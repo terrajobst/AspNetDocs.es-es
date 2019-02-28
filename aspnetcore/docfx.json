@@ -50,6 +50,7 @@
       "feedback_github_repo": "aspnet/docs",
       "feedback_product_url": "https://github.com/aspnet/Home/blob/master/CONTRIBUTING.md",
       "feedback_system": "GitHub",
+      "bilingual_type": "hover over",
       "ms.prod": "aspnet-core",
       "searchScope": [
         "ASP.NET Core"
