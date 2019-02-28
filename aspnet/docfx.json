@@ -42,6 +42,7 @@
       "_navPath": "/foo",
       "_navRel": "/foo",
       "breadcrumb_path": "/aspnet/breadcrumb/toc.json",
+      "bilingual_type": "hover over",
       "ms.prod": "aspnet-framework",
       "ms.topic": "conceptual",
       "searchScope": [
