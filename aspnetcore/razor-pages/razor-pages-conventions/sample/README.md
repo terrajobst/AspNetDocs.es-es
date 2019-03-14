@@ -1,0 +1,20 @@
+---
+ms.openlocfilehash: 68a77fffb9e2ed0eba05cceb2bff041f159501c6
+ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 03/01/2019
+ms.locfileid: "57046592"
+---
+# <a name="aspnet-core-model-providers-sample"></a><span data-ttu-id="84eb4-101">Ejemplo de proveedores de modelos de ASP.NET Core</span><span class="sxs-lookup"><span data-stu-id="84eb4-101">ASP.NET Core Model Providers Sample</span></span>
+
+<span data-ttu-id="84eb4-102">En este ejemplo se muestra el uso de proveedores personalizados de modelo de página y ruta de páginas de Razor.</span><span class="sxs-lookup"><span data-stu-id="84eb4-102">This sample illustrates use of Razor Pages custom route and page model providers.</span></span> <span data-ttu-id="84eb4-103">En este ejemplo se muestran las características descritas en el tema [Convenciones de aplicación y ruta de las páginas de Razor](https://docs.microsoft.com/aspnet/core/razor-pages/razor-pages-convention-features).</span><span class="sxs-lookup"><span data-stu-id="84eb4-103">This sample demonstrates the features described in the [Razor Pages route and app conventions](https://docs.microsoft.com/aspnet/core/razor-pages/razor-pages-convention-features) topic.</span></span>
+
+## <a name="examples-in-this-sample"></a><span data-ttu-id="84eb4-104">Ejemplos que se incluyen</span><span class="sxs-lookup"><span data-stu-id="84eb4-104">Examples in this sample</span></span>
+
+| <span data-ttu-id="84eb4-105">Escenario</span><span class="sxs-lookup"><span data-stu-id="84eb4-105">Scenario</span></span> | <span data-ttu-id="84eb4-106">Demostración de ejemplo</span><span class="sxs-lookup"><span data-stu-id="84eb4-106">Sample demo</span></span> |
+| -------- | ----------- |
+| [<span data-ttu-id="84eb4-107">Convenciones de modelo</span><span class="sxs-lookup"><span data-stu-id="84eb4-107">Model conventions</span></span>](https://docs.microsoft.com/aspnet/core/razor-pages/razor-pages-conventions#model-conventions) | <span data-ttu-id="84eb4-108">Agregue un atributo de ruta y un encabezado a las páginas de la aplicación.</span><span class="sxs-lookup"><span data-stu-id="84eb4-108">Add a route attribute and header to the app's pages.</span></span> |
+| [<span data-ttu-id="84eb4-109">Usar AddPageRoute para agregar una ruta de página</span><span class="sxs-lookup"><span data-stu-id="84eb4-109">Use AddPageRoute to add a page route</span></span>](https://docs.microsoft.com/aspnet/core/razor-pages/razor-pages-conventions#configure-a-page-route) | <span data-ttu-id="84eb4-110">Agrega la ruta especificada a la página en la página especificada.</span><span class="sxs-lookup"><span data-stu-id="84eb4-110">Adds the specified route to the page at the specified page.</span></span> |
+| [<span data-ttu-id="84eb4-111">Convenciones de acción del modelo de página</span><span class="sxs-lookup"><span data-stu-id="84eb4-111">Page model action conventions</span></span>](https://docs.microsoft.com/aspnet/core/razor-pages/razor-pages-conventions#page-model-action-conventions) | <span data-ttu-id="84eb4-112">Agregue un encabezado a las páginas de una carpeta, agregue un encabezado a una sola página y configure una fábrica de filtros para agregar un encabezado a las páginas de la aplicación.</span><span class="sxs-lookup"><span data-stu-id="84eb4-112">Add a header to pages in a folder, add a header to a single page, and configure a filter factory to add a header to the app's pages.</span></span> |
+| [<span data-ttu-id="84eb4-113">Reemplazar el proveedor de modelo de aplicación de página predeterminado</span><span class="sxs-lookup"><span data-stu-id="84eb4-113">Replace the default page app model provider</span></span>](https://docs.microsoft.com/aspnet/core/razor-pages/razor-pages-conventions#replace-the-default-page-app-model-provider) | <span data-ttu-id="84eb4-114">Cambie las convenciones de nomenclatura del controlador.</span><span class="sxs-lookup"><span data-stu-id="84eb4-114">Change the conventions for handler naming.</span></span> |
