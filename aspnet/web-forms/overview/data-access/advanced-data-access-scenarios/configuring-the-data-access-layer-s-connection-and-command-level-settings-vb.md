@@ -8,12 +8,12 @@ ms.date: 08/03/2007
 ms.assetid: d57dfa2b-d627-45cb-b5b1-abbf3159d770
 msc.legacyurl: /web-forms/overview/data-access/advanced-data-access-scenarios/configuring-the-data-access-layer-s-connection-and-command-level-settings-vb
 msc.type: authoredcontent
-ms.openlocfilehash: d44372ef3eaf7634d3bf3a82bd2c1eb1d710f786
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: 37c537931008045c5c6438fe2097652438c7e8b1
+ms.sourcegitcommit: 289e051cc8a90e8f7127e239fda73047bde4de12
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57032372"
+ms.lasthandoff: 03/25/2019
+ms.locfileid: "58424916"
 ---
 <a name="configuring-the-data-access-layers-connection--and-command-level-settings-vb"></a>Configurar las opciones de nivel comando y de conexión de la capa de acceso a datos (VB)
 ====================
@@ -106,7 +106,7 @@ Con esta clase parcial crear (y guardar), abra el `ProductsBLL` clase. Vaya a un
 
 Esta clase parcial expone sólo una propiedad del objeto de conexión subyacente: `ConnectionString`. Si desea que el objeto toda conexión esté disponible más allá de los confines del TableAdapter, o bien puede cambiar el `Connection` nivel de protección de la propiedad s. El código generado automáticamente que hemos visto en el paso 1 se ha mostrado que TableAdapters `Connection` propiedad está marcada como `Friend`, lo que significa que solo se accesible por clases en el mismo ensamblado. Esto se puede cambiar, sin embargo, a través de los TableAdapters `ConnectionModifier` propiedad.
 
-Abra el `Northwind` conjunto de datos, haga clic en el `ProductsTableAdatper` en el diseñador y vaya a la ventana Propiedades. Allí verá el `ConnectionModifier` establecido en su valor predeterminado, `Assembly`. Para realizar la `Connection` disponible fuera del ensamblado del conjunto de datos con tipo s, cambio de propiedad el `ConnectionModifier` propiedad `Public`.
+Abra el `Northwind` conjunto de datos, haga clic en el `ProductsTableAdapter` en el diseñador y vaya a la ventana Propiedades. Allí verá el `ConnectionModifier` establecido en su valor predeterminado, `Assembly`. Para realizar la `Connection` disponible fuera del ensamblado del conjunto de datos con tipo s, cambio de propiedad el `ConnectionModifier` propiedad `Public`.
 
 
 [![El nivel de accesibilidad de s de propiedad de conexión puede configurarse a través de la propiedad ConnectionModifier](configuring-the-data-access-layer-s-connection-and-command-level-settings-vb/_static/image7.png)](configuring-the-data-access-layer-s-connection-and-command-level-settings-vb/_static/image6.png)

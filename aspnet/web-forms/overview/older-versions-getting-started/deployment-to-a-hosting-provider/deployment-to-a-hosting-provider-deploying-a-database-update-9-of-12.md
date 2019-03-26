@@ -8,12 +8,12 @@ ms.date: 11/17/2011
 ms.assetid: a8d776af-4735-4612-87f6-9f326587f2d3
 msc.legacyurl: /web-forms/overview/older-versions-getting-started/deployment-to-a-hosting-provider/deployment-to-a-hosting-provider-deploying-a-database-update-9-of-12
 msc.type: authoredcontent
-ms.openlocfilehash: b15d27a07207110187b897624814125c9e030493
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: 045e1076183cc46e935df40120d0377108cbed61
+ms.sourcegitcommit: 289e051cc8a90e8f7127e239fda73047bde4de12
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57041312"
+ms.lasthandoff: 03/25/2019
+ms.locfileid: "58422157"
 ---
 <a name="deploying-an-aspnet-web-application-with-sql-server-compact-using-visual-studio-or-visual-web-developer-deploying-a-database-update---9-of-12"></a>Implementar una aplicación Web de ASP.NET con SQL Server Compact con Visual Studio o Visual Web Developer: Implementar una actualización de la base de datos - 9 de 12
 ====================
@@ -56,7 +56,7 @@ En el **Package Manager Console** ventana, seleccione **ContosoUniversity.DAL** 
 
 [!code-powershell[Main](deployment-to-a-hosting-provider-deploying-a-database-update-9-of-12/samples/sample4.ps1)]
 
-Cuando finalice este comando, Visual Studio abre el archivo de clase que define la nueva `DbMIgration` (clase) y en el `Up` método puede ver el código que crea la nueva columna.
+Cuando finalice este comando, Visual Studio abre el archivo de clase que define la nueva `DbMigration` (clase) y en el `Up` método puede ver el código que crea la nueva columna.
 
 ![AddBirthDate_migration_code](deployment-to-a-hosting-provider-deploying-a-database-update-9-of-12/_static/image1.png)
 

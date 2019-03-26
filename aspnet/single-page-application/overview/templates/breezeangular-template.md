@@ -8,12 +8,12 @@ ms.date: 03/08/2013
 ms.assetid: db31e909-563a-4516-aadd-62aa210ac7e4
 msc.legacyurl: /single-page-application/overview/templates/breezeangular-template
 msc.type: authoredcontent
-ms.openlocfilehash: a3e8b42cdadf99df6971a278834b1429e129ce72
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: a3021f166262ee953b0cbe9ea88762a385925b88
+ms.sourcegitcommit: 289e051cc8a90e8f7127e239fda73047bde4de12
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57041192"
+ms.lasthandoff: 03/25/2019
+ms.locfileid: "58423109"
 ---
 <a name="breezeangular-template"></a>Plantilla de Breeze/Angular
 ====================
@@ -30,7 +30,7 @@ La plantilla de Breeze/Angular SPA es una variación en el [plantilla KnockoutJS
 
 ![](http://www.breezejs.com/sites/all/images/spa-template/NgRunningTodoPage.png)
 
-Hacia afuera, la aplicación parece muy similar a la plantilla KnockoutJS SPA. Pero es bastante diferente bajo el capó. La plantilla KnockoutJS utiliza Knockout para el enlace de datos y de AJAX sin procesar para el acceso a datos. La plantilla de Breeze/Angular usa Angular para el enlace de datos y Breeze para el acceso a datos. Estas bibliotecas habilitan funcionalidades adicionales, incluido el historial y la navegación de página.
+Hacia afuera, la aplicación parece muy similar a la plantilla KnockoutJS SPA. Pero es bastante diferente bajo el capó. La plantilla KnockoutJS utiliza Knockout para el enlace de datos y de AJAX sin procesar para el acceso a datos. La plantilla de Breeze/Angular usa Angular para el enlace de datos y Breeze para el acceso a datos. Estas bibliotecas permiten funcionalidades adicionales, incluido el historial y la navegación de página.
 
 Aquí está la página acerca de la aplicación:
 
@@ -89,7 +89,7 @@ Ahora está en la tierra de SPA. Todo lo que puede ver y experimenta mientras la
 
 La lógica de validación es del cliente realizado por Breeze. Atributos de validación en las clases del modelo de servidor se propaga al cliente y ejecuta automáticamente antes de que el cliente contacta con el servidor.
 
-Revise el tráfico de red. Tenga en cuenta que no había ninguna llamada al servidor cuando Breeze ha detectado un error. Cada cambio válido dieron lugar a una solicitud POST a "/ api/Todo/SaveChanges". BREEZE agrupa los cambios y los envía juntos como una única solicitud para el controlador de Web API `SaveChanges` método. Que es diferente de la plantilla de SPA KockoutJS, lo que hace que PUT, POST y DELETE individualmente las solicitudes para cada elemento.
+Revise el tráfico de red. Tenga en cuenta que no había ninguna llamada al servidor cuando Breeze ha detectado un error. Cada cambio válido dieron lugar a una solicitud POST a "/ api/Todo/SaveChanges". BREEZE agrupa los cambios y los envía juntos como una única solicitud para el controlador de Web API `SaveChanges` método. Que es diferente de la plantilla KnockoutJS SPA, lo que hace que PUT, POST y DELETE individualmente las solicitudes para cada elemento.
 
 Además, observe que no hay ningún tráfico de red cuando se cambia entre el TodoList y acerca de las páginas. Eso es porque se ha restringido la consulta a la caché local de Breeze.
 
@@ -107,7 +107,7 @@ La pila del lado servidor consta de código para desarrolladores y tres bibliote
 
 ![](http://www.breezejs.com/sites/all/images/spa-template/ServerArchitecture.png)
 
-La arquitectura básica es la misma que la plantilla de SPA KockoutJS. Sin embargo, la implementación es mucho más sencilla: Se eliminaron los dto y la mayoría de los detalles de Entity Framework le ha sido delegada Breeze.NET.
+La arquitectura básica es la misma que la plantilla KnockoutJS SPA. Sin embargo, la implementación es mucho más sencilla: Se eliminaron los dto y la mayoría de los detalles de Entity Framework le ha sido delegada Breeze.NET.
 
 ## <a name="next-steps"></a>Pasos siguientes
 

@@ -8,12 +8,12 @@ ms.date: 02/20/2005
 ms.assetid: f2339485-5d78-4c5e-8c0a-dc9b8a315345
 msc.legacyurl: /web-forms/overview/moving-to-aspnet-20/membership
 msc.type: authoredcontent
-ms.openlocfilehash: d7fa3cb61608ea089141931cb9362359cdc92619
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: d4fab68555eeb27420e60a28aca2f2c0fb9a73e3
+ms.sourcegitcommit: 289e051cc8a90e8f7127e239fda73047bde4de12
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57031472"
+ms.lasthandoff: 03/25/2019
+ms.locfileid: "58421523"
 ---
 <a name="membership"></a>Pertenencia
 ====================
@@ -107,7 +107,7 @@ Los controles de inicio de sesión siguientes están disponibles en ASP.NET 2.0:
 
 ## <a name="login-control"></a>Control de inicio de sesión
 
-El control de inicio de sesión proporciona una interfaz para que alguien inicie sesión en el sistema de pertenencia. Proporciona un nombre de usuario y contraseña textboxt y un botón de inicio de sesión. Muchas otras características comunes, como un vínculo para registrarse para las personas que aún no ha hecho por lo tanto, una casilla de verificación que permite al usuario iniciar sesión automáticamente en visitas posteriores, un vínculo para un recordatorio de contraseña, etcetera. Todas las características del control de inicio de sesión son personalizables a través de las propiedades del control.
+El control de inicio de sesión proporciona una interfaz para que alguien inicie sesión en el sistema de pertenencia. Proporciona un cuadro de texto Nombre de usuario y contraseña y un botón de inicio de sesión. Muchas otras características comunes, como un vínculo para registrarse para las personas que aún no ha hecho por lo tanto, una casilla de verificación que permite al usuario iniciar sesión automáticamente en visitas posteriores, un vínculo para un recordatorio de contraseña, etcetera. Todas las características del control de inicio de sesión son personalizables a través de las propiedades del control.
 
 En ASP.NET 1.x, los desarrolladores tenían que escribir una gran cantidad de código para realizar una búsqueda cuando se usa la autenticación de formularios. Con la pertenencia a ASP.NET 2.0, puede validar a los usuarios sin escribir ningún código en absoluto. ASP.NET realizará automáticamente la búsqueda del usuario para usted. (Si está utilizando el control de inicio de sesión sin usar la pertenencia a ASP.NET, puede usar el **OnAuthenticate** método para validar el usuario.)
 

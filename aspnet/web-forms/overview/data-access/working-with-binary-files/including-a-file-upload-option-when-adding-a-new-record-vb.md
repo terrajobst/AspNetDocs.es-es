@@ -8,12 +8,12 @@ ms.date: 03/27/2007
 ms.assetid: 5776281d-4637-4d1e-a65b-2621d2cade44
 msc.legacyurl: /web-forms/overview/data-access/working-with-binary-files/including-a-file-upload-option-when-adding-a-new-record-vb
 msc.type: authoredcontent
-ms.openlocfilehash: 22ca0d85fac598b2f845be4bd5c18fdcbd3bc3a8
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: 2c23cbac0a94607a05de4e1ef5b8e5b0874a1a5e
+ms.sourcegitcommit: 289e051cc8a90e8f7127e239fda73047bde4de12
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57061772"
+ms.lasthandoff: 03/25/2019
+ms.locfileid: "58424201"
 ---
 <a name="including-a-file-upload-option-when-adding-a-new-record-vb"></a>Incluir una opción de carga de archivos al agregar un nuevo registro (VB)
 ====================
@@ -73,7 +73,7 @@ Puesto que la capa de presentación sólo debe interactuar con la capa de lógic
 [!code-vb[Main](including-a-file-upload-option-when-adding-a-new-record-vb/samples/sample2.vb)]
 
 > [!NOTE]
-> Asegúrese de que ha guardado el conjunto de datos con tipo antes de agregar el `InsertWithPicture` método a la capa BLL. Puesto que la `CategoriesTableAdapter` código de la clase es generado automáticamente basándose en el conjunto de datos con tipo, si don t primero guarde los cambios en el conjunto de datos con tipo el `Adapter` propiedad ganó t saber sobre el `InsertWithPicture` método.
+> Asegúrese de que ha guardado el conjunto de datos con tipo antes de agregar el `InsertWithPicture` método a la capa BLL. Puesto que la `CategoriesTableAdapter` código de la clase es generado automáticamente basándose en el conjunto de datos con tipo, si don t primero guarde los cambios en el conjunto de datos con tipo el `Adapter` propiedad no conocerá el `InsertWithPicture` método.
 
 
 ## <a name="step-3-listing-the-existing-categories-and-their-binary-data"></a>Paso 3: Lista de las categorías existentes y sus datos binarios
@@ -231,7 +231,7 @@ Let s dedique un momento para probar la interfaz de inserción y `ItemInserting`
 **Figura 9**: Es de un mensaje de advertencia aparece si se carga un tipo de archivo no válido ([haga clic aquí para ver imagen en tamaño completo](including-a-file-upload-option-when-adding-a-new-record-vb/_static/image16.png))
 
 
-Una vez haya comprobado que la página requiere una imagen que se cargará y t ganado aceptan archivos PDF no o que no son JPG, agregue una nueva categoría válido imagen JPG, dejar vacío el campo de folleto. Después de hacer clic en el botón de inserción, la página se devolución de datos y se agregará un nuevo registro a la `Categories` tabla con el contenido binario de la imagen cargada s almacenada directamente en la base de datos. El control GridView se actualiza y muestra una fila para la categoría recién agregada, pero, como se muestra en la figura 10, la nueva imagen de s de categoría no se represente correctamente.
+Una vez haya comprobado que la página requiere una imagen para cargarse y no aceptan archivos PDF no o que no son JPG, agregue una nueva categoría válido imagen JPG, dejar vacío el campo de folleto. Después de hacer clic en el botón de inserción, la página se devolución de datos y se agregará un nuevo registro a la `Categories` tabla con el contenido binario de la imagen cargada s almacenada directamente en la base de datos. El control GridView se actualiza y muestra una fila para la categoría recién agregada, pero, como se muestra en la figura 10, la nueva imagen de s de categoría no se represente correctamente.
 
 
 [![La nueva categoría s que no se muestra la imagen](including-a-file-upload-option-when-adding-a-new-record-vb/_static/image10.gif)](including-a-file-upload-option-when-adding-a-new-record-vb/_static/image17.png)

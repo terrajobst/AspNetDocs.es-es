@@ -8,12 +8,12 @@ ms.date: 06/12/2014
 ms.assetid: ba6e6baa-9b9f-471f-b39d-b007a3addadc
 msc.legacyurl: /aspnet/overview/developing-apps-with-windows-azure/building-real-world-cloud-apps-with-windows-azure/automate-everything
 msc.type: authoredcontent
-ms.openlocfilehash: d0ce344bcb036819feba6218edc8dd90af501f50
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: 18e988279b56e479b0bb27de2f01ab22a2e70301
+ms.sourcegitcommit: 289e051cc8a90e8f7127e239fda73047bde4de12
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57039682"
+ms.lasthandoff: 03/25/2019
+ms.locfileid: "58422615"
 ---
 <a name="automate-everything-building-real-world-cloud-apps-with-azure"></a>Automatizar todas las acciones (creación de aplicaciones de nube reales con Azure)
 ====================
@@ -159,7 +159,7 @@ El script de creación de la base de datos recupera la dirección IP del equipo 
 - Crea la base de datos de aplicación y la base de datos de pertenencia mediante el `New-AzureSqlDatabase` cmdlet.
 
     [!code-powershell[Main](automate-everything/samples/sample11.ps1?highlight=2,5)]
-- Llama a una función definida localmente de tocreates una cadena de conexión para cada base de datos. La aplicación utilizará estas cadenas de conexión para tener acceso a las bases de datos. 
+- Llama a una función definida localmente para crear una cadena de conexión para cada base de datos. La aplicación utilizará estas cadenas de conexión para tener acceso a las bases de datos. 
 
     [!code-powershell[Main](automate-everything/samples/sample12.ps1?highlight=1-2)]
 

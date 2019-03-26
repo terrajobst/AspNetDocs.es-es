@@ -8,12 +8,12 @@ ms.date: 02/20/2005
 ms.assetid: 92df4051-77c6-492c-bd34-23d24189cea4
 msc.legacyurl: /web-forms/overview/moving-to-aspnet-20/profiles-themes-and-web-parts
 msc.type: authoredcontent
-ms.openlocfilehash: 98559c2a378c72bc5664faafe5436753050b574f
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: 010adaba61b15ca4421c2d3a4a7590becb53897b
+ms.sourcegitcommit: 289e051cc8a90e8f7127e239fda73047bde4de12
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57062772"
+ms.lasthandoff: 03/25/2019
+ms.locfileid: "58422858"
 ---
 <a name="profiles-themes-and-web-parts"></a>Perfiles, temas y elementos web
 ====================
@@ -222,7 +222,7 @@ En este ejercicio, se aplicará un tema de ASP.NET a un sitio Web.
 3. Elija el archivo de configuración Web de la lista de archivos y haga clic en Agregar.
 4. Haga doble clic en el proyecto en el Explorador de soluciones y seleccione Agregar nuevo elemento.
 5. Seleccione la máscara de archivo y haga clic en Agregar.
-6. Haga clic en Sí cuando se le pregunte si tal como desea colocar el archivo dentro de la aplicación\_carpeta de temas.
+6. Haga clic en Sí cuando se le pregunte si desea colocar el archivo dentro de la aplicación\_carpeta de temas.
 7. Haga doble clic en la carpeta SkinFile dentro de la aplicación\_carpeta de temas en el Explorador de soluciones y seleccione Agregar nuevo elemento.
 8. Elija la hoja de estilos en la lista de archivos y haga clic en Agregar. Ahora tiene todos los archivos necesarios para implementar el nuevo tema. Sin embargo, Visual Studio ha nombrado a la carpeta de temas SkinFile. Haga doble clic en esa carpeta y cambie el nombre a CoolTheme.
 9. Abra el archivo SkinFile.skin y agregue el código siguiente al final del archivo: 

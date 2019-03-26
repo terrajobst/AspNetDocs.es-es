@@ -8,12 +8,12 @@ ms.date: 11/13/2013
 ms.assetid: ca26e5bb-630e-41d2-8512-2a9386c431cb
 msc.legacyurl: /visual-studio/overview/2012/aspnet-and-web-tools-20131-for-visual-studio-2012
 msc.type: authoredcontent
-ms.openlocfilehash: a0b3d52910ac33c403ecbe2340c12b202c25147b
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: 008891b72e1fb72458aee00bbf83839d0fbed263
+ms.sourcegitcommit: 289e051cc8a90e8f7127e239fda73047bde4de12
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57053032"
+ms.lasthandoff: 03/25/2019
+ms.locfileid: "58423551"
 ---
 <a name="release-notes-for-aspnet-and-web-tools-20131-for-visual-studio-2012"></a>Notas de la versión de ASP.NET and Web Tools 2013.1 para Visual Studio 2012
 ====================
@@ -163,7 +163,7 @@ Para corregir este problema, configure Visual Studio Express para que funcione c
 ### <a name="aspnet-razor-3"></a>3 de Razor de ASP.NET
 
 <a id="browseissue"></a>
-#### <a name="viewing-cshtml-file-withbrowse-withorf5causes-a-server-error"></a>Ver archivo de cshtml withBrowse WithorF5causes un error de servidor
+#### <a name="viewing-cshtml-file-with-browse-with-or-f5-causes-a-server-error"></a>Ver archivo cshtml explorar con ni F5 produce un error de servidor
 
 Al crear un proyecto de MVC 5 en Visual Studio 2012 (o abrir en el proyecto de Visual Studio 2012 una MVC 5 que se creó en Visual Studio 2013) e intenta ver un archivo cshtml mediante explorar con o F5, recibirá un error que indica - **Error de servidor en La aplicación '/'**. El servidor intenta navegar a `http://localhost:XXXX/Views/../XXXX.cshtml`
 

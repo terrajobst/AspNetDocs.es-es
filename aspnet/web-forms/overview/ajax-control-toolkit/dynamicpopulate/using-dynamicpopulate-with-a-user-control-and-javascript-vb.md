@@ -8,12 +8,12 @@ ms.date: 06/02/2008
 ms.assetid: 778b9009-76f2-4665-940e-afc0e35bc917
 msc.legacyurl: /web-forms/overview/ajax-control-toolkit/dynamicpopulate/using-dynamicpopulate-with-a-user-control-and-javascript-vb
 msc.type: authoredcontent
-ms.openlocfilehash: a275eed17552d26b63f98762c6c870bd53dd455d
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: b863cb0045fcec202931148bff5befa7ed62db4d
+ms.sourcegitcommit: 289e051cc8a90e8f7127e239fda73047bde4de12
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57037152"
+ms.lasthandoff: 03/25/2019
+ms.locfileid: "58424149"
 ---
 <a name="using-dynamicpopulate-with-a-user-control-and-javascript-vb"></a>Usar DynamicPopulate con un control de usuario y JavaScript (VB)
 ====================

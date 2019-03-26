@@ -8,12 +8,12 @@ ms.date: 08/15/2012
 ms.assetid: c7e4e1ab-4932-4614-9f53-aaf7c706d498
 msc.legacyurl: /mvc/overview/views/using-page-inspector-in-aspnet-mvc
 msc.type: authoredcontent
-ms.openlocfilehash: 0dea8b077878139a3f513cb51447b86a93fe55b8
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: abb1ef355bd7614daaab8c205d9d53065856cd23
+ms.sourcegitcommit: 289e051cc8a90e8f7127e239fda73047bde4de12
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57057712"
+ms.lasthandoff: 03/25/2019
+ms.locfileid: "58424370"
 ---
 <a name="using-page-inspector-in-aspnet-mvc"></a>Usar el Inspector de página en ASP.NET MVC
 ====================
@@ -139,7 +139,7 @@ A continuación, tendrá una visión rápida de la ventana de HTML y cómo se as
 
 Haga clic en **inspeccionar** para poner Inspector de página en modo de inspección.
 
-Haga clic en la parte superior de la página que dice "El logohere". Si está examinando un elemento determinado con más detalle, por lo que ya no se cambia la presentación en la ventana del explorador al mover el puntero del mouse.
+Haga clic en la parte superior de la página que dice "Su logotipo aquí". Si está examinando un elemento determinado con más detalle, por lo que ya no se cambia la presentación en la ventana del explorador al mover el puntero del mouse.
 
 Ahora, mueva el puntero del mouse en el **HTML** ventana. Al mover el puntero del mouse, Inspector de página se describe el elemento dentro de la **HTML** ventana y resalta el elemento correspondiente en la ventana del explorador.
 

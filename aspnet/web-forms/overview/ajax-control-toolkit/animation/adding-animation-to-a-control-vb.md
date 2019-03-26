@@ -8,12 +8,12 @@ ms.date: 06/02/2008
 ms.assetid: c120187e-963e-4439-bb85-32771bc7f1f4
 msc.legacyurl: /web-forms/overview/ajax-control-toolkit/animation/adding-animation-to-a-control-vb
 msc.type: authoredcontent
-ms.openlocfilehash: 9392b1bab2289d886baf308d05644afbdc42a13a
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: c76e488f36690acd1a6c48b87335a8e6f892f2a8
+ms.sourcegitcommit: 289e051cc8a90e8f7127e239fda73047bde4de12
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57032762"
+ms.lasthandoff: 03/25/2019
+ms.locfileid: "58421160"
 ---
 <a name="adding-animation-to-a-control-vb"></a>Agregar animación a un control (VB)
 ====================
@@ -65,7 +65,7 @@ El marco de trabajo incluye un conjunto de animaciones, cada uno representado po
 - `<Resize>` (cambiar el tamaño)
 - `<Scale>` (cambiar proporcionalmente el tamaño)
 
-En este ejemplo, el panel será fundido de salida. La animación adoptarán 1,5 segundos (`Duration` atributo), mostrar (pasos de animación) de 24 fotogramas por segundo (`Fps` attributs). Aquí está el marcado completo para el `AnimationExtender` control:
+En este ejemplo, el panel será fundido de salida. La animación adoptarán 1,5 segundos (`Duration` atributo), mostrar (pasos de animación) de 24 fotogramas por segundo (`Fps` atributo). Aquí está el marcado completo para el `AnimationExtender` control:
 
 [!code-aspx[Main](adding-animation-to-a-control-vb/samples/sample5.aspx)]
 

@@ -8,12 +8,12 @@ ms.date: 02/18/2013
 ms.assetid: 87daa99f-3810-407e-b969-dd28a192959d
 msc.legacyurl: /web-api/overview/older-versions/build-restful-apis-with-aspnet-web-api
 msc.type: authoredcontent
-ms.openlocfilehash: 00304f67138873318b63c5e2ad0cd69aa7449521
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: f1f5ebbf5170f205be331b6402951fb429196046
+ms.sourcegitcommit: 289e051cc8a90e8f7127e239fda73047bde4de12
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57041672"
+ms.lasthandoff: 03/25/2019
+ms.locfileid: "58423720"
 ---
 <a name="build-restful-apis-with-aspnet-web-api"></a>Compilar API RESTful con ASP.NET Web API
 ====================
@@ -528,7 +528,7 @@ En este apéndice se mostrará cómo crear un nuevo sitio web desde el Portal de
 1. Vaya a la [Portal de administración de Azure](https://manage.windowsazure.com/) e inicie sesión con las credenciales de Microsoft asociadas con su suscripción.
 
     > [!NOTE]
-    > Con Azure puede hospedar 10 sitios Web ASP.NET de forma gratuita y, a continuación, escalar a medida que crece el tráfico. Puede registrarse [aquí](http://aka.ms/aspnet-hol-azure).
+    > Con Azure puede hospedar 10 sitios Web ASP.NET de forma gratuita y, a continuación, escalar a medida que crece el tráfico. Puede registrarse [aquí](https://aka.ms/aspnet-hol-azure).
 
     ![Inicie sesión en el portal de Windows Azure](build-restful-apis-with-aspnet-web-api/_static/image39.png "inicie sesión en el portal de Windows Azure")
 

@@ -8,12 +8,12 @@ ms.date: 08/03/2007
 ms.assetid: 5811b8ff-ed56-40fc-9397-6b69ae09a8f6
 msc.legacyurl: /web-forms/overview/data-access/advanced-data-access-scenarios/working-with-computed-columns-vb
 msc.type: authoredcontent
-ms.openlocfilehash: 81254408252c5e786c938d4eb8beb1c7a2b65218
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: 136e4a07422d9f71ed56ac132d93f5eade273ca2
+ms.sourcegitcommit: 289e051cc8a90e8f7127e239fda73047bde4de12
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57061312"
+ms.lasthandoff: 03/25/2019
+ms.locfileid: "58423174"
 ---
 <a name="working-with-computed-columns-vb"></a>Trabajar con columnas calculadas (VB)
 ====================
@@ -32,7 +32,7 @@ Puesto que un valor de columna calculada s viene determinada por una expresión,
 
 Uno de los retos del uso de calcula las columnas con un TableAdapter utiliza instrucciones SQL ad hoc es que los TableAdapter s `INSERT` y `UPDATE` automáticamente las consultas se vuelven a generar siempre que se complete el Asistente para configuración de TableAdapter. Por lo tanto, las columnas calculadas quitan manualmente desde el `INSERT` y `UPDATE` consultas volverá a aparecer si se vuelve a ejecutar el asistente. Aunque los TableAdapters que utilizan procedimientos almacenados don t sufren este fragilidad, tienen sus propias peculiaridades que abordaremos en el paso 3.
 
-En este tutorial se agregará una columna calculada a la `Suppliers` de tabla en la base de datos Northwind y, a continuación, creará un TableAdapter correspondiente para que funcione con esta tabla y su columna calculada. Tendremos nuestro TableAdapter utilizar procedimientos almacenados en lugar de instrucciones SQL ad hoc para que nuestro t de las personalizaciones se pierde cuando se usa el Asistente para configuración de TableAdapter.
+En este tutorial se agregará una columna calculada a la `Suppliers` de tabla en la base de datos Northwind y, a continuación, creará un TableAdapter correspondiente para que funcione con esta tabla y su columna calculada. Tendremos nuestro TableAdapter utilizar procedimientos almacenados en lugar de instrucciones SQL ad hoc para que nuestro personalizaciones no se pierden cuando se usa el Asistente para configuración de TableAdapter.
 
 Introducción s Let!
 

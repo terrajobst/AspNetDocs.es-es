@@ -8,12 +8,12 @@ ms.date: 01/20/2014
 ms.assetid: 4c56f64a-086a-44ce-99c2-4c69604cd7fd
 msc.legacyurl: /web-api/overview/formats-and-model-binding/media-formatters
 msc.type: authoredcontent
-ms.openlocfilehash: 7b7ba2fb3f1bba0447e700c84a017266cba305e6
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: bd54a1d8ae3a2913c9d8a11c5b31ba1c829450d2
+ms.sourcegitcommit: 289e051cc8a90e8f7127e239fda73047bde4de12
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57045022"
+ms.lasthandoff: 03/25/2019
+ms.locfileid: "58425319"
 ---
 <a name="media-formatters-in-aspnet-web-api-2"></a>Formateadores de contenido multimedia en ASP.NET Web API 2
 ====================
@@ -46,7 +46,7 @@ El tipo de medio determina cómo la API Web serializa y deserializa el cuerpo de
 Para crear a un formateador de medios, que se derivan de una de estas clases:
 
 - [MediaTypeFormatter](https://msdn.microsoft.com/library/system.net.http.formatting.mediatypeformatter.aspx). Esta lectura asincrónica de usos de clases y métodos de escritura.
-- [BufferedMediaTypeFormatter](https://msdn.microsoft.com/library/system.net.http.formatting.bufferedmediatypeformatter.aspx). Esta clase se deriva de **elemento MediaTypeFormatter** pero utiliza los métodos de lectura/escritura sychronous.
+- [BufferedMediaTypeFormatter](https://msdn.microsoft.com/library/system.net.http.formatting.bufferedmediatypeformatter.aspx). Esta clase se deriva de **elemento MediaTypeFormatter** pero utiliza los métodos de lectura y escritura sincrónica.
 
 Derivar de **BufferedMediaTypeFormatter** es más sencillo, porque no hay ningún código asincrónico, pero también significa que puede bloquear el subproceso de llamada durante la E/S.
 
@@ -56,7 +56,7 @@ El ejemplo siguiente muestra un formateador de tipo de medios que puede serializ
 
 [!code-csharp[Main](media-formatters/samples/sample3.cs)]
 
-Para implementar un formateador CSV, defina una clase que deriva de **BufferedMediaTypeFormater**:
+Para implementar un formateador CSV, defina una clase que deriva de **BufferedMediaTypeFormatter**:
 
 [!code-csharp[Main](media-formatters/samples/sample4.cs)]
 

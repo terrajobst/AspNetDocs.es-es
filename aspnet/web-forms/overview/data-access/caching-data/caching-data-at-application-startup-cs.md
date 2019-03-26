@@ -8,12 +8,12 @@ ms.date: 05/30/2007
 ms.assetid: 22ca8efa-7cd1-45a7-b9ce-ce6eb3b3ff95
 msc.legacyurl: /web-forms/overview/data-access/caching-data/caching-data-at-application-startup-cs
 msc.type: authoredcontent
-ms.openlocfilehash: c97058e5fd54dfd0393ec5ad020ad957d9719784
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: 692b2a13664a9a5153a85a230dd513b022518316
+ms.sourcegitcommit: 289e051cc8a90e8f7127e239fda73047bde4de12
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57064072"
+ms.lasthandoff: 03/25/2019
+ms.locfileid: "58423993"
 ---
 <a name="caching-data-at-application-startup-c"></a>Almacenar datos en caché al iniciar la aplicación (C#)
 ====================
@@ -103,7 +103,7 @@ Del mismo modo, la caché de datos puede usarse como un almacén de caché, como
 
 [!code-csharp[Main](caching-data-at-application-startup-cs/samples/sample5.cs)]
 
-Para agregar un elemento a la caché de datos con sin expiración basado en tiempo, use el `System.Web.Caching.Cache.NoAbsoluteExpiration` y `System.Web.Caching.Cache.NoSlidingExpiration` valores como parámetros de entrada. Esta sobrecarga en particular de la caché de datos `Insert` método se ha seleccionado para que pudiéramos especificar la *prioridad* de elemento de la caché. La prioridad se utiliza para determinar qué elementos de borrado de la memoria caché cuando hay poca memoria disponible. Aquí usamos la prioridad `NotRemovable`, lo que garantiza que este elemento en caché ganó t se eliminen sus.
+Para agregar un elemento a la caché de datos con sin expiración basado en tiempo, use el `System.Web.Caching.Cache.NoAbsoluteExpiration` y `System.Web.Caching.Cache.NoSlidingExpiration` valores como parámetros de entrada. Esta sobrecarga en particular de la caché de datos `Insert` método se ha seleccionado para que pudiéramos especificar la *prioridad* de elemento de la caché. La prioridad se utiliza para determinar qué elementos de borrado de la memoria caché cuando hay poca memoria disponible. Aquí usamos la prioridad `NotRemovable`, lo que garantiza que no se eliminen sus este elemento en caché.
 
 > [!NOTE]
 > Descarga de este tutorial implementa el `StaticCache` clase mediante el enfoque de variable de miembro estático. El código de las técnicas de caché de estado y los datos de aplicación está disponible en los comentarios en el archivo de clase.

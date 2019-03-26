@@ -8,12 +8,12 @@ ms.date: 02/20/2009
 ms.assetid: 92c70297-4430-4e4e-919a-9c2333a8d09a
 msc.legacyurl: /mvc/overview/older-versions-1/contact-manager/iteration-4-make-the-application-loosely-coupled-vb
 msc.type: authoredcontent
-ms.openlocfilehash: be6ddbdfbe8da33871355c2a7917a7ce7008d81b
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: a319e2eb71da1bf693b1bd14ae368c844e7daeb1
+ms.sourcegitcommit: 62db31596a7da029263cf06335aff12236fb3186
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57054872"
+ms.lasthandoff: 03/26/2019
+ms.locfileid: "58440266"
 ---
 <a name="iteration-4--make-the-application-loosely-coupled-vb"></a>Iteración #4: hacer que la aplicación tenga un acoplamiento (VB)
 ====================
@@ -61,7 +61,7 @@ Por ejemplo, imagine que decide cambiar cómo implementar la capa de acceso a da
 
 Por otro lado, cuando una aplicación tiene un acoplamiento flexible, puede realizar cambios en una parte de una aplicación sin tocar otras partes de una aplicación. Por ejemplo, puede cambiar las tecnologías de acceso de datos sin modificar la lógica de validación o controlador.
 
-En esta iteración, aprovechamos de varios patrones de diseño de software que nos permiten refactorizar nuestra aplicación de Contact Manager en una aplicación de acoplamiento más flexible. Si hemos terminado, el Administrador de contactos ha ganado t hacer todo lo que lo t hacer antes. Sin embargo, podremos cambiar la aplicación más fácilmente en el futuro.
+En esta iteración, aprovechamos de varios patrones de diseño de software que nos permiten refactorizar nuestra aplicación de Contact Manager en una aplicación de acoplamiento más flexible. Cuando hemos terminado, el Administrador de contactos ganó t hacer cualquier cosa que no hizo antes. Sin embargo, podremos cambiar la aplicación más fácilmente en el futuro.
 
 > [!NOTE] 
 > 
@@ -165,7 +165,7 @@ Queremos poder separar completamente nuestro nivel de servicio desde nuestro niv
 
 Sin embargo, la capa de servicio debe poder pasar los mensajes de error de validación a la capa de controlador. ¿Cómo podemos habilitar el nivel de servicio transmitir los mensajes de error de validación sin acoplamiento el controlador y la capa de servicio? Podemos aprovechar las ventajas de un patrón de diseño de software denominado el [patrón Decorator](http://en.wikipedia.org/wiki/Decorator_pattern).
 
-Un controlador utiliza un ModelStateDictionary denominado ModelState para representar errores de validación. Por lo tanto, podría verse tentado a pasar ModelState desde el nivel de controlador a la capa de servicio. Sin embargo, usar ModelState en el nivel de servicio haría que la capa de servicio depende de una característica de ASP.NET MVC framework. Esto sería incorrecta porque, en algún momento, es posible que desea usar la capa de servicio con una aplicación de WPF en lugar de una aplicación ASP.NET MVC. En ese caso, no sería t desea hacer referencia el marco de ASP.NET MVC para usar la clase ModelStateDictionary.
+Un controlador utiliza un ModelStateDictionary denominado ModelState para representar errores de validación. Por lo tanto, podría verse tentado a pasar ModelState desde el nivel de controlador a la capa de servicio. Sin embargo, usar ModelState en el nivel de servicio haría que la capa de servicio depende de una característica de ASP.NET MVC framework. Esto sería incorrecta porque, en algún momento, es posible que desea usar la capa de servicio con una aplicación de WPF en lugar de una aplicación ASP.NET MVC. En ese caso, no desearía hacer referencia el marco de ASP.NET MVC para usar la clase ModelStateDictionary.
 
 El patrón Decorator permite ajustar una clase existente en una nueva clase con el fin de implementar una interfaz. Nuestro proyecto Contact Manager incluye la clase ModelStateWrapper contenida en la lista 7. La clase ModelStateWrapper implementa la interfaz del listado 8.
 

@@ -8,12 +8,12 @@ ms.date: 03/31/2010
 ms.assetid: 0f982827-f8f9-420d-b36b-57b23f5aa519
 msc.legacyurl: /web-forms/overview/data-access/masterdetail/master-detail-using-a-selectable-master-gridview-with-a-details-detailview-cs
 msc.type: authoredcontent
-ms.openlocfilehash: 9d75c80b4c1bac5011acc896d91ff2fcd5a19298
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: a5623c34ad7f8c9b5effed318a04b204ab66ecaa
+ms.sourcegitcommit: 289e051cc8a90e8f7127e239fda73047bde4de12
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57064802"
+ms.lasthandoff: 03/25/2019
+ms.locfileid: "58425202"
 ---
 <a name="masterdetail-using-a-selectable-master-gridview-with-a-details-detailview-c"></a>Maestro y detalles mediante un GridView maestro seleccionable con un DetailView de detalles (C#)
 ====================
@@ -153,7 +153,7 @@ Una vez el `productDetailsDataSource` ObjectDataSource ha sido configurado corre
 
 En este y los tres tutoriales anteriores, hemos visto una serie de técnicas para mostrar los informes de maestro y detalles. En este tutorial que se examinan mediante un GridView seleccionable para alojar los registros maestros y DetailsView para mostrar los detalles sobre el registro maestro seleccionado en la misma página. En los tutoriales anteriores hemos examinado cómo mostrar informes de maestro y detalles con listas desplegables y mostrar registros maestros en una página web y registros de detalle en otro.
 
-En este tutorial concluye nuestro examen de los informes de maestro y detalles. A partir de la siguiente tutorialwe comenzará la exploración de formato personalizado con el control GridView, DetailsView y FormView. Veremos cómo personalizar la apariencia de estos controles en función de los datos enlazados a ellas, cómo resumir los datos en el pie de página de GridView y cómo usar plantillas para obtener un mayor grado de control sobre el diseño.
+En este tutorial concluye nuestro examen de los informes de maestro y detalles. Empezando por el siguiente tutorial comenzaremos nuestro periplo de formato personalizado con el control GridView, DetailsView y FormView. Veremos cómo personalizar la apariencia de estos controles en función de los datos enlazados a ellas, cómo resumir los datos en el pie de página de GridView y cómo usar plantillas para obtener un mayor grado de control sobre el diseño.
 
 Feliz programación.
 

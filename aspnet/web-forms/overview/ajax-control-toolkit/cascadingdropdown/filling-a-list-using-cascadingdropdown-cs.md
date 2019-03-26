@@ -8,12 +8,12 @@ ms.date: 06/02/2008
 ms.assetid: f949aafa-fe57-43b0-b722-f0dd33a900be
 msc.legacyurl: /web-forms/overview/ajax-control-toolkit/cascadingdropdown/filling-a-list-using-cascadingdropdown-cs
 msc.type: authoredcontent
-ms.openlocfilehash: 795b2a2ee80d3d2bed6f752887d5f9d974151a56
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: 15368ea543702eeda1b6a63f53acdc6c336b49e7
+ms.sourcegitcommit: 289e051cc8a90e8f7127e239fda73047bde4de12
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57040042"
+ms.lasthandoff: 03/25/2019
+ms.locfileid: "58420795"
 ---
 <a name="filling-a-list-using-cascadingdropdown-c"></a>Rellenar una lista con CascadingDropDown (C#)
 ====================

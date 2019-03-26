@@ -8,12 +8,12 @@ ms.date: 06/12/2014
 ms.assetid: 1bc333c5-f096-4ea7-b170-779accc21c1a
 msc.legacyurl: /aspnet/overview/developing-apps-with-windows-azure/building-real-world-cloud-apps-with-windows-azure/the-fix-it-sample-application
 msc.type: authoredcontent
-ms.openlocfilehash: de3c8ea29f2c271136f58d8165bb92f4ab28ce83
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: a73fac6107be45455465b506a019bcc9a41b1deb
+ms.sourcegitcommit: 289e051cc8a90e8f7127e239fda73047bde4de12
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57034222"
+ms.lasthandoff: 03/25/2019
+ms.locfileid: "58425527"
 ---
 <a name="appendix-the-fix-it-sample-application-building-real-world-cloud-apps-with-azure"></a>Apéndice: Corrección de la aplicación de ejemplo (creación de aplicaciones de nube reales con Azure)
 ====================
@@ -376,13 +376,13 @@ A continuación, cree un nuevo servicio de nube de Azure. Los scripts incluidos 
 
 Antes de implementar el servicio en la nube, deberá actualizar algunos de los archivos de configuración.
 
-En MyFixIt.WorkerRoler\app.config, bajo `connectionStrings`, reemplace el valor de la `appdb` cadena de conexión con la cadena de conexión real para la base de datos de SQL. Puede obtener la cadena de conexión desde el portal. En el portal, haga clic en **bases de datos SQL** - **appdb** - **cadenas de conexión de base de datos de vista SQL para ADO. NET, ODBC, PHP y JDBC**. Copie la cadena de conexión de ADO.NET y pegue el valor en el archivo app.config. Reemplace "{su\_contraseña\_aquí}" con la contraseña de la base de datos. (Suponiendo que utiliza las secuencias de comandos para implementar la aplicación MVC, especificó la contraseña de la base de datos en el `SqlDatabasePassword` parámetro de script.)
+En MyFixIt.WorkerRole\app.config, bajo `connectionStrings`, reemplace el valor de la `appdb` cadena de conexión con la cadena de conexión real para la base de datos de SQL. Puede obtener la cadena de conexión desde el portal. En el portal, haga clic en **bases de datos SQL** - **appdb** - **cadenas de conexión de base de datos de vista SQL para ADO. NET, ODBC, PHP y JDBC**. Copie la cadena de conexión de ADO.NET y pegue el valor en el archivo app.config. Reemplace "{su\_contraseña\_aquí}" con la contraseña de la base de datos. (Suponiendo que utiliza las secuencias de comandos para implementar la aplicación MVC, especificó la contraseña de la base de datos en el `SqlDatabasePassword` parámetro de script.)
 
 El resultado debería ser similar al siguiente:
 
 [!code-xml[Main](the-fix-it-sample-application/samples/sample32.xml)]
 
-En el mismo archivo MyFixIt.WorkerRoler\app.config, bajo `appSettings`, reemplace los dos valores de marcador de posición para la cuenta de almacenamiento de Azure.
+En el mismo archivo MyFixIt.WorkerRole\app.config, bajo `appSettings`, reemplace los dos valores de marcador de posición para la cuenta de almacenamiento de Azure.
 
 [!code-xml[Main](the-fix-it-sample-application/samples/sample33.xml?highlight=2-3)]
 

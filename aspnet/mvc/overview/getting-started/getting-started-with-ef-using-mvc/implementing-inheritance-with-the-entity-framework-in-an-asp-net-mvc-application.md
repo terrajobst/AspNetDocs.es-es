@@ -9,12 +9,12 @@ ms.topic: tutorial
 ms.assetid: 08834147-77ec-454a-bb7a-d931d2a40dab
 msc.legacyurl: /mvc/overview/getting-started/getting-started-with-ef-using-mvc/implementing-inheritance-with-the-entity-framework-in-an-asp-net-mvc-application
 msc.type: authoredcontent
-ms.openlocfilehash: 79513edce7ac3044f6f547149400cba7d307edfa
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: 3ebabd626e0b862e09f19552648406aab959f882
+ms.sourcegitcommit: 289e051cc8a90e8f7127e239fda73047bde4de12
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57027642"
+ms.lasthandoff: 03/25/2019
+ms.locfileid: "58423318"
 ---
 # <a name="template-implement-inheritance-with-ef-in-an-aspnet-mvc-5-app"></a>Plantilla: Implementar la herencia con EF en una aplicación ASP.NET MVC 5
 
@@ -73,7 +73,7 @@ En el *modelos* carpeta, cree *Person.cs* y reemplace el código de plantilla co
 
 ## <a name="update-instructor-and-student"></a>Actualiza Instructor y Student
 
-Ahora, actualice el *Instructor.cs* y *Sudent.cs* para heredar valores de la *Person.sc*.
+Ahora, actualice el *Instructor.cs* y *Student.cs* para heredar valores de la *Person.sc*.
 
 En *Instructor.cs*, derivar el `Instructor` clase desde el `Person` clase y quite los campos claves y nombres. El código tendrá un aspecto similar al ejemplo siguiente:
 

@@ -8,12 +8,12 @@ ms.date: 03/26/2015
 ms.assetid: d4911cb3-1afb-4805-b860-10818c4b1280
 msc.legacyurl: /mvc/overview/security/create-an-aspnet-mvc-5-web-app-with-email-confirmation-and-password-reset
 msc.type: authoredcontent
-ms.openlocfilehash: 5092476c6cf59bea6fab6fa6f169ff11ec4c9c4a
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: 650063db25f38b02cc33955925d1e3c2f45db665
+ms.sourcegitcommit: 289e051cc8a90e8f7127e239fda73047bde4de12
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57030282"
+ms.lasthandoff: 03/25/2019
+ms.locfileid: "58420860"
 ---
 <a name="create-a-secure-aspnet-mvc-5-web-app-with-log-in-email-confirmation-and-password-reset-c"></a>Crear una aplicación web de ASP.NET MVC 5 segura con inicio de sesión, confirmación por correo electrónico y restablecimiento de contraseña (C#)
 ====================
@@ -137,7 +137,7 @@ El registro en la página mostrará un vínculo para restablecer la contraseña.
 <a id="rsend"></a>
 ## <a name="resend-email-confirmation-link"></a>Vínculo de confirmación de correo electrónico de reenvío
 
-Una vez que un usuario crea una nueva cuenta local, reciben un correo electrónico un vínculo de confirmación deben usar antes de que puedan iniciar sesión. Si el usuario que accidentalmente elimina el correo electrónico de confirmación o nunca llega el correo electrónico, deben volverá a enviar el vínculo de confirmación. Los cambios de código siguientes muestran cómo habilitarlo.
+Una vez que un usuario crea una nueva cuenta local, reciben un correo electrónico un vínculo de confirmación deben usar antes de que puedan iniciar sesión. Si el usuario elimina accidentalmente el correo electrónico de confirmación o nunca llega el correo electrónico, deben volverá a enviar el vínculo de confirmación. Los cambios de código siguientes muestran cómo habilitarlo.
 
 Agregue el siguiente método auxiliar a la parte inferior de la *controllers\accountcontroller* archivo:
 

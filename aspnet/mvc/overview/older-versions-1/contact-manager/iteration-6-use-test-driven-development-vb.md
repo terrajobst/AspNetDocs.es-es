@@ -8,12 +8,12 @@ ms.date: 02/20/2009
 ms.assetid: e1fd226f-3f8e-4575-a179-5c75b240333d
 msc.legacyurl: /mvc/overview/older-versions-1/contact-manager/iteration-6-use-test-driven-development-vb
 msc.type: authoredcontent
-ms.openlocfilehash: 7b1700e0ccece543c381dbb4fa7d6243de57ed4d
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: ac502a1f57b25dd596489d1e7abaa55a77ddb6c7
+ms.sourcegitcommit: 62db31596a7da029263cf06335aff12236fb3186
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57055012"
+ms.lasthandoff: 03/26/2019
+ms.locfileid: "58440344"
 ---
 <a name="iteration-6--use-test-driven-development-vb"></a>Iteración #6: usar el desarrollo controlado por pruebas (VB)
 ====================
@@ -80,9 +80,9 @@ Vamos a agregar esta nueva funcionalidad a nuestra aplicación siguiendo un proc
 
 ## <a name="what-gets-tested"></a>¿Qué Obtiene probado
 
-Como se explicó en la iteración anterior, normalmente no escribir pruebas unitarias para la lógica de acceso a datos o ver lógica. Cuando no las pruebas unitarias de t escritura lógica del acceso a datos porque el acceso a una base de datos es una operación relativamente lenta. Cuando no las pruebas unitarias de t escritura para la lógica de la vista porque el acceso a una vista requiere poner en marcha un servidor web que es una operación relativamente lenta. T no debe escribir una prueba unitaria a menos que la prueba se puede ejecutar una y otra vez muy rápida
+Como se explicó en la iteración anterior, normalmente no escribir pruebas unitarias para la lógica de acceso a datos o ver lógica. Cuando no las pruebas unitarias de t escritura lógica del acceso a datos porque el acceso a una base de datos es una operación relativamente lenta. Cuando no las pruebas unitarias de t escritura para la lógica de la vista porque el acceso a una vista requiere poner en marcha un servidor web que es una operación relativamente lenta. No debe escribir una prueba unitaria a menos que la prueba se puede ejecutar una y otra vez muy rápida
 
-Porque el desarrollo controlado por pruebas está controlado por pruebas unitarias, inicialmente nos centramos en escribir el controlador y la lógica empresarial. Evite la tocar la base de datos o vistas. Hemos ganado t modificar la base de datos o crear nuestras vistas hasta el final de este tutorial. Comenzaremos con lo que se pueden probar.
+Porque el desarrollo controlado por pruebas está controlado por pruebas unitarias, inicialmente nos centramos en escribir el controlador y la lógica empresarial. Evite la tocar la base de datos o vistas. Hemos no modificar la base de datos o crear nuestras vistas hasta el final de este tutorial. Comenzaremos con lo que se pueden probar.
 
 ## <a name="creating-user-stories"></a>Crear casos de usuario
 
@@ -247,10 +247,10 @@ Es necesario crear una nueva tabla de base de datos del grupo. Siga estos pasos:
 | **Nombre de columna** | **Tipo de datos** | **Permitir valores null** |
 | --- | --- | --- |
 | Id. | int | False |
-| nombre | nvarchar(50) | False |
+| Name | nvarchar(50) | False |
 
 
-A continuación, se debe eliminar todos los datos de la tabla de contactos (en caso contrario, hemos ganado poder crear una relación entre las tablas de contactos y grupos). Siga estos pasos:
+A continuación, se debe eliminar todos los datos de la tabla de contactos (en caso contrario, no podremos crear una relación entre las tablas de contactos y grupos). Siga estos pasos:
 
 1. Haga clic en la tabla Contacts y seleccione la opción de menú **mostrar datos de tabla**.
 2. Eliminar todas las filas.
@@ -310,7 +310,7 @@ A continuación, debemos implementar nuestra clase de repositorio. En el transcu
 
 [!code-vb[Main](iteration-6-use-test-driven-development-vb/samples/sample14.vb)]
 
-Nos haven t realmente implementa cualquiera de los métodos relacionados con el trabajo con grupos de contactos en nuestra clase EntityContactManagerRepository real. Actualmente, la clase EntityContactManagerRepository tiene los métodos auxiliares para cada uno de los métodos de grupo de contactos que aparecen en la interfaz IContactManagerRepository. Por ejemplo, el método ListGroups() actualmente este aspecto:
+No hemos implementado realmente cualquiera de los métodos relacionados con el trabajo con grupos de contactos en nuestra clase EntityContactManagerRepository real. Actualmente, la clase EntityContactManagerRepository tiene los métodos auxiliares para cada uno de los métodos de grupo de contactos que aparecen en la interfaz IContactManagerRepository. Por ejemplo, el método ListGroups() actualmente este aspecto:
 
 [!code-vb[Main](iteration-6-use-test-driven-development-vb/samples/sample15.vb)]
 

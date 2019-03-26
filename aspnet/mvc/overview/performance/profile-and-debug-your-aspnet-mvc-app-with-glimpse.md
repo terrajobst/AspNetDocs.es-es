@@ -8,12 +8,12 @@ ms.date: 03/26/2015
 ms.assetid: c205805f-efdd-4fa7-9616-f26eab180611
 msc.legacyurl: /mvc/overview/performance/profile-and-debug-your-aspnet-mvc-app-with-glimpse
 msc.type: authoredcontent
-ms.openlocfilehash: 94a72f22cbcd7fa84528dde502cceaa1e26dcaa1
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: ea149b6450cf02c993c7690752a05396802336be
+ms.sourcegitcommit: 289e051cc8a90e8f7127e239fda73047bde4de12
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57049232"
+ms.lasthandoff: 03/25/2019
+ms.locfileid: "58425059"
 ---
 <a name="profile-and-debug-your-aspnet-mvc-app-with-glimpse"></a>Crear un perfil y depurar la aplicación de ASP.NET MVC con Glimpse
 ====================
@@ -58,7 +58,7 @@ Vaya a http://localhost:&lt; número de puerto&gt;/glimpse.axd y haga clic en el
 
 Si tienes que muestra la barra de favoritos, puede arrastrar y colocar los botones de Glimpse y agregarlas como bookmarklets:
 
-![IE con Glimpse boookmarklets](profile-and-debug-your-aspnet-mvc-app-with-glimpse/_static/image5.png)
+![IE con Glimpse bookmarklets](profile-and-debug-your-aspnet-mvc-app-with-glimpse/_static/image5.png)
 
 Ahora puede desplazarse la aplicación y el **cabezas de presentación** (HUD) se muestra en la parte inferior de la página.
 
@@ -104,11 +104,11 @@ El [pestaña modelo de enlace](http://getglimpse.com/Docs/Model-Binding-Tab) pro
 <a id="da"></a>
 ## <a name="using-glimpse-on-azure"></a>Uso de Glimpse en Azure
 
-La directiva de seguridad predeterminada de Glimpse solo permite que los datos de observar lo que se muestran desde el host local. Puede cambiar esta directiva de seguridad para que pueda ver estos datos en un servidor remoto (por ejemplo, una aplicación web en Azure). Para entornos de prueba en Azure, agregue la marca de resaltado hasta la parte inferior de la *web.confg* archivo para habilitar la perspectiva:
+La directiva de seguridad predeterminada de Glimpse solo permite que los datos de observar lo que se muestran desde el host local. Puede cambiar esta directiva de seguridad para que pueda ver estos datos en un servidor remoto (por ejemplo, una aplicación web en Azure). Para entornos de prueba en Azure, agregue la marca de resaltado hasta la parte inferior de la *web.config* archivo para habilitar la perspectiva:
 
 [!code-xml[Main](profile-and-debug-your-aspnet-mvc-app-with-glimpse/samples/sample3.xml?highlight=2-6)]
 
-Con este cambio por sí solo, cualquier usuario puede ver los datos de Glimpse en un sitio remoto. Considere la posibilidad de agregar el marcado anterior a un perfil de publicación, por lo que solo ha implementado un aplicada al usar ese perfil de publicación (por ejemplo, su proifle de prueba de Azure.) Para restringir los datos de Glimpse, agregaremos el `canViewGlimpseData` rol y permitir sólo a los usuarios con este rol para ver los datos de Glimpse.
+Con este cambio por sí solo, cualquier usuario puede ver los datos de Glimpse en un sitio remoto. Considere la posibilidad de agregar el marcado anterior a un perfil de publicación para que solo ha implementado un aplicada al usar ese perfil de publicación (por ejemplo, el perfil de prueba de Azure.) Para restringir los datos de Glimpse, agregaremos el `canViewGlimpseData` rol y permitir sólo a los usuarios con este rol para ver los datos de Glimpse.
 
 Quite los comentarios de la *GlimpseSecurityPolicy.cs* y cambie el [IsInRole](https://msdn.microsoft.com/library/system.security.principal.iprincipal.isinrole(v=vs.110).aspx) llamar desde `Administrator` a la `canViewGlimpseData` rol:
 

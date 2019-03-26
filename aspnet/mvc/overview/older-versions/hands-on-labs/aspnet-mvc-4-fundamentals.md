@@ -8,12 +8,12 @@ ms.date: 02/18/2013
 ms.assetid: b7dba543-73c3-4534-a9a0-ba70fa2c6a8a
 msc.legacyurl: /mvc/overview/older-versions/hands-on-labs/aspnet-mvc-4-fundamentals
 msc.type: authoredcontent
-ms.openlocfilehash: d8e837a5d56871d271590859c2e82336111cc87a
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: d3bc39a37cace003c3fda6691f0dd7f893128b07
+ms.sourcegitcommit: 289e051cc8a90e8f7127e239fda73047bde4de12
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57029412"
+ms.lasthandoff: 03/25/2019
+ms.locfileid: "58425254"
 ---
 # <a name="aspnet-mvc-4-fundamentals"></a>Conceptos básicos de ASP.NET MVC 4
 
@@ -389,7 +389,7 @@ El archivo **~/Views/Shared/\_layout.cshtml** permite configurar una plantilla p
    (C#)
 
     [!code-cshtml[Main](aspnet-mvc-4-fundamentals/samples/sample7.cshtml)]
-5. Incluir un elemento div para representar la sección de cuerpo de cada página. Reemplace  <strong>@RenderBody()</strong> con el siguiente código higlighted: (C#)
+5. Incluir un elemento div para representar la sección de cuerpo de cada página. Reemplace  <strong>@RenderBody()</strong> con el siguiente código resaltado: (C#)
 
     [!code-cshtml[Main](aspnet-mvc-4-fundamentals/samples/sample8.cshtml)]
 
@@ -800,7 +800,7 @@ En esta tarea, agregará un vínculo en la vista de Store para tener un vínculo
    > 
    > Aunque este enfoque funciona, depende de una cadena estática. Si posteriormente se cambia el nombre del controlador, tendrá que cambiar manualmente esta instrucción. Una alternativa mejor es usar un **aplicación auxiliar HTML** método. ASP.NET MVC incluye un método de aplicación auxiliar HTML que está disponible para estas tareas. El **Html.ActionLink()** método auxiliar facilita la compilación HTML **&lt;un&gt;** vínculos, asegurándose de que las rutas de acceso de dirección URL están correctamente codificado como URL.
    > 
-   > Htlm.ActionLink tiene varias sobrecargas. En este ejercicio usará uno que toma tres parámetros:
+   > Html.ActionLink tiene varias sobrecargas. En este ejercicio usará uno que toma tres parámetros:
    > 
    > 1. Texto del vínculo, que mostrará el nombre de género
    > 2. Nombre de acción de controlador (**examinar**)
@@ -1017,7 +1017,7 @@ En este apéndice se mostrará cómo crear un nuevo sitio web desde el Portal de
 1. Vaya a la [Portal de administración de Windows Azure](https://manage.windowsazure.com/) e inicie sesión con las credenciales de Microsoft asociadas con su suscripción.
 
     > [!NOTE]
-    > Con Windows Azure puede hospedar 10 sitios Web ASP.NET de forma gratuita y, a continuación, escalar a medida que crece el tráfico. Puede registrarse [aquí](http://aka.ms/aspnet-hol-azure).
+    > Con Windows Azure puede hospedar 10 sitios Web ASP.NET de forma gratuita y, a continuación, escalar a medida que crece el tráfico. Puede registrarse [aquí](https://aka.ms/aspnet-hol-azure).
 
     ![Inicie sesión en el portal de Windows Azure](aspnet-mvc-4-fundamentals/_static/image48.png "inicie sesión en el portal de Windows Azure")
 

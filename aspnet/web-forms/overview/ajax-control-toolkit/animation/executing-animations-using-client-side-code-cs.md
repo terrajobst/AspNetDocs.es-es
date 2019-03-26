@@ -8,12 +8,12 @@ ms.date: 06/02/2008
 ms.assetid: 0270e0df-6fde-4a8f-a2cb-2cacc55143f2
 msc.legacyurl: /web-forms/overview/ajax-control-toolkit/animation/executing-animations-using-client-side-code-cs
 msc.type: authoredcontent
-ms.openlocfilehash: 5dc5c0b49a3530988bf42d6d632a061622f0a217
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: a8812b3b9f9a34b34a579d6f5595b9ffc175caa4
+ms.sourcegitcommit: 289e051cc8a90e8f7127e239fda73047bde4de12
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57029482"
+ms.lasthandoff: 03/25/2019
+ms.locfileid: "58420991"
 ---
 <a name="executing-animations-using-client-side-code-c"></a>Ejecutar animaciones con código de cliente (C#)
 ====================
@@ -46,7 +46,7 @@ A continuación, agregue el `AnimationExtender` a la página, que proporciona un
 
 [!code-aspx[Main](executing-animations-using-client-side-code-cs/samples/sample4.aspx)]
 
-Dentro de la `<Animations>` nodo, use `<OnClick>` ejecutar las animaciones, una vez que el usuario hace clic en el panel. Agregue dos animaciones que se ejecutará parallelly:
+Dentro de la `<Animations>` nodo, use `<OnClick>` ejecutar las animaciones, una vez que el usuario hace clic en el panel. Agregue dos animaciones que se ejecutará en paralelo:
 
 [!code-xml[Main](executing-animations-using-client-side-code-cs/samples/sample5.xml)]
 

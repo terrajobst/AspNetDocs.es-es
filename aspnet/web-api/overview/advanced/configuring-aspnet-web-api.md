@@ -8,12 +8,12 @@ ms.date: 03/31/2014
 ms.assetid: 9e10a700-8d91-4d2e-a31e-b8b569fe867c
 msc.legacyurl: /web-api/overview/advanced/configuring-aspnet-web-api
 msc.type: authoredcontent
-ms.openlocfilehash: 57066b8ce3254caf59cf927d16d96f8bc22a8acd
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: 270268b77f398084169843e20b0a2bf9f1c2a011
+ms.sourcegitcommit: 289e051cc8a90e8f7127e239fda73047bde4de12
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57046482"
+ms.lasthandoff: 03/25/2019
+ms.locfileid: "58423162"
 ---
 <a name="configuring-aspnet-web-api-2"></a>Configuración de ASP.NET Web API 2
 ====================
@@ -30,7 +30,7 @@ Este tema describe cómo configurar ASP.NET Web API.
 <a id="settings"></a>
 ## <a name="configuration-settings"></a>Opciones de configuración
 
-Configuración de la configuración de Web API se define en el [HttpConfiguration](https://msdn.microsoft.com/library/system.web.http.httpconfiguration.aspx) clase.
+Opciones de configuración de Web API se definen en el [HttpConfiguration](https://msdn.microsoft.com/library/system.web.http.httpconfiguration.aspx) clase.
 
 | Miembro | Descripción |
 | --- | --- |
@@ -53,7 +53,7 @@ Configuración de la configuración de Web API se define en el [HttpConfiguratio
 <a id="webhost"></a>
 ## <a name="configuring-web-api-with-aspnet-hosting"></a>Configuración de Web API con hospedaje de ASP.NET
 
-En una aplicación ASP.NET, configurar la API Web mediante una llamada a [GlobalConfiguration.Configure](https://msdn.microsoft.com/library/system.web.http.globalconfiguration.configure.aspx) en el **aplicación\_iniciar** método. El **configurar** método toma un delegado con un solo parámetro de tipo **HttpConfiguration**. Realizar todos su configuración dentro del delegado.
+En una aplicación ASP.NET, configurar la API Web mediante una llamada a [GlobalConfiguration.Configure](https://msdn.microsoft.com/library/system.web.http.globalconfiguration.configure.aspx) en el **aplicación\_iniciar** método. El **configurar** método toma un delegado con un solo parámetro de tipo **HttpConfiguration**. Realizar toda la configuración dentro del delegado.
 
 Este es un ejemplo de cómo utilizar a un delegado anónimo:
 

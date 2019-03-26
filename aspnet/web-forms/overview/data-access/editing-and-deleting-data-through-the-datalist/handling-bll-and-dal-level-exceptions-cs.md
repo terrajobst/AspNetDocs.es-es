@@ -8,12 +8,12 @@ ms.date: 10/30/2006
 ms.assetid: f8fd58e2-f932-4f08-ab3d-fbf8ff3295d2
 msc.legacyurl: /web-forms/overview/data-access/editing-and-deleting-data-through-the-datalist/handling-bll-and-dal-level-exceptions-cs
 msc.type: authoredcontent
-ms.openlocfilehash: ebaca5ea34fabe3fcd4979eab2e3f684e8e221be
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: 43a43c95e049acab734fa7d9fdcf2b96f12e78d9
+ms.sourcegitcommit: 62db31596a7da029263cf06335aff12236fb3186
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57038422"
+ms.lasthandoff: 03/26/2019
+ms.locfileid: "58440279"
 ---
 <a name="handling-bll--and-dal-level-exceptions-c"></a>Controlar las excepciones de nivel BLL y DAL (C#)
 ====================
@@ -30,7 +30,7 @@ En el [información general de la edición y eliminación de datos en el control
 
 Como hemos visto en el [BLL - control y excepciones de nivel DAL en una página ASP.NET](../editing-inserting-and-deleting-data/handling-bll-and-dal-level-exceptions-in-an-asp-net-page-cs.md) tutorial, si se produce una excepción desde las profundidades de la lógica de negocios o los niveles de acceso a datos, los detalles de la excepción se devuelven a ObjectDataSource y a continuación, en GridView. Hemos visto cómo controlar correctamente estas excepciones mediante la creación de `Updated` o `RowUpdated` controladores de eventos para el origen ObjectDataSource o GridView, comprobar si hay una excepción y, a continuación, que indica que se ha controlado la excepción.
 
-Nuestros DataList tutoriales, sin embargo, t a través de ObjectDataSource para actualizar y eliminar datos. En su lugar, estamos trabajando directamente en la capa BLL. Con el fin de detectar las excepciones que se origina en el nivel de lógica empresarial o DAL, debemos implementar código en el código subyacente de nuestra página ASP.NET de control de excepciones. En este tutorial, veremos cómo controlar las excepciones iniciadas durante una s DataList editable actualizar el flujo de trabajo de manera más discreta.
+Nuestros tutoriales DataList, sin embargo, no están usando el origen ObjectDataSource para actualizar y eliminar datos. En su lugar, estamos trabajando directamente en la capa BLL. Con el fin de detectar las excepciones que se origina en el nivel de lógica empresarial o DAL, debemos implementar código en el código subyacente de nuestra página ASP.NET de control de excepciones. En este tutorial, veremos cómo controlar las excepciones iniciadas durante una s DataList editable actualizar el flujo de trabajo de manera más discreta.
 
 > [!NOTE]
 > En el *una visión general de edición y eliminación de datos en el control DataList* tutorial analizamos las distintas técnicas para editar y eliminar datos desde el control DataList, algunas técnicas conlleva el uso de un origen ObjectDataSource para actualizar y Eliminando. Si emplea estas técnicas, puede controlar las excepciones de la capa BLL o DAL a través de las operaciones de asignación ObjectDataSource `Updated` o `Deleted` controladores de eventos.
@@ -131,7 +131,7 @@ El control GridView y ObjectDataSource proporcionan controladores de eventos pos
 
 En este tutorial hemos visto cómo agregar el control de excepciones para una s DataList editable actualizar el flujo de trabajo mediante la adición de un `Try ... Catch` bloquear a los `UpdateCommand` controlador de eventos. Si se produce una excepción durante el flujo de trabajo de actualización, el `Catch` ejecuta código del bloque s, mostrar información útil en la `ExceptionDetails` etiqueta.
 
-En este momento, el control DataList realiza ningún esfuerzo para evitar excepciones tengan lugar en primer lugar. Aunque se sabe que un precio negativo se producirá una excepción, conocemos t ha agregado funcionalidad para evitar de forma proactiva un usuario de escribir una entrada no válida. En nuestro siguiente tutorial veremos cómo ayudar a reducir las excepciones causadas por la entrada de usuario no válido mediante la adición de controles de validación en el `EditItemTemplate`.
+En este momento, el control DataList realiza ningún esfuerzo para evitar excepciones tengan lugar en primer lugar. Aunque se sabe que un precio negativo se producirá una excepción, aún no hayamos agregado funcionalidad para evitar de forma proactiva un usuario de escribir una entrada no válida. En nuestro siguiente tutorial veremos cómo ayudar a reducir las excepciones causadas por la entrada de usuario no válido mediante la adición de controles de validación en el `EditItemTemplate`.
 
 Feliz programación.
 

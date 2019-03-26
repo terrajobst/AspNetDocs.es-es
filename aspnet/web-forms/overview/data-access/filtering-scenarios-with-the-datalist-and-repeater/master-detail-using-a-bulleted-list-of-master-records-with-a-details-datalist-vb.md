@@ -8,12 +8,12 @@ ms.date: 10/17/2006
 ms.assetid: ee20742f-6fb7-49a0-a009-058fe363aacb
 msc.legacyurl: /web-forms/overview/data-access/filtering-scenarios-with-the-datalist-and-repeater/master-detail-using-a-bulleted-list-of-master-records-with-a-details-datalist-vb
 msc.type: authoredcontent
-ms.openlocfilehash: 3a10d6e5f60efad1f88c5acc8371a24dbf8d2cb7
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: 73a93c93932a004e76cf4ef7be1b3308ef6b991f
+ms.sourcegitcommit: 289e051cc8a90e8f7127e239fda73047bde4de12
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57061812"
+ms.lasthandoff: 03/25/2019
+ms.locfileid: "58422901"
 ---
 <a name="masterdetail-using-a-bulleted-list-of-master-records-with-a-details-datalist-vb"></a>Maestro y detalles mediante una lista con viñetas de registros maestros con un control DataList de detalles (VB)
 ====================
@@ -100,7 +100,7 @@ El marcado siguiente muestra la sintaxis declarativa para el control Repeater y 
 [!code-aspx[Main](master-detail-using-a-bulleted-list-of-master-records-with-a-details-datalist-vb/samples/sample4.aspx)]
 
 > [!NOTE]
-> En este tutorial, el control Repeater debe tener su estado de vista habilitado (tenga en cuenta la omisión de la `EnableViewState="False"` desde la sintaxis declarativa del control Repeater s). En el paso 3 crearemos un controlador de eventos para el control Repeater s `ItemCommand` eventos en el que actualizaremos el control DataList s s ObjectDataSource `SelectParameters` colección. El control Repeater s `ItemCommand`; no obstante, ganó el fuego t si se deshabilita el estado de vista. Consulte [más difíciles A una pregunta ASP.NET](http://scottonwriting.net/sowblog/posts/1263.aspx) y [su solución](http://scottonwriting.net/sowBlog/posts/1268.aspx) para obtener más información sobre por qué el estado de vista debe estar habilitado para un control Repeater s `ItemCommand` activación del evento.
+> En este tutorial, el control Repeater debe tener su estado de vista habilitado (tenga en cuenta la omisión de la `EnableViewState="False"` desde la sintaxis declarativa del control Repeater s). En el paso 3 crearemos un controlador de eventos para el control Repeater s `ItemCommand` eventos en el que actualizaremos el control DataList s s ObjectDataSource `SelectParameters` colección. El control Repeater s `ItemCommand`, sin embargo, no se activarán si el estado de vista está deshabilitado. Consulte [más difíciles A una pregunta ASP.NET](http://scottonwriting.net/sowblog/posts/1263.aspx) y [su solución](http://scottonwriting.net/sowBlog/posts/1268.aspx) para obtener más información sobre por qué el estado de vista debe estar habilitado para un control Repeater s `ItemCommand` activación del evento.
 
 
 El control LinkButton con el `ID` el valor de propiedad `ViewCategory` no tiene su `Text` conjunto de propiedades. Si hubiéramos sólo deseamos mostrar el nombre de categoría, habría establecemos la propiedad Text de forma declarativa, mediante la sintaxis de enlace de datos, así:

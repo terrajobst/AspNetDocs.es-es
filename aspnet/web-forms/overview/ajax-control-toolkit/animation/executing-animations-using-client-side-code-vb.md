@@ -8,12 +8,12 @@ ms.date: 06/02/2008
 ms.assetid: f7073f50-d765-456d-9957-926ce60f35f6
 msc.legacyurl: /web-forms/overview/ajax-control-toolkit/animation/executing-animations-using-client-side-code-vb
 msc.type: authoredcontent
-ms.openlocfilehash: 08cba7fa04249da4f0c7baa8e730ac75489e0efc
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: d9933af3f1be20177c958413173746fe087dec43
+ms.sourcegitcommit: 289e051cc8a90e8f7127e239fda73047bde4de12
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57048382"
+ms.lasthandoff: 03/25/2019
+ms.locfileid: "58425813"
 ---
 <a name="executing-animations-using-client-side-code-vb"></a>Ejecutar animaciones con código de cliente (VB)
 ====================
@@ -46,7 +46,7 @@ A continuación, agregue el `AnimationExtender` a la página, que proporciona un
 
 [!code-aspx[Main](executing-animations-using-client-side-code-vb/samples/sample4.aspx)]
 
-Dentro de la `<Animations>` nodo, use `<OnClick>` ejecutar las animaciones, una vez que el usuario hace clic en el panel. Agregue dos animaciones que se ejecutará parallelly:
+Dentro de la `<Animations>` nodo, use `<OnClick>` ejecutar las animaciones, una vez que el usuario hace clic en el panel. Agregue dos animaciones que se ejecutará en paralelo:
 
 [!code-xml[Main](executing-animations-using-client-side-code-vb/samples/sample5.xml)]
 

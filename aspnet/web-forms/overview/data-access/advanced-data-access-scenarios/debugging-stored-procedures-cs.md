@@ -8,12 +8,12 @@ ms.date: 08/03/2007
 ms.assetid: c655c324-2ffa-4c21-8265-a254d79a693d
 msc.legacyurl: /web-forms/overview/data-access/advanced-data-access-scenarios/debugging-stored-procedures-cs
 msc.type: authoredcontent
-ms.openlocfilehash: a377dde0c4ed25aed549ca1f3b8eeeecece79517
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: 4558a309248c89483d198f47f731eee2a266695f
+ms.sourcegitcommit: 289e051cc8a90e8f7127e239fda73047bde4de12
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57040132"
+ms.lasthandoff: 03/25/2019
+ms.locfileid: "58421471"
 ---
 <a name="debugging-stored-procedures-c"></a>Depurar procedimientos almacenados (C#)
 ====================
@@ -48,7 +48,7 @@ El [información general de Transact-SQL y depuración de CLR en SQL Server 2005
 
 Visual Studio puede depurar procedimientos almacenados en instancias de SQL Server locales y remotos. Una instancia de SQL Server local es aquella que está instalado en el mismo equipo que Visual Studio. Si no se encuentra la base de datos de SQL Server que se usa en el equipo de desarrollo, se considera una instancia remota. Estos tutoriales que hemos usado las instancias locales de SQL Server. Depurar procedimientos almacenados en una instancia remota de SQL server requiere más pasos de configuración que al depurar procedimientos almacenados en una instancia local.
 
-Si usa una instancia de SQL Server local, puede comenzar con el paso 1 y trabajar con este tutorial al final. Si usa una instancia remota de SQL Server, sin embargo, tendrá que primero es preciso asegurarse de que al depurar se registran en el equipo de desarrollo con una cuenta de usuario de Windows que tiene un inicio de sesión de SQL Server en la instancia remota. Moveover, este inicio de sesión de base de datos y el inicio de sesión de base de datos que se usa para conectarse a la base de datos de la aplicación ASP.NET en ejecución debe ser miembros de la `sysadmin` rol. Ver los objetos de base de datos de T-SQL depuración en la sección de instancias remotas al final de este tutorial para obtener más información sobre cómo configurar Visual Studio y SQL Server para depurar una instancia remota.
+Si usa una instancia de SQL Server local, puede comenzar con el paso 1 y trabajar con este tutorial al final. Si usa una instancia remota de SQL Server, sin embargo, tendrá que primero es preciso asegurarse de que al depurar se registran en el equipo de desarrollo con una cuenta de usuario de Windows que tiene un inicio de sesión de SQL Server en la instancia remota. Además, este inicio de sesión de base de datos y el inicio de sesión de base de datos que se usa para conectarse a la base de datos de la aplicación ASP.NET en ejecución deben ser miembros de la `sysadmin` rol. Ver los objetos de base de datos de T-SQL depuración en la sección de instancias remotas al final de este tutorial para obtener más información sobre cómo configurar Visual Studio y SQL Server para depurar una instancia remota.
 
 Por último, comprender que compatibilidad de depuración para los objetos de base de datos de Transact-SQL no es como característica enriquecido como soporte para aplicaciones .NET de depuración. Por ejemplo, filtros y las condiciones de punto de interrupción no se admiten, solo un subconjunto de las ventanas de depuración están disponibles, no se puede usar Editar y continuar, se representa la ventana Inmediato inútil y así sucesivamente. Consulte [limitaciones de las características y comandos del depurador](https://msdn.microsoft.com/library/ms165035(VS.80).aspx) para obtener más información.
 

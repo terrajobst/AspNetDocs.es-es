@@ -8,12 +8,12 @@ ms.date: 10/17/2013
 ms.assetid: 08815768-2702-42ae-ae85-0a59934a11d1
 msc.legacyurl: /visual-studio/overview/2013/release-notes
 msc.type: authoredcontent
-ms.openlocfilehash: 43878bc101ef97e8bbb6c150f4125707da7660c9
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: cd6197a9cbed822ba874a19823521a3711be9201
+ms.sourcegitcommit: 289e051cc8a90e8f7127e239fda73047bde4de12
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57027442"
+ms.lasthandoff: 03/25/2019
+ms.locfileid: "58422719"
 ---
 <a name="aspnet-and-web-tools-for-visual-studio-2013-release-notes"></a>Notas de la versión de ASP.NET and Web Tools para Visual Studio 2013
 ====================
@@ -357,7 +357,7 @@ En un **autohospedado aplicación**, la clase de inicio se pasa como parámetro 
 
 ### <a name="cross-domain-support"></a>Compatibilidad entre dominios
 
-En SignalR 1.x solicitudes entre dominios se controla mediante una única marca EnableCrossDomain. Este indicador controla las solicitudes de JSONP y CORS. Para una mayor flexibilidad, compatibilidad con CORS todos los ha quitado el componente de servidor de SignalR (JavaScript lients todavía usa CORS normalmente si se detecta que el explorador lo admite), y middleware OWIN nuevo está disponible admitir estos escenarios.
+En SignalR 1.x solicitudes entre dominios se controla mediante una única marca EnableCrossDomain. Este indicador controla las solicitudes de JSONP y CORS. Para una mayor flexibilidad, compatibilidad con CORS todos los ha quitado el componente de servidor de SignalR (clientes de JavaScript todavía usan CORS normalmente si se detecta que el explorador lo admite), y middleware OWIN nuevo está disponible admitir estos escenarios.
 
 En SignalR 2.0, es necesario si JSONP en el cliente (para admitir las solicitudes entre dominios en los exploradores más antiguos), deberá habilitarse explícitamente estableciendo `EnableJSONP` en el `HubConfiguration` objeto `true`, tal y como se muestra a continuación. JSONP está deshabilitada de forma predeterminada, ya que es menos segura que la CORS.
 

@@ -8,18 +8,18 @@ ms.date: 07/16/2014
 ms.assetid: ecfd0eb4-c4ad-44e6-9db9-a2a66611ff6a
 msc.legacyurl: /aspnet/overview/developing-apps-with-windows-azure/maintainable-azure-websites-managing-change-and-scale
 msc.type: authoredcontent
-ms.openlocfilehash: bc6de2f0c8b2cd958c198abb90fc4ad97613e973
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: 315e89c81782edf0875c65afd27153102d733050
+ms.sourcegitcommit: 289e051cc8a90e8f7127e239fda73047bde4de12
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57054542"
+ms.lasthandoff: 03/25/2019
+ms.locfileid: "58424253"
 ---
 <a name="hands-on-lab-maintainable-azure-websites-managing-change-and-scale"></a>Laboratorio práctico: Sitios web de Azure fáciles de mantener Administrar cambios y escalado
 ====================
 por [campamentos Web Team](https://twitter.com/webcamps)
 
-[Descargue el Kit de aprendizaje de campamentos de Web](http://aka.ms/webcamps-training-kit)
+[Descargue el Kit de aprendizaje de campamentos de Web](https://aka.ms/webcamps-training-kit)
 
 > Microsoft Azure facilita la creación e implementación de sitios Web en producción. Pero no ha terminado cuando la aplicación está en funcionamiento, está empezando. Deberá controlar los cambiantes requisitos, las actualizaciones de la base de datos, escala y mucho más. Afortunadamente, Azure App Service le puede ayudar, con una gran cantidad de características para ayudarle a mantener sus sitios que se ejecutan sin problemas.
 >
@@ -31,7 +31,7 @@ por [campamentos Web Team](https://twitter.com/webcamps)
 >
 > Con las bases de datos de SQL, es importante mantener la base de datos productiva actualizada al implementar nuevas versiones de la aplicación. Gracias a **migraciones de Entity Framework Code First**, desarrollo e implementación del modelo de datos se ha simplificado para actualizar los entornos en cuestión de minutos. Este seminario práctico le mostrará los diferentes temas que podría producirse al implementar la aplicación web en entornos de producción en Microsoft Azure.
 >
-> Todo el código de ejemplo y fragmentos de código se incluyen en el Kit de entrenamiento campamentos de Web, que está disponible en [ http://aka.ms/webcamps-training-kit ](http://aka.ms/webcamps-training-kit).
+> Todo el código de ejemplo y fragmentos de código se incluyen en el Kit de entrenamiento campamentos de Web, que está disponible en [ https://aka.ms/webcamps-training-kit ](https://aka.ms/webcamps-training-kit).
 >
 > Para obtener más información detallada de este tema, consulte el [Building Real-World Cloud Apps with e-book de Azure](building-real-world-cloud-apps-with-windows-azure/introduction.md).
 
@@ -62,10 +62,10 @@ El siguiente es necesario para completar este laboratorio práctico:
 - [Sistema de Control de versiones GIT](http://git-scm.com/download)
 - Una suscripción de Microsoft Azure
 
-    - Registrarse para obtener un [evaluación gratuita](http://aka.ms/watk-freetrial)
-    - Si está un Visual Studio Professional, Test Professional, Premium o Ultimate con MSDN o plataformas de MSDN, activar su [las ventajas de MSDN](http://aka.ms/watk-msdn) ahora para empezar a desarrollar y probar en Azure
-    - [BizSpark](http://aka.ms/watk-bizspark) los miembros reciben automáticamente Azure beneficio a través de sus de Visual Studio Ultimate con suscripciones a MSDN
-    - Los miembros de la [Microsoft Partner Network](http://aka.ms/watk-mpn) programa Cloud Essentials reciba créditos mensuales de Azure sin cargo
+    - Registrarse para obtener un [evaluación gratuita](https://aka.ms/watk-freetrial)
+    - Si está un Visual Studio Professional, Test Professional, Premium o Ultimate con MSDN o plataformas de MSDN, activar su [las ventajas de MSDN](https://aka.ms/watk-msdn) ahora para empezar a desarrollar y probar en Azure
+    - [BizSpark](https://aka.ms/watk-bizspark) los miembros reciben automáticamente Azure beneficio a través de sus de Visual Studio Ultimate con suscripciones a MSDN
+    - Los miembros de la [Microsoft Partner Network](https://aka.ms/watk-mpn) programa Cloud Essentials reciba créditos mensuales de Azure sin cargo
 
 <a id="Setup"></a>
 ### <a name="setup"></a>Programa de instalación

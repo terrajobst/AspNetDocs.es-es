@@ -8,12 +8,12 @@ ms.date: 03/31/2014
 ms.assetid: 6d497001-fa80-4765-b4cc-181fe90b894e
 msc.legacyurl: /web-forms/overview/advanced/aspnet-web-forms-connection-resiliency-and-command-interception
 msc.type: authoredcontent
-ms.openlocfilehash: 039923a91d957765fa8b2c0cfe11abc8790c1e88
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: 067542e8b8aa9909bbb2147f8e11e34604986d87
+ms.sourcegitcommit: 289e051cc8a90e8f7127e239fda73047bde4de12
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57052682"
+ms.lasthandoff: 03/25/2019
+ms.locfileid: "58424032"
 ---
 <a name="aspnet-web-forms-connection-resiliency-and-command-interception"></a>Resistencia de la conexión e intercepción de comandos de Formularios Web Forms de ASP.NET
 ====================
@@ -141,7 +141,7 @@ A continuación, creará las clases que Entity Framework llamará a cada vez que
 
 Estas líneas de código son lo que hace que el código de interceptor que se ejecutará cuando Entity Framework envía consultas a la base de datos. Tenga en cuenta que dado que ha creado las clases de interceptor independiente para la simulación de error transitorio y registro, puede independientemente activarlos y desactivarlos.   
   
- Puede agregar interceptores mediante el `DbInterception.Add` método en cualquier parte del código; no tiene que estar en el `Application_Start` método. Otra opción, si no agregó interceptores en el `Application_Start` sería el método actualizar o agregar la clase denominada *WingtipToysConfiguration.cs* y coloque el código anterior al final del constructor de la `WingtipToysbConfiguration` clase.
+ Puede agregar interceptores mediante el `DbInterception.Add` método en cualquier parte del código; no tiene que estar en el `Application_Start` método. Otra opción, si no agregó interceptores en el `Application_Start` sería el método actualizar o agregar la clase denominada *WingtipToysConfiguration.cs* y coloque el código anterior al final del constructor de la `WingtipToysConfiguration` clase.
 
 Siempre que coloque este código, tenga cuidado de no ejecutar `DbInterception.Add` mismo interceptor de más de una vez, o bien obtendrá instancias adicionales de interceptor. Por ejemplo, si agrega dos veces el interceptor de registro, verá dos registros para todas las consultas SQL.
 
@@ -156,7 +156,7 @@ Ha escrito el código de simulación de error transitorio de forma que le permit
 3. Escriba un nuevo producto denominado "Producir" con el archivo de descripción, el precio y la imagen adecuado.
 4. Presione el **agregar producto** botón.  
    Observará que el explorador parece no responder durante varios segundos, mientras que Entity Framework está reintentando la consulta varias veces. El primer reintento ocurre muy rápidamente, a continuación, aumenta la espera antes de cada reintento adicional. Este proceso de espera ya antes de llama a cada reintento *retroceso exponencial* .
-5. Espere hasta que la página ya no atttempting para cargar.
+5. Espere hasta que la página ya no está intentando cargar.
 6. Detener el proyecto y examine el Visual Studio **salida** ventana para ver los resultados del seguimiento. Puede encontrar el **salida** ventana seleccionando **depurar**  - &gt; **Windows**  - &gt;  **Salida**. Es posible que deba Desplácese más allá de varios otros registros escritos por el registrador.  
   
    Tenga en cuenta que puede ver las consultas SQL reales que se envían a la base de datos. Consulte algunas consultas iniciales y los comandos que Entity Framework realiza para comenzar, comprobación de la tabla de historial de versión y la migración de base de datos.   

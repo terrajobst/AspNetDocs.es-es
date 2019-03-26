@@ -8,12 +8,12 @@ ms.date: 02/06/2013
 ms.assetid: b91e6424-1544-4747-bd0b-d1f8418c9653
 msc.legacyurl: /web-api/overview/odata-support-in-aspnet-web-api/odata-security-guidance
 msc.type: authoredcontent
-ms.openlocfilehash: 4ba53e15dab83368097a58ba4d0d2e46d113d1d2
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: 0e43ec6b1cbe922b00f0f71d08aed4d0f4c08af8
+ms.sourcegitcommit: 289e051cc8a90e8f7127e239fda73047bde4de12
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57065252"
+ms.lasthandoff: 03/25/2019
+ms.locfileid: "58425865"
 ---
 <a name="security-guidance-for-aspnet-web-api-2-odata"></a>Guía de seguridad para ASP.NET Web API 2 OData
 ====================
@@ -25,7 +25,7 @@ En este tema se describe algunos de los problemas de seguridad que se deben cons
 
 La semántica de consulta se basa en el entity data model (EDM), no los tipos del modelo subyacente. Puede excluir una propiedad de EDM y no será visible para la consulta. Por ejemplo, suponga que el modelo incluye un tipo de empleado con una propiedad de sueldo. Es posible que desee excluir de esta propiedad de EDM para ocultarlo de los clientes.
 
-Hay dos maneras de excluye una propiedad de EDM. Puede establecer el **[IgnoreDataMember]** atributo en la propiedad de la clase del modelo:
+Hay dos maneras para excluir una propiedad de EDM. Puede establecer el **[IgnoreDataMember]** atributo en la propiedad de la clase del modelo:
 
 [!code-csharp[Main](odata-security-guidance/samples/sample1.cs)]
 

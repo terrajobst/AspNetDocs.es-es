@@ -8,12 +8,12 @@ ms.date: 03/31/2010
 ms.assetid: 11de31e8-a78a-4f96-bd75-66e994175902
 msc.legacyurl: /web-forms/overview/data-access/custom-formatting/using-templatefields-in-the-gridview-control-cs
 msc.type: authoredcontent
-ms.openlocfilehash: 4d1cad54d07ba3756d653685b3e04cb66e5ca98b
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: 163b66323325f24430f8f5fda40aab5b9e8f3b85
+ms.sourcegitcommit: 289e051cc8a90e8f7127e239fda73047bde4de12
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57044212"
+ms.lasthandoff: 03/25/2019
+ms.locfileid: "58426073"
 ---
 <a name="using-templatefields-in-the-gridview-control-c"></a>Usar TemplateFields en el control GridView (C#)
 ====================

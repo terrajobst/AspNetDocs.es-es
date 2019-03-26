@@ -8,12 +8,12 @@ ms.date: 03/06/2007
 ms.assetid: 2e31b60b-8723-4f14-b7ee-37859454dc3b
 msc.legacyurl: /web-forms/overview/data-access/enhancing-the-gridview/adding-a-gridview-column-of-radio-buttons-vb
 msc.type: authoredcontent
-ms.openlocfilehash: 76b3dbd502eff7c97f57fdacd120ac2312aaceae
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: 262e4e303daeda56b6590c8f2f925850b216f300
+ms.sourcegitcommit: 289e051cc8a90e8f7127e239fda73047bde4de12
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57061022"
+ms.lasthandoff: 03/25/2019
+ms.locfileid: "58422342"
 ---
 <a name="adding-a-gridview-column-of-radio-buttons-vb"></a>Agregar una columna GridView de botones de radio (VB)
 ====================
@@ -179,7 +179,7 @@ Existen dos enfoques que se pueden realizar con el fin de insertar el marcado de
 
 [!code-aspx[Main](adding-a-gridview-column-of-radio-buttons-vb/samples/sample5.aspx)]
 
-En este caso, `GetUniqueRadioButton` y `GetRadioButtonValue` sería métodos definidos en la clase de código subyacente que devuelve el texto adecuado `id` y `value` valores para cada botón de radio del atributo. Este enfoque funciona bien para asignar el `id` y `value` atributos, pero no es suficiente cuando es necesario especificar el `checked` valor de atributo porque la sintaxis de enlace de datos solo se ejecuta cuando primero se enlazan datos a la GridView. Por lo tanto, si el control GridView tiene habilitado el estado de vista, los métodos de formato activarán únicamente cuando se carga la página por primera vez (o cuando el control GridView se explícitamente vuelve a enlazar al origen de datos) y, por tanto, la función que establece la `checked` atributo ganado t se llama en devolución de datos. Lo s un problema bastante sutil y un poco más allá del ámbito de este artículo, así que dejaré en esto. Hacer, sin embargo, recomendamos que intente usar el enfoque anterior y trabajar a través en el punto donde se le bloquea. Aunque este tipo t de ejercicio ganó un obtener acercarme más a una versión, le ayudará a fomentar una comprensión más profunda de GridView y el ciclo de vida de enlace de datos.
+En este caso, `GetUniqueRadioButton` y `GetRadioButtonValue` sería métodos definidos en la clase de código subyacente que devuelve el texto adecuado `id` y `value` valores para cada botón de radio del atributo. Este enfoque funciona bien para asignar el `id` y `value` atributos, pero no es suficiente cuando es necesario especificar el `checked` valor de atributo porque la sintaxis de enlace de datos solo se ejecuta cuando primero se enlazan datos a la GridView. Por lo tanto, si el control GridView tiene habilitado el estado de vista, los métodos de formato activarán únicamente cuando se carga la página por primera vez (o cuando el control GridView se explícitamente vuelve a enlazar al origen de datos) y, por tanto, la función que establece la `checked` atributo no se llama en devolución de datos. Lo s un problema bastante sutil y un poco más allá del ámbito de este artículo, así que dejaré en esto. Hacer, sin embargo, recomendamos que intente usar el enfoque anterior y trabajar a través en el punto donde se le bloquea. Aunque este tipo de ejercicio no obtendrá acercarme más a una versión, le ayudará a fomentar una comprensión más profunda de GridView y el ciclo de vida de enlace de datos.
 
 Otro enfoque para insertar personalizado, marcado de bajo nivel en una plantilla y el enfoque que vamos a usar para este tutorial consiste en Agregar un [control Literal](https://msdn.microsoft.com/library/sz4949ks(VS.80).aspx) a la plantilla. A continuación, en la s GridView `RowCreated` o `RowDataBound` controlador de eventos, el control Literal puede tener acceso mediante programación y su `Text` propiedad establecida en el marcado para emitir.
 

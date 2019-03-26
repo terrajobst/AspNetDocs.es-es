@@ -8,12 +8,12 @@ ms.date: 02/20/2007
 ms.assetid: a526f0ec-779e-4a2b-a476-6604090d25ce
 msc.legacyurl: /web-forms/overview/data-access/accessing-the-database-directly-from-an-aspnet-page/inserting-updating-and-deleting-data-with-the-sqldatasource-cs
 msc.type: authoredcontent
-ms.openlocfilehash: 2c52fcf746d80899d7ea568c8110c4dfa610224c
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: 06c5fea8a058f15e72d455cf0e15b462d8f91e38
+ms.sourcegitcommit: 62db31596a7da029263cf06335aff12236fb3186
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57041372"
+ms.lasthandoff: 03/26/2019
+ms.locfileid: "58440396"
 ---
 <a name="inserting-updating-and-deleting-data-with-the-sqldatasource-c"></a>Insertar, actualizar y eliminar datos con SqlDataSource (C#)
 ====================
@@ -119,7 +119,7 @@ Con el `DeleteCommand` agrega la propiedad, la etiqueta inteligente de GridView 
 Al hacer clic en un botón de eliminación, se produce un postback, el control GridView se asigna el `ProductID` parámetro el valor de la `DataKeys` valor de la colección para la fila cuyo botón Delete se hizo clic e invoca la s SqlDataSource `Delete()` método. El control SqlDataSource, a continuación, se conecta a la base de datos y ejecuta el `DELETE` instrucción. El control GridView, a continuación, vuelve a enlazar de SqlDataSource, obtener y mostrar el conjunto actual de productos (que ya no incluye el registro recién eliminados).
 
 > [!NOTE]
-> Puesto que el control GridView se utiliza su `DataKeys` colección para rellenar los parámetros de SqlDataSource, lo s fundamental que la s GridView `DataKeyNames` propiedad se establece en las columnas que constituyen la clave principal y que la s SqlDataSource `SelectCommand` devuelve Estas columnas. Además, lo importante que el parámetro de nombre de la s SqlDataSource `DeleteCommand` está establecido en `@ProductID`. Si el `DataKeyNames` no está establecida la propiedad o el parámetro no se denomina `@ProductsID`, al hacer clic en el botón Eliminar provocará una devolución de datos, pero t ganado realmente eliminar cualquier registro.
+> Puesto que el control GridView se utiliza su `DataKeys` colección para rellenar los parámetros de SqlDataSource, lo s fundamental que la s GridView `DataKeyNames` propiedad se establece en las columnas que constituyen la clave principal y que la s SqlDataSource `SelectCommand` devuelve Estas columnas. Además, lo importante que el parámetro de nombre de la s SqlDataSource `DeleteCommand` está establecido en `@ProductID`. Si el `DataKeyNames` no está establecida la propiedad o el parámetro no se denomina `@ProductsID`, al hacer clic en el botón Eliminar provocará una devolución de datos, pero no elimina realmente los registros.
 
 
 Figura 5 se muestra gráficamente esta interacción. Vuelva a consultar el [examinando los eventos asociados con la inserción, actualización y eliminación](../editing-inserting-and-deleting-data/examining-the-events-associated-with-inserting-updating-and-deleting-cs.md) tutorial para obtener una explicación más detallada de la cadena de eventos asociados con la inserción, actualización y eliminación de un control Web de datos.
@@ -192,7 +192,7 @@ Desde la generar `INSERT`, `UPDATE`, y `DELETE` opción extractos solo está dis
 
 Mientras el `INSERT`, `UPDATE`, y `DELETE` instrucciones puede especificarse manualmente, considere la siguiente sugerencia para ahorrar tiempo. Configurar inicialmente SqlDataSource para que vuelva extrae datos de únicamente la `Products` tabla. Utilice el Configurar origen de datos asistente s especificar columnas de una tabla o vista de pantalla para que se puede generar automáticamente el `INSERT`, `UPDATE`, y `DELETE` instrucciones. A continuación, después de completar al asistente, elija Configurar el SelectQuery desde la ventana Propiedades (o, como alternativa, vuelva a la opción de procedimiento almacenado o el Asistente para configurar origen de datos, pero la especificación de una instrucción SQL personalizada). A continuación, actualice el `SELECT` instrucción para incluir el `JOIN` sintaxis. Esta técnica ofrece las ventajas de ahorro de tiempo de las instrucciones SQL generadas automáticamente y permite más personalizada `SELECT` instrucción.
 
-Otra limitación de generar automáticamente el `INSERT`, `UPDATE`, y `DELETE` instrucciones es que las columnas de la `INSERT` y `UPDATE` instrucciones se basan en las columnas devueltas por la `SELECT` instrucción. Podemos necesitamos actualizar o insertar los campos de más o menos, sin embargo. Por ejemplo, en el ejemplo del paso 2, quizás queremos tener la `UnitPrice` BoundField ser de solo lectura. En ese caso, t no debe aparecer en el `UpdateCommand`. O quizás deseamos establecer el valor de un campo de tabla que no aparece en el control GridView. Por ejemplo, al agregar un nuevo registro es posible que queramos la `QuantityPerUnit` valor establecido en la lista de tareas.
+Otra limitación de generar automáticamente el `INSERT`, `UPDATE`, y `DELETE` instrucciones es que las columnas de la `INSERT` y `UPDATE` instrucciones se basan en las columnas devueltas por la `SELECT` instrucción. Podemos necesitamos actualizar o insertar los campos de más o menos, sin embargo. Por ejemplo, en el ejemplo del paso 2, quizás queremos tener la `UnitPrice` BoundField ser de solo lectura. En ese caso, no debería aparecer en el `UpdateCommand`. O quizás deseamos establecer el valor de un campo de tabla que no aparece en el control GridView. Por ejemplo, al agregar un nuevo registro es posible que queramos la `QuantityPerUnit` valor establecido en la lista de tareas.
 
 Si se requieren estas personalizaciones, deberá realizar manualmente, ya sea a través de la ventana Propiedades, especifique una instrucción SQL personalizada o la opción de procedimiento almacenado en el asistente o a través de la sintaxis declarativa.
 
@@ -204,7 +204,7 @@ Si se requieren estas personalizaciones, deberá realizar manualmente, ya sea a 
 
 En el orden de los datos de que controles Web para utilizar sus integradas de inserción, edición y eliminación de recursos, el control de origen de datos se enlazan a debe ofrecer esta funcionalidad. Para SqlDataSource, esto significa que `INSERT`, `UPDATE`, y `DELETE` instrucciones SQL deben estar asignadas a la `InsertCommand`, `UpdateCommand`, y `DeleteCommand` propiedades. Estas propiedades y las colecciones de parámetros correspondientes, pueden agregar manualmente o se genera automáticamente mediante el Asistente para configurar orígenes de datos. En este tutorial se examinan ambas técnicas.
 
-Examinamos utiliza simultaneidad optimista con ObjectDataSource en el [implementar simultaneidad optimista](../editing-inserting-and-deleting-data/implementing-optimistic-concurrency-cs.md) tutorial. El control SqlDataSource también proporciona compatibilidad con la simultaneidad optimista. Como se indicó en el paso 2, cuando se genera automáticamente el `INSERT`, `UPDATE`, y `DELETE` instrucciones, el asistente ofrece una opción de usar simultaneidad optimista. Como veremos en el siguiente tutorial, usar simultaneidad optimista con SqlDataSource modifica el `WHERE` cláusulas en el `UPDATE` y `DELETE` instrucciones para asegurarse de que los valores de las demás columnas conocemos t cambiado desde que los datos por última vez se muestra en la página.
+Examinamos utiliza simultaneidad optimista con ObjectDataSource en el [implementar simultaneidad optimista](../editing-inserting-and-deleting-data/implementing-optimistic-concurrency-cs.md) tutorial. El control SqlDataSource también proporciona compatibilidad con la simultaneidad optimista. Como se indicó en el paso 2, cuando se genera automáticamente el `INSERT`, `UPDATE`, y `DELETE` instrucciones, el asistente ofrece una opción de usar simultaneidad optimista. Como veremos en el siguiente tutorial, usar simultaneidad optimista con SqlDataSource modifica el `WHERE` cláusulas en el `UPDATE` y `DELETE` instrucciones para asegurarse de que los valores de las otras columnas no ha cambiado desde que los datos por última vez se muestra en la página.
 
 Feliz programación.
 

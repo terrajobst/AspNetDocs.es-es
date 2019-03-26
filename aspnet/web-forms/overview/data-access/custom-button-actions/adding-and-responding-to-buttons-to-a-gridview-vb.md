@@ -8,12 +8,12 @@ ms.date: 09/13/2006
 ms.assetid: 06c6bbd2-4bdc-435b-87a3-df2c868f4baa
 msc.legacyurl: /web-forms/overview/data-access/custom-button-actions/adding-and-responding-to-buttons-to-a-gridview-vb
 msc.type: authoredcontent
-ms.openlocfilehash: 0834d43f95bd19fffb603dcde640714bd779fd80
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: 3ebbf60ada1f50bb704118d0e81fb3c97c7e4386
+ms.sourcegitcommit: 289e051cc8a90e8f7127e239fda73047bde4de12
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57031562"
+ms.lasthandoff: 03/25/2019
+ms.locfileid: "58422238"
 ---
 <a name="adding-and-responding-to-buttons-to-a-gridview-vb"></a>Agregar y responder a los botones en un control GridView (VB)
 ====================
@@ -113,7 +113,7 @@ Antes de agregar el botón de productos interrumpir todo a la plantilla de s For
 **Figura 8**: Crear un nuevo origen ObjectDataSource denominado `SuppliersProductsDataSource` ([haga clic aquí para ver imagen en tamaño completo](adding-and-responding-to-buttons-to-a-gridview-vb/_static/image20.png))
 
 
-Configurar este origen ObjectDataSource para usar la clase ProductsBLL s `GetProductsBySupplierID(supplierID)` (método) (consulte la figura 9). Aunque este GridView permitirá para que se ajuste un precio de producto s, ganó t se usa el método integrado editen o eliminen las características de GridView. Por lo tanto, podemos establecer la lista desplegable en (None) para el s ObjectDataSource pestañas UPDATE, INSERT y DELETE.
+Configurar este origen ObjectDataSource para usar la clase ProductsBLL s `GetProductsBySupplierID(supplierID)` (método) (consulte la figura 9). Mientras esta GridView permitirá para que se ajuste un precio de s de producto, no usará la integrada, editar o eliminar características desde el control GridView. Por lo tanto, podemos establecer la lista desplegable en (None) para el s ObjectDataSource pestañas UPDATE, INSERT y DELETE.
 
 
 [![Configurar el origen de datos para utilizar la clase ProductsBLL s GetProductsBySupplierID(supplierID) (método)](adding-and-responding-to-buttons-to-a-gridview-vb/_static/image22.png)](adding-and-responding-to-buttons-to-a-gridview-vb/_static/image21.png)

@@ -8,12 +8,12 @@ ms.date: 08/14/2010
 ms.assetid: 7ae696b9-348f-4993-8ebb-a838acbe0c28
 msc.legacyurl: /mvc/overview/older-versions-1/getting-started-with-mvc/getting-started-with-mvc-part8
 msc.type: authoredcontent
-ms.openlocfilehash: 22a6c4e5a07e81d5876cc442e68926094e3a243d
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: a014690078f113e5090f4867c2f384751f16b9f6
+ms.sourcegitcommit: 289e051cc8a90e8f7127e239fda73047bde4de12
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57033802"
+ms.lasthandoff: 03/25/2019
+ms.locfileid: "58425358"
 ---
 <a name="adding-a-column-to-the-model"></a>Agregar una columna al modelo
 ====================
@@ -24,7 +24,7 @@ por [Scott Hanselman](https://github.com/shanselman)
 
 En esta sección vamos a recorrer cómo podemos realizar cambios en el esquema de nuestra base de datos y controlar los cambios dentro de nuestra aplicación.
 
-Vamos a agregar a una columna "Clasificación" a la tabla de la película. Vuelva al IDE y haga clic en el Explorador de base de datos. Haga clic en la tabla de la película y seleccione Abrir definición de tabla.
+Vamos a agregar una columna "Clasificación" a la tabla de la película. Vuelva al IDE y haga clic en el Explorador de base de datos. Haga clic en la tabla de la película y seleccione Abrir definición de tabla.
 
 Agregar una columna de "Rating" tal como se muestra a continuación. Puesto que no hay ninguna clasificación ahora, la columna puede permitir valores NULL. Haga clic en Guardar.
 

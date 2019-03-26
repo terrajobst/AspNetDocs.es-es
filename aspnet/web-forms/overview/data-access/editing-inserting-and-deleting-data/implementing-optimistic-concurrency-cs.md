@@ -8,12 +8,12 @@ ms.date: 07/17/2006
 ms.assetid: 56e15b33-93b8-43ad-8e19-44c6647ea05c
 msc.legacyurl: /web-forms/overview/data-access/editing-inserting-and-deleting-data/implementing-optimistic-concurrency-cs
 msc.type: authoredcontent
-ms.openlocfilehash: 700770946caa68fca2b3101dd91a683d10aae052
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: 08a9e1db4f8c34b438d45c0fb74d852bbd249615
+ms.sourcegitcommit: 289e051cc8a90e8f7127e239fda73047bde4de12
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57059632"
+ms.lasthandoff: 03/25/2019
+ms.locfileid: "58422784"
 ---
 <a name="implementing-optimistic-concurrency-c"></a>Implementar la simultaneidad optimista (C#)
 ====================
@@ -60,7 +60,7 @@ Control de simultaneidad optimista funciona asegurándose de que el registro que
 **Figura 2**: Para la actualización o eliminación que sea un éxito, el Original valores debe ser igual que los valores actuales de la base de datos ([haga clic aquí para ver imagen en tamaño completo](implementing-optimistic-concurrency-cs/_static/image6.png))
 
 
-Hay varios enfoques para implementar la simultaneidad optimista (consulte [Peter A. Bromberg](http://peterbromberg.net/)del [Optmistic simultaneidad actualizando lógica](http://www.eggheadcafe.com/articles/20050719.asp) para un breve vistazo a una serie de opciones). El conjunto de datos con tipo de ADO.NET proporciona una implementación que se puede configurar con solo la graduación de un control checkbox. Al habilitar la simultaneidad optimista para un TableAdapter en el conjunto de datos con tipo aumenta el TableAdapter `UPDATE` y `DELETE` instrucciones para incluir una comparación de todos los valores originales de la `WHERE` cláusula. La siguiente `UPDATE` instrucción, por ejemplo, actualiza el nombre y el precio de un producto sólo si los valores actuales de la base de datos son iguales a los valores que se recuperaron originalmente al actualizar el registro en el control GridView. El `@ProductName` y `@UnitPrice` parámetros contienen los nuevos valores especificados por el usuario, mientras que `@original_ProductName` y `@original_UnitPrice` contienen los valores que se cargaron originalmente en el control GridView cuando se hace clic en el botón Editar:
+Hay varios enfoques para implementar la simultaneidad optimista (consulte [Peter A. Bromberg](http://peterbromberg.net/)del [lógica de actualización de concurrencia optimista](http://www.eggheadcafe.com/articles/20050719.asp) para un breve vistazo a una serie de opciones). El conjunto de datos con tipo de ADO.NET proporciona una implementación que se puede configurar con solo la graduación de un control checkbox. Al habilitar la simultaneidad optimista para un TableAdapter en el conjunto de datos con tipo aumenta el TableAdapter `UPDATE` y `DELETE` instrucciones para incluir una comparación de todos los valores originales de la `WHERE` cláusula. La siguiente `UPDATE` instrucción, por ejemplo, actualiza el nombre y el precio de un producto sólo si los valores actuales de la base de datos son iguales a los valores que se recuperaron originalmente al actualizar el registro en el control GridView. El `@ProductName` y `@UnitPrice` parámetros contienen los nuevos valores especificados por el usuario, mientras que `@original_ProductName` y `@original_UnitPrice` contienen los valores que se cargaron originalmente en el control GridView cuando se hace clic en el botón Editar:
 
 
 [!code-sql[Main](implementing-optimistic-concurrency-cs/samples/sample1.sql)]

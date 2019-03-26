@@ -8,12 +8,12 @@ ms.date: 06/02/2008
 ms.assetid: e5d99c2b-d8ee-413c-80d5-c120cffb0a4c
 msc.legacyurl: /web-forms/overview/ajax-control-toolkit/animation/triggering-an-animation-in-another-control-cs
 msc.type: authoredcontent
-ms.openlocfilehash: ad6dfecf71a7577215e43222a8788e5c48d0c4c2
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: 6216f24e497936245280f337477b287ff2afb080
+ms.sourcegitcommit: 289e051cc8a90e8f7127e239fda73047bde4de12
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57041472"
+ms.lasthandoff: 03/25/2019
+ms.locfileid: "58421393"
 ---
 <a name="triggering-an-animation-in-another-control-c"></a>Desencadenar una animación en otro control (C#)
 ====================
@@ -54,7 +54,7 @@ Dentro de la `<Animations>` nodo, las animaciones de contexto como de costumbre.
 
 [!code-aspx[Main](triggering-an-animation-in-another-control-cs/samples/sample6.aspx)]
 
-Tenga en cuenta el orden en especial en el que aparecen las animaciones individuales. En primer lugar, el botón desactiva una vez que se ejecuta la animación. Dado que no hay ningún `AnimationTarget` atributo el `<EnableAction>` elemento, esta animación se aplica al control de origen: el botón. Los pasos de la animación en los dos próximos se llevará a cabo parallelly (`<Parallel>` elemento). Ambos tienen sus `AnimationTarget` atributos establecidos en `"Panel1"`, animar, por tanto, el panel, no en el botón.
+Tenga en cuenta el orden en especial en el que aparecen las animaciones individuales. En primer lugar, el botón desactiva una vez que se ejecuta la animación. Dado que no hay ningún `AnimationTarget` atributo el `<EnableAction>` elemento, esta animación se aplica al control de origen: el botón. Los pasos de la animación en los dos próximos se llevará a cabo en paralelo (`<Parallel>` elemento). Ambos tienen sus `AnimationTarget` atributos establecidos en `"Panel1"`, animar, por tanto, el panel, no en el botón.
 
 
 [![Un clic del mouse en el botón inicia la animación de panel](triggering-an-animation-in-another-control-cs/_static/image2.png)](triggering-an-animation-in-another-control-cs/_static/image1.png)

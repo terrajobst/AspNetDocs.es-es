@@ -8,12 +8,12 @@ ms.date: 04/23/2009
 ms.assetid: 1e33d1c6-3f9f-4c26-81e2-2a8f8907bb05
 msc.legacyurl: /web-forms/overview/older-versions-getting-started/deploying-web-site-projects/configuring-a-website-that-uses-application-services-cs
 msc.type: authoredcontent
-ms.openlocfilehash: 4cec939795c2b3abfd51c894f985dfd2eb7bc361
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: 2cfe18b99af7b04d18a52e64b77e1b9a6b204f75
+ms.sourcegitcommit: 289e051cc8a90e8f7127e239fda73047bde4de12
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57058342"
+ms.lasthandoff: 03/25/2019
+ms.locfileid: "58423447"
 ---
 <a name="configuring-a-website-that-uses-application-services-c"></a>Configurar un sitio web que usa servicios de aplicaciones (C#)
 ====================
@@ -138,7 +138,7 @@ Para comprobar que los objetos de base de datos de servicios de aplicación se a
 **Figura 4**: Confirme que los objetos de base de datos se agregaron a la base de datos de producción ([haga clic aquí para ver imagen en tamaño completo](configuring-a-website-that-uses-application-services-cs/_static/image12.jpg))
 
 
-Sólo deberá usar el `aspnet_regsql.exe` herramienta al implementar la aplicación web por primera vez o por primera vez después de haber iniciado mediante los servicios de aplicación. Una vez que estos objetos de base de datos se encuentran en la base de datos de producción ganó t necesidad de volver a added o modified.
+Sólo deberá usar el `aspnet_regsql.exe` herramienta al implementar la aplicación web por primera vez o por primera vez después de haber iniciado mediante los servicios de aplicación. Una vez que estos objetos de base de datos están en la base de datos de producción que no tendrán que volver a added o modified.
 
 ### <a name="copying-user-accounts-from-development-to-production"></a>Copiar cuentas de usuario de desarrollo a producción
 
@@ -148,7 +148,7 @@ El `SqlMembershipProvider` y `SqlRoleProvider` clases de proveedor se ha diseña
 
 Además el `ApplicationId` columna, el `aspnet_Applications` tabla también incluye un `ApplicationName` columna, que proporciona un nombre más fácil de usar para la aplicación. Cuando un sitio Web intenta trabajar con una cuenta de usuario, como la validación de un credenciales de usuario s en la página de inicio de sesión, debe indicar el `SqlMembershipProvider` qué aplicación para que funcione con la clase. Lo normal esto proporcionando el nombre de la aplicación y este valor procede de la configuración del proveedor s en `Web.config` : específicamente a través de la `applicationName` atributo.
 
-¿Pero qué sucede si el `applicationName` no se especifica el atributo en `Web.config`? En tal caso, la pertenencia a un sistema usa la ruta de acceso raíz de aplicación como el `applicationName` valor. Si el `applicationName` atributo no se establece explícitamente `Web.config`, a continuación, es posible que el entorno de desarrollo y el entorno de producción use una raíz de aplicación diferentes y, por tanto, se asociarán con otra aplicación nombres de los servicios de aplicación. Si se produce una discrepancia de este tipo, a continuación, los usuarios creados en el entorno de desarrollo tendrán un `ApplicationId` valor que no coincide con el `ApplicationId` valor para el entorno de producción. El resultado neto es que los usuarios que ganó t podrán iniciar sesión.
+¿Pero qué sucede si el `applicationName` no se especifica el atributo en `Web.config`? En tal caso, la pertenencia a un sistema usa la ruta de acceso raíz de aplicación como el `applicationName` valor. Si el `applicationName` atributo no se establece explícitamente `Web.config`, a continuación, es posible que el entorno de desarrollo y el entorno de producción use una raíz de aplicación diferentes y, por tanto, se asociarán con otra aplicación nombres de los servicios de aplicación. Si se produce una discrepancia de este tipo, a continuación, los usuarios creados en el entorno de desarrollo tendrán un `ApplicationId` valor que no coincide con el `ApplicationId` valor para el entorno de producción. El resultado neto es que los usuarios no podrán iniciar sesión.
 
 > [!NOTE]
 > Si se encuentra en esta situación - con cuentas de usuario que se copian en producción con una que no coinciden `ApplicationId` valor - podría escribir una consulta para actualizar estos incorrecto `ApplicationId` valores para el `ApplicationId` utilizado en producción. Una vez actualizado, los usuarios cuyas cuentas se crearon en el entorno de desarrollo ahora podrán iniciar sesión en la aplicación web en producción.

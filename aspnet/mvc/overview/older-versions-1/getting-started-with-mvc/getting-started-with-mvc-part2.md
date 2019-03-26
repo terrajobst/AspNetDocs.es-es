@@ -8,12 +8,12 @@ ms.date: 08/14/2010
 ms.assetid: ff03dcc0-da97-458d-838f-0823e7482642
 msc.legacyurl: /mvc/overview/older-versions-1/getting-started-with-mvc/getting-started-with-mvc-part2
 msc.type: authoredcontent
-ms.openlocfilehash: 9a8ecac5203234c140783bbe3a518d35f6a57675
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: b593c6225c05c7405c9d8b78abfd29a087d47b04
+ms.sourcegitcommit: 289e051cc8a90e8f7127e239fda73047bde4de12
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57058002"
+ms.lasthandoff: 03/25/2019
+ms.locfileid: "58421264"
 ---
 <a name="adding-a-controller"></a>Agregar un controlador
 ====================
@@ -56,7 +56,7 @@ ASP.NET MVC invoca diferentes clases de controlador (y diferentes métodos de ac
 
 / [Controller] / [ActionName] / [parámetros]
 
-La primera parte de la dirección URL determina la clase de controlador para ejecutar. Por lo que /HelloWorld se asigna a la clase HelloWorldController. La segunda parte de la dirección URL determina el método de acción en la clase que se ejecutará. /HelloWorld/Index causara el método Index() de la clase HelloWorldcontroller para ejecutar. Tenga en cuenta que sólo se tenía visite /HelloWorld anterior y el método que index estaba implícito. Esto es porque un método denominado "Index" es el método predeterminado que se llamará en un controlador si no se especifica explícitamente.
+La primera parte de la dirección URL determina la clase de controlador para ejecutar. Por lo que /HelloWorld se asigna a la clase HelloWorldController. La segunda parte de la dirección URL determina el método de acción en la clase que se ejecutará. /HelloWorld/Index causara el método Index() de la clase HelloWorldController para ejecutar. Tenga en cuenta que sólo se tenía visite /HelloWorld anterior y el método que index estaba implícito. Esto es porque un método denominado "Index" es el método predeterminado que se llamará en un controlador si no se especifica explícitamente.
 
 [![Ésta es mi acción predeterminada](getting-started-with-mvc-part2/_static/image8.png)](getting-started-with-mvc-part2/_static/image7.png)
 

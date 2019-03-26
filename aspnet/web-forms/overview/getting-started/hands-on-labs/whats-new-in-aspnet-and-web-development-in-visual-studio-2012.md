@@ -8,12 +8,12 @@ ms.date: 02/18/2013
 ms.assetid: 6d40d276-1642-4a77-b6c9-02ac914f6805
 msc.legacyurl: /web-forms/overview/getting-started/hands-on-labs/whats-new-in-aspnet-and-web-development-in-visual-studio-2012
 msc.type: authoredcontent
-ms.openlocfilehash: 263a6e0aed51a681193333b53eff8f03847fc3aa
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: 6d5af6563bdf3872110497f4b142dd7353c8d64c
+ms.sourcegitcommit: 289e051cc8a90e8f7127e239fda73047bde4de12
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57047582"
+ms.lasthandoff: 03/25/2019
+ms.locfileid: "58426125"
 ---
 <a name="whats-new-in-aspnet-and-web-development-in-visual-studio-2012"></a>Novedades de Desarrollo de ASP.NET y web en Visual Studio 2012
 ====================
@@ -737,7 +737,7 @@ En este apéndice se mostrará cómo crear un nuevo sitio web desde el Portal de
 1. Vaya a la [Portal de administración de Windows Azure](https://manage.windowsazure.com/) e inicie sesión con las credenciales de Microsoft asociadas con su suscripción.
 
     > [!NOTE]
-    > Con Windows Azure puede hospedar 10 sitios Web ASP.NET de forma gratuita y, a continuación, escalar a medida que crece el tráfico. Puede registrarse [aquí](http://aka.ms/aspnet-hol-azure).
+    > Con Windows Azure puede hospedar 10 sitios Web ASP.NET de forma gratuita y, a continuación, escalar a medida que crece el tráfico. Puede registrarse [aquí](https://aka.ms/aspnet-hol-azure).
 
     ![Inicie sesión en el portal de Windows Azure](whats-new-in-aspnet-and-web-development-in-visual-studio-2012/_static/image64.png "inicie sesión en el portal de Windows Azure")
 

@@ -8,12 +8,12 @@ ms.date: 11/13/2006
 ms.assetid: f52c302a-1b7c-46fe-8a13-8412c95cbf6d
 msc.legacyurl: /web-forms/overview/data-access/paging-and-sorting-with-the-datalist-and-repeater/sorting-data-in-a-datalist-or-repeater-control-cs
 msc.type: authoredcontent
-ms.openlocfilehash: 05fbc51d5341a4d3d634cbbc05c0e66a827b0394
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: ec5124cb0b449db703988bdadbaa244ff72cf363
+ms.sourcegitcommit: 289e051cc8a90e8f7127e239fda73047bde4de12
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57042512"
+ms.lasthandoff: 03/25/2019
+ms.locfileid: "58425605"
 ---
 <a name="sorting-data-in-a-datalist-or-repeater-control-c"></a>Ordenar datos en un control DataList o Repeater (C#)
 ====================
@@ -135,7 +135,7 @@ En este punto, cuando se visita la página de primero los productos inicialmente
 
 
 > [!NOTE]
-> Al hacer clic en el botón de actualización hace que los datos automáticamente se ordenada de nuevo porque se ha deshabilitado el estado de vista de Repeater s, por lo que el control Repeater para volver a enlazar al origen de datos en cada devolución de datos. Si ve deja el estado de vista de Repeater s está habilitado, cambiar la ordenación desplegable lista ganó t tendrá ningún efecto en el criterio de ordenación. Para solucionar este problema, cree un controlador de eventos para el botón Actualizar de s `Click` eventos y volver a vincular el control Repeater a su origen de datos (mediante una llamada a Repeater s `DataBind()` método).
+> Al hacer clic en el botón de actualización hace que los datos automáticamente se ordenada de nuevo porque se ha deshabilitado el estado de vista de Repeater s, por lo que el control Repeater para volver a enlazar al origen de datos en cada devolución de datos. Si ve deja el estado de vista de Repeater s está habilitado, cambiar la ordenación desplegable lista no tendrá ningún efecto en el criterio de ordenación. Para solucionar este problema, cree un controlador de eventos para el botón Actualizar de s `Click` eventos y volver a vincular el control Repeater a su origen de datos (mediante una llamada a Repeater s `DataBind()` método).
 
 
 ## <a name="remembering-the-sort-expression-and-direction"></a>Recordar la expresión de ordenación y la dirección

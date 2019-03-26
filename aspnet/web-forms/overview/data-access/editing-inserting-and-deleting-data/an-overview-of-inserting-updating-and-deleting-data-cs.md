@@ -8,12 +8,12 @@ ms.date: 07/17/2006
 ms.assetid: b651dc58-93c7-4f83-a74e-3b99f6d60848
 msc.legacyurl: /web-forms/overview/data-access/editing-inserting-and-deleting-data/an-overview-of-inserting-updating-and-deleting-data-cs
 msc.type: authoredcontent
-ms.openlocfilehash: 82f1127b01c211a2af91623d4df7ca10dcad6d8a
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: 6c8a07d7b0819df4deb566644fe36bc504d2a2ca
+ms.sourcegitcommit: 289e051cc8a90e8f7127e239fda73047bde4de12
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57041082"
+ms.lasthandoff: 03/25/2019
+ms.locfileid: "58424578"
 ---
 <a name="an-overview-of-inserting-updating-and-deleting-data-c"></a>Información general de insertar, actualizar y eliminar datos (C#)
 ====================
@@ -179,7 +179,7 @@ El control GridView proporciona compatibilidad integrada para la edición de niv
 Los valores asignados a la `DeleteParameters` son los valores de la `DataKeyNames` campos para la fila cuyo botón Delete se hizo clic. Por lo tanto, es fundamental que un GridView `DataKeyNames` propiedad se establezca correctamente. Si está presente, el `DeleteParameters` se le asignará un `null` valor en el paso 1, que a su vez no dará como resultado en cualquiera de los registros en el paso 2 eliminados.
 
 > [!NOTE]
-> El `DataKeys` colección se almacena en el estado del control GridView s, lo que significa que el `DataKeys` valores se conservarán en la devolución de datos incluso si se ha deshabilitado el estado de vista GridView s. Sin embargo, es muy importante que el estado de vista sigue estando habilitado para GridView que admiten editen o eliminen (comportamiento predeterminado). Si establece la s GridView `EnableViewState` propiedad `false`, la edición y eliminación de comportamiento funcionará correctamente para un solo usuario, pero si hay una eliminación de datos de usuarios simultáneos, existe la posibilidad de que estos usuarios simultáneos, es posible que accidentalmente eliminar o editar los registros que t no ha previsto. Vea Mi entrada de blog, [advertencia: Simultaneidad emitir con ASP.NET 2.0 GridView y DetailsView/FormViews que compatibilidad con la edición o eliminación y cuyo estado de vista está deshabilitado](http://scottonwriting.net/sowblog/archive/2006/10/03/163215.aspx), para obtener más información.
+> El `DataKeys` colección se almacena en el estado del control GridView s, lo que significa que el `DataKeys` valores se conservarán en la devolución de datos incluso si se ha deshabilitado el estado de vista GridView s. Sin embargo, es muy importante que el estado de vista sigue estando habilitado para GridView que admiten editen o eliminen (comportamiento predeterminado). Si establece la s GridView `EnableViewState` propiedad `false`, la edición y eliminación de comportamiento funcionará correctamente para un solo usuario, pero si hay una eliminación de datos de usuarios simultáneos, existe la posibilidad de que estos usuarios simultáneos, es posible que accidentalmente eliminar o modificar los registros quería. Vea Mi entrada de blog, [advertencia: Simultaneidad emitir con ASP.NET 2.0 GridView y DetailsView/FormViews que compatibilidad con la edición o eliminación y cuyo estado de vista está deshabilitado](http://scottonwriting.net/sowblog/archive/2006/10/03/163215.aspx), para obtener más información.
 
 
 Esta advertencia también se aplica a DetailsViews y FormViews.

@@ -8,12 +8,12 @@ ms.date: 07/27/2010
 ms.assetid: 18700815-8e6c-4489-91af-7ea9dab6529e
 msc.legacyurl: /mvc/overview/older-versions-1/nerddinner/use-ajax-to-deliver-dynamic-updates
 msc.type: authoredcontent
-ms.openlocfilehash: e902881d3dab6a902cb747a197a32f317d199723
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: 71e566523d658eb8198453f354a12e63a4c38495
+ms.sourcegitcommit: 289e051cc8a90e8f7127e239fda73047bde4de12
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57025992"
+ms.lasthandoff: 03/25/2019
+ms.locfileid: "58421043"
 ---
 <a name="use-ajax-to-deliver-dynamic-updates"></a>Usar AJAX para entregar actualizaciones dinámicas
 ====================
@@ -78,7 +78,7 @@ Vamos a usar AJAX para invocar el método de acción Register de la vista de det
 
 La primera biblioteca hace referencia a la biblioteca de script de cliente AJAX de ASP.NET core. Este archivo es aproximadamente 24 KB de tamaño (comprimido) y contiene la funcionalidad de AJAX del lado cliente. La segunda biblioteca contiene funciones de utilidad que se integran con integrados auxiliar los métodos de AJAX de ASP.NET MVC (lo que vamos a usar en breve).
 
-Se puede, a continuación, se agregó anteriormente para que en lugar de un mensaje "No están registrados para este evento" outputing, en su lugar representamos un vínculo que cuando inserta el código de plantilla de vista de actualización realiza una llamada de AJAX que invoca el método de acción RSVPForEvent en nuestro controlador de RSVP y RSVPs el usuario:
+Se puede, a continuación, se agregó anteriormente para que en lugar de generar un mensaje "No están registrados para este evento", se procesa un vínculo que cuando inserta el código de plantilla de vista de actualización realiza una llamada de AJAX que invoca el método de acción RSVPForEvent en nuestro controlador de RSVP y RSVPs el usuario:
 
 [!code-aspx[Main](use-ajax-to-deliver-dynamic-updates/samples/sample6.aspx)]
 

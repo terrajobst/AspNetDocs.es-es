@@ -8,12 +8,12 @@ ms.date: 08/15/2006
 ms.assetid: f3897a74-cc6a-4032-8f68-465f155e296a
 msc.legacyurl: /web-forms/overview/data-access/paging-and-sorting/creating-a-customized-sorting-user-interface-vb
 msc.type: authoredcontent
-ms.openlocfilehash: b12baa5075b4e67018d8a98a92e807d1778737c8
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: 63e31d719991dddec2168524187c304256d1b4e0
+ms.sourcegitcommit: 289e051cc8a90e8f7127e239fda73047bde4de12
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57054702"
+ms.lasthandoff: 03/25/2019
+ms.locfileid: "58426112"
 ---
 <a name="creating-a-customized-sorting-user-interface-vb"></a>Crear una interfaz de usuario de ordenación personalizada (VB)
 ====================
@@ -79,7 +79,7 @@ Cuando el control GridView se enlaza a un origen de datos, crea un `GridViewRow`
 **Figura 3**: Una técnica consiste en Agregar filas de separador para el origen de datos
 
 
-Usar los registros de separador de términos entre comillas porque no hay ningún registro de separación especial; en su lugar, nos debemos que algún modo Marcar que un registro determinado en el origen de datos actúa como un separador en lugar de una fila de datos normal. Para nuestros ejemplos, hemos re enlace un `ProductsDataTable` instancia en el control GridView, que se compone de `ProductRows`. Se puede marcar un registro como una fila de separación estableciendo su `CategoryID` propiedad `-1` (ya que este tipo un valor existe normalmente).
+Usar los registros de separador de términos entre comillas porque no hay ningún registro de separación especial; en su lugar, nos debemos que algún modo Marcar que un registro determinado en el origen de datos actúa como un separador en lugar de una fila de datos normal. Para nuestros ejemplos, hemos re enlace un `ProductsDataTable` instancia en el control GridView, que se compone de `ProductRows`. Se puede marcar un registro como una fila de separación estableciendo su `CategoryID` propiedad `-1` (ya que dicho valor no se pudo existe normalmente).
 
 Para utilizar esta técnica d es necesario realizar los pasos siguientes:
 

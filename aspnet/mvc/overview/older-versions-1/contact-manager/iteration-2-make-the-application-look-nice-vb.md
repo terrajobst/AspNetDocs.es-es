@@ -8,12 +8,12 @@ ms.date: 02/20/2009
 ms.assetid: f65cb436-e493-46fd-9608-384b27385aa1
 msc.legacyurl: /mvc/overview/older-versions-1/contact-manager/iteration-2-make-the-application-look-nice-vb
 msc.type: authoredcontent
-ms.openlocfilehash: 7f27cbab17effc3b44649e06409893e6be09b011
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: 9cda4153c4e4883586a83ac7f89b2f369f8157e5
+ms.sourcegitcommit: 289e051cc8a90e8f7127e239fda73047bde4de12
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57050922"
+ms.lasthandoff: 03/25/2019
+ms.locfileid: "58422272"
 ---
 <a name="iteration-2--make-the-application-look-nice-vb"></a>Iteración #2: que la aplicación parezca interesante (VB)
 ====================
@@ -112,7 +112,7 @@ La Galería de diseño de MVC de ASP.NET tiene una buena selección de los estil
 
 Sin embargo, es posible que deba crear un diseño completamente único para el sitio Web. En ese caso, tiene sentido para trabajar con una empresa de diseño del sitio Web. Decidido adoptar este enfoque para el diseño de la aplicación de Contact Manager.
 
-De Contact Manager de iteración 1 y lo envíe el proyecto a la empresa de diseño. No poseen Visual Studio (es lamentable en ellas!), pero que no ha t presentan un problema. Podían descargar Microsoft Visual Web Developer de forma gratuita desde el [ https://www.asp.net ](https://www.asp.net) sitio Web y abra la aplicación de Contact Manager en Visual Web Developer. En un par de días, se hubiera producido el diseño en la figura 7.
+De Contact Manager de iteración 1 y lo envíe el proyecto a la empresa de diseño. No poseen (es lamentable en ellas!) de Visual Studio, pero que no presentan un problema. Podían descargar Microsoft Visual Web Developer de forma gratuita desde el [ https://www.asp.net ](https://www.asp.net) sitio Web y abra la aplicación de Contact Manager en Visual Web Developer. En un par de días, se hubiera producido el diseño en la figura 7.
 
 
 [![El cuadro de diálogo nuevo proyecto](iteration-2-make-the-application-look-nice-vb/_static/image7.jpg)](iteration-2-make-the-application-look-nice-vb/_static/image13.png)

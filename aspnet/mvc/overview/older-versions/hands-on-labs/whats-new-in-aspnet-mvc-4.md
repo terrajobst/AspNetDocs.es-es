@@ -8,12 +8,12 @@ ms.date: 02/18/2013
 ms.assetid: 48f7feb3-872f-485d-b96f-e30011ff8c4a
 msc.legacyurl: /mvc/overview/older-versions/hands-on-labs/whats-new-in-aspnet-mvc-4
 msc.type: authoredcontent
-ms.openlocfilehash: 9d5a51a5887ecbbc96fce1416b88aa849bc3674e
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: 0c4b7b2641c91cbb63ec46fa707c004f7273a303
+ms.sourcegitcommit: 289e051cc8a90e8f7127e239fda73047bde4de12
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57053502"
+ms.lasthandoff: 03/25/2019
+ms.locfileid: "58422693"
 ---
 # <a name="whats-new-in-aspnet-mvc-4"></a>Novedades de ASP.NET MVC 4
 
@@ -144,7 +144,7 @@ En este ejercicio, explorará las mejoras en las plantillas de proyecto de ASP.N
     *Validación de jQuery*
 
     > [!NOTE]
-    > Tenga en cuenta que los dos inicie sesión en secciones, en la primera sección se puede iniciar sesión con una cuenta ha registrado desde el sitio y en la segunda sección que puede altenativelly inicie sesión con otro servicio de autenticación, como google (deshabilitado de forma predeterminada).
+    > Tenga en cuenta el registro de dos secciones, en la primera sección, puede iniciar sesión con una cuenta registrada desde el sitio y en la segunda sección también puede iniciar sesión con otro servicio de autenticación, como google (deshabilitado de forma predeterminada).
 5. Cierre el explorador para detener al depurador y vuelva a Visual Studio.
 6. Abra el archivo **AuthConfig.cs** ubicado en el **aplicación\_iniciar** carpeta.
 7. Quitar el comentario de la última línea para registrar el cliente de Google para *OAuth* autenticación.
@@ -429,7 +429,7 @@ Una de las actualizaciones claves en ASP.NET MVC 4 es la compatibilidad para el 
 <a id="Task_2_-_Creating_Mobile_Views"></a>
 #### <a name="task-2---creating-mobile-views"></a>Tarea 2: creación de vistas móviles
 
-En esta tarea, creará una versión móvil de la vista de índice con el contenido que se ha adaptado a appareance mejor en dispositivos móviles.
+En esta tarea, creará una versión móvil de la vista de índice con contenido adaptado para una mejor apariencia en dispositivos móviles.
 
 1. Copia el **Views\Home\Index.cshtml** ver y péguelo en la creación de una copia, cambie el nombre del nuevo archivo a **Index.Mobile.cshtml**.
 2. Abra el nuevo creó **Index.Mobile.cshtml** ver y reemplazar el existente &lt;ul&gt; etiqueta con este código. Al hacerlo, se va a actualizar el &lt;ul&gt; etiqueta con las anotaciones de datos móvil de jQuery para usar los temas de jQuery mobile.
@@ -512,15 +512,15 @@ En esta tarea, explorará la implementación de ejemplo de un modificador de vis
 
     La vista parcial utiliza el nuevo método **ViewContext.HttpContext.GetOverriddenBrowser()** para determinar el origen de la solicitud web y mostrar el vínculo correspondiente para pasar a las vistas de escritorio o móviles.
 
-    El **GetOverridenBrowser** método devuelve un **HttpBrowserCapabilitiesBase** instancia que se corresponde con el agente de usuario establecido actualmente para la solicitud (real o reemplazada). Puede usar este valor para obtener las propiedades como **IsMobileDevice**.
+    El **GetOverriddenBrowser** método devuelve un **HttpBrowserCapabilitiesBase** instancia que se corresponde con el agente de usuario establecido actualmente para la solicitud (real o reemplazada). Puede usar este valor para obtener las propiedades como **IsMobileDevice**.
 
     ![Vista parcial ViewSwitcher](whats-new-in-aspnet-mvc-4/_static/image30.png "ViewSwitcher de vista parcial")
 
     *Vista parcial ViewSwitcher*
 4. Abra el **ViewSwitcherController.cs** clase ubicado en el **controladores** carpeta. Comprobación de esa acción SwitchView se llama mediante el vínculo en el componente ViewSwitcher y observe los nuevos métodos de HttpContext.
 
-    - El **HttpContext.ClearOverridenBrowser()** método quita cualquier agente de usuario invalidado para la solicitud actual.
-    - El **HttpContext.SetOverridenBrowser()** método invalida el valor de agente de usuario real de la solicitud mediante el agente de usuario especificado.  
+    - El **HttpContext.ClearOverriddenBrowser()** método quita cualquier agente de usuario invalidado para la solicitud actual.
+    - El **HttpContext.SetOverriddenBrowser()** método invalida el valor de agente de usuario real de la solicitud mediante el agente de usuario especificado.  
         ![Controlador ViewSwitcher](whats-new-in-aspnet-mvc-4/_static/image31.png "ViewSwitcher controlador")  
 *Controlador ViewSwitcher*
 
@@ -580,8 +580,8 @@ Después de ejecutar este código, cuando un explorador de iPhone genera una sol
 > [!NOTE]
 > Esta forma de probar la solicitud para el iPhone se ha simplificado con fines de demostración y podría no funcionar según lo previsto para cada cadena de agente de usuario de iPhone (para pruebas de ejemplo distingue mayúsculas de minúsculas).
 
-4. Crear una copia de la  **\_Layout.Mobile.cshtml** de archivos en el **Views\Shared** carpeta y cambie el nombre de la copia a &quot; **\_Layout.iPhone.csthml**&quot;.
-5. Abra  **\_Layout.iPhone.csthml** que creó en el paso anterior.
+4. Crear una copia de la  **\_Layout.Mobile.cshtml** de archivos en el **Views\Shared** carpeta y cambie el nombre de la copia a &quot; **\_Layout.iPhone.cshtml**&quot;.
+5. Abra  **\_Layout.iPhone.cshtml** que creó en el paso anterior.
 6. Busque el elemento div con el atributo de rol de datos establecido en **página** y cambie el **data-theme** atributo &quot; **un**&quot;.
 
 
@@ -674,7 +674,7 @@ Métodos de acción asincrónicos que devuelven instancias de tarea también pue
     (Código de fragmento de código - *atributos de ASP.NET MVC 4 laboratorio - Ex04 -*)
 
     [!code-csharp[Main](whats-new-in-aspnet-mvc-4/samples/sample26.cs)]
-6. Abra el **PhotoController** clase y actualización de la **galería** método para retrasar la milisegundos ejecución 1000 (1 segundo) para simular una tarea de ejecución prolongada.
+6. Abra el **PhotoController** clase y actualización de la **galería** método retrasar los milisegundos de ejecución 1000 (1 segundo) para simular una tarea de ejecución prolongada.
 
     [!code-csharp[Main](whats-new-in-aspnet-mvc-4/samples/sample27.cs)]
 7. Abra el **Web.config** de archivos y habilitar los errores personalizados agregando el siguiente elemento.
@@ -904,7 +904,7 @@ En este apéndice se mostrará cómo crear un nuevo sitio web desde el Portal de
 1. Vaya a la [Portal de administración de Windows Azure](https://manage.windowsazure.com/) e inicie sesión con las credenciales de Microsoft asociadas con su suscripción.
 
     > [!NOTE]
-    > Con Windows Azure puede hospedar 10 sitios Web ASP.NET de forma gratuita y, a continuación, escalar a medida que crece el tráfico. Puede registrarse [aquí](http://aka.ms/aspnet-hol-azure).
+    > Con Windows Azure puede hospedar 10 sitios Web ASP.NET de forma gratuita y, a continuación, escalar a medida que crece el tráfico. Puede registrarse [aquí](https://aka.ms/aspnet-hol-azure).
 
     ![Inicie sesión en el portal de Windows Azure](whats-new-in-aspnet-mvc-4/_static/image61.png "inicie sesión en el portal de Windows Azure")
 

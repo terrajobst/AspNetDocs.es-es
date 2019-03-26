@@ -8,12 +8,12 @@ ms.date: 01/27/2009
 ms.assetid: 68acd884-fb57-4486-a1be-aaa93e380780
 msc.legacyurl: /mvc/overview/older-versions-1/controllers-and-routing/adding-dynamic-content-to-a-cached-page-vb
 msc.type: authoredcontent
-ms.openlocfilehash: 121a3a35c8255f1423d7008930315f76bbb8e8f9
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: b361470c769b61a7b407797158eb695fe5084eda
+ms.sourcegitcommit: 289e051cc8a90e8f7127e239fda73047bde4de12
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57053102"
+ms.lasthandoff: 03/25/2019
+ms.locfileid: "58423499"
 ---
 <a name="adding-dynamic-content-to-a-cached-page-vb"></a>Agregar contenido dinámico a una página almacenada en caché (VB)
 ====================
@@ -72,7 +72,7 @@ Aprovechar las ventajas de la sustitución posterior a la caché de una manera m
 
 Listado 4 contiene un módulo de Visual Basic que expone dos métodos: RenderBanner() y RenderBannerInternal(). El método RenderBanner() representa el método auxiliar real. Este método extiende la clase HtmlHelper de MVC de ASP.NET estándar para que pueda llamar Html.RenderBanner() en una vista al igual que cualquier otro método auxiliar.
 
-El método RenderBanner() llama al método de HttpResponse.WriteSubstitution() pasando el método RenderBannerInternal() WriteSubsitution() al método.
+El método RenderBanner() llama al método de HttpResponse.WriteSubstitution() pasando el método RenderBannerInternal() WriteSubstitution() al método.
 
 El método RenderBannerInternal() es un método privado. Este método no se exponen como un método auxiliar. El método RenderBannerInternal() aleatoriamente devuelve una imagen del anuncio banner de una lista de tres imágenes de anuncios de pancarta.
 

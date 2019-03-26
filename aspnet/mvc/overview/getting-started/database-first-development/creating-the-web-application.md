@@ -9,12 +9,12 @@ ms.topic: tutorial
 ms.assetid: bc8f2bd5-ff57-4dcd-8418-a5bd517d8953
 msc.legacyurl: /mvc/overview/getting-started/database-first-development/creating-the-web-application
 msc.type: authoredcontent
-ms.openlocfilehash: dced55386c3f810e406c5c2b3f0071b45e3b2dbd
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: 481a0ee9b19e5d35d736b2cc937a124900bce446
+ms.sourcegitcommit: 289e051cc8a90e8f7127e239fda73047bde4de12
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57041582"
+ms.lasthandoff: 03/25/2019
+ms.locfileid: "58426138"
 ---
 # <a name="tutorial-create-the-the-web-application-and-data-models-for-ef-database-first-with-aspnet-mvc"></a>Tutorial: Crear la base de datos de la aplicación Web y los modelos de datos para EF primero con ASP.NET MVC
 
@@ -64,7 +64,7 @@ Haga clic en **Siguiente**.
 
 Si tiene conexiones de base de datos definidas dentro de su entorno de desarrollo, es posible que vea una de estas conexiones previamente seleccionadas. Sin embargo, desea crear una nueva conexión a la base de datos que creó en la primera parte de este tutorial. Haga clic en el **nueva conexión** botón.
 
-En la ventana Propiedades de conexión, proporcione el nombre del servidor local donde se creó la base de datos (en este caso **(localdb) \Projects13**). Después de proporcionar el nombre del servidor, seleccione el ContosoUniversityData de las bases de datos disponibles.
+En la ventana Propiedades de conexión, proporcione el nombre del servidor local donde se creó la base de datos (en este caso **(localdb) \ProjectsV13**). Después de proporcionar el nombre del servidor, seleccione el ContosoUniversityData de las bases de datos disponibles.
 
 ![establecer propiedades de conexión](creating-the-web-application/_static/image8.png)
 

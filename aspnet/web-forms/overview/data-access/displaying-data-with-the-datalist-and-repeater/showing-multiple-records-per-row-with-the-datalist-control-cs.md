@@ -8,12 +8,12 @@ ms.date: 09/13/2006
 ms.assetid: cf5acaf5-d4f6-4957-badc-b89956b285f3
 msc.legacyurl: /web-forms/overview/data-access/displaying-data-with-the-datalist-and-repeater/showing-multiple-records-per-row-with-the-datalist-control-cs
 msc.type: authoredcontent
-ms.openlocfilehash: f79c446a0c9407309ab65cd993df544e883afb22
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: 8dd23b960df6511f65882820cb26d4af4ccf5c58
+ms.sourcegitcommit: 289e051cc8a90e8f7127e239fda73047bde4de12
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57038432"
+ms.lasthandoff: 03/25/2019
+ms.locfileid: "58421536"
 ---
 <a name="showing-multiple-records-per-row-with-the-datalist-control-c"></a>Mostrar varios registros por fila con el control DataList (C#)
 ====================
@@ -66,7 +66,7 @@ Dedique un momento para visitar la página en un explorador. Como se muestra en 
 
 Mientras el comportamiento predeterminado para el control DataList consiste en disponer sus elementos verticalmente en una tabla de una sola columna y varias filas, este comportamiento puede modificarse fácilmente mediante el control DataList s [ `RepeatDirection` propiedad](https://msdn.microsoft.com/system.web.ui.webcontrols.datalist.repeatdirection.aspx). El `RepeatDirection` propiedad puede aceptar uno de dos valores posibles: `Horizontal` o `Vertical` (valor predeterminado).
 
-Cambiando el `RepeatDirection` propiedad desde `Vertical` a `Horizontal`, el control DataList representa sus registros en una sola fila, la creación de una columna por cada elemento de origen de datos. Para ilustrar este efecto, haga clic en el control DataList en el diseñador y, a continuación, en la ventana Propiedades, cambie la `RepeatDirection` propiedad desde `Vertical` a `Horiztonal`. Inmediatamente tras hacerlo, el diseñador ajusta el control DataList s diseño, creación de una sola fila, varias columnas (consulte la figura 3).
+Cambiando el `RepeatDirection` propiedad desde `Vertical` a `Horizontal`, el control DataList representa sus registros en una sola fila, la creación de una columna por cada elemento de origen de datos. Para ilustrar este efecto, haga clic en el control DataList en el diseñador y, a continuación, en la ventana Propiedades, cambie la `RepeatDirection` propiedad desde `Vertical` a `Horizontal`. Inmediatamente tras hacerlo, el diseñador ajusta el control DataList s diseño, creación de una sola fila, varias columnas (consulte la figura 3).
 
 
 [![Los elementos de RepeatDirection propiedad dicta cómo la dirección la s DataList son colocan horizontalmente](showing-multiple-records-per-row-with-the-datalist-control-cs/_static/image8.png)](showing-multiple-records-per-row-with-the-datalist-control-cs/_static/image7.png)

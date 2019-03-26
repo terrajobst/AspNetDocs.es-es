@@ -8,12 +8,12 @@ ms.date: 06/12/2014
 ms.assetid: 7e97cfc3-d830-4002-8ff7-5790d1ff49e6
 msc.legacyurl: /aspnet/overview/developing-apps-with-windows-azure/building-real-world-cloud-apps-with-windows-azure/more-patterns-and-guidance
 msc.type: authoredcontent
-ms.openlocfilehash: 3de929ff7253928f2f9cd9b033ef6c643744e91c
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: 87dbbc0b598a6592b511383a5487a04b302b0994
+ms.sourcegitcommit: 289e051cc8a90e8f7127e239fda73047bde4de12
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57050802"
+ms.lasthandoff: 03/25/2019
+ms.locfileid: "58425670"
 ---
 <a name="more-patterns-and-guidance-building-real-world-cloud-apps-with-azure"></a>Más patrones y directrices (crear aplicaciones de nube reales con Azure)
 ====================
@@ -61,7 +61,7 @@ Vídeos
 Ejemplo de código
 
 - [La aplicación Fix It que acompaña a este libro electrónico](https://code.msdn.microsoft.com/Fix-It-app-for-Building-cdd80df4?cdn_id=2013-12-03-002).
-- [En la nube Fundamentos de servicio en Azure en C# para Visual Studio 2012](http://aka.ms/csf). Proyecto que se pueden descargar en el sitio de Microsoft Code Gallery, incluye el código y documentación desarrollado por el Microsoft Customer Advisory Team (CAT). Muestra muchos de los procedimientos recomendados que sostiene en la serie de vídeos a prueba de errores y creación grande y las notas a prueba de errores. La página Galería de código también incluye vínculos a la amplia documentación de los autores del proyecto: consulte especialmente la [colección wiki de Fundamentos de servicio de nube](https://social.technet.microsoft.com/wiki/contents/articles/17987.cloud-service-fundamentals.aspx) vínculo en el cuadro azul situado en la parte superior de la descripción del proyecto. Este proyecto y la documentación correspondiente todavía activamente están desarrollando, facilitando la mejor elección para obtener información sobre muchos temas similares pero anteriores notas del producto.
+- [En la nube Fundamentos de servicio en Azure en C# para Visual Studio 2012](https://aka.ms/csf). Proyecto que se pueden descargar en el sitio de Microsoft Code Gallery, incluye el código y documentación desarrollado por el Microsoft Customer Advisory Team (CAT). Muestra muchos de los procedimientos recomendados que sostiene en la serie de vídeos a prueba de errores y creación grande y las notas a prueba de errores. La página Galería de código también incluye vínculos a la amplia documentación de los autores del proyecto: consulte especialmente la [colección wiki de Fundamentos de servicio de nube](https://social.technet.microsoft.com/wiki/contents/articles/17987.cloud-service-fundamentals.aspx) vínculo en el cuadro azul situado en la parte superior de la descripción del proyecto. Este proyecto y la documentación correspondiente todavía activamente están desarrollando, facilitando la mejor elección para obtener información sobre muchos temas similares pero anteriores notas del producto.
 
 Copia impresa de los libros en pantalla
 
@@ -101,7 +101,7 @@ Muchos otros compañeros en Microsoft revisan y borradores y código comentada:
 - Edward Wu - proporciona código de ejemplo para el capítulo de inicio de sesión único.
 - Guang Yang - escribió los scripts de automatización de PowerShell.
 
-Los miembros de la [Guía de desarrollador de Microsoft Advisory Council](http://aka.ms/DGAC) (DGAC) también revisado y borradores comentada:
+Los miembros de la [Guía de desarrollador de Microsoft Advisory Council](https://aka.ms/DGAC) (DGAC) también revisado y borradores comentada:
 
 - Jean-Luc Boucho
 - Catalin Gheorghiu

@@ -8,12 +8,12 @@ ms.date: 06/26/2007
 ms.assetid: d191a204-d7ea-458d-b81c-0b9049ecb55f
 msc.legacyurl: /web-forms/overview/data-access/working-with-batched-data/batch-updating-vb
 msc.type: authoredcontent
-ms.openlocfilehash: 76c475b67943b77d99630e087ed46fe6d5f11a03
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: dc40c056aa951b94ca0af2af339d9c7987ffd987
+ms.sourcegitcommit: 289e051cc8a90e8f7127e239fda73047bde4de12
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57078568"
+ms.lasthandoff: 03/25/2019
+ms.locfileid: "58426034"
 ---
 <a name="batch-updating-vb"></a>Actualización por lotes (VB)
 ====================
@@ -241,7 +241,7 @@ Este método comienza mediante la obtención de todos los productos en un `Produ
 
 Para cada fila del `ProductID` se obtiene de la `DataKeys` adecuado y colección `ProductsRow` está seleccionado en el `ProductsDataTable`. Los cuatro controles de entrada TemplateField mediante programación se hace referencia y sus valores se asignan a la `ProductsRow` s propiedades de la instancia. Después de cada control GridView se usaron los valores de fila s para actualizar la `ProductsDataTable`, se han pasado a la s BLL `UpdateWithTransaction` método que, como hemos visto en el tutorial anterior, simplemente llama a hacia abajo en la s DAL `UpdateWithTransaction` método.
 
-El algoritmo de actualización por lotes utilizado para este tutorial actualiza cada fila de la `ProductsDataTable` que corresponde a una fila en el control GridView, independientemente de si ha cambiado la información del producto s. Mientras estas blind actualiza no son normalmente un problema de rendimiento, puede provocar registros superfluo si se van a auditar los cambios en la tabla de base de datos. En el [realizar actualizaciones por lotes](../editing-and-deleting-data-through-the-datalist/performing-batch-updates-vb.md) tutorial hemos explorado una actualización por lotes interfaz con el control DataList y agregado código que va a actualizar solo aquellos registros que realmente se han modificado por el usuario. No dude en usar las técnicas de [realizar actualizaciones por lotes](../editing-and-deleting-data-through-the-datalist/performing-batch-updates-vb.md) para actualizar el código en este tutorial, si lo desea.
+El algoritmo de actualización por lotes utilizado para este tutorial actualiza cada fila de la `ProductsDataTable` que corresponde a una fila en el control GridView, independientemente de si ha cambiado la información del producto s. Aunque estas actualizaciones ocultas no supone un problema de rendimiento, puede provocar registros superfluo si se van a auditar los cambios en la tabla de base de datos. En el [realizar actualizaciones por lotes](../editing-and-deleting-data-through-the-datalist/performing-batch-updates-vb.md) tutorial hemos explorado una actualización por lotes interfaz con el control DataList y agregado código que va a actualizar solo aquellos registros que realmente se han modificado por el usuario. No dude en usar las técnicas de [realizar actualizaciones por lotes](../editing-and-deleting-data-through-the-datalist/performing-batch-updates-vb.md) para actualizar el código en este tutorial, si lo desea.
 
 > [!NOTE]
 > Al enlazar el origen de datos en el control GridView a través de su etiqueta inteligente, Visual Studio asigna automáticamente los valores de clave principal de s de origen de datos para el s GridView `DataKeyNames` propiedad. Si no se enlazó ObjectDataSource en GridView a través de la etiqueta inteligente de GridView s tal como se describe en el paso 1, entonces deberá establecer manualmente la s GridView `DataKeyNames` propiedad ProductID para tener acceso a la `ProductID` valor para cada fila a través de la `DataKeys` colección.
@@ -269,7 +269,7 @@ Para esos tipos de situaciones, considere el uso de los siguientes `BatchUpdateA
 
 `BatchMethodAlternate` se inicia mediante la creación de una nueva y vacía `ProductsDataTable` denominado `products`. A continuación, se recorre la s GridView `Rows` colección y para cada fila Obtiene la información de producto en particular utilizando la s BLL `GetProductByProductID(productID)` método. El objeto recuperado `ProductsRow` instancia tiene sus propiedades actualizados en la misma manera que `BatchUpdate`, pero después de actualizar la fila que se importan los `products` `ProductsDataTable` a través de las operaciones de asignación DataTable [ `ImportRow(DataRow)` método](https://msdn.microsoft.com/library/system.data.datatable.importrow(VS.80).aspx).
 
-Después de la `For Each` bucle se completa, `products` contiene uno `ProductsRow` instancia para cada fila en el control GridView. Desde cada uno de los `ProductsRow` instancias se han agregado a la `products` (en lugar de actualización), si se pasa a ciegas la `UpdateWithTransaction` método la `ProductsTableAdatper` intentará insertar cada uno de los registros en la base de datos. En su lugar, necesitamos especificar que cada una de estas filas se se ha modificado (no agregado).
+Después de la `For Each` bucle se completa, `products` contiene uno `ProductsRow` instancia para cada fila en el control GridView. Desde cada uno de los `ProductsRow` instancias se han agregado a la `products` (en lugar de actualización), si se pasa a ciegas la `UpdateWithTransaction` método la `ProductsTableAdapter` intentará insertar cada uno de los registros en la base de datos. En su lugar, necesitamos especificar que cada una de estas filas se se ha modificado (no agregado).
 
 Esto puede realizarse mediante la adición de un nuevo método a la capa BLL denominada `UpdateProductsWithTransaction`. `UpdateProductsWithTransaction`, conjuntos se muestra a continuación, el `RowState` de cada uno de los `ProductsRow` instancias en el `ProductsDataTable` a `Modified` y, a continuación, pasa el `ProductsDataTable` al s DAL `UpdateWithTransaction` método.
 

@@ -8,12 +8,12 @@ ms.date: 08/28/2012
 ms.assetid: 5d9a2999-fcc4-4c45-a018-271fddf74a3b
 msc.legacyurl: /mvc/overview/older-versions/getting-started-with-aspnet-mvc4/adding-validation-to-the-model
 msc.type: authoredcontent
-ms.openlocfilehash: 5819d789f31b9452d40ae3aa7f821f101ae126ce
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: c0cfd4f900c88f953cf7004a987bc267a1e1b4a2
+ms.sourcegitcommit: 289e051cc8a90e8f7127e239fda73047bde4de12
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57049482"
+ms.lasthandoff: 03/25/2019
+ms.locfileid: "58422038"
 ---
 <a name="adding-validation-to-the-model"></a>Agregar la validación al modelo
 ====================
@@ -55,7 +55,7 @@ Se usará las migraciones para actualizar el esquema. Compile la solución y, a 
 
 [!code-console[Main](adding-validation-to-the-model/samples/sample3.cmd)]
 
-Cuando finalice este comando, Visual Studio abre el archivo de clase que define la nueva `DbMIgration` clase derivada con el nombre especificado (*AddDataAnnotationsMig*) y en el `Up` método puede ver el código que se actualiza las restricciones de esquema. El `Title` y `Genre` campos ya no admiten valores null (es decir, debe especificar un valor) y el `Rating` campo tiene una longitud máxima de 5.
+Cuando finalice este comando, Visual Studio abre el archivo de clase que define la nueva `DbMigration` clase derivada con el nombre especificado (*AddDataAnnotationsMig*) y en el `Up` método puede ver el código que se actualiza las restricciones de esquema. El `Title` y `Genre` campos ya no admiten valores null (es decir, debe especificar un valor) y el `Rating` campo tiene una longitud máxima de 5.
 
 Los atributos de validación especifican el comportamiento que quiere aplicar en las propiedades del modelo al que se aplican. El `Required` atributo indica que una propiedad debe tener un valor; en este ejemplo, una película tiene que tener valores para el `Title`, `ReleaseDate`, `Genre`, y `Price` propiedades para que sean válidos. El atributo `Range` restringe un valor a un intervalo determinado. El atributo `StringLength` permite establecer la longitud máxima de una propiedad de cadena y, opcionalmente, su longitud mínima. Tipos intrínsecos (como `decimal, int, float, DateTime`) son necesarias de forma predeterminada y no es necesario el `Required` atributo.
 

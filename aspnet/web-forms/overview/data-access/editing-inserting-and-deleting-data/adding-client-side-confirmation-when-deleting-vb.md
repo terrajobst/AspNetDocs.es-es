@@ -8,12 +8,12 @@ ms.date: 07/17/2006
 ms.assetid: 6331e02e-c465-4cdf-bd3f-f07680c289d6
 msc.legacyurl: /web-forms/overview/data-access/editing-inserting-and-deleting-data/adding-client-side-confirmation-when-deleting-vb
 msc.type: authoredcontent
-ms.openlocfilehash: deae088d1daa63e2936aedf80eded18588b1ec60
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: 2b0d7aeab357a0009c44a29ff66f22ce8a744a90
+ms.sourcegitcommit: 289e051cc8a90e8f7127e239fda73047bde4de12
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57026902"
+ms.lasthandoff: 03/25/2019
+ms.locfileid: "58422160"
 ---
 <a name="adding-client-side-confirmation-when-deleting-vb"></a>Agregar la confirmación del cliente al eliminar (VB)
 ====================
@@ -38,7 +38,7 @@ El código JavaScript `confirm(string)` función muestra su parámetro de entrad
 **Figura 1**: El código JavaScript `confirm(string)` método muestra un cuadro de mensaje Modal, del lado cliente
 
 
-Durante un envío de formulario, si un valor de `false` se devuelve desde un controlador de eventos del lado cliente, a continuación, se ha cancelado el envío del formulario. Con esta característica, podemos tener la eliminación botón s del lado cliente `onclick` controlador de eventos devuelve el valor de una llamada a `confirm("Are you sure you want to delete this product?")`. Si el usuario hace clic en Cancelar, `confirm(string)` devolverá false, lo que causa el envío del formulario Cancelar. Con ninguna devolución de datos, se puede eliminar el producto cuyo botón Delete se hizo clic ganado t. Si, sin embargo, el usuario hace clic en Aceptar en el cuadro de diálogo de confirmación, la devolución de datos continuará sin alteraciones y se eliminará el producto. Consulte [s de usando JavaScript `confirm()` método de envío del Control formulario](http://www.webreference.com/programming/javascript/confirm/) para obtener más información sobre esta técnica.
+Durante un envío de formulario, si un valor de `false` se devuelve desde un controlador de eventos del lado cliente, a continuación, se ha cancelado el envío del formulario. Con esta característica, podemos tener la eliminación botón s del lado cliente `onclick` controlador de eventos devuelve el valor de una llamada a `confirm("Are you sure you want to delete this product?")`. Si el usuario hace clic en Cancelar, `confirm(string)` devolverá false, lo que causa el envío del formulario Cancelar. Con ninguna devolución de datos, no se puede eliminar el producto cuyo botón Delete se hizo clic. Si, sin embargo, el usuario hace clic en Aceptar en el cuadro de diálogo de confirmación, la devolución de datos continuará sin alteraciones y se eliminará el producto. Consulte [s de usando JavaScript `confirm()` método de envío del Control formulario](http://www.webreference.com/programming/javascript/confirm/) para obtener más información sobre esta técnica.
 
 Agregar el script de cliente necesario varía ligeramente si usa las plantillas que cuando se utiliza un CommandField. Por lo tanto, en este tutorial veremos un FormView y GridView de ejemplo.
 

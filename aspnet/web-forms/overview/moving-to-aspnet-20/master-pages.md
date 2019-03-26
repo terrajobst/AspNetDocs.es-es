@@ -8,12 +8,12 @@ ms.date: 02/20/2005
 ms.assetid: 9c0cce4d-efd9-4c14-b0e8-a1a140abb3f4
 msc.legacyurl: /web-forms/overview/moving-to-aspnet-20/master-pages
 msc.type: authoredcontent
-ms.openlocfilehash: f40eb338a1b6b8eebb6578dd7938e96a05b1617f
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: 644beb37bf893a590be03dd0929c5870af6fbe87
+ms.sourcegitcommit: 289e051cc8a90e8f7127e239fda73047bde4de12
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57055122"
+ms.lasthandoff: 03/25/2019
+ms.locfileid: "58425774"
 ---
 <a name="master-pages"></a>Páginas maestras
 ====================
@@ -94,7 +94,7 @@ En este laboratorio, creará una nueva página maestra y definir tres controles 
 
 1. Coloque el cursor en cada celda de la tabla y establezca el *valign* propiedad *superior*.
 2. Desde el cuadro de herramientas, inserte un control ContentPlaceHolder en la celda superior de la tabla (la celda de encabezado).
-3. Cuando se inserta este control ContentPlaceHolder, observará que el alto de fila ocupa casi toda la página como se muestra en la figura 4. Se preocupa en este momento.
+3. Cuando se inserta este control ContentPlaceHolder, observará que el alto de fila ocupa casi toda la página como se muestra en la figura 4. No preocuparse de en este momento.
 
 
 ![Es el espacio vacío en la misma celda, como el control ContentPlaceHolder](master-pages/_static/image1.gif)
@@ -127,7 +127,7 @@ En este laboratorio, creará una nueva página maestra y definir tres controles 
 2. Seleccione exercise1.master en seleccionar un cuadro de diálogo página principal como se muestra en la figura 7.
 3. Haga clic en Aceptar para agregar la nueva página de contenido.
 
-Aparece la página de contenido nuevo en Visual Studio con un control de contenido para cada control ContentPlaceHolder en la página maestra. De forma predeterminada, los controles de contenido están vacíos, por lo que puede agregar su propio contenido. Si le gusta iba para que poder usar el contenido desde el control ContentPlaceHolder en la página maestra, simplemente haga clic en el símbolo de etiqueta inteligente (la pequeña flecha negra en la esquina superior derecha del control) y elija *predeterminado el contenido de patrones* en la etiqueta inteligente tal como se muestra en **figura 8**. Al hacerlo, el elemento de menú cambia a *crear contenido personalizado*. Al hacer clic en él en ese momento, se quita el contenido de la página maestra que le permite definir contenido personalizado para ese control de contenido determinado.
+Aparece la página de contenido nuevo en Visual Studio con un control de contenido para cada control ContentPlaceHolder en la página maestra. De forma predeterminada, los controles de contenido están vacíos, por lo que puede agregar su propio contenido. Si desea que les permite utilizar el contenido desde el control ContentPlaceHolder en la página maestra, simplemente haga clic en el símbolo de etiqueta inteligente (la pequeña flecha negra en la esquina superior derecha del control) y elija *predeterminado el contenido de patrones* en la etiqueta inteligente tal como se muestra en **figura 8**. Al hacerlo, el elemento de menú cambia a *crear contenido personalizado*. Al hacer clic en él en ese momento, se quita el contenido de la página maestra que le permite definir contenido personalizado para ese control de contenido determinado.
 
 
 ![Establecer un Control de contenido en el valor predeterminado el contenido de las páginas principal](master-pages/_static/image4.gif)

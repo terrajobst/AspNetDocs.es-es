@@ -8,12 +8,12 @@ ms.date: 06/10/2014
 ms.assetid: 400db427-27af-4f2f-abf0-5486d5e024b5
 msc.legacyurl: /signalr/overview/deployment/tutorial-signalr-self-host
 msc.type: authoredcontent
-ms.openlocfilehash: 6a6359d59a4b715e13fe2bbcef57da6d6d6294b5
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: 194f72ce40067e177a23b1eb70bd07ceb2225a04
+ms.sourcegitcommit: 289e051cc8a90e8f7127e239fda73047bde4de12
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57039032"
+ms.lasthandoff: 03/25/2019
+ms.locfileid: "58425566"
 ---
 <a name="tutorial-signalr-self-host"></a>Tutorial: Autohospedaje de SignalR
 ====================

@@ -8,12 +8,12 @@ ms.date: 05/01/2013
 ms.assetid: 1dca7967-8296-444a-9533-837eb284e78c
 msc.legacyurl: /signalr/overview/older-versions/scaleout-with-sql-server
 msc.type: authoredcontent
-ms.openlocfilehash: 7fd05a4487be4cc96fa945cf08226841e3f01806
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: eb0d6cd23563f72bb382b3a3304d03294f783ad8
+ms.sourcegitcommit: 289e051cc8a90e8f7127e239fda73047bde4de12
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57032352"
+ms.lasthandoff: 03/25/2019
+ms.locfileid: "58425852"
 ---
 <a name="signalr-scaleout-with-sql-server-signalr-1x"></a>Escalabilidad horizontal de SignalR con SQL Server (SignalR 1.x)
 ====================
@@ -97,7 +97,7 @@ También incluyen el servicio de administración (que se muestran en "Herramient
 
 ![](scaleout-with-sql-server/_static/image5.png)
 
-**Instalar Web Deploy 3.0.** Cuando se ejecuta el Administrador de IIS, se le pedirá que instale la plataforma Web de Microsoft, o bien puede [descargar el intstaller](https://go.microsoft.com/fwlink/?LinkId=255386). En el instalador de plataforma, buscar Web Deploy e instalar Web Deploy 3.0
+**Instalar Web Deploy 3.0.** Cuando se ejecuta el Administrador de IIS, se le pedirá que instale la plataforma Web de Microsoft, o bien puede [descargar el instalador](https://go.microsoft.com/fwlink/?LinkId=255386). En el instalador de plataforma, buscar Web Deploy e instalar Web Deploy 3.0
 
 ![](scaleout-with-sql-server/_static/image6.png)
 

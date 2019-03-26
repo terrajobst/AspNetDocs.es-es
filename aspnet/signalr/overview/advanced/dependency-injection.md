@@ -8,12 +8,12 @@ ms.date: 06/10/2014
 ms.assetid: a14121ae-02cf-4024-8af0-9dd0dc810690
 msc.legacyurl: /signalr/overview/advanced/dependency-injection
 msc.type: authoredcontent
-ms.openlocfilehash: 54e263e277852d2d478ce5bccd4164254498831a
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: 957facaf2988fedb6615e95701af5155cbcb23d2
+ms.sourcegitcommit: 289e051cc8a90e8f7127e239fda73047bde4de12
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57024752"
+ms.lasthandoff: 03/25/2019
+ms.locfileid: "58423103"
 ---
 <a name="dependency-injection-in-signalr"></a>Inserción de dependencias en SignalR
 ====================
@@ -59,7 +59,7 @@ Un mejor enfoque es "Insertar" un `ILogger` en el objeto, por ejemplo, mediante 
 
 [!code-csharp[Main](dependency-injection/samples/sample3.cs)]
 
-Ahora, el objeto no es responsable de seleccionarlos `ILogger` a usar. Puede swich `ILogger` implementaciones sin cambiar los objetos que dependen de él.
+Ahora, el objeto no es responsable de seleccionarlos `ILogger` a usar. Puede cambiar `ILogger` implementaciones sin cambiar los objetos que dependen de él.
 
 [!code-csharp[Main](dependency-injection/samples/sample4.cs)]
 
@@ -179,7 +179,7 @@ Crear un enlace para **IHubConnectionContext** como sigue:
 
 [!code-csharp[Main](dependency-injection/samples/sample18.cs)]
 
-Este creatres código una función anónima que devuelve un **IHubConnection**. El **WhenInjectedInto** método indica Ninject para usar esta función sólo cuando se crea `IStockTicker` instancias. El motivo es que crea SignalR **IHubConnectionContext** instancias internamente, y no queremos invalidar cómo los crea SignalR. Esta función solo se aplica a nuestro `StockTicker` clase.
+Este código crea una función anónima que devuelve un **IHubConnection**. El **WhenInjectedInto** método indica Ninject para usar esta función sólo cuando se crea `IStockTicker` instancias. El motivo es que crea SignalR **IHubConnectionContext** instancias internamente, y no queremos invalidar cómo los crea SignalR. Esta función solo se aplica a nuestro `StockTicker` clase.
 
 Pasar la resolución de dependencia en el **MapSignalR** método mediante la adición de una configuración de concentrador:
 

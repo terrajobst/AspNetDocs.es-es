@@ -15,7 +15,7 @@ msc.type: chapter
 
 [!INCLUDE [consider RP](../../../../includes/razor.md)]
 
-Esta serie de tutoriales siguiente trata de ASP.NET MVC: Código fuente ubicado en [GitHub](https://github.com/aspnet/Docs/tree/master/aspnet/mvc/overview/getting-started/introduction/sample/MvcMovie/MvcMovie)
+Esta serie de tutoriales siguiente trata de ASP.NET MVC: Código fuente ubicado en [GitHub](https://github.com/aspnet/AspNetDocs/tree/master/aspnet/mvc/overview/getting-started/introduction/sample/MvcMovie/MvcMovie)
 
 - [Introducción](getting-started.md)
 - [Agregar un controlador](adding-a-controller.md)

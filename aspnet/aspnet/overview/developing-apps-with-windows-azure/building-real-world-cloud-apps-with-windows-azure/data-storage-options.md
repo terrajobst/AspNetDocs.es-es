@@ -8,15 +8,15 @@ ms.date: 06/12/2014
 ms.assetid: e51fcecb-cb33-4f9e-8428-6d2b3d0fe1bf
 msc.legacyurl: /aspnet/overview/developing-apps-with-windows-azure/building-real-world-cloud-apps-with-windows-azure/data-storage-options
 msc.type: authoredcontent
-ms.openlocfilehash: 17e11c33d6bf2a75e99e3bda4d6ab89c5b1631f9
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: 9969a68a3e1aa043845fb5affd6d3b73dec4136d
+ms.sourcegitcommit: 289e051cc8a90e8f7127e239fda73047bde4de12
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57042862"
+ms.lasthandoff: 03/25/2019
+ms.locfileid: "58425397"
 ---
-<a name="data-storage-options-building-real-world-cloud-apps-with-azure"></a>Opciones de almacenamiento de datos (creación de aplicaciones de nube reales con Azure)
-====================
+# <a name="data-storage-options-building-real-world-cloud-apps-with-azure"></a>Opciones de almacenamiento de datos (creación de aplicaciones de nube reales con Azure)
+
 by [Mike Wasson](https://github.com/MikeWasson), [Rick Anderson]((https://twitter.com/RickAndMSFT)), [Tom Dykstra](https://github.com/tdykstra)
 
 [Descargar proyecto corregirlo](http://code.msdn.microsoft.com/Fix-It-app-for-Building-cdd80df4) o [descargar libro electrónico](http://blogs.msdn.com/b/microsoft_press/archive/2014/07/23/free-ebook-building-cloud-apps-with-microsoft-azure.aspx)
@@ -62,13 +62,13 @@ Los grandes volúmenes de datos que se pueden almacenar en bases de datos NoSQL 
 
 En Azure, [HDInsight](https://azure.microsoft.com/services/hdinsight/) permite procesar, analizar y obtener nuevas perspectivas de big data con la potencia de Hadoop. Por ejemplo, podría utilizarlo para analizar registros de servidor web:
 
-- Habilitar el registro de servidor web para la cuenta de almacenamiento. Esto configura Azure para escribir registros en el servicio Blob para todas las solicitudes HTTP a la aplicación. Blob Service es básicamente el almacenamiento de archivos en la nube, y se integra perfectamente con HDInsight. 
+- Habilitar el registro de servidor web para la cuenta de almacenamiento. Esto configura Azure para escribir registros en el servicio Blob para todas las solicitudes HTTP a la aplicación. Blob Service es básicamente el almacenamiento de archivos en la nube, y se integra perfectamente con HDInsight.
 
     ![Registros al almacenamiento de blobs](data-storage-options/_static/image2.png)
-- A medida que la aplicación de tráfico, registros de IIS del servidor web se escriben en el almacenamiento de blobs. 
+- A medida que la aplicación de tráfico, registros de IIS del servidor web se escriben en el almacenamiento de blobs.
 
     ![Registros de servidor Web](data-storage-options/_static/image3.png)
-- En el portal, haga clic en **New** - **Data Services** - **HDInsight** - **creación rápida**, y especifique un nombre de clúster de HDInsight, el tamaño de clúster (número de nodos de datos del clúster de HDInsight) y un nombre de usuario y una contraseña para el clúster de HDInsight. 
+- En el portal, haga clic en **New** - **Data Services** - **HDInsight** - **creación rápida**, y especifique un nombre de clúster de HDInsight, el tamaño de clúster (número de nodos de datos del clúster de HDInsight) y un nombre de usuario y una contraseña para el clúster de HDInsight.
 
     ![HDInsight](data-storage-options/_static/image4.png)
 
@@ -175,7 +175,7 @@ Espere varios segundos, y tiene una base de datos en Azure listo para su uso.
 
 ![Crear nueva base de datos SQL](data-storage-options/_static/image10.png)
 
-Por lo que Azure en unos pocos segundos, lo que puede que le lleve un día o una semana o más tiempo para llevar a cabo en el entorno local. Y puesto que podríamos puede crear bases de datos automáticamente en una secuencia de comandos o mediante una API de administración, pueden escalar dinámicamente al repartir los datos entre varias bases de datos < o:p >, siempre y cuando la aplicación se ha programado para que. </o : p >
+Por lo que Azure en unos pocos segundos, lo que puede que le lleve un día o una semana o más tiempo para llevar a cabo en el entorno local. Y puesto que podríamos puede crear bases de datos automáticamente en una secuencia de comandos o mediante una API de administración, pueden escalar dinámicamente al repartir los datos entre varias bases de datos, siempre y cuando la aplicación se ha programado para.
 
 Esto es un ejemplo de nuestro modelo de plataforma como servicio. No es necesario que administrar los servidores, lo hacemos. Si no tiene que preocuparse por las copias de seguridad, lo hacemos. Se está ejecutando en alta disponibilidad: los datos en la base de datos se replican automáticamente en tres servidores. Si se bloquea una máquina, se conmutarán por error automáticamente y no se pierde ningún dato. El servidor se aplican las revisiones con regularidad, no es necesario preocuparse de ello.
 
@@ -267,7 +267,7 @@ Para obtener más información, vea los siguientes recursos.
 
 Seleccionar una plataforma de base de datos:
 
-- [Acceso a datos para soluciones altamente escalables: Uso de SQL, NoSQL y persistencia políglota](http://aka.ms/dag-doc). Libro electrónico de Microsoft Patterns and Practices que entra en profundidad en los diferentes tipos de datos almacena disponibles para las aplicaciones en la nube.
+- [Acceso a datos para soluciones altamente escalables: Uso de SQL, NoSQL y persistencia políglota](https://aka.ms/dag-doc). Libro electrónico de Microsoft Patterns and Practices que entra en profundidad en los diferentes tipos de datos almacena disponibles para las aplicaciones en la nube.
 - [Microsoft Patterns and Practices - Guía de Azure](https://msdn.microsoft.com/library/ff898430.aspx). Consulte el manual de coherencia de datos, replicación de datos y orientación de sincronización, patrón Index Table, el patrón Materialized View.
 - [BASE: Una alternativa Acid](http://queue.acm.org/detail.cfm?id=1394128). El artículo sobre un equilibrio entre la coherencia de los datos y la escalabilidad.
 - [Siete bases de datos de siete semanas: Una guía para las bases de datos modernas y el movimiento NoSQL](https://www.amazon.com/Seven-Databases-Weeks-Modern-Movement/dp/1934356921). Libro de Eric Redmond y Jim R. Wilson. Se recomienda encarecidamente para introducir usted mismo a la gama de plataformas de almacenamiento de datos disponibles en la actualidad.

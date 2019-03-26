@@ -8,12 +8,12 @@ ms.date: 02/05/2013
 ms.assetid: a8367c6d-ef94-4dff-a010-5eff9e6eea96
 msc.legacyurl: /single-page-application/overview/introduction/other-libraries
 msc.type: authoredcontent
-ms.openlocfilehash: 53c97580b45bb40a6c3256c8038ec5c8b861b69f
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: 5503a00df707ee79282a32c77ed2287e93cf8f48
+ms.sourcegitcommit: 289e051cc8a90e8f7127e239fda73047bde4de12
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57025222"
+ms.lasthandoff: 03/25/2019
+ms.locfileid: "58425475"
 ---
 <a name="know-a-library-other-than-knockout"></a>¿Conoce una biblioteca distinta de Knockout?
 ====================
@@ -48,7 +48,7 @@ La plantilla de SPA de Ember es una reimplementación de la plantilla de SPA de 
 
 [Plantilla de SPA toalla hot](../templates/hottowel-template.md). Esta plantilla se ofrece en varias bibliotecas de JavaScript, incluidos Breeze, Knockout, RequireJS y Twitter Bootstrap.
 
-En comparación con las otras plantillas que se muestran aquí, el teample toalla activa proporciona una aplicación de más completa desde el que puede crear sus propios. Hay varios conceptos que tener en cuenta, pero una vez que entenderlas, esta plantilla puede ser simplemente lo busca. Si desea crear una SPA pero no se puede decidir dónde se inicia, use la toalla activo y en segundos, tendrá una SPA y todas las herramientas debe basarse en él.
+En comparación con las otras plantillas que se muestran aquí, la plantilla de Hot toalla proporciona una aplicación más completada desde el que puede crear sus propios. Hay varios conceptos que tener en cuenta, pero una vez que entenderlas, esta plantilla puede ser simplemente lo busca. Si desea crear una SPA pero no se puede decidir dónde se inicia, use la toalla activo y en segundos, tendrá una SPA y todas las herramientas debe basarse en él.
 
 ## <a name="feature-table"></a>Tabla de características
 
@@ -60,7 +60,7 @@ Estas son las características proporcionadas por cada plantilla SPA:
 |      Ejemplo "todo"       |  &#10003;   |          |    &#10003;    | &#10003;  | &#10003; |           |
 |     Plantilla      |             | &#10003; |                |           |          | &#10003;  |
 | Navegación e historial |             | &#10003; |    &#10003;    |           | &#10003; | &#10003;  |
-|        Bibliotecas        |             |          |                |           |          |           |
+|        Bibliotecas       |             |          |                |           |          |           |
 |        Angular         |             |          |    &#10003;    |           |          |           |
 |    &#8195;Red troncal     |             | &#10003; |                |           |          |           |
 |         Breeze         |             |          |    &#10003;    | &#10003;  |          | &#10003;  |

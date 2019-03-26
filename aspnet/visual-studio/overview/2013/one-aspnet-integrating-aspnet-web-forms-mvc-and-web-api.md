@@ -8,24 +8,24 @@ ms.date: 07/16/2014
 ms.assetid: 4fe2558d-67cc-4d12-a5c1-6fb9f6f16137
 msc.legacyurl: /visual-studio/overview/2013/one-aspnet-integrating-aspnet-web-forms-mvc-and-web-api
 msc.type: authoredcontent
-ms.openlocfilehash: c18911680b59448cd67190f71e951a3fcf3d0478
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: 85e4369ee458043eec59fb27e317d18466f61f32
+ms.sourcegitcommit: 289e051cc8a90e8f7127e239fda73047bde4de12
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57044132"
+ms.lasthandoff: 03/25/2019
+ms.locfileid: "58422537"
 ---
 <a name="hands-on-lab-one-aspnet-integrating-aspnet-web-forms-mvc-and-web-api"></a>Laboratorio práctico: One ASP.NET: Integrar formularios Web Forms de ASP.NET, MVC y Web API
 ====================
 por [campamentos Web Team](https://twitter.com/webcamps)
 
-[Descargue el Kit de aprendizaje de campamentos de Web](http://aka.ms/webcamps-training-kit)
+[Descargue el Kit de aprendizaje de campamentos de Web](https://aka.ms/webcamps-training-kit)
 
 > ASP.NET es un marco para crear sitios Web, aplicaciones y servicios con tecnologías especializadas como MVC, Web API y otros. Con la expansión de ASP.NET ha visto desde su creación y el expresado debe tener estas tecnologías integradas, ha habido esfuerzos recientes en trabajar hacia **One ASP.NET**.
 > 
 > Visual Studio 2013 presenta un nuevo sistema de proyecto unificado que le permite crear una aplicación y usar todas las tecnologías ASP.NET en un proyecto. Esta característica elimina la necesidad de elegir una tecnología al principio de un proyecto y stick con él y en su lugar, recomienda el uso de varios marcos ASP.NET dentro de un proyecto.
 > 
-> Todo el código de ejemplo y fragmentos de código se incluyen en el Kit de entrenamiento campamentos de Web, que está disponible en [ http://aka.ms/webcamps-training-kit ](http://aka.ms/webcamps-training-kit).
+> Todo el código de ejemplo y fragmentos de código se incluyen en el Kit de entrenamiento campamentos de Web, que está disponible en [ https://aka.ms/webcamps-training-kit ](https://aka.ms/webcamps-training-kit).
 
 
 <a id="Overview"></a>

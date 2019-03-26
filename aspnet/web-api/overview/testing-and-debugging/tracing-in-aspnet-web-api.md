@@ -8,12 +8,12 @@ ms.date: 02/25/2014
 ms.assetid: 66a837e9-600b-4b72-97a9-19804231c64a
 msc.legacyurl: /web-api/overview/testing-and-debugging/tracing-in-aspnet-web-api
 msc.type: authoredcontent
-ms.openlocfilehash: e0d525e497cf41a79820417a9c832fa6b5cd7f8a
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: 59bce8c511167e8ba8a8db6f1842e352c90f3039
+ms.sourcegitcommit: 289e051cc8a90e8f7127e239fda73047bde4de12
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57031542"
+ms.lasthandoff: 03/25/2019
+ms.locfileid: "58424903"
 ---
 <a name="tracing-in-aspnet-web-api-2"></a>Seguimiento en ASP.NET Web API 2
 ====================
@@ -113,7 +113,7 @@ Escritor de seguimiento solo una puede estar activa. De forma predeterminada, We
 
 Seguimiento de API Web usa un *fachada* patrón: Cuando se habilita el seguimiento, API Web incluye distintas partes de la canalización de solicitudes con las clases que realizan llamadas de seguimiento.
 
-Por ejemplo, al seleccionar un controlador, la canalización usa el **IHttpControllerSelector** interfaz. Con el seguimiento habilitado, inserta una clase que implementa la canalización de **IHttpControllerSelector** pero las llamadas a través de la implementación real:
+Por ejemplo, al seleccionar un controlador, la canalización usa el **IHttpControllerSelector** interfaz. Con el seguimiento habilitado, inserta una clase que implementa la canalización **IHttpControllerSelector** pero las llamadas a través de la implementación real:
 
 ![Seguimiento de API Web usa el patrón de fachada.](tracing-in-aspnet-web-api/_static/image8.png)
 

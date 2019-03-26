@@ -8,12 +8,12 @@ ms.date: 02/10/2010
 ms.assetid: d7729af4-1eda-4ff2-8b61-dbbe4fc11d10
 msc.legacyurl: /whitepapers/aspnet4
 msc.type: content
-ms.openlocfilehash: 775286df610df9040cbf04125b1742b6befa055b
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: 93ee29ae125e9442ee755998768a8105dfb485c0
+ms.sourcegitcommit: 289e051cc8a90e8f7127e239fda73047bde4de12
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57043162"
+ms.lasthandoff: 03/25/2019
+ms.locfileid: "58424305"
 ---
 <a name="aspnet-4-and-visual-studio-2010-web-development-overview"></a>Información general sobre la implementación web de ASP.NET 4 y Visual Studio 2010
 ====================
@@ -945,7 +945,7 @@ El valor de *controlRenderingCompatibility* es una cadena, lo que permite posibl
 
 En ASP.NET 3.5 SP1 y versiones anteriores, el marco de trabajo procesa los *deshabilitado* atributo en el marcado HTML para todos los controles cuyo *habilitado* propiedad establecida en *false*. Sin embargo, según la especificación de HTML 4.01, sólo *entrada* elementos deben tener este atributo.
 
-En ASP.NET 4, puede establecer el *controlRenderingCompatabilityVersion* propiedad en "3.5", como en el ejemplo siguiente:
+En ASP.NET 4, puede establecer el *controlRenderingCompatibilityVersion* propiedad en "3.5", como en el ejemplo siguiente:
 
 [!code-xml[Main](overview/samples/sample70.xml)]
 
@@ -957,7 +957,7 @@ El *etiqueta* podría representar el siguiente código HTML:
 
 [!code-html[Main](overview/samples/sample72.html)]
 
-En ASP.NET 4, puede establecer el *controlRenderingCompatabilityVersion* en "4.0". En ese caso, sólo los controles que se representen *entrada* elementos representará un *deshabilitado* atributo cuando el control *habilitado* propiedad está establecida en *false* . Los controles que no se representan HTML *entrada* elementos se representan en su lugar un *clase* atributo que hace referencia a una clase CSS que puede usar para definir un aspecto deshabilitado para el control. Por ejemplo, el *etiqueta* control mostrado en el ejemplo anterior generaría el marcado siguiente:
+En ASP.NET 4, puede establecer el *controlRenderingCompatibilityVersion* en "4.0". En ese caso, sólo los controles que se representen *entrada* elementos representará un *deshabilitado* atributo cuando el control *habilitado* propiedad está establecida en *false* . Los controles que no se representan HTML *entrada* elementos se representan en su lugar un *clase* atributo que hace referencia a una clase CSS que puede usar para definir un aspecto deshabilitado para el control. Por ejemplo, el *etiqueta* control mostrado en el ejemplo anterior generaría el marcado siguiente:
 
 [!code-html[Main](overview/samples/sample73.html)]
 

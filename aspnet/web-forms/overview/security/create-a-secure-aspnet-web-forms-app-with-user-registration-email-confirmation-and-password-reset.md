@@ -8,12 +8,12 @@ ms.date: 10/02/2014
 ms.assetid: 0a8d6044-5fab-4213-82d6-5618d5601358
 msc.legacyurl: /web-forms/overview/security/create-a-secure-aspnet-web-forms-app-with-user-registration-email-confirmation-and-password-reset
 msc.type: authoredcontent
-ms.openlocfilehash: acc13776840408756901e20589b9efacc83ff2a9
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: 1bd90f0ceddee7d9e18c1cac2fadfb2c84841f19
+ms.sourcegitcommit: 289e051cc8a90e8f7127e239fda73047bde4de12
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57053652"
+ms.lasthandoff: 03/25/2019
+ms.locfileid: "58424643"
 ---
 <a name="create-a-secure-aspnet-web-forms-app-with-user-registration-email-confirmation-and-password-reset-c"></a>Crear una aplicación segura de formularios Web Forms de ASP.NET con registro de usuario, confirmación por correo electrónico y restablecimiento de contraseña (C#)
 ====================
@@ -152,7 +152,7 @@ Aunque haya confirmado la cuenta de correo electrónico, en este momento no ser�
 <a id="rsend"></a>
 ## <a name="resend-email-confirmation-link"></a>Vínculo de confirmación de correo electrónico de reenvío
 
-Una vez que un usuario crea una nueva cuenta local, reciben un correo electrónico un vínculo de confirmación deben usar antes de que puedan iniciar sesión. Si el usuario que accidentalmente elimina el correo electrónico de confirmación o nunca llega el correo electrónico, deben volverá a enviar el vínculo de confirmación. Los cambios de código siguientes muestran cómo habilitarlo.
+Una vez que un usuario crea una nueva cuenta local, reciben un correo electrónico un vínculo de confirmación deben usar antes de que puedan iniciar sesión. Si el usuario elimina accidentalmente el correo electrónico de confirmación o nunca llega el correo electrónico, deben volverá a enviar el vínculo de confirmación. Los cambios de código siguientes muestran cómo habilitarlo.
 
 1. En Visual Studio, abra el **Login.aspx.cs** código subyacente y agregue el siguiente controlador de eventos después de la `LogIn` controlador de eventos:   
 

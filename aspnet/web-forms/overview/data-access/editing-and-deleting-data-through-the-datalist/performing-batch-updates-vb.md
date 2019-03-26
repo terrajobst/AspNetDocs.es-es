@@ -8,12 +8,12 @@ ms.date: 10/30/2006
 ms.assetid: 8dac22a7-91de-4e3b-888f-a4c438b03851
 msc.legacyurl: /web-forms/overview/data-access/editing-and-deleting-data-through-the-datalist/performing-batch-updates-vb
 msc.type: authoredcontent
-ms.openlocfilehash: 67ab034880c8140e6156721956059b7cdd3f077b
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: c903dd64ba7dd19a8af63224ee54629086279bf6
+ms.sourcegitcommit: 289e051cc8a90e8f7127e239fda73047bde4de12
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57034942"
+ms.lasthandoff: 03/25/2019
+ms.locfileid: "58425891"
 ---
 <a name="performing-batch-updates-vb"></a>Realizar actualizaciones por lotes (VB)
 ====================
@@ -126,7 +126,7 @@ Cuando el usuario hace clic en uno de los botones Actualizar todo, el `UpdateAll
 
 ## <a name="updating-only-those-addresses-that-have-been-modified"></a>Actualizar solo las direcciones que se han modificado
 
-El algoritmo de actualización por lotes utilizado para este tutorial se llama el `UpdateSupplierAddress` método para *cada* proveedor en el control DataList, independientemente de si ha cambiado su información de dirección. Mientras estas blind actualiza no son normalmente un problema de rendimiento, puede provocar registros superfluo si se van a auditar los cambios en la tabla de base de datos. Por ejemplo, si utiliza desencadenadores para registrar todas `UPDATE` s para el `Suppliers` tabla a una tabla de auditoría cada vez que un usuario hace clic en el botón Actualizar todo, se creará un nuevo registro de auditoría para cada proveedor en el sistema, independientemente de si el usuario realiza cada cambios.
+El algoritmo de actualización por lotes utilizado para este tutorial se llama el `UpdateSupplierAddress` método para *cada* proveedor en el control DataList, independientemente de si ha cambiado su información de dirección. Aunque estas actualizaciones ocultas no supone un problema de rendimiento, puede provocar registros superfluo si se van a auditar los cambios en la tabla de base de datos. Por ejemplo, si utiliza desencadenadores para registrar todas `UPDATE` s para el `Suppliers` tabla a una tabla de auditoría cada vez que un usuario hace clic en el botón Actualizar todo, se creará un nuevo registro de auditoría para cada proveedor en el sistema, independientemente de si el usuario realiza cada cambios.
 
 Las clases DataTable de ADO.NET y DataAdapter están diseñadas para admitir las actualizaciones por lotes donde se produce solo modificados, eliminados y nuevos registros en cualquier comunicación de la base de datos. Cada fila de la tabla de datos tiene un [ `RowState` propiedad](https://msdn.microsoft.com/library/system.data.datarow.rowstate.aspx) que indica si la fila se ha agregado a la DataTable, se eliminan de él, puede modificar, o permanece sin cambios. Cuando inicialmente se rellena una DataTable, todas las filas se marcan sin cambios. Cambiar el valor de cualquiera de las columnas de fila s marca la fila como modificado.
 

@@ -8,12 +8,12 @@ ms.date: 08/15/2006
 ms.assetid: 811a6ef2-ec66-4c8e-a089-6f795056e288
 msc.legacyurl: /web-forms/overview/data-access/paging-and-sorting/paging-and-sorting-report-data-cs
 msc.type: authoredcontent
-ms.openlocfilehash: 5ebef919deeda409cfa6805b603f67ef96ff003e
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: 15e23b09df13f11c69a2fd6c721981e632a25434
+ms.sourcegitcommit: 289e051cc8a90e8f7127e239fda73047bde4de12
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57064962"
+ms.lasthandoff: 03/25/2019
+ms.locfileid: "58422121"
 ---
 <a name="paging-and-sorting-report-data-c"></a>Paginar y ordenar datos de informes (C#)
 ====================
@@ -194,7 +194,7 @@ A continuación, volver a la `DataBound` controlador de eventos y agregue el có
 
 [!code-csharp[Main](paging-and-sorting-report-data-cs/samples/sample6.cs)]
 
-Este código comienza desactivando los elementos de la `PageList` DropDownList. Esto puede parecer superflua, puesto que una t no sería espera que el número de páginas que se va a cambiar, pero otros usuarios pueden usar simultáneamente el sistema, agregar o quitar registros de la `Products` tabla. Como las inserciones o eliminaciones podrían alterar el número de páginas de datos.
+Este código comienza desactivando los elementos de la `PageList` DropDownList. Esto puede parecer superflua, ya que uno no esperaría que el número de páginas que se va a cambiar, pero otros usuarios pueden usar simultáneamente el sistema, agregar o quitar registros de la `Products` tabla. Como las inserciones o eliminaciones podrían alterar el número de páginas de datos.
 
 A continuación, necesitamos crear de nuevo los números de página y tiene el que se asigna a la GridView actual `PageIndex` seleccionada de forma predeterminada. Lograrlo con un bucle desde 0 hasta `PageCount - 1`, agregando un nuevo `ListItem` en cada iteración y estableciendo su `Selected` propiedad en true si el índice de iteración actual es igual a la s GridView `PageIndex` propiedad.
 
@@ -253,7 +253,7 @@ Al enlazar un origen ObjectDataSource en GridView a través de la lista desplega
 
 [!code-aspx[Main](paging-and-sorting-report-data-cs/samples/sample9.aspx)]
 
-Un campo puede configurarse para que lo s no ordenable borrando su `SortExpression` propiedad (asignándolo a una cadena vacía). Para ilustrar esto, imagine que nos t debería permitir que nuestros clientes ordenar nuestros productos por precio. El `UnitPrice` BoundField s `SortExpression` propiedad se puede quitar o desde el marcado declarativo mediante el cuadro de diálogo campos (que se puede acceder haciendo clic en el vínculo Editar columnas en la etiqueta inteligente de GridView s).
+Un campo puede configurarse para que lo s no ordenable borrando su `SortExpression` propiedad (asignándolo a una cadena vacía). Para ilustrar esto, imagine que queríamos que nuestros clientes ordenar nuestros productos por precio. El `UnitPrice` BoundField s `SortExpression` propiedad se puede quitar o desde el marcado declarativo mediante el cuadro de diálogo campos (que se puede acceder haciendo clic en el vínculo Editar columnas en la etiqueta inteligente de GridView s).
 
 
 ![Los resultados están ordenados por el precio unitario en orden ascendente](paging-and-sorting-report-data-cs/_static/image27.png)

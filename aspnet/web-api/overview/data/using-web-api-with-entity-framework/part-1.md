@@ -8,12 +8,12 @@ ms.date: 01/17/2019
 ms.assetid: e879487e-dbcd-4b33-b092-d67c37ae768c
 msc.legacyurl: /web-api/overview/data/using-web-api-with-entity-framework/part-1
 msc.type: authoredcontent
-ms.openlocfilehash: 266c808e3525787181038d2de473194989039e02
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: d96f2bef5fff6fbee8e0767b0fa735cbd68e2779
+ms.sourcegitcommit: 289e051cc8a90e8f7127e239fda73047bde4de12
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57038022"
+ms.lasthandoff: 03/25/2019
+ms.locfileid: "58421549"
 ---
 <a name="using-web-api-2-with-entity-framework-6"></a>Usar Web API 2 con Entity Framework 6
 ====================
@@ -91,7 +91,7 @@ Después de crear el proyecto, puede implementar en Azure App Service Web Apps e
 
    [![](part-1/_static/image16.png)](part-1/_static/image16.png)
 
-   Acepte los valores predeterminados o escribir valores diferentes. Escriba un **Adminstrator Username** y **contraseña de administrador** para la base de datos. Seleccione **Aceptar** cuando haya terminado. El **crear App Service** página volverá a aparecer.
+   Acepte los valores predeterminados o escribir valores diferentes. Escriba un **nombre de usuario administrador** y **contraseña de administrador** para la base de datos. Seleccione **Aceptar** cuando haya terminado. El **crear App Service** página volverá a aparecer.
 
 5. Seleccione **crear** para crear su perfil. Aparece un mensaje en la esquina inferior derecha, que indica que la implementación está en curso. Después de unos momentos, el **publicar** ventana vuelve a aparecer.
 

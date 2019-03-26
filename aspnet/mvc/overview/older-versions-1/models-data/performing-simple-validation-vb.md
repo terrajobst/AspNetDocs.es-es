@@ -8,12 +8,12 @@ ms.date: 03/02/2009
 ms.assetid: df6cf4b7-0bb3-4c4e-b17a-bd78a759a6bc
 msc.legacyurl: /mvc/overview/older-versions-1/models-data/performing-simple-validation-vb
 msc.type: authoredcontent
-ms.openlocfilehash: 1d0bd6917bab61b17d1cafcf0cd9eb1983275dc8
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: 31faf2e89e6acb25854455902c1a6fdffebd293c
+ms.sourcegitcommit: 289e051cc8a90e8f7127e239fda73047bde4de12
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57057652"
+ms.lasthandoff: 03/25/2019
+ms.locfileid: "58423187"
 ---
 <a name="performing-simple-validation-vb"></a>Realizar una validación simple (VB)
 ====================
@@ -90,7 +90,7 @@ Hay tres clases de hoja de estilos en cascada se usan para controlar la aparienc
 
 - entrada:-error de validación - se aplica a la &lt;entrada&gt; representada por Html.TextBox() auxiliar de etiqueta.
 - campo--error de validación - se aplica a la &lt;abarcan&gt; etiqueta representada por la aplicación auxiliar de Html.ValidationMessage().
-- Resumen de errores de validación - se aplica a la &lt;ul&gt; etiqueta representada por la aplicación auxiliar de Html.ValidationSumamry().
+- Resumen de errores de validación - se aplica a la &lt;ul&gt; etiqueta representada por la aplicación auxiliar de Html.ValidationSummary().
 
 Puede modificar estas clases de hoja de estilos en cascada y, por lo tanto, modificar la apariencia de los errores de validación, modificando el archivo Site.css ubicado en la carpeta de contenido.
 

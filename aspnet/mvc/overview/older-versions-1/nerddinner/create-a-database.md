@@ -8,12 +8,12 @@ ms.date: 07/27/2010
 ms.assetid: 983f3ffa-08b8-4868-b8c9-aa34593fc683
 msc.legacyurl: /mvc/overview/older-versions-1/nerddinner/create-a-database
 msc.type: authoredcontent
-ms.openlocfilehash: b6ab0740f251889f0fa0561809cac2bbe79bcb3a
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: 48ca2984ca8e4ec5b2bc49952a8718aa26138aea
+ms.sourcegitcommit: 289e051cc8a90e8f7127e239fda73047bde4de12
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57064912"
+ms.lasthandoff: 03/25/2019
+ms.locfileid: "58423707"
 ---
 <a name="create-a-database"></a>Crear una base de datos
 ====================
@@ -94,7 +94,7 @@ Se deberá guardarlo y asígnele el nombre "RSVP".
 
 Ahora tenemos dos tablas dentro de nuestra base de datos. El último paso de diseño de esquema será configurar una relación "uno a varios" entre estas dos tablas: para que podamos asociamos cada fila de la cena con cero o más filas RSVP que se aplican a él. Para hacer esto mediante la configuración de la columna de la tabla RSVP "DinnerID" para que tenga una relación de clave externa a la columna "DinnerID" en la tabla "Dinners".
 
-Para ello que se abrirá el Diseñador de tablas la tabla de RSVP haciendo doble clic en el Explorador de servidores. A continuación, seleccione la columna "DinnerID" dentro de ella, con el botón secundario y elija el comando "Relationshps..." del menú contextual:
+Para ello que se abrirá el Diseñador de tablas la tabla de RSVP haciendo doble clic en el Explorador de servidores. A continuación, seleccione la columna "DinnerID" dentro de ella, con el botón secundario y elija el "relaciones..." comando del menú contextual:
 
 ![](create-a-database/_static/image12.png)
 

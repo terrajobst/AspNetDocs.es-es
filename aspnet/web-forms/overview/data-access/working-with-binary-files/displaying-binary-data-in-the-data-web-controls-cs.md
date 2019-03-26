@@ -8,12 +8,12 @@ ms.date: 03/27/2007
 ms.assetid: 5cbeb9f8-5f92-4ba8-87ae-0b4d460ae6d4
 msc.legacyurl: /web-forms/overview/data-access/working-with-binary-files/displaying-binary-data-in-the-data-web-controls-cs
 msc.type: authoredcontent
-ms.openlocfilehash: 50d7f8eceb4772c628f7f6ef71f110de03dd9348
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: 026fce7544f40ff333a5c0a500bc53c7fd434080
+ms.sourcegitcommit: 289e051cc8a90e8f7127e239fda73047bde4de12
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57047172"
+ms.lasthandoff: 03/25/2019
+ms.locfileid: "58422095"
 ---
 <a name="displaying-binary-data-in-the-data-web-controls-c"></a>Mostrar datos binarios en los controles web de datos (C#)
 ====================
@@ -183,7 +183,7 @@ El código anterior supone que existen algunos con nombre de archivo de imagen d
 También se podría producir esta excepción si el `CategoriesTableAdapter` s `GetCategoryWithBinaryDataByCategoryID` método s `SELECT` instrucción ha vuelto a la lista de columnas de la consulta principal s, lo que puede suceder si usa instrucciones SQL ad hoc y ve vuelva a ejecuta el Asistente para la s de TableAdapter consulta principal. Compruebe que `GetCategoryWithBinaryDataByCategoryID` método s `SELECT` instrucción todavía incluye la `Picture` columna.
 
 > [!NOTE]
-> Cada vez que el `DisplayCategoryPicture.aspx` es visitadas, la base de datos se accede y se devuelven los datos de imagen de la categoría especificada s. Si t categoría s imagen realizados cambiado desde que el usuario lo haya visto por última vez, sin embargo, esto es esfuerzo en vano. Afortunadamente, HTTP permite *condicional Obtiene*. Con una operación GET condicional, el cliente que realiza la solicitud HTTP se envía a lo largo de un [ `If-Modified-Since` encabezado HTTP](http://www.w3.org/Protocols/rfc2616/rfc2616-sec14.html) que proporciona la fecha y hora que el cliente recuperó por última vez este recurso desde el servidor web. Si no ha cambiado el contenido ya que esto especifica la fecha, el servidor web puede responder con un [código de estado no modificado (304)](http://www.w3.org/Protocols/rfc2616/rfc2616-sec10.html) y renuncian a devolver el contenido del recurso solicitado. En resumen, esta técnica evita tener que enviar el contenido de un recurso si no se ha modificado desde que el cliente tiene acceso por última vez el servidor web.
+> Cada vez que el `DisplayCategoryPicture.aspx` es visitadas, la base de datos se accede y se devuelven los datos de imagen de la categoría especificada s. Si la imagen de categoría s no ha cambiado desde que el usuario lo haya visto por última vez, sin embargo, esto es de esfuerzo en vano. Afortunadamente, HTTP permite *condicional Obtiene*. Con una operación GET condicional, el cliente que realiza la solicitud HTTP se envía a lo largo de un [ `If-Modified-Since` encabezado HTTP](http://www.w3.org/Protocols/rfc2616/rfc2616-sec14.html) que proporciona la fecha y hora que el cliente recuperó por última vez este recurso desde el servidor web. Si no ha cambiado el contenido ya que esto especifica la fecha, el servidor web puede responder con un [código de estado no modificado (304)](http://www.w3.org/Protocols/rfc2616/rfc2616-sec10.html) y renuncian a devolver el contenido del recurso solicitado. En resumen, esta técnica evita tener que enviar el contenido de un recurso si no se ha modificado desde que el cliente tiene acceso por última vez el servidor web.
 
 
 Para implementar este comportamiento, sin embargo, requiere que se agregue un `PictureLastModified` columna a la `Categories` tabla para capturar cuando el `Picture` columna se actualizó por última vez, así como código para comprobar la `If-Modified-Since` encabezado. Para obtener más información sobre la `If-Modified-Since` encabezado y el flujo de trabajo GET condicional, consulte [HTTP GET condicional para los Hackers RSS](http://fishbowl.pastiche.org/2002/10/21/http_conditional_get_for_rss_hackers) y [A Look más profunda al realizar solicitudes HTTP en una página ASP.NET](http://aspnet.4guysfromrolla.com/articles/122204-1.aspx).

@@ -2,24 +2,24 @@
 uid: web-api/overview/odata-support-in-aspnet-web-api/odata-v4/use-open-types-in-odata-v4
 title: Tipos abiertos en OData v4 con ASP.NET Web API | Microsoft Docs
 author: microsoft
-description: En OData v4, un tipo abierto es un tipo de stuctured que contiene las propiedades dinámicas, además de las propiedades que se declaran en la definición de tipo. Abrir...
+description: En OData v4, un tipo abierto es un tipo estructurado que contiene las propiedades dinámicas, además de las propiedades que se declaran en la definición de tipo. Abrir...
 ms.author: riande
 ms.date: 09/15/2014
 ms.assetid: f25f5ac5-4800-4950-abe5-c97750a27fc6
 msc.legacyurl: /web-api/overview/odata-support-in-aspnet-web-api/odata-v4/use-open-types-in-odata-v4
 msc.type: authoredcontent
-ms.openlocfilehash: 77771d85532b8b622c2ad4ca219a38990e474c9c
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: f901e5efc38e5cda6eb606b6bc1ecfe7dea3599c
+ms.sourcegitcommit: 289e051cc8a90e8f7127e239fda73047bde4de12
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57042592"
+ms.lasthandoff: 03/25/2019
+ms.locfileid: "58423443"
 ---
 <a name="open-types-in-odata-v4-with-aspnet-web-api"></a>Tipos abiertos en OData v4 con ASP.NET Web API
 ====================
 por [Microsoft](https://github.com/microsoft)
 
-> En OData v4, un *abrir tipo* es un tipo de stuctured que contiene las propiedades dinámicas, además de las propiedades que se declaran en la definición de tipo. Tipos abiertos permiten agregar flexibilidad a los modelos de datos. Este tutorial muestra cómo utilizar tipos abiertos en ASP.NET Web API OData.
+> En OData v4, un *abrir tipo* es un tipo estructurado que contiene las propiedades dinámicas, además de las propiedades que se declaran en la definición de tipo. Tipos abiertos permiten agregar flexibilidad a los modelos de datos. Este tutorial muestra cómo utilizar tipos abiertos en ASP.NET Web API OData.
 > 
 > En este tutorial se da por supuesto que ya sabe cómo crear un extremo de OData en ASP.NET Web API. Si no, empiece por leer [crear un punto de conexión de OData v4](create-an-odata-v4-endpoint.md) primero.
 > 

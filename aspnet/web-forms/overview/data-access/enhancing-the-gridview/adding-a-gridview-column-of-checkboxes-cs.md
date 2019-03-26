@@ -8,12 +8,12 @@ ms.date: 03/06/2007
 ms.assetid: f63a9443-2db0-4f80-8246-840d3e86c2a3
 msc.legacyurl: /web-forms/overview/data-access/enhancing-the-gridview/adding-a-gridview-column-of-checkboxes-cs
 msc.type: authoredcontent
-ms.openlocfilehash: 1921ceeb33197299f3cedb0eef082af0fd8fa960
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: b78e87d7bd6a05b790203808a9be52af8e8aad1e
+ms.sourcegitcommit: 289e051cc8a90e8f7127e239fda73047bde4de12
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57063692"
+ms.lasthandoff: 03/25/2019
+ms.locfileid: "58422979"
 ---
 <a name="adding-a-gridview-column-of-checkboxes-c"></a>Agregar una columna GridView de casillas de verificación (C#)
 ====================

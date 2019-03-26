@@ -8,12 +8,12 @@ ms.date: 07/23/2014
 ms.assetid: fbe11a18-01ad-4027-b3af-8399a0bf90e7
 msc.legacyurl: /ajax/cdn/jquery-ui/cdnjqueryui1817
 msc.type: content
-ms.openlocfilehash: ebe54ac085fe4ed3263db98a3278df9c9466ee65
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: 29258cf3b78c0a11fb3996ff7b5ccd02d7e7650b
+ms.sourcegitcommit: 289e051cc8a90e8f7127e239fda73047bde4de12
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57043192"
+ms.lasthandoff: 03/25/2019
+ms.locfileid: "58423395"
 ---
 <a name="jquery-ui-1817-on-the-microsoft-ajax-cdn"></a>jQuery UI 1.8.17 en la red CDN de Microsoft Ajax
 ====================
@@ -28,7 +28,7 @@ Todos los temas de la interfaz de usuario estándar de jQuery se hospedan en est
 
 Haga clic en cualquiera de las imágenes de tema para ver ese tema en jQuery UI ThemeRoller.
 
-Haga clic en cualquiera de los campos de entrada para seleccionar la dirección URL completa para el € themeâ&trade;CDN hospedadas archivo CSS.
+Haga clic en cualquiera de los campos de entrada para seleccionar la dirección URL completa para el tema de la red CDN hospedado archivo CSS.
 
 **Etiqueta**  
 [![Image](cdnjqueryui1817/_static/image1.png)](http://jqueryui.com/themeroller/#ffDefault=Verdana,+Arial,+sans-serif&amp;fwDefault=normal&amp;fsDefault=1.1em&amp;cornerRadius=4px&amp;bgColorHeader=333333&amp;bgTextureHeader=08_diagonals_thick.png&amp;bgImgOpacityHeader=8&amp;borderColorHeader=a3a3a3&amp;fcHeader=eeeeee&amp;iconColorHeader=bbbbbb&amp;bgColorContent=f9f9f9&amp;bgTextureContent=04_highlight_hard.png&amp;bgImgOpacityContent=100&amp;borderColorContent=cccccc&amp;fcContent=222222&amp;iconColorContent=222222&amp;bgColorDefault=111111&amp;bgTextureDefault=02_glass.png&amp;bgImgOpacityDefault=40&amp;borderColorDefault=777777&amp;fcDefault=e3e3e3&amp;iconColorDefault=ededed&amp;bgColorHover=1c1c1c&amp;bgTextureHover=02_glass.png&amp;bgImgOpacityHover=55&amp;borderColorHover=000000&amp;fcHover=ffffff&amp;iconColorHover=ffffff&amp;bgColorActive=ffffff&amp;bgTextureActive=01_flat.png&amp;bgImgOpacityActive=65&amp;borderColorActive=cccccc&amp;fcActive=222222&amp;iconColorActive=222222&amp;bgColorHighlight=ffeb80&amp;bgTextureHighlight=06_inset_hard.png&amp;bgImgOpacityHighlight=55&amp;borderColorHighlight=ffde2e&amp;fcHighlight=363636&amp;iconColorHighlight=4ca300&amp;bgColorError=cd0a0a&amp;bgTextureError=06_inset_hard.png&amp;bgImgOpacityError=45&amp;borderColorError=9e0505&amp;fcError=ffffff&amp;iconColorError=ffcf29&amp;bgColorOverlay=aaaaaa&amp;bgTextureOverlay=04_highlight_hard.png&amp;bgImgOpacityOverlay=40&amp;opacityOverlay=30&amp;bgColorShadow=aaaaaa&amp;bgTextureShadow=03_highlight_soft.png&amp;bgImgOpacityShadow=50&amp;opacityShadow=20&amp;thicknessShadow=8px&amp;offsetTopShadow=-8px&amp;offsetLeftShadow=-8px&amp;cornerRadiusShadow=8px)  

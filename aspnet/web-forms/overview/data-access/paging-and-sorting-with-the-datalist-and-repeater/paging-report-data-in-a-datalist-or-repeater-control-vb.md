@@ -8,12 +8,12 @@ ms.date: 11/13/2006
 ms.assetid: bbd6b7f7-b98a-48b4-93f3-341d6a4f53c0
 msc.legacyurl: /web-forms/overview/data-access/paging-and-sorting-with-the-datalist-and-repeater/paging-report-data-in-a-datalist-or-repeater-control-vb
 msc.type: authoredcontent
-ms.openlocfilehash: 64615f126f87cec7a96f86385ee7a717fdcdd103
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: 2d867c7ae073fafe1e9674deb7c03bf1cfd24dd7
+ms.sourcegitcommit: 289e051cc8a90e8f7127e239fda73047bde4de12
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57057672"
+ms.lasthandoff: 03/25/2019
+ms.locfileid: "58425839"
 ---
 <a name="paging-report-data-in-a-datalist-or-repeater-control-vb"></a>Paginar datos de informe en un control DataList o Repeater (VB)
 ====================
@@ -127,7 +127,7 @@ Puesto que el `GetProductsAsPagedDataSource` método espera dos parámetros de e
 
 El índice de página y los valores de tamaño de página se deben recordar en las devoluciones. Pueden almacenarse en el estado de vista, conserva en la cadena de consulta, almacenados en variables de sesión o recuerda utilizando otra técnica. En este tutorial vamos a usar la cadena de consulta, que tiene la ventaja de permitir que una página determinada de datos que se va a ser un marcador.
 
-En concreto, utilice el pageIndex de campos de cadena de consulta y pageSize de la `pageIndex` y `pageSize` parámetros, respectivamente (consulte la figura 7). Dedique un momento para establecer los valores predeterminados para estos parámetros, como los valores de cadena de consulta ganados t estar presente cuando un usuario visita esta página por primera vez. Para `pageIndex`, establecer el valor predeterminado en 0 (lo que se mostrará la primera página de datos) y `pageSize` valor predeterminado de s a 4.
+En concreto, utilice el pageIndex de campos de cadena de consulta y pageSize de la `pageIndex` y `pageSize` parámetros, respectivamente (consulte la figura 7). Dedique un momento para establecer los valores predeterminados para estos parámetros, como los valores de cadena de consulta no estarán presentes cuando un usuario visita esta página por primera vez. Para `pageIndex`, establecer el valor predeterminado en 0 (lo que se mostrará la primera página de datos) y `pageSize` valor predeterminado de s a 4.
 
 
 [![Use la cadena de consulta como origen para los parámetros pageIndex y pageSize](paging-report-data-in-a-datalist-or-repeater-control-vb/_static/image14.png)](paging-report-data-in-a-datalist-or-repeater-control-vb/_static/image13.png)

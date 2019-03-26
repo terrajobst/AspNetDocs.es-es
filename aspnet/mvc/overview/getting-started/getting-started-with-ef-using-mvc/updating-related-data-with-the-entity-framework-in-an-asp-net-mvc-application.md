@@ -9,12 +9,12 @@ ms.topic: tutorial
 ms.assetid: 7ba88418-5d0a-437d-b6dc-7c3816d4ec07
 msc.legacyurl: /mvc/overview/getting-started/getting-started-with-ef-using-mvc/updating-related-data-with-the-entity-framework-in-an-asp-net-mvc-application
 msc.type: authoredcontent
-ms.openlocfilehash: 1ef4242ff3bd1dd86f4d58bd04ba08e8b90fdaa4
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: 50fdcc1959b8f3a02ec5bbe0eb7417ffb8a260a3
+ms.sourcegitcommit: 289e051cc8a90e8f7127e239fda73047bde4de12
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57037522"
+ms.lasthandoff: 03/25/2019
+ms.locfileid: "58425917"
 ---
 <a name="updating-related-data-with-the-entity-framework-in-an-aspnet-mvc-application"></a>Actualización de datos relacionados con Entity Framework en una aplicación ASP.NET MVC
 ====================
@@ -131,7 +131,7 @@ Reemplace el `HttpPost` `Edit` método con el código siguiente. que controla la
 La referencia a `RetryLimitExceededException` requiere un `using` instrucción; para agregarlo: mantenga el mouse sobre `RetryLimitExceededException`. Aparece el mensaje siguiente: ![ Vuelva a intentar el mensaje de excepción](updating-related-data-with-the-entity-framework-in-an-asp-net-mvc-application/_static/image13.png)
 
 
-Seleccione **mostrar correcciones potentital**, a continuación, **con System.Data.Entity.Infrastructure**
+Seleccione **mostrar posibles correcciones**, a continuación, **con System.Data.Entity.Infrastructure**
 
 ![Resolver las excepciones de reintento](updating-related-data-with-the-entity-framework-in-an-asp-net-mvc-application/_static/image14.png)
 

@@ -8,12 +8,12 @@ ms.date: 05/04/2012
 ms.assetid: f97a1145-6470-4bca-8f15-ccfb25fb903c
 msc.legacyurl: /web-forms/overview/deployment/deploying-web-applications-in-enterprise-scenarios/application-lifecycle-management-from-development-to-production
 msc.type: authoredcontent
-ms.openlocfilehash: 7cb9c949936c3af73d4c904d401c36d4d83f3e18
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: 998191a21388d76fb18b59fca9bcea7a40507c86
+ms.sourcegitcommit: 289e051cc8a90e8f7127e239fda73047bde4de12
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57045692"
+ms.lasthandoff: 03/25/2019
+ms.locfileid: "58425579"
 ---
 <a name="application-lifecycle-management-from-development-to-production"></a>Administración del ciclo de vida de las aplicaciones: De desarrollo a producción
 ====================
@@ -26,7 +26,7 @@ por [Jason Lee](https://github.com/jrjlee)
 > El tema está diseñado para proporcionar una descripción general de un [serie de tutoriales](deploying-web-applications-in-enterprise-scenarios.md) en la implementación web en la empresa. No se preocupe si no está familiarizado con algunos de los conceptos descritos aquí&#x2014;los tutoriales siguientes proporcionan información detallada sobre todas estas tareas y técnicas.
 > 
 > > [!NOTE]
-> > Parael simplificar, este tema no habla de actualización de bases de datos como parte del proceso de implementación. Sin embargo, realizar actualizaciones incrementales en las características de las bases de datos es un requisito para muchos escenarios de implementación empresarial, y puede encontrar instrucciones sobre cómo lograr esto más adelante en esta serie de tutoriales. Para obtener más información, consulte [implementar proyectos de base de datos](../web-deployment-in-the-enterprise/deploying-database-projects.md).
+> > Por simplicidad, este tema no habla de actualización de bases de datos como parte del proceso de implementación. Sin embargo, realizar actualizaciones incrementales en las características de las bases de datos es un requisito para muchos escenarios de implementación empresarial, y puede encontrar instrucciones sobre cómo lograr esto más adelante en esta serie de tutoriales. Para obtener más información, consulte [implementar proyectos de base de datos](../web-deployment-in-the-enterprise/deploying-database-projects.md).
 
 
 ## <a name="overview"></a>Información general

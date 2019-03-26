@@ -7,12 +7,12 @@ ms.author: riande
 ms.date: 10/29/2018
 ms.technology: aspnet
 msc.type: content
-ms.openlocfilehash: 4dcc62573fad13ec8b37b2c59e884eec7ca80b92
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: 5e2f3781623af5a32149e1db1c17b67ce43b7da0
+ms.sourcegitcommit: 289e051cc8a90e8f7127e239fda73047bde4de12
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57030652"
+ms.lasthandoff: 03/25/2019
+ms.locfileid: "58423985"
 ---
 # <a name="configuration-builders-for-aspnet"></a>Generadores de configuración de ASP.NET
 
@@ -191,7 +191,7 @@ El [EnvironmentConfigBuilder](https://www.nuget.org/packages/Microsoft.Configura
 
 Este generador de configuración proporciona una característica similar a [ASP.NET Core Secret Manager](/aspnet/core/security/app-secrets).
 
-El [UserSecretsConfigBuilder](https://www.nuget.org/packages/Microsoft.Configuration.ConfigurationBuilders.UserSecrets/) se puede usar en proyectos de .NET Framework, pero se debe especificar un archivo de secretos. Como alternativa, puede definir el `UserSecretsId` propiedad en el proyecto de archivo y crea el archivo de secretos sin procesar en la ubicación adecuada para su lectura. Para mantener las dependencias externas fuera de su proyecto, el archivo del secreto es con formato XML. El formato XML es un detalle de implementación y el formato no se debería confiar en. Si necesita compartir un *secrets.json* archivo con proyectos de .NET Core, considere el uso de la [SimpleJsonConfigBuilder](#simplejsonconfig). El `SimpleJsonConfigBuilder` para .NET Core también debe considerarse un detalle de implementación sujeta a cambios de formato.
+El [UserSecretsConfigBuilder](https://www.nuget.org/packages/Microsoft.Configuration.ConfigurationBuilders.UserSecrets/) se puede usar en proyectos de .NET Framework, pero se debe especificar un archivo de secretos. Como alternativa, puede definir el `UserSecretsId` propiedad en el proyecto de archivo y crea el archivo de secretos sin procesar en la ubicación adecuada para su lectura. Para mantener las dependencias externas fuera de su proyecto, el archivo del secreto es con formato XML. El formato XML es un detalle de implementación y el formato no se debería confiar en. Si necesita compartir un *secrets.json* archivo con proyectos de .NET Core, considere el uso de la [SimpleJsonConfigBuilder](#simplejsonconfigbuilder). El `SimpleJsonConfigBuilder` para .NET Core también debe considerarse un detalle de implementación sujeta a cambios de formato.
 
 Configuración de atributos de `UserSecretsConfigBuilder`:
 

@@ -8,12 +8,12 @@ ms.date: 04/16/2013
 ms.assetid: ad2a5da5-2e79-40ea-bc84-028d327f5982
 msc.legacyurl: /signalr/overview/older-versions/tutorial-high-frequency-realtime-with-signalr
 msc.type: authoredcontent
-ms.openlocfilehash: 6df35a420a0733003808a12d065b03f08ef56dd9
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: 60fffd7cd5139b2be34968c1f33474be867f0962
+ms.sourcegitcommit: 289e051cc8a90e8f7127e239fda73047bde4de12
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57048052"
+ms.lasthandoff: 03/25/2019
+ms.locfileid: "58422888"
 ---
 <a name="high-frequency-realtime-with-signalr-1x"></a>Alta frecuencia en tiempo real con SignalR 1.x
 ====================
@@ -136,7 +136,7 @@ En esta sección, vamos a crear una aplicación de explorador que envía la ubic
 
 ## <a name="add-the-client-loop"></a>Agregar el bucle de cliente
 
-Dado que el envío de la ubicación de la forma en cada evento de mover el mouse, se creará una cantidad innecesarios del tráfico de red, los mensajes desde el cliente deben estar limitado. Vamos a usar el código javascript `setInterval` función para establecer un bucle que envía información de posición de nuevo al servidor con una tarifa fija. Este bucle es una representación muy básica de un "bucle de juego", una función varias veces a que controla toda la funcionalidad de un juego o una simulación de otro.
+Dado que el envío de la ubicación de la forma en cada evento de mover el mouse, se creará un volumen de tráfico de red innecesario, los mensajes desde el cliente deben estar limitado. Vamos a usar el código javascript `setInterval` función para establecer un bucle que envía información de posición de nuevo al servidor con una tarifa fija. Este bucle es una representación muy básica de un "bucle de juego", una función varias veces a que controla toda la funcionalidad de un juego o una simulación de otro.
 
 1. Actualice el código de cliente en la página HTML para que coincida con el siguiente fragmento de código.
 

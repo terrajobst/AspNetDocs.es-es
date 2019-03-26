@@ -8,12 +8,12 @@ ms.date: 01/20/2014
 ms.assetid: e3d3e7ba-87f0-4032-bdd3-31f3c1aa9d9c
 msc.legacyurl: /web-api/overview/advanced/dependency-injection
 msc.type: authoredcontent
-ms.openlocfilehash: 318a2f1c587feb360212a390bb5de7bdc127513d
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: d5011d42d0c2200bc782ab548f6bfa0d952f6e72
+ms.sourcegitcommit: 289e051cc8a90e8f7127e239fda73047bde4de12
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57043872"
+ms.lasthandoff: 03/25/2019
+ms.locfileid: "58420925"
 ---
 <a name="dependency-injection-in-aspnet-web-api-2"></a>Inserción de dependencias en ASP.NET Web API 2
 ====================
@@ -49,7 +49,7 @@ Tenga en cuenta que depende de la clase de controlador `ProductRepository`, y va
 
 - Si desea reemplazar `ProductRepository` con una implementación diferente, también deberá modificar la clase de controlador.
 - Si el `ProductRepository` tiene dependencias, debe configurar estos dentro del controlador. Para un proyecto grande con varios controladores, su código de configuración se convierte en dispersa por todo el proyecto.
-- Resulta difícil realizar pruebas unitarias, porque el controlador de forma rígida para consultar la base de datos. Para una prueba unitaria, debe usar un repositorio de código auxiliar o de simulacro, que no es posible con el diseño hágala.
+- Resulta difícil realizar pruebas unitarias, porque el controlador de forma rígida para consultar la base de datos. Para una prueba unitaria, debe usar un repositorio de código auxiliar o de simulacro, que no es posible con el diseño actual.
 
 Podemos abordar estos problemas por *inyectando* el repositorio en el controlador. En primer lugar, refactorizar la `ProductRepository` clase en una interfaz:
 

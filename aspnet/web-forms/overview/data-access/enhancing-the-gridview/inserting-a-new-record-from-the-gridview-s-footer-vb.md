@@ -8,12 +8,12 @@ ms.date: 03/06/2007
 ms.assetid: 528acc48-f20c-4b4e-aa16-4cc02f068ebb
 msc.legacyurl: /web-forms/overview/data-access/enhancing-the-gridview/inserting-a-new-record-from-the-gridview-s-footer-vb
 msc.type: authoredcontent
-ms.openlocfilehash: 0c661190125e818d3abaf54f50a0067d0944a956
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: 6e56c46d1f2574b9f228190e0e0c8205240015ed
+ms.sourcegitcommit: 289e051cc8a90e8f7127e239fda73047bde4de12
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57059392"
+ms.lasthandoff: 03/25/2019
+ms.locfileid: "58423969"
 ---
 <a name="inserting-a-new-record-from-the-gridviews-footer-vb"></a>Insertar un nuevo registro desde el pie de página de GridView (VB)
 ====================
@@ -207,7 +207,7 @@ Por lo tanto, para responder al usuario hacer clic en el botón Agregar, es nece
 [!code-vb[Main](inserting-a-new-record-from-the-gridview-s-footer-vb/samples/sample6.vb)]
 
 > [!NOTE]
-> Quizás se pregunte por qué el controlador de eventos molesta comprobando el `Page.IsValid` propiedad. ¿Después de todo, t ganado el postback suprimirse si se proporcionan los datos no válidos en la interfaz de inserción? Esta suposición es correcta, siempre que el usuario no ha deshabilitado JavaScript o ha tomado medidas para evitar la lógica de validación del lado cliente. En resumen, uno nunca debería basarse estrictamente en la validación del lado cliente; siempre debe realizarse una comprobación del lado servidor para validez antes de trabajar con los datos.
+> Quizás se pregunte por qué el controlador de eventos molesta comprobando el `Page.IsValid` propiedad. ¿Después de todo, no se pueden suprimir la devolución de datos si se proporcionan los datos no válidos en la interfaz de inserción? Esta suposición es correcta, siempre que el usuario no ha deshabilitado JavaScript o ha tomado medidas para evitar la lógica de validación del lado cliente. En resumen, uno nunca debería basarse estrictamente en la validación del lado cliente; siempre debe realizarse una comprobación del lado servidor para validez antes de trabajar con los datos.
 
 
 En el paso 1 se creó el `ProductsDataSource` ObjectDataSource tal que su `Insert()` método se asigna a la `ProductsBLL` clase s `AddProduct` método. Para insertar el nuevo registro en el `Products` tabla, que podemos llamar simplemente la s ObjectDataSource `Insert()` método:
