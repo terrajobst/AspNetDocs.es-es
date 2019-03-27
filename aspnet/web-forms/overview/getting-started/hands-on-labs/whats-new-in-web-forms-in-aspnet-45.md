@@ -8,12 +8,12 @@ ms.date: 02/18/2013
 ms.assetid: 0a1f88bd-97da-4ed1-86f1-605199dc75a4
 msc.legacyurl: /web-forms/overview/getting-started/hands-on-labs/whats-new-in-web-forms-in-aspnet-45
 msc.type: authoredcontent
-ms.openlocfilehash: 54e0234d6f13ce62803dbe55a836414a93a207b2
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: 78cb6dec71e6b4974fdea4f205d1a36ebdfc3104
+ms.sourcegitcommit: 289e051cc8a90e8f7127e239fda73047bde4de12
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57026482"
+ms.lasthandoff: 03/25/2019
+ms.locfileid: "58424449"
 ---
 <a name="whats-new-in-web-forms-in-aspnet-45"></a>Novedades de los formularios Web Forms en ASP.NET 4.5
 ====================
@@ -51,7 +51,7 @@ En este laboratorio práctico, aprenderá cómo:
 - Usar nuevas características de enlace de modelos en formularios Web Forms
 - Usar proveedores de valor para la asignación de datos de la página a los métodos de código subyacente
 - Usar anotaciones de datos para la validación de entrada de usuario
-- Tomar advange de validación del lado cliente unobstrusive con jQuery en formularios Web Forms
+- Aprovechar las ventajas de la validación del lado cliente discreta con jQuery en formularios Web Forms
 - Implementar la validación de solicitud específico
 - Implementar el procesamiento de formularios Web Forms de la página asincrónica
 
@@ -407,13 +407,13 @@ ASP.NET 4.5 introduce la validación de formularios Web Forms de anotaciones de 
     > [EmailAddress(ErrorMessage=&quot;Invalid Email&quot;), MaxLength(56)]: Two annotations in the same line.
     > 
     > También puede definir sus propios mensajes de error dentro de cada atributo.
-3. Abra **CustomerDetails.aspx** y quite todas las RequiredFieldvalidators para los campos nombre y apellidos en las secciones en plantillas EditItemTemplate e InsertItemTemplate del control FormView.
+3. Abra **CustomerDetails.aspx** y quite todas las RequiredFieldValidators para los campos nombre y apellidos en las secciones en plantillas EditItemTemplate e InsertItemTemplate del control FormView.
 
     [!code-aspx[Main](whats-new-in-web-forms-in-aspnet-45/samples/sample24.aspx)]
 
     > [!NOTE]
     > Una ventaja del uso de anotaciones de datos es que la lógica de validación no se duplica en páginas de la aplicación. Definir una vez en el modelo y usarlo en todas las páginas de la aplicación que manipulan los datos.
-4. Abra **CustomerDetails.aspx** código subyacente y busque el método SaveCustomer. Este método se llama cuando se inserta a un nuevo cliente y recibe el parámetro de cliente de los valores del control FormView. Cuando la asignación entre los controles de página y el objeto de parámetro se produce, ASP.NET se ejecutará la validación del modelo frente a todas las anotaciones de datos de atributos y rellenar el diccionario ModelState con los errores encontrados, si existe.
+4. Abra **CustomerDetails.aspx** código subyacente y busque el método SaveCustomer. Este método se llama cuando se inserta a un nuevo cliente y recibe el parámetro de cliente de los valores del control FormView. Cuando controla la asignación entre la página y se produce el objeto de parámetro, ASP.NET ejecutará la validación del modelo frente a todos los atributos de anotación de datos y rellenar el diccionario ModelState con los errores encontrados, si existe.
 
     El ModelState.IsValid solo devolverá true si todos los campos en el modelo son válidos después de realizar la validación.
 
@@ -623,7 +623,7 @@ En este laboratorio práctico, se han solucionado y muestra los conceptos siguie
 - Usar nuevas características de enlace de modelos en formularios Web Forms
 - Usar proveedores de valor para la asignación de datos de la página a los métodos de código subyacente
 - Usar anotaciones de datos para la validación de entrada de usuario
-- Tomar advange de validación del lado cliente unobstrusive con jQuery en formularios Web Forms
+- Aprovechar las ventajas de la validación del lado cliente discreta con jQuery en formularios Web Forms
 - Implementar la validación de solicitud específico
 - Implementar el procesamiento de formularios Web Forms de la página asincrónica
 
@@ -678,7 +678,7 @@ En este apéndice se mostrará cómo crear un nuevo sitio web desde el Portal de
 1. Vaya a la [Portal de administración de Azure](https://manage.windowsazure.com/) e inicie sesión con las credenciales de Microsoft asociadas con su suscripción.
 
     > [!NOTE]
-    > Con Azure puede hospedar 10 sitios Web ASP.NET de forma gratuita y, a continuación, escalar a medida que crece el tráfico. Puede registrarse [aquí](http://aka.ms/aspnet-hol-azure).
+    > Con Azure puede hospedar 10 sitios Web ASP.NET de forma gratuita y, a continuación, escalar a medida que crece el tráfico. Puede registrarse [aquí](https://aka.ms/aspnet-hol-azure).
 
     ![Inicie sesión en el portal de Windows Azure](whats-new-in-web-forms-in-aspnet-45/_static/image30.png "inicie sesión en el portal de Windows Azure")
 
