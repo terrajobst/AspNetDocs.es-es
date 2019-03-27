@@ -399,7 +399,7 @@ description: 'Aprenda a desarrollar aplicaciones de ASP.NET y aplicaciones web d
                                                 </div>
                                                 <div class="cardText">
                                                     <h3>En tiempo real</h3>
-                                                    <p>Obtenga información sobre cómo crear una aplicación de chat con ASP.NET SignalR 2 y Visual Studio.</p>
+                                                    <p>Obtenga información sobre cómo compilar una aplicación de chat con ASP.NET SignalR 2 y Visual Studio.</p>
                                                 </div>
                                             </div>
                                         </div>
