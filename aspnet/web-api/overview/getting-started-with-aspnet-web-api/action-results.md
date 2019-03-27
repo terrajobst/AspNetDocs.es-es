@@ -8,12 +8,12 @@ ms.date: 02/03/2014
 ms.assetid: 2fc4797c-38ef-4cc7-926c-ca431c4739e8
 msc.legacyurl: /web-api/overview/getting-started-with-aspnet-web-api/action-results
 msc.type: authoredcontent
-ms.openlocfilehash: b2b5ae5e5cef19e75a184aa28ac838a31e5ef1fd
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: c255cebfd6b0c632c000d24288a4dd4cf73c8a1c
+ms.sourcegitcommit: 289e051cc8a90e8f7127e239fda73047bde4de12
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57061782"
+ms.lasthandoff: 03/25/2019
+ms.locfileid: "58422043"
 ---
 <a name="action-results-in-web-api-2"></a>Resultados de la acción en Web API 2
 ====================
@@ -83,7 +83,7 @@ El **IHttpActionResult** interfaz se introdujo en Web API 2. Básicamente, defin
 
 Si una acción de controlador devuelve un **IHttpActionResult**, llamadas de API Web la **ExecuteAsync** método para crear un **HttpResponseMessage**. A continuación, convierte el **HttpResponseMessage** en un mensaje de respuesta HTTP.
 
-Esta es una implementación simple que haga de **IHttpActionResult** que crea una respuesta de texto sin formato:
+Esta es una implementación sencilla de **IHttpActionResult** que crea una respuesta de texto sin formato:
 
 [!code-csharp[Main](action-results/samples/sample7.cs)]
 

@@ -8,12 +8,12 @@ ms.date: 02/20/2009
 ms.assetid: db0f160b-901c-46d3-865e-7ab6cd4ed68d
 msc.legacyurl: /mvc/overview/older-versions-1/contact-manager/iteration-1-create-the-application-cs
 msc.type: authoredcontent
-ms.openlocfilehash: 78b488263fbb0c646d9bf6ee8c4ace2ff63ccf9d
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: 8fb2481342fa309941257feae792d9aa3c7bf721
+ms.sourcegitcommit: 289e051cc8a90e8f7127e239fda73047bde4de12
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57040102"
+ms.lasthandoff: 03/25/2019
+ms.locfileid: "58422680"
 ---
 <a name="iteration-1--create-the-application-c"></a>Iteración #1: crear la aplicación (C#)
 ====================
@@ -88,7 +88,7 @@ Como alternativa a realizar cada una de estas descargas uno por uno, puede aprov
 Proyecto de aplicación Web de ASP.NET MVC. Inicie Visual Studio y seleccione la opción de menú **archivo, nuevo proyecto**. El **nuevo proyecto** cuadro de diálogo aparece (consulte la figura 1). Seleccione el **Web** tipo de proyecto y el **aplicación Web ASP.NET MVC** plantilla. Nombre del nuevo proyecto *ContactManager* y haga clic en el botón Aceptar.
 
 
-Asegúrese de que haya seleccionado en la lista desplegable en la parte superior de .NET Framework 3.5 derecha de la **nuevo proyecto** cuadro de diálogo. En caso contrario, la plantilla de aplicación Web ASP.NET MVC ganó t aparecen.
+Asegúrese de que haya seleccionado en la lista desplegable en la parte superior de .NET Framework 3.5 derecha de la **nuevo proyecto** cuadro de diálogo. En caso contrario, no aparecerá la plantilla de aplicación Web ASP.NET MVC.
 
 
 [![El cuadro de diálogo nuevo proyecto](iteration-1-create-the-application-cs/_static/image1.jpg)](iteration-1-create-the-application-cs/_static/image1.png)
@@ -96,7 +96,7 @@ Asegúrese de que haya seleccionado en la lista desplegable en la parte superior
 **Figura 01**: El cuadro de diálogo nuevo proyecto ([haga clic aquí para ver imagen en tamaño completo](iteration-1-create-the-application-cs/_static/image2.png))
 
 
-Aplicación de ASP.NET MVC, la **crear proyecto de prueba unitaria** aparece el cuadro de diálogo. Puede usar este cuadro de diálogo para indicar que desea crear y agregar un proyecto de prueba unitaria a la solución al crear la aplicación de ASP.NET MVC. Aunque hemos ganado t puede generar pruebas unitarias en esta iteración, debe seleccionar la opción **Sí, crear un proyecto de prueba unitaria** porque tenemos previsto agregar pruebas unitarias en una iteración posterior. Agregar un proyecto de prueba al crear un nuevo proyecto de ASP.NET MVC es mucho más sencillo que agregar un proyecto de prueba una vez creado el proyecto de MVC de ASP.NET.
+Aplicación de ASP.NET MVC, la **crear proyecto de prueba unitaria** aparece el cuadro de diálogo. Puede usar este cuadro de diálogo para indicar que desea crear y agregar un proyecto de prueba unitaria a la solución al crear la aplicación de ASP.NET MVC. Aunque se no se puede compilar las pruebas unitarias en esta iteración, debe seleccionar la opción **Sí, crear un proyecto de prueba unitaria** porque tenemos previsto agregar pruebas unitarias en una iteración posterior. Agregar un proyecto de prueba al crear un nuevo proyecto de ASP.NET MVC es mucho más sencillo que agregar un proyecto de prueba una vez creado el proyecto de MVC de ASP.NET.
 
 > [!NOTE] 
 > 
@@ -175,7 +175,7 @@ Es necesario crear una tabla que contiene las siguientes columnas:
 | Correo electrónico | nvarchar(255) | False |
 
 
-La primera columna, la columna de identificador es especial. Deberá marcar la columna de identificador como una columna de identidad y una columna de clave principal. Indica que una columna es una columna de identidad mediante la expansión de propiedades de columna (examine la parte inferior de la figura 6) y desplácese hacia abajo hasta la propiedad de la especificación de identidad. Establecer el **(identidad)** valor para la propiedad **Sí**.
+La primera columna, la columna de identificador es especial. Deberá marcar la columna de identificador como una columna de identidad y una columna de clave principal. Indica que una columna es una columna de identidad mediante la expansión de las propiedades de columna (examine la parte inferior de la figura 6) y desplácese hacia abajo hasta la propiedad de la especificación de identidad. Establecer el **(identidad)** valor para la propiedad **Sí**.
 
 Marcar una columna como una columna de clave principal, seleccione la columna y haga clic en el botón con el icono de una clave. Después de una columna está marcada como una columna de clave principal, aparece un icono de una clave junto a la columna (consulte la figura 6).
 
@@ -442,7 +442,7 @@ El contenido de la vista de eliminación está contenido en el listado 9. Esta v
 
 ## <a name="changing-the-name-of-the-default-controller"></a>Cambiar el nombre del controlador predeterminado
 
-Es posible que le molesta que el nombre de nuestra clase de controlador para trabajar con contactos se denomina la clase HomeController. ¿No debe t el controlador se denomina ContactController?
+Es posible que le molesta que el nombre de nuestra clase de controlador para trabajar con contactos se denomina la clase HomeController. ¿El controlador no debe llamarse ContactController?
 
 Es bastante fácil de corregir este problema. En primer lugar, es necesario refactorizar el nombre del controlador Home. Abra la clase HomeController en el Editor de código de Visual Studio, haga clic el nombre de la clase y seleccione la opción de menú **refactorizar cambiar nombre**. Al seleccionar esta opción de menú abre el cuadro de diálogo de cambio de nombre.
 
