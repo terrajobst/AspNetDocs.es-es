@@ -69,6 +69,21 @@
         "web-pages/**/**.md": "aspnet-webpages",
         "webhooks/**/**.md": "aspnet-webhooks",
         "whitepapers/**/**.md": "aspnet-whitepapers"
+      },
+     "open_to_public_contributors": {
+        "ajax/**.md": false,
+        "aspnet/**.md": false,
+        "identity/**.md": false,
+        "mobile/**.md": false,
+        "mvc/**.md": false,
+        "signalr/**.md": false,
+        "single-page-application/**.md": false,
+        "visual-studio/**.md": false,
+        "web-api/**.md": false,
+        "web-forms/**.md": false,
+        "web-pages/**.md": false,
+        "webhooks/**.md": false,
+        "whitepapers/**.md": false
       }
     },
     "template": [],
