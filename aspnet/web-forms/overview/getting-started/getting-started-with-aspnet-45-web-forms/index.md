@@ -8,6 +8,12 @@ ms.date: 04/09/2012
 ms.assetid: dc6aa59a-9cb0-4a81-b5f3-ec545a0e958d
 msc.legacyurl: /web-forms/overview/getting-started/getting-started-with-aspnet-45-web-forms
 msc.type: chapter
+ms.openlocfilehash: 9440bca12585ddbb97c362384c9cafdc9f156ae4
+ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 03/01/2019
+ms.locfileid: "57022652"
 ---
 <a name="getting-started-with-aspnet-45-web-forms-and-visual-studio-2013"></a>Introducción a los formularios Web Forms de ASP.NET 4.5 y Visual Studio 2013
 ====================

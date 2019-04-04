@@ -8,6 +8,12 @@ ms.date: 10/05/2011
 ms.assetid: 0078ceb6-3447-4ce4-90c2-d0e013ebc000
 msc.legacyurl: /web-forms/videos/iis
 msc.type: chapter
+ms.openlocfilehash: febbe4e6cc00241246cb4a8d212bb86d1adccf23
+ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 03/01/2019
+ms.locfileid: "57020192"
 ---
 <a name="general-iis-tips"></a>Consejos generales de IIS
 ====================

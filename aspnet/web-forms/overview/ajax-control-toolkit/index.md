@@ -8,6 +8,12 @@ ms.date: 10/05/2011
 ms.assetid: 76242ce9-e611-41d2-95e8-dc5f406d4bfc
 msc.legacyurl: /web-forms/overview/ajax-control-toolkit
 msc.type: chapter
+ms.openlocfilehash: ad68d8f074bc3c453e991abf7f8d393fbe9740ba
+ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 03/01/2019
+ms.locfileid: "57020312"
 ---
 <a name="older-versions---ajax-control-toolkit"></a>Versiones anteriores - Ajax Control Toolkit
 ====================

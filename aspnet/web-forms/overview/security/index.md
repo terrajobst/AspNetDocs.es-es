@@ -1,13 +1,19 @@
 ---
 uid: web-forms/overview/security/index
-title: 'Seguridad, autenticación y autorización en ASP.NET Web Forms | Microsoft Docs'
+title: Seguridad, autenticación y autorización en ASP.NET Web Forms | Microsoft Docs
 author: rick-anderson
-description: 'Cómo permitir que los usuarios para iniciar sesión en su sitio (y, opcionalmente, asignar a roles) mediante un formulario de inicio de sesión o autenticación de Windows.'
+description: Cómo permitir que los usuarios para iniciar sesión en su sitio (y, opcionalmente, asignar a roles) mediante un formulario de inicio de sesión o autenticación de Windows.
 ms.author: riande
 ms.date: 08/08/2011
 ms.assetid: 24eab207-f69c-4eab-bfae-06725050452d
 msc.legacyurl: /web-forms/overview/security
 msc.type: chapter
+ms.openlocfilehash: 236a89bebd6cebf1720d5be5804ba9194d397a0a
+ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 03/01/2019
+ms.locfileid: "57019712"
 ---
 <a name="security-authentication-and-authorization-in-aspnet-web-forms"></a>Seguridad, autenticación y autorización en ASP.NET Web Forms
 ====================

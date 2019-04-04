@@ -8,6 +8,12 @@ ms.date: 10/23/2013
 ms.assetid: b452a3af-4157-4056-a181-569d1735c239
 msc.legacyurl: /aspnet/overview/developing-apps-with-windows-azure/building-real-world-cloud-apps-with-windows-azure
 msc.type: chapter
+ms.openlocfilehash: 9c2149fb8195e6b660331e18a975a5571b9652fb
+ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 03/01/2019
+ms.locfileid: "57019722"
 ---
 <a name="building-real-world-cloud-apps-with-azure"></a>Compilar aplicaciones en la nube del mundo real con Azure
 ====================

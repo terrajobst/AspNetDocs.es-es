@@ -2,12 +2,18 @@
 uid: web-forms/overview/data-access/working-with-binary-files/index
 title: Trabajar con archivos binarios | Microsoft Docs
 author: rick-anderson
-description: 'Estos tutoriales muestra cómo permitir que los usuarios cargar archivos binarios (por ejemplo, documentos de Word o PDF) en el servidor, donde pueden almacenar en carpetas o en la base de datos.'
+description: Estos tutoriales muestra cómo permitir que los usuarios cargar archivos binarios (por ejemplo, documentos de Word o PDF) en el servidor, donde pueden almacenar en carpetas o en la base de datos.
 ms.author: riande
 ms.date: 10/05/2011
 ms.assetid: 2d08658a-16c4-4877-9f43-c6503adda7bf
 msc.legacyurl: /web-forms/overview/data-access/working-with-binary-files
 msc.type: chapter
+ms.openlocfilehash: 2fa205c4c77d01661017daf53e12d71234cf22f6
+ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 03/01/2019
+ms.locfileid: "57022752"
 ---
 <a name="working-with-binary-files"></a>Trabajar con archivos binarios
 ====================

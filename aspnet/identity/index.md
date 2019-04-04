@@ -8,6 +8,12 @@ ms.date: 10/02/2013
 ms.assetid: 0c2df5d4-c2dd-486d-b0ed-fe831c6b596c
 msc.legacyurl: /identity
 msc.type: categoryindex
+ms.openlocfilehash: b81e92ff1675b7810f9b2ca8b038a99fb84b1f5e
+ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 03/01/2019
+ms.locfileid: "57019192"
 ---
 <a name="aspnet-identity"></a>ASP.NET Identity
 ====================

@@ -8,6 +8,12 @@ ms.date: 10/24/2012
 ms.assetid: e57da75a-1d98-4e3c-8787-f1d7e1eb2d86
 msc.legacyurl: /signalr/overview
 msc.type: book
+ms.openlocfilehash: 2ab5094e863c5762c0c4c70a15f4da1088bc52e7
+ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 03/01/2019
+ms.locfileid: "57022672"
 ---
 <a name="signalr-guidance"></a>Guía de SignalR
 ====================

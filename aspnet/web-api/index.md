@@ -8,6 +8,12 @@ ms.date: 01/17/2012
 ms.assetid: f571ca7a-c06b-400d-8051-f62f9f0bcc9b
 msc.legacyurl: /web-api
 msc.type: categoryindex
+ms.openlocfilehash: 3246478c9d159afce7e265af0a471d639ce202bf
+ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 03/01/2019
+ms.locfileid: "57022372"
 ---
 <a name="aspnet-web-api"></a>ASP.NET Web API
 ====================

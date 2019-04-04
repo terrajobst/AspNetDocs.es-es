@@ -8,6 +8,12 @@ ms.date: 10/05/2011
 ms.assetid: bac10aee-6731-4a0f-84d7-9eef5e560ae5
 msc.legacyurl: /web-forms/videos/net-4
 msc.type: chapter
+ms.openlocfilehash: e8565bc2914570eef982bbcc63a8497c2d38386a
+ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 03/01/2019
+ms.locfileid: "57019812"
 ---
 <a name="net-4"></a>.NET 4
 ====================

@@ -8,6 +8,12 @@ ms.date: 10/26/2013
 ms.assetid: 5bd2e5db-8053-459e-9246-08731a4c8036
 msc.legacyurl: /mvc/overview/older-versions/getting-started-with-ef-5-using-mvc-4
 msc.type: chapter
+ms.openlocfilehash: 57c79d599b35e98bbb7372db90d128b7e1295f87
+ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 03/01/2019
+ms.locfileid: "57021692"
 ---
 <a name="getting-started-with-ef-5-using-mvc-4"></a>Introducción a EF 5 mediante MVC 4
 ====================

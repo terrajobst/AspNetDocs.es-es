@@ -8,6 +8,12 @@ ms.date: 10/05/2011
 ms.assetid: 6f7b1c74-cc73-42f9-8ef0-8b3d058dabfa
 msc.legacyurl: /web-forms/videos/ajax-control-toolkit
 msc.type: chapter
+ms.openlocfilehash: 389a7563ca2c95563cd57326122a4a801e9e91e6
+ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 03/01/2019
+ms.locfileid: "57019012"
 ---
 <a name="ajax-control-toolkit"></a>Ajax Control Toolkit
 ====================

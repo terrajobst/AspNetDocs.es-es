@@ -8,6 +8,12 @@ ms.date: 08/08/2011
 ms.assetid: f215d6b9-8a84-4bd8-8881-e9527d814950
 msc.legacyurl: /web-forms/videos
 msc.type: book
+ms.openlocfilehash: 15ab12404daf45a6876facd20fad924996b527a3
+ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 03/01/2019
+ms.locfileid: "57019052"
 ---
 <a name="videos"></a>Vídeos
 ====================
