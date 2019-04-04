@@ -2,12 +2,18 @@
 uid: web-forms/videos/tailspin-spyworks/index
 title: Tailspin Spyworks | Microsoft Docs
 author: rick-anderson
-description: 'Cómo usar las nuevas características en ASP.NET 4 para crear una tienda en línea, incluida la compra, la desprotección y la administración.'
+description: Cómo usar las nuevas características en ASP.NET 4 para crear una tienda en línea, incluida la compra, la desprotección y la administración.
 ms.author: riande
 ms.date: 10/05/2011
 ms.assetid: 8aa371f8-913c-4ed2-98b0-f76abf15669d
 msc.legacyurl: /web-forms/videos/tailspin-spyworks
 msc.type: chapter
+ms.openlocfilehash: 0fbbc6e0ca1d13effe5d7f157e3f0dc5502578c6
+ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 03/01/2019
+ms.locfileid: "57023812"
 ---
 <a name="tailspin-spyworks"></a><span data-ttu-id="c43c7-103">Tailspin Spyworks</span><span class="sxs-lookup"><span data-stu-id="c43c7-103">Tailspin Spyworks</span></span>
 ====================

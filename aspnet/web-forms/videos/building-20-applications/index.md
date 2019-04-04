@@ -8,6 +8,12 @@ ms.date: 10/05/2011
 ms.assetid: ea40322d-2e77-4c37-8227-e650b286e373
 msc.legacyurl: /web-forms/videos/building-20-applications
 msc.type: chapter
+ms.openlocfilehash: 7914af59618b247d8e36d535ccd3bf580ea76041
+ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 03/01/2019
+ms.locfileid: "57021642"
 ---
 <a name="building-20-applications"></a><span data-ttu-id="fc2ee-103">Compilar aplicaciones 2.0</span><span class="sxs-lookup"><span data-stu-id="fc2ee-103">Building 2.0 Applications</span></span>
 ====================

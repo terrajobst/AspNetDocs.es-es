@@ -8,6 +8,12 @@ ms.date: 10/05/2011
 ms.assetid: cf0b487c-f387-46dd-b3bc-6b3c4af17c9c
 msc.legacyurl: /web-forms/videos/sql-2005
 msc.type: chapter
+ms.openlocfilehash: 4c64bfdd331d248cbb2cb930d151bb42b787c413
+ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 03/01/2019
+ms.locfileid: "57024002"
 ---
 <a name="sql-2005"></a><span data-ttu-id="c249f-103">SQL 2005</span><span class="sxs-lookup"><span data-stu-id="c249f-103">SQL 2005</span></span>
 ====================

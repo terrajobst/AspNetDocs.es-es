@@ -8,6 +8,12 @@ ms.date: 10/14/2017
 ms.assetid: a266cc44-f514-4913-9768-5b382380184d
 msc.legacyurl: /ajax/cdn/jquery-validate
 msc.type: folder
+ms.openlocfilehash: d7990cf52fedd10d09b1edcfb1dfb05df367a5eb
+ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 03/01/2019
+ms.locfileid: "57023172"
 ---
 <a name="jquery-validate"></a><span data-ttu-id="1b137-102">jQuery Validate</span><span class="sxs-lookup"><span data-stu-id="1b137-102">jQuery Validate</span></span>
 ====================

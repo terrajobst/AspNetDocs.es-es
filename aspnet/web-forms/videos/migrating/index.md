@@ -8,6 +8,12 @@ ms.date: 10/05/2011
 ms.assetid: baa03541-3f84-4e46-8a2c-2395e64f484d
 msc.legacyurl: /web-forms/videos/migrating
 msc.type: chapter
+ms.openlocfilehash: 9daf2ad20dee8b544cf9874d345d9879955d75bc
+ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 03/01/2019
+ms.locfileid: "57022202"
 ---
 <a name="migrating"></a><span data-ttu-id="1d83b-103">Migración</span><span class="sxs-lookup"><span data-stu-id="1d83b-103">Migrating</span></span>
 ====================

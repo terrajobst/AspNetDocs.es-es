@@ -8,6 +8,12 @@ ms.date: 09/19/2014
 ms.assetid: 2acff246-c74c-4277-b539-35bc42988c6f
 msc.legacyurl: /signalr/overview/getting-started
 msc.type: chapter
+ms.openlocfilehash: 4573a04f115ab5d2fdc363f9746a22bc3939174c
+ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 03/01/2019
+ms.locfileid: "57018872"
 ---
 <a name="signalr-getting-started"></a><span data-ttu-id="4e8b2-104">Introducción de SignalR</span><span class="sxs-lookup"><span data-stu-id="4e8b2-104">SignalR Getting Started</span></span>
 ====================

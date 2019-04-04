@@ -8,6 +8,12 @@ ms.date: 09/28/2011
 ms.assetid: 1e9204db-664c-4376-aa50-1fb9e245a4d9
 msc.legacyurl: /mvc/overview/older-versions-1/deployment
 msc.type: chapter
+ms.openlocfilehash: f6ad66f93e0bc4efbd85c2d0b25ff70eef9deee0
+ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 03/01/2019
+ms.locfileid: "57022512"
 ---
 <a name="deployment"></a><span data-ttu-id="ecbcd-103">Implementación</span><span class="sxs-lookup"><span data-stu-id="ecbcd-103">Deployment</span></span>
 ====================

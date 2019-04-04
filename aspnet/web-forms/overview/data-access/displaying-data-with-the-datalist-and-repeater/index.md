@@ -8,6 +8,12 @@ ms.date: 10/05/2011
 ms.assetid: 3005174a-ba3d-4937-8b3e-b913ee4172ac
 msc.legacyurl: /web-forms/overview/data-access/displaying-data-with-the-datalist-and-repeater
 msc.type: chapter
+ms.openlocfilehash: 7b751a7c9dfdb5738dafb795a82f80540ae002bd
+ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 03/01/2019
+ms.locfileid: "57022592"
 ---
 <a name="displaying-data-with-the-datalist-and-repeater"></a><span data-ttu-id="7d24f-103">Mostrar datos con los controles DataList y Repeater</span><span class="sxs-lookup"><span data-stu-id="7d24f-103">Displaying Data with the DataList and Repeater</span></span>
 ====================

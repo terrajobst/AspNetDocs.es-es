@@ -8,6 +8,12 @@ ms.date: 08/17/2012
 ms.assetid: 9151c605-e911-4f24-95b5-ca310b105abf
 msc.legacyurl: /web-api/overview/odata-support-in-aspnet-web-api
 msc.type: chapter
+ms.openlocfilehash: 9b805bb1ed9d7b5dea53a2aaccbf471829145920
+ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 03/01/2019
+ms.locfileid: "57020392"
 ---
 <a name="odata-in-aspnet-web-api"></a><span data-ttu-id="e92d0-106">OData en ASP.NET Web API</span><span class="sxs-lookup"><span data-stu-id="e92d0-106">OData in ASP.NET Web API</span></span>
 ====================

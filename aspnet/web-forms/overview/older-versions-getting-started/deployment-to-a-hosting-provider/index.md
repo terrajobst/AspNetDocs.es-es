@@ -8,6 +8,12 @@ ms.date: 11/29/2011
 ms.assetid: 6798c7e4-f08e-4802-9fa5-443f67d5df62
 msc.legacyurl: /web-forms/overview/older-versions-getting-started/deployment-to-a-hosting-provider
 msc.type: chapter
+ms.openlocfilehash: 4fd9e95fbb5c73f7bae1b9d47228eb56a6976125
+ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 03/01/2019
+ms.locfileid: "57021432"
 ---
 <a name="aspnet-4---web-deployment-with-sql-server-compact-using-visual-studio"></a><span data-ttu-id="c1e52-103">ASP.NET 4 - Implementación web con SQL Server Compact mediante Visual Studio</span><span class="sxs-lookup"><span data-stu-id="c1e52-103">ASP.NET 4 - Web Deployment with SQL Server Compact using Visual Studio</span></span>
 ====================

@@ -8,6 +8,12 @@ ms.date: 01/26/2012
 ms.assetid: 500be045-e1e1-478a-97fc-0374645dd95f
 msc.legacyurl: /web-api/overview/hosting-aspnet-web-api
 msc.type: chapter
+ms.openlocfilehash: 76e5df0e67dee23df3cd0114f50011aa41e45e51
+ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 03/01/2019
+ms.locfileid: "57019872"
 ---
 <a name="aspnet-web-api-deployment-and-hosting"></a><span data-ttu-id="c0473-103">ASP.NET Web API: Implementación y hospedaje</span><span class="sxs-lookup"><span data-stu-id="c0473-103">ASP.NET Web API: Deployment and Hosting</span></span>
 ====================

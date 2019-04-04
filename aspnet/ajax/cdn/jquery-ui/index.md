@@ -8,6 +8,12 @@ ms.date: 07/21/2014
 ms.assetid: bd72bb7e-bdcb-490b-8bc1-9b669329632b
 msc.legacyurl: /ajax/cdn/jquery-ui
 msc.type: folder
+ms.openlocfilehash: b78adb451fba9fba05c0122afeea4d6baf31a447
+ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 03/01/2019
+ms.locfileid: "57020732"
 ---
 <a name="jquery-ui"></a><span data-ttu-id="58dd1-102">jQuery UI</span><span class="sxs-lookup"><span data-stu-id="58dd1-102">jQuery UI</span></span>
 ====================

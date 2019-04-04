@@ -2,12 +2,18 @@
 uid: web-api/overview/getting-started-with-aspnet-web-api/index
 title: Introducción a ASP.NET Web API | Microsoft Docs
 author: rick-anderson
-description: 'Obtenga información sobre ASP.NET Web API de ASP.NET Web API es un marco que facilita la creación de servicios HTTP que llegan a una amplia gama de clientes, incluidos los exploradores...'
+description: Obtenga información sobre ASP.NET Web API de ASP.NET Web API es un marco que facilita la creación de servicios HTTP que llegan a una amplia gama de clientes, incluidos los exploradores...
 ms.author: riande
 ms.date: 01/17/2012
 ms.assetid: a36e178f-de46-46d9-b150-61fb3ba1b4d3
 msc.legacyurl: /web-api/overview/getting-started-with-aspnet-web-api
 msc.type: chapter
+ms.openlocfilehash: 9350116f4a9dd3ca9faed402fd6f8bbba29f01a6
+ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 03/01/2019
+ms.locfileid: "57019332"
 ---
 <a name="getting-started-with-aspnet-web-api"></a><span data-ttu-id="dc396-103">Introducción a ASP.NET Web API</span><span class="sxs-lookup"><span data-stu-id="dc396-103">Getting Started with ASP.NET Web API</span></span>
 ====================

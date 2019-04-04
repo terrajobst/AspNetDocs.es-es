@@ -2,12 +2,18 @@
 uid: web-forms/overview/data-access/basic-reporting/index
 title: Informes básicos | Microsoft Docs
 author: rick-anderson
-description: 'Este conjunto de tutoriales explica cómo usar el control ObjectDataSource para trabajar con datos recuperados de BLL, todo ello sin necesidad de código.'
+description: Este conjunto de tutoriales explica cómo usar el control ObjectDataSource para trabajar con datos recuperados de BLL, todo ello sin necesidad de código.
 ms.author: riande
 ms.date: 10/05/2011
 ms.assetid: cbd98d24-8281-4415-87df-8365f0fbe7fc
 msc.legacyurl: /web-forms/overview/data-access/basic-reporting
 msc.type: chapter
+ms.openlocfilehash: 9323886ed50df775ac587b0473126fbdc28a7a19
+ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 03/01/2019
+ms.locfileid: "57019892"
 ---
 <a name="basic-reporting"></a><span data-ttu-id="a62a6-103">Informes básicos</span><span class="sxs-lookup"><span data-stu-id="a62a6-103">Basic Reporting</span></span>
 ====================

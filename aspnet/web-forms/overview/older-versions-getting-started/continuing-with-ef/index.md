@@ -8,6 +8,12 @@ ms.date: 10/05/2011
 ms.assetid: 25a6b7ba-e374-4c3f-9e53-83f665cfdd21
 msc.legacyurl: /web-forms/overview/older-versions-getting-started/continuing-with-ef
 msc.type: chapter
+ms.openlocfilehash: 7866827440b16cdee1af923b9a1597a659c0f443
+ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 03/01/2019
+ms.locfileid: "57020532"
 ---
 <a name="aspnet-4---continuing-with-entity-framework-4-and-web-forms"></a><span data-ttu-id="f8b94-103">ASP.NET 4 - Continuación de Entity Framework 4 y los formularios Web Forms</span><span class="sxs-lookup"><span data-stu-id="f8b94-103">ASP.NET 4 - Continuing with Entity Framework 4 and Web Forms</span></span>
 ====================

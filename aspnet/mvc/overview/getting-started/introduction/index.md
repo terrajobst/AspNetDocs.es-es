@@ -8,6 +8,12 @@ ms.date: 06/10/2013
 ms.assetid: 9afe7454-f1bd-4e81-8ecf-12fe54d080c1
 msc.legacyurl: /mvc/overview/getting-started/introduction
 msc.type: chapter
+ms.openlocfilehash: 894de721a0f9e80352417753f07ada38cf966e79
+ms.sourcegitcommit: 289e051cc8a90e8f7127e239fda73047bde4de12
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 03/25/2019
+ms.locfileid: "58423512"
 ---
 <a name="getting-started-with-aspnet-mvc-5"></a><span data-ttu-id="e7537-103">Introducción a ASP.NET MVC 5</span><span class="sxs-lookup"><span data-stu-id="e7537-103">Getting Started with ASP.NET MVC 5</span></span>
 ====================

@@ -8,6 +8,12 @@ ms.date: 06/25/2013
 ms.assetid: 51900291-7787-4a6e-be4e-fa558486f5ff
 msc.legacyurl: /visual-studio/overview/2012
 msc.type: chapter
+ms.openlocfilehash: 7d49d7cf865bb6fad0bf4e90788bcf5c2613ab87
+ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 03/01/2019
+ms.locfileid: "57019932"
 ---
 <a name="aspnet-and-visual-studio-2012"></a><span data-ttu-id="36376-103">ASP.NET y Visual Studio 2012</span><span class="sxs-lookup"><span data-stu-id="36376-103">ASP.NET and Visual Studio 2012</span></span>
 ====================

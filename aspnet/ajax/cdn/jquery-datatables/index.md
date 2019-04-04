@@ -8,6 +8,12 @@ ms.date: 07/23/2014
 ms.assetid: c3d609b5-ad52-4ff8-a79d-58a815efdb63
 msc.legacyurl: /ajax/cdn/jquery-datatables
 msc.type: folder
+ms.openlocfilehash: bf93971df43513ba042ed10c240b066964c80be1
+ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 03/01/2019
+ms.locfileid: "57018992"
 ---
 <a name="jquery-datatables"></a><span data-ttu-id="1eeaa-102">jQuery DataTables</span><span class="sxs-lookup"><span data-stu-id="1eeaa-102">jQuery DataTables</span></span>
 ====================

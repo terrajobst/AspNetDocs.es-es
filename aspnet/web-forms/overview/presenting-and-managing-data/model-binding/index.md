@@ -8,6 +8,12 @@ ms.date: 02/13/2013
 ms.assetid: b94c8eca-9cde-417e-a8bd-e0ff53600984
 msc.legacyurl: /web-forms/overview/presenting-and-managing-data/model-binding
 msc.type: chapter
+ms.openlocfilehash: 0eb6c82ba3fdf3e89edde819297d5b443cc4c252
+ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 03/01/2019
+ms.locfileid: "57021672"
 ---
 <a name="model-binding-and-web-forms-in-visual-studio-2013"></a><span data-ttu-id="352e2-103">Enlace de modelos y formularios Web Forms en Visual Studio 2013</span><span class="sxs-lookup"><span data-stu-id="352e2-103">Model Binding and Web Forms in Visual Studio 2013</span></span>
 ====================

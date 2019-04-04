@@ -8,6 +8,12 @@ ms.date: 05/30/2013
 ms.assetid: 37e005e9-2f1c-4039-b6ef-15612e0fdbc9
 msc.legacyurl: /aspnet/overview/owin-and-katana
 msc.type: chapter
+ms.openlocfilehash: e528bbfb4513d25b6a77fa2263dc744fb5e52df6
+ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 03/01/2019
+ms.locfileid: "57019162"
 ---
 <a name="owin-and-katana"></a><span data-ttu-id="ac8a1-103">OWIN y Katana</span><span class="sxs-lookup"><span data-stu-id="ac8a1-103">OWIN and Katana</span></span>
 ====================

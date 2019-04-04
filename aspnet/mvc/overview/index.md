@@ -8,6 +8,12 @@ ms.date: 06/23/2011
 ms.assetid: 946574c5-b5cb-423b-a6e1-a2cfb506ecf9
 msc.legacyurl: /mvc/overview
 msc.type: book
+ms.openlocfilehash: bbd4b121820c79d891d95905a8a8d8d0b4e17f2d
+ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 03/01/2019
+ms.locfileid: "57018932"
 ---
 <a name="aspnet-mvc-guidance"></a><span data-ttu-id="6ae5f-102">Guía de ASP.NET MVC</span><span class="sxs-lookup"><span data-stu-id="6ae5f-102">ASP.NET MVC Guidance</span></span>
 ====================

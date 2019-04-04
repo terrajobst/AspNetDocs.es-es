@@ -8,6 +8,12 @@ ms.date: 09/28/2011
 ms.assetid: 296b3a7a-483d-4937-ba2f-3f9c1319616a
 msc.legacyurl: /mvc/videos/mvc-1/aspnet-mvc-storefront
 msc.type: chapter
+ms.openlocfilehash: b6030c14980bfe86b04284160d2c1e4a5ccc8bf7
+ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 03/01/2019
+ms.locfileid: "57020702"
 ---
 <a name="aspnet-mvc-storefront"></a><span data-ttu-id="d2cda-103">Escaparate de ASP.NET MVC</span><span class="sxs-lookup"><span data-stu-id="d2cda-103">ASP.NET MVC Storefront</span></span>
 ====================

@@ -8,6 +8,12 @@ ms.date: 10/05/2011
 ms.assetid: 80010898-5cb0-49ae-a678-cc2f3fe3ca6c
 msc.legacyurl: /web-forms/overview/data-access/enhancing-the-gridview
 msc.type: chapter
+ms.openlocfilehash: 4c2c5e506f6186c9e6efe940fb5074eec63d52dd
+ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 03/01/2019
+ms.locfileid: "57019132"
 ---
 <a name="enhancing-the-gridview"></a><span data-ttu-id="126b5-103">Mejorar el control GridView</span><span class="sxs-lookup"><span data-stu-id="126b5-103">Enhancing the GridView</span></span>
 ====================

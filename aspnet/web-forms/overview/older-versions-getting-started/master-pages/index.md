@@ -8,6 +8,12 @@ ms.date: 11/04/2011
 ms.assetid: bc30f0ec-cf8f-4a33-9eee-513be872ac9c
 msc.legacyurl: /web-forms/overview/older-versions-getting-started/master-pages
 msc.type: chapter
+ms.openlocfilehash: 129d1992d702e8f3deeaa29ed089f04999cd1e5f
+ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 03/01/2019
+ms.locfileid: "57019472"
 ---
 <a name="aspnet-35---web-forms-master-pages"></a><span data-ttu-id="cc38c-103">ASP.NET 3.5 - Páginas maestras de los formularios Web Forms</span><span class="sxs-lookup"><span data-stu-id="cc38c-103">ASP.NET 3.5 - Web Forms Master Pages</span></span>
 ====================
