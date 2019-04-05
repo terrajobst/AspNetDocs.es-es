@@ -8,6 +8,12 @@ ms.date: 07/23/2014
 ms.assetid: c13785b6-5538-4511-92de-4afdb4a1d0f1
 msc.legacyurl: /ajax/cdn/jquery-mobile
 msc.type: folder
+ms.openlocfilehash: 9dd3e94c1bb936897c8c492d65186c4edd652b59
+ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 03/01/2019
+ms.locfileid: "57019222"
 ---
 <a name="jquery-mobile"></a>jQuery Mobile
 ====================
