@@ -8,35 +8,35 @@ ms.date: 08/08/2011
 ms.assetid: f645d3b1-1092-43c6-a28a-074b413924b4
 msc.legacyurl: /web-forms/overview/getting-started
 msc.type: chapter
-ms.openlocfilehash: de5f8df4a6247ae41971867cafda15835b4944e4
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: 12dd89632f9ec9ebfb16bcefbd37e7311adfff08
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57020332"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59422829"
 ---
-<a name="getting-started-with-aspnet-web-forms"></a><span data-ttu-id="ef171-104">Introducción a ASP.NET Web Forms</span><span class="sxs-lookup"><span data-stu-id="ef171-104">Getting Started with ASP.NET Web Forms</span></span>
-====================
-> <span data-ttu-id="ef171-105">El modelo de formularios Web Forms y cómo crear páginas y usar los controles.</span><span class="sxs-lookup"><span data-stu-id="ef171-105">The Web Forms model and how to create pages and use controls.</span></span>
+# <a name="getting-started-with-aspnet-web-forms"></a><span data-ttu-id="4113d-104">Introducción a ASP.NET Web Forms</span><span class="sxs-lookup"><span data-stu-id="4113d-104">Getting Started with ASP.NET Web Forms</span></span>
+
+> <span data-ttu-id="4113d-105">El modelo de formularios Web Forms y cómo crear páginas y usar los controles.</span><span class="sxs-lookup"><span data-stu-id="4113d-105">The Web Forms model and how to create pages and use controls.</span></span>
 
 
-- [<span data-ttu-id="ef171-106">Introducción a los formularios Web Forms de ASP.NET 4.5 y Visual Studio 2013</span><span class="sxs-lookup"><span data-stu-id="ef171-106">Getting Started with ASP.NET 4.5 Web Forms and Visual Studio 2013</span></span>](getting-started-with-aspnet-45-web-forms/index.md)
+- [<span data-ttu-id="4113d-106">Introducción a los formularios Web Forms de ASP.NET 4.5 y Visual Studio 2013</span><span class="sxs-lookup"><span data-stu-id="4113d-106">Getting Started with ASP.NET 4.5 Web Forms and Visual Studio 2013</span></span>](getting-started-with-aspnet-45-web-forms/index.md)
 
-    - [<span data-ttu-id="ef171-107">Introducción a los formularios Web Forms y Visual Studio</span><span class="sxs-lookup"><span data-stu-id="ef171-107">Getting Started with Web Forms and Visual Studio</span></span>](getting-started-with-aspnet-45-web-forms/introduction-and-overview.md)
-    - [<span data-ttu-id="ef171-108">Crear el proyecto</span><span class="sxs-lookup"><span data-stu-id="ef171-108">Create the Project</span></span>](getting-started-with-aspnet-45-web-forms/create-the-project.md)
-    - [<span data-ttu-id="ef171-109">Crear la capa de acceso a datos</span><span class="sxs-lookup"><span data-stu-id="ef171-109">Create the Data Access Layer</span></span>](getting-started-with-aspnet-45-web-forms/create_the_data_access_layer.md)
-    - [<span data-ttu-id="ef171-110">Interfaz de usuario y navegación</span><span class="sxs-lookup"><span data-stu-id="ef171-110">UI and Navigation</span></span>](getting-started-with-aspnet-45-web-forms/ui_and_navigation.md)
-    - [<span data-ttu-id="ef171-111">Mostrar los elementos de datos y los detalles</span><span class="sxs-lookup"><span data-stu-id="ef171-111">Display Data Items and Details</span></span>](getting-started-with-aspnet-45-web-forms/display_data_items_and_details.md)
-    - [<span data-ttu-id="ef171-112">Carro de la compra</span><span class="sxs-lookup"><span data-stu-id="ef171-112">Shopping Cart</span></span>](getting-started-with-aspnet-45-web-forms/shopping-cart.md)
-    - [<span data-ttu-id="ef171-113">Finalización de la compra y pago con PayPal</span><span class="sxs-lookup"><span data-stu-id="ef171-113">Checkout and Payment with PayPal</span></span>](getting-started-with-aspnet-45-web-forms/checkout-and-payment-with-paypal.md)
-    - [<span data-ttu-id="ef171-114">Pertenencia y administración</span><span class="sxs-lookup"><span data-stu-id="ef171-114">Membership and Administration</span></span>](getting-started-with-aspnet-45-web-forms/membership-and-administration.md)
-    - [<span data-ttu-id="ef171-115">Enrutamiento de direcciones URL</span><span class="sxs-lookup"><span data-stu-id="ef171-115">URL Routing</span></span>](getting-started-with-aspnet-45-web-forms/url-routing.md)
-    - [<span data-ttu-id="ef171-116">Control de errores de ASP.NET</span><span class="sxs-lookup"><span data-stu-id="ef171-116">ASP.NET Error Handling</span></span>](getting-started-with-aspnet-45-web-forms/aspnet-error-handling.md)
-- [<span data-ttu-id="ef171-117">Crear una página básica de formularios Web Forms en Visual Studio 2013</span><span class="sxs-lookup"><span data-stu-id="ef171-117">Creating a Basic Web Forms Page in Visual Studio 2013</span></span>](creating-a-basic-web-forms-page.md)
-- [<span data-ttu-id="ef171-118">Edición del código de formularios Web Forms de ASP.NET en Visual Studio 2013</span><span class="sxs-lookup"><span data-stu-id="ef171-118">Code Editing ASP.NET Web Forms in Visual Studio 2013</span></span>](code-editing-in-web-forms-pages.md)
-- [<span data-ttu-id="ef171-119">Usar el Inspector de página para Visual Studio 2012 en los formularios Web Forms de ASP.NET</span><span class="sxs-lookup"><span data-stu-id="ef171-119">Using Page Inspector for Visual Studio 2012 in ASP.NET Web Forms</span></span>](using-page-inspector-in-a-visual-studio-11-beta-web-forms-project.md)
-- [<span data-ttu-id="ef171-120">Laboratorios prácticos de Visual Studio 2012</span><span class="sxs-lookup"><span data-stu-id="ef171-120">Visual Studio 2012 Hands On Labs</span></span>](hands-on-labs/index.md)
+    - [<span data-ttu-id="4113d-107">Introducción a los formularios Web Forms y Visual Studio</span><span class="sxs-lookup"><span data-stu-id="4113d-107">Getting Started with Web Forms and Visual Studio</span></span>](getting-started-with-aspnet-45-web-forms/introduction-and-overview.md)
+    - [<span data-ttu-id="4113d-108">Crear el proyecto</span><span class="sxs-lookup"><span data-stu-id="4113d-108">Create the Project</span></span>](getting-started-with-aspnet-45-web-forms/create-the-project.md)
+    - [<span data-ttu-id="4113d-109">Crear la capa de acceso a datos</span><span class="sxs-lookup"><span data-stu-id="4113d-109">Create the Data Access Layer</span></span>](getting-started-with-aspnet-45-web-forms/create_the_data_access_layer.md)
+    - [<span data-ttu-id="4113d-110">Interfaz de usuario y navegación</span><span class="sxs-lookup"><span data-stu-id="4113d-110">UI and Navigation</span></span>](getting-started-with-aspnet-45-web-forms/ui_and_navigation.md)
+    - [<span data-ttu-id="4113d-111">Mostrar los elementos de datos y los detalles</span><span class="sxs-lookup"><span data-stu-id="4113d-111">Display Data Items and Details</span></span>](getting-started-with-aspnet-45-web-forms/display_data_items_and_details.md)
+    - [<span data-ttu-id="4113d-112">Carro de la compra</span><span class="sxs-lookup"><span data-stu-id="4113d-112">Shopping Cart</span></span>](getting-started-with-aspnet-45-web-forms/shopping-cart.md)
+    - [<span data-ttu-id="4113d-113">Finalización de la compra y pago con PayPal</span><span class="sxs-lookup"><span data-stu-id="4113d-113">Checkout and Payment with PayPal</span></span>](getting-started-with-aspnet-45-web-forms/checkout-and-payment-with-paypal.md)
+    - [<span data-ttu-id="4113d-114">Pertenencia y administración</span><span class="sxs-lookup"><span data-stu-id="4113d-114">Membership and Administration</span></span>](getting-started-with-aspnet-45-web-forms/membership-and-administration.md)
+    - [<span data-ttu-id="4113d-115">Enrutamiento de direcciones URL</span><span class="sxs-lookup"><span data-stu-id="4113d-115">URL Routing</span></span>](getting-started-with-aspnet-45-web-forms/url-routing.md)
+    - [<span data-ttu-id="4113d-116">Control de errores de ASP.NET</span><span class="sxs-lookup"><span data-stu-id="4113d-116">ASP.NET Error Handling</span></span>](getting-started-with-aspnet-45-web-forms/aspnet-error-handling.md)
+- [<span data-ttu-id="4113d-117">Crear una página básica de formularios Web Forms en Visual Studio 2013</span><span class="sxs-lookup"><span data-stu-id="4113d-117">Creating a Basic Web Forms Page in Visual Studio 2013</span></span>](creating-a-basic-web-forms-page.md)
+- [<span data-ttu-id="4113d-118">Edición del código de formularios Web Forms de ASP.NET en Visual Studio 2013</span><span class="sxs-lookup"><span data-stu-id="4113d-118">Code Editing ASP.NET Web Forms in Visual Studio 2013</span></span>](code-editing-in-web-forms-pages.md)
+- [<span data-ttu-id="4113d-119">Usar el Inspector de página para Visual Studio 2012 en los formularios Web Forms de ASP.NET</span><span class="sxs-lookup"><span data-stu-id="4113d-119">Using Page Inspector for Visual Studio 2012 in ASP.NET Web Forms</span></span>](using-page-inspector-in-a-visual-studio-11-beta-web-forms-project.md)
+- [<span data-ttu-id="4113d-120">Laboratorios prácticos de Visual Studio 2012</span><span class="sxs-lookup"><span data-stu-id="4113d-120">Visual Studio 2012 Hands On Labs</span></span>](hands-on-labs/index.md)
 
-    - [<span data-ttu-id="ef171-121">Novedades de Desarrollo de ASP.NET y web en Visual Studio 2012</span><span class="sxs-lookup"><span data-stu-id="ef171-121">What's New in ASP.NET and Web Development in Visual Studio 2012</span></span>](hands-on-labs/whats-new-in-aspnet-and-web-development-in-visual-studio-2012.md)
-    - [<span data-ttu-id="ef171-122">Novedades de los formularios Web Forms en ASP.NET 4.5</span><span class="sxs-lookup"><span data-stu-id="ef171-122">What's New in Web Forms in ASP.NET 4.5</span></span>](hands-on-labs/whats-new-in-web-forms-in-aspnet-45.md)
-    - [<span data-ttu-id="ef171-123">Usar el Inspector de página en Visual Studio 2012</span><span class="sxs-lookup"><span data-stu-id="ef171-123">Using Page Inspector in Visual Studio 2012</span></span>](hands-on-labs/using-page-inspector-in-visual-studio-2012.md)
+    - [<span data-ttu-id="4113d-121">Novedades de Desarrollo de ASP.NET y web en Visual Studio 2012</span><span class="sxs-lookup"><span data-stu-id="4113d-121">What's New in ASP.NET and Web Development in Visual Studio 2012</span></span>](hands-on-labs/whats-new-in-aspnet-and-web-development-in-visual-studio-2012.md)
+    - [<span data-ttu-id="4113d-122">Novedades de los formularios Web Forms en ASP.NET 4.5</span><span class="sxs-lookup"><span data-stu-id="4113d-122">What's New in Web Forms in ASP.NET 4.5</span></span>](hands-on-labs/whats-new-in-web-forms-in-aspnet-45.md)
+    - [<span data-ttu-id="4113d-123">Usar el Inspector de página en Visual Studio 2012</span><span class="sxs-lookup"><span data-stu-id="4113d-123">Using Page Inspector in Visual Studio 2012</span></span>](hands-on-labs/using-page-inspector-in-visual-studio-2012.md)

@@ -9,26 +9,26 @@ ms.date: 03/12/2010
 ms.technology: aspnet
 msc.legacyurl: /entity-framework
 msc.type: content
-ms.openlocfilehash: 4f18afb9df3d486845d33735d045ee26f59b3f97
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: bcbd98f88b1e7e292961326061404ce91d157b32
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57045332"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59414561"
 ---
-<a name="entity-framework"></a><span data-ttu-id="4ad74-102">Entity Framework</span><span class="sxs-lookup"><span data-stu-id="4ad74-102">Entity Framework</span></span>
-====================
-<span data-ttu-id="4ad74-103">Entity Framework (EF) es un asignador relacional de objetos que permite a los desarrolladores de .NET trabajar con datos relacionales usando objetos específicos del dominio.</span><span class="sxs-lookup"><span data-stu-id="4ad74-103">Entity Framework (EF) is an object-relational mapper that enables .NET developers to work with relational data using domain-specific objects.</span></span> <span data-ttu-id="4ad74-104">Elimina la necesidad de la mayor parte del código de acceso a datos que los desarrolladores normalmente deben escribir.</span><span class="sxs-lookup"><span data-stu-id="4ad74-104">It eliminates the need for most of the data-access code that developers usually need to write.</span></span>
+# <a name="entity-framework"></a><span data-ttu-id="8b615-102">Entity Framework</span><span class="sxs-lookup"><span data-stu-id="8b615-102">Entity Framework</span></span>
+
+<span data-ttu-id="8b615-103">Entity Framework (EF) es un asignador relacional de objetos que permite a los desarrolladores de .NET trabajar con datos relacionales usando objetos específicos del dominio.</span><span class="sxs-lookup"><span data-stu-id="8b615-103">Entity Framework (EF) is an object-relational mapper that enables .NET developers to work with relational data using domain-specific objects.</span></span> <span data-ttu-id="8b615-104">Elimina la necesidad de la mayor parte del código de acceso a datos que los desarrolladores normalmente deben escribir.</span><span class="sxs-lookup"><span data-stu-id="8b615-104">It eliminates the need for most of the data-access code that developers usually need to write.</span></span>
 
 
-- <span data-ttu-id="4ad74-105">[Queda claro:](https://msdn.com/data/ee712906) Agregar esto a su proyecto y comenzar a aprovechar esta eficaz O/RM.</span><span class="sxs-lookup"><span data-stu-id="4ad74-105">[Get it:](https://msdn.com/data/ee712906) Add this to your project and start taking advantage of this powerful O/RM.</span></span>
-- <span data-ttu-id="4ad74-106">[Empezar a trabajar:](https://msdn.com/data/ee712907) Visite a la Guía de vídeos y tutoriales que le ayudarán a sacar el máximo partido de sus datos.</span><span class="sxs-lookup"><span data-stu-id="4ad74-106">[Get Started:](https://msdn.com/data/ee712907) Visit the guide for videos and tutorials that will help you make the most of your data.</span></span>
-- <span data-ttu-id="4ad74-107">[Obtener ayuda:](https://msdn.com/data/hh913619) Descubra cómo obtener ayuda de expertos y contribuir a la Comunidad de datos en Stack Overflow.</span><span class="sxs-lookup"><span data-stu-id="4ad74-107">[Get Help:](https://msdn.com/data/hh913619) Find out how to get help from the experts and contribute to the data community on Stack Overflow.</span></span>
-- <span data-ttu-id="4ad74-108">[Contribuir:](https://github.com/aspnet/EntityFramework6) Descubra cómo puede ayudar a mejorar Entity Framework, un modelo de desarrollo abierto, incluso, visite el sitio de GitHub.</span><span class="sxs-lookup"><span data-stu-id="4ad74-108">[Contribute:](https://github.com/aspnet/EntityFramework6) Find out how you can help make Entity Framework, an open development model, even better by visiting GitHub site.</span></span>
+- <span data-ttu-id="8b615-105">[Queda claro:](https://msdn.com/data/ee712906) Agregar esto a su proyecto y comenzar a aprovechar esta eficaz O/RM.</span><span class="sxs-lookup"><span data-stu-id="8b615-105">[Get it:](https://msdn.com/data/ee712906) Add this to your project and start taking advantage of this powerful O/RM.</span></span>
+- <span data-ttu-id="8b615-106">[Empezar a trabajar:](https://msdn.com/data/ee712907) Visite a la Guía de vídeos y tutoriales que le ayudarán a sacar el máximo partido de sus datos.</span><span class="sxs-lookup"><span data-stu-id="8b615-106">[Get Started:](https://msdn.com/data/ee712907) Visit the guide for videos and tutorials that will help you make the most of your data.</span></span>
+- <span data-ttu-id="8b615-107">[Obtener ayuda:](https://msdn.com/data/hh913619) Descubra cómo obtener ayuda de expertos y contribuir a la Comunidad de datos en Stack Overflow.</span><span class="sxs-lookup"><span data-stu-id="8b615-107">[Get Help:](https://msdn.com/data/hh913619) Find out how to get help from the experts and contribute to the data community on Stack Overflow.</span></span>
+- <span data-ttu-id="8b615-108">[Contribuir:](https://github.com/aspnet/EntityFramework6) Descubra cómo puede ayudar a mejorar Entity Framework, un modelo de desarrollo abierto, incluso, visite el sitio de GitHub.</span><span class="sxs-lookup"><span data-stu-id="8b615-108">[Contribute:](https://github.com/aspnet/EntityFramework6) Find out how you can help make Entity Framework, an open development model, even better by visiting GitHub site.</span></span>
 
 
-<span data-ttu-id="4ad74-109">Usar Entity Framework con ASP.NET</span><span class="sxs-lookup"><span data-stu-id="4ad74-109">Use Entity Framework with ASP.NET</span></span>
+<span data-ttu-id="8b615-109">Usar Entity Framework con ASP.NET</span><span class="sxs-lookup"><span data-stu-id="8b615-109">Use Entity Framework with ASP.NET</span></span>
 
-- [<span data-ttu-id="4ad74-110">Tutoriales de Web Forms</span><span class="sxs-lookup"><span data-stu-id="4ad74-110">Web Forms Tutorials</span></span>](web-forms/overview/older-versions-getting-started/getting-started-with-ef/the-entity-framework-and-aspnet-getting-started-part-1.md)
-- [<span data-ttu-id="4ad74-111">Tutoriales MVC</span><span class="sxs-lookup"><span data-stu-id="4ad74-111">MVC Tutorials</span></span>](mvc/overview/getting-started/getting-started-with-ef-using-mvc/creating-an-entity-framework-data-model-for-an-asp-net-mvc-application.md)
-- [<span data-ttu-id="4ad74-112">Aplicación de ejemplo</span><span class="sxs-lookup"><span data-stu-id="4ad74-112">Sample Application</span></span>](https://webpifeed.blob.core.windows.net/webpifeed/Partners/ASP.NET%20MVC%20Application%20Using%20Entity%20Framework%20Code%20First.zip)
+- [<span data-ttu-id="8b615-110">Tutoriales de Web Forms</span><span class="sxs-lookup"><span data-stu-id="8b615-110">Web Forms Tutorials</span></span>](web-forms/overview/older-versions-getting-started/getting-started-with-ef/the-entity-framework-and-aspnet-getting-started-part-1.md)
+- [<span data-ttu-id="8b615-111">Tutoriales MVC</span><span class="sxs-lookup"><span data-stu-id="8b615-111">MVC Tutorials</span></span>](mvc/overview/getting-started/getting-started-with-ef-using-mvc/creating-an-entity-framework-data-model-for-an-asp-net-mvc-application.md)
+- [<span data-ttu-id="8b615-112">Aplicación de ejemplo</span><span class="sxs-lookup"><span data-stu-id="8b615-112">Sample Application</span></span>](https://webpifeed.blob.core.windows.net/webpifeed/Partners/ASP.NET%20MVC%20Application%20Using%20Entity%20Framework%20Code%20First.zip)
