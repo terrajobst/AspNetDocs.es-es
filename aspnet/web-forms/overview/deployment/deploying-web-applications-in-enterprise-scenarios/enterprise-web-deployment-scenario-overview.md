@@ -8,15 +8,15 @@ ms.date: 05/03/2012
 ms.assetid: aa862153-4cd8-4e33-beeb-abf502c6664f
 msc.legacyurl: /web-forms/overview/deployment/deploying-web-applications-in-enterprise-scenarios/enterprise-web-deployment-scenario-overview
 msc.type: authoredcontent
-ms.openlocfilehash: ec5b62f3991fa256bc8efe7abe9b953d61d1a515
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: 326abfe4fe86d0741b0bf807d5454d6cf87a7c12
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57038392"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59411974"
 ---
-<a name="enterprise-web-deployment-scenario-overview"></a>Implementación web de empresa: Información general del escenario
-====================
+# <a name="enterprise-web-deployment-scenario-overview"></a>Implementación web de empresa: Información general del escenario
+
 por [Jason Lee](https://github.com/jrjlee)
 
 [Descargar PDF](https://msdnshared.blob.core.windows.net/media/MSDNBlogsFS/prod.evol.blogs.msdn.com/CommunityServer.Blogs.Components.WeblogFiles/00/00/00/63/56/8130.DeployingWebAppsInEnterpriseScenarios.pdf)

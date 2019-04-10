@@ -8,15 +8,15 @@ ms.date: 03/24/2008
 ms.assetid: 4d9b63fa-c3d4-4e85-82b1-26ae3ba3ca1c
 msc.legacyurl: /web-forms/overview/older-versions-security/roles/role-based-authorization-cs
 msc.type: authoredcontent
-ms.openlocfilehash: 3f947e35164724b99507858a19bdd9cd1154768a
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: 9c6dbfee1a1a05af7bdd82ad96b0ca52774274b1
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57047382"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59383140"
 ---
-<a name="role-based-authorization-c"></a>Autorización basada en roles (C#)
-====================
+# <a name="role-based-authorization-c"></a>Autorización basada en roles (C#)
+
 por [Scott Mitchell](https://twitter.com/ScottOnWriting)
 
 [Descargar código](http://download.microsoft.com/download/6/0/3/6032582f-360d-4739-b935-38721fdb86ea/CS.11.zip) o [descargar PDF](http://download.microsoft.com/download/6/0/3/6032582f-360d-4739-b935-38721fdb86ea/aspnet_tutorial11_RoleAuth_cs.pdf)
@@ -47,7 +47,7 @@ Figura 1 se muestra el flujo de trabajo de canalización ASP.NET cuando se usa l
 Si un usuario anónimo visita el sitio, ni el `FormsAuthenticationModule` ni `RoleManagerModule` crea un objeto de entidad.
 
 
-[![Los eventos de canalización de ASP.NET para un usuario autenticado cuando se usa la autenticación de formularios y el marco de trabajo de Roles](role-based-authorization-cs/_static/image2.png)](role-based-authorization-cs/_static/image1.png)
+[![TEventos de canalización de ASP.NET para un autenticado usuario al utilizar autenticación de formularios y Roles de Framework](role-based-authorization-cs/_static/image2.png)](role-based-authorization-cs/_static/image1.png)
 
 **Figura 1**: Los eventos de la canalización de ASP.NET para un autenticado usuario al utilizar autenticación de formularios y el marco de trabajo de Roles ([haga clic aquí para ver imagen en tamaño completo](role-based-authorization-cs/_static/image3.png))
 
@@ -59,7 +59,7 @@ El `RolePrincipal` del objeto `IsInRole(roleName)` llamadas al método `Roles.Ge
 Si el marco de trabajo de Roles está configurado para almacenar en caché los roles del usuario en una cookie, el `RoleManagerModule` crea la cookie durante la canalización de ASP.NET [ `EndRequest` eventos](https://msdn.microsoft.com/library/system.web.httpapplication.endrequest.aspx). Se usa esta cookie en solicitudes posteriores en la `PostAuthenticateRequest`, que es cuando el `RolePrincipal` se crea el objeto. Si la cookie es válida y no ha expirado, los datos de la cookie se analiza y se usa para rellenar los roles del usuario, lo que ahorra el `RolePrincipal` de tener que realizar una llamada a la `Roles` clase para determinar los roles del usuario. Figura 2 se ilustra este flujo de trabajo.
 
 
-[![Información de roles del usuario se puede almacenar en una Cookie para mejorar el rendimiento](role-based-authorization-cs/_static/image5.png)](role-based-authorization-cs/_static/image4.png)
+[![TInformación de roles del usuario se puede almacenar en una Cookie para mejorar el rendimiento](role-based-authorization-cs/_static/image5.png)](role-based-authorization-cs/_static/image4.png)
 
 **Figura 2**: Rol información pueden almacenarse el usuario en una Cookie para mejorar el rendimiento ([haga clic aquí para ver imagen en tamaño completo](role-based-authorization-cs/_static/image6.png))
 
@@ -70,7 +70,7 @@ De forma predeterminada, el mecanismo de cookies de la memoria caché de rol est
 > Los valores de configuración aparece en la tabla 1 especifican las propiedades de la cookie de caché de rol resultante. Para obtener más información sobre las cookies, cómo funcionan y sus diversas propiedades, lea [este tutorial Cookies](http://www.quirksmode.org/js/cookies.html).
 
 
-| <strong>Property</strong> |                                                                                                                                                                                                                                                                                                                                                         <strong>Descripción</strong>                                                                                                                                                                                                                                                                                                                                                          |
+| <strong>Propiedad</strong> |                                                                                                                                                                                                                                                                                                                                                         <strong>Descripción</strong>                                                                                                                                                                                                                                                                                                                                                          |
 |---------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 |   `cacheRolesInCookie`    |                                                                                                                                                                                                                                                                                                                              Un valor booleano que indica si se utiliza el almacenamiento en caché de cookies. Tiene como valor predeterminado `false`.                                                                                                                                                                                                                                                                                                                              |
 |       `cookieName`        |                                                                                                                                                                                                                                                                                                                                     El nombre de la cookie de la memoria caché de rol. El valor predeterminado es ". ASPXROLES".                                                                                                                                                                                                                                                                                                                                     |
@@ -115,7 +115,7 @@ Vamos a configurar nuestra aplicación para que la `ManageRoles.aspx`, `UsersAnd
 Para lograr esto, empiece agregando un `Web.config` del archivo a la `Roles` carpeta.
 
 
-[![Agregue un archivo Web.config en el directorio de Roles](role-based-authorization-cs/_static/image8.png)](role-based-authorization-cs/_static/image7.png)
+[![Aun archivo Web.config en el directorio Roles dd](role-based-authorization-cs/_static/image8.png)](role-based-authorization-cs/_static/image7.png)
 
 **Figura 3**: Agregar un `Web.config` del archivo a la `Roles` directorio ([haga clic aquí para ver imagen en tamaño completo](role-based-authorization-cs/_static/image9.png))
 
@@ -129,7 +129,7 @@ El `<authorization>` elemento en el `<system.web>` sección indica que solo los 
 Después de guardar los cambios realizados en `Web.config`, inicie sesión como un usuario que no está en el rol de administradores y, a continuación, intentar visitar una de las páginas protegidas. El `UrlAuthorizationModule` detectará que no tiene permiso para visitar el recurso solicitado; por lo tanto, el `FormsAuthenticationModule` le redirigirá a la página de inicio de sesión. La página de inicio de sesión, a continuación, le redirigirá a la `UnauthorizedAccess.aspx` página (consulte la figura 4). Esta redirección final de la página de inicio de sesión a `UnauthorizedAccess.aspx` se produce debido a código que se ha agregado a la página de inicio de sesión en el paso 2 de la <a id="_msoanchor_7"> </a> [ *autorización basada en usuario* ](../membership/user-based-authorization-cs.md) tutorial. En concreto, la página de inicio de sesión redirige automáticamente a cualquier usuario autenticado `UnauthorizedAccess.aspx` si la cadena de consulta contiene un `ReturnUrl` parámetro, como este parámetro indica que el usuario ha llegado en la página de inicio de sesión después de intentar ver una página no fue autorización para ver.
 
 
-[![Solo los usuarios de la función Administrators puedan ver las páginas protegidas](role-based-authorization-cs/_static/image11.png)](role-based-authorization-cs/_static/image10.png)
+[![Osolo los usuarios del rol de los administradores puede ver las páginas protegidas](role-based-authorization-cs/_static/image11.png)](role-based-authorization-cs/_static/image10.png)
 
 **Figura 4**: Solo los usuarios del rol de los administradores pueden ver las páginas protegidas ([haga clic aquí para ver imagen en tamaño completo](role-based-authorization-cs/_static/image12.png))
 
@@ -137,7 +137,7 @@ Después de guardar los cambios realizados en `Web.config`, inicie sesión como 
 Cierre sesión y, a continuación, inicie sesión como un usuario que está en la función Administrators. Ahora debería poder ver las tres páginas protegidas.
 
 
-[![Puede visitar Tito la UsersAndRoles.aspx página porque se encuentre en el rol de administradores](role-based-authorization-cs/_static/image14.png)](role-based-authorization-cs/_static/image13.png)
+[![TGil puede visitar el UsersAndRoles.aspx página porque es de la función Administrators](role-based-authorization-cs/_static/image14.png)](role-based-authorization-cs/_static/image13.png)
 
 **Figura 5**: Puede visitar Tito el `UsersAndRoles.aspx` página porque es de la función Administrators ([haga clic aquí para ver imagen en tamaño completo](role-based-authorization-cs/_static/image15.png))
 
@@ -167,7 +167,7 @@ Tiene la primera presentación BoundField el `UserName` propiedad; conjunto su `
 Establecer el `HeaderText` las propiedades de los dos TemplateFields "Email" y "Comment".
 
 
-[![Campos de GridView pueden configurarse mediante el cuadro de diálogo campos](role-based-authorization-cs/_static/image17.png)](role-based-authorization-cs/_static/image16.png)
+[![TCampos puede ser configurado mediante el cuadro de GridView de diálogo campos](role-based-authorization-cs/_static/image17.png)](role-based-authorization-cs/_static/image16.png)
 
 **Figura 6**: Campos puede ser configurado mediante el cuadro de GridView de diálogo campos ([haga clic aquí para ver imagen en tamaño completo](role-based-authorization-cs/_static/image18.png))
 
@@ -193,7 +193,7 @@ Ahora, hemos completado marcado declarativo de esta página. La siguiente tarea 
 Con este código en su lugar, visite la página a través de un explorador. Como se muestra en la figura 7, debería ver un GridView presentar información acerca de cada cuenta de usuario en el sistema.
 
 
-[![UserGrid GridView muestra información acerca de cada usuario en el sistema](role-based-authorization-cs/_static/image20.png)](role-based-authorization-cs/_static/image19.png)
+[![Tél UserGrid GridView muestra información acerca de cada usuario del sistema](role-based-authorization-cs/_static/image20.png)](role-based-authorization-cs/_static/image19.png)
 
 **Figura 7**: El `UserGrid` GridView muestra información acerca de cada usuario del sistema ([haga clic aquí para ver imagen en tamaño completo](role-based-authorization-cs/_static/image21.png))
 
@@ -239,7 +239,7 @@ Además el `AnonymousTemplate` y `LoggedInTemplate`, puede incluir el control Lo
 Para administrar los grupos de funciones, haga clic en el vínculo "Editar RoleGroups" desde etiqueta del control inteligente para mostrar el Editor de colección RoleGroup. Agregue dos nuevos grupos de funciones. Establecer el RoleGroup primera `Roles` propiedad en "Administradores" y el segundo a "Supervisores".
 
 
-[![Administrar plantillas de rol específicos de LoginView a través del Editor de colección RoleGroup.](role-based-authorization-cs/_static/image23.png)](role-based-authorization-cs/_static/image22.png)
+[![Madministrar el LoginView específica de la función plantillas mediante el Editor Kolekce RoleGroup.](role-based-authorization-cs/_static/image23.png)](role-based-authorization-cs/_static/image22.png)
 
 **Figura 8**: Administración específica de la función plantillas mediante el Editor de LoginView Kolekce RoleGroup. ([haga clic aquí para ver imagen en tamaño completo](role-based-authorization-cs/_static/image24.png))
 
@@ -260,7 +260,7 @@ A continuación, inicie sesión como un usuario que sea un miembro del rol de lo
 **Figura 9**: Bruce se muestra el mensaje de rol específicos de los supervisores ([haga clic aquí para ver imagen en tamaño completo](role-based-authorization-cs/_static/image27.png))
 
 
-[![Tito se muestra el mensaje de rol específicos de administradores](role-based-authorization-cs/_static/image29.png)](role-based-authorization-cs/_static/image28.png)
+[![TGil se muestra el mensaje de rol específicos de los administradores](role-based-authorization-cs/_static/image29.png)](role-based-authorization-cs/_static/image28.png)
 
 **Figura 10**: Tito se muestra el mensaje de rol específicos de los administradores ([haga clic aquí para ver imagen en tamaño completo](role-based-authorization-cs/_static/image30.png))
 
@@ -270,7 +270,7 @@ Como las capturas de pantalla en las figuras 9 y 10 mostrar, el LoginView sólo 
 Figura 11 se ilustra el flujo de trabajo usa el control LoginView para determinar qué plantilla se debe representar. Tenga en cuenta que si hay más de uno RoleGroup especificado, la plantilla de LoginView representa el *primera* RoleGroup que coincida con. En otras palabras, si hubiéramos situamos el RoleGroup supervisores como el primer RoleGroup y los administradores como el segundo, a continuación, cuando Tito visita esta página debería ver el mensaje de supervisores.
 
 
-[![Flujo de trabajo del Control LoginView para determinar qué plantilla se debe representar](role-based-authorization-cs/_static/image32.png)](role-based-authorization-cs/_static/image31.png)
+[![Tflujo de trabajo del LoginView Control para determinar qué plantilla que se representarán](role-based-authorization-cs/_static/image32.png)](role-based-authorization-cs/_static/image31.png)
 
 **Figura 11**: Flujo de trabajo del LoginView Control para determinar qué plantilla que se representarán ([haga clic aquí para ver imagen en tamaño completo](role-based-authorization-cs/_static/image33.png))
 
@@ -282,7 +282,7 @@ Mientras el control LoginView muestra instrucciones diferentes según el rol del
 Es la manera más fácil de hacer referencia mediante programación a los controles en un CommandField convertirlo a una plantilla. Para ello, haga clic en el vínculo "Editar columnas" de la etiqueta inteligente de GridView, seleccione el CommandField desde la lista de campos actuales y haga clic en el vínculo "Convert this field into a TemplateField". Esto convierte el CommandField en TemplateField con un `ItemTemplate` y `EditItemTemplate`. El `ItemTemplate` contiene la edición y eliminar LinkButtons mientras el `EditItemTemplate` aloja la actualización y cancelar LinkButtons.
 
 
-[![Convertir el CommandField en TemplateField](role-based-authorization-cs/_static/image35.png)](role-based-authorization-cs/_static/image34.png)
+[![Cconvertir el CommandField en TemplateField](role-based-authorization-cs/_static/image35.png)](role-based-authorization-cs/_static/image34.png)
 
 **Figura 12**: Convertir el CommandField en TemplateField ([haga clic aquí para ver imagen en tamaño completo](role-based-authorization-cs/_static/image36.png))
 
@@ -313,7 +313,7 @@ Pruebe esta página a través de un explorador. Si visita la página como un vis
 > Es posible ocultar el CommandField por completo cuando una no Supervisor y sin privilegios de administrador es visitar la página. Dejar como un ejercicio para el lector.
 
 
-[![La edición y eliminar botones están ocultos para que no son supervisores y que no son administradores](role-based-authorization-cs/_static/image38.png)](role-based-authorization-cs/_static/image37.png)
+[![Tpara que no son supervisores y no administradores están ocultos, editar y eliminar botones](role-based-authorization-cs/_static/image38.png)](role-based-authorization-cs/_static/image37.png)
 
 **Figura 13**: La edición y eliminar botones están ocultos para que no son supervisores y no administradores ([haga clic aquí para ver imagen en tamaño completo](role-based-authorization-cs/_static/image39.png))
 
@@ -321,7 +321,7 @@ Pruebe esta página a través de un explorador. Si visita la página como un vis
 Si visita un usuario que pertenece a la función de los supervisores (pero no al rol de administrador), ve solo el botón Editar.
 
 
-[![Mientras que el botón Editar está disponible para los supervisores, se oculta el botón Eliminar](role-based-authorization-cs/_static/image41.png)](role-based-authorization-cs/_static/image40.png)
+[![Wel botón Editar ientras está disponible para los supervisores, se oculta el botón Eliminar](role-based-authorization-cs/_static/image41.png)](role-based-authorization-cs/_static/image40.png)
 
 **Figura 14**: Mientras que el botón Editar está disponible para los supervisores, se oculta el botón Eliminar ([haga clic aquí para ver imagen en tamaño completo](role-based-authorization-cs/_static/image42.png))
 
@@ -329,7 +329,7 @@ Si visita un usuario que pertenece a la función de los supervisores (pero no al
 Y si un administrador visita, tiene acceso a los botones Editar y eliminar.
 
 
-[![El editar y eliminar botones están disponibles sólo para administradores](role-based-authorization-cs/_static/image44.png)](role-based-authorization-cs/_static/image43.png)
+[![TEditar y eliminar botones están disponibles sólo para los administradores](role-based-authorization-cs/_static/image44.png)](role-based-authorization-cs/_static/image43.png)
 
 **Figura 15**: El editar y eliminar botones están disponibles sólo para los administradores ([haga clic aquí para ver imagen en tamaño completo](role-based-authorization-cs/_static/image45.png))
 
@@ -356,7 +356,7 @@ El atributo para el `RowUpdating` controlador de eventos dicta que solo los usua
 Si, de algún modo, no administrador intenta ejecutar la `RowDeleting` controlador de eventos o si un intentos no Supervisor o sin privilegios de administrador para ejecutar el `RowUpdating` controlador de eventos, se producirá el runtime de .NET un `SecurityException`.
 
 
-[![Si el contexto de seguridad no está autorizado para ejecutar el método, se produce una excepción SecurityException](role-based-authorization-cs/_static/image47.png)](role-based-authorization-cs/_static/image46.png)
+[![Iel contexto de seguridad no está autorizado para ejecutar el método de f, se produce una excepción SecurityException](role-based-authorization-cs/_static/image47.png)](role-based-authorization-cs/_static/image46.png)
 
 **Figura 16**: Si el contexto de seguridad no está autorizado para ejecutar el método, un `SecurityException` se produce ([haga clic aquí para ver imagen en tamaño completo](role-based-authorization-cs/_static/image48.png))
 

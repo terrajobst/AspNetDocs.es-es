@@ -8,15 +8,15 @@ ms.date: 08/03/2007
 ms.assetid: c655c324-2ffa-4c21-8265-a254d79a693d
 msc.legacyurl: /web-forms/overview/data-access/advanced-data-access-scenarios/debugging-stored-procedures-cs
 msc.type: authoredcontent
-ms.openlocfilehash: 4558a309248c89483d198f47f731eee2a266695f
-ms.sourcegitcommit: 289e051cc8a90e8f7127e239fda73047bde4de12
+ms.openlocfilehash: 9ac206edee58542ced24ce89adc3393d7a3c1c37
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/25/2019
-ms.locfileid: "58421471"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59392175"
 ---
-<a name="debugging-stored-procedures-c"></a>Depurar procedimientos almacenados (C#)
-====================
+# <a name="debugging-stored-procedures-c"></a>Depurar procedimientos almacenados (C#)
+
 por [Scott Mitchell](https://twitter.com/ScottOnWriting)
 
 [Descargar código](http://download.microsoft.com/download/3/9/f/39f92b37-e92e-4ab3-909e-b4ef23d01aa3/ASPNET_Data_Tutorial_74_CS.zip) o [descargar PDF](debugging-stored-procedures-cs/_static/datatutorial74cs1.pdf)
@@ -67,7 +67,7 @@ Puesto que la `Products_SelectByCategoryID` procedimiento almacenado espera un `
 Después de suministrar el valor de la `@CategoryID` parámetro, el procedimiento almacenado se ejecuta. Sin embargo, en lugar de ejecutarse hasta su finalización, el depurador detiene la ejecución en la primera instrucción. Tenga en cuenta la flecha amarilla en el margen, que indica la ubicación actual en el procedimiento almacenado. Puede ver y editar los valores de parámetro a través de la ventana Inspección o mantenga el puntero sobre el nombre del parámetro del procedimiento almacenado.
 
 
-[![El depurador se detiene en la primera instrucción del procedimiento almacenado](debugging-stored-procedures-cs/_static/image3.png)](debugging-stored-procedures-cs/_static/image2.png)
+[![Ten la primera instrucción del procedimiento almacenado se ha detenido, depurador](debugging-stored-procedures-cs/_static/image3.png)](debugging-stored-procedures-cs/_static/image2.png)
 
 **Figura 2**: El depurador se detiene en la primera instrucción del procedimiento almacenado ([haga clic aquí para ver imagen en tamaño completo](debugging-stored-procedures-cs/_static/image4.png))
 
@@ -85,7 +85,7 @@ Aunque es útil depurar un procedimiento almacenado directamente desde el Explor
 Antes de que podemos comenzar a depurar procedimientos almacenados llamados desde la aplicación, es necesario indicar a la aplicación web ASP.NET para integrarse con el depurador de SQL Server. Iniciar con el botón secundario en el nombre del sitio Web en el Explorador de soluciones (`ASPNET_Data_Tutorial_74_CS`). Elija la opción de páginas de propiedades en el menú contextual, seleccione el elemento de opciones de inicio de la izquierda y Active la casilla de SQL Server en la sección de depuradores (consulte la figura 3).
 
 
-[![Active la casilla SQL Server en las páginas de propiedades de s aplicación](debugging-stored-procedures-cs/_static/image6.png)](debugging-stored-procedures-cs/_static/image5.png)
+[![Cmuchísimo la casilla de verificación de SQL Server en las páginas de propiedades de aplicación s](debugging-stored-procedures-cs/_static/image6.png)](debugging-stored-procedures-cs/_static/image5.png)
 
 **Figura 3**: Active la casilla de SQL Server en las páginas de propiedades de aplicación s ([haga clic aquí para ver imagen en tamaño completo](debugging-stored-procedures-cs/_static/image7.png))
 
@@ -108,7 +108,7 @@ En este momento la aplicación ASP.NET se configuró para permitir que Visual St
 Abra el `Products_SelectByCategoryID` procedimiento almacenado y establezca un punto de interrupción al principio de la `SELECT` instrucción haciendo clic en el margen en el lugar adecuado, o colocando el cursor al principio de la `SELECT` instrucción y presionar F9. Como se muestra en la figura 4, el punto de interrupción aparece como un círculo rojo en el margen.
 
 
-[![Establecer un punto de interrupción en el Products_SelectByCategoryID procedimiento almacenado](debugging-stored-procedures-cs/_static/image9.png)](debugging-stored-procedures-cs/_static/image8.png)
+[![Set procedimiento almacenado de un punto de interrupción en el Products_SelectByCategoryID](debugging-stored-procedures-cs/_static/image9.png)](debugging-stored-procedures-cs/_static/image8.png)
 
 **Figura 4**: Establecer un punto de interrupción en el `Products_SelectByCategoryID` Stored Procedure ([haga clic aquí para ver imagen en tamaño completo](debugging-stored-procedures-cs/_static/image10.png))
 
@@ -126,12 +126,12 @@ Con el conjunto de punto de interrupción y la opción de depuración de la apli
 El `Products_SelectByCategoryID` se creó el procedimiento almacenado en el [utilizando procedimientos almacenados existentes para la s de conjunto de datos con tipo TableAdapters](using-existing-stored-procedures-for-the-typed-dataset-s-tableadapters-cs.md) tutorial. Su página web correspondiente (`~/AdvancedDAL/ExistingSprocs.aspx`) contiene una GridView que muestra los resultados devueltos por este procedimiento almacenado. Visite esta página a través del explorador. Al llegar a la página, el punto de interrupción en el `Products_SelectByCategoryID` se alcanzarán el procedimiento almacenado y devuelve el control a Visual Studio. Al igual que en el paso 1, puede recorrer las instrucciones de s de procedimiento almacenado y la vista y modificar los valores de parámetro.
 
 
-[![La página ExistingSprocs.aspx muestra inicialmente las bebidas](debugging-stored-procedures-cs/_static/image13.png)](debugging-stored-procedures-cs/_static/image12.png)
+[![TPágina ExistingSprocs.aspx inicialmente muestra las bebidas](debugging-stored-procedures-cs/_static/image13.png)](debugging-stored-procedures-cs/_static/image12.png)
 
 **Figura 6**: El `ExistingSprocs.aspx` página muestra inicialmente las bebidas ([haga clic aquí para ver imagen en tamaño completo](debugging-stored-procedures-cs/_static/image14.png))
 
 
-[![La s de procedimiento almacenado se ha alcanzado el punto de interrupción](debugging-stored-procedures-cs/_static/image16.png)](debugging-stored-procedures-cs/_static/image15.png)
+[![Tse ha alcanzado, el punto de interrupción del procedimiento almacenado s](debugging-stored-procedures-cs/_static/image16.png)](debugging-stored-procedures-cs/_static/image15.png)
 
 **Figura 7**: La s de procedimiento almacenado se ha alcanzado el punto de interrupción ([haga clic aquí para ver imagen en tamaño completo](debugging-stored-procedures-cs/_static/image17.png))
 
@@ -139,12 +139,12 @@ El `Products_SelectByCategoryID` se creó el procedimiento almacenado en el [uti
 Como la ventana Inspección en la figura 7 muestra, el valor de la `@CategoryID` del parámetro es 1. Esto es porque el `ExistingSprocs.aspx` página inicialmente muestra productos de la categoría Bebidas, que tiene un `CategoryID` valor 1. Elija una categoría diferente de la lista desplegable. Si lo hace, se produce un postback y se vuelve a ejecutar el `Products_SelectByCategoryID` procedimiento almacenado. El punto de interrupción, pero esta vez el `@CategoryID` valor del parámetro s refleja el elemento de lista desplegable seleccionado s `CategoryID`.
 
 
-[![Elija una categoría diferente de la lista desplegable](debugging-stored-procedures-cs/_static/image19.png)](debugging-stored-procedures-cs/_static/image18.png)
+[![CElija una categoría diferente de la lista desplegable](debugging-stored-procedures-cs/_static/image19.png)](debugging-stored-procedures-cs/_static/image18.png)
 
 **Figura 8**: Elija una categoría diferente de la lista desplegable ([haga clic aquí para ver imagen en tamaño completo](debugging-stored-procedures-cs/_static/image20.png))
 
 
-[![El @CategoryID parámetro refleja la categoría seleccionada en la página Web](debugging-stored-procedures-cs/_static/image22.png)](debugging-stored-procedures-cs/_static/image21.png)
+[![Tél @CategoryID parámetro refleja la categoría seleccionada en la página Web](debugging-stored-procedures-cs/_static/image22.png)](debugging-stored-procedures-cs/_static/image21.png)
 
 **Figura 9**: El `@CategoryID` parámetro refleja la categoría seleccionada en la página Web ([haga clic aquí para ver imagen en tamaño completo](debugging-stored-procedures-cs/_static/image23.png))
 

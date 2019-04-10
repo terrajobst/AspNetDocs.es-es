@@ -8,15 +8,15 @@ ms.date: 02/27/2014
 ms.assetid: 266e7866-e327-4687-b29d-627a0925e87d
 msc.legacyurl: /web-forms/overview/presenting-and-managing-data/model-binding/sorting-paging-and-filtering-data
 msc.type: authoredcontent
-ms.openlocfilehash: 624f98cea6030e0b7b022f86c4c1aa37f1db9726
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: 1159d75ec5b2f7e5ac94da0a15acf24b5400798b
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57065782"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59387482"
 ---
-<a name="sorting-paging-and-filtering-data-with-model-binding-and-web-forms"></a>Ordenar, paginar y filtrar datos con enlace de modelos y formularios web forms
-====================
+# <a name="sorting-paging-and-filtering-data-with-model-binding-and-web-forms"></a>Ordenar, paginar y filtrar datos con enlace de modelos y formularios web forms
+
 por [Tom FitzMacken](https://github.com/tfitzmac)
 
 > Esta serie de tutoriales muestra los aspectos básicos del uso de enlace de modelos con un proyecto de formularios Web Forms de ASP.NET. Enlace de modelos permite interactuar con los datos más sencilla de tratar con datos de objetos de origen (como ObjectDataSource o SqlDataSource). Esta serie comienza con material introductorio y mueve a conceptos más avanzados en los tutoriales posteriores.
