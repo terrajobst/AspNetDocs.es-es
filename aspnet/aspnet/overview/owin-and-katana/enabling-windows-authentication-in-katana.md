@@ -8,15 +8,15 @@ ms.date: 07/30/2013
 ms.assetid: 82324ef0-3b75-4f63-a217-76ef4036ec93
 msc.legacyurl: /aspnet/overview/owin-and-katana/enabling-windows-authentication-in-katana
 msc.type: authoredcontent
-ms.openlocfilehash: 8afa2c9dfbe03a9874513f7d083adf7608f4218f
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: 6d90538ace07402b655b8cd1d9c6e4d5c6dff424
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57041112"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59411207"
 ---
-<a name="enabling-windows-authentication-in-katana"></a>Habilitar la autenticación de Windows en Katana
-====================
+# <a name="enabling-windows-authentication-in-katana"></a>Habilitar la autenticación de Windows en Katana
+
 por [Mike Wasson](https://github.com/MikeWasson)
 
 > En este artículo se muestra cómo habilitar la autenticación de Windows en Katana. Se tratan dos escenarios: Usar IIS para hospedar Katana y con HttpListener autohospedaje Katana en un proceso personalizado. Gracias a Chris Ross, David Matson y Barry Dorrans por revisar este artículo.

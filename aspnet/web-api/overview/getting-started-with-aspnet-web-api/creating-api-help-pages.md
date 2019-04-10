@@ -1,27 +1,28 @@
 ---
 uid: web-api/overview/getting-started-with-aspnet-web-api/creating-api-help-pages
-title: Crear páginas de ayuda para ASP.NET Web API | Microsoft Docs
+title: Crear páginas de ayuda para ASP.NET Web API - ASP.NET 4.x
 author: MikeWasson
-description: ''
+description: Este tutorial con el código muestra cómo crear páginas de ayuda para ASP.NET Web API en ASP.NET 4.x.
 ms.author: riande
 ms.date: 04/01/2013
+ms.custom: seoapril2019
 ms.assetid: 0150e67b-c50d-4613-83ea-7b4ef8cacc5a
 msc.legacyurl: /web-api/overview/getting-started-with-aspnet-web-api/creating-api-help-pages
 msc.type: authoredcontent
-ms.openlocfilehash: fba368e4017fea65ff96e2540d486662cc6b45f8
-ms.sourcegitcommit: 289e051cc8a90e8f7127e239fda73047bde4de12
+ms.openlocfilehash: e3f6a9b8a6835b034a075d580cd9a33136969990
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/25/2019
-ms.locfileid: "58423733"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59395022"
 ---
-<a name="creating-help-pages-for-aspnet-web-api"></a>Crear páginas de ayuda para ASP.NET Web API
-====================
+# <a name="creating-help-pages-for-aspnet-web-api"></a>Crear páginas de ayuda para ASP.NET Web API
+
 por [Mike Wasson](https://github.com/MikeWasson)
 
-Cuando se crea una API web, a menudo es útil crear una página de ayuda, para que otros desarrolladores sepan cómo llamar a la API. Puede crear toda la documentación de forma manual, pero es mejor para generar automáticamente tanto como sea posible.
+Este tutorial con el código muestra cómo crear páginas de ayuda para ASP.NET Web API en ASP.NET 4.x.
 
-Para facilitar esta tarea, ASP.NET Web API proporciona una biblioteca para generar automáticamente las páginas de ayuda en tiempo de ejecución.
+Cuando se crea una API web, a menudo es útil crear una página de ayuda, para que otros desarrolladores sepan cómo llamar a la API. Puede crear toda la documentación de forma manual, pero es mejor para generar automáticamente tanto como sea posible. Para facilitar esta tarea, ASP.NET Web API proporciona una biblioteca para generar automáticamente las páginas de ayuda en tiempo de ejecución.
 
 ![](creating-api-help-pages/_static/image1.png)
 

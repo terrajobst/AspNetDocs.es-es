@@ -8,15 +8,15 @@ ms.date: 08/15/2006
 ms.assetid: 4823a186-caaf-4116-a318-c7ff4d955ddc
 msc.legacyurl: /web-forms/overview/data-access/paging-and-sorting/sorting-custom-paged-data-vb
 msc.type: authoredcontent
-ms.openlocfilehash: 3f40c2632e98dd8c64c985e44478a9739df473ca
-ms.sourcegitcommit: 289e051cc8a90e8f7127e239fda73047bde4de12
+ms.openlocfilehash: ca1bf281130bf2c726b6147f90733c8a83754563
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/25/2019
-ms.locfileid: "58423144"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59399594"
 ---
-<a name="sorting-custom-paged-data-vb"></a>Ordenar datos paginados personalizados (VB)
-====================
+# <a name="sorting-custom-paged-data-vb"></a>Ordenar datos paginados personalizados (VB)
+
 por [Scott Mitchell](https://twitter.com/ScottOnWriting)
 
 [Descargue la aplicación de ejemplo](http://download.microsoft.com/download/9/c/1/9c1d03ee-29ba-4d58-aa1a-f201dcc822ea/ASPNET_Data_Tutorial_26_VB.exe) o [descargar PDF](sorting-custom-paged-data-vb/_static/datatutorial26vb1.pdf)
@@ -71,7 +71,7 @@ Dedique un momento para probar este procedimiento almacenado con valores diferen
 **Figura 1**: Pruebe diferentes valores para el procedimiento almacenado s tres parámetros de entrada
 
 
-[![El procedimiento almacenado de s resultados se muestran en la ventana de salida](sorting-custom-paged-data-vb/_static/image3.png)](sorting-custom-paged-data-vb/_static/image2.png)
+[![TStored Procedure s resultados se muestran en la ventana de salida](sorting-custom-paged-data-vb/_static/image3.png)](sorting-custom-paged-data-vb/_static/image2.png)
 
 **Figura 2**: El procedimiento almacenado de s resultados se muestran en la ventana de salida ([haga clic aquí para ver imagen en tamaño completo](sorting-custom-paged-data-vb/_static/image4.png))
 
@@ -145,7 +145,7 @@ Para habilitar la ordenación en el control GridView, simplemente marque la casi
 La figura 7 muestra la primera página de resultados cuando se ordenan por el `UnitPrice` en orden ascendente.
 
 
-[![Los resultados se ordenan por el precio unitario](sorting-custom-paged-data-vb/_static/image10.png)](sorting-custom-paged-data-vb/_static/image9.png)
+[![TResultados se ordenan por el precio unitario](sorting-custom-paged-data-vb/_static/image10.png)](sorting-custom-paged-data-vb/_static/image9.png)
 
 **Figura 7**: Los resultados se ordenan por el precio unitario ([haga clic aquí para ver imagen en tamaño completo](sorting-custom-paged-data-vb/_static/image11.png))
 
@@ -166,7 +166,7 @@ Esta excepción se produce porque el `SortExpression` la s GridView `SupplierNam
 **Figura 9**: Cambie la expresión de ordenación de s NombreProveedor BoundField a CompanyName
 
 
-[![Ahora se pueden ordenar los resultados por proveedor](sorting-custom-paged-data-vb/_static/image15.png)](sorting-custom-paged-data-vb/_static/image14.png)
+[![Tque ahora se pueden ordenar los resultados por proveedor](sorting-custom-paged-data-vb/_static/image15.png)](sorting-custom-paged-data-vb/_static/image14.png)
 
 **Figura 10**: Los resultados ahora se pueden ordenar por proveedor ([haga clic aquí para ver imagen en tamaño completo](sorting-custom-paged-data-vb/_static/image16.png))
 

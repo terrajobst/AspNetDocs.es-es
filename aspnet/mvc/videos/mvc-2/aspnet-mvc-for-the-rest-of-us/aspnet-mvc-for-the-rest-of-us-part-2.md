@@ -8,15 +8,15 @@ ms.date: 04/22/2010
 ms.assetid: d27fbb54-353f-4d79-b465-403ff8e0538b
 msc.legacyurl: /mvc/videos/mvc-2/aspnet-mvc-for-the-rest-of-us/aspnet-mvc-for-the-rest-of-us-part-2
 msc.type: video
-ms.openlocfilehash: d7b7843e28a0da340fca45f75c41e9b445916d2e
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: 17a144dfe2fb9f34ceb15644b44828ec6aeaf577
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57053292"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59399676"
 ---
-<a name="aspnet-mvc-for-the-rest-of-us-part-2"></a>Vídeo "ASP.NET MVC For the Rest of Us": parte 2
-====================
+# <a name="aspnet-mvc-for-the-rest-of-us-part-2"></a>Vídeo "ASP.NET MVC For the Rest of Us": parte 2
+
 por [Joe Stagner](https://github.com/JoeStagner)
 
 En este Joe Stagner de vídeo Microsoft compila una característica "Póngase en contacto con nosotros" para una aplicación ASP.NET MVC mediante la adición de una vista, la lógica del controlador y un modelo personalizado a la aplicación de ASP.NET predeterminada. Verá algunas de las diferencias fundamentales entre trabajar con ASP.NET MVC frente a formularios Web Forms de ASP.NET.

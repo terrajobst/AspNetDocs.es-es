@@ -8,15 +8,15 @@ ms.date: 01/27/2009
 ms.assetid: 0e7b4d85-2c46-4eaf-b6a8-6cd566a67334
 msc.legacyurl: /mvc/overview/older-versions-1/controllers-and-routing/improving-performance-with-output-caching-vb
 msc.type: authoredcontent
-ms.openlocfilehash: 9402d7e053ef11eeefa92d112b05ec255d5ec6f7
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: 0f824bd5e080d42a9df3525ca47b87bcef407f7a
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57033672"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59405630"
 ---
-<a name="improving-performance-with-output-caching-vb"></a>Mejorar el rendimiento con el almacenamiento en caché de resultados (VB)
-====================
+# <a name="improving-performance-with-output-caching-vb"></a>Mejorar el rendimiento con el almacenamiento en caché de resultados (VB)
+
 por [Microsoft](https://github.com/microsoft)
 
 > En este tutorial, obtendrá información sobre cómo puede mejorar considerablemente el rendimiento de las aplicaciones web de ASP.NET MVC aprovechando las ventajas de la caché de resultados. Aprenda a almacenar en caché el resultado devuelto de una acción de controlador para que no tenga el mismo contenido a crearse cada vez que un nuevo usuario invoca la acción.
@@ -32,7 +32,7 @@ Si, por otro lado, aprovechar las ventajas de la caché de resultados, a continu
 
 Habilitar almacenamiento en caché de salida mediante la adición de un &lt;OutputCache&gt; atributo a una acción de controlador individuales o una clase de controlador completo. Por ejemplo, el controlador en el listado 1 expone una acción denominada Index(). El resultado de la acción de Index() se almacena en caché durante 10 segundos.
 
-**Listing 1 – Controllers\HomeController.vb**
+**Listado 1 – Controllers\HomeController.vb**
 
 [!code-vb[Main](improving-performance-with-output-caching-vb/samples/sample1.vb)]
 
@@ -46,7 +46,7 @@ No hay ninguna garantía de que el contenido se almacenará en caché para la ca
 
 El controlador Home en el listado 1 devuelve la vista de índice en el listado 2. No hay nada especial acerca de esta vista. La vista de índice simplemente muestra la hora actual (consulte la figura 1).
 
-**Listing 2 – Views\Home\Index.aspx**
+**Listado 2 – Views\Home\Index.aspx**
 
 [!code-aspx[Main](improving-performance-with-output-caching-vb/samples/sample2.aspx)]
 
@@ -95,7 +95,7 @@ Nunca se debe almacenar en caché contenido personalizado en la caché del servi
 
 El controlador modificado en el listado 4 se almacena en caché el resultado de la acción GetName(). Sin embargo, el contenido se almacena en caché solo en el explorador y no en el servidor. De este modo, cuando varios usuarios invocan el método GetName(), cada persona obtiene su propio nombre de usuario y no otro nombre del usuario.
 
-**Listing 4 – Controllers\UserController.vb**
+**Listado 4 – Controllers\UserController.vb**
 
 [!code-vb[Main](improving-performance-with-output-caching-vb/samples/sample4.vb)]
 
@@ -111,7 +111,7 @@ Puede corregir este problema aprovechando las ventajas de la propiedad VaryByPar
 
 Por ejemplo, el controlador en el listado 5 expone dos acciones denominadas Master() y Details(). La acción Master() devuelve una lista de títulos de películas y la acción Details() devuelve los detalles de la película seleccionada.
 
-**Listing 5 – Controllers\MoviesController.vb**
+**Listado 5 – Controllers\MoviesController.vb**
 
 [!code-vb[Main](improving-performance-with-output-caching-vb/samples/sample5.vb)]
 
@@ -154,7 +154,7 @@ Por ejemplo, el &lt;almacenamiento en caché&gt; sección de configuración web 
 
 El controlador en la lista 7 muestra cómo puede aplicar el perfil Cache1Hour a una acción de controlador con el &lt;OutputCache&gt; atributo.
 
-**Listing 7 – Controllers\ProfileController.vb**
+**Listado 7 – Controllers\ProfileController.vb**
 
 [!code-vb[Main](improving-performance-with-output-caching-vb/samples/sample7.vb)]
 

@@ -8,15 +8,15 @@ ms.date: 08/15/2012
 ms.assetid: 27dc4fc8-1b51-43b0-933f-fc1b52476523
 msc.legacyurl: /mvc/overview/older-versions/aspnet-mvc-4-mobile-features
 msc.type: authoredcontent
-ms.openlocfilehash: 6fe55a14b40f8c50dee91cdc7f59d0378f2a1ea2
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: de65e01b888d9ed15da3903f086b40c49b32b9fb
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57056162"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59402419"
 ---
-<a name="aspnet-mvc-4-mobile-features"></a>Características para móviles de ASP.NET MVC 4
-====================
+# <a name="aspnet-mvc-4-mobile-features"></a>Características para móviles de ASP.NET MVC 4
+
 by [Rick Anderson]((https://twitter.com/RickAndMSFT))
 
 > Ahora hay una versión de MVC 5 de este tutorial con ejemplos de código en [implementar una aplicación de ASP.NET MVC 5 Mobile Web en Azure websites](https://azure.microsoft.com/documentation/articles/web-sites-dotnet-deploy-aspnet-mvc-mobile-app/).
@@ -248,7 +248,7 @@ Actualizar el *AllTags* vista en el explorador móvil. Ahora puede desplazarse e
 >
 > [!code-csharp[Main](aspnet-mvc-4-mobile-features/samples/sample15.cs)]
 >
->  y agregar el encabezado siguiente a la *Views\Shared\\_Layout.cshtml* archivo.
+> y agregar el encabezado siguiente a la *Views\Shared\\_Layout.cshtml* archivo.
 >
 > [!code-html[Main](aspnet-mvc-4-mobile-features/samples/sample16.html)]
 

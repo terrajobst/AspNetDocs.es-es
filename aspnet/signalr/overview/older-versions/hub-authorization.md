@@ -8,15 +8,15 @@ ms.date: 10/17/2013
 ms.assetid: 3d2dfc0e-eac2-4076-a468-325d3d01cc7b
 msc.legacyurl: /signalr/overview/older-versions/hub-authorization
 msc.type: authoredcontent
-ms.openlocfilehash: 7f4a76109111f19dc4381ad01e642afdabade336
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: af97ff2488841b2d65e50122691736603be2a686
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57046232"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59401418"
 ---
-<a name="authentication-and-authorization-for-signalr-hubs-signalr-1x"></a>Autenticación y autorización de los concentradores de SignalR (SignalR 1.x)
-====================
+# <a name="authentication-and-authorization-for-signalr-hubs-signalr-1x"></a>Autenticación y autorización de los concentradores de SignalR (SignalR 1.x)
+
 por [Patrick Fletcher](https://github.com/pfletcher), [Tom FitzMacken](https://github.com/tfitzmac)
 
 [!INCLUDE [Consider ASP.NET Core SignalR](~/includes/signalr/signalr-version-disambiguation.md)]
@@ -37,7 +37,7 @@ Este tema contiene las siguientes secciones:
     - [Cookie de autenticación de formularios](#cookie)
     - [Autenticación de Windows](#windows)
     - [Encabezado de conexión](#header)
-    - [Certificate](#certificate)
+    - [Certificado](#certificate)
 
 <a id="authorizeattribute"></a>
 

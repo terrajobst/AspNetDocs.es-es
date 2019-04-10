@@ -8,15 +8,15 @@ ms.date: 03/09/2009
 ms.assetid: ee45ab78-bc04-45dc-bfac-5c0c023b3f17
 msc.legacyurl: /web-forms/videos/iis/troubleshooting-production-aspnet-apps
 msc.type: video
-ms.openlocfilehash: f6a375132e3df24a38a9a7e12af3f6e61fd37a2d
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: d8a260152213a8374a9b7b7a31623bca13eccce5
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57037462"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59399299"
 ---
-<a name="troubleshooting-production-aspnet-apps"></a>Solución de problemas de las aplicaciones de ASP.NET de producción
-====================
+# <a name="troubleshooting-production-aspnet-apps"></a>Solución de problemas de las aplicaciones de ASP.NET de producción
+
 por [Joe Stagner](https://github.com/JoeStagner)
 
 Este vídeo proporciona un inventario rápido de las herramientas para solucionar problemas de las aplicaciones de ASP.NET de producción.

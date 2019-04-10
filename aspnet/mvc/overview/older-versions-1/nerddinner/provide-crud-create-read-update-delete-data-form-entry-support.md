@@ -8,15 +8,15 @@ ms.date: 07/27/2010
 ms.assetid: bbb976e5-6150-4283-a374-c22fbafe29f5
 msc.legacyurl: /mvc/overview/older-versions-1/nerddinner/provide-crud-create-read-update-delete-data-form-entry-support
 msc.type: authoredcontent
-ms.openlocfilehash: 45d74249a34fc7e37e9776a398615d2f613a7582
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: 242665b3ba2e2ad2157abbe2c44ae207f15e72ce
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57031742"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59410869"
 ---
-<a name="provide-crud-create-read-update-delete-data-form-entry-support"></a>Proporcionar la compatibilidad con entradas de formularios de datos CRUD (crear, leer, actualizar y eliminar)
-====================
+# <a name="provide-crud-create-read-update-delete-data-form-entry-support"></a>Proporcionar la compatibilidad con entradas de formularios de datos CRUD (crear, leer, actualizar y eliminar)
+
 por [Microsoft](https://github.com/microsoft)
 
 [Descargar PDF](http://aspnetmvcbook.s3.amazonaws.com/aspnetmvc-nerdinner_v1.pdf)
@@ -36,22 +36,22 @@ Hemos introducido controladores y vistas y ha explicado cómo usarlas para imple
 
 Se agregaron previamente los métodos de acción a DinnersController que implementa la compatibilidad con dos direcciones URL: */dinners* y */dinners/detalles / [id]*.
 
-| **URL** | **VERB** | **Propósito** |
+| **Resolución** | **VERB** | **Finalidad** |
 | --- | --- | --- |
 | */Dinners/* | GET | Mostrar una lista HTML de instancias dinners próximas. |
 | */ Dinners/detalles / [id]* | GET | Mostrar los detalles sobre una cena específico. |
 
-Ahora agregaremos métodos de acción para implementar tres direcciones URL adicionales: <em>/dinners/Edit / [id], / Dinners/Create,</em>y<em>/dinners/Delete / [id]</em>. Estas direcciones URL permitirá la compatibilidad con la edición Dinners existentes, crear instancias Dinners nuevas y eliminar las cenas.
+Ahora agregaremos métodos de acción para implementar tres direcciones URL adicionales: */dinners/Edit / [id]*, */Dinners/Create*, y */dinners/Delete / [id]*. Estas direcciones URL permitirá la compatibilidad con la edición Dinners existentes, crear instancias Dinners nuevas y eliminar las cenas.
 
 Admitimos interacciones de verbo HTTP GET y HTTP POST con estas nuevas direcciones URL. Las solicitudes HTTP GET a estas direcciones URL mostrará la vista HTML inicial de los datos (un formulario que se rellena con los datos de la cena en el caso de "Editar", un formulario en blanco en el caso de "crear" y una pantalla de confirmación de eliminación en el caso de "delete"). Las solicitudes HTTP POST a estas direcciones URL va a guardar, actualizar o eliminar los datos de la cena en nuestra instancia DinnerRepository (y desde allí, a la base de datos).
 
-| **URL** | **VERB** | **Propósito** |
+| **Resolución** | **VERB** | **Finalidad** |
 | --- | --- | --- |
 | */Dinners/Edit/[id]* | GET | Mostrar un formulario HTML modificable que se rellena con datos de la cena. |
 | EXPONER | Guarde los cambios del formulario para una cena en particular a la base de datos. |
 | */Dinners/Create* | GET | Mostrar un formulario HTML vacío que permite a los usuarios definir instancias Dinners nuevo. |
 | EXPONER | Crea una cena nuevo y lo guarda en la base de datos. |
-| */Dinners/Delete/[id]* | GET | Mostrar eliminación pantalla de confirmación. |
+| */ Dinners/delete / [id]* | GET | Mostrar eliminación pantalla de confirmación. |
 | EXPONER | Elimina la cena especificada de la base de datos. |
 
 ### <a name="edit-support"></a>Editar el soporte técnico
@@ -138,7 +138,7 @@ Empezaremos por agregar un método de acción "Editar" sobrecargado a nuestro Di
 
 [!code-csharp[Main](provide-crud-create-read-update-delete-data-form-entry-support/samples/sample9.cs)]
 
-Cuando el atributo [AcceptVerbs] se aplica a los métodos de acción sobrecargado, ASP.NET MVC controla automáticamente las solicitudes de distribución para el método de acción adecuado según el verbo HTTP entrante. Las solicitudes HTTP POST a <em>/dinners/Edit / [id]</em> irán direcciones URL para el método de edición anterior, mientras que todas las demás solicitudes de verbo HTTP para <em>/dinners/Edit / [id]</em>irán direcciones URL para el primer método de edición (lo que hizo implementamos no tiene un atributo [AcceptVerbs]).
+Cuando el atributo [AcceptVerbs] se aplica a los métodos de acción sobrecargado, ASP.NET MVC controla automáticamente las solicitudes de distribución para el método de acción adecuado según el verbo HTTP entrante. Las solicitudes HTTP POST a */dinners/Edit / [id]* irán direcciones URL para el método de edición anterior, mientras que todas las demás solicitudes de verbo HTTP para */dinners/Edit / [id]* irán direcciones URL para el primer método de edición (lo que hizo implementamos no tiene un `[AcceptVerbs]` atributo).
 
 | **Tema de lado: ¿Por qué se diferencia mediante verbos HTTP?** |
 | --- |
@@ -228,7 +228,7 @@ El método auxiliar Html.ValidationMessage() también admite un segundo parámet
 
 [!code-aspx[Main](provide-crud-create-read-update-delete-data-form-entry-support/samples/sample18.aspx)]
 
-Genera el código anterior:  <em>&lt;abarcan clase = "error de validación de campo"&gt;\*&lt;/span&gt;</em>en lugar del texto de error de forma predeterminada, cuando hay un error para el Propiedad EventDate.
+Genera el código anterior: *&lt;abarcan clase = "error de validación de campo"&gt;\*&lt;/span&gt;* en lugar del texto de error de forma predeterminada, cuando hay un error para el Propiedad EventDate.
 
 ##### <a name="htmlvalidationsummary-helper-method"></a>Método auxiliar de Html.ValidationSummary()
 

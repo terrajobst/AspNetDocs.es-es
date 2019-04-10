@@ -8,15 +8,15 @@ ms.date: 02/15/2013
 ms.assetid: 24ad086d-865e-433c-9ac9-05f1a553da16
 msc.legacyurl: /web-forms/overview/deployment/visual-studio-web-deployment/introduction
 msc.type: authoredcontent
-ms.openlocfilehash: a227f6564607ed9e909fc4d6297d7370f8fb62b5
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: 0edab77cd973af129e54c7867265f86b47c349a6
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57057662"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59410141"
 ---
-<a name="aspnet-web-deployment-using-visual-studio-introduction"></a>Implementación Web de ASP.NET con Visual Studio: Introducción
-====================
+# <a name="aspnet-web-deployment-using-visual-studio-introduction"></a>Implementación Web de ASP.NET con Visual Studio: Introducción
+
 por [Tom Dykstra](https://github.com/tdykstra)
 
 [Descargar el proyecto de inicio](http://go.microsoft.com/fwlink/p/?LinkId=282627)

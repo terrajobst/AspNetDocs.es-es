@@ -8,15 +8,15 @@ ms.date: 02/15/2013
 ms.assetid: 416438a1-3b2f-4d27-bf53-6b76223c33bf
 msc.legacyurl: /web-forms/overview/deployment/visual-studio-web-deployment/deploying-to-production
 msc.type: authoredcontent
-ms.openlocfilehash: f71d8311cbb1131d9c30c0bd9071a1c6c90f9976
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: 19cda45ce1b425462ec491bcc86b7a0b76dec162
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57045852"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59409803"
 ---
-<a name="aspnet-web-deployment-using-visual-studio-deploying-to-production"></a>Implementación Web de ASP.NET con Visual Studio: Implementar en entorno de producción
-====================
+# <a name="aspnet-web-deployment-using-visual-studio-deploying-to-production"></a>Implementación Web de ASP.NET con Visual Studio: Implementar en entorno de producción
+
 por [Tom Dykstra](https://github.com/tdykstra)
 
 [Descargar el proyecto de inicio](http://go.microsoft.com/fwlink/p/?LinkId=282627)
@@ -276,7 +276,7 @@ Un *.pubxml* archivo contiene los valores que pertenecen a un perfil de publicac
 
     ![Vista previa de archivos se publiquen en producción](deploying-to-production/_static/image14.png)
 
-    Revise la lista de archivos que se va a copiar. Verá que todos los *.cs* archivos, incluidos *. aspx.cs*, *. aspx.designer.cs*, *Master.cs*, y  *Master.Designer.cs* se omiten los archivos. Todo este código se ha compilado en el *ContosoUniversity.dll* y *ContosUniversity.pdb* archivos que encontrará en el *bin* carpeta. Dado que solo el *.dll* es necesario para ejecutar la aplicación y se especificó anteriormente que se deben implementar sólo los archivos necesarios para ejecutar la aplicación, no *.cs* se copiaron los archivos en el destino entorno. El *obj* carpeta y el *ContosoUniversity.csproj* y *. csproj.user* se omiten los archivos por la misma razón.
+    Revise la lista de archivos que se va a copiar. Verá que todos los *.cs* archivos, incluidos *. aspx.cs*, *. aspx.designer.cs*, *Master.cs*, y  *Master.Designer.cs* se omiten los archivos. Todo este código se ha compilado en el *ContosoUniversity.dll* y *ContosoUniversity.pdb* archivos que encontrará en el *bin* carpeta. Dado que solo el *.dll* es necesario para ejecutar la aplicación y se especificó anteriormente que se deben implementar sólo los archivos necesarios para ejecutar la aplicación, no *.cs* se copiaron los archivos en el destino entorno. El *obj* carpeta y el *ContosoUniversity.csproj* y *. csproj.user* se omiten los archivos por la misma razón.
 
     Haga clic en **publicar** para implementar en el entorno de producción.
 2. Probar en producción, siga el mismo procedimiento que usó para el almacenamiento provisional.

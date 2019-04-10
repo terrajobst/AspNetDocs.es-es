@@ -8,15 +8,15 @@ ms.date: 10/10/2014
 ms.assetid: 1506f70f-6919-45bd-8c75-a17aff77510c
 msc.legacyurl: /mvc/overview/older-versions-1
 msc.type: chapter
-ms.openlocfilehash: 8f06d9d08c381e8c6d704149b29d46196baceae9
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: 5827542a951a4b65d1c9b02b0ad15ed988bf1456
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57021172"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59399637"
 ---
-<a name="older-versions---mvc-1-and-2"></a>Versiones anteriores - MVC 1 y 2
-====================
+# <a name="older-versions---mvc-1-and-2"></a>Versiones anteriores - MVC 1 y 2
+
 > Recursos para aprender a programar MVC 1 y 2.
 
 
@@ -55,12 +55,12 @@ ms.locfileid: "57021172"
 - [Vistas de ASP.NET MVC](views/index.md)
 
     - [Información general sobre las vistas de ASP.NET MVC (C#)](views/asp-net-mvc-views-overview-cs.md)
-    - [Crear asistentes de HTML personalizadas (C#)](views/creating-custom-html-helpers-cs.md)
+    - [Crear asistentes de HTML personalizados (C#)](views/creating-custom-html-helpers-cs.md)
     - [Clase TagBuilder para compilar asistentes de HTML (C#)](views/using-the-tagbuilder-class-to-build-html-helpers-cs.md)
     - [Crear diseños de página con páginas maestras de vista (C#)](views/creating-page-layouts-with-view-master-pages-cs.md)
     - [Pasar datos a las páginas maestras de vista (C#)](views/passing-data-to-view-master-pages-cs.md)
     - [Información general sobre las vistas de ASP.NET MVC (VB)](views/asp-net-mvc-views-overview-vb.md)
-    - [Crear asistentes de HTML personalizadas (VB)](views/creating-custom-html-helpers-vb.md)
+    - [Crear asistentes de HTML personalizados (VB)](views/creating-custom-html-helpers-vb.md)
     - [Clase TagBuilder para compilar asistentes de HTML (VB)](views/using-the-tagbuilder-class-to-build-html-helpers-vb.md)
     - [Crear diseños de página con páginas maestras de vista (VB)](views/creating-page-layouts-with-view-master-pages-vb.md)
     - [Pasar datos a las páginas maestras de vista (VB)](views/passing-data-to-view-master-pages-vb.md)
@@ -104,20 +104,20 @@ ms.locfileid: "57021172"
     - [Crear pruebas unitarias para aplicaciones de ASP.NET MVC (VB)](unit-testing/creating-unit-tests-for-asp-net-mvc-applications-vb.md)
 - [Contact Manager](contact-manager/index.md)
 
-    - [Iteración n.º 1: Crear la aplicación (C#)](contact-manager/iteration-1-create-the-application-cs.md)
-    - [Iteración n.º 2: Hacer que la aplicación tenga un buen aspecto (C#)](contact-manager/iteration-2-make-the-application-look-nice-cs.md)
-    - [Iteración n.º 3: Agregar una validación de formulario (C#)](contact-manager/iteration-3-add-form-validation-cs.md)
-    - [Iteración n.º 4: Hacer que la aplicación tenga un acoplamiento flexible (C#)](contact-manager/iteration-4-make-the-application-loosely-coupled-cs.md)
-    - [Iteración n.º 5: Crear pruebas unitarias (C#)](contact-manager/iteration-5-create-unit-tests-cs.md)
-    - [Iteración n.º 6: Usar el desarrollo mediante pruebas (C#)](contact-manager/iteration-6-use-test-driven-development-cs.md)
-    - [Iteración n.º 7: Agregar funcionalidad de Ajax (C#)](contact-manager/iteration-7-add-ajax-functionality-cs.md)
-    - [Iteración n.º 1: Crear la aplicación (VB)](contact-manager/iteration-1-create-the-application-vb.md)
-    - [Iteración n.º 2: Hacer que la aplicación tenga un buen aspecto (VB)](contact-manager/iteration-2-make-the-application-look-nice-vb.md)
-    - [Iteración n.º 3: Agregar una validación de formulario (VB)](contact-manager/iteration-3-add-form-validation-vb.md)
-    - [Iteración n.º 4: Hacer que la aplicación tenga un acoplamiento flexible (VB)](contact-manager/iteration-4-make-the-application-loosely-coupled-vb.md)
-    - [Iteración n.º 5: Crear pruebas unitarias (VB)](contact-manager/iteration-5-create-unit-tests-vb.md)
-    - [Iteración n.º 6: Usar el desarrollo mediante pruebas (VB)](contact-manager/iteration-6-use-test-driven-development-vb.md)
-    - [Iteración n.º 7: Agregar funcionalidad de Ajax (VB)](contact-manager/iteration-7-add-ajax-functionality-vb.md)
+    - [Iteración #1: crear la aplicación (C#)](contact-manager/iteration-1-create-the-application-cs.md)
+    - [Iteración #2: que la aplicación parezca interesante (C#)](contact-manager/iteration-2-make-the-application-look-nice-cs.md)
+    - [Iteración #3: agregar una validación de formulario (C#)](contact-manager/iteration-3-add-form-validation-cs.md)
+    - [Iteración #4: hacer que la aplicación tenga un acoplamiento (C#)](contact-manager/iteration-4-make-the-application-loosely-coupled-cs.md)
+    - [Iteración #5: crear pruebas unitarias (C#)](contact-manager/iteration-5-create-unit-tests-cs.md)
+    - [Iteración #6: usar el desarrollo controlado por pruebas (C#)](contact-manager/iteration-6-use-test-driven-development-cs.md)
+    - [Iteración #7: agregar funcionalidad de Ajax (C#)](contact-manager/iteration-7-add-ajax-functionality-cs.md)
+    - [Iteración #1: crear la aplicación (VB)](contact-manager/iteration-1-create-the-application-vb.md)
+    - [Iteración #2: que la aplicación parezca interesante (VB)](contact-manager/iteration-2-make-the-application-look-nice-vb.md)
+    - [Iteración #3: agregar una validación de formulario (VB)](contact-manager/iteration-3-add-form-validation-vb.md)
+    - [Iteración #4: hacer que la aplicación tenga un acoplamiento (VB)](contact-manager/iteration-4-make-the-application-loosely-coupled-vb.md)
+    - [Iteración #5: crear pruebas unitarias (VB)](contact-manager/iteration-5-create-unit-tests-vb.md)
+    - [Iteración #6: usar el desarrollo controlado por pruebas (VB)](contact-manager/iteration-6-use-test-driven-development-vb.md)
+    - [Iteración #7: agregar funcionalidad de Ajax (VB)](contact-manager/iteration-7-add-ajax-functionality-vb.md)
 - [NerdDinner](nerddinner/index.md)
 
     - [Introducción al tutorial de NerdDinner](nerddinner/introducing-the-nerddinner-tutorial.md)
@@ -133,7 +133,7 @@ ms.locfileid: "57021172"
     - [Usar AJAX para entregar actualizaciones dinámicas](nerddinner/use-ajax-to-deliver-dynamic-updates.md)
     - [Usar AJAX para implementar escenarios de asignación](nerddinner/use-ajax-to-implement-mapping-scenarios.md)
     - [Habilitar las pruebas unitarias automatizadas](nerddinner/enable-automated-unit-testing.md)
-    - [Ajuste DE NerdDinner](nerddinner/nerddinner-wrap-up.md)
+    - [Ajuste de NerdDinner](nerddinner/nerddinner-wrap-up.md)
 - [Base de datos de películas](movie-database/index.md)
 
     - [Crear una aplicación de base de datos de película en 15 minutos con ASP.NET MVC (C#)](movie-database/create-a-movie-database-application-in-15-minutes-with-asp-net-mvc-cs.md)

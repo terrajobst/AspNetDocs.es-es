@@ -8,15 +8,15 @@ ms.date: 10/02/2014
 ms.assetid: 0a8d6044-5fab-4213-82d6-5618d5601358
 msc.legacyurl: /web-forms/overview/security/create-a-secure-aspnet-web-forms-app-with-user-registration-email-confirmation-and-password-reset
 msc.type: authoredcontent
-ms.openlocfilehash: 1bd90f0ceddee7d9e18c1cac2fadfb2c84841f19
-ms.sourcegitcommit: 289e051cc8a90e8f7127e239fda73047bde4de12
+ms.openlocfilehash: 3df728891103de9c8e461ab9507237c9b14e8251
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/25/2019
-ms.locfileid: "58424643"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59390693"
 ---
-<a name="create-a-secure-aspnet-web-forms-app-with-user-registration-email-confirmation-and-password-reset-c"></a>Crear una aplicación segura de formularios Web Forms de ASP.NET con registro de usuario, confirmación por correo electrónico y restablecimiento de contraseña (C#)
-====================
+# <a name="create-a-secure-aspnet-web-forms-app-with-user-registration-email-confirmation-and-password-reset-c"></a>Crear una aplicación segura de formularios Web Forms de ASP.NET con registro de usuario, confirmación por correo electrónico y restablecimiento de contraseña (C#)
+
 por [Erik Reitan](https://github.com/Erikre)
 
 > Este tutorial muestra cómo compilar una aplicación de formularios Web Forms ASP.NET con registro de usuario, confirmación por correo electrónico y restablecimiento de contraseña mediante el sistema de pertenencia de ASP.NET Identity. Este tutorial se basa en de Rick Anderson [tutorial de MVC](../../../mvc/overview/security/create-an-aspnet-mvc-5-web-app-with-email-confirmation-and-password-reset.md).

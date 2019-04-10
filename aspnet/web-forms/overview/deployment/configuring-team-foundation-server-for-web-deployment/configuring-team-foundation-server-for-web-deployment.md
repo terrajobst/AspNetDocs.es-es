@@ -8,15 +8,15 @@ ms.date: 05/04/2012
 ms.assetid: ff55233a-e795-4007-a4fc-861fe1bb590b
 msc.legacyurl: /web-forms/overview/deployment/configuring-team-foundation-server-for-web-deployment/configuring-team-foundation-server-for-web-deployment
 msc.type: authoredcontent
-ms.openlocfilehash: 2b668f2e9bdf73632b8b076416c9ccc5cf34a7ed
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: 188ab63dd84be5559d5a3646eb95caa77ab01bd1
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57058832"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59392006"
 ---
-<a name="configuring-team-foundation-server-for-web-deployment"></a>Configurar Team Foundation Server para la implementación web
-====================
+# <a name="configuring-team-foundation-server-for-web-deployment"></a>Configurar Team Foundation Server para la implementación web
+
 por [Jason Lee](https://github.com/jrjlee)
 
 [Descargar PDF](https://msdnshared.blob.core.windows.net/media/MSDNBlogsFS/prod.evol.blogs.msdn.com/CommunityServer.Blogs.Components.WeblogFiles/00/00/00/63/56/8130.DeployingWebAppsInEnterpriseScenarios.pdf)

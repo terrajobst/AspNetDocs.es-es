@@ -8,15 +8,15 @@ ms.date: 10/05/2011
 ms.assetid: cf54a6fb-a362-4481-b967-c158b98092f7
 msc.legacyurl: /web-forms/overview/data-access
 msc.type: chapter
-ms.openlocfilehash: 0060650de35a8693a9c1432876df1d4902bb1ade
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: d2f9d48618a102df7ea24a6d2a80b5c3026c7752
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57023082"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59405409"
 ---
-<a name="older-versions---data-access"></a>Versiones anteriores - Acceso a datos
-====================
+# <a name="older-versions---data-access"></a>Versiones anteriores - Acceso a datos
+
 > Cómo realizar diversas tareas relacionadas con los datos mediante controles de datos de formularios Web Forms de ASP.NET.
 
 
@@ -158,7 +158,7 @@ ms.locfileid: "57023082"
     - [Mostrar datos binarios en los controles web de datos (VB)](working-with-binary-files/displaying-binary-data-in-the-data-web-controls-vb.md)
     - [Incluir una opción de carga de archivos al agregar un nuevo registro (VB)](working-with-binary-files/including-a-file-upload-option-when-adding-a-new-record-vb.md)
     - [Actualizar y eliminar los datos binarios existentes (VB)](working-with-binary-files/updating-and-deleting-existing-binary-data-vb.md)
-- [Almacenamiento de datos en caché](caching-data/index.md)
+- [Almacenar datos en caché](caching-data/index.md)
 
     - [Almacenar datos en caché con ObjectDataSource (C#)](caching-data/caching-data-with-the-objectdatasource-cs.md)
     - [Almacenar datos en caché en la arquitectura (C#)](caching-data/caching-data-in-the-architecture-cs.md)

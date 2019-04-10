@@ -8,15 +8,15 @@ ms.date: 08/28/2012
 ms.assetid: 9ef2c4f1-a305-4e0a-9fb8-bfbd9ef331d9
 msc.legacyurl: /mvc/overview/older-versions/getting-started-with-aspnet-mvc4/adding-a-new-field-to-the-movie-model-and-table
 msc.type: authoredcontent
-ms.openlocfilehash: a1f56a48c0c5b16993a853532689a2b524a1f92e
-ms.sourcegitcommit: 289e051cc8a90e8f7127e239fda73047bde4de12
+ms.openlocfilehash: 307719f30c9efc8001f63f3ab068e50f82e1c5c0
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/25/2019
-ms.locfileid: "58425449"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59399624"
 ---
-<a name="adding-a-new-field-to-the-movie-model-and-table"></a>Agregar un nuevo campo a la tabla y modelo de películas
-====================
+# <a name="adding-a-new-field-to-the-movie-model-and-table"></a>Agregar un nuevo campo a la tabla y modelo de películas
+
 by [Rick Anderson]((https://twitter.com/RickAndMSFT))
 
 > > [!NOTE]

@@ -8,15 +8,15 @@ ms.date: 06/12/2014
 ms.assetid: 1bc333c5-f096-4ea7-b170-779accc21c1a
 msc.legacyurl: /aspnet/overview/developing-apps-with-windows-azure/building-real-world-cloud-apps-with-windows-azure/the-fix-it-sample-application
 msc.type: authoredcontent
-ms.openlocfilehash: a73fac6107be45455465b506a019bcc9a41b1deb
-ms.sourcegitcommit: 289e051cc8a90e8f7127e239fda73047bde4de12
+ms.openlocfilehash: d3a965ccf7ca001d3178819f88836b59f2893bb0
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/25/2019
-ms.locfileid: "58425527"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59406423"
 ---
-<a name="appendix-the-fix-it-sample-application-building-real-world-cloud-apps-with-azure"></a>Apéndice: Corrección de la aplicación de ejemplo (creación de aplicaciones de nube reales con Azure)
-====================
+# <a name="appendix-the-fix-it-sample-application-building-real-world-cloud-apps-with-azure"></a>Apéndice: Corrección de la aplicación de ejemplo (creación de aplicaciones de nube reales con Azure)
+
 by [Mike Wasson](https://github.com/MikeWasson), [Rick Anderson]((https://twitter.com/RickAndMSFT)), [Tom Dykstra](https://github.com/tdykstra)
 
 [Descargue la corrección el proyecto](http://code.msdn.microsoft.com/Fix-It-app-for-Building-cdd80df4)

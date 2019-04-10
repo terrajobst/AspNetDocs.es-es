@@ -8,15 +8,15 @@ ms.date: 05/21/2008
 ms.assetid: 30945276-8ed9-4b27-8e50-4309244d3559
 msc.legacyurl: /web-forms/overview/older-versions-getting-started/master-pages/creating-a-site-wide-layout-using-master-pages-vb
 msc.type: authoredcontent
-ms.openlocfilehash: feb04c19092101bb019883c8b72b40ceb9afc015
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: 17ec6128d2da94630bfc6014b9eb17922c544dbc
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57034542"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59402822"
 ---
-<a name="creating-a-site-wide-layout-using-master-pages-vb"></a>Crear un diseño de todo el sitio mediante páginas maestras (VB)
-====================
+# <a name="creating-a-site-wide-layout-using-master-pages-vb"></a>Crear un diseño de todo el sitio mediante páginas maestras (VB)
+
 por [Scott Mitchell](https://twitter.com/ScottOnWriting)
 
 [Descargar código](http://download.microsoft.com/download/e/e/f/eef369f5-743a-4a52-908f-b6532c4ce0a4/ASPNET_MasterPages_Tutorial_01_VB.zip) o [descargar PDF](http://download.microsoft.com/download/8/f/6/8f6349e4-6554-405a-bcd7-9b094ba5089a/ASPNET_MasterPages_Tutorial_01_VB.pdf)
@@ -29,7 +29,7 @@ por [Scott Mitchell](https://twitter.com/ScottOnWriting)
 Un atributo de un sitio Web bien diseñado es un diseño de página coherente de todo el sitio. Tomemos como ejemplo el sitio Web www.asp.net. En el momento de redactar este artículo, cada página tiene el mismo contenido en la parte superior e inferior de la página. Como se muestra en la figura 1, la parte superior de cada página muestra una barra gris con una lista de Microsoft Communities. Por debajo de ese es el logotipo del sitio, la lista de idiomas en la que se ha traducido el sitio y en las secciones principales: Principal, empezar a trabajar, aprendizaje, descargas y así sucesivamente. Del mismo modo, la parte inferior de la página incluye información acerca de la publicidad en www.asp.net, una declaración de copyright y un vínculo a la declaración de privacidad.
 
 
-[![El sitio Web www.asp.net emplea una apariencia coherente en todas las páginas](creating-a-site-wide-layout-using-master-pages-vb/_static/image2.png)](creating-a-site-wide-layout-using-master-pages-vb/_static/image1.png)
+[![Twww.asp.net sitio Web emplea un aspecto coherente y sentir a través de todas las páginas](creating-a-site-wide-layout-using-master-pages-vb/_static/image2.png)](creating-a-site-wide-layout-using-master-pages-vb/_static/image1.png)
 
 <strong>Figura 01</strong>: El sitio Web www.asp.net emplea un aspecto coherente y sentir a través de todas las páginas ([haga clic aquí para ver imagen en tamaño completo](creating-a-site-wide-layout-using-master-pages-vb/_static/image3.png))
 
@@ -76,7 +76,7 @@ Figura 2 muestra el aspecto que podría tener la página principal de www.asp.ne
 Una vez que se ha definido una página maestra pueden estar limitado a las nuevas páginas ASP.NET a través de la graduación de un control checkbox. Estas páginas de ASP.NET - denominadas páginas de contenido - incluyen un control de contenido para cada uno de los controles ContentPlaceHolder de la página maestra. Cuando se visita la página de contenido a través de un explorador el motor de ASP.NET crea la jerarquía de controles de la página maestra e inserta la jerarquía de controles de la página de contenido en los lugares adecuados. Esta jerarquía de control combinado se representa y el HTML resultante se devuelve al explorador del usuario final. Por lo tanto, la página de contenido emite el marcado común definido en su página principal fuera de los controles ContentPlaceHolder y el marcado específico de página definidos dentro de sus propios controles de contenido. Figura 3 ilustra este concepto.
 
 
-[![Marcado de la página solicitada se fusionan en la página maestra](creating-a-site-wide-layout-using-master-pages-vb/_static/image6.png)](creating-a-site-wide-layout-using-master-pages-vb/_static/image5.png)
+[![TMarcado de la página solicitado se fusionan en la página principal](creating-a-site-wide-layout-using-master-pages-vb/_static/image6.png)](creating-a-site-wide-layout-using-master-pages-vb/_static/image5.png)
 
 **Figura 03**: Marcado de la página solicitada se fusionan en la página maestra ([haga clic aquí para ver imagen en tamaño completo](creating-a-site-wide-layout-using-master-pages-vb/_static/image7.png))
 
@@ -95,7 +95,7 @@ Antes de que se pueden explorar la creación y uso de páginas maestras y de con
 > Visual Studio admite dos modos de administración de proyectos: Proyectos de sitios Web y proyectos de aplicación Web. Proyectos de sitios Web carecen de un archivo de proyecto, mientras que los proyectos de aplicación Web imitar la arquitectura del proyecto en Visual Studio .NET 2002/2003: incluyen un archivo de proyecto y compilar código fuente del proyecto en un único ensamblado, que se coloca en el `/bin` carpeta. Visual Studio 2005 inicialmente solo compatibles proyectos de sitio Web, aunque el modelo de proyecto de aplicación Web se vuelve a insertar con Service Pack 1. Visual Studio 2008 ofrece ambos modelos de proyecto. Visual Web Developer 2005 y 2008 ediciones, sin embargo, solo admiten proyectos de sitio Web. Usar el modelo de proyecto de sitio Web para mi demostraciones en esta serie de tutoriales. Si está usando una edición no Express y desea utilizar el [modelo de proyecto de aplicación Web](https://msdn.microsoft.com/library/aa730880(vs.80).aspx) en su lugar, no dude en hacerlo, pero tenga en cuenta que puede haber algunas discrepancias entre lo que ve en la pantalla y los pasos que debe seguir frente a la capturas de pantalla se muestra y las instrucciones proporcionadas en estos tutoriales.
 
 
-[![Crear un nuevo archivo basado en el sistema sitio Web](creating-a-site-wide-layout-using-master-pages-vb/_static/image9.png)](creating-a-site-wide-layout-using-master-pages-vb/_static/image8.png)
+[![Crear un sitio Web de New File System-Based](creating-a-site-wide-layout-using-master-pages-vb/_static/image9.png)](creating-a-site-wide-layout-using-master-pages-vb/_static/image8.png)
 
 **Figura 04**: Crear un sitio Web de New File System-Based ([haga clic aquí para ver imagen en tamaño completo](creating-a-site-wide-layout-using-master-pages-vb/_static/image10.png))
 
@@ -103,7 +103,7 @@ Antes de que se pueden explorar la creación y uso de páginas maestras y de con
 A continuación, agregue una página maestra al sitio en el directorio raíz, con el botón secundario en el nombre del proyecto, elija Agregar nuevo elemento y seleccionar la plantilla de página maestra. Tenga en cuenta que las páginas maestras terminan con la extensión `.master`. Nombre de esta nueva página maestra `Site.master` y haga clic en Agregar.
 
 
-[![Agregar una página maestra denominada Site.master al sitio Web](creating-a-site-wide-layout-using-master-pages-vb/_static/image12.png)](creating-a-site-wide-layout-using-master-pages-vb/_static/image11.png)
+[![Add un denominado Site.master página de principal al sitio Web](creating-a-site-wide-layout-using-master-pages-vb/_static/image12.png)](creating-a-site-wide-layout-using-master-pages-vb/_static/image11.png)
 
 **Figura 05**: Agregar un nombre de la página maestra `Site.master` al sitio Web ([haga clic aquí para ver imagen en tamaño completo](creating-a-site-wide-layout-using-master-pages-vb/_static/image13.png))
 
@@ -132,7 +132,7 @@ Este marcado declarativo de la página maestra predeterminada actúa como punto 
 Vamos a ampliar `Site.master`del marcado declarativo de forma predeterminada para crear un diseño de sitio que comparten todas las páginas: un encabezado común; una columna de la izquierda con la navegación, noticias y otro contenido de todo el sitio; y un pie de página que muestra el icono "Con la tecnología por Microsoft ASP.NET". Figura 6 se muestra el resultado final de la página principal cuando una de las páginas de contenido se visualiza a través de un explorador. La región en un círculo rojo en la figura 6 es específica de la página que se visita (`Default.aspx`); el resto del contenido está definido en la página maestra y, por tanto, coherente en todas las páginas de contenido.
 
 
-[![La página principal define el marcado para la parte superior, izquierda y las partes de la parte inferior](creating-a-site-wide-layout-using-master-pages-vb/_static/image15.png)](creating-a-site-wide-layout-using-master-pages-vb/_static/image14.png)
+[![TPágina principal define el marcado para la parte superior, izquierda y las partes de la parte inferior](creating-a-site-wide-layout-using-master-pages-vb/_static/image15.png)](creating-a-site-wide-layout-using-master-pages-vb/_static/image14.png)
 
 **Figura 06**: El patrón de página define el marcado para la parte superior, izquierda y las partes de la parte inferior ([haga clic aquí para ver imagen en tamaño completo](creating-a-site-wide-layout-using-master-pages-vb/_static/image16.png))
 
@@ -173,12 +173,12 @@ Vamos a agregar una página ASP.NET nueva al proyecto y enlazarlo a la `Site.mas
 > Si ha creado su sitio Web ASP.NET mediante el modelo de proyecto de aplicación Web en lugar del modelo de proyecto de sitio Web no verá la casilla de verificación "Seleccionar la página principal" en el cuadro de diálogo Agregar nuevo elemento que se muestra en la figura 7. Para crear un contenido de página cuando usando el proyecto de aplicación Web de modelo debe elegir la plantilla de formulario de contenido Web en lugar de la plantilla de formulario Web. Después de seleccionar la plantilla de formulario de contenido Web y hacer clic en Agregar, el mismo seleccionar una página maestra, aparecerá el cuadro de diálogo que se muestra en la figura 8.
 
 
-[![Agregue una nueva página de contenido](creating-a-site-wide-layout-using-master-pages-vb/_static/image18.png)](creating-a-site-wide-layout-using-master-pages-vb/_static/image17.png)
+[![Auna nueva página de contenido dd](creating-a-site-wide-layout-using-master-pages-vb/_static/image18.png)](creating-a-site-wide-layout-using-master-pages-vb/_static/image17.png)
 
 **Figura 07**: Agregue una nueva página de contenido ([haga clic aquí para ver imagen en tamaño completo](creating-a-site-wide-layout-using-master-pages-vb/_static/image19.png))
 
 
-[![Seleccione la página maestra Site.master](creating-a-site-wide-layout-using-master-pages-vb/_static/image21.png)](creating-a-site-wide-layout-using-master-pages-vb/_static/image20.png)
+[![Soptar por la página maestra Site.master](creating-a-site-wide-layout-using-master-pages-vb/_static/image21.png)](creating-a-site-wide-layout-using-master-pages-vb/_static/image20.png)
 
 **Figura 08**: Seleccione el `Site.master` página maestra ([haga clic aquí para ver imagen en tamaño completo](creating-a-site-wide-layout-using-master-pages-vb/_static/image22.png))
 
@@ -198,7 +198,7 @@ Dado que la página maestra tiene dos controles ContentPlaceHolder - `head` y `M
 Donde se destacan las páginas maestras a través de técnicas de plantilla para todo el sitio anterior es con su compatibilidad en tiempo de diseño. Figura 9 se muestra la `About.aspx` página de contenido cuando se ven a través de la vista de diseño Visual de los desarrolladores Web. Tenga en cuenta que mientras que el contenido de la página maestra está visible, está atenuado y no se puede modificar. Los controles de contenido correspondiente a ContentPlaceHolders la página maestra son, sin embargo, puede editables. Y, al igual que con cualquier otra página ASP.NET, puede crear la interfaz de la página de contenido mediante la adición de controles Web a través de las vistas de diseño o código fuente.
 
 
-[![La vista de diseño de la página de contenido muestra tanto el contenido de la página maestra y específica de la página](creating-a-site-wide-layout-using-master-pages-vb/_static/image24.png)](creating-a-site-wide-layout-using-master-pages-vb/_static/image23.png)
+[![TContenido diseño vista muestra tanto la específica de la página y la página contenido de la página maestra](creating-a-site-wide-layout-using-master-pages-vb/_static/image24.png)](creating-a-site-wide-layout-using-master-pages-vb/_static/image23.png)
 
 **Figura 09**: La página de contenido diseño vista muestra tanto la específica de la página y contenido de la página maestra ([haga clic aquí para ver imagen en tamaño completo](creating-a-site-wide-layout-using-master-pages-vb/_static/image25.png))
 
@@ -208,7 +208,7 @@ Donde se destacan las páginas maestras a través de técnicas de plantilla para
 Dedique un momento para crear parte del contenido para el `About.aspx` página. Como puede ver en la figura 10, que se ha especificado un encabezado "Sobre Author" y un par de párrafos de texto, pero no dude en Agregar controles Web, también. Después de crear esta interfaz, visite la `About.aspx` página a través de un explorador.
 
 
-[![Visite la página About.aspx mediante un explorador](creating-a-site-wide-layout-using-master-pages-vb/_static/image27.png)](creating-a-site-wide-layout-using-master-pages-vb/_static/image26.png)
+[![Vla página About.aspx a través de un explorador isitar](creating-a-site-wide-layout-using-master-pages-vb/_static/image27.png)](creating-a-site-wide-layout-using-master-pages-vb/_static/image26.png)
 
 **Figura 10**: Visite el `About.aspx` a través de un explorador a una página ([haga clic aquí para ver imagen en tamaño completo](creating-a-site-wide-layout-using-master-pages-vb/_static/image28.png))
 
@@ -248,7 +248,7 @@ A continuación, cree un `Page_Load` controlador de eventos para el maestro de p
 El código anterior establece la etiqueta `Text` formato de la propiedad a la fecha y hora actuales como el día de la semana, el nombre del mes y el día de dos dígitos (consulte la figura 11). Con este cambio, volver a visitar las páginas de contenido. Como se muestra en la figura 11, el marcado resultante se actualiza inmediatamente para incluir el cambio a la página maestra.
 
 
-[![Los cambios en la página maestra están reflejados al ver la página de contenido](creating-a-site-wide-layout-using-master-pages-vb/_static/image30.png)](creating-a-site-wide-layout-using-master-pages-vb/_static/image29.png)
+[![Tlos cambios a la página maestra están reflejados al ver la página de contenido](creating-a-site-wide-layout-using-master-pages-vb/_static/image30.png)](creating-a-site-wide-layout-using-master-pages-vb/_static/image29.png)
 
 **Figura 11**: Los cambios en la página maestra están reflejados al ver la página de contenido ([haga clic aquí para ver imagen en tamaño completo](creating-a-site-wide-layout-using-master-pages-vb/_static/image31.png))
 

@@ -1,23 +1,26 @@
 ---
 uid: web-api/overview/odata-support-in-aspnet-web-api/supporting-odata-query-options
-title: Compatibilidad con las opciones de consulta de OData en ASP.NET Web API 2 | Microsoft Docs
+title: Compatibilidad con las opciones de consulta de OData en ASP.NET Web API 2 - ASP.NET 4.x
 author: MikeWasson
-description: ''
+description: Información general de ejemplos de código muestra las opciones de consulta OData compatibles en ASP.NET Web API 2 de ASP.NET 4.x.
 ms.author: riande
 ms.date: 02/04/2013
+ms.custom: seoapril2019
 ms.assetid: 50e6e62b-e72e-4a29-8293-4b67377bd21f
 msc.legacyurl: /web-api/overview/odata-support-in-aspnet-web-api/supporting-odata-query-options
 msc.type: authoredcontent
-ms.openlocfilehash: 8745183125c9dd1dcc7cb0e146367a893bdb0170
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: 428e4942e42436585049c1e84cd7b07a4a79c0d1
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57050882"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59411571"
 ---
-<a name="supporting-odata-query-options-in-aspnet-web-api-2"></a>Compatibilidad con las opciones de consulta de OData en ASP.NET Web API 2
-====================
+# <a name="supporting-odata-query-options-in-aspnet-web-api-2"></a>Compatibilidad con las opciones de consulta de OData en ASP.NET Web API 2
+
 por [Mike Wasson](https://github.com/MikeWasson)
+
+Esta introducción con ejemplos de código muestra las opciones de consulta OData compatibles en ASP.NET Web API 2 de ASP.NET 4.x. 
 
 OData define los parámetros que pueden usarse para modificar una consulta de OData. El cliente envía estos parámetros en la cadena de consulta del URI de solicitud. Por ejemplo, para ordenar los resultados, un cliente usa el parámetro $orderby:
 
@@ -85,7 +88,7 @@ La opción $filter permite filtrar los resultados aplicando una expresión boole
 | Funciones de cadena: Devolver todos los productos con "zz" en el nombre. | `http://localhost/Products?$filter=substringof('zz',Name)` |
 | Funciones de fecha: Devolver todos los productos con ReleaseDate después de 2005. | `http://localhost/Products?$filter=year(ReleaseDate)` gt 2005 |
 
-**Ordenación**
+**Ordenar**
 
 Para ordenar los resultados, use el filtro $orderby.
 

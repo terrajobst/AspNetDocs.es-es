@@ -8,15 +8,15 @@ ms.date: 01/15/2019
 ms.assetid: a9fd4dc0-1b96-4443-82ca-932a5b4a8ea4
 msc.legacyurl: /signalr/overview/guide-to-the-api/hubs-api-guide-javascript-client
 msc.type: authoredcontent
-ms.openlocfilehash: 7689fa5b6a3e81c9f767831423eb3efad72e1ab3
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: b4c6d850062e1b65eacd97ffc4f34c80fedea503
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57053122"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59404317"
 ---
-<a name="aspnet-signalr-hubs-api-guide---javascript-client"></a>Guía de API de ASP.NET SignalR Hubs: cliente JavaScript
-====================
+# <a name="aspnet-signalr-hubs-api-guide---javascript-client"></a>Guía de API de ASP.NET SignalR Hubs: cliente JavaScript
+
 
 [!INCLUDE [Consider ASP.NET Core SignalR](~/includes/signalr/signalr-version-disambiguation.md)]
 

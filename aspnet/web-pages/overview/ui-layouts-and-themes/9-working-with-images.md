@@ -8,15 +8,15 @@ ms.date: 02/20/2014
 ms.assetid: 778c4e58-4372-4d25-bab9-aec4a8d8e38d
 msc.legacyurl: /web-pages/overview/ui-layouts-and-themes/9-working-with-images
 msc.type: authoredcontent
-ms.openlocfilehash: 7536f71eb9afce9d7c8bb7e4d6326d280658c27b
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: fedd1013c036ebdb85877a868aaaa172733e5b8a
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57056042"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59394710"
 ---
-<a name="working-with-images-in-an-aspnet-web-pages-razor-site"></a>Trabajar con imágenes en un sitio Web de ASP.NET Pages (Razor)
-====================
+# <a name="working-with-images-in-an-aspnet-web-pages-razor-site"></a>Trabajar con imágenes en un sitio Web de ASP.NET Pages (Razor)
+
 por [Tom FitzMacken](https://github.com/tfitzmac)
 
 > En este artículo se muestra cómo agregar, mostrar y manipular imágenes (cambiar el tamaño, voltear y añadir marcas de agua) en un sitio Web de ASP.NET Web Pages (Razor).
@@ -74,7 +74,7 @@ El procedimiento descrito en esta sección muestra cómo mostrar una imagen sobr
 
     En el código, puede obtener la selección del usuario (en otras palabras, el nombre de archivo de imagen) de la lista mediante la lectura de `Request["photoChoice"]`. Aparece en primer lugar si hay una selección. Si no existe, construir una ruta de acceso para la imagen que se compone del nombre de la carpeta para las imágenes y nombre de archivo de imagen del usuario. (Si se ha intentado crear una ruta de acceso, pero no existía nada en `Request["photoChoice"]`, obtendría un error.) Esto da como resultado una ruta de acceso relativa similar al siguiente:
 
-    *images/Photo1.jpg*
+    *imágenes/Photo1.jpg*
 
     La ruta de acceso se almacena en la variable denominada `imagePath` que necesitará más adelante en la página.
 

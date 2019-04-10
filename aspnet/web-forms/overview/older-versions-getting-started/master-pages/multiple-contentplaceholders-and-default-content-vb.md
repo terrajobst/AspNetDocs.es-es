@@ -8,15 +8,15 @@ ms.date: 05/21/2008
 ms.assetid: 866a7177-6884-451e-88f4-c934b1dd1af5
 msc.legacyurl: /web-forms/overview/older-versions-getting-started/master-pages/multiple-contentplaceholders-and-default-content-vb
 msc.type: authoredcontent
-ms.openlocfilehash: 18e2dfdf5cf3d5802bf94d797795fc0f12bdc95b
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: 488988bbf540cc809579a5ad5f80cb772ed6b1bf
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57040232"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59408373"
 ---
-<a name="multiple-contentplaceholders-and-default-content-vb"></a>Varios ContentPlaceHolders y contenido predeterminado (VB)
-====================
+# <a name="multiple-contentplaceholders-and-default-content-vb"></a>Varios ContentPlaceHolders y contenido predeterminado (VB)
+
 por [Scott Mitchell](https://twitter.com/ScottOnWriting)
 
 [Descargar código](http://download.microsoft.com/download/e/e/f/eef369f5-743a-4a52-908f-b6532c4ce0a4/ASPNET_MasterPages_Tutorial_02_VB.zip) o [descargar PDF](http://download.microsoft.com/download/8/f/6/8f6349e4-6554-405a-bcd7-9b094ba5089a/ASPNET_MasterPages_Tutorial_02_VB.pdf)
@@ -37,7 +37,7 @@ Muchos diseños de sitio Web contienen varias áreas en la pantalla que se perso
 La figura 1 muestra `Default.aspx` cuando se ve mediante un explorador. La región con un círculo rojo es el marcado específico de la página correspondiente a `MainContent`.
 
 
-[![La región en un círculo muestra el área actualmente personalizables según una página por página](multiple-contentplaceholders-and-default-content-vb/_static/image2.png)](multiple-contentplaceholders-and-default-content-vb/_static/image1.png)
+[![TRegión en círculo muestra el área actualmente personalizables según una página por página](multiple-contentplaceholders-and-default-content-vb/_static/image2.png)](multiple-contentplaceholders-and-default-content-vb/_static/image1.png)
 
 **Figura 01**: La región en círculo muestra el área actualmente personalizables según una página por página ([haga clic aquí para ver imagen en tamaño completo](multiple-contentplaceholders-and-default-content-vb/_static/image3.png))
 
@@ -45,7 +45,7 @@ La figura 1 muestra `Default.aspx` cuando se ve mediante un explorador. La regi�
 Imagine que además de la región que se muestra en la figura 1, también es necesario agregar elementos específicos de la página a la columna izquierda debajo de las lecciones y noticias secciones. Para ello, agregamos otro control ContentPlaceHolder a la página maestra. Para poder continuar, abra el `Site.master` página en Visual Web Developer principal y, a continuación, arrastre un control ContentPlaceHolder desde el cuadro de herramientas hasta el diseñador después de la sección de noticias. Establecer el ContentPlaceHolder `ID` a `LeftColumnContent`.
 
 
-[![Agregar un Control ContentPlaceHolder a la columna izquierda de la página maestra](multiple-contentplaceholders-and-default-content-vb/_static/image5.png)](multiple-contentplaceholders-and-default-content-vb/_static/image4.png)
+[![Aun ContentPlaceHolder Control a la columna izquierda de la página maestra dd](multiple-contentplaceholders-and-default-content-vb/_static/image5.png)](multiple-contentplaceholders-and-default-content-vb/_static/image4.png)
 
 **Figura 02**: Agregar un ContentPlaceHolder Control a la columna izquierda de la página maestra ([haga clic aquí para ver imagen en tamaño completo](multiple-contentplaceholders-and-default-content-vb/_static/image6.png))
 
@@ -67,7 +67,7 @@ Escriba algún contenido en el control de contenido que hacen referencia a la `M
 Después de agregar este marcado, visite la página a través de un explorador. Como se muestra en la figura 3, el marcado se coloca en el `Content3` control de contenido se muestra en la columna izquierda, bajo la sección de noticias (rodeada en rojo). El marcado que se coloca en `Content2` se muestra en la parte derecha de la página (marcadas con un círculo azul).
 
 
-[![La columna izquierda ahora incluye el contenido específico de página debajo de la sección de noticias](multiple-contentplaceholders-and-default-content-vb/_static/image8.png)](multiple-contentplaceholders-and-default-content-vb/_static/image7.png)
+[![Tél izquierda columna ahora incluye específica de la página contenido bajo la sección noticias](multiple-contentplaceholders-and-default-content-vb/_static/image8.png)](multiple-contentplaceholders-and-default-content-vb/_static/image7.png)
 
 **Figura 03**: La izquierda columna ahora incluye específica de la página contenido bajo la sección noticias ([haga clic aquí para ver imagen en tamaño completo](multiple-contentplaceholders-and-default-content-vb/_static/image9.png))
 
@@ -81,7 +81,7 @@ A diferencia de la mayoría de los controles Web de ASP.NET, el cuadro de herram
 Para agregar un control de contenido para el `LeftColumnContent` ContentPlaceHolder a `About.aspx`, expanda la etiqueta inteligente del ContentPlaceHolder y haga clic en el vínculo Crear contenido personalizado.
 
 
-[![La vista de diseño para About.aspx muestra el LeftColumnContent ContentPlaceHolder](multiple-contentplaceholders-and-default-content-vb/_static/image11.png)](multiple-contentplaceholders-and-default-content-vb/_static/image10.png)
+[![Tél diseño ver para About.aspx muestra el LeftColumnContent ContentPlaceHolder](multiple-contentplaceholders-and-default-content-vb/_static/image11.png)](multiple-contentplaceholders-and-default-content-vb/_static/image10.png)
 
 **Figura 04**: La vista de diseño `About.aspx` muestra el `LeftColumnContent` ContentPlaceHolder ([haga clic aquí para ver imagen en tamaño completo](multiple-contentplaceholders-and-default-content-vb/_static/image12.png))
 
@@ -97,7 +97,7 @@ ASP.NET no requiere que todas las páginas de contenido incluyen controles de co
 Actualmente, `Default.aspx` contiene dos controles de contenido para el `head` y `MainContent` ContentPlaceHolders; no tiene un control de contenido para `LeftColumnContent`. Por lo tanto, cuando `Default.aspx` se representa el `LeftColumnContent` usan el contenido de forma predeterminada del ContentPlaceHolder. Dado que aún es necesario definir ningún contenido predeterminado para este control ContentPlaceHolder, el efecto neto es que no se emite ningún marcado para esta región. Para comprobar este comportamiento, visite `Default.aspx` a través de un explorador. Como se muestra en la figura 5, no hay ningún marcado se genera en la columna izquierda debajo de la sección de noticias.
 
 
-[![No hay contenido se represente para el LeftColumnContent ContentPlaceHolder](multiple-contentplaceholders-and-default-content-vb/_static/image14.png)](multiple-contentplaceholders-and-default-content-vb/_static/image13.png)
+[![No que presentar el contenido para el LeftColumnContent ContentPlaceHolder](multiple-contentplaceholders-and-default-content-vb/_static/image14.png)](multiple-contentplaceholders-and-default-content-vb/_static/image13.png)
 
 **Figura 05**: No hay contenido se represente para el `LeftColumnContent` ContentPlaceHolder ([haga clic aquí para ver imagen en tamaño completo](multiple-contentplaceholders-and-default-content-vb/_static/image15.png))
 
@@ -123,7 +123,7 @@ Abra el `Site.master` página principal y agregue el marcado siguiente a la colu
 Después de agregar esta marca de la vista de diseño de su página principal debe ser similar a la figura 6.
 
 
-[![La página principal incluye un Control de inicio de sesión](multiple-contentplaceholders-and-default-content-vb/_static/image17.png)](multiple-contentplaceholders-and-default-content-vb/_static/image16.png)
+[![TPágina principal incluye un Control de inicio de sesión](multiple-contentplaceholders-and-default-content-vb/_static/image17.png)](multiple-contentplaceholders-and-default-content-vb/_static/image16.png)
 
 **Figura 06**: La página principal incluye un Control de inicio de sesión ([haga clic aquí para ver imagen en tamaño completo](multiple-contentplaceholders-and-default-content-vb/_static/image18.png))
 
@@ -145,7 +145,7 @@ Después de definir el contenido de la `MainContent` y `LeftColumnContent` regio
 Figura 7 muestra esta página cuando se ve mediante un explorador. Puesto que esta página especifica un control de contenido para el `QuickLoginUI` ContentPlaceHolder, reemplaza el contenido predeterminado especificado en la página maestra. El efecto neto es que el control de inicio de sesión se muestra en la vista (consulte la figura 6) no se representa en esta página de diseño de la página maestra.
 
 
-[![La página de inicio de sesión Represses contenido de forma predeterminada de QuickLoginUI ContentPlaceHolder](multiple-contentplaceholders-and-default-content-vb/_static/image20.png)](multiple-contentplaceholders-and-default-content-vb/_static/image19.png)
+[![TPágina de inicio de sesión de él Represses predeterminado contenido el QuickLoginUI ContentPlaceHolder](multiple-contentplaceholders-and-default-content-vb/_static/image20.png)](multiple-contentplaceholders-and-default-content-vb/_static/image19.png)
 
 **Figura 07**: La página de inicio de sesión Represses el `QuickLoginUI` predeterminado contenido del ContentPlaceHolder ([haga clic aquí para ver imagen en tamaño completo](multiple-contentplaceholders-and-default-content-vb/_static/image21.png))
 
@@ -161,7 +161,7 @@ Para quitar el control de contenido, puede manualmente eliminar su marcado decla
 La figura 8 muestra `Default.aspx` cuando se ve mediante un explorador. Recuerde que `Default.aspx` solo tiene dos controles de contenido especificados en el marcado declarativo: uno para `head` y otro para `MainContent`. Como resultado, el valor predeterminado de contenido para el `LeftColumnContent` y `QuickLoginUI` ContentPlaceHolders se muestran.
 
 
-[![Se muestran el contenido predeterminado para el LeftColumnContent y QuickLoginUI ContentPlaceHolders](multiple-contentplaceholders-and-default-content-vb/_static/image23.png)](multiple-contentplaceholders-and-default-content-vb/_static/image22.png)
+[![Tse muestran, contenido predeterminado para el LeftColumnContent y QuickLoginUI ContentPlaceHolders](multiple-contentplaceholders-and-default-content-vb/_static/image23.png)](multiple-contentplaceholders-and-default-content-vb/_static/image22.png)
 
 **Figura 08**: El contenido predeterminado para el `LeftColumnContent` y `QuickLoginUI` aparecen ContentPlaceHolders ([haga clic aquí para ver imagen en tamaño completo](multiple-contentplaceholders-and-default-content-vb/_static/image24.png))
 

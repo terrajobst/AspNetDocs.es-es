@@ -9,17 +9,13 @@ ms.topic: tutorial
 ms.assetid: 7ba88418-5d0a-437d-b6dc-7c3816d4ec07
 msc.legacyurl: /mvc/overview/getting-started/getting-started-with-ef-using-mvc/updating-related-data-with-the-entity-framework-in-an-asp-net-mvc-application
 msc.type: authoredcontent
-ms.openlocfilehash: 50fdcc1959b8f3a02ec5bbe0eb7417ffb8a260a3
-ms.sourcegitcommit: 289e051cc8a90e8f7127e239fda73047bde4de12
+ms.openlocfilehash: d90a327da40ffd6d7956c5fbe019cf9de30c706d
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/25/2019
-ms.locfileid: "58425917"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59407515"
 ---
-<a name="updating-related-data-with-the-entity-framework-in-an-aspnet-mvc-application"></a>Actualización de datos relacionados con Entity Framework en una aplicación ASP.NET MVC
-====================
-
-
 # <a name="tutorial-update-related-data-with-ef-in-an-aspnet-mvc-app"></a>Tutorial: Actualizar datos relacionados con EF en una aplicación ASP.NET MVC
 
 En el tutorial anterior se muestran datos relacionados. En este tutorial, actualizará datos relacionados. Para la mayoría de las relaciones, esto puede hacerse mediante la actualización de campos de clave externa o las propiedades de navegación. Para las relaciones de varios a varios, Entity Framework no expone la tabla de combinación directamente, por lo que agrega y quita entidades hacia y desde las propiedades de navegación correspondientes.

@@ -8,15 +8,15 @@ ms.date: 10/05/2011
 ms.assetid: 7d7ee56c-a867-4777-9407-ec8f73a605a3
 msc.legacyurl: /web-forms/overview/data-access/caching-data
 msc.type: chapter
-ms.openlocfilehash: daa92182f2c28a7fd79d584c0a647f6a15700d12
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: 5bf69b1caacf32fe6a5bce3bcd2da037b3defc26
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57021192"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59395711"
 ---
-<a name="caching-data"></a>Almacenar datos en caché
-====================
+# <a name="caching-data"></a>Almacenar datos en caché
+
 > Esta serie de tutoriales explica el almacenamiento en caché, lo que puede mejorar el rendimiento del sitio y cómo aplicar el almacenamiento en caché a la capa de presentación mediante el control ObjectDataSource.
 
 

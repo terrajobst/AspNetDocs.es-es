@@ -8,15 +8,15 @@ ms.date: 08/04/2008
 ms.assetid: b3edd71d-b43e-4ccb-93e5-b89bb723312c
 msc.legacyurl: /web-forms/videos/authentication/configuring-sql-to-work-with-membership-schemas
 msc.type: video
-ms.openlocfilehash: 1748f40aea66022e928b8f2b0584efab48047fd3
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: 1144f6de63ebff3c92efc148ec619ec1d5cc0aa1
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57039852"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59409933"
 ---
-<a name="configuring-sql-to-work-with-membership-schemas"></a>Configurar SQL para trabajar con esquemas de pertenencia
-====================
+# <a name="configuring-sql-to-work-with-membership-schemas"></a>Configurar SQL para trabajar con esquemas de pertenencia
+
 por [Joe Stagner](https://github.com/JoeStagner)
 
 En este vídeo Joe Stagner demuestra cómo configurar una instancia SQL para trabajar con un perfil de pertenencia de servicios de ASP específico; así como configurar la aplicación para usar específicamente esta instancia de SQL y no la configuración predeterminada en el archivo machine.cgf. Para obtener más información acerca de este vídeo, lea el [crear el esquema de pertenencia en SQL Server](../../overview/older-versions-security/membership/creating-the-membership-schema-in-sql-server-vb.md) tutorial de seguridad.

@@ -8,15 +8,15 @@ ms.date: 06/02/2008
 ms.assetid: 04c79748-0f21-4a3b-aba5-e1ce3161c32e
 msc.legacyurl: /web-forms/overview/ajax-control-toolkit/cascadingdropdown/presetting-list-entries-with-cascadingdropdown-cs
 msc.type: authoredcontent
-ms.openlocfilehash: 2599b5015f288b2e8d02577a0865252a862574a4
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: 188f98d013707178e50858f8ea26d8cf2af06bea
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57050002"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59406020"
 ---
-<a name="presetting-list-entries-with-cascadingdropdown-c"></a>Preconfigurar entradas de lista con CascadingDropDown (C#)
-====================
+# <a name="presetting-list-entries-with-cascadingdropdown-c"></a>Preconfigurar entradas de lista con CascadingDropDown (C#)
+
 por [Christian Wenz](https://github.com/wenz)
 
 [Descargar código](http://download.microsoft.com/download/9/0/7/907760b1-2c60-4f81-aeb6-ca416a573b0d/cascadingdropdown2.cs.zip) o [descargar PDF](http://download.microsoft.com/download/2/d/c/2dc10e34-6983-41d4-9c08-f78f5387d32b/cascadingDropDown2CS.pdf)
@@ -53,7 +53,7 @@ El método devuelve una matriz de tipo de valor CascadingDropDown. El constructo
 Carga de la página en el explorador rellenará la lista desplegable con los tres proveedores, la segunda se está preseleccionado.
 
 
-[![La lista se rellena y preseleccionada automáticamente](presetting-list-entries-with-cascadingdropdown-cs/_static/image2.png)](presetting-list-entries-with-cascadingdropdown-cs/_static/image1.png)
+[![Tlista se rellena y preseleccionado automáticamente](presetting-list-entries-with-cascadingdropdown-cs/_static/image2.png)](presetting-list-entries-with-cascadingdropdown-cs/_static/image1.png)
 
 La lista se rellena y preseleccionada automáticamente ([haga clic aquí para ver imagen en tamaño completo](presetting-list-entries-with-cascadingdropdown-cs/_static/image3.png))
 

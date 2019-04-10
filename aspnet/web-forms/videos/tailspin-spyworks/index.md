@@ -8,15 +8,15 @@ ms.date: 10/05/2011
 ms.assetid: 8aa371f8-913c-4ed2-98b0-f76abf15669d
 msc.legacyurl: /web-forms/videos/tailspin-spyworks
 msc.type: chapter
-ms.openlocfilehash: 0fbbc6e0ca1d13effe5d7f157e3f0dc5502578c6
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: d30dc8906a72a35d87db40701070fe8c8f71c174
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57023812"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59394125"
 ---
-<a name="tailspin-spyworks"></a>Tailspin Spyworks
-====================
+# <a name="tailspin-spyworks"></a>Tailspin Spyworks
+
 > Cómo usar las nuevas características en ASP.NET 4 para crear una tienda en línea, incluida la compra, la desprotección y la administración.
 
 

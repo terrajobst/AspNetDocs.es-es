@@ -8,15 +8,15 @@ ms.date: 03/26/2015
 ms.assetid: f1d2a916-626c-4a54-8df4-77e6b9fff355
 msc.legacyurl: /mvc/overview/getting-started/introduction/examining-the-details-and-delete-methods
 msc.type: authoredcontent
-ms.openlocfilehash: c68d7a022f14bdcf2a08696691d2b6ef888a8d54
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: e14df35818ac996186e22b72bc57bd5aada2afec
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57064942"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59408477"
 ---
-<a name="examining-the-details-and-delete-methods"></a>Examinar los métodos Details y Delete
-====================
+# <a name="examining-the-details-and-delete-methods"></a>Examinar los métodos Details y Delete
+
 by [Rick Anderson]((https://twitter.com/RickAndMSFT))
 
 [!INCLUDE [Tutorial Note](sample/code-location.md)]

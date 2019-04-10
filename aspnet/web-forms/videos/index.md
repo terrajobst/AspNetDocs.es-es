@@ -8,16 +8,16 @@ ms.date: 08/08/2011
 ms.assetid: f215d6b9-8a84-4bd8-8881-e9527d814950
 msc.legacyurl: /web-forms/videos
 msc.type: book
-ms.openlocfilehash: 15ab12404daf45a6876facd20fad924996b527a3
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: 0082330e75a905469c66b04277d70416555c30c3
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57019052"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59397219"
 ---
-<a name="videos"></a>Vídeos
-====================
-- [¿Cómo...?](how-do-i/index.md)
+# <a name="videos"></a>Vídeos
+
+- [Cómo](how-do-i/index.md)
 
     - [Aprender las sugerencias y los trucos de los expertos](how-do-i/how-do-i-learn-the-tips-and-tricks-of-experts.md)
     - [Crear un sitio multilingüe con localización](how-do-i/how-do-i-create-a-multi-lingual-site-with-localization.md)
@@ -35,7 +35,7 @@ ms.locfileid: "57019052"
     - [Implementar la reescritura de direcciones URL](how-do-i/how-do-i-implement-url-rewriting.md)
     - [Utilizar los adaptadores de controles descriptivos de CSS](how-do-i/how-do-i-utilize-the-css-friendly-control-adapters.md)
     - [Controlar eventos de aplicación mediante un HttpModule](how-do-i/how-do-i-handle-application-events-using-an-httpmodule.md)
-    - [Usar hojas de estilos en cascada para el diseño de página web](how-do-i/how-do-i-use-cascading-style-sheets-for-web-page-layout.md)
+    - [Usar hojas de estilos CSS para el diseño de página web](how-do-i/how-do-i-use-cascading-style-sheets-for-web-page-layout.md)
     - [Crear un proveedor de pertenencia personalizado](how-do-i/how-do-i-create-a-custom-membership-provider.md)
     - [Crear un proveedor de perfiles personalizado](how-do-i/how-do-i-create-a-custom-profile-provider.md)
     - [Implementar la navegación del sitio en ASP.NET](how-do-i/how-do-i-implement-site-navigation-in-aspnet.md)
@@ -109,8 +109,8 @@ ms.locfileid: "57019052"
     - [Crear un enfoque eficaz y estandarizado para implementar estilos CSS](how-do-i/how-do-i-create-an-efficient-and-standardized-approach-for-implementing-css-styles.md)
     - [¿Qué es ASP.NET?](how-do-i/what-is-asp-net.md)
     - [Elegir el modelo de programación correcto](how-do-i/choosing-the-right-programming-model.md)
-    - [Cree su primera aplicación de ASP.NET con ASP.NET Web Forms](how-do-i/build-your-first-asp-net-application-with-asp-net-web-forms.md)
-    - [Cree su primera aplicación de ASP.NET con ASP.NET MVC](how-do-i/build-your-first-asp-net-application-with-asp-net-mvc.md)
+    - [Crear su primera aplicación de ASP.NET con ASP.NET Web Forms](how-do-i/build-your-first-asp-net-application-with-asp-net-web-forms.md)
+    - [Crear su primera aplicación de ASP.NET con ASP.NET MVC](how-do-i/build-your-first-asp-net-application-with-asp-net-mvc.md)
     - [Aprendizaje óptimo de Formularios Web Forms de ASP.NET](how-do-i/how-to-best-learn-aspnet-web-forms.md)
     - [Introducción de 5 minutos a Formularios Web Forms de ASP.NET](how-do-i/5-minute-introduction-to-aspnet-web-forms.md)
     - [Instalar ASP.NET y las herramientas](how-do-i/how-to-install-asp-net-and-tools.md)
@@ -162,7 +162,7 @@ ms.locfileid: "57019052"
     - [Cambiar la configuración de la pertenencia en el esquema de pertenencia predeterminado](authentication/changing-membership-settings-in-the-default-membership-schema.md)
     - [Crear cuentas de usuario con el Asistente para crear usuarios](authentication/creating-user-accounts-with-the-create-user-wizard.md)
     - [Crear cuentas de usuario mediante programación](authentication/creating-user-accounts-programmatically.md)
-    - [Validación manual de usuarios](authentication/validating-users-manually.md)
+    - [Validar usuarios manualmente](authentication/validating-users-manually.md)
     - [Validar usuarios con el control de inicio de sesión](authentication/validating-users-with-the-login-control.md)
     - [Agregar usuarios al sistema de pertenencia](authentication/adding-users-to-your-membership-system.md)
     - [Iniciar la sesión de los usuarios en el sistema de pertenencia](authentication/logging-users-into-your-membership-system.md)
@@ -221,10 +221,10 @@ ms.locfileid: "57019052"
     - [[Introducción a ASP.NET 2.0:] Aspectos esenciales de ASP.NET 2.0](migrating/intro-to-aspnet-20-aspnet-20-fundamentals.md)
     - [[Introducción a ASP.NET 2.0:] Elementos de la interfaz de usuario](migrating/intro-to-aspnet-20-user-interface-elements.md)
     - [[Migración de] ASP clásico a ASP.NET](migrating/migrating-from-classic-asp-to-aspnet.md)
-    - [Introducción a ASP.NET para desarrolladores de JSP: Bienvenido a ASP.NET 2.0](migrating/intro-to-aspnet-for-jsp-developers-welcome-to-aspnet-20.md)
-    - [Introducción a ASP.NET para desarrolladores de JSP: Creación de aplicaciones](migrating/intro-to-aspnet-for-jsp-developers-building-applications.md)
-    - [Introducción a ASP.NET para programadores de ColdFusion: Adición de ASP.NET al repertorio](migrating/intro-to-aspnet-for-coldfusion-developers-adding-aspnet-to-your-repertoire.md)
-    - [Introducción a ASP.NET para programadores de ColdFusion: Compilar una aplicación ASP.NET](migrating/introduction-to-aspnet-for-coldfusion-developers-building-an-aspnet-application.md)
+    - [Introducción a ASP.NET para programadores de JSP: Bienvenido a ASP.NET 2.0](migrating/intro-to-aspnet-for-jsp-developers-welcome-to-aspnet-20.md)
+    - [Introducción a ASP.NET para programadores de JSP: Compilar aplicaciones](migrating/intro-to-aspnet-for-jsp-developers-building-applications.md)
+    - [Nº 6 | Introducción a ASP.NET para programadores de ColdFusion: Agregar ASP.NET al repertorio](migrating/intro-to-aspnet-for-coldfusion-developers-adding-aspnet-to-your-repertoire.md)
+    - [Nº 6 | Introducción a ASP.NET para programadores de ColdFusion: Crear una aplicación ASP.NET](migrating/introduction-to-aspnet-for-coldfusion-developers-building-an-aspnet-application.md)
     - [Interoperabilidad entre PHP y la plataforma de Windows](migrating/interop-between-php-and-the-windows-platform.md)
 - [Compilar aplicaciones 2.0](building-20-applications/index.md)
 
@@ -239,7 +239,7 @@ ms.locfileid: "57019052"
     - [Ver el desarrollo de ASP.NET en acción](building-20-applications/watch-aspnet-development-in-action.md)
 - [Consejos generales de IIS](iis/index.md)
 
-    - [Desarrollo e implementación en un hospedaje compartido](iis/developing-and-deploying-in-a-shared-hosting.md)
+    - [Desarrollar e implementar en un hospedaje compartido](iis/developing-and-deploying-in-a-shared-hosting.md)
     - [Trabajar con la administración delegada de IIS7](iis/working-with-iis7-deligated-admin.md)
     - [Administración delegada específica de las características](iis/feature-specific-delegated-management.md)
     - [Solución de problemas de las aplicaciones de ASP.NET de producción](iis/troubleshooting-production-aspnet-apps.md)
@@ -261,10 +261,10 @@ ms.locfileid: "57019052"
 
     - [Introducción a ASP.NET AJAX Control Toolkit](ajax-control-toolkit/how-do-i-get-started-with-the-aspnet-ajax-control-toolkit.md)
     - [Extensor de control CascadingDropDown de ASP.NET AJAX](ajax-control-toolkit/how-do-i-use-the-aspnet-ajax-cascadingdropdown-control-extender.md)
-    - [Extensor del control TextBoxWatermark de ASP.NET AJAX](ajax-control-toolkit/how-do-i-use-the-aspnet-ajax-textboxwatermark-control-extender.md)
-    - [Extensor del control Popup de ASP.NET AJAX](ajax-control-toolkit/how-do-i-use-the-aspnet-ajax-popup-control-extender.md)
-    - [Control extensor ModalPopup de ASP.NET AJAX](ajax-control-toolkit/how-do-i-use-the-aspnet-ajax-modalpopup-extender-control.md)
-    - [Extensor de control AlwaysVisible de ASP.NET AJAX](ajax-control-toolkit/how-do-i-use-the-aspnet-ajax-alwaysvisible-control-extender.md)
+    - [Extensor de control TextBoxWatermark de ASP.NET AJAX](ajax-control-toolkit/how-do-i-use-the-aspnet-ajax-textboxwatermark-control-extender.md)
+    - [Extensor de control Popup de ASP.NET AJAX](ajax-control-toolkit/how-do-i-use-the-aspnet-ajax-popup-control-extender.md)
+    - [Extensor de control ModalPopup de ASP.NET AJAX](ajax-control-toolkit/how-do-i-use-the-aspnet-ajax-modalpopup-extender-control.md)
+    - [Extensor del control AlwaysVisible de ASP.NET AJAX](ajax-control-toolkit/how-do-i-use-the-aspnet-ajax-alwaysvisible-control-extender.md)
     - [Control Accordion de ASP.NET AJAX](ajax-control-toolkit/how-do-i-use-the-aspnet-ajax-accordion-control.md)
     - [Extensor de panel contraíble de ASP.NET AJAX](ajax-control-toolkit/how-do-i-use-the-aspnet-ajax-collapsable-panel-extender.md)
     - [Extensor de panel arrastrable de ASP.NET AJAX](ajax-control-toolkit/how-do-i-use-the-aspnet-ajax-draggable-panel-extender.md)
@@ -297,7 +297,7 @@ ms.locfileid: "57019052"
     - [Selector de colores](ajax-control-toolkit/color-picker.md)
     - [Cuadro combinado](ajax-control-toolkit/combo-box.md)
     - [Control de editor](ajax-control-toolkit/editor-control.md)
-    - [Control del Editor personalizado](ajax-control-toolkit/editor-control-custom.md)
+    - [Control del editor personalizado](ajax-control-toolkit/editor-control-custom.md)
     - [Crear un extensor personalizado](ajax-control-toolkit/create-a-new-custom-extender.md)
 - [ASP.NET AJAX](aspnet-ajax/index.md)
 
@@ -344,22 +344,22 @@ ms.locfileid: "57019052"
     - [Configurar el entorno de desarrollo para ASP.NET 2.0](aspnet-ajax/set-up-your-development-environment-for-aspnet-20.md)
     - [Personalizar el control de errores del UpdatePanel de ASP.NET AJAX](aspnet-ajax/how-do-i-customize-error-handling-for-the-aspnet-ajax-updatepanel.md)
     - [Usar plantillas de cliente de ASP.NET AJAX](aspnet-ajax/how-do-i-use-aspnet-ajax-client-templates.md)
-- [Acceso a datos](data-access/index.md)
+- [Acceso a datos en ASP.NET (Visual Studio)](data-access/index.md)
 
-    - [Servicios de datos de ADO.NET](data-access/adonet-data-services/index.md)
+    - [Data Services de ADO.NET](data-access/adonet-data-services/index.md)
 
         - [Niveles de acceso a datos en aplicaciones de ASP.NET](data-access/adonet-data-services/data-access-layers-in-aspnet-applications.md)
         - [Enlazar manualmente un conjunto de datos a un control Datagrid](data-access/adonet-data-services/how-to-manually-bind-a-dataset-to-a-datagrid.md)
         - [Trabajar con conjuntos de datos y filtros de una aplicación ASP](data-access/adonet-data-services/how-to-work-with-datasets-and-filters-from-an-asp-application.md)
     - ["¿Cómo...?" con LINQ](data-access/how-do-i-with-linq/index.md)
 
-        - [LINQ to SQL: información general](data-access/how-do-i-with-linq/how-do-i-linq-to-sql-overview.md)
+        - [LINQ to SQL: Información general](data-access/how-do-i-with-linq/how-do-i-linq-to-sql-overview.md)
         - [LINQ to SQL: Modelo de datos](data-access/how-do-i-with-linq/how-do-i-linq-to-sql-data-model.md)
         - [LINQ to SQL: Consultar la base de datos](data-access/how-do-i-with-linq/how-do-i-linq-to-sql-querying-the-database.md)
-        - [LINQ to SQL: Actualizando la base de datos](data-access/how-do-i-with-linq/how-do-i-linq-to-sql-updating-the-database.md)
+        - [LINQ to SQL: Actualizar la base de datos](data-access/how-do-i-with-linq/how-do-i-linq-to-sql-updating-the-database.md)
         - [LINQ to SQL: LinqDataSource](data-access/how-do-i-with-linq/how-do-i-linq-to-sql-linqdatasource.md)
-        - [LINQ to SQL: Custom LinqDataSource](data-access/how-do-i-with-linq/how-do-i-linq-to-sql-custom-linqdatasource.md)
-        - [LINQ to SQL: Uso de procedimientos almacenados](data-access/how-do-i-with-linq/how-do-i-linq-to-sql-using-stored-procedures.md)
+        - [LINQ to SQL: LinqDataSource personalizado](data-access/how-do-i-with-linq/how-do-i-linq-to-sql-custom-linqdatasource.md)
+        - [LINQ to SQL: Utilizar procedimientos almacenados](data-access/how-do-i-with-linq/how-do-i-linq-to-sql-using-stored-procedures.md)
         - [LINQ to SQL: Actualizar con procedimientos almacenados](data-access/how-do-i-with-linq/how-do-i-linq-to-sql-updating-with-stored-procedures.md)
         - [LINQ to SQL: Ejecutar SQL arbitrario](data-access/how-do-i-with-linq/how-do-i-linq-to-sql-executing-arbitrary-sql.md)
     - [Vídeos de LINQ del equipo de VB](data-access/linq-videos-from-the-vb-team/index.md)
@@ -396,7 +396,7 @@ ms.locfileid: "57019052"
 
         - [Crear una página maestra en Visual Studio 2008](aspnet-35/how-do-i/how-do-i-create-a-master-page-in-visual-studio-2008.md)
         - [Crear una página maestra anidada en Visual Studio 2008](aspnet-35/how-do-i/how-do-i-create-nested-master-page-in-visual-studio-2008.md)
-        - [Hojas de estilos en cascada en Visual Studio 2008](aspnet-35/how-do-i/how-do-i-cascading-style-sheets-in-visual-studio-2008.md)
+        - [Hojas de estilo CSS en Visual Studio 2008](aspnet-35/how-do-i/how-do-i-cascading-style-sheets-in-visual-studio-2008.md)
         - [Trabajar con Visual Studio 2008 .NET Framework](aspnet-35/how-do-i/how-do-i-working-with-visual-studio-2008-net-framework.md)
         - [Agregar elementos a un archivo CSS y crear CSS sobre la marcha](aspnet-35/how-do-i/how-do-i-adding-elements-to-a-css-file-and-create-new-css-on-the-fly.md)
         - [Administración y características avanzadas de las hojas de estilos en cascada](aspnet-35/how-do-i/how-do-i-advance-cascading-style-sheet-features-and-management.md)
@@ -410,13 +410,13 @@ ms.locfileid: "57019052"
         - [Compatibilidad con ASP.NET AJAX en Visual Studio 2008](aspnet-35/aspnet-ajax/aspnet-ajax-support-in-visual-studio-2008.md)
         - [Agregar funcionalidad AJAX a una página ASP.NET existente](aspnet-35/aspnet-ajax/adding-ajax-functionality-to-an-existing-aspnet-page.md)
         - [Crear y usar un servicio web habilitado para AJAX en un sitio web](aspnet-35/aspnet-ajax/creating-and-using-an-ajax-enabled-web-service-in-a-web-site.md)
-        - [AJAX DE ASP.NET: Ver una demostración de AJAX de ASP.NET](aspnet-35/aspnet-ajax/aspnet-ajax-a-demonstration-of-aspnet-ajax.md)
+        - [ASP.NET AJAX: Demostración de ASP.NET AJAX](aspnet-35/aspnet-ajax/aspnet-ajax-a-demonstration-of-aspnet-ajax.md)
         - [Servicios de datos de ADO.NET con compatibilidad con ASP.NET AJAX](aspnet-35/aspnet-ajax/adonet-data-services-with-aspnet-ajax-support.md)
         - [Introducción al historial de ASP.NET Ajax](aspnet-35/aspnet-ajax/introduction-to-aspnet-ajax-history.md)
         - [Usar la combinación de scripts para mejorar el rendimiento de AJAX](aspnet-35/aspnet-ajax/using-script-combining-to-improve-ajax-performance.md)
     - [Controles de datos](aspnet-35/data-controls/index.md)
 
-        - [ListView (Control)](aspnet-35/data-controls/the-listview-control.md)
+        - [Control ListView](aspnet-35/data-controls/the-listview-control.md)
         - [Control DataPager](aspnet-35/data-controls/the-datapager-control.md)
     - [Diseñador de Visual Studio](aspnet-35/visual-studio-designer/index.md)
 
@@ -451,7 +451,7 @@ ms.locfileid: "57019052"
         - [Limpiar archivos Web.Config](net-4/core/aspnet-4-quick-hit-clean-webconfig-files.md)
         - [Id. de cliente predecibles](net-4/core/aspnet-4-quick-hit-predictable-client-ids.md)
         - [Método de utilidad HtmlEncoder](net-4/core/aspnet-4-quick-hit-the-htmlencoder-utility-method.md)
-    - [Data](net-4/data/index.md)
+    - [Datos](net-4/data/index.md)
 
         - [Selección persistente de filas del control GridView](net-4/data/aspnet-4-quick-hit-persistent-gridview-row-selection.md)
     - [Control de marcado](net-4/markup-control/index.md)
@@ -482,7 +482,7 @@ ms.locfileid: "57019052"
     - [Controles de datos fuertemente tipados](aspnet-web-forms-vnext/aspnet-vnext-videos-strongly-typed-data-controls.md)
     - [Enlace de modelos, parte 1: Seleccionar datos](aspnet-web-forms-vnext/aspnet-vnext-videos-model-binding-part-1-selecting-data.md)
     - [Enlace de modelos, parte 2: Filtrar](aspnet-web-forms-vnext/aspnet-vnext-videos-model-binding-part-2-filtering.md)
-    - [Enlace de modelos, parte 3: Actualización](aspnet-web-forms-vnext/aspnet-vnext-videos-model-binding-part-3-updating.md)
+    - [Enlace de modelos, parte 3: Actualizar](aspnet-web-forms-vnext/aspnet-vnext-videos-model-binding-part-3-updating.md)
     - [Enlace de modelos de Formularios Web Forms de ASP.NET 4.5](aspnet-web-forms-vnext/aspnet-45-web-forms-model-binding.md)
     - [Controles de datos fuertemente tipados de Formularios Web Forms de ASP.NET 4.5](aspnet-web-forms-vnext/aspnet-45-web-forms-strong-typed-data-controls.md)
     - [Unión y minificación](aspnet-web-forms-vnext/aspnet-vnext-videos-bundling-and-minification.md)

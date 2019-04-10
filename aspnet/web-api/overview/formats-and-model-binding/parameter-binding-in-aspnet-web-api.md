@@ -1,25 +1,26 @@
 ---
 uid: web-api/overview/formats-and-model-binding/parameter-binding-in-aspnet-web-api
-title: Parámetro de enlace en ASP.NET Web API | Microsoft Docs
+title: Parámetro de enlace en ASP.NET Web API - ASP.NET 4.x
 author: MikeWasson
-description: ''
+description: Describe cómo Web API enlaza los parámetros y cómo personalizar el proceso de enlace en ASP.NET 4.x.
 ms.author: riande
 ms.date: 07/11/2013
+ms.custom: seoapril2019
 ms.assetid: e42c8388-04ed-4341-9fdb-41b1b4c06320
 msc.legacyurl: /web-api/overview/formats-and-model-binding/parameter-binding-in-aspnet-web-api
 msc.type: authoredcontent
-ms.openlocfilehash: a022138c594154109ff0bfba85949099e6b2d2a2
-ms.sourcegitcommit: 289e051cc8a90e8f7127e239fda73047bde4de12
+ms.openlocfilehash: f121f12ce689a079412bbd5392fde4fea863ff1f
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/25/2019
-ms.locfileid: "58422758"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59401977"
 ---
-<a name="parameter-binding-in-aspnet-web-api"></a>Parámetro de enlace en ASP.NET Web API
-====================
+# <a name="parameter-binding-in-aspnet-web-api"></a>Parámetro de enlace en ASP.NET Web API
+
 por [Mike Wasson](https://github.com/MikeWasson)
 
-Cuando la API Web llama a un método en un controlador, se deben establecer valores para los parámetros, un proceso denominado *enlace*. En este artículo se describe cómo Web API enlaza los parámetros y cómo puede personalizar el proceso de enlace.
+En este artículo se describe cómo Web API enlaza los parámetros y cómo puede personalizar el proceso de enlace. Cuando la API Web llama a un método en un controlador, se deben establecer valores para los parámetros, un proceso denominado *enlace*. 
 
 De forma predeterminada, Web API usa las siguientes reglas para enlazar parámetros:
 

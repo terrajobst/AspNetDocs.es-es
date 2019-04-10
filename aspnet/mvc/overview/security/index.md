@@ -8,15 +8,15 @@ ms.date: 08/10/2011
 ms.assetid: 1c1aa6a6-82f4-4553-8495-dc99814162df
 msc.legacyurl: /mvc/overview/security
 msc.type: chapter
-ms.openlocfilehash: 74808405e15f5bf230c5dd77e8603f4982cd78d7
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: 0e060fe9cff63558d371a19bcfb7cadad21e7f9d
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57019972"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59401691"
 ---
-<a name="security-authentication-and-authorization-with-aspnet-mvc"></a>Seguridad, autenticación y autorización con ASP.NET MVC
-====================
+# <a name="security-authentication-and-authorization-with-aspnet-mvc"></a>Seguridad, autenticación y autorización con ASP.NET MVC
+
 > Cómo proteger un sitio de ASP.NET y cómo implementar la autenticación y autorización.
 
 

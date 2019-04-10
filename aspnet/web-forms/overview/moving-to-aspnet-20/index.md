@@ -8,15 +8,15 @@ ms.date: 10/05/2011
 ms.assetid: d4287e40-272a-412f-b0e9-59a5d97421bd
 msc.legacyurl: /web-forms/overview/moving-to-aspnet-20
 msc.type: chapter
-ms.openlocfilehash: ccccb2610e040cf709099b44d1e583eae0848365
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: 651ac82196b29d0f90c5dff41c9ce42b4bdcf627
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57020922"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59395503"
 ---
-<a name="older-versions---aspnet-20"></a>Versiones anteriores: ASP.NET 2.0
-====================
+# <a name="older-versions---aspnet-20"></a>Versiones anteriores: ASP.NET 2.0
+
 > Cómo migrar las aplicaciones ASP.NET 1.x a ASP.NET 2.0.
 
 
@@ -26,7 +26,7 @@ ms.locfileid: "57020922"
 - [Páginas maestras](master-pages.md)
 - [Controles de origen de datos](data-source-controls.md)
 - [Controles enlazados a datos](data-bound-controls.md)
-- [Almacenamiento en caché](caching.md)
+- [Almacenamiento en memoria caché](caching.md)
 - [Pertenencia](membership.md)
 - [Configuración e instrumentación](configuration-and-instrumentation.md)
 - [Perfiles, temas y elementos web](profiles-themes-and-web-parts.md)

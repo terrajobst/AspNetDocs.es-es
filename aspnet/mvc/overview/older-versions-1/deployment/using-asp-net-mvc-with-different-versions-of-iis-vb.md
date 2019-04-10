@@ -8,15 +8,15 @@ ms.date: 08/19/2008
 ms.assetid: 1c1283b2-6956-4937-b568-d30de432ce23
 msc.legacyurl: /mvc/overview/older-versions-1/deployment/using-asp-net-mvc-with-different-versions-of-iis-vb
 msc.type: authoredcontent
-ms.openlocfilehash: e83a5f8e5d1726dc2f39a9aee6515995ce0ed157
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: 0446a125845134d2fad869094a540c960f6b0a25
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57057912"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59406475"
 ---
-<a name="using-aspnet-mvc-with-different-versions-of-iis-vb"></a>Usar ASP.NET MVC con distintas versiones de IIS (VB)
-====================
+# <a name="using-aspnet-mvc-with-different-versions-of-iis-vb"></a>Usar ASP.NET MVC con distintas versiones de IIS (VB)
+
 por [Microsoft](https://github.com/microsoft)
 
 > En este tutorial, aprenderá a usar ASP.NET MVC y el enrutamiento de direcciones URL, con diferentes versiones de Internet Information Services. Aprenda estrategias distintas para usar ASP.NET MVC con IIS 7.0 (modo clásico), IIS 6.0 y versiones anteriores de IIS.
@@ -54,7 +54,7 @@ El modo de procesamiento de solicitud viene determinada por el grupo de aplicaci
 De forma predeterminada, IIS está configurado para admitir dos grupos de aplicaciones: **DefaultAppPool** y **Classic .NET AppPool**. Si se selecciona DefaultAppPool, la aplicación se está ejecutando en modo de procesamiento de solicitud integrada. Si se selecciona Classic .NET AppPool, la aplicación se ejecuta en modo de procesamiento de solicitudes clásico.
 
 
-[![El cuadro de diálogo nuevo proyecto](using-asp-net-mvc-with-different-versions-of-iis-vb/_static/image1.jpg)](using-asp-net-mvc-with-different-versions-of-iis-vb/_static/image1.png)
+[![Tel cuadro de diálogo nuevo proyecto](using-asp-net-mvc-with-different-versions-of-iis-vb/_static/image1.jpg)](using-asp-net-mvc-with-different-versions-of-iis-vb/_static/image1.png)
 
 **Figura 1**: Detectar el modo de procesamiento de solicitud ([haga clic aquí para ver imagen en tamaño completo](using-asp-net-mvc-with-different-versions-of-iis-vb/_static/image2.png))
 
@@ -97,7 +97,7 @@ O producto
 Lamentablemente, las versiones anteriores de IIS no pasan estas solicitudes para el marco de ASP.NET. Por lo tanto, estas solicitudes no se enrutan a un controlador. Por ejemplo, si se realiza una solicitud de explorador para el índice de/Home de dirección URL, a continuación, obtendrá la página de error en la figura 2.
 
 
-[![El cuadro de diálogo nuevo proyecto](using-asp-net-mvc-with-different-versions-of-iis-vb/_static/image2.jpg)](using-asp-net-mvc-with-different-versions-of-iis-vb/_static/image3.png)
+[![Tel cuadro de diálogo nuevo proyecto](using-asp-net-mvc-with-different-versions-of-iis-vb/_static/image2.jpg)](using-asp-net-mvc-with-different-versions-of-iis-vb/_static/image3.png)
 
 **Figura 2**: Recibir un error 404 no encontrado ([haga clic aquí para ver imagen en tamaño completo](using-asp-net-mvc-with-different-versions-of-iis-vb/_static/image4.png))
 
@@ -173,7 +173,7 @@ Le mostramos cómo habilitar una asignación de script comodín para IIS 7.0:
 7. Haga clic en el **Aceptar** botón
 
 
-[![El cuadro de diálogo nuevo proyecto](using-asp-net-mvc-with-different-versions-of-iis-vb/_static/image3.jpg)](using-asp-net-mvc-with-different-versions-of-iis-vb/_static/image5.png)
+[![Tel cuadro de diálogo nuevo proyecto](using-asp-net-mvc-with-different-versions-of-iis-vb/_static/image3.jpg)](using-asp-net-mvc-with-different-versions-of-iis-vb/_static/image5.png)
 
 **Figura 3**: Creación de una asignación de script comodín con IIS 7.0 ([haga clic aquí para ver imagen en tamaño completo](using-asp-net-mvc-with-different-versions-of-iis-vb/_static/image6.png))
 
@@ -190,7 +190,7 @@ Siga estos pasos para crear una asignación de script comodín con IIS 6.0:
 8. Haga clic en el **Aceptar** botón
 
 
-[![El cuadro de diálogo nuevo proyecto](using-asp-net-mvc-with-different-versions-of-iis-vb/_static/image4.jpg)](using-asp-net-mvc-with-different-versions-of-iis-vb/_static/image7.png)
+[![Tel cuadro de diálogo nuevo proyecto](using-asp-net-mvc-with-different-versions-of-iis-vb/_static/image4.jpg)](using-asp-net-mvc-with-different-versions-of-iis-vb/_static/image7.png)
 
 **Figura 4**: Creación de una asignación de script comodín con IIS 6.0 ([haga clic aquí para ver imagen en tamaño completo](using-asp-net-mvc-with-different-versions-of-iis-vb/_static/image8.png))
 
@@ -198,7 +198,7 @@ Siga estos pasos para crear una asignación de script comodín con IIS 6.0:
 Después de habilitar asignaciones de secuencia de comandos de comodines, deberá modificar la tabla de rutas en el archivo Global.asax para que incluya una ruta raíz. En caso contrario, aparecerá la página de error en la figura 5 cuando se realiza una solicitud para la página raíz de la aplicación. Puede usar el archivo Global.asax modificado en el listado 4.
 
 
-[![El cuadro de diálogo nuevo proyecto](using-asp-net-mvc-with-different-versions-of-iis-vb/_static/image5.jpg)](using-asp-net-mvc-with-different-versions-of-iis-vb/_static/image9.png)
+[![Tel cuadro de diálogo nuevo proyecto](using-asp-net-mvc-with-different-versions-of-iis-vb/_static/image5.jpg)](using-asp-net-mvc-with-different-versions-of-iis-vb/_static/image9.png)
 
 **Figura 5**: Falta el error de la ruta raíz ([haga clic aquí para ver imagen en tamaño completo](using-asp-net-mvc-with-different-versions-of-iis-vb/_static/image10.png))
 

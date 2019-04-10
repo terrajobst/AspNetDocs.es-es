@@ -8,15 +8,15 @@ ms.date: 06/10/2014
 ms.assetid: 3751f5e7-59db-4be0-a290-50abc24e5c84
 msc.legacyurl: /signalr/overview/performance/signalr-performance
 msc.type: authoredcontent
-ms.openlocfilehash: 3326c2e600854fc7a4435d96c45b04a6188d3937
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: b0da3032e22123f415bf9865e264832739c29f61
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57046742"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59409023"
 ---
-<a name="signalr-performance"></a>Rendimiento de SignalR
-====================
+# <a name="signalr-performance"></a>Rendimiento de SignalR
+
 por [Patrick Fletcher](https://github.com/pfletcher)
 
 [!INCLUDE [Consider ASP.NET Core SignalR](~/includes/signalr/signalr-version-disambiguation.md)]
@@ -199,14 +199,14 @@ Las siguientes métricas de medir el tráfico a través del bus de mensajes de S
 
 Las siguientes métricas de medir los errores generados por el tráfico de mensajes de SignalR. **Resolución de concentrador** errores se producen cuando un concentrador o un método de concentrador no se puede resolver. **Invocación de concentrador** errores son las excepciones iniciadas al invocar un método de concentrador. **Transporte** errores son errores de conexión que se produce durante una solicitud o respuesta HTTP.
 
-- **Errores: Total de todos los**
-- **Errores: All/seg.**
-- **Errores: Total de resolución de concentrador**
-- **Errores: Resolución de concentrador/seg.**
-- **Errores: Total de invocación de concentrador**
-- **Errores: Invocación de concentrador/seg.**
-- **Errores: Total de transporte**
-- **Errores: Transport/Sec**
+- **Errors: Total de todos los**
+- **Errors: All/seg.**
+- **Errors: Total de resolución de concentrador**
+- **Errors: Resolución de concentrador/seg.**
+- **Errors: Total de invocación de concentrador**
+- **Errors: Invocación de concentrador/seg.**
+- **Errors: Total de transporte**
+- **Errors: Transporte/seg.**
 
 <a id="scaleout_metrics"></a>
 
@@ -268,7 +268,7 @@ Los siguientes contadores de rendimiento también pueden ser útiles para superv
 - Conexiones de servicio web\conexiones Web
 - Conexiones Web Service\Maximum
 
-**Subprocesamiento**
+**Subprocesos**
 
 - .NET CLR de bloqueos y subprocesos\\número de subprocesos lógicos actuales
 - .NET CLR de bloqueos y subprocesos\\número de subprocesos físicos actuales
@@ -279,6 +279,6 @@ Los siguientes contadores de rendimiento también pueden ser útiles para superv
 
 Para obtener más información sobre la supervisión y optimización del rendimiento de ASP.NET, vea los temas siguientes:
 
-- [Información general acerca del rendimiento de ASP.NET](https://msdn.microsoft.com/library/cc668225(v=vs.100).aspx)
+- [Información general sobre el rendimiento de ASP.NET](https://msdn.microsoft.com/library/cc668225(v=vs.100).aspx)
 - [Uso de subprocesos de ASP.NET en IIS 6.0, IIS 7.0 y IIS 7.5](https://blogs.msdn.com/b/tmarq/archive/2007/07/21/asp-net-thread-usage-on-iis-7-0-and-6-0.aspx)
 - [&lt;applicationPool&gt; elemento (configuración Web)](https://msdn.microsoft.com/library/dd560842.aspx)

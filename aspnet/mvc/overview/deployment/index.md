@@ -1,23 +1,24 @@
 ---
 uid: mvc/overview/deployment/index
-title: Implementación | Microsoft Docs
+title: Implementación de ASP.NET MVC 5.0 - ASP.NET 4.x
 author: rick-anderson
-description: Cómo implementar proyectos de ASP.NET MVC en un servidor.
+description: Cómo implementar proyectos de ASP.NET MVC 5.0 en un servidor.
 ms.author: riande
 ms.date: 08/18/2011
+ms.custom: seoapril2019
 ms.assetid: 31922c31-59df-4399-99d2-e935a476f16a
 msc.legacyurl: /mvc/overview/deployment
 msc.type: chapter
-ms.openlocfilehash: caf5801dcec8c586626e830dafc1ab01c9c0e6d9
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: f4fb7ccaf9e6fbecf414d1bdfe7b4cae3218de4b
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57022952"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59389926"
 ---
 # <a name="aspnet-mvc-deployment"></a>Implementación de ASP.NET MVC
 
-> Cómo implementar proyectos de ASP.NET MVC en un servidor.
+> Cómo implementar proyectos de ASP.NET MVC 5.0 en un servidor.
 
 - [Información general de implementación Web para Visual Studio y ASP.NET](https://msdn.microsoft.com/library/dd394698)
 - [Migrar aplicaciones de ASP.NET MVC a contenedores de Windows](docker-aspnetmvc.md)

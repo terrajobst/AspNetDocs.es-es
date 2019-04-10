@@ -8,15 +8,15 @@ ms.date: 10/30/2006
 ms.assetid: 57743ca7-5695-4e07-aed1-44b297f245a9
 msc.legacyurl: /web-forms/overview/data-access/editing-and-deleting-data-through-the-datalist/performing-batch-updates-cs
 msc.type: authoredcontent
-ms.openlocfilehash: 2de7cdbfc37140a4b60c3123524974c4f0ffa42f
-ms.sourcegitcommit: 289e051cc8a90e8f7127e239fda73047bde4de12
+ms.openlocfilehash: 388637d67594d6431a134673cf85b3b18098136e
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/25/2019
-ms.locfileid: "58425878"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59402757"
 ---
-<a name="performing-batch-updates-c"></a>Realizar actualizaciones por lotes (C#)
-====================
+# <a name="performing-batch-updates-c"></a>Realizar actualizaciones por lotes (C#)
+
 por [Scott Mitchell](https://twitter.com/ScottOnWriting)
 
 [Descargue la aplicación de ejemplo](http://download.microsoft.com/download/9/c/1/9c1d03ee-29ba-4d58-aa1a-f201dcc822ea/ASPNET_Data_Tutorial_37_CS.exe) o [descargar PDF](performing-batch-updates-cs/_static/datatutorial37cs1.pdf)
@@ -29,7 +29,7 @@ por [Scott Mitchell](https://twitter.com/ScottOnWriting)
 En el [tutorial anterior](an-overview-of-editing-and-deleting-data-in-the-datalist-cs.md) hemos visto cómo crear un control DataList de nivel de elemento. Como GridView editable estándar, cada elemento en el control DataList incluye una edición de botón que, al hacer clic en, haría que el elemento editable. Aunque este nivel de elemento edición funciona bien con datos que solo se actualizan ocasionalmente, determinados escenarios de casos de uso requieren que el usuario editar el número de registros. Si un usuario necesita editar docenas de registros y se ve obligado a haga clic en Editar, realice los cambios y haga clic en Actualizar para cada uno de ellos, la cantidad de hacer clic en, puede reducir su productividad. En tales situaciones, una mejor opción es proporcionar un control DataList puede modificar por completo, donde *todas* de sus elementos están en modo de edición y cuyos valores se pueden editar, haga clic en un botón Actualizar todo en la página (consulte la figura 1).
 
 
-[![Se puede modificar cada elemento en un control DataList Editable totalmente](performing-batch-updates-cs/_static/image2.png)](performing-batch-updates-cs/_static/image1.png)
+[![Ese puede modificar ACH elemento en un control DataList Editable totalmente](performing-batch-updates-cs/_static/image2.png)](performing-batch-updates-cs/_static/image1.png)
 
 **Figura 1**: Se puede modificar cada elemento en un control DataList Editable totalmente ([haga clic aquí para ver imagen en tamaño completo](performing-batch-updates-cs/_static/image3.png))
 
@@ -50,7 +50,7 @@ Para un control DataList totalmente editable, queremos *todas* de la `DataListIt
 Comience abriendo la `BatchUpdate.aspx` página, agregue un control DataList y establezca su `ID` propiedad `Suppliers`. En la etiqueta inteligente de DataList s, optar por agregar un nuevo control ObjectDataSource denominado `SuppliersDataSource`.
 
 
-[![Crear un nuevo origen ObjectDataSource denominado SuppliersDataSource](performing-batch-updates-cs/_static/image5.png)](performing-batch-updates-cs/_static/image4.png)
+[![Ccrear un nuevo SuppliersDataSource denominado de ObjectDataSource](performing-batch-updates-cs/_static/image5.png)](performing-batch-updates-cs/_static/image4.png)
 
 **Figura 2**: Crear un nuevo origen ObjectDataSource denominado `SuppliersDataSource` ([haga clic aquí para ver imagen en tamaño completo](performing-batch-updates-cs/_static/image6.png))
 
@@ -58,12 +58,12 @@ Comience abriendo la `BatchUpdate.aspx` página, agregue un control DataList y e
 Configurar el origen ObjectDataSource para recuperar datos mediante el `SuppliersBLL` clase s `GetSuppliers()` (método) (consulte la figura 3). Al igual que con el tutorial anterior, en lugar de actualizar la información del proveedor a través de ObjectDataSource, vamos a trabajar directamente con la capa de lógica empresarial. Por lo tanto, establecer la lista desplegable en (None) en la pestaña de actualización (consulte la figura 4).
 
 
-[![Recuperar la información de proveedor mediante el método GetSuppliers()](performing-batch-updates-cs/_static/image8.png)](performing-batch-updates-cs/_static/image7.png)
+[![RInformación del proveedor mediante el método GetSuppliers() etrieve](performing-batch-updates-cs/_static/image8.png)](performing-batch-updates-cs/_static/image7.png)
 
 **Figura 3**: Recuperar información de proveedor mediante el `GetSuppliers()` método ([haga clic aquí para ver imagen en tamaño completo](performing-batch-updates-cs/_static/image9.png))
 
 
-[![Establecer la lista desplegable en (None) en la pestaña de la actualización](performing-batch-updates-cs/_static/image11.png)](performing-batch-updates-cs/_static/image10.png)
+[![Sla lista desplegable en (None) en la ficha actualización et](performing-batch-updates-cs/_static/image11.png)](performing-batch-updates-cs/_static/image10.png)
 
 **Figura 4**: Establecer la lista desplegable en (None) en la pestaña de actualización ([haga clic aquí para ver imagen en tamaño completo](performing-batch-updates-cs/_static/image12.png))
 
@@ -87,7 +87,7 @@ En el `ItemTemplate` me m con dos nuevas clases CSS, `SupplierPropertyLabel` y `
 Después de realizar estos cambios, visite esta página a través de un explorador. Como se muestra en la figura 5, cada elemento DataList muestra el nombre del proveedor como texto y cuadros de texto utiliza para mostrar la dirección, ciudad y país.
 
 
-[![Cada proveedor en el control DataList es modificable](performing-batch-updates-cs/_static/image14.png)](performing-batch-updates-cs/_static/image13.png)
+[![EACH proveedor en el control DataList es modificable](performing-batch-updates-cs/_static/image14.png)](performing-batch-updates-cs/_static/image13.png)
 
 **Figura 5**: Cada proveedor en el control DataList es Editable ([haga clic aquí para ver imagen en tamaño completo](performing-batch-updates-cs/_static/image15.png))
 
@@ -104,7 +104,7 @@ Comience por agregar un control de botón Web por encima de los controles DataLi
 Figura 6 muestra la página después de han agregado los botones Actualizar todo.
 
 
-[![Dos botones de todas las actualizaciones se han agregado a la página](performing-batch-updates-cs/_static/image17.png)](performing-batch-updates-cs/_static/image16.png)
+[![Two actualización todos los botones se han agregado a la página](performing-batch-updates-cs/_static/image17.png)](performing-batch-updates-cs/_static/image16.png)
 
 **Figura 6**: Dos botones de todas las actualizaciones se han agregado a la página ([haga clic aquí para ver imagen en tamaño completo](performing-batch-updates-cs/_static/image18.png))
 

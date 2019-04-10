@@ -8,15 +8,15 @@ ms.date: 06/12/2014
 ms.assetid: 364ce84e-5af8-4e08-afc9-75a512b01f84
 msc.legacyurl: /aspnet/overview/developing-apps-with-windows-azure/building-real-world-cloud-apps-with-windows-azure/design-to-survive-failures
 msc.type: authoredcontent
-ms.openlocfilehash: 72b26fd58866df1296d06bd9e3bc695900cfbf65
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: fbe618acfc70711933996f97657a4326d389b3dd
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57035202"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59411246"
 ---
-<a name="design-to-survive-failures-building-real-world-cloud-apps-with-azure"></a>Diseño para sobrevivir a errores (crear aplicaciones de nube reales con Azure)
-====================
+# <a name="design-to-survive-failures-building-real-world-cloud-apps-with-azure"></a>Diseño para sobrevivir a errores (crear aplicaciones de nube reales con Azure)
+
 by [Mike Wasson](https://github.com/MikeWasson), [Rick Anderson]((https://twitter.com/RickAndMSFT)), [Tom Dykstra](https://github.com/tdykstra)
 
 [Descargar proyecto corregirlo](http://code.msdn.microsoft.com/Fix-It-app-for-Building-cdd80df4) o [descargar libro electrónico](http://blogs.msdn.com/b/microsoft_press/archive/2014/07/23/free-ebook-building-cloud-apps-with-microsoft-azure.aspx)

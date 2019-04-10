@@ -8,15 +8,15 @@ ms.date: 02/15/2012
 ms.assetid: 0fed43a5-4703-41ff-8da9-15917cbc0944
 msc.legacyurl: /web-api/videos/getting-started/getting-data
 msc.type: video
-ms.openlocfilehash: 03b69d6f3af1f467c4b13045e96e0e981e663a00
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: 2e584a7a924d985de57d7d61ab45812af19093d1
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57056792"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59391915"
 ---
-<a name="aspnet-web-api-part-2-getting-data"></a>ASP.NET Web API, parte 2: Obtener datos
-====================
+# <a name="aspnet-web-api-part-2-getting-data"></a>ASP.NET Web API, parte 2: Obtener datos
+
 por [Jon Galloway](https://github.com/jongalloway)
 
 > [!NOTE]

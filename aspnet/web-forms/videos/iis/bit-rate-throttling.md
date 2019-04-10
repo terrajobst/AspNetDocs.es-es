@@ -8,15 +8,15 @@ ms.date: 03/09/2009
 ms.assetid: 8dc90862-97d6-48d1-8bfc-79c70d622474
 msc.legacyurl: /web-forms/videos/iis/bit-rate-throttling
 msc.type: video
-ms.openlocfilehash: e5230a600fb8a6330ba173fdf88298008e187753
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: 4845c9f7311bf6e973c7be9230b32ac3fc1677ba
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57060752"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59405279"
 ---
-<a name="bit-rate-throttling"></a>Limitación de la velocidad de bits
-====================
+# <a name="bit-rate-throttling"></a>Limitación de la velocidad de bits
+
 por [Joe Stagner](https://github.com/JoeStagner)
 
 Este vídeo le enseñará cómo instalar y configurar una nueva característica de IIS7 excelente: limitación de velocidad de bits. Con BRT puede servir archivos multimedia o descargas grandes sin dañar el rendimiento de la interfaz de usuario de sitios.

@@ -8,15 +8,15 @@ ms.date: 05/04/2012
 ms.assetid: 07978d9d-341c-4524-bcba-62976f390f77
 msc.legacyurl: /web-forms/overview/deployment/web-deployment-in-the-enterprise/understanding-the-project-file
 msc.type: authoredcontent
-ms.openlocfilehash: 114dd21002ef41627f3a101c0197a85fd5208887
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: d774a8e13e108d1be4c39e1e909d3d9683968a0d
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57053972"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59404928"
 ---
-<a name="understanding-the-project-file"></a>Descripción del archivo de proyecto
-====================
+# <a name="understanding-the-project-file"></a>Descripción del archivo de proyecto
+
 por [Jason Lee](https://github.com/jrjlee)
 
 [Descargar PDF](https://msdnshared.blob.core.windows.net/media/MSDNBlogsFS/prod.evol.blogs.msdn.com/CommunityServer.Blogs.Components.WeblogFiles/00/00/00/63/56/8130.DeployingWebAppsInEnterpriseScenarios.pdf)
@@ -90,7 +90,7 @@ Normalmente necesita un archivo de proyecto proporcionar una gran cantidad de di
 [!code-xml[Main](understanding-the-project-file/samples/sample2.xml)]
 
 
-Para recuperar un valor de propiedad, use el formato <strong>$(</strong><em>PropertyName</em><strong>)</strong><em>.</em> Por ejemplo, para recuperar el valor de la <strong>ServerName</strong> propiedad, escribiría:
+Para recuperar un valor de propiedad, use el formato **$(***PropertyName***) ***.* Por ejemplo, para recuperar el valor de la **ServerName** propiedad, escribiría:
 
 
 [!code-powershell[Main](understanding-the-project-file/samples/sample3.ps1)]
@@ -192,8 +192,8 @@ Destinos y tareas pueden incluir **condición** atributos. Por lo tanto, puede e
 
 Por lo general, al crear tareas útiles y destinos, necesita hacer referencia a las propiedades y elementos que ha definido en otro lugar del archivo de proyecto:
 
-- Para usar un valor de propiedad, escriba <strong>$(</strong><em>PropertyName</em><strong>)</strong>, donde <em>PropertyName</em> es el nombre de la <strong>propiedad</strong> elemento o el nombre del parámetro.
-- Para usar un elemento, escriba <strong>@(</strong><em>ItemName</em><strong>)</strong>, donde <em>ItemName</em> es el nombre de la <strong>elemento</strong> elemento.
+- Para usar un valor de propiedad, escriba **$(***PropertyName***)**, donde *PropertyName* es el nombre de la **propiedad** elemento o el nombre de la parámetro.
+- Para usar un elemento, escriba **@(***ItemName***)**, donde *ItemName* es el nombre de la **elemento** elemento.
 
 > [!NOTE]
 > Recuerde que si crea varios elementos con el mismo nombre, va a compilar una lista. En cambio, si crea varias propiedades con el mismo nombre, el último valor de propiedad que proporcione sobrescribirá todas las propiedades anteriores con el mismo nombre&#x2014;una propiedad sólo puede contener un valor único.

@@ -8,15 +8,15 @@ ms.date: 04/12/2011
 ms.assetid: a60d0b1f-38c4-4a7a-901e-8de57b087dd4
 msc.legacyurl: /web-pages/videos/introduction/create-a-website-using-webmatrix
 msc.type: video
-ms.openlocfilehash: 4e0f1113728da6e5e95da8025bafbee217a53c72
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: 6b19196383b8bfa4d0f37f6d27bfd6009882bc14
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57053952"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59406202"
 ---
-<a name="create-a-website-using-webmatrix"></a>Crear un sitio web mediante WebMatrix
-====================
+# <a name="create-a-website-using-webmatrix"></a>Crear un sitio web mediante WebMatrix
+
 por [Advaiya](https://twitter.com/Advaiyasolns)
 
 Parte 2 le enseña a crear su primera página Web mediante WebMatrix.

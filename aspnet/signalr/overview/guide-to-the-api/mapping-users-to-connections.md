@@ -8,15 +8,15 @@ ms.date: 12/30/2014
 ms.assetid: f80c08b1-3f1f-432c-980c-c7b6edeb31b1
 msc.legacyurl: /signalr/overview/guide-to-the-api/mapping-users-to-connections
 msc.type: authoredcontent
-ms.openlocfilehash: 786fc6bbc0b8d430770cf19d1647dbdba26347aa
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: d55d40848e1e9d40570850c3552b225235c5e814
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57065612"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59389796"
 ---
-<a name="mapping-signalr-users-to-connections"></a>Asignar usuarios de SignalR a las conexiones
-====================
+# <a name="mapping-signalr-users-to-connections"></a>Asignar usuarios de SignalR a las conexiones
+
 por [Tom FitzMacken](https://github.com/tfitzmac)
 
 [!INCLUDE [Consider ASP.NET Core SignalR](~/includes/signalr/signalr-version-disambiguation.md)]

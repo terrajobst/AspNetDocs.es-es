@@ -8,15 +8,15 @@ ms.date: 10/11/2018
 ms.assetid: f79fbf7f-59e5-4279-a832-c1a0294630f4
 msc.legacyurl: /mvc/mvc5
 msc.type: content
-ms.openlocfilehash: 14fcf863a4ef5f6c9180cdf9e7b632ccdb1ebcb0
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: ed25b2563f8c3f2d686affbcad4e2844289cb287
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57038042"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59406761"
 ---
-<a name="aspnet-mvc-5"></a>ASP.NET MVC 5
-====================
+# <a name="aspnet-mvc-5"></a>ASP.NET MVC 5
+
 ## <a name="whats-new-in-aspnet-mvc-5"></a>Novedades de ASP.NET MVC 5
 
 ### <a name="one-aspnet"></a>One ASP.NET

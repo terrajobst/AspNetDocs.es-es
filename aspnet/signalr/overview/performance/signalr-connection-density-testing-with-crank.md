@@ -8,15 +8,15 @@ ms.date: 02/22/2015
 ms.assetid: 148d9ca7-1af1-44b6-a9fb-91e261b9b463
 msc.legacyurl: /signalr/overview/performance/signalr-connection-density-testing-with-crank
 msc.type: authoredcontent
-ms.openlocfilehash: 40c9764f0c47b83df8300553b4b290429937345c
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: bb8a7da1080dc325c0479b337d114b8dcdf6e102
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57058032"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59390069"
 ---
-<a name="signalr-connection-density-testing-with-crank"></a>Pruebas de densidad de la conexión de SignalR con Crank
-====================
+# <a name="signalr-connection-density-testing-with-crank"></a>Pruebas de densidad de la conexión de SignalR con Crank
+
 por [Tom FitzMacken](https://github.com/tfitzmac)
 
 [!INCLUDE [Consider ASP.NET Core SignalR](~/includes/signalr/signalr-version-disambiguation.md)]

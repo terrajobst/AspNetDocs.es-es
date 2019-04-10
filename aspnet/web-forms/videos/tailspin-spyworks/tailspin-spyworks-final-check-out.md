@@ -8,15 +8,15 @@ ms.date: 06/29/2010
 ms.assetid: 61ee30d6-c557-4ebd-9538-1253bd02d825
 msc.legacyurl: /web-forms/videos/tailspin-spyworks/tailspin-spyworks-final-check-out
 msc.type: video
-ms.openlocfilehash: c51d6634f6b13662c43d1243a08442b7582767b8
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: 9642e3ab581462359d4bc37e6ab41e4372339f5b
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57025622"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59405474"
 ---
-<a name="tailspin-spyworks---final-check-out"></a>Tailspin Spyworks - Finalizar la compra
-====================
+# <a name="tailspin-spyworks---final-check-out"></a>Tailspin Spyworks - Finalizar la compra
+
 por [Joe Stagner](https://github.com/JoeStagner)
 
 Joe Stagner coloca el pedido del cliente durante el proceso de la aplicación de formularios Web Forms de ejemplo Tailspin Spyworks desprotección final.

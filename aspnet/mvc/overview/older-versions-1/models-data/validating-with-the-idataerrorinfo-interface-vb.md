@@ -8,15 +8,15 @@ ms.date: 03/02/2009
 ms.assetid: 3a8a9d9f-82dd-4959-b7c6-960e9ce95df1
 msc.legacyurl: /mvc/overview/older-versions-1/models-data/validating-with-the-idataerrorinfo-interface-vb
 msc.type: authoredcontent
-ms.openlocfilehash: e9b989d0110c3947583fd70bd38b29dcb2bb5c31
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: c64e1ea1562c3a0cfe4fb33f1c3033bb9c31bd2c
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57033702"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59402744"
 ---
-<a name="validating-with-the-idataerrorinfo-interface-vb"></a>Validación de la interfaz IDataErrorInfo (VB)
-====================
+# <a name="validating-with-the-idataerrorinfo-interface-vb"></a>Validación de la interfaz IDataErrorInfo (VB)
+
 by [Stephen Walther](https://github.com/StephenWalther)
 
 > Stephen Walther muestra cómo mostrar los mensajes de error de validación personalizada implementando la interfaz IDataErrorInfo en una clase de modelo.
@@ -31,7 +31,7 @@ En este tutorial, usará la base de datos MoviesDB y la tabla de base de datos d
 <a id="0.6_table01"></a>
 
 
-| **Nombre de columna** | **Tipo de datos** | **Permitir valores null** |
+| **Nombre de columna** | **Tipo de datos** | **Permitir valores nulos** |
 | --- | --- | --- |
 | Id. | Valor int. | False |
 | Título | Nvarchar(100) | False |
@@ -42,7 +42,7 @@ En este tutorial, usará la base de datos MoviesDB y la tabla de base de datos d
 En este tutorial, usar Microsoft Entity Framework para generar mis clases de modelo de base de datos. La clase Movie generada por Entity Framework se muestra en la figura 1.
 
 
-[![La entidad de película](validating-with-the-idataerrorinfo-interface-vb/_static/image1.jpg)](validating-with-the-idataerrorinfo-interface-vb/_static/image1.png)
+[![Tél entidades de película](validating-with-the-idataerrorinfo-interface-vb/_static/image1.jpg)](validating-with-the-idataerrorinfo-interface-vb/_static/image1.png)
 
 **Figura 01**: La entidad de la película ([haga clic aquí para ver imagen en tamaño completo](validating-with-the-idataerrorinfo-interface-vb/_static/image2.png))
 
@@ -56,7 +56,7 @@ En este tutorial, usar Microsoft Entity Framework para generar mis clases de mod
 
 Se usa el controlador Home para películas de lista y creación nuevas películas. El código para esta clase está contenido en el listado 1.
 
-**Listing 1 - Controllers\HomeController.vb**
+**Listado 1 - Controllers\HomeController.vb**
 
 [!code-vb[Main](validating-with-the-idataerrorinfo-interface-vb/samples/sample1.vb)]
 
@@ -73,7 +73,7 @@ La propiedad IsValid devuelve false cuando hay un error de validación. En ese c
 La clase Movie se genera por Entity Framework. Puede ver el código de la clase Movie si expandir el archivo MoviesDBModel.edmx en la ventana Explorador de soluciones y abra el archivo MoviesDBModel.Designer.vb en el Editor de código (consulte la figura 2).
 
 
-[![El código de la entidad de película](validating-with-the-idataerrorinfo-interface-vb/_static/image2.jpg)](validating-with-the-idataerrorinfo-interface-vb/_static/image3.png)
+[![Tel código para la entidad de película](validating-with-the-idataerrorinfo-interface-vb/_static/image2.jpg)](validating-with-the-idataerrorinfo-interface-vb/_static/image3.png)
 
 **Figura 02**: El código de la entidad de la película ([haga clic aquí para ver imagen en tamaño completo](validating-with-the-idataerrorinfo-interface-vb/_static/image4.png))
 
@@ -147,7 +147,7 @@ En el listado 4, se comprueba la propiedad de indizador el \_colección de error
 No es necesario modificar el controlador Home en alguna forma de usar la clase Movie modificada. La página se muestra en la figura 3 muestra lo que sucede cuando se especifica ningún valor para el título o Director campos del formulario.
 
 
-[![Creación automática de los métodos de acción](validating-with-the-idataerrorinfo-interface-vb/_static/image3.jpg)](validating-with-the-idataerrorinfo-interface-vb/_static/image5.png)
+[![Clos métodos de acción rear automáticamente](validating-with-the-idataerrorinfo-interface-vb/_static/image3.jpg)](validating-with-the-idataerrorinfo-interface-vb/_static/image5.png)
 
 **Figura 03**: Un formulario con los valores que faltan ([haga clic aquí para ver imagen en tamaño completo](validating-with-the-idataerrorinfo-interface-vb/_static/image6.png))
 

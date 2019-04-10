@@ -8,15 +8,15 @@ ms.date: 08/26/2010
 ms.assetid: 66944300-804e-484d-8176-6cfe8c128cfc
 msc.legacyurl: /web-forms/videos/tailspin-spyworks/tailspin-spyworks-creating-and-using-the-popular-products-control
 msc.type: video
-ms.openlocfilehash: f0134ed7ca793cec1fbb0264d620d270e7be0e03
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: e8ae1e4d284a32b9c5163a0339879eef0803fed9
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57025642"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59404798"
 ---
-<a name="tailspin-spyworks---creating-and-using-the-popular-products-control"></a>Tailspin Spyworks - crear y usar el Control de los productos más populares
-====================
+# <a name="tailspin-spyworks---creating-and-using-the-popular-products-control"></a>Tailspin Spyworks - crear y usar el Control de los productos más populares
+
 por [Joe Stagner](https://github.com/JoeStagner)
 
 Joe Stagner crea y utiliza el control de los productos más populares en la aplicación de formularios Web Forms de ejemplo Tailspin Spyworks.

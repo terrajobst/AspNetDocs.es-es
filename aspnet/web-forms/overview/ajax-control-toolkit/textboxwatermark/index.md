@@ -8,15 +8,15 @@ ms.date: 11/14/2011
 ms.assetid: ee920155-b136-4f87-9545-8b5777ade9f3
 msc.legacyurl: /web-forms/overview/ajax-control-toolkit/textboxwatermark
 msc.type: chapter
-ms.openlocfilehash: 1cfd57569766e01511f62dd225b23cf5c881b6e2
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: 958861f2a7df0beacf80cf9f2aa78a7c67db1532
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57021412"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59395438"
 ---
-<a name="textboxwatermark"></a>TextBoxWatermark
-====================
+# <a name="textboxwatermark"></a>TextBoxWatermark
+
 > Este tutorial muestra cómo usar el control TextBoxWatermark para mostrar un cuadro de texto con un mensaje que desaparece cuando comience a escribir en él los usuarios.
 
 

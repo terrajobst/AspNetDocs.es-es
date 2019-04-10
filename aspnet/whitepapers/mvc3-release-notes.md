@@ -8,15 +8,15 @@ ms.date: 10/06/2010
 ms.assetid: f44c166e-7e91-48a0-a6f8-d9285f3594e5
 msc.legacyurl: /whitepapers/mvc3-release-notes
 msc.type: content
-ms.openlocfilehash: 7342b5f4a7e2327f3f3850941510a6e46ec30842
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: 36bc314c6709c34863d86158419257be99f4084f
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57063872"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59407112"
 ---
-<a name="aspnet-mvc-3"></a>ASP.NET MVC 3
-====================
+# <a name="aspnet-mvc-3"></a>ASP.NET MVC 3
+
 - [Información general](#overview)
 - [Notas de instalación](#installation-notes)
 - [Requisitos de software](#software-requirements)
@@ -141,7 +141,7 @@ Tutoriales y otra información sobre ASP.NET MVC están disponibles en la págin
 [https://www.asp.net/mvc/](../mvc/index.md)
 
 <a id="support"></a>
-## <a name="support"></a>Compatibilidad
+## <a name="support"></a>Soporte técnico
 
 Esta es una versión totalmente compatible. Puede encontrar información sobre cómo obtener soporte técnico en el [sitio Web de Microsoft Support](https://support.microsoft.com/).
 
@@ -435,7 +435,7 @@ Cuando el *Html.ValidationMessage* método muestra un mensaje de validación, om
 <a id="_Toc2_10"></a>
 ### <a name="fixed-model-declaration-to-not-add-whitespace-to-the-document"></a>Fijo @model declaración no agregar espacio en blanco al documento
 
-En versiones anteriores, el <em>@model</em> declaración en la parte superior de una vista agrega una línea en blanco a la salida HTML representada. Este problema se ha corregido para que la declaración de no introducir un espacio en blanco.
+En versiones anteriores, el *@model* declaración en la parte superior de una vista agrega una línea en blanco a la salida HTML representada. Este problema se ha corregido para que la declaración de no introducir un espacio en blanco.
 
 <a id="_Toc2_11"></a>
 ### <a name="added-fileextensions-property-to-view-engines-to-support-engine-specific-file-names"></a>Propiedad "FileExtensions" se ha agregado a los motores de vista para admitir los nombres de archivo específico del motor
@@ -462,7 +462,7 @@ En versiones anteriores, los valores explícitos que se pasaron a la *RenderActi
 - En versiones anteriores de ASP.NET MVC, los filtros de acción se crearon por solicitud, excepto en algunos casos. Este comportamiento nunca fue un comportamiento garantizado, pero simplemente un detalle de implementación y el contrato para los filtros era tener en cuenta sin estado. En ASP.NET MVC 3, los filtros se almacenan en caché una forma más agresiva. Por lo tanto, los filtros de acción personalizada que se almacenen de forma incorrecta el estado de instancia se pueden interrumpidos.
 - Ha cambiado el orden de ejecución para los filtros de excepciones para los filtros de excepciones que tienen el mismo *orden* valor. En ASP.NET MVC 2 y versiones anteriores, los filtros de excepciones en el controlador que tenían el mismo *orden* valor tal y como los de un método de acción se ejecutaban antes que los filtros de excepciones en el método de acción. Esto normalmente sería el caso cuando se aplicaron filtros de excepción especificado *orden* valor. En ASP.NET MVC 3, este pedido se ha invertido para que se ejecuta primero el controlador de excepción más específico. Al igual que en versiones anteriores, si la *orden* propiedad se especifica explícitamente, los filtros se ejecutan en el orden especificado.
 - Una nueva propiedad denominada *FileExtensions* se agregó a la *VirtualPathProviderViewEngine* clase base. Cuando ASP.NET busca una vista mediante la ruta de acceso (no por nombre), se consideran sólo las vistas con una extensión de archivo incluidos en la lista especificada por esta nueva propiedad. Se trata de un cambio importante en las aplicaciones que se registra un proveedor de compilación personalizada con el fin de habilitar una extensión de archivo personalizado para las vistas de formulario Web Forms y donde el proveedor hace referencia a esas vistas mediante el uso de una ruta de acceso completa en lugar de un nombre. La solución consiste en modificar el valor de la *FileExtensions* propiedad para incluir la extensión de archivo personalizado.
-- Las implementaciones de fábrica del dispositivo personalizado que se implementan directamente el <em>IControllerFactory</em> interfaz debe proporcionar una implementación de la nueva <em>GetControllerSessionBehavior</em>  <em>método que se agregó a la interfaz en esta versión</em>. En general, se recomienda que no implemente esta interfaz directamente y en su lugar, derive la clase de <em>DefaultControllerFactory</em>.
+- Las implementaciones de fábrica del dispositivo personalizado que se implementan directamente el *IControllerFactory* interfaz debe proporcionar una implementación de la nueva *GetControllerSessionBehavior* método se agregan a la interfaz en esta versión. En general, se recomienda que no implemente esta interfaz directamente y en su lugar, derive la clase de *DefaultControllerFactory*.
 
 <a id="_Toc2_KI"></a>
 ## <a name="known-issues"></a>Problemas conocidos

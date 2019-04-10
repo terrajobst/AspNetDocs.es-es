@@ -8,15 +8,15 @@ ms.date: 10/17/2013
 ms.assetid: cc764f3b-6921-486a-8f44-c6ccd1249acd
 msc.legacyurl: /mvc/overview/getting-started/introduction/adding-a-controller
 msc.type: authoredcontent
-ms.openlocfilehash: 4f2c56624ad9c2f750dfd9d7f84410622106fc21
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: ad5f32a08270ce318c03e1b29acd74d12bbb3d3b
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57055732"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59394060"
 ---
-<a name="adding-a-controller"></a>Agregar un controlador
-====================
+# <a name="adding-a-controller"></a>Agregar un controlador
+
 by [Rick Anderson]((https://twitter.com/RickAndMSFT))
 
 [!INCLUDE [Tutorial Note](sample/code-location.md)]

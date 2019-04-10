@@ -8,15 +8,15 @@ ms.date: 03/02/2009
 ms.assetid: ec26f264-d0ea-4031-9943-825505a3ac4b
 msc.legacyurl: /mvc/overview/older-versions-1/views/using-the-tagbuilder-class-to-build-html-helpers-vb
 msc.type: authoredcontent
-ms.openlocfilehash: 783c5f73709de37f79c472e10c79e284cf25f8fd
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: 4fe34858aadb705ffb59e06ba805493d89aa4028
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57049402"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59403212"
 ---
-<a name="using-the-tagbuilder-class-to-build-html-helpers-vb"></a>Uso de la clase TagBuilder para compilar aplicaciones auxiliares HTML (VB)
-====================
+# <a name="using-the-tagbuilder-class-to-build-html-helpers-vb"></a>Uso de la clase TagBuilder para compilar aplicaciones auxiliares HTML (VB)
+
 by [Stephen Walther](https://github.com/StephenWalther)
 
 > Stephen Walther presenta una clase de utilidad en el marco de MVC de ASP.NET con el nombre de la clase TagBuilder. Puede usar la clase TagBuilder para compilar fácilmente las etiquetas HTML.
@@ -50,7 +50,7 @@ Cuando se crea una instancia de la clase TagBuilder, pase el nombre de la etique
 
 Por ejemplo, el listado 1 contiene una aplicación auxiliar de imagen HTML. La aplicación auxiliar de imagen se implementa internamente con un TagBuilder que representa un elemento HTML &lt;img&gt; etiqueta.
 
-**Listing 1 – Helpers\ImageHelper.vb**
+**Listado 1 – Helpers\ImageHelper.vb**
 
 [!code-vb[Main](using-the-tagbuilder-class-to-build-html-helpers-vb/samples/sample1.vb)]
 
@@ -65,7 +65,7 @@ Después de crear la aplicación auxiliar de imagen, puede usar la aplicación a
 [!code-aspx[Main](using-the-tagbuilder-class-to-build-html-helpers-vb/samples/sample2.aspx)]
 
 
-[![El cuadro de diálogo nuevo proyecto](using-the-tagbuilder-class-to-build-html-helpers-vb/_static/image1.jpg)](using-the-tagbuilder-class-to-build-html-helpers-vb/_static/image1.png)
+[![Tel cuadro de diálogo nuevo proyecto](using-the-tagbuilder-class-to-build-html-helpers-vb/_static/image1.jpg)](using-the-tagbuilder-class-to-build-html-helpers-vb/_static/image1.png)
 
 **Figura 01**: Uso de la aplicación auxiliar de imagen ([haga clic aquí para ver imagen en tamaño completo](using-the-tagbuilder-class-to-build-html-helpers-vb/_static/image2.png))
 

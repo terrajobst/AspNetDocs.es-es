@@ -8,15 +8,15 @@ ms.date: 08/08/2011
 ms.assetid: 7e4ce5d2-ab22-44f0-9825-c12eed7b8fcb
 msc.legacyurl: /web-forms
 msc.type: categoryindex
-ms.openlocfilehash: 88c12f74c3fa086a90b9999d6a4887be106c1e98
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: 623df5d3ffe357f42d72ee0a33bc50aa60a8c4d0
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57022912"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59397011"
 ---
-<a name="aspnet-web-forms"></a>Formularios Web Forms de ASP.NET
-====================
+# <a name="aspnet-web-forms"></a>Formularios Web Forms de ASP.NET
+
 - [Orientación](overview/index.md)
 
     - [Introducción](overview/getting-started/index.md)
@@ -68,7 +68,7 @@ ms.locfileid: "57022912"
             - [Propiedades del proyecto](overview/deployment/visual-studio-web-deployment/project-properties.md)
             - [Implementación de prueba](overview/deployment/visual-studio-web-deployment/deploying-to-iis.md)
             - [Establecer permisos de carpeta](overview/deployment/visual-studio-web-deployment/setting-folder-permissions.md)
-            - [Implementación en entorno de producción](overview/deployment/visual-studio-web-deployment/deploying-to-production.md)
+            - [Implementar en entorno de producción](overview/deployment/visual-studio-web-deployment/deploying-to-production.md)
             - [Implementar una actualización de código](overview/deployment/visual-studio-web-deployment/deploying-a-code-update.md)
             - [Implementar una actualización de base de datos](overview/deployment/visual-studio-web-deployment/deploying-a-database-update.md)
             - [Implementación de línea de comandos](overview/deployment/visual-studio-web-deployment/command-line-deployment.md)
@@ -77,8 +77,8 @@ ms.locfileid: "57022912"
         - [ASP.NET 4 - Introducción a la implementación de empresa](overview/deployment/deploying-web-applications-in-enterprise-scenarios/index.md)
 
             - [Implementar aplicaciones web en escenarios empresariales mediante Visual Studio 2010](overview/deployment/deploying-web-applications-in-enterprise-scenarios/deploying-web-applications-in-enterprise-scenarios.md)
-            - [Implementación Web de empresa: Información general del escenario](overview/deployment/deploying-web-applications-in-enterprise-scenarios/enterprise-web-deployment-scenario-overview.md)
-            - [Administración del ciclo de vida de aplicaciones: Entornos de desarrollo a producción](overview/deployment/deploying-web-applications-in-enterprise-scenarios/application-lifecycle-management-from-development-to-production.md)
+            - [Implementación web de empresa: Información general del escenario](overview/deployment/deploying-web-applications-in-enterprise-scenarios/enterprise-web-deployment-scenario-overview.md)
+            - [Administración del ciclo de vida de las aplicaciones: De desarrollo a producción](overview/deployment/deploying-web-applications-in-enterprise-scenarios/application-lifecycle-management-from-development-to-production.md)
         - [ASP.NET 4 - Implementación de empresa, serie 1](overview/deployment/web-deployment-in-the-enterprise/index.md)
 
             - [Implementación web en la empresa](overview/deployment/web-deployment-in-the-enterprise/web-deployment-in-the-enterprise.md)
@@ -96,9 +96,9 @@ ms.locfileid: "57022912"
 
             - [Configurar entornos de servidor para la implementación web](overview/deployment/configuring-server-environments-for-web-deployment/configuring-server-environments-for-web-deployment.md)
             - [Elegir el enfoque adecuado para la implementación web](overview/deployment/configuring-server-environments-for-web-deployment/choosing-the-right-approach-to-web-deployment.md)
-            - [Escenario: Configurar un entorno de prueba para la implementación de Web](overview/deployment/configuring-server-environments-for-web-deployment/scenario-configuring-a-test-environment-for-web-deployment.md)
-            - [Escenario: Configuración de un entorno de ensayo para la implementación Web](overview/deployment/configuring-server-environments-for-web-deployment/scenario-configuring-a-staging-environment-for-web-deployment.md)
-            - [Escenario: Configurar un entorno de producción para la implementación Web](overview/deployment/configuring-server-environments-for-web-deployment/scenario-configuring-a-production-environment-for-web-deployment.md)
+            - [Escenario: Configurar un entorno de prueba para la implementación web](overview/deployment/configuring-server-environments-for-web-deployment/scenario-configuring-a-test-environment-for-web-deployment.md)
+            - [Escenario: Configurar un entorno de ensayo para la implementación web](overview/deployment/configuring-server-environments-for-web-deployment/scenario-configuring-a-staging-environment-for-web-deployment.md)
+            - [Escenario: Configurar un entorno de producción para la implementación web](overview/deployment/configuring-server-environments-for-web-deployment/scenario-configuring-a-production-environment-for-web-deployment.md)
             - [Configurar un servidor web para la publicación de la implementación web (agente remoto)](overview/deployment/configuring-server-environments-for-web-deployment/configuring-a-web-server-for-web-deploy-publishing-remote-agent.md)
             - [Configurar un servidor web para la publicación de la implementación web (controlador de implementación web)](overview/deployment/configuring-server-environments-for-web-deployment/configuring-a-web-server-for-web-deploy-publishing-web-deploy-handler.md)
             - [Configurar un servidor web para la publicación de la implementación web (implementación sin conexión)](overview/deployment/configuring-server-environments-for-web-deployment/configuring-a-web-server-for-web-deploy-publishing-offline-deployment.md)
@@ -133,14 +133,14 @@ ms.locfileid: "57022912"
         - [ASP.NET 4 - Tailspin Spyworks](overview/older-versions-getting-started/tailspin-spyworks/index.md)
 
             - [Parte 1: Archivo -> Nuevo proyecto](overview/older-versions-getting-started/tailspin-spyworks/tailspin-spyworks-part-1.md)
-            - [Parte 2: Capa de acceso a datos](overview/older-versions-getting-started/tailspin-spyworks/tailspin-spyworks-part-2.md)
-            - [Parte 3: Diseño y menú categoría](overview/older-versions-getting-started/tailspin-spyworks/tailspin-spyworks-part-3.md)
+            - [Parte 2: Nivel de acceso a datos](overview/older-versions-getting-started/tailspin-spyworks/tailspin-spyworks-part-2.md)
+            - [Parte 3: Diseño y menú Categoría](overview/older-versions-getting-started/tailspin-spyworks/tailspin-spyworks-part-3.md)
             - [Parte 4: Lista de productos](overview/older-versions-getting-started/tailspin-spyworks/tailspin-spyworks-part-4.md)
-            - [Parte 5: Lógica de negocios](overview/older-versions-getting-started/tailspin-spyworks/tailspin-spyworks-part-5.md)
+            - [Parte 5: Lógica empresarial](overview/older-versions-getting-started/tailspin-spyworks/tailspin-spyworks-part-5.md)
             - [Parte 6: Pertenencia a ASP.NET](overview/older-versions-getting-started/tailspin-spyworks/tailspin-spyworks-part-6.md)
             - [Parte 7: Agregar características](overview/older-versions-getting-started/tailspin-spyworks/tailspin-spyworks-part-7.md)
             - [Parte 8: Páginas finales, control de excepciones y conclusión](overview/older-versions-getting-started/tailspin-spyworks/tailspin-spyworks-part-8.md)
-        - [ASP.NET 4 - Introducción a Entity Framework 4 y formularios Web Forms](overview/older-versions-getting-started/getting-started-with-ef/index.md)
+        - [ASP.NET 4: Introducción a Entity Framework 4 y formularios Web Forms](overview/older-versions-getting-started/getting-started-with-ef/index.md)
 
             - [Introducción a Entity Framework 4.0 Database First](overview/older-versions-getting-started/getting-started-with-ef/the-entity-framework-and-aspnet-getting-started-part-1.md)
             - [Introducción a Entity Framework 4.0 Database First - Parte 2](overview/older-versions-getting-started/getting-started-with-ef/the-entity-framework-and-aspnet-getting-started-part-2.md)
@@ -152,9 +152,9 @@ ms.locfileid: "57022912"
             - [Introducción a Entity Framework 4.0 Database First - Parte 8](overview/older-versions-getting-started/getting-started-with-ef/the-entity-framework-and-aspnet-getting-started-part-8.md)
         - [ASP.NET 4 - Continuación de Entity Framework 4 y los formularios Web Forms](overview/older-versions-getting-started/continuing-with-ef/index.md)
 
-            - [Entity Framework 4.0 y el Control ObjectDataSource, parte 1: Introducción a](overview/older-versions-getting-started/continuing-with-ef/using-the-entity-framework-and-the-objectdatasource-control-part-1-getting-started.md)
-            - [Entity Framework 4.0 y el Control ObjectDataSource, parte 2: Agregar una capa de lógica empresarial y las pruebas unitarias](overview/older-versions-getting-started/continuing-with-ef/using-the-entity-framework-and-the-objectdatasource-control-part-2-adding-a-business-logic-layer-and-unit-tests.md)
-            - [Entity Framework 4.0 y el Control ObjectDataSource, parte 3: Ordenar y filtrar](overview/older-versions-getting-started/continuing-with-ef/using-the-entity-framework-and-the-objectdatasource-control-part-3-sorting-and-filtering.md)
+            - [Entity Framework 4.0 y el control ObjectDataSource, parte 1: Introducción](overview/older-versions-getting-started/continuing-with-ef/using-the-entity-framework-and-the-objectdatasource-control-part-1-getting-started.md)
+            - [Entity Framework 4.0 y el control ObjectDataSource, parte 2: Agregar una capa de lógica de negocios y pruebas unitarias](overview/older-versions-getting-started/continuing-with-ef/using-the-entity-framework-and-the-objectdatasource-control-part-2-adding-a-business-logic-layer-and-unit-tests.md)
+            - [Entity Framework 4.0 y el control ObjectDataSource, parte 3: Ordenar y filtrar](overview/older-versions-getting-started/continuing-with-ef/using-the-entity-framework-and-the-objectdatasource-control-part-3-sorting-and-filtering.md)
             - [Controlar la simultaneidad con Entity Framework 4.0 en ASP.NET 4](overview/older-versions-getting-started/continuing-with-ef/handling-concurrency-with-the-entity-framework-in-an-asp-net-web-application.md)
             - [Maximizar el rendimiento con Entity Framework 4.0 en ASP.NET 4](overview/older-versions-getting-started/continuing-with-ef/maximizing-performance-with-the-entity-framework-in-an-asp-net-web-application.md)
             - [Novedades de Entity Framework 4.0](overview/older-versions-getting-started/continuing-with-ef/what-s-new-in-the-entity-framework-4.md)
@@ -171,7 +171,7 @@ ms.locfileid: "57022912"
             - [Implementación web de Visual Studio con SQL Server Compact - Implementar una actualización de base de datos](overview/older-versions-getting-started/deployment-to-a-hosting-provider/deployment-to-a-hosting-provider-deploying-a-database-update-9-of-12.md)
             - [Implementación web de Visual Studio con SQL Server Compact - Migración a SQL Server](overview/older-versions-getting-started/deployment-to-a-hosting-provider/deployment-to-a-hosting-provider-migrating-to-sql-server-10-of-12.md)
             - [Implementación web de Visual Studio con SQL Server Compact - Implementar una actualización de la base de datos de SQL Server](overview/older-versions-getting-started/deployment-to-a-hosting-provider/deployment-to-a-hosting-provider-deploying-a-sql-server-database-update-11-of-12.md)
-            - [Implementación web de Visual Studio con SQL Server Compact: Solución de problemas](overview/older-versions-getting-started/deployment-to-a-hosting-provider/deployment-to-a-hosting-provider-creating-and-installing-deployment-packages-12-of-12.md)
+            - [Implementación web de Visual Studio con SQL Server Compact - Solución de problemas](overview/older-versions-getting-started/deployment-to-a-hosting-provider/deployment-to-a-hosting-provider-creating-and-installing-deployment-packages-12-of-12.md)
         - [ASP.NET 3.5 - AJAX](overview/older-versions-getting-started/aspnet-ajax/index.md)
 
             - [Descripción de las actualizaciones de página parcial con ASP.NET AJAX](overview/older-versions-getting-started/aspnet-ajax/understanding-partial-page-updates-with-asp-net-ajax.md)
@@ -195,7 +195,7 @@ ms.locfileid: "57022912"
             - [Crear un diseño de todo el sitio mediante páginas maestras (VB)](overview/older-versions-getting-started/master-pages/creating-a-site-wide-layout-using-master-pages-vb.md)
             - [Varios ContentPlaceHolders y contenido predeterminado (VB)](overview/older-versions-getting-started/master-pages/multiple-contentplaceholders-and-default-content-vb.md)
             - [Especificar el título, etiquetas meta y otros encabezados HTML en la página maestra (VB)](overview/older-versions-getting-started/master-pages/specifying-the-title-meta-tags-and-other-html-headers-in-the-master-page-vb.md)
-            - [Direcciones URL en Páginas maestras (VB)](overview/older-versions-getting-started/master-pages/urls-in-master-pages-vb.md)
+            - [Direcciones URL en páginas maestras (VB)](overview/older-versions-getting-started/master-pages/urls-in-master-pages-vb.md)
             - [Nomenclatura de los identificadores de control en las páginas de contenido (VB)](overview/older-versions-getting-started/master-pages/control-id-naming-in-content-pages-vb.md)
             - [Interactuar con la página maestra desde la página de contenido (VB)](overview/older-versions-getting-started/master-pages/interacting-with-the-master-page-from-the-content-page-vb.md)
             - [Interactuar con la página de contenido desde la página maestra (VB)](overview/older-versions-getting-started/master-pages/interacting-with-the-content-page-from-the-master-page-vb.md)
@@ -264,7 +264,7 @@ ms.locfileid: "57022912"
             - [Desencadenar una animación en otro control (C#)](overview/ajax-control-toolkit/animation/triggering-an-animation-in-another-control-cs.md)
             - [Modificar las animaciones desde el lado servidor (C#)](overview/ajax-control-toolkit/animation/modifying-animations-from-the-server-side-cs.md)
             - [Ejecutar animaciones con código de cliente (C#)](overview/ajax-control-toolkit/animation/executing-animations-using-client-side-code-cs.md)
-            - [Cambiar una animación con código del lado cliente (C#)](overview/ajax-control-toolkit/animation/changing-an-animation-using-client-side-code-cs.md)
+            - [Cambiar una animación con código de cliente (C#)](overview/ajax-control-toolkit/animation/changing-an-animation-using-client-side-code-cs.md)
             - [Animar un control UpdatePanel (C#)](overview/ajax-control-toolkit/animation/animating-an-updatepanel-control-cs.md)
             - [Controlar dinámicamente las animaciones UpdatePanel (C#)](overview/ajax-control-toolkit/animation/dynamically-controlling-updatepanel-animations-cs.md)
             - [Agregar animación a un control (VB)](overview/ajax-control-toolkit/animation/adding-animation-to-a-control-vb.md)
@@ -277,7 +277,7 @@ ms.locfileid: "57022912"
             - [Desencadenar una animación en otro control (VB)](overview/ajax-control-toolkit/animation/triggering-an-animation-in-another-control-vb.md)
             - [Modificar las animaciones desde el lado servidor (VB)](overview/ajax-control-toolkit/animation/modifying-animations-from-the-server-side-vb.md)
             - [Ejecutar animaciones con código de cliente (VB)](overview/ajax-control-toolkit/animation/executing-animations-using-client-side-code-vb.md)
-            - [Cambiar una animación con código del lado cliente (VB)](overview/ajax-control-toolkit/animation/changing-an-animation-using-client-side-code-vb.md)
+            - [Cambiar una animación con código de cliente (VB)](overview/ajax-control-toolkit/animation/changing-an-animation-using-client-side-code-vb.md)
             - [Animar un control UpdatePanel (VB)](overview/ajax-control-toolkit/animation/animating-an-updatepanel-control-vb.md)
             - [Controlar dinámicamente las animaciones UpdatePanel (VB)](overview/ajax-control-toolkit/animation/dynamically-controlling-updatepanel-animations-vb.md)
         - [CascadingDropdown](overview/ajax-control-toolkit/cascadingdropdown/index.md)
@@ -366,7 +366,7 @@ ms.locfileid: "57022912"
             - [Usar varios controles emergentes (VB)](overview/ajax-control-toolkit/popup/using-multiple-popup-controls-vb.md)
             - [Controlar los postbacks desde un control emergente con un UpdatePanel (VB)](overview/ajax-control-toolkit/popup/handling-postbacks-from-a-popup-control-with-an-updatepanel-vb.md)
             - [Controlar los postbacks desde un control emergente sin un UpdatePanel (VB)](overview/ajax-control-toolkit/popup/handling-postbacks-from-a-popup-control-without-an-updatepanel-vb.md)
-        - [Clasificación](overview/ajax-control-toolkit/rating/index.md)
+        - [Calificación](overview/ajax-control-toolkit/rating/index.md)
 
             - [Crear un control de clasificación (C#)](overview/ajax-control-toolkit/rating/creating-a-rating-control-cs.md)
             - [Crear un control de clasificación (VB)](overview/ajax-control-toolkit/rating/creating-a-rating-control-vb.md)
@@ -388,7 +388,7 @@ ms.locfileid: "57022912"
             - [Usar TextBoxWatermark con los controles de validación (C#)](overview/ajax-control-toolkit/textboxwatermark/using-textboxwatermark-with-validation-controls-cs.md)
             - [Usar TextBoxWatermark en un FormView (VB)](overview/ajax-control-toolkit/textboxwatermark/using-textboxwatermark-in-a-formview-vb.md)
             - [Usar TextBoxWatermark con los controles de validación (VB)](overview/ajax-control-toolkit/textboxwatermark/using-textboxwatermark-with-validation-controls-vb.md)
-    - [Versiones anteriores: Acceso a datos](overview/data-access/index.md)
+    - [Versiones anteriores - Acceso a datos](overview/data-access/index.md)
 
         - [Introducción](overview/data-access/introduction/index.md)
 
@@ -528,7 +528,7 @@ ms.locfileid: "57022912"
             - [Mostrar datos binarios en los controles web de datos (VB)](overview/data-access/working-with-binary-files/displaying-binary-data-in-the-data-web-controls-vb.md)
             - [Incluir una opción de carga de archivos al agregar un nuevo registro (VB)](overview/data-access/working-with-binary-files/including-a-file-upload-option-when-adding-a-new-record-vb.md)
             - [Actualizar y eliminar los datos binarios existentes (VB)](overview/data-access/working-with-binary-files/updating-and-deleting-existing-binary-data-vb.md)
-        - [Almacenamiento de datos en caché](overview/data-access/caching-data/index.md)
+        - [Almacenar datos en caché](overview/data-access/caching-data/index.md)
 
             - [Almacenar datos en caché con ObjectDataSource (C#)](overview/data-access/caching-data/caching-data-with-the-objectdatasource-cs.md)
             - [Almacenar datos en caché en la arquitectura (C#)](overview/data-access/caching-data/caching-data-in-the-architecture-cs.md)
@@ -618,13 +618,13 @@ ms.locfileid: "57022912"
         - [Páginas maestras](overview/moving-to-aspnet-20/master-pages.md)
         - [Controles de origen de datos](overview/moving-to-aspnet-20/data-source-controls.md)
         - [Controles enlazados a datos](overview/moving-to-aspnet-20/data-bound-controls.md)
-        - [Almacenamiento en caché](overview/moving-to-aspnet-20/caching.md)
+        - [Almacenamiento en memoria caché](overview/moving-to-aspnet-20/caching.md)
         - [Pertenencia](overview/moving-to-aspnet-20/membership.md)
         - [Configuración e instrumentación](overview/moving-to-aspnet-20/configuration-and-instrumentation.md)
         - [Perfiles, temas y elementos web](overview/moving-to-aspnet-20/profiles-themes-and-web-parts.md)
 - [Vídeos](videos/index.md)
 
-    - [¿Cómo...?](videos/how-do-i/index.md)
+    - [Cómo](videos/how-do-i/index.md)
 
         - [Aprender las sugerencias y los trucos de los expertos](videos/how-do-i/how-do-i-learn-the-tips-and-tricks-of-experts.md)
         - [Crear un sitio multilingüe con localización](videos/how-do-i/how-do-i-create-a-multi-lingual-site-with-localization.md)
@@ -642,7 +642,7 @@ ms.locfileid: "57022912"
         - [Implementar la reescritura de direcciones URL](videos/how-do-i/how-do-i-implement-url-rewriting.md)
         - [Utilizar los adaptadores de controles descriptivos de CSS](videos/how-do-i/how-do-i-utilize-the-css-friendly-control-adapters.md)
         - [Controlar eventos de aplicación mediante un HttpModule](videos/how-do-i/how-do-i-handle-application-events-using-an-httpmodule.md)
-        - [Usar hojas de estilos en cascada para el diseño de página web](videos/how-do-i/how-do-i-use-cascading-style-sheets-for-web-page-layout.md)
+        - [Usar hojas de estilos CSS para el diseño de página web](videos/how-do-i/how-do-i-use-cascading-style-sheets-for-web-page-layout.md)
         - [Crear un proveedor de pertenencia personalizado](videos/how-do-i/how-do-i-create-a-custom-membership-provider.md)
         - [Crear un proveedor de perfiles personalizado](videos/how-do-i/how-do-i-create-a-custom-profile-provider.md)
         - [Implementar la navegación del sitio en ASP.NET](videos/how-do-i/how-do-i-implement-site-navigation-in-aspnet.md)
@@ -716,8 +716,8 @@ ms.locfileid: "57022912"
         - [Crear un enfoque eficaz y estandarizado para implementar estilos CSS](videos/how-do-i/how-do-i-create-an-efficient-and-standardized-approach-for-implementing-css-styles.md)
         - [¿Qué es ASP.NET?](videos/how-do-i/what-is-asp-net.md)
         - [Elegir el modelo de programación correcto](videos/how-do-i/choosing-the-right-programming-model.md)
-        - [Cree su primera aplicación de ASP.NET con ASP.NET Web Forms](videos/how-do-i/build-your-first-asp-net-application-with-asp-net-web-forms.md)
-        - [Cree su primera aplicación de ASP.NET con ASP.NET MVC](videos/how-do-i/build-your-first-asp-net-application-with-asp-net-mvc.md)
+        - [Crear su primera aplicación de ASP.NET con ASP.NET Web Forms](videos/how-do-i/build-your-first-asp-net-application-with-asp-net-web-forms.md)
+        - [Crear su primera aplicación de ASP.NET con ASP.NET MVC](videos/how-do-i/build-your-first-asp-net-application-with-asp-net-mvc.md)
         - [Aprendizaje óptimo de Formularios Web Forms de ASP.NET](videos/how-do-i/how-to-best-learn-aspnet-web-forms.md)
         - [Introducción de 5 minutos a Formularios Web Forms de ASP.NET](videos/how-do-i/5-minute-introduction-to-aspnet-web-forms.md)
         - [Instalar ASP.NET y las herramientas](videos/how-do-i/how-to-install-asp-net-and-tools.md)
@@ -769,7 +769,7 @@ ms.locfileid: "57022912"
         - [Cambiar la configuración de la pertenencia en el esquema de pertenencia predeterminado](videos/authentication/changing-membership-settings-in-the-default-membership-schema.md)
         - [Crear cuentas de usuario con el Asistente para crear usuarios](videos/authentication/creating-user-accounts-with-the-create-user-wizard.md)
         - [Crear cuentas de usuario mediante programación](videos/authentication/creating-user-accounts-programmatically.md)
-        - [Validación manual de usuarios](videos/authentication/validating-users-manually.md)
+        - [Validar usuarios manualmente](videos/authentication/validating-users-manually.md)
         - [Validar usuarios con el control de inicio de sesión](videos/authentication/validating-users-with-the-login-control.md)
         - [Agregar usuarios al sistema de pertenencia](videos/authentication/adding-users-to-your-membership-system.md)
         - [Iniciar la sesión de los usuarios en el sistema de pertenencia](videos/authentication/logging-users-into-your-membership-system.md)
@@ -828,10 +828,10 @@ ms.locfileid: "57022912"
         - [[Introducción a ASP.NET 2.0:] Aspectos esenciales de ASP.NET 2.0](videos/migrating/intro-to-aspnet-20-aspnet-20-fundamentals.md)
         - [[Introducción a ASP.NET 2.0:] Elementos de la interfaz de usuario](videos/migrating/intro-to-aspnet-20-user-interface-elements.md)
         - [[Migración de] ASP clásico a ASP.NET](videos/migrating/migrating-from-classic-asp-to-aspnet.md)
-        - [Introducción a ASP.NET para desarrolladores de JSP: Bienvenido a ASP.NET 2.0](videos/migrating/intro-to-aspnet-for-jsp-developers-welcome-to-aspnet-20.md)
-        - [Introducción a ASP.NET para desarrolladores de JSP: Creación de aplicaciones](videos/migrating/intro-to-aspnet-for-jsp-developers-building-applications.md)
-        - [Introducción a ASP.NET para programadores de ColdFusion: Adición de ASP.NET al repertorio](videos/migrating/intro-to-aspnet-for-coldfusion-developers-adding-aspnet-to-your-repertoire.md)
-        - [Introducción a ASP.NET para programadores de ColdFusion: Compilar una aplicación ASP.NET](videos/migrating/introduction-to-aspnet-for-coldfusion-developers-building-an-aspnet-application.md)
+        - [Introducción a ASP.NET para programadores de JSP: Bienvenido a ASP.NET 2.0](videos/migrating/intro-to-aspnet-for-jsp-developers-welcome-to-aspnet-20.md)
+        - [Introducción a ASP.NET para programadores de JSP: Compilar aplicaciones](videos/migrating/intro-to-aspnet-for-jsp-developers-building-applications.md)
+        - [Nº 6 | Introducción a ASP.NET para programadores de ColdFusion: Agregar ASP.NET al repertorio](videos/migrating/intro-to-aspnet-for-coldfusion-developers-adding-aspnet-to-your-repertoire.md)
+        - [Nº 6 | Introducción a ASP.NET para programadores de ColdFusion: Crear una aplicación ASP.NET](videos/migrating/introduction-to-aspnet-for-coldfusion-developers-building-an-aspnet-application.md)
         - [Interoperabilidad entre PHP y la plataforma de Windows](videos/migrating/interop-between-php-and-the-windows-platform.md)
     - [Compilar aplicaciones 2.0](videos/building-20-applications/index.md)
 
@@ -846,7 +846,7 @@ ms.locfileid: "57022912"
         - [Ver el desarrollo de ASP.NET en acción](videos/building-20-applications/watch-aspnet-development-in-action.md)
     - [Consejos generales de IIS](videos/iis/index.md)
 
-        - [Desarrollo e implementación en un hospedaje compartido](videos/iis/developing-and-deploying-in-a-shared-hosting.md)
+        - [Desarrollar e implementar en un hospedaje compartido](videos/iis/developing-and-deploying-in-a-shared-hosting.md)
         - [Trabajar con la administración delegada de IIS7](videos/iis/working-with-iis7-deligated-admin.md)
         - [Administración delegada específica de las características](videos/iis/feature-specific-delegated-management.md)
         - [Solución de problemas de las aplicaciones de ASP.NET de producción](videos/iis/troubleshooting-production-aspnet-apps.md)
@@ -868,10 +868,10 @@ ms.locfileid: "57022912"
 
         - [Introducción a ASP.NET AJAX Control Toolkit](videos/ajax-control-toolkit/how-do-i-get-started-with-the-aspnet-ajax-control-toolkit.md)
         - [Extensor de control CascadingDropDown de ASP.NET AJAX](videos/ajax-control-toolkit/how-do-i-use-the-aspnet-ajax-cascadingdropdown-control-extender.md)
-        - [Extensor del control TextBoxWatermark de ASP.NET AJAX](videos/ajax-control-toolkit/how-do-i-use-the-aspnet-ajax-textboxwatermark-control-extender.md)
-        - [Extensor del control Popup de ASP.NET AJAX](videos/ajax-control-toolkit/how-do-i-use-the-aspnet-ajax-popup-control-extender.md)
-        - [Control extensor ModalPopup de ASP.NET AJAX](videos/ajax-control-toolkit/how-do-i-use-the-aspnet-ajax-modalpopup-extender-control.md)
-        - [Extensor de control AlwaysVisible de ASP.NET AJAX](videos/ajax-control-toolkit/how-do-i-use-the-aspnet-ajax-alwaysvisible-control-extender.md)
+        - [Extensor de control TextBoxWatermark de ASP.NET AJAX](videos/ajax-control-toolkit/how-do-i-use-the-aspnet-ajax-textboxwatermark-control-extender.md)
+        - [Extensor de control Popup de ASP.NET AJAX](videos/ajax-control-toolkit/how-do-i-use-the-aspnet-ajax-popup-control-extender.md)
+        - [Extensor de control ModalPopup de ASP.NET AJAX](videos/ajax-control-toolkit/how-do-i-use-the-aspnet-ajax-modalpopup-extender-control.md)
+        - [Extensor del control AlwaysVisible de ASP.NET AJAX](videos/ajax-control-toolkit/how-do-i-use-the-aspnet-ajax-alwaysvisible-control-extender.md)
         - [Control Accordion de ASP.NET AJAX](videos/ajax-control-toolkit/how-do-i-use-the-aspnet-ajax-accordion-control.md)
         - [Extensor de panel contraíble de ASP.NET AJAX](videos/ajax-control-toolkit/how-do-i-use-the-aspnet-ajax-collapsable-panel-extender.md)
         - [Extensor de panel arrastrable de ASP.NET AJAX](videos/ajax-control-toolkit/how-do-i-use-the-aspnet-ajax-draggable-panel-extender.md)
@@ -904,7 +904,7 @@ ms.locfileid: "57022912"
         - [Selector de colores](videos/ajax-control-toolkit/color-picker.md)
         - [Cuadro combinado](videos/ajax-control-toolkit/combo-box.md)
         - [Control de editor](videos/ajax-control-toolkit/editor-control.md)
-        - [Control del Editor personalizado](videos/ajax-control-toolkit/editor-control-custom.md)
+        - [Control del editor personalizado](videos/ajax-control-toolkit/editor-control-custom.md)
         - [Crear un extensor personalizado](videos/ajax-control-toolkit/create-a-new-custom-extender.md)
     - [ASP.NET AJAX](videos/aspnet-ajax/index.md)
 
@@ -951,22 +951,22 @@ ms.locfileid: "57022912"
         - [Configurar el entorno de desarrollo para ASP.NET 2.0](videos/aspnet-ajax/set-up-your-development-environment-for-aspnet-20.md)
         - [Personalizar el control de errores del UpdatePanel de ASP.NET AJAX](videos/aspnet-ajax/how-do-i-customize-error-handling-for-the-aspnet-ajax-updatepanel.md)
         - [Usar plantillas de cliente de ASP.NET AJAX](videos/aspnet-ajax/how-do-i-use-aspnet-ajax-client-templates.md)
-    - [Acceso a datos](videos/data-access/index.md)
+    - [Acceso a datos en ASP.NET (Visual Studio)](videos/data-access/index.md)
 
-        - [Servicios de datos de ADO.NET](videos/data-access/adonet-data-services/index.md)
+        - [Data Services de ADO.NET](videos/data-access/adonet-data-services/index.md)
 
             - [Niveles de acceso a datos en aplicaciones de ASP.NET](videos/data-access/adonet-data-services/data-access-layers-in-aspnet-applications.md)
             - [Enlazar manualmente un conjunto de datos a un control Datagrid](videos/data-access/adonet-data-services/how-to-manually-bind-a-dataset-to-a-datagrid.md)
             - [Trabajar con conjuntos de datos y filtros de una aplicación ASP](videos/data-access/adonet-data-services/how-to-work-with-datasets-and-filters-from-an-asp-application.md)
         - ["¿Cómo...?" con LINQ](videos/data-access/how-do-i-with-linq/index.md)
 
-            - [LINQ to SQL: información general](videos/data-access/how-do-i-with-linq/how-do-i-linq-to-sql-overview.md)
+            - [LINQ to SQL: Información general](videos/data-access/how-do-i-with-linq/how-do-i-linq-to-sql-overview.md)
             - [LINQ to SQL: Modelo de datos](videos/data-access/how-do-i-with-linq/how-do-i-linq-to-sql-data-model.md)
             - [LINQ to SQL: Consultar la base de datos](videos/data-access/how-do-i-with-linq/how-do-i-linq-to-sql-querying-the-database.md)
-            - [LINQ to SQL: Actualizando la base de datos](videos/data-access/how-do-i-with-linq/how-do-i-linq-to-sql-updating-the-database.md)
+            - [LINQ to SQL: Actualizar la base de datos](videos/data-access/how-do-i-with-linq/how-do-i-linq-to-sql-updating-the-database.md)
             - [LINQ to SQL: LinqDataSource](videos/data-access/how-do-i-with-linq/how-do-i-linq-to-sql-linqdatasource.md)
-            - [LINQ to SQL: Custom LinqDataSource](videos/data-access/how-do-i-with-linq/how-do-i-linq-to-sql-custom-linqdatasource.md)
-            - [LINQ to SQL: Uso de procedimientos almacenados](videos/data-access/how-do-i-with-linq/how-do-i-linq-to-sql-using-stored-procedures.md)
+            - [LINQ to SQL: LinqDataSource personalizado](videos/data-access/how-do-i-with-linq/how-do-i-linq-to-sql-custom-linqdatasource.md)
+            - [LINQ to SQL: Utilizar procedimientos almacenados](videos/data-access/how-do-i-with-linq/how-do-i-linq-to-sql-using-stored-procedures.md)
             - [LINQ to SQL: Actualizar con procedimientos almacenados](videos/data-access/how-do-i-with-linq/how-do-i-linq-to-sql-updating-with-stored-procedures.md)
             - [LINQ to SQL: Ejecutar SQL arbitrario](videos/data-access/how-do-i-with-linq/how-do-i-linq-to-sql-executing-arbitrary-sql.md)
         - [Vídeos de LINQ del equipo de VB](videos/data-access/linq-videos-from-the-vb-team/index.md)
@@ -1003,7 +1003,7 @@ ms.locfileid: "57022912"
 
             - [Crear una página maestra en Visual Studio 2008](videos/aspnet-35/how-do-i/how-do-i-create-a-master-page-in-visual-studio-2008.md)
             - [Crear una página maestra anidada en Visual Studio 2008](videos/aspnet-35/how-do-i/how-do-i-create-nested-master-page-in-visual-studio-2008.md)
-            - [Hojas de estilos en cascada en Visual Studio 2008](videos/aspnet-35/how-do-i/how-do-i-cascading-style-sheets-in-visual-studio-2008.md)
+            - [Hojas de estilo CSS en Visual Studio 2008](videos/aspnet-35/how-do-i/how-do-i-cascading-style-sheets-in-visual-studio-2008.md)
             - [Trabajar con Visual Studio 2008 .NET Framework](videos/aspnet-35/how-do-i/how-do-i-working-with-visual-studio-2008-net-framework.md)
             - [Agregar elementos a un archivo CSS y crear CSS sobre la marcha](videos/aspnet-35/how-do-i/how-do-i-adding-elements-to-a-css-file-and-create-new-css-on-the-fly.md)
             - [Administración y características avanzadas de las hojas de estilos en cascada](videos/aspnet-35/how-do-i/how-do-i-advance-cascading-style-sheet-features-and-management.md)
@@ -1017,13 +1017,13 @@ ms.locfileid: "57022912"
             - [Compatibilidad con ASP.NET AJAX en Visual Studio 2008](videos/aspnet-35/aspnet-ajax/aspnet-ajax-support-in-visual-studio-2008.md)
             - [Agregar funcionalidad AJAX a una página ASP.NET existente](videos/aspnet-35/aspnet-ajax/adding-ajax-functionality-to-an-existing-aspnet-page.md)
             - [Crear y usar un servicio web habilitado para AJAX en un sitio web](videos/aspnet-35/aspnet-ajax/creating-and-using-an-ajax-enabled-web-service-in-a-web-site.md)
-            - [AJAX DE ASP.NET: Ver una demostración de AJAX de ASP.NET](videos/aspnet-35/aspnet-ajax/aspnet-ajax-a-demonstration-of-aspnet-ajax.md)
+            - [ASP.NET AJAX: Demostración de ASP.NET AJAX](videos/aspnet-35/aspnet-ajax/aspnet-ajax-a-demonstration-of-aspnet-ajax.md)
             - [Servicios de datos de ADO.NET con compatibilidad con ASP.NET AJAX](videos/aspnet-35/aspnet-ajax/adonet-data-services-with-aspnet-ajax-support.md)
             - [Introducción al historial de ASP.NET Ajax](videos/aspnet-35/aspnet-ajax/introduction-to-aspnet-ajax-history.md)
             - [Usar la combinación de scripts para mejorar el rendimiento de AJAX](videos/aspnet-35/aspnet-ajax/using-script-combining-to-improve-ajax-performance.md)
         - [Controles de datos](videos/aspnet-35/data-controls/index.md)
 
-            - [ListView (Control)](videos/aspnet-35/data-controls/the-listview-control.md)
+            - [Control ListView](videos/aspnet-35/data-controls/the-listview-control.md)
             - [Control DataPager](videos/aspnet-35/data-controls/the-datapager-control.md)
         - [Diseñador de Visual Studio](videos/aspnet-35/visual-studio-designer/index.md)
 
@@ -1058,7 +1058,7 @@ ms.locfileid: "57022912"
             - [Limpiar archivos Web.Config](videos/net-4/core/aspnet-4-quick-hit-clean-webconfig-files.md)
             - [Id. de cliente predecibles](videos/net-4/core/aspnet-4-quick-hit-predictable-client-ids.md)
             - [Método de utilidad HtmlEncoder](videos/net-4/core/aspnet-4-quick-hit-the-htmlencoder-utility-method.md)
-        - [Data](videos/net-4/data/index.md)
+        - [Datos](videos/net-4/data/index.md)
 
             - [Selección persistente de filas del control GridView](videos/net-4/data/aspnet-4-quick-hit-persistent-gridview-row-selection.md)
         - [Control de marcado](videos/net-4/markup-control/index.md)
@@ -1089,7 +1089,7 @@ ms.locfileid: "57022912"
         - [Controles de datos fuertemente tipados](videos/aspnet-web-forms-vnext/aspnet-vnext-videos-strongly-typed-data-controls.md)
         - [Enlace de modelos, parte 1: Seleccionar datos](videos/aspnet-web-forms-vnext/aspnet-vnext-videos-model-binding-part-1-selecting-data.md)
         - [Enlace de modelos, parte 2: Filtrar](videos/aspnet-web-forms-vnext/aspnet-vnext-videos-model-binding-part-2-filtering.md)
-        - [Enlace de modelos, parte 3: Actualización](videos/aspnet-web-forms-vnext/aspnet-vnext-videos-model-binding-part-3-updating.md)
+        - [Enlace de modelos, parte 3: Actualizar](videos/aspnet-web-forms-vnext/aspnet-vnext-videos-model-binding-part-3-updating.md)
         - [Enlace de modelos de Formularios Web Forms de ASP.NET 4.5](videos/aspnet-web-forms-vnext/aspnet-45-web-forms-model-binding.md)
         - [Controles de datos fuertemente tipados de Formularios Web Forms de ASP.NET 4.5](videos/aspnet-web-forms-vnext/aspnet-45-web-forms-strong-typed-data-controls.md)
         - [Unión y minificación](videos/aspnet-web-forms-vnext/aspnet-vnext-videos-bundling-and-minification.md)

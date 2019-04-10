@@ -8,15 +8,15 @@ ms.date: 03/13/2008
 ms.assetid: b041ea07-a174-4a57-b2a8-4ce64232bdae
 msc.legacyurl: /web-forms/videos/data-access/how-do-i-with-linq/how-do-i-linq-to-sql-updating-with-stored-procedures
 msc.type: video
-ms.openlocfilehash: ab88bf56d3f63a562a121dc7523ad221dc5c68cf
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: b91234b1e0c163a2f6350e93e775864e32218cc0
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57048862"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59390329"
 ---
-<a name="how-do-i-linq-to-sql-updating-with-stored-procedures"></a>¿Cómo lo hago?: LINQ to SQL: Actualizar con procedimientos almacenados
-====================
+# <a name="how-do-i-linq-to-sql-updating-with-stored-procedures"></a>¿Cómo lo hago?: LINQ to SQL: Actualizar con procedimientos almacenados
+
 por [Scott Stanfield](https://github.com/scottstanfield)
 
 Invalidar la lógica de update/delete/insert ORM generada por los suyos propios a través de procedimientos almacenados. El vídeo también muestra en detalle cómo usar al Profiler de SQL para supervisar los cambios en la ORM desde SQL generado para nuestros procedimientos almacenados de SQL personalizada. Dado que solo se escriben SQL, se aplican las mismas técnicas para C# y desarrolladores de VB.

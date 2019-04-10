@@ -8,15 +8,15 @@ ms.date: 08/22/2008
 ms.assetid: fe023ad0-a25e-48e6-a43a-304e113f1fca
 msc.legacyurl: /web-forms/videos/authentication/creating-user-accounts-with-the-create-user-wizard
 msc.type: video
-ms.openlocfilehash: 7aba0123446cd1ef14c58324022f9a31e2fc5d2f
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: d1eff0f8a0671f554b07f00328d7f28573553581
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57024292"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59411636"
 ---
-<a name="creating-user-accounts-with-the-create-user-wizard"></a>Crear cuentas de usuario con el Asistente para crear usuarios
-====================
+# <a name="creating-user-accounts-with-the-create-user-wizard"></a>Crear cuentas de usuario con el Asistente para crear usuarios
+
 por [Joe Stagner](https://github.com/JoeStagner)
 
 En este vídeo, Joe Stagner muestra cómo crear usuarios con el Asistente de creación de usuario para que se incluye con la colección de controles de inicio de sesión de ASP.NET y Visual Studio. Para obtener más información acerca de este vídeo, lea el tutorial de seguridad de "Creación de cuentas de usuario" ([C#](../../overview/older-versions-security/membership/creating-user-accounts-cs.md), [VB](../../overview/older-versions-security/membership/creating-user-accounts-vb.md)).

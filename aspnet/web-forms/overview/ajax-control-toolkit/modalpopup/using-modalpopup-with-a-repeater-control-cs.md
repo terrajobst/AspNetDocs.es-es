@@ -8,15 +8,15 @@ ms.date: 06/02/2008
 ms.assetid: d686d84a-1c58-492e-8a77-3eb5a0cfe918
 msc.legacyurl: /web-forms/overview/ajax-control-toolkit/modalpopup/using-modalpopup-with-a-repeater-control-cs
 msc.type: authoredcontent
-ms.openlocfilehash: c2ffa22fb8d9d985d99d9f8d2298d317e6caf469
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: 91758b7c329b78bcb3a3ab301650d6da6164d1a3
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57058282"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59411194"
 ---
-<a name="using-modalpopup-with-a-repeater-control-c"></a>Usar ModalPopup con un control Repeater (C#)
-====================
+# <a name="using-modalpopup-with-a-repeater-control-c"></a>Usar ModalPopup con un control Repeater (C#)
+
 por [Christian Wenz](https://github.com/wenz)
 
 [Descargar código](http://download.microsoft.com/download/2/4/0/24052038-f942-4336-905b-b60ae56f0dd5/ModalPopup2.cs.zip) o [descargar PDF](http://download.microsoft.com/download/b/6/a/b6ae89ee-df69-4c87-9bfb-ad1eb2b23373/modalpopup2CS.pdf)
@@ -49,7 +49,7 @@ Con el fin de que el elemento emergente funcione del control Repeater, el `Modal
 A continuación, se muestra cada elemento del origen de datos con un botón junto a él que desencadena el elemento emergente modal.
 
 
-[![El elemento emergente modal puede activarse para cada entrada del origen de datos](using-modalpopup-with-a-repeater-control-cs/_static/image2.png)](using-modalpopup-with-a-repeater-control-cs/_static/image1.png)
+[![Telemento emergente modal de puede activarse para cada entrada del origen de datos](using-modalpopup-with-a-repeater-control-cs/_static/image2.png)](using-modalpopup-with-a-repeater-control-cs/_static/image1.png)
 
 El elemento emergente modal puede activarse para cada entrada del origen de datos ([haga clic aquí para ver imagen en tamaño completo](using-modalpopup-with-a-repeater-control-cs/_static/image3.png))
 

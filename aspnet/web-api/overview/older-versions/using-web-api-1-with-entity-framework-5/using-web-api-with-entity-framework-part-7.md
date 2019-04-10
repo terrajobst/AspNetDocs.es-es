@@ -8,15 +8,15 @@ ms.date: 07/04/2012
 ms.assetid: eb32a17b-626c-4373-9a7d-3387992f3c04
 msc.legacyurl: /web-api/overview/older-versions/using-web-api-1-with-entity-framework-5/using-web-api-with-entity-framework-part-7
 msc.type: authoredcontent
-ms.openlocfilehash: 91a6496e2640668c58ec0493d47d909e2de67367
-ms.sourcegitcommit: 289e051cc8a90e8f7127e239fda73047bde4de12
+ms.openlocfilehash: 028631f8855e4d94bebb0e965de75c4025e22859
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/25/2019
-ms.locfileid: "58421355"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59409270"
 ---
-<a name="part-7-creating-the-main-page"></a>Parte 7: Crear la página principal
-====================
+# <a name="part-7-creating-the-main-page"></a>Parte 7: Crear la página principal
+
 por [Mike Wasson](https://github.com/MikeWasson)
 
 [Descargue el proyecto completado](http://code.msdn.microsoft.com/ASP-NET-Web-API-with-afa30545)
@@ -83,7 +83,7 @@ Esto se recorre en iteración la matriz de productos y muestra el nombre y el pr
 
 Las llamadas del botón "Agregar a pedido" `addItemToCart` en el `ProductViewModel` instancia para el producto. Esto muestra una interesante característica de Knockout.js: Cuando un modelo de vista contiene otros modelos de vista, puede aplicar los enlaces para el modelo interno. En este ejemplo, los enlaces dentro de la `foreach` se aplican a cada uno de los `ProductViewModel` instancias. Este enfoque es mucho más limpio que poner toda la funcionalidad en un único modelo de vista.
 
-**Cart**
+**Carro de compra**
 
 Estos son los enlaces para el carro de compra:
 
@@ -91,7 +91,7 @@ Estos son los enlaces para el carro de compra:
 
 Esto se recorre en iteración la matriz de carro y muestra el nombre, precio y cantidad. Tenga en cuenta que el vínculo "Remove" y el botón "Crear un pedido" están enlazados a las funciones del modelo de vista.
 
-**Pedidos**
+**Orders**
 
 Estos son los enlaces de la lista de pedidos:
 

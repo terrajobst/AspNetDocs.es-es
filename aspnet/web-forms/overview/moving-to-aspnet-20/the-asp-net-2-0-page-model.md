@@ -8,15 +8,15 @@ ms.date: 02/20/2005
 ms.assetid: af4575a3-0ae3-4638-ba4d-218fad7a1642
 msc.legacyurl: /web-forms/overview/moving-to-aspnet-20/the-asp-net-2-0-page-model
 msc.type: authoredcontent
-ms.openlocfilehash: 4452169a01276cbc60f2a2057e6b560022ccd7c0
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: 09f8389a04c5600ca9ee8365a9dc5a0d607c0a4d
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57057262"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59403927"
 ---
-<a name="the-aspnet-20-page-model"></a>El modelo de página 2.0 de ASP.NET
-====================
+# <a name="the-aspnet-20-page-model"></a>El modelo de página 2.0 de ASP.NET
+
 por [Microsoft](https://github.com/microsoft)
 
 > En ASP.NET 1.x, los desarrolladores tenían una elección entre un modelo de código en línea y un modelo de código de código subyacente. Código subyacente podría implementarse mediante el atributo Src o el atributo de código subyacente de la @Page directiva. En ASP.NET 2.0, los desarrolladores tienen todavía una elección entre el código en línea y código subyacente, pero ha habido importantes mejoras en el modelo de código subyacente.
@@ -34,7 +34,7 @@ En ASP.NET 1.x, consistió en el modelo de código subyacente de un archivo ASPX
 
 ## <a name="the-code-behind-model-in-aspnet-20"></a>El modelo de código subyacente en ASP.NET 2.0
 
-ASP.NET 2.0 mejora en gran medida este modelo. En ASP.NET 2.0, código subyacente se implementa mediante el nuevo *clases parciales* incluido en ASP.NET 2.0. La clase de código subyacente de ASP.NET 2.0 es definen como una clase parcial, lo que significa que contiene solo una parte de la definición de clase. La parte restante de la definición de clase se genera dinámicamente mediante la página ASPX en tiempo de ejecución o cuando se precompila el sitio Web de ASP.NET 2.0. El vínculo entre el archivo de código subyacente y la página ASPX sigue establecido mediante la directiva @ Page. Sin embargo, en lugar de un atributo de código subyacente o Src, ASP.NET 2.0 ahora usa el atributo CodeFile. El atributo Inherits también se utiliza para especificar el nombre de clase para la página.
+ASP.NET 2.0 mejora en gran medida este modelo. En ASP.NET 2.0, código subyacente se implementa mediante el nuevo *clases parciales* incluido en ASP.NET 2.0. La clase de código subyacente en ASP.NET 2.0 se define como una clase parcial, lo que significa que contiene solo una parte de la definición de clase. La parte restante de la definición de clase se genera dinámicamente mediante la página ASPX en tiempo de ejecución o cuando se precompila el sitio Web de ASP.NET 2.0. El vínculo entre el archivo de código subyacente y la página ASPX sigue establecido mediante la directiva @ Page. Sin embargo, en lugar de un atributo de código subyacente o Src, ASP.NET 2.0 ahora usa el atributo CodeFile. El atributo Inherits también se utiliza para especificar el nombre de clase para la página.
 
 Una directiva @ Page típica podría tener este aspecto:
 
@@ -265,7 +265,7 @@ Esta propiedad devuelve el objeto PageStatePersister para la página. Esta propi
 
 ## <a name="uniquefilepathsuffix"></a>UniqueFilePathSuffix
 
-Esta propiedad devuelve un suffic único que se anexa a la ruta de acceso de archivo para almacenar en caché de los exploradores. El valor predeterminado es \_ \_ufps = y un número de 6 dígitos.
+Esta propiedad devuelve un sufijo único que se anexa a la ruta de acceso de archivo para almacenar en caché de los exploradores. El valor predeterminado es \_ \_ufps = y un número de 6 dígitos.
 
 ## <a name="new-public-methods-for-the-page-class"></a>Nuevos métodos públicos de la clase de página
 
@@ -508,7 +508,7 @@ Recuerde que *cbRef* es el valor devuelto de la llamada a GetCallbackEventRefere
 
 ## <a name="step-4--register-the-client-side-script"></a>Paso 4: Registre el Script del lado cliente
 
-Recuerde que la llamada a GetCallbackEventReference especifica que un script de cliente denominado **ShowCompanyName** se ejecutaría si la devolución de llamada del lado servidor se realiza correctamente. Ese script debe agregarse a la página mediante una instancia de ClientScriptManager. (La clase ClientScriptManager será describen más adelante en este módulo). Hacerlo ese tipo:
+Recuerde que la llamada a GetCallbackEventReference especifica que un script de cliente denominado **ShowCompanyName** se ejecutaría si la devolución de llamada del lado servidor se realiza correctamente. Ese script debe agregarse a la página mediante una instancia de ClientScriptManager. (La clase ClientScriptManager se tratará más adelante en este módulo.) Hacerlo ese tipo:
 
 [!code-javascript[Main](the-asp-net-2-0-page-model/samples/sample16.js)]
 
@@ -545,7 +545,7 @@ Los métodos de ClientScriptManager deben estar familiarizados para todos los de
 
 Este método agrega una secuencia de comandos a la parte superior de la página representada. Esto es útil para agregar funciones que se llama explícitamente en el cliente.
 
-Hay dos versiones sobrecargadas de este método. Tres de cuatro argumentos son comunes entre ellos. Son estos:
+Hay dos versiones sobrecargadas de este método. Tres de cuatro argumentos son comunes entre ellos. Estas sobrecargas son:
 
 `type (string)`
 

@@ -8,15 +8,15 @@ ms.date: 02/18/2013
 ms.assetid: 73232292-a5fe-4720-82a1-8f6553effd1f
 msc.legacyurl: /web-forms/overview/getting-started/hands-on-labs/using-page-inspector-in-visual-studio-2012
 msc.type: authoredcontent
-ms.openlocfilehash: ce654eb5abd54613987f2375cc973febc9dc2ad5
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: d85fab0aeec86013761fc07ada1789b7719b24d9
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57041962"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59396569"
 ---
-<a name="using-page-inspector-in-visual-studio-2012"></a>Usar el Inspector de página en Visual Studio 2012
-====================
+# <a name="using-page-inspector-in-visual-studio-2012"></a>Usar el Inspector de página en Visual Studio 2012
+
 por [campamentos Web Team](https://twitter.com/webcamps)
 
 > En este laboratorio práctico, detectará una nueva herramienta para buscar y corregir problemas de la página web en Visual Studio: el Inspector de página.
@@ -59,7 +59,7 @@ Debe tener los elementos siguientes para completar esta práctica:
 - [Microsoft Visual Studio Express 2012 para Web](https://www.microsoft.com/visualstudio/eng/products/visual-studio-express-for-web) o superior (leer [Apéndice A](#AppendixA) para obtener instrucciones sobre cómo instalarlo).
 - Internet Explorer 9 o superior
 
-* * *
+---
 
 <a id="Exercises"></a>
 
@@ -106,7 +106,7 @@ En esta tarea, obtendrá información sobre cómo usar el Inspector de página e
     *Al seleccionar un archivo para obtener una vista previa en Inspector de página*
 3. La ventana del Inspector de página mostrará el */Home/Index* dirección URL asignada a la vista seleccionada de origen.
 
-    ![ThefirstcontactwithPageInspector](using-page-inspector-in-visual-studio-2012/_static/image2.png)
+    ![El primer contacto con PageInspector](using-page-inspector-in-visual-studio-2012/_static/image2.png)
 
     *El primer contacto con el Inspector de página*
 
@@ -130,7 +130,7 @@ En esta tarea, obtendrá información sobre cómo usar el Inspector de página e
     *Botón de alternancia modo de inspección*
 6. En el Explorador de Inspector de página, mueva el puntero del mouse sobre los elementos de página. Mientras se mueve el puntero del mouse sobre cualquier parte de la página presentada, se muestra el tipo de elemento y se resalta el correspondiente marcado o código en el editor de Visual Studio.
 
-    ![Inspectionmodeinaction](using-page-inspector-in-visual-studio-2012/_static/image5.png)
+    ![Modo de inspección en acción](using-page-inspector-in-visual-studio-2012/_static/image5.png)
 
     *Modo de inspección en acción*
 
@@ -139,7 +139,7 @@ En esta tarea, obtendrá información sobre cómo usar el Inspector de página e
 
     Si preste atención a la **Index.cshtml** archivo, observará que se resalta la parte del código fuente que genera el elemento seleccionado. Esta característica facilita la edición de archivos de origen largo, que proporciona una manera rápida y directa de obtener acceso al código.
 
-    ![Inspectingelements](using-page-inspector-in-visual-studio-2012/_static/image6.png)
+    ![Inspeccionar elementos](using-page-inspector-in-visual-studio-2012/_static/image6.png)
 
     *Inspeccionar elementos*
 7. Haga clic en el **alternar el modo de inspección** botón (![seleccione la ficha HTML para mostrar el código HTML que se representa en el Explorador de Inspector de página.](using-page-inspector-in-visual-studio-2012/_static/image7.png "Seleccione la ficha HTML para mostrar el código HTML que se representa en el Explorador de Inspector de página.") ) para deshabilitar el cursor.
@@ -156,7 +156,7 @@ En esta tarea, obtendrá información sobre cómo usar el Inspector de página e
     > [!NOTE]
     > Dado que el encabezado es una parte del diseño del sitio, también se abrirá el Inspector de página \_archivo Layout.cshtml y resalte el segmento de código afectado.
 
-    ![Discoveringstyles](using-page-inspector-in-visual-studio-2012/_static/image9.png)
+    ![Detección de estilos](using-page-inspector-in-visual-studio-2012/_static/image9.png)
 
     *Detección de estilos y archivos de código fuente de un elemento seleccionado*
 11. Con el puntero de inspección de alternancia habilitado, mueva el puntero del mouse debajo de la barra azul destacada y haga clic en el círculo mitad.
@@ -180,7 +180,7 @@ En esta tarea, obtendrá información sobre cómo usar el Inspector de página e
     *Cambiar los valores de CSS en el Inspector de página*
 15. Haga clic en el **Rastrear estilos** ficha, que se encuentra en el panel derecho del Inspector de página. Esto es una forma alternativa para ver todos los estilos aplicados a la selección, ordenada por nombre de atributo.
 
-    ![CSSstylestracing](using-page-inspector-in-visual-studio-2012/_static/image13.png)
+    ![Seguimiento de estilos CSS](using-page-inspector-in-visual-studio-2012/_static/image13.png)
 
     *Seguimiento de estilos CSS del elemento seleccionado*
 16. Otra característica de Inspector de página es el panel de diseño. Con el modo de inspección, seleccione la barra de navegación y, a continuación, haga clic en el **diseño** ficha en el panel derecho. Verá el tamaño exacto del elemento seleccionado, así como su tamaño de desplazamiento, margen, relleno y borde. Tenga en cuenta que también puede modificar los valores de esta vista.
@@ -218,7 +218,7 @@ En esta tarea, utilizará el inspector de página y corregir algunos problemas d
 2. Con el modo de inspección de alternancia seleccionado, haga clic en Cerrar para, pero no en el vínculo de registro para abrir su código.
 
     Tenga en cuenta que el código fuente de los vínculos se encuentra en la  **\_LoginPartial.cshtml** de archivos, no el Index.cshtml ni \_Layout.cshtml, que son los lugares que podría ser en primer lugar. Han colocado directamente en el archivo de código fuente correcto.
-3. En el **estilos** pestaña, busque y haga clic en el **<section> #login</section>** elemento, que es el contenedor HTML para que estos vínculos.
+3. En el **estilos** pestaña, busque y haga clic en el  **\<sección > #login** elemento, que es el contenedor HTML para que estos vínculos.
 
     Tenga en cuenta que el **#login** estilo automáticamente se encuentra en **Site.css** tras hacer clic en. Además, ahora se resalta el código.
 
@@ -261,12 +261,12 @@ En esta tarea, utilizará el inspector de página y corregir algunos problemas d
 
     *Asignar un título nuevo*
 
-    ![PhotoGallerypage](using-page-inspector-in-visual-studio-2012/_static/image23.png)
+    ![Página de la Galería fotográfica](using-page-inspector-in-visual-studio-2012/_static/image23.png)
 
     *Página de la Galería fotográfica actualizado*
 11. Por último, seleccione el **PhotoGallery** proyecto y presione **F5** para ejecutar la aplicación. Consulte todos los cambios funcionan según lo previsto.
 
-* * *
+---
 
 <a id="Exercise2"></a>
 
@@ -347,7 +347,7 @@ En esta tarea, obtendrá información sobre cómo usar las características de I
     > [!NOTE]
     > Puesto que el encabezado es una parte del diseño del sitio, Inspector de página también abre el archivo Site.Master y resalte el segmento de código que se ven afectado.
 
-    ![DiscoveringstylesWebForms](using-page-inspector-in-visual-studio-2012/_static/image32.png "detección estilos y archivos de código fuente de un elemento seleccionado")
+    ![Detectar estilos WebForms](using-page-inspector-in-visual-studio-2012/_static/image32.png "detección estilos y archivos de código fuente de un elemento seleccionado")
 
     *Detección de estilos y archivos de código fuente de un elemento seleccionado*
 11. Con el puntero de inspección de alternancia habilitado, mueva el puntero del mouse debajo de la barra de menú y haga clic en el círculo mitad en blanco.
@@ -421,7 +421,7 @@ En esta tarea, usará el inspector de página para solucionar algunos problemas 
     Inspector de página es consciente de los diferentes archivos que componen la página actual, y puede detectar cuando cambie cualquiera de estos archivos. Le avisa cada vez que la página actual en el explorador no está sincronizada con los archivos de origen.
 5. En el explorador del Inspector de página, haga clic en la barra situada debajo de la barra de direcciones para guardar los cambios y volver a cargar la página.
 
-    ![Reloadingthepage](using-page-inspector-in-visual-studio-2012/_static/image40.png)
+    ![Volver a cargar la página](using-page-inspector-in-visual-studio-2012/_static/image40.png)
 
     *Volver a cargar la página*
 
@@ -457,7 +457,7 @@ En esta tarea, usará el inspector de página para solucionar algunos problemas 
     *Página de la Galería fotográfica actualizado*
 11. Por último, active **F5** para ejecutar la aplicación de la desprotección de todos los cambios funcionan según lo previsto.
 
-* * *
+---
 
 <a id="Summary"></a>
 

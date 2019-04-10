@@ -8,15 +8,15 @@ ms.date: 02/05/2013
 ms.assetid: a8367c6d-ef94-4dff-a010-5eff9e6eea96
 msc.legacyurl: /single-page-application/overview/introduction/other-libraries
 msc.type: authoredcontent
-ms.openlocfilehash: 5503a00df707ee79282a32c77ed2287e93cf8f48
-ms.sourcegitcommit: 289e051cc8a90e8f7127e239fda73047bde4de12
+ms.openlocfilehash: 70ced1d53b66fbe5ced3606413594707099dda28
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/25/2019
-ms.locfileid: "58425475"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59406449"
 ---
-<a name="know-a-library-other-than-knockout"></a>¿Conoce una biblioteca distinta de Knockout?
-====================
+# <a name="know-a-library-other-than-knockout"></a>¿Conoce una biblioteca distinta de Knockout?
+
 por [Mads Kristensen](https://github.com/madskristensen)
 
 El [plantilla de aplicación de página única (SPA)](knockoutjs-template.md) es una excelente manera de empezar a escribir aplicaciones de página única. La plantilla utiliza [KnockoutJS](http://knockoutjs.com/) para enlazar datos de la aplicación a los elementos DOM.

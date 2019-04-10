@@ -8,15 +8,15 @@ ms.date: 04/01/2009
 ms.assetid: f8d78a88-cc91-40d8-bce3-3d7954f6033b
 msc.legacyurl: /web-forms/overview/older-versions-getting-started/deploying-web-site-projects/determining-what-files-need-to-be-deployed-cs
 msc.type: authoredcontent
-ms.openlocfilehash: ad759cefc372f6276ce1b16beea7282d9685ef82
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: c17e3afaf4406489a14d0537a33fef384d6c5a19
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57029922"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59408971"
 ---
-<a name="determining-what-files-need-to-be-deployed-c"></a>Determinar qué archivos se deben implementar (C#)
-====================
+# <a name="determining-what-files-need-to-be-deployed-c"></a>Determinar qué archivos se deben implementar (C#)
+
 por [Scott Mitchell](https://twitter.com/ScottOnWriting)
 
 [Descargar código](http://download.microsoft.com/download/4/5/F/45F815EC-8B0E-46D3-9FB8-2DC015CCA306/ASPNET_Hosting_Tutorial_02_CS.zip) o [descargar PDF](http://download.microsoft.com/download/E/8/9/E8920AE6-D441-41A7-8A77-9EF8FF970D8B/aspnet_tutorial02_FilesToDeploy_cs.pdf)
@@ -93,7 +93,7 @@ La descarga de este tutorial incluye una aplicación de ASP.NET denominada rese�
 Figura 1 muestra una captura de pantalla de la reseñas de libros del sitio Web cuando se ve mediante un explorador. Aquí verá la página ~ /`Tech/TYASP35.aspx`, que revisa el libro *enseñar a usted mismo ASP.NET 3.5 en 24 horas*. La ruta de navegación que abarca la parte superior de la página y el menú de la columna izquierda se basan en la estructura de mapa del sitio definida en `Web.sitemap`. La imagen en la esquina superior derecha es una de las imágenes ubicadas en la cubierta del libro la `Images` carpeta. Apariencia del sitio Web se definen mediante en cascada deletreadas los archivos CSS en la carpeta Styles, mientras que el diseño general de la página se define en la página maestra, reglas de hojas de estilos `Site.master`.
 
 
-[![El sitio Web de libro de revisiones ofrece las revisiones de una gran variedad de títulos](determining-what-files-need-to-be-deployed-cs/_static/image2.png)](determining-what-files-need-to-be-deployed-cs/_static/image1.png)
+[![Tsitio Web de libro de revisiones ofrece las revisiones de una gran variedad de títulos](determining-what-files-need-to-be-deployed-cs/_static/image2.png)](determining-what-files-need-to-be-deployed-cs/_static/image1.png)
 
 **Figura 1:** El sitio Web de libro de revisiones ofrece las revisiones de una gran variedad de títulos ([haga clic aquí para ver imagen en tamaño completo](determining-what-files-need-to-be-deployed-cs/_static/image3.png))
 
@@ -116,7 +116,7 @@ El modelo de proyecto de aplicación Web usa la compilación explícita: código
 Figura 2 muestra los archivos que componen el proyecto de aplicación Web de libreta de revisiones.
 
 
-[![El Explorador de soluciones muestra los archivos que componen el proyecto de aplicación Web](determining-what-files-need-to-be-deployed-cs/_static/image5.png)](determining-what-files-need-to-be-deployed-cs/_static/image4.png)
+[![Tel Explorador de soluciones incluye los archivos que componen el proyecto de aplicación Web](determining-what-files-need-to-be-deployed-cs/_static/image5.png)](determining-what-files-need-to-be-deployed-cs/_static/image4.png)
 
 **Figura 2**: El Explorador de soluciones muestra los archivos que componen el proyecto de aplicación Web
 
@@ -143,7 +143,7 @@ La opción de menú de la compilación en Visual Studio está presente en los pr
 Figura 3 muestra los archivos que componen el proyecto de sitio Web de las revisiones de libro.
 
 
- [![El Explorador de soluciones muestra los archivos que componen el proyecto de sitio Web](determining-what-files-need-to-be-deployed-cs/_static/image7.png)](determining-what-files-need-to-be-deployed-cs/_static/image6.png) 
+ [![Tel Explorador de soluciones incluye los archivos que componen el proyecto de sitio Web](determining-what-files-need-to-be-deployed-cs/_static/image7.png)](determining-what-files-need-to-be-deployed-cs/_static/image6.png) 
 
 **Figura 3**: El Explorador de soluciones muestra los archivos que componen el proyecto de sitio Web
 

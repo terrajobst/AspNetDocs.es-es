@@ -8,15 +8,15 @@ ms.date: 02/25/2014
 ms.assetid: 66a837e9-600b-4b72-97a9-19804231c64a
 msc.legacyurl: /web-api/overview/testing-and-debugging/tracing-in-aspnet-web-api
 msc.type: authoredcontent
-ms.openlocfilehash: 59bce8c511167e8ba8a8db6f1842e352c90f3039
-ms.sourcegitcommit: 289e051cc8a90e8f7127e239fda73047bde4de12
+ms.openlocfilehash: a01acb649556d06ab9828ceab0fcbdf363bbc0d1
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/25/2019
-ms.locfileid: "58424903"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59405903"
 ---
-<a name="tracing-in-aspnet-web-api-2"></a>Seguimiento en ASP.NET Web API 2
-====================
+# <a name="tracing-in-aspnet-web-api-2"></a>Seguimiento en ASP.NET Web API 2
+
 por [Mike Wasson](https://github.com/MikeWasson)
 
 > Cuando se intenta depurar una aplicación basada en web, no hay ningún sustituto para un buen conjunto de registros de seguimiento. Este tutorial muestra cómo habilitar el seguimiento en ASP.NET Web API. Puede usar esta característica para realizar un seguimiento de lo que hace el marco API Web antes y después invoca el controlador. También puede usar para realizar un seguimiento de su propio código.

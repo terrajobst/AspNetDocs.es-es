@@ -1,6 +1,6 @@
 ---
 uid: mvc/overview/getting-started/database-first-development/creating-the-web-application
-title: 'Tutorial: Crear la base de datos de la aplicación Web y los modelos de datos para EF primero con ASP.NET MVC'
+title: 'Tutorial: Crear la aplicación Web y los modelos de datos para EF Database First con MVC de ASP.NET'
 description: En este tutorial se centra en crear la aplicación web y generar los modelos de datos basados en las tablas de base de datos.
 author: Rick-Anderson
 ms.author: riande
@@ -9,14 +9,14 @@ ms.topic: tutorial
 ms.assetid: bc8f2bd5-ff57-4dcd-8418-a5bd517d8953
 msc.legacyurl: /mvc/overview/getting-started/database-first-development/creating-the-web-application
 msc.type: authoredcontent
-ms.openlocfilehash: 481a0ee9b19e5d35d736b2cc937a124900bce446
-ms.sourcegitcommit: 289e051cc8a90e8f7127e239fda73047bde4de12
+ms.openlocfilehash: 30fd42be5677df6fa6ee0630914098c30d21385b
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/25/2019
-ms.locfileid: "58426138"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59404525"
 ---
-# <a name="tutorial-create-the-the-web-application-and-data-models-for-ef-database-first-with-aspnet-mvc"></a>Tutorial: Crear la base de datos de la aplicación Web y los modelos de datos para EF primero con ASP.NET MVC
+# <a name="tutorial-create-the-web-application-and-data-models-for-ef-database-first-with-aspnet-mvc"></a>Tutorial: Crear la aplicación Web y los modelos de datos para EF Database First con MVC de ASP.NET
 
  Con Scaffolding de ASP.NET, MVC y Entity Framework, puede crear una aplicación web que proporciona una interfaz a una base de datos existente. Esta serie de tutoriales muestra cómo generar el código que permite a los usuarios mostrar, editar, crear automáticamente y eliminar datos que residen en una tabla de base de datos. El código generado corresponde a las columnas de la tabla de base de datos.
 
@@ -104,4 +104,4 @@ En este tutorial ha:
 
 Avance al siguiente tutorial para aprender a crear generar código basado en los modelos de datos.
 > [!div class="nextstepaction"]
-> [Generación de vistas](generating-views.md)
+> [Generar vistas](generating-views.md)

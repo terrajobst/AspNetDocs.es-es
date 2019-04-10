@@ -8,15 +8,15 @@ ms.date: 02/10/2010
 ms.assetid: d7729af4-1eda-4ff2-8b61-dbbe4fc11d10
 msc.legacyurl: /whitepapers/aspnet4
 msc.type: content
-ms.openlocfilehash: 93ee29ae125e9442ee755998768a8105dfb485c0
-ms.sourcegitcommit: 289e051cc8a90e8f7127e239fda73047bde4de12
+ms.openlocfilehash: 0991ce5c866aa9e31ef23812e953d9ee10dda3d1
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/25/2019
-ms.locfileid: "58424305"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59409725"
 ---
-<a name="aspnet-4-and-visual-studio-2010-web-development-overview"></a>Información general sobre la implementación web de ASP.NET 4 y Visual Studio 2010
-====================
+# <a name="aspnet-4-and-visual-studio-2010-web-development-overview"></a>Información general sobre la implementación web de ASP.NET 4 y Visual Studio 2010
+
 > Este documento proporciona información general de muchas de las nuevas características para ASP.NET que se incluyen en.NET Framework 4 y en Visual Studio 2010.
 > 
 > [Descargue estas notas del producto](https://download.microsoft.com/download/7/1/A/71A105A9-89D6-4201-9CC5-AD6A3B7E2F22/ASP_NET_4_and_Visual_Studio_2010_Web_Development_Overview.pdf)
@@ -202,7 +202,7 @@ ASP.NET 4 también le permite configurar los caracteres que se usan por la compr
 
 [!code-xml[Main](overview/samples/sample11.xml)]
 
-De forma predeterminada, el <em>requestPathInvalidChars</em> atributo define ocho caracteres como no válidos. (En la cadena que se asigna a <em>requestPathInvalidChars</em> predeterminada<em>,</em>el menor que (&lt;), mayor que (&gt;) y "y" comercial (&amp;) es caracteres adicionales. codificar, porque el `Web.config` archivo es un archivo XML.) Puede personalizar el conjunto de caracteres no válidos según sea necesario.
+De forma predeterminada, el *requestPathInvalidChars* atributo define ocho caracteres como no válidos. (En la cadena que se asigna a *requestPathInvalidChars* de forma predeterminada, el menor que (&lt;), mayor que (&gt;) y "y" comercial (&amp;) se codifican caracteres, porque el `Web.config` archivo es un archivo XML). Puede personalizar el conjunto de caracteres no válidos según sea necesario.
 
 > [!NOTE]
 > Tenga en cuenta que ASP.NET 4 siempre rechaza las rutas de acceso de dirección URL que contienen caracteres en el intervalo ASCII de 0 x 00 a 0x1F, ya que son caracteres de dirección URL no válidos, tal como se define en RFC 2396 de IETF ([http://www.ietf.org/rfc/rfc2396.txt](http://www.ietf.org/rfc/rfc2396.txt)). En las versiones de Windows Server que ejecutan IIS 6 o versiones posteriores, el controlador de dispositivo de protocolo de http.sys rechaza automáticamente las direcciones URL con estos caracteres.
@@ -413,13 +413,13 @@ El efecto de esta configuración es que, cuando la página carga por primera vez
 
 Deshabilitado `: [DynamicValue]`
 
-Habilitada:`[DynamicValue]`
+Habilitado:`[DynamicValue]`
 
 Después de un postback, sin embargo, se muestra el siguiente resultado:
 
 Deshabilitado `: [DeclaredValue]`
 
-Habilitada:`[DynamicValue]`
+Habilitado:`[DynamicValue]`
 
 El control label1 (cuyo *ViewStateMode* valor se establece en *deshabilitado*) no se conserva el valor que se ha establecido en el código. Sin embargo, controlar la label2 (cuyo *ViewStateMode* valor se establece en *habilitado*) se conserva su estado.
 
@@ -445,7 +445,7 @@ La siguiente lista muestra los archivos de definición de nueva ventana del expl
 
 - *blackberry.browser*
 - *chrome.browser*
-- *Default.browser*
+- *Default.Browser*
 - *firefox.browser*
 - *gateway.browser*
 - *generic.browser*
@@ -628,7 +628,7 @@ El *RouteParameter* clase le permite especificar datos de ruta como valor de par
 
 [!code-aspx[Main](overview/samples/sample46.aspx)]
 
-En este caso, el valor de la searchterm de parámetro de ruta se usará para la @companyname parámetro en el <em>seleccione</em> instrucción.
+En este caso, el valor de la searchterm de parámetro de ruta se usará para la @companyname parámetro en el *seleccione* instrucción.
 
 <a id="0.2__Toc224729037"></a><a id="0.2__Toc253429261"></a><a id="0.2__Toc243304635"></a>
 
@@ -982,10 +982,10 @@ A continuación, puede definir una clase CSS que solo se aplica a la *oculto* el
 De forma predeterminada, los siguientes controles de servidor Web de ASP.NET que admiten las plantillas se ajustan automáticamente en una tabla externa que se usa para aplicar estilos en línea:
 
 - *FormView*
-- *inicio de sesión*
+- *Iniciar sesión*
 - *PasswordRecovery*
 - *ChangePassword*
-- *Wizard*
+- *Asistente*
 - *CreateUserWizard*
 
 Una nueva propiedad denominada *RenderOuterTable* se agregó a estos controles que permite la tabla externa se quitó el marcado. Por ejemplo, considere el siguiente ejemplo de un *FormView* control:

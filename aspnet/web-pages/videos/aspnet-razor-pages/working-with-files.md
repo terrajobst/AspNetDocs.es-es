@@ -8,15 +8,15 @@ ms.date: 02/25/2011
 ms.assetid: 7245123a-244d-4665-bff4-5238d5ad3427
 msc.legacyurl: /web-pages/videos/aspnet-razor-pages/working-with-files
 msc.type: video
-ms.openlocfilehash: 142ff352a3424a3fce3305f1c72c1b0eb578f139
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: af40e6b4bf919783ef2e3cc1118783bf7e346074
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57046022"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59408776"
 ---
-<a name="working-with-files"></a>Trabajar con archivos
-====================
+# <a name="working-with-files"></a>Trabajar con archivos
+
 por [Joe Stagner](https://github.com/JoeStagner)
 
 Vídeo acompañamiento para el trabajo con el tutorial de archivos

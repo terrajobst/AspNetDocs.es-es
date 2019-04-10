@@ -8,15 +8,15 @@ ms.date: 09/21/2006
 ms.assetid: eca1b75a-2f32-4004-842e-aa555175a3ea
 msc.legacyurl: /web-forms/videos/vs-2005/web-deployment-projects
 msc.type: video
-ms.openlocfilehash: 43eef4475ccd6f5d2b2222116e538b15fcc522ab
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: 413644e1bfc8ed9753517dc29a4747e43e91b8e3
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57035552"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59400352"
 ---
-<a name="web-deployment-projects"></a>Proyectos de implementación web
-====================
+# <a name="web-deployment-projects"></a>Proyectos de implementación web
+
 by [Bradley Bartz](https://github.com/BradleyBartz)
 
 Bradley Bartz y Richard Ersek muestra cómo los proyectos de implementación Web proporcionan una funcionalidad adicional para crear e implementar aplicaciones de sitios web creadas en Visual Studio 2005.

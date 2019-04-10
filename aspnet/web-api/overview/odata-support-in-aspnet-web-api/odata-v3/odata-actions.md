@@ -8,15 +8,15 @@ ms.date: 02/25/2014
 ms.assetid: 2d7b3aa2-aa47-4e6e-b0ce-3d65a1c6fe02
 msc.legacyurl: /web-api/overview/odata-support-in-aspnet-web-api/odata-v3/odata-actions
 msc.type: authoredcontent
-ms.openlocfilehash: 71c0f91f709aca0deb5548bdbcad60d79a2702f6
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: 62ac526a9b0861af73ab17e9714bde1266a86221
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57060182"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59392370"
 ---
-<a name="supporting-odata-actions-in-aspnet-web-api-2"></a>Compatibilidad con las acciones de OData en ASP.NET Web API 2
-====================
+# <a name="supporting-odata-actions-in-aspnet-web-api-2"></a>Compatibilidad con las acciones de OData en ASP.NET Web API 2
+
 por [Mike Wasson](https://github.com/MikeWasson)
 
 [Descargue el proyecto completado](http://code.msdn.microsoft.com/ASPNET-Web-API-OData-cecdb524)

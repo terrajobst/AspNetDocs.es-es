@@ -8,15 +8,15 @@ ms.date: 02/16/2008
 ms.assetid: 94c3e5d9-a904-445e-a34e-d92fd1ca108a
 msc.legacyurl: /mvc/overview/older-versions-1/controllers-and-routing/asp-net-mvc-controller-overview-vb
 msc.type: authoredcontent
-ms.openlocfilehash: 604bf4af2a46e56d9445de141fae1a1651acf47f
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: 33544825403db67fc3b8f0e9eae5d7671b8d2e67
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57064492"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59402198"
 ---
-<a name="aspnet-mvc-controller-overview-vb"></a>Información general sobre el controlador de ASP.NET MVC (VB)
-====================
+# <a name="aspnet-mvc-controller-overview-vb"></a>Información general sobre el controlador de ASP.NET MVC (VB)
+
 by [Stephen Walther](https://github.com/StephenWalther)
 
 > En este tutorial, Stephen Walther presenta los controladores ASP.NET MVC. Aprenda a crear nuevos controladores y devolver tipos diferentes de los resultados de acción.
@@ -34,7 +34,7 @@ En este caso, se invoca un controlador llamado ProductController. ProductControl
 
 Listado 1 contiene un controlador simple llamado ProductController.
 
-**Listing1 - Controllers\ProductController.vb**
+**Listado 1 - Controllers\ProductController.vb**
 
 [!code-vb[Main](asp-net-mvc-controller-overview-vb/samples/sample1.vb)]
 
@@ -72,7 +72,7 @@ Todos estos resultados de acción se heredan de la clase ActionResult base.
 
 En la mayoría de los casos, una acción de controlador devuelve ViewResult. Por ejemplo, la acción de controlador de índice en el listado 2 devuelve ViewResult.
 
-**Listing 2 - Controllers\BookController.vb**
+**Listado 2 - Controllers\BookController.vb**
 
 [!code-vb[Main](asp-net-mvc-controller-overview-vb/samples/sample2.vb)]
 
@@ -97,7 +97,7 @@ Por lo tanto, si desea devolver una vista en el explorador, se llame al método 
 
 El resultado de acción ContentResult es especial. Puede usar el resultado de acción ContentResult para devolver un resultado de acción como texto sin formato. Por ejemplo, el método Index() en el listado 4 devuelve un mensaje como texto sin formato y no como HTML.
 
-**Listing 4 - Controllers\StatusController.vb**
+**Listado 4 - Controllers\StatusController.vb**
 
 > StatusController
 > 

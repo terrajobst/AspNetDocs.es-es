@@ -8,12 +8,12 @@ ms.date: 02/18/2013
 ms.assetid: 48f7feb3-872f-485d-b96f-e30011ff8c4a
 msc.legacyurl: /mvc/overview/older-versions/hands-on-labs/whats-new-in-aspnet-mvc-4
 msc.type: authoredcontent
-ms.openlocfilehash: 0c4b7b2641c91cbb63ec46fa707c004f7273a303
-ms.sourcegitcommit: 289e051cc8a90e8f7127e239fda73047bde4de12
+ms.openlocfilehash: b9da2522cfaed324a23f43265d4e234ebb4950bd
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/25/2019
-ms.locfileid: "58422693"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59411129"
 ---
 # <a name="whats-new-in-aspnet-mvc-4"></a>Novedades de ASP.NET MVC 4
 
@@ -173,14 +173,14 @@ En este ejercicio, explorará las mejoras en las plantillas de proyecto de ASP.N
 
    *La plantilla de proyecto de aplicación de Internet de ASP.NET MVC 4*
 
-   - **HTML 5 marcado**
+    - **HTML 5 marcado**
 
        Examinar vistas de la plantilla para averiguar el nuevo marcado de tema.
 
        ![Nueva plantilla, uso de marcado de Razor y HTML5 About.cshtml. ](whats-new-in-aspnet-mvc-4/_static/image10.png "Nueva plantilla, uso de marcado de Razor y HTML5 About.cshtml.")
 
        *Nueva plantilla, usando un marcado de Razor y HTML5 (About.cshtml).*
-   - **Bibliotecas actualizadas de JavaScript**
+    - **Bibliotecas actualizadas de JavaScript**
 
        La plantilla predeterminada de ASP.NET MVC 4 ahora incluye KnockoutJS, un marco MVVM JavaScript que le permite crear enriquecidos y aplicaciones de alta capacidad de respuesta web con JavaScript y HTML. Al igual que en MVC3, jQuery y bibliotecas de interfaz de usuario de jQuery también se incluyen en ASP.NET MVC 4.
 
@@ -250,11 +250,11 @@ Mediante la técnica de procesamiento adaptable, su sitio será **muestre correc
 > Es el formato básico de una consulta de medios: @media \[Ámbito: todos | mano | imprimir | proyección | pantalla\] ([: valor de propiedad] y... [propiedad: valor])
 
 
-Ejemplos de consultas de medios: &gt;  <strong>@media todas y (ancho máximo: 1000px) y (min-width: 700px) {}:</strong> Para todas las resoluciones entre 700px y 1000px.
+Ejemplos de consultas de medios: &gt;  **@media todas y (ancho máximo: 1000px) y (min-width: 700px) {}:** Para todas las resoluciones entre 700px y 1000px.
 
-> <strong>@media pantalla y (min-width: 400px) y (ancho máximo: 700px) { ... }:</strong> Solo para las pantallas. La resolución debe estar entre 400 y 700px.
+> **@media pantalla y (min-width: 400px) y (ancho máximo: 700px) { ... }:** Solo para las pantallas. La resolución debe estar entre 400 y 700px.
 > 
-> <strong>@media dispositivo de mano y (min-width: 20em), pantalla y (min-width: 20em) { ... }:</strong> Para dispositivos de mano (mobile y dispositivos) y pantallas. El ancho mínimo debe ser mayor que 20em.
+> **@media dispositivo de mano y (min-width: 20em), pantalla y (min-width: 20em) { ... }:** Para dispositivos de mano (mobile y dispositivos) y pantallas. El ancho mínimo debe ser mayor que 20em.
 > 
 > Puede encontrar más información al respecto en el [sitio W3C](http://www.w3.org/TR/css3-mediaqueries/).
 
@@ -263,7 +263,7 @@ Ahora explorará cómo funciona el procesamiento adaptable, mejorar la legibilid
 
 1. Abra el **PhotoGallery.sln** solución que ha creado en la tarea 1 y seleccione el **PhotoGallery** proyecto. Presione **F5** para ejecutar la solución.
 2. Cambio de tamaño el ancho del explorador, configuración de las ventanas a la mitad o menos de un trimestre de su tamaño original. Tenga en cuenta lo que sucede con los elementos en el encabezado: Algunos elementos no aparecerán en el área visible del encabezado.
-3. Abra <strong>Site.css</strong> archivo desde el Explorador de soluciones de Visual Studio, ubicado en <strong>contenido</strong> carpeta del proyecto. Presione <strong>CTRL + F</strong> para abrir la búsqueda integrada en Visual Studio y escribir <strong>@media</strong> para localizar el <strong>consulta de medios CSS</strong>.
+3. Abra **Site.css** archivo desde el Explorador de soluciones de Visual Studio, ubicado en **contenido** carpeta del proyecto. Presione **CTRL + F** para abrir la búsqueda integrada en Visual Studio y escribir **@media** para localizar el **consulta de medios CSS**.
 
     La condición de consulta de medios definida en esta plantilla funciona de esta manera: Cuando el tamaño de la ventana del explorador está por debajo **850 px**, aplica las reglas de CSS son los que se definen dentro de este bloque de medios.
 
@@ -274,13 +274,13 @@ Ahora explorará cómo funciona el procesamiento adaptable, mejorar la legibilid
 
     ![En el lado izquierdo, la página se aplica el @media estilo, en la derecha, el estilo se omite](whats-new-in-aspnet-mvc-4/_static/image17.png "en la izquierda, está aplicando la página el @media estilo, en la derecha, el estilo se omite")
 
-    <em>En el lado izquierdo, la página está aplicando la @media estilo, en la derecha, el estilo se omite</em>
+    *En el lado izquierdo, la página está aplicando la @media estilo, en la derecha, el estilo se omite*
 
     Ahora, vamos a comprobar lo que sucede en los dispositivos móviles:
 
     ![En el lado izquierdo, la página se aplica el @media estilo, en la derecha, el estilo se omite](whats-new-in-aspnet-mvc-4/_static/image18.png "en la izquierda, está aplicando la página el @media estilo, en la derecha, el estilo se omite")
 
-    <em>En el lado izquierdo, la página está aplicando la @media estilo, en la derecha, el estilo se omite</em>
+    *En el lado izquierdo, la página está aplicando la @media estilo, en la derecha, el estilo se omite*
 
     Aunque observará que los cambios cuando la página se representa en un explorador Web no son muy importantes, cuando se usa un dispositivo móvil las diferencias se hacen más evidentes. En el lado izquierdo de la imagen, podemos ver que el estilo personalizado mejora la legibilidad.
 
@@ -543,11 +543,11 @@ En esta tarea, actualizará el diseño de escritorio para incluir al modificador
     ![Ver modificador representado en la vista de escritorio](whats-new-in-aspnet-mvc-4/_static/image32.png "modificador de vista que se representan en la vista de escritorio")
 
     *Modificador de vista que se representan en la vista de escritorio*
-7. Cambie a la vista móvil nuevo y vaya a <strong>sobre</strong> página (http://localhost[puerto] / Home/acerca de). Tenga en cuenta que, incluso si no ha creado una vista About.Mobile.cshtml, la página About se muestra con el diseño móvil (\_Layout.Mobile.cshtml).
+7. Cambie a la vista móvil nuevo y vaya a **sobre** página (http://localhost[puerto] / Home/acerca de). Tenga en cuenta que, incluso si no ha creado una vista About.Mobile.cshtml, la página About se muestra con el diseño móvil (\_Layout.Mobile.cshtml).
 
     ![Acerca de la página](whats-new-in-aspnet-mvc-4/_static/image33.png "acerca de la página")
 
-    *Acerca de la página*
+    *Página About*
 8. Por último, abra el sitio en un explorador Web de escritorio. Tenga en cuenta que ninguna de las actualizaciones anteriores ha afectado a la vista de escritorio.
 
     ![Vista de escritorio PhotoGallery](whats-new-in-aspnet-mvc-4/_static/image34.png "PhotoGallery vista del escritorio")
@@ -764,7 +764,7 @@ Con fragmentos de código, tiene todo el código que necesita a su alcance. El d
 
 Puede instalar **Microsoft Visual Studio Express 2012 para Web** u otro &quot;Express&quot; versión utilizando el **[Microsoft Web Platform Installer](https://www.microsoft.com/web/downloads/platform.aspx)**. Las instrucciones siguientes le guían a través de los pasos necesarios para instalar *Visual studio Express 2012 para Web* mediante *Microsoft Web Platform Installer*.
 
-1. Vaya a [ [ https://go.microsoft.com/?linkid=9810169 ](https://go.microsoft.com/?linkid=9810169) ](https://go.microsoft.com/?linkid=9810169). Como alternativa, si ya ha instalado el instalador de plataforma Web, puede abrirla y busque el producto &quot; <em>Visual Studio Express 2012 for Web con SDK de Windows Azure</em>&quot;.
+1. Vaya a [ [ https://go.microsoft.com/?linkid=9810169 ](https://go.microsoft.com/?linkid=9810169) ](https://go.microsoft.com/?linkid=9810169). Como alternativa, si ya ha instalado el instalador de plataforma Web, puede abrirla y busque el producto &quot; *Visual Studio Express 2012 for Web con SDK de Windows Azure*&quot;.
 2. Haga clic en **instalar ahora**. Si no tienes **instalador de plataforma Web** se le redirigirá para descargarlo e instalarlo en primer lugar.
 3. Una vez **instalador de plataforma Web** está abierto, haga clic en **instalar** para iniciar el programa de instalación.
 
@@ -805,7 +805,7 @@ Para ejecutar el sitio en un dispositivo simulado iPhone puede usar la extensió
 <a id="Task_1_-_Installing_WebMatrix_2"></a>
 #### <a name="task-1---installing-webmatrix-2"></a>Tarea 1: instalar WebMatrix 2
 
-1. Vaya a [ [ https://go.microsoft.com/?linkid=9809776 ](https://go.microsoft.com/?linkid=9809776) ](https://go.microsoft.com/?linkid=9810169). Como alternativa, si ya ha instalado el instalador de plataforma Web, puede abrirla y busque el producto &quot; <em>WebMatrix 2</em>&quot;.
+1. Vaya a [ [ https://go.microsoft.com/?linkid=9809776 ](https://go.microsoft.com/?linkid=9809776) ](https://go.microsoft.com/?linkid=9810169). Como alternativa, si ya ha instalado el instalador de plataforma Web, puede abrirla y busque el producto &quot; *WebMatrix 2*&quot;.
 2. Haga clic en **instalar ahora**. Si no tienes **instalador de plataforma Web** se le redirigirá para descargarlo e instalarlo en primer lugar.
 3. Una vez **instalador de plataforma Web** está abierto, haga clic en **instalar** para iniciar el programa de instalación.
 
@@ -875,7 +875,7 @@ Para ejecutar el sitio en un dispositivo simulado iPhone puede usar la extensió
 3. En el &quot;explorar con&quot; cuadro de diálogo, haga clic en **agregar**.
 4. En el &quot;Agregar programa&quot; cuadro de diálogo, use los siguientes valores:
 
-   - <strong>Programa</strong>: C:\Users\*{CurrentUser}<em>\AppData\Local\Microsoft\WebMatrix\Extensions\20\iPhoneSimulator\ElectricMobileSim\ElectricMobileSim.exe * (actualización de la ruta de acceso según corresponda)</em>
+   - **Programa**: C:\Users\*{CurrentUser}*\AppData\Local\Microsoft\WebMatrix\Extensions\20\iPhoneSimulator\ElectricMobileSim\ElectricMobileSim.exe *(actualización de la ruta de acceso según corresponda)*
    - **Argumentos**: &quot;1&quot;
    - **Nombre descriptivo**: simulador de iPhone
 

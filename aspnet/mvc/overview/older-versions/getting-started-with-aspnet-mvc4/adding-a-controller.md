@@ -8,15 +8,15 @@ ms.date: 08/28/2012
 ms.assetid: 0267d31c-892f-49a1-9e7a-3ae8cc12b2ca
 msc.legacyurl: /mvc/overview/older-versions/getting-started-with-aspnet-mvc4/adding-a-controller
 msc.type: authoredcontent
-ms.openlocfilehash: 6cc64cd9ed7a8a4cf053a63d22214bf31a80147b
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: d1cd01e924dc8e13b22b736ada490a3507e730f5
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57057752"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59405838"
 ---
-<a name="adding-a-controller"></a>Agregar un controlador
-====================
+# <a name="adding-a-controller"></a>Agregar un controlador
+
 by [Rick Anderson]((https://twitter.com/RickAndMSFT))
 
 > > [!NOTE]

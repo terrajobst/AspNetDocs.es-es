@@ -8,15 +8,15 @@ ms.date: 06/10/2014
 ms.assetid: 6ecd08c1-e364-4cd7-ad4c-806521911585
 msc.legacyurl: /signalr/overview/performance/scaleout-with-redis
 msc.type: authoredcontent
-ms.openlocfilehash: c20341a7fa0f5c5382ce7f2f6d459c4a6bec509f
-ms.sourcegitcommit: 289e051cc8a90e8f7127e239fda73047bde4de12
+ms.openlocfilehash: 78efe409ab59df17ae71c26d4e280cc9971a64d2
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/25/2019
-ms.locfileid: "58424103"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59393256"
 ---
-<a name="signalr-scaleout-with-redis"></a>Escalabilidad horizontal de SignalR con Redis
-====================
+# <a name="signalr-scaleout-with-redis"></a>Escalabilidad horizontal de SignalR con Redis
+
 por [Mike Wasson](https://github.com/MikeWasson)
 
 [!INCLUDE [Consider ASP.NET Core SignalR](~/includes/signalr/signalr-version-disambiguation.md)]

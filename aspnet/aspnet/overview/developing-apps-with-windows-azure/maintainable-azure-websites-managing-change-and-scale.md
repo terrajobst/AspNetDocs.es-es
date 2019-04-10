@@ -8,15 +8,15 @@ ms.date: 07/16/2014
 ms.assetid: ecfd0eb4-c4ad-44e6-9db9-a2a66611ff6a
 msc.legacyurl: /aspnet/overview/developing-apps-with-windows-azure/maintainable-azure-websites-managing-change-and-scale
 msc.type: authoredcontent
-ms.openlocfilehash: 315e89c81782edf0875c65afd27153102d733050
-ms.sourcegitcommit: 289e051cc8a90e8f7127e239fda73047bde4de12
+ms.openlocfilehash: ec0058472f8bc1d8d58e7c78deeb8b6097532510
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/25/2019
-ms.locfileid: "58424253"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59409738"
 ---
-<a name="hands-on-lab-maintainable-azure-websites-managing-change-and-scale"></a>Laboratorio práctico: Sitios web de Azure fáciles de mantener Administrar cambios y escalado
-====================
+# <a name="hands-on-lab-maintainable-azure-websites-managing-change-and-scale"></a>Laboratorio práctico: Sitios web de Azure fáciles de mantener Administrar cambios y escalado
+
 por [campamentos Web Team](https://twitter.com/webcamps)
 
 [Descargue el Kit de aprendizaje de campamentos de Web](https://aka.ms/webcamps-training-kit)
@@ -89,7 +89,7 @@ En todo el documento de laboratorio, se le pedirá que inserte los bloques de c�
 > Cada ejercicio viene acompañado por una solución inicial ubicada en el **comenzar** carpeta del ejercicio que le permite seguir cada ejercicio independientemente de los demás. Ten en cuenta que los fragmentos de código que se agregan durante un ejercicio faltan en estos a partir de las soluciones y es posible que no funcione hasta que haya completado el ejercicio. En el código fuente para un ejercicio, también encontrará un **final** carpeta que contiene una solución de Visual Studio con el código que se obtiene al completar los pasos descritos en el ejercicio correspondiente. Puede usar estas soluciones como instrucciones si necesita más ayuda mientras se trabaja a través de este laboratorio práctico.
 
 
-* * *
+---
 
 <a id="Exercises"></a>
 ## <a name="exercises"></a>Ejercicios
@@ -909,7 +909,7 @@ Ahora ejecute la prueba de carga que creó en la tarea anterior y ver cómo se c
     > - Reducir los valores máximo y mínimos de la **CPU de destino** rango en la configuración de escalado automático de la aplicación web
     > - Ejecutar la prueba de carga en la nube con **probar planes de Azure**. Obtener más información [aquí](/azure/devops/test/load-test/index?view=vsts)
 
-* * *
+---
 
 <a id="Summary"></a>
 ## <a name="summary"></a>Resumen

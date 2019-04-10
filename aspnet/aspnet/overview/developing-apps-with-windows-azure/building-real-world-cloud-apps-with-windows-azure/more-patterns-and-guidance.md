@@ -8,15 +8,15 @@ ms.date: 06/12/2014
 ms.assetid: 7e97cfc3-d830-4002-8ff7-5790d1ff49e6
 msc.legacyurl: /aspnet/overview/developing-apps-with-windows-azure/building-real-world-cloud-apps-with-windows-azure/more-patterns-and-guidance
 msc.type: authoredcontent
-ms.openlocfilehash: 87dbbc0b598a6592b511383a5487a04b302b0994
-ms.sourcegitcommit: 289e051cc8a90e8f7127e239fda73047bde4de12
+ms.openlocfilehash: 95943222a9869349784d4fd2686fb81725c65d44
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/25/2019
-ms.locfileid: "58425670"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59409231"
 ---
-<a name="more-patterns-and-guidance-building-real-world-cloud-apps-with-azure"></a>Más patrones y directrices (crear aplicaciones de nube reales con Azure)
-====================
+# <a name="more-patterns-and-guidance-building-real-world-cloud-apps-with-azure"></a>Más patrones y directrices (crear aplicaciones de nube reales con Azure)
+
 by [Mike Wasson](https://github.com/MikeWasson), [Rick Anderson]((https://twitter.com/RickAndMSFT)), [Tom Dykstra](https://github.com/tdykstra)
 
 [Descargar proyecto corregirlo](http://code.msdn.microsoft.com/Fix-It-app-for-Building-cdd80df4) o [descargar libro electrónico](http://blogs.msdn.com/b/microsoft_press/archive/2014/07/23/free-ebook-building-cloud-apps-with-microsoft-azure.aspx)

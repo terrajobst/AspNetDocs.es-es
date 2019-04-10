@@ -8,15 +8,15 @@ ms.date: 1/04/2019
 ms.assetid: 64a491a8-0ed6-4c2f-9c1c-412962eb6006
 msc.legacyurl: /web-forms/overview/getting-started/getting-started-with-aspnet-45-web-forms/display_data_items_and_details
 msc.type: authoredcontent
-ms.openlocfilehash: acc2f8e78375ef0455d467e2af750ecbee623224
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: 54896da5565c9383f13fc352da26bbdc3cb63a76
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57044642"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59405370"
 ---
-<a name="display-data-items-and-details"></a>Mostrar los elementos de datos y detalles
-====================
+# <a name="display-data-items-and-details"></a>Mostrar los elementos de datos y detalles
+
 por [Erik Reitan](https://github.com/Erikre)
 
 > Esta serie de tutoriales aprenderá los aspectos básicos de la creación de una aplicación de formularios Web Forms ASP.NET con ASP.NET 4.7 y Microsoft Visual Studio 2017.
@@ -39,9 +39,9 @@ En este tutorial, obtendrá información sobre cómo mostrar los elementos de da
 
 Puede usar varias opciones diferentes para enlazar datos a un control de servidor. Entre los más comunes se incluyen:
 
- * Agregar un control de origen de datos
- * Agregar código a mano
- * Uso de enlace de modelos
+* Agregar un control de origen de datos
+* Agregar código a mano
+* Uso de enlace de modelos
 
 ### <a name="use-a-data-source-control-to-bind-data"></a>Utilizar un control de origen de datos para enlazar datos
 

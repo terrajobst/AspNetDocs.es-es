@@ -8,15 +8,15 @@ ms.date: 06/02/2008
 ms.assetid: 2469f7ea-1489-42fb-a8e1-414c90141ce9
 msc.legacyurl: /web-forms/overview/ajax-control-toolkit/animation/executing-several-animations-at-the-same-time-vb
 msc.type: authoredcontent
-ms.openlocfilehash: 92191e87ed78d8e549d14412ff4a5a9d8eb4afbb
-ms.sourcegitcommit: 289e051cc8a90e8f7127e239fda73047bde4de12
+ms.openlocfilehash: f8bb91de9642814a79d0fddd642928c25c58ebfd
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/25/2019
-ms.locfileid: "58422470"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59402848"
 ---
-<a name="executing-several-animations-at-the-same-time-vb"></a>Ejecutar varias animaciones al mismo tiempo (VB)
-====================
+# <a name="executing-several-animations-at-the-same-time-vb"></a>Ejecutar varias animaciones al mismo tiempo (VB)
+
 por [Christian Wenz](https://github.com/wenz)
 
 [Descargar código](http://download.microsoft.com/download/f/9/a/f9a26acd-8df4-4484-8a18-199e4598f411/Animation2.vb.zip) o [descargar PDF](http://download.microsoft.com/download/6/7/1/6718d452-ff89-4d3f-a90e-c74ec2d636a3/animation2VB.pdf)
@@ -55,7 +55,7 @@ Este es el un marcado posible para el `AnimationExtender` control difuminación 
 Y efectivamente: al ejecutar este script, el panel se muestra, a continuación, cambia automáticamente de tamaño (más de triplicando su ancho y mitad su alto) y atenúa al mismo tiempo.
 
 
-[![El panel se atenúa y cambiar el tamaño (incluido su contenido, gracias al motor de representación del explorador)](executing-several-animations-at-the-same-time-vb/_static/image2.png)](executing-several-animations-at-the-same-time-vb/_static/image1.png)
+[![Tpanel se atenúa y cambiar el tamaño (incluido su contenido, gracias al motor de representación del explorador)](executing-several-animations-at-the-same-time-vb/_static/image2.png)](executing-several-animations-at-the-same-time-vb/_static/image1.png)
 
 El panel se atenúa y cambiar el tamaño (incluido su contenido, gracias al motor de representación del explorador) ([haga clic aquí para ver imagen en tamaño completo](executing-several-animations-at-the-same-time-vb/_static/image3.png))
 

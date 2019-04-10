@@ -8,15 +8,15 @@ ms.date: 10/23/2013
 ms.assetid: b452a3af-4157-4056-a181-569d1735c239
 msc.legacyurl: /aspnet/overview/developing-apps-with-windows-azure/building-real-world-cloud-apps-with-windows-azure
 msc.type: chapter
-ms.openlocfilehash: 9c2149fb8195e6b660331e18a975a5571b9652fb
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: bb9ae940ba90620a6a4c2d373117635f80e14588
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57019722"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59397453"
 ---
-<a name="building-real-world-cloud-apps-with-azure"></a>Compilar aplicaciones en la nube del mundo real con Azure
-====================
+# <a name="building-real-world-cloud-apps-with-azure"></a>Compilar aplicaciones en la nube del mundo real con Azure
+
 > Compilar aplicaciones en la nube del mundo real con Azure
 
 
@@ -35,4 +35,4 @@ ms.locfileid: "57019722"
 - [Almacenamiento en caché distribuido](distributed-caching.md)
 - [Patrón de trabajo centrado en la cola](queue-centric-work-pattern.md)
 - [Más patrones y directrices](more-patterns-and-guidance.md)
-- [Apéndice: Corrección de la aplicación de ejemplo](the-fix-it-sample-application.md)
+- [Apéndice: Aplicación de ejemplo Reparar](the-fix-it-sample-application.md)

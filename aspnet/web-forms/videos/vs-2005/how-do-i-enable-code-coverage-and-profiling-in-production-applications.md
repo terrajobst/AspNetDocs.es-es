@@ -8,15 +8,15 @@ ms.date: 08/22/2007
 ms.assetid: a0437314-e310-425a-b67b-0dc06878dbe2
 msc.legacyurl: /web-forms/videos/vs-2005/how-do-i-enable-code-coverage-and-profiling-in-production-applications
 msc.type: video
-ms.openlocfilehash: d7937ecd85054621665077186a5c67287f260311
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: eb886aac6c0a5d9e65719a0dc359acbad3b85659
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57052272"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59408789"
 ---
-<a name="how-do-i-enable-code-coverage-and-profiling-in-production-applications"></a>[¿Cómo lo hago?:] ¿Habilitar la cobertura de código y la generación de perfiles en aplicaciones de producción?
-====================
+# <a name="how-do-i-enable-code-coverage-and-profiling-in-production-applications"></a>[¿Cómo lo hago?:] ¿Habilitar la cobertura de código y la generación de perfiles en aplicaciones de producción?
+
 por [Chris Menegay](https://twitter.com/CMenegay)
 
 Obtenga información sobre cómo configurar la instrumentación de cobertura de código y la generación de perfiles en una aplicación de ASP.NET implementada, en lugar de una aplicación que se ejecuta desde dentro de Visual Studio. Este vídeo sigue los pasos que figuran en la [generación de perfiles de ASP.NET en modo de instrumentación desde la línea de comandos](https://msdn.microsoft.com/teamsystem/aa718860.aspx) Nota técnica en el sitio Web de Microsoft MSDN.

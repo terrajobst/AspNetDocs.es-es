@@ -8,15 +8,15 @@ ms.date: 01/10/2008
 ms.assetid: 9d020ec8-a7a8-4753-b73a-d9d0584d72e3
 msc.legacyurl: /web-forms/videos/data-access/how-do-i-with-linq/how-do-i-linq-to-sql-custom-linqdatasource
 msc.type: video
-ms.openlocfilehash: fcf7ed5a67e95088cefd2f78b83d3fe306e6b098
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: ce7daaab2478d1c5a4b67e6cec33c033e53ceafb
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57029242"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59410284"
 ---
-<a name="how-do-i-linq-to-sql-custom-linqdatasource"></a>[¿Cómo lo hago?:] LINQ to SQL: LinqDataSource personalizado
-====================
+# <a name="how-do-i-linq-to-sql-custom-linqdatasource"></a>[¿Cómo lo hago?:] LINQ to SQL: LinqDataSource personalizado
+
 por [Scott Stanfield](https://github.com/scottstanfield)
 
 El control LinqDataSource puede personalizarse declaritively, tal como se muestra en la parte 5, o bien mediante código controlando el método de selección.

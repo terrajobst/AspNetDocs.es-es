@@ -1,22 +1,23 @@
 ---
 uid: web-api/overview/hosting-aspnet-web-api/host-aspnet-web-api-in-an-azure-worker-role
-title: Hospedar ASP.NET Web API 2 en un rol de trabajo de Azure | Microsoft Docs
+title: Hospedar ASP.NET Web API 2 en un rol de trabajo de Azure - ASP.NET 4.x
 author: MikeWasson
-description: Este tutorial muestra cómo hospedar ASP.NET Web API en un rol de trabajador de Azure, mediante OWIN para probar internamente el marco API Web. Abrir la interfaz Web de .NET (OWIN)...
+description: 'Tutorial: Hospedar ASP.NET Web API en un rol de trabajador de Azure, usar OWIN para probar internamente el marco API Web.'
 ms.author: riande
 ms.date: 04/02/2014
+ms.custom: seoapril2019
 ms.assetid: 6980ee2e-d6b0-4a08-8fb6-ab96362dd0e3
 msc.legacyurl: /web-api/overview/hosting-aspnet-web-api/host-aspnet-web-api-in-an-azure-worker-role
 msc.type: authoredcontent
-ms.openlocfilehash: 40cb1a4514beaf81e7ed75bbd3e478f2ba146fe5
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: bfb23aafb814010e8651965dad91ca20a37fd786
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57063922"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59404629"
 ---
-<a name="host-aspnet-web-api-2-in-an-azure-worker-role"></a>Hospedar ASP.NET Web API 2 en un rol de trabajo de Azure
-====================
+# <a name="host-aspnet-web-api-2-in-an-azure-worker-role"></a>Hospedar ASP.NET Web API 2 en un rol de trabajo de Azure
+
 por [Mike Wasson](https://github.com/MikeWasson)
 
 > Este tutorial muestra cómo hospedar ASP.NET Web API en un rol de trabajador de Azure, mediante OWIN para probar internamente el marco API Web.

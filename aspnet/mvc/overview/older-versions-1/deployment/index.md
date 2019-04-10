@@ -8,15 +8,15 @@ ms.date: 09/28/2011
 ms.assetid: 1e9204db-664c-4376-aa50-1fb9e245a4d9
 msc.legacyurl: /mvc/overview/older-versions-1/deployment
 msc.type: chapter
-ms.openlocfilehash: f6ad66f93e0bc4efbd85c2d0b25ff70eef9deee0
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: f14784a1b5ae54873b9777dcdadd9dc32689ec5a
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57022512"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59408438"
 ---
-<a name="deployment"></a>Implementación
-====================
+# <a name="deployment"></a>Implementación
+
 > En este tutorial aprenderá a usar ASP.NET MVC y el enrutamiento con distintas versiones de IIS.
 
 

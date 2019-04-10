@@ -8,15 +8,15 @@ ms.date: 08/22/2008
 ms.assetid: c11eec26-25a2-41fb-9330-ddc123c0423a
 msc.legacyurl: /web-forms/videos/authentication/validating-users-manually
 msc.type: video
-ms.openlocfilehash: b530963dbaad8c03eef87004fb8536063ebc2534
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: 3fc0ad6b366650d20d2710574a0b443f8cd994ee
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57030022"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59396699"
 ---
-<a name="validating-users-manually"></a>Validar usuarios manualmente
-====================
+# <a name="validating-users-manually"></a>Validar usuarios manualmente
+
 por [Joe Stagner](https://github.com/JoeStagner)
 
 En este vídeo Joe Stagner muestra cómo crear su propio formulario web Forms y el proceso de la solicitud de autenticación manualmente. Para obtener más información acerca de este vídeo, lea el tutorial de seguridad de "Validación de usuario credenciales en la pertenencia a usuario Store" ([C#](../../overview/older-versions-security/membership/validating-user-credentials-against-the-membership-user-store-cs.md), [VB](../../overview/older-versions-security/membership/validating-user-credentials-against-the-membership-user-store-vb.md)).

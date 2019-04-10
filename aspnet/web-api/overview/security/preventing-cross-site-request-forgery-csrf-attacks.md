@@ -8,15 +8,15 @@ ms.date: 12/12/2012
 ms.assetid: 81d46f14-8f48-4d8c-830d-cc8d594dc11b
 msc.legacyurl: /web-api/overview/security/preventing-cross-site-request-forgery-csrf-attacks
 msc.type: authoredcontent
-ms.openlocfilehash: c88975d1c205e9d0733bfb4c710b92bc8fdaaa7a
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: 5fb0f8bcc9e587ba4fbbf2b857d3bf7adcaafb94
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57042372"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59392032"
 ---
-<a name="preventing-cross-site-request-forgery-csrf-attacks-in-aspnet-mvc-application"></a>Prevención de ataques de falsificación (CSRF) de solicitudes entre sitios en la aplicación ASP.NET MVC
-====================
+# <a name="preventing-cross-site-request-forgery-csrf-attacks-in-aspnet-mvc-application"></a>Prevención de ataques de falsificación (CSRF) de solicitudes entre sitios en la aplicación ASP.NET MVC
+
 por [Mike Wasson](https://github.com/MikeWasson)
 
 Falsificación de solicitud entre sitios (CSRF) es un ataque en un sitio malintencionado envía una solicitud a un sitio vulnerable donde el usuario ha iniciado en

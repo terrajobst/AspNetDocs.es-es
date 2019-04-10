@@ -8,15 +8,15 @@ ms.date: 03/31/2010
 ms.assetid: df5a1525-386f-4632-972c-57b199870bc3
 msc.legacyurl: /web-forms/overview/data-access/custom-formatting/custom-formatting-based-upon-data-vb
 msc.type: authoredcontent
-ms.openlocfilehash: d902fd6d042783c036bb42a11b7e469f6dd2b5b6
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: a408134b4e26e8ad1f7c22c9d2005a7c551b00c6
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57038572"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59392864"
 ---
-<a name="custom-formatting-based-upon-data-vb"></a>Formato personalizado basado en datos (VB)
-====================
+# <a name="custom-formatting-based-upon-data-vb"></a>Formato personalizado basado en datos (VB)
+
 por [Scott Mitchell](https://twitter.com/ScottOnWriting)
 
 [Descargue la aplicación de ejemplo](http://download.microsoft.com/download/5/7/0/57084608-dfb3-4781-991c-407d086e2adc/ASPNET_Data_Tutorial_11_VB.exe) o [descargar PDF](custom-formatting-based-upon-data-vb/_static/datatutorial11vb1.pdf)
@@ -49,7 +49,7 @@ Abra el `CustomColors.aspx` página en el `CustomFormatting` carpeta, arrastre u
 Una vez que se ha enlazado al origen ObjectDataSource a DetailsView, dedique un momento para modificar la lista de campos. He optado por eliminar la `ProductID`, `SupplierID`, `CategoryID`, `UnitsInStock`, `UnitsOnOrder`, `ReorderLevel`, y `Discontinued` BoundFields y cambia el nombre y volver a formatear el BoundFields restantes. También se ha retirado la `Width` y `Height` configuración. Puesto que DetailsView muestra sólo un único registro, es necesario habilitar la paginación con el fin de permitir que el usuario final ver todos los productos. Hacerlo activando la casilla Habilitar paginación en la etiqueta inteligente de DetailsView.
 
 
-[![Figura 1: Compruebe la casilla de verificación Habilitar paginación en la etiqueta inteligente de DetailsView](custom-formatting-based-upon-data-vb/_static/image2.png)](custom-formatting-based-upon-data-vb/_static/image1.png)
+[![Figure 1: Active la casilla de verificación Habilitar paginación en la etiqueta inteligente de DetailsView](custom-formatting-based-upon-data-vb/_static/image2.png)](custom-formatting-based-upon-data-vb/_static/image1.png)
 
 **Figura 1**: Figura 1: Active la casilla de la paginación de habilitar en la etiqueta inteligente de DetailsView ([haga clic aquí para ver imagen en tamaño completo](custom-formatting-based-upon-data-vb/_static/image3.png))
 
@@ -62,7 +62,7 @@ Después de estos cambios, el marcado DetailsView será:
 Dedique un momento para probar esta página en el explorador.
 
 
-[![El Control DetailsView muestra uno de los productos a la vez](custom-formatting-based-upon-data-vb/_static/image5.png)](custom-formatting-based-upon-data-vb/_static/image4.png)
+[![Tél DetailsView Control muestra un producto a la vez](custom-formatting-based-upon-data-vb/_static/image5.png)](custom-formatting-based-upon-data-vb/_static/image4.png)
 
 **Figura 2**: El producto DetailsView Control muestra una a la vez ([haga clic aquí para ver imagen en tamaño completo](custom-formatting-based-upon-data-vb/_static/image6.png))
 
@@ -124,12 +124,12 @@ A continuación, en el `DataBound` controlador de eventos, establecer la celda `
 Cuando se visualizan Chai, lo cual cuesta menos de $75,00, el precio se muestra en una fuente normal (consulte la figura 4). Sin embargo, cuando se visualizan buey Mishi Kobe Niku, que tiene un precio de $97.00, el precio se muestra en una fuente en negrita, cursiva (consulte la figura 5).
 
 
-[![Precios de menos de $75,00 se muestran en una fuente Normal](custom-formatting-based-upon-data-vb/_static/image9.png)](custom-formatting-based-upon-data-vb/_static/image8.png)
+[![PMenos de $75,00 se muestran en una fuente Normal recios](custom-formatting-based-upon-data-vb/_static/image9.png)](custom-formatting-based-upon-data-vb/_static/image8.png)
 
 **Figura 4**: Precios de menos de $75,00 se muestran en una fuente Normal ([haga clic aquí para ver imagen en tamaño completo](custom-formatting-based-upon-data-vb/_static/image10.png))
 
 
-[![Se muestran los precios de los productos costoso en un negrita, cursiva fuente](custom-formatting-based-upon-data-vb/_static/image12.png)](custom-formatting-based-upon-data-vb/_static/image11.png)
+[![Elos precios de los productos xpensive se muestran en un negrita, cursiva fuente](custom-formatting-based-upon-data-vb/_static/image12.png)](custom-formatting-based-upon-data-vb/_static/image11.png)
 
 **Figura 5**: Se muestran los precios de los productos costoso en un negrita, cursiva fuente ([haga clic aquí para ver imagen en tamaño completo](custom-formatting-based-upon-data-vb/_static/image13.png))
 
@@ -196,12 +196,12 @@ Una vez que tenemos una referencia al control Web mediante programación, podemo
 Las figuras 7 muestra FormView al ver un producto cuyo `UnitsInStock` valor es mayor que 10, mientras que el producto en la figura 8 tiene un valor menor que 10.
 
 
-[![Para los productos con unas lo suficientemente grandes Units In Stock, se aplica sin formato personalizado](custom-formatting-based-upon-data-vb/_static/image16.png)](custom-formatting-based-upon-data-vb/_static/image15.png)
+[![Fo bien, se aplica a los productos con unas lo suficientemente grandes Units In Stock, sin formato personalizado](custom-formatting-based-upon-data-vb/_static/image16.png)](custom-formatting-based-upon-data-vb/_static/image15.png)
 
 **Figura 7**: Para los productos con unas lo suficientemente grandes Units In Stock, sin formato personalizado se aplica ([haga clic aquí para ver imagen en tamaño completo](custom-formatting-based-upon-data-vb/_static/image17.png))
 
 
-[![Las unidades en existencias número se muestra en rojo para los productos con los valores de 10 o menos](custom-formatting-based-upon-data-vb/_static/image19.png)](custom-formatting-based-upon-data-vb/_static/image18.png)
+[![Tpara los productos con los valores de 10 o menos, las unidades en existencias número se muestra en rojo](custom-formatting-based-upon-data-vb/_static/image19.png)](custom-formatting-based-upon-data-vb/_static/image18.png)
 
 **Figura 8**: Las unidades en existencias número se muestra en rojo para los productos con los valores de 10 o menos ([haga clic aquí para ver imagen en tamaño completo](custom-formatting-based-upon-data-vb/_static/image20.png))
 
@@ -247,7 +247,7 @@ Agregue un control GridView debajo de FormView del ejemplo anterior y establezca
 Figura 9 muestra nuestro progreso en este punto, cuando se ve mediante un explorador.
 
 
-[![El control GridView muestra el nombre, categoría y el precio de cada producto](custom-formatting-based-upon-data-vb/_static/image22.png)](custom-formatting-based-upon-data-vb/_static/image21.png)
+[![TGridView incluye el nombre, categoría y precios para cada producto](custom-formatting-based-upon-data-vb/_static/image22.png)](custom-formatting-based-upon-data-vb/_static/image21.png)
 
 **Figura 9**: El control GridView muestra el nombre, categoría y precio de cada producto ([haga clic aquí para ver imagen en tamaño completo](custom-formatting-based-upon-data-vb/_static/image23.png))
 
@@ -303,7 +303,7 @@ En lugar de establecer el `GridViewRow`del `BackColor` propiedad directamente, s
 [!code-vb[Main](custom-formatting-based-upon-data-vb/samples/sample18.vb)]
 
 
-[![Los productos más asequible son resaltado amarillo](custom-formatting-based-upon-data-vb/_static/image26.png)](custom-formatting-based-upon-data-vb/_static/image25.png)
+[![TMás asequible productos están resaltado amarillo](custom-formatting-based-upon-data-vb/_static/image26.png)](custom-formatting-based-upon-data-vb/_static/image25.png)
 
 **Figura 11**: Los productos más asequible son resaltado amarillo ([haga clic aquí para ver imagen en tamaño completo](custom-formatting-based-upon-data-vb/_static/image27.png))
 

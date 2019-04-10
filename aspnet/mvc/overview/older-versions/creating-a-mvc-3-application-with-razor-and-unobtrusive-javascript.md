@@ -8,15 +8,15 @@ ms.date: 11/01/2010
 ms.assetid: 658b149b-d770-46bf-8b4b-4e47cca242f3
 msc.legacyurl: /mvc/overview/older-versions/creating-a-mvc-3-application-with-razor-and-unobtrusive-javascript
 msc.type: authoredcontent
-ms.openlocfilehash: f60ca3e76fda8a18da1ad83e955e5e4759f5e3af
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: 91c96cc413e63ad2fc160ffbb473c4f3e1ada3e4
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57053172"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59401067"
 ---
-<a name="creating-a-mvc-3-application-with-razor-and-unobtrusive-javascript"></a>Crear una aplicación de MVC 3 con Razor y JavaScript discreto
-====================
+# <a name="creating-a-mvc-3-application-with-razor-and-unobtrusive-javascript"></a>Crear una aplicación de MVC 3 con Razor y JavaScript discreto
+
 por [Microsoft](https://github.com/microsoft)
 
 > La aplicación web de lista de usuarios muestra lo sencillo que es crear aplicaciones de ASP.NET MVC 3 con el motor de vistas Razor. La aplicación de ejemplo muestra cómo usar el nuevo motor de vista de Razor con ASP.NET MVC versión 3 y Visual Studio 2010 para crear un sitio Web lista de usuarios ficticio que incluye funciones como la creación, visualización, edición y eliminación de usuarios.
@@ -36,7 +36,7 @@ Puede descargar el proyecto completado de VB y C# [aquí](https://code.msdn.micr
 
 Para iniciar el tutorial, abra Visual Studio 2010 y cree un nuevo proyecto con el *aplicación Web de ASP.NET MVC 3* plantilla. Nombre de la aplicación &quot;Mvc3Razor&quot;.
 
-[![Nuevo proyecto de MVC 3](creating-a-mvc-3-application-with-razor-and-unobtrusive-javascript/_static/image3.png)](creating-a-mvc-3-application-with-razor-and-unobtrusive-javascript/_static/image2.png)
+[![Nproyecto de MVC 3 ueva](creating-a-mvc-3-application-with-razor-and-unobtrusive-javascript/_static/image3.png)](creating-a-mvc-3-application-with-razor-and-unobtrusive-javascript/_static/image2.png)
 
 En el **nuevo proyecto de ASP.NET MVC 3** cuadro de diálogo, seleccione **aplicación de Internet**, seleccione el motor de vistas Razor y, a continuación, haga clic en **Aceptar**.
 

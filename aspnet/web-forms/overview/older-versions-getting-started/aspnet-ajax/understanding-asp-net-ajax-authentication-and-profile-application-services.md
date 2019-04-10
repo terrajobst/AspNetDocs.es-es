@@ -8,15 +8,15 @@ ms.date: 03/14/2008
 ms.assetid: 6ab4efb6-aab6-45ac-ad2c-bdec5848ef9e
 msc.legacyurl: /web-forms/overview/older-versions-getting-started/aspnet-ajax/understanding-asp-net-ajax-authentication-and-profile-application-services
 msc.type: authoredcontent
-ms.openlocfilehash: d722130e625a9f867923280fce0ef35f19bfeb9d
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: 18056c917b32680678c536229e8e26d5cc7db161
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57041262"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59395139"
 ---
-<a name="understanding-aspnet-ajax-authentication-and-profile-application-services"></a>Descripción de la autenticación de ASP.NET AJAX y los servicios de aplicaciones de perfiles
-====================
+# <a name="understanding-aspnet-ajax-authentication-and-profile-application-services"></a>Descripción de la autenticación de ASP.NET AJAX y los servicios de aplicaciones de perfiles
+
 por [Scott Cate](https://github.com/scottcate)
 
 [Descargar PDF](http://download.microsoft.com/download/C/1/9/C19A3451-1D14-477C-B703-54EF22E197EE/AJAX_tutorial03_MSAjax_ASP.NET_Services_cs.pdf)
@@ -32,7 +32,7 @@ Este artículo examina la implementación y el uso de la generación de perfiles
 
 Estas notas del producto se basan en la versión Beta 2 de Visual Studio 2008 y .NET Framework 3.5. Estas notas del producto también se da por supuesto que trabajará con Visual Studio 2008 Beta 2, no Visual Web Developer Express y proporcionará tutoriales de acuerdo con la interfaz de usuario de Visual Studio. Algunos ejemplos de código pueden utilizar las plantillas de proyecto no está disponibles en Visual Web Developer Express.
 
-## <a name="profiles-and-authentication"></a>*Autenticación y perfiles*
+## *<a name="profiles-and-authentication"></a>Autenticación y perfiles*
 
 Los perfiles de ASP.NET de Microsoft y servicios de autenticación proporcionados por el sistema de autenticación de formularios de ASP.NET y son los componentes estándar de ASP.NET. Las extensiones de AJAX de ASP.NET proporcionan acceso de script a estos servicios a través de servidores proxy de script a través de un modelo en el espacio de nombres Sys.Services de la biblioteca de cliente AJAX bastante sencillo.
 
@@ -42,7 +42,7 @@ El servicio de perfiles permite la integración automática y el almacenamiento 
 
 Incorporar la autenticación de ASP.NET y los propios servicios de generación de perfiles a una aplicación está fuera del ámbito de este artículo. Para obtener más información sobre el tema, vea MSDN Library hacen referencia a artículo administrar usuarios mediante pertenencia en [ https://msdn.microsoft.com/library/tw292whz.aspx ](https://msdn.microsoft.com/library/tw292whz.aspx). ASP.NET también incluye una utilidad para configurar automáticamente la pertenencia a un servidor SQL, que es el proveedor de servicios de autenticación predeterminado para la pertenencia de ASP.NET. Para obtener más información, consulte el artículo de la herramienta de registro de SQL Server de ASP.NET (Aspnet\_regsql.exe) en [ https://msdn.microsoft.com/library/ms229862(vs.80).aspx ](https://msdn.microsoft.com/library/ms229862(vs.80).aspx).
 
-## <a name="using-the-aspnet-ajax-authentication-service"></a>*Mediante el servicio de autenticación de ASP.NET AJAX*
+## *<a name="using-the-aspnet-ajax-authentication-service"></a>Mediante el servicio de autenticación de ASP.NET AJAX*
 
 El servicio de autenticación de AJAX de ASP.NET debe estar habilitado en el archivo web.config:
 
@@ -304,7 +304,7 @@ El código siguiente comprueba si un usuario está autenticado y si es así, car
 
 [!code-javascript[Main](understanding-asp-net-ajax-authentication-and-profile-application-services/samples/sample12.js)]
 
-## <a name="using-a-custom-authentication-service-provider"></a>*Uso de un proveedor de servicios de autenticación personalizada*
+## *<a name="using-a-custom-authentication-service-provider"></a>Uso de un proveedor de servicios de autenticación personalizada*
 
 Las extensiones de AJAX de ASP.NET permiten crear un proveedor de servicios de autenticación de script personalizado mediante la exposición de su funcionalidad a través de un servicio web personalizado. Para poder usarlo, el servicio web debe exponer dos métodos, `Login` y `Logout`; y estos métodos deben especificarse con las mismas firmas de método que el servicio web de autenticación de ASP.NET AJAX de forma predeterminada.
 
@@ -338,7 +338,7 @@ Servicios ASP.NET - específicamente los servicios de generación de perfiles, l
 
 Además, mediante la creación de implementaciones de servicios web simplificada con las firmas de método equivalente, los desarrolladores pueden crear proveedores de script personalizado para estos servicios intrínsecos de ASP.NET. Compatibilidad con estas técnicas simplifica el desarrollo de aplicaciones cliente enriquecidas, al tiempo que proporciona a los desarrolladores con una amplia gama de flexibilidad para satisfacer necesidades específicas.
 
-## <a name="bio"></a>*Bio*
+## *<a name="bio"></a>Bio*
 
 Scott Cate ha estado trabajando con tecnologías Web de Microsoft desde 1997 y es el presidente de myKB.com ([www.myKB.com](http://www.myKB.com)) donde se especializa en la escritura de ASP.NET en función de las aplicaciones que se centra en soluciones de Software de Base de conocimiento. Se puede establecer contacto con Scott por correo electrónico en [ scott.cate@myKB.com ](mailto:scott.cate@myKB.com) o su blog en [ScottCate.com](http://ScottCate.com)
 

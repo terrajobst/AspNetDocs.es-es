@@ -8,15 +8,15 @@ ms.date: 01/30/2013
 ms.assetid: 3bd94827-3c59-448f-abc3-36e6df4858db
 msc.legacyurl: /single-page-application/overview/templates/breezeknockout-template
 msc.type: authoredcontent
-ms.openlocfilehash: 478ee9f851a395c68701347c04534bfe72d94512
-ms.sourcegitcommit: 289e051cc8a90e8f7127e239fda73047bde4de12
+ms.openlocfilehash: 482119a97f30e24472231897e8db31685c451a0f
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/25/2019
-ms.locfileid: "58424864"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59400794"
 ---
-<a name="breezeknockout-template"></a>Plantilla de Breeze/Knockout
-====================
+# <a name="breezeknockout-template"></a>Plantilla de Breeze/Knockout
+
 por [Mads Kristensen](https://github.com/madskristensen)
 
 > La plantilla de MVC de Breeze/Knockout escribió Ward Bell

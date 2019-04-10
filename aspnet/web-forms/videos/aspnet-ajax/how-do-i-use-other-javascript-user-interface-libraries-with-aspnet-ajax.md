@@ -8,15 +8,15 @@ ms.date: 07/16/2007
 ms.assetid: 35cf5142-e2d0-40de-884b-00039cc7ecb7
 msc.legacyurl: /web-forms/videos/aspnet-ajax/how-do-i-use-other-javascript-user-interface-libraries-with-aspnet-ajax
 msc.type: video
-ms.openlocfilehash: 89fa8c82d47c047c8d14f2e647102546bc67a997
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: 21c0a717c299cb72ca7379c9cb128ce5bb80edec
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57038512"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59409887"
 ---
-<a name="how-do-i-use-other-javascript-user-interface-libraries-with-aspnet-ajax"></a>[¿Cómo lo hago?:] ¿Usar otras bibliotecas de interfaz de usuario de JavaScript con ASP.NET AJAX?
-====================
+# <a name="how-do-i-use-other-javascript-user-interface-libraries-with-aspnet-ajax"></a>[¿Cómo lo hago?:] ¿Usar otras bibliotecas de interfaz de usuario de JavaScript con ASP.NET AJAX?
+
 por [Joe Stagner](https://github.com/JoeStagner)
 
 Microsoft forma parte de la [OpenAjax alliance](http://www.openajax.org/) y Microsoft AJAX Library está diseñado para funcionar perfectamente con bibliotecas de interfaz de usuario de JavaScript de terceros. Este vídeo ofrece una demostración de la interoperabilidad entre ASP.NET AJAX, el prototipo y script.aculo.us.

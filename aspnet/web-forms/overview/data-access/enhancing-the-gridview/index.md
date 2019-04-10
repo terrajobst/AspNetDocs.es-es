@@ -8,15 +8,15 @@ ms.date: 10/05/2011
 ms.assetid: 80010898-5cb0-49ae-a678-cc2f3fe3ca6c
 msc.legacyurl: /web-forms/overview/data-access/enhancing-the-gridview
 msc.type: chapter
-ms.openlocfilehash: 4c2c5e506f6186c9e6efe940fb5074eec63d52dd
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: b2547e11225ba4d89b2907efa9f65646db2f0eb4
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57019132"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59400755"
 ---
-<a name="enhancing-the-gridview"></a>Mejorar el control GridView
-====================
+# <a name="enhancing-the-gridview"></a>Mejorar el control GridView
+
 > Estos tutoriales muestra cómo agregar una columna de botones de radio a un control GridView para proporcionar una manera intuitiva para seleccionar una sola fila.
 
 

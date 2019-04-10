@@ -8,15 +8,15 @@ ms.date: 03/28/2008
 ms.assetid: 54d9df99-1161-4899-b4e8-2679c85915e7
 msc.legacyurl: /web-forms/overview/older-versions-getting-started/aspnet-ajax/understanding-partial-page-updates-with-asp-net-ajax
 msc.type: authoredcontent
-ms.openlocfilehash: 4883046aa16d5e67b7f0c92e15c897ef1a933b67
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: d2d7982a4e0175824ffede965dc8206219485df2
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57048992"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59396478"
 ---
-<a name="understanding-partial-page-updates-with-aspnet-ajax"></a>Descripción de las actualizaciones de página parcial con ASP.NET AJAX
-====================
+# <a name="understanding-partial-page-updates-with-aspnet-ajax"></a>Descripción de las actualizaciones de página parcial con ASP.NET AJAX
+
 por [Scott Cate](https://github.com/scottcate)
 
 [Descargar PDF](http://download.microsoft.com/download/C/1/9/C19A3451-1D14-477C-B703-54EF22E197EE/AJAX_tutorial01_Partial_Page_Updates_cs.pdf)
@@ -111,7 +111,7 @@ Visual Studio 2008 no parecen venir con una plantilla predefinida para un sitio 
 
 Propiedades de marcado habilitados:
 
-| **Nombre de la propiedad** | **Type** | **Descripción** |
+| **Nombre de la propiedad** | **Tipo** | **Descripción** |
 | --- | --- | --- |
 | AllowCustomErrors-Redirect | Bool | Especifica si se debe usar la sección de errores personalizados del archivo web.config para controlar los errores. |
 | AsyncPostBackError-Message | String | Obtiene o establece el mensaje de error enviado al cliente si se produce un error. |
@@ -124,7 +124,7 @@ Propiedades de marcado habilitados:
 
 Propiedades de sólo código:
 
-| **Nombre de la propiedad** | **Type** | **Descripción** |
+| **Nombre de la propiedad** | **Tipo** | **Descripción** |
 | --- | --- | --- |
 | AuthenticationService | AuthenticationService-Manager | Obtiene información detallada sobre el proxy de servicio de autenticación de ASP.NET que se enviará al cliente. |
 | IsDebuggingEnabled | Bool | Obtiene si scripts y está habilitada la depuración de código. |
@@ -136,13 +136,13 @@ Propiedades de sólo código:
 
 Métodos de código público:
 
-| **Nombre del método** | **Type** | **Descripción** |
+| **Nombre del método** | **Tipo** | **Descripción** |
 | --- | --- | --- |
 | SetFocus(string) | Void | Establece el foco del cliente a un control determinado cuando se haya completado la solicitud. |
 
 Descendientes de marcado:
 
-| **Tag** | **Descripción** |
+| **Etiqueta** | **Descripción** |
 | --- | --- |
 | &lt;AuthenticationService&gt; | Proporciona detalles sobre el proxy al servicio de autenticación de ASP.NET. |
 | &lt;ProfileService&gt; | Proporciona detalles sobre el proxy para el servicio de generación de perfiles de ASP.NET. |
@@ -185,7 +185,7 @@ El control ScriptManager ofrece una amplia compatibilidad para la localización 
 
 Propiedades de marcado habilitados:
 
-| **Nombre de la propiedad** | **Type** | **Descripción** |
+| **Nombre de la propiedad** | **Tipo** | **Descripción** |
 | --- | --- | --- |
 | ChildrenAsTriggers | bool | Especifica si los controles secundarios invocan automáticamente la actualización en el postback. |
 | RenderMode | enum (bloque, en línea) | Especifica que la forma en que el contenido se presentarán visualmente. |
@@ -193,7 +193,7 @@ Propiedades de marcado habilitados:
 
 Propiedades de sólo código:
 
-| **Nombre de la propiedad** | **Type** | **Descripción** |
+| **Nombre de la propiedad** | **Tipo** | **Descripción** |
 | --- | --- | --- |
 | IsInPartialRendering | bool | Obtiene si el control UpdatePanel es compatible con la representación parcial de la solicitud actual. |
 | ContentTemplate | ITemplate | Obtiene la plantilla de marcado para la solicitud de actualización. |
@@ -202,13 +202,13 @@ Propiedades de sólo código:
 
 Métodos de código público:
 
-| **Nombre del método** | **Type** | **Descripción** |
+| **Nombre del método** | **Tipo** | **Descripción** |
 | --- | --- | --- |
 | Update() | Void | Actualiza un UpdatePanel especificado mediante programación. Permite que una solicitud de servidor desencadenar una representación parcial de un UpdatePanel en caso contrario,-no desencadenado. |
 
 Descendientes de marcado:
 
-| **Tag** | **Descripción** |
+| **Etiqueta** | **Descripción** |
 | --- | --- |
 | &lt;ContentTemplate&gt; | Especifica el marcado que se usará para representar el resultado de la representación parcial. Elemento secundario de &lt;asp: UpdatePanel&gt;. |
 | &lt;Desencadenadores&gt; | Especifica una colección de *n* controles asociados con este UpdatePanel de la actualización. Elemento secundario de &lt;asp: UpdatePanel&gt;. |
@@ -280,7 +280,7 @@ Por último, si una aplicación requiere que se usan los UpdatePanels, deben ayu
 
 Propiedades de marcado habilitados:
 
-| **Nombre de la propiedad** | **Type** | **Descripción** |
+| **Nombre de la propiedad** | **Tipo** | **Descripción** |
 | --- | --- | --- |
 | AssociatedUpdate-PanelID | String | Especifica el identificador de UpdatePanel que deben notificar este UpdateProgress en. |
 | DisplayAfter | Valor int. | Especifica el tiempo de espera en milisegundos antes de este control se muestra después de que comience la solicitud asincrónica. |
@@ -288,7 +288,7 @@ Propiedades de marcado habilitados:
 
 Descendientes de marcado:
 
-| **Tag** | **Descripción** |
+| **Etiqueta** | **Descripción** |
 | --- | --- |
 | &lt;ProgressTemplate&gt; | Contiene la plantilla de control establecido para el contenido que se mostrará con este control. |
 

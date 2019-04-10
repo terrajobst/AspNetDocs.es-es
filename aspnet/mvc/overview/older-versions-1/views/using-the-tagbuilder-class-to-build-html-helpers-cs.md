@@ -8,15 +8,15 @@ ms.date: 03/02/2009
 ms.assetid: 3975a52f-bd15-4edd-8f3d-1df93672515b
 msc.legacyurl: /mvc/overview/older-versions-1/views/using-the-tagbuilder-class-to-build-html-helpers-cs
 msc.type: authoredcontent
-ms.openlocfilehash: 9759ea9b05ba5eba268901d3d2d1a15b2afe6202
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: 3227560c1d0c48f7738e26c87a0dbb140c410eee
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57055932"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59410102"
 ---
-<a name="using-the-tagbuilder-class-to-build-html-helpers-c"></a>Uso de la clase TagBuilder para compilar aplicaciones auxiliares HTML (C#)
-====================
+# <a name="using-the-tagbuilder-class-to-build-html-helpers-c"></a>Uso de la clase TagBuilder para compilar aplicaciones auxiliares HTML (C#)
+
 by [Stephen Walther](https://github.com/StephenWalther)
 
 > Stephen Walther presenta una clase de utilidad en el marco de MVC de ASP.NET con el nombre de la clase TagBuilder. Puede usar la clase TagBuilder para compilar fácilmente las etiquetas HTML.
@@ -60,12 +60,12 @@ Tenga en cuenta cómo se usa el método TagBuilder.MergeAttribute() para agregar
 
 Después de crear la aplicación auxiliar de imagen, puede usar la aplicación auxiliar en las vistas de MVC de ASP.NET como cualquiera de las otras estándar las aplicaciones auxiliares HTML. La vista en el listado 2 usa la aplicación auxiliar de imagen para mostrar dos veces la misma imagen de una consola Xbox (consulte la figura 1). Se llama a la aplicación auxiliar de Image() con y sin una colección de atributos HTML.
 
-**Listing 2 - Home\Index.aspx**
+**Listado 2 - Home\Index.aspx**
 
 [!code-aspx[Main](using-the-tagbuilder-class-to-build-html-helpers-cs/samples/sample2.aspx)]
 
 
-[![El cuadro de diálogo nuevo proyecto](using-the-tagbuilder-class-to-build-html-helpers-cs/_static/image1.jpg)](using-the-tagbuilder-class-to-build-html-helpers-cs/_static/image1.png)
+[![Tel cuadro de diálogo nuevo proyecto](using-the-tagbuilder-class-to-build-html-helpers-cs/_static/image1.jpg)](using-the-tagbuilder-class-to-build-html-helpers-cs/_static/image1.png)
 
 **Figura 01**: Uso de la aplicación auxiliar de imagen ([haga clic aquí para ver imagen en tamaño completo](using-the-tagbuilder-class-to-build-html-helpers-cs/_static/image2.png))
 

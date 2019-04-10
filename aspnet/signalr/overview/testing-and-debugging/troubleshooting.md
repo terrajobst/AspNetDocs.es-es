@@ -8,15 +8,15 @@ ms.date: 06/10/2014
 ms.assetid: 4b559e6c-4fb0-4a04-9812-45cf08ae5779
 msc.legacyurl: /signalr/overview/testing-and-debugging/troubleshooting
 msc.type: authoredcontent
-ms.openlocfilehash: c9ccfa00d768f767cee7705372c157199572d2ed
-ms.sourcegitcommit: 289e051cc8a90e8f7127e239fda73047bde4de12
+ms.openlocfilehash: 3e3ba353184f94621ffc0fb1c50647caf1a89514
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/25/2019
-ms.locfileid: "58422589"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59402770"
 ---
-<a name="signalr-troubleshooting"></a>Solución de problemas de SignalR
-====================
+# <a name="signalr-troubleshooting"></a>Solución de problemas de SignalR
+
 por [Patrick Fletcher](https://github.com/pfletcher)
 
 [!INCLUDE [Consider ASP.NET Core SignalR](~/includes/signalr/signalr-version-disambiguation.md)]

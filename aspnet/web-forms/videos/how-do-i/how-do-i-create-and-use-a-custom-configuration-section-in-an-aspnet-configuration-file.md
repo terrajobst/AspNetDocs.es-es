@@ -8,15 +8,15 @@ ms.date: 04/16/2008
 ms.assetid: fa9ed773-cceb-49d0-a939-5a9e6bbae00f
 msc.legacyurl: /web-forms/videos/how-do-i/how-do-i-create-and-use-a-custom-configuration-section-in-an-aspnet-configuration-file
 msc.type: video
-ms.openlocfilehash: b4189ca107f5e2f455e5e83809bdd6d267478e3b
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: f1a1c73947bda381bf559e3cbe1e308d0079c2dc
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57028902"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59392695"
 ---
-<a name="how-do-i-create-and-use-a-custom-configuration-section-in-an-aspnet-configuration-file"></a>[¿Cómo lo hago?:] Crear y usar una sección de configuración personalizada en un archivo de configuración de ASP.NET
-====================
+# <a name="how-do-i-create-and-use-a-custom-configuration-section-in-an-aspnet-configuration-file"></a>[¿Cómo lo hago?:] Crear y usar una sección de configuración personalizada en un archivo de configuración de ASP.NET
+
 por [Chris Pels](https://twitter.com/chrispels)
 
 En este vídeo, Chris Pels mostrará cómo ampliar el conjunto estándar de opciones de configuración de ASP.NET con sus propios elementos de configuración XML. En primer lugar, vea cómo crear un controlador de la sección de configuración que es necesario para interpretar y procesar la información de los elementos de configuración XML personalizados. Durante este Obtenga información sobre cómo usar el modelo declarativo para definir el comportamiento de un controlador de la sección de configuración. A continuación, ver cómo agregar un controlador de sección personalizada y elementos personalizados a un archivo de configuración de ASP.NET. Por último, vea cómo tener acceso mediante programación a los datos de configuración personalizada.

@@ -8,20 +8,20 @@ ms.date: 11/14/2012
 ms.assetid: a17452c8-35fc-4ac2-811e-16d29f647cf7
 msc.legacyurl: /single-page-application/overview
 msc.type: book
-ms.openlocfilehash: 0f121ded971e404e6b7ec90c55741bab3bf2af8c
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: ba656ecc14204d833e9dc18b941a2c19ec5e06ef
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57019652"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59397733"
 ---
-<a name="single-page-application-overview"></a>Introducción a la aplicación de página única
-====================
+# <a name="single-page-application-overview"></a>Introducción a la aplicación de página única
+
 - [Introducción](introduction/index.md)
 
-    - [Aplicación una sola página: Plantilla KnockoutJS](introduction/knockoutjs-template.md)
+    - [Aplicación de una sola página: Plantilla KnockoutJS](introduction/knockoutjs-template.md)
     - [¿Conoce una biblioteca distinta de Knockout?](introduction/other-libraries.md)
-- [Templates](templates/index.md) (Plantillas [C++])
+- [Plantillas](templates/index.md)
 
     - [Plantilla de Backbone](templates/backbonejs-template.md)
     - [Plantilla de Breeze/Angular](templates/breezeangular-template.md)

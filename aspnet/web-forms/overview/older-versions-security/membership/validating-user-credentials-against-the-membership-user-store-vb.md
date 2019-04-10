@@ -8,15 +8,15 @@ ms.date: 01/18/2008
 ms.assetid: 17772912-b47b-4557-9ce9-80f22df642f7
 msc.legacyurl: /web-forms/overview/older-versions-security/membership/validating-user-credentials-against-the-membership-user-store-vb
 msc.type: authoredcontent
-ms.openlocfilehash: f5f1121bacdf287e346419d70ac155f47bc826ac
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: 98869574adb8ac85a2b6dad8db2a583e013150fe
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57064742"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59393182"
 ---
-<a name="validating-user-credentials-against-the-membership-user-store-vb"></a>Validar las credenciales de usuario en el almacén de usuarios de pertenencia (VB)
-====================
+# <a name="validating-user-credentials-against-the-membership-user-store-vb"></a>Validar las credenciales de usuario en el almacén de usuarios de pertenencia (VB)
+
 por [Scott Mitchell](https://twitter.com/ScottOnWriting)
 
 [Descargar código](http://download.microsoft.com/download/3/f/5/3f5a8605-c526-4b34-b3fd-a34167117633/ASPNET_Security_Tutorial_06_VB.zip) o [descargar PDF](http://download.microsoft.com/download/3/f/5/3f5a8605-c526-4b34-b3fd-a34167117633/aspnet_tutorial06_LoggingIn_vb.pdf)
@@ -43,7 +43,7 @@ El `SqlMembershipProvider` valida las credenciales proporcionadas mediante la ob
 Vamos a actualizar nuestra página de inicio de sesión (~ /`Login.aspx`) para que lo valida las credenciales proporcionadas en el almacén de usuario del marco de pertenencia. Hemos creado esta página de inicio de sesión en el <a id="Tutorial02"> </a> [ *una visión general de autenticación mediante formularios* ](../introduction/an-overview-of-forms-authentication-vb.md) tutorial, crear una interfaz con dos cuadros de texto para el nombre de usuario y la contraseña, un Recordarme checkbox y un botón de inicio de sesión (consulte la figura 1). El código valida las credenciales introducidas con una lista codificada de pares de nombre de usuario y contraseña (Scott/contraseña, Jisun y la contraseña y Sam y contraseña). En el <a id="Tutorial03"> </a> [ *configuración de autenticación de formularios y temas avanzados* ](../introduction/forms-authentication-configuration-and-advanced-topics-vb.md) tutorial hemos actualizado el código de la página de inicio de sesión para almacenar información adicional en los formularios vale de autenticación `UserData` propiedad.
 
 
-[![Interfaz de la página de inicio de sesión incluye dos cuadros de texto, un control CheckBoxList y un botón](validating-user-credentials-against-the-membership-user-store-vb/_static/image2.png)](validating-user-credentials-against-the-membership-user-store-vb/_static/image1.png)
+[![TInterfaz incluye dos cuadros de texto la página de inicio de sesión, un control CheckBoxList y un botón](validating-user-credentials-against-the-membership-user-store-vb/_static/image2.png)](validating-user-credentials-against-the-membership-user-store-vb/_static/image1.png)
 
 **Figura 1**: Interfaz incluye dos cuadros de texto la página de inicio de sesión, un control CheckBoxList y un botón ([haga clic aquí para ver imagen en tamaño completo](validating-user-credentials-against-the-membership-user-store-vb/_static/image3.png))
 
@@ -86,7 +86,7 @@ El [control de inicio de sesión Web](https://msdn.microsoft.com/library/system.
 Vamos a actualizar `Login.aspx`, reemplazando la interfaz creada manualmente y de código con un control de inicio de sesión. Empiece quitando el marcado existente y código en `Login.aspx`. Puede eliminar directamente, o simplemente coméntelo. Para comentar el marcado declarativo, inclúyalo con la `<%--` y `--%>` delimitadores. Puede escribir estos delimitadores manualmente, o bien, como se muestra en la figura 2, puede seleccionar el texto que se marque como comentario y, a continuación, haga clic en el comentario en el icono de las líneas seleccionadas en la barra de herramientas. De forma similar, puede usar el comentario en el icono de las líneas seleccionadas para marcar como comentario el código seleccionado en la clase de código subyacente.
 
 
-[![Comente el marcado declarativo existente y código fuente en Login.aspx](validating-user-credentials-against-the-membership-user-store-vb/_static/image5.png)](validating-user-credentials-against-the-membership-user-store-vb/_static/image4.png)
+[![Ccomentario Out the existente marcado declarativo y código fuente en Login.aspx](validating-user-credentials-against-the-membership-user-store-vb/_static/image5.png)](validating-user-credentials-against-the-membership-user-store-vb/_static/image4.png)
 
 **Figura 2**: Comentario Out the existente marcado declarativo y código fuente en Login.aspx ([haga clic aquí para ver imagen en tamaño completo](validating-user-credentials-against-the-membership-user-store-vb/_static/image6.png))
 
@@ -98,7 +98,7 @@ Vamos a actualizar `Login.aspx`, reemplazando la interfaz creada manualmente y d
 A continuación, arrastre un control de inicio de sesión desde el cuadro de herramientas en la página y establezca su `ID` propiedad `myLogin`. En este momento, la pantalla debe ser similar a la figura 3. Tenga en cuenta que la interfaz predeterminada del control de inicio de sesión incluye controles de cuadro de texto para el nombre de usuario y contraseña, un Recordármelo la próxima vez casilla de verificación y un botón de registro. También hay `RequiredFieldValidator` controles para los dos cuadros de texto.
 
 
-[![Agregar un Control de inicio de sesión a la página](validating-user-credentials-against-the-membership-user-store-vb/_static/image8.png)](validating-user-credentials-against-the-membership-user-store-vb/_static/image7.png)
+[![Aun Control de inicio de sesión a la página dd](validating-user-credentials-against-the-membership-user-store-vb/_static/image8.png)](validating-user-credentials-against-the-membership-user-store-vb/_static/image7.png)
 
 **Figura 3**: Agregar un Control de inicio de sesión a la página ([haga clic aquí para ver imagen en tamaño completo](validating-user-credentials-against-the-membership-user-store-vb/_static/image9.png))
 
@@ -115,7 +115,7 @@ El control de inicio de sesión usa cuatro factores para determinar la página a
 Figura 4 se muestra cómo el control de inicio de sesión utiliza estos cuatro parámetros para llegar a su decisión de página correspondiente.
 
 
-[![Agregar un Control de inicio de sesión a la página](validating-user-credentials-against-the-membership-user-store-vb/_static/image11.png)](validating-user-credentials-against-the-membership-user-store-vb/_static/image10.png)
+[![Aun Control de inicio de sesión a la página dd](validating-user-credentials-against-the-membership-user-store-vb/_static/image11.png)](validating-user-credentials-against-the-membership-user-store-vb/_static/image10.png)
 
 **Figura 4**: Agregar un Control de inicio de sesión a la página ([haga clic aquí para ver imagen en tamaño completo](validating-user-credentials-against-the-membership-user-store-vb/_static/image12.png))
 
@@ -145,7 +145,7 @@ El control de inicio de sesión ofrece dos propiedades para ajustar el diseño d
 Después de realizar estos cambios de propiedad, deben ser similares al que se muestra en la figura 5 marcado declarativo y la apariencia del control de inicio de sesión.
 
 
-[![Valores de las propiedades del Control de inicio de sesión determinan su apariencia](validating-user-credentials-against-the-membership-user-store-vb/_static/image14.png)](validating-user-credentials-against-the-membership-user-store-vb/_static/image13.png)
+[![TValores determinan su apariencia las propiedades del Control de inicio de sesión](validating-user-credentials-against-the-membership-user-store-vb/_static/image14.png)](validating-user-credentials-against-the-membership-user-store-vb/_static/image13.png)
 
 **Figura 5**: Valores determinan su apariencia las propiedades del Control de inicio de sesión ([haga clic aquí para ver imagen en tamaño completo](validating-user-credentials-against-the-membership-user-store-vb/_static/image15.png))
 
@@ -164,7 +164,7 @@ Para lograr la primera tarea, se debe convertir el control de inicio de sesión 
 Vamos a actualizar el control de inicio de sesión para que se solicita a los usuarios su nombre de usuario, contraseña y dirección de correo electrónico y sólo autentica al usuario si la dirección de correo electrónico proporcionada coincide con su dirección de correo electrónico en el archivo. En primer lugar, necesitamos convertir la interfaz del control de inicio de sesión en una plantilla. Desde la etiqueta inteligente del control de inicio de sesión, elija a la opción convertir en plantilla.
 
 
-[![Convertir el Control de inicio de sesión en una plantilla](validating-user-credentials-against-the-membership-user-store-vb/_static/image17.png)](validating-user-credentials-against-the-membership-user-store-vb/_static/image16.png)
+[![Cel Control de inicio de sesión a una plantilla onvertir](validating-user-credentials-against-the-membership-user-store-vb/_static/image17.png)](validating-user-credentials-against-the-membership-user-store-vb/_static/image16.png)
 
 **Figura 6**: Convertir el Control de inicio de sesión en una plantilla ([haga clic aquí para ver imagen en tamaño completo](validating-user-credentials-against-the-membership-user-store-vb/_static/image18.png))
 
@@ -176,7 +176,7 @@ Vamos a actualizar el control de inicio de sesión para que se solicita a los us
 Convertir el control de inicio de sesión a una plantilla agrega un `LayoutTemplate` al código de marcado declarativo con elementos HTML y controles Web define la interfaz de usuario del control. Como se muestra en la figura 7, convertir el control a una plantilla quita un número de propiedades de la ventana Propiedades, como `TitleText`, `CreateUserUrl`, y así sucesivamente, ya que estos valores de propiedad se omiten cuando se usa una plantilla.
 
 
-[![Menos propiedades están que disponibles cuando el Control Login se convierte en una plantilla](validating-user-credentials-against-the-membership-user-store-vb/_static/image20.png)](validating-user-credentials-against-the-membership-user-store-vb/_static/image19.png)
+[![Fzar propiedades están que disponibles cuando el Control Login se convierte en una plantilla](validating-user-credentials-against-the-membership-user-store-vb/_static/image20.png)](validating-user-credentials-against-the-membership-user-store-vb/_static/image19.png)
 
 **Figura 7**: Menos propiedades están disponibles cuando el Control Login se convierte en una plantilla ([haga clic aquí para ver imagen en tamaño completo](validating-user-credentials-against-the-membership-user-store-vb/_static/image21.png))
 
@@ -190,7 +190,7 @@ Para recopilar la dirección de correo electrónico del visitante, necesitamos a
 Después de agregar el `Email` cuadro de texto, visite la página a través de un explorador. Como se muestra en la figura 8, interfaz de usuario del control de inicio de sesión incluye ahora un tercer cuadro de texto.
 
 
-[![El Control de inicio de sesión ahora incluye un cuadro de texto dirección de correo electrónico del usuario](validating-user-credentials-against-the-membership-user-store-vb/_static/image23.png)](validating-user-credentials-against-the-membership-user-store-vb/_static/image22.png)
+[![TControl de inicio de sesión ahora incluye un cuadro de texto dirección de correo electrónico del usuario](validating-user-credentials-against-the-membership-user-store-vb/_static/image23.png)](validating-user-credentials-against-the-membership-user-store-vb/_static/image22.png)
 
 **Figura 8**: El Control de inicio de sesión ahora incluye un cuadro de texto dirección de correo electrónico del usuario ([haga clic aquí para ver imagen en tamaño completo](validating-user-credentials-against-the-membership-user-store-vb/_static/image24.png))
 
@@ -208,7 +208,7 @@ Si las credenciales proporcionadas son válidas, a continuación, se crea el val
 Figura 9 ofrece un diagrama de flujo del flujo de trabajo de autenticación.
 
 
-[![Flujo de trabajo de autenticación de inicio de sesión del Control](validating-user-credentials-against-the-membership-user-store-vb/_static/image26.png)](validating-user-credentials-against-the-membership-user-store-vb/_static/image25.png)
+[![Tflujo de trabajo de autenticación del Control de inicio de sesión](validating-user-credentials-against-the-membership-user-store-vb/_static/image26.png)](validating-user-credentials-against-the-membership-user-store-vb/_static/image25.png)
 
 **Figura 9**: Flujo de trabajo de autenticación de inicio de sesión del Control ([haga clic aquí para ver imagen en tamaño completo](validating-user-credentials-against-the-membership-user-store-vb/_static/image27.png))
 
@@ -247,7 +247,7 @@ El código siguiente implementa estas comprobaciones de dos. Si, a continuación
 Con este código en su lugar, intente iniciar la sesión como usuario válido, especifique el nombre de usuario correcto, la contraseña y dirección de correo electrónico. Inténtelo de nuevo, pero esta vez utilice intencionadamente una dirección de correo electrónico incorrecta (consulte la figura 10). Por último, pruebe una tercera vez con un nombre de usuario inexistente. En el primer caso debe ser iniciado sesión correctamente en el sitio, pero en los dos últimos casos debería ver el mensaje de credenciales no válidas del control de inicio de sesión.
 
 
-[![Tito no puede iniciar sesión cuando se suministra una dirección de correo electrónico incorrecta](validating-user-credentials-against-the-membership-user-store-vb/_static/image29.png)](validating-user-credentials-against-the-membership-user-store-vb/_static/image28.png)
+[![TGil no puede iniciar sesión al proporcionar una dirección de correo electrónico incorrecta](validating-user-credentials-against-the-membership-user-store-vb/_static/image29.png)](validating-user-credentials-against-the-membership-user-store-vb/_static/image28.png)
 
 **Figura 10**: Tito no registro en al proporcionar una dirección de correo electrónico incorrecta ([haga clic aquí para ver imagen en tamaño completo](validating-user-credentials-against-the-membership-user-store-vb/_static/image30.png))
 
@@ -280,7 +280,7 @@ El código anterior se inicia mediante el establecimiento del control de inicio 
 Para probar este código, intencionadamente intenta iniciar sesión como un usuario existente, pero utiliza una contraseña incorrecta. Hacer esto cinco veces en una fila dentro de un período de tiempo de 10 minutos y se bloqueará la cuenta. Como se muestra en la figura 11, inicio de sesión subsiguiente intentos siempre se producirá un error (incluso con la contraseña correcta), pero tendrán ahora más descriptivo para mostrar su cuenta se bloqueó debido a demasiados intentos de inicio de sesión no válido. Póngase en contacto con el administrador para que el mensaje de cuenta desbloqueada.
 
 
-[![Tito realiza demasiados intentos de inicio de sesión no válido y se ha bloqueado](validating-user-credentials-against-the-membership-user-store-vb/_static/image32.png)](validating-user-credentials-against-the-membership-user-store-vb/_static/image31.png)
+[![TGil realiza demasiado muchos intentos no válidos de inicio de sesión y ha sido bloqueada](validating-user-credentials-against-the-membership-user-store-vb/_static/image32.png)](validating-user-credentials-against-the-membership-user-store-vb/_static/image31.png)
 
 **Figura 11**: Tito realiza demasiado muchos intentos no válidos de inicio de sesión y ha sido bloqueada ([haga clic aquí para ver imagen en tamaño completo](validating-user-credentials-against-the-membership-user-store-vb/_static/image33.png))
 
@@ -301,7 +301,7 @@ Para obtener más información sobre los temas tratados en este tutorial, consul
 
 - [Mostrar mensajes personalizados a bloqueada y que los usuarios no aprobado](http://aspnet.4guysfromrolla.com/articles/050306-1.aspx)
 - [Examen de ASP.NET del 2.0 perfil, Roles y pertenencia](http://aspnet.4guysfromrolla.com/articles/120705-1.aspx)
-- [Cómo: Crear una página de inicio de sesión ASP.NET](https://msdn.microsoft.com/library/ms178331.aspx)
+- [Cómo Crear una página de inicio de sesión ASP.NET](https://msdn.microsoft.com/library/ms178331.aspx)
 - [Documentación técnica de Control de inicio de sesión](https://msdn.microsoft.com/library/system.web.ui.webcontrols.login.aspx)
 - [Uso de los controles de inicio de sesión](https://quickstarts.asp.net/QuickStartv20/aspnet/doc/security/login.aspx)
 

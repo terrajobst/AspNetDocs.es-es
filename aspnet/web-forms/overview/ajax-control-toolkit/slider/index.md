@@ -8,15 +8,15 @@ ms.date: 11/14/2011
 ms.assetid: fd7812d1-55d7-4e4a-96c8-1614b375db56
 msc.legacyurl: /web-forms/overview/ajax-control-toolkit/slider
 msc.type: chapter
-ms.openlocfilehash: a73631fc1e5345e8705b6eb69e0241d44e298af7
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: 176fd901a927d85cc048b5af07afb120d15c70e9
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57018622"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59399259"
 ---
-<a name="slider"></a>Slider
-====================
+# <a name="slider"></a>Slider
+
 > Este tutorial muestra cómo utilizar el control deslizante para mostrar un control deslizante gráfico que los usuarios pueden controlar con el mouse.
 
 

@@ -8,19 +8,19 @@ ms.date: 01/26/2012
 ms.assetid: 8447679a-2556-4411-b758-bbe55cfa4805
 msc.legacyurl: /web-api/overview/web-api-routing-and-actions
 msc.type: chapter
-ms.openlocfilehash: cb38906e33d5c32dada35d72bb646aad1e5a0907
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: 41ee7a14c26c10fb693eb3b5bf590f92a4caf3a3
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57022972"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59405968"
 ---
-<a name="web-api-routing"></a>Enrutamiento de Web API
-====================
+# <a name="web-api-routing"></a>Enrutamiento de Web API
+
 > Cómo ASP.NET Web API enruta las solicitudes HTTP a los controladores y acciones.
 
 
 - [Enrutamiento en Web API](routing-in-aspnet-web-api.md)
 - [Enrutamiento y selección de una acción en Web API](routing-and-action-selection.md)
 - [Enrutamiento de atributos en Web API 2](attribute-routing-in-web-api-2.md)
-- [Crear una API de REST con enrutamiento de atributos en Web API 2](create-a-rest-api-with-attribute-routing.md)
+- [Crear una API REST con enrutamiento de atributos en Web API 2](create-a-rest-api-with-attribute-routing.md)

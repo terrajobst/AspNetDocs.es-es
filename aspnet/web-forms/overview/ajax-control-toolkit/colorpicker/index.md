@@ -8,15 +8,15 @@ ms.date: 11/14/2011
 ms.assetid: 7a46340d-d7b0-427d-abbc-7fee884219ed
 msc.legacyurl: /web-forms/overview/ajax-control-toolkit/colorpicker
 msc.type: chapter
-ms.openlocfilehash: 51d5cca0d9887014104fda3677653d4cd64fc2f0
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: 5620710239c282b126fadd2e0ca09e71bac8786f
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57023612"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59407398"
 ---
-<a name="colorpicker"></a>ColorPicker
-====================
+# <a name="colorpicker"></a>ColorPicker
+
 > Este tutorial muestra cómo usar el control ColorPicker, que permite a los usuarios seleccionar un color de una ventana emergente.
 
 

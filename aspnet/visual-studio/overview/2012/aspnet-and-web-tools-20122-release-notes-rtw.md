@@ -8,15 +8,15 @@ ms.date: 02/14/2013
 ms.assetid: 9534e58b-1d15-4f1d-b04c-10c79b9d8227
 msc.legacyurl: /visual-studio/overview/2012/aspnet-and-web-tools-20122-release-notes-rtw
 msc.type: content
-ms.openlocfilehash: 0566a362b36f6cfb73b6479cd490e82c63455459
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: e4545f36d5a2668bc6a21249a89a94ece9bb2ca2
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57030202"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59397986"
 ---
-<a name="aspnet-and-web-tools-20122-release-notes"></a>Notas de la versión de ASP.NET and Web Tools 2012.2
-====================
+# <a name="aspnet-and-web-tools-20122-release-notes"></a>Notas de la versión de ASP.NET and Web Tools 2012.2
+
 > Este documento describe la versión de ASP.NET y Web Tools 2012.2. Es una actualización de herramientas Web de Visual Studio y ASP.NET.
 
 
@@ -26,12 +26,12 @@ ms.locfileid: "57030202"
 - [Requisitos de software](#_Software_Requirements)
 - [Nuevas características de ASP.NET y Web Tools 2012.2](#_New_Features_in)
 
-    - [Herramientas](#_Tooling)
+    - [Tooling](#_Tooling)
     - [Publicación en Web](#_Web_Publishing)
     - [Plantillas de ASP.NET MVC](#_Templates)
-    - [ASP.NET Web API](#_ASP.NET_Web_API) (Más información sobre ASP.NET Web API)
+    - [ASP.NET Web API](#_ASP.NET_Web_API)
 
-    - [SignalR de ASP.NET](#_ASP.NET_SignalR)
+    - [ASP.NET SignalR](#_ASP.NET_SignalR)
     - [ASP.NET Friendly URLs](#_ASP.NET_Friendly_URLs)
 - [Problemas conocidos y cambios importantes](#_Known_Issues_and)
 
@@ -58,7 +58,7 @@ También puede instalar ASP.NET y Web Tools 2012.2 manualmente. Debe tener Visua
 Tutoriales y otra información acerca de ASP.NET y Web Tools 2012.2 están disponibles en el sitio web de ASP.NET ( https://www.asp.net).
 
 <a id="_Support"></a>
-## <a name="support"></a>Compatibilidad
+## <a name="support"></a>Soporte técnico
 
 ASP.NET y Web Tools 2012.2 se lanzó oficialmente y admite. Puede usar el canal de soporte normales. También puede publicar preguntas en los foros ASP.NET ([https://forums.asp.net/](https://forums.asp.net/)), donde los miembros de la Comunidad de ASP.NET son normalmente pueden ofrecer soporte técnico informal.
 

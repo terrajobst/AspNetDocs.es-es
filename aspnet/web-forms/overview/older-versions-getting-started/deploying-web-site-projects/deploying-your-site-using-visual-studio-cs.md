@@ -8,15 +8,15 @@ ms.date: 04/01/2009
 ms.assetid: cde4ee53-a5d0-4937-a54b-67877e8266c3
 msc.legacyurl: /web-forms/overview/older-versions-getting-started/deploying-web-site-projects/deploying-your-site-using-visual-studio-cs
 msc.type: authoredcontent
-ms.openlocfilehash: 94f4f3e0d81f3cfae141c8306731cc8eef6f0efb
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: 9512685672e42091e7be11c5710a2434ca8b0488
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57033512"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59392422"
 ---
-<a name="deploying-your-site-using-visual-studio-c"></a>Implementar el sitio con Visual Studio (C#)
-====================
+# <a name="deploying-your-site-using-visual-studio-c"></a>Implementar el sitio con Visual Studio (C#)
+
 por [Scott Mitchell](https://twitter.com/ScottOnWriting)
 
 [Descargar código](http://download.microsoft.com/download/4/5/F/45F815EC-8B0E-46D3-9FB8-2DC015CCA306/ASPNET_Hosting_Tutorial_04_CS.zip) o [descargar PDF](http://download.microsoft.com/download/E/8/9/E8920AE6-D441-41A7-8A77-9EF8FF970D8B/aspnet_tutorial04_DeployingViaVS_cs.pdf)
@@ -45,7 +45,7 @@ Echemos un vistazo al uso de la herramienta Copiar sitio Web para publicar la ap
 Iniciar el proyecto de la herramienta Copiar sitio Web haciendo clic en el icono Copiar sitio Web en el Explorador de soluciones (este icono está en un círculo en la figura 1); como alternativa, puede seleccionar la opción de Copiar sitio Web en el menú del sitio Web. Cualquiera de los enfoques inicia la interfaz de usuario Copiar sitio Web que se muestra en la figura 1; se rellena solo en el panel izquierdo en la figura 1 porque todavía tenemos que conectarnos a un servidor remoto.
 
 
-[![Interfaz de usuario de la herramienta Copiar sitio Web está dividido en dos paneles](deploying-your-site-using-visual-studio-cs/_static/image2.png)](deploying-your-site-using-visual-studio-cs/_static/image1.png)
+[![TInterfaz de usuario de la herramienta Copiar sitio Web está dividido en dos paneles](deploying-your-site-using-visual-studio-cs/_static/image2.png)](deploying-your-site-using-visual-studio-cs/_static/image1.png)
 
 **Figura 1**: Interfaz de usuario de la herramienta Copiar sitio Web está dividido en dos paneles ([haga clic aquí para ver imagen en tamaño completo](deploying-your-site-using-visual-studio-cs/_static/image3.png))
 
@@ -62,7 +62,7 @@ Puede conectarse al sitio Web de destino seleccionando una de las cuatro opcione
 La mayoría de los proveedores de host de web admiten FTP, pero menos ofrecen compatibilidad con las extensiones de servidor de FrontPage. Por ese motivo, he seleccionado la opción de sitio FTP y, a continuación, escribió la información de conexión como se muestra en la figura 2.
 
 
-[![Especifique el sitio Web de destino](deploying-your-site-using-visual-studio-cs/_static/image5.png)](deploying-your-site-using-visual-studio-cs/_static/image4.png)
+[![Sespecificar el sitio Web de destino](deploying-your-site-using-visual-studio-cs/_static/image5.png)](deploying-your-site-using-visual-studio-cs/_static/image4.png)
 
 **Figura 2**: Especifique el sitio Web de destino ([haga clic aquí para ver imagen en tamaño completo](deploying-your-site-using-visual-studio-cs/_static/image6.png))
 
@@ -72,7 +72,7 @@ Después de conectarse, la herramienta Copiar sitio Web carga los archivos en el
 Vamos a agregar una nueva página al proyecto BookReviewsWSP y, a continuación, implementarlo para que podamos ver la herramienta Copiar sitio Web en acción. Crear una nueva página ASP.NET en Visual Studio en el directorio raíz denominado `Privacy.aspx`. Tiene la página que utilice la página principal `Site.master` y agregar la directiva de privacidad de su sitio en esta página. Figura 3 se muestra Visual Studio después de esta página se ha creado.
 
 
-[![Agregar una nueva página denominada &lt;código&gt;Privacy.aspx&lt;/código&gt; a carpeta de raíz del sitio Web](deploying-your-site-using-visual-studio-cs/_static/image8.png)](deploying-your-site-using-visual-studio-cs/_static/image7.png)
+[![Add una nueva página denominada &lt;código&gt;Privacy.aspx&lt;/código&gt; a carpeta de raíz del sitio Web](deploying-your-site-using-visual-studio-cs/_static/image8.png)](deploying-your-site-using-visual-studio-cs/_static/image7.png)
 
 **Figura 3**: Agregar una nueva página denominada `Privacy.aspx` a carpeta de raíz del sitio Web ([haga clic aquí para ver imagen en tamaño completo](deploying-your-site-using-visual-studio-cs/_static/image9.png))
 
@@ -80,7 +80,7 @@ Vamos a agregar una nueva página al proyecto BookReviewsWSP y, a continuación,
 A continuación, vuelva a la interfaz de usuario Copiar sitio Web. Como se muestra en la figura 4, el panel izquierdo ahora incluye los nuevos archivos - `Policy.aspx` y `Policy.aspx.cs`. Además, estos archivos se marcan con un icono de flecha y un estado de nuevo, que indica que existen en el sitio local, pero no en el sitio remoto.
 
 
-[![La herramienta Copiar sitio Web incluye el nuevo &lt;código&gt;Privacy.aspx&lt;/código&gt; página en el panel de la izquierda](deploying-your-site-using-visual-studio-cs/_static/image11.png)](deploying-your-site-using-visual-studio-cs/_static/image10.png)
+[![THerramienta Copiar sitio Web incluye el nuevo &lt;código&gt;Privacy.aspx&lt;/código&gt; página en el panel izquierdo](deploying-your-site-using-visual-studio-cs/_static/image11.png)](deploying-your-site-using-visual-studio-cs/_static/image10.png)
 
 **Figura 4**: La herramienta Copiar sitio Web incluye el nuevo `Privacy.aspx` página en el panel de la izquierda ([haga clic aquí para ver imagen en tamaño completo](deploying-your-site-using-visual-studio-cs/_static/image12.png))
 
@@ -90,7 +90,7 @@ Para implementar los nuevos archivos, selecciónelos y, a continuación, haga cl
 Junto con la lista de nuevos archivos, la herramienta Copiar sitio Web resalta los archivos que difieren entre los sitios locales y remotos. Para ver esto en acción, vuelva a la `Privacy.aspx` página y agregue algunas palabras más a la directiva de privacidad. Guarde la página y, a continuación, volver a la herramienta Copiar sitio Web. Como se muestra en la figura 5, el `Privacy.aspx` página en el panel izquierdo tiene un estado de Changed que indica que está sincronizada con el sitio remoto.
 
 
-[![La herramienta Copiar sitio Web que indica la &lt;código&gt;Privacy.aspx&lt;/código&gt; página ha cambiado](deploying-your-site-using-visual-studio-cs/_static/image14.png)](deploying-your-site-using-visual-studio-cs/_static/image13.png)
+[![THerramienta Copiar sitio Web de que indica que el &lt;código&gt;Privacy.aspx&lt;/código&gt; página ha cambiado](deploying-your-site-using-visual-studio-cs/_static/image14.png)](deploying-your-site-using-visual-studio-cs/_static/image13.png)
 
 **Figura 5**: La herramienta Copiar sitio Web que indica la `Privacy.aspx` página ha cambiado ([haga clic aquí para ver imagen en tamaño completo](deploying-your-site-using-visual-studio-cs/_static/image15.png))
 
@@ -117,7 +117,7 @@ Echemos un vistazo a implementar la aplicación de reseñas de libros con la opc
 También hay una opción para cargar el contenido de la `App_Data` carpeta.
 
 
-[![Especifique el sitio Web de destino](deploying-your-site-using-visual-studio-cs/_static/image17.png)](deploying-your-site-using-visual-studio-cs/_static/image16.png)
+[![Sespecificar el sitio Web de destino](deploying-your-site-using-visual-studio-cs/_static/image17.png)](deploying-your-site-using-visual-studio-cs/_static/image16.png)
 
 **Figura 6**: Especifique el sitio Web de destino ([haga clic aquí para ver imagen en tamaño completo](deploying-your-site-using-visual-studio-cs/_static/image18.png))
 
@@ -127,7 +127,7 @@ Para la aplicación de la reseña de libro en el sitio remoto contiene los archi
 Figura 7 muestra los archivos en el sitio FTP una vez completada la operación de publicación. Tenga en cuenta que se han cargado solamente las páginas de marcado y los archivos de compatibilidad necesario sever - y del lado cliente.
 
 
-[![Solo los archivos necesarios se publicaron en el entorno de producción](deploying-your-site-using-visual-studio-cs/_static/image20.png)](deploying-your-site-using-visual-studio-cs/_static/image19.png)
+[![Osolo que los archivos necesarios se han publicado en el entorno de producción](deploying-your-site-using-visual-studio-cs/_static/image20.png)](deploying-your-site-using-visual-studio-cs/_static/image19.png)
 
 **Figura 7**: Solo los necesarios archivos se publicaron en el entorno de producción ([haga clic aquí para ver imagen en tamaño completo](deploying-your-site-using-visual-studio-cs/_static/image21.png))
 
@@ -148,8 +148,8 @@ Para obtener más información sobre los temas tratados en este tutorial, consul
 
 - [Copiar sitio Web con la herramienta Copiar sitio Web](https://msdn.microsoft.com/library/1cc82atw.aspx)
 - [¿Cómo lo hago?: Implementar un sitio Web mediante la herramienta Copiar sitio Web](../../../videos/how-do-i/how-do-i-deploy-a-web-site-using-the-copy-web-site-tool.md) (vídeo)
-- [Cómo: Publicar proyectos de aplicación Web](https://msdn.microsoft.com/library/aa983453.aspx)
-- [Cómo: Publicar sitios Web](https://msdn.microsoft.com/library/20yh9f1b.aspx)
+- [Cómo Publicar proyectos de aplicación Web](https://msdn.microsoft.com/library/aa983453.aspx)
+- [Cómo Publicar sitios Web](https://msdn.microsoft.com/library/20yh9f1b.aspx)
 - [El programa de instalación y la implementación de proyectos en Visual Studio](https://msdn.microsoft.com/library/wx3b589t.aspx)
 
 > [!div class="step-by-step"]

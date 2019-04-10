@@ -8,15 +8,15 @@ ms.date: 08/28/2012
 ms.assetid: 41eb99ca-e88f-4720-ae6d-49a958da8116
 msc.legacyurl: /mvc/overview/older-versions/getting-started-with-aspnet-mvc4/examining-the-edit-methods-and-edit-view
 msc.type: authoredcontent
-ms.openlocfilehash: 1223e110ce98c5b511312de42bc2992045a4a40b
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: d22b6a02a211e61707e9660c64b87a8c08388e58
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57062142"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59392097"
 ---
-<a name="examining-the-edit-methods-and-edit-view"></a>Examinar los métodos y la vista Edit
-====================
+# <a name="examining-the-edit-methods-and-edit-view"></a>Examinar los métodos y la vista Edit
+
 by [Rick Anderson]((https://twitter.com/RickAndMSFT))
 
 > > [!NOTE]

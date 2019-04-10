@@ -8,15 +8,15 @@ ms.date: 11/07/2013
 ms.assetid: d031c021-33c2-45a5-bf9f-98f8fa78c2ab
 msc.legacyurl: /aspnet/overview/owin-and-katana/owin-middleware-in-the-iis-integrated-pipeline
 msc.type: authoredcontent
-ms.openlocfilehash: 6124bcdaeeb0d4342cbde0d3ca52d55f76a953ab
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: 484c01f19014639cc30244ed4f4d014794594aa2
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57041452"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59391707"
 ---
-<a name="owin-middleware-in-the-iis-integrated-pipeline"></a>Middleware de OWIN en la canalización integrada de IIS
-====================
+# <a name="owin-middleware-in-the-iis-integrated-pipeline"></a>Middleware de OWIN en la canalización integrada de IIS
+
 por [Praburaj Thiagarajan](https://github.com/Praburaj), [Rick Anderson]((https://twitter.com/RickAndMSFT))
 
 > En este artículo se muestra cómo ejecutar componentes de middleware OWIN (OMCs) en la canalización integrada de IIS, y cómo establecer el evento de la canalización un OMC se ejecuta en. Debe revisar [una visión general del proyecto Katana](an-overview-of-project-katana.md) y [detección de clase de inicio OWIN](owin-startup-class-detection.md) antes de leer este tutorial. En este tutorial se escribió por Rick Anderson ( [ @RickAndMSFT ](https://twitter.com/#!/RickAndMSFT) ), Howard Dierking, Chris Ross y Praburaj Thiagarajan ( [ @howard \_dierking](https://twitter.com/howard_dierking) ).

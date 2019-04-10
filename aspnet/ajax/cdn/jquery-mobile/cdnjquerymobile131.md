@@ -8,15 +8,15 @@ ms.date: 07/23/2014
 ms.assetid: b5c41c56-f5df-489e-9389-25e2523cdd28
 msc.legacyurl: /ajax/cdn/jquery-mobile/cdnjquerymobile131
 msc.type: content
-ms.openlocfilehash: cfca54487f2ce01961c282c7c6f03a7698476753
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: 7c25f3e43a1d4a06c9fc2b22ba9f66a6fcef3bca
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57027732"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59395412"
 ---
-<a name="jquery-mobile-131-on-the-microsoft-ajax-cdn"></a>jQuery Mobile 1.3.1 en la red CDN de Microsoft Ajax
-====================
+# <a name="jquery-mobile-131-on-the-microsoft-ajax-cdn"></a>jQuery Mobile 1.3.1 en la red CDN de Microsoft Ajax
+
 La biblioteca de jQuery Mobile 1.3.1 incluye los siguientes archivos:
 
 - https://ajax.aspnetcdn.com/ajax/jquery.mobile/1.3.1/jquery.mobile.structure-1.3.1.css

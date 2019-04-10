@@ -8,21 +8,21 @@ ms.date: 04/20/2010
 ms.assetid: 69a8d6f8-4b10-4602-8822-2d6c05fc432b
 msc.legacyurl: /whitepapers/what-is-new-in-aspnet-mvc
 msc.type: content
-ms.openlocfilehash: 82a3fd4fe74202ed9a23298390322458cfc029f8
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: 7f846e807309f3123db52b3053b9aa8d6aca81e6
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57031002"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59394840"
 ---
-<a name="whats-new-in-aspnet-mvc-2"></a>Novedades de ASP.NET MVC 2
-====================
+# <a name="whats-new-in-aspnet-mvc-2"></a>Novedades de ASP.NET MVC 2
+
 > Este documento describe las nuevas características y mejoras introducidas en ASP.NET MVC 2. Este documento también está disponible para [descargar](https://download.microsoft.com/download/F/1/6/F16F9AF9-8EF4-4845-BC97-639791D5699C/WhatIsNewInMVC_2.pdf)
 
 
 [Introducción](#_TOC1)   
 [Actualizar un proyecto de ASP.NET MVC 1.0 a ASP.NET MVC 2](#_TOC2)   
-[Nuevas características](#_TOC3)   
+[Características nuevas](#_TOC3)   
 [Aplicaciones auxiliares con plantilla](#_TOC3_1)   
 [Áreas](#_TOC3_2)   
 [Compatibilidad con controladores asincrónicos](#_TOC3_3)   

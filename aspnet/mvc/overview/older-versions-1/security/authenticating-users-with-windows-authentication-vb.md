@@ -8,15 +8,15 @@ ms.date: 01/27/2009
 ms.assetid: 532fa051-7d5c-4d6d-87f6-339ce4b84c44
 msc.legacyurl: /mvc/overview/older-versions-1/security/authenticating-users-with-windows-authentication-vb
 msc.type: authoredcontent
-ms.openlocfilehash: e37508dedd4243dd1a1638e68760f6f4310e61a8
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: d6b48d676c2dd90fc052b338f31a389e0fb809be
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57059082"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59402315"
 ---
-<a name="authenticating-users-with-windows-authentication-vb"></a>Autenticar a los usuarios con la autenticación de Windows (VB)
-====================
+# <a name="authenticating-users-with-windows-authentication-vb"></a>Autenticar a los usuarios con la autenticación de Windows (VB)
+
 por [Microsoft](https://github.com/microsoft)
 
 > Obtenga información sobre cómo usar la autenticación de Windows en el contexto de una aplicación MVC. Obtenga información sobre cómo habilitar la autenticación de Windows en el archivo de configuración de la aplicación web y cómo configurar la autenticación con IIS. Por último, aprenderá a usar el atributo [Authorize] para restringir el acceso a las acciones de controlador a grupos o usuarios de Windows determinados.
@@ -69,7 +69,7 @@ Después de habilitar la autenticación de Windows, puede usar el &lt;Authorize&
 
 Por ejemplo, el controlador Home en el listado 1 expone tres acciones denominadas Index() CompanySecrets() y StephenSecrets(). Cualquier usuario puede invocar la acción de Index(). Sin embargo, solo los miembros del grupo de administradores locales de Windows pueden invocar la acción CompanySecrets(). Por último, solo el usuario de dominio de Windows denominado a Stephen (en el dominio Redmond) puede invocar la acción StephenSecrets().
 
-**Listing 1 – Controllers\HomeController.vb**
+**Listado 1 – Controllers\HomeController.vb**
 
 [!code-vb[Main](authenticating-users-with-windows-authentication-vb/samples/sample2.vb)]
 

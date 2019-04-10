@@ -8,15 +8,15 @@ ms.date: 01/20/2014
 ms.assetid: 979d6c9f-0129-4e5b-ae56-4507b281b86d
 msc.legacyurl: /web-api/overview/web-api-routing-and-actions/attribute-routing-in-web-api-2
 msc.type: authoredcontent
-ms.openlocfilehash: 22eb2fd748d52ec95e813ada8b1bf3b4826ad573
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: 65e2268418501f89a77a0ba20f7960a618c2e9b7
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57034282"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59405462"
 ---
-<a name="attribute-routing-in-aspnet-web-api-2"></a>Enrutamiento mediante atributos en ASP.NET Web API 2
-====================
+# <a name="attribute-routing-in-aspnet-web-api-2"></a>Enrutamiento mediante atributos en ASP.NET Web API 2
+
 por [Mike Wasson](https://github.com/MikeWasson)
 
 *Enrutamiento* es cómo API Web coincide con un URI a una acción. Web API 2 es compatible con un nuevo tipo de enrutamiento, llamado *enrutamiento mediante atributos*. Como el nombre implica, el enrutamiento mediante atributos utiliza atributos para definir las rutas. Enrutamiento mediante atributos proporciona mayor control sobre los URI de la API web. Por ejemplo, puede crear fácilmente los identificadores URI que se describen las jerarquías de recursos.
@@ -228,8 +228,8 @@ Como alternativa, puede especificar un valor predeterminado dentro de la plantil
 
 Esto es prácticamente el mismo que el ejemplo anterior, pero hay una ligera diferencia de comportamiento cuando se aplica el valor predeterminado.
 
-- En el primer ejemplo ("{lcid?}"), el valor predeterminado de 1033 se asigna directamente al parámetro de método, por lo que el parámetro tendrá este valor exacto.
-- En el segundo ejemplo ("{lcid = 1033}"), el valor predeterminado de "1033" recorre el proceso de enlace de modelos. El enlazador de modelos de forma predeterminada, se convertirá "1033" al valor numérico 1033. Sin embargo, es posible insertar un enlazador de modelos personalizado, que podría hacer algo diferente.
+- En el primer ejemplo ("{lcid:int?}"), el valor predeterminado de 1033 se asigna directamente al parámetro de método, por lo que el parámetro tendrá este valor exacto.
+- En el segundo ejemplo ("{lcid:int = 1033}"), el valor predeterminado de "1033" recorre el proceso de enlace de modelos. El enlazador de modelos de forma predeterminada, se convertirá "1033" al valor numérico 1033. Sin embargo, es posible insertar un enlazador de modelos personalizado, que podría hacer algo diferente.
 
 (En la mayoría de los casos, a menos que tenga los enlazadores de modelos personalizados en la canalización, los dos formularios será equivalente.)
 

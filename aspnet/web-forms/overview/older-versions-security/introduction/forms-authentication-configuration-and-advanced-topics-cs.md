@@ -8,15 +8,15 @@ ms.date: 01/14/2008
 ms.assetid: b9c29865-a34e-48bb-92c0-c443a72cb860
 msc.legacyurl: /web-forms/overview/older-versions-security/introduction/forms-authentication-configuration-and-advanced-topics-cs
 msc.type: authoredcontent
-ms.openlocfilehash: 33d9c90aa2798ec7a88acc8ff4e4062efc0701fc
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: 9665dafb23b885fdf9e4ea5f1a515a0c6dcc9a9a
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57046082"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59410635"
 ---
-<a name="forms-authentication-configuration-and-advanced-topics-c"></a>Configuración de la autenticación de formularios y temas avanzados (C#)
-====================
+# <a name="forms-authentication-configuration-and-advanced-topics-c"></a>Configuración de la autenticación de formularios y temas avanzados (C#)
+
 por [Scott Mitchell](https://twitter.com/ScottOnWriting)
 
 [Descargar código](http://download.microsoft.com/download/2/F/7/2F705A34-F9DE-4112-BBDE-60098089645E/ASPNET_Security_Tutorial_03_CS.zip) o [descargar PDF](http://download.microsoft.com/download/2/F/7/2F705A34-F9DE-4112-BBDE-60098089645E/aspnet_tutorial03_AuthAdvanced_cs.pdf)
@@ -39,14 +39,14 @@ El sistema de autenticación de formularios de ASP.NET ofrece una serie de opcio
 La tabla 1 resume las propiedades que se pueden personalizar mediante la &lt;formularios&gt; elemento. Puesto que el archivo Web.config es un archivo XML, los nombres de atributo en la columna izquierda distinguen mayúsculas de minúsculas.
 
 
-| <strong>Attribute</strong> |                                                                                                                                                                                                                                     <strong>Descripción</strong>                                                                                                                                                                                                                                      |
+| <strong>Atributo</strong> |                                                                                                                                                                                                                                     <strong>Descripción</strong>                                                                                                                                                                                                                                      |
 |----------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 |         sin cookies         |                                                                                                                Este atributo especifica bajo qué condiciones el vale de autenticación se almacena en una cookie en comparación con la que se incrusta en la dirección URL. Valores permitidos son: UseCookies; UseUri; Detección automática; y UseDeviceProfile (predeterminado). Paso 2 examina esta configuración con más detalle.                                                                                                                |
 |         defaultUrl         |                                                                                                                                                         Indica la dirección URL que se redirigen a los usuarios después de iniciar sesión en la página de inicio de sesión si no hay ningún valor de URL de redireccionamiento especificado en la cadena de consulta. El valor predeterminado es default.aspx.                                                                                                                                                         |
 |           dominio           | Cuando se utiliza vales de autenticación basada en cookies, esta configuración especifica el valor de dominio de la cookie. El valor predeterminado es una cadena vacía, lo que hace que el explorador usar el dominio desde el que se emitió (por ejemplo, www.yourdomain.com). En este caso, la cookie le <strong>no</strong> enviarse al realizar solicitudes a subdominios, como admin.yourdomain.com. Si desea que la cookie que se pasará a todos los subdominios que necesita para personalizar el atributo de dominio si se establece en sudominio.com. |
 |  enableCrossAppRedirects   |                                                                                                                                                                   Un valor booleano que indica si los usuarios autenticados se memorizan al redirigir a direcciones URL de otras aplicaciones web en el mismo servidor. El valor predeterminado es false.                                                                                                                                                                   |
 |          loginUrl          |                                                                                                                                                                                                                      La dirección URL de la página de inicio de sesión. El valor predeterminado es login.aspx.                                                                                                                                                                                                                      |
-|            name            |                                                                                                                                                                                                   Cuando se usan vales de autenticación basada en cookies, el nombre de la cookie. El valor predeterminado es. ASPXAUTH.                                                                                                                                                                                                   |
+|            NAME            |                                                                                                                                                                                                   Cuando se usan vales de autenticación basada en cookies, el nombre de la cookie. El valor predeterminado es. ASPXAUTH.                                                                                                                                                                                                   |
 |            ruta de acceso            |                                                                             Cuando se utiliza vales de autenticación basada en cookies, esta configuración especifica el atributo de ruta de acceso de la cookie. El atributo de ruta de acceso permite que un desarrollador limitar el ámbito de una cookie para una jerarquía de directorios concreta. El valor predeterminado es /, que indica al explorador para enviar la cookie de vale de autenticación a cualquier solicitud realizada al dominio.                                                                              |
 |         protección         |                                                                                                                                            Indica las técnicas que se usan para proteger el vale de autenticación de formularios. Los valores permitidos son: Todos (predeterminado); Cifrado; Ninguno; y la validación. Estas opciones se describen en detalle en el paso 3.                                                                                                                                            |
 |         requireSSL         |                                                                                                                                                                                Un valor booleano que indica si se requiere una conexión SSL para transmitir la cookie de autenticación. El valor predeterminado es false.                                                                                                                                                                                |
@@ -84,7 +84,7 @@ La expiración define un tiempo absoluto en el futuro cuando expira el vale de a
 Figura 1 ilustra el flujo de trabajo cuando slidingExpiration se establece en false y el tiempo de espera se establece en 30. Tenga en cuenta que el vale de autenticación que se generan en el inicio de sesión contiene la fecha de expiración, y este valor no se actualiza en las solicitudes subsiguientes. Si FormsAuthenticationModule detecta que el vale ha caducado, se descarta y trata la solicitud como anónimo.
 
 
-[![Una representación gráfica de slidingExpiration de expiración cuando del vale autenticación de formularios es false](forms-authentication-configuration-and-advanced-topics-cs/_static/image2.png)](forms-authentication-configuration-and-advanced-topics-cs/_static/image1.png)
+[![A Representación gráfica de slidingExpiration de expiración cuando del vale autenticación de formularios es false](forms-authentication-configuration-and-advanced-topics-cs/_static/image2.png)](forms-authentication-configuration-and-advanced-topics-cs/_static/image1.png)
 
 **Figura 01**: Una representación gráfica de slidingExpiration de expiración cuando del vale autenticación de formularios es false ([haga clic aquí para ver imagen en tamaño completo](forms-authentication-configuration-and-advanced-topics-cs/_static/image3.png))
 
@@ -92,7 +92,7 @@ Figura 1 ilustra el flujo de trabajo cuando slidingExpiration se establece en fa
 La figura 2 muestra el flujo de trabajo cuando slidingExpiration se establece en true y el tiempo de espera se establece en 30. Cuando se recibe una solicitud autenticada (con un vale no hayan caducado) se actualiza su expiración en tiempo de espera número de minutos en el futuro.
 
 
-[![Una representación gráfica del vale de autenticación de formularios cuando slidingExpiration es true](forms-authentication-configuration-and-advanced-topics-cs/_static/image5.png)](forms-authentication-configuration-and-advanced-topics-cs/_static/image4.png)
+[![A Representación gráfica del vale de autenticación de formularios cuando es true slidingExpiration](forms-authentication-configuration-and-advanced-topics-cs/_static/image5.png)](forms-authentication-configuration-and-advanced-topics-cs/_static/image4.png)
 
 **Figura 02**: Una representación gráfica del vale de autenticación de formularios cuando es true slidingExpiration ([haga clic aquí para ver imagen en tamaño completo](forms-authentication-configuration-and-advanced-topics-cs/_static/image6.png))
 
@@ -181,7 +181,7 @@ Para garantizar la autenticidad de un vale, el sistema de autenticación de form
 Al crear (o modificar) una incidencia, el sistema de autenticación de formularios crea un equipo MAC y lo adjunta a los datos del vale. Cuando llega una solicitud posterior, el sistema de autenticación de formularios compara los datos de MAC y el vale para validar la autenticidad de los datos del vale. Figura 3 ilustra gráficamente este flujo de trabajo.
 
 
-[![Se garantiza la autenticidad del vale a través de un equipo MAC](forms-authentication-configuration-and-advanced-topics-cs/_static/image8.png)](forms-authentication-configuration-and-advanced-topics-cs/_static/image7.png)
+[![Tse garantiza la autenticidad del vale a través de un equipo MAC](forms-authentication-configuration-and-advanced-topics-cs/_static/image8.png)](forms-authentication-configuration-and-advanced-topics-cs/_static/image7.png)
 
 **Figura 03**: Se garantiza la autenticidad del vale a través de un equipo MAC ([haga clic aquí para ver imagen en tamaño completo](forms-authentication-configuration-and-advanced-topics-cs/_static/image9.png))
 
@@ -199,7 +199,7 @@ Microsoft recomienda utilizar la configuración de todos.
 
 El cifrado y hash algoritmos usados por el sistema de autenticación de formularios para cifrar y validar el vale de autenticación son personalizables a través de la [ &lt;machineKey&gt; elemento](https://msdn.microsoft.com/library/w8h3skw9.aspx) en el archivo Web.config. Tabla 2 contornos el &lt;machineKey&gt; atributos del elemento y sus valores posibles.
 
-| **Attribute** | **Descripción** |
+| **Atributo** | **Descripción** |
 | --- | --- |
 | descifrado | Indica el algoritmo utilizado para el cifrado. Este atributo puede tener uno de los siguientes cuatro valores: - Auto - el valor predeterminado; Determina el algoritmo que se basa en la longitud del atributo decryptionKey. -AES - utiliza el [estándar de cifrado avanzado (AES)](http://en.wikipedia.org/wiki/Advanced_Encryption_Standard) algoritmo. -DES - utiliza el [estándar de cifrado de datos (DES)](http://en.wikipedia.org/wiki/Data_Encryption_Standard) este algoritmo se considera computacionalmente débil y no debe usarse. -3DES - utiliza el [Triple DES](http://en.wikipedia.org/wiki/Triple_DES) algoritmo, que aplica el algoritmo DES triple. |
 | decryptionKey | La clave secreta usada por el algoritmo de cifrado. Este valor debe ser una cadena hexadecimal de la longitud apropiada (según el valor de descifrado), generar automáticamente o cualquiera de los valores anexada, IsolateApps. Agregar IsolateApps indica a ASP.NET que utilice un valor único para cada aplicación. El valor predeterminado es AutoGenerate, IsolateApps. |
@@ -238,7 +238,7 @@ Para almacenar datos de usuario en el vale de autenticación, se debe escribir u
 Cada vez que se necesita tener acceso a los datos almacenados en el vale, podemos hacerlo; para hacerlo FormsAuthenticationTicket de la solicitud actual y deserializar la propiedad UserData. En el caso de la fecha de nacimiento y el empresario ejemplo de nombre, se podría dividir la cadena de UserData en dos subcadenas según el delimitador (|).
 
 
-[![Información adicional del usuario se puede almacenar en el vale de autenticación](forms-authentication-configuration-and-advanced-topics-cs/_static/image11.png)](forms-authentication-configuration-and-advanced-topics-cs/_static/image10.png)
+[![Aadicionales al usuario información puede almacenarse en el vale de autenticación](forms-authentication-configuration-and-advanced-topics-cs/_static/image11.png)](forms-authentication-configuration-and-advanced-topics-cs/_static/image10.png)
 
 **Figura 04**: Adicionales usuario información puede almacenarse en el vale de autenticación ([haga clic aquí para ver imagen en tamaño completo](forms-authentication-configuration-and-advanced-topics-cs/_static/image12.png))
 
@@ -302,7 +302,7 @@ Si Request.IsAuthenticated es true, entonces la propiedad de texto del WelcomeBa
 Figura 5 muestra una captura de pantalla de esta presentación en acción. Inicie sesión como Scott muestra un mensaje de back-Bienvenido que incluye la empresa y el título de Scott.
 
 
-[![Empresa actualmente ha iniciado en del usuario y el título se muestran](forms-authentication-configuration-and-advanced-topics-cs/_static/image14.png)](forms-authentication-configuration-and-advanced-topics-cs/_static/image13.png)
+[![TEmpresa actualmente registrado del usuario y el título se muestran](forms-authentication-configuration-and-advanced-topics-cs/_static/image14.png)](forms-authentication-configuration-and-advanced-topics-cs/_static/image13.png)
 
 **Figura 05**: Empresa actualmente ha iniciado en del usuario y el título se muestran ([haga clic aquí para ver imagen en tamaño completo](forms-authentication-configuration-and-advanced-topics-cs/_static/image15.png))
 
@@ -338,7 +338,7 @@ Para este tutorial, vamos a crear los objetos principal e identity personalizado
 A continuación, agregue dos nuevos archivos de clase a la aplicación\_carpeta de código, una CustomIdentity.cs con nombre y otro denominan archivo CustomPrincipal.cs.
 
 
-[![Agregue las clases de CustomPrincipal y CustomIdentity al proyecto](forms-authentication-configuration-and-advanced-topics-cs/_static/image17.png)](forms-authentication-configuration-and-advanced-topics-cs/_static/image16.png)
+[![AClases de CustomPrincipal a su proyecto y dd el CustomIdentity](forms-authentication-configuration-and-advanced-topics-cs/_static/image17.png)](forms-authentication-configuration-and-advanced-topics-cs/_static/image16.png)
 
 **Figura 06**: Agregar las clases de CustomPrincipal y CustomIdentity a su proyecto ([haga clic aquí para ver imagen en tamaño completo](forms-authentication-configuration-and-advanced-topics-cs/_static/image18.png))
 
@@ -362,7 +362,7 @@ La canalización de ASP.NET toma una solicitud entrante y lo procesa mediante un
 Después del evento AuthenticateRequest, la canalización de ASP.NET genera el [PostAuthenticateRequest eventos](https://msdn.microsoft.com/library/system.web.httpapplication.postauthenticaterequest.aspx), que es donde podemos reemplazar el objeto GenericPrincipal creado por FormsAuthenticationModule con una instancia de nuestra Objeto CustomPrincipal. Figura 7 muestra este flujo de trabajo.
 
 
-[![El objeto GenericPrincipal se sustituye por un CustomPrincipal en el evento PostAuthenticationRequest](forms-authentication-configuration-and-advanced-topics-cs/_static/image20.png)](forms-authentication-configuration-and-advanced-topics-cs/_static/image19.png)
+[![Tél GenericPrincipal se sustituye por un CustomPrincipal en el evento PostAuthenticationRequest](forms-authentication-configuration-and-advanced-topics-cs/_static/image20.png)](forms-authentication-configuration-and-advanced-topics-cs/_static/image19.png)
 
 **Figura 07**: El objeto GenericPrincipal se sustituye por un CustomPrincipal en el evento PostAuthenticationRequest ([haga clic aquí para ver imagen en tamaño completo](forms-authentication-configuration-and-advanced-topics-cs/_static/image21.png))
 
@@ -370,7 +370,7 @@ Después del evento AuthenticateRequest, la canalización de ASP.NET genera el [
 Para ejecutar código en respuesta a un evento de la canalización ASP.NET, nos podemos crear el controlador de eventos apropiado en Global.asax o crear nuestro propio módulo HTTP. En este tutorial vamos a crear el controlador de eventos en Global.asax. Empiece agregando Global.asax a su sitio Web. Haga doble clic en el nombre del proyecto en el Explorador de soluciones y agregue un elemento de tipo de clase de aplicación Global denominada Global.asax.
 
 
-[![Agregue un archivo Global.asax para su sitio Web](forms-authentication-configuration-and-advanced-topics-cs/_static/image23.png)](forms-authentication-configuration-and-advanced-topics-cs/_static/image22.png)
+[![Aun archivo Global.asax para su sitio Web dd](forms-authentication-configuration-and-advanced-topics-cs/_static/image23.png)](forms-authentication-configuration-and-advanced-topics-cs/_static/image22.png)
 
 **Figura 08**: Agregue un archivo Global.asax para su sitio Web ([haga clic aquí para ver imagen en tamaño completo](forms-authentication-configuration-and-advanced-topics-cs/_static/image24.png))
 
@@ -411,7 +411,7 @@ Para obtener más información sobre los temas tratados en este tutorial, consul
 
 - [Si examinamos la autenticación de formularios](http://aspnet.4guysfromrolla.com/articles/072005-1.aspx)
 - [Se explica: Autenticación de formularios en ASP.NET 2.0](https://msdn.microsoft.com/library/aa480476.aspx)
-- [Cómo: Proteger la autenticación de formularios en ASP.NET 2.0](https://msdn.microsoft.com/library/ms998310.aspx)
+- [Cómo Proteger la autenticación de formularios en ASP.NET 2.0](https://msdn.microsoft.com/library/ms998310.aspx)
 - [Professional ASP.NET 2.0 seguridad, la pertenencia y administración de roles](http://www.wrox.com/WileyCDA/WroxTitle/productCd-0764596985.html) (ISBN: 978-0-7645-9698-8)
 - [Protección de los controles de inicio de sesión](https://msdn.microsoft.com/library/ms178346.aspx)
 - [El &lt;autenticación&gt; elemento](https://msdn.microsoft.com/library/532aee0e.aspx)

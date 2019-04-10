@@ -8,15 +8,15 @@ ms.date: 02/20/2005
 ms.assetid: 2bb109d2-e299-46ea-9054-fa0263b59165
 msc.legacyurl: /web-forms/overview/moving-to-aspnet-20/caching
 msc.type: authoredcontent
-ms.openlocfilehash: 5c97464ee50291338a80120a86b1b86b07bc672d
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: 5e16415df5bd4203995bec943ffa682f7da82357
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57032932"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59400209"
 ---
-<a name="caching"></a>Almacenamiento en memoria caché
-====================
+# <a name="caching"></a>Almacenamiento en memoria caché
+
 por [Microsoft](https://github.com/microsoft)
 
 > Una descripción del almacenamiento en caché es importante para una aplicación ASP.NET de buen rendimiento. ASP.NET 1.x que ofrecen tres opciones distintas para el almacenamiento en caché; caché de resultados, almacenamiento en caché y la API de caché.
@@ -56,7 +56,7 @@ Para invalidar el elemento que se insertó anteriormente, basta con quitar el el
 
 Tenga en cuenta que la clave del elemento que actúa como la clave de caché debe ser el mismo que el valor agregado a la matriz de claves de caché.
 
-## <a name="polling-based-sql-cache-dependenciesemalso-called-table-based-dependenciesem"></a>Dependencias de caché de SQL basados en sondeos<em>(también denominado dependencias basadas en la tabla)</em>
+## <a name="polling-based-sql-cache-dependenciesalso-called-table-based-dependencies"></a>Basados en sondeos SQL caché Dependencies(Also called Table-Based Dependencies)
 
 SQL Server 7 y 2000 utilizan el modelo basado en sondeo de dependencias de caché de SQL. El modelo basado en sondeo usa un desencadenador en una tabla de base de datos que se desencadena cuando cambian los datos de la tabla. Las actualizaciones que desencadenen un **changeId** campo en la tabla de notificación que ASP.NET comprueba periódicamente. Si el **changeId** campo se ha actualizado, ASP.NET sepa que los datos han cambiado y no invalida los datos almacenados en caché.
 
@@ -72,7 +72,7 @@ La línea de comandos siguiente registra la tabla Products en la base de datos d
 
 El siguiente es una explicación de los modificadores de línea de comandos utilizados en el comando anterior:
 
-| **Conmutador de línea de comandos** | **Propósito** |
+| **Conmutador de línea de comandos** | **Finalidad** |
 | --- | --- |
 | -S *server* | Especifica el nombre del servidor. |
 | -ed | Especifica que se debe habilitar la base de datos para la dependencia de caché SQL. |
@@ -211,9 +211,9 @@ Se puede manipular correctamente una instancia ControlCachePolicy solo entre las
 
 Hay varios cambios en la configuración de almacenamiento en caché en ASP.NET 2.0. El &lt;almacenamiento en caché&gt; elemento es nuevo en ASP.NET 2.0 y le permite realizar cambios de configuración de almacenamiento en caché en el archivo de configuración. Los siguientes atributos están disponibles.
 
-| **Element** | **Descripción** |
+| **Elemento** | **Descripción** |
 | --- | --- |
-| **cache** | Elemento opcional. Define la configuración de la caché global de la aplicación. |
+| **caché** | Elemento opcional. Define la configuración de la caché global de la aplicación. |
 | **outputCache** | Elemento opcional. Especifica la configuración de caché de resultados de toda la aplicación. |
 | **outputCacheSettings** | Elemento opcional. Especifica la configuración de caché de resultados que se puede aplicar a las páginas de la aplicación. |
 | **sqlCacheDependency** | Elemento opcional. Configura las dependencias de caché SQL para una aplicación ASP.NET. |
@@ -222,7 +222,7 @@ Hay varios cambios en la configuración de almacenamiento en caché en ASP.NET 2
 
 Los siguientes atributos están disponibles en el &lt;caché&gt; elemento:
 
-| **Attribute** | **Descripción** |
+| **Atributo** | **Descripción** |
 | --- | --- |
 | **disableMemoryCollection** | Opcional **booleano** atributo. Obtiene o establece un valor que indica si la colección de la memoria caché que se produce cuando el equipo está bajo presión de memoria está deshabilitada. |
 | **disableExpiration** | Opcional **booleano** atributo. Obtiene o establece un valor que indica si la expiración de caché está deshabilitada. Cuando está deshabilitado, los elementos en caché no caducan y eliminación de registros obsoletos en segundo plano de elementos de caché expirados no se produce. |
@@ -235,7 +235,7 @@ Los siguientes atributos están disponibles en el &lt;caché&gt; elemento:
 Los siguientes atributos están disponibles para el &lt;outputCache&gt; elemento.
 
 
-|       <strong>Attribute</strong>        |                                                                                                                                                                                                                                                       <strong>Descripción</strong>                                                                                                                                                                                                                                                       |
+|       <strong>Atributo</strong>        |                                                                                                                                                                                                                                                       <strong>Descripción</strong>                                                                                                                                                                                                                                                       |
 |-----------------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 |   <strong>enableOutputCache</strong>    |                                                                                                                                                          Opcional <strong>booleano</strong> atributo. Habilita o deshabilita la caché de resultados de página. Si deshabilita esta opción, no hay páginas se almacenan en caché independientemente de la configuración declarativa o mediante programación. Valor predeterminado es <strong>true</strong>.                                                                                                                                                           |
 |  <strong>enableFragmentCache</strong>   |                                                Opcional <strong>booleano</strong> atributo. Habilita o deshabilita la caché de fragmentos de la aplicación. Si deshabilita esta opción, no hay páginas se almacenan en caché sin tener en cuenta la [@ OutputCache](https://msdn.microsoft.com/library/hdxfb6cy.aspx) directiva o el almacenamiento en caché de perfil que se usa. Incluye un encabezado de control de caché que indica que no deben intentar servidores proxy de nivel superior, así como los clientes de explorador a la caché de resultados de página. Valor predeterminado es <strong>false</strong>.                                                 |
@@ -250,7 +250,7 @@ El &lt;outputCacheSettings&gt; elemento permite la creación de perfiles de memo
 
 Los siguientes atributos están disponibles para el &lt;sqlCacheDependency&gt; elemento.
 
-| **Attribute** | **Descripción** |
+| **Atributo** | **Descripción** |
 | --- | --- |
 | **enabled** | Requiere **booleano** atributo. Indica si se sondean los cambios. |
 | **pollTime** | Opcional **Int32** atributo. Establece la frecuencia con que SqlCacheDependency sondea la tabla de base de datos de los cambios. Este valor corresponde al número de milisegundos que transcurren entre sondeos sucesivos. No se puede establecer en menos de 500 milisegundos. Valor predeterminado es 1 minuto. |

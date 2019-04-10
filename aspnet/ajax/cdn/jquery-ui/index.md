@@ -8,15 +8,15 @@ ms.date: 07/21/2014
 ms.assetid: bd72bb7e-bdcb-490b-8bc1-9b669329632b
 msc.legacyurl: /ajax/cdn/jquery-ui
 msc.type: folder
-ms.openlocfilehash: b78adb451fba9fba05c0122afeea4d6baf31a447
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: 00e481ab8a24823fa4b52fb2d7ec38bc9f2cf739
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57020732"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59409426"
 ---
-<a name="jquery-ui"></a>jQuery UI
-====================
+# <a name="jquery-ui"></a>jQuery UI
+
 - [jQuery UI 1.10.4 en la red CDN de Microsoft Ajax](cdnjqueryui1104.md)
 - [jQuery UI 1.10.3 en la red CDN de Microsoft Ajax](cdnjqueryui1103.md)
 - [jQuery UI 1.10.2 en la red CDN de Microsoft Ajax](cdnjqueryui1102.md)

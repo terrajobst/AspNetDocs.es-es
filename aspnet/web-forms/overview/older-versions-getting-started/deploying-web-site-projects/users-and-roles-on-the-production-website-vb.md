@@ -8,15 +8,15 @@ ms.date: 06/09/2009
 ms.assetid: 491ed5ae-9be1-4191-87be-65e4e1c57690
 msc.legacyurl: /web-forms/overview/older-versions-getting-started/deploying-web-site-projects/users-and-roles-on-the-production-website-vb
 msc.type: authoredcontent
-ms.openlocfilehash: f63d64532543da681fdf88399d7dd365804674c4
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: e97b66aed789cf6f2b2b503ae86e773ac03d74e0
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57053742"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59392942"
 ---
-<a name="users-and-roles-on-the-production-website-vb"></a>Los usuarios y Roles en el sitio Web de producción (VB)
-====================
+# <a name="users-and-roles-on-the-production-website-vb"></a>Los usuarios y Roles en el sitio Web de producción (VB)
+
 por [Scott Mitchell](https://twitter.com/ScottOnWriting)
 
 [Descargar PDF](http://download.microsoft.com/download/5/C/5/5C57DB8C-5DEA-4B3A-92CA-4405544D313B/aspnet_tutorial16_CustomAWAT_vb.pdf)

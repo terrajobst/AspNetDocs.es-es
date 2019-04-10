@@ -1,22 +1,23 @@
 ---
 uid: web-api/overview/advanced/httpclient-message-handlers
-title: Controladores de mensajes HttpClient en ASP.NET Web API | Microsoft Docs
+title: Controladores de mensajes HttpClient en ASP.NET Web API - ASP.NET 4.x
 author: MikeWasson
-description: ''
+description: Crear controladores de mensajes personalizados para ASP.NET Web API en ASP.NET 4.x
 ms.author: riande
 ms.date: 10/01/2012
+ms.custom: seoapril2019
 ms.assetid: 5a4b6c80-b2e9-4710-8969-d5076f7f82b8
 msc.legacyurl: /web-api/overview/advanced/httpclient-message-handlers
 msc.type: authoredcontent
-ms.openlocfilehash: 764244d1299d8cfcb59c3f15d63b42ebff4f6ac0
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: bd52396064cd7007ee17705ba86b02aaf27cb4f0
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57029102"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59401730"
 ---
-<a name="httpclient-message-handlers-in-aspnet-web-api"></a>Controladores de mensajes HttpClient en ASP.NET Web API
-====================
+# <a name="httpclient-message-handlers-in-aspnet-web-api"></a>Controladores de mensajes HttpClient en ASP.NET Web API
+
 por [Mike Wasson](https://github.com/MikeWasson)
 
 Un *controlador de mensajes* es una clase que recibe una solicitud HTTP y devuelve una respuesta HTTP.

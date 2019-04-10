@@ -8,15 +8,15 @@ ms.date: 05/28/2015
 ms.assetid: c85ec591-f8d7-4882-b763-de6ab9f3df7a
 msc.legacyurl: /web-pages/overview/getting-started/introducing-aspnet-web-pages-2/layouts
 msc.type: authoredcontent
-ms.openlocfilehash: a6a007678d58547e9987ebda46bd08ae8aea66f7
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: 58f3ec28914a604aa911cc3cb73733f0d58fd49f
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57046182"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59390421"
 ---
-<a name="introducing-aspnet-web-pages---creating-a-consistent-layout"></a>Introducción a las páginas Web ASP.NET - crear un diseño coherente
-====================
+# <a name="introducing-aspnet-web-pages---creating-a-consistent-layout"></a>Introducción a las páginas Web ASP.NET - crear un diseño coherente
+
 por [Tom FitzMacken](https://github.com/tfitzmac)
 
 > Este tutorial muestra cómo usar *diseños* para crear una apariencia coherente para las páginas en un sitio que usa ASP.NET Web Pages. Supone que ha completado la serie a través de [eliminando la base de datos en ASP.NET Web Pages](https://go.microsoft.com/fwlink/?LinkId=251584).
@@ -146,7 +146,7 @@ Abra el *Movies.cshtml* página nuevo. En el código en la parte superior, agreg
 
 El `Page` está disponible en todos los objetos *.cshtml* páginas y es para este propósito, es decir, para compartir información entre una página y su diseño.
 
-Abra el<em>\_Layout.cshtml</em> página. Cambiar el `<title>` elemento para que quede como este marcado:
+Abra el  *\_Layout.cshtml* página. Cambiar el `<title>` elemento para que quede como este marcado:
 
 [!code-html[Main](layouts/samples/sample9.html)]
 

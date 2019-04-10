@@ -8,15 +8,15 @@ ms.date: 07/09/2007
 ms.assetid: a5e33a7d-ccb2-483f-a955-3d39f72ba4ec
 msc.legacyurl: /web-forms/videos/aspnet-ajax/how-do-i-choose-between-methods-of-ajax-page-updates
 msc.type: video
-ms.openlocfilehash: 9f146c36ab2225e732a2a35d84bc4e6a616b22d5
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: 56e3ebfbe0b5af4234791136725de79e38171cc1
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57044802"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59395464"
 ---
-<a name="how-do-i-choose-between-methods-of-ajax-page-updates"></a>[¿Cómo lo hago?:] ¿Elegir entre métodos de AJAX de actualización de páginas?
-====================
+# <a name="how-do-i-choose-between-methods-of-ajax-page-updates"></a>[¿Cómo lo hago?:] ¿Elegir entre métodos de AJAX de actualización de páginas?
+
 por [Joe Stagner](https://github.com/JoeStagner)
 
 En este vídeo Joe Stagner compara los dos métodos principales de realización de actualizaciones de la página de estilo AJAX en una aplicación ASP.NET. El primer método consiste en usar un control UpdatePanel, donde no debe escribirse en el lado del cliente o en el lado del servidor ningún código adicional. La ventaja de usar el control UpdatePanel es que todo funciona automáticamente. La penalización es en el cliente requiere una gran cantidad de datos que se incluirán en la solicitud de AJAX y la respuesta y en el servidor requiere un ciclo de vida de página completa que se ejecutará. El segundo método es usar devoluciones de llamada de red, donde se necesita código adicional se escriban en el lado del cliente y el lado del servidor. La ventaja de utilizar las devoluciones de llamada de red es que en el cliente requiere muy pocos datos para incluirse en la solicitud de AJAX y la respuesta, y en el servidor requiere solo el método de llamada de servicio que se ejecutará. El penality es el tiempo y esfuerzo necesario para escribir el código necesario. Joe concluye el vídeo con una descripción de lo debe considerar al elegir entre los dos métodos principales de las actualizaciones de página de estilo AJAX. (Este vídeo usa el código de la [cómo ¿empezar a usar ASP.NET AJAX](how-do-i-get-started-with-aspnet-ajax.md) vídeo y la [¿cómo puedo realizar devoluciones de red del lado cliente con ASP.NET AJAX](how-do-i-make-client-side-network-callbacks-with-aspnet-ajax.md) vídeo.)

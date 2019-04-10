@@ -8,15 +8,15 @@ ms.date: 01/27/2009
 ms.assetid: 68acd884-fb57-4486-a1be-aaa93e380780
 msc.legacyurl: /mvc/overview/older-versions-1/controllers-and-routing/adding-dynamic-content-to-a-cached-page-vb
 msc.type: authoredcontent
-ms.openlocfilehash: b361470c769b61a7b407797158eb695fe5084eda
-ms.sourcegitcommit: 289e051cc8a90e8f7127e239fda73047bde4de12
+ms.openlocfilehash: 0dae280dfa3028df5fda95c4366132c99a0dc3b7
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/25/2019
-ms.locfileid: "58423499"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59409205"
 ---
-<a name="adding-dynamic-content-to-a-cached-page-vb"></a>Agregar contenido dinámico a una página almacenada en caché (VB)
-====================
+# <a name="adding-dynamic-content-to-a-cached-page-vb"></a>Agregar contenido dinámico a una página almacenada en caché (VB)
+
 por [Microsoft](https://github.com/microsoft)
 
 > Obtenga información sobre cómo mezclar contenido dinámico y almacenado en caché en la misma página. La substitución posterior a la caché le permite mostrar contenido dinámico, como anuncios de pancarta o elementos de noticias, dentro de una página que ha sido de salida almacenados en caché.
@@ -38,13 +38,13 @@ Uso de la sustitución posterior a la caché, requiere dos pasos. En primer luga
 
 Por ejemplo, imagínese que desea mostrar los elementos de noticias diferente aleatoriamente en una página almacenada en caché. La clase en el listado 1 expone un solo método, denominado RenderNews(), que devuelve aleatoriamente un artículo de noticias de una lista de tres elementos de noticias.
 
-**Listing 1 – Models\News.vb**
+**Listado 1 – Models\News.vb**
 
 [!code-vb[Main](adding-dynamic-content-to-a-cached-page-vb/samples/sample1.vb)]
 
 Para aprovechar las ventajas de la sustitución posterior a la caché, se llama al método de HttpResponse.WriteSubstitution(). El método WriteSubstitution() establece el código para reemplazar una región de la página en caché con contenido dinámico. El método WriteSubstitution() se usa para mostrar el elemento de noticias aleatorio en la vista en el listado 2.
 
-**Listing 2 – Views\Home\Index.aspx**
+**Listado 2 – Views\Home\Index.aspx**
 
 [!code-aspx[Main](adding-dynamic-content-to-a-cached-page-vb/samples/sample2.aspx)]
 
@@ -52,7 +52,7 @@ El método RenderNews se pasa al método WriteSubstitution(). Tenga en cuenta qu
 
 La vista de índice se almacena en caché. Se devuelve la vista por el controlador en el listado 3. Tenga en cuenta que la acción de Index() está decorada con un &lt;OutputCache&gt; atributo que hace que la vista de índice en la memoria caché durante 60 segundos.
 
-**Listing 3 – Controllers\HomeController.vb**
+**Listado 3 – Controllers\HomeController.vb**
 
 [!code-vb[Main](adding-dynamic-content-to-a-cached-page-vb/samples/sample3.vb)]
 
@@ -66,7 +66,7 @@ Aunque la vista de índice se almacena en caché, se muestran elementos de notic
 
 Aprovechar las ventajas de la sustitución posterior a la caché de una manera más fácil consiste en encapsular la llamada al método WriteSubstitution() dentro de un método auxiliar personalizada. Este enfoque se ilustra el método auxiliar en el listado 4.
 
-**Listing 4 – Helpers\AdHelper.vb**
+**Listado 4 – Helpers\AdHelper.vb**
 
 [!code-vb[Main](adding-dynamic-content-to-a-cached-page-vb/samples/sample4.vb)]
 

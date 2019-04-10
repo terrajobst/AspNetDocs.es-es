@@ -8,15 +8,15 @@ ms.date: 05/27/2008
 ms.assetid: 194a163b-2aad-4cad-bf1f-e9ce3f80add0
 msc.legacyurl: /mvc/videos/mvc-1/aspnet-mvc-storefront/aspnet-mvc-storefront-part-1-architectural-discussion-and-overview
 msc.type: video
-ms.openlocfilehash: e23a5b742c4a3a89c4d5c923b49f4a50cb1aecf6
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: a3df375425c4c79f1274f466a6669997a1e3676f
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57042822"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59390621"
 ---
-<a name="aspnet-mvc-storefront-part-1-architectural-discussion-and-overview"></a>Escaparate de ASP.NET MVC, parte 1: Información general y debate sobre la arquitectura
-====================
+# <a name="aspnet-mvc-storefront-part-1-architectural-discussion-and-overview"></a>Escaparate de ASP.NET MVC, parte 1: Información general y debate sobre la arquitectura
+
 por [Rob Conery](https://github.com/robconery)
 
 Rob Conery se tratan en este caso, la arquitectura inicial en la parte 1, donde comenta el modelo de repositorio con Ayende Rahien y Steve Harman. También le pide Phil Haack ¿qué es el primero: La prueba de pollo o el huevo de modelo.

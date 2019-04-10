@@ -8,15 +8,15 @@ ms.date: 05/04/2012
 ms.assetid: 787a53fd-9901-4a11-9d58-61e0509cda45
 msc.legacyurl: /web-forms/overview/deployment/configuring-server-environments-for-web-deployment/choosing-the-right-approach-to-web-deployment
 msc.type: authoredcontent
-ms.openlocfilehash: 0b21852a1db2862a8452e332021b55ce7f1db423
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: 65b77b016e02c2d9c8ff2b925b1567f26a6a05cc
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57036322"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59407918"
 ---
-<a name="choosing-the-right-approach-to-web-deployment"></a>Elegir el enfoque adecuado para la implementación web
-====================
+# <a name="choosing-the-right-approach-to-web-deployment"></a>Elegir el enfoque adecuado para la implementación web
+
 por [Jason Lee](https://github.com/jrjlee)
 
 [Descargar PDF](https://msdnshared.blob.core.windows.net/media/MSDNBlogsFS/prod.evol.blogs.msdn.com/CommunityServer.Blogs.Components.WeblogFiles/00/00/00/63/56/8130.DeployingWebAppsInEnterpriseScenarios.pdf)

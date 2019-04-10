@@ -8,15 +8,15 @@ ms.date: 01/13/2008
 ms.assetid: 07e15538-2f29-40c6-b2e7-e6115075ac83
 msc.legacyurl: /web-forms/overview/older-versions-security/introduction/security-basics-and-asp-net-support-cs
 msc.type: authoredcontent
-ms.openlocfilehash: 817a823ab5b09ea8bf2620a142779e79f53d957d
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: 8f6fb4348e6ff703d329331b908e41763f24bb1f
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57026512"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59402952"
 ---
-<a name="security-basics-and-aspnet-support-c"></a>Conceptos básicos de seguridad y compatibilidad de ASP.NET (C#)
-====================
+# <a name="security-basics-and-aspnet-support-c"></a>Conceptos básicos de seguridad y compatibilidad de ASP.NET (C#)
+
 por [Scott Mitchell](https://twitter.com/ScottOnWriting)
 
 [Descargar PDF](http://download.microsoft.com/download/2/F/7/2F705A34-F9DE-4112-BBDE-60098089645E/aspnet_tutorial01_Basics_cs.pdf)
@@ -140,7 +140,7 @@ Microsoft incluye dos clases de proveedor de pertenencia en .NET Framework:
 Esta serie de tutoriales se centra exclusivamente en SqlMembershipProvider.
 
 
-[![El modelo permite que diferentes implementaciones del proveedor siendo perfectamente conectado en el marco de trabajo&lt;/ seguro&gt;](security-basics-and-asp-net-support-cs/_static/image4.png)](security-basics-and-asp-net-support-cs/_static/image3.png)
+[![TProveedor de modelo permite implementaciones diferentes siendo perfectamente conectado en el marco de trabajo tiene&lt;/ strong&gt;](security-basics-and-asp-net-support-cs/_static/image4.png)](security-basics-and-asp-net-support-cs/_static/image3.png)
 
 **Figura 03**: El modelo permite que diferentes implementaciones del proveedor siendo perfectamente conectado en el marco de trabajo ([haga clic aquí para ver imagen en tamaño completo](security-basics-and-asp-net-support-cs/_static/image5.png))
 

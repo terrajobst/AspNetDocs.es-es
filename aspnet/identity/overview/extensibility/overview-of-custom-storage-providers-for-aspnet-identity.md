@@ -1,22 +1,23 @@
 ---
 uid: identity/overview/extensibility/overview-of-custom-storage-providers-for-aspnet-identity
-title: Información general sobre proveedores de almacenamiento personalizados para ASP.NET Identity | Microsoft Docs
+title: Información general sobre proveedores de almacenamiento personalizados para ASP.NET Identity - ASP.NET 4.x
 author: Rick-Anderson
 description: ASP.NET Identity es un sistema extensible que le permite crear su propio proveedor de almacenamiento y conectar a su aplicación sin tener que volver a trabajar el receptor...
 ms.author: riande
 ms.date: 10/13/2014
 ms.assetid: 681a9204-462e-4260-9a0b-19f0644d6ad7
+ms.custom: seoapril2019
 msc.legacyurl: /identity/overview/extensibility/overview-of-custom-storage-providers-for-aspnet-identity
 msc.type: authoredcontent
-ms.openlocfilehash: d819fabf4f367c8f6d0ce857bc248a2b812c2b21
-ms.sourcegitcommit: 289e051cc8a90e8f7127e239fda73047bde4de12
+ms.openlocfilehash: 71201e9d91080855350349b966fe7916ce21a909
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/25/2019
-ms.locfileid: "58422212"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59411272"
 ---
-<a name="overview-of-custom-storage-providers-for-aspnet-identity"></a>Información general sobre los proveedores de almacenamiento personalizado para ASP.NET Identity
-====================
+# <a name="overview-of-custom-storage-providers-for-aspnet-identity"></a>Información general sobre los proveedores de almacenamiento personalizado para ASP.NET Identity
+
 por [Tom FitzMacken](https://github.com/tfitzmac)
 
 > ASP.NET Identity es un sistema extensible que le permite crear su propio proveedor de almacenamiento y conectar a su aplicación sin tener que volver a trabajar la aplicación. Este tema describe cómo crear un proveedor de almacenamiento personalizados para ASP.NET Identity. Abarca los conceptos importantes para crear su propio proveedor de almacenamiento, pero no es un tutorial paso a paso de implementación de un proveedor de almacenamiento personalizado.

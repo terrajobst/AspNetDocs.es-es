@@ -8,15 +8,15 @@ ms.date: 06/10/2014
 ms.assetid: b19913e5-cd8a-4e4b-a872-5ac7a858a934
 msc.legacyurl: /signalr/overview/guide-to-the-api/hubs-api-guide-server
 msc.type: authoredcontent
-ms.openlocfilehash: a28663c8d5c679f85e863e7d0b4523a6f4dd4a1f
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: adfd540562ec54938860740ab280c770e24f492e
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57035212"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59411415"
 ---
-<a name="aspnet-signalr-hubs-api-guide---server-c"></a>Guía de la API SignalR de ASP.NET Hubs - servidor (C#)
-====================
+# <a name="aspnet-signalr-hubs-api-guide---server-c"></a>Guía de la API SignalR de ASP.NET Hubs - servidor (C#)
+
 por [Patrick Fletcher](https://github.com/pfletcher), [Tom Dykstra](https://github.com/tdykstra)
 
 [!INCLUDE [Consider ASP.NET Core SignalR](~/includes/signalr/signalr-version-disambiguation.md)]
@@ -270,7 +270,7 @@ El ejemplo siguiente se muestra el mismo método en el código para ejecutar de 
 
 [!code-csharp[Main](hubs-api-guide-server/samples/sample19.cs)]
 
-**Asincrónica**
+**Asincrónico**
 
 [!code-csharp[Main](hubs-api-guide-server/samples/sample20.cs?highlight=1,7-8)]
 

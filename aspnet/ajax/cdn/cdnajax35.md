@@ -8,15 +8,15 @@ ms.date: 07/28/2014
 ms.assetid: d5af74c6-3bdf-4d56-8dba-316e3dc0092f
 msc.legacyurl: /ajax/cdn/cdnajax35
 msc.type: content
-ms.openlocfilehash: b908bfd2b67ce57d6d8d25a41bfaaa7e1be8a739
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: 0ec7f95cd592bee4731a3eed15468cee329c38f4
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57027712"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59406827"
 ---
-<a name="aspnet-ajax-35"></a>ASP.NET Ajax 3.5
-====================
+# <a name="aspnet-ajax-35"></a>ASP.NET Ajax 3.5
+
 Los siguientes archivos se hospedan en la red CDN:
 
 - https://ajax.aspnetcdn.com/ajax/3.5/MicrosoftAjax.debug.js

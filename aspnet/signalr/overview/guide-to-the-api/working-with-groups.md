@@ -8,15 +8,15 @@ ms.date: 06/10/2014
 ms.assetid: cd378ecd-3e9e-4236-b902-65916d85a048
 msc.legacyurl: /signalr/overview/guide-to-the-api/working-with-groups
 msc.type: authoredcontent
-ms.openlocfilehash: 384b7e5f07fa46ea3cc32e5c18c3c2327b7aedd3
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: 46dd952fc4902b37c981a111dfa344dad79bb668
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57025312"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59392487"
 ---
-<a name="working-with-groups-in-signalr"></a>Trabajar con grupos en SignalR
-====================
+# <a name="working-with-groups-in-signalr"></a>Trabajar con grupos en SignalR
+
 por [Patrick Fletcher](https://github.com/pfletcher), [Tom FitzMacken](https://github.com/tfitzmac)
 
 [!INCLUDE [Consider ASP.NET Core SignalR](~/includes/signalr/signalr-version-disambiguation.md)]

@@ -1,22 +1,23 @@
 ---
 uid: identity/overview/features-api/two-factor-authentication-using-sms-and-email-with-aspnet-identity
-title: Autenticación en dos fases mediante SMS y correo electrónico con ASP.NET Identity | Microsoft Docs
+title: Autenticación en dos fases mediante SMS y correo electrónico con ASP.NET Identity - ASP.NET 4.x
 author: HaoK
 description: Este tutorial le mostrará cómo configurar la autenticación en dos fases (2FA) mediante SMS y correo electrónico. En este artículo se escribió por Rick Anderson ( @RickAndMSFT ), por...
 ms.author: riande
 ms.date: 09/15/2015
 ms.assetid: 053e23c4-13c9-40fa-87cb-3e9b0823b31e
+ms.custom: seoapril2019
 msc.legacyurl: /identity/overview/features-api/two-factor-authentication-using-sms-and-email-with-aspnet-identity
 msc.type: authoredcontent
-ms.openlocfilehash: 4b253923696e35e59c196578a232f53c11671d16
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: c41fc06ad98665f7d48efde030c1341b06e49dd0
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57043172"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59395296"
 ---
-<a name="two-factorauthentication-using-sms-and-email-with-aspnet-identity"></a>Autenticación en dos fases mediante SMS y correo electrónico con ASP.NET Identity
-====================
+# <a name="two-factorauthentication-using-sms-and-email-with-aspnet-identity"></a>Autenticación en dos fases mediante SMS y correo electrónico con ASP.NET Identity
+
 por [Hao Kung](https://github.com/HaoK), [Pranav Rastogi](https://github.com/rustd), [Rick Anderson]((https://twitter.com/RickAndMSFT)), [Suhas Joshi](https://github.com/suhasj)
 
 > Este tutorial le mostrará cómo configurar la autenticación en dos fases (2FA) mediante SMS y correo electrónico.
@@ -52,8 +53,8 @@ En esta sección, usará NuGet para descargar un ejemplo que vamos a trabajar co
    En este tutorial, vamos a usar [SendGrid](http://sendgrid.com/) para enviar correo electrónico y [Twilio](https://www.twilio.com/) o [ASPSMS](https://www.aspsms.com/asp.net/identity/testcredits/) de texto sms. El `Identity.Samples` paquete instala el código que se trabajará con.
 3. Establecer el [proyecto para usar SSL](../../../mvc/overview/security/create-an-aspnet-mvc-5-app-with-facebook-and-google-oauth2-and-openid-sign-on.md).
 4. *Opcional*: Siga las instrucciones de mi [tutorial de confirmación de correo electrónico](account-confirmation-and-password-recovery-with-aspnet-identity.md) para enlazar SendGrid y, a continuación, ejecute la aplicación y registrar una cuenta de correo electrónico.
-5. * Opcional: * eliminar el código de confirmación del vínculo de correo electrónico de demostración de la muestra (el `ViewBag.Link` código en el controlador de cuentas. Consulte la `DisplayEmail` y `ForgotPasswordConfirmation` los métodos de acción y las vistas de razor).
-6. <em>Opcional: * quite el `ViewBag.Status` código desde los controladores de administración y la cuenta y de la *Views\Account\VerifyCode.cshtml</em> y <em>Views\Manage\VerifyPhoneNumber.cshtml</em> las vistas de razor. Como alternativa, puede mantener el `ViewBag.Status` display para probar cómo funciona esta aplicación localmente sin tener que enlaza y enviar correo electrónico y mensajes SMS.
+5. *Opcional:* Eliminar el código de confirmación del vínculo de correo electrónico de demostración de la muestra (el `ViewBag.Link` código en el controlador de cuentas. Consulte la `DisplayEmail` y `ForgotPasswordConfirmation` los métodos de acción y las vistas de razor).
+6. *Opcional:* Quitar el `ViewBag.Status` código desde los controladores de administración y la cuenta y de la *Views\Account\VerifyCode.cshtml* y *Views\Manage\VerifyPhoneNumber.cshtml* las vistas de razor. Como alternativa, puede mantener el `ViewBag.Status` display para probar cómo funciona esta aplicación localmente sin tener que enlaza y enviar correo electrónico y mensajes SMS.
 
 > [!NOTE]
 > Advertencia: Si cambia la configuración de seguridad en este ejemplo, las aplicaciones de producción debe someterse a una auditoría de seguridad que se llama explícitamente a los cambios realizados.

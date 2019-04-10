@@ -8,15 +8,15 @@ ms.date: 07/27/2010
 ms.assetid: 397522d5-0402-4b94-b810-a2fb564f869d
 msc.legacyurl: /mvc/overview/older-versions-1/nerddinner/introducing-the-nerddinner-tutorial
 msc.type: authoredcontent
-ms.openlocfilehash: d5efab525841b5c526aa3b656f27b1c42cc74648
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: ebd49295ea165ba4ef1a25398cff7dddcfa54f11
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57053252"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59392201"
 ---
-<a name="introducing-the-nerddinner-tutorial"></a>Introducción al tutorial de NerdDinner
-====================
+# <a name="introducing-the-nerddinner-tutorial"></a>Introducción al tutorial de NerdDinner
+
 por [Scott Hanselman](https://github.com/shanselman)
 
 [Descargar PDF](http://aspnetmvcbook.s3.amazonaws.com/aspnetmvc-nerdinner_v1.pdf)
@@ -60,18 +60,18 @@ Puede, a continuación, haga clic en un vínculo RSVP basadas en AJAX para parti
 
 Vamos a empezar a nuestra aplicación NerdDinner utilizando el archivo -&gt;comando nuevo proyecto en Visual Studio para crear un nuevo proyecto de ASP.NET MVC. A continuación, incrementalmente agregaremos las características y funcionalidad. En el camino que trataremos:
 
-1. [Cómo crear un nuevo proyecto de MVC de ASP.NET](# "crear un nuevo proyecto de MVC de ASP.NET")
-2. [Cómo crear una base de datos](# "crear una base de datos")
-3. [Cómo crear un modelo con validaciones de regla de negocio](# "crear un modelo con validaciones de regla de negocio")
-4. [Uso de controladores y vistas para implementar una interfaz de usuario de lista/detalles](# "usar controladores y vistas para implementar una interfaz de usuario de la lista/detalles")
-5. [Cómo proporcionar CRUD (crear, leer, actualizar y eliminar) compatibilidad con entradas de formularios de datos](# "proporcionar CRUD (creación, lectura, actualización, eliminación) de datos formulario de entrada compatible")
-6. [Cómo usar ViewData e implementar las clases ViewModel](# "usar ViewData e implementar clases ViewModel")
-7. [Cómo volver a usar la interfaz de usuario mediante páginas maestras y parciales](# "volver a usar la interfaz de usuario utilizando las páginas principales y parciales")
-8. [Cómo implementar la paginación eficiente de los datos](# "implementar eficaz paginación de datos")
-9. [Cómo proteger las aplicaciones mediante la autenticación y autorización](# "proteger aplicaciones mediante la autenticación y autorización")
-10. [Cómo usar AJAX para entregar actualizaciones dinámicas](# "usar AJAX para entregar actualizaciones dinámicas")
-11. [Cómo usar AJAX para implementar escenarios de asignación](# "usar AJAX para implementar escenarios de asignación")
-12. [Cómo habilitar las pruebas unitarias automatizadas](# "habilitar pruebas automatizadas de unidades")
+1. [Cómo crear un nuevo proyecto de MVC de ASP.NET](create-a-new-aspnet-mvc-project.md)
+2. [Cómo crear una base de datos](create-a-database.md)
+3. [Cómo crear un modelo con validaciones de regla de negocio](build-a-model-with-business-rule-validations.md)
+4. [Uso de controladores y vistas para implementar una interfaz de usuario de lista/detalles](use-controllers-and-views-to-implement-a-listingdetails-ui.md)
+5. [Cómo proporcionar CRUD (crear, leer, actualizar y eliminar) compatibilidad con entradas de formularios de datos](provide-crud-create-read-update-delete-data-form-entry-support.md)
+6. [Cómo usar ViewData e implementar las clases ViewModel](use-viewdata-and-implement-viewmodel-classes.md)
+7. [Cómo volver a usar la interfaz de usuario mediante parciales y páginas maestras](re-use-ui-using-master-pages-and-partials.md)
+8. [Cómo implementar la paginación eficiente de los datos](implement-efficient-data-paging.md)
+9. [Cómo proteger las aplicaciones mediante la autenticación y autorización](secure-applications-using-authentication-and-authorization.md)
+10. [Cómo usar AJAX para entregar actualizaciones dinámicas](use-ajax-to-deliver-dynamic-updates.md)
+11. [Cómo usar AJAX para implementar escenarios de asignación](use-ajax-to-implement-mapping-scenarios.md)
+12. [Cómo habilitar las pruebas unitarias automatizadas](enable-automated-unit-testing.md)
 
 Puede crear su propia copia de NerdDinner desde el principio al completar cada paso se tutorial en este capítulo. Como alternativa, puede descargar una versión completa del código fuente aquí: [NerdDinner en GitHub](https://github.com/AspNetMVPSamples/NerdDinner). Opcionalmente, también puede también [descargar una versión gratuita de PDF de este tutorial](http://aspnetmvcbook.s3.amazonaws.com/aspnetmvc-nerdinner_v1.pdf) si desea leer el tutorial sin conexión.
 

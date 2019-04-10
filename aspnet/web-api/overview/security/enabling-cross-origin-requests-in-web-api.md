@@ -8,15 +8,15 @@ ms.date: 01/29/2019
 ms.assetid: 9b265a5a-6a70-4a82-adce-2d7c56ae8bdd
 msc.legacyurl: /web-api/overview/security/enabling-cross-origin-requests-in-web-api
 msc.type: authoredcontent
-ms.openlocfilehash: c9d3e4b05103d270ad95908177bb2981338a4ae1
-ms.sourcegitcommit: 289e051cc8a90e8f7127e239fda73047bde4de12
+ms.openlocfilehash: 9d3016d98fa6c3a55359c6dab0737407b29925f1
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/25/2019
-ms.locfileid: "58425293"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59403836"
 ---
-<a name="enable-cross-origin-requests-in-aspnet-web-api-2"></a>Habilitar solicitudes entre orígenes en ASP.NET Web API 2
-====================
+# <a name="enable-cross-origin-requests-in-aspnet-web-api-2"></a>Habilitar solicitudes entre orígenes en ASP.NET Web API 2
+
 por [Mike Wasson](https://github.com/MikeWasson)
 
 > La seguridad del explorador impide que una página web realice solicitudes AJAX a otro dominio. Esta restricción se denomina *"directiva de mismo origen"* e impide que un sitio malintencionado lea los datos confidenciales desde otro sitio. Sin embargo, a veces es posible que desee permitir que otros sitios de llamada a la API web.
@@ -25,7 +25,7 @@ por [Mike Wasson](https://github.com/MikeWasson)
 >
 > ## <a name="software-used-in-the-tutorial"></a>Software que se usa en el tutorial
 >
-> - [Visual Studio](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=button+cta&utm_content=download+vs2017)
+> - [Programa para la mejora](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=button+cta&utm_content=download+vs2017)
 > - Web API 2.2
 
 ## <a name="introduction"></a>Introducción
@@ -45,10 +45,10 @@ Estas dos direcciones URL tienen el mismo origen:
 
 Estas direcciones URL tienen orígenes diferentes de los dos anteriores:
 
-- `http://example.net`: dominio diferente
-- `http://example.com:9000/foo.html`: puerto diferente
-- `https://example.com/foo.html`: esquema diferente
-- `http://www.example.com/foo.html`: subdominio diferente
+- `http://example.net` -Dominio diferente
+- `http://example.com:9000/foo.html` -Otro puerto
+- `https://example.com/foo.html` -Combinación diferente
+- `http://www.example.com/foo.html` -Subdominio diferente
 
 > [!NOTE]
 > Internet Explorer no tiene en cuenta el puerto al comparar orígenes.
@@ -197,7 +197,7 @@ Si establece **[EnableCors]** en la clase de controlador, se aplica a todas las 
 
 [!code-csharp[Main](enabling-cross-origin-requests-in-web-api/samples/sample11.cs)]
 
-**Globally**
+**Globalmente**
 
 Para habilitar CORS para todos los controladores de API Web en la aplicación, pase un **EnableCorsAttribute** de instancia para el **EnableCors** método:
 

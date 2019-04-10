@@ -8,15 +8,15 @@ ms.date: 02/20/2009
 ms.assetid: 28ad8f80-b8a5-444e-b478-8b15a846060c
 msc.legacyurl: /mvc/overview/older-versions-1/contact-manager/iteration-5-create-unit-tests-cs
 msc.type: authoredcontent
-ms.openlocfilehash: b2e96c996905bc73698d1c0b11df97d1dd366172
-ms.sourcegitcommit: 289e051cc8a90e8f7127e239fda73047bde4de12
+ms.openlocfilehash: 68080859e205283f56d8f543bfa06b76bb22a39d
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/25/2019
-ms.locfileid: "58422173"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59408867"
 ---
-<a name="iteration-5--create-unit-tests-c"></a>Iteración #5: crear pruebas unitarias (C#)
-====================
+# <a name="iteration-5--create-unit-tests-c"></a>Iteración #5: crear pruebas unitarias (C#)
+
 por [Microsoft](https://github.com/microsoft)
 
 [Descargue el código](iteration-5-create-unit-tests-cs/_static/contactmanager_5_cs1.zip)
@@ -117,12 +117,12 @@ Para poder usar Moq, es preciso completar los pasos siguientes:
 5. Después de completar estos pasos, la carpeta de referencias debe parecerse a la figura 2.
 
 
-[![Moq desbloqueo](iteration-5-create-unit-tests-cs/_static/image1.jpg)](iteration-5-create-unit-tests-cs/_static/image1.png)
+[![Unblocking Moq](iteration-5-create-unit-tests-cs/_static/image1.jpg)](iteration-5-create-unit-tests-cs/_static/image1.png)
 
 **Figura 01**: Moq desbloqueo ([haga clic aquí para ver imagen en tamaño completo](iteration-5-create-unit-tests-cs/_static/image2.png))
 
 
-[![Referencias después de agregar Moq](iteration-5-create-unit-tests-cs/_static/image2.jpg)](iteration-5-create-unit-tests-cs/_static/image3.png)
+[![Rreferencias después de agregar Moq](iteration-5-create-unit-tests-cs/_static/image2.jpg)](iteration-5-create-unit-tests-cs/_static/image3.png)
 
 **Figura 02**: Referencias después de agregar Moq ([haga clic aquí para ver imagen en tamaño completo](iteration-5-create-unit-tests-cs/_static/image4.png))
 
@@ -185,7 +185,7 @@ Las pruebas restantes comprueban que cuando se llama al método CreateContact() 
 Puede ejecutar las pruebas unitarias en el listado 1 seleccionando la opción de menú **pruebas, ejecutar, todas las pruebas de la solución (CTRL + R, A)**. Los resultados de las pruebas se muestran en la ventana Resultados de pruebas (consulte la figura 4).
 
 
-[![Resultados de pruebas](iteration-5-create-unit-tests-cs/_static/image4.jpg)](iteration-5-create-unit-tests-cs/_static/image7.png)
+[![Test resultados](iteration-5-create-unit-tests-cs/_static/image4.jpg)](iteration-5-create-unit-tests-cs/_static/image7.png)
 
 **Figura 04**: Los resultados de pruebas ([haga clic aquí para ver imagen en tamaño completo](iteration-5-create-unit-tests-cs/_static/image8.png))
 
@@ -224,7 +224,7 @@ devolver View("Create");
 Si no es explícito al devolver una vista de la propiedad ViewResult.ViewName devuelve una cadena vacía.
 
 
-**Listing 2 - Controllers\ContactControllerTest.cs**
+**Listado 2 - Controllers\ContactControllerTest.cs**
 
 [!code-csharp[Main](iteration-5-create-unit-tests-cs/samples/sample6.cs)]
 

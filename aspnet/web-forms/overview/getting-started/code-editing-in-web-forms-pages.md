@@ -8,15 +8,15 @@ ms.date: 03/03/2014
 ms.assetid: 5344b74e-b888-479a-92bc-601a33bd61a2
 msc.legacyurl: /web-forms/overview/getting-started/code-editing-in-web-forms-pages
 msc.type: authoredcontent
-ms.openlocfilehash: 670f81ca1ef9923575cb2fee1747f06f426963d8
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: 328dc6fb61ac562131b11b36b40f574ca5a53866
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57029712"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59397375"
 ---
-<a name="code-editing-aspnet-web-forms-in-visual-studio-2013"></a>Edición del código de formularios Web Forms de ASP.NET en Visual Studio 2013
-====================
+# <a name="code-editing-aspnet-web-forms-in-visual-studio-2013"></a>Edición del código de formularios Web Forms de ASP.NET en Visual Studio 2013
+
 por [Erik Reitan](https://github.com/Erikre)
 
 En muchas páginas de formulario Web Forms de ASP.NET, escribir código en Visual Basic, C# u otro lenguaje. El editor de código en Visual Studio puede ayudarle a escribir código rápidamente y ayudarle a evitar errores. Además, el editor proporciona maneras de crear código reutilizable para ayudar a reducir la cantidad de trabajo que necesita hacer.
@@ -59,7 +59,7 @@ En esta parte del tutorial, creará un proyecto de aplicación Web y agregue una
 3. Seleccione el **plantillas**  - &gt; **Visual C#**  - &gt; **Web** grupo de plantillas de la izquierda.
 4. Elija la **aplicación Web ASP.NET** plantilla en la columna central.
 5. Nombre del proyecto ***BasicWebApp*** y haga clic en el **Aceptar** botón.   
-![Cuadro de diálogo nuevo proyecto](code-editing-in-web-forms-pages/_static/image2.png)
+![Cuadro de diálogo Nuevo proyecto](code-editing-in-web-forms-pages/_static/image2.png)
 6. A continuación, seleccione el **formularios Web Forms** plantilla y haga clic en el **Aceptar** botón para crear el proyecto.  
 ![Cuadro de diálogo nuevo proyecto de ASP.NET](code-editing-in-web-forms-pages/_static/image3.png)  
 
@@ -77,7 +77,7 @@ Cuando se crea una nueva aplicación de formularios Web Forms mediante el **apli
 1. En **el Explorador de soluciones**, haga clic en el nombre de la aplicación Web (en este tutorial es el nombre de la aplicación **BasicWebSite**) y, a continuación, haga clic en **agregar**  - &gt; **Nuevo elemento**.   
 Se abrirá el cuadro de diálogo **Agregar nuevo elemento**.
 2. Seleccione el **Visual C#**  - &gt; **Web** grupo de plantillas de la izquierda. A continuación, seleccione **formulario Web Forms** desde la parte central de lista y asígnele el nombre *FirstWebPage.aspx*.   
-    ![Agregar cuadro de diálogo nuevo elemento](code-editing-in-web-forms-pages/_static/image4.png)
+    ![Cuadro de diálogo Agregar nuevo elemento](code-editing-in-web-forms-pages/_static/image4.png)
 3. Haga clic en **agregar** para agregar la página de formularios Web Forms al proyecto.  
  Visual Studio crea la nueva página y lo abre.
 4. A continuación, establezca esta nueva página como página de inicio predeterminada. En **el Explorador de soluciones**, haga clic en la página nueva denominada *FirstWebPage.aspx* y seleccione **establecer como página principal**. La próxima vez que ejecute esta aplicación para probar nuestro progreso automáticamente verá esta nueva página en el explorador.

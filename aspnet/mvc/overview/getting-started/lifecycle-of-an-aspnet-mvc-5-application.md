@@ -8,15 +8,15 @@ ms.date: 02/28/2014
 ms.assetid: 9c1e3a75-b644-4480-8326-11300b1ec4b3
 msc.legacyurl: /mvc/overview/getting-started/lifecycle-of-an-aspnet-mvc-5-application
 msc.type: authoredcontent
-ms.openlocfilehash: 5523217ae5674ac4e5898a150f9e5f0ae3a70d26
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: 952d13fec206bdb8d398cead70d10335731f583d
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57046622"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59402224"
 ---
-<a name="lifecycle-of-an-aspnet-mvc-5-application"></a>Ciclo de vida de una aplicación de ASP.NET MVC 5
-====================
+# <a name="lifecycle-of-an-aspnet-mvc-5-application"></a>Ciclo de vida de una aplicación de ASP.NET MVC 5
+
 por [Cephas Lin](https://github.com/cephalin)
 
 [Descargue el documento PDF](lifecycle-of-an-aspnet-mvc-5-application/_static/lifecycle-of-an-aspnet-mvc-5-application1.pdf)

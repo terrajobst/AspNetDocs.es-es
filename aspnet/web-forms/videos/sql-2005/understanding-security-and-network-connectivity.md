@@ -8,15 +8,15 @@ ms.date: 03/20/2006
 ms.assetid: 5a0df3fa-07d9-4762-b9db-1824dcd8a31a
 msc.legacyurl: /web-forms/videos/sql-2005/understanding-security-and-network-connectivity
 msc.type: video
-ms.openlocfilehash: 1f37c39df6b3b9c9c4847e038b490347888300a3
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: 9f4bf5f0e0658c1fc7e883a0a5544b1f0fc96809
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57055492"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59395633"
 ---
-<a name="understanding-security-and-network-connectivity"></a>Descripción de la seguridad y la conectividad de red
-====================
+# <a name="understanding-security-and-network-connectivity"></a>Descripción de la seguridad y la conectividad de red
+
 por [Microsoft](https://github.com/microsoft)
 
 Los principiantes de SQL Server aprenderán a diferenciar entre los archivos de base de datos de SQL Server y los procesos de SQL Server. Explore escenarios para conectarse a bases de datos de SQL Server Express, habilitar y deshabilitar las instancias de usuario, permisos de inicio de sesión y otras medidas de seguridad.

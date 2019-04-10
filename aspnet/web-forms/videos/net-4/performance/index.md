@@ -8,15 +8,15 @@ ms.date: 11/14/2011
 ms.assetid: 5752873e-07b4-4450-9bf8-6cff8b3b5f50
 msc.legacyurl: /web-forms/videos/net-4/performance
 msc.type: chapter
-ms.openlocfilehash: 4d26c2df2e439022471858fdd7a0b65afc9cc7fc
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: c2dc613713747cef5ada2e44e2077fc36e7a2086
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57021832"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59399793"
 ---
-<a name="performance"></a>Rendimiento
-====================
+# <a name="performance"></a>Rendimiento
+
 > Esta serie de vídeos trata nuevas formas de optimizar las páginas de formularios Web Forms en ASP.NET 4.
 
 

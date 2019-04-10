@@ -8,12 +8,12 @@ ms.date: 02/18/2013
 ms.assetid: 187ee9cd-bc70-479b-bfed-f568b8da96eb
 msc.legacyurl: /mvc/overview/older-versions/hands-on-labs/aspnet-mvc-4-helpers-forms-and-validation
 msc.type: authoredcontent
-ms.openlocfilehash: 45aab00140f63cd84ea1b7ba22f655b0e4373f97
-ms.sourcegitcommit: 289e051cc8a90e8f7127e239fda73047bde4de12
+ms.openlocfilehash: 639a8e0e5fd9557221c95aee1bef0294df047ae8
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/25/2019
-ms.locfileid: "58423083"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59406319"
 ---
 # <a name="aspnet-mvc-4-helpers-forms-and-validation"></a>Validación, formularios y asistentes de ASP.NET MVC 4
 
@@ -70,7 +70,7 @@ Para mayor comodidad, gran parte del código que se va a administrar a lo largo 
 
 Si no está familiarizado con los fragmentos de código de Visual Studio y desea aprender a usarlas, puede consultar el apéndice de este documento &quot; [Apéndice B: Usar fragmentos de código](#AppendixB)&quot;.
 
-* * *
+---
 
 <a id="Exercises"></a>
 
@@ -755,7 +755,7 @@ En esta tarea, probará que la **StoreManager** Crear vista plantilla realiza la
    > 
    > [!code-html[Main](aspnet-mvc-4-helpers-forms-and-validation/samples/sample25.html)]
 
-* * *
+---
 
 <a id="Summary"></a>
 

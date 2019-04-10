@@ -1,22 +1,23 @@
 ---
 uid: web-api/overview/formats-and-model-binding/json-and-xml-serialization
-title: Serialización de XML en ASP.NET Web API y JSON | Microsoft Docs
+title: Serialización JSON y XML en ASP.NET Web API - ASP.NET 4.x
 author: MikeWasson
-description: ''
+description: Describe los formateadores JSON y XML en ASP.NET Web API para ASP.NET 4.x.
 ms.author: riande
 ms.date: 05/30/2012
+ms.custom: seoapril2019
 ms.assetid: 1cd7525d-de5e-4ab6-94f0-51480d3255d1
 msc.legacyurl: /web-api/overview/formats-and-model-binding/json-and-xml-serialization
 msc.type: authoredcontent
-ms.openlocfilehash: 47967e6e1dd0e84b6059c07d7544c0e755fdf510
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: a9e7ed63a55c146976e0221214e722f3a2292fee
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57028932"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59408282"
 ---
-<a name="json-and-xml-serialization-in-aspnet-web-api"></a>Serialización JSON y XML en ASP.NET Web API
-====================
+# <a name="json-and-xml-serialization-in-aspnet-web-api"></a>Serialización JSON y XML en ASP.NET Web API
+
 por [Mike Wasson](https://github.com/MikeWasson)
 
 En este artículo se describe a los formateadores JSON y XML en ASP.NET Web API.

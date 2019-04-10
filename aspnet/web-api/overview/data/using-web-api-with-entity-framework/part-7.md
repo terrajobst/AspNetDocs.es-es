@@ -8,15 +8,15 @@ ms.date: 06/16/2014
 ms.assetid: b2445062-a1fe-4133-8994-f510280f6d9a
 msc.legacyurl: /web-api/overview/data/using-web-api-with-entity-framework/part-7
 msc.type: authoredcontent
-ms.openlocfilehash: aa0ea68dd83a294e6d6c343887738c60eef595bf
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: 62c4523c2c6fb399cfbc3716309a1379996d601c
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57034842"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59408243"
 ---
-<a name="create-the-view-ui"></a>Crear la vista (IU)
-====================
+# <a name="create-the-view-ui"></a>Crear la vista (IU)
+
 por [Mike Wasson](https://github.com/MikeWasson)
 
 [Descargue el proyecto completado](https://github.com/MikeWasson/BookService)

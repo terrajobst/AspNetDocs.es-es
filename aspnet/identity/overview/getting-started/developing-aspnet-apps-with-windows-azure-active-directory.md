@@ -1,22 +1,23 @@
 ---
 uid: identity/overview/getting-started/developing-aspnet-apps-with-windows-azure-active-directory
-title: Desarrollo de aplicaciones ASP.NET con Azure Active Directory | Microsoft Docs
+title: Desarrollo de aplicaciones ASP.NET con Azure Active Directory - ASP.NET 4.x
 author: Rick-Anderson
 description: Herramientas de Microsoft ASP.NET para Azure Active Directory simplifica habilitar la autenticación para aplicaciones web hospedadas en Azure. Puede usar Azure Authenti...
 ms.author: riande
 ms.date: 08/14/2014
 ms.assetid: 457d7eaf-ee76-4ceb-9082-c7c1721435ad
+ms.custom: seoapril2019
 msc.legacyurl: /identity/overview/getting-started/developing-aspnet-apps-with-windows-azure-active-directory
 msc.type: authoredcontent
-ms.openlocfilehash: 7f0e569458c9a294cc281b86e731c2fda48768be
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: 6f8b926c78097b68e6a159f2fdd30e7b8a6477a0
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57027852"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59395178"
 ---
-<a name="developing-aspnet-apps-with-azure-active-directory"></a>Desarrollo de aplicaciones ASP.NET con Azure Active Directory
-====================
+# <a name="developing-aspnet-apps-with-azure-active-directory"></a>Desarrollo de aplicaciones ASP.NET con Azure Active Directory
+
 by [Rick Anderson]((https://twitter.com/RickAndMSFT))
 
 Herramientas de Microsoft ASP.NET para Azure Active Directory simplifica al habilitar la autenticación para aplicaciones web hospedadas en [Azure](https://www.windowsazure.com/home/features/web-sites/). Puede usar la autenticación de Azure para autenticar a los usuarios de Office 365 de su organización, las cuentas corporativas sincronizadas desde Active Directory local o los usuarios creados en su propio dominio personalizado de Azure Active Directory. Habilitar la autenticación de Windows Azure configura la aplicación para autenticar usuarios mediante una sola [Azure Active Directory](https://docs.microsoft.com/azure/active-directory/) inquilino.

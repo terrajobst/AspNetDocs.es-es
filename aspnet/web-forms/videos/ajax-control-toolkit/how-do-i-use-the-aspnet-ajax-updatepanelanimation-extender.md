@@ -8,15 +8,15 @@ ms.date: 07/16/2007
 ms.assetid: 56f5ec0f-38f7-4ebc-90d9-9baf0c693bd4
 msc.legacyurl: /web-forms/videos/ajax-control-toolkit/how-do-i-use-the-aspnet-ajax-updatepanelanimation-extender
 msc.type: video
-ms.openlocfilehash: 3245db2c98e894b4489f186e12ce87c4acacdf29
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: 8e17b21c40df5f8f687059e0daa9028a3a823148
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57042252"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59396504"
 ---
-<a name="how-do-i-use-the-aspnet-ajax-updatepanelanimation-extender"></a>[¿Cómo lo hago?:] ¿Usar el extensor UpdatePanelAnimation ASP.NET AJAX?
-====================
+# <a name="how-do-i-use-the-aspnet-ajax-updatepanelanimation-extender"></a>[¿Cómo lo hago?:] ¿Usar el extensor UpdatePanelAnimation ASP.NET AJAX?
+
 por [Joe Stagner](https://github.com/JoeStagner)
 
 Al agregar animación a una actualización parcial de página que se puede informar al usuario cuando una actualización se está produciendo y cuando ha finalizado. El extensor UpdatePanelAnimation agrega efectos de animación para el control UpdatePanel de ASP.NET AJAX, usar el marco de animación enriquecido de las principales extensiones AJAX de ASP.NET. Este vídeo muestra cómo puede definir la secuencia de efectos de la UpdatePanelAnimation y cómo puede ajustar la animación mediante el uso de las definiciones de ScriptAction.

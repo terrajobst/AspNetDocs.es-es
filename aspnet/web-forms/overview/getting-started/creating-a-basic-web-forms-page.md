@@ -8,16 +8,17 @@ ms.date: 03/03/2014
 ms.assetid: a2f1c635-0817-4a9a-8c13-d5b5d29727c0
 msc.legacyurl: /web-forms/overview/getting-started/creating-a-basic-web-forms-page
 msc.type: authoredcontent
-ms.openlocfilehash: eb1a4632caf00097012bd1757da44016a076630f
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: bf3336c2467553ba3714bbd4fbb41a35a0490768
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57026232"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59410609"
 ---
 # <a name="using-visual-studio-2013-to-create-a-basic-aspnet-45-web-forms-page"></a>Uso de Visual Studio 2013 para crear una página básica de ASP.NET 4.5 Web Forms
+# 
 
-=== por [Erik Reitan](https://github.com/Erikre)
+por [Erik Reitan](https://github.com/Erikre)
 
 [!INCLUDE[](~/includes/rp.md)]
 
@@ -61,7 +62,7 @@ En esta parte del tutorial, creará un proyecto de aplicación Web y agregue una
 3. Seleccione el **plantillas**  - &gt; **Visual C#**  - &gt; **Web** grupo de plantillas de la izquierda.
 4. Elija la **aplicación Web ASP.NET** plantilla en la columna central.
 5. Nombre del proyecto ***BasicWebApp*** y haga clic en el **Aceptar** botón.   
-![Cuadro de diálogo nuevo proyecto](creating-a-basic-web-forms-page/_static/image2.png)
+![Cuadro de diálogo Nuevo proyecto](creating-a-basic-web-forms-page/_static/image2.png)
 6. A continuación, seleccione el **formularios Web Forms** plantilla y haga clic en el **Aceptar** botón para crear el proyecto.  
 ![Cuadro de diálogo nuevo proyecto de ASP.NET](creating-a-basic-web-forms-page/_static/image3.png)  
 
@@ -108,7 +109,7 @@ Cuando se crea una nueva aplicación de formularios Web Forms mediante el **apli
 2. En **el Explorador de soluciones**, haga clic en el nombre de la aplicación Web (en este tutorial es el nombre de la aplicación **BasicWebSite**) y, a continuación, haga clic en **agregar**  - &gt; **Nuevo elemento**.   
 Se abrirá el cuadro de diálogo **Agregar nuevo elemento**.
 3. Seleccione el **Visual C#**  - &gt; **Web** grupo de plantillas de la izquierda. A continuación, seleccione **formulario Web Forms** desde la parte central de lista y asígnele el nombre *FirstWebPage.aspx*.   
-    ![Agregar cuadro de diálogo nuevo elemento](creating-a-basic-web-forms-page/_static/image6.png)
+    ![Cuadro de diálogo Agregar nuevo elemento](creating-a-basic-web-forms-page/_static/image6.png)
 4. Haga clic en **agregar** para agregar la página web al proyecto.  
 Visual Studio crea la nueva página y lo abre.
 
@@ -187,7 +188,7 @@ Visual Studio ofrece varias maneras de establecer las propiedades de controles d
 ### <a name="to-set-control-properties"></a>Para establecer las propiedades de control
 
 
-1. En primer lugar, muestre la **propiedades** windows mediante la selección de la **vista** menú -&gt; **Other Windows**  - &gt; **Ventana dimensiones**. Como alternativa, puede seleccionar **F4** para mostrar el **propiedades** ventana.
+1. En primer lugar, muestre la **propiedades** windows mediante la selección de la **vista** menú -&gt; **Other Windows**  - &gt; **Ventana propiedades**. Como alternativa, puede seleccionar **F4** para mostrar el **propiedades** ventana.
 2. Seleccione el [botón](https://msdn.microsoft.com/library/system.web.ui.webcontrols.button.aspx) (control) y, a continuación, en el **propiedades** ventana, establezca el valor de **texto** a **nombre para mostrar**. El texto especificado aparece en el botón en el diseñador, como se muestra en la siguiente ilustración.
 
     ![Establecer texto del botón](creating-a-basic-web-forms-page/_static/image10.png "texto del botón establecer")

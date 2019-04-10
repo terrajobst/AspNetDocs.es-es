@@ -8,15 +8,15 @@ ms.date: 10/05/2011
 ms.assetid: 76242ce9-e611-41d2-95e8-dc5f406d4bfc
 msc.legacyurl: /web-forms/overview/ajax-control-toolkit
 msc.type: chapter
-ms.openlocfilehash: ad68d8f074bc3c453e991abf7f8d393fbe9740ba
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: 795283c33d63272b29b91fd7037c3463bc71abad
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57020312"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59410752"
 ---
-<a name="older-versions---ajax-control-toolkit"></a>Versiones anteriores - Ajax Control Toolkit
-====================
+# <a name="older-versions---ajax-control-toolkit"></a>Versiones anteriores - Ajax Control Toolkit
+
 > Cómo empezar a trabajar con Ajax Control Toolkit y cómo usar algunos de los controles más populares. DevExpress mantiene que libre y abra su origen Ajax Control Toolkit.
 > 
 > 
@@ -49,7 +49,7 @@ ms.locfileid: "57020312"
     - [Desencadenar una animación en otro control (C#)](animation/triggering-an-animation-in-another-control-cs.md)
     - [Modificar las animaciones desde el lado servidor (C#)](animation/modifying-animations-from-the-server-side-cs.md)
     - [Ejecutar animaciones con código de cliente (C#)](animation/executing-animations-using-client-side-code-cs.md)
-    - [Cambiar una animación con código del lado cliente (C#)](animation/changing-an-animation-using-client-side-code-cs.md)
+    - [Cambiar una animación con código de cliente (C#)](animation/changing-an-animation-using-client-side-code-cs.md)
     - [Animar un control UpdatePanel (C#)](animation/animating-an-updatepanel-control-cs.md)
     - [Controlar dinámicamente las animaciones UpdatePanel (C#)](animation/dynamically-controlling-updatepanel-animations-cs.md)
     - [Agregar animación a un control (VB)](animation/adding-animation-to-a-control-vb.md)
@@ -62,7 +62,7 @@ ms.locfileid: "57020312"
     - [Desencadenar una animación en otro control (VB)](animation/triggering-an-animation-in-another-control-vb.md)
     - [Modificar las animaciones desde el lado servidor (VB)](animation/modifying-animations-from-the-server-side-vb.md)
     - [Ejecutar animaciones con código de cliente (VB)](animation/executing-animations-using-client-side-code-vb.md)
-    - [Cambiar una animación con código del lado cliente (VB)](animation/changing-an-animation-using-client-side-code-vb.md)
+    - [Cambiar una animación con código de cliente (VB)](animation/changing-an-animation-using-client-side-code-vb.md)
     - [Animar un control UpdatePanel (VB)](animation/animating-an-updatepanel-control-vb.md)
     - [Controlar dinámicamente las animaciones UpdatePanel (VB)](animation/dynamically-controlling-updatepanel-animations-vb.md)
 - [CascadingDropdown](cascadingdropdown/index.md)
@@ -151,7 +151,7 @@ ms.locfileid: "57020312"
     - [Usar varios controles emergentes (VB)](popup/using-multiple-popup-controls-vb.md)
     - [Controlar los postbacks desde un control emergente con un UpdatePanel (VB)](popup/handling-postbacks-from-a-popup-control-with-an-updatepanel-vb.md)
     - [Controlar los postbacks desde un control emergente sin un UpdatePanel (VB)](popup/handling-postbacks-from-a-popup-control-without-an-updatepanel-vb.md)
-- [Clasificación](rating/index.md)
+- [Calificación](rating/index.md)
 
     - [Crear un control de clasificación (C#)](rating/creating-a-rating-control-cs.md)
     - [Crear un control de clasificación (VB)](rating/creating-a-rating-control-vb.md)

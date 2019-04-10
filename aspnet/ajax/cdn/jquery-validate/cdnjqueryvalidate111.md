@@ -8,15 +8,15 @@ ms.date: 07/23/2014
 ms.assetid: 028452a2-a3c2-494b-b5e9-b1677cb5c07d
 msc.legacyurl: /ajax/cdn/jquery-validate/cdnjqueryvalidate111
 msc.type: content
-ms.openlocfilehash: 594f40c46e686aea80e028bdbb975da198bb405b
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: 7c74e835ff2ac70ce2b77bb7c4c1e7d14866dcf9
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57036682"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59409517"
 ---
-<a name="jquery-validation-1110"></a>jQuery Validation 1.11.0
-====================
+# <a name="jquery-validation-1110"></a>jQuery Validation 1.11.0
+
 Los siguientes archivos se hospedan en la red CDN:
 
 - https://ajax.aspnetcdn.com/ajax/jquery.validate/1.11.0/jquery.validate.js

@@ -8,15 +8,15 @@ ms.date: 04/12/2011
 ms.assetid: 7dc21790-5607-467d-a08b-fcf3c80b0174
 msc.legacyurl: /web-pages/videos/introduction/create-an-edit-data-page-in-webmatrix
 msc.type: video
-ms.openlocfilehash: 72387bb39320f0ce04e1a7fe6bdb1802c938f761
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: 9a37221db30d7d126cf652a734b5c3d8864e91a0
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57060202"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59395477"
 ---
-<a name="create-an-edit-data-page-in-webmatrix"></a>Crear una página de edición de datos en WebMatrix
-====================
+# <a name="create-an-edit-data-page-in-webmatrix"></a>Crear una página de edición de datos en WebMatrix
+
 por [Advaiya](https://twitter.com/Advaiyasolns)
 
 Parte 7 se basa en esta opción para mostrar cómo puede tener una página para editar la base de datos y ver los cambios que se actualizan automáticamente.

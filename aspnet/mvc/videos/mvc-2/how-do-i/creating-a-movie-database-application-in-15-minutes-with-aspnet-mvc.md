@@ -8,15 +8,15 @@ ms.date: 03/17/2009
 ms.assetid: c742a7c2-11ed-4f39-b658-960676494db9
 msc.legacyurl: /mvc/videos/mvc-2/how-do-i/creating-a-movie-database-application-in-15-minutes-with-aspnet-mvc
 msc.type: video
-ms.openlocfilehash: 082ac4dd51d6d919baf75f5fe316db86f5dfd189
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: 49458c6d498b492b138247cb9257cd934e472ba6
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57055812"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59399546"
 ---
-<a name="creating-a-movie-database-application-in-15-minutes-with-aspnet-mvc"></a>Crear una aplicación de base de datos de películas en 15 minutos con ASP.NET MVC
-====================
+# <a name="creating-a-movie-database-application-in-15-minutes-with-aspnet-mvc"></a>Crear una aplicación de base de datos de películas en 15 minutos con ASP.NET MVC
+
 by [Stephen Walther](https://github.com/StephenWalther)
 
 Stephen Walther compila una aplicación de ASP.NET MVC toda de principio a fin. Este vídeo es una introducción excelente para las personas que está familiarizado con el marco de MVC de ASP.NET y que quieren tener una idea del proceso de creación de una aplicación ASP.NET MVC.

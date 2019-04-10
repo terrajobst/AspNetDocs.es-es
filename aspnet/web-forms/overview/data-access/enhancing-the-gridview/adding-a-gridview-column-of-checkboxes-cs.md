@@ -8,15 +8,15 @@ ms.date: 03/06/2007
 ms.assetid: f63a9443-2db0-4f80-8246-840d3e86c2a3
 msc.legacyurl: /web-forms/overview/data-access/enhancing-the-gridview/adding-a-gridview-column-of-checkboxes-cs
 msc.type: authoredcontent
-ms.openlocfilehash: b78e87d7bd6a05b790203808a9be52af8e8aad1e
-ms.sourcegitcommit: 289e051cc8a90e8f7127e239fda73047bde4de12
+ms.openlocfilehash: 7f19965894b899aa429be0ef89ccde121191aeb8
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/25/2019
-ms.locfileid: "58422979"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59394034"
 ---
-<a name="adding-a-gridview-column-of-checkboxes-c"></a>Agregar una columna GridView de casillas de verificación (C#)
-====================
+# <a name="adding-a-gridview-column-of-checkboxes-c"></a>Agregar una columna GridView de casillas de verificación (C#)
+
 por [Scott Mitchell](https://twitter.com/ScottOnWriting)
 
 [Descargue la aplicación de ejemplo](http://download.microsoft.com/download/4/a/7/4a7a3b18-d80e-4014-8e53-a6a2427f0d93/ASPNET_Data_Tutorial_52_CS.exe) o [descargar PDF](adding-a-gridview-column-of-checkboxes-cs/_static/datatutorial52cs1.pdf)
@@ -31,7 +31,7 @@ En el tutorial anterior, hemos visto cómo agregar una columna de botones de rad
 En este tutorial, veremos cómo agregar una columna de casillas de verificación y cómo determinar qué casillas de verificación se protegieron en el postback. En concreto, vamos a crear un ejemplo que imita la interfaz de usuario del cliente de correo electrónico basado en web. En nuestro ejemplo incluirá un GridView paginado lista de los productos en el `Products` (consulte la figura 1) de tabla de base de datos con una casilla en cada fila. Un botón Eliminar productos seleccionados, al hacer clic, eliminará los productos seleccionados.
 
 
-[![Cada fila del producto incluye una casilla de verificación](adding-a-gridview-column-of-checkboxes-cs/_static/image1.gif)](adding-a-gridview-column-of-checkboxes-cs/_static/image1.png)
+[![EFila del producto ACH incluye una casilla de verificación](adding-a-gridview-column-of-checkboxes-cs/_static/image1.gif)](adding-a-gridview-column-of-checkboxes-cs/_static/image1.png)
 
 **Figura 1**: Cada fila del producto incluye una casilla de verificación ([haga clic aquí para ver imagen en tamaño completo](adding-a-gridview-column-of-checkboxes-cs/_static/image2.png))
 
@@ -41,17 +41,17 @@ En este tutorial, veremos cómo agregar una columna de casillas de verificación
 Antes de que preocuparse acerca de cómo agregar una columna de casillas de verificación, permiten centrarnos primero de s en la lista de los productos en un control GridView que admita la paginación. Comience abriendo la `CheckBoxField.aspx` página en el `EnhancedGridView` carpeta y arrastre un control GridView del cuadro de herramientas hasta el diseñador, establecer su `ID` a `Products`. A continuación, elija enlazar el control GridView a un nuevo origen ObjectDataSource denominado `ProductsDataSource`. Configurar el origen ObjectDataSource para usar el `ProductsBLL` clase, una llamada a la `GetProducts()` método para devolver los datos. Puesto que este GridView será de solo lectura, establezca las listas desplegables en la actualización, INSERCIÓN y eliminar pestañas en (None).
 
 
-[![Crear un nuevo origen ObjectDataSource denominado ProductsDataSource](adding-a-gridview-column-of-checkboxes-cs/_static/image2.gif)](adding-a-gridview-column-of-checkboxes-cs/_static/image3.png)
+[![Ccrear un nuevo ProductsDataSource denominado de ObjectDataSource](adding-a-gridview-column-of-checkboxes-cs/_static/image2.gif)](adding-a-gridview-column-of-checkboxes-cs/_static/image3.png)
 
 **Figura 2**: Crear un nuevo origen ObjectDataSource denominado `ProductsDataSource` ([haga clic aquí para ver imagen en tamaño completo](adding-a-gridview-column-of-checkboxes-cs/_static/image4.png))
 
 
-[![Configurar el origen ObjectDataSource para recuperar datos mediante el método GetProducts()](adding-a-gridview-column-of-checkboxes-cs/_static/image3.gif)](adding-a-gridview-column-of-checkboxes-cs/_static/image5.png)
+[![Cconfigurar el origen ObjectDataSource para recuperar datos mediante el método GetProducts()](adding-a-gridview-column-of-checkboxes-cs/_static/image3.gif)](adding-a-gridview-column-of-checkboxes-cs/_static/image5.png)
 
 **Figura 3**: Configurar el origen ObjectDataSource para recuperar datos mediante el `GetProducts()` método ([haga clic aquí para ver imagen en tamaño completo](adding-a-gridview-column-of-checkboxes-cs/_static/image6.png))
 
 
-[![Establecer las listas desplegables en la actualización, INSERCIÓN y eliminar las fichas en (None)](adding-a-gridview-column-of-checkboxes-cs/_static/image4.gif)](adding-a-gridview-column-of-checkboxes-cs/_static/image7.png)
+[![Set las listas desplegables en la actualización, INSERCIÓN y eliminación pestañas en (None)](adding-a-gridview-column-of-checkboxes-cs/_static/image4.gif)](adding-a-gridview-column-of-checkboxes-cs/_static/image7.png)
 
 **Figura 4**: Establecer la lista desplegable se enumeran en la actualización, INSERCIÓN y eliminar pestañas en (None) ([haga clic aquí para ver imagen en tamaño completo](adding-a-gridview-column-of-checkboxes-cs/_static/image8.png))
 
@@ -68,7 +68,7 @@ Después de realizar estos cambios, el marcado declarativo de s GridView, Object
 Dedique un momento para ver la página en un explorador (consulte la figura 5). En este momento debería ver el nombre, la categoría y el precio de los diez primeros productos.
 
 
-[![Se muestran el nombre, la categoría y el precio de los primeros diez productos](adding-a-gridview-column-of-checkboxes-cs/_static/image5.gif)](adding-a-gridview-column-of-checkboxes-cs/_static/image9.png)
+[![Tse muestran, nombre, categoría y el precio de los primeros diez productos](adding-a-gridview-column-of-checkboxes-cs/_static/image5.gif)](adding-a-gridview-column-of-checkboxes-cs/_static/image9.png)
 
 **Figura 5**: Se muestran el nombre, la categoría y el precio de los primeros diez productos ([haga clic aquí para ver imagen en tamaño completo](adding-a-gridview-column-of-checkboxes-cs/_static/image10.png))
 
@@ -80,7 +80,7 @@ Dado que ASP.NET 2.0 incluye una CampoCasillaVerificación, uno puede pensar que
 En su lugar, debemos agregar TemplateField y agregar un control de casilla de verificación Web a su `ItemTemplate`. Agregue un TemplateField para el `Products` GridView y conviértalo en el primer campo (izquierdo). En la etiqueta inteligente de GridView s, haga clic en el vínculo Editar plantillas y, a continuación, arrastre un control CheckBox Web desde el cuadro de herramientas en el `ItemTemplate`. Establecer esta casilla de verificación s `ID` propiedad `ProductSelector`.
 
 
-[![Agregue un Control de casilla de verificación Web denominado ProductSelector a TemplateField s ItemTemplate](adding-a-gridview-column-of-checkboxes-cs/_static/image6.gif)](adding-a-gridview-column-of-checkboxes-cs/_static/image11.png)
+[![Add un ProductSelector de denominado de Control Web de casilla de verificación para el s TemplateField ItemTemplate](adding-a-gridview-column-of-checkboxes-cs/_static/image6.gif)](adding-a-gridview-column-of-checkboxes-cs/_static/image11.png)
 
 **Figura 6**: Agregue un Control de casilla de verificación Web denominado `ProductSelector` al s TemplateField `ItemTemplate` ([haga clic aquí para ver imagen en tamaño completo](adding-a-gridview-column-of-checkboxes-cs/_static/image12.png))
 
@@ -88,7 +88,7 @@ En su lugar, debemos agregar TemplateField y agregar un control de casilla de ve
 Con el control Web de la casilla de verificación y TemplateField agregado, cada fila ahora incluye una casilla de verificación. Figura 7 muestra esta página, cuando se ve mediante un explorador, después de han agregado el TemplateField y la casilla de verificación.
 
 
-[![Cada fila del producto ahora incluye una casilla de verificación](adding-a-gridview-column-of-checkboxes-cs/_static/image7.gif)](adding-a-gridview-column-of-checkboxes-cs/_static/image13.png)
+[![EFila del producto ACH ahora incluye una casilla de verificación](adding-a-gridview-column-of-checkboxes-cs/_static/image7.gif)](adding-a-gridview-column-of-checkboxes-cs/_static/image13.png)
 
 **Figura 7**: Cada fila del producto ahora incluye una casilla de verificación ([haga clic aquí para ver imagen en tamaño completo](adding-a-gridview-column-of-checkboxes-cs/_static/image14.png))
 
@@ -109,7 +109,7 @@ El `Rows` propiedad devuelve una colección de `GridViewRow` instancias que util
 Con la adición de este controlador de eventos, haga clic en el botón Eliminar productos seleccionados ahora muestra el `ProductID` s de los productos seleccionados.
 
 
-[![Cuando se hace clic en el botón Eliminar productos de seleccionado se muestran el ProductID de productos seleccionada](adding-a-gridview-column-of-checkboxes-cs/_static/image8.gif)](adding-a-gridview-column-of-checkboxes-cs/_static/image15.png)
+[![When el botón Eliminar productos de seleccionado se hace clic en el ProductID de productos seleccionada se muestran](adding-a-gridview-column-of-checkboxes-cs/_static/image8.gif)](adding-a-gridview-column-of-checkboxes-cs/_static/image15.png)
 
 **Figura 8**: Cuando se hace clic el botón Eliminar productos de seleccionada en los productos seleccionados `ProductID` se enumeran ([haga clic aquí para ver imagen en tamaño completo](adding-a-gridview-column-of-checkboxes-cs/_static/image16.png))
 
@@ -136,7 +136,7 @@ A continuación, cree `Click` controladores de eventos para el `CheckAll` y `Unc
 Con este código, al hacer clic en el botón Comprobar todo produce un postback y comprueba todas las casillas de verificación en el control GridView. Del mismo modo, al hacer clic en desactivar todo anula la selección de todas las casillas. Figura 9 muestra la pantalla después el botón Comprobar todo se ha protegido.
 
 
-[![Al hacer clic en la comprobación de que todos los botones selecciona todas las casillas de verificación](adding-a-gridview-column-of-checkboxes-cs/_static/image9.gif)](adding-a-gridview-column-of-checkboxes-cs/_static/image17.png)
+[![Celectrónicamente con la comprobación de todos los botón selecciona todas las casillas](adding-a-gridview-column-of-checkboxes-cs/_static/image9.gif)](adding-a-gridview-column-of-checkboxes-cs/_static/image17.png)
 
 **Figura 9**: Al hacer clic en la comprobación de todos los botón selecciona todas las casillas ([haga clic aquí para ver imagen en tamaño completo](adding-a-gridview-column-of-checkboxes-cs/_static/image18.png))
 

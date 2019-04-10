@@ -8,12 +8,12 @@ ms.date: 02/18/2013
 ms.assetid: 84c7baca-1c54-4c44-8f52-4282122d6acb
 msc.legacyurl: /mvc/overview/older-versions/hands-on-labs/aspnet-mvc-4-dependency-injection
 msc.type: authoredcontent
-ms.openlocfilehash: 52aba3fa5948d32180fbf135444433771b17756d
-ms.sourcegitcommit: 289e051cc8a90e8f7127e239fda73047bde4de12
+ms.openlocfilehash: 86781a1f46ce0c01a5d70b1f0cf8a81f3f96a032
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/25/2019
-ms.locfileid: "58425653"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59405929"
 ---
 # <a name="aspnet-mvc-4-dependency-injection"></a>Inserción de dependencias de ASP.NET MVC 4
 
@@ -91,7 +91,7 @@ Para mayor comodidad, gran parte del código que se va a administrar a lo largo 
 
 Si no está familiarizado con los fragmentos de código de Visual Studio y desea aprender a usarlas, puede consultar el apéndice de este documento &quot; [Apéndice B: Usar fragmentos de código](#AppendixB)&quot;.
 
-* * *
+---
 
 <a id="Exercises"></a>
 
@@ -484,7 +484,7 @@ En esta tarea, ejecutará la aplicación y que el filtro de acción personalizad
     *Seguimiento de la aplicación - detalles de la solicitud*
 4. Cierre el explorador.
 
-* * *
+---
 
 <a id="Summary"></a>
 

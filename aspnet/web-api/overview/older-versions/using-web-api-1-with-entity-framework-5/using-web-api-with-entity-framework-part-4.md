@@ -8,15 +8,15 @@ ms.date: 07/04/2012
 ms.assetid: 792f4513-a508-4d14-a0dd-1a2fe282c7bb
 msc.legacyurl: /web-api/overview/older-versions/using-web-api-1-with-entity-framework-5/using-web-api-with-entity-framework-part-4
 msc.type: authoredcontent
-ms.openlocfilehash: ff46c7cbdf13a048e57ad88ab39077357e35c5b3
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: 54b3afac9b19962b02336a35909b208c4e3f7504
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57042742"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59400560"
 ---
-<a name="part-4-adding-an-admin-view"></a>Parte 4: Agregar una vista de administración
-====================
+# <a name="part-4-adding-an-admin-view"></a>Parte 4: Agregar una vista de administración
+
 por [Mike Wasson](https://github.com/MikeWasson)
 
 [Descargue el proyecto completado](http://code.msdn.microsoft.com/ASP-NET-Web-API-with-afa30545)

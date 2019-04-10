@@ -8,15 +8,15 @@ ms.date: 03/29/2006
 ms.assetid: 560d2455-ce08-4b2a-900d-7e9ccf82e048
 msc.legacyurl: /web-forms/videos/sql-2005/what-is-a-database
 msc.type: video
-ms.openlocfilehash: 23038d2fa13e888ecdd3edc3fb0ea7f8072e1bce
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: 019383897daeb7d8885ea4b9c3609e7f8ef9f827
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57049542"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59396673"
 ---
-<a name="what-is-a-database"></a>¿Qué es una base de datos?
-====================
+# <a name="what-is-a-database"></a>¿Qué es una base de datos?
+
 por [Microsoft](https://github.com/microsoft)
 
 Esta introducción trata las preguntas y principiantes de SQL Server de terminología que se necesitan crear y administrar bases de datos, como: ¿Qué es una base de datos de SQL Server? ¿Cómo es una base de datos de SQL Server diferente de una hoja de cálculo de Excel? ¿Qué hacen las bases de datos de SQL Server en Mi sitio Web o aplicaciones de software? ¿Qué es la relación de SQL Server Express con Visual Studio Express? ¿Qué términos como "ADO.NET" significa?

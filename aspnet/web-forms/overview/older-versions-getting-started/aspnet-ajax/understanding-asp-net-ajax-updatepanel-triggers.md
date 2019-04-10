@@ -8,15 +8,15 @@ ms.date: 03/12/2008
 ms.assetid: faab8503-2984-48a9-8a40-7728461abc50
 msc.legacyurl: /web-forms/overview/older-versions-getting-started/aspnet-ajax/understanding-asp-net-ajax-updatepanel-triggers
 msc.type: authoredcontent
-ms.openlocfilehash: 9501a2e855bdffe8c9d85c0dd0d836f50935b306
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: e3821eee8c7bf2c2f9b45ea75ade2bd5b3b8ef19
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57025302"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59406267"
 ---
-<a name="understanding-aspnet-ajax-updatepanel-triggers"></a>Descripción de los desencadenadores UpdatePanel de ASP.NET AJAX
-====================
+# <a name="understanding-aspnet-ajax-updatepanel-triggers"></a>Descripción de los desencadenadores UpdatePanel de ASP.NET AJAX
+
 por [Scott Cate](https://github.com/scottcate)
 
 [Descargar PDF](http://download.microsoft.com/download/C/1/9/C19A3451-1D14-477C-B703-54EF22E197EE/AJAX_tutorial02_Triggers_cs.pdf)
@@ -32,7 +32,7 @@ Este artículo examina la funcionalidad de los desencadenadores de XML de ASP.NE
 
 Estas notas del producto se basan en la versión Beta 2 de .NET Framework 3.5 y Visual Studio 2008. Las extensiones de AJAX de ASP.NET, previamente un ensamblado de complemento destinado a ASP.NET 2.0, ahora están integradas en la biblioteca de clases Base de .NET Framework. Estas notas del producto también se da por supuesto que trabajará con Visual Studio 2008, no Visual Web Developer Express y proporcionará tutoriales de acuerdo con la interfaz de usuario de Visual Studio (aunque serán totalmente compatibles con independencia de los listados de código entorno de desarrollo).
 
-## <a name="triggers"></a>*Desencadenadores*
+## *<a name="triggers"></a>Desencadenadores*
 
 Los desencadenadores para una determinada UpdatePanel, de forma predeterminada, incluyen automáticamente todos los controles secundarios que invocan una devolución de datos, incluidos, (por ejemplo), los controles de cuadro de texto que tienen sus `AutoPostBack` propiedad establecida en **true**. Sin embargo, desencadenadores también se incluye de manera declarativa mediante marcado; Esto se realiza en el `<triggers>` sección de la declaración del control UpdatePanel. Aunque los desencadenadores se pueden acceder mediante el `Triggers` propiedad de colección, se recomienda registrar todos los desencadenadores de representación parcial en tiempo de ejecución (por ejemplo, si un control no está disponible en tiempo de diseño) mediante el uso de la `RegisterAsyncPostBackControl(Control)` método de la ScriptManager de objeto dentro de la página, el `Page_Load` eventos. Recuerde que las páginas no tienen estadas y, por lo que se deben volver a registrar estos controles cada vez que se crearon.
 
@@ -40,7 +40,7 @@ Inclusión de desencadenador automático secundarios también se puede deshabili
 
 Tenga en cuenta que cuando se anidan controles UpdatePanel, cuando el UpdateMode está establecido en **condicional**, si el elemento secundario UpdatePanel se desencadene, pero el elemento primario no es así, es, a continuación, solo el elemento secundario UpdatePanel se actualizará. Sin embargo, si el elemento primario UpdatePanel se actualiza, a continuación, el elemento secundario de UpdatePanel también se actualizan.
 
-## <a name="the-lttriggersgt-element"></a>*El &lt;desencadenadores&gt; elemento*
+## *<a name="the-lttriggersgt-element"></a>El &lt;desencadenadores&gt; elemento*
 
 Cuando se trabaja en el editor de marcado en Visual Studio, es posible que observe (desde IntelliSense) que hay dos elementos secundarios de un `UpdatePanel` control. El elemento que se ve con mayor frecuencia es el `<ContentTemplate>` elemento, que básicamente encapsula el contenido que se retiene el panel de actualización (es decir, el contenido para el que se va a habilitar la representación parcial). El otro elemento es el `<Triggers>` elemento, que especifica los controles en la página (o el control de usuario, si está usando uno) que desencadenará una representación parcial del control UpdatePanel en el que el &lt;desencadenadores&gt; elemento reside.
 
@@ -50,16 +50,16 @@ El `<asp:AsyncPostBackTrigger>` elemento es especialmente útil en que puede ten
 
 De forma similar, la `<asp:PostBackTrigger>` elemento se puede usar para representar una página parcial de desencadenador, pero que requiere una vuelta completa al servidor. Este elemento trigger también puede usarse para forzar una presentación de página completa, cuando un control en caso contrario, normalmente en cuestión desencadenaría una representación de página parcial (por ejemplo, cuando un `Button` control existe en el `<ContentTemplate>` elemento de un control UpdatePanel). De nuevo, el elemento PostBackTrigger puede especificar cualquier control que es un elemento secundario de cualquier control UpdatePanel en la unidad actual de la encapsulación.
 
-## <a name="lttriggersgt-element-reference"></a>*&lt;Desencadenadores&gt; referencia del elemento*
+## *<a name="lttriggersgt-element-reference"></a>&lt;Desencadenadores&gt; referencia del elemento*
 
 *Descendientes de marcado:*
 
-| **Tag** | **Descripción** |
+| **Etiqueta** | **Descripción** |
 | --- | --- |
 | &lt;asp:AsyncPostBackTrigger&gt; | Especifica un control y el evento que hará que una actualización parcial de páginas para el control UpdatePanel que contiene esta referencia del desencadenador. |
 | &lt;asp:PostBackTrigger&gt; | Especifica un control y el evento que hará que una actualización de página completa (una actualización de página completa). Esta etiqueta se puede usar para forzar una actualización completa cuando un control en caso contrario, podría desencadenar la representación parcial. |
 
-## <a name="walkthrough-cross-updatepanel-triggers"></a>*Tutorial: Desencadenadores entre UpdatePanel*
+## *<a name="walkthrough-cross-updatepanel-triggers"></a>Tutorial: Desencadenadores entre UpdatePanel*
 
 1. Crear una nueva página ASP.NET con un objeto de ScriptManager para habilitar la representación parcial. Agregue dos UpdatePanel en esta página, en la primera, incluyen un control de etiqueta (Label1) y dos controles Button (Button1 y Button2). Button1 debe indicar, haga clic para actualizar y Button2 debe indicar, haga clic para actualizar este o algo similar. En el segundo control UpdatePanel, incluir un control de etiqueta (Label2), pero establezca su propiedad de color de primer plano en algo distinto del predeterminado para diferenciarla.
 2. Establezca la propiedad de UpdateMode de las dos etiquetas de UpdatePanel a **condicional**.
@@ -82,7 +82,7 @@ De forma similar, la `<asp:PostBackTrigger>` elemento se puede usar para represe
 ([Haga clic aquí para ver imagen en tamaño completo](understanding-asp-net-ajax-updatepanel-triggers/_static/image3.png))
 
 
-## <a name="under-the-hood"></a>*Aspectos técnicos*
+## *<a name="under-the-hood"></a>En segundo plano*
 
 Al utilizar el ejemplo que acabamos de construir, podemos echamos un vistazo a lo que hace ASP.NET AJAX y cómo funcionan nuestros los desencadenadores UpdatePanel de entre-panel. Para ello, vamos a trabajar con el origen de la página generada HTML, así como la extensión de Mozilla Firefox denominada a FireBug - con él, podemos examinar fácilmente las devoluciones de AJAX. También usamos la herramienta .NET Reflector de Lutz Roeder. Ambas herramientas están disponibles de forma gratuita en línea y pueden encontrarse con una búsqueda en internet.
 

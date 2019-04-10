@@ -8,15 +8,15 @@ ms.date: 10/05/2011
 ms.assetid: 3005174a-ba3d-4937-8b3e-b913ee4172ac
 msc.legacyurl: /web-forms/overview/data-access/displaying-data-with-the-datalist-and-repeater
 msc.type: chapter
-ms.openlocfilehash: 7b751a7c9dfdb5738dafb795a82f80540ae002bd
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: 46c56eb012f08900ba8f3d10ce92868d0d4d02e4
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57022592"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59390264"
 ---
-<a name="displaying-data-with-the-datalist-and-repeater"></a>Mostrar datos con los controles DataList y Repeater
-====================
+# <a name="displaying-data-with-the-datalist-and-repeater"></a>Mostrar datos con los controles DataList y Repeater
+
 > Estos tutoriales muestran formas alternativas para mostrar los datos mediante el uso de los controles DataList y Repeater.
 
 

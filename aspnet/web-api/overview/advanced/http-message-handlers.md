@@ -1,22 +1,23 @@
 ---
 uid: web-api/overview/advanced/http-message-handlers
-title: Controladores de mensajes HTTP en ASP.NET Web API | Microsoft Docs
+title: Controladores de mensajes HTTP en ASP.NET Web API - ASP.NET 4.x
 author: MikeWasson
-description: ''
+description: Información general sobre controladores de mensajes HTTP en ASP.NET Web API para ASP.NET 4.x
 ms.author: riande
 ms.date: 02/13/2012
+ms.custom: seoapril2019
 ms.assetid: 9002018b-3aa3-4358-bb1c-fbb5bc751d01
 msc.legacyurl: /web-api/overview/advanced/http-message-handlers
 msc.type: authoredcontent
-ms.openlocfilehash: 0b0d7b4c543dc4e597c6c472083898f3a8095a83
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: 308d2e3dd21917e7656f7ffe889dc965d9275d74
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57043212"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59392111"
 ---
-<a name="http-message-handlers-in-aspnet-web-api"></a>Controladores de mensajes HTTP en ASP.NET Web API
-====================
+# <a name="http-message-handlers-in-aspnet-web-api"></a>Controladores de mensajes HTTP en ASP.NET Web API
+
 por [Mike Wasson](https://github.com/MikeWasson)
 
 Un *controlador de mensajes* es una clase que recibe una solicitud HTTP y devuelve una respuesta HTTP. Controladores de mensajes se derivan de la clase abstracta **HttpMessageHandler** clase.

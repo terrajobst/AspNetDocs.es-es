@@ -8,15 +8,15 @@ ms.date: 06/02/2008
 ms.assetid: 11be4211-2fb9-4e15-b6d4-2aa623d81f3e
 msc.legacyurl: /web-forms/overview/ajax-control-toolkit/dropshadow/manipulating-dropshadow-properties-from-client-code-vb
 msc.type: authoredcontent
-ms.openlocfilehash: d8b8330174f6f49e96c42a0e15eeaf934bf24f87
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: c9b0946568063b9e5cf1454bd7a57c43304c3543
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57048372"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59390316"
 ---
-<a name="manipulating-dropshadow-properties-from-client-code-vb"></a>Manipular propiedades DropShadow desde el código de cliente (VB)
-====================
+# <a name="manipulating-dropshadow-properties-from-client-code-vb"></a>Manipular propiedades DropShadow desde el código de cliente (VB)
+
 por [Christian Wenz](https://github.com/wenz)
 
 [Descargar código](http://download.microsoft.com/download/5/1/6/51652a81-500b-4f6b-88d3-617103e7941e/DropShadow2.vb.zip) o [descargar PDF](http://download.microsoft.com/download/b/6/a/b6ae89ee-df69-4c87-9bfb-ad1eb2b23373/dropshadow2VB.pdf)
@@ -55,7 +55,7 @@ La función de JavaScript `changeOpacity()` , a continuación, debe buscar el `D
 [!code-html[Main](manipulating-dropshadow-properties-from-client-code-vb/samples/sample6.html)]
 
 
-[![Se cambia la opacidad del lado cliente](manipulating-dropshadow-properties-from-client-code-vb/_static/image2.png)](manipulating-dropshadow-properties-from-client-code-vb/_static/image1.png)
+[![Tse cambia la opacidad en el lado cliente](manipulating-dropshadow-properties-from-client-code-vb/_static/image2.png)](manipulating-dropshadow-properties-from-client-code-vb/_static/image1.png)
 
 Se cambia la opacidad del lado cliente ([haga clic aquí para ver imagen en tamaño completo](manipulating-dropshadow-properties-from-client-code-vb/_static/image3.png))
 

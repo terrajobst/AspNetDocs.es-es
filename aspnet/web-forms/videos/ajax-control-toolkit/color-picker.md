@@ -8,15 +8,15 @@ ms.date: 05/13/2009
 ms.assetid: 8f2cb811-d9d3-4a6a-a7d6-f2035cfe51e5
 msc.legacyurl: /web-forms/videos/ajax-control-toolkit/color-picker
 msc.type: video
-ms.openlocfilehash: 35ec830c0f0d4e422a67467987dae462d3d23285
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: fe3383b48adf2c5ed4766b40ceed80fd4bcca2a9
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57043732"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59392682"
 ---
-<a name="color-picker"></a>Selector de colores
-====================
+# <a name="color-picker"></a>Selector de colores
+
 por [Joe Stagner](https://github.com/JoeStagner)
 
 Este vídeo demostrará cómo usar el nuevo control de selector de colores de Microsoft AJAX Control Toolkit.

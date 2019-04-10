@@ -8,15 +8,15 @@ ms.date: 06/21/2007
 ms.assetid: 60b10049-ca02-4830-b3ce-83e9584511d0
 msc.legacyurl: /web-forms/videos/vs-2005/how-do-i-practice-test-driven-development
 msc.type: video
-ms.openlocfilehash: 3006b4d61844753dc36c5005dfbf1f66f928dbb5
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: debb6c1bf20684149ca259b25bc3df92d12dcd34
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57038502"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59395425"
 ---
-<a name="how-do-i-practice-test-driven-development"></a>[¿Cómo lo hago?:] ¿Prácticas recomendadas de desarrollo controlado por pruebas?
-====================
+# <a name="how-do-i-practice-test-driven-development"></a>[¿Cómo lo hago?:] ¿Prácticas recomendadas de desarrollo controlado por pruebas?
+
 por [Chris Menegay](https://twitter.com/CMenegay)
 
 Visual Studio Team System proporciona las herramientas necesarias para poner en práctica de desarrollo controlado por pruebas y este vídeo que se descubra cómo la funcionalidad de prueba de Team System permite ir desde el código para probar y de prueba al código. Vemos cómo puede escribir una prueba y, a continuación, usar Visual Studio Team System para generar el código de destino, que se adhiere a la ideología TDD de escribir la prueba primero y el código en segundo lugar.

@@ -8,15 +8,15 @@ ms.date: 08/14/2010
 ms.assetid: 004703cd-e0e9-4ba7-9974-1b0475c71222
 msc.legacyurl: /mvc/overview/older-versions-1/getting-started-with-mvc/getting-started-with-mvc-part5
 msc.type: authoredcontent
-ms.openlocfilehash: 76dc324134dc93c9552741fea9f1136abdc9184a
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: e0b540c030bf600def9b9efad4c73f055a343851
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57036662"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59402835"
 ---
-<a name="accessing-your-models-data-from-a-controller"></a>Obtener acceso a los datos del modelo desde un controlador
-====================
+# <a name="accessing-your-models-data-from-a-controller"></a>Obtener acceso a los datos del modelo desde un controlador
+
 por [Scott Hanselman](https://github.com/shanselman)
 
 > Este es un tutorial para principiantes que presenta los conceptos básicos de ASP.NET MVC. Creará una aplicación web simple que lee y escribe desde una base de datos. Visite el [centro de aprendizaje de ASP.NET MVC](../../../index.md) para buscar otros ASP.NET MVC, tutoriales y ejemplos.
@@ -26,7 +26,7 @@ En esta sección vamos a crear una nueva clase de nombre moviescontroller al y e
 
 Haga clic con el botón derecho en la carpeta Controllers y realice un nombre moviescontroller al nuevo.
 
-[![Agregar controlador](getting-started-with-mvc-part5/_static/image2.png)](getting-started-with-mvc-part5/_static/image1.png)
+[![Add controlador](getting-started-with-mvc-part5/_static/image2.png)](getting-started-with-mvc-part5/_static/image1.png)
 
 Esto creará un nuevo archivo "MoviesController.cs" bajo la carpeta \Controllers dentro de nuestro proyecto. Vamos a actualizar el MovieController para recuperar la lista de películas de nuestra base de datos recién agregado.
 
@@ -42,11 +42,11 @@ Recuerde que cuando ha creado una nueva clase, deberá compilar la aplicación p
 
 Haga clic en Agregar y el sistema generará automáticamente el código para obtener una vista para que podamos que muestra nuestra lista de películas. Esto es un buen momento para cambiar la &lt;h2&gt; encabezado a algo parecido a "My Movie List", como hicimos anteriormente con la vista de Hello World.
 
-[![Películas - Microsoft Visual Web Developer 2010 Express](getting-started-with-mvc-part5/_static/image5.png)](getting-started-with-mvc-part5/_static/image4.png)
+[![Movies - Microsoft Visual Web Developer 2010 Express](getting-started-with-mvc-part5/_static/image5.png)](getting-started-with-mvc-part5/_static/image4.png)
 
 Ejecute la aplicación y visite /Movies en la barra de direcciones. Ahora hemos recupera datos de la base de datos mediante una consulta básica en el controlador y devuelve los datos a una vista que sabe acerca de las películas. Esa vista, a continuación, pone a través de la lista de películas y crea una tabla de datos para nosotros.
 
-[![Lista de películas - Windows Internet Explorer](getting-started-with-mvc-part5/_static/image7.png)](getting-started-with-mvc-part5/_static/image6.png)
+[![Movie lista - Windows Internet Explorer](getting-started-with-mvc-part5/_static/image7.png)](getting-started-with-mvc-part5/_static/image6.png)
 
 Se no implementar funcionalidad de edición, detalles y eliminación con esta aplicación, por lo que no necesitamos los vínculos predeterminados creados por la plantilla scaffold para nosotros. Abra el archivo /Movies/Index.aspx y quitarlas.
 
@@ -56,7 +56,7 @@ Este es el código fuente para el aspecto que debería nuestra plantilla de vist
 
 Crear vínculos que no necesitamos, por lo que deberá eliminarlos en este ejemplo. Mantendremos el vínculo Crear nuevo sin embargo, ya que es el siguiente. Este es el aspecto de nuestra aplicación con esa columna eliminada.
 
-[![Lista de películas - Windows Internet Explorer](getting-started-with-mvc-part5/_static/image9.png)](getting-started-with-mvc-part5/_static/image8.png)
+[![Movie lista - Windows Internet Explorer](getting-started-with-mvc-part5/_static/image9.png)](getting-started-with-mvc-part5/_static/image8.png)
 
 Ahora tenemos una lista simple de nuestros datos de la película. Sin embargo, si hacemos clic en el vínculo "Crear nuevo", obtendremos un error que no se enlazó! Vamos a implementar un método de acción Create y que los usuarios puedan introducir nuevas películas en nuestra base de datos.
 

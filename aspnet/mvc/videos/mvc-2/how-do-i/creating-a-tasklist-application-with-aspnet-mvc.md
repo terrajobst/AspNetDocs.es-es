@@ -8,15 +8,15 @@ ms.date: 08/20/2008
 ms.assetid: e2a72e8d-d8da-4505-aa0a-61c830c0954b
 msc.legacyurl: /mvc/videos/mvc-2/how-do-i/creating-a-tasklist-application-with-aspnet-mvc
 msc.type: video
-ms.openlocfilehash: bccbe6ce15714e8247574bd40e28086c95d48d38
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: 97dac03e4b305b3775214801143cbc57b4221a40
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57032332"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59411493"
 ---
-<a name="creating-a-tasklist-application-with-aspnet-mvc"></a>Crear una aplicación de lista de tareas con ASP.NET MVC
-====================
+# <a name="creating-a-tasklist-application-with-aspnet-mvc"></a>Crear una aplicación de lista de tareas con ASP.NET MVC
+
 by [Stephen Walther](https://github.com/StephenWalther)
 
 Stephen Walther compila una aplicación de ASP.NET MVC toda de principio a fin. Este tutorial es una introducción excelente para las personas que está familiarizado con el marco de MVC de ASP.NET y que quieren tener una idea del proceso de creación de una aplicación ASP.NET MVC.

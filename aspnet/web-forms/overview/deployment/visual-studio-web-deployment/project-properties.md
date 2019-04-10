@@ -8,15 +8,15 @@ ms.date: 02/15/2013
 ms.assetid: ec1cec4c-a75f-47af-a2ba-b1e2f971d24b
 msc.legacyurl: /web-forms/overview/deployment/visual-studio-web-deployment/project-properties
 msc.type: authoredcontent
-ms.openlocfilehash: 85b2aa982c56f030c2de0f3ac2ad0dca780f3f38
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: 464146bc8af5cf978902a3e634398ed3f8d15404
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57051652"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59400053"
 ---
-<a name="aspnet-web-deployment-using-visual-studio-project-properties"></a>Implementación Web de ASP.NET con Visual Studio: Propiedades del proyecto
-====================
+# <a name="aspnet-web-deployment-using-visual-studio-project-properties"></a>Implementación Web de ASP.NET con Visual Studio: Propiedades del proyecto
+
 por [Tom Dykstra](https://github.com/tdykstra)
 
 [Descargar el proyecto de inicio](http://go.microsoft.com/fwlink/p/?LinkId=282627)

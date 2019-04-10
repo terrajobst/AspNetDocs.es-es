@@ -8,15 +8,15 @@ ms.date: 01/06/2011
 ms.assetid: 36c5beeb-45a7-48a0-9c30-f82cdf5c5f5f
 msc.legacyurl: /web-pages/readme
 msc.type: content
-ms.openlocfilehash: aa852e7bbd93622154d59e0d0a13ffa680812df2
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: 7374b1afafa9ca63309f3c0369c5efd808f7f28a
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57050722"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59401990"
 ---
-<a name="webmatrix-readme"></a>Archivo Léame de WebMatrix
-====================
+# <a name="webmatrix-readme"></a>Archivo Léame de WebMatrix
+
 13 de enero de 2011
 
 ## <a name="contents"></a>Contenido
@@ -31,7 +31,7 @@ ms.locfileid: "57050722"
 - [Los cambios y problemas](#ChangesAndIssues)
 
     - [Instalación de WebMatrix 1.0](#Known_Issues_Installation)
-    - [ASP.NET Web Pages](#Known_Issues_ASPNET) (Más información sobre páginas web de ASP.NET)
+    - [ASP.NET Web Pages](#Known_Issues_ASPNET)
     - [WebMatrix](#Known_Issues_WebMatrix)
     - [IIS Express](#Known_Issues_IISExpress)
     - [SQL Server Compact](#Known_Issues_SQLServerCompact)
@@ -73,7 +73,7 @@ ms.locfileid: "57050722"
 
 > La versión 4 de .NET Framework es necesaria para WebMatrix. En algunos casos, el programa de instalación de 1.0 WebMatrix le permitirá intenta instalar en una plataforma que no forma parte del conjunto de configuración admitidos. En concreto, Windows Vista sin la actualización SP1 le permiten comenzar la instalación de WebMatrix, pero producirá un error en el componente de .NET Framework 4 y bloquear la instalación.
 > 
-> **Workaround**  
+> **Solución**  
 > Instalar en una plataforma compatible, que incluye:
 > 
 > - Windows 7
@@ -86,7 +86,7 @@ ms.locfileid: "57050722"
 
 #### <a name="issue-cannot-install-webmatrix-10-if-microsoft-visual-studio-2008-is-installed-without-microsoft-visual-studio-2008-sp1"></a>Problema: No se puede instalar WebMatrix 1.0 si se instala Microsoft Visual Studio 2008 sin Microsoft Visual Studio 2008 SP1
 
-> **Workaround**  
+> **Solución**  
 > Instalar [Microsoft Visual Studio 2008 SP1](https://www.microsoft.com/downloads/details.aspx?FamilyId=FBEE1648-7106-44A7-9649-6D9F6D58056E&amp;displaylang=en) desde el centro de descarga de Microsoft.
 
 
@@ -97,7 +97,7 @@ ms.locfileid: "57050722"
 > - *System.Data.SqlServerCe.dll* (proveedor de ADO.NET)
 > - *System.Data.SqlServerCe.Entity.dll* (ADO.NET Entity Framework)
 > 
-> **Workaround**  
+> **Solución**  
 > Desinstalar SQL Server Compact 4.0. Descargue e instale la versión completa de .NET Framework 3.5 SP1 desde la ubicación siguiente:  
 >   
 > [Paquete de Microsoft .NET Framework 3.5 con Service 1 (paquete completo)](https://go.microsoft.com/fwlink/?LinkId=194828)  
@@ -109,7 +109,7 @@ ms.locfileid: "57050722"
 
 > Desinstalación de SQL Server Compact usando las opciones de línea de comandos no funciona en esta versión.
 > 
-> **Workaround**  
+> **Solución**  
 > Use *programas y características* en el Panel de Control de Windows para desinstalar Microsoft SQL Server Compact 4.0.
 
 
@@ -154,7 +154,7 @@ Esta sección del documento describen las nuevas características, cambios y pro
 > 
 > Esto puede ser un problema si va a usar una tabla de usuario personalizada para la suscripción pero pase el nombre de tabla incorrecto para el `WebSecurity.InitializeDatabaseConnection` método. Dado que el método no predeterminada genera un error si no existe la tabla que se especifique, y porque crea una nueva tabla en su lugar, la aplicación puede parecer a trabajar. Sin embargo, código de aplicación que se basa en la tabla de usuario personalizada (y en los campos de él) puede producir un error con errores inesperados.
 > 
-> **Workaround**  
+> **Solución**  
 > Asegúrese de que pasa el nombre de la `InitializeDatabaseConnection` coincidencias de método, el perfil de usuario de la tabla en la base de datos de pertenencia o asegúrese de que el `autoCreateTables` parámetro se establece en false.
 
 
@@ -183,7 +183,7 @@ Esta sección del documento describen las nuevas características, cambios y pro
 
 > Si instaló un paquete mediante el Administrador de paquetes en la versión Beta 3 y, a continuación, intente desinstalar mediante la versión actual, el paquete no se desinstala completamente. Mediante el Administrador de paquetes **desinstalar** botón quita algunos componentes, pero deje el código de biblioteca del paquete y no actualiza el *package.config* archivo.
 > 
-> **Solución alternativa**   
+> **Solución**   
 > Siga estos pasos:  
 > 1. Eliminar el *aplicación\_Data\packages* carpeta. Esto quita todos los paquetes.   
 > 2. Eliminar el *packages.config* archivo en la raíz del sitio Web.
@@ -196,7 +196,7 @@ Esta sección del documento describen las nuevas características, cambios y pro
 > [!NOTE]
 > Aunque normalmente vería este comportamiento cuando se usa la interfaz del Administrador de paquetes basado en web, se produce el mismo comportamiento si agregar, quitar o modificar los archivos en el *aplicación\_datos* carpeta.
 > 
-> **Solución alternativa**   
+> **Solución**   
 > Para trabajar con paquetes en Visual Studio, utilice la extensión de NuGet en lugar del Administrador de paquetes basada en web. Para obtener información, consulte el [documentación de NuGet](https://docs.microsoft.com/nuget/). Si está trabajando con otros archivos en el *aplicación\_datos* carpeta, considere la posibilidad de mantener los archivos en otra parte, para evitar este problema. Si no es práctico, elimine el *aplicación\_offline.htm* archivo manualmente o espere a que el sitio vuelve a conectarse automáticamente (de forma predeterminada, después de 30 segundos).
 
 
@@ -238,7 +238,7 @@ Esta sección del documento describen las nuevas características, cambios y pro
 > 
 > El problema surge porque la reescritura de URL no está habilitada de forma predeterminada para IIS 7 o IIS 7.5. El escenario más probable es que no ve el problema al realizar pruebas localmente mediante IIS Express, pero la experiencia al implementar su sitio Web en un sitio Web de hospedaje.
 > 
-> **Workaround**
+> **Solución**
 > 
 > - Si tiene control sobre el equipo del servidor, en el equipo servidor instalar la actualización que se describe en [hay una actualización disponible que habilita ciertos controladores de IIS 7.0 o IIS 7.5 para controlar las solicitudes cuyas direcciones URL no termina con un punto](https://support.microsoft.com/kb/980368).
 > - Si no tiene control sobre el equipo del servidor (por ejemplo, va a implementar en un sitio de hospedaje Web), agregue lo siguiente del sitio Web *web.config* archivo: 
@@ -255,9 +255,9 @@ Esta sección del documento describen las nuevas características, cambios y pro
 > 1. Copie los ensamblados del motor de base de datos a la *Bin* carpeta (y las subcarpetas) de la aplicación en el equipo de destino:  
 > 
 >    - Copia *C:\Program Files\Microsoft SQL Server Edition\v4.0\Desktop\System.Data.SqlServerCe.dll*   
->        **to** *\Bin*
->    - Copia <em>C:\Program Files\Microsoft SQL Server Compact Edition\v4.0\Private\x86\\</em><strong><em>a</em></strong>\Bin\x86*
->    - Copia <em>C:\Program Files\Microsoft SQL Server Compact Edition\v4.0\Private\amd64\\</em>* <strong>a</strong><em>\Bin\amd64</em>
+>      **to** *\Bin*
+>    - Copia *C:\Program Files\Microsoft SQL Server Compact Edition\v4.0\Private\x86\\*  **a** *\Bin\x86*
+>    - Copia *C:\Program Files\Microsoft SQL Server Compact Edition\v4.0\Private\amd64\\** **a** *\Bin\amd64*
 > 
 > 2. En la carpeta raíz del sitio Web, cree o abra un *web.config* archivo. (En WebMatrix 1.0, está disponible si hace clic en este tipo de archivo **todas** en el **elegir un tipo de archivo** cuadro de diálogo.)
 > 3. Agregue el siguiente elemento como elemento secundario de la `<configuration>` elemento (no está dentro de la `<system.web>` elemento):
@@ -269,7 +269,7 @@ Esta sección del documento describen las nuevas características, cambios y pro
 
 > Si está utilizando Visual Basic (crear *.vbhtml* archivos), el `Database` y `WebGrid` aplicaciones auxiliares no funcionará si la aplicación está configurada para usar el nivel de confianza medio.
 > 
-> **Workaround**  
+> **Solución**  
 > Si usa Visual Studio 2010, puede resolver este problema mediante la instalación de la versión del Service Pack 1. Hasta que esté disponible la versión final de la versión SP1, puede descargar la versión Beta de SP1 desde el [Microsoft Visual Studio 2010 Service Pack 1 Beta](https://www.microsoft.com/downloads/en/details.aspx?FamilyID=11ea69cb-cf12-4842-a3d7-b32a1e5642e2&amp;displaylang=en) página en Microsoft Download Center.   
 >   
 > Si esto no es práctico, o si no usa Visual Studio 2010, temporalmente puede establece la aplicación para usar la plena confianza.
@@ -283,7 +283,7 @@ Esta sección del documento describen las nuevas características, cambios y pro
 >   
 > Esta solicitud de descarga todas las cadenas de recursos en el *System.Web.WebPages.Administration.dll* ensamblado. Se descargan todos los recursos incrustados (incluso aquellos que no están diseñados para ser servido como contenido estático). Si los recursos incrustados contienen información confidencial, esto puede representar un riesgo de seguridad. 
 > 
-> **Solución alternativa**   
+> **Solución**   
 > Si creas un **ApplicationPart** , asegúrese de que los recursos incrustados asociada con la que **ApplicationPart** ensamblado del objeto no contienen información confidencial.
 
 
@@ -299,7 +299,7 @@ Esta sección del documento describen problemas conocidos para el entorno de des
 
 #### <a name="issue-changes-in-the-username-or-password-of-a-database-connection-string-in-a-webconfig-file-are-not-reflected-in-the-databases-workspace"></a>Problema: No se reflejan los cambios en el nombre de usuario o contraseña de una cadena de conexión de base de datos en un archivo web.config en el área de trabajo de bases de datos
 
-> **Workaround**  
+> **Solución**  
 > 
 > 1. En el *web.config* de archivo, cambie el nombre de la base de datos en la cadena de conexión (por ejemplo, agregue "1" a él).
 > 2. Guardar el *web.config* archivo.
@@ -313,7 +313,7 @@ Esta sección del documento describen problemas conocidos para el entorno de des
 
 > Si WebMatrix se ejecuta con permisos elevados (es decir, Introducción al uso de WebMatrix el **ejecutar como administrador** opción en Windows), no se puede eliminar carpetas que se crean mediante WebMatrix mediante el Explorador de Windows.
 > 
-> **Workaround**  
+> **Solución**  
 > Ejecute el Explorador de Windows con permisos elevados. Siga estos pasos:  
 > 
 > 1. En Windows, haga clic en **iniciar**.
@@ -328,7 +328,7 @@ Esta sección del documento describen problemas conocidos para el entorno de des
 > - En Windows Vista o Windows 7, que ha iniciado sesión con una cuenta que no tiene privilegios administrativos y Control de cuentas de usuario (UAC) está deshabilitada.
 > - Está utilizando Microsoft Windows XP o Microsoft Windows Server 2003.
 > 
-> **Workaround**  
+> **Solución**  
 > Mayoría de las tareas en WebMatrix 1.0 no requiere permisos administrativos. Para aquellos que lo hacen, puede realizar la operación porque un administrador o siga estos pasos:
 > 
 > - En Windows Vista o Windows 7, habilitar UAC.
@@ -339,7 +339,7 @@ Esta sección del documento describen problemas conocidos para el entorno de des
 
 > El **sitio desde galería Web** opción está deshabilitada si el instalador de plataforma Web 3.0 no está instalado.
 > 
-> **Workaround**  
+> **Solución**  
 > Instalar el [instalador de plataforma Web de Microsoft 3.0](https://go.microsoft.com/fwlink/?LinkID=194638).
 
 
@@ -347,7 +347,7 @@ Esta sección del documento describen problemas conocidos para el entorno de des
 
 > Google Chrome no se muestra en la lista de exploradores en **ejecutar** en el **inicio** ficha.
 > 
-> **Workaround**  
+> **Solución**  
 > Algunas versiones de Google Chrome no se registran correctamente con la característica de programas predeterminados en Windows. Como alternativa, inicie Google Chrome, haga clic en el *control Google Chrome y personalizar* menú, haga clic en *opciones*y, a continuación, haga clic en *Make Google Chrome mi explorador predeterminado*.
 
 
@@ -355,7 +355,7 @@ Esta sección del documento describen problemas conocidos para el entorno de des
 
 > El **Foreign Key** cuadro de diálogo no permite especificar el nombre de clave principal de la tabla de clave principal.
 > 
-> **Workaround**  
+> **Solución**  
 > Esto tiene su porqué. No es necesario que escriba el nombre de la clave principal de la tabla de clave principal.
 
 
@@ -363,7 +363,7 @@ Esta sección del documento describen problemas conocidos para el entorno de des
 
 > IntelliSense se admite en WebMatrix para HTML y CSS. Sin embargo, no está disponible para otros lenguajes. 
 > 
-> **Solución alternativa**   
+> **Solución**   
 > Ninguno.
 
 
@@ -371,7 +371,7 @@ Esta sección del documento describen problemas conocidos para el entorno de des
 
 > IntelliSense para el marcado en WebMatrix es compatible con HTML mediante la [esquema XHTML 1.0 Transitional](http://www.w3.org/TR/2002/NOTE-xhtml1-schema-20020902/#xhtml1-transitional) y el uso de CSS el [esquema CSS 2.1](http://www.w3.org/TR/CSS2/). Dado que IntelliSense se basa en estos esquemas específicos, determinadas etiquetas, atributos o propiedades podrían sugiere que no son adecuadas para la definición de estilo o la página actual. Para HTML, también puede conducir a sugerencias inesperadas en el contenido que podría interpretarse como XHTML con formato incorrecto (por ejemplo, cuando no se cierran las etiquetas). Este problema podría ser más evidente si el punto de inserción está dentro de una etiqueta incompleta; en ese caso, IntelliSense puede sugerir nuevas etiquetas de apertura u ofrecen otras sugerencias incorrectos. 
 > 
-> **Solución alternativa**   
+> **Solución**   
 > Para HTML, asegúrese de que está trabajando dentro de una página XHTML completa tiene el formato correcto. No hay ninguna solución alternativa para CSS.
 
 
@@ -379,7 +379,7 @@ Esta sección del documento describen problemas conocidos para el entorno de des
 
 > En ocasiones, no se puede invocar IntelliSense como HTML o CSS se está entrando en el editor. En concreto, esto puede ocurrir cuando el punto de inserción está directamente al lado de otro elemento o al final de un archivo. 
 > 
-> **Solución alternativa**   
+> **Solución**   
 > Asegúrese de que hay espacio en blanco alrededor del punto de inserción y que no es el punto de inserción al final de un archivo. También puede invocar IntelliSense manualmente presionando CTRL+BARRA ESPACIADORA.
 
 
@@ -387,7 +387,7 @@ Esta sección del documento describen problemas conocidos para el entorno de des
 
 > WebMatrix 1.0 se proporciona ninguna interfaz de usuario o de gestos para deshabilitar IntelliSense. 
 > 
-> **Solución alternativa**   
+> **Solución**   
 > Inicie WebMatrix mediante el comando siguiente, que incluye un modificador que deshabilita IntelliSense:  
 >   
 > `WebMatrix.exe #ExecuteCommand# EditorIntelliSense off`
@@ -414,7 +414,7 @@ Para obtener información acerca de los problemas que implican la instalación d
 
 #### <a name="issue-installing-an-application-can-take-a-long-time-if-the-users-my-documents-folder-is-redirected-to-a-network-share"></a>Problema: Instalar una aplicación puede tardar mucho tiempo si la carpeta Mis documentos del usuario se redirige a un recurso compartido de red
 
-> **Workaround**  
+> **Solución**  
 > Ninguno. La aplicación puede tardar un rato para instalar, pero se instalará correctamente.
 
 
@@ -424,7 +424,7 @@ Para obtener información acerca de los problemas que implican la instalación d
 
 > WebMatrix admite totalmente la implementación archivos binarios compatibles para SQL Server Compact a un servidor que se está ejecutando la versión 3.5 de .NET Framework con una configuración de nivel de confianza medio.
 > 
-> **Workaround**  
+> **Solución**  
 > Es la solución preferida instalar .NET Framework 4 en el servidor. Como alternativa, haga lo siguiente:
 > 
 > 1. Agregue los siguientes elementos para el `SecurityClasses` sección *Web\_MediumTrust.config* archivo:
@@ -442,7 +442,7 @@ Para obtener información acerca de los problemas que implican la instalación d
 
 > En algunas circunstancias, publicar una aplicación, produce un error "servicio no está disponible".
 > 
-> **Workaround**  
+> **Solución**  
 > En WebMatrix, agregue una barra diagonal inversa (\) al final del nombre del servidor en el **configuración de publicación** ventana y, a continuación, publicar la aplicación de nuevo.
 
 
@@ -450,7 +450,7 @@ Para obtener información acerca de los problemas que implican la instalación d
 
 > Después de publicar una aplicación de Moodle, la aplicación no funciona correctamente.
 > 
-> **Workaround**  
+> **Solución**  
 > En WebMatrix, agregue una barra diagonal (/) al final de la **nombre del sitio** campo el **configuración de publicación** ventana y, a continuación, publicar la aplicación de nuevo.
 
 
@@ -458,7 +458,7 @@ Para obtener información acerca de los problemas que implican la instalación d
 
 > Publicación nopCommerce se produce un error y notifica un error de base de datos, como "insertar en la instrucción nop\_tabla del registro de error."
 > 
-> **Workaround**  
+> **Solución**  
 > 
 > 1. En WebMatrix, haga clic en **ejecutar** para iniciar nopCommerce localmente.
 > 2. Inicie sesión en la página de administración.
@@ -470,13 +470,13 @@ Para obtener información acerca de los problemas que implican la instalación d
 
 #### <a name="issue-silverstripe-cms-displays-a-http-500-php-fcgi-error-when-you-download-a-published-site"></a>Problema: Silverstripe CMS muestra un "Error FCGI PHP HTTP 500" al descargar un sitio publicado
 
-> **Workaround**  
+> **Solución**  
 > Tras hacer clic en **Descargar sitio publicado**, omitir `silverstripe-cache/manifest_main` en **vista previa de publicación**. Este archivo se usa para fines de almacenamiento en caché y es específico de cada equipo.
 
 
 #### <a name="issue-subtext-displays-server-error-in--application-when-you-download-a-published-site"></a>Problema: SubText muestra "Error de servidor en la aplicación '/'" cuando se descarga un sitio publicado
 
-> **Workaround**  
+> **Solución**  
 > Abra la carpeta del sitio *web.config* de archivo y reemplace el identificador de usuario y contraseña en la cadena de conexión de base de datos con las credenciales de administrador de SQL Server (las credenciales "sa").
 > 
 > Como alternativa, siga estos pasos para conceder a la cuenta de usuario que ha iniciado sesión con `db_owner` permisos:
@@ -491,7 +491,7 @@ Para obtener información acerca de los problemas que implican la instalación d
 
 > En el **configuración de publicación** cuadro de diálogo, si la dirección URL de destino no comienza con `http://` o `https://`, el sitio no funcionen después de la implementación.
 > 
-> **Workaround**  
+> **Solución**  
 > Asegúrese de que antes de publicar un sitio, la dirección URL de destino en el **configuración de publicación** inicia el cuadro de diálogo con `http://` o `https://`.
 
 
@@ -499,7 +499,7 @@ Para obtener información acerca de los problemas que implican la instalación d
 
 > El error puede producirse por una serie de motivos. Una razón que ve este error es si la secuencia de comandos de base de datos contiene un carácter de comillas simples (') y el juego de caracteres de destino MySQL la base de datos predeterminado no es UTF-8.
 > 
-> **Workaround**  
+> **Solución**  
 > Establece el carácter predeterminado establecido para la base de datos MySQL remota en UTF-8.
 
 
@@ -507,7 +507,7 @@ Para obtener información acerca de los problemas que implican la instalación d
 
 > Si publicar o descargar un sitio de DotNetNuke, es posible que deba borrar la memoria caché para obtener los nuevos vínculos que aparecen en el sitio.
 > 
-> **Workaround**
+> **Solución**
 > 
 > 1. Inicie sesión como "Host".
 > 2. Vaya al menú de host y seleccione **configuración de Host**.
@@ -518,7 +518,7 @@ Para obtener información acerca de los problemas que implican la instalación d
 
 #### <a name="issue-some-links-in-atomsite-are-broken-after-you-download-a-published-site"></a>Problema: Algunos vínculos de AtomSite se interrumpen después de descargar un sitio publicado
 
-> **Workaround**  
+> **Solución**  
 > En el *service.config* archivo, *users.config* archivo y todos los *.xml* archivos, reemplace la cadena de dirección URL (por ejemplo, `http://myhost.com/atomsite`) con locales (por ejemplo, `http://localhost:1239`).
 
 
@@ -526,7 +526,7 @@ Para obtener información acerca de los problemas que implican la instalación d
 
 > De forma predeterminada, WebMatrix instala MySQL con el juego de caracteres UTF-8. Si instala MySQL en su propio y el juego de caracteres no es UTF-8 (por ejemplo, es Latin1), podría producir un error en el proceso de publicación para las bases de datos.
 > 
-> **Workaround**
+> **Solución**
 > 
 > 1. Cambiar el juego de caracteres de MySQL a UTF-8. (Para obtener más información, consulte [intercalación y juego de caracteres de servidor](http://dev.mysql.com/doc/refman/5.0/en/charset-server.html) en el sitio Web de MySQL.)
 > 2. Vuelva a instalar la aplicación.
@@ -537,7 +537,7 @@ Para obtener información acerca de los problemas que implican la instalación d
 
 > Algunas aplicaciones (por ejemplo, Kentico CMS) requieren que se inicie en el explorador con el fin de realizar la configuración posterior a la instalación como la creación de una base de datos. Si publica una aplicación similar al siguiente sin completar la instalación basada en explorador, intenta descargar el mismo sitio desde un servidor remoto generará un error.
 > 
-> **Workaround**  
+> **Solución**  
 > Finalizar la instalación basada en explorador antes de publicar el sitio.
 
 
@@ -547,7 +547,7 @@ Para obtener información acerca de los problemas que implican la instalación d
 > 
 > [!code-console[Main](overview/samples/sample9.cmd)]
 > 
-> **Workaround**  
+> **Solución**  
 > Si es posible, vuelva a publicar el sitio (o publicarlo) con las credenciales sin privilegios de administrador para la base de datos.
 
 

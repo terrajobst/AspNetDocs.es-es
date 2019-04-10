@@ -1,25 +1,26 @@
 ---
 uid: web-api/overview/odata-support-in-aspnet-web-api/using-select-expand-and-value
-title: Usar $select, $expand y $value en ASP.NET Web API 2 OData | Microsoft Docs
+title: Usar $select, $expand y $value en ASP.NET Web API 2 OData - ASP.NET 4.x
 author: MikeWasson
-description: ''
+description: Información general y ejemplos de código para el $expandir, $select, y opciones de $value de OData Web API 2 de ASP.NET 4.x.
 ms.author: riande
 ms.date: 10/11/2013
+ms.custom: seoapril2019
 ms.assetid: 43279a80-a96c-4564-b6ea-ad992a2d6828
 msc.legacyurl: /web-api/overview/odata-support-in-aspnet-web-api/using-select-expand-and-value
 msc.type: authoredcontent
-ms.openlocfilehash: d198ecf40155cba36204bc0810f4735aae6b100b
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: 8b5d3e87c679a31f1908aa648219ae5c6b701a1f
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57033932"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59400703"
 ---
-<a name="using-select-expand-and-value-in-aspnet-web-api-2-odata"></a>Usar $select, $expand y $value en ASP.NET Web API 2 OData
-====================
+# <a name="using-select-expand-and-value-in-aspnet-web-api-2-odata"></a>Usar $select, $expand y $value en ASP.NET Web API 2 OData
+
 por [Mike Wasson](https://github.com/MikeWasson)
 
-Web API 2 agrega compatibilidad para expandir el $, $select y las opciones de $value de OData. Estas opciones permiten que un cliente controlar la representación que recibe desde el servidor.
+Información general y ejemplos de código para el $expandir, $select, y opciones de $value de OData Web API 2 de ASP.NET 4.x. Estas opciones permiten que un cliente controlar la representación que recibe desde el servidor.
 
 - **$expand** hace que las entidades relacionadas ser incluido en línea en la respuesta.
 - **$select** selecciona un subconjunto de propiedades para incluir en la respuesta.

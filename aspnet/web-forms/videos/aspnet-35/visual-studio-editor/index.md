@@ -8,15 +8,15 @@ ms.date: 11/14/2011
 ms.assetid: 8d424d7b-5206-4790-a068-36d01c05ceb0
 msc.legacyurl: /web-forms/videos/aspnet-35/visual-studio-editor
 msc.type: chapter
-ms.openlocfilehash: f28695d13a8fee29816955813bbf34739ebc936b
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: fda6eaf86f3822bce0ca0dd834cd187897bce69d
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57023792"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59392851"
 ---
-<a name="visual-studio-editor"></a>Editor de Visual Studio
-====================
+# <a name="visual-studio-editor"></a>Editor de Visual Studio
+
 > Esta serie de vídeos muestra nuevas características del editor de Visual Studio 2008, incluida la compatibilidad mejorada con JavaScript y CSS.
 
 

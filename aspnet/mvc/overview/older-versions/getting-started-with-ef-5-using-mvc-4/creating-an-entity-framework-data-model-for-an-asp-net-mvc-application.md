@@ -8,15 +8,15 @@ ms.date: 07/30/2013
 ms.assetid: 4ba029b6-ee7c-4e45-a0e7-b703c37e5d9a
 msc.legacyurl: /mvc/overview/older-versions/getting-started-with-ef-5-using-mvc-4/creating-an-entity-framework-data-model-for-an-asp-net-mvc-application
 msc.type: authoredcontent
-ms.openlocfilehash: b691f718258f98e03513a089ca26b286f284765e
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: eeed594e785b99146140dcd2833a95bf6e467823
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57048232"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59390446"
 ---
-<a name="creating-an-entity-framework-data-model-for-an-aspnet-mvc-application-1-of-10"></a>Creación de un modelo de datos de Entity Framework para una aplicación ASP.NET MVC (1 de 10)
-====================
+# <a name="creating-an-entity-framework-data-model-for-an-aspnet-mvc-application-1-of-10"></a>Creación de un modelo de datos de Entity Framework para una aplicación ASP.NET MVC (1 de 10)
+
 por [Tom Dykstra](https://github.com/tdykstra)
 
 [Descargue el proyecto completado](http://code.msdn.microsoft.com/Getting-Started-with-dd0e2ed8)
