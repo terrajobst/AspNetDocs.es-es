@@ -8,26 +8,26 @@ ms.date: 11/14/2011
 ms.assetid: 6a25069b-c80f-45f3-a901-4548442c37b6
 msc.legacyurl: /web-forms/videos/aspnet-35/how-do-i
 msc.type: chapter
-ms.openlocfilehash: 45026082904fb8c740f34e1e9ae31153c1e551a5
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: 8a7251971410ef2539e3957039de33af6e74371c
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57019852"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59415458"
 ---
-<a name="how-do-i"></a><span data-ttu-id="fb654-103">¿Cómo...?</span><span class="sxs-lookup"><span data-stu-id="fb654-103">How Do I</span></span>
-====================
-> <span data-ttu-id="fb654-104">Esta serie de vídeos de varias partes muestra cómo aprovechar las ventajas de las nuevas características de ASP.NET 3.5 y Visual Studio 2008.</span><span class="sxs-lookup"><span data-stu-id="fb654-104">This multi-part video series shows you how to take advantage of new features in ASP.NET 3.5 and Visual Studio 2008.</span></span>
+# <a name="how-do-i"></a><span data-ttu-id="a5c58-103">¿Cómo...?</span><span class="sxs-lookup"><span data-stu-id="a5c58-103">How Do I</span></span>
+
+> <span data-ttu-id="a5c58-104">Esta serie de vídeos de varias partes muestra cómo aprovechar las ventajas de las nuevas características de ASP.NET 3.5 y Visual Studio 2008.</span><span class="sxs-lookup"><span data-stu-id="a5c58-104">This multi-part video series shows you how to take advantage of new features in ASP.NET 3.5 and Visual Studio 2008.</span></span>
 
 
-- [<span data-ttu-id="fb654-105">Crear una página maestra en Visual Studio 2008</span><span class="sxs-lookup"><span data-stu-id="fb654-105">Create a Master Page in Visual Studio 2008</span></span>](how-do-i-create-a-master-page-in-visual-studio-2008.md)
-- [<span data-ttu-id="fb654-106">Crear una página maestra anidada en Visual Studio 2008</span><span class="sxs-lookup"><span data-stu-id="fb654-106">Create Nested Master Page in Visual Studio 2008</span></span>](how-do-i-create-nested-master-page-in-visual-studio-2008.md)
-- [<span data-ttu-id="fb654-107">Hojas de estilos en cascada en Visual Studio 2008</span><span class="sxs-lookup"><span data-stu-id="fb654-107">Cascading Style Sheets in Visual Studio 2008</span></span>](how-do-i-cascading-style-sheets-in-visual-studio-2008.md)
-- [<span data-ttu-id="fb654-108">Trabajar con Visual Studio 2008 .NET Framework</span><span class="sxs-lookup"><span data-stu-id="fb654-108">Working with Visual Studio 2008 .NET Framework</span></span>](how-do-i-working-with-visual-studio-2008-net-framework.md)
-- [<span data-ttu-id="fb654-109">Agregar elementos a un archivo CSS y crear CSS sobre la marcha</span><span class="sxs-lookup"><span data-stu-id="fb654-109">Adding Elements to a CSS File and Create New CSS on the Fly</span></span>](how-do-i-adding-elements-to-a-css-file-and-create-new-css-on-the-fly.md)
-- [<span data-ttu-id="fb654-110">Administración y características avanzadas de las hojas de estilos en cascada</span><span class="sxs-lookup"><span data-stu-id="fb654-110">Advance Cascading Style Sheet Features and Management</span></span>](how-do-i-advance-cascading-style-sheet-features-and-management.md)
-- [<span data-ttu-id="fb654-111">Convertir una aplicación de Windows Forms de .NET 2.0 a .NET 3.5</span><span class="sxs-lookup"><span data-stu-id="fb654-111">Converting a .NET 2.0 Windows Forms Application to .NET 3.5</span></span>](how-do-i-converting-a-net-20-windows-forms-application-to-net-35.md)
-- [<span data-ttu-id="fb654-112">Introducción a Entity Framework</span><span class="sxs-lookup"><span data-stu-id="fb654-112">Get Started with the Entity Framework</span></span>](how-do-i-get-started-with-the-entity-framework.md)
-- [<span data-ttu-id="fb654-113">Usar el nuevo origen de datos de entidad</span><span class="sxs-lookup"><span data-stu-id="fb654-113">Use the New Entity Data Source</span></span>](how-do-i-use-the-new-entity-data-source.md)
-- [<span data-ttu-id="fb654-114">Serializar un gráfico con Entity Framework</span><span class="sxs-lookup"><span data-stu-id="fb654-114">Serialize a Graph with the Entity Framework</span></span>](how-do-i-serialize-a-graph-with-the-entity-framework.md)
-- [<span data-ttu-id="fb654-115">Usar MSBuild para automatizar el compilador de ASP.NET y combinar utilidades</span><span class="sxs-lookup"><span data-stu-id="fb654-115">Use MSBuild to Automate the ASP.NET Compiler and Merge Utilities</span></span>](how-do-i-use-msbuild-to-automate-the-aspnet-compiler-and-merge-utilities.md)
+- [<span data-ttu-id="a5c58-105">Crear una página maestra en Visual Studio 2008</span><span class="sxs-lookup"><span data-stu-id="a5c58-105">Create a Master Page in Visual Studio 2008</span></span>](how-do-i-create-a-master-page-in-visual-studio-2008.md)
+- [<span data-ttu-id="a5c58-106">Crear una página maestra anidada en Visual Studio 2008</span><span class="sxs-lookup"><span data-stu-id="a5c58-106">Create Nested Master Page in Visual Studio 2008</span></span>](how-do-i-create-nested-master-page-in-visual-studio-2008.md)
+- [<span data-ttu-id="a5c58-107">Hojas de estilo CSS en Visual Studio 2008</span><span class="sxs-lookup"><span data-stu-id="a5c58-107">Cascading Style Sheets in Visual Studio 2008</span></span>](how-do-i-cascading-style-sheets-in-visual-studio-2008.md)
+- [<span data-ttu-id="a5c58-108">Trabajar con Visual Studio 2008 .NET Framework</span><span class="sxs-lookup"><span data-stu-id="a5c58-108">Working with Visual Studio 2008 .NET Framework</span></span>](how-do-i-working-with-visual-studio-2008-net-framework.md)
+- [<span data-ttu-id="a5c58-109">Agregar elementos a un archivo CSS y crear CSS sobre la marcha</span><span class="sxs-lookup"><span data-stu-id="a5c58-109">Adding Elements to a CSS File and Create New CSS on the Fly</span></span>](how-do-i-adding-elements-to-a-css-file-and-create-new-css-on-the-fly.md)
+- [<span data-ttu-id="a5c58-110">Administración y características avanzadas de las hojas de estilos en cascada</span><span class="sxs-lookup"><span data-stu-id="a5c58-110">Advance Cascading Style Sheet Features and Management</span></span>](how-do-i-advance-cascading-style-sheet-features-and-management.md)
+- [<span data-ttu-id="a5c58-111">Convertir una aplicación de Windows Forms de .NET 2.0 a .NET 3.5</span><span class="sxs-lookup"><span data-stu-id="a5c58-111">Converting a .NET 2.0 Windows Forms Application to .NET 3.5</span></span>](how-do-i-converting-a-net-20-windows-forms-application-to-net-35.md)
+- [<span data-ttu-id="a5c58-112">Introducción a Entity Framework</span><span class="sxs-lookup"><span data-stu-id="a5c58-112">Get Started with the Entity Framework</span></span>](how-do-i-get-started-with-the-entity-framework.md)
+- [<span data-ttu-id="a5c58-113">Usar el nuevo origen de datos de entidad</span><span class="sxs-lookup"><span data-stu-id="a5c58-113">Use the New Entity Data Source</span></span>](how-do-i-use-the-new-entity-data-source.md)
+- [<span data-ttu-id="a5c58-114">Serializar un gráfico con Entity Framework</span><span class="sxs-lookup"><span data-stu-id="a5c58-114">Serialize a Graph with the Entity Framework</span></span>](how-do-i-serialize-a-graph-with-the-entity-framework.md)
+- [<span data-ttu-id="a5c58-115">Usar MSBuild para automatizar el compilador de ASP.NET y combinar utilidades</span><span class="sxs-lookup"><span data-stu-id="a5c58-115">Use MSBuild to Automate the ASP.NET Compiler and Merge Utilities</span></span>](how-do-i-use-msbuild-to-automate-the-aspnet-compiler-and-merge-utilities.md)
