@@ -8,15 +8,15 @@ ms.date: 05/22/2008
 ms.assetid: ce4a5e6c-8aec-4955-a145-337f1e48af05
 msc.legacyurl: /web-forms/videos/aspnet-35/how-do-i/how-do-i-use-the-new-entity-data-source
 msc.type: video
-ms.openlocfilehash: 37f8dfb9b035f46d1a06c513b749fda64e9093d8
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: 1c02cea5bf9b899f400cbcd07a19fe5e213decdc
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57030572"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59384689"
 ---
-<a name="how-do-i-use-the-new-entity-data-source"></a>[¿Cómo lo hago?:] Usar el nuevo origen de datos de entidad
-====================
+# <a name="how-do-i-use-the-new-entity-data-source"></a>[¿Cómo lo hago?:] Usar el nuevo origen de datos de entidad
+
 por [Diego Vega](https://github.com/divega)
 
 En este vídeo introductorio Diego Vega mostrará cómo usar el origen de datos de entidad en una aplicación ASP.NET.

@@ -8,15 +8,15 @@ ms.date: 01/12/2012
 ms.assetid: 53767e05-c8ab-42e1-a94b-22d906195200
 msc.legacyurl: /mvc/overview/older-versions/working-with-the-dropdownlist-box-and-jquery/using-the-dropdownlist-helper-with-aspnet-mvc
 msc.type: authoredcontent
-ms.openlocfilehash: 11b874d2d07c84631c6c5c266c22c6de49d40cf2
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: 2a4d991205351531129480bee221651021483967
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57050582"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59396257"
 ---
-<a name="using-the-dropdownlist-helper-with-aspnet-mvc"></a>Usar el asistente DropDownList con ASP.NET MVC
-====================
+# <a name="using-the-dropdownlist-helper-with-aspnet-mvc"></a>Usar el asistente DropDownList con ASP.NET MVC
+
 by [Rick Anderson]((https://twitter.com/RickAndMSFT))
 
 Este tutorial le enseñará los aspectos básicos de trabajar con el [DropDownList](https://msdn.microsoft.com/library/dd492948.aspx) auxiliar y el [ListBox](https://msdn.microsoft.com/library/system.web.mvc.html.selectextensions.listbox.aspx) auxiliar en una aplicación Web de ASP.NET MVC. Puede utilizar Microsoft Visual Web Developer 2010 Express Service Pack 1, que es una versión gratuita de Microsoft Visual Studio para seguir el tutorial. Antes de empezar, asegúrese de que ha instalado los requisitos previos descritos a continuación. Puede instalar todos ellos haciendo clic en el siguiente vínculo: [Instalador de plataforma Web](https://www.microsoft.com/web/gallery/install.aspx?appid=VWD2010SP1Pack). Como alternativa, puede instalar individualmente los requisitos previos mediante los vínculos siguientes:
@@ -190,7 +190,7 @@ Abra el *Views\Home\MultiSelectCountry.cshtml* archivo y agregue un `htmlAttribu
 
 [!code-cshtml[Main](using-the-dropdownlist-helper-with-aspnet-mvc/samples/sample12.cshtml)]
 
-En el código anterior, estamos agregando el atributo HTML y el valor del atributo `class = "chzn-select"`. El \@ carácter clase anterior tiene nada que ver con el motor de vistas Razor. `class` es un [palabra clave de C#](https://msdn.microsoft.com/library/x53a06bb.aspx). Palabras clave de C# no se puede usar como identificadores a menos que incluyan \@ como prefijo. En el ejemplo anterior, `@class` es un identificador válido, pero **clase** no es porque **clase** es una palabra clave.
+En el código anterior, estamos agregando el atributo HTML y el valor del atributo `class = "chzn-select"`. El \@ carácter clase anterior tiene nada que ver con el motor de vistas Razor. `class` es un [ C# palabra clave](https://msdn.microsoft.com/library/x53a06bb.aspx). Palabras clave de C# no se puede usar como identificadores a menos que incluyan \@ como prefijo. En el ejemplo anterior, `@class` es un identificador válido, pero **clase** no es porque **clase** es una palabra clave.
 
 Agregue referencias a la *Chosen/chosen.jquery.js* y *Chosen/chosen.css* archivos. El *Chosen/chosen.jquery.js* e implementa la funcionalidad del complemento seleccionado. El *Chosen/chosen.css* archivo proporciona el estilo. Agregue estas referencias a la parte inferior de la *Views\Home\MultiSelectCountry.cshtml* archivo. El código siguiente muestra cómo hacer referencia el complemento elegido.
 

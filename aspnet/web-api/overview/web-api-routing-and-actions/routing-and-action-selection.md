@@ -8,15 +8,15 @@ ms.date: 12/14/2018
 ms.assetid: bcf2d223-cb7f-411e-be05-f43e96a14015
 msc.legacyurl: /web-api/overview/web-api-routing-and-actions/routing-and-action-selection
 msc.type: authoredcontent
-ms.openlocfilehash: ce54181996376cb5dde3b91c10c16f33b3c6a570
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: 238efd312a73e2452ca5f679f2b8f5ed1336c4dc
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57058922"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59385883"
 ---
-<a name="routing-and-action-selection-in-aspnet-web-api"></a>Enrutamiento y selección de acción en ASP.NET Web API
-====================
+# <a name="routing-and-action-selection-in-aspnet-web-api"></a>Enrutamiento y selección de acción en ASP.NET Web API
+
 por [Mike Wasson](https://github.com/MikeWasson)
 
 En este artículo se describe cómo ASP.NET Web API enruta una solicitud HTTP a una acción determinada en un controlador.

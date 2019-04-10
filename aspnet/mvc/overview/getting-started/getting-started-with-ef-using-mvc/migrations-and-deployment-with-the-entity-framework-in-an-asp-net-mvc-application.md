@@ -9,12 +9,12 @@ ms.topic: tutorial
 ms.assetid: d4dfc435-bda6-4621-9762-9ba270f8de4e
 msc.legacyurl: /mvc/overview/getting-started/getting-started-with-ef-using-mvc/migrations-and-deployment-with-the-entity-framework-in-an-asp-net-mvc-application
 msc.type: authoredcontent
-ms.openlocfilehash: dd6bf5d8eb8a05dad1d230ef40c9b863e2af7094
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: 1f25a9afdf379d725496bd88f6ac192ab19930ca
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57036992"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59384518"
 ---
 # <a name="tutorial-use-ef-migrations-in-an-aspnet-mvc-app-and-deploy-to-azure"></a>Tutorial: Usa migraciones de EF en una aplicación ASP.NET MVC e implementarlo en Azure
 
@@ -168,8 +168,8 @@ Implementará la base de datos a Azure SQL database. SQL database es un servicio
 10. Modificar [intercalación](/sql/relational-databases/collations/collation-and-unicode-support) según sea necesario.
 11. Especifique un administrador **SQL Admin Username** y **contraseña de administrador de SQL**.
 
-   - Si seleccionó **el servidor de base de datos SQL nueva**, defina un nuevo nombre y una contraseña que usará más adelante cuando acceda a la base de datos.
-   - Si ha seleccionado un servidor que creó anteriormente, escriba las credenciales para ese servidor.
+    - Si seleccionó **el servidor de base de datos SQL nueva**, defina un nuevo nombre y una contraseña que usará más adelante cuando acceda a la base de datos.
+    - Si ha seleccionado un servidor que creó anteriormente, escriba las credenciales para ese servidor.
 
 12. Recopilación de telemetría puede habilitarse para App Service con Application Insights. Con muy poca configuración, Application Insights recopila eventos valiosa, excepción, dependencia, solicitud y la información de seguimiento. Para obtener más información acerca de Application Insights, consulte [Azure Monitor](https://azure.microsoft.com/services/monitor/).
 13. Haga clic en **crear** en la parte inferior para indicar que haya terminado.

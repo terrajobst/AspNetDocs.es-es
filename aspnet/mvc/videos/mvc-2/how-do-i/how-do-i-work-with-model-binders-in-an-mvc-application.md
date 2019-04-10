@@ -8,15 +8,15 @@ ms.date: 12/30/2009
 ms.assetid: 55c2fa76-d5b9-43e7-921e-51a9b57dba30
 msc.legacyurl: /mvc/videos/mvc-2/how-do-i/how-do-i-work-with-model-binders-in-an-mvc-application
 msc.type: video
-ms.openlocfilehash: 889506be05c617d64a7e1f7b9b70a7a1ed52ae0a
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: c81057a065e00834928eebe4bd129f3a4a8581f6
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57053552"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59379019"
 ---
-<a name="how-do-i-work-with-model-binders-in-an-mvc-application"></a>¿Cómo lo hago?: ¿Trabajar con los enlazadores de modelos en una aplicación MVC?
-====================
+# <a name="how-do-i-work-with-model-binders-in-an-mvc-application"></a>¿Cómo lo hago?: ¿Trabajar con los enlazadores de modelos en una aplicación MVC?
+
 por [Chris Pels](https://twitter.com/chrispels)
 
 En este vídeo Chris Pels muestra cómo utilizar los enlazadores de modelos para enlazar datos de formulario a los objetos de negocios compleja en los modelos en una aplicación MVC. En primer lugar, se crea una aplicación de MVC, junto con un modelo simple para una clase de cliente junto con un controlador y vista de edición de los datos del cliente. A continuación, se muestra el enlace de modelos automática de MVC con la clase customer. A continuación, el atributo Bind se describen y se muestra como un mecanismo para controlar los detalles del proceso de enlace para incluir y excluir propiedades específicas de un objeto complejo. Por último, se explica el uso de prefijos de espacio de nombres para la segmentación de datos de formulario en una página.

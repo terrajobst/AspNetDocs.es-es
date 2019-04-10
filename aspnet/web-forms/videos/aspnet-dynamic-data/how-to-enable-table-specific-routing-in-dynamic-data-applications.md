@@ -8,15 +8,15 @@ ms.date: 10/23/2008
 ms.assetid: cfbfa166-2f92-4f21-889c-95c9bef436cc
 msc.legacyurl: /web-forms/videos/aspnet-dynamic-data/how-to-enable-table-specific-routing-in-dynamic-data-applications
 msc.type: video
-ms.openlocfilehash: 972e7c2812fd300cfd501db1c1adebdedcda0833
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: a1b099aedc6fa0824df3281cca55543bcfd4d159
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57049722"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59386789"
 ---
-<a name="how-to-enable-table-specific-routing-in-dynamic-data-applications"></a>Cómo habilitar el enrutamiento específico de tabla en aplicaciones de datos dinámicos
-====================
+# <a name="how-to-enable-table-specific-routing-in-dynamic-data-applications"></a>Cómo habilitar el enrutamiento específico de tabla en aplicaciones de datos dinámicos
+
 por [Joe Stagner](https://github.com/JoeStagner)
 
 En este vídeo de información sobre cómo agregar lógica de flujo de trabajo personalizado en su aplicación de datos dinámicos de ASP.NET mediante el uso de enrutamiento para habilitar el uso del archivo .aspx específico de la tabla.

@@ -8,15 +8,15 @@ ms.date: 06/02/2008
 ms.assetid: f70ac2b3-900f-40fa-858f-ab057904506b
 msc.legacyurl: /web-forms/overview/ajax-control-toolkit/modalpopup/handling-postbacks-from-a-modalpopup-vb
 msc.type: authoredcontent
-ms.openlocfilehash: 3f81a2bf1866d026046fdba815fdbae1b162c1dd
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: add305855d876b5033bbd7921ad24b5e840b9acc
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57047062"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59386403"
 ---
-<a name="handling-postbacks-from-a-modalpopup-vb"></a>Controlar postbacks desde un ModalPopup (VB)
-====================
+# <a name="handling-postbacks-from-a-modalpopup-vb"></a>Controlar postbacks desde un ModalPopup (VB)
+
 por [Christian Wenz](https://github.com/wenz)
 
 [Descargar código](http://download.microsoft.com/download/2/4/0/24052038-f942-4336-905b-b60ae56f0dd5/ModalPopup3.vb.zip) o [descargar PDF](http://download.microsoft.com/download/b/6/a/b6ae89ee-df69-4c87-9bfb-ad1eb2b23373/modalpopup3VB.pdf)
@@ -55,7 +55,7 @@ Además, los controles de cuadro de texto dentro de la ventana emergente modal d
 [!code-vb[Main](handling-postbacks-from-a-modalpopup-vb/samples/sample6.vb)]
 
 
-[![El elemento emergente modal provoca una devolución de datos](handling-postbacks-from-a-modalpopup-vb/_static/image2.png)](handling-postbacks-from-a-modalpopup-vb/_static/image1.png)
+[![Temergente modal provoca una devolución de datos](handling-postbacks-from-a-modalpopup-vb/_static/image2.png)](handling-postbacks-from-a-modalpopup-vb/_static/image1.png)
 
 El elemento emergente modal produce un postback ([haga clic aquí para ver imagen en tamaño completo](handling-postbacks-from-a-modalpopup-vb/_static/image3.png))
 

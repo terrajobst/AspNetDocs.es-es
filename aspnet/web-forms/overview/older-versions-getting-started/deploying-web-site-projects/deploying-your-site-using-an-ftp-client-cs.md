@@ -8,15 +8,15 @@ ms.date: 04/01/2009
 ms.assetid: a3599cf7-8474-4006-954a-3bc693736b66
 msc.legacyurl: /web-forms/overview/older-versions-getting-started/deploying-web-site-projects/deploying-your-site-using-an-ftp-client-cs
 msc.type: authoredcontent
-ms.openlocfilehash: cdecc85c056fc5153763d938c665b473117df9ba
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: 1ef796dc61cc65b6ca5205a5f8baf4dcc4ba05ae
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57031652"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59389172"
 ---
-<a name="deploying-your-site-using-an-ftp-client-c"></a>Implementar el sitio mediante un cliente FTP (C#)
-====================
+# <a name="deploying-your-site-using-an-ftp-client-c"></a>Implementar el sitio mediante un cliente FTP (C#)
+
 por [Scott Mitchell](https://twitter.com/ScottOnWriting)
 
 [Descargar código](http://download.microsoft.com/download/4/5/F/45F815EC-8B0E-46D3-9FB8-2DC015CCA306/ASPNET_Hosting_Tutorial_03_CS.zip) o [descargar PDF](http://download.microsoft.com/download/E/8/9/E8920AE6-D441-41A7-8A77-9EF8FF970D8B/aspnet_tutorial03_DeployingViaFTP_cs.pdf)
@@ -69,7 +69,7 @@ Figura 1 muestra FileZilla, una vez copiados los archivos necesarios. FileZilla 
 > No hay ningún riesgo de tener los archivos de código fuente en el servidor de producción, tal como se pasan por alto. ASP.NET prohíbe las solicitudes HTTP para archivos de código fuente de forma predeterminada para que incluso si los archivos de código fuente están presentes en el servidor de producción son inaccesibles para los visitantes de su sitio. (Es decir, si un usuario intenta visitar `http://www.yoursite.com/Default.aspx.cs` obtendrán una página de error que explica que estos tipos de archivos - `.cs` archivos - están prohibidas.)
 
 
-[![Uso de un cliente FTP para copiar los archivos necesarios desde el escritorio al servidor Web en el proveedor de hospedaje Web](deploying-your-site-using-an-ftp-client-cs/_static/image2.png)](deploying-your-site-using-an-ftp-client-cs/_static/image1.png)
+[![Uun cliente FTP para copiar los archivos necesarios desde el escritorio al servidor Web en el proveedor de hospedaje Web se](deploying-your-site-using-an-ftp-client-cs/_static/image2.png)](deploying-your-site-using-an-ftp-client-cs/_static/image1.png)
 
 **Figura 1**: Uso de un cliente FTP para copiar los archivos necesarios desde el escritorio al servidor Web en el proveedor de hospedaje Web ([haga clic aquí para ver imagen en tamaño completo](deploying-your-site-using-an-ftp-client-cs/_static/image3.png))
 
@@ -82,7 +82,7 @@ Figura 2 muestra el sitio implementado de reseñas de libros. Tenga en cuenta qu
 > Si recibe un error al visualizar la aplicación dedique un momento para asegurarse de que ha implementado el conjunto correcto de archivos. A continuación, compruebe el mensaje de error para ver si revelan las pistas sobre el problema. A continuación, puede activar al departamento de soporte técnico de su compañía de host de web o publicar su pregunta en el foro adecuado en el [foros de ASP.NET](https://forums.asp.net/).
 
 
-[![El sitio de las revisiones del libro es ahora accesible para cualquier persona con una conexión a Internet](deploying-your-site-using-an-ftp-client-cs/_static/image5.png)](deploying-your-site-using-an-ftp-client-cs/_static/image4.png)
+[![TSitio de las revisiones de libro es ahora accesibles a cualquiera que tenga una conexión a Internet](deploying-your-site-using-an-ftp-client-cs/_static/image5.png)](deploying-your-site-using-an-ftp-client-cs/_static/image4.png)
 
 **Figura 2**: El sitio de las revisiones del libro es ahora accesible para cualquier persona con una conexión a Internet ([haga clic aquí para ver imagen en tamaño completo](deploying-your-site-using-an-ftp-client-cs/_static/image6.png))
 
@@ -124,7 +124,7 @@ Una vez que ha creado correctamente el proyecto, use el cliente de FTP para copi
 Figura 3 muestra FileZilla después de copiar los archivos necesarios. Como puede ver, ASP.NET archivos de código fuente, como `About.aspx.cs`, están presentes en el equipo local (el entorno de desarrollo) y el proveedor de hospedaje web (el entorno de producción) porque los archivos de código deben implementarse al usar automática compilación.
 
 
-[![Uso de un cliente FTP para copiar los archivos necesarios desde el escritorio al servidor Web en el proveedor de hospedaje Web](deploying-your-site-using-an-ftp-client-cs/_static/image8.png)](deploying-your-site-using-an-ftp-client-cs/_static/image7.png)
+[![Uun cliente FTP para copiar los archivos necesarios desde el escritorio al servidor Web en el proveedor de hospedaje Web se](deploying-your-site-using-an-ftp-client-cs/_static/image8.png)](deploying-your-site-using-an-ftp-client-cs/_static/image7.png)
 
 **Figura 3**: Uso de un cliente FTP para copiar los archivos necesarios desde el escritorio al servidor Web en el proveedor de hospedaje Web ([haga clic aquí para ver imagen en tamaño completo](deploying-your-site-using-an-ftp-client-cs/_static/image9.png))
 

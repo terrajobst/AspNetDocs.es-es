@@ -8,15 +8,15 @@ ms.date: 04/21/2011
 ms.assetid: 26b2f55e-ed42-4277-89b0-c941eb754145
 msc.legacyurl: /mvc/overview/older-versions/mvc-music-store/mvc-music-store-part-8
 msc.type: authoredcontent
-ms.openlocfilehash: cab338e56505c453532a26d794eb7bf4e94555a9
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: 2ba210d8c541c6c330dda74706470fa73a81474a
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57064412"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59379487"
 ---
-<a name="part-8-shopping-cart-with-ajax-updates"></a>Parte 8: Carro de la compra con las actualizaciones de Ajax
-====================
+# <a name="part-8-shopping-cart-with-ajax-updates"></a>Parte 8: Carro de la compra con las actualizaciones de Ajax
+
 por [Jon Galloway](https://github.com/jongalloway)
 
 > El Store de música de MVC es una aplicación de tutorial que presenta y explica paso a paso cómo usar ASP.NET MVC y Visual Studio para el desarrollo web.  

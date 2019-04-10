@@ -8,15 +8,15 @@ ms.date: 08/30/2011
 ms.assetid: a87af3be-589d-4b0c-846d-4de60a8745c0
 msc.legacyurl: /visual-studio/overview/2012/visual-studio-vnext-videos-css-editor-snippets
 msc.type: video
-ms.openlocfilehash: f2c70dc335bac3b6466a99375c72d7076276f411
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: 8af991fad10957ee5a0c712b0298647a02eaed46
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57031722"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59395841"
 ---
-<a name="visual-studio-vnext-videos-css-snippets"></a>Visual Studio vNext vídeos: Fragmentos de código CSS
-====================
+# <a name="visual-studio-vnext-videos-css-snippets"></a>Visual Studio vNext vídeos: Fragmentos de código CSS
+
 por [Mads Kristensen](https://github.com/madskristensen)
 
 En este vídeo, Mads Kristensen muestra una mejora en el editor de CSS de Visual Studio vNext que agrega algunos fragmentos de código útiles para CSS3 transformaciones, las consultas de medios, la incrustación de fuentes y mucho más.

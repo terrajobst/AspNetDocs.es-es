@@ -8,15 +8,15 @@ ms.date: 10/16/2008
 ms.assetid: 81190124-d0f6-4e4b-a48f-2613cc5a6aa7
 msc.legacyurl: /mvc/videos/mvc-1/aspnet-mvc-storefront/aspnet-mvc-storefront-part-22-restructuring-rerouting-and-paypal
 msc.type: video
-ms.openlocfilehash: 189125563764d4eb8e8bc42befb21239be1bd8d5
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: 772ddf69baf8daf5d3f0b13ed92efb80c561c38b
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57049192"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59388839"
 ---
-<a name="aspnet-mvc-storefront-part-22-restructuring-rerouting-and-paypal"></a>Escaparate de ASP.NET MVC, parte 22: Reestructuración, reenrutamiento y PayPal
-====================
+# <a name="aspnet-mvc-storefront-part-22-restructuring-rerouting-and-paypal"></a>Escaparate de ASP.NET MVC, parte 22: Reestructuración, reenrutamiento y PayPal
+
 por [Rob Conery](https://github.com/robconery)
 
 En este episodio, reestructurar un poco con el fin de limpiar las cosas un poco. También cambiar las rutas para que sea mucho más sencillo. Por último, agrego PayPal como una opción de desprotección.

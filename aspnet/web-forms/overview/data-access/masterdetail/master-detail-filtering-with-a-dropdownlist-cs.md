@@ -8,15 +8,15 @@ ms.date: 03/31/2010
 ms.assetid: 53e659cc-eefb-40c1-a1dc-559481c99443
 msc.legacyurl: /web-forms/overview/data-access/masterdetail/master-detail-filtering-with-a-dropdownlist-cs
 msc.type: authoredcontent
-ms.openlocfilehash: a2d7a27a8bf9da365e4f48d7ca2d9d902ec4a5ba
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: 8edc18968625036964c0120b83f8ebb149dbf87a
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57048472"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59393436"
 ---
-<a name="masterdetail-filtering-with-a-dropdownlist-c"></a>Filtrado de maestro y detalles con DropDownList (C#)
-====================
+# <a name="masterdetail-filtering-with-a-dropdownlist-c"></a>Filtrado de maestro y detalles con DropDownList (C#)
+
 por [Scott Mitchell](https://twitter.com/ScottOnWriting)
 
 [Descargue la aplicación de ejemplo](http://download.microsoft.com/download/4/6/3/463cf87c-4724-4cbc-b7b5-3f866f43ba50/ASPNET_Data_Tutorial_7_CS.exe) o [descargar PDF](master-detail-filtering-with-a-dropdownlist-cs/_static/datatutorial07cs1.pdf)
@@ -35,7 +35,7 @@ Hay muchas maneras con las que se puede implementar un informe de maestro y deta
 Nuestro informe de maestro y detalles mostrará las categorías de DropDownList, con los productos del elemento de lista seleccionado aparece más abajo en la página en un control GridView. La primera tarea antes que nosotros, a continuación, es que las categorías mostradas en DropDownList. Abrir el `FilterByDropDownList.aspx` página en el `Filtering` carpeta, arrastre en DropDownList del cuadro de herramientas al diseñador de la página y establezca su `ID` propiedad `Categories`. A continuación, haga clic en el vínculo Elegir origen de datos de etiqueta inteligente de DropDownList. Se mostrará al Asistente para configuración de origen de datos.
 
 
-[![Especifique el origen de datos de la DropDownList](master-detail-filtering-with-a-dropdownlist-cs/_static/image2.png)](master-detail-filtering-with-a-dropdownlist-cs/_static/image1.png)
+[![Sespecificar el origen de datos de la DropDownList](master-detail-filtering-with-a-dropdownlist-cs/_static/image2.png)](master-detail-filtering-with-a-dropdownlist-cs/_static/image1.png)
 
 **Figura 1**: Especifique el origen de datos de la DropDownList ([haga clic aquí para ver imagen en tamaño completo](master-detail-filtering-with-a-dropdownlist-cs/_static/image3.png))
 
@@ -43,17 +43,17 @@ Nuestro informe de maestro y detalles mostrará las categorías de DropDownList,
 Optar por agregar un nuevo origen ObjectDataSource denominado `CategoriesDataSource` que invoca la `CategoriesBLL` la clase `GetCategories()` método.
 
 
-[![Agregar un nuevo origen ObjectDataSource denominado CategoriesDataSource](master-detail-filtering-with-a-dropdownlist-cs/_static/image5.png)](master-detail-filtering-with-a-dropdownlist-cs/_static/image4.png)
+[![Aun nuevo CategoriesDataSource denominado de ObjectDataSource dd](master-detail-filtering-with-a-dropdownlist-cs/_static/image5.png)](master-detail-filtering-with-a-dropdownlist-cs/_static/image4.png)
 
 **Figura 2**: Agregar un nuevo origen ObjectDataSource denominado `CategoriesDataSource` ([haga clic aquí para ver imagen en tamaño completo](master-detail-filtering-with-a-dropdownlist-cs/_static/image6.png))
 
 
-[![Optar por usar la clase CategoriesBLL](master-detail-filtering-with-a-dropdownlist-cs/_static/image8.png)](master-detail-filtering-with-a-dropdownlist-cs/_static/image7.png)
+[![Celija usar la clase CategoriesBLL](master-detail-filtering-with-a-dropdownlist-cs/_static/image8.png)](master-detail-filtering-with-a-dropdownlist-cs/_static/image7.png)
 
 **Figura 3**: Optar por usar la `CategoriesBLL` clase ([haga clic aquí para ver imagen en tamaño completo](master-detail-filtering-with-a-dropdownlist-cs/_static/image9.png))
 
 
-[![Configurar el origen ObjectDataSource para usar el método GetCategories()](master-detail-filtering-with-a-dropdownlist-cs/_static/image11.png)](master-detail-filtering-with-a-dropdownlist-cs/_static/image10.png)
+[![Cconfigurar el origen ObjectDataSource para usar el método GetCategories()](master-detail-filtering-with-a-dropdownlist-cs/_static/image11.png)](master-detail-filtering-with-a-dropdownlist-cs/_static/image10.png)
 
 **Figura 4**: Configurar el origen ObjectDataSource que se usarán el `GetCategories()` método ([haga clic aquí para ver imagen en tamaño completo](master-detail-filtering-with-a-dropdownlist-cs/_static/image12.png))
 
@@ -61,7 +61,7 @@ Optar por agregar un nuevo origen ObjectDataSource denominado `CategoriesDataSou
 Después de configurar ObjectDataSource necesitamos especificar qué campo del origen de datos se debe mostrar en DropDownList y que uno se debe asociar como el valor del elemento de lista. Tiene la `CategoryName` campo como la presentación y `CategoryID` como el valor de cada elemento de lista.
 
 
-[![Tiene la presentación de DropDownList el campo CategoryName y Use CategoryID como valor](master-detail-filtering-with-a-dropdownlist-cs/_static/image14.png)](master-detail-filtering-with-a-dropdownlist-cs/_static/image13.png)
+[![Hla presentación de DropDownList CategoryName Field ave y Use CategoryID como el valor](master-detail-filtering-with-a-dropdownlist-cs/_static/image14.png)](master-detail-filtering-with-a-dropdownlist-cs/_static/image13.png)
 
 **Figura 5**: Tiene la presentación de DropDownList el `CategoryName` campo y Use `CategoryID` como el valor ([haga clic aquí para ver imagen en tamaño completo](master-detail-filtering-with-a-dropdownlist-cs/_static/image15.png))
 
@@ -69,7 +69,7 @@ Después de configurar ObjectDataSource necesitamos especificar qué campo del o
 En este momento, tenemos un control DropDownList que se rellena con los registros de la `Categories` tabla (todo lleva a cabo de seis segundos aproximadamente). Figura 6 muestra nuestro progreso hasta ahora, cuando se ve mediante un explorador.
 
 
-[![Una lista desplegable enumera las categorías actuales](master-detail-filtering-with-a-dropdownlist-cs/_static/image17.png)](master-detail-filtering-with-a-dropdownlist-cs/_static/image16.png)
+[![A Lista desplegable enumera las categorías actuales](master-detail-filtering-with-a-dropdownlist-cs/_static/image17.png)](master-detail-filtering-with-a-dropdownlist-cs/_static/image16.png)
 
 **Figura 6**: Una lista desplegable se enumeran las categorías actuales ([haga clic aquí para ver imagen en tamaño completo](master-detail-filtering-with-a-dropdownlist-cs/_static/image18.png))
 
@@ -79,7 +79,7 @@ En este momento, tenemos un control DropDownList que se rellena con los registro
 Este último paso en nuestro informe de maestro y detalles es enumerar los productos asociados con la categoría seleccionada. Para ello, agregue un control GridView a la página y crear un nuevo origen ObjectDataSource denominado `productsDataSource`. Tiene la `productsDataSource` control seleccionar sus datos en el `ProductsBLL` la clase `GetProductsByCategoryID(categoryID)` método.
 
 
-[![Seleccione el método GetProductsByCategoryID(categoryID)](master-detail-filtering-with-a-dropdownlist-cs/_static/image20.png)](master-detail-filtering-with-a-dropdownlist-cs/_static/image19.png)
+[![Selegir el método GetProductsByCategoryID(categoryID)](master-detail-filtering-with-a-dropdownlist-cs/_static/image20.png)](master-detail-filtering-with-a-dropdownlist-cs/_static/image19.png)
 
 **Figura 7**: Seleccione el `GetProductsByCategoryID(categoryID)` método ([haga clic aquí para ver imagen en tamaño completo](master-detail-filtering-with-a-dropdownlist-cs/_static/image21.png))
 
@@ -87,7 +87,7 @@ Este último paso en nuestro informe de maestro y detalles es enumerar los produ
 Después de elegir este método, el ObjectDataSource wizard nos pide el valor para el método *`categoryID`* parámetro. Para usar el valor del seleccionado `categories` DropDownList elemento establezca el origen de parámetro para el Control y la ControlID a `Categories`.
 
 
-[![Establece el parámetro categoryID en el valor de DropDownList categorías](master-detail-filtering-with-a-dropdownlist-cs/_static/image23.png)](master-detail-filtering-with-a-dropdownlist-cs/_static/image22.png)
+[![Sel parámetro en el valor de DropDownList categorías categoryID et](master-detail-filtering-with-a-dropdownlist-cs/_static/image23.png)](master-detail-filtering-with-a-dropdownlist-cs/_static/image22.png)
 
 **Figura 8**: Establecer el *`categoryID`* parámetro en el valor de la `Categories` DropDownList ([haga clic aquí para ver imagen en tamaño completo](master-detail-filtering-with-a-dropdownlist-cs/_static/image24.png))
 
@@ -100,12 +100,12 @@ Dedique un momento para comprobar nuestro progreso en un explorador. Cuando se v
 Las figuras 9 y 10 se muestra el informe de maestro y detalles en acción.
 
 
-[![Cuando se visita primero la página, se muestran los productos de bebidas](master-detail-filtering-with-a-dropdownlist-cs/_static/image26.png)](master-detail-filtering-with-a-dropdownlist-cs/_static/image25.png)
+[![Wgallina primera visita la página, los productos de bebidas se muestran](master-detail-filtering-with-a-dropdownlist-cs/_static/image26.png)](master-detail-filtering-with-a-dropdownlist-cs/_static/image25.png)
 
 **Figura 9**: Cuando se visita primero la página, se muestran los productos de bebidas ([haga clic aquí para ver imagen en tamaño completo](master-detail-filtering-with-a-dropdownlist-cs/_static/image27.png))
 
 
-[![Seleccionar automáticamente un nuevo producto (generar) produce un PostBack, actualizando el control GridView](master-detail-filtering-with-a-dropdownlist-cs/_static/image29.png)](master-detail-filtering-with-a-dropdownlist-cs/_static/image28.png)
+[![Selección de un nuevo producto (generar) hace automáticamente un PostBack, actualizando la GridView](master-detail-filtering-with-a-dropdownlist-cs/_static/image29.png)](master-detail-filtering-with-a-dropdownlist-cs/_static/image28.png)
 
 **Figura 10**: Seleccionar automáticamente un nuevo producto (generar) produce un PostBack, actualizando el control GridView ([haga clic aquí para ver imagen en tamaño completo](master-detail-filtering-with-a-dropdownlist-cs/_static/image30.png))
 
@@ -117,7 +117,7 @@ Cuando se visita primero la `FilterByDropDownList.aspx` página las categorías 
 Para agregar un nuevo elemento de lista al control DropDownList, vaya a la ventana Propiedades y haga clic en el botón de puntos suspensivos en el `Items` propiedad. Agregar un nuevo elemento de lista con el `Text` "--elegir una categoría:" y el `Value` `-1`.
 
 
-[![Agregue--elegir una categoría, elemento de lista](master-detail-filtering-with-a-dropdownlist-cs/_static/image32.png)](master-detail-filtering-with-a-dropdownlist-cs/_static/image31.png)
+[![Add--elegir una categoría, elemento de lista](master-detail-filtering-with-a-dropdownlist-cs/_static/image32.png)](master-detail-filtering-with-a-dropdownlist-cs/_static/image31.png)
 
 **Figura 11**: Agregue--elegir una categoría, elemento de lista ([haga clic aquí para ver imagen en tamaño completo](master-detail-filtering-with-a-dropdownlist-cs/_static/image33.png))
 
@@ -137,7 +137,7 @@ Además, se debe establecer el control DropDownList `AppendDataBoundItems` en Tr
 Después de estos cambios, al visitar la página que está seleccionada la opción "--elegir una categoría:" en primer lugar y no hay productos se muestran.
 
 
-[![En la carga de página inicial se muestran no hay productos](master-detail-filtering-with-a-dropdownlist-cs/_static/image36.png)](master-detail-filtering-with-a-dropdownlist-cs/_static/image35.png)
+[![On se muestran los productos de n de carga de página inicial](master-detail-filtering-with-a-dropdownlist-cs/_static/image36.png)](master-detail-filtering-with-a-dropdownlist-cs/_static/image35.png)
 
 **Figura 13**: Se muestran en los productos de n de carga de página inicial ([haga clic aquí para ver imagen en tamaño completo](master-detail-filtering-with-a-dropdownlist-cs/_static/image37.png))
 
@@ -151,7 +151,7 @@ La técnica empleada aquí es similar al método que se usa para mostrar todos l
 Figura 14 se muestra una captura de pantalla de `FilterByDropDownList.aspx` cuando se selecciona la opción "--elegir una categoría--". En este caso, todos los productos se muestran de forma predeterminada, y el usuario puede restringir la visualización seleccionando una categoría específica.
 
 
-[![Todos los productos son ahora aparece de forma predeterminada](master-detail-filtering-with-a-dropdownlist-cs/_static/image39.png)](master-detail-filtering-with-a-dropdownlist-cs/_static/image38.png)
+[![All de los productos están ahora aparece de forma predeterminada](master-detail-filtering-with-a-dropdownlist-cs/_static/image39.png)](master-detail-filtering-with-a-dropdownlist-cs/_static/image38.png)
 
 **Figura 14**: Todos los productos son ahora aparece de forma predeterminada ([haga clic aquí para ver imagen en tamaño completo](master-detail-filtering-with-a-dropdownlist-cs/_static/image40.png))
 

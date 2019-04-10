@@ -8,15 +8,15 @@ ms.date: 09/08/2014
 ms.assetid: 664ec95e-b0c9-4f43-a39f-798d0f2a7e08
 msc.legacyurl: /web-forms/overview/getting-started/getting-started-with-aspnet-45-web-forms/checkout-and-payment-with-paypal
 msc.type: authoredcontent
-ms.openlocfilehash: b59a395e255823a732aef1b899612063e09b2424
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: a0895c2246bc08f50645a865ce2dfffecfbb56a6
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57034632"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59391161"
 ---
-<a name="checkout-and-payment-with-paypal"></a>Finalización de la compra y pago con PayPal
-====================
+# <a name="checkout-and-payment-with-paypal"></a>Finalización de la compra y pago con PayPal
+
 por [Erik Reitan](https://github.com/Erikre)
 
 [Descargar el proyecto de ejemplo de Wingtip Toys (C#)](http://go.microsoft.com/fwlink/?LinkID=389434&clcid=0x409) o [descargar eBook (PDF)](http://download.microsoft.com/download/0/F/B/0FBFAA46-2BFD-478F-8E56-7BF3C672DF9D/Getting%20Started%20with%20ASP.NET%204.5%20Web%20Forms%20and%20Visual%20Studio%202013.pdf)
@@ -190,7 +190,7 @@ Los pasos siguientes, podrá agregar un proveedor de autenticación de Google.
     [!code-csharp[Main](checkout-and-payment-with-paypal/samples/sample7.cs?highlight=64-65)]
 15. Presione **CTRL+F5** para compilar y ejecutar la aplicación. Haga clic en el **iniciarla** vínculo.
 16. En **utilice otro servicio para iniciar sesión**, haga clic en **Google**.  
-    ![Inicia sesión](checkout-and-payment-with-paypal/_static/image11.png)
+    ![Iniciar sesión](checkout-and-payment-with-paypal/_static/image11.png)
 17. Si tiene que escribir sus credenciales, se le redirigirá al sitio de google donde especificará sus credenciales.  
     ![Google: inicio de sesión](checkout-and-payment-with-paypal/_static/image12.png)
 18. Después de escribir sus credenciales, se le pedirá para conceder permisos a la aplicación web que acaba de crear.  
@@ -250,7 +250,7 @@ Si está siguiendo este tutorial utilizando la **creados previamente** Wingtip T
 
 PayPal es una plataforma de facturación basada en web que acepte pagos por los comercios en línea. A continuación, en este tutorial se explica cómo integrar la funcionalidad de PayPal Express desprotección en la aplicación. Desprotección Express permite a los clientes usar PayPal para pagar los elementos que se hayan agregado a su carro de la compra.
 
-### <a name="create-paylpal-test-accounts"></a>Crear cuentas de prueba PaylPal
+### <a name="create-paypal-test-accounts"></a>Crear cuentas de prueba de PayPal
 
 Para usar el entorno de pruebas de PayPal, debe crear y comprobar una cuenta de prueba para desarrolladores. Usará la cuenta de prueba para desarrolladores para crear un comprador de cuenta de prueba y una cuenta de prueba de vendedor. Las credenciales de cuenta de prueba para desarrolladores también permitirá la aplicación de ejemplo Wingtip Toys tener acceso al entorno de prueba de PayPal.
 
@@ -277,7 +277,7 @@ Para usar el entorno de pruebas de PayPal, debe crear y comprobar una cuenta de 
 7. Crear la cuenta de prueba de comprador haciendo clic en el **crear cuenta** botón.  
  El **cuentas de prueba de espacio aislado** se muestra la página. 
 
-    ![Pago con PayPal - PaylPal cuentas y envío](checkout-and-payment-with-paypal/_static/image17.png)
+    ![Retirada y pago con PayPal - cuentas de PayPal](checkout-and-payment-with-paypal/_static/image17.png)
 8. En el **cuentas de prueba de espacio aislado** página, haga clic en el **facilitador** cuentas de correo electrónico.  
     **Perfil** y **notificación** opciones que aparecen.
 9. Seleccione el **perfil** opción y, después, haga clic en **las credenciales de la API** para ver sus credenciales de la API para la cuenta de comerciante de prueba.
@@ -309,9 +309,9 @@ Colocará la mayoría del código de PayPal en una sola clase. Esta clase contie
 
 La clase NVPAPICaller contiene la mayor parte de la funcionalidad de PayPal. El código de la clase proporciona los métodos necesarios para realizar una prueba de compra desde el entorno de pruebas de PayPal. Las tres funciones de PayPal siguientes se utilizan para realizar compras:
 
-- `SetExpressCheckout` Función
-- `GetExpressCheckoutDetails` Función
-- `DoExpressCheckoutPayment` Función
+- `SetExpressCheckout` función
+- `GetExpressCheckoutDetails` función
+- `DoExpressCheckoutPayment` función
 
 El `ShortcutExpressCheckout` método recopila los detalles de producto y la información de compra de prueba de la cesta y llama a la `SetExpressCheckout` función PayPal. El `GetCheckoutDetails` método confirma los detalles de la compra y llama a la `GetExpressCheckoutDetails` PayPal función antes de realizar la compra de prueba. El `DoCheckoutPayment` método completa la compra de prueba desde el entorno de pruebas mediante una llamada a la `DoExpressCheckoutPayment` función PayPal. El código restante es compatible con los métodos de PayPal y proceso, como la codificación de cadenas, descodificación de cadenas, matrices de procesamiento y determinar las credenciales.
 

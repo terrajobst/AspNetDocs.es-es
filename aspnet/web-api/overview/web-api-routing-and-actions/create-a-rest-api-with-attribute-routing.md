@@ -8,15 +8,15 @@ ms.date: 06/26/2013
 ms.assetid: 23fc77da-2725-4434-99a0-ff872d96336b
 msc.legacyurl: /web-api/overview/web-api-routing-and-actions/create-a-rest-api-with-attribute-routing
 msc.type: authoredcontent
-ms.openlocfilehash: 18a44c280e6df1603837938d24d7d639d8c87cc2
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: a58daa96410de734619bf65f84346137c7d3cf44
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57055182"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59393306"
 ---
-<a name="create-a-rest-api-with-attribute-routing-in-aspnet-web-api-2"></a>Creación de una API de REST con enrutamiento de atributos en ASP.NET Web API 2
-====================
+# <a name="create-a-rest-api-with-attribute-routing-in-aspnet-web-api-2"></a>Creación de una API de REST con enrutamiento de atributos en ASP.NET Web API 2
+
 por [Mike Wasson](https://github.com/MikeWasson)
 
 Web API 2 es compatible con un nuevo tipo de enrutamiento, llamado *enrutamiento mediante atributos*. Para obtener una descripción general de enrutamiento mediante atributos, vea [enrutamiento mediante atributos en Web API 2](attribute-routing-in-web-api-2.md). En este tutorial, utilizará el enrutamiento mediante atributos para crear una API de REST para una colección de los libros en pantalla. La API será compatible con las siguientes acciones:
@@ -34,7 +34,7 @@ Todos los métodos son de solo lectura (las solicitudes HTTP GET).
 
 La capa de datos, vamos a usar Entity Framework. Registros de libro tendrán los siguientes campos:
 
-- Id.
+- ID
 - Título
 - Genre
 - Fecha de publicación

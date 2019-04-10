@@ -8,15 +8,15 @@ ms.date: 09/28/2011
 ms.assetid: 6edfe14c-415a-4281-b6fa-69e9b38a82c8
 msc.legacyurl: /mvc/overview/older-versions-1/nerddinner
 msc.type: chapter
-ms.openlocfilehash: 39a7f1b44ffe33b27097a53a8e5c1f47ea1cdd73
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: 263ffc1ab815c1f7d6c1ee008f4fbe61316b7231
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57022882"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59380748"
 ---
-<a name="nerddinner"></a>NerdDinner
-====================
+# <a name="nerddinner"></a>NerdDinner
+
 > Cómo crear el sitio Web de NerdDinner.com con ASP.NET MVC 1. Para la versión de ASP.NET MVC, visite [NerdDinner en GitHub](https://github.com/AspNetMVPSamples/NerdDinner).
 
 
@@ -33,4 +33,4 @@ ms.locfileid: "57022882"
 - [Usar AJAX para entregar actualizaciones dinámicas](use-ajax-to-deliver-dynamic-updates.md)
 - [Usar AJAX para implementar escenarios de asignación](use-ajax-to-implement-mapping-scenarios.md)
 - [Habilitar las pruebas unitarias automatizadas](enable-automated-unit-testing.md)
-- [Ajuste DE NerdDinner](nerddinner-wrap-up.md)
+- [Ajuste de NerdDinner](nerddinner-wrap-up.md)

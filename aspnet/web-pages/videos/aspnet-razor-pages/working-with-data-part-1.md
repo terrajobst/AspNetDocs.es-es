@@ -8,15 +8,15 @@ ms.date: 02/25/2011
 ms.assetid: ebeac83f-2bca-4225-899e-1687480476f6
 msc.legacyurl: /web-pages/videos/aspnet-razor-pages/working-with-data-part-1
 msc.type: video
-ms.openlocfilehash: 05072ef56d9b46d6a27783ae8c9392e24ef1d041
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: b357d386ae11869d4c16f2b1d42d0b713bbd57c4
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57059942"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59381391"
 ---
-<a name="working-with-data-part-1"></a>Trabajar con datos (parte 1)
-====================
+# <a name="working-with-data-part-1"></a>Trabajar con datos (parte 1)
+
 por [Joe Stagner](https://github.com/JoeStagner)
 
 Vídeo acompañamiento para el trabajo con el tutorial de datos (parte 1)

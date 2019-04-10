@@ -8,15 +8,15 @@ ms.date: 01/27/2009
 ms.assetid: 61644169-e8b1-45dd-bf96-9c2301b69879
 msc.legacyurl: /mvc/overview/older-versions-1/models-data/creating-model-classes-with-the-entity-framework-cs
 msc.type: authoredcontent
-ms.openlocfilehash: d1cf97a7f1dc9bae2774518cdfc13da48fc7ada2
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: 29f7dded2f6fc2e8ce588dab2949b59ddb6f1fc4
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57043082"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59388912"
 ---
-<a name="creating-model-classes-with-the-entity-framework-c"></a>Crear clases de modelo con Entity Framework (C#)
-====================
+# <a name="creating-model-classes-with-the-entity-framework-c"></a>Crear clases de modelo con Entity Framework (C#)
+
 por [Microsoft](https://github.com/microsoft)
 
 > En este tutorial, aprenderá a usar ASP.NET MVC con Entity Framework de Microsoft. Aprenda a usar al Asistente para Entity para crear un Entity Data Model de ADO.NET. En el transcurso de este tutorial, creamos una aplicación web que se muestra cómo seleccionar, insertar, actualizar y eliminar datos de la base de datos mediante Entity Framework.
@@ -136,7 +136,7 @@ Usar cualquier sintaxis LINQ, sintaxis de método o sintaxis de consulta, que en
 
 La vista en el listado 2 se usa para mostrar los registros de la película.
 
-**Listing 2 – Views\Home\Index.aspx**
+**Listado 2 – Views\Home\Index.aspx**
 
 [!code-aspx[Main](creating-model-classes-with-the-entity-framework-cs/samples/sample3.aspx)]
 

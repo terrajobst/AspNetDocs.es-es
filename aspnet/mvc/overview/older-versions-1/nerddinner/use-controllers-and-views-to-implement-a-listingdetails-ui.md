@@ -8,15 +8,15 @@ ms.date: 07/27/2010
 ms.assetid: 64116e56-1c9a-4f07-8097-bb36cbb6e57f
 msc.legacyurl: /mvc/overview/older-versions-1/nerddinner/use-controllers-and-views-to-implement-a-listingdetails-ui
 msc.type: authoredcontent
-ms.openlocfilehash: 203a12473f79f38f7162d360d2179ca7c4a30303
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: abff97e5cc2663465fdf61f41ff69d17104fe8b6
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57063672"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59379474"
 ---
-<a name="use-controllers-and-views-to-implement-a-listingdetails-ui"></a>Usar controladores y vistas para implementar una interfaz de usuario de lista/detalles
-====================
+# <a name="use-controllers-and-views-to-implement-a-listingdetails-ui"></a>Usar controladores y vistas para implementar una interfaz de usuario de lista/detalles
+
 por [Microsoft](https://github.com/microsoft)
 
 [Descargar PDF](http://aspnetmvcbook.s3.amazonaws.com/aspnetmvc-nerdinner_v1.pdf)
@@ -56,7 +56,7 @@ También se abrirá la nueva clase DinnersController dentro del editor de códig
 
 Queremos permitir a que los visitantes con nuestra aplicación para examinar una lista de instancias dinners próximas y permitirles hacer clic en cualquier cena en la lista para ver los detalles específicos sobre él. Haremos esto mediante la publicación de las siguientes direcciones URL desde nuestra aplicación:
 
-| **URL** | **Propósito** |
+| **Resolución** | **Finalidad** |
 | --- | --- |
 | */Dinners/* | Mostrar una lista HTML de próximas dinners |
 | */ Dinners/detalles / [id]* | Mostrar los detalles sobre una cena específico indicado por un parámetro "id" incrustado dentro de la dirección URL: que coincidirá con el DinnerID de la cena en la base de datos. Por ejemplo: /Dinners/Details/2 mostraría una página HTML con detalles acerca de la cena cuyo valor DinnerID es 2. |
@@ -91,9 +91,9 @@ Las rutas de". MapRoute() "llamada al método anterior registra una regla de enr
 
 A continuación es una tabla que muestra cómo una variedad de direcciones URL se asignan mediante el valor predeterminado "<em>/ {controladores} / {action} / {id}"</em>regla de ruta:
 
-| **URL** | **Clase de controlador** | **Método de acción** | **Parámetros pasados** |
+| **Resolución** | **Clase de controlador** | **Método de acción** | **Parámetros pasados** |
 | --- | --- | --- | --- |
-| */Dinners/Details/2* | DinnersController | Details(ID) | id=2 |
+| */ Dinners/detalles/2* | DinnersController | Details(ID) | id=2 |
 | */Dinners/Edit/5* | DinnersController | Edit(ID) | id=5 |
 | */Dinners/Create* | DinnersController | Create() | N/D |
 | */ Dinners* | DinnersController | Index() | N/D |

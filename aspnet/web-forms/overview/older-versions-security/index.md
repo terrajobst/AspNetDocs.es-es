@@ -8,15 +8,15 @@ ms.date: 10/18/2014
 ms.assetid: 2f952638-6b1f-48b6-b019-1c5d1e9ab746
 msc.legacyurl: /web-forms/overview/older-versions-security
 msc.type: chapter
-ms.openlocfilehash: 5a2eeef18163d0d408e4aba33bad7464ebf600a8
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: afd786a25c8dc23eba1bbf6ed3f6512c64f2e72d
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57023512"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59378580"
 ---
-<a name="older-versions---security"></a>Versiones anteriores: Seguridad
-====================
+# <a name="older-versions---security"></a>Versiones anteriores: Seguridad
+
 > Temas de seguridad, autenticación y autorización para anteriores aplicaciones de formularios Web Forms y ASP.NET 4.
 
 

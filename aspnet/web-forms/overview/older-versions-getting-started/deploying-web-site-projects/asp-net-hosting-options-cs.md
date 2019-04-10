@@ -8,15 +8,15 @@ ms.date: 04/01/2009
 ms.assetid: 89a1d2bc-fdfd-4c5c-a3b0-49a08baaf63a
 msc.legacyurl: /web-forms/overview/older-versions-getting-started/deploying-web-site-projects/asp-net-hosting-options-cs
 msc.type: authoredcontent
-ms.openlocfilehash: 3adad579c5893fb4f40e7043b9ece78740080f65
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: 90285eac8e45d542c4ccca3e3db00493546aac57
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57061392"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59398454"
 ---
-<a name="aspnet-hosting-options-c"></a>Opciones de hospedaje de ASP.NET (C#)
-====================
+# <a name="aspnet-hosting-options-c"></a>Opciones de hospedaje de ASP.NET (C#)
+
 por [Scott Mitchell](https://twitter.com/ScottOnWriting)
 
 [Descargar PDF](http://download.microsoft.com/download/E/8/9/E8920AE6-D441-41A7-8A77-9EF8FF970D8B/aspnet_tutorial01_Basics_cs.pdf)

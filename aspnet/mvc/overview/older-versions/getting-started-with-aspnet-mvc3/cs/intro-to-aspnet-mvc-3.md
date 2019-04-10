@@ -8,15 +8,15 @@ ms.date: 01/12/2011
 ms.assetid: 86a80b35-88bd-4b7c-bd58-f6e7997197d4
 msc.legacyurl: /mvc/overview/older-versions/getting-started-with-aspnet-mvc3/cs/intro-to-aspnet-mvc-3
 msc.type: authoredcontent
-ms.openlocfilehash: 53306318ab1a782d3605876aac53ec903d053269
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: 5cdef14ec55e2e66c31219c8ccc95c8e361547d5
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57049332"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59396372"
 ---
-<a name="intro-to-aspnet-mvc-3-c"></a>Introducción a ASP.NET MVC 3 (C#)
-====================
+# <a name="intro-to-aspnet-mvc-3-c"></a>Introducción a ASP.NET MVC 3 (C#)
+
 by [Rick Anderson]((https://twitter.com/RickAndMSFT))
 
 > > [!NOTE]

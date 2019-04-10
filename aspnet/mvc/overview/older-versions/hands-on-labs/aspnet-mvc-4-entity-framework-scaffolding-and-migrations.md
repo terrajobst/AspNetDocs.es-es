@@ -8,12 +8,12 @@ ms.date: 02/18/2013
 ms.assetid: 093c1362-f10b-407c-a708-be370f4b62b0
 msc.legacyurl: /mvc/overview/older-versions/hands-on-labs/aspnet-mvc-4-entity-framework-scaffolding-and-migrations
 msc.type: authoredcontent
-ms.openlocfilehash: 649f83d54bfdb3367d9cea056a53a614f982adec
-ms.sourcegitcommit: 289e051cc8a90e8f7127e239fda73047bde4de12
+ms.openlocfilehash: ca47f6fe6d55153354d38fcf1ba5e844215279b2
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/25/2019
-ms.locfileid: "58422966"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59389042"
 ---
 # <a name="aspnet-mvc-4-entity-framework-scaffolding-and-migrations"></a>Scaffolding y migraciones de Entity Framework de ASP.NET MVC 4
 
@@ -58,7 +58,7 @@ Para mayor comodidad, gran parte del código que se va a administrar a lo largo 
 
 Si no está familiarizado con los fragmentos de código de Visual Studio y desea aprender a usarlas, puede consultar el apéndice de este documento &quot; [Apéndice B: Usar fragmentos de código](#AppendixB)&quot;.
 
-* * *
+---
 
 <a id="Exercises"></a>
 
@@ -110,7 +110,7 @@ En este ejercicio, obtendrá información sobre cómo usar el scaffolding de ASP
 
     ![Creación de la aplicación](aspnet-mvc-4-entity-framework-scaffolding-and-migrations/_static/image3.png "compilar la aplicación")
 
-    *Compilación de la aplicación*
+    *Compilar la aplicación*
 7. En el Explorador de soluciones, haga clic en la carpeta controllers y seleccione **Add | Controlador**.
 8. Asigne al controlador el *PersonController* y complete el **opciones de Scaffolding** con los valores siguientes.
 
@@ -198,7 +198,7 @@ En esta tarea se actualizará la base de datos mediante migraciones de Entity Fr
 
     ![Creación de la aplicación](aspnet-mvc-4-entity-framework-scaffolding-and-migrations/_static/image13.png "compilar la aplicación")
 
-    *Compilar la aplicación*
+    *Compilación de la aplicación*
 6. En la consola de administrador de paquetes, escriba el siguiente comando:
 
     PMC
@@ -218,7 +218,7 @@ En esta tarea se actualizará la base de datos mediante migraciones de Entity Fr
 
     ![Generar un script SQL](aspnet-mvc-4-entity-framework-scaffolding-and-migrations/_static/image15.png "generar un script SQL")
 
-    *Generar un script SQL*
+    *Generación de un script SQL*
 
     ![Actualización de secuencia de comandos SQL](aspnet-mvc-4-entity-framework-scaffolding-and-migrations/_static/image16.png "actualización de secuencia de comandos SQL")
 
@@ -231,7 +231,7 @@ En esta tarea se actualizará la base de datos mediante migraciones de Entity Fr
 
     ![Actualizando la base de datos](aspnet-mvc-4-entity-framework-scaffolding-and-migrations/_static/image17.png "actualizar la base de datos")
 
-    *Actualizando la base de datos*
+    *Actualizar la base de datos*
 
     Esto agregará la **MiddleName** columna en el **personas** tabla para que coincida con la definición actual de la **persona** clase.
 9. Una vez que se actualiza la base de datos, haga clic en la carpeta de controlador y seleccione **Add | Controlador** para agregar el controlador de persona nuevo (terminar con los mismos valores). Esto actualizará los métodos existentes y agregar el nuevo atributo de vistas.
@@ -260,7 +260,7 @@ En esta tarea se actualizará la base de datos mediante migraciones de Entity Fr
 
     ![El segundo apellido edition](aspnet-mvc-4-entity-framework-scaffolding-and-migrations/_static/image21.png "edition del segundo nombre")
 
-* * *
+---
 
 <a id="Summary"></a>
 

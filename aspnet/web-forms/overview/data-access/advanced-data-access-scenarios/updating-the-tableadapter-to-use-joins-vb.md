@@ -8,15 +8,15 @@ ms.date: 07/18/2007
 ms.assetid: e624a3e0-061b-4efc-8b0e-5877f9ff6714
 msc.legacyurl: /web-forms/overview/data-access/advanced-data-access-scenarios/updating-the-tableadapter-to-use-joins-vb
 msc.type: authoredcontent
-ms.openlocfilehash: d5a7b61d447631f5e65ca8a3dfac9c58c108643f
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: 943b8a67e77e4ed449e0b2c887b3cae7cc10f305
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57048542"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59383439"
 ---
-<a name="updating-the-tableadapter-to-use-joins-vb"></a>Actualizar TableAdapter para usar JOIN (VB)
-====================
+# <a name="updating-the-tableadapter-to-use-joins-vb"></a>Actualizar TableAdapter para usar JOIN (VB)
+
 por [Scott Mitchell](https://twitter.com/ScottOnWriting)
 
 [Descargar código](http://download.microsoft.com/download/3/9/f/39f92b37-e92e-4ab3-909e-b4ef23d01aa3/ASPNET_Data_Tutorial_69_VB.zip) o [descargar PDF](updating-the-tableadapter-to-use-joins-vb/_static/datatutorial69vb1.pdf)
@@ -64,7 +64,7 @@ Para explorar este inconveniente, crear un conjunto de datos de tipo temporal en
 [!code-sql[Main](updating-the-tableadapter-to-use-joins-vb/samples/sample3.sql)]
 
 
-[![Escriba una consulta principal que contiene las combinaciones](updating-the-tableadapter-to-use-joins-vb/_static/image2.png)](updating-the-tableadapter-to-use-joins-vb/_static/image1.png)
+[![EEscriba un principal de consulta que une contiene](updating-the-tableadapter-to-use-joins-vb/_static/image2.png)](updating-the-tableadapter-to-use-joins-vb/_static/image1.png)
 
 **Figura 1**: Escriba una consulta principal que contiene `JOIN` s ([haga clic aquí para ver imagen en tamaño completo](updating-the-tableadapter-to-use-joins-vb/_static/image3.png))
 
@@ -88,7 +88,7 @@ Haga clic en Finalizar para completar al asistente. En este momento su diseñado
 Aunque la tabla de datos tiene las columnas apropiadas, TableAdapter le faltan valores para su `InsertCommand`, `UpdateCommand`, y `DeleteCommand` propiedades. Para confirmarlo, haga clic en el TableAdapter en el diseñador y, a continuación, vaya a la ventana Propiedades. Allí verá el `InsertCommand`, `UpdateCommand`, y `DeleteCommand` propiedades se establecen en (None).
 
 
-[![El InsertCommand, UpdateCommand y DeleteCommand propiedades se establecen en (None)](updating-the-tableadapter-to-use-joins-vb/_static/image7.png)](updating-the-tableadapter-to-use-joins-vb/_static/image6.png)
+[![Tél InsertCommand, UpdateCommand y DeleteCommand propiedades se establecen en (None)](updating-the-tableadapter-to-use-joins-vb/_static/image7.png)](updating-the-tableadapter-to-use-joins-vb/_static/image6.png)
 
 **Figura 4**: El `InsertCommand`, `UpdateCommand`, y `DeleteCommand` propiedades se establecen en (None) ([haga clic aquí para ver imagen en tamaño completo](updating-the-tableadapter-to-use-joins-vb/_static/image8.png))
 
@@ -108,7 +108,7 @@ En este tutorial se agregará a un TableAdapter y DataTable fuertemente tipados 
 Comience abriendo la `NorthwindWithSprocs` conjunto de datos en el `~/App_Code/DAL` carpeta. Haga doble clic en el diseñador, seleccione la opción Agregar en el menú contextual y elegir el elemento de menú de TableAdapter. Esto iniciará al Asistente para configuración de TableAdapter. Tal y como se muestra en la figura 5, que el asistente cree nuevos procedimientos almacenados y haga clic en siguiente. Para hacer un repaso sobre la creación de nuevos procedimientos almacenados desde el Asistente para la s de TableAdapter, consulte el [crear procedimientos almacenados nuevo para la s de conjunto de datos con tipo TableAdapters](creating-new-stored-procedures-for-the-typed-dataset-s-tableadapters-vb.md) tutorial.
 
 
-[![Seleccione los procedimientos almacenados nueva opción de crear](updating-the-tableadapter-to-use-joins-vb/_static/image10.png)](updating-the-tableadapter-to-use-joins-vb/_static/image9.png)
+[![Soptar por el crear nuevos procedimientos almacenados opción](updating-the-tableadapter-to-use-joins-vb/_static/image10.png)](updating-the-tableadapter-to-use-joins-vb/_static/image9.png)
 
 **Figura 5**: Seleccione Create new almacenados procedures (opción) ([haga clic aquí para ver imagen en tamaño completo](updating-the-tableadapter-to-use-joins-vb/_static/image11.png))
 
@@ -123,7 +123,7 @@ Puesto que esta consulta no incluye ningún `JOIN` s, el Asistente de TableAdapt
 El siguiente paso nos permite nombrar los procedimientos almacenados de TableAdapter. Use los nombres `Employees_Select`, `Employees_Insert`, `Employees_Update`, y `Employees_Delete`, como se muestra en la figura 6.
 
 
-[![Nombre de los procedimientos almacenados de TableAdapter](updating-the-tableadapter-to-use-joins-vb/_static/image13.png)](updating-the-tableadapter-to-use-joins-vb/_static/image12.png)
+[![NProcedimientos almacenados de TableAdapters AME](updating-the-tableadapter-to-use-joins-vb/_static/image13.png)](updating-the-tableadapter-to-use-joins-vb/_static/image12.png)
 
 **Figura 6**: Nombre de los procedimientos almacenados de TableAdapter s ([haga clic aquí para ver imagen en tamaño completo](updating-the-tableadapter-to-use-joins-vb/_static/image14.png))
 
@@ -131,7 +131,7 @@ El siguiente paso nos permite nombrar los procedimientos almacenados de TableAda
 El último paso nos pedirá un nombre de los métodos de TableAdapter s. Use `Fill` y `GetEmployees` como los nombres de método. Además, asegúrese de dejar el crear métodos para enviar actualizaciones directamente a la casilla de la base de datos (GenerateDBDirectMethods) activada.
 
 
-[![Nombre del relleno de los métodos de TableAdapter s y GetEmployees](updating-the-tableadapter-to-use-joins-vb/_static/image16.png)](updating-the-tableadapter-to-use-joins-vb/_static/image15.png)
+[![Nombre los TableAdapter s métodos Fill y GetEmployees](updating-the-tableadapter-to-use-joins-vb/_static/image16.png)](updating-the-tableadapter-to-use-joins-vb/_static/image15.png)
 
 **Figura 7**: Nombre de los métodos de TableAdapter s `Fill` y `GetEmployees` ([haga clic aquí para ver imagen en tamaño completo](updating-the-tableadapter-to-use-joins-vb/_static/image17.png))
 
@@ -139,7 +139,7 @@ El último paso nos pedirá un nombre de los métodos de TableAdapter s. Use `Fi
 Después de completar al asistente, dedique un momento a examinar los procedimientos almacenados en la base de datos. Debería ver cuatro nuevas: `Employees_Select`, `Employees_Insert`, `Employees_Update`, y `Employees_Delete`. A continuación, inspeccione el `EmployeesDataTable` y `EmployeesTableAdapter` acaba de crear. La tabla de datos contiene una columna para cada campo devuelto por la consulta principal. Haga clic en el TableAdapter y, a continuación, vaya a la ventana Propiedades. Allí verá el `InsertCommand`, `UpdateCommand`, y `DeleteCommand` propiedades están configuradas correctamente para llamar a los procedimientos almacenados correspondientes.
 
 
-[![El TableAdapter incluye Insertar, actualizar y eliminar las capacidades](updating-the-tableadapter-to-use-joins-vb/_static/image19.png)](updating-the-tableadapter-to-use-joins-vb/_static/image18.png)
+[![Tél TableAdapter incluye Insert, Update y eliminar capacidades](updating-the-tableadapter-to-use-joins-vb/_static/image19.png)](updating-the-tableadapter-to-use-joins-vb/_static/image18.png)
 
 **Figura 8**: El TableAdapter incluye Insert, Update y eliminar capacidades ([haga clic aquí para ver imagen en tamaño completo](updating-the-tableadapter-to-use-joins-vb/_static/image20.png))
 
@@ -156,7 +156,7 @@ Empiece por ir en el Explorador de servidores, profundizar en la carpeta de proc
 Después de actualizar el `SELECT` instrucción, guarde los cambios, vaya al menú archivo y elegir guardar `Employees_Select`. Como alternativa, puede haga clic en el icono Guardar en la barra de herramientas o presione CTRL+s. Después de guardar los cambios, haga doble clic en el `Employees_Select` procedimiento almacenado en el Explorador de servidores y elija ejecutar. Esto ejecutará el procedimiento almacenado y mostrar sus resultados en la ventana de salida (consulte la figura 9).
 
 
-[![Los resultados de los procedimientos almacenados se muestran en la ventana de salida](updating-the-tableadapter-to-use-joins-vb/_static/image22.png)](updating-the-tableadapter-to-use-joins-vb/_static/image21.png)
+[![TResultados de los procedimientos almacenados se muestran en la ventana de salida](updating-the-tableadapter-to-use-joins-vb/_static/image22.png)](updating-the-tableadapter-to-use-joins-vb/_static/image21.png)
 
 **Figura 9**: Los resultados de los procedimientos almacenados se muestran en la ventana de salida ([haga clic aquí para ver imagen en tamaño completo](updating-the-tableadapter-to-use-joins-vb/_static/image23.png))
 
@@ -173,7 +173,7 @@ Agregar manualmente las columnas de DataTable se han analizado en los tutoriales
 Iniciar con el botón secundario en el `EmployeesTableAdapter` y seleccione Configurar en el menú contextual. Se abrirá el Asistente para configuración de TableAdapter, que enumera los procedimientos almacenados utilizados para seleccionar, insertar, actualizar y eliminar, junto con sus valores devueltos y parámetros (si existe). Figura 10 muestra a este asistente. Aquí podemos ver que el `Employees_Select` procedimiento almacenado ahora devuelve el `ManagerFirstName` y `ManagerLastName` campos.
 
 
-[![Se muestra en el Asistente para la lista de columnas actualizadas para el Employees_Select de procedimiento almacenado](updating-the-tableadapter-to-use-joins-vb/_static/image25.png)](updating-the-tableadapter-to-use-joins-vb/_static/image24.png)
+[![TAsistente muestra la lista de columnas actualizado para el procedimiento almacenado Employees_Select](updating-the-tableadapter-to-use-joins-vb/_static/image25.png)](updating-the-tableadapter-to-use-joins-vb/_static/image24.png)
 
 **Figura 10**: El asistente muestra la lista de columnas actualizado para el `Employees_Select` Stored Procedure ([haga clic aquí para ver imagen en tamaño completo](updating-the-tableadapter-to-use-joins-vb/_static/image26.png))
 
@@ -181,7 +181,7 @@ Iniciar con el botón secundario en el `EmployeesTableAdapter` y seleccione Conf
 Complete el asistente, haga clic en Finalizar. Al volver al diseñador de DataSet, el `EmployeesDataTable` incluye dos columnas adicionales: `ManagerFirstName` y `ManagerLastName`.
 
 
-[![El EmployeesDataTable contiene dos nuevas columnas](updating-the-tableadapter-to-use-joins-vb/_static/image28.png)](updating-the-tableadapter-to-use-joins-vb/_static/image27.png)
+[![Tél EmployeesDataTable contiene dos nuevas columnas](updating-the-tableadapter-to-use-joins-vb/_static/image28.png)](updating-the-tableadapter-to-use-joins-vb/_static/image27.png)
 
 **Figura 11**: El `EmployeesDataTable` contiene dos nuevas columnas ([haga clic aquí para ver imagen en tamaño completo](updating-the-tableadapter-to-use-joins-vb/_static/image29.png))
 
@@ -204,12 +204,12 @@ Con el `EmployeesBLLWithSprocs` clase completa, que está listo para trabajar co
 Configurar el origen ObjectDataSource para usar el `EmployeesBLLWithSprocs` clase y, desde las pestañas de seleccionar y eliminar, asegúrese de que el `GetEmployees` y `DeleteEmployee` se seleccionan los métodos de las listas desplegables. Haga clic en Finalizar para completar la configuración ObjectDataSource.
 
 
-[![Configurar el origen ObjectDataSource para usar la clase EmployeesBLLWithSprocs](updating-the-tableadapter-to-use-joins-vb/_static/image31.png)](updating-the-tableadapter-to-use-joins-vb/_static/image30.png)
+[![Cconfigurar el origen ObjectDataSource para usar la clase EmployeesBLLWithSprocs](updating-the-tableadapter-to-use-joins-vb/_static/image31.png)](updating-the-tableadapter-to-use-joins-vb/_static/image30.png)
 
 **Figura 12**: Configurar el origen ObjectDataSource que se usarán el `EmployeesBLLWithSprocs` clase ([haga clic aquí para ver imagen en tamaño completo](updating-the-tableadapter-to-use-joins-vb/_static/image32.png))
 
 
-[![Tiene el uso de ObjectDataSource los métodos de DeleteEmployee y GetEmployees](updating-the-tableadapter-to-use-joins-vb/_static/image34.png)](updating-the-tableadapter-to-use-joins-vb/_static/image33.png)
+[![Hel uso de ObjectDataSource el GetEmployees ave y métodos DeleteEmployee](updating-the-tableadapter-to-use-joins-vb/_static/image34.png)](updating-the-tableadapter-to-use-joins-vb/_static/image33.png)
 
 **Figura 13**: Usar ObjectDataSource el `GetEmployees` y `DeleteEmployee` métodos ([haga clic aquí para ver imagen en tamaño completo](updating-the-tableadapter-to-use-joins-vb/_static/image35.png))
 
@@ -224,7 +224,7 @@ Para permitir a los usuarios eliminar a empleados desde esta página, necesitamo
 Pruebe la página visitando a través de un explorador. Como se muestra en la figura 14, mostrará la página de cada empleado y su propio nombre s manager (suponiendo que tengan uno).
 
 
-[![La combinación en el Employees_Select procedimiento almacenado devuelve el nombre del administrador s](updating-the-tableadapter-to-use-joins-vb/_static/image37.png)](updating-the-tableadapter-to-use-joins-vb/_static/image36.png)
+[![TCOMBINACIÓN en el procedimiento almacenado Employees_Select regresa el Administrador de nombre de](updating-the-tableadapter-to-use-joins-vb/_static/image37.png)](updating-the-tableadapter-to-use-joins-vb/_static/image36.png)
 
 **Figura 14**: El `JOIN` en el `Employees_Select` procedimiento almacenado devuelve el Administrador de s nombre ([haga clic aquí para ver imagen en tamaño completo](updating-the-tableadapter-to-use-joins-vb/_static/image38.png))
 
@@ -232,7 +232,7 @@ Pruebe la página visitando a través de un explorador. Como se muestra en la fi
 Al hacer clic en el botón Eliminar se inicia el flujo de trabajo eliminando que culmina en la ejecución de la `Employees_Delete` procedimiento almacenado. Sin embargo, el intento `DELETE` instrucción en el procedimiento almacenado produce un error debido a una infracción de restricción de clave externa (consulte la figura 15). En concreto, cada empleado tiene uno o más registros el `Orders` tabla, provocando la eliminación de un error.
 
 
-[![Eliminación de un empleado que tiene resultados pedidos correspondientes a una infracción de restricción de clave externa](updating-the-tableadapter-to-use-joins-vb/_static/image40.png)](updating-the-tableadapter-to-use-joins-vb/_static/image39.png)
+[![Dun empleado que tiene resultados pedidos correspondientes a una infracción de restricción de clave externa eleting](updating-the-tableadapter-to-use-joins-vb/_static/image40.png)](updating-the-tableadapter-to-use-joins-vb/_static/image39.png)
 
 **Figura 15**: Eliminación de un empleado que tiene resultados pedidos correspondientes a una infracción de restricción de clave externa ([haga clic aquí para ver imagen en tamaño completo](updating-the-tableadapter-to-use-joins-vb/_static/image41.png))
 

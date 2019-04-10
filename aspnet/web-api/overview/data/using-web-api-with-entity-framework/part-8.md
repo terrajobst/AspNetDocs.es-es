@@ -8,15 +8,15 @@ ms.date: 06/16/2014
 ms.assetid: 75ef94b1-bbec-4681-9210-452dba816144
 msc.legacyurl: /web-api/overview/data/using-web-api-with-entity-framework/part-8
 msc.type: authoredcontent
-ms.openlocfilehash: 83f291326307a4964afdd5e8b50f2c375348ed0e
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: 3f48c5ad73ceb9a4873fbbb621b518553a498966
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57065362"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59389055"
 ---
-<a name="display-item-details"></a>Mostrar detalles del elemento
-====================
+# <a name="display-item-details"></a>Mostrar detalles del elemento
+
 por [Mike Wasson](https://github.com/MikeWasson)
 
 [Descargue el proyecto completado](https://github.com/MikeWasson/BookService)

@@ -8,15 +8,15 @@ ms.date: 03/14/2008
 ms.assetid: c1a35f18-bab9-41f7-8497-15530c37a09d
 msc.legacyurl: /web-forms/overview/older-versions-getting-started/aspnet-ajax/understanding-asp-net-ajax-localization
 msc.type: authoredcontent
-ms.openlocfilehash: 86cbf150708f1db711b40ccbc25345afeb3e542a
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: 11e70493478d6810d63ba6b3ac813e32f03052eb
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57031442"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59381333"
 ---
-<a name="understanding-aspnet-ajax-localization"></a>Descripción de localización de ASP.NET AJAX
-====================
+# <a name="understanding-aspnet-ajax-localization"></a>Descripción de localización de ASP.NET AJAX
+
 por [Scott Cate](https://github.com/scottcate)
 
 [Descargar PDF](http://download.microsoft.com/download/C/1/9/C19A3451-1D14-477C-B703-54EF22E197EE/AJAX_tutorial04_Localization_cs.pdf)
@@ -32,13 +32,13 @@ Este artículo examina las características de localización presentes en el mar
 
 Estas notas del producto se basa en la versión Beta 2 de Microsoft Visual Studio 2008. Estas notas del producto también se da por supuesto que trabajará con Visual Studio 2008, no Visual Web Developer Express y proporcionará tutoriales de acuerdo con la interfaz de usuario de Visual Studio. Algunos ejemplos de código utilizarán las plantillas de proyecto que pueden no estar disponibles en Visual Web Developer Express.
 
-## <a name="the-need-for-localization"></a>*La necesidad de localización*
+## *<a name="the-need-for-localization"></a>La necesidad de localización*
 
 Especialmente para los desarrolladores de aplicaciones empresariales y los desarrolladores de componentes, la capacidad para crear herramientas que pueden tener en cuenta las diferencias entre idiomas y referencias culturales se ha vuelto cada vez más es necesaria. Diseño de componentes con la capacidad de adaptarse a la configuración regional del cliente aumenta la productividad del desarrollador y reduce la cantidad de trabajo necesario para la adaptación de un componente para funcionar globalmente.
 
 La localización es el proceso de diseño y la integración de soporte técnico para un idioma específico y la referencia cultural en una aplicación o un componente de aplicación. La plataforma de Microsoft ASP.NET proporciona una amplia compatibilidad para la localización de aplicaciones de ASP.NET estándar integrando el modelo de localización estándar. NET; el marco de AJAX de Microsoft usan el modelo integrado para admitir los diversos escenarios en los que se puede realizar la localización. Con el marco de AJAX de Microsoft, las secuencias de comandos pueden localizados por la que se implementan en ensamblados satélite, o mediante el uso de una estructura de sistema de archivos estáticos.
 
-## <a name="embedding-scripts-with-satellite-assemblies"></a>*Incrustación de Scripts con los ensamblados satélite*
+## *<a name="embedding-scripts-with-satellite-assemblies"></a>Incrustación de Scripts con los ensamblados satélite*
 
 Coherente con la estrategia de localización estándar de .NET Framework, los recursos pueden incluirse en los ensamblados satélite. Los ensamblados satélite proporcionan varias ventajas sobre la inclusión de recurso tradicionales en binarios, se puede actualizar cualquier localización determinado sin actualizar la imagen más grande, localizaciones adicionales pueden implementarse simplemente al instalar los ensamblados satélite en la carpeta de proyecto y los ensamblados satélite pueden implementarse sin causar una recarga del ensamblado del proyecto principal. Especialmente en los proyectos ASP.NET, esto es útil, ya que puede reducir significativamente la cantidad de recursos del sistema utilizados por las actualizaciones incrementales y mínimamente interrumpe el uso del sitio Web de producción.
 
@@ -118,7 +118,7 @@ Para quienes no conocen la sintaxis de JavaScript Regex, texto dentro únicas ba
 
 Tenga en cuenta que hay diversas variaciones para este tutorial. Por ejemplo, las secuencias de comandos se puede registrar con el control ScriptManager mediante programación durante la carga de página.
 
-## <a name="including-a-static-script-file-structure"></a>*Como una estructura de archivos de Script estático*
+## *<a name="including-a-static-script-file-structure"></a>Como una estructura de archivos de Script estático*
 
 Cuando se usan archivos de script estático para la implementación, perderá algunas de las ventajas del uso de la combinación de localización .NET inherente. Es principalmente visible que se pierda el tipo automática generado, que incluyen archivos de recursos de la secuencia de comandos; Por ejemplo, en el tutorial anterior, los recursos se exponen mediante un tipo generado automáticamente llamado mensaje desde el control ScriptManager.
 
@@ -128,7 +128,7 @@ Microsoft recomienda evitar un problema de control de versiones mediante la gene
 
 Porque no hay recursos para incluir de forma declarativa, deben ser archivos de script estático al que hace referencia mediante la adición `<asp:ScriptElement>` elementos como un elemento secundario de la `<Scripts>` etiqueta del control ScriptManager, o agregando mediante programación `ScriptReference` objetos para el `Scripts` propiedad de la `ScriptManager` control en la página en tiempo de ejecución.
 
-## <a name="the-scriptmanager-and-its-role-in-localization"></a>*El control ScriptManager y su papel en la localización*
+## *<a name="the-scriptmanager-and-its-role-in-localization"></a>El control ScriptManager y su papel en la localización*
 
 El control ScriptManager habilita varios comportamientos automáticos para las aplicaciones localizadas:
 
@@ -146,7 +146,7 @@ A medida que crecen las aplicaciones web para llegar a un público más amplio, 
 
 .NET Framework admite intrínsecamente un marco de trabajo de localización enriquecida, utilizando los ensamblados satélite y archivos de recursos (.resx) XML para presentar una manera uniforme para buscar imágenes y cadenas de recursos. Las extensiones de AJAX de ASP.NET, incluido el marco de AJAX de Microsoft y la secuencia de comandos de Microsoft AJAX Library, proporcionan compatibilidad para este modelo de programación en el código del lado cliente, lo que permite búsquedas de cadena fácil de los recursos. Los ensamblados satélite admiten la inclusión automática de los recursos de script (archivos .js real) a través de ScriptResource.axd siempre y cuando los nombres de archivo siguen un esquema de nomenclatura determinado. Con esta compatibilidad, ASP.NET AJAX Extensions simplifican la localización de scripts y la globalización de las aplicaciones.
 
-## <a name="bio"></a>*Bio*
+## *<a name="bio"></a>Bio*
 
 Scott Cate ha estado trabajando con tecnologías Web de Microsoft desde 1997 y es el presidente de myKB.com ([www.myKB.com](http://www.myKB.com)) donde se especializa en la escritura de ASP.NET en función de las aplicaciones que se centra en soluciones de Software de Base de conocimiento. Se puede establecer contacto con Scott por correo electrónico en [ scott.cate@myKB.com ](mailto:scott.cate@myKB.com) o su blog en [ScottCate.com](http://ScottCate.com)
 

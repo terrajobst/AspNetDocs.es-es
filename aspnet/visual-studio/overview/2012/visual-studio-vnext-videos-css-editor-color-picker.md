@@ -8,15 +8,15 @@ ms.date: 08/30/2011
 ms.assetid: c0c084d3-1b12-4de1-b904-30fbbda59a30
 msc.legacyurl: /visual-studio/overview/2012/visual-studio-vnext-videos-css-editor-color-picker
 msc.type: video
-ms.openlocfilehash: 0b926fd683c8b3e63ab10f54c9ffff82254529d2
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: 6497eed7f70d76d9c4eb13b3d08ab7abe1f42b5d
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57032202"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59393410"
 ---
-<a name="visual-studio-vnext-videos-css-editor-color-picker"></a>Visual Studio vNext vídeos: Selector de colores del Editor CSS
-====================
+# <a name="visual-studio-vnext-videos-css-editor-color-picker"></a>Visual Studio vNext vídeos: Selector de colores del Editor CSS
+
 por [Mads Kristensen](https://github.com/madskristensen)
 
 En este vídeo, Mads Kristensen muestra el selector de colores en el editor de CSS de Visual Studio vNext que brinda un rápido acceso a todos los colores en la hoja de cálculo actual y proporciona un selector de color avanzada con una herramienta de cuentagotas.

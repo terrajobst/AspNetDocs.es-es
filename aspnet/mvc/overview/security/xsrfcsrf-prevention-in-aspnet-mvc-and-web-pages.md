@@ -8,15 +8,15 @@ ms.date: 03/14/2013
 ms.assetid: aadc5fa4-8215-4fc7-afd5-bcd2ef879728
 msc.legacyurl: /mvc/overview/security/xsrfcsrf-prevention-in-aspnet-mvc-and-web-pages
 msc.type: authoredcontent
-ms.openlocfilehash: 5db661cccc58d1101f95091b069ab5cbfe78a378
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: de0e9cc168b9f18fd2bd83329106df45d7551b1a
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57063952"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59386565"
 ---
-<a name="xsrfcsrf-prevention-in-aspnet-mvc-and-web-pages"></a>Prevención de XSRF/CSRF en ASP.NET MVC y Web Pages
-====================
+# <a name="xsrfcsrf-prevention-in-aspnet-mvc-and-web-pages"></a>Prevención de XSRF/CSRF en ASP.NET MVC y Web Pages
+
 by [Rick Anderson]((https://twitter.com/RickAndMSFT))
 
 > Solicitud entre sitios que falsificación (también conocida como XSRF o CSRF) es un ataque contra aplicaciones hospedadas en web mediante el cual un sitio web malintencionado puede influir en la interacción entre un explorador cliente y un sitio web de confianza de ese explorador. Estos ataques se posible porque los exploradores web enviarán tokens de autenticación automáticamente con cada solicitud a un sitio web. El ejemplo canónico es una cookie de autenticación, por ejemplo, ASP. Vale de autenticación de formularios de la red. Sin embargo, los sitios web que use cualquier mecanismo de autenticación persistente (por ejemplo, la autenticación de Windows, Basic etc.) puede tener como destino estos ataques.
@@ -160,7 +160,7 @@ El *GetTokens* método toma como entrada un token de sesión existente del compr
 
 El desarrollador puede configurar el sistema de anti-XSRF de la aplicación\_iniciar. La configuración es mediante programación. Las propiedades de estático *AntiForgeryConfig* tipo se describen a continuación. Uso de notificaciones de mayoría de los usuarios querrán establecer la propiedad UniqueClaimTypeIdentifier.
 
-| **Property** | **Descripción** |
+| **Propiedad** | **Descripción** |
 | --- | --- |
 | **AdditionalDataProvider** | Un [IAntiForgeryAdditionalDataProvider](https://msdn.microsoft.com/library/system.web.helpers.iantiforgeryadditionaldataprovider(v=vs.111).aspx) que proporciona datos adicionales durante la generación de tokens y consume datos adicionales durante la validación del token. El valor predeterminado es *null*. Para obtener más información, consulte el [IAntiForgeryAdditionalDataProvider](https://msdn.microsoft.com/library/system.web.helpers.iantiforgeryadditionaldataprovider(v=vs.111).aspx) sección. |
 | **CookieName** | Una cadena que proporciona el nombre de la cookie HTTP que se utiliza para almacenar el token de sesión anti-XSRF. Si no se establece este valor, un nombre se generará automáticamente basándose en la ruta de acceso virtual de la aplicación implementada. El valor predeterminado es *null*. |

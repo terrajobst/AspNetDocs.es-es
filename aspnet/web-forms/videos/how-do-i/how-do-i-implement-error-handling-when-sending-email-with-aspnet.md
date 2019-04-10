@@ -8,15 +8,15 @@ ms.date: 11/06/2008
 ms.assetid: c02ffd50-aa19-4cdc-b1bf-760989979a61
 msc.legacyurl: /web-forms/videos/how-do-i/how-do-i-implement-error-handling-when-sending-email-with-aspnet
 msc.type: video
-ms.openlocfilehash: 6708a0a22e621d08301fb4228ec6c6e5f599d57a
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: faa0daa2ffe71e58cd18bb8bed4e476ffcb1852e
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57060762"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59379058"
 ---
-<a name="how-do-i-implement-error-handling-when-sending-email-with-aspnet"></a>[¿Cómo lo hago?:] Implementar el control de errores al enviar correo electrónico con ASP.NET
-====================
+# <a name="how-do-i-implement-error-handling-when-sending-email-with-aspnet"></a>[¿Cómo lo hago?:] Implementar el control de errores al enviar correo electrónico con ASP.NET
+
 por [Chris Pels](https://twitter.com/chrispels)
 
 Chris Pels muestra cómo implementar el control de errores al enviar un correo electrónico con ASP.NET. Crea una página web ASP.NET para enviar correo electrónico, se muestra cómo configurar &lt;mailSettings&gt; en el archivo web.config, se describe la clase System.Net.Mail y cómo se utiliza para crear y enviar mensajes de correo electrónico. A continuación, agrega control de errores mediante las clases de excepción System.Net.Mail, que proporcionan información sobre los errores que pueden producirse al enviar correo electrónico y se revisa la enumeración SmtpStatusCode, que proporciona una lista de resultados posibles al enviar un correo electrónico con el SmtpClient. Por último, envía un correo electrónico de prueba que provoca una excepción y revisa la información en el depurador de Visual Studio de control de errores.

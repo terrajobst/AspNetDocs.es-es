@@ -8,15 +8,15 @@ ms.date: 02/22/2019
 ms.assetid: 97f6164f-59cf-45c0-b820-e4aa29b45396
 msc.legacyurl: /web-api/overview/security/working-with-ssl-in-web-api
 msc.type: authoredcontent
-ms.openlocfilehash: 69c0d217f605096d968435c062ee9931f8dff75f
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: 31589b3713b1f1a9b98d12906bfef81f8bf5e3f9
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57048802"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59386163"
 ---
-<a name="working-with-ssl-in-web-api"></a>Trabajar con SSL en Web API
-====================
+# <a name="working-with-ssl-in-web-api"></a>Trabajar con SSL en Web API
+
 por [Mike Wasson](https://github.com/MikeWasson)
 
 Varios esquemas de autenticación habituales no son seguras a través de HTTP sin formato. En concreto, la autenticación básica y autenticación mediante formularios envían credenciales no cifradas. Para ser seguro, estos esquemas de autenticación *debe* utilizar SSL. Además, se pueden usar certificados de cliente SSL para autenticar a los clientes.

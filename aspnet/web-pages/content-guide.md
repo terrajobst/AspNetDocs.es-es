@@ -8,15 +8,15 @@ ms.date: 01/13/2011
 ms.assetid: b558e481-775a-4aa0-bd3b-ad61e530c2d2
 msc.legacyurl: /web-pages/content-guide
 msc.type: content
-ms.openlocfilehash: e5c2edcceeda977919c1212719786630e7bb8a4f
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: 5e410ac0c6d3430c00e171775d842ee30eeab021
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57028942"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59383178"
 ---
-<a name="webmatrix-content-guide"></a>Guía de contenido de WebMatrix
-====================
+# <a name="webmatrix-content-guide"></a>Guía de contenido de WebMatrix
+
 
 > [!NOTE] 
 > WebMatrix no se recomienda como un entorno de desarrollo integrado para ASP.NET Web Pages. Use [Visual Studio](xref:aspnet/web-pages/overview/getting-started/program-asp-net-web-pages-in-visual-studio) o [código de Visual Studio](https://code.visualstudio.com/).
@@ -50,7 +50,7 @@ WebMatrix es un conjunto de herramientas que proporciona una manera sencilla par
 
 ## <a name="additional-resources"></a>Recursos adicionales
 
-**Read**
+**Leer**
 
 - [Kit de aprendizaje de Microsoft Web campamentos para WebMatrix](http://trainingkit.webcamps.ms/WebMatrix.htm)
 - [Enviar un error o una sugerencia](https://go.microsoft.com/fwlink/?LinkId=195940)

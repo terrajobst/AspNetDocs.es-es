@@ -8,15 +8,15 @@ ms.date: 02/20/2005
 ms.assetid: 9c0cce4d-efd9-4c14-b0e8-a1a140abb3f4
 msc.legacyurl: /web-forms/overview/moving-to-aspnet-20/master-pages
 msc.type: authoredcontent
-ms.openlocfilehash: 644beb37bf893a590be03dd0929c5870af6fbe87
-ms.sourcegitcommit: 289e051cc8a90e8f7127e239fda73047bde4de12
+ms.openlocfilehash: 348e28778e0e7d96230534df1d61386ed39f8f11
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/25/2019
-ms.locfileid: "58425774"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59381151"
 ---
-<a name="master-pages"></a>Páginas maestras
-====================
+# <a name="master-pages"></a>Páginas maestras
+
 por [Microsoft](https://github.com/microsoft)
 
 > Uno de los componentes clave para un sitio Web tenga éxito es un aspecto coherente. En ASP.NET 1.x, los desarrolladores usan controles de usuario para replicar elementos comunes de la página a través de una aplicación Web. Aunque ciertamente es una solución operativa, utilizando los controles de usuario tiene algunas desventajas. Por ejemplo, un cambio en la posición de un control de usuario requiere un cambio en varias páginas en un sitio. Los controles de usuario no se representan también en la vista de diseño después de que se va a insertar en una página.
@@ -71,7 +71,7 @@ Para crear una nueva página principal:
 **Figura 2**: Crear una nueva página maestra
 
 
-Tenga en cuenta que la extensión de archivo para una página maestra es <em>.master</em>. Esta es una de las maneras en que una página maestra difiere de una página normal. La principal diferencia es que en lugar de un @Page la directiva, la página maestra contiene un @Master directiva. Cambie a vista de origen para el patrón de página que acaba de crear y revisar el código.
+Tenga en cuenta que la extensión de archivo para una página maestra es *.master*. Esta es una de las maneras en que una página maestra difiere de una página normal. La principal diferencia es que en lugar de un @Page la directiva, la página maestra contiene un @Master directiva. Cambie a vista de origen para el patrón de página que acaba de crear y revisar el código.
 
 Una nueva página principal tendrá un control ContentPlaceHolder de forma predeterminada. En la mayoría de los casos, tiene más sentido para crear los elementos de página comunes primero y, a continuación, insertar controles ContentPlaceHolder donde desee contenido personalizado. En esos casos, los programadores desearán eliminar el control ContentPlaceHolder predeterminado e insertar otros nuevos mientras se desarrolla la página. Controles ContentPlaceHolder no son redimensionables a pesar del hecho de que muestren los controladores de tamaño. Los tamaños de control ContentPlaceHolder automáticamente según el contenido que lo contiene con una excepción; Si se coloca un control ContentPlaceHolder dentro de un elemento de bloque como una celda de tabla, ajustarse según el tamaño del elemento.
 
@@ -154,7 +154,7 @@ Estableciendo la propiedad MasterPageFile en el código, puede aplicar una deter
 
 ## <a name="using-the-ltpagesgt-element"></a>Mediante el &lt;páginas&gt; elemento
 
-Puede configurar una página principal para las páginas estableciendo el atributo masterPageFile el &lt;páginas&gt; elemento del archivo web.config. Cuando se usa este método, tenga en cuenta que los archivos web.config inferiores en la estructura de la aplicación pueden invalidar esta configuración. Cualquier atributo MasterPageFile establecido un @Page directiva también invalidará esta configuración. Mediante el &lt;páginas&gt; elemento simplifica el proceso crear un <em>maestro</em> página maestra que se puede invalidar si es necesario en determinadas carpetas o archivos.
+Puede configurar una página principal para las páginas estableciendo el atributo masterPageFile el &lt;páginas&gt; elemento del archivo web.config. Cuando se usa este método, tenga en cuenta que los archivos web.config inferiores en la estructura de la aplicación pueden invalidar esta configuración. Cualquier atributo MasterPageFile establecido un @Page directiva también invalidará esta configuración. Mediante el &lt;páginas&gt; elemento simplifica el proceso crear un *maestro* página maestra que se puede invalidar si es necesario en determinadas carpetas o archivos.
 
 ## <a name="properties-in-master-pages"></a>Propiedades en las páginas maestras
 

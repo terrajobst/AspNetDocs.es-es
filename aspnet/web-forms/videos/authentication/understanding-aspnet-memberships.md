@@ -8,15 +8,15 @@ ms.date: 08/04/2008
 ms.assetid: bccd102b-67d5-4c66-833d-6b5f6f51ca55
 msc.legacyurl: /web-forms/videos/authentication/understanding-aspnet-memberships
 msc.type: video
-ms.openlocfilehash: 42ad83dfc33484e9475b8d2013bbb3b047d62faa
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: 007c20834aed2de1d7584fd593b9e4580e0bba78
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57053712"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59386208"
 ---
-<a name="understanding-aspnet-memberships"></a>Descripción de las pertenencias a ASP.NET
-====================
+# <a name="understanding-aspnet-memberships"></a>Descripción de las pertenencias a ASP.NET
+
 por [Joe Stagner](https://github.com/JoeStagner)
 
 En este vídeo Joe Stagner analiza trabajar con los proveedores integrados, disponibles para los desarrolladores ASP.NET, para la suscripción. Para obtener más información acerca de este vídeo, lea el [crear el esquema de pertenencia en SQL Server](../../overview/older-versions-security/membership/creating-the-membership-schema-in-sql-server-vb.md) tutorial de seguridad.

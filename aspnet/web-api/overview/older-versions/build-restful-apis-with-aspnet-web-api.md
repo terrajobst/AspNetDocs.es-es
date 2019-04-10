@@ -1,25 +1,30 @@
 ---
 uid: web-api/overview/older-versions/build-restful-apis-with-aspnet-web-api
-title: Compilar API RESTful con ASP.NET Web API | Microsoft Docs
+title: Compilar API RESTful con ASP.NET Web API - ASP.NET 4.x
 author: rick-anderson
-description: En los últimos años, se ha convertido en claro que HTTP no es solo para servir como páginas HTML. También es una plataforma eficaz para la creación de API de Web, con un puñado de o...
+description: 'Laboratorio práctico: Usar Web API en ASP.NET 4.x para crear una sencilla API de REST para una aplicación de administrador de contactos.'
 ms.author: riande
 ms.date: 02/18/2013
+ms.custom: seoapril2019
 ms.assetid: 87daa99f-3810-407e-b969-dd28a192959d
 msc.legacyurl: /web-api/overview/older-versions/build-restful-apis-with-aspnet-web-api
 msc.type: authoredcontent
-ms.openlocfilehash: f1f5ebbf5170f205be331b6402951fb429196046
-ms.sourcegitcommit: 289e051cc8a90e8f7127e239fda73047bde4de12
+ms.openlocfilehash: 3ba7f2d186e6f0837a32f69f964cec19fe625953
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/25/2019
-ms.locfileid: "58423720"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59391486"
 ---
-<a name="build-restful-apis-with-aspnet-web-api"></a>Compilar API RESTful con ASP.NET Web API
-====================
+# <a name="build-restful-apis-with-aspnet-web-api"></a>Compilar API RESTful con ASP.NET Web API
+
 por [campamentos Web Team](https://twitter.com/webcamps)
 
-> En los últimos años, se ha convertido en claro que HTTP no es solo para servir como páginas HTML. También es una plataforma eficaz para crear las API Web, con unos cuantos verbos (GET, POST etc.) además de algunos conceptos simples como *URI* y *encabezados*. ASP.NET Web API es un conjunto de componentes que simplifican la programación de HTTP. Dado que se basa en el tiempo de ejecución de ASP.NET MVC, API Web controla automáticamente los detalles de bajo nivel de transporte de HTTP. Al mismo tiempo, API Web expone naturalmente el modelo de programación HTTP. De hecho, es uno de los objetivos de la API Web *no* abstraer la realidad de HTTP. Como resultado, la API Web es flexible y fácil de extender. En este laboratorio práctico, usará la API Web para crear una sencilla API de REST para una aplicación de administrador de contactos. También creará un cliente para usar la API. El estilo arquitectónico REST ha demostrado para ser una forma eficaz de aprovechar HTTP - aunque ciertamente no es el enfoque sólo es válido para HTTP. El Administrador de contactos expondrá el RESTful para enumerar, agregar y quitar contactos, entre otros. Esta práctica requiere una comprensión básica de HTTP, REST y se supone que tiene conocimientos prácticos básicos de HTML, JavaScript y jQuery.
+> Laboratorio práctico: Usar Web API en ASP.NET 4.x para crear una sencilla API de REST para una aplicación de administrador de contactos. También creará un cliente para usar la API.
+
+En los últimos años, se ha convertido en claro que HTTP no es solo para servir como páginas HTML. También es una plataforma eficaz para crear las API Web, con unos cuantos verbos (GET, POST etc.) además de algunos conceptos simples como *URI* y *encabezados*. ASP.NET Web API es un conjunto de componentes que simplifican la programación de HTTP. Dado que se basa en el tiempo de ejecución de ASP.NET MVC, API Web controla automáticamente los detalles de bajo nivel de transporte de HTTP. Al mismo tiempo, API Web expone naturalmente el modelo de programación HTTP. De hecho, es uno de los objetivos de la API Web *no* abstraer la realidad de HTTP. Como resultado, la API Web es flexible y fácil de extender.  El estilo arquitectónico REST ha demostrado para ser una forma eficaz de aprovechar HTTP - aunque ciertamente no es el enfoque sólo es válido para HTTP. El Administrador de contactos expondrá el RESTful para enumerar, agregar y quitar contactos, entre otros. 
+
+Esta práctica requiere una comprensión básica de HTTP, REST y se supone que tiene conocimientos prácticos básicos de HTML, JavaScript y jQuery.
 > 
 > > [!NOTE]
 > > El sitio Web de ASP.NET tiene un área dedicada para el marco de ASP.NET Web API en [ https://asp.net/web-api ](https://asp.net/web-api). Este sitio seguirá proporcionando información más reciente, ejemplos y noticias relacionadas con la API Web, así que comprobación con frecuencia si gustaría profundizar más en el arte de la creación de API Web personalizadas disponibles para prácticamente cualquier marco de desarrollo o de dispositivo.
@@ -417,7 +422,7 @@ En esta tarea, continuará modificar la vista de índice de la aplicación MVC. 
 > Además, puede implementar esta aplicación a Azure siguiente [Apéndice C: Publicar una aplicación de ASP.NET MVC 4 mediante Web Deploy](#AppendixC).
 
 
-* * *
+---
 
 <a id="Summary"></a>
 ## <a name="summary"></a>Resumen

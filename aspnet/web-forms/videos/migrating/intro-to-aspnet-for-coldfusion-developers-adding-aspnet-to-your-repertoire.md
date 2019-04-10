@@ -8,15 +8,15 @@ ms.date: 07/25/2006
 ms.assetid: 835a2484-e9e5-468e-9e43-5ae4e61531b6
 msc.legacyurl: /web-forms/videos/migrating/intro-to-aspnet-for-coldfusion-developers-adding-aspnet-to-your-repertoire
 msc.type: video
-ms.openlocfilehash: 9e32afa1a939ecc7d50ff32d3ace8125b80bd6f8
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: 644996c713f589c09b991589cf940f73c798809f
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57065342"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59388574"
 ---
-<a name="intro-to-aspnet-for-coldfusion-developers-adding-aspnet-to-your-repertoire"></a>Nº 6 | Introducción a ASP.NET para programadores de ColdFusion: Agregar ASP.NET al repertorio
-====================
+# <a name="intro-to-aspnet-for-coldfusion-developers-adding-aspnet-to-your-repertoire"></a>Nº 6 | Introducción a ASP.NET para programadores de ColdFusion: Agregar ASP.NET al repertorio
+
 por [Microsoft](https://github.com/microsoft)
 
 Las sesiones de este se muestra una comparación de código de sencilla pero real world entre ColdFusion y ASP.NET.

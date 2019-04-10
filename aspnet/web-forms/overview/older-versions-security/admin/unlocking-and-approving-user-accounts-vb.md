@@ -8,15 +8,15 @@ ms.date: 04/01/2008
 ms.assetid: 041854a5-ea8c-4de0-82f1-121ba6cb2893
 msc.legacyurl: /web-forms/overview/older-versions-security/admin/unlocking-and-approving-user-accounts-vb
 msc.type: authoredcontent
-ms.openlocfilehash: 87f27dc1cc7271ddee8785c12d48913e3c9f2c98
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: 1f6ade517bda60ac0f44811853ee9b9d06070091
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57044502"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59384181"
 ---
-<a name="unlocking-and-approving-user-accounts-vb"></a>Desbloquear y autorizar cuentas de usuario (VB)
-====================
+# <a name="unlocking-and-approving-user-accounts-vb"></a>Desbloquear y autorizar cuentas de usuario (VB)
+
 por [Scott Mitchell](https://twitter.com/ScottOnWriting)
 
 [Descargar código](http://download.microsoft.com/download/6/0/e/60e1bd94-e5f9-4d5a-a079-f23c98f4f67d/VB.14.zip) o [descargar PDF](http://download.microsoft.com/download/6/0/e/60e1bd94-e5f9-4d5a-a079-f23c98f4f67d/aspnet_tutorial14_UnlockAndApprove_vb.pdf)
@@ -49,7 +49,7 @@ Abra el `ManageUsers.aspx` página y agregue un campo Hyperlink a la `UserAccoun
 Después de agregar el campo HYPERLINK en el control GridView, dedique un momento para ver el `ManageUsers.aspx` página a través de un explorador. Como se muestra en la figura 1, cada fila GridView ahora incluye un vínculo "Administrar". El vínculo "Administrar" para Bruce apunta a `UserInformation.aspx?user=Bruce`, mientras que el vínculo "Administrar" de Dave apunta a `UserInformation.aspx?user=Dave`.
 
 
-[![Agrega el campo HYPERLINK un](unlocking-and-approving-user-accounts-vb/_static/image2.png)](unlocking-and-approving-user-accounts-vb/_static/image1.png)
+[![THe campo HYPERLINK agrega una](unlocking-and-approving-user-accounts-vb/_static/image2.png)](unlocking-and-approving-user-accounts-vb/_static/image1.png)
 
 **Figura 1**: El campo HYPERLINK agrega un vínculo "Administrar" para cada cuenta de usuario ([haga clic aquí para ver imagen en tamaño completo](unlocking-and-approving-user-accounts-vb/_static/image3.png))
 
@@ -72,7 +72,7 @@ Ahora estamos listos para implementar la interfaz de usuario `UserInformation.as
 Después de agregar estos controles, la vista de diseño en Visual Studio debe ser similar a la pantalla en la figura 2.
 
 
-[![Crear la interfaz de usuario de UserInformation.aspx](unlocking-and-approving-user-accounts-vb/_static/image5.png)](unlocking-and-approving-user-accounts-vb/_static/image4.png)
+[![Ccrear la interfaz de usuario para UserInformation.aspx](unlocking-and-approving-user-accounts-vb/_static/image5.png)](unlocking-and-approving-user-accounts-vb/_static/image4.png)
 
 **Figura 2**: Crear la interfaz de usuario de `UserInformation.aspx` ([haga clic aquí para ver imagen en tamaño completo](unlocking-and-approving-user-accounts-vb/_static/image6.png))
 
@@ -98,7 +98,7 @@ Vuelva a Visual Studio y cree controladores de eventos para el `IsApproved` de c
 Con estos controladores de eventos en su lugar, volver a visitar la página aprobadas y un usuario. Como se muestra en la figura 3, debería ver una breve mensaje en la página que indica que el usuario `IsApproved` propiedad se modificó correctamente.
 
 
-[![Chris ha sido no aprobado](unlocking-and-approving-user-accounts-vb/_static/image8.png)](unlocking-and-approving-user-accounts-vb/_static/image7.png)
+[![CHRIS ha estado Unapproved](unlocking-and-approving-user-accounts-vb/_static/image8.png)](unlocking-and-approving-user-accounts-vb/_static/image7.png)
 
 **Figura 3**: Chris ha sido no aprobado ([haga clic aquí para ver imagen en tamaño completo](unlocking-and-approving-user-accounts-vb/_static/image9.png))
 
@@ -106,7 +106,7 @@ Con estos controladores de eventos en su lugar, volver a visitar la página apro
 A continuación, cierre de sesión y vuelva a iniciar sesión como el usuario cuya cuenta era simplemente no aprobados. Dado que el usuario no está aprobado, no pueden iniciar sesión. De forma predeterminada, el control de inicio de sesión muestra el mismo mensaje si el usuario no puede iniciar sesión, independientemente del motivo. Sin embargo, en el <a id="Tutorial6"> </a> [ *validar usuario las credenciales en la pertenencia a usuario Store* ](../membership/validating-user-credentials-against-the-membership-user-store-vb.md) tutorial analizamos mejora el control de inicio de sesión para mostrar un mensaje más apropiado. Como se muestra en la figura 4, Chris se muestra un mensaje que explique que él no se puede iniciar sesión porque su cuenta aún no está aprobada.
 
 
-[![Chris no porque su cuenta de inicio es no aprobado](unlocking-and-approving-user-accounts-vb/_static/image11.png)](unlocking-and-approving-user-accounts-vb/_static/image10.png)
+[![CHRIS no pueden iniciar sesión porque su cuenta no aprobado](unlocking-and-approving-user-accounts-vb/_static/image11.png)](unlocking-and-approving-user-accounts-vb/_static/image10.png)
 
 **Figura 4**: Chris no porque su cuenta de inicio es no aprobado ([haga clic aquí para ver imagen en tamaño completo](unlocking-and-approving-user-accounts-vb/_static/image12.png))
 
@@ -116,7 +116,7 @@ Para probar la funcionalidad de bloqueada, intente iniciar sesión como un usuar
 Vuelva a la `ManageUsers.aspx` página y haga clic en el vínculo Administrar para el usuario bloqueado. Como se muestra en la figura 5, debería ver un valor en el `LastLockedOutDateLabel` debe habilitarse el botón Desbloquear usuario. Haga clic en el botón Desbloquear usuario para desbloquear la cuenta de usuario. Una vez que ha conseguido el usuario, podrá iniciar sesión de nuevo.
 
 
-[![Dave se ha bloqueado fuera del sistema](unlocking-and-approving-user-accounts-vb/_static/image14.png)](unlocking-and-approving-user-accounts-vb/_static/image13.png)
+[![DSe ha bloqueado ave fuera del sistema](unlocking-and-approving-user-accounts-vb/_static/image14.png)](unlocking-and-approving-user-accounts-vb/_static/image13.png)
 
 **Figura 5**: Dave tiene ha bloqueado fuera del sistema ([haga clic aquí para ver imagen en tamaño completo](unlocking-and-approving-user-accounts-vb/_static/image15.png))
 
@@ -166,7 +166,7 @@ El `SendingMail` evento se desencadena después de la `CreatedUser` eventos, lo 
 El efecto neto es que los usuarios nuevos están aprobados, lo que significa que no se puede iniciar sesión en el sitio. Además, se envían automáticamente un correo electrónico con un vínculo a la dirección URL de comprobación (consulte la figura 6).
 
 
-[![El nuevo usuario recibe un correo electrónico con un vínculo a la dirección URL de comprobación](unlocking-and-approving-user-accounts-vb/_static/image17.png)](unlocking-and-approving-user-accounts-vb/_static/image16.png)
+[![TNuevo usuario recibirá un correo electrónico con un vínculo a la dirección URL de comprobación](unlocking-and-approving-user-accounts-vb/_static/image17.png)](unlocking-and-approving-user-accounts-vb/_static/image16.png)
 
 **Figura 6**: El nuevo usuario recibe un correo electrónico con un vínculo a la dirección URL de comprobación ([haga clic aquí para ver imagen en tamaño completo](unlocking-and-approving-user-accounts-vb/_static/image18.png))
 
@@ -188,7 +188,7 @@ La mayor parte del código anterior comprueba que existe el identificador de usu
 La figura 7 muestra el `Verification.aspx` página cuando visita a través de un explorador.
 
 
-[![La nueva cuenta de usuario es aprobado ahora](unlocking-and-approving-user-accounts-vb/_static/image20.png)](unlocking-and-approving-user-accounts-vb/_static/image19.png)
+[![TCuenta de usuario nueva es aprobado ahora](unlocking-and-approving-user-accounts-vb/_static/image20.png)](unlocking-and-approving-user-accounts-vb/_static/image19.png)
 
 **Figura 7**: La nueva cuenta de usuario es aprobado ahora ([haga clic aquí para ver imagen en tamaño completo](unlocking-and-approving-user-accounts-vb/_static/image21.png))
 

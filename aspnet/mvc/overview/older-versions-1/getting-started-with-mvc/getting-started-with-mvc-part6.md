@@ -8,15 +8,15 @@ ms.date: 08/14/2010
 ms.assetid: a3a90963-0286-4fa0-9b3d-c230cc18b0a3
 msc.legacyurl: /mvc/overview/older-versions-1/getting-started-with-mvc/getting-started-with-mvc-part6
 msc.type: authoredcontent
-ms.openlocfilehash: 546c3e0a24ecd0d916c79e9ad12f62b926c760c5
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: f648e0cb53dd410105adc22401f19a5a15f9e8c1
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57045192"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59380813"
 ---
-<a name="adding-a-create-method-and-create-view"></a>Agregar un método Create y una vista Create
-====================
+# <a name="adding-a-create-method-and-create-view"></a>Agregar un método Create y una vista Create
+
 por [Scott Hanselman](https://github.com/shanselman)
 
 > Este es un tutorial para principiantes que presenta los conceptos básicos de ASP.NET MVC. Creará una aplicación web simple que lee y escribe desde una base de datos. Visite el [centro de aprendizaje de ASP.NET MVC](../../../index.md) para buscar otros ASP.NET MVC, tutoriales y ejemplos.
@@ -38,7 +38,7 @@ Implementemos ahora la plantilla Create View que vamos a usar para mostrar un fo
 
 Seleccionaremos que se va a pasar a la plantilla de vista de una película"" como su clase de datos de vista e indicar que deseamos "aplicar la técnica scaffolding" una plantilla "Crear".
 
-[![Agregar vista](getting-started-with-mvc-part6/_static/image2.png)](getting-started-with-mvc-part6/_static/image1.png)
+[![Add View](getting-started-with-mvc-part6/_static/image2.png)](getting-started-with-mvc-part6/_static/image1.png)
 
 Tras hacer clic en el botón Agregar, plantilla de vista \Movies\Create.aspx se crearán automáticamente. Dado que hemos seleccionado "Crear" en la lista desplegable de "ver el contenido", el cuadro de diálogo Agregar vista automáticamente "scaffolding" algún contenido predeterminado para nosotros. La técnica de scaffolding crea un elemento HTML &lt;formulario&gt;, un lugar para error de validación de mensajes para ir y, ya que sabe scaffolding sobre películas, crea campos y etiqueta para cada propiedad de nuestra clase.
 
@@ -58,7 +58,7 @@ Echemos un vistazo en el segundo método de creación de nuestro nombre moviesco
 
 Este objeto de película, a continuación, se pasó a la versión [HttpPost] de nuestro método de acción Create, y se guardó en la base de datos y, a continuación, redirige al usuario al método de acción de Index() que mostrará los resultados guardados en la lista de películas:
 
-[![Lista de películas - Windows Internet Explorer](getting-started-with-mvc-part6/_static/image6.png)](getting-started-with-mvc-part6/_static/image5.png)
+[![Movie lista - Windows Internet Explorer](getting-started-with-mvc-part6/_static/image6.png)](getting-started-with-mvc-part6/_static/image5.png)
 
 Hemos no estamos comprobando si nuestra películas son correctas, sin embargo, y la base de datos no nos permite guardar una película con ningún título. Sería bueno si podemos decirle al usuario que antes de la base de datos produjo un error. Haremos esto a continuación mediante la adición de compatibilidad de validación a nuestra aplicación.
 

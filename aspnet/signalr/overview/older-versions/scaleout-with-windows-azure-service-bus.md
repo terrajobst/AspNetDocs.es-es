@@ -8,15 +8,15 @@ ms.date: 05/01/2013
 ms.assetid: 501db899-e68c-49ff-81b2-1dc561bfe908
 msc.legacyurl: /signalr/overview/older-versions/scaleout-with-windows-azure-service-bus
 msc.type: authoredcontent
-ms.openlocfilehash: 77186f43b38a8423a1cbd4cf42723c5b9ccdd953
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: cab185ccb048a374a08f4b5d978b30675c30a60d
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57044202"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59383971"
 ---
-<a name="signalr-scaleout-with-azure-service-bus-signalr-1x"></a>Escalabilidad horizontal de SignalR con Azure Service Bus (SignalR 1.x)
-====================
+# <a name="signalr-scaleout-with-azure-service-bus-signalr-1x"></a>Escalabilidad horizontal de SignalR con Azure Service Bus (SignalR 1.x)
+
 por [Mike Wasson](https://github.com/MikeWasson), [Patrick Fletcher](https://github.com/pfletcher)
 
 [!INCLUDE [Consider ASP.NET Core SignalR](~/includes/signalr/signalr-version-disambiguation.md)]
@@ -33,7 +33,7 @@ Requisitos previos:
 
 También es compatible con el backplane de bus de servicio [Service Bus para Windows Server](https://msdn.microsoft.com/library/windowsazure/dn282144.aspx), versión 1.1. Sin embargo, no es compatible con la versión 1.0 de Service Bus para Windows Server.
 
-## <a name="pricing"></a>Precio
+## <a name="pricing"></a>Precios
 
 El backplane de Service Bus usa temas para enviar mensajes. Para la información de precio más reciente, consulte [Service Bus](https://azure.microsoft.com/pricing/details/service-bus/). En el momento de redactar este artículo, puede enviar 1.000.000 mensajes al mes por menos de $1. El backplane envía un mensaje de bus de servicio para cada invocación de un método de concentrador SignalR. También hay algunos mensajes de control para las conexiones, desconexiones, dejando o unirse a grupos y así sucesivamente. En la mayoría de las aplicaciones, la mayoría del tráfico de mensajes serán las invocaciones de método de concentrador.
 

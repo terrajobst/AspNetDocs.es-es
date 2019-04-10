@@ -8,20 +8,20 @@ ms.date: 08/15/2012
 ms.assetid: 2ece0bf4-aae5-4ff4-8f62-28e0819d4f86
 msc.legacyurl: /web-forms/overview/getting-started/using-page-inspector-in-a-visual-studio-11-beta-web-forms-project
 msc.type: authoredcontent
-ms.openlocfilehash: d2c377f8466f8f324b75ce60860aa00c11bc0ffe
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: c39e1cf42fde382a9e74d7f865f0dac1aa62ddc8
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57058482"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59384245"
 ---
-<a name="using-page-inspector-for-visual-studio-2012-in-aspnet-web-forms"></a>Usar el Inspector de página para Visual Studio 2012 en los formularios Web Forms de ASP.NET
-====================
+# <a name="using-page-inspector-for-visual-studio-2012-in-aspnet-web-forms"></a>Usar el Inspector de página para Visual Studio 2012 en los formularios Web Forms de ASP.NET
+
 by Tim Ammann
 
 > Inspector de página para Visual Studio 2012 es una herramienta de desarrollo web con un explorador integrado. Seleccione cualquier elemento en el explorador integrado y el Inspector de página al instante resalta del elemento origen y CSS. Puede examinar cualquier página en la aplicación, rápidamente buscar los orígenes de marcado representado y usar las herramientas del explorador directamente en el entorno de Visual Studio.
 > 
-> Este tutorial shwos cómo habilitar el modo de inspección y, a continuación, buscar y editar rápidamente las reglas de CSS y el texto dentro del proyecto web. El tutorial usa un proyecto de aplicación de formularios Web, pero también puede usar el Inspector de página para proyectos de sitios Web y [MVC](https://go.microsoft.com/?linkid=9802002) aplicaciones.
+> Este tutorial muestra cómo habilitar el modo de inspección y, a continuación, buscar y editar rápidamente las reglas de CSS y el texto dentro del proyecto web. El tutorial usa un proyecto de aplicación de formularios Web, pero también puede usar el Inspector de página para proyectos de sitios Web y [MVC](https://go.microsoft.com/?linkid=9802002) aplicaciones.
 > 
 > El tutorial tiene las siguientes secciones:
 > 
@@ -198,7 +198,7 @@ Haga clic en **inspeccionar** para poner Inspector de página en modo de inspecc
 
 En el Explorador de Inspector de página, mueva el puntero del mouse sobre la sección "Página principal" hasta que el **div.content contenedor** etiqueta aparece. Haga clic una vez para seleccionar este elemento.
 
-El **Syles** ventana muestra todas las reglas CSS para este elemento. Desplácese hacia abajo hasta encontrar el contenedor de .content .featured selector de clase. Haga clic en ".featured .content-contenedor". Inspector de página abre el archivo CSS que define este estilo (Site.css) y resalta el estilo CSS correspondiente.
+El **estilos** ventana muestra todas las reglas CSS para este elemento. Desplácese hacia abajo hasta encontrar el contenedor de .content .featured selector de clase. Haga clic en ".featured .content-contenedor". Inspector de página abre el archivo CSS que define este estilo (Site.css) y resalta el estilo CSS correspondiente.
 
 ![Archivo CSS](using-page-inspector-in-a-visual-studio-11-beta-web-forms-project/_static/image18.png)
 

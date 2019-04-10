@@ -2,26 +2,26 @@
 uid: web-forms/overview/older-versions-getting-started/master-pages/control-id-naming-in-content-pages-vb
 title: Controlar la nomenclatura de Id. en las páginas de contenido (VB) | Microsoft Docs
 author: rick-anderson
-description: Ilustra cómo los controles ContentPlaceHolder actúan como un contenedor de nomenclatura y, por tanto, asegúrese de trabajar mediante programación con un control difícil (a través de FindConrol)...
+description: Ilustra cómo los controles ContentPlaceHolder actúan como un contenedor de nomenclatura y, por tanto, asegúrese de trabajar mediante programación con un control difícil (a través de FindControl)...
 ms.author: riande
 ms.date: 06/10/2008
 ms.assetid: dbb024a6-f043-4fc5-ad66-56556711875b
 msc.legacyurl: /web-forms/overview/older-versions-getting-started/master-pages/control-id-naming-in-content-pages-vb
 msc.type: authoredcontent
-ms.openlocfilehash: 6e9a751538ca28250e4e776ff2c6c3f0185ffbe6
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: dd60d02c2c3840edd4c0e1244623fcea0cb2db0b
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57059312"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59386325"
 ---
-<a name="control-id-naming-in-content-pages-vb"></a>Nomenclatura de los identificadores de control en las páginas de contenido (VB)
-====================
+# <a name="control-id-naming-in-content-pages-vb"></a>Nomenclatura de los identificadores de control en las páginas de contenido (VB)
+
 por [Scott Mitchell](https://twitter.com/ScottOnWriting)
 
 [Descargar código](http://download.microsoft.com/download/e/e/f/eef369f5-743a-4a52-908f-b6532c4ce0a4/ASPNET_MasterPages_Tutorial_05_VB.zip) o [descargar PDF](http://download.microsoft.com/download/8/f/6/8f6349e4-6554-405a-bcd7-9b094ba5089a/ASPNET_MasterPages_Tutorial_05_VB.pdf)
 
-> Muestra cómo los controles ContentPlaceHolder actúan como un contenedor de nomenclatura y, por tanto, asegúrese de trabajar mediante programación con un control difícil (a través de FindConrol). Examina este problema y soluciones alternativas. También se explica cómo obtener acceso mediante programación el valor de ClientID resultante.
+> Muestra cómo los controles ContentPlaceHolder actúan como un contenedor de nomenclatura y, por tanto, asegúrese de trabajar mediante programación con un control difícil (a través de FindControl). Examina este problema y soluciones alternativas. También se explica cómo obtener acceso mediante programación el valor de ClientID resultante.
 
 
 ## <a name="introduction"></a>Introducción
@@ -83,7 +83,7 @@ En este punto marcado declarativo del control de su contenido debe ser similar a
 Figura 3 muestra la página cuando se ven a través del Diseñador de Visual Studio.
 
 
-[![La página incluye tres controles Web: un cuadro de texto, botón y etiqueta](control-id-naming-in-content-pages-vb/_static/image4.png)](control-id-naming-in-content-pages-vb/_static/image3.png)
+[![THe página incluye tres controles Web: un cuadro de texto, un botón y una etiqueta](control-id-naming-in-content-pages-vb/_static/image4.png)](control-id-naming-in-content-pages-vb/_static/image3.png)
 
 **Figura 03**: La página incluye tres controles Web: un cuadro de texto, botón y etiqueta ([haga clic aquí para ver imagen en tamaño completo](control-id-naming-in-content-pages-vb/_static/image5.png))
 
@@ -133,7 +133,7 @@ Aunque la sintaxis usada para llamar a la `FindControl` método difiere ligerame
 Después de escribir este código, visite la `IDIssues.aspx` página a través de un explorador, escriba su edad y haga clic en el botón "Enviar". Al hacer clic en el botón "Enviar" un `NullReferenceException` se genera (consulte la figura 5).
 
 
-[![Se produce una excepción NullReferenceException](control-id-naming-in-content-pages-vb/_static/image8.png)](control-id-naming-in-content-pages-vb/_static/image7.png)
+[![A Se produce la excepción NullReferenceException](control-id-naming-in-content-pages-vb/_static/image8.png)](control-id-naming-in-content-pages-vb/_static/image7.png)
 
 **Figura 05**: Un `NullReferenceException` se genera ([haga clic aquí para ver imagen en tamaño completo](control-id-naming-in-content-pages-vb/_static/image9.png))
 
@@ -173,7 +173,7 @@ Afortunadamente, una referencia a la página maestra es accesible a través de l
 Esta vez, visite la página a través de un explorador, escribir tu edad y haga clic en el botón "Enviar" muestra el mensaje en el `Results` etiquetar, según lo previsto.
 
 
-[![La edad del usuario se muestra en la etiqueta](control-id-naming-in-content-pages-vb/_static/image11.png)](control-id-naming-in-content-pages-vb/_static/image10.png)
+[![TEdad del usuario se muestra en la etiqueta](control-id-naming-in-content-pages-vb/_static/image11.png)](control-id-naming-in-content-pages-vb/_static/image10.png)
 
 **Figura 06**: La edad del usuario se muestra en la etiqueta ([haga clic aquí para ver imagen en tamaño completo](control-id-naming-in-content-pages-vb/_static/image12.png))
 
@@ -200,7 +200,7 @@ Agregue el código siguiente a la `PageExtensionMethods.vb` archivo para definir
 Con este código en su lugar, volver a la `IDIssues.aspx` comentario actual y clase de código subyacente de la página `FindControl` llamadas al método. Sustitúyalas por llamadas a `Page.FindControlRecursive("controlID")`. ¿Qué es clara sobre los métodos de extensión es que aparecen directamente en las listas de la lista desplegable de IntelliSense. Como se muestra en la figura 7, cuando escriba `Page` y, a continuación, presione período, el `FindControlRecursive` método está incluido en la lista desplegable, junto con el otro IntelliSense `Control` métodos de la clase.
 
 
-[![Métodos de extensión se incluyen en las desplegables de IntelliSense](control-id-naming-in-content-pages-vb/_static/image14.png)](control-id-naming-in-content-pages-vb/_static/image13.png)
+[![EMétodos xtensión se incluyen en las desplegables de IntelliSense](control-id-naming-in-content-pages-vb/_static/image14.png)](control-id-naming-in-content-pages-vb/_static/image13.png)
 
 **Figura 07**: Métodos de extensión se incluyen en IntelliSense listas desplegables ([haga clic aquí para ver imagen en tamaño completo](control-id-naming-in-content-pages-vb/_static/image15.png))
 
@@ -256,7 +256,7 @@ Para obtener más información sobre los temas tratados en este tutorial, consul
 - [Páginas maestras en ASP.NET y `FindControl`](http://www.west-wind.com/WebLog/posts/5127.aspx)
 - [Crear Interfaces de usuario de entrada de datos dinámicos](https://msdn.microsoft.com/library/aa479330.aspx)
 - [Extender la funcionalidad de tipo Base con métodos de extensión](http://aspnet.4guysfromrolla.com/articles/120507-1.aspx)
-- [Cómo: Contenido de la página maestra ASP.NET de referencia](https://msdn.microsoft.com/library/xxwa0ff0.aspx)
+- [Cómo Contenido de la página maestra ASP.NET de referencia](https://msdn.microsoft.com/library/xxwa0ff0.aspx)
 - [Importar en qué páginas: Sugerencias, trucos y capturas](http://www.odetocode.com/articles/450.aspx)
 - [Trabajar con el Script de cliente](https://msdn.microsoft.com/library/aa479302.aspx)
 

@@ -8,15 +8,15 @@ ms.date: 07/23/2014
 ms.assetid: c13785b6-5538-4511-92de-4afdb4a1d0f1
 msc.legacyurl: /ajax/cdn/jquery-mobile
 msc.type: folder
-ms.openlocfilehash: 9dd3e94c1bb936897c8c492d65186c4edd652b59
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: f539911e5d7db6bf13f8e1ad41a1358c5b02c76c
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57019222"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59383205"
 ---
-<a name="jquery-mobile"></a>jQuery Mobile
-====================
+# <a name="jquery-mobile"></a>jQuery Mobile
+
 - [jQuery Mobile 1.4.2 en la red CDN de Microsoft Ajax](cdnjquerymobile142.md)
 - [jQuery Mobile 1.4.1 en la red CDN de Microsoft Ajax](cdnjquerymobile141.md)
 - [jQuery Mobile 1.4.0 en la red CDN de Microsoft Ajax](cdnjquerymobile140.md)

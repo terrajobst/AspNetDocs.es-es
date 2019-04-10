@@ -8,15 +8,15 @@ ms.date: 02/20/2009
 ms.assetid: 829f589f-e201-4f6e-9ae6-08ae84322065
 msc.legacyurl: /mvc/overview/older-versions-1/contact-manager/iteration-4-make-the-application-loosely-coupled-cs
 msc.type: authoredcontent
-ms.openlocfilehash: 389627e610eebcdabee9b4db524e5915186db099
-ms.sourcegitcommit: 62db31596a7da029263cf06335aff12236fb3186
+ms.openlocfilehash: 8caa88d928517e1c71210cbe55e3961d4baf461a
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58440357"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59381281"
 ---
-<a name="iteration-4--make-the-application-loosely-coupled-c"></a>Iteración #4: hacer que la aplicación tenga un acoplamiento (C#)
-====================
+# <a name="iteration-4--make-the-application-loosely-coupled-c"></a>Iteración #4: hacer que la aplicación tenga un acoplamiento (C#)
+
 por [Microsoft](https://github.com/microsoft)
 
 [Descargue el código](iteration-4-make-the-application-loosely-coupled-cs/_static/contactmanager_4_cs1.zip)

@@ -8,15 +8,15 @@ ms.date: 02/20/2009
 ms.assetid: c6e5c036-2265-4fa7-a9eb-47f197bdc262
 msc.legacyurl: /mvc/overview/older-versions-1/contact-manager/iteration-5-create-unit-tests-vb
 msc.type: authoredcontent
-ms.openlocfilehash: 8b34a9f7690777cfcc79d87a5e19586646d5b0d9
-ms.sourcegitcommit: 289e051cc8a90e8f7127e239fda73047bde4de12
+ms.openlocfilehash: 476e5529e4fd53c6166c53766409268939a83c72
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/25/2019
-ms.locfileid: "58425709"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59380670"
 ---
-<a name="iteration-5--create-unit-tests-vb"></a>Iteración #5: crear pruebas unitarias (VB)
-====================
+# <a name="iteration-5--create-unit-tests-vb"></a>Iteración #5: crear pruebas unitarias (VB)
+
 por [Microsoft](https://github.com/microsoft)
 
 [Descargue el código](iteration-5-create-unit-tests-vb/_static/contactmanager_5_vb1.zip)
@@ -116,12 +116,12 @@ Para poder usar Moq, es preciso completar los pasos siguientes:
 4. Agregue una referencia al ensamblado Moq al proyecto de prueba seleccionando la opción de menú **proyecto, agregar referencia** para abrir el **Agregar referencia** cuadro de diálogo. En la pestaña Examinar, vaya a la carpeta donde descomprimió Moq y seleccione el ensamblado Moq.dll. Haga clic en el **Aceptar** botón (consulte la figura 2).
 
 
-[![Moq desbloqueo](iteration-5-create-unit-tests-vb/_static/image1.jpg)](iteration-5-create-unit-tests-vb/_static/image1.png)
+[![Unblocking Moq](iteration-5-create-unit-tests-vb/_static/image1.jpg)](iteration-5-create-unit-tests-vb/_static/image1.png)
 
 **Figura 01**: Moq desbloqueo ([haga clic aquí para ver imagen en tamaño completo](iteration-5-create-unit-tests-vb/_static/image2.png))
 
 
-[![Referencias después de agregar Moq](iteration-5-create-unit-tests-vb/_static/image2.jpg)](iteration-5-create-unit-tests-vb/_static/image3.png)
+[![Rreferencias después de agregar Moq](iteration-5-create-unit-tests-vb/_static/image2.jpg)](iteration-5-create-unit-tests-vb/_static/image3.png)
 
 **Figura 02**: Referencias después de agregar Moq ([haga clic aquí para ver imagen en tamaño completo](iteration-5-create-unit-tests-vb/_static/image4.png))
 
@@ -154,7 +154,7 @@ La primera prueba comprueba que un contacto válido no genera un error de valida
 
 El código para estas pruebas se encuentra en el listado 1.
 
-**Listing 1 - Models\ContactManagerServiceTest.vb**
+**Listado 1 - Models\ContactManagerServiceTest.vb**
 
 [!code-vb[Main](iteration-5-create-unit-tests-vb/samples/sample1.vb)]
 
@@ -184,7 +184,7 @@ Las pruebas restantes comprueban que cuando se llama al método CreateContact() 
 Puede ejecutar las pruebas unitarias en el listado 1 seleccionando la opción de menú **pruebas, ejecutar, todas las pruebas de la solución (CTRL + R, A)**. Los resultados de las pruebas se muestran en la ventana Resultados de pruebas (consulte la figura 4).
 
 
-[![Resultados de pruebas](iteration-5-create-unit-tests-vb/_static/image4.jpg)](iteration-5-create-unit-tests-vb/_static/image7.png)
+[![Test resultados](iteration-5-create-unit-tests-vb/_static/image4.jpg)](iteration-5-create-unit-tests-vb/_static/image7.png)
 
 **Figura 04**: Los resultados de pruebas ([haga clic aquí para ver imagen en tamaño completo](iteration-5-create-unit-tests-vb/_static/image8.png))
 
@@ -223,7 +223,7 @@ Devolver View("Create")
 Si no es explícito al devolver una vista de la propiedad ViewResult.ViewName devuelve una cadena vacía.
 
 
-**Listing 2 - Controllers\ContactControllerTest.vb**
+**Listado 2 - Controllers\ContactControllerTest.vb**
 
 [!code-vb[Main](iteration-5-create-unit-tests-vb/samples/sample6.vb)]
 

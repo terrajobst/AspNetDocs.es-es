@@ -8,15 +8,15 @@ ms.date: 01/17/2014
 ms.assetid: bec04f5d-2638-4417-b288-97c58c8d6379
 msc.legacyurl: /aspnet/overview/owin-and-katana/katana-samples
 msc.type: authoredcontent
-ms.openlocfilehash: b8ce2b40a19e0429f1ccedb03b8f829582652d24
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: 1238f7d09492a6856d49dece5de75184ccfa4838
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57056402"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59379080"
 ---
-<a name="katana-samples"></a>Ejemplos de Katana
-====================
+# <a name="katana-samples"></a>Ejemplos de Katana
+
 por [Microsoft](https://github.com/microsoft)
 
 ## <a name="katana-samples"></a>Ejemplos de Katana

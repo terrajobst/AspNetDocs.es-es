@@ -8,26 +8,26 @@ ms.date: 02/27/2014
 ms.assetid: 9f24fb82-c7ac-48da-b8e2-51b3da17e365
 msc.legacyurl: /web-forms/overview/presenting-and-managing-data/model-binding/retrieving-data
 msc.type: authoredcontent
-ms.openlocfilehash: c53c27f4852eab9813bd917315111e7cd3b04953
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: 29baaf2917e47ac46a78a252721be725b4e9b58f
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57056602"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59398480"
 ---
-<a name="retrieving-and-displaying-data-with-model-binding-and-web-forms"></a>Recuperar y mostrar datos con enlace de modelos y formularios web forms
-====================
+# <a name="retrieving-and-displaying-data-with-model-binding-and-web-forms"></a>Recuperar y mostrar datos con enlace de modelos y formularios web forms
+
 
 > Esta serie de tutoriales muestra los aspectos básicos del uso de enlace de modelos con un proyecto de formularios Web Forms de ASP.NET. Enlace de modelos permite interactuar con los datos más sencilla de tratar con datos de objetos de origen (como ObjectDataSource o SqlDataSource). Esta serie comienza con material introductorio y mueve a conceptos más avanzados en los tutoriales posteriores.
 > 
->  El patrón de enlace modelo funciona con cualquier tecnología de acceso a datos. En este tutorial, va a usar Entity Framework, pero podría usar la tecnología de acceso a datos que le resulte más familiar. Desde un control de servidor enlazado a datos, como un control ListView, GridView, DetailsView o FormView, especifique los nombres de los métodos que se usará para seleccionar, actualizar, eliminar y crear datos. En este tutorial, especificará un valor para el SelectMethod. 
+> El patrón de enlace modelo funciona con cualquier tecnología de acceso a datos. En este tutorial, va a usar Entity Framework, pero podría usar la tecnología de acceso a datos que le resulte más familiar. Desde un control de servidor enlazado a datos, como un control ListView, GridView, DetailsView o FormView, especifique los nombres de los métodos que se usará para seleccionar, actualizar, eliminar y crear datos. En este tutorial, especificará un valor para el SelectMethod. 
 > 
 > Dentro de ese método, proporcionan la lógica para recuperar los datos. En el siguiente tutorial, establecerá los valores para UpdateMethod, InsertMethod y la DeleteMethod.
 >
 > También puede [descargar](https://go.microsoft.com/fwlink/?LinkId=286116) el proyecto completo en C# o Visual Basic. El código descargable funciona con Visual Studio 2012 y versiones posteriores. Usa la plantilla de Visual Studio 2012, que es ligeramente diferente de la plantilla de Visual Studio 2017 que se muestra en este tutorial.
 > 
 > En el tutorial para ejecutar la aplicación en Visual Studio. También puede implementar la aplicación en un proveedor de hospedaje y que esté disponible a través de internet. Microsoft ofrece hospedaje web gratuito para hasta 10 sitios web en un  
->  [cuenta de evaluación de Azure gratuita](https://azure.microsoft.com/free/?WT.mc_id=A443DD604). Para obtener información acerca de cómo implementar un proyecto web de Visual Studio en Azure App Service Web Apps, consulte el [implementación Web de ASP.NET con Visual Studio](../../deployment/visual-studio-web-deployment/introduction.md) serie. Este tutorial también muestra cómo usar migraciones de Entity Framework Code First para implementar la base de datos de SQL Server en Azure SQL Database.
+> [cuenta de evaluación de Azure gratuita](https://azure.microsoft.com/free/?WT.mc_id=A443DD604). Para obtener información acerca de cómo implementar un proyecto web de Visual Studio en Azure App Service Web Apps, consulte el [implementación Web de ASP.NET con Visual Studio](../../deployment/visual-studio-web-deployment/introduction.md) serie. Este tutorial también muestra cómo usar migraciones de Entity Framework Code First para implementar la base de datos de SQL Server en Azure SQL Database.
 > 
 > ## <a name="software-versions-used-in-the-tutorial"></a>Versiones de software que se usa en el tutorial
 > 

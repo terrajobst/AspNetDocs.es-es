@@ -8,12 +8,12 @@ ms.date: 02/18/2013
 ms.assetid: 969ab824-1b98-4552-81fe-b60ef5fc6887
 msc.legacyurl: /mvc/overview/older-versions/hands-on-labs/aspnet-mvc-4-custom-action-filters
 msc.type: authoredcontent
-ms.openlocfilehash: 4c8628cc289610e287c0a3bc3c8a4c7a833c9fde
-ms.sourcegitcommit: 289e051cc8a90e8f7127e239fda73047bde4de12
+ms.openlocfilehash: 32587c7b0fd3075cd46678922b40bda2019f3a26
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/25/2019
-ms.locfileid: "58423421"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59381138"
 ---
 # <a name="aspnet-mvc-4-custom-action-filters"></a>Filtros de acción personalizada de ASP.NET MVC 4
 
@@ -59,7 +59,7 @@ Para mayor comodidad, gran parte del código que se va a administrar a lo largo 
 
 Si no está familiarizado con los fragmentos de código de Visual Studio y desea aprender a usarlas, puede consultar el apéndice de este documento &quot; [Apéndice C: Usar fragmentos de código](#AppendixC)&quot;.
 
-* * *
+---
 
 <a id="Exercises"></a>
 
@@ -234,7 +234,7 @@ Para obtener más información sobre el orden de ejecución de los filtros de ac
 <a id="Ex2Task1"></a>
 
 <a id="Task_1_Creating_a_new_Custom_Action_Filter"></a>
-#### <a name="task-1-creating-a-new-custom-action-filter"></a>Tarea 1: Crear un nuevo filtro de acción personalizado
+#### <a name="task-1-creating-a-new-custom-action-filter"></a>Tarea 1: Crear un nuevo filtro de acción personalizado
 
 En esta tarea, creará un nuevo filtro de acción personalizado para insertar en la clase StoreController, aprender a administrar el orden de ejecución de los filtros.
 
@@ -266,7 +266,7 @@ En esta tarea, creará un nuevo filtro de acción personalizado para insertar en
 <a id="Ex2Task2"></a>
 
 <a id="Task_2_Injecting_a_new_Code_Interceptor_into_the_StoreController_Class"></a>
-#### <a name="task-2-injecting-a-new-code-interceptor-into-the-storecontroller-class"></a>Tarea 2: Inserta un nuevo Interceptor de código en la clase StoreController
+#### <a name="task-2-injecting-a-new-code-interceptor-into-the-storecontroller-class"></a>Tarea 2: Inserta un nuevo Interceptor de código en la clase StoreController
 
 En esta tarea, agregará un nuevo filtro personalizado en la clase StoreController y ejecutar la solución para comprobar cómo estos dos filtros funcionan juntos.
 
@@ -290,7 +290,7 @@ En esta tarea, agregará un nuevo filtro personalizado en la clase StoreControll
 <a id="Ex2Task3"></a>
 
 <a id="Task_3_Managing_Filter_Ordering"></a>
-#### <a name="task-3-managing-filter-ordering"></a>Tarea 3: Administrar el orden de los filtros
+#### <a name="task-3-managing-filter-ordering"></a>Tarea 3: Administrar el orden de los filtros
 
 En esta tarea, obtendrá información sobre cómo administrar el orden de ejecución de los filtros utilizando la propiedad Order.
 
@@ -354,7 +354,7 @@ En esta tarea, actualizará la solución para registrar el nuevo filtro (**MyNew
 > Además, puede implementar esta aplicación a los siguientes sitios Web Windows Azure [Apéndice B: Publicar una aplicación de ASP.NET MVC 4 mediante Web Deploy](#AppendixB).
 
 
-* * *
+---
 
 <a id="Summary"></a>
 

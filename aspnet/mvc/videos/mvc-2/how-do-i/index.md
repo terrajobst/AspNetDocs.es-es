@@ -8,15 +8,15 @@ ms.date: 09/15/2011
 ms.assetid: 9bc6c53a-3e54-4f9d-8bef-0f3359aecf7b
 msc.legacyurl: /mvc/videos/mvc-2/how-do-i
 msc.type: chapter
-ms.openlocfilehash: 09b8b31059ed6a238414714847d191426e28db28
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: 84c626764573108969fec51a2cba028e463b1962
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57023902"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59380891"
 ---
-<a name="how-do-i"></a>¿Cómo puedo...?
-====================
+# <a name="how-do-i"></a>¿Cómo puedo...?
+
 > Vídeos de esta sección cubren ASP.NET MVC, incluido cómo crear una aplicación de comercio electrónico completo desde el principio para finalizar de "The Storefront -".
 
 
@@ -29,20 +29,20 @@ ms.locfileid: "57023902"
 - [Introducción al enrutamiento de direcciones URL](an-introduction-to-url-routing.md)
 - [Prevenir ataques por inyección de código de JavaScript](preventing-javascript-injection-attacks.md)
 - [Crear pruebas unitarias para aplicaciones de ASP.NET MVC](creating-unit-tests-for-aspnet-mvc-applications.md)
-- [Crear asistentes de HTML personalizadas](creating-custom-html-helpers.md)
+- [Crear asistentes de HTML personalizados](creating-custom-html-helpers.md)
 - [Crear clases de modelo con LINQ to SQL](creating-model-classes-with-linq-to-sql.md)
 - [Mostrar una tabla de los datos de la base de datos](displaying-a-table-of-database-data.md)
 - [Vídeo técnico de 80 minutos sobre ASP.NET MVC para desarrolladores y compilación de NerdDinner](what-is-aspnet-mvc-80-minute-technical-video-for-developers-building-nerddinner.md)
 - [Vídeo de introducción de 3 minutos de ASP.NET MVC para la toma de decisiones](why-aspnet-mvc-3-minute-overview-video-for-decision-makers.md)
-- [ASP.NET MVC: 10 minutos vídeo técnico para desarrolladores](aspnet-mvc-how-10-minute-technical-video-for-developers.md)
+- [ASP.NET MVC: Vídeo técnico de 10 minutos para desarrolladores](aspnet-mvc-how-10-minute-technical-video-for-developers.md)
 - [Devolver datos con formato JSON para una llamada de AJAX en una aplicación web de ASP.NET MVC](how-do-i-return-json-formatted-data-for-an-ajax-call-in-an-aspnet-mvc-web-application.md)
 - [Trabajar con datos en las vistas parciales de ASP.NET MVC](how-do-i-work-with-data-in-aspnet-mvc-partial-views.md)
 - [Implementar modelos de vista para administrar los datos para las vistas de MVC de ASP.NET](how-do-i-implement-view-models-to-manage-data-for-aspnet-mvc-views.md)
-- [Crear un asistente de HTML personalizada para una aplicación MVC](how-do-i-create-a-custom-html-helper-for-an-mvc-application.md)
+- [Crear un Asistente de HTML personalizado para una aplicación MVC](how-do-i-create-a-custom-html-helper-for-an-mvc-application.md)
 - [Trabajar con los enlazadores de modelos en una aplicación MVC](how-do-i-work-with-model-binders-in-an-mvc-application.md)
 - [Usar atributos HttpVerbs en una aplicación MVC](how-do-i-use-httpverbs-attributes-in-an-mvc-application.md)
 - [MVC2 - Codificación HTML](mvc2-html-encoding.md)
-- [MVC2 - Asistentes fuertemente tipadas](mvc2-stronglytyped-helpers.md)
+- [MVC2 - Asistentes fuertemente tipados](mvc2-stronglytyped-helpers.md)
 - [MVC2 - Validación de modelos](mvc2-model-validation.md)
 - [MVC2 - Personalización de plantillas](mvc2-template-customization.md)
 - [ASP.NET MVC 2 - Áreas](aspnet-mvc-2-areas.md)

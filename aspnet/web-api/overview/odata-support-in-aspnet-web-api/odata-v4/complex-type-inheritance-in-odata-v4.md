@@ -8,15 +8,15 @@ ms.date: 09/16/2014
 ms.assetid: a00d3600-9c2a-41bc-9460-06cc527904e2
 msc.legacyurl: /web-api/overview/odata-support-in-aspnet-web-api/odata-v4/complex-type-inheritance-in-odata-v4
 msc.type: authoredcontent
-ms.openlocfilehash: 8dbf7dc4cfc70e1ea1ed6f72ffc0751a56809c09
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: 76db6325b8528af5b82ca3ea4e34284ca470ff6e
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57028452"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59378606"
 ---
-<a name="complex-type-inheritance-in-odata-v4-with-aspnet-web-api"></a>Herencia de tipo complejo en OData v4 con ASP.NET Web API
-====================
+# <a name="complex-type-inheritance-in-odata-v4-with-aspnet-web-api"></a>Herencia de tipo complejo en OData v4 con ASP.NET Web API
+
 por [Microsoft](https://github.com/microsoft)
 
 > Según el OData v4 [especificación](http://www.odata.org/documentation/odata-version-4-0/), un tipo complejo puede heredar de otro tipo complejo. (Un *complejos* tipo es un tipo estructurado sin una clave.) Web API OData 5.3 admite la herencia de tipo complejo.

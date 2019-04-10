@@ -8,15 +8,15 @@ ms.date: 06/10/2014
 ms.assetid: 98358b6e-9139-4239-ba3a-2d7dd74dd664
 msc.legacyurl: /signalr/overview/performance/scaleout-with-sql-server
 msc.type: authoredcontent
-ms.openlocfilehash: ac023e7d52f01886ad9978897607396d8f1c31a4
-ms.sourcegitcommit: 289e051cc8a90e8f7127e239fda73047bde4de12
+ms.openlocfilehash: c0c214ea32ad13b3a63be9ef84bcb4b8bc7311aa
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/25/2019
-ms.locfileid: "58422563"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59393586"
 ---
-<a name="signalr-scaleout-with-sql-server"></a>Escalabilidad horizontal de SignalR con SQL Server
-====================
+# <a name="signalr-scaleout-with-sql-server"></a>Escalabilidad horizontal de SignalR con SQL Server
+
 por [Mike Wasson](https://github.com/MikeWasson), [Patrick Fletcher](https://github.com/pfletcher)
 
 [!INCLUDE [Consider ASP.NET Core SignalR](~/includes/signalr/signalr-version-disambiguation.md)]

@@ -1,22 +1,23 @@
 ---
 uid: web-api/overview/hosting-aspnet-web-api/use-owin-to-self-host-web-api
-title: Use OWIN para autohospedaje de ASP.NET Web API | Microsoft Docs
+title: Use OWIN para autohospedaje de ASP.NET Web API - ASP.NET 4.x
 author: rick-anderson
-description: Este tutorial muestra cómo hospedar ASP.NET Web API en una aplicación de consola, el uso de OWIN para autohospedaje el marco API Web. Interfaz Web abierta para .NET (OWIN) d...
+description: Tutorial con código que muestra cómo hospedar ASP.NET Web API en una aplicación de consola.
 ms.author: riande
 ms.date: 07/09/2013
+ms.custom: seoapril2019
 ms.assetid: a90a04ce-9d07-43ad-8250-8a92fb2bd3d5
 msc.legacyurl: /web-api/overview/hosting-aspnet-web-api/use-owin-to-self-host-web-api
 msc.type: authoredcontent
-ms.openlocfilehash: a83d1350c2e984acd3c115afd27adfe2b05adb2f
-ms.sourcegitcommit: 289e051cc8a90e8f7127e239fda73047bde4de12
+ms.openlocfilehash: a67db0bd061846af2db3599e0843ed7c6a22db1e
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/25/2019
-ms.locfileid: "58424565"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59386520"
 ---
-<a name="use-owin-to-self-host-aspnet-web-api"></a>Use OWIN para autohospedaje de ASP.NET Web API 
-====================
+# <a name="use-owin-to-self-host-aspnet-web-api"></a>Use OWIN para autohospedaje de ASP.NET Web API 
+
 
 > Este tutorial muestra cómo hospedar ASP.NET Web API en una aplicación de consola, el uso de OWIN para autohospedaje el marco API Web.
 >

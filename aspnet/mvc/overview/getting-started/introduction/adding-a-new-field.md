@@ -8,15 +8,15 @@ ms.date: 10/17/2013
 ms.assetid: 4085de68-d243-4378-8a64-86236ea8d2da
 msc.legacyurl: /mvc/overview/getting-started/introduction/adding-a-new-field
 msc.type: authoredcontent
-ms.openlocfilehash: bcc1de15b49b51461f76c9ac8f1bee4555ea101d
-ms.sourcegitcommit: 289e051cc8a90e8f7127e239fda73047bde4de12
+ms.openlocfilehash: a5de73d93d0af21a3b59d6c21014810184292adb
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/25/2019
-ms.locfileid: "58422433"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59379357"
 ---
-<a name="adding-a-new-field"></a>Adición de un nuevo campo
-====================
+# <a name="adding-a-new-field"></a>Adición de un nuevo campo
+
 by [Rick Anderson]((https://twitter.com/RickAndMSFT))
 
 [!INCLUDE [Tutorial Note](sample/code-location.md)]
@@ -75,7 +75,7 @@ Si lo hace, agrega la siguiente instrucción using:
 > 
 > Este código supone que los títulos son únicos. Si agrega manualmente un título duplicado, obtendrá la siguiente excepción la próxima vez que realice una migración.   
 > 
->  *La secuencia contiene más de un elemento*  
+> *La secuencia contiene más de un elemento*  
 > 
 > Para obtener más información sobre la [AddOrUpdate](https://msdn.microsoft.com/library/system.data.entity.migrations.idbsetextensions.addorupdate(v=vs.103).aspx) método, consulte [tener cuidado con el método de EF 4.3 AddOrUpdate](http://thedatafarm.com/blog/data-access/take-care-with-ef-4-3-addorupdate-method/)...
 

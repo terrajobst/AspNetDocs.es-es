@@ -8,15 +8,15 @@ ms.date: 06/02/2008
 ms.assetid: 918026b4-2f63-421d-8546-df12856960a8
 msc.legacyurl: /web-forms/overview/ajax-control-toolkit/animation/disabling-actions-during-animation-cs
 msc.type: authoredcontent
-ms.openlocfilehash: 4315f06ea1599bacb93a23a3759610e19754cfba
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: 1cce2b05f125902ab05d493bebe753b2060b4d95
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57044352"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59384284"
 ---
-<a name="disabling-actions-during-animation-c"></a>Deshabilitar las acciones durante la animación (C#)
-====================
+# <a name="disabling-actions-during-animation-c"></a>Deshabilitar las acciones durante la animación (C#)
+
 por [Christian Wenz](https://github.com/wenz)
 
 [Descargar código](http://download.microsoft.com/download/f/9/a/f9a26acd-8df4-4484-8a18-199e4598f411/Animation7.cs.zip) o [descargar PDF](http://download.microsoft.com/download/6/7/1/6718d452-ff89-4d3f-a90e-c74ec2d636a3/animation7CS.pdf)
@@ -55,7 +55,7 @@ También sería posible volver a habilitar al botón después de la animación, 
 Sin embargo en un escenario determinado sería inútil desde el botón se atenúa y no está visible al final de la animación.
 
 
-[![El botón está deshabilitado en cuanto se ejecuta la animación](disabling-actions-during-animation-cs/_static/image2.png)](disabling-actions-during-animation-cs/_static/image1.png)
+[![Tbotón está deshabilitado en cuanto se ejecuta la animación](disabling-actions-during-animation-cs/_static/image2.png)](disabling-actions-during-animation-cs/_static/image1.png)
 
 El botón está deshabilitado en cuanto se ejecuta la animación ([haga clic aquí para ver imagen en tamaño completo](disabling-actions-during-animation-cs/_static/image3.png))
 

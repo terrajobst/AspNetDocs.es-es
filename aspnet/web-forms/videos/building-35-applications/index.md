@@ -8,15 +8,15 @@ ms.date: 10/05/2011
 ms.assetid: 20060b05-3c1b-41ca-9621-4434ba233adc
 msc.legacyurl: /web-forms/videos/building-35-applications
 msc.type: chapter
-ms.openlocfilehash: 0c70223c81f598c83cc39c28d97364f5c8b1e92b
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: 2808f8811e06875a5b38585772763f45794d1fc2
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57020852"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59388327"
 ---
-<a name="building-35-applications"></a>Compilar aplicaciones 3.5
-====================
+# <a name="building-35-applications"></a>Compilar aplicaciones 3.5
+
 > Los conceptos básicos de la creación de aplicaciones de formularios Web Forms de ASP.NET.
 
 

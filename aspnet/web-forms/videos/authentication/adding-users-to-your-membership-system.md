@@ -8,15 +8,15 @@ ms.date: 07/29/2010
 ms.assetid: fc0f145a-ba00-495e-b8aa-a6e8ad4e80f5
 msc.legacyurl: /web-forms/videos/authentication/adding-users-to-your-membership-system
 msc.type: video
-ms.openlocfilehash: 2b92c58f4fddf1362972fa3b1e8e2a56a6a15eb0
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: 0d27ffba7746800e1cc034e75a964ab48bf87b33
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57059212"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59393956"
 ---
-<a name="adding-users-to-your-membership-system"></a>Agregar usuarios al sistema de pertenencia
-====================
+# <a name="adding-users-to-your-membership-system"></a>Agregar usuarios al sistema de pertenencia
+
 por [Joe Stagner](https://github.com/JoeStagner)
 
 En este vídeo, Joe Stagner muestra cómo agregar nuevos usuarios en el repositorio de pertenencia.

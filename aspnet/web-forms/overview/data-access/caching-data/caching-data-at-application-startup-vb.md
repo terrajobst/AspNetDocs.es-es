@@ -8,15 +8,15 @@ ms.date: 05/30/2007
 ms.assetid: 84afe4ac-cc53-4f2e-a867-27eaf692c2df
 msc.legacyurl: /web-forms/overview/data-access/caching-data/caching-data-at-application-startup-vb
 msc.type: authoredcontent
-ms.openlocfilehash: ef0a99a1601f40995c81a12f457303e040f57e29
-ms.sourcegitcommit: 289e051cc8a90e8f7127e239fda73047bde4de12
+ms.openlocfilehash: 58c4654691084b9574283c03c77398cb43f6751a
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/25/2019
-ms.locfileid: "58424617"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59393475"
 ---
-<a name="caching-data-at-application-startup-vb"></a>Almacenar datos en caché al iniciar la aplicación (VB)
-====================
+# <a name="caching-data-at-application-startup-vb"></a>Almacenar datos en caché al iniciar la aplicación (VB)
+
 por [Scott Mitchell](https://twitter.com/ScottOnWriting)
 
 [Descargar PDF](caching-data-at-application-startup-vb/_static/datatutorial60vb1.pdf)
@@ -119,7 +119,7 @@ Agregar el `Global.asax` archivo al directorio raíz web application s, con el b
 > Si ya tiene un `Global.asax` archivo del proyecto, el tipo de elemento no aparecerá en el cuadro de diálogo Agregar nuevo elemento de clase de aplicación Global.
 
 
-[![Agregar el archivo Global.asax al directorio raíz Web Application s](caching-data-at-application-startup-vb/_static/image4.png)](caching-data-at-application-startup-vb/_static/image3.png)
+[![Ael archivo Global.asax para s directorio raíz de la aplicación Web dd](caching-data-at-application-startup-vb/_static/image4.png)](caching-data-at-application-startup-vb/_static/image3.png)
 
 **Figura 3**: Agregar el `Global.asax` archivo s directorio raíz de la aplicación Web ([haga clic aquí para ver imagen en tamaño completo](caching-data-at-application-startup-vb/_static/image5.png))
 
@@ -142,7 +142,7 @@ Estos tutoriales sólo tenemos que agregar código a la `Application_Start` mét
 ¡Y ya está todo s! Al iniciarse la aplicación, el `LoadStaticCache()` método tomará la información del proveedor de BLL y almacenarlo en una variable de miembro estático (o cualquier caché almacenar acabé por uso en el `StaticCache` clase). Para comprobar este comportamiento, establezca un punto de interrupción el `Application_Start` método y ejecutar la aplicación. Tenga en cuenta que el punto de interrupción tras el inicio de la aplicación. Hacen que las solicitudes posteriores, sin embargo, el `Application_Start` ejecución del método.
 
 
-[![Usar un punto de interrupción para verificar que el controlador de eventos Application_Start es que se está ejecutando](caching-data-at-application-startup-vb/_static/image7.png)](caching-data-at-application-startup-vb/_static/image6.png)
+[![UCompruebe que el controlador de eventos Application_Start es que se está ejecutando un punto de interrupción se](caching-data-at-application-startup-vb/_static/image7.png)](caching-data-at-application-startup-vb/_static/image6.png)
 
 **Figura 4**: Usar un punto de interrupción para comprobar que la `Application_Start` controlador de eventos es que se está ejecutando ([haga clic aquí para ver imagen en tamaño completo](caching-data-at-application-startup-vb/_static/image8.png))
 
@@ -158,12 +158,12 @@ En este momento la `StaticCache` clase tiene una versión de los datos de provee
 Comience abriendo la `AtApplicationStartup.aspx` página en el `Caching` carpeta. Arrastre un control GridView del cuadro de herramientas hasta el diseñador, establecer su `ID` propiedad `Suppliers`. A continuación, desde el control GridView etiqueta inteligente de s optar por crear un nuevo origen ObjectDataSource denominado `SuppliersCachedDataSource`. Configurar el origen ObjectDataSource para usar el `StaticCache` clase s `GetSuppliers()` método.
 
 
-[![Configurar el origen ObjectDataSource para usar la clase StaticCache](caching-data-at-application-startup-vb/_static/image10.png)](caching-data-at-application-startup-vb/_static/image9.png)
+[![Cconfigurar el origen ObjectDataSource para usar la clase StaticCache](caching-data-at-application-startup-vb/_static/image10.png)](caching-data-at-application-startup-vb/_static/image9.png)
 
 **Figura 5**: Configurar el origen ObjectDataSource para usar el `StaticCache` clase ([haga clic aquí para ver imagen en tamaño completo](caching-data-at-application-startup-vb/_static/image11.png))
 
 
-[![Utilice el método GetSuppliers() para recuperar los datos de proveedor almacenado en caché](caching-data-at-application-startup-vb/_static/image13.png)](caching-data-at-application-startup-vb/_static/image12.png)
+[![Uel método GetSuppliers() para recuperar los datos de proveedor almacenado en caché se](caching-data-at-application-startup-vb/_static/image13.png)](caching-data-at-application-startup-vb/_static/image12.png)
 
 **Figura 6**: Use la `GetSuppliers()` método para recuperar los datos de proveedor almacenado en caché ([haga clic aquí para ver imagen en tamaño completo](caching-data-at-application-startup-vb/_static/image14.png))
 
@@ -176,7 +176,7 @@ Después de completar el asistente, Visual Studio agregará automáticamente Bou
 Figura 7 muestra la página cuando se ve mediante un explorador. El resultado es el mismo si hubiéramos extraemos los datos del s BLL `SuppliersBLL` clase, pero utilizando el `StaticCache` clase devuelve los datos de proveedor como en caché al iniciarse la aplicación. Puede establecer puntos de interrupción el `StaticCache` clase s `GetSuppliers()` método para comprobar este comportamiento.
 
 
-[![Los datos de proveedor almacenado en caché se muestra en un control GridView](caching-data-at-application-startup-vb/_static/image16.png)](caching-data-at-application-startup-vb/_static/image15.png)
+[![Tlos datos de proveedor de almacenamiento en caché se muestra en un control GridView](caching-data-at-application-startup-vb/_static/image16.png)](caching-data-at-application-startup-vb/_static/image15.png)
 
 **Figura 7**: Los datos de proveedor almacenado en caché se muestra en un control GridView ([haga clic aquí para ver imagen en tamaño completo](caching-data-at-application-startup-vb/_static/image17.png))
 

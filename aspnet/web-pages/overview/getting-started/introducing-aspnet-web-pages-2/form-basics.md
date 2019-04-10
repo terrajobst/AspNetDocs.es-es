@@ -8,15 +8,15 @@ ms.date: 05/28/2015
 ms.assetid: 81ed82bf-b940-44f1-b94a-555d0cb7cc98
 msc.legacyurl: /web-pages/overview/getting-started/introducing-aspnet-web-pages-2/form-basics
 msc.type: authoredcontent
-ms.openlocfilehash: 28385ac2244ab0bfb38ee5fcbc64e6e11804612b
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: f88f7a31551abda029bee0ec16aa35ce2ef5d2f0
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57028222"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59385961"
 ---
-<a name="introducing-aspnet-web-pages---html-form-basics"></a>Introducción a las páginas Web ASP.NET - conceptos básicos de formularios HTML
-====================
+# <a name="introducing-aspnet-web-pages---html-form-basics"></a>Introducción a las páginas Web ASP.NET - conceptos básicos de formularios HTML
+
 por [Tom FitzMacken](https://github.com/tfitzmac)
 
 > Este tutorial muestra los conceptos básicos de cómo crear un formulario de entrada y cómo controlar la entrada del usuario cuando se usa ASP.NET Web Pages (Razor). Y ahora que tiene una base de datos, deberá usar sus habilidades de formulario para que los usuarios puedan buscar películas específicas en la base de datos. Supone que ha completado la serie a través de [Introducción para mostrar datos utilizando ASP.NET Web Pages](/aspnet/web-pages/overview/getting-started/introducing-aspnet-web-pages-2/displaying-data).
@@ -356,7 +356,7 @@ En el siguiente tutorial, creará una página que usa un formulario para permiti
 
 ## <a name="additional-resources"></a>Recursos adicionales
 
-- [Introducción a la programación Web de ASP.NET mediante la sintaxis Razor](https://go.microsoft.com/fwlink/?LinkID=202890)
+- [Introducción a la programación web de ASP.NET usando la sintaxis Razor](https://go.microsoft.com/fwlink/?LinkID=202890)
 - [Cláusula WHERE de SQL](http://www.w3schools.com/sql/sql_where.asp) en el sitio W3Schools
 - [Las definiciones de método](http://www.w3.org/Protocols/rfc2616/rfc2616-sec9.html) artículo en el sitio de W3C
 

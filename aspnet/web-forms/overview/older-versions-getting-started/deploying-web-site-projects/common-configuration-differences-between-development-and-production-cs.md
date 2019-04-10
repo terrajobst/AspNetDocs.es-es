@@ -8,15 +8,15 @@ ms.date: 04/01/2009
 ms.assetid: 721a5c37-7e21-48e0-832e-535c6351dcae
 msc.legacyurl: /web-forms/overview/older-versions-getting-started/deploying-web-site-projects/common-configuration-differences-between-development-and-production-cs
 msc.type: authoredcontent
-ms.openlocfilehash: 47060b45cad0e2f15a3c314d608b88c7c1d30809
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: b9d4ed08ea1e8429c1895d0631e1acac9c7eaba9
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57037322"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59391460"
 ---
-<a name="common-configuration-differences-between-development-and-production-c"></a>Diferencias de configuración comunes entre el desarrollo y la producción (C#)
-====================
+# <a name="common-configuration-differences-between-development-and-production-c"></a>Diferencias de configuración comunes entre el desarrollo y la producción (C#)
+
 por [Scott Mitchell](https://twitter.com/ScottOnWriting)
 
 [Descargar PDF](http://download.microsoft.com/download/E/8/9/E8920AE6-D441-41A7-8A77-9EF8FF970D8B/aspnet_tutorial05_ConfigDifferences_cs.pdf)

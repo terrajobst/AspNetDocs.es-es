@@ -8,15 +8,15 @@ ms.date: 10/16/2008
 ms.assetid: 37a1ebae-8773-408f-8645-d21da7ff9ae1
 msc.legacyurl: /mvc/overview/older-versions-1/views/passing-data-to-view-master-pages-vb
 msc.type: authoredcontent
-ms.openlocfilehash: 9b840e0a5cc325a043ae88c10f52cca418589119
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: 7de5a1545ee59e671058f09789ce69d5062d3655
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57055802"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59380982"
 ---
-<a name="passing-data-to-view-master-pages-vb"></a>Pasar datos a las páginas maestras de vista (VB)
-====================
+# <a name="passing-data-to-view-master-pages-vb"></a>Pasar datos a las páginas maestras de vista (VB)
+
 por [Microsoft](https://github.com/microsoft)
 
 [Descargar PDF](http://download.microsoft.com/download/e/f/3/ef3f2ff6-7424-48f7-bdaa-180ef64c3490/ASPNET_MVC_Tutorial_13_VB.pdf)
@@ -33,7 +33,7 @@ El objetivo de este tutorial es explicar cómo puede pasar datos de un controlad
 Imagine que está creando una aplicación de base de datos de películas y desea mostrar la lista de las categorías de películas en todas las páginas en la aplicación (consulte la figura 1). Además, imagine que la lista de las categorías de películas se almacena en una tabla de base de datos. En ese caso tendría sentido para recuperar las categorías de la base de datos y presentar la lista de categorías de película dentro de una página maestra de la vista.
 
 
-[![Mostrar las categorías de películas en una página maestra de la vista](passing-data-to-view-master-pages-vb/_static/image2.png)](passing-data-to-view-master-pages-vb/_static/image1.png)
+[![Dcategorías de películas IsPlaying en una página maestra de vista](passing-data-to-view-master-pages-vb/_static/image2.png)](passing-data-to-view-master-pages-vb/_static/image1.png)
 
 **Figura 01**: Mostrar las categorías de películas en una página de vista maestra ([haga clic aquí para ver imagen en tamaño completo](passing-data-to-view-master-pages-vb/_static/image3.png))
 
@@ -59,7 +59,7 @@ Tenga en cuenta que tanto el `Index()` y `Details()` acciones de agregan dos ele
 El `Details()` acción también agrega dos claves denominada categorías y películas. La clave de categorías, una vez más, representa la lista de las categorías de películas que se muestra en la página principal de la vista. La clave de películas representa la lista de películas en una categoría determinada que se muestra en la página de vista de detalles (consulte la figura 2).
 
 
-[![La vista de detalles](passing-data-to-view-master-pages-vb/_static/image5.png)](passing-data-to-view-master-pages-vb/_static/image4.png)
+[![Tvista de detalles](passing-data-to-view-master-pages-vb/_static/image5.png)](passing-data-to-view-master-pages-vb/_static/image4.png)
 
 **Figura 02**: La vista de detalles ([haga clic aquí para ver imagen en tamaño completo](passing-data-to-view-master-pages-vb/_static/image6.png))
 
