@@ -8,15 +8,15 @@ ms.date: 01/12/2011
 ms.assetid: b4e76c1a-f66e-43a0-aa72-f39df79c07c1
 msc.legacyurl: /mvc/overview/older-versions/getting-started-with-aspnet-mvc3/cs/adding-a-new-field
 msc.type: authoredcontent
-ms.openlocfilehash: 3767ca5f0f32c2a93217d902e200fa2dd3dd262a
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: a06def9c434bd79d63bb74d105c1788e993e231a
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57059222"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59383923"
 ---
-<a name="adding-a-new-field-to-the-movie-model-and-table-c"></a>Agregar un nuevo campo a la tabla y modelo de películas (C#)
-====================
+# <a name="adding-a-new-field-to-the-movie-model-and-table-c"></a>Agregar un nuevo campo a la tabla y modelo de películas (C#)
+
 by [Rick Anderson]((https://twitter.com/RickAndMSFT))
 
 > > [!NOTE]

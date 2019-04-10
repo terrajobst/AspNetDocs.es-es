@@ -8,15 +8,15 @@ ms.date: 05/18/2012
 ms.assetid: 1a2ed0e8-63da-4110-9896-e2731d86f7c4
 msc.legacyurl: /web-pages/overview
 msc.type: book
-ms.openlocfilehash: f95d998b838e262dd1843c882dae466a88c23ad5
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: b4c9e9eb85f6ba9a1e2b2d0a1bbaf027ee25bc0d
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57023992"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59381853"
 ---
-<a name="web-pages-guidance"></a>Orientación de las páginas Web
-====================
+# <a name="web-pages-guidance"></a>Orientación de las páginas Web
+
 - [Introducción](getting-started/index.md)
 
     - [Programar ASP.NET Web Pages en Visual Studio](getting-started/program-asp-net-web-pages-in-visual-studio.md)

@@ -9,16 +9,13 @@ ms.date: 01/15/2019
 ms.assetid: be0c098a-1fb2-457e-b815-ddca601afc65
 msc.legacyurl: /mvc/overview/getting-started/getting-started-with-ef-using-mvc/handling-concurrency-with-the-entity-framework-in-an-asp-net-mvc-application
 msc.type: authoredcontent
-ms.openlocfilehash: b513d7d86d382068bc1a8f1bcc61289ee946d38b
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: 11b1bc316f730e31b4a01924765db3c982783652
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57064532"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59383023"
 ---
-<a name="handling-concurrency-with-the-entity-framework-6-in-an-aspnet-mvc-5-application-10-of-12"></a>Controlar la simultaneidad con Entity Framework 6 en una aplicación de ASP.NET MVC 5 (10 de 12)
-====================
-
 # <a name="tutorial-handle-concurrency-with-ef-in-an-aspnet-mvc-5-app"></a>Tutorial: Controlar la simultaneidad con EF en una aplicación ASP.NET MVC 5
 
 En los tutoriales anteriores, ha aprendido cómo actualizar datos. Este tutorial muestra cómo usar simultaneidad optimista para tratar los conflictos cuando varios usuarios actualizan la misma entidad al mismo tiempo. Cambiar las páginas web que funcionan con el `Department` entidad para que controlan los errores de simultaneidad. Las siguientes ilustraciones muestran las páginas Edit y Delete, incluidos algunos mensajes que se muestran si se produce un conflicto de simultaneidad.

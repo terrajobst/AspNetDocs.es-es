@@ -8,15 +8,15 @@ ms.date: 01/26/2011
 ms.assetid: 393df4a8-b1db-44c4-9db7-2b533ca887d0
 msc.legacyurl: /web-forms/overview/older-versions-getting-started/continuing-with-ef/what-s-new-in-the-entity-framework-4
 msc.type: authoredcontent
-ms.openlocfilehash: 402e7ace1abad899d32ed179d6b68de4e5a129f5
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: 0bc24a59e09728a5ecb6e18378c4cde0c8e046f2
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57045722"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59387456"
 ---
-<a name="whats-new-in-the-entity-framework-40"></a>Novedades de Entity Framework 4.0
-====================
+# <a name="whats-new-in-the-entity-framework-40"></a>Novedades de Entity Framework 4.0
+
 por [Tom Dykstra](https://github.com/tdykstra)
 
 > Esta serie de tutoriales se basa en la aplicación web de Contoso University creado por el [Introducción a Entity Framework](../getting-started-with-ef/the-entity-framework-and-aspnet-getting-started-part-1.md) serie de tutoriales. Si no has completado los tutoriales anteriores, como un punto de partida para este tutorial puede [descargar la aplicación](https://code.msdn.microsoft.com/ASPNET-Web-Forms-97f8ee9a) que puede haberla creado. También puede [descargar la aplicación](https://code.msdn.microsoft.com/ASPNET-Web-Forms-6c7197aa) creado por la serie de tutoriales completa. Si tiene preguntas acerca de los tutoriales, puede publicarlos en el [foro de ASP.NET Entity Framework](https://forums.asp.net/1227.aspx).
@@ -135,7 +135,7 @@ En el **elegir la conexión de datos** paso, haga clic en **nueva conexión**.
 
 [![Image14](what-s-new-in-the-entity-framework-4/_static/image26.png)](what-s-new-in-the-entity-framework-4/_static/image25.png)
 
-En el **las propiedades de conexión** diálogo cuadro, seleccione la instancia local de SQL Server Express y el nombre de la base de datos `AlumniAsssociation`.
+En el **las propiedades de conexión** diálogo cuadro, seleccione la instancia local de SQL Server Express y el nombre de la base de datos `AlumniAssociation`.
 
 [![Image15](what-s-new-in-the-entity-framework-4/_static/image28.png)](what-s-new-in-the-entity-framework-4/_static/image27.png)
 
@@ -197,7 +197,7 @@ Para obtener más información sobre cómo usar el enfoque de code first al desa
 - [Desarrollo con 4 de Entity Framework Code First](https://weblogs.asp.net/scottgu/archive/2010/07/16/code-first-development-with-entity-framework-4.aspx). Se trata de un artículo de blog de desarrollo code first presentación de Scott Guthrie.
 - [Publicaciones de Blog del equipo de desarrollo de Entity Framework - CodeOnly etiquetada](https://blogs.msdn.com/b/efdesign/archive/tags/codeonly/)
 - [Entradas de Blog del equipo de desarrollo de Entity Framework - Code First etiquetadas](https://blogs.msdn.com/b/efdesign/archive/tags/code+first/)
-- [Tutorial de Store música de MVC - parte 4: Acceso a datos y modelos](../../../../mvc/overview/older-versions/mvc-music-store/mvc-music-store-part-4.md)
+- [Tutorial de Store música de MVC - parte 4: Modelos y acceso a datos](../../../../mvc/overview/older-versions/mvc-music-store/mvc-music-store-part-4.md)
 - [Introducción a MVC 3 - parte 4: Desarrollo de Code First de Entity Framework](../../../../mvc/overview/older-versions/getting-started-with-aspnet-mvc3/cs/adding-a-model.md)
 
 Además, se proyecta un nuevo tutorial de Code First de MVC que compila una aplicación similar a la aplicación Contoso University para publicarse en la primavera de 2011 a las [https://asp.net/entity-framework/tutorials](../../../../entity-framework.md)

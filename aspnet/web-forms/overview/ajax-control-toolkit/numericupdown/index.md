@@ -8,15 +8,15 @@ ms.date: 11/14/2011
 ms.assetid: 77751a27-0c0a-41ff-9547-1c0d2ed03fd4
 msc.legacyurl: /web-forms/overview/ajax-control-toolkit/numericupdown
 msc.type: chapter
-ms.openlocfilehash: c1038f11c3b5c82baae5564bdb478a977a84a0b3
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: bbe259960bdbd02e070630b6b1000e2e999469f0
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57019092"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59387599"
 ---
-<a name="numericupdown"></a>NumericUpDown
-====================
+# <a name="numericupdown"></a>NumericUpDown
+
 > Este tutorial muestra cómo usar el control NumericUpDown, que permite a los usuarios seleccionar un valor mediante flechas arriba y abajo.
 
 

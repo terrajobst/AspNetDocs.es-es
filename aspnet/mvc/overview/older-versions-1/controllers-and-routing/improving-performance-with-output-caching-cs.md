@@ -8,15 +8,15 @@ ms.date: 01/27/2009
 ms.assetid: 521c9117-81cd-4d8d-9d96-0256dc7bf50f
 msc.legacyurl: /mvc/overview/older-versions-1/controllers-and-routing/improving-performance-with-output-caching-cs
 msc.type: authoredcontent
-ms.openlocfilehash: 516c370941b8f7e5f3528953491057973679586d
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: 5dd5b96d0365c55cbbfa2dfe0856beda41f915e1
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57049352"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59384771"
 ---
-<a name="improving-performance-with-output-caching-c"></a>Mejorar el rendimiento con el almacenamiento en caché de resultados (C#)
-====================
+# <a name="improving-performance-with-output-caching-c"></a>Mejorar el rendimiento con el almacenamiento en caché de resultados (C#)
+
 por [Microsoft](https://github.com/microsoft)
 
 > En este tutorial, obtendrá información sobre cómo puede mejorar considerablemente el rendimiento de las aplicaciones web de ASP.NET MVC aprovechando las ventajas de la caché de resultados. Aprenda a almacenar en caché el resultado devuelto de una acción de controlador para que no tenga el mismo contenido a crearse cada vez que un nuevo usuario invoca la acción.
@@ -44,7 +44,7 @@ No hay ninguna garantía de que el contenido se almacenará en caché para la ca
 
 El controlador Home en el listado 1 devuelve la vista de índice en el listado 2. No hay nada especial acerca de esta vista. La vista de índice simplemente muestra la hora actual (consulte la figura 1).
 
-**Listing 2 – Views\Home\Index.aspx**
+**Listado 2 – Views\Home\Index.aspx**
 
 [!code-aspx[Main](improving-performance-with-output-caching-cs/samples/sample2.aspx)]
 

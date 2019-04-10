@@ -8,12 +8,12 @@ ms.date: 02/18/2013
 ms.assetid: b7dba543-73c3-4534-a9a0-ba70fa2c6a8a
 msc.legacyurl: /mvc/overview/older-versions/hands-on-labs/aspnet-mvc-4-fundamentals
 msc.type: authoredcontent
-ms.openlocfilehash: d3bc39a37cace003c3fda6691f0dd7f893128b07
-ms.sourcegitcommit: 289e051cc8a90e8f7127e239fda73047bde4de12
+ms.openlocfilehash: 38aea3b3480dde6ec6182a45c4f61f44eea8e05e
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/25/2019
-ms.locfileid: "58425254"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59380228"
 ---
 # <a name="aspnet-mvc-4-fundamentals"></a>Conceptos básicos de ASP.NET MVC 4
 
@@ -276,7 +276,7 @@ En esta tarea, se pruebe la aplicación en un explorador web.
 
         ![Exploración StoreBrowse](aspnet-mvc-4-fundamentals/_static/image9.png "StoreBrowse de exploración")
 
-        *Browsing /Store/Browse*
+        *Exploración /Store/Browse*
 3. Cierre el explorador.
 
 <a id="Exercise3"></a>
@@ -869,7 +869,7 @@ En este ejercicio, explorará las mejoras en las plantillas de proyecto de ASP.N
 <a id="Ex7Task1"></a>
 
 <a id="Task_1_Exploring_the_ASPNET_MVC_4_Internet_Application_Template"></a>
-#### <a name="task-1-exploring-the-aspnet-mvc-4-internet-application-template"></a>Tarea 1: Exploración de la plantilla de aplicación de Internet de ASP.NET MVC 4
+#### <a name="task-1-exploring-the-aspnet-mvc-4-internet-application-template"></a>Tarea 1: Exploración de la plantilla de aplicación de Internet de ASP.NET MVC 4
 
 1. Si no está abierto, inicie **VS Express para Web**
 2. Seleccione el **archivo | Nuevo | Proyecto** comando de menú. En el **nuevo proyecto** cuadro de diálogo, seleccione el **Visual C# | Web** plantilla en el panel izquierdo del árbol y elija el **aplicación Web de ASP.NET MVC 4**. **Nombre** el proyecto *Music Store tal* y actualizar la **nombre de la solución** a *comenzar*, a continuación, seleccione una ubicación (o deje el valor predeterminado) y haga clic en **Aceptar** .
@@ -947,7 +947,7 @@ En este ejercicio, explorará las mejoras en las plantillas de proyecto de ASP.N
 > Además, puede implementar esta aplicación a los siguientes sitios Web Windows Azure [Apéndice B: Publicar una aplicación de ASP.NET MVC 4 mediante Web Deploy](#AppendixB).
 
 
-* * *
+---
 
 <a id="Summary"></a>
 

@@ -8,15 +8,15 @@ ms.date: 05/08/2008
 ms.assetid: f6c73522-4c77-4757-b1af-69f9d1db4fb1
 msc.legacyurl: /web-forms/videos/aspnet-dynamic-data/how-do-i-handle-business-logic-exceptions
 msc.type: video
-ms.openlocfilehash: a8f623eedeb438341904e5453b4c75bc424825f1
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: 5eb84731714bd181d69a94bbce27993439288d42
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57032942"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59381879"
 ---
-<a name="how-do-i-handle-business-logic-exceptions"></a>¿Cómo controlar excepciones de lógica de negocios?
-====================
+# <a name="how-do-i-handle-business-logic-exceptions"></a>¿Cómo controlar excepciones de lógica de negocios?
+
 por [Scott Hanselman](https://github.com/shanselman)
 
 Este vídeo muestra cómo agregar validación al modelo de datos. Podrá ver cómo se refleja esa lógica de validación en la interfaz de usuario.

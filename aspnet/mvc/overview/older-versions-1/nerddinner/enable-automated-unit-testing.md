@@ -8,15 +8,15 @@ ms.date: 07/27/2010
 ms.assetid: a19ff2ce-3f7e-4358-9a51-a1403da9c63e
 msc.legacyurl: /mvc/overview/older-versions-1/nerddinner/enable-automated-unit-testing
 msc.type: authoredcontent
-ms.openlocfilehash: 74abf391bb4aab3ff0d5079e0a24ba20287e18fb
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: b0c9cd7ab36a8414e0d7d50a68b05bb09a5f24f1
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57049462"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59387911"
 ---
-<a name="enable-automated-unit-testing"></a>Habilitar las pruebas unitarias automatizadas
-====================
+# <a name="enable-automated-unit-testing"></a>Habilitar las pruebas unitarias automatizadas
+
 por [Microsoft](https://github.com/microsoft)
 
 [Descargar PDF](http://aspnetmvcbook.s3.amazonaws.com/aspnetmvc-nerdinner_v1.pdf)
@@ -98,7 +98,7 @@ Vamos a colocar el cursor dentro de la clase DinnerTest y escriba "Ctrl R, T" pa
 
 *Nota: La ventana de resultados de pruebas de VS no muestra la columna de nombre de clase de forma predeterminada. Se puede agregar con el botón secundario en la ventana Resultados de pruebas y usando el comando de menú Agregar o quitar columnas.*
 
-Las dos pruebas duraban sólo una fracción de segundo para ejecutar y como se puede ver pasados. Ahora podemos se encienden y aumentarlas mediante la creación de pruebas adicionales que comprobación las validaciones de regla concreta, así como para cubren los dos métodos auxiliares - IsUserHost() y IsUserRegisterd(): que se han agregado a la clase Dinner. Con todas estas pruebas en su lugar para la clase Dinner resultará más fácil y seguro agregar nuevas reglas de negocios y validaciones a él en el futuro. Podemos agregar nuestra lógica de la regla nueva a cenar y, a continuación, en cuestión de segundos, comprobar que no se ha interrumpido cualquiera de nuestra funcionalidad lógica anterior.
+Las dos pruebas duraban sólo una fracción de segundo para ejecutar y como se puede ver pasados. Ahora podemos se encienden y aumentarlas mediante la creación de pruebas adicionales que comprobación las validaciones de regla concreta, así como para cubren los dos métodos auxiliares - IsUserHost() y IsUserRegistered(): que se han agregado a la clase Dinner. Con todas estas pruebas en su lugar para la clase Dinner resultará más fácil y seguro agregar nuevas reglas de negocios y validaciones a él en el futuro. Podemos agregar nuestra lógica de la regla nueva a cenar y, a continuación, en cuestión de segundos, comprobar que no se ha interrumpido cualquiera de nuestra funcionalidad lógica anterior.
 
 Tenga en cuenta cómo utilizando un nombre descriptivo prueba facilita comprender rápidamente lo que está comprobando cada prueba. Recomienda usar la **Tools -&gt;opciones** comando de menú, abrir las herramientas de pruebas -&gt;pantalla de configuración de ejecución de prueba y comprobar el "doble clic en un resultado de prueba unitaria con error o no concluyente muestra casilla de verificación de punto de error en la prueba". Esto le permitirá hacer doble clic en un error en la ventana de resultados de pruebas y pasar inmediatamente al error de aserción.
 
@@ -211,7 +211,7 @@ Lo mejor de todo, tomar sólo una fracción de segundo para ejecutar y no requie
 
 | **Tema de lado: Marcos de inserción de dependencia** |
 | --- |
-| Realizar la inserción de dependencias de manual (por ejemplo, se están por encima) funciona bien, pero se vuelven más difícil de mantener como el número de dependencias y los componentes de una aplicación aumenta. Existen varios marcos de inserción de dependencia para .NET que puede ayudar a proporcionar mayor flexibilidad de administración de dependencias. Estos marcos, a veces se denominan contenedores "Inversión de Control" (IoC), proporcionan mecanismos que permiten un nivel adicional de compatibilidad con la configuración para especificar y pasar las dependencias a objetos en tiempo de ejecución (con mayor frecuencia mediante inserción de constructor ). Algunas de la inserción de dependencias más populares de OSS / incluyen marcos IOC en. NET: AutoFac, Ninject, Spring.NET, StructureMap y Windsor. ASP.NET MVC expone la API que permiten a los desarrolladores participar en la resolución y la creación de instancias de los controladores y, lo que permite la inserción de dependencias de extensibilidad / marcos IoC para integrarse sin problemas dentro de este proceso. Con el marco DI/IOC sería también nos permiten quitar el constructor predeterminado de nuestro DinnersController – que desea quitar completamente el acoplamiento entre ella y la DinnerRepositorys. No se usará con una inserción de dependencias / marco IOC con nuestra aplicación NerdDinner. Pero es algo que podemos considerar para el futuro si las capacidades y la base de código de NerdDinner ha crecido. |
+| Realizar la inserción de dependencias de manual (por ejemplo, se están por encima) funciona bien, pero se vuelven más difícil de mantener como el número de dependencias y los componentes de una aplicación aumenta. Existen varios marcos de inserción de dependencia para .NET que puede ayudar a proporcionar mayor flexibilidad de administración de dependencias. Estos marcos, a veces se denominan contenedores "Inversión de Control" (IoC), proporcionan mecanismos que permiten un nivel adicional de compatibilidad con la configuración para especificar y pasar las dependencias a objetos en tiempo de ejecución (con mayor frecuencia mediante inserción de constructor ). Algunas de la inserción de dependencias más populares de OSS / incluyen marcos IOC en. NET: AutoFac, Ninject, Spring.NET, StructureMap y Windsor. ASP.NET MVC expone la API que permiten a los desarrolladores participar en la resolución y la creación de instancias de los controladores y, lo que permite la inserción de dependencias de extensibilidad / marcos IoC para integrarse sin problemas dentro de este proceso. Uso de un marco DI/IOC también permitiría que eliminemos el constructor predeterminado desde nuestro DinnersController – que desea quitar completamente el acoplamiento entre ella y la instancia DinnerRepository. No se usará con una inserción de dependencias / marco IOC con nuestra aplicación NerdDinner. Pero es algo que podemos considerar para el futuro si las capacidades y la base de código de NerdDinner ha crecido. |
 
 ### <a name="creating-edit-action-unit-tests"></a>Crear pruebas unitarias de acción de edición
 

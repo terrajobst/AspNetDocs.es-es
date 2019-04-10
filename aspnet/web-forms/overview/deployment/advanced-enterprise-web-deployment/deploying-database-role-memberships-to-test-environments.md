@@ -8,15 +8,15 @@ ms.date: 05/04/2012
 ms.assetid: 9b2af539-7ad9-47aa-b66e-873bd9906e79
 msc.legacyurl: /web-forms/overview/deployment/advanced-enterprise-web-deployment/deploying-database-role-memberships-to-test-environments
 msc.type: authoredcontent
-ms.openlocfilehash: 07442b7a016ce2a32b1c9e7f44010517e40d7189
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: fd0914ed62a280fea290b9f1b150fc25c8ed6d40
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57035502"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59385337"
 ---
-<a name="deploying-database-role-memberships-to-test-environments"></a>Implementar las pertenencias a roles de base de datos en entornos de prueba
-====================
+# <a name="deploying-database-role-memberships-to-test-environments"></a>Implementar las pertenencias a roles de base de datos en entornos de prueba
+
 por [Jason Lee](https://github.com/jrjlee)
 
 [Descargar PDF](https://msdnshared.blob.core.windows.net/media/MSDNBlogsFS/prod.evol.blogs.msdn.com/CommunityServer.Blogs.Components.WeblogFiles/00/00/00/63/56/8130.DeployingWebAppsInEnterpriseScenarios.pdf)

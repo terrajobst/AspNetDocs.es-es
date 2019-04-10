@@ -8,15 +8,15 @@ ms.date: 06/17/2015
 ms.assetid: 7526ed45-a97d-4e8a-8301-01324ef0eff9
 msc.legacyurl: /web-pages/overview/getting-started/introducing-aspnet-web-pages-2/intro-to-web-pages-programming
 msc.type: authoredcontent
-ms.openlocfilehash: ec1c055d1b3f6ca5c6374a18840c2595bb368e0e
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: 81c2c6f0070a409c289128ccf5d39f9fff788b48
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57034562"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59387352"
 ---
-<a name="introducing-aspnet-web-pages---programming-basics"></a>Introducción a las páginas Web ASP.NET - conceptos básicos de programación
-====================
+# <a name="introducing-aspnet-web-pages---programming-basics"></a>Introducción a las páginas Web ASP.NET - conceptos básicos de programación
+
 por [Tom FitzMacken](https://github.com/tfitzmac)
 
 > Este tutorial proporciona información general sobre cómo programar en ASP.NET Web Pages con sintaxis Razor.
@@ -162,7 +162,7 @@ Estos son algunos ejemplos de condiciones que puede probar en if instrucción:
 
 [!code-csharp[Main](intro-to-web-pages-programming/samples/sample7.cs)]
 
-Puede probar variables con valores o de expresiones mediante un <em>operador lógico</em> o <em>operador de comparación</em>: igual a (==), mayor que (&gt;), menor que (&lt;), mayor o igual a (&gt;=) y menor o igual a (&lt;=). El! = significa operador no es igual a, por ejemplo, si (un! = 0) significa <em>si</em> <em>un</em><em>no es igual a 0</em>.
+Puede probar variables con valores o de expresiones mediante un *operador lógico* o *operador de comparación*: igual a (==), mayor que (&gt;), menor que (&lt;), mayor o igual a (&gt;=) y menor o igual a (&lt;=). El! = significa operador no es igual a, por ejemplo, si (un! = 0) significa *si una no es igual a 0*.
 
 > [!NOTE]
 > Asegúrese de que se tenga en cuenta que el operador de comparación de igual a (==) no es el mismo =. El = operador se usa solo para asignar valores (var un = 2). Si mezcla estos operadores de, obtendrá un error u obtendrá resultados extraños.
@@ -354,7 +354,7 @@ El siguiente tutorial presenta a trabajar con una base de datos. En ese tutorial
 
 ## <a name="additional-resources"></a>Recursos adicionales
 
-- [Introducción a la programación Web de ASP.NET mediante la sintaxis Razor](https://go.microsoft.com/fwlink/?LinkID=202890)
+- [Introducción a la programación web de ASP.NET usando la sintaxis Razor](https://go.microsoft.com/fwlink/?LinkID=202890)
 - [Aplicación auxiliar de Twitter](../../ui-layouts-and-themes/twitter-helper.md)
 
 > [!div class="step-by-step"]

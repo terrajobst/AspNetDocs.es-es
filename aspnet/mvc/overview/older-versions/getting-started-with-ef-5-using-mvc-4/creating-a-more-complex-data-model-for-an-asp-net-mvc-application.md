@@ -8,15 +8,15 @@ ms.date: 07/30/2013
 ms.assetid: f81f3d80-3674-4d8e-a9b1-87feed1a93c9
 msc.legacyurl: /mvc/overview/older-versions/getting-started-with-ef-5-using-mvc-4/creating-a-more-complex-data-model-for-an-asp-net-mvc-application
 msc.type: authoredcontent
-ms.openlocfilehash: cfb01742c3921c24c71fd3fa4a14a9f71fac1ac1
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: 15bdaa588792c3cf4a8e6eee651e0675f959f942
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57063682"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59382243"
 ---
-<a name="creating-a-more-complex-data-model-for-an-aspnet-mvc-application-4-of-10"></a>Crear un modelo de datos más compleja para una aplicación ASP.NET MVC (4 de 10)
-====================
+# <a name="creating-a-more-complex-data-model-for-an-aspnet-mvc-application-4-of-10"></a>Crear un modelo de datos más compleja para una aplicación ASP.NET MVC (4 de 10)
+
 por [Tom Dykstra](https://github.com/tdykstra)
 
 [Descargue el proyecto completado](http://code.msdn.microsoft.com/Getting-Started-with-dd0e2ed8)
@@ -48,7 +48,7 @@ En *Models\Student.cs*, agregue un `using` instrucción para el `System.Componen
 
 El [DataType](https://msdn.microsoft.com/library/system.componentmodel.dataannotations.datatypeattribute.aspx) atributo se usa para especificar un tipo de datos que es más específico que el tipo intrínseco de base de datos. En este caso solo se quiere realizar el seguimiento de la fecha, no de la fecha y la hora. El [enumeración DataType](https://msdn.microsoft.com/library/system.componentmodel.dataannotations.datatype.aspx) proporciona muchos tipos de datos, como *fecha, hora, PhoneNumber, Currency, EmailAddress* y mucho más. El atributo `DataType` también puede permitir que la aplicación proporcione automáticamente características específicas del tipo. Por ejemplo, un `mailto:` vínculo puede crearse para [DataType.EmailAddress](https://msdn.microsoft.com/library/system.componentmodel.dataannotations.datatype.aspx), y se puede proporcionar un selector de fecha para [DataType.Date](https://msdn.microsoft.com/library/system.componentmodel.dataannotations.datatype.aspx) en exploradores que admiten [HTML5](http://html5.org/). El [DataType](https://msdn.microsoft.com/library/system.componentmodel.dataannotations.datatypeattribute.aspx) emite de atributos HTML 5 [data -](http://ejohn.org/blog/html-5-data-attributes/) (pronunciado *"datos dash"*) los atributos que los exploradores HTML 5 pueden comprender. El [DataType](https://msdn.microsoft.com/library/system.componentmodel.dataannotations.datatypeattribute.aspx) atributos no proporcionan ninguna validación.
 
-`DataType.Date` no especifica el formato de la fecha que se muestra. De forma predeterminada, se muestra el campo de datos según los formatos predeterminados basados en el servidor [CultureInfo](https://msdn.microsoft.com/library/vstudio/system.globalization.cultureinfo(v=vs.110).aspx).
+`DataType.Date` no se especifica el formato de la fecha en que se muestra. De forma predeterminada, se muestra el campo de datos según los formatos predeterminados basados en el servidor [CultureInfo](https://msdn.microsoft.com/library/vstudio/system.globalization.cultureinfo(v=vs.110).aspx).
 
 El atributo `DisplayFormat` se usa para especificar el formato de fecha de forma explícita:
 
@@ -152,7 +152,7 @@ Puede colocar varios atributos en una sola línea, por lo que también podría e
 
 ### <a name="the-fullname-calculated-property"></a>La propiedad calculada FullName
 
-`FullName` es una propiedad calculada que devuelve un valor que se crea mediante la concatenación de otras dos propiedades. Por lo tanto, solo tiene un `get` descriptor de acceso y no `FullName` se generará una columna en la base de datos.
+`FullName` es una propiedad calculada que devuelve un valor que se crea concatenando las otras dos propiedades. Por lo tanto, solo tiene un `get` descriptor de acceso y no `FullName` se generará una columna en la base de datos.
 
 [!code-csharp[Main](creating-a-more-complex-data-model-for-an-asp-net-mvc-application/samples/sample11.cs)]
 
@@ -358,7 +358,7 @@ En la PMC, escriba el `add-migration` comando:
 
 Si se intenta actualizar la base de datos en este momento, obtendrá el siguiente error:
 
-*La instrucción ALTER TABLE en conflicto con la restricción FOREIGN KEY "FK\_dbo. Curso\_dbo. Departamento\_DepartmentID ". Se produjo el conflicto en la tabla base de datos "contosouniversity" por "dbo. Department", columna"DepartmentID".*
+*La instrucción ALTER TABLE en conflicto con la restricción FOREIGN KEY "FK\_dbo. Curso\_dbo. Departamento\_DepartmentID ". El conflicto ha aparecido en la base de datos "ContosoUniversity", tabla "dbo.Department", columna "DepartmentID".*
 
 Editar el &lt; *timestamp&gt;\_Chap4.cs* de archivos y realice los siguientes cambios de código (agregará una instrucción SQL y modificar un `AddColumn` instrucción):
 
@@ -377,7 +377,7 @@ Cuando haya terminado de editar el &lt; *timestamp&gt;\_Chap4.cs* de archivo, es
 > 
 > [!code-xml[Main](creating-a-more-complex-data-model-for-an-asp-net-mvc-application/samples/sample35.xml?highlight=1-2)]
 > 
->  Con una base de datos, no hay ningún dato para migrar y el `update-database` comando es mucho más probable que se completará sin errores. Para obtener instrucciones sobre cómo eliminar la base de datos, consulte [cómo quitar una base de datos de Visual Studio 2012](http://romiller.com/2013/05/17/how-to-drop-a-database-from-visual-studio-2012/).
+> Con una base de datos, no hay ningún dato para migrar y el `update-database` comando es mucho más probable que se completará sin errores. Para obtener instrucciones sobre cómo eliminar la base de datos, consulte [cómo quitar una base de datos de Visual Studio 2012](http://romiller.com/2013/05/17/how-to-drop-a-database-from-visual-studio-2012/).
 
 
 Abra la base de datos en **Explorador de servidores** como hizo anteriormente y expanda el **tablas** nodo para ver que se han creado todas las tablas. (Si sigue teniendo **Explorador de servidores** abierta desde el momento anterior, haga clic en el **actualizar** botón.)

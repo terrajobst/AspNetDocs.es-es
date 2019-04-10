@@ -8,15 +8,15 @@ ms.date: 02/09/2013
 ms.assetid: 75af2e17-6ed3-4d24-8ea1-bc340027c318
 msc.legacyurl: /single-page-application/overview/templates/hottowel-template
 msc.type: authoredcontent
-ms.openlocfilehash: b80b5940b5733a0ae2af3491ccdfa05b84b50343
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: 017f550e2caffe1b20823e9b1880cbb4e968005a
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57053072"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59379942"
 ---
-<a name="hot-towel-template"></a>Plantilla de Hot Towel
-====================
+# <a name="hot-towel-template"></a>Plantilla de Hot Towel
+
 por [Mads Kristensen](https://github.com/madskristensen)
 
 > La plantilla de MVC toalla activo está escrita por John Papa

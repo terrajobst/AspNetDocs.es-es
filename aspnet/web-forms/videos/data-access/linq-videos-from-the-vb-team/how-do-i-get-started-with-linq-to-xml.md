@@ -8,15 +8,15 @@ ms.date: 11/15/2007
 ms.assetid: dc3dedcd-5daf-4f0e-9afa-9ccad94f2ce0
 msc.legacyurl: /web-forms/videos/data-access/linq-videos-from-the-vb-team/how-do-i-get-started-with-linq-to-xml
 msc.type: video
-ms.openlocfilehash: c7ca1a1361157afc6d1032dc4bcded3fdc2fbe38
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: bbe5c24f88562d2e4eb0b70e8d83dbd92a90460f
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57060252"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59384804"
 ---
-<a name="how-do-i-get-started-with-linq-to-xml"></a>[¿Cómo lo hago?:] ¿Empezar a trabajar con LINQ to XML?
-====================
+# <a name="how-do-i-get-started-with-linq-to-xml"></a>[¿Cómo lo hago?:] ¿Empezar a trabajar con LINQ to XML?
+
 por [Beth Massi](https://github.com/bethmassi)
 
 Los desarrolladores de Visual Basic obtendrá información sobre cómo trabajar con XML en Visual Basic mediante literales XML, las expresiones incrustadas y propiedades de eje XML para crear, consultar y transformar documentos XML con facilidad.

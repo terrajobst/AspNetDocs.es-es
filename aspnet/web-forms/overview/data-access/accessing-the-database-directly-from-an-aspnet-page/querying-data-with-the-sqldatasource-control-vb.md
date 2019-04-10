@@ -8,15 +8,15 @@ ms.date: 02/20/2007
 ms.assetid: b12f752d-3502-40a4-b695-fc7b7d08cfd3
 msc.legacyurl: /web-forms/overview/data-access/accessing-the-database-directly-from-an-aspnet-page/querying-data-with-the-sqldatasource-control-vb
 msc.type: authoredcontent
-ms.openlocfilehash: 341cd518b5875b6cc7739f88fc1a35687ea0e090
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: d1e01c7693cc5d59b32019dfef1663863e7978c4
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57038832"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59379851"
 ---
-<a name="querying-data-with-the-sqldatasource-control-vb"></a>Consultar datos con el control SqlDataSource (VB)
-====================
+# <a name="querying-data-with-the-sqldatasource-control-vb"></a>Consultar datos con el control SqlDataSource (VB)
+
 por [Scott Mitchell](https://twitter.com/ScottOnWriting)
 
 [Descargue la aplicación de ejemplo](http://download.microsoft.com/download/4/a/7/4a7a3b18-d80e-4014-8e53-a6a2427f0d93/ASPNET_Data_Tutorial_47_VB.exe) o [descargar PDF](querying-data-with-the-sqldatasource-control-vb/_static/datatutorial47vb1.pdf)
@@ -51,7 +51,7 @@ SqlDataSource proporciona la misma funcionalidad, pero funciona con una base de 
 
 
 > [!NOTE]
-> En este tutorial, nos centraremos en recuperar los datos de la base de datos. En el [Insertar, actualizar y eliminar el datos con el SqlDataSource Control](inserting-updating-and-deleting-data-with-the-sqldatasource-vb.md) tutorial, veremos cómo configurar SqlDataSource para admitir la inserción, actualización y eliminación.
+> En este tutorial, nos centraremos en recuperar los datos de la base de datos. En el [Insertar, actualizar y eliminar datos con el SqlDataSource Control](inserting-updating-and-deleting-data-with-the-sqldatasource-vb.md) tutorial, veremos cómo configurar SqlDataSource para admitir la inserción, actualización y eliminación.
 
 
 ## <a name="the-sqldatasource-and-accessdatasource-controls"></a>Los controles de AccessDataSource y SqlDataSource
@@ -79,7 +79,7 @@ Antes de empezar a explorar cómo trabajar directamente con la base de datos med
 Al igual que en las demás carpetas `Default.aspx` en el `SqlDataSource` carpeta mostrará una lista de los tutoriales en su sección. Recuerde que el `SectionLevelTutorialListing.ascx` Control de usuario proporciona esta funcionalidad. Por lo tanto, agrega este Control de usuario a `Default.aspx` arrastrándolo desde el Explorador de soluciones en la página de vista de diseño de s.
 
 
-[![Agregar el Control de usuario SectionLevelTutorialListing.ascx a Default.aspx](querying-data-with-the-sqldatasource-control-vb/_static/image5.gif)](querying-data-with-the-sqldatasource-control-vb/_static/image4.gif)
+[![Ael Control de usuario SectionLevelTutorialListing.ascx a Default.aspx dd](querying-data-with-the-sqldatasource-control-vb/_static/image5.gif)](querying-data-with-the-sqldatasource-control-vb/_static/image4.gif)
 
 **Figura 4**: Agregar el `SectionLevelTutorialListing.ascx` Control de usuario `Default.aspx` ([haga clic aquí para ver imagen en tamaño completo](querying-data-with-the-sqldatasource-control-vb/_static/image6.gif))
 
@@ -155,7 +155,7 @@ El `SelectCommand` propiedad especifica la instrucción de SQL ad hoc o un proce
 Una vez que se ha configurado SqlDataSource, se puede enlazar a un control Web, como GridView o DetailsView de datos. Para este tutorial, permiten s mostrar los datos en un control GridView. En el cuadro de herramientas, arrastre un control GridView a la página y enlazarlo a la `ProductsDataSource` SqlDataSource eligiendo el origen de datos de la lista desplegable en la etiqueta inteligente de s GridView.
 
 
-[![Agregar un control GridView y enlazarlo con el SqlDataSource Control](querying-data-with-the-sqldatasource-control-vb/_static/image13.gif)](querying-data-with-the-sqldatasource-control-vb/_static/image12.gif)
+[![Add un control GridView y enlazarlo con el SqlDataSource Control](querying-data-with-the-sqldatasource-control-vb/_static/image13.gif)](querying-data-with-the-sqldatasource-control-vb/_static/image12.gif)
 
 **Figura 10**: Agregar un control GridView y enlazarlo con el SqlDataSource Control ([haga clic aquí para ver imagen en tamaño completo](querying-data-with-the-sqldatasource-control-vb/_static/image14.gif))
 
@@ -170,7 +170,7 @@ Dedique un momento a configurar las tres operaciones de asignación GridView Bou
 Visite esta página a través de un explorador. Como se muestra en la figura 11, el control GridView enumera cada producto s `ProductID`, `ProductName`, y `UnitPrice` valores.
 
 
-[![El control GridView muestra cada producto s ProductID, ProductName y los valores de UnitPrice](querying-data-with-the-sqldatasource-control-vb/_static/image16.gif)](querying-data-with-the-sqldatasource-control-vb/_static/image15.gif)
+[![TGridView muestra cada producto s ProductID, ProductName y los valores de UnitPrice](querying-data-with-the-sqldatasource-control-vb/_static/image16.gif)](querying-data-with-the-sqldatasource-control-vb/_static/image15.gif)
 
 **Figura 11**: Las operaciones de asignación GridView muestra cada producto `ProductID`, `ProductName`, y `UnitPrice` valores ([haga clic aquí para ver imagen en tamaño completo](querying-data-with-the-sqldatasource-control-vb/_static/image17.gif))
 
@@ -228,7 +228,7 @@ Después de completar el asistente, el control GridView tendrá tres BoundFields
 [!code-aspx[Main](querying-data-with-the-sqldatasource-control-vb/samples/sample5.aspx)]
 
 
-[![El control GridView muestra cada identificador de producto s, nombre de la categoría de nombre y asociados](querying-data-with-the-sqldatasource-control-vb/_static/image22.gif)](querying-data-with-the-sqldatasource-control-vb/_static/image21.gif)
+[![TGridView muestra cada ID, Name y el nombre de la categoría asociada de producto s](querying-data-with-the-sqldatasource-control-vb/_static/image22.gif)](querying-data-with-the-sqldatasource-control-vb/_static/image21.gif)
 
 **Figura 15**: El Id. de producto de GridView muestra cada s, el nombre y el nombre de la categoría asociada ([haga clic aquí para ver imagen en tamaño completo](querying-data-with-the-sqldatasource-control-vb/_static/image23.gif))
 

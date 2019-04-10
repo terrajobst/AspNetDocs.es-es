@@ -8,15 +8,15 @@ ms.date: 07/11/2008
 ms.assetid: 0ee9318c-29bb-4d58-b1dc-94e575b8ae10
 msc.legacyurl: /web-forms/overview/older-versions-getting-started/master-pages/master-pages-and-asp-net-ajax-vb
 msc.type: authoredcontent
-ms.openlocfilehash: aa511b8bd2f4d739cbe1f04b2a9cf03bf6928182
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: 5a968bbbe5bdb6f8daad2c11c18c2b704c3bed8b
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57036242"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59385506"
 ---
-<a name="master-pages-and-aspnet-ajax-vb"></a>Páginas maestras y ASP.NET AJAX (VB)
-====================
+# <a name="master-pages-and-aspnet-ajax-vb"></a>Páginas maestras y ASP.NET AJAX (VB)
+
 por [Scott Mitchell](https://twitter.com/ScottOnWriting)
 
 [Descargar código](http://download.microsoft.com/download/1/8/4/184e24fa-fcc8-47fa-ac99-4b6a52d41e97/ASPNET_MasterPages_Tutorial_08_VB.zip) o [descargar PDF](http://download.microsoft.com/download/e/b/4/eb4abb10-c416-4ba4-9899-32577715b1bd/ASPNET_MasterPages_Tutorial_08_VB.pdf)
@@ -71,7 +71,7 @@ Abra el `Site.master` página principal y agregue un control ScriptManager en la
 Después de agregar el control ScriptManager en la página, cambiar su `ID` desde `ScriptManager1` a `MyManager`.
 
 
-[![Agregar el control ScriptManager en la página maestra](master-pages-and-asp-net-ajax-vb/_static/image2.png)](master-pages-and-asp-net-ajax-vb/_static/image1.png)
+[![Ael ScriptManager en la página maestra dd](master-pages-and-asp-net-ajax-vb/_static/image2.png)](master-pages-and-asp-net-ajax-vb/_static/image1.png)
 
 **Figura 01**: Agregar el control ScriptManager en la página maestra ([haga clic aquí para ver imagen en tamaño completo](master-pages-and-asp-net-ajax-vb/_static/image3.png))
 
@@ -83,7 +83,7 @@ Con el control ScriptManager agregado a la página maestra ahora podemos agregar
 Empiece por crear una nueva página en el directorio raíz denominado `ShowRandomProduct.aspx`. No se olvide de enlazar esta nueva página a la `Site.master` página maestra.
 
 
-[![Agregue una nueva página de ASP.NET al sitio Web](master-pages-and-asp-net-ajax-vb/_static/image5.png)](master-pages-and-asp-net-ajax-vb/_static/image4.png)
+[![Auna nueva página de ASP.NET para el sitio Web de dd](master-pages-and-asp-net-ajax-vb/_static/image5.png)](master-pages-and-asp-net-ajax-vb/_static/image4.png)
 
 **Figura 02**: Agregue una nueva página de ASP.NET al sitio Web ([haga clic aquí para ver imagen en tamaño completo](master-pages-and-asp-net-ajax-vb/_static/image6.png))
 
@@ -104,7 +104,7 @@ Vuelva a `ShowRandomProduct.aspx`. En el diseñador, arrastre un control UpdateP
 Nuestra primera tarea consiste en Mostrar información acerca de un producto seleccionado aleatoriamente dentro de UpdatePanel. Iniciar, arrastre un control DetailsView en UpdatePanel. Establecer el control DetailsView `ID` propiedad `ProductInfo` y borre su `Height` y `Width` propiedades. Expanda la etiqueta inteligente de DetailsView y, en la lista desplegable Elegir origen de datos, decide enlazar DetailsView a un nuevo control SqlDataSource denominado `RandomProductDataSource`.
 
 
-[![Enlazar DetailsView a un nuevo Control SqlDataSource](master-pages-and-asp-net-ajax-vb/_static/image8.png)](master-pages-and-asp-net-ajax-vb/_static/image7.png)
+[![BIND DetailsView a un nuevo Control SqlDataSource](master-pages-and-asp-net-ajax-vb/_static/image8.png)](master-pages-and-asp-net-ajax-vb/_static/image7.png)
 
 **Figura 03**: Enlazar DetailsView a un nuevo SqlDataSource Control ([haga clic aquí para ver imagen en tamaño completo](master-pages-and-asp-net-ajax-vb/_static/image9.png))
 
@@ -117,7 +117,7 @@ Configurar el control SqlDataSource para conectarse a la base de datos Northwind
 El `TOP 1` palabra clave en el `SELECT` cláusula devuelve solo el primer registro devuelto por la consulta. El `NEWID()` función genera un nuevo valor de identificador único global (GUID) y se pueden usar en un `ORDER BY` cláusula para devolver registros de la tabla en orden aleatorio.
 
 
-[![Configurar SqlDataSource para devolver un único registro seleccionado al azar](master-pages-and-asp-net-ajax-vb/_static/image11.png)](master-pages-and-asp-net-ajax-vb/_static/image10.png)
+[![Configurar SqlDataSource para devolver un único registro seleccionado aleatoriamente](master-pages-and-asp-net-ajax-vb/_static/image11.png)](master-pages-and-asp-net-ajax-vb/_static/image10.png)
 
 **Figura 04**: Configurar SqlDataSource para devolver un único registro seleccionado aleatoriamente ([haga clic aquí para ver imagen en tamaño completo](master-pages-and-asp-net-ajax-vb/_static/image12.png))
 
@@ -130,7 +130,7 @@ Después de completar al asistente, Visual Studio crea un BoundField para las do
 La figura 5 muestra el `ShowRandomProduct.aspx` página cuando se ve mediante un explorador. Haga clic en el botón de actualización de su explorador para volver a cargar la página. debería ver el `ProductName` y `UnitPrice` valores para un nuevo registro seleccionado aleatoriamente.
 
 
-[![Se muestra el nombre y el precio de un producto aleatorio](master-pages-and-asp-net-ajax-vb/_static/image14.png)](master-pages-and-asp-net-ajax-vb/_static/image13.png)
+[![A Se muestra el nombre y el precio del producto aleatorio](master-pages-and-asp-net-ajax-vb/_static/image14.png)](master-pages-and-asp-net-ajax-vb/_static/image13.png)
 
 **Figura 05**: Se muestra el nombre y el precio de un producto aleatorio ([haga clic aquí para ver imagen en tamaño completo](master-pages-and-asp-net-ajax-vb/_static/image15.png))
 
@@ -159,12 +159,12 @@ Para ver mejor lo que sucede aquí, vamos a agregar un control de etiqueta para 
 Con este cambio completo, la página incluye el tiempo que se cargó el producto que se muestra actualmente. Figura 6 muestra la página cuando se visita por primera vez. Figura 7 muestra la página de 15 segundos más tarde después de que el control Timer ha "activada" y el control UpdatePanel se actualizó para mostrar información sobre un producto nuevo.
 
 
-[![Se muestra un producto seleccionado aleatoriamente al cargar la página](master-pages-and-asp-net-ajax-vb/_static/image17.png)](master-pages-and-asp-net-ajax-vb/_static/image16.png)
+[![A Producto seleccionado se muestran aleatoriamente al cargar la página](master-pages-and-asp-net-ajax-vb/_static/image17.png)](master-pages-and-asp-net-ajax-vb/_static/image16.png)
 
 **Figura 06**: Se muestra un producto seleccionado aleatoriamente al cargar la página ([haga clic aquí para ver imagen en tamaño completo](master-pages-and-asp-net-ajax-vb/_static/image18.png))
 
 
-[![Cada 15 segundos, se muestra un nuevo aleatoriamente Selected Product](master-pages-and-asp-net-ajax-vb/_static/image20.png)](master-pages-and-asp-net-ajax-vb/_static/image19.png)
+[![Emuy 15 segundos que se muestra un nuevo aleatoriamente seleccionado producto](master-pages-and-asp-net-ajax-vb/_static/image20.png)](master-pages-and-asp-net-ajax-vb/_static/image19.png)
 
 **Figura 07**: Cada 15 segundos, se muestra un nuevo aleatoriamente Selected Product ([haga clic aquí para ver imagen en tamaño completo](master-pages-and-asp-net-ajax-vb/_static/image21.png))
 
@@ -190,12 +190,12 @@ Vamos a crear un archivo JavaScript con una variable denominada `timerEnabled` y
 Empiece por crear una nueva carpeta en el sitio Web denominado `Scripts`. A continuación, agregue un nuevo archivo en la carpeta de secuencias de comandos denominada `TimerScript.js` del tipo de archivo de JScript.
 
 
-[![Agregue un nuevo archivo JavaScript a la carpeta de Scripts](master-pages-and-asp-net-ajax-vb/_static/image23.png)](master-pages-and-asp-net-ajax-vb/_static/image22.png)
+[![Aun nuevo archivo de JavaScript a la carpeta Scripts dd](master-pages-and-asp-net-ajax-vb/_static/image23.png)](master-pages-and-asp-net-ajax-vb/_static/image22.png)
 
 **Figura 08**: Agregue un nuevo archivo de JavaScript a la `Scripts` carpeta ([haga clic aquí para ver imagen en tamaño completo](master-pages-and-asp-net-ajax-vb/_static/image24.png))
 
 
-[![Se agregó un nuevo archivo JavaScript en el sitio Web](master-pages-and-asp-net-ajax-vb/_static/image26.png)](master-pages-and-asp-net-ajax-vb/_static/image25.png)
+[![A Nuevo archivo de JavaScript se ha agregado al sitio Web](master-pages-and-asp-net-ajax-vb/_static/image26.png)](master-pages-and-asp-net-ajax-vb/_static/image25.png)
 
 **Figura 09**: Se agregó un nuevo archivo JavaScript en el sitio Web ([haga clic aquí para ver imagen en tamaño completo](master-pages-and-asp-net-ajax-vb/_static/image27.png))
 
@@ -208,7 +208,7 @@ A continuación, agregue el script siguiente para el `TimerScript.js` archivo:
 Ahora debemos registrar este archivo JavaScript personalizado en `ShowRandomProduct.aspx`. Vuelva a `ShowRandomProduct.aspx` y agregue un control ScriptManagerProxy a la página; establecer su `ID` a `MyManagerProxy`. Para registrar un código de JavaScript personalizado archivo seleccionar el control ScriptManagerProxy en el diseñador y, a continuación, vaya a la ventana Propiedades. Una de las propiedades se titula secuencias de comandos. Selección de esta propiedad muestra el Editor de la colección ScriptReference que se muestra en la figura 10. Haga clic en el botón Agregar para incluir una referencia de script nuevo y, a continuación, escriba la ruta de acceso al archivo de script en la propiedad de ruta de acceso: `~/Scripts/TimerScript.js`.
 
 
-[![Agregue una referencia de Script al Control ScriptManagerProxy](master-pages-and-asp-net-ajax-vb/_static/image29.png)](master-pages-and-asp-net-ajax-vb/_static/image28.png)
+[![Auna referencia de Script al ScriptManagerProxy Control dd](master-pages-and-asp-net-ajax-vb/_static/image29.png)](master-pages-and-asp-net-ajax-vb/_static/image28.png)
 
 **Figura 10**: Agregue una referencia de Script al ScriptManagerProxy Control ([haga clic aquí para ver imagen en tamaño completo](master-pages-and-asp-net-ajax-vb/_static/image30.png))
 
@@ -230,12 +230,12 @@ Esto muestra un botón con el texto "Pausar". Cada vez que se hace clic, la func
 Figura 11 muestra esta página cuando visita primero a través de un explorador. El temporizador se está ejecutando actualmente y actualiza la información de producto mostrado cada 15 segundos. Figura 12 se muestra la pantalla después de que se ha hecho clic el botón de pausa. Al hacer clic en el botón Pausar detiene el temporizador y actualiza el texto del botón para "Reanudar". La información del producto se actualice (y continuar actualizar cada 15 segundos) una vez que el usuario hace clic en Reanudar.
 
 
-[![Haga clic en el botón de pausa para detener el Control Timer](master-pages-and-asp-net-ajax-vb/_static/image32.png)](master-pages-and-asp-net-ajax-vb/_static/image31.png)
+[![CHaga clic en el botón de pausa para detener el Control Timer](master-pages-and-asp-net-ajax-vb/_static/image32.png)](master-pages-and-asp-net-ajax-vb/_static/image31.png)
 
 **Figura 11**: Haga clic en el botón de pausa para detener el Control Timer ([haga clic aquí para ver imagen en tamaño completo](master-pages-and-asp-net-ajax-vb/_static/image33.png))
 
 
-[![Haga clic en el botón de reanudación para reiniciar el temporizador](master-pages-and-asp-net-ajax-vb/_static/image35.png)](master-pages-and-asp-net-ajax-vb/_static/image34.png)
+[![CHaga clic en el botón de reanudación para reiniciar el temporizador](master-pages-and-asp-net-ajax-vb/_static/image35.png)](master-pages-and-asp-net-ajax-vb/_static/image34.png)
 
 **Figura 12**: Haga clic en el botón de reanudación para reiniciar el temporizador ([haga clic aquí para ver imagen en tamaño completo](master-pages-and-asp-net-ajax-vb/_static/image36.png))
 
@@ -253,7 +253,7 @@ Feliz programación.
 Para obtener más información sobre los temas tratados en este tutorial, consulte los siguientes recursos:
 
 - [Marco de AJAX de ASP.NET](../../../../ajax/index.md)
-- [ASP.NET AJAX Tutorials](../aspnet-ajax/understanding-partial-page-updates-with-asp-net-ajax.md)
+- [Tutoriales ASP.NET AJAX](../aspnet-ajax/understanding-partial-page-updates-with-asp-net-ajax.md)
 - [ASP.NET AJAX Videos](../../../videos/aspnet-ajax/index.md)
 - [Creación de interfaz de usuario interactiva con Microsoft ASP.NET AJAX](http://aspnet.4guysfromrolla.com/articles/101007-1.aspx)
 - [Utilizar NEWID para ordenar aleatoriamente los registros](http://www.sqlteam.com/article/using-newid-to-randomly-sort-records)

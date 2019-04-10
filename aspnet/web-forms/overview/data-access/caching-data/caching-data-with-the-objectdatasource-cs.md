@@ -8,15 +8,15 @@ ms.date: 05/30/2007
 ms.assetid: bd87413c-8160-4520-a8a2-43b555c4183a
 msc.legacyurl: /web-forms/overview/data-access/caching-data/caching-data-with-the-objectdatasource-cs
 msc.type: authoredcontent
-ms.openlocfilehash: 770b1ae92db8384a0c0b7f038b1ea994ae4c1b4c
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: 3e8fa3fe62ee2f58cd5cfbd32d17a3613cf80c12
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57064422"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59382509"
 ---
-<a name="caching-data-with-the-objectdatasource-c"></a>Almacenar datos en caché con ObjectDataSource (C#)
-====================
+# <a name="caching-data-with-the-objectdatasource-c"></a>Almacenar datos en caché con ObjectDataSource (C#)
+
 por [Scott Mitchell](https://twitter.com/ScottOnWriting)
 
 [Descargue la aplicación de ejemplo](http://download.microsoft.com/download/4/a/7/4a7a3b18-d80e-4014-8e53-a6a2427f0d93/ASPNET_Data_Tutorial_58_CS.exe) o [descargar PDF](caching-data-with-the-objectdatasource-cs/_static/datatutorial58cs1.pdf)
@@ -66,7 +66,7 @@ Antes de empezar la exploración de las características de almacenamiento en ca
 Al igual que en las demás carpetas `Default.aspx` en el `Caching` carpeta mostrará una lista de los tutoriales en su sección. Recuerde que el `SectionLevelTutorialListing.ascx` Control de usuario proporciona esta funcionalidad. Por lo tanto, agrega este Control de usuario a `Default.aspx` arrastrándolo desde el Explorador de soluciones en la página de vista de diseño de s.
 
 
-[![Figura 2: Agregar el Control de usuario SectionLevelTutorialListing.ascx a Default.aspx](caching-data-with-the-objectdatasource-cs/_static/image3.png)](caching-data-with-the-objectdatasource-cs/_static/image2.png)
+[![Figure 2: Agregar el Control de usuario SectionLevelTutorialListing.ascx a Default.aspx](caching-data-with-the-objectdatasource-cs/_static/image3.png)](caching-data-with-the-objectdatasource-cs/_static/image2.png)
 
 **Figura 2**: Figura 2: Agregar el `SectionLevelTutorialListing.ascx` Control de usuario `Default.aspx` ([haga clic aquí para ver imagen en tamaño completo](caching-data-with-the-objectdatasource-cs/_static/image4.png))
 
@@ -91,7 +91,7 @@ Este tutorial describe cómo usar las ObjectDataSource control s característica
 Comience abriendo la `ObjectDataSource.aspx` página en el `Caching` carpeta. Arrastre un control GridView del cuadro de herramientas hasta el diseñador, establezca su `ID` propiedad `Products`y, en su etiqueta inteligente, elija para enlazarla a un nuevo control ObjectDataSource denominado `ProductsDataSource`. Configurar el origen ObjectDataSource para trabajar con el `ProductsBLL` clase.
 
 
-[![Configurar el origen ObjectDataSource para usar la clase ProductsBLL](caching-data-with-the-objectdatasource-cs/_static/image7.png)](caching-data-with-the-objectdatasource-cs/_static/image6.png)
+[![Cconfigurar el origen ObjectDataSource para usar la clase ProductsBLL](caching-data-with-the-objectdatasource-cs/_static/image7.png)](caching-data-with-the-objectdatasource-cs/_static/image6.png)
 
 **Figura 4**: Configurar el origen ObjectDataSource que se usarán el `ProductsBLL` clase ([haga clic aquí para ver imagen en tamaño completo](caching-data-with-the-objectdatasource-cs/_static/image8.png))
 
@@ -99,7 +99,7 @@ Comience abriendo la `ObjectDataSource.aspx` página en el `Caching` carpeta. Ar
 Para esta página, permiten crear un control GridView editable para que podamos examinar lo que sucede cuando se modifican los datos almacenados en caché en el origen ObjectDataSource a través de la interfaz de s GridView de s. Deje la lista desplegable en la ficha Seleccionar con su valor predeterminado, `GetProducts()`, pero cambie el elemento seleccionado en la pestaña de la actualización a la `UpdateProduct` sobrecarga que acepta `productName`, `unitPrice`, y `productID` como sus parámetros de entrada.
 
 
-[![Establecer la lista desplegable s UPDATE a la sobrecarga adecuada UpdateProduct](caching-data-with-the-objectdatasource-cs/_static/image10.png)](caching-data-with-the-objectdatasource-cs/_static/image9.png)
+[![Sla actualización pestaña s lista desplegable situada a la sobrecarga adecuada UpdateProduct et](caching-data-with-the-objectdatasource-cs/_static/image10.png)](caching-data-with-the-objectdatasource-cs/_static/image9.png)
 
 **Figura 5**: Establece la lista desplegable de ficha actualización s en el adecuado `UpdateProduct` sobrecargar ([haga clic aquí para ver imagen en tamaño completo](caching-data-with-the-objectdatasource-cs/_static/image11.png))
 
@@ -114,7 +114,7 @@ Asegúrese de GridView editable activando la casilla Habilitar edición en la et
 > ¿Necesita una revisión de cómo personalizar la interfaz de edición de s GridView? Si es así, vuelva a consultar el [personalizar la interfaz de modificación de datos](../editing-inserting-and-deleting-data/customizing-the-data-modification-interface-cs.md) tutorial.
 
 
-[![Habilitar la compatibilidad de GridView para la edición, ordenación y paginación](caching-data-with-the-objectdatasource-cs/_static/image13.png)](caching-data-with-the-objectdatasource-cs/_static/image12.png)
+[![EHabilitar compatibilidad de GridView para edición, ordenación y paginación](caching-data-with-the-objectdatasource-cs/_static/image13.png)](caching-data-with-the-objectdatasource-cs/_static/image12.png)
 
 **Figura 6**: Habilitar la compatibilidad con GridView edición, ordenación y paginación ([haga clic aquí para ver imagen en tamaño completo](caching-data-with-the-objectdatasource-cs/_static/image14.png))
 
@@ -127,7 +127,7 @@ Después de realizar estas modificaciones GridView, el marcado declarativo de s 
 Como se muestra en la figura 7, el control GridView editable muestra el nombre, la categoría y el precio de cada uno de los productos en la base de datos. Dedique un momento para probar los resultados de página a través de ellos, la ordenación de la funcionalidad de página s y editar un registro.
 
 
-[![Cada nombre de producto, categoría y el precio se muestran en un ordenable, Pageable, control GridView Editable](caching-data-with-the-objectdatasource-cs/_static/image16.png)](caching-data-with-the-objectdatasource-cs/_static/image15.png)
+[![EACH s nombre de producto, categoría y el precio se muestra en un ordenable, Pageable, control GridView Editable](caching-data-with-the-objectdatasource-cs/_static/image16.png)](caching-data-with-the-objectdatasource-cs/_static/image15.png)
 
 **Figura 7**: Cada nombre de producto, categoría y el precio se muestran en un ordenable, Pageable, control GridView Editable ([haga clic aquí para ver imagen en tamaño completo](caching-data-with-the-objectdatasource-cs/_static/image17.png))
 
@@ -141,7 +141,7 @@ Esta secuencia de eventos se produce cada vez que el control GridView necesita e
 Para apreciar la frecuencia con la que se recuperan los datos de la base de datos, permiten s muestra un mensaje que indica cuando se vuelve a recuperados los datos. Agregar un control Web de etiqueta por encima del control GridView denominado `ODSEvents`. Borrar su `Text` propiedad y establezca su `EnableViewState` propiedad `false`. Debajo de la etiqueta, agregue un control Web de botón y establezca su `Text` propiedad a la devolución de datos.
 
 
-[![Agregar una etiqueta y un botón a la página situada encima del control GridView](caching-data-with-the-objectdatasource-cs/_static/image19.png)](caching-data-with-the-objectdatasource-cs/_static/image18.png)
+[![Add una etiqueta y el botón en la página por encima el control GridView](caching-data-with-the-objectdatasource-cs/_static/image19.png)](caching-data-with-the-objectdatasource-cs/_static/image18.png)
 
 **Figura 8**: Agregar una etiqueta y un botón a la página encima de GridView ([haga clic aquí para ver imagen en tamaño completo](caching-data-with-the-objectdatasource-cs/_static/image20.png))
 
@@ -156,12 +156,12 @@ Cada vez que el origen ObjectDataSource realiza una solicitud a la arquitectura 
 Visite esta página en un explorador. Cuando primero se visita la página, se muestra el evento de selección de texto que se desencadena. Haga clic en el botón de devolución de datos y tenga en cuenta que el texto desaparece (suponiendo que la s GridView `EnableViewState` propiedad está establecida en `true`, el valor predeterminado). Esto es porque, en el postback, se reconstruye el control GridView de su estado de vista y, por tanto, t a ObjectDataSource para sus datos. Ordenación, paginación, o la edición de los datos, sin embargo, hace que el control GridView a enlazarse a su origen de datos, y por lo tanto, desencadena el evento cuando se selecciona texto vuelve a aparecer.
 
 
-[![Cuando se vuelve a enlazar el control GridView al origen de datos, se mostrará cuando se selecciona el evento](caching-data-with-the-objectdatasource-cs/_static/image22.png)](caching-data-with-the-objectdatasource-cs/_static/image21.png)
+[![Wse muestra henever que se vuelve a enlazar el control GridView al origen de datos, cuando se selecciona el evento](caching-data-with-the-objectdatasource-cs/_static/image22.png)](caching-data-with-the-objectdatasource-cs/_static/image21.png)
 
 **Figura 9**: Cuando se vuelve a enlazar el control GridView al origen de datos, se mostrará cuando se selecciona el evento ([haga clic aquí para ver imagen en tamaño completo](caching-data-with-the-objectdatasource-cs/_static/image23.png))
 
 
-[![Al hacer clic en el botón de devolución de datos hace que el control GridView a se reconstruye a partir de su estado de vista](caching-data-with-the-objectdatasource-cs/_static/image25.png)](caching-data-with-the-objectdatasource-cs/_static/image24.png)
+[![Cpulsando el botón de devolución de datos hace que el control GridView a se reconstruye a partir de su estado de vista](caching-data-with-the-objectdatasource-cs/_static/image25.png)](caching-data-with-the-objectdatasource-cs/_static/image24.png)
 
 **Figura 10**: Al hacer clic en el botón de devolución de datos hace que el control GridView a se reconstruye a partir de su estado de vista ([haga clic aquí para ver imagen en tamaño completo](caching-data-with-the-objectdatasource-cs/_static/image26.png))
 
@@ -180,7 +180,7 @@ Al establecer simplemente una serie de propiedades, ObjectDataSource puede confi
 Permiten s configurar el `ProductsDataSource` ObjectDataSource para almacenar en caché sus datos durante 30 segundos en una escala absoluta. Establezca la s ObjectDataSource `EnableCaching` propiedad `true` y su `CacheDuration` propiedad a 30. Deje el `CacheExpirationPolicy` propiedad establecida en su valor predeterminado, `Absolute`.
 
 
-[![Configurar el origen ObjectDataSource para almacenar sus datos en caché durante 30 segundos](caching-data-with-the-objectdatasource-cs/_static/image28.png)](caching-data-with-the-objectdatasource-cs/_static/image27.png)
+[![Cconfigurar el origen ObjectDataSource para almacenar en caché sus datos durante 30 segundos](caching-data-with-the-objectdatasource-cs/_static/image28.png)](caching-data-with-the-objectdatasource-cs/_static/image27.png)
 
 **Figura 11**: Configurar el origen ObjectDataSource para almacenar sus datos en caché durante 30 segundos ([haga clic aquí para ver imagen en tamaño completo](caching-data-with-the-objectdatasource-cs/_static/image29.png))
 

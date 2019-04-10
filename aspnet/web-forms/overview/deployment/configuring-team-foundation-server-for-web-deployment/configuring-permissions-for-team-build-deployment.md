@@ -8,15 +8,15 @@ ms.date: 05/04/2012
 ms.assetid: 2488a91e-b0a8-465a-b874-3233f724b56b
 msc.legacyurl: /web-forms/overview/deployment/configuring-team-foundation-server-for-web-deployment/configuring-permissions-for-team-build-deployment
 msc.type: authoredcontent
-ms.openlocfilehash: 0142be694a4e7d601625022f6fbfe39971823d03
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: 62e5c5622743447e1119141469c894dc905e6b43
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57058822"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59381060"
 ---
-<a name="configuring-permissions-for-team-build-deployment"></a>Configurar permisos para la implementación de compilaciones de equipo
-====================
+# <a name="configuring-permissions-for-team-build-deployment"></a>Configurar permisos para la implementación de compilaciones de equipo
+
 por [Jason Lee](https://github.com/jrjlee)
 
 [Descargar PDF](https://msdnshared.blob.core.windows.net/media/MSDNBlogsFS/prod.evol.blogs.msdn.com/CommunityServer.Blogs.Components.WeblogFiles/00/00/00/63/56/8130.DeployingWebAppsInEnterpriseScenarios.pdf)

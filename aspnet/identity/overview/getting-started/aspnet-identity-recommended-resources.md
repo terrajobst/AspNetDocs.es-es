@@ -1,19 +1,20 @@
 ---
 uid: identity/overview/getting-started/aspnet-identity-recommended-resources
-title: Recursos recomendados de ASP.NET Identity | Microsoft Docs
+title: Identidad de ASP.NET de los recursos recomendados - ASP.NET 4.x
 author: Rick-Anderson
 description: Este tema proporcionan vínculos a recursos de documentación sobre cómo usar ASP.NET Identity. Si necesita una entrada de blog excelentes, hilo o cualquier otro lin...
 ms.author: riande
 ms.date: 04/09/2015
 ms.assetid: 0f78aec2-f509-46fa-b20f-d5208425d8ec
+ms.custom: seoapril2019
 msc.legacyurl: /identity/overview/getting-started/aspnet-identity-recommended-resources
 msc.type: authoredcontent
-ms.openlocfilehash: 14a8ec16fe741d87a23bfa45046386a2c08d2f27
-ms.sourcegitcommit: 289e051cc8a90e8f7127e239fda73047bde4de12
+ms.openlocfilehash: 8e476f8a4172ebbe55819cda1ceb5458426243bd
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/25/2019
-ms.locfileid: "58424344"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59381905"
 ---
 # <a name="aspnet-identity-recommended-resources"></a>Recursos recomendados de ASP.NET Identity
 

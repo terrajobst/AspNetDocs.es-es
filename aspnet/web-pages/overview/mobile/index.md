@@ -8,15 +8,15 @@ ms.date: 09/08/2014
 ms.assetid: ce83fbc9-ef24-4f59-8e76-7ca1b983bf9a
 msc.legacyurl: /web-pages/overview/mobile
 msc.type: chapter
-ms.openlocfilehash: cfaf011e33238ccc96812510ac856567b5f2dbf6
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: 552d047286adbc53e4161b412432cbf0b3bfb4c9
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57020632"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59380306"
 ---
-<a name="mobile"></a>Móvil
-====================
+# <a name="mobile"></a>Móvil
+
 > Cómo trabajar con dispositivos móviles en aplicaciones de ASP.NET Web Pages.
 
 

@@ -8,15 +8,15 @@ ms.date: 02/20/2005
 ms.assetid: 72d90cd0-b3d9-454c-b2eb-ed0d9812f32c
 msc.legacyurl: /web-forms/overview/moving-to-aspnet-20/improvements-in-visual-studio-2005
 msc.type: authoredcontent
-ms.openlocfilehash: 60259ceb99de536410aa5f53db64fb2dca68bf66
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: a580b678a943695969b7f3acd2f7a033bd0b6ee3
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57037362"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59379774"
 ---
-<a name="improvements-in-visual-studio-2005"></a>Mejoras en Visual Studio 2005
-====================
+# <a name="improvements-in-visual-studio-2005"></a>Mejoras en Visual Studio 2005
+
 por [Microsoft](https://github.com/microsoft)
 
 > Visual Studio 2005 proporciona a los desarrolladores de aplicaciones Web con una larga lista de mejoras para proyectos Web.
@@ -438,7 +438,7 @@ Debe alcanzar el punto de interrupción según lo previsto.
 
 ## <a name="aspnet-development-server"></a>servidor de desarrollo de ASP.NET
 
-Como se comentó que hayamos, Visual Studio 2005 se distribuye con un servidor Web que llama el servidor de desarrollo de ASP.NET. (El servidor de desarrollo de ASP.NET se conoce a veces como Cassini.) Este servidor Web es un medio cómodo para examinar y depurar aplicaciones Web que se ejecutan en el sistema de archivos.
+Como ya hemos analizado, Visual Studio 2005 se distribuye con un servidor Web que llama el servidor de desarrollo de ASP.NET. (El servidor de desarrollo de ASP.NET se conoce a veces como Cassini.) Este servidor Web es un medio cómodo para examinar y depurar aplicaciones Web que se ejecutan en el sistema de archivos.
 
 El servidor de desarrollo de ASP.NET es un servidor Web restringido. No permite conexiones remotas, no permite las solicitudes de cualquier usuario que no sea el usuario que inició el servidor Web. No tiene la capacidad de servir páginas ASP. Se sirven solo los recursos ASP.NET y los recursos HTML (incluidas las imágenes, archivos CSS, etc.).
 

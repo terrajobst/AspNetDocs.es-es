@@ -8,15 +8,15 @@ ms.date: 08/23/2012
 ms.assetid: 5894dc13-5d45-4dad-8096-136499120f1d
 msc.legacyurl: /mvc/overview/performance/bundling-and-minification
 msc.type: authoredcontent
-ms.openlocfilehash: 9b627a66007aec09a404147698e2bef06c7e7794
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: 9e4a2a9fc56393ac816f25a1039b233aa8961608
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57053192"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59383842"
 ---
-<a name="bundling-and-minification"></a>Unión y minificación
-====================
+# <a name="bundling-and-minification"></a>Unión y minificación
+
 by [Rick Anderson]((https://twitter.com/RickAndMSFT))
 
 > Unión y minificación son dos técnicas puede usar en ASP.NET 4.5 para mejorar el tiempo de carga de solicitud. Unión y minificación mejora el tiempo de carga por lo que reduce el número de solicitudes al servidor y reducir el tamaño de los activos solicitados (por ejemplo, CSS y JavaScript).
@@ -52,7 +52,7 @@ Después de la minificación, la función se reduce a lo siguiente:
 
 Además de quitar los comentarios y espacios en blanco innecesarios, los siguientes parámetros y los nombres de variable se cambió el nombre (abreviado) como sigue:
 
-| **Original** | **Renamed** |
+| **Original** | **Se cambia el nombre** |
 | --- | --- |
 | imageTagAndImageID | n |
 | imageContext | m |
@@ -62,10 +62,10 @@ Además de quitar los comentarios y espacios en blanco innecesarios, los siguien
 
 En la tabla siguiente se muestra varias diferencias importantes entre el listado de todos los recursos individualmente y el uso de unión y minificación (B/M) en el programa de ejemplo.
 
-|  | **Uso de B/M** | **Sin B/M** | **Change** |
+|  | **Uso de B/M** | **Sin B/M** | **Cambio** |
 | --- | --- | --- | --- |
 | **Solicitudes de archivos** | 9 | 34 | 256% |
-| **KB enviado** | 3.26 | 11.92 | 266% |
+| **KB Sent** | 3.26 | 11.92 | 266% |
 | **KB recibido** | 388.51 | 530 | 36% |
 | **Tiempo de carga** | 510 MS | 780 MS | 53% |
 
@@ -165,7 +165,7 @@ Considere la posibilidad de un proyecto con los siguientes archivos JavaScript:
 
 La siguiente tabla muestra los archivos agregados a una agrupación mediante el carácter comodín, como se muestra:
 
-| **Call** | **Archivos agregados o una excepción** |
+| **Llamar a** | **Archivos agregados o una excepción** |
 | --- | --- |
 | Include("~/Scripts/Common/\*.js") | *AddAltToImg.js*, *ToggleDiv.js*, *ToggleImg.js* |
 | Include("~/Scripts/Common/T\*.js") | Excepción de patrón no válido. Solo se permite el carácter comodín en el prefijo o sufijo. |

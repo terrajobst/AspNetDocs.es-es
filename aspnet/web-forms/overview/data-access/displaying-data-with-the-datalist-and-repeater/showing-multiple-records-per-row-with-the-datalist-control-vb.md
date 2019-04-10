@@ -8,15 +8,15 @@ ms.date: 09/13/2006
 ms.assetid: f555c531-bf33-4699-9987-42dbfef23c1f
 msc.legacyurl: /web-forms/overview/data-access/displaying-data-with-the-datalist-and-repeater/showing-multiple-records-per-row-with-the-datalist-control-vb
 msc.type: authoredcontent
-ms.openlocfilehash: e8b5493694b24e4187ecb69ca8d2eff6a8507985
-ms.sourcegitcommit: 289e051cc8a90e8f7127e239fda73047bde4de12
+ms.openlocfilehash: 632db5152c84eb463ddc7bd5f5734a9fb3ae135c
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/25/2019
-ms.locfileid: "58421224"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59382990"
 ---
-<a name="showing-multiple-records-per-row-with-the-datalist-control-vb"></a>Mostrar varios registros por fila con el control DataList (VB)
-====================
+# <a name="showing-multiple-records-per-row-with-the-datalist-control-vb"></a>Mostrar varios registros por fila con el control DataList (VB)
+
 por [Scott Mitchell](https://twitter.com/ScottOnWriting)
 
 [Descargue la aplicación de ejemplo](http://download.microsoft.com/download/9/c/1/9c1d03ee-29ba-4d58-aa1a-f201dcc822ea/ASPNET_Data_Tutorial_31_VB.exe) o [descargar PDF](showing-multiple-records-per-row-with-the-datalist-control-vb/_static/datatutorial31vb1.pdf)
@@ -31,7 +31,7 @@ Los ejemplos de DataList se ve que se muestra en los dos últimos tutoriales imp
 Podemos personalizar el diseño de DataList s a través de su `RepeatColumns` y `RepeatDirection` propiedades, que, respectivamente, indican cuántas columnas se representan y si esos elementos se colocan verticalmente u horizontalmente. Figura 1, por ejemplo, se muestra a un control DataList que muestra información de producto en una tabla con tres columnas.
 
 
-[![El control DataList muestra tres productos por fila](showing-multiple-records-per-row-with-the-datalist-control-vb/_static/image2.png)](showing-multiple-records-per-row-with-the-datalist-control-vb/_static/image1.png)
+[![Tél DataList muestra tres productos por fila](showing-multiple-records-per-row-with-the-datalist-control-vb/_static/image2.png)](showing-multiple-records-per-row-with-the-datalist-control-vb/_static/image1.png)
 
 **Figura 1**: Los controles DataList muestra tres productos por fila ([haga clic aquí para ver imagen en tamaño completo](showing-multiple-records-per-row-with-the-datalist-control-vb/_static/image3.png))
 
@@ -57,7 +57,7 @@ Tenga en cuenta que ve incluye un especificador de formato en el `Eval` sintaxis
 Dedique un momento para visitar la página en un explorador. Como se muestra en la figura 2, el control DataList representa como una tabla de una sola columna y varias filas de productos.
 
 
-[![De forma predeterminada, los controles DataList se representan como una tabla de una sola columna y varias filas](showing-multiple-records-per-row-with-the-datalist-control-vb/_static/image5.png)](showing-multiple-records-per-row-with-the-datalist-control-vb/_static/image4.png)
+[![By predeterminada, el control DataList representa como una tabla de una sola columna y varias filas](showing-multiple-records-per-row-with-the-datalist-control-vb/_static/image5.png)](showing-multiple-records-per-row-with-the-datalist-control-vb/_static/image4.png)
 
 **Figura 2**: De forma predeterminada, el control DataList representa como una sola columna, tabla de varias filas ([haga clic aquí para ver imagen en tamaño completo](showing-multiple-records-per-row-with-the-datalist-control-vb/_static/image6.png))
 
@@ -69,7 +69,7 @@ Mientras el comportamiento predeterminado para el control DataList consiste en d
 Cambiando el `RepeatDirection` propiedad desde `Vertical` a `Horizontal`, el control DataList representa sus registros en una sola fila, la creación de una columna por cada elemento de origen de datos. Para ilustrar este efecto, haga clic en el control DataList en el diseñador y, a continuación, en la ventana Propiedades, cambie la `RepeatDirection` propiedad desde `Vertical` a `Horizontal`. Inmediatamente tras hacerlo, el diseñador ajusta el control DataList s diseño, creación de una sola fila, varias columnas (consulte la figura 3).
 
 
-[![Los elementos de RepeatDirection propiedad dicta cómo la dirección la s DataList son colocan horizontalmente](showing-multiple-records-per-row-with-the-datalist-control-vb/_static/image8.png)](showing-multiple-records-per-row-with-the-datalist-control-vb/_static/image7.png)
+[![Tél RepeatDirection propiedad dicta cómo la dirección la s DataList elementos no están definidas](showing-multiple-records-per-row-with-the-datalist-control-vb/_static/image8.png)](showing-multiple-records-per-row-with-the-datalist-control-vb/_static/image7.png)
 
 **Figura 3**: El `RepeatDirection` propiedad dicta cómo los elementos de dirección la s DataList son colocan horizontalmente ([haga clic aquí para ver imagen en tamaño completo](showing-multiple-records-per-row-with-the-datalist-control-vb/_static/image9.png))
 
@@ -77,7 +77,7 @@ Cambiando el `RepeatDirection` propiedad desde `Vertical` a `Horizontal`, el con
 Al mostrar pequeñas cantidades de datos, una sola fila y tabla de varias columnas podría ser una forma ideal para maximizar el espacio en pantalla. Sin embargo, para mayores volúmenes de datos, una sola fila requerirá muchas columnas, que inserta los elementos que t puede caber en la pantalla de a la derecha. Figura 4 muestra los productos cuando se representan en un control DataList de fila única. Dado que existen muchos productos (más de 80), el usuario tendrá que desplazarse hacia la distancia a la derecha para ver información acerca de cada uno de los productos.
 
 
-[![Para orígenes de datos lo suficientemente grande, será necesario un control DataList de columna único desplazamiento Horizontal](showing-multiple-records-per-row-with-the-datalist-control-vb/_static/image11.png)](showing-multiple-records-per-row-with-the-datalist-control-vb/_static/image10.png)
+[![Fo bien, orígenes de datos lo suficientemente grande, un control DataList de columna única se requerirá de desplazamiento Horizontal](showing-multiple-records-per-row-with-the-datalist-control-vb/_static/image11.png)](showing-multiple-records-per-row-with-the-datalist-control-vb/_static/image10.png)
 
 **Figura 4**: Lo suficientemente grandes orígenes de datos, una sola columna DataList le requiere desplazamiento Horizontal ([haga clic aquí para ver imagen en tamaño completo](showing-multiple-records-per-row-with-the-datalist-control-vb/_static/image12.png))
 
@@ -89,7 +89,7 @@ Para crear un control DataList de varias columna, varias filas, es necesario est
 En nuestro ejemplo, deje que s muestre tres productos por cada fila de tabla. Por consiguiente, establecer el `RepeatColumns` propiedad a 3. Después de realizar este cambio, dedique un momento para ver los resultados en un explorador. Como se muestra en la figura 5, los productos se muestran ahora en una tabla con tres columnas y varias filas.
 
 
-[![Se muestran tres productos por fila](showing-multiple-records-per-row-with-the-datalist-control-vb/_static/image14.png)](showing-multiple-records-per-row-with-the-datalist-control-vb/_static/image13.png)
+[![Tse muestran tres productos por fila](showing-multiple-records-per-row-with-the-datalist-control-vb/_static/image14.png)](showing-multiple-records-per-row-with-the-datalist-control-vb/_static/image13.png)
 
 **Figura 5**: Se muestran tres productos por fila ([haga clic aquí para ver imagen en tamaño completo](showing-multiple-records-per-row-with-the-datalist-control-vb/_static/image15.png))
 
@@ -97,7 +97,7 @@ En nuestro ejemplo, deje que s muestre tres productos por cada fila de tabla. Po
 El `RepeatDirection` propiedad afecta a cómo se colocan los elementos en el control DataList. La figura 5 muestra los resultados con el `RepeatDirection` propiedad establecida en `Horizontal`. Tenga en cuenta que se distribuyen los tres primeros productos Chai, Chang y Aniseed jarabe de izquierda a derecha, arriba a abajo. Los siguientes tres productos (empezando por s Chef Antón Cajun Seasoning) aparecen en una fila debajo de las tres primeras. Cambiar el `RepeatDirection` propiedad nuevo a `Vertical`, sin embargo, dispone de estos productos de arriba a abajo, de izquierda a derecha, como se muestra en la figura 6.
 
 
-[![En este caso, los productos son colocan verticalmente](showing-multiple-records-per-row-with-the-datalist-control-vb/_static/image17.png)](showing-multiple-records-per-row-with-the-datalist-control-vb/_static/image16.png)
+[![Here, los productos son colocan verticalmente](showing-multiple-records-per-row-with-the-datalist-control-vb/_static/image17.png)](showing-multiple-records-per-row-with-the-datalist-control-vb/_static/image16.png)
 
 **Figura 6**: En este caso, los productos son colocan verticalmente ([haga clic aquí para ver imagen en tamaño completo](showing-multiple-records-per-row-with-the-datalist-control-vb/_static/image18.png))
 

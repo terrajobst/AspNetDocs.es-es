@@ -8,15 +8,15 @@ ms.date: 03/02/2009
 ms.assetid: 21383c9d-6aea-4bad-a99b-b5f2c9d6503f
 msc.legacyurl: /mvc/overview/older-versions-1/models-data/performing-simple-validation-cs
 msc.type: authoredcontent
-ms.openlocfilehash: 8ee1d892cd58534c2b64455efed01aa8c2dfdcce
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: 12fe89ec83a33ece2971c8186783326d165cbf79
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57061992"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59388509"
 ---
-<a name="performing-simple-validation-c"></a>Realizar una validación simple (C#)
-====================
+# <a name="performing-simple-validation-c"></a>Realizar una validación simple (C#)
+
 by [Stephen Walther](https://github.com/StephenWalther)
 
 > Obtenga información sobre cómo realizar la validación en una aplicación ASP.NET MVC. En este tutorial, Stephen Walther presenta para el estado del modelo y las aplicaciones auxiliares de validación HTML.
@@ -56,12 +56,12 @@ Las aplicaciones auxiliares de Html.ValidationMessage() y Html.ValidationSummary
 Asegúrese de que compilar la aplicación antes de agregar una vista. En caso contrario, no aparecerá la lista de clases en el **Ver clase de datos** lista desplegable.
 
 
-[![El cuadro de diálogo nuevo proyecto](performing-simple-validation-cs/_static/image1.jpg)](performing-simple-validation-cs/_static/image1.png)
+[![Tel cuadro de diálogo nuevo proyecto](performing-simple-validation-cs/_static/image1.jpg)](performing-simple-validation-cs/_static/image1.png)
 
 **Figura 01**: Agregar una vista ([haga clic aquí para ver imagen en tamaño completo](performing-simple-validation-cs/_static/image2.png))
 
 
-[![El cuadro de diálogo nuevo proyecto](performing-simple-validation-cs/_static/image2.jpg)](performing-simple-validation-cs/_static/image3.png)
+[![Tel cuadro de diálogo nuevo proyecto](performing-simple-validation-cs/_static/image2.jpg)](performing-simple-validation-cs/_static/image3.png)
 
 **Figura 02**: Creación de una vista fuertemente tipada ([haga clic aquí para ver imagen en tamaño completo](performing-simple-validation-cs/_static/image4.png))
 
@@ -79,7 +79,7 @@ Se llama a la aplicación auxiliar de Html.ValidationMessage() junto a cada uno 
 La página en la figura 3 muestra los mensajes de error representados por las aplicaciones auxiliares de validación cuando se envía el formulario con los campos que faltan y valores no válidos.
 
 
-[![El cuadro de diálogo nuevo proyecto](performing-simple-validation-cs/_static/image3.jpg)](performing-simple-validation-cs/_static/image5.png)
+[![Tel cuadro de diálogo nuevo proyecto](performing-simple-validation-cs/_static/image3.jpg)](performing-simple-validation-cs/_static/image5.png)
 
 **Figura 03**: La vista de creación enviada con problemas ([haga clic aquí para ver imagen en tamaño completo](performing-simple-validation-cs/_static/image6.png))
 
@@ -104,7 +104,7 @@ Puede modificar estas clases de hoja de estilos en cascada y, por lo tanto, modi
 Si envía el formulario HTML para la creación de un producto y escriba un valor no válido para el campo de precio y ningún valor para el campo UnitsInStock, obtendrá los mensajes de validación que se muestra en la figura 4. ¿De dónde proceden estos mensajes de error de validación?
 
 
-[![El cuadro de diálogo nuevo proyecto](performing-simple-validation-cs/_static/image4.jpg)](performing-simple-validation-cs/_static/image7.png)
+[![Tel cuadro de diálogo nuevo proyecto](performing-simple-validation-cs/_static/image4.jpg)](performing-simple-validation-cs/_static/image7.png)
 
 **Figura 04**: Errores de validación de prebinding ([haga clic aquí para ver imagen en tamaño completo](performing-simple-validation-cs/_static/image8.png))
 

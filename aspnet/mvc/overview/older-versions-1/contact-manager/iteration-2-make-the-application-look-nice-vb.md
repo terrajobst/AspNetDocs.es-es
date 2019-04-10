@@ -8,15 +8,15 @@ ms.date: 02/20/2009
 ms.assetid: f65cb436-e493-46fd-9608-384b27385aa1
 msc.legacyurl: /mvc/overview/older-versions-1/contact-manager/iteration-2-make-the-application-look-nice-vb
 msc.type: authoredcontent
-ms.openlocfilehash: 9cda4153c4e4883586a83ac7f89b2f369f8157e5
-ms.sourcegitcommit: 289e051cc8a90e8f7127e239fda73047bde4de12
+ms.openlocfilehash: 21f7974fe066543d6db1d17d462398a998d0171e
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/25/2019
-ms.locfileid: "58422272"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59382582"
 ---
-<a name="iteration-2--make-the-application-look-nice-vb"></a>Iteración #2: que la aplicación parezca interesante (VB)
-====================
+# <a name="iteration-2--make-the-application-look-nice-vb"></a>Iteración #2: que la aplicación parezca interesante (VB)
+
 por [Microsoft](https://github.com/microsoft)
 
 [Descargue el código](iteration-2-make-the-application-look-nice-vb/_static/contactmanager_2_vb1.zip)
@@ -50,7 +50,7 @@ Creamos la aplicación a través de varias iteraciones. Con cada iteración, mej
 El objetivo de esta iteración es mejorar la apariencia de la aplicación de Contact Manager. Actualmente, el Administrador de contactos usa la página principal de la vista de MVC de ASP.NET de forma predeterminada y la hoja de estilos en cascada (consulte la figura 1). Estos don t aspecto negativo, pero que no necesita el Administrador de contacto para el aspecto de cada otro sitio Web de ASP.NET MVC. Quiero reemplazar estos archivos con los archivos personalizados.
 
 
-[![El cuadro de diálogo nuevo proyecto](iteration-2-make-the-application-look-nice-vb/_static/image1.jpg)](iteration-2-make-the-application-look-nice-vb/_static/image1.png)
+[![Tel cuadro de diálogo nuevo proyecto](iteration-2-make-the-application-look-nice-vb/_static/image1.jpg)](iteration-2-make-the-application-look-nice-vb/_static/image1.png)
 
 **Figura 01**: La apariencia predeterminada de una aplicación ASP.NET MVC ([haga clic aquí para ver imagen en tamaño completo](iteration-2-make-the-application-look-nice-vb/_static/image2.png))
 
@@ -68,7 +68,7 @@ La Galería de diseño de MVC de ASP.NET es un recurso gratuito proporcionado po
 La Galería de diseño de MVC de ASP.NET hospeda una colección de diseños de sitio Web gratuito que se crearon específicamente para usar en un proyecto de ASP.NET MVC. Diseños se cargan los miembros de la Comunidad. Los visitantes de la Galería pueden votar por sus diseños favoritos (consulte la figura 2).
 
 
-[![El cuadro de diálogo nuevo proyecto](iteration-2-make-the-application-look-nice-vb/_static/image2.jpg)](iteration-2-make-the-application-look-nice-vb/_static/image3.png)
+[![Tel cuadro de diálogo nuevo proyecto](iteration-2-make-the-application-look-nice-vb/_static/image2.jpg)](iteration-2-make-the-application-look-nice-vb/_static/image3.png)
 
 **Figura 02**: La Galería de diseño de MVC de ASP.NET ([haga clic aquí para ver imagen en tamaño completo](iteration-2-make-the-application-look-nice-vb/_static/image4.png))
 
@@ -83,17 +83,17 @@ Mientras escribo este tutorial, el diseño más popular en la galería es un dis
 6. Seleccione la opción de menú de Visual Studio **editar, buscar y reemplazar, reemplazo rápido** y reemplace *[MyProjectName]* con *ContactManager* (consulte la figura 5).
 
 
-[![El cuadro de diálogo nuevo proyecto](iteration-2-make-the-application-look-nice-vb/_static/image3.jpg)](iteration-2-make-the-application-look-nice-vb/_static/image5.png)
+[![Tel cuadro de diálogo nuevo proyecto](iteration-2-make-the-application-look-nice-vb/_static/image3.jpg)](iteration-2-make-the-application-look-nice-vb/_static/image5.png)
 
 **Figura 03**: Desbloquear un archivo descargado de Internet ([haga clic aquí para ver imagen en tamaño completo](iteration-2-make-the-application-look-nice-vb/_static/image6.png))
 
 
-[![El cuadro de diálogo nuevo proyecto](iteration-2-make-the-application-look-nice-vb/_static/image4.jpg)](iteration-2-make-the-application-look-nice-vb/_static/image7.png)
+[![Tel cuadro de diálogo nuevo proyecto](iteration-2-make-the-application-look-nice-vb/_static/image4.jpg)](iteration-2-make-the-application-look-nice-vb/_static/image7.png)
 
 **Figura 04**: Sobrescribiendo los archivos en el Explorador de soluciones ([haga clic aquí para ver imagen en tamaño completo](iteration-2-make-the-application-look-nice-vb/_static/image8.png))
 
 
-[![El cuadro de diálogo nuevo proyecto](iteration-2-make-the-application-look-nice-vb/_static/image5.jpg)](iteration-2-make-the-application-look-nice-vb/_static/image9.png)
+[![Tel cuadro de diálogo nuevo proyecto](iteration-2-make-the-application-look-nice-vb/_static/image5.jpg)](iteration-2-make-the-application-look-nice-vb/_static/image9.png)
 
 **Figura 05**: Sustituyendo [ProjectName] ContactManager ([haga clic aquí para ver imagen en tamaño completo](iteration-2-make-the-application-look-nice-vb/_static/image10.png))
 
@@ -101,7 +101,7 @@ Mientras escribo este tutorial, el diseño más popular en la galería es un dis
 Después de completar estos pasos, la aplicación web usará el nuevo diseño. La página en la figura 6 muestra la apariencia de la aplicación de Contact Manager con el diseño de octubre.
 
 
-[![El cuadro de diálogo nuevo proyecto](iteration-2-make-the-application-look-nice-vb/_static/image6.jpg)](iteration-2-make-the-application-look-nice-vb/_static/image11.png)
+[![Tel cuadro de diálogo nuevo proyecto](iteration-2-make-the-application-look-nice-vb/_static/image6.jpg)](iteration-2-make-the-application-look-nice-vb/_static/image11.png)
 
 **Figura 06**: ContactManager con la plantilla de octubre ([haga clic aquí para ver imagen en tamaño completo](iteration-2-make-the-application-look-nice-vb/_static/image12.png))
 
@@ -115,7 +115,7 @@ Sin embargo, es posible que deba crear un diseño completamente único para el s
 De Contact Manager de iteración 1 y lo envíe el proyecto a la empresa de diseño. No poseen (es lamentable en ellas!) de Visual Studio, pero que no presentan un problema. Podían descargar Microsoft Visual Web Developer de forma gratuita desde el [ https://www.asp.net ](https://www.asp.net) sitio Web y abra la aplicación de Contact Manager en Visual Web Developer. En un par de días, se hubiera producido el diseño en la figura 7.
 
 
-[![El cuadro de diálogo nuevo proyecto](iteration-2-make-the-application-look-nice-vb/_static/image7.jpg)](iteration-2-make-the-application-look-nice-vb/_static/image13.png)
+[![Tel cuadro de diálogo nuevo proyecto](iteration-2-make-the-application-look-nice-vb/_static/image7.jpg)](iteration-2-make-the-application-look-nice-vb/_static/image13.png)
 
 **Figura 07**: El diseño de ASP.NET MVC Contact Manager ([haga clic aquí para ver imagen en tamaño completo](iteration-2-make-the-application-look-nice-vb/_static/image14.png))
 
@@ -139,14 +139,14 @@ El método de Html.ActionLink() representa un hipervínculo HTML completo. El m�
 Además, tenga en cuenta que el nuevo diseño incluye pestañas seleccionadas o sin seleccionadas. Por ejemplo, en la figura 8, el **crear nuevo contacto** pestaña está seleccionada y el **Mis contactos** ficha no está seleccionada.
 
 
-[![El cuadro de diálogo nuevo proyecto](iteration-2-make-the-application-look-nice-vb/_static/image8.jpg)](iteration-2-make-the-application-look-nice-vb/_static/image15.png)
+[![Tel cuadro de diálogo nuevo proyecto](iteration-2-make-the-application-look-nice-vb/_static/image8.jpg)](iteration-2-make-the-application-look-nice-vb/_static/image15.png)
 
 **Figura 08**: Activada y desactivada pestañas ([haga clic aquí para ver imagen en tamaño completo](iteration-2-make-the-application-look-nice-vb/_static/image16.png))
 
 
 Para poder representar pestañas seleccionadas o sin seleccionadas, he creado una aplicación auxiliar HTML personalizada denominada el MenuItemHelper. Este método auxiliar representa cualquiera un &lt;li&gt; etiqueta o una &lt;clase li = "selected"&gt; etiqueta en función de si el controlador actual y la acción se corresponde con el nombre de acción y controlador pasado a la aplicación auxiliar. El código para el MenuItemHelper está contenido en el listado 1.
 
-**Listing 1 – Helpers\MenuItemHelper.vb**
+**Listado 1 – Helpers\MenuItemHelper.vb**
 
 [!code-vb[Main](iteration-2-make-the-application-look-nice-vb/samples/sample3.vb)]
 

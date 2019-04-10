@@ -8,12 +8,12 @@ ms.date: 02/18/2013
 ms.assetid: 634ea84b-f904-4afe-b71b-49cccef4d9cc
 msc.legacyurl: /mvc/overview/older-versions/hands-on-labs/aspnet-mvc-4-models-and-data-access
 msc.type: authoredcontent
-ms.openlocfilehash: 10c2f6379f6d3139dd3bcf1027ff456e074298c3
-ms.sourcegitcommit: 289e051cc8a90e8f7127e239fda73047bde4de12
+ms.openlocfilehash: 53ca3bc4e550f488f3ae4c41f02a636e747107cb
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/25/2019
-ms.locfileid: "58425098"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59384895"
 ---
 # <a name="aspnet-mvc-4-models-and-data-access"></a>Acceso a datos y modelos de ASP.NET MVC 4
 
@@ -74,7 +74,7 @@ Para mayor comodidad, gran parte del código que se va a administrar a lo largo 
 
 Si no está familiarizado con los fragmentos de código de Visual Studio y desea aprender a usarlas, puede consultar el apéndice de este documento &quot; [Apéndice C: Usar fragmentos de código](#AppendixC)&quot;.
 
-* * *
+---
 
 <a id="Exercises"></a>
 
@@ -163,7 +163,7 @@ En esta tarea, creará un modelo de datos para interactuar con la base de datos 
 
     ![Propiedades de conexión](aspnet-mvc-4-models-and-data-access/_static/image9.png "las propiedades de conexión")
 
-    *Propiedades de conexión*
+    *Propiedades de la conexión*
 6. Debe tener el mismo nombre que la cadena de conexión de entidad, cambie su nombre a la clase generada **MusicStoreEntities** y haga clic en **siguiente**.
 
     ![Elegir la conexión de datos](aspnet-mvc-4-models-and-data-access/_static/image10.png "elegir la conexión de datos")
@@ -181,7 +181,7 @@ En esta tarea, creará un modelo de datos para interactuar con la base de datos 
 
     ![Diagrama de la entidad](aspnet-mvc-4-models-and-data-access/_static/image12.png "diagrama de entidades")
 
-    *Diagrama de la entidad*
+    *Diagrama de entidades*
 
     > [!NOTE]
     > Las plantillas T4 (.tt) ejecutan código para generar las clases de entidades y las clases existentes, sobrescribirán con el mismo nombre. En este ejemplo, las clases &quot;álbum&quot;, &quot;género&quot; y &quot;artista&quot; se sobrescribieron con el código generado.
@@ -514,7 +514,7 @@ En esta tarea, ejecutará la aplicación en un explorador web y obtener detalles
 > [!NOTE]
 > Además, puede implementar esta aplicación a los siguientes sitios Web Windows Azure [Apéndice B: Publicar una aplicación de ASP.NET MVC 4 mediante Web Deploy](#AppendixB).
 
-* * *
+---
 
 <a id="Summary"></a>
 

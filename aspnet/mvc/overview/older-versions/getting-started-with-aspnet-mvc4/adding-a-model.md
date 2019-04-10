@@ -8,15 +8,15 @@ ms.date: 08/28/2012
 ms.assetid: 53db72da-e0b9-44d9-b60b-6e6988c00b28
 msc.legacyurl: /mvc/overview/older-versions/getting-started-with-aspnet-mvc4/adding-a-model
 msc.type: authoredcontent
-ms.openlocfilehash: 5308d2d1d11f954db8a4502adb42223f69e0c675
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: 2d0f3813c0c8df0fa7d13ca601f172bc370efe78
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57031602"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59379955"
 ---
-<a name="adding-a-model"></a>Agregar un modelo
-====================
+# <a name="adding-a-model"></a>Agregar un modelo
+
 by [Rick Anderson]((https://twitter.com/RickAndMSFT))
 
 > > [!NOTE]

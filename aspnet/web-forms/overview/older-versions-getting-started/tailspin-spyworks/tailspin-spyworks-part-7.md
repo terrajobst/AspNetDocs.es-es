@@ -8,15 +8,15 @@ ms.date: 07/21/2010
 ms.assetid: 50223ee9-11b9-4cf3-bca2-e2f10bf471f3
 msc.legacyurl: /web-forms/overview/older-versions-getting-started/tailspin-spyworks/tailspin-spyworks-part-7
 msc.type: authoredcontent
-ms.openlocfilehash: cada8d9aee649e4f2a5afc1ca2b46863ea458207
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: 646aeb4ad99ba9b0ee114c6be4aa528e62ef4775
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57056522"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59389952"
 ---
-<a name="part-7-adding-features"></a>Parte 7: Agregar características
-====================
+# <a name="part-7-adding-features"></a>Parte 7: Agregar características
+
 por [Joe Stagner](https://github.com/JoeStagner)
 
 > Tailspin Spyworks demuestra cómo extraordinariamente simple es crear aplicaciones eficaces y escalables para la plataforma. NET. Resalta cómo usar las características nuevas en ASP.NET 4 para crear una tienda en línea, incluida la compra, la desprotección y la administración.
@@ -41,11 +41,11 @@ Aunque los usuarios pueden examinar nuestro catálogo, colocar elementos en su c
 
 En la carpeta de "Cuenta", cree dos páginas .aspx uno OrderList.aspx con nombre y el otro OrderDetails.aspx con nombre
 
-OrderList.aspx aprovechará los controles GridView y EntityDataSoure mucho que tenemos anteriormente.
+OrderList.aspx aprovechará los controles GridView y EntityDataSource mucho que tenemos anteriormente.
 
 [!code-aspx[Main](tailspin-spyworks-part-7/samples/sample1.aspx)]
 
-El EntityDataSoure selecciona los registros de la tabla de pedidos filtrada por el nombre de usuario (consulte la WhereParameter) que se establece en una variable de sesión cuando el registro de usuario.
+EntityDataSource selecciona los registros de la tabla de pedidos filtrada por el nombre de usuario (consulte la WhereParameter) que se establece en una variable de sesión cuando el registro de usuario.
 
 Tenga en cuenta también estos parámetros en el campo Hyperlink del control GridView:
 
@@ -143,7 +143,7 @@ Tenga en cuenta también esta línea importante en la parte superior del marcado
 
 Puesto que no cambiará los elementos más populares minuto a minuto, podemos agregar una directiva dolor para mejorar el rendimiento de nuestra aplicación. Esta directiva hará que el código de los controles que solo se ejecutará cuando expira la salida almacenada en caché del control. En caso contrario, se usará la versión en caché de salida del control.
 
-Ahora sólo tenemos que hacer es incluir el control de nuevo en nuestra página Default.aspc.
+Ahora sólo tenemos que hacer es incluir el control de nuevo en nuestra página Default.aspx.
 
 Utilice arrastrar y colocar para colocar una instancia del control en la columna abierta el formulario predeterminado.
 

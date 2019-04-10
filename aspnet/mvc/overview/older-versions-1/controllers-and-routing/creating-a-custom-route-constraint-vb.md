@@ -8,15 +8,15 @@ ms.date: 02/16/2009
 ms.assetid: 892edb27-1cc2-4eaf-8314-dbc2efc6228a
 msc.legacyurl: /mvc/overview/older-versions-1/controllers-and-routing/creating-a-custom-route-constraint-vb
 msc.type: authoredcontent
-ms.openlocfilehash: d088380152adcb025857176b4396cab48fa64b66
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: febba98be86f0151724af6d6c00fb14760ce1b91
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57045352"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59378954"
 ---
-<a name="creating-a-custom-route-constraint-vb"></a>Crear una restricción de ruta personalizada (VB)
-====================
+# <a name="creating-a-custom-route-constraint-vb"></a>Crear una restricción de ruta personalizada (VB)
+
 by [Stephen Walther](https://github.com/StephenWalther)
 
 > Stephen Walther demuestra cómo puede crear una restricción de ruta personalizada. Implementamos una restricción personalizada simple que impide que una ruta que se va a coincidir cuando se realiza una solicitud de explorador desde un equipo remoto.
@@ -34,7 +34,7 @@ El método devuelve un valor booleano. Si devuelve False, la ruta asociada con l
 
 La restricción de Localhost se encuentra en el listado 1.
 
-**Listing 1 - LocalhostConstraint.vb**
+**Listado 1 - LocalhostConstraint.vb**
 
 [!code-vb[Main](creating-a-custom-route-constraint-vb/samples/sample2.vb)]
 

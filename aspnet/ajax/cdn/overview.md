@@ -8,15 +8,15 @@ ms.date: 10/14/2017
 ms.assetid: 8935bf14-ca6d-4a4e-9dbe-b96ce74cef49
 msc.legacyurl: /ajax/cdn
 msc.type: content
-ms.openlocfilehash: 6fd91f8c05462b603d6911e16bd48ec618d635d9
-ms.sourcegitcommit: 289e051cc8a90e8f7127e239fda73047bde4de12
+ms.openlocfilehash: 6cea53021ce92e3936b06481008a86dd0590a117
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/25/2019
-ms.locfileid: "58425735"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59387443"
 ---
-<a name="microsoft-ajax-content-delivery-network"></a>Microsoft Ajax Content Delivery Network
-====================
+# <a name="microsoft-ajax-content-delivery-network"></a>Microsoft Ajax Content Delivery Network
+
 > [!WARNING]
 > Las aplicaciones de producción no deberían adoptar una dependencia fuerte de activos de la red CDN. Las aplicaciones deben comprobar el recurso de la red CDN al que hace referencia y utilizar un recurso de reserva cuando la red CDN no está disponible.
 >
@@ -27,7 +27,7 @@ ms.locfileid: "58425735"
 ## <a name="table-of-contents"></a>Tabla de contenido
 
 **[AJAX.Microsoft.com ha cambiado a ajax.aspnetcdn.com](#ajaxmicrosoftcom_renamed_to_ajaxaspnetcdncom_18)**  
-**[Visual Studio .vsdoc Support](#Visual_Studio_vsdoc_Support_19)**  
+**[Compatibilidad de Visual Studio .vsdoc](#Visual_Studio_vsdoc_Support_19)**  
 **[Uso de Ajax de ASP.NET desde la red CDN](#Using_ASPNET_Ajax_from_the_CDN_20)**  
 **[Uso de jQuery desde la red CDN](#Using_jQuery_from_the_CDN_21)**  
 **[Mediante jQuery UI desde la red CDN](#Using_jQuery_UI_from_the_CDN_22)**  

@@ -8,15 +8,15 @@ ms.date: 02/21/2014
 ms.assetid: ef852096-a5bf-47b3-9945-125cde065093
 msc.legacyurl: /web-pages/overview/security/enabling-login-from-external-sites-in-an-aspnet-web-pages-site
 msc.type: authoredcontent
-ms.openlocfilehash: 188a9203ba7b04f5a88d0f802f1a05bf35d58d8c
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: a93835e685716b3be59023b9f84a006e38f48e89
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57045662"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59380461"
 ---
-<a name="logging-in-using-external-sites-in-an-aspnet-web-pages-razor-site"></a>Iniciar sesión con sitios externos en un sitio Web de ASP.NET Pages (Razor)
-====================
+# <a name="logging-in-using-external-sites-in-an-aspnet-web-pages-razor-site"></a>Iniciar sesión con sitios externos en un sitio Web de ASP.NET Pages (Razor)
+
 por [Tom FitzMacken](https://github.com/tfitzmac)
 
 > En este artículo se explica cómo iniciar sesión en el sitio de ASP.NET Web Pages (Razor) con Facebook, Twitter, Google, Yahoo y otros sitios, es decir, cómo admitir OAuth y OpenID en su sitio.

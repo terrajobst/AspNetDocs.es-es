@@ -8,15 +8,15 @@ ms.date: 11/17/2011
 ms.assetid: 3fc23eed-921d-4d46-a610-a2d156e4bd03
 msc.legacyurl: /web-forms/overview/older-versions-getting-started/deployment-to-a-hosting-provider/deployment-to-a-hosting-provider-creating-and-installing-deployment-packages-12-of-12
 msc.type: authoredcontent
-ms.openlocfilehash: 2923501289f31243a7341848ed3f7c2142c98e75
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: 7e3c8b2adbe8d5248bed7299fb5e784a753f3851
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57041972"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59382172"
 ---
-<a name="deploying-an-aspnet-web-application-with-sql-server-compact-using-visual-studio-or-visual-web-developer-troubleshooting-12-of-12"></a>Implementar una aplicación Web de ASP.NET con SQL Server Compact con Visual Studio o Visual Web Developer: Solución de problemas (12 de 12)
-====================
+# <a name="deploying-an-aspnet-web-application-with-sql-server-compact-using-visual-studio-or-visual-web-developer-troubleshooting-12-of-12"></a>Implementar una aplicación Web de ASP.NET con SQL Server Compact con Visual Studio o Visual Web Developer: Solución de problemas (12 de 12)
+
 por [Tom Dykstra](https://github.com/tdykstra)
 
 [Descargar el proyecto de inicio](http://code.msdn.microsoft.com/Deploying-an-ASPNET-Web-4e31366b)
@@ -113,7 +113,7 @@ Después de implementar una aplicación con un solo clic publicar, cuando ejecut
 
 ### <a name="possible-cause-and-solution"></a>Causa y solución posibles
 
-Abra el *Web.config* archivo en el sitio implementado y compruebe si los valores de cadena de conexión comienzan con `$(ReplacableToken_`, como en el ejemplo siguiente:
+Abra el *Web.config* archivo en el sitio implementado y compruebe si los valores de cadena de conexión comienzan con `$(ReplaceableToken_`, como en el ejemplo siguiente:
 
 [!code-xml[Main](deployment-to-a-hosting-provider-creating-and-installing-deployment-packages-12-of-12/samples/sample9.xml)]
 

@@ -8,15 +8,15 @@ ms.date: 02/25/2011
 ms.assetid: f28e8c8e-5e0f-4bc3-af69-2e6e18a6d100
 msc.legacyurl: /web-pages/videos/aspnet-razor-pages/displaying-data-in-a-chart-part-2
 msc.type: video
-ms.openlocfilehash: 081c7d3cad1d62e69f91416afbc095753d484ea6
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: ee02ebda2261727f9a477c29eb76fa303ce2b033
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57027182"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59381840"
 ---
-<a name="displaying-data-in-a-chart-part-2"></a>Mostrar datos en un gráfico (parte 2)
-====================
+# <a name="displaying-data-in-a-chart-part-2"></a>Mostrar datos en un gráfico (parte 2)
+
 por [Joe Stagner](https://github.com/JoeStagner)
 
 Vídeo acompañamiento para mostrar datos en un tutorial del gráfico (parte 2)

@@ -8,15 +8,15 @@ ms.date: 06/10/2014
 ms.assetid: e264677b-9c01-47ec-94f9-3cd8f08f94af
 msc.legacyurl: /signalr/overview/security/persistent-connection-authorization
 msc.type: authoredcontent
-ms.openlocfilehash: 7dab28f4720b34082f71e487c64af88a8ba01e6c
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: 9399addc76b7ba0844efe5b935d16edfdd9ec9f0
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57033532"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59384992"
 ---
-<a name="authentication-and-authorization-for-signalr-persistent-connections"></a>Autenticación y autorización para las conexiones persistentes de SignalR
-====================
+# <a name="authentication-and-authorization-for-signalr-persistent-connections"></a>Autenticación y autorización para las conexiones persistentes de SignalR
+
 por [Patrick Fletcher](https://github.com/pfletcher), [Tom FitzMacken](https://github.com/tfitzmac)
 
 [!INCLUDE [Consider ASP.NET Core SignalR](~/includes/signalr/signalr-version-disambiguation.md)]

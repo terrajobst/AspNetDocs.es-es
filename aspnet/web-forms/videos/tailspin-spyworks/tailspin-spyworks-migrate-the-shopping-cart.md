@@ -8,15 +8,15 @@ ms.date: 06/29/2010
 ms.assetid: 1dcc27a0-f9a9-4e34-94bf-7c35190ea08d
 msc.legacyurl: /web-forms/videos/tailspin-spyworks/tailspin-spyworks-migrate-the-shopping-cart
 msc.type: video
-ms.openlocfilehash: d96b3bba8013c984ae0f2df12085e0e9bd1813cd
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: bb7a6e1208d97cf27e05a6ab5753d02485addc8e
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57059902"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59378967"
 ---
-<a name="tailspin-spyworks---migrate-the-shopping-cart"></a>Tailspin Spyworks - Migrar el carro de la compra
-====================
+# <a name="tailspin-spyworks---migrate-the-shopping-cart"></a>Tailspin Spyworks - Migrar el carro de la compra
+
 por [Joe Stagner](https://github.com/JoeStagner)
 
 Joe Stagner se muestra cómo convertir el carro de la compra de un usuario anónimo a otro autenticada antes de extraer del repositorio final para la aplicación de formularios Web Forms de ejemplo Tailspin Spyworks.

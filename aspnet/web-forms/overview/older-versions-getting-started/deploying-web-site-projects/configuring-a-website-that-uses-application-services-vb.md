@@ -8,15 +8,15 @@ ms.date: 04/23/2009
 ms.assetid: 9c31a42f-d8bb-4c0f-9ccc-597d4f70ac42
 msc.legacyurl: /web-forms/overview/older-versions-getting-started/deploying-web-site-projects/configuring-a-website-that-uses-application-services-vb
 msc.type: authoredcontent
-ms.openlocfilehash: 472770477e83fc0bbe24995e5558d0e8624082ae
-ms.sourcegitcommit: 289e051cc8a90e8f7127e239fda73047bde4de12
+ms.openlocfilehash: b8ec246c2f35f3d7fa5bcf67aa6f157195028176
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/25/2019
-ms.locfileid: "58426008"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59379526"
 ---
-<a name="configuring-a-website-that-uses-application-services-vb"></a>Configurar un sitio web que usa servicios de aplicaciones (VB)
-====================
+# <a name="configuring-a-website-that-uses-application-services-vb"></a>Configurar un sitio web que usa servicios de aplicaciones (VB)
+
 por [Scott Mitchell](https://twitter.com/ScottOnWriting)
 
 [Descargar código](http://download.microsoft.com/download/E/6/F/E6FE3A1F-EE3A-4119-989A-33D1A9F6F6DD/ASPNET_Hosting_Tutorial_09_VB.zip) o [descargar PDF](http://download.microsoft.com/download/C/3/9/C391A649-B357-4A7B-BAA4-48C96871FEA6/aspnet_tutorial09_AppServicesConfig_vb.pdf)
@@ -106,7 +106,7 @@ Permiten s veamos cómo agregar los objetos de base de datos a la base de datos 
 La herramienta se inicia al mostrar una pantalla de presentación que explica su propósito. Haga clic en siguiente para pasar a la pantalla "Seleccionar una opción de configuración", que se muestra en la figura 1. Desde aquí puede agregar objetos de base de datos de los servicios de aplicación o quitarlos de una base de datos. Puesto que deseamos agregar estos objetos a la base de datos de producción, seleccione la opción "Configurar SQL Server para servicios de aplicación" y haga clic en siguiente.
 
 
-[![Elija configurar SQL Server para servicios de aplicación](configuring-a-website-that-uses-application-services-vb/_static/image2.jpg)](configuring-a-website-that-uses-application-services-vb/_static/image1.jpg)
+[![CElija para configurar SQL Server para servicios de aplicación](configuring-a-website-that-uses-application-services-vb/_static/image2.jpg)](configuring-a-website-that-uses-application-services-vb/_static/image1.jpg)
 
 **Figura 1**: Optar por configurar SQL Server para servicios de aplicación ([haga clic aquí para ver imagen en tamaño completo](configuring-a-website-that-uses-application-services-vb/_static/image3.jpg))
 
@@ -117,7 +117,7 @@ En "Seleccionar el servidor y base de datos" pantalla pide información para con
 > Después de escribir el servidor de base de datos y las credenciales puede obtener un error al expandir la lista desplegable de bases de datos. El `aspnet_regsql.exe` herramienta consultas el `sysdatabases` tabla del sistema para recuperar una lista de bases de datos en el servidor, pero algunos web que hospeda los servidores de base de datos de bloqueo de las empresas para que esta información no está disponible públicamente. Si recibe este error puede escribir el nombre de base de datos directamente en la lista desplegable.
 
 
-[![Proporcionar a la herramienta con la información de conexión de base de datos s](configuring-a-website-that-uses-application-services-vb/_static/image5.jpg)](configuring-a-website-that-uses-application-services-vb/_static/image4.jpg)
+[![Ssuministro de la información de conexión de s herramienta con la base de datos](configuring-a-website-that-uses-application-services-vb/_static/image5.jpg)](configuring-a-website-that-uses-application-services-vb/_static/image4.jpg)
 
 **Figura 2**: Proporcione la información de conexión de herramienta con la base de datos s ([haga clic aquí para ver imagen en tamaño completo](configuring-a-website-that-uses-application-services-vb/_static/image6.jpg))
 
@@ -125,7 +125,7 @@ En "Seleccionar el servidor y base de datos" pantalla pide información para con
 La pantalla posterior resume las acciones que se va a tener lugar, es decir que los objetos de base de datos de servicios de aplicación se van a agregar a la base de datos especificado. Haga clic en siguiente para completar esta acción. Transcurridos unos instantes, se muestra la última pantalla, teniendo en cuenta que se han agregado los objetos de base de datos (consulte la figura 3).
 
 
-[![¡Success! Los objetos de base de datos de servicios de aplicación se agregaron a la base de datos de producción](configuring-a-website-that-uses-application-services-vb/_static/image8.jpg)](configuring-a-website-that-uses-application-services-vb/_static/image7.jpg)
+[![S¡orrecto! Los objetos de base de datos de servicios de aplicación se agregaron a la base de datos de producción](configuring-a-website-that-uses-application-services-vb/_static/image8.jpg)](configuring-a-website-that-uses-application-services-vb/_static/image7.jpg)
 
 **Figura 3**: Correcto La aplicación Servicios de base de datos de objetos se agregaron a la base de datos de producción ([haga clic aquí para ver imagen en tamaño completo](configuring-a-website-that-uses-application-services-vb/_static/image9.jpg))
 
@@ -133,7 +133,7 @@ La pantalla posterior resume las acciones que se va a tener lugar, es decir que 
 Para comprobar que los objetos de base de datos de servicios de aplicación se agregaron correctamente a la base de datos de producción, abra SQL Server Management Studio y conéctese a la base de datos de producción. Como se muestra en la figura 4, ahora debería ver las tablas de base de datos de servicios de aplicación en la base de datos `aspnet_Applications`, `aspnet_Membership`, `aspnet_Users`, y así sucesivamente.
 
 
-[![Confirme que los objetos de base de datos se agregaron a la base de datos de producción](configuring-a-website-that-uses-application-services-vb/_static/image11.jpg)](configuring-a-website-that-uses-application-services-vb/_static/image10.jpg)
+[![CQue se agregaron los objetos de base de datos a la base de datos de producción de onfirmar](configuring-a-website-that-uses-application-services-vb/_static/image11.jpg)](configuring-a-website-that-uses-application-services-vb/_static/image10.jpg)
 
 **Figura 4**: Confirme que los objetos de base de datos se agregaron a la base de datos de producción ([haga clic aquí para ver imagen en tamaño completo](configuring-a-website-that-uses-application-services-vb/_static/image12.jpg))
 
@@ -172,7 +172,7 @@ Recuerde que un tutorial anterior actualiza la aplicación web de reseñas de li
 > Para obtener más información sobre el uso de la pertenencia y funciones de API junto con los controles Web relacionados con el inicio de sesión de ASP.NET, no olvide leer mi [ *tutoriales de seguridad del sitio Web*](../../older-versions-security/introduction/security-basics-and-asp-net-support-cs.md). Para obtener más información sobre la personalización del control CreateUserWizard, consulte el [ *crear cuentas de usuario* ](../../older-versions-security/membership/creating-user-accounts-vb.md) y [ *almacenar información de usuario adicional* ](../../older-versions-security/membership/storing-additional-user-information-vb.md) tutoriales o desproteger [ *Erich Peterson* ](http://www.erichpeterson.com/) artículo, [ *personalizar el CreateUserWizard Control* ](http://aspnet.4guysfromrolla.com/articles/070506-1.aspx).
 
 
-[![Los administradores pueden crear nuevas cuentas de usuario](configuring-a-website-that-uses-application-services-vb/_static/image14.jpg)](configuring-a-website-that-uses-application-services-vb/_static/image13.jpg)
+[![APuede crear nuevas cuentas de usuario dministrators](configuring-a-website-that-uses-application-services-vb/_static/image14.jpg)](configuring-a-website-that-uses-application-services-vb/_static/image13.jpg)
 
 **Figura 5**: Los administradores pueden crear nuevas cuentas de usuario ([haga clic aquí para ver imagen en tamaño completo](configuring-a-website-that-uses-application-services-vb/_static/image15.jpg))
 

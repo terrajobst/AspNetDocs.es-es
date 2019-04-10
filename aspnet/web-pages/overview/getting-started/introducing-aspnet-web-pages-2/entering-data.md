@@ -8,15 +8,15 @@ ms.date: 05/28/2015
 ms.assetid: d37c93fc-25fd-4e94-8671-0d437beef206
 msc.legacyurl: /web-pages/overview/getting-started/introducing-aspnet-web-pages-2/entering-data
 msc.type: authoredcontent
-ms.openlocfilehash: e40d2962ccac56eaaf4812819aa42168e69295bc
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: d76f607f1d5e779d43ee15d8f2d697e7b0f147ae
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57029802"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59380124"
 ---
-<a name="introducing-aspnet-web-pages---entering-database-data-by-using-forms"></a>Introducción a las páginas Web ASP.NET: introducción de datos de base de datos mediante el uso de formularios
-====================
+# <a name="introducing-aspnet-web-pages---entering-database-data-by-using-forms"></a>Introducción a las páginas Web ASP.NET: introducción de datos de base de datos mediante el uso de formularios
+
 por [Tom FitzMacken](https://github.com/tfitzmac)
 
 > Este tutorial muestra cómo crear un formulario de entrada y, a continuación, escriba los datos que se obtiene desde el formulario en una tabla de base de datos al usar ASP.NET Web Pages (Razor). Supone que ha completado la serie a través de [conceptos básicos de los formularios HTML en ASP.NET Web Pages](https://go.microsoft.com/fwlink/?LinkId=251581).
@@ -253,7 +253,7 @@ En el siguiente tutorial, obtendrá información sobre cómo permitir que los us
 
 ## <a name="additional-resources"></a>Recursos adicionales
 
-- [Introducción a la programación Web de ASP.NET mediante la sintaxis Razor](https://go.microsoft.com/fwlink/?LinkID=202890)
+- [Introducción a la programación web de ASP.NET usando la sintaxis Razor](https://go.microsoft.com/fwlink/?LinkID=202890)
 - [Instrucción SQL INSERT INTO](http://www.w3schools.com/sql/sql_insert.asp) en el sitio W3Schools
 - [Validar la entrada del usuario en ASP.NET Web Pages sitios](https://go.microsoft.com/fwlink/?LinkId=253002). Para obtener más información sobre cómo trabajar con el `Validation` auxiliar.
 

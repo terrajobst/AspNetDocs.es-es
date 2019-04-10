@@ -8,15 +8,15 @@ ms.date: 03/02/2009
 ms.assetid: 4eabc535-b8a1-43f5-bb99-cfeb86db0fca
 msc.legacyurl: /mvc/overview/older-versions-1/models-data/validating-with-a-service-layer-cs
 msc.type: authoredcontent
-ms.openlocfilehash: 69ff78949589017d12a791231e38b400b49f2917
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: 9b2a7e00b3c50a946ad0f2518880892f103a5c1b
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57051842"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59387118"
 ---
-<a name="validating-with-a-service-layer-c"></a>Validación con un nivel de servicio (C#)
-====================
+# <a name="validating-with-a-service-layer-c"></a>Validación con un nivel de servicio (C#)
+
 by [Stephen Walther](https://github.com/StephenWalther)
 
 > Obtenga información sobre cómo mover la lógica de validación fuera de sus acciones de controlador y en una capa de servicio independiente. En este tutorial, Stephen Walther explica cómo puede mantener una separación de preocupaciones sharp aislando la capa de servicio de su capa de controlador.
@@ -48,7 +48,7 @@ Un nivel de servicio es una capa adicional en una aplicación de ASP.NET MVC que
 
 Por ejemplo, la capa de servicio de producto en el listado 3 tiene un método CreateProduct(). El método CreateProduct() llama al método de ValidateProduct() para validar un nuevo producto antes de pasar el producto en el repositorio de producto.
 
-**Listing 3 - Models\ProductService.cs**
+**Listado 3 - Models\ProductService.cs**
 
 [!code-csharp[Main](validating-with-a-service-layer-cs/samples/sample3.cs)]
 
@@ -74,7 +74,7 @@ En el listado 5 se actualizó el nivel de servicio para que ya no utiliza el est
 
 La interfaz IValidationDictionary se define en el listado 6. Esta interfaz simple tiene un solo método y una sola propiedad.
 
-**Listing 6 - Models\IValidationDictionary.cs**
+**Listado 6 - Models\IValidationDictionary.cs**
 
 [!code-csharp[Main](validating-with-a-service-layer-cs/samples/sample6.cs)]
 
@@ -86,7 +86,7 @@ La clase en la lista 7, con el nombre de la clase ModelStateWrapper, implementa 
 
 Por último, el controlador actualizado del listado 8 usa el ModelStateWrapper al crear la capa de servicio en su constructor.
 
-**Listing 8 - Controllers\ProductController.cs**
+**Listado 8 - Controllers\ProductController.cs**
 
 [!code-csharp[Main](validating-with-a-service-layer-cs/samples/sample8.cs)]
 

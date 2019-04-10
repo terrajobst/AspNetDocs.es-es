@@ -8,15 +8,15 @@ ms.date: 07/27/2010
 ms.assetid: 0bc191b2-4311-479a-a83a-7f1b1c32e6fe
 msc.legacyurl: /mvc/overview/older-versions-1/nerddinner/build-a-model-with-business-rule-validations
 msc.type: authoredcontent
-ms.openlocfilehash: f5829aab8cb266a65674d052ab77ab8e10c60670
-ms.sourcegitcommit: 289e051cc8a90e8f7127e239fda73047bde4de12
+ms.openlocfilehash: 078614c6e7ba18ac09bbd5e23b90b08c97aee658
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/25/2019
-ms.locfileid: "58422862"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59387313"
 ---
-<a name="build-a-model-with-business-rule-validations"></a>Crear un modelo con validaciones de regla de negocios
-====================
+# <a name="build-a-model-with-business-rule-validations"></a>Crear un modelo con validaciones de regla de negocios
+
 por [Microsoft](https://github.com/microsoft)
 
 [Descargar PDF](http://aspnetmvcbook.s3.amazonaws.com/aspnetmvc-nerdinner_v1.pdf)

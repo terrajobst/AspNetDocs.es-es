@@ -8,15 +8,15 @@ ms.date: 02/26/2014
 ms.assetid: 6f448917-ad23-4dcc-9789-897fad74051b
 msc.legacyurl: /web-api/overview/odata-support-in-aspnet-web-api/odata-v3/calling-an-odata-service-from-a-net-client
 msc.type: authoredcontent
-ms.openlocfilehash: 75f8e3eab7bd5667bbdcccbb5ae8a8e5b1f5fdba
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: d35c0057f5c29e399e45d0a58467de7f106d9994
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57050142"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59389978"
 ---
-<a name="calling-an-odata-service-from-a-net-client-c"></a>Llamar a un servicio OData desde un cliente .NET (C#)
-====================
+# <a name="calling-an-odata-service-from-a-net-client-c"></a>Llamar a un servicio OData desde un cliente .NET (C#)
+
 por [Mike Wasson](https://github.com/MikeWasson)
 
 [Descargue el proyecto completado](http://code.msdn.microsoft.com/ASPNET-Web-API-OData-cecdb524)
@@ -27,7 +27,7 @@ por [Mike Wasson](https://github.com/MikeWasson)
 >
 >
 > - [Visual Studio 2013](https://my.visualstudio.com/Downloads?q=visual%20studio%202013) (funciona con Visual Studio 2012)
-> - [Biblioteca cliente de Servicios de datos de WCF](https://msdn.microsoft.com/library/cc668772.aspx)
+> - [Biblioteca cliente de Data Services de WCF](https://msdn.microsoft.com/library/cc668772.aspx)
 > - Web API 2. (El servicio de OData de ejemplo se compila con Web API 2, pero la aplicación cliente no depende de la API Web).
 
 

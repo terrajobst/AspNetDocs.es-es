@@ -8,15 +8,15 @@ ms.date: 07/30/2013
 ms.assetid: b83f47c4-8521-4d0a-8644-e8f77e39733e
 msc.legacyurl: /mvc/overview/older-versions/getting-started-with-ef-5-using-mvc-4/handling-concurrency-with-the-entity-framework-in-an-asp-net-mvc-application
 msc.type: authoredcontent
-ms.openlocfilehash: 07d4d673b7bb6bad6e9d8cbacbc965a60608db2a
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: a79cca143df9a10b4255796a6d034688713e4e52
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57047952"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59379760"
 ---
-<a name="handling-concurrency-with-the-entity-framework-in-an-aspnet-mvc-application-7-of-10"></a>Controlar la simultaneidad con Entity Framework en una aplicación ASP.NET MVC (7 de 10)
-====================
+# <a name="handling-concurrency-with-the-entity-framework-in-an-aspnet-mvc-application-7-of-10"></a>Controlar la simultaneidad con Entity Framework en una aplicación ASP.NET MVC (7 de 10)
+
 por [Tom Dykstra](https://github.com/tdykstra)
 
 [Descargue el proyecto completado](http://code.msdn.microsoft.com/Getting-Started-with-dd0e2ed8)

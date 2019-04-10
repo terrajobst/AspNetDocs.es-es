@@ -8,15 +8,15 @@ ms.date: 05/21/2008
 ms.assetid: 0aa1c84f-c9e2-4699-b009-0e28643ecbc6
 msc.legacyurl: /web-forms/overview/older-versions-getting-started/master-pages/specifying-the-title-meta-tags-and-other-html-headers-in-the-master-page-cs
 msc.type: authoredcontent
-ms.openlocfilehash: e3846ea696a1a5a29fd53d6753878fab9dd9a95d
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: 431d5a124017e2a23bfaa7579f63d61faf0b8ebd
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57036612"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59379799"
 ---
-<a name="specifying-the-title-meta-tags-and-other-html-headers-in-the-master-page-c"></a>Especificar el título, etiquetas meta y otros encabezados HTML en la página maestra (C#)
-====================
+# <a name="specifying-the-title-meta-tags-and-other-html-headers-in-the-master-page-c"></a>Especificar el título, etiquetas meta y otros encabezados HTML en la página maestra (C#)
+
 por [Scott Mitchell](https://twitter.com/ScottOnWriting)
 
 [Descargar código](http://download.microsoft.com/download/e/e/f/eef369f5-743a-4a52-908f-b6532c4ce0a4/ASPNET_MasterPages_Tutorial_03_CS.zip) o [descargar PDF](http://download.microsoft.com/download/8/f/6/8f6349e4-6554-405a-bcd7-9b094ba5089a/ASPNET_MasterPages_Tutorial_03_CS.pdf)
@@ -169,7 +169,7 @@ Una vez hecho esto, visite el sitio mediante un explorador. Si visita una págin
 La figura 5 muestra el `MultipleContentPlaceHolders.aspx` página cuando se ve mediante un explorador. Tenga en cuenta que el título es precisamente filename de la página (menos la extensión), "MultipleContentPlaceHolders".
 
 
-[![Si un título no es especifica explícitamente, el nombre de archivo de la página es usa automáticamente](specifying-the-title-meta-tags-and-other-html-headers-in-the-master-page-cs/_static/image6.png)](specifying-the-title-meta-tags-and-other-html-headers-in-the-master-page-cs/_static/image5.png)
+[![Iun título de f no es especifica explícitamente, el nombre de archivo de la página es usa automáticamente](specifying-the-title-meta-tags-and-other-html-headers-in-the-master-page-cs/_static/image6.png)](specifying-the-title-meta-tags-and-other-html-headers-in-the-master-page-cs/_static/image5.png)
 
 **Figura 05**: Si un título no es especifica explícitamente, el nombre de archivo de la página es usa automáticamente ([haga clic aquí para ver imagen en tamaño completo](specifying-the-title-meta-tags-and-other-html-headers-in-the-master-page-cs/_static/image7.png))
 
@@ -191,7 +191,7 @@ El sistema de sitio se basa en el [modelo de proveedor](http://aspnet.4guysfromr
 Empiece por crear un archivo de mapa del sitio en la carpeta de raíz del sitio Web denominada `Web.sitemap`. Para ello, haga doble clic en el nombre del sitio Web en el Explorador de soluciones, seleccione Agregar nuevo elemento y seleccione la plantilla de mapa del sitio. Asegúrese de que el archivo se denomina `Web.sitemap` y haga clic en Agregar.
 
 
-[![Agregue un archivo denominado Web.sitemap a carpeta de raíz del sitio Web](specifying-the-title-meta-tags-and-other-html-headers-in-the-master-page-cs/_static/image9.png)](specifying-the-title-meta-tags-and-other-html-headers-in-the-master-page-cs/_static/image8.png)
+[![Add un Web.sitemap con nombre de archivo a carpeta de raíz del sitio Web](specifying-the-title-meta-tags-and-other-html-headers-in-the-master-page-cs/_static/image9.png)](specifying-the-title-meta-tags-and-other-html-headers-in-the-master-page-cs/_static/image8.png)
 
 **Figura 06**: Agregar un archivo denominado `Web.sitemap` a carpeta de raíz del sitio Web ([haga clic aquí para ver imagen en tamaño completo](specifying-the-title-meta-tags-and-other-html-headers-in-the-master-page-cs/_static/image10.png))
 
@@ -224,7 +224,7 @@ Empiece quitando el marcado existente de la lista sin ordenar de la sección lec
 Desde el Asistente para configuración de orígenes de datos que elija para enlazar el ListView con un nuevo control SiteMapDataSource denominado `LessonsDataSource`. El control SiteMapDataSource devuelve la estructura jerárquica del sistema de mapa del sitio.
 
 
-[![Enlazar un Control SiteMapDataSource al Control ListView LessonsList](specifying-the-title-meta-tags-and-other-html-headers-in-the-master-page-cs/_static/image13.png)](specifying-the-title-meta-tags-and-other-html-headers-in-the-master-page-cs/_static/image12.png)
+[![Bbuscar un Control SiteMapDataSource al Control ListView LessonsList](specifying-the-title-meta-tags-and-other-html-headers-in-the-master-page-cs/_static/image13.png)](specifying-the-title-meta-tags-and-other-html-headers-in-the-master-page-cs/_static/image12.png)
 
 **Figura 08**: Enlazar un SiteMapDataSource Control a la `LessonsList` ListView Control ([haga clic aquí para ver imagen en tamaño completo](specifying-the-title-meta-tags-and-other-html-headers-in-the-master-page-cs/_static/image14.png))
 
@@ -239,7 +239,7 @@ El `LayoutTemplate` genera el marcado para una lista desordenada (`<ul>...</ul>`
 Después de configurar las plantillas de ListView, visite el sitio Web. Como se muestra en la figura 9, la sección lecciones contiene un solo elemento con viñetas, principal. ¿Dónde están About y el uso de las lecciones de controles ContentPlaceHolder varios? El SiteMapDataSource está diseñado para devolver un conjunto jerárquico de datos, pero el control ListView solo puede mostrar un solo nivel de la jerarquía. Por lo tanto, se muestra solo el primer nivel de nodos del mapa del sitio devuelto por el SiteMapDataSource.
 
 
-[![La sección lecciones contiene un único elemento de lista](specifying-the-title-meta-tags-and-other-html-headers-in-the-master-page-cs/_static/image16.png)](specifying-the-title-meta-tags-and-other-html-headers-in-the-master-page-cs/_static/image15.png)
+[![Tél lecciones sección contiene un único elemento de lista](specifying-the-title-meta-tags-and-other-html-headers-in-the-master-page-cs/_static/image16.png)](specifying-the-title-meta-tags-and-other-html-headers-in-the-master-page-cs/_static/image15.png)
 
 **Figura 09**: La sección lecciones contiene un único elemento de lista ([haga clic aquí para ver imagen en tamaño completo](specifying-the-title-meta-tags-and-other-html-headers-in-the-master-page-cs/_static/image17.png))
 
@@ -254,7 +254,7 @@ Con este cambio, el ListView muestra los elementos de viñeta de que está en Ab
 Configurando el SiteMapDataSource para omitir el nodo de inicio y agregar explícitamente un elemento de viñeta de página principal, la sección lecciones ahora muestra el resultado deseado.
 
 
-[![La sección lecciones contiene un elemento de viñeta de principal y cada nodo secundario](specifying-the-title-meta-tags-and-other-html-headers-in-the-master-page-cs/_static/image19.png)](specifying-the-title-meta-tags-and-other-html-headers-in-the-master-page-cs/_static/image18.png)
+[![Tél lecciones sección contiene una viñeta de elemento de la principal y todos los nodos secundarios](specifying-the-title-meta-tags-and-other-html-headers-in-the-master-page-cs/_static/image19.png)](specifying-the-title-meta-tags-and-other-html-headers-in-the-master-page-cs/_static/image18.png)
 
 **Figura 10**: La sección lecciones contiene un elemento de viñeta de principal y todos los nodos secundarios ([haga clic aquí para ver imagen en tamaño completo](specifying-the-title-meta-tags-and-other-html-headers-in-the-master-page-cs/_static/image20.png))
 

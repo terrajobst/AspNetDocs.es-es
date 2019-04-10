@@ -8,15 +8,15 @@ ms.date: 05/04/2012
 ms.assetid: fe47a018-f6d0-4979-80e7-5b1fa75a5865
 msc.legacyurl: /web-forms/overview/deployment/configuring-team-foundation-server-for-web-deployment/creating-a-build-definition-that-supports-deployment
 msc.type: authoredcontent
-ms.openlocfilehash: 33ebde3074603801945c676ace64b26ca5bbf44a
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: 97a60274d9306ea0ee332fcc1ab9e487355dbedb
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57031972"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59384947"
 ---
-<a name="creating-a-build-definition-that-supports-deployment"></a>Crear una definición de compilación que admita la implementación
-====================
+# <a name="creating-a-build-definition-that-supports-deployment"></a>Crear una definición de compilación que admita la implementación
+
 por [Jason Lee](https://github.com/jrjlee)
 
 [Descargar PDF](https://msdnshared.blob.core.windows.net/media/MSDNBlogsFS/prod.evol.blogs.msdn.com/CommunityServer.Blogs.Components.WeblogFiles/00/00/00/63/56/8130.DeployingWebAppsInEnterpriseScenarios.pdf)

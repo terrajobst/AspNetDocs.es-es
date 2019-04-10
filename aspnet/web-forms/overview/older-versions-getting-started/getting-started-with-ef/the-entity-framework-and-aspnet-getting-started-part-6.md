@@ -8,15 +8,15 @@ ms.date: 12/03/2010
 ms.assetid: 994a5496-c648-4830-b03c-55bb43f325d2
 msc.legacyurl: /web-forms/overview/older-versions-getting-started/getting-started-with-ef/the-entity-framework-and-aspnet-getting-started-part-6
 msc.type: authoredcontent
-ms.openlocfilehash: 57ba4a47dcc33a1fcc449bc32e9ce186e76cfb5b
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: 1e974d7ff259952d7dba0e968d43180f32a83d23
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57058152"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59387989"
 ---
-<a name="getting-started-with-entity-framework-40-database-first-and-aspnet-4-web-forms---part-6"></a>Introducción a Entity Framework 4.0 Database First y ASP.NET 4 Web Forms, parte 6
-====================
+# <a name="getting-started-with-entity-framework-40-database-first-and-aspnet-4-web-forms---part-6"></a>Introducción a Entity Framework 4.0 Database First y ASP.NET 4 Web Forms, parte 6
+
 por [Tom Dykstra](https://github.com/tdykstra)
 
 > La aplicación web de Contoso University muestra cómo crear aplicaciones de formularios Web Forms de ASP.NET con el Entity Framework 4.0 y Visual Studio 2010. Para obtener información acerca de la serie de tutoriales, vea [el primer tutorial de la serie](the-entity-framework-and-aspnet-getting-started-part-1.md)

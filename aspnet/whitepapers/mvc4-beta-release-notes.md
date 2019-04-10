@@ -8,15 +8,15 @@ ms.date: 09/09/2011
 ms.assetid: 666407bb-81de-4319-89ba-0302c382a208
 msc.legacyurl: /whitepapers/mvc4-beta-release-notes
 msc.type: content
-ms.openlocfilehash: f1d949ec716ea8cb677c54fe5b07431161c58fbc
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: b7722d5c282f07b35dd18d08911fa562dae6afc2
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57065112"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59387937"
 ---
-<a name="aspnet-mvc-4"></a>ASP.NET MVC 4
-====================
+# <a name="aspnet-mvc-4"></a>ASP.NET MVC 4
+
 > Este documento describe la versión de ASP.NET MVC 4 Beta para Visual Studio 2010.
 > 
 > > [!NOTE]
@@ -30,7 +30,7 @@ ms.locfileid: "57065112"
 - [Actualizar un proyecto de ASP.NET MVC 3 a ASP.NET MVC 4](#_Toc303253806)
 - [Nuevas características de ASP.NET MVC 4 Beta](#_Toc303253807)
 
-    - [ASP.NET Web API](#_Toc317096197) (Más información sobre ASP.NET Web API)
+    - [ASP.NET Web API](#_Toc317096197)
     - [Aplicación de página única de ASP.NET](#_Toc317096198)
     - [Mejoras en las plantillas de proyecto predeterminadas](#_Toc303253808)
     - [Plantilla de proyecto móvil](#_Toc303253809)
@@ -62,7 +62,7 @@ Documentación de ASP.NET MVC está disponible en el sitio Web MSDN en la siguie
 Tutoriales y otra información sobre ASP.NET MVC están disponibles en la página de MVC 4 del sitio Web ASP.NET ([https://www.asp.net/mvc/mvc4](../mvc/mvc4.md)).
 
 <a id="_Toc303253804"></a>
-## <a name="support"></a>Compatibilidad
+## <a name="support"></a>Soporte técnico
 
 Esto es una versión preliminar y no se admite oficialmente. Si tiene preguntas sobre cómo trabajar con esta versión, publíquelos en el foro de ASP.NET MVC ([https://forums.asp.net/1146.aspx](https://forums.asp.net/1146.aspx)), donde los miembros de la Comunidad de ASP.NET son normalmente pueden ofrecer soporte técnico informal.
 

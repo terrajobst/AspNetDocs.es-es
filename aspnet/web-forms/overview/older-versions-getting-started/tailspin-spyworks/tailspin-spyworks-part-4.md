@@ -8,15 +8,15 @@ ms.date: 07/21/2010
 ms.assetid: 4fab47d5-a6ec-4fdc-91f0-651a093a24b9
 msc.legacyurl: /web-forms/overview/older-versions-getting-started/tailspin-spyworks/tailspin-spyworks-part-4
 msc.type: authoredcontent
-ms.openlocfilehash: ca7eccd684473d9a1ec4a8adfd8690b291fe702f
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: 63afd25e2ccf22d3c7ae5c5048c80a8cf060d4cf
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57043272"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59382828"
 ---
-<a name="part-4-listing-products"></a>Parte 4: Lista de productos
-====================
+# <a name="part-4-listing-products"></a>Parte 4: Lista de productos
+
 por [Joe Stagner](https://github.com/JoeStagner)
 
 > Tailspin Spyworks demuestra cómo extraordinariamente simple es crear aplicaciones eficaces y escalables para la plataforma. NET. Resalta cómo usar las características nuevas en ASP.NET 4 para crear una tienda en línea, incluida la compra, la desprotección y la administración.
@@ -50,7 +50,7 @@ Después de crear la página nuevo vamos a usar un origen de datos de entidad pa
 
 Para realizar esta acción se lo indicaremos EntityDataSource para generar automáticamente la cláusula WHERE y especificamos el WhereParameter.
 
-Recordará que cuando creamos los elementos de menú en nuestra "Menu de categoría de producto" se compila dinámicamente el enlace agregando el CatagoryID a la cadena de consulta para cada vínculo. Se le indicará que el origen de datos de entidad para el parámetro WHERE se derivan de ese parámetro de cadena de consulta.
+Recordará que cuando se crean los elementos de menú en nuestra "Menu de categoría de producto" se compila dinámicamente el enlace agregando el CategoryID para la cadena de consulta para cada vínculo. Se le indicará que el origen de datos de entidad para el parámetro WHERE se derivan de ese parámetro de cadena de consulta.
 
 [!code-aspx[Main](tailspin-spyworks-part-4/samples/sample1.aspx)]
 
@@ -79,7 +79,7 @@ En la página del sitio principal, haga clic en uno de los vínculos de categor�
 
 ![](tailspin-spyworks-part-4/_static/image6.jpg)
 
-Ahora debemos implementar la página ProductDetials.apsx y la funcionalidad de AddToCart.
+Ahora debemos implementar la página ProductDetails.aspx y la funcionalidad de AddToCart.
 
 Use archivo -&gt;nuevo para crear un nombre de página ProductDetails.aspx mediante la página principal del sitio como hicimos anteriormente.
 
@@ -93,7 +93,7 @@ El carro de la compra representará una lógica más compleja en nuestra aplicac
 
 Tenga en cuenta que no nos estamos elección del nombre ShoppingCart.aspx.
 
-Nuestra base de datos contiene una tabla denominada "ShoppingCart". Cuando se genera un Entity Data Model se crea una clase para cada tabla en la base de datos. Por lo tanto, el Entity Data Model genera una clase de entidad denominada "ShoppingCart". Por lo que nos podríamos usar ese nombre para la implementación de carro de la compra o ampliarlo para nuestras necesidades, pero se elegirá en su lugar para simplemente seleccione un nombre que evitará el conflicto, se podríamos modificar el modelo.
+Nuestra base de datos contiene una tabla denominada "ShoppingCart". Cuando se genera un Entity Data Model se crea una clase para cada tabla en la base de datos. Por lo tanto, el Entity Data Model genera una clase de entidad denominada "ShoppingCart". Por lo que nos podríamos usar ese nombre para la implementación de carro de la compra o ampliarlo para nuestras necesidades, pero se decidirán en su lugar, simplemente seleccione un nombre que evitará el conflicto, se podríamos modificar el modelo.
 
 También merece la pena tener en cuenta que se va a crear un carro de compra simple e insertar la lógica del carro de la compra con la presentación del carro de la compra. También podríamos optar por implementar nuestro carro de compra en una capa de negocio completamente independiente.
 

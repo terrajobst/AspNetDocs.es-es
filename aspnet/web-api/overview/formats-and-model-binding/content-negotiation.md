@@ -1,25 +1,26 @@
 ---
 uid: web-api/overview/formats-and-model-binding/content-negotiation
-title: En ASP.NET Web API la negociación de contenido | Microsoft Docs
+title: Contenido de la negociación en ASP.NET Web API - ASP.NET 4.x
 author: MikeWasson
-description: Describe cómo ASP.NET Web API implementa la negociación de contenido HTTP.
+description: Describe cómo ASP.NET Web API implementa la negociación de contenido HTTP de ASP.NET 4.x.
 ms.author: riande
 ms.date: 05/20/2012
+ms.custom: seoapril2019
 ms.assetid: 0dd51b30-bf5a-419f-a1b7-2817ccca3c7d
 msc.legacyurl: /web-api/overview/formats-and-model-binding/content-negotiation
 msc.type: authoredcontent
-ms.openlocfilehash: 9cfbed49c1022fbf26160e89aed3ab474f5e0fdc
-ms.sourcegitcommit: 289e051cc8a90e8f7127e239fda73047bde4de12
+ms.openlocfilehash: cb6668ff6de276d3778ce11f27ce597d8bf1f9c7
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/25/2019
-ms.locfileid: "58425696"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59380166"
 ---
-<a name="content-negotiation-in-aspnet-web-api"></a>Negociación de contenido en ASP.NET Web API
-====================
+# <a name="content-negotiation-in-aspnet-web-api"></a>Negociación de contenido en ASP.NET Web API
+
 por [Mike Wasson](https://github.com/MikeWasson)
 
-En este artículo se describe cómo ASP.NET Web API implementa la negociación de contenido.
+Este artículo describe cómo ASP.NET Web API implementa la negociación de contenido de ASP.NET 4.x.
 
 La especificación de HTTP (RFC 2616) define la negociación de contenido como "el proceso de seleccionar la mejor representación para una respuesta determinada cuando hay varias representaciones". El mecanismo principal para la negociación de contenido en HTTP son estos encabezados de solicitud:
 

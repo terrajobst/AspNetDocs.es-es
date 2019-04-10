@@ -8,15 +8,15 @@ ms.date: 01/17/2019
 ms.assetid: df001954-18bf-4550-b03d-43911a0ea186
 msc.legacyurl: /mvc/overview/getting-started/introduction/adding-search
 msc.type: authoredcontent
-ms.openlocfilehash: ada125c917656f3a83524ff39e53b4cfc041a497
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: 7b49c1e6425080693229c6c132df3879504c835c
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57029702"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59379539"
 ---
-<a name="search"></a>Buscar
-====================
+# <a name="search"></a>Buscar
+
 
 [!INCLUDE [Tutorial Note](sample/code-location.md)]
 

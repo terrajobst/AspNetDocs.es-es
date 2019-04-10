@@ -8,15 +8,15 @@ ms.date: 08/14/2010
 ms.assetid: 7ae696b9-348f-4993-8ebb-a838acbe0c28
 msc.legacyurl: /mvc/overview/older-versions-1/getting-started-with-mvc/getting-started-with-mvc-part8
 msc.type: authoredcontent
-ms.openlocfilehash: a014690078f113e5090f4867c2f384751f16b9f6
-ms.sourcegitcommit: 289e051cc8a90e8f7127e239fda73047bde4de12
+ms.openlocfilehash: 029234cf9a28a80c487504e4e0980c214e45f53a
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/25/2019
-ms.locfileid: "58425358"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59381970"
 ---
-<a name="adding-a-column-to-the-model"></a>Agregar una columna al modelo
-====================
+# <a name="adding-a-column-to-the-model"></a>Agregar una columna al modelo
+
 por [Scott Hanselman](https://github.com/shanselman)
 
 > Este es un tutorial para principiantes que presenta los conceptos básicos de ASP.NET MVC. Creará una aplicación web simple que lee y escribe desde una base de datos. Visite el [centro de aprendizaje de ASP.NET MVC](../../../index.md) para buscar otros ASP.NET MVC, tutoriales y ejemplos.
@@ -28,11 +28,11 @@ Vamos a agregar una columna "Clasificación" a la tabla de la película. Vuelva 
 
 Agregar una columna de "Rating" tal como se muestra a continuación. Puesto que no hay ninguna clasificación ahora, la columna puede permitir valores NULL. Haga clic en Guardar.
 
-[![Edición de la tabla de películas](getting-started-with-mvc-part8/_static/image2.png)](getting-started-with-mvc-part8/_static/image1.png)
+[![ETabla de películas dición](getting-started-with-mvc-part8/_static/image2.png)](getting-started-with-mvc-part8/_static/image1.png)
 
 A continuación, vuelva al explorador de soluciones y abra el archivo Movies.edmx (que se encuentra en la carpeta \Models). Haga clic con el botón derecho en la superficie de diseño (el área blanca) y seleccione el modelo de actualización de base de datos.
 
-[![Películas - Microsoft Visual Web Developer 2010 Express (11)](getting-started-with-mvc-part8/_static/image4.png)](getting-started-with-mvc-part8/_static/image3.png)
+[![Movies - Microsoft Visual Web Developer 2010 Express (11)](getting-started-with-mvc-part8/_static/image4.png)](getting-started-with-mvc-part8/_static/image3.png)
 
 Esto iniciará al Asistente de actualización de"". Haga clic en la pestaña de actualización dentro de él y haga clic en Finalizar. Nuestra clase de modelo de película, a continuación, se actualizará con la nueva columna.
 
@@ -40,7 +40,7 @@ Esto iniciará al Asistente de actualización de"". Haga clic en la pestaña de 
 
 Después de hacer clic en Finalizar, puede ver que la nueva columna de clasificación se ha agregado a la entidad de la película en nuestro modelo.
 
-[![Entidad de película](getting-started-with-mvc-part8/_static/image7.png)](getting-started-with-mvc-part8/_static/image6.png)
+[![Movie Entity](getting-started-with-mvc-part8/_static/image7.png)](getting-started-with-mvc-part8/_static/image6.png)
 
 Hemos agregado una columna en el modelo de base de datos, pero no conocen las vistas.
 
@@ -70,7 +70,7 @@ Ejecute la aplicación y ahora tenemos un nuevo campo en la base de datos que se
 
 Después de hacer clic en crear, se le envía a la página de índice donde se nueva película aparece con la nueva columna de clasificación en la base de datos
 
-[![Lista de películas - Windows Internet Explorer (12)](getting-started-with-mvc-part8/_static/image11.png)](getting-started-with-mvc-part8/_static/image10.png)
+[![Movie lista - Windows Internet Explorer (12)](getting-started-with-mvc-part8/_static/image11.png)](getting-started-with-mvc-part8/_static/image10.png)
 
 Este tutorial básico de lo que a realizar los controladores de su asociación con las vistas y pasan datos codificados de forma rígida. A continuación, creamos y diseñado una base de datos y colocar algunos datos en. Se recuperan los datos de la base de datos y se muestra en una tabla HTML. A continuación, agregamos un formulario de creación que permiten al usuario que se agreguen datos a la base de datos desde dentro de la aplicación Web. Se agregó la validación y luego realiza la validación de usar JavaScript en el lado cliente. Por último, se puede cambiar la base de datos para incluir una nueva columna de datos y luego actualizan nuestras dos páginas para crear y mostrar estos nuevos datos.
 

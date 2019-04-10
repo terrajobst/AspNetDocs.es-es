@@ -8,15 +8,15 @@ ms.date: 08/07/2008
 ms.assetid: 14f2b333-59f5-4ae4-88db-2a78f809cef3
 msc.legacyurl: /web-forms/videos/aspnet-35/how-do-i/how-do-i-use-msbuild-to-automate-the-aspnet-compiler-and-merge-utilities
 msc.type: video
-ms.openlocfilehash: bed850b06b69e101d34f6987c9e6c66ab928543c
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: 4d0ee2f8f1a7538dbfb488a0599fdc0cd3ec999e
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57044172"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59388015"
 ---
-<a name="how-do-i-use-msbuild-to-automate-the-aspnet-compiler-and-merge-utilities"></a>[¿Cómo lo hago?:] Usar MSBuild para automatizar el compilador de ASP.NET y combinar utilidades
-====================
+# <a name="how-do-i-use-msbuild-to-automate-the-aspnet-compiler-and-merge-utilities"></a>[¿Cómo lo hago?:] Usar MSBuild para automatizar el compilador de ASP.NET y combinar utilidades
+
 por [Chris Pels](https://twitter.com/chrispels)
 
 En este vídeo, Chris Pels muestra cómo crear un proyecto de MSBuild que Orquesta la ejecución de aspnet\_compilador y aspnet\_combinar utilidades para un sitio web ASP.NET. En primer lugar, obtenga información sobre los aspectos básicos del proceso de compilación para un sitio web ASP.NET y la función de las utilidades de línea de comandos de dos. A continuación, vea cómo crear un archivo de proyecto de MSBuild y los elementos principales como PropertyGroup y Target. A continuación, obtenga información sobre los detalles de cómo ejecutar aspnet\_compilador y aspnet\_combinar utilidades desde el proyecto de MSBuild. Por último, se describen varias expansiones posibles de los conceptos básicos.

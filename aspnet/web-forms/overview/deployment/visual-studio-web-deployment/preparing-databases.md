@@ -8,15 +8,15 @@ ms.date: 02/15/2013
 ms.assetid: ae4def81-fa37-4883-a13e-d9896cbf6c36
 msc.legacyurl: /web-forms/overview/deployment/visual-studio-web-deployment/preparing-databases
 msc.type: authoredcontent
-ms.openlocfilehash: 67f44d9f23a2fe83c48e68328b1dee739056e32f
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: 786be61d48f26e5765eac0c8d6fad7551897f711
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57029782"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59387691"
 ---
-<a name="aspnet-web-deployment-using-visual-studio-preparing-for-database-deployment"></a>Implementación Web de ASP.NET con Visual Studio: Preparar la implementación de la base de datos
-====================
+# <a name="aspnet-web-deployment-using-visual-studio-preparing-for-database-deployment"></a>Implementación Web de ASP.NET con Visual Studio: Preparar la implementación de la base de datos
+
 por [Tom Dykstra](https://github.com/tdykstra)
 
 [Descargar el proyecto de inicio](http://go.microsoft.com/fwlink/p/?LinkId=282627)
@@ -63,7 +63,7 @@ Al implementar una base de datos de aplicación, normalmente no basta con implem
 
 Para simular este escenario habitual, configurará un migraciones de Code First `Seed` método que se inserta en la base de datos solo los datos que se desean estar allí en producción. Esto `Seed` método no debe insertar datos de prueba porque se ejecutarán en producción después de Code First crea la base de datos en producción.
 
-En versiones anteriores de Code First antes de que se publicó las migraciones, era habitual para `Seed` métodos para insertar datos de prueba también, porque con cada cambio de modelo durante el desarrollo de la base de datos tenía que eliminar y volver a crear desde cero por completo. Con migraciones de Code First, prueba los datos se conservan después de realizar cambios de la base de datos, por lo que incluso los datos de prueba de la `Seed` método no es necesario. El proyecto que ha descargado usa el método de inclusión de todos los datos en el `Seed` método de una clase de inicializador. En este tutorial podrá deshabilitar esa clase de inicializador y `enable Migrations. Then you'll update the `inicialización ' método en la configuración de las migraciones de clase para que inserte solo datos que se van a insertarse en producción.
+En versiones anteriores de Code First antes de que se publicó las migraciones, era habitual para `Seed` métodos para insertar datos de prueba también, porque con cada cambio de modelo durante el desarrollo de la base de datos tenía que eliminar y volver a crear desde cero por completo. Con migraciones de Code First, prueba los datos se conservan después de realizar cambios de la base de datos, por lo que incluso los datos de prueba de la `Seed` método no es necesario. El proyecto que ha descargado usa el método de inclusión de todos los datos en el `Seed` método de una clase de inicializador. En este tutorial podrá deshabilitar esa clase de inicializador y habilitar las migraciones. A continuación, actualizará la `Seed` método en la configuración de las migraciones de clase para que inserte solo datos que se van a insertarse en producción.
 
 El siguiente diagrama muestra el esquema de la base de datos de aplicación:
 

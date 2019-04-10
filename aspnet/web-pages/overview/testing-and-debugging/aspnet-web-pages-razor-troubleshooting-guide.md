@@ -8,15 +8,15 @@ ms.date: 02/10/2014
 ms.assetid: 2a2c1833-0bfe-4e2e-9cc0-341b52c7b121
 msc.legacyurl: /web-pages/overview/testing-and-debugging/aspnet-web-pages-razor-troubleshooting-guide
 msc.type: authoredcontent
-ms.openlocfilehash: ec8cdda5c5b298736a650f82cd6b52d73b6dfe3d
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: adbaa5cbda4a60a8b222ba49bb148b28b2e214cc
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57061302"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59389211"
 ---
-<a name="aspnet-web-pages-razor-troubleshooting-guide"></a>Guía de solución de problemas de ASP.NET Web Pages (Razor)
-====================
+# <a name="aspnet-web-pages-razor-troubleshooting-guide"></a>Guía de solución de problemas de ASP.NET Web Pages (Razor)
+
 por [Tom FitzMacken](https://github.com/tfitzmac)
 
 > En este artículo se describe problemas que podría tener cuando se trabaja con ASP.NET Web Pages (Razor) y algunas soluciones sugeridas.
@@ -136,12 +136,12 @@ Sustituya los valores adecuados para `your-SMTP-server-name`, y así sucesivamen
 
 - *Error al enviar correo.*
 
-    O bien
+    -o bien-
 
     *Un intento de conexión porque la parte conectada no respondió adecuadamente tras un período de tiempo o conexión establecida porque el host conectado no respondió*
 
     Este error normalmente significa que la aplicación no se pudo conectar al servidor SMTP. Compruebe el nombre del servidor y número de puerto.
-- <em>Buzón no disponible. La respuesta del servidor fue: 5.1.0 &lt; someuser@invaliddomain &gt; remitente rechazado: dominio del remitente no válido</em>
+- *Buzón no disponible. La respuesta del servidor fue: 5.1.0 &lt; someuser@invaliddomain &gt; remitente rechazado: dominio del remitente no válido*
 
     Este mensaje puede indicar que el `From` dirección no es correcta o falta.
 - *La cadena especificada no es de la forma necesaria para una dirección de correo electrónico.*

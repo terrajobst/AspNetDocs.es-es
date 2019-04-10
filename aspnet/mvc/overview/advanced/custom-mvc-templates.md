@@ -8,15 +8,15 @@ ms.date: 12/10/2012
 ms.assetid: b0a214c7-2f38-4dbc-b47f-bd7bd9df97bd
 msc.legacyurl: /mvc/overview/advanced/custom-mvc-templates
 msc.type: authoredcontent
-ms.openlocfilehash: 3c14bc6feb144a52773bf7bd4c23df24966a9ebb
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: 0603bc24e070e223551813f66a75889a2e46fd35
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57033872"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59379552"
 ---
-<a name="custom-mvc-template"></a>Plantilla personalizada de MVC
-====================
+# <a name="custom-mvc-template"></a>Plantilla personalizada de MVC
+
 por [Jacques Eloff](https://github.com/joeloff)
 
 La versión de MVC 3 Tools Update para Visual Studio 2010 introdujo a un asistente de proyecto independiente para los proyectos de MVC. El cambio se realizó por dos factores. En primer lugar, la introducción de nuevas plantillas de MVC 3 y compatibilidad con motores de vista adicionales como Razor dar lugar a que genera el cuadro de diálogo nuevo proyecto en Visual Studio. En segundo lugar, los clientes tenían han formulado para puntos de extensibilidad y el Asistente para nuevo proyecto MVC nos podría permitirse la oportunidad de responder a estas solicitudes.
