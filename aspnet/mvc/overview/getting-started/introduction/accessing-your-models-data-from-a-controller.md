@@ -8,15 +8,15 @@ ms.date: 10/17/2013
 ms.assetid: caa1ba4a-f9f0-4181-ba21-042e3997861d
 msc.legacyurl: /mvc/overview/getting-started/introduction/accessing-your-models-data-from-a-controller
 msc.type: authoredcontent
-ms.openlocfilehash: c561534a3fa1382c8af23c6ac779fac0c1dc8160
-ms.sourcegitcommit: 289e051cc8a90e8f7127e239fda73047bde4de12
+ms.openlocfilehash: 91948b1b997b083606a53e6e02bc00d2c58cb791
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/25/2019
-ms.locfileid: "58424188"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59418149"
 ---
-<a name="accessing-your-models-data-from-a-controller"></a>Obtener acceso a los datos del modelo desde un controlador
-====================
+# <a name="accessing-your-models-data-from-a-controller"></a>Obtener acceso a los datos del modelo desde un controlador
+
 by [Rick Anderson]((https://twitter.com/RickAndMSFT))
 
 [!INCLUDE [Tutorial Note](sample/code-location.md)]

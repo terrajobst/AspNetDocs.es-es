@@ -8,15 +8,15 @@ ms.date: 04/18/2018
 ms.assetid: eac31beb-0f46-4afa-9def-e80904dea4f0
 msc.legacyurl: /signalr/overview/getting-started/supported-platforms
 msc.type: authoredcontent
-ms.openlocfilehash: 60fa74b54797efbe14ba525160b2f750a4f5a451
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: 89730e591bb94022d16fe1a78a4350b38e0bf7a4
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57063422"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59420892"
 ---
-<a name="supported-platforms"></a>Plataformas compatibles
-====================
+# <a name="supported-platforms"></a>Plataformas compatibles
+
 por [Patrick Fletcher](https://github.com/pfletcher)
 
 [!INCLUDE [Consider ASP.NET Core SignalR](~/includes/signalr/signalr-version-disambiguation.md)]

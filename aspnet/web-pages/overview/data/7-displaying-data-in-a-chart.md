@@ -8,15 +8,15 @@ ms.date: 05/22/2012
 ms.assetid: f889fd46-4dac-4ecb-83d8-60e64c22036e
 msc.legacyurl: /web-pages/overview/data/7-displaying-data-in-a-chart
 msc.type: authoredcontent
-ms.openlocfilehash: 00529355476e88c47ab790121ae77202aa5e7b76
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: f97f214abeaeb88634dd10aaebacc0d58e91ab84
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57061102"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59422465"
 ---
-<a name="displaying-data-in-a-chart-with-aspnet-web-pages-razor"></a>Mostrar datos en un gráfico con ASP.NET Web Pages (Razor)
-====================
+# <a name="displaying-data-in-a-chart-with-aspnet-web-pages-razor"></a>Mostrar datos en un gráfico con ASP.NET Web Pages (Razor)
+
 por [Microsoft](https://github.com/microsoft)
 
 > En este artículo se explica cómo usar un gráfico para mostrar datos en un sitio Web de ASP.NET Web Pages (Razor) mediante el `Chart` auxiliar.
@@ -40,9 +40,9 @@ por [Microsoft](https://github.com/microsoft)
 
 Cuando desea mostrar los datos en forma gráfica, puede usar `Chart` auxiliar. El `Chart` auxiliar puede presentar una imagen que muestra los datos en una variedad de tipos de gráficos. Admite muchas opciones para dar formato y etiquetado. El `Chart` auxiliar puede representar más de 30 tipos de gráficos, incluidos todos los tipos de gráficos que es posible que esté familiarizado con desde Microsoft Excel u otras herramientas &#8212; gráficos de áreas, gráficos de barras, gráficos de columnas, gráficos de líneas y los gráficos circulares, junto con más los gráficos especializados, como los gráficos de cotizaciones.
 
-| **Gráfico de áreas** ![Descripción: Imagen del tipo de gráfico de área](7-displaying-data-in-a-chart/_static/image1.jpg) | **Gráfico de barras** ![Descripción: Imagen del tipo de gráfico de barras](7-displaying-data-in-a-chart/_static/image2.jpg) |
+| **Gráfico de áreas** ![Descripción: Imagen del tipo de gráfico de áreas](7-displaying-data-in-a-chart/_static/image1.jpg) | **Gráfico de barras** ![Descripción: Imagen del tipo de gráfico de barras](7-displaying-data-in-a-chart/_static/image2.jpg) |
 | --- | --- |
-| **Gráfico de columnas** ![Descripción: Imagen del tipo de gráfico de columna](7-displaying-data-in-a-chart/_static/image3.jpg) | **Gráfico de líneas** ![Descripción: Imagen del tipo de gráfico de línea](7-displaying-data-in-a-chart/_static/image4.jpg) |
+| **Gráfico de columnas** ![Descripción: Imagen del tipo de gráfico de columnas](7-displaying-data-in-a-chart/_static/image3.jpg) | **Gráfico de líneas** ![Descripción: Imagen del tipo de gráfico de líneas](7-displaying-data-in-a-chart/_static/image4.jpg) |
 | **Gráfico circular** ![Descripción: Imagen del tipo de gráfico circular](7-displaying-data-in-a-chart/_static/image5.jpg) | **Gráfico de cotizaciones** ![Descripción: Imagen del tipo de gráfico de cotizaciones](7-displaying-data-in-a-chart/_static/image6.jpg) |
 
 ### <a name="chart-elements"></a>Elemento de gráfico

@@ -8,15 +8,15 @@ ms.date: 06/16/2014
 ms.assetid: 10fd812b-94d6-4967-be97-a31ce9c45e2c
 msc.legacyurl: /web-api/overview/data/using-web-api-with-entity-framework/part-10
 msc.type: authoredcontent
-ms.openlocfilehash: 5c1a70ceded85681046065881f62c5c95c5d8740
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: a9a7b74a07c71b47253c0af304c7a26ffa4eaae5
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57060272"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59417369"
 ---
-<a name="publish-the-app-to-azure-azure-app-service"></a>Publicar la aplicación en Azure App Service de Azure
-====================
+# <a name="publish-the-app-to-azure-azure-app-service"></a>Publicar la aplicación en Azure App Service de Azure
+
 por [Mike Wasson](https://github.com/MikeWasson)
 
 [Descargue el proyecto completado](https://github.com/MikeWasson/BookService)

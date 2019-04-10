@@ -8,15 +8,15 @@ ms.date: 07/19/2010
 ms.assetid: 50e7265e-b7fa-44a0-a17c-15048a2e84a8
 msc.legacyurl: /mvc/videos/mvc-2/aspnet-mvc-for-the-rest-of-us/aspnet-mvc-for-the-rest-of-us-part-4
 msc.type: video
-ms.openlocfilehash: 9e3e0c65840cd2c07b9ef73374084a9451f3264e
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: 919a28e221ed87aef6cc05d95ab95264026180e6
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57063262"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59421451"
 ---
-<a name="aspnet-mvc-for-the-rest-of-us-part-4"></a>Vídeo "ASP.NET MVC For the Rest of Us": parte 4
-====================
+# <a name="aspnet-mvc-for-the-rest-of-us-part-4"></a>Vídeo "ASP.NET MVC For the Rest of Us": parte 4
+
 por [Joe Stagner](https://github.com/JoeStagner)
 
 En este vídeo Joe Stagner de Microsoft agrega un controlador a una aplicación ASP.NET MVC.

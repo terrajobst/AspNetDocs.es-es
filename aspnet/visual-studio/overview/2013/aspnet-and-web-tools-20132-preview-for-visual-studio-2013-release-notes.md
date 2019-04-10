@@ -8,15 +8,15 @@ ms.date: 03/06/2014
 ms.assetid: 7ef5f73c-ca60-43c1-bdb2-702800347e7e
 msc.legacyurl: /visual-studio/overview/2013/aspnet-and-web-tools-20132-preview-for-visual-studio-2013-release-notes
 msc.type: authoredcontent
-ms.openlocfilehash: bbb38ddde49cdeea4255e0e05bd559ddd9e5f692
-ms.sourcegitcommit: 289e051cc8a90e8f7127e239fda73047bde4de12
+ms.openlocfilehash: 22d4d4afd6963f23d6cfef1745a859c20b69d599
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/25/2019
-ms.locfileid: "58425995"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59422998"
 ---
-<a name="aspnet-and-web-tools-20132--for-visual-studio-2013-release-notes"></a>Notas de la versión de ASP.NET and Web Tools 2013.2 para Visual Studio 2013
-====================
+# <a name="aspnet-and-web-tools-20132--for-visual-studio-2013-release-notes"></a>Notas de la versión de ASP.NET and Web Tools 2013.2 para Visual Studio 2013
+
 por [Microsoft](https://github.com/microsoft)
 
 ## <a name="installation-notes"></a>Notas de instalación
@@ -44,7 +44,7 @@ Las siguientes secciones describen las características que se han introducido e
 - [Mejoras de publicación Web](#webpublish)
 - [Scaffolding de ASP.NET](#scaffolding)
 - [NuGet 2.8.1](#nuget)
-- [Formularios Web Forms ASP.NET](#webforms)
+- [Formularios Web Forms de ASP.NET](#webforms)
 - [ASP.NET MVC 5.1.2](#mvc)
 - [ASP.NET Web API 2.1.2](#webapi)
 - [3.1.2 de ASP.NET Web Pages](#webpages)
@@ -185,7 +185,7 @@ NuGet 2.8.1 que RTM se lanzará en abril de 2014. Estos son los puntos important
     `<config> <add key="dependencyversion" value="Highest" /> </config>`
 - **Obtener una vista previa de las operaciones de NuGet con - WhatIf**: Algunos paquetes de NuGet pueden tener gráficos de dependencia profunda y, por lo tanto, puede resultar útil durante una instalación, desinstalar o para ver primero lo que ocurrirá la operación de actualización. NuGet 2.8 agrega el estándar de PowerShell: ¿qué ocurre si se va a los comandos install-package, paquete desinstalar y paquete de actualización para habilitar la visualización de la clausura completa de los paquetes a la que se aplicará el comando.
 - **Cambiar el paquete**: No es raro que instale una versión preliminar de un paquete con el fin de investigar las nuevas características y, a continuación, decidir revertir a la última versión estable. Antes de NuGet 2.8, esto era un proceso de varios pasos de desinstalación del paquete preliminar y sus dependencias y, a continuación, instalar la versión anterior. Con NuGet 2.8, sin embargo, el paquete de actualización ahora revertirá al cierre del paquete completo (por ejemplo, el árbol de dependencias del paquete) a la versión anterior.
-- **Las dependencias de desarrollo**: Muchos tipos diferentes de las capacidades se pueden entregar como paquetes de NuGet - incluidas las herramientas que se usan para optimizar el proceso de desarrollo. No se deben considerar estos componentes, aunque pueden ser fundamental en el desarrollo de un nuevo paquete, publica una dependencia del paquete de nuevo cuando es una versión posterior. NuGet 2.8 habilita un paquete para identificarse en el archivo .nuspec como un developmentDependency. Cuando se instala, estos metadatos también se agregará al archivo packages.config del proyecto en el que se instaló el paquete. Cuando ese archivo packages.config se analiza más adelante para las dependencias de NuGet durante pack de nuget.exe, excluirá esas dependencias marcados como las dependencias de desarrollo.
+- **Las dependencias de desarrollo**: Muchos tipos diferentes de las capacidades se pueden entregar como paquetes de NuGet - incluidas las herramientas que se usan para optimizar el proceso de desarrollo. No se deben considerar estos componentes, aunque pueden ser fundamental en el desarrollo de un nuevo paquete, publica una dependencia del paquete de nuevo cuando es una versión posterior. NuGet 2.8 habilita un paquete para identificarse en el archivo .nuspec como un developmentDependency. Cuando se instala, estos metadatos también se agregará al archivo packages.config del proyecto en el que se instaló el paquete. Cuando ese archivo packages.config se analiza más adelante para las dependencias de NuGet durante pack de nuget.exe, excluirá esas dependencias marcadas como las dependencias de desarrollo.
 - **Archivos packages.config individuales para diferentes plataformas**: Al desarrollar aplicaciones para varias plataformas de destino, es habitual tener distintos archivos de proyecto para cada uno de los entornos de compilación respectivos. También es común para consumir paquetes de NuGet diferentes en distintos archivos de proyecto, como los paquetes tienen distintos niveles de compatibilidad para diferentes plataformas. NuGet 2.8 proporciona compatibilidad mejorada para este escenario mediante la creación de archivos packages.config diferentes para los archivos de proyecto específico de plataforma diferente.
 - **Reserva de memoria caché Local**: Aunque normalmente se consumen los paquetes de NuGet desde una galería remota, como el [Galería de NuGet](http://www.nuget.org) mediante una conexión de red, hay muchos escenarios donde el cliente no está conectado. Sin una conexión de red, el cliente de NuGet no pudo instalar correctamente paquetes - incluso cuando esos paquetes ya estaban en el equipo cliente en la caché local de NuGet. NuGet 2.8 agrega almacenamiento en caché automático reserva a la consola del Administrador de paquetes.
 

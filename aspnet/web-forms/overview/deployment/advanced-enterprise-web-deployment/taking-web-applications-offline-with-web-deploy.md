@@ -8,15 +8,15 @@ ms.date: 05/04/2012
 ms.assetid: 3e9f6e7d-8967-4586-94d5-d3a122f12529
 msc.legacyurl: /web-forms/overview/deployment/advanced-enterprise-web-deployment/taking-web-applications-offline-with-web-deploy
 msc.type: authoredcontent
-ms.openlocfilehash: 9b18a48914a74a7fea85278d0e601f6f84376b23
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: 017eceb8567859fdbe28bb87af844eee20dfa525
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57056192"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59415484"
 ---
-<a name="taking-web-applications-offline-with-web-deploy"></a>Desconectar aplicaciones web con Web Deploy
-====================
+# <a name="taking-web-applications-offline-with-web-deploy"></a>Desconectar aplicaciones web con Web Deploy
+
 por [Jason Lee](https://github.com/jrjlee)
 
 [Descargar PDF](https://msdnshared.blob.core.windows.net/media/MSDNBlogsFS/prod.evol.blogs.msdn.com/CommunityServer.Blogs.Components.WeblogFiles/00/00/00/63/56/8130.DeployingWebAppsInEnterpriseScenarios.pdf)

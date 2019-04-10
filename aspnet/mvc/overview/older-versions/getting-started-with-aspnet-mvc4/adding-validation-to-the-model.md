@@ -8,15 +8,15 @@ ms.date: 08/28/2012
 ms.assetid: 5d9a2999-fcc4-4c45-a018-271fddf74a3b
 msc.legacyurl: /mvc/overview/older-versions/getting-started-with-aspnet-mvc4/adding-validation-to-the-model
 msc.type: authoredcontent
-ms.openlocfilehash: c0cfd4f900c88f953cf7004a987bc267a1e1b4a2
-ms.sourcegitcommit: 289e051cc8a90e8f7127e239fda73047bde4de12
+ms.openlocfilehash: 266d2e3fda54a9e584622ccd595e41229c96e6b0
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/25/2019
-ms.locfileid: "58422038"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59420749"
 ---
-<a name="adding-validation-to-the-model"></a>Agregar la validación al modelo
-====================
+# <a name="adding-validation-to-the-model"></a>Agregar la validación al modelo
+
 by [Rick Anderson]((https://twitter.com/RickAndMSFT))
 
 > > [!NOTE]
@@ -49,7 +49,7 @@ Ahora, actualice el `Movie` clase para aprovechar las ventajas de los integrados
 
 Ejecute la aplicación y volverá a obtener el siguiente error de tiempo de ejecución:
 
-***El modelo que respalda el contexto 'MovieDBContext' ha cambiado desde que se creó la base de datos. Considere la posibilidad de usar migraciones de Code First para actualizar la base de datos ([https://go.microsoft.com/fwlink/?LinkId=238269](https://go.microsoft.com/fwlink/?LinkId=238269)).***
+***El modelo que respalda el contexto 'MovieDBContext' ha cambiado desde que se creó la base de datos. Considere la posibilidad de usar migraciones de Code First para actualizar la base de datos ([https://go.microsoft.com/fwlink/?LinkId=238269](https://go.microsoft.com/fwlink/?LinkId=238269)).)).***
 
 Se usará las migraciones para actualizar el esquema. Compile la solución y, a continuación, abra el **Package Manager Console** ventana y escriba los siguientes comandos:
 

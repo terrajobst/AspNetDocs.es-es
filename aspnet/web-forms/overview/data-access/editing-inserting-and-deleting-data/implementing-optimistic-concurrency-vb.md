@@ -8,15 +8,15 @@ ms.date: 07/17/2006
 ms.assetid: 2646968c-2826-4418-b1d0-62610ed177e3
 msc.legacyurl: /web-forms/overview/data-access/editing-inserting-and-deleting-data/implementing-optimistic-concurrency-vb
 msc.type: authoredcontent
-ms.openlocfilehash: 06ee6f8ea415ddde4e47acacaa74a29cbf9a0478
-ms.sourcegitcommit: 289e051cc8a90e8f7127e239fda73047bde4de12
+ms.openlocfilehash: bab4dd5180f0064a4fa8b0c50045f97100ce7d10
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/25/2019
-ms.locfileid: "58425592"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59422972"
 ---
-<a name="implementing-optimistic-concurrency-vb"></a>Implementar la simultaneidad optimista (VB)
-====================
+# <a name="implementing-optimistic-concurrency-vb"></a>Implementar la simultaneidad optimista (VB)
+
 por [Scott Mitchell](https://twitter.com/ScottOnWriting)
 
 [Descargue la aplicación de ejemplo](http://download.microsoft.com/download/9/c/1/9c1d03ee-29ba-4d58-aa1a-f201dcc822ea/ASPNET_Data_Tutorial_21_VB.exe) o [descargar PDF](implementing-optimistic-concurrency-vb/_static/datatutorial21vb1.pdf)
@@ -31,7 +31,7 @@ Para las aplicaciones web que permiten sólo a los usuarios ver los datos, o par
 Por ejemplo, imagine que dos usuarios, Jisun y Sam, visitan una página en nuestra aplicación que permite a los visitantes de actualización y eliminación de los productos a través de un control GridView en ambos. Haga clic en el botón Editar en el control GridView aproximadamente al mismo tiempo. Jisun cambia el nombre del producto a "Té Chai" y hace clic en el botón Actualizar. El resultado neto es un `UPDATE` instrucción que se envía a la base de datos, que establece *todas* de los campos actualizables del producto (aunque Jisun solo actualiza un campo, `ProductName`). En este momento, la base de datos tiene los valores "Chai té," la categoría Bebidas, el proveedor líquidos exóticos, y así sucesivamente para este producto en particular. Sin embargo, el control GridView en pantalla de Sam sigue mostrando el nombre del producto en la fila GridView editable como "Chai". Unos pocos segundos después de que se han realizado los cambios del Jisun, Sam actualizaciones de la categoría condimentos y hace clic en actualizar. Esto da como resultado un `UPDATE` instrucción enviada a la base de datos que establece el nombre del producto a "Chai", la `CategoryID` para el Id. de categoría de bebidas correspondiente y así sucesivamente. Se han sobrescrito los cambios realizados de Jisun en el nombre del producto. Figura 1 muestra gráficamente la esta serie de eventos.
 
 
-[![Cuando dos usuarios actualizan simultáneamente un potencial s hay registros de cambios de un usuario sobrescribir el otro](implementing-optimistic-concurrency-vb/_static/image2.png)](implementing-optimistic-concurrency-vb/_static/image1.png)
+[![Wgallina dos usuarios actualización simultáneamente un s registro existe potencial para un usuario cambia a sobrescribir el otro](implementing-optimistic-concurrency-vb/_static/image2.png)](implementing-optimistic-concurrency-vb/_static/image1.png)
 
 **Figura 1**: Cuando dos usuarios simultáneamente actualización un registro existe s potencial para un usuario cambia a sobrescribir la otra ([haga clic aquí para ver imagen en tamaño completo](implementing-optimistic-concurrency-vb/_static/image3.png))
 
@@ -55,7 +55,7 @@ Todos nuestros tutoriales hasta ahora han usado la estrategia de resolución de 
 Control de simultaneidad optimista funciona asegurándose de que el registro que se va a actualizar o eliminar tiene los mismos valores que tenía cuando se inició la actualización o eliminación de proceso. Por ejemplo, al hacer clic en el botón Editar de un control GridView editable, los valores del registro se leen de la base de datos y muestran en cuadros de texto y otros controles Web. Estos valores originales se guardan por el control GridView. Más adelante, cuando el usuario hace que sus cambios y hace clic en el botón de actualización, los valores originales y los nuevos valores se envían a la capa de lógica empresarial y, a continuación, hacia abajo hasta la capa de acceso a datos. La capa de acceso a datos debe emitir una instrucción SQL que solo se actualizará el registro si los valores originales que el usuario comenzó a editar son idénticos a los valores en la base de datos. Figura 2 se ilustra esta secuencia de eventos.
 
 
-[![Para que la actualización o eliminación se realice correctamente, los valores originales deben ser iguales a los valores actuales de la base de datos](implementing-optimistic-concurrency-vb/_static/image5.png)](implementing-optimistic-concurrency-vb/_static/image4.png)
+[![Fo bien, Update o Delete se realice correctamente, los valores originales deben ser iguales a los valores actuales de la base de datos](implementing-optimistic-concurrency-vb/_static/image5.png)](implementing-optimistic-concurrency-vb/_static/image4.png)
 
 **Figura 2**: Para la actualización o eliminación que sea un éxito, el Original valores debe ser igual que los valores actuales de la base de datos ([haga clic aquí para ver imagen en tamaño completo](implementing-optimistic-concurrency-vb/_static/image6.png))
 
@@ -78,7 +78,7 @@ En su lugar de ampliar nuestra existente TableAdapters de DAL para usar la simul
 Para crear un nuevo conjunto de datos con tipo, haga doble clic en el `DAL` carpeta dentro de la `App_Code` carpeta y agregue un nuevo conjunto de datos denominado `NorthwindOptimisticConcurrency`. Como hemos visto en el primer tutorial, si lo hace así agregará un nuevo TableAdapter a DataSet con tipo, iniciar automáticamente el Asistente para configuración de TableAdapter. En la primera pantalla, nos estamos le solicitará que especifique la base de datos para conectarse a: conexión a la misma base de datos Northwind utilizando el `NORTHWNDConnectionString` de `Web.config`.
 
 
-[![Conectarse a la misma base de datos Northwind](implementing-optimistic-concurrency-vb/_static/image8.png)](implementing-optimistic-concurrency-vb/_static/image7.png)
+[![Cconectar a la misma base de datos de Northwind](implementing-optimistic-concurrency-vb/_static/image8.png)](implementing-optimistic-concurrency-vb/_static/image7.png)
 
 **Figura 3**: Conectarse a la misma base de datos de Northwind ([haga clic aquí para ver imagen en tamaño completo](implementing-optimistic-concurrency-vb/_static/image9.png))
 
@@ -86,7 +86,7 @@ Para crear un nuevo conjunto de datos con tipo, haga doble clic en el `DAL` carp
 A continuación, se nos pide sobre cómo consultar los datos: a través de una instrucción SQL ad hoc, un nuevo procedimiento almacenado o procedimiento almacenado de una existente. Ya que hemos usado las consultas SQL ad hoc en nuestro DAL original, utilice esta opción aquí también.
 
 
-[![Especifique los datos que se va a recuperar utilizando una instrucción de SQL Ad Hoc](implementing-optimistic-concurrency-vb/_static/image11.png)](implementing-optimistic-concurrency-vb/_static/image10.png)
+[![Sespecificar los datos a recuperar con una instrucción de SQL Ad Hoc](implementing-optimistic-concurrency-vb/_static/image11.png)](implementing-optimistic-concurrency-vb/_static/image10.png)
 
 **Figura 4**: Especificar los datos para recuperar mediante una instrucción de SQL Ad Hoc ([haga clic aquí para ver imagen en tamaño completo](implementing-optimistic-concurrency-vb/_static/image12.png))
 
@@ -105,7 +105,7 @@ En la siguiente pantalla, escriba la consulta SQL se utiliza para recuperar la i
 Antes de pasar a la siguiente pantalla, haga clic en el botón Opciones avanzadas. Para que este control de simultaneidad optimista emplean TableAdapter, simplemente marque la casilla "Usar simultaneidad optimista".
 
 
-[![Habilitar Control de simultaneidad optimista mediante la comprobación de la &quot;usar simultaneidad optimista&quot; casilla de verificación](implementing-optimistic-concurrency-vb/_static/image17.png)](implementing-optimistic-concurrency-vb/_static/image16.png)
+[![EHabilitar Control de simultaneidad optimista mediante la comprobación de la &quot;usar simultaneidad optimista&quot; casilla](implementing-optimistic-concurrency-vb/_static/image17.png)](implementing-optimistic-concurrency-vb/_static/image16.png)
 
 **Figura 6**: Habilitar Control de simultaneidad optimista activando la casilla "Usar simultaneidad optimista" ([haga clic aquí para ver imagen en tamaño completo](implementing-optimistic-concurrency-vb/_static/image18.png))
 
@@ -113,7 +113,7 @@ Antes de pasar a la siguiente pantalla, haga clic en el botón Opciones avanzada
 Por último, indicar que el TableAdapter debe usar los patrones de acceso de datos que devuelven un DataTable; y rellenar un DataTable También indican que se deben crear los métodos directos de la base de datos. Cambiar el nombre del método para el retorno de un patrón de DataTable de GetData a GetProducts, con el fin de reflejar las convenciones de nomenclatura usamos en nuestro DAL original.
 
 
-[![Tiene lo TableAdapter utilizan todos los patrones de acceso a datos](implementing-optimistic-concurrency-vb/_static/image20.png)](implementing-optimistic-concurrency-vb/_static/image19.png)
+[![Hlos TableAdapter utilizan todos los datos de patrones de acceso de ave](implementing-optimistic-concurrency-vb/_static/image20.png)](implementing-optimistic-concurrency-vb/_static/image19.png)
 
 **Figura 7**: Tiene los TableAdapter utilizan todos los datos de patrones de acceso ([haga clic aquí para ver imagen en tamaño completo](implementing-optimistic-concurrency-vb/_static/image21.png))
 
@@ -121,7 +121,7 @@ Por último, indicar que el TableAdapter debe usar los patrones de acceso de dat
 Después de completar el asistente, el Diseñador de DataSet incluirá fuertemente tipadas `Products` DataTable y un TableAdapter. Tómese un momento para cambiar el nombre de la DataTable de `Products` a `ProductsOptimisticConcurrency`, lo que puede hacer con el botón secundario en la barra de título de la DataTable y eligiendo el cambio de nombre en el menú contextual.
 
 
-[![Una tabla de datos y un TableAdapter se han agregado al conjunto de datos con tipo](implementing-optimistic-concurrency-vb/_static/image23.png)](implementing-optimistic-concurrency-vb/_static/image22.png)
+[![A DataTable y un TableAdapter se han agregado al conjunto de datos con tipo](implementing-optimistic-concurrency-vb/_static/image23.png)](implementing-optimistic-concurrency-vb/_static/image22.png)
 
 **Figura 8**: Un objeto DataTable y TableAdapter se han agregado al conjunto de datos con tipo ([haga clic aquí para ver imagen en tamaño completo](implementing-optimistic-concurrency-vb/_static/image24.png))
 
@@ -143,7 +143,7 @@ Que no van a agregar las tablas de datos adicionales para el conjunto de datos h
 Para ello, haga doble clic en la barra de título del TableAdapter (la derecha del área por encima del `Fill` y `GetProducts` los nombres de método) y elija Agregar consulta en el menú contextual. Esto iniciará al Asistente para configuración de consulta de TableAdapter. Como con la configuración inicial de nuestra TableAdapter, optar por crear la `GetProductByProductID(productID)` método mediante una instrucción de SQL ad hoc (consulte la figura 4). Puesto que la `GetProductByProductID(productID)` método devuelve información sobre un producto determinado, para indicar que esta consulta es un `SELECT` tipo que devuelve filas de consulta.
 
 
-[![Marcar el tipo de consulta como un &quot;LECT que devuelve filas&quot;](implementing-optimistic-concurrency-vb/_static/image26.png)](implementing-optimistic-concurrency-vb/_static/image25.png)
+[![MArk escriba la consulta como un &quot;LECT que devuelve filas&quot;](implementing-optimistic-concurrency-vb/_static/image26.png)](implementing-optimistic-concurrency-vb/_static/image25.png)
 
 **Figura 9**: Marcar el tipo de consulta como un "`SELECT` que devuelve filas" ([haga clic aquí para ver imagen en tamaño completo](implementing-optimistic-concurrency-vb/_static/image27.png))
 
@@ -151,7 +151,7 @@ Para ello, haga doble clic en la barra de título del TableAdapter (la derecha d
 En la siguiente pantalla estamos solicitará la consulta SQL usar con la consulta del TableAdapter predeterminado previamente cargada. Aumentar la consulta existente para incluir la cláusula `WHERE ProductID = @ProductID`, como se muestra en la figura 10.
 
 
-[![Agregar un WHERE cláusula a la consulta para devolver un producto específico de registro cargada previamente.](implementing-optimistic-concurrency-vb/_static/image29.png)](implementing-optimistic-concurrency-vb/_static/image28.png)
+[![Add una cláusula WHERE a la consulta Pre-Loaded para devolver un registro específico del producto](implementing-optimistic-concurrency-vb/_static/image29.png)](implementing-optimistic-concurrency-vb/_static/image28.png)
 
 **Figura 10**: Agregar un `WHERE` cláusula a la consulta Pre-Loaded para devolver un registro específico del producto ([haga clic aquí para ver imagen en tamaño completo](implementing-optimistic-concurrency-vb/_static/image30.png))
 
@@ -159,7 +159,7 @@ En la siguiente pantalla estamos solicitará la consulta SQL usar con la consult
 Por último, cambie los nombres de método generados para `FillByProductID` y `GetProductByProductID`.
 
 
-[![Cambiar el nombre de los métodos FillByProductID y GetProductByProductID](implementing-optimistic-concurrency-vb/_static/image32.png)](implementing-optimistic-concurrency-vb/_static/image31.png)
+[![Rlos métodos FillByProductID y GetProductByProductID eName](implementing-optimistic-concurrency-vb/_static/image32.png)](implementing-optimistic-concurrency-vb/_static/image31.png)
 
 **Figura 11**: Cambiar el nombre de los métodos para `FillByProductID` y `GetProductByProductID` ([haga clic aquí para ver imagen en tamaño completo](implementing-optimistic-concurrency-vb/_static/image33.png))
 
@@ -232,7 +232,7 @@ Con DAL y BLL completa, todo lo que queda es crear una página ASP.NET que puede
 Comience abriendo la `OptimisticConcurrency.aspx` página en el `EditInsertDelete` carpeta y agregar un control GridView al diseñador, establecer su `ID` propiedad `ProductsGrid`. Desde las etiquetas inteligentes de GridView, optar por crear un nuevo origen ObjectDataSource denominado `ProductsOptimisticConcurrencyDataSource`. Puesto que deseamos que este origen ObjectDataSource para usar la capa DAL que admite la simultaneidad optimista, configúrelo para utilizar el `ProductsOptimisticConcurrencyBLL` objeto.
 
 
-[![Tiene el uso de ObjectDataSource el objeto ProductsOptimisticConcurrencyBLL](implementing-optimistic-concurrency-vb/_static/image36.png)](implementing-optimistic-concurrency-vb/_static/image35.png)
+[![Hel uso de ObjectDataSource el objeto ProductsOptimisticConcurrencyBLL ave](implementing-optimistic-concurrency-vb/_static/image36.png)](implementing-optimistic-concurrency-vb/_static/image35.png)
 
 **Figura 13**: Usar ObjectDataSource el `ProductsOptimisticConcurrencyBLL` objeto ([haga clic aquí para ver imagen en tamaño completo](implementing-optimistic-concurrency-vb/_static/image37.png))
 
@@ -294,7 +294,7 @@ En concreto, los valores originales de GridView se asignan los valores en las in
 Para ver por qué esto es importante, dedique un momento a visite nuestra página en un explorador. Según lo esperado, el control GridView enumera todos los productos con un botón de edición y eliminación de la columna izquierda.
 
 
-[![Los productos se muestran en un control GridView](implementing-optimistic-concurrency-vb/_static/image39.png)](implementing-optimistic-concurrency-vb/_static/image38.png)
+[![TProductos se muestran en un control GridView](implementing-optimistic-concurrency-vb/_static/image39.png)](implementing-optimistic-concurrency-vb/_static/image38.png)
 
 **Figura 14**: Los productos se muestran en un control GridView ([haga clic aquí para ver imagen en tamaño completo](implementing-optimistic-concurrency-vb/_static/image40.png))
 
@@ -302,7 +302,7 @@ Para ver por qué esto es importante, dedique un momento a visite nuestra págin
 Si hace clic en el botón Eliminar para cualquier producto, un `FormatException` se produce.
 
 
-[![Intentando eliminar los resultados de cualquier producto en un FormatException](implementing-optimistic-concurrency-vb/_static/image42.png)](implementing-optimistic-concurrency-vb/_static/image41.png)
+[![Attempting para eliminar cualquier producto resultados en una FormatException](implementing-optimistic-concurrency-vb/_static/image42.png)](implementing-optimistic-concurrency-vb/_static/image41.png)
 
 **Figura 15**: Intentando eliminar cualquier producto resultados en un `FormatException` ([haga clic aquí para ver imagen en tamaño completo](implementing-optimistic-concurrency-vb/_static/image43.png))
 
@@ -323,7 +323,7 @@ Para mi ejemplo opté por el segundo enfoque, agregar una Web etiqueta oculta co
 Después de resolver este problema, intente hacer clic en el botón Eliminar para cualquier producto de nuevo. Esta vez obtendrá un `InvalidOperationException` cuando el origen ObjectDataSource intenta invocar el BLL `UpdateProduct` método.
 
 
-[![ObjectDataSource no puede encontrar un método con los parámetros de entrada desea enviar](implementing-optimistic-concurrency-vb/_static/image45.png)](implementing-optimistic-concurrency-vb/_static/image44.png)
+[![Tél ObjectDataSource no puede encontrar un método con los parámetros de entrada desea enviar](implementing-optimistic-concurrency-vb/_static/image45.png)](implementing-optimistic-concurrency-vb/_static/image44.png)
 
 **Figura 16**: ObjectDataSource no puede encontrar un método con los parámetros de entrada desea enviar ([haga clic aquí para ver imagen en tamaño completo](implementing-optimistic-concurrency-vb/_static/image46.png))
 
@@ -342,7 +342,7 @@ Para comprobar que las infracciones de simultaneidad se están detectado (en lug
 Sin embargo, en la otra instancia de ventana Explorador, el nombre del producto del cuadro de texto sigue mostrando "Chai". En esta segunda ventana del explorador, actualice el `UnitPrice` a `25.00`. Sin compatibilidad con la simultaneidad optimista, haga clic en actualizar en la segunda instancia del explorador cambiaría el nombre del producto a "Chai", sobrescribiendo los cambios realizados por la primera instancia del explorador. Con la simultaneidad optimista empleada, sin embargo, al hacer clic en el botón de actualización de la segunda instancia del explorador da como resultado un [DBConcurrencyException](https://msdn.microsoft.com/library/system.data.dbconcurrencyexception.aspx).
 
 
-[![Cuando se detecta una infracción de simultaneidad, se produce una excepción DBConcurrencyException](implementing-optimistic-concurrency-vb/_static/image48.png)](implementing-optimistic-concurrency-vb/_static/image47.png)
+[![Wse produce cuando que se detecta una infracción de simultaneidad, una excepción DBConcurrencyException](implementing-optimistic-concurrency-vb/_static/image48.png)](implementing-optimistic-concurrency-vb/_static/image47.png)
 
 **Figura 17**: Cuando se detecta una infracción de simultaneidad, un `DBConcurrencyException` se produce ([haga clic aquí para ver imagen en tamaño completo](implementing-optimistic-concurrency-vb/_static/image49.png))
 
@@ -369,7 +369,7 @@ Además de establecer su `Visible`, `EnabledViewState`, y `Text` propiedades, ta
 Después de agregar estas etiquetas, el Diseñador de Visual Studio debe ser similar a la figura 18.
 
 
-[![Se han agregado dos controles de etiqueta a la página](implementing-optimistic-concurrency-vb/_static/image51.png)](implementing-optimistic-concurrency-vb/_static/image50.png)
+[![Tse han agregado dos controles de etiqueta a la página](implementing-optimistic-concurrency-vb/_static/image51.png)](implementing-optimistic-concurrency-vb/_static/image50.png)
 
 **Figura 18**: Dos etiquetas controles se han agregado a la página ([haga clic aquí para ver imagen en tamaño completo](implementing-optimistic-concurrency-vb/_static/image52.png))
 
@@ -388,7 +388,7 @@ Como hemos visto en el *BLL - control y excepciones de nivel DAL en una página 
 En el de un `DBConcurrencyException` muestra de este controlador de eventos de excepción, el `UpdateConflictMessage` control de etiqueta e indica que se ha controlado la excepción. Con este código en su lugar, cuando se produce una infracción de simultaneidad cuando se actualiza un registro, los cambios del usuario se pierden, puesto que habría sobrescribe las modificaciones de otro usuario al mismo tiempo. En concreto, GridView se vuelve a su estado de edición previamente y enlazado a la base de datos actual. La fila del control GridView se actualizará con los cambios del otro usuario, que estaban anteriormente no es visibles. Además, el `UpdateConflictMessage` explicará control de etiqueta para el usuario lo que ha sucedido. Esta secuencia de eventos se detalla en la figura 19.
 
 
-[![Un usuario s se pierden las actualizaciones en la cara de una infracción de simultaneidad](implementing-optimistic-concurrency-vb/_static/image54.png)](implementing-optimistic-concurrency-vb/_static/image53.png)
+[![A El usuario s se pierden las actualizaciones en la cara de una infracción de simultaneidad](implementing-optimistic-concurrency-vb/_static/image54.png)](implementing-optimistic-concurrency-vb/_static/image53.png)
 
 **Figura 19**: Un usuario s se pierden las actualizaciones en la cara de una infracción de simultaneidad ([haga clic aquí para ver imagen en tamaño completo](implementing-optimistic-concurrency-vb/_static/image55.png))
 
@@ -409,7 +409,7 @@ Se puede examinar el valor devuelto para un método BLL en los controladores de 
 En caso de una infracción de simultaneidad, se cancela la solicitud de eliminación del usuario. Se actualiza el control GridView, que muestra los cambios efectuados para ese registro entre el momento en que el usuario cargan la página y cuando hace clic en el botón Eliminar. Cuando ocurre una infracción de este tipo, el `DeleteConflictMessage` etiqueta se muestra, que explica lo que ha sucedido (Véase la figura 20).
 
 
-[![Un usuario s Delete se cancela en caso de una infracción de simultaneidad](implementing-optimistic-concurrency-vb/_static/image57.png)](implementing-optimistic-concurrency-vb/_static/image56.png)
+[![A El usuario s Delete se cancela en caso de una infracción de simultaneidad](implementing-optimistic-concurrency-vb/_static/image57.png)](implementing-optimistic-concurrency-vb/_static/image56.png)
 
 **Figura 20**: Un usuario s Delete se cancela en caso de una infracción de simultaneidad ([haga clic aquí para ver imagen en tamaño completo](implementing-optimistic-concurrency-vb/_static/image58.png))
 

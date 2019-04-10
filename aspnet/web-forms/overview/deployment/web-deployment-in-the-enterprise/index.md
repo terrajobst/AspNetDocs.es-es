@@ -8,15 +8,15 @@ ms.date: 05/16/2012
 ms.assetid: 83e0a572-428f-4bea-9638-1a031c6901c0
 msc.legacyurl: /web-forms/overview/deployment/web-deployment-in-the-enterprise
 msc.type: chapter
-ms.openlocfilehash: 92bc3d18c417e73e198d0f7663489fd931bf75b5
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: 109a0dc1e1ebe0b644e9414561c798a7bb3d0531
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57020612"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59414834"
 ---
-<a name="aspnet-4---enterprise-deployment-series-1"></a>ASP.NET 4 - Implementación de empresa, serie 1
-====================
+# <a name="aspnet-4---enterprise-deployment-series-1"></a>ASP.NET 4 - Implementación de empresa, serie 1
+
 > Este tutorial describe cómo satisfacer una gran cantidad de los desafíos que encontrará al administrar la implementación de aplicaciones web a escala empresarial en entornos de desarrollo, prueba, ensayo y producción. El tutorial incluye una solución de referencia junto con una combinación de contenido conceptual y orientados a tareas a guiarle a través de varias tareas comunes y procedimientos.
 
 

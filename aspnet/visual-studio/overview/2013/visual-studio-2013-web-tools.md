@@ -8,15 +8,15 @@ ms.date: 07/16/2014
 ms.assetid: 09e82351-816b-402d-acd1-0f9ac6901d16
 msc.legacyurl: /visual-studio/overview/2013/visual-studio-2013-web-tools
 msc.type: authoredcontent
-ms.openlocfilehash: 54d86de49bf61305b17fc80964723c518abd467b
-ms.sourcegitcommit: 289e051cc8a90e8f7127e239fda73047bde4de12
+ms.openlocfilehash: 874542305bd3f47066cfae595919285ed079aa53
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/25/2019
-ms.locfileid: "58423252"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59421074"
 ---
-<a name="hands-on-lab-visual-studio-2013-web-tools"></a>Laboratorio práctico: Herramientas web de Visual Studio 2013
-====================
+# <a name="hands-on-lab-visual-studio-2013-web-tools"></a>Laboratorio práctico: Herramientas web de Visual Studio 2013
+
 por [campamentos Web Team](https://twitter.com/webcamps)
 
 [Descargue el Kit de aprendizaje de campamentos de Web](https://aka.ms/webcamps-training-kit)
@@ -74,7 +74,7 @@ En todo el documento de laboratorio, se le pedirá que inserte los bloques de c�
 > Cada ejercicio viene acompañado por una solución inicial ubicada en el **comenzar** carpeta del ejercicio que le permite seguir cada ejercicio independientemente de los demás. Ten en cuenta que los fragmentos de código que se agregan durante un ejercicio faltan en estos a partir de las soluciones y es posible que no funcione hasta que haya completado el ejercicio. En el código fuente para un ejercicio, también encontrará un **final** carpeta que contiene una solución de Visual Studio con el código que se obtiene al completar los pasos descritos en el ejercicio correspondiente. Puede usar estas soluciones como instrucciones si necesita más ayuda mientras se trabaja a través de este laboratorio práctico.
 
 
-* * *
+---
 
 <a id="Exercises"></a>
 ## <a name="exercises"></a>Ejercicios
@@ -511,7 +511,7 @@ Con Web Essentials 2013, hojas de estilo y páginas HTML generan una lista de id
 
     *Reproductor de audio incluido en la vista*
 
-* * *
+---
 
 <a id="Summary"></a>
 ## <a name="summary"></a>Resumen

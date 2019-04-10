@@ -9,12 +9,12 @@ ms.assetid: a8b3b778-f009-4369-85c7-e90f9878d8b4
 msc.legacyurl: /signalr/overview/getting-started/tutorial-getting-started-with-signalr
 msc.type: authoredcontent
 ms.topic: tutorial
-ms.openlocfilehash: 90f2c03fbda522e3a46200bc0132cc74100ce70f
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: b1e8b6b1b300665f6cd2466766e9adcff52733da
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57042682"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59422920"
 ---
 # <a name="tutorial-real-time-chat-with-signalr-2"></a>Tutorial: Chat en tiempo real con SignalR 2
 
@@ -81,6 +81,7 @@ En esta sección se muestra cómo usar Visual Studio 2017 y SignalR 2 para crear
 1. Compruebe que las referencias de script en el bloque de código se corresponden con las versiones de los archivos de script en el proyecto.
 
     Referencias de script desde el bloque de código original:
+
     ```html
     <!--Script references. -->
     <!--Reference the jQuery library. -->
@@ -170,7 +171,7 @@ El código inicia la conexión y, a continuación, pasa una función para contro
 
 Para obtener más información acerca de SignalR, consulte los siguientes recursos:
 
-* [SignalR Project](http://signalr.net)
+* [Proyecto de SignalR](http://signalr.net)
 
 * [SignalR Github y ejemplos](https://github.com/SignalR/SignalR)
 

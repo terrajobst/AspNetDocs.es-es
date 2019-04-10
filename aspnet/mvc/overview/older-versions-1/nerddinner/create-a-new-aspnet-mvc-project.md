@@ -8,15 +8,15 @@ ms.date: 07/27/2010
 ms.assetid: 7e0e9928-8fdc-4b74-9882-55fac0976628
 msc.legacyurl: /mvc/overview/older-versions-1/nerddinner/create-a-new-aspnet-mvc-project
 msc.type: authoredcontent
-ms.openlocfilehash: 3f34f17aa35dbfed2d52daf615c8dc81be6e7847
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: c85db4289698988ead44afd452da17054bab9f07
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57065812"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59417213"
 ---
-<a name="create-a-new-aspnet-mvc-project"></a>Crear un proyecto de ASP.NET MVC
-====================
+# <a name="create-a-new-aspnet-mvc-project"></a>Crear un proyecto de ASP.NET MVC
+
 por [Microsoft](https://github.com/microsoft)
 
 [Descargar PDF](http://aspnetmvcbook.s3.amazonaws.com/aspnetmvc-nerdinner_v1.pdf)
@@ -60,13 +60,13 @@ Cuando se crea una nueva aplicación MVC de ASP.NET con Visual Studio, agrega au
 
 Proyectos de ASP.NET MVC predeterminada tienen seis directorios de nivel superior:
 
-| **Directorio** | **Propósito** |
+| **Directorio** | **Finalidad** |
 | --- | --- |
 | **Y controladores** | En la que colocar las clases de controlador que controlan las solicitudes URL |
 | **/ Modelos** | En la que colocar las clases que representan y manipulan datos |
 | **O vistas** | En la que colocar los archivos de plantilla de la interfaz de usuario que son responsables de la salida de representación |
-| **/Scripts** | En la que colocar los archivos de biblioteca de JavaScript y los scripts (.js) |
-| **/Content** | Dónde colocar CSS y archivos de imagen y otro contenido que no sean-dinámicos no admiten de JavaScript |
+| **/ Scripts** | En la que colocar los archivos de biblioteca de JavaScript y los scripts (.js) |
+| **/ Content** | Dónde colocar CSS y archivos de imagen y otro contenido que no sean-dinámicos no admiten de JavaScript |
 | **/ Aplicación\_datos** | Almacenar archivos de datos que desea lectura/escritura. |
 
 ASP.NET MVC no requiere esta estructura. De hecho, los desarrolladores que trabajan en aplicaciones de gran tamaño se normalmente realizan particiones de la aplicación de seguridad en varios proyectos para que sea más fácil de administrar (por ejemplo: clases de modelo de datos entran a menudo en un proyecto de biblioteca de clases independiente de la aplicación web). Sin embargo, la estructura del proyecto de forma predeterminada, proporcionar una convención de directorio predeterminada agradable que podemos usar para mantener limpio nuestros problemas de la aplicación.

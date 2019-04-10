@@ -8,15 +8,15 @@ ms.date: 02/16/2009
 ms.assetid: b7cce113-c82c-45bf-b97b-357e5d9f7f56
 msc.legacyurl: /mvc/overview/older-versions-1/controllers-and-routing/creating-a-route-constraint-vb
 msc.type: authoredcontent
-ms.openlocfilehash: 0a8e540a00d852d5b710bfdbf63a68f6e6d280ee
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: 8c7b2274ff396f222382488ed877599e86ae5b99
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57032192"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59412689"
 ---
-<a name="creating-a-route-constraint-vb"></a>Crear una restricción de ruta (VB)
-====================
+# <a name="creating-a-route-constraint-vb"></a>Crear una restricción de ruta (VB)
+
 by [Stephen Walther](https://github.com/StephenWalther)
 
 > En este tutorial, Stephen Walther demuestra cómo puede controlar cómo el explorador solicita coincidencia rutas mediante la creación de las restricciones de ruta con expresiones regulares.
@@ -32,7 +32,7 @@ Por ejemplo, imagine que ha definido la ruta en el listado 1 en el archivo Globa
 
 Listado 1 contiene una ruta con el nombre de producto. Puede usar la ruta de producto para asignar las solicitudes del explorador a ProductController contenido en el listado 2.
 
-**Listing 2 - Controllers\ProductController.vb**
+**Listado 2 - Controllers\ProductController.vb**
 
 [!code-vb[Main](creating-a-route-constraint-vb/samples/sample2.vb)]
 
@@ -51,7 +51,7 @@ Por desgracia, la ruta también coincidirá con las direcciones URL siguientes:
 Dado que la acción Details() espera un parámetro entero, que realiza una solicitud que contiene un valor distinto de un valor entero se producirá un error. Por ejemplo, si escribe la dirección URL /Product/apple en el explorador, a continuación, obtendrá la página de error en la figura 1.
 
 
-[![El cuadro de diálogo nuevo proyecto](creating-a-route-constraint-vb/_static/image1.jpg)](creating-a-route-constraint-vb/_static/image1.png)
+[![Tel cuadro de diálogo nuevo proyecto](creating-a-route-constraint-vb/_static/image1.jpg)](creating-a-route-constraint-vb/_static/image1.png)
 
 **Figura 01**: Puede ver una página explode ([haga clic aquí para ver imagen en tamaño completo](creating-a-route-constraint-vb/_static/image2.png))
 

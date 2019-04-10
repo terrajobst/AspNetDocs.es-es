@@ -8,15 +8,15 @@ ms.date: 11/14/2011
 ms.assetid: db4eca5d-b625-4e67-8e5b-a844639d4354
 msc.legacyurl: /web-forms/overview/ajax-control-toolkit/modalpopup
 msc.type: chapter
-ms.openlocfilehash: 3b859ce51df5b55b236fb8fbafa94ab2530558b1
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: c797e6556282ef6570d50d8a3e77587ac30dbbea
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57022072"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59415237"
 ---
-<a name="modalpopup"></a>ModalPopup
-====================
+# <a name="modalpopup"></a>ModalPopup
+
 > Este tutorial muestra cómo usar el control ModalPopup, que le permite crear el equivalente de un cuadro de diálogo modal.
 
 

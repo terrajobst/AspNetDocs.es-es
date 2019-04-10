@@ -8,15 +8,15 @@ ms.date: 02/20/2007
 ms.assetid: a8fa72ee-8328-4854-a419-c1b271772303
 msc.legacyurl: /web-forms/overview/data-access/accessing-the-database-directly-from-an-aspnet-page/implementing-optimistic-concurrency-with-the-sqldatasource-vb
 msc.type: authoredcontent
-ms.openlocfilehash: 879f0f491461ec49c4eef9dc8add747ac2b22f90
-ms.sourcegitcommit: 289e051cc8a90e8f7127e239fda73047bde4de12
+ms.openlocfilehash: da0df163d7c3b68246a84ff490471e64c142a8f0
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/25/2019
-ms.locfileid: "58422108"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59416524"
 ---
-<a name="implementing-optimistic-concurrency-with-the-sqldatasource-vb"></a>Implementar la simultaneidad optimista con SqlDataSource (VB)
-====================
+# <a name="implementing-optimistic-concurrency-with-the-sqldatasource-vb"></a>Implementar la simultaneidad optimista con SqlDataSource (VB)
+
 por [Scott Mitchell](https://twitter.com/ScottOnWriting)
 
 [Descargue la aplicación de ejemplo](http://download.microsoft.com/download/4/a/7/4a7a3b18-d80e-4014-8e53-a6a2427f0d93/ASPNET_Data_Tutorial_50_VB.exe) o [descargar PDF](implementing-optimistic-concurrency-with-the-sqldatasource-vb/_static/datatutorial50vb1.pdf)
@@ -47,7 +47,7 @@ Imagine que dos usuarios, Jisun y Sam, visitan una página en una aplicación qu
 Figura 2 ilustra esta interacción.
 
 
-[![Cuando dos usuarios simultáneamente actualizan un registro existe potencial s para un usuario s cambia esta opción para sobrescribir los otros elementos](implementing-optimistic-concurrency-with-the-sqldatasource-vb/_static/image2.gif)](implementing-optimistic-concurrency-with-the-sqldatasource-vb/_static/image1.png)
+[![Wgallina dos usuarios simultáneamente actualización de un registro existe s potencial para un usuario s cambia a sobrescribir los otros s](implementing-optimistic-concurrency-with-the-sqldatasource-vb/_static/image2.gif)](implementing-optimistic-concurrency-with-the-sqldatasource-vb/_static/image1.png)
 
 **Figura 2**: Cuando dos usuarios simultáneamente actualización un registro existe s potencial para un usuario s los cambios en sobrescribir los otros s ([haga clic aquí para ver imagen en tamaño completo](implementing-optimistic-concurrency-with-the-sqldatasource-vb/_static/image2.png))
 
@@ -61,7 +61,7 @@ Para evitar que este escenario como el desarrollo, una forma de [control de simu
 Control de simultaneidad optimista funciona asegurándose de que el registro que se va a actualizar o eliminar tiene los mismos valores que tenía cuando se inició la actualización o eliminación de proceso. Por ejemplo, al hacer clic en el botón Editar de un control GridView editable, los valores del registro s se leen de la base de datos y muestran en cuadros de texto y otros controles Web. Estos valores originales se guardan por el control GridView. Más adelante, cuando el usuario hace que sus cambios y hace clic en el botón de actualización, el `UPDATE` instrucción utilizada debe tener en cuenta los valores originales además de los valores nuevos y solo actualiza el registro de base de datos subyacente, si los valores que el usuario comenzó a editar el original son idénticos a los valores en la base de datos. Figura 3 muestra esta secuencia de eventos.
 
 
-[![Para que la actualización o eliminación se realice correctamente, los valores originales deben ser iguales a los valores actuales de la base de datos](implementing-optimistic-concurrency-with-the-sqldatasource-vb/_static/image3.gif)](implementing-optimistic-concurrency-with-the-sqldatasource-vb/_static/image3.png)
+[![Fo bien, Update o Delete se realice correctamente, los valores originales deben ser iguales a los valores actuales de la base de datos](implementing-optimistic-concurrency-with-the-sqldatasource-vb/_static/image3.gif)](implementing-optimistic-concurrency-with-the-sqldatasource-vb/_static/image3.png)
 
 **Figura 3**: Para la actualización o eliminación que sea un éxito, el Original valores debe ser igual que los valores actuales de la base de datos ([haga clic aquí para ver imagen en tamaño completo](implementing-optimistic-concurrency-with-the-sqldatasource-vb/_static/image4.png))
 
@@ -78,7 +78,7 @@ Como veremos en este tutorial, la habilitación del control de simultaneidad opt
 Comience abriendo la `OptimisticConcurrency.aspx` página desde la `SqlDataSource` carpeta. Arrastre un control SqlDataSource desde el cuadro de herramientas hasta el diseñador, la configuración de su `ID` propiedad `ProductsDataSourceWithOptimisticConcurrency`. A continuación, haga clic en el vínculo Configurar origen de datos de la etiqueta inteligente del control s. En la primera pantalla del asistente, elija para que funcione con el `NORTHWINDConnectionString` y haga clic en siguiente.
 
 
-[![Elija para trabajar con el NORTHWINDConnectionString](implementing-optimistic-concurrency-with-the-sqldatasource-vb/_static/image4.gif)](implementing-optimistic-concurrency-with-the-sqldatasource-vb/_static/image5.png)
+[![CElija para trabajar con el NORTHWINDConnectionString](implementing-optimistic-concurrency-with-the-sqldatasource-vb/_static/image4.gif)](implementing-optimistic-concurrency-with-the-sqldatasource-vb/_static/image5.png)
 
 **Figura 4**: Elija para trabajar con el `NORTHWINDConnectionString` ([haga clic aquí para ver imagen en tamaño completo](implementing-optimistic-concurrency-with-the-sqldatasource-vb/_static/image6.png))
 
@@ -86,7 +86,7 @@ Comience abriendo la `OptimisticConcurrency.aspx` página desde la `SqlDataSourc
 En este ejemplo se agregará un control GridView que permite a los usuarios editar el `Products` tabla. Por lo tanto, en la configuración de la pantalla de la instrucción Select, elija el `Products` de tabla en la lista desplegable y seleccione el `ProductID`, `ProductName`, `UnitPrice`, y `Discontinued` columnas, como se muestra en la figura 5.
 
 
-[![De la tabla Products, devolver el ProductID, ProductName, UnitPrice y las columnas no incluidas](implementing-optimistic-concurrency-with-the-sqldatasource-vb/_static/image5.gif)](implementing-optimistic-concurrency-with-the-sqldatasource-vb/_static/image7.png)
+[![FROM de la tabla Products, devolver el ProductID, ProductName, UnitPrice y discontinuas columnas](implementing-optimistic-concurrency-with-the-sqldatasource-vb/_static/image5.gif)](implementing-optimistic-concurrency-with-the-sqldatasource-vb/_static/image7.png)
 
 **Figura 5**: Desde el `Products` de tabla, se devuelve el `ProductID`, `ProductName`, `UnitPrice`, y `Discontinued` columnas ([haga clic aquí para ver imagen en tamaño completo](implementing-optimistic-concurrency-with-the-sqldatasource-vb/_static/image8.png))
 
@@ -152,7 +152,7 @@ Si se aplica a nuestro ejemplo da como resultado la siguiente modificada `Update
 Con SqlDataSource configurado para admitir la simultaneidad optimista, todo lo que queda es agregar un control Web de datos a la página que utiliza este control de simultaneidad. Para este tutorial, permiten s Agregar un control GridView que proporciona ambos edición y la funcionalidad de eliminación. Para ello, arrastre un control GridView del cuadro de herramientas en el diseñador y el conjunto de sus `ID` a `Products`. En la etiqueta inteligente s GridView, enlazarlo a la `ProductsDataSourceWithOptimisticConcurrency` control SqlDataSource agregado en el paso 1. Por último, compruebe las opciones Habilitar edición y habilitar la eliminación de la etiqueta inteligente.
 
 
-[![Enlazar el control GridView a SqlDataSource y habilitar la edición y eliminación](implementing-optimistic-concurrency-with-the-sqldatasource-vb/_static/image6.gif)](implementing-optimistic-concurrency-with-the-sqldatasource-vb/_static/image9.png)
+[![Bbuscar el control GridView a la SqlDataSource y habilitar editar y eliminar](implementing-optimistic-concurrency-with-the-sqldatasource-vb/_static/image6.gif)](implementing-optimistic-concurrency-with-the-sqldatasource-vb/_static/image9.png)
 
 **Figura 6**: Enlazar el control GridView a SqlDataSource y Habilitar edición y eliminación ([haga clic aquí para ver imagen en tamaño completo](implementing-optimistic-concurrency-with-the-sqldatasource-vb/_static/image10.png))
 
@@ -173,7 +173,7 @@ Para ver el control de simultaneidad optimista en acción, abra dos ventanas del
 En la segunda ventana del explorador, cambie el precio (pero deje el nombre del producto como su valor original) y haga clic en actualizar. En el postback, la cuadrícula se devuelve al modo de edición previamente, pero no se registra el cambio en el precio. El segundo explorador muestra el mismo valor que la primera de ellas en el nuevo nombre de producto con el precio anterior. Se perdieron los cambios realizados en la segunda ventana del explorador. Además, los cambios se han perdido silenciosamente en su lugar, porque se ha producido ninguna excepción o mensaje que indica que acaba de producirse una infracción de simultaneidad.
 
 
-[![Los cambios en la segunda ventana del explorador se perdieron en modo silencioso](implementing-optimistic-concurrency-with-the-sqldatasource-vb/_static/image7.gif)](implementing-optimistic-concurrency-with-the-sqldatasource-vb/_static/image11.png)
+[![TCambia en el segundo explorador ventana se silenciosamente perdieron](implementing-optimistic-concurrency-with-the-sqldatasource-vb/_static/image7.gif)](implementing-optimistic-concurrency-with-the-sqldatasource-vb/_static/image11.png)
 
 **Figura 7**: Los cambios en el segundo explorador ventana se silenciosamente perdieron ([haga clic aquí para ver imagen en tamaño completo](implementing-optimistic-concurrency-with-the-sqldatasource-vb/_static/image12.png))
 
@@ -196,7 +196,7 @@ Desde la perspectiva de s del usuario final en la segunda ventana del explorador
 Puesto que una infracción de simultaneidad rechaza los cambios que ha realizado uno, sería bueno avisar al usuario cuando se ha producido una infracción de simultaneidad. Para avisar al usuario, s permiten agregar un control Web de la etiqueta a la parte superior de la página llamada `ConcurrencyViolationMessage` cuyo `Text` propiedad muestra el mensaje siguiente: Ha intentado actualizar o eliminar un registro que se ha actualizado simultáneamente por otro usuario. Revise los cambios del otro usuario y la actualización de puesta al día o eliminar. Establecer el control de etiqueta s `CssClass` propiedad a la advertencia, que es una clase CSS definida en `Styles.css` que muestra texto en una fuente roja, cursiva, negrita y grande. Por último, establezca la etiqueta s `Visible` y `EnableViewState` propiedades a `False`. Esto ocultará la etiqueta excepto solo esas devoluciones de datos que se establece explícitamente su `Visible` propiedad `True`.
 
 
-[![Agregar un Control etiqueta a la página para mostrar la advertencia](implementing-optimistic-concurrency-with-the-sqldatasource-vb/_static/image8.gif)](implementing-optimistic-concurrency-with-the-sqldatasource-vb/_static/image13.png)
+[![Aun Control de etiqueta a la página para mostrar la advertencia dd](implementing-optimistic-concurrency-with-the-sqldatasource-vb/_static/image8.gif)](implementing-optimistic-concurrency-with-the-sqldatasource-vb/_static/image13.png)
 
 **Figura 8**: Agregar un Control etiqueta a la página para mostrar la advertencia ([haga clic aquí para ver imagen en tamaño completo](implementing-optimistic-concurrency-with-the-sqldatasource-vb/_static/image14.png))
 
@@ -213,7 +213,7 @@ En ambos controladores de eventos comprobamos la `e.AffectedRows` propiedad y, s
 Como se muestra en la figura 9, estos dos controladores de eventos, se muestra un mensaje muy notable siempre que se produzca una infracción de simultaneidad.
 
 
-[![Se muestra un mensaje en caso de una infracción de simultaneidad](implementing-optimistic-concurrency-with-the-sqldatasource-vb/_static/image9.gif)](implementing-optimistic-concurrency-with-the-sqldatasource-vb/_static/image15.png)
+[![A Se muestra el mensaje en caso de una infracción de simultaneidad](implementing-optimistic-concurrency-with-the-sqldatasource-vb/_static/image9.gif)](implementing-optimistic-concurrency-with-the-sqldatasource-vb/_static/image15.png)
 
 **Figura 9**: Se muestra un mensaje en caso de una infracción de simultaneidad ([haga clic aquí para ver imagen en tamaño completo](implementing-optimistic-concurrency-with-the-sqldatasource-vb/_static/image16.png))
 

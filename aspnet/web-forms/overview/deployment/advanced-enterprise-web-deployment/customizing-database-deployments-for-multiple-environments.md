@@ -8,15 +8,15 @@ ms.date: 05/04/2012
 ms.assetid: a172979a-1318-4318-a9c6-4f9560d26267
 msc.legacyurl: /web-forms/overview/deployment/advanced-enterprise-web-deployment/customizing-database-deployments-for-multiple-environments
 msc.type: authoredcontent
-ms.openlocfilehash: 52fb2539ef388d129f88aa8aa87088e2d4a41ccf
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: 865e901618b48bc4bfdc6d7a3ca4e8868d4cb46b
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57055132"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59412988"
 ---
-<a name="customizing-database-deployments-for-multiple-environments"></a>Personalizar las implementaciones de la base de datos para varios entornos
-====================
+# <a name="customizing-database-deployments-for-multiple-environments"></a>Personalizar las implementaciones de la base de datos para varios entornos
+
 por [Jason Lee](https://github.com/jrjlee)
 
 [Descargar PDF](https://msdnshared.blob.core.windows.net/media/MSDNBlogsFS/prod.evol.blogs.msdn.com/CommunityServer.Blogs.Components.WeblogFiles/00/00/00/63/56/8130.DeployingWebAppsInEnterpriseScenarios.pdf)
@@ -139,7 +139,7 @@ Para obtener más información sobre la implementación de proyectos de base de 
 Estos artículos en MSDN proporcionan una orientación más general sobre la implementación de la base de datos:
 
 - [Información general de configuración del proyecto de base de datos](https://msdn.microsoft.com/library/aa833291(v=VS.100).aspx)
-- [Cómo: Configurar las propiedades de los detalles de implementación](https://msdn.microsoft.com/library/dd172125.aspx)
+- [Filtrar Configurar las propiedades de los detalles de implementación](https://msdn.microsoft.com/library/dd172125.aspx)
 - [Compilar e implementar bases de datos en un entorno de desarrollo aislado](https://msdn.microsoft.com/library/dd193409.aspx)
 - [Compilar e implementar bases de datos en un entorno de producción o ensayo](https://msdn.microsoft.com/library/dd193413.aspx)
 

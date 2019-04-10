@@ -8,15 +8,15 @@ ms.date: 03/18/2015
 ms.assetid: d7ec655d-49b0-4968-af5e-3064616aff9a
 msc.legacyurl: /ajax/cdn/cdnajax451
 msc.type: content
-ms.openlocfilehash: bbcd6425b66ecd760272bab37c758e47d0c18811
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: a81abf2c57d1400a9c4b2f1d1febaddc9c569c6d
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57039832"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59414548"
 ---
-<a name="aspnet-web-forms-and-ajax-451"></a>Formularios ASP.NET Web Forms y Ajax 4.5.1
-====================
+# <a name="aspnet-web-forms-and-ajax-451"></a>Formularios ASP.NET Web Forms y Ajax 4.5.1
+
 Los siguientes archivos se hospedan en la red CDN:
 
 - https://ajax.aspnetcdn.com/ajax/4.5.1/1/Date.HijriCalendar.debug.js

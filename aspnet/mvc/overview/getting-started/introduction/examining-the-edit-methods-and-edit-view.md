@@ -8,15 +8,15 @@ ms.date: 01/06/2019
 ms.assetid: 52a4d5fe-aa31-4471-b3cb-a064f82cb791
 msc.legacyurl: /mvc/overview/getting-started/introduction/examining-the-edit-methods-and-edit-view
 msc.type: authoredcontent
-ms.openlocfilehash: 75fd3a7dd55107cbdb9095d5b54b616133b4f65e
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: 4a4627bdce8b8f2085150aa08cdc4c1271e09e09
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57029212"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59422010"
 ---
-<a name="examining-the-edit-methods-and-edit-view"></a>Examinar los métodos y la vista Edit
-====================
+# <a name="examining-the-edit-methods-and-edit-view"></a>Examinar los métodos y la vista Edit
+
 by [Rick Anderson]((https://twitter.com/RickAndMSFT))
 
 [!INCLUDE [Tutorial Note](sample/code-location.md)]

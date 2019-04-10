@@ -8,15 +8,15 @@ ms.date: 05/16/2012
 ms.assetid: eacf0e3a-c2e9-4f77-a676-249146f393e8
 msc.legacyurl: /web-forms/overview/deployment/advanced-enterprise-web-deployment
 msc.type: chapter
-ms.openlocfilehash: b042faf38fe0269508895f1b7826908cf086222d
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: 0d3a356aafcce499f50d3a5d3b98f44ca5643ede
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57018812"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59417980"
 ---
-<a name="aspnet-4---enterprise-deployment-series-4-advanced-topics"></a>ASP.NET 4 - Implementación de empresa, serie 4: temas avanzados
-====================
+# <a name="aspnet-4---enterprise-deployment-series-4-advanced-topics"></a>ASP.NET 4 - Implementación de empresa, serie 4: temas avanzados
+
 > Este tutorial le mostrará cómo realizar diversas tareas que están necesario o deseable en muchos escenarios de implementación de empresa.
 
 

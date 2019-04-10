@@ -8,15 +8,15 @@ ms.date: 01/27/2009
 ms.assetid: 2ddd4407-d143-4a94-877c-21771bfb97a6
 msc.legacyurl: /mvc/overview/older-versions-1/controllers-and-routing/adding-dynamic-content-to-a-cached-page-cs
 msc.type: authoredcontent
-ms.openlocfilehash: 26e40ff9659a4b8552b2a087c7c948c9f1f1554c
-ms.sourcegitcommit: 289e051cc8a90e8f7127e239fda73047bde4de12
+ms.openlocfilehash: c126270304178d178f4b8f9739fa5c51e5dd0551
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/25/2019
-ms.locfileid: "58424175"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59415367"
 ---
-<a name="adding-dynamic-content-to-a-cached-page-c"></a>Agregar contenido dinámico a una página almacenada en caché (C#)
-====================
+# <a name="adding-dynamic-content-to-a-cached-page-c"></a>Agregar contenido dinámico a una página almacenada en caché (C#)
+
 por [Microsoft](https://github.com/microsoft)
 
 > Obtenga información sobre cómo mezclar contenido dinámico y almacenado en caché en la misma página. La substitución posterior a la caché le permite mostrar contenido dinámico, como anuncios de pancarta o elementos de noticias, dentro de una página que ha sido de salida almacenados en caché.
@@ -38,13 +38,13 @@ Uso de la sustitución posterior a la caché, requiere dos pasos. En primer luga
 
 Por ejemplo, imagínese que desea mostrar los elementos de noticias diferente aleatoriamente en una página almacenada en caché. La clase en el listado 1 expone un solo método, denominado RenderNews(), que devuelve aleatoriamente un artículo de noticias de una lista de tres elementos de noticias.
 
-**Listado 1 – Models\News.cs**
+**Listing 1 – Models\News.cs**
 
 [!code-csharp[Main](adding-dynamic-content-to-a-cached-page-cs/samples/sample1.cs)]
 
 Para aprovechar las ventajas de la sustitución posterior a la caché, se llama al método de HttpResponse.WriteSubstitution(). El método WriteSubstitution() establece el código para reemplazar una región de la página en caché con contenido dinámico. El método WriteSubstitution() se usa para mostrar el elemento de noticias aleatorio en la vista en el listado 2.
 
-**Listing 2 – Views\Home\Index.aspx**
+**Listado 2 – Views\Home\Index.aspx**
 
 [!code-aspx[Main](adding-dynamic-content-to-a-cached-page-cs/samples/sample2.aspx)]
 
@@ -93,10 +93,6 @@ Cuando se solicita la página representada por la vista en el listado 5, se mues
 En este tutorial se explica cómo actualizar dinámicamente el contenido de una página almacenada en caché. Ha aprendido a usar el método HttpResponse.WriteSubstitution() para habilitar el contenido dinámico para insertarse en una página almacenada en caché. También ha aprendido cómo encapsular la llamada al método WriteSubstitution() dentro de un método de aplicación auxiliar HTML.
 
 Aprovechar las ventajas del almacenamiento en caché siempre que sea posible: puede tener un impacto significativo en el rendimiento de las aplicaciones web. Como se explica en este tutorial, puede beneficiarse del almacenamiento en caché incluso cuando necesite mostrar contenido dinámico en las páginas.
-
-## 
-
-## 
 
 > [!div class="step-by-step"]
 > [Anterior](improving-performance-with-output-caching-cs.md)

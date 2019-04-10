@@ -8,15 +8,15 @@ ms.date: 07/21/2010
 ms.assetid: 94ea1a70-a9bc-4241-8f36-08366d64bab9
 msc.legacyurl: /web-forms/overview/older-versions-getting-started/tailspin-spyworks/tailspin-spyworks-part-3
 msc.type: authoredcontent
-ms.openlocfilehash: f55b29a271dbdb72d3e2249ed74517b77d78cf5e
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: badae58d5b43fb2674f4918f54f999ff48d0b5b0
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57034852"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59418019"
 ---
-<a name="part-3-layout-and-category-menu"></a>Parte 3: Diseño y menú Categoría
-====================
+# <a name="part-3-layout-and-category-menu"></a>Parte 3: Diseño y menú Categoría
+
 por [Joe Stagner](https://github.com/JoeStagner)
 
 > Tailspin Spyworks demuestra cómo extraordinariamente simple es crear aplicaciones eficaces y escalables para la plataforma. NET. Resalta cómo usar las características nuevas en ASP.NET 4 para crear una tienda en línea, incluida la compra, la desprotección y la administración.
@@ -66,7 +66,7 @@ Tenga en cuenta la instrucción "Eval": &lt;% # Eval("CategoryName") %&gt;
 
 La sintaxis ASP.NET &lt;% # %&gt; es una convención taquigrafía que indica el tiempo de ejecución para ejecutar todo lo que está dentro y mostrar los resultados "en línea".
 
-La instrucción Eval("CategoryName") indica, a la entrada actual en la colección enlazada de elementos de datos, capturar el valor de los nombres de elemento de modelo de entidad "CatagoryName". Se trata de una sintaxis concisa para una característica muy eficaz.
+La instrucción Eval("CategoryName") indica, a la entrada actual en la colección enlazada de elementos de datos, capturar el valor de los nombres de elemento de modelo de entidad "CategoryName". Se trata de una sintaxis concisa para una característica muy eficaz.
 
 Permite ejecutar la aplicación ahora.
 

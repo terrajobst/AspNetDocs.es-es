@@ -8,21 +8,21 @@ ms.date: 07/16/2014
 ms.assetid: ba07958c-42e1-4da0-81db-ba6925ed6db0
 msc.legacyurl: /signalr/overview/getting-started/real-time-web-applications-with-signalr
 msc.type: authoredcontent
-ms.openlocfilehash: 3db54a134e8f842cab1d3471c69f5a8e2039d83d
-ms.sourcegitcommit: 289e051cc8a90e8f7127e239fda73047bde4de12
+ms.openlocfilehash: 9904582450d4386ef8b8656078f6d40dbd1e10be
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/25/2019
-ms.locfileid: "58423616"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59412013"
 ---
-<a name="hands-on-lab-real-time-web-applications-with-signalr"></a>Laboratorio práctico: Aplicaciones web en tiempo real con SignalR
-====================
+# <a name="hands-on-lab-real-time-web-applications-with-signalr"></a>Laboratorio práctico: Aplicaciones web en tiempo real con SignalR
+
 
 por [campamentos Web Team](https://twitter.com/webcamps)
 
 [!INCLUDE [Consider ASP.NET Core SignalR](~/includes/signalr/signalr-version-disambiguation.md)]
 
-[Descargue el Kit de aprendizaje de campamentos de Web](https://aka.ms/webcamps-training-kit)
+[Descargar campamentos Web entrenamiento Kit, versión de octubre de 2015](https://github.com/Microsoft-Web/WebCampTrainingKit/releases/tag/v2015.10.13b)
 
 > Aplicaciones Web en tiempo real ofrecen la posibilidad de insertar contenido para los clientes conectados, como sucede, en tiempo real del servidor. Para los desarrolladores ASP.NET, **ASP.NET SignalR** es una biblioteca para agregar funcionalidad web en tiempo real a sus aplicaciones. Aprovecha de varios transportes, seleccionar automáticamente el mejor transporte disponible según el cliente y mejor transporte disponible del servidor. Aprovecha las ventajas de **WebSocket**, una API de HTML5 que permite la comunicación bidireccional entre el explorador y el servidor.
 > 
@@ -34,8 +34,7 @@ por [campamentos Web Team](https://twitter.com/webcamps)
 > 
 > ![Arquitectura de SignalR](real-time-web-applications-with-signalr/_static/image1.png)
 > 
-> Todo el código de ejemplo y fragmentos de código se incluyen en el Kit de entrenamiento campamentos de Web, que está disponible en [ https://aka.ms/webcamps-training-kit ](https://aka.ms/webcamps-training-kit).
-
+> Todo el código de ejemplo y fragmentos de código se incluyen en el Kit de entrenamiento campamentos Web, octubre de 2015 versión, disponible en [ https://github.com/Microsoft-Web/WebCampTrainingKit/releases/tag/v2015.10.13b ](https://github.com/Microsoft-Web/WebCampTrainingKit/releases/tag/v2015.10.13b).  Tenga en cuenta que el vínculo de instalador en la página deja de funcionar; Use uno de los vínculos en la sección de recursos en su lugar.
 
 <a id="Overview"></a>
 ## <a name="overview"></a>Información general
@@ -77,7 +76,7 @@ En todo el documento de laboratorio, se le pedirá que inserte los bloques de c�
 > Cada ejercicio viene acompañado por una solución inicial ubicada en el **comenzar** carpeta del ejercicio que le permite seguir cada ejercicio independientemente de los demás. Ten en cuenta que los fragmentos de código que se agregan durante un ejercicio faltan en estos a partir de las soluciones y es posible que no funcione hasta que haya completado el ejercicio. En el código fuente para un ejercicio, también encontrará un **final** carpeta que contiene una solución de Visual Studio con el código que se obtiene al completar los pasos descritos en el ejercicio correspondiente. Puede usar estas soluciones como instrucciones si necesita más ayuda mientras se trabaja a través de este laboratorio práctico.
 
 
-* * *
+---
 
 <a id="Exercises"></a>
 ## <a name="exercises"></a>Ejercicios
@@ -394,7 +393,7 @@ En esta tarea, configurará **"geek" Quiz** para conectarse a la placa posterior
 
     *Tabla de mensajes de backplane*
 
-* * *
+---
 
 <a id="Summary"></a>
 ## <a name="summary"></a>Resumen

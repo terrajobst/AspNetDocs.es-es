@@ -9,15 +9,15 @@ ms.date: 03/12/2010
 ms.technology: aspnet
 msc.legacyurl: /entity-framework
 msc.type: content
-ms.openlocfilehash: 4f18afb9df3d486845d33735d045ee26f59b3f97
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: bcbd98f88b1e7e292961326061404ce91d157b32
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57045332"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59414561"
 ---
-<a name="entity-framework"></a>Entity Framework
-====================
+# <a name="entity-framework"></a>Entity Framework
+
 Entity Framework (EF) es un asignador relacional de objetos que permite a los desarrolladores de .NET trabajar con datos relacionales usando objetos específicos del dominio. Elimina la necesidad de la mayor parte del código de acceso a datos que los desarrolladores normalmente deben escribir.
 
 

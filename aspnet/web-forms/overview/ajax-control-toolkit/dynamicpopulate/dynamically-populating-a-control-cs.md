@@ -8,15 +8,15 @@ ms.date: 06/02/2008
 ms.assetid: e1fec43e-1daf-49d2-b0c7-7f1b930455cc
 msc.legacyurl: /web-forms/overview/ajax-control-toolkit/dynamicpopulate/dynamically-populating-a-control-cs
 msc.type: authoredcontent
-ms.openlocfilehash: 1f37a3a41c7b83738f97c0daacd781c52b55abc8
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: 42c1cd684196c026f1435cba289fc2535187087c
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57029512"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59417304"
 ---
-<a name="dynamically-populating-a-control-c"></a>Rellenar un control dinámicamente (C#)
-====================
+# <a name="dynamically-populating-a-control-c"></a>Rellenar un control dinámicamente (C#)
+
 por [Christian Wenz](https://github.com/wenz)
 
 [Descargar código](http://download.microsoft.com/download/d/8/f/d8f2f6f9-1b7c-46ad-9252-e1fc81bdea3e/dynamicpopulate0.cs.zip) o [descargar PDF](http://download.microsoft.com/download/b/6/a/b6ae89ee-df69-4c87-9bfb-ad1eb2b23373/dynamicpopulate0CS.pdf)
@@ -66,7 +66,7 @@ Como puede ver, el control requiere cierta información pero puesta en marcha de
 Ejecute la página ASP.NET en el explorador y haga clic en el botón; recibirá la fecha actual en formato de mes-año.
 
 
-[![Hacer clic en el botón recupera la fecha del servidor](dynamically-populating-a-control-cs/_static/image2.png)](dynamically-populating-a-control-cs/_static/image1.png)
+[![A Haga clic en el botón recupera la fecha del servidor](dynamically-populating-a-control-cs/_static/image2.png)](dynamically-populating-a-control-cs/_static/image1.png)
 
 Hacer clic en el botón recupera la fecha del servidor ([haga clic aquí para ver imagen en tamaño completo](dynamically-populating-a-control-cs/_static/image3.png))
 

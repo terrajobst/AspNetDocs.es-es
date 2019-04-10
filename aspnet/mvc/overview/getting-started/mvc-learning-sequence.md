@@ -8,15 +8,15 @@ ms.date: 05/22/2015
 ms.assetid: 8513a57a-2d45-4d6b-881c-15a01c5cbb1c
 msc.legacyurl: /mvc/overview/getting-started/mvc-learning-sequence
 msc.type: authoredcontent
-ms.openlocfilehash: 720e3999fe2c1872a50c82bad0711bbcadd176cd
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: e78ad67187b2da96ca3766e6914e396508aa180e
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57029272"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59417551"
 ---
-<a name="mvc-recommended-tutorials-and-articles"></a>Artículos y tutoriales recomendados de MVC
-====================
+# <a name="mvc-recommended-tutorials-and-articles"></a>Artículos y tutoriales recomendados de MVC
+
 by [Rick Anderson]((https://twitter.com/RickAndMSFT))
 
 <a id="pwd"></a>

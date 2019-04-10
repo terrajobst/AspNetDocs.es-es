@@ -8,15 +8,15 @@ ms.date: 03/10/2015
 ms.assetid: 7a06c2a5-fd96-436c-baa1-2d148b8f7116
 msc.legacyurl: /ajax/cdn/jquery-datatables/cdnjquerydatatables105
 msc.type: content
-ms.openlocfilehash: 91bbf8167cd3bdc331d4d6f7d0a400a2424bf451
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: 07f30ddcdc5c1943eb2afda02b2174aee898b537
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57030692"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59415939"
 ---
-<a name="jquery-datatables-1105"></a>jQuery DataTables 1.10.5
-====================
+# <a name="jquery-datatables-1105"></a>jQuery DataTables 1.10.5
+
 Los siguientes archivos para lo complementos DataTables de jQuery se hospedan en la red CDN:
 
 - https://ajax.aspnetcdn.com/ajax/jquery.dataTables/1.10.5/jquery.dataTables.js

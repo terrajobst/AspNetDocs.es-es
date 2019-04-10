@@ -8,15 +8,15 @@ ms.date: 06/09/2009
 ms.assetid: 11f6fe44-64ef-4a38-a3b4-35c7bb992352
 msc.legacyurl: /web-forms/overview/older-versions-getting-started/deploying-web-site-projects/logging-error-details-with-elmah-cs
 msc.type: authoredcontent
-ms.openlocfilehash: 4337500e0da3c6a75737438f3eeed731350847dd
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: 02c4371cccb56f0ef7c0a6244c3dcd8a30d241b0
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57041292"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59415653"
 ---
-<a name="logging-error-details-with-elmah-c"></a>Registrar detalles de error con ELMAH (C#)
-====================
+# <a name="logging-error-details-with-elmah-c"></a>Registrar detalles de error con ELMAH (C#)
+
 por [Scott Mitchell](https://twitter.com/ScottOnWriting)
 
 [Descargar código](http://download.microsoft.com/download/1/0/C/10CC829F-A808-4302-97D3-59989B8F9C01/ASPNET_Hosting_Tutorial_14_CS.zip) o [descargar PDF](http://download.microsoft.com/download/5/C/5/5C57DB8C-5DEA-4B3A-92CA-4405544D313B/aspnet_tutorial14_ELMAH_cs.pdf)

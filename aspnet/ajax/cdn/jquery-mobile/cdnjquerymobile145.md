@@ -8,15 +8,15 @@ ms.date: 12/31/2014
 ms.assetid: 67e9fda2-7895-4818-add6-fdc5be5be367
 msc.legacyurl: /ajax/cdn/jquery-mobile/cdnjquerymobile145
 msc.type: content
-ms.openlocfilehash: af305dbb73a266748d1e600dcf45fab530a6ce32
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: e46484f06e3cb75765c4891851d509d560600d3e
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57038272"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59416108"
 ---
-<a name="jquery-mobile-145-on-the-microsoft-ajax-cdn"></a>jQuery Mobile 1.4.5 en la red CDN de Microsoft Ajax
-====================
+# <a name="jquery-mobile-145-on-the-microsoft-ajax-cdn"></a>jQuery Mobile 1.4.5 en la red CDN de Microsoft Ajax
+
 La biblioteca de jQuery Mobile 1.4.5 incluye los siguientes archivos:
 
 - https://ajax.aspnetcdn.com/ajax/jquery.mobile/1.4.5/jquery.mobile.structure-1.4.5.css

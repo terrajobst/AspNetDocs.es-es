@@ -8,15 +8,15 @@ ms.date: 07/01/2007
 ms.assetid: 2b0649d3-d072-446a-9918-b2648de26472
 msc.legacyurl: /web-forms/videos/vs-2005/how-do-i-load-test-a-web-application
 msc.type: video
-ms.openlocfilehash: 9171b4aeb806b20d9e5a8464d503551761d3b2b6
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: 6b086fd9c8c92d5dafa8aba9f1a8928c6bcb0c07
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57064692"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59413781"
 ---
-<a name="how-do-i-load-test-a-web-application"></a>[¿Cómo lo hago?:] ¿Una aplicación Web de prueba de carga?
-====================
+# <a name="how-do-i-load-test-a-web-application"></a>[¿Cómo lo hago?:] ¿Una aplicación Web de prueba de carga?
+
 por [Chris Menegay](https://twitter.com/CMenegay)
 
 Este vídeo le guiará a través del proceso de grabación de pruebas Web y, a continuación, la reproducción como una prueba de carga simula varios usuarios. Se puede ver cómo Visual Studio Team System le permite establecer umbrales de advertencia y críticos de uso de recursos del servidor, que define si la aplicación Web se supera o produce un error en la prueba de carga.

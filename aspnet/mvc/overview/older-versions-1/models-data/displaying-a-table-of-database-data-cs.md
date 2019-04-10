@@ -8,15 +8,15 @@ ms.date: 10/07/2008
 ms.assetid: d6e758b6-6571-484d-a132-34ee6c47747a
 msc.legacyurl: /mvc/overview/older-versions-1/models-data/displaying-a-table-of-database-data-cs
 msc.type: authoredcontent
-ms.openlocfilehash: d0d3f6a574a4b923d5da73ccb2ab3bfbd6f305ef
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: 99b18de33e266adb626f4ab53ff20b1f52102900
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57054832"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59417590"
 ---
-<a name="displaying-a-table-of-database-data-c"></a>Mostrar una tabla de los datos de la base de datos (C#)
-====================
+# <a name="displaying-a-table-of-database-data-c"></a>Mostrar una tabla de los datos de la base de datos (C#)
+
 por [Microsoft](https://github.com/microsoft)
 
 [Descargar PDF](http://download.microsoft.com/download/1/1/f/11f721aa-d749-4ed7-bb89-a681b68894e6/ASPNET_MVC_Tutorial_11_CS.pdf)
@@ -33,7 +33,7 @@ Vamos a mostrar el conjunto de registros de la tabla de base de datos de pelícu
 <a id="0.3_table01"></a>
 
 
-| **Nombre de columna** | **Tipo de datos** | **Permitir valores null** |
+| **Nombre de columna** | **Tipo de datos** | **Permitir valores nulos** |
 | --- | --- | --- |
 | Id. | Valor int. | False |
 | Título | Nvarchar(200) | False |
@@ -61,7 +61,7 @@ Tras hacer clic en el botón Agregar, el Asistente para Entity Data Model aparec
 3. En el **elija los objetos de base de datos** paso, expanda el nodo tablas, seleccione la tabla de películas. Escriba el espacio de nombres *modelos* y haga clic en el **finalizar** botón.
 
 
-[![Creación de LINQ a las clases SQL](displaying-a-table-of-database-data-cs/_static/image1.jpg)](displaying-a-table-of-database-data-cs/_static/image1.png)
+[![Crear LINQ a las clases SQL](displaying-a-table-of-database-data-cs/_static/image1.jpg)](displaying-a-table-of-database-data-cs/_static/image1.png)
 
 **Figura 01**: Creación de LINQ a las clases SQL ([haga clic aquí para ver imagen en tamaño completo](displaying-a-table-of-database-data-cs/_static/image2.png))
 
@@ -69,7 +69,7 @@ Tras hacer clic en el botón Agregar, el Asistente para Entity Data Model aparec
 Después de completar al Asistente para Entity Data Model, se abre el Entity Data Model Designer. El diseñador debe mostrar la entidad de películas (consulte la figura 2).
 
 
-[![El Entity Data Model Designer](displaying-a-table-of-database-data-cs/_static/image2.jpg)](displaying-a-table-of-database-data-cs/_static/image3.png)
+[![Tél Entity Data Model Designer](displaying-a-table-of-database-data-cs/_static/image2.jpg)](displaying-a-table-of-database-data-cs/_static/image3.png)
 
 **Figura 02**: El Entity Data Model Designer ([haga clic aquí para ver imagen en tamaño completo](displaying-a-table-of-database-data-cs/_static/image4.png))
 
@@ -83,7 +83,7 @@ Haga doble clic en el nombre de la clase en la superficie del diseñador y cambi
 Ahora que tenemos una forma de representar nuestros registros de base de datos, podemos crear un controlador que devuelve la colección de películas. En la ventana Explorador de soluciones de Visual Studio, haga clic en la carpeta Controllers y seleccione la opción de menú **Add, controlador** (consulte la figura 3).
 
 
-[![El controlador menú Agregar](displaying-a-table-of-database-data-cs/_static/image3.jpg)](displaying-a-table-of-database-data-cs/_static/image5.png)
+[![Tque agregar controlador menú](displaying-a-table-of-database-data-cs/_static/image3.jpg)](displaying-a-table-of-database-data-cs/_static/image5.png)
 
 **Figura 03**: Agregar controlador de menú ([haga clic aquí para ver imagen en tamaño completo](displaying-a-table-of-database-data-cs/_static/image6.png))
 
@@ -91,7 +91,7 @@ Ahora que tenemos una forma de representar nuestros registros de base de datos, 
 Cuando el **Agregar controlador** aparece el cuadro de diálogo, escriba el nombre del controlador MovieController (consulte la figura 4). Haga clic en el **agregar** para agregar el nuevo controlador.
 
 
-[![El cuadro de diálogo Agregar controlador](displaying-a-table-of-database-data-cs/_static/image4.jpg)](displaying-a-table-of-database-data-cs/_static/image7.png)
+[![Tcuadro de diálogo de Agregar controlador](displaying-a-table-of-database-data-cs/_static/image4.jpg)](displaying-a-table-of-database-data-cs/_static/image7.png)
 
 **Figura 04**: El cuadro de diálogo Agregar controlador ([haga clic aquí para ver imagen en tamaño completo](displaying-a-table-of-database-data-cs/_static/image8.png))
 
@@ -125,21 +125,21 @@ Haga clic en la acción de Index() y seleccione la opción de menú **agregar vi
 En el **agregar vista** cuadro de diálogo, active la casilla etiquetada **crear una vista fuertemente tipada**. Seleccione la clase Movie como el **Ver clase de datos**. Seleccione *lista* como el **ver contenido** (consulte la figura 6). Al seleccionar estas opciones, se generará una vista fuertemente tipada que muestra una lista de películas.
 
 
-[![El cuadro de diálogo Agregar vista](displaying-a-table-of-database-data-cs/_static/image6.jpg)](displaying-a-table-of-database-data-cs/_static/image11.png)
+[![Tcuadro de diálogo Agregar vista](displaying-a-table-of-database-data-cs/_static/image6.jpg)](displaying-a-table-of-database-data-cs/_static/image11.png)
 
 **Figura 06**: El cuadro de diálogo Agregar vista ([haga clic aquí para ver imagen en tamaño completo](displaying-a-table-of-database-data-cs/_static/image12.png))
 
 
 Tras hacer clic en el **agregar** botón, la vista en el listado 2 se genera automáticamente. Esta vista contiene el código necesario para recorrer en iteración la colección de películas y mostrar las propiedades de una película.
 
-**Listing 2 – Views\Movie\Index.aspx**
+**Listado 2 – Views\Movie\Index.aspx**
 
 [!code-aspx[Main](displaying-a-table-of-database-data-cs/samples/sample2.aspx)]
 
 Puede ejecutar la aplicación seleccionando la opción de menú **depurar, Iniciar depuración** (o presionar la tecla F5). Se ejecuta la aplicación, inicia Internet Explorer. Si navega a la dirección URL de /Movie verá la página en la figura 7.
 
 
-[![Una tabla de películas](displaying-a-table-of-database-data-cs/_static/image7.jpg)](displaying-a-table-of-database-data-cs/_static/image13.png)
+[![A tabla de películas](displaying-a-table-of-database-data-cs/_static/image7.jpg)](displaying-a-table-of-database-data-cs/_static/image13.png)
 
 **Figura 07**: Una tabla de películas ([haga clic aquí para ver imagen en tamaño completo](displaying-a-table-of-database-data-cs/_static/image14.png))
 
@@ -170,7 +170,7 @@ La parcial en el listado 3 contiene una plantilla para una sola fila de registro
 
 La vista de índice modificada en el listado 4 usa el MovieTemplate parcial.
 
-**Listing 4 – Views\Movie\Index.aspx**
+**Listado 4 – Views\Movie\Index.aspx**
 
 [!code-aspx[Main](displaying-a-table-of-database-data-cs/samples/sample4.aspx)]
 

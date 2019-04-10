@@ -8,15 +8,15 @@ ms.date: 06/10/2014
 ms.assetid: ce1305f9-30fd-49e3-bf38-d0a78dfb06c3
 msc.legacyurl: /signalr/overview/performance/scaleout-with-windows-azure-service-bus
 msc.type: authoredcontent
-ms.openlocfilehash: 9f6188ff5f716c20d759f73975d6a8ad522834d8
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: d0e7dcb0317c403c5cf7df1db7decbdda4ada8e9
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57051712"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59417382"
 ---
-<a name="signalr-scaleout-with-azure-service-bus"></a>Escalabilidad horizontal de SignalR con Azure Service Bus
-====================
+# <a name="signalr-scaleout-with-azure-service-bus"></a>Escalabilidad horizontal de SignalR con Azure Service Bus
+
 por [Mike Wasson](https://github.com/MikeWasson), [Patrick Fletcher](https://github.com/pfletcher)
 
 [!INCLUDE [Consider ASP.NET Core SignalR](~/includes/signalr/signalr-version-disambiguation.md)]
@@ -33,7 +33,7 @@ Requisitos previos:
 
 También es compatible con el backplane de bus de servicio [Service Bus para Windows Server](https://msdn.microsoft.com/library/windowsazure/dn282144.aspx), versión 1.1. Sin embargo, no es compatible con la versión 1.0 de Service Bus para Windows Server.
 
-## <a name="pricing"></a>Precio
+## <a name="pricing"></a>Precios
 
 El backplane de Service Bus usa temas para enviar mensajes. Para la información de precio más reciente, consulte [Service Bus](https://azure.microsoft.com/pricing/details/service-bus/). En el momento de redactar este artículo, puede enviar 1.000.000 mensajes al mes por menos de $1. El backplane envía un mensaje de bus de servicio para cada invocación de un método de concentrador SignalR. También hay algunos mensajes de control para las conexiones, desconexiones, dejando o unirse a grupos y así sucesivamente. En la mayoría de las aplicaciones, la mayoría del tráfico de mensajes serán las invocaciones de método de concentrador.
 

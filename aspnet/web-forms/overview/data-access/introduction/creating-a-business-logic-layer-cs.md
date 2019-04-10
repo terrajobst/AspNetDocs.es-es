@@ -8,15 +8,15 @@ ms.date: 03/31/2010
 ms.assetid: 85554606-47cb-4e4f-9848-eed9da579056
 msc.legacyurl: /web-forms/overview/data-access/introduction/creating-a-business-logic-layer-cs
 msc.type: authoredcontent
-ms.openlocfilehash: 0db90f1e87bcaac51ca08ef1a8b258c93be8f613
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: fd3bf46394f562462c561bf06370d2f372e47d0a
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57027882"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59415268"
 ---
-<a name="creating-a-business-logic-layer-c"></a>Crear una capa de lógica empresarial (C#)
-====================
+# <a name="creating-a-business-logic-layer-c"></a>Crear una capa de lógica empresarial (C#)
+
 por [Scott Mitchell](https://twitter.com/ScottOnWriting)
 
 [Descargue la aplicación de ejemplo](http://download.microsoft.com/download/4/6/3/463cf87c-4724-4cbc-b7b5-3f866f43ba50/ASPNET_Data_Tutorial_2_CS.exe) o [descargar PDF](creating-a-business-logic-layer-cs/_static/datatutorial02cs1.pdf)
@@ -127,7 +127,7 @@ Para usar la capa BLL nuevas clases, todo lo que debe cambiarse es simplemente r
 Las clases de nivel de lógica empresarial también pueden obtenerse mediante declaración (como el conjunto de datos con tipo) mediante el uso de ObjectDataSource. Trataremos ObjectDataSource en detalle en los tutoriales siguientes.
 
 
-[![Se muestra la lista de productos en un control GridView](creating-a-business-logic-layer-cs/_static/image4.png)](creating-a-business-logic-layer-cs/_static/image3.png)
+[![TLista de productos de él se muestra en un control GridView](creating-a-business-logic-layer-cs/_static/image4.png)](creating-a-business-logic-layer-cs/_static/image3.png)
 
 **Figura 3**: Se muestra la lista de productos en un control GridView ([haga clic aquí para ver imagen en tamaño completo](creating-a-business-logic-layer-cs/_static/image5.png))
 
@@ -146,7 +146,7 @@ Estas reglas pueden y deben expresarse en el nivel de base de datos. El límite 
 Además de aplicar estas reglas en la base de datos también se deben aplicar en el nivel de conjunto de datos. De hecho, la longitud de campo y si un valor es obligatorio u opcional ya se capturan para el conjunto de cada DataTable de DataColumn. Para ver la validación de nivel de campo existente proporciona automáticamente, vaya al diseñador de DataSet, seleccione un campo de una de las tablas de datos y, a continuación, vaya a la ventana Propiedades. Como se muestra en la figura 4, el `QuantityPerUnit` DataColumn en el `ProductsDataTable` tiene una longitud máxima de 20 caracteres y permitir `NULL` valores. Si se intenta establecer el `ProductsDataRow`del `QuantityPerUnit` propiedad con un valor de cadena de más de 20 caracteres un `ArgumentException` se iniciará.
 
 
-[![DataColumn proporciona validación básica de nivel de campo](creating-a-business-logic-layer-cs/_static/image7.png)](creating-a-business-logic-layer-cs/_static/image6.png)
+[![TValidación de nivel de campo básica proporciona DataColumn](creating-a-business-logic-layer-cs/_static/image7.png)](creating-a-business-logic-layer-cs/_static/image6.png)
 
 **Figura 4**: El objeto DataColumn proporciona nivel de campo validación básica ([haga clic aquí para ver imagen en tamaño completo](creating-a-business-logic-layer-cs/_static/image8.png))
 
@@ -154,7 +154,7 @@ Además de aplicar estas reglas en la base de datos también se deben aplicar en
 Lamentablemente, no podemos especificamos las comprobaciones de límites, como el `UnitPrice` valor debe ser mayor o igual a cero, a través de la ventana Propiedades. Para proporcionar este tipo de validación de nivel de campo es necesario crear un controlador de eventos de la DataTable [ColumnChanging](https://msdn.microsoft.com/library/system.data.datatable.columnchanging%28VS.80%29.aspx) eventos. Como se mencionó en el [tutorial anterior](creating-a-data-access-layer-cs.md), los objetos DataRow, DataTable y DataSet creados por el conjunto de datos con tipo se pueden extender mediante el uso de clases parciales. Con esta técnica se puede crear un `ColumnChanging` controlador de eventos para el `ProductsDataTable` clase. Empiece por crear una clase en el `App_Code` carpeta denominada `ProductsDataTable.ColumnChanging.cs`.
 
 
-[![Agregue una nueva clase a la carpeta App_Code](creating-a-business-logic-layer-cs/_static/image10.png)](creating-a-business-logic-layer-cs/_static/image9.png)
+[![Auna nueva clase a la carpeta App_Code dd](creating-a-business-logic-layer-cs/_static/image10.png)](creating-a-business-logic-layer-cs/_static/image9.png)
 
 **Figura 5**: Agregue una nueva clase a la `App_Code` carpeta ([haga clic aquí para ver imagen en tamaño completo](creating-a-business-logic-layer-cs/_static/image11.png))
 

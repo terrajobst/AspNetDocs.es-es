@@ -8,15 +8,15 @@ ms.date: 06/10/2014
 ms.assetid: 0fab5e35-8c1f-43d4-8635-b8aba8766a71
 msc.legacyurl: /signalr/overview/getting-started/introduction-to-signalr
 msc.type: authoredcontent
-ms.openlocfilehash: 7b9dae3e5d79319a9fefee41f4525a59f950746a
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: 43ff1bdf3999e67506d6d58d8a7a5d41fadc82b4
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57042932"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59420957"
 ---
-<a name="introduction-to-signalr"></a>Introducción a SignalR
-====================
+# <a name="introduction-to-signalr"></a>Introducción a SignalR
+
 
 por [Patrick Fletcher](https://github.com/pfletcher)
 

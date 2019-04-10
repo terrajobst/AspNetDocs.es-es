@@ -8,15 +8,15 @@ ms.date: 05/04/2012
 ms.assetid: 656dd06d-806c-467c-863d-9fc45e5ba3ab
 msc.legacyurl: /web-forms/overview/deployment/configuring-server-environments-for-web-deployment/creating-a-server-farm-with-the-web-farm-framework
 msc.type: authoredcontent
-ms.openlocfilehash: b650a05a22f18ffdcc114a9a64054dd0a34bc041
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: 19c061e83257e118aee74c9373a627b8c56defe3
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57052242"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59421243"
 ---
-<a name="creating-a-server-farm-with-the-web-farm-framework"></a>Crear una granja de servidores con Web Farm Framework
-====================
+# <a name="creating-a-server-farm-with-the-web-farm-framework"></a>Crear una granja de servidores con Web Farm Framework
+
 por [Jason Lee](https://github.com/jrjlee)
 
 [Descargar PDF](https://msdnshared.blob.core.windows.net/media/MSDNBlogsFS/prod.evol.blogs.msdn.com/CommunityServer.Blogs.Components.WeblogFiles/00/00/00/63/56/8130.DeployingWebAppsInEnterpriseScenarios.pdf)

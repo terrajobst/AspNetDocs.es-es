@@ -8,15 +8,15 @@ ms.date: 02/15/2013
 ms.assetid: 9715a121-fa55-4f1b-a5d2-fb3f6cd8be8f
 msc.legacyurl: /web-forms/overview/deployment/visual-studio-web-deployment/setting-folder-permissions
 msc.type: authoredcontent
-ms.openlocfilehash: 930f46c0ddb0b77525098291393e526107a542d2
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: 0a9181f741452e4abe256c9eab04615ce9819ff1
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57054472"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59421698"
 ---
-<a name="aspnet-web-deployment-using-visual-studio-setting-folder-permissions"></a>Implementación Web de ASP.NET con Visual Studio: Establecer permisos de carpeta
-====================
+# <a name="aspnet-web-deployment-using-visual-studio-setting-folder-permissions"></a>Implementación Web de ASP.NET con Visual Studio: Establecer permisos de carpeta
+
 por [Tom Dykstra](https://github.com/tdykstra)
 
 [Descargar el proyecto de inicio](http://go.microsoft.com/fwlink/p/?LinkId=282627)

@@ -8,15 +8,15 @@ ms.date: 04/23/2009
 ms.assetid: 3e8b0627-3eb7-488e-807e-067cba7cec05
 msc.legacyurl: /web-forms/overview/older-versions-getting-started/deploying-web-site-projects/strategies-for-database-development-and-deployment-cs
 msc.type: authoredcontent
-ms.openlocfilehash: 4ea1713541c30623c0f7c8387318549dd36a125f
-ms.sourcegitcommit: 289e051cc8a90e8f7127e239fda73047bde4de12
+ms.openlocfilehash: 3951ab4562e2c172f418c74136d511f0f9f50454
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/25/2019
-ms.locfileid: "58423590"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59415848"
 ---
-<a name="strategies-for-database-development-and-deployment-c"></a>Estrategias del desarrollo e implementación de bases de datos (C#)
-====================
+# <a name="strategies-for-database-development-and-deployment-c"></a>Estrategias del desarrollo e implementación de bases de datos (C#)
+
 por [Scott Mitchell](https://twitter.com/ScottOnWriting)
 
 [Descargar PDF](http://download.microsoft.com/download/C/3/9/C391A649-B357-4A7B-BAA4-48C96871FEA6/aspnet_tutorial10_DBDevel_cs.pdf)
@@ -55,7 +55,7 @@ Es la manera más sencilla para mantener un registro de cambios al modelo de dat
 <a id="0.4_table01"></a>
 
 
-| **Fecha de cambio** | **Cambiar detalles** |
+| **Fecha del cambio** | **Cambiar detalles** |
 | --- | --- |
 | 2009-02-03: | Columna agregada `DepartmentID` (`int`, no es NULL) para el `Employees` tabla. Agrega una restricción foreign key de `Departments.DepartmentID` a `Employees.DepartmentID`. |
 | 2009-02-05: | Columna quitada `TotalWeight` desde el `Orders` tabla. Asociados de datos ya está capturados en `OrderDetails` registros. |
@@ -99,7 +99,7 @@ Hay una variedad de herramientas de comparación de base de datos de terceros of
 Cuando se inicia SQL Compare abre el cuadro de diálogo de proyectos de comparación, que muestra los proyectos de SQL Compare guardados. Cree un nuevo proyecto. Esto inicia el Asistente de configuración del proyecto, que solicita información acerca de las bases de datos para comparar (consulte la figura 1). Escriba la información de las bases de datos de entorno de desarrollo y producción.
 
 
-[![Comparar el desarrollo y las bases de datos de producción](strategies-for-database-development-and-deployment-cs/_static/image2.jpg)](strategies-for-database-development-and-deployment-cs/_static/image1.jpg)
+[![Compare el desarrollo y las bases de datos de producción](strategies-for-database-development-and-deployment-cs/_static/image2.jpg)](strategies-for-database-development-and-deployment-cs/_static/image1.jpg)
 
 **Figura 1**: Comparar el desarrollo y las bases de datos de producción ([haga clic aquí para ver imagen en tamaño completo](strategies-for-database-development-and-deployment-cs/_static/image3.jpg))
 
@@ -116,7 +116,7 @@ Después de seleccionar las bases de datos para comparar (y revisar las opciones
 > Se realizaron los cambios realizados en este tutorial del modelo de datos para ilustrar el uso de una herramienta de comparación de la base de datos. No encontrará estos cambios en la base de datos en tutoriales futuros.
 
 
-[![Comparación SQL enumera las diferencias entre el desarrollo y las bases de datos de producción](strategies-for-database-development-and-deployment-cs/_static/image5.jpg)](strategies-for-database-development-and-deployment-cs/_static/image4.jpg)
+[![SComparación QL enumera las diferencias entre el desarrollo y las bases de datos de producción](strategies-for-database-development-and-deployment-cs/_static/image5.jpg)](strategies-for-database-development-and-deployment-cs/_static/image4.jpg)
 
 **Figura 2**: Comparación SQL enumera las diferencias entre el desarrollo y las bases de datos de producción ([haga clic aquí para ver imagen en tamaño completo](strategies-for-database-development-and-deployment-cs/_static/image6.jpg))
 
@@ -128,7 +128,7 @@ Seleccionar un objeto de base de datos muestra la ventana de diferencias de SQL,
 Después de revisar las diferencias y seleccionar los objetos que desea sincronizar, el siguiente paso es generar los comandos SQL necesarios para actualizar el esquema s de base de datos de producción para que coincida con la base de datos de desarrollo. Esto se logra mediante el Asistente para la sincronización. El Asistente para sincronización Confirma qué objetos se deben para sincronizar y resume la acción previsto (consulte la figura 3). Puede sincronizar las bases de datos inmediatamente o generar un script con los comandos SQL que se pueden ejecutar en su tiempo libre.
 
 
-[![Utilice al Asistente para la sincronización para sincronizar los esquemas de bases de datos](strategies-for-database-development-and-deployment-cs/_static/image8.jpg)](strategies-for-database-development-and-deployment-cs/_static/image7.jpg)
+[![Uel Asistente para la sincronización para sincronizar los esquemas de bases de datos se](strategies-for-database-development-and-deployment-cs/_static/image8.jpg)](strategies-for-database-development-and-deployment-cs/_static/image7.jpg)
 
 **Figura 3**: Utilice el Asistente para la sincronización para sincronizar los esquemas de bases de datos ([haga clic aquí para ver imagen en tamaño completo](strategies-for-database-development-and-deployment-cs/_static/image9.jpg))
 

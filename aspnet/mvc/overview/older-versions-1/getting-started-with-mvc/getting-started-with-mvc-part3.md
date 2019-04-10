@@ -8,15 +8,15 @@ ms.date: 08/14/2010
 ms.assetid: e8f1515c-c277-47ff-a23e-224118f13f02
 msc.legacyurl: /mvc/overview/older-versions-1/getting-started-with-mvc/getting-started-with-mvc-part3
 msc.type: authoredcontent
-ms.openlocfilehash: f55e558dd056e86bdd2310894959aef02a9d8de2
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: 3eff3aceea302c51e6970bb13fbee3a8bf98a71d
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57046882"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59411987"
 ---
-<a name="adding-a-view"></a>Agregar una vista
-====================
+# <a name="adding-a-view"></a>Agregar una vista
+
 por [Scott Hanselman](https://github.com/shanselman)
 
 > Este es un tutorial para principiantes que presenta los conceptos básicos de ASP.NET MVC. Creará una aplicación web simple que lee y escribe desde una base de datos. Visite el [centro de aprendizaje de ASP.NET MVC](../../../index.md) para buscar otros ASP.NET MVC, tutoriales y ejemplos.
@@ -38,7 +38,7 @@ Ahora agreguemos una plantilla de vista a nuestro proyecto que podemos usar nues
 
 Se abrirá el cuadro de diálogo "Agregar vista", lo que nos proporciona algunas opciones para ver cómo queremos crear una plantilla de vista que se puede usar nuestro método Index. Por ahora, no cambia nada y, simplemente haga clic en el botón Agregar.
 
-[![Agregar cuadro de diálogo de vista](getting-started-with-mvc-part3/_static/image3.png)](getting-started-with-mvc-part3/_static/image2.png)
+[![Acuadro de diálogo Vista dd](getting-started-with-mvc-part3/_static/image3.png)](getting-started-with-mvc-part3/_static/image2.png)
 
 Tras hacer clic en Agregar, una nueva carpeta y un nuevo archivo se mostrarán en la carpeta de soluciones, tal como se muestra aquí. Ahora tengo una carpeta HelloWorld en vistas y un archivo Index.aspx dentro de esa carpeta.
 
@@ -50,7 +50,7 @@ El nuevo archivo de índice también está ya abierto y listo para su edición. 
 
 Ejecute la aplicación y visite [ `http://localhost:xx/HelloWorld` ](http://localhostxx) nuevo en el explorador. El método Index en nuestro controlador en este ejemplo no realiza ningún trabajo, pero llamó a "return View()", lo que indica que deseamos utilizar un archivo de plantilla de vista para presentar una respuesta al cliente. Dado que no se ha especificado explícitamente el nombre del archivo de plantilla de vista para usar, ASP.NET MVC usa de forma predeterminada el archivo de vista Index.aspx dentro de la carpeta \Views\HelloWorld. Ahora vemos que la cadena que se pueden modificar en nuestra vista.
 
-[![Índice - Windows Internet Explorer](getting-started-with-mvc-part3/_static/image7.png)](getting-started-with-mvc-part3/_static/image6.png)
+[![Indice - Windows Internet Explorer](getting-started-with-mvc-part3/_static/image7.png)](getting-started-with-mvc-part3/_static/image6.png)
 
 Parece bastante bueno. Sin embargo, tenga en cuenta que el título del explorador dice "Index" y el título en la página big dice "Mi aplicación MVC." Vamos a cambiar aquellos.
 
@@ -80,7 +80,7 @@ Open /HelloWorld/Index.aspx. Hay dos lugares a cambiar. En primer lugar, el tít
 
 Ejecute la aplicación y visite /Movies. Tenga en cuenta que el título del explorador, el encabezado principal y los encabezados secundarios han cambiado. Es fácil realizar grandes cambios en su aplicación con pequeños cambios en la vista.
 
-[![Lista de películas - Windows Internet Explorer](getting-started-with-mvc-part3/_static/image9.png)](getting-started-with-mvc-part3/_static/image8.png)
+[![Movie lista - Windows Internet Explorer](getting-started-with-mvc-part3/_static/image9.png)](getting-started-with-mvc-part3/_static/image8.png)
 
 Nuestra pequeña cantidad de "datos" (en este caso, "Hello World!" mensaje) fue difícil aunque codificada. Tenemos V (vistas) y tenemos C (controladores), pero aún no hay M (modelo). En breve analizaremos cómo crear una base de datos y recuperar los datos del modelo del mismo.
 
@@ -109,11 +109,11 @@ Agregue este código bajo el &lt;h2&gt; en su nuevo Welcome.aspx. Crearemos real
 
 Además, tenga en cuenta mientras escribe que dado que indicamos a esta vista sobre el WelcomeViewModel (están casados, recuerde?) que obtenemos útil Intellisense cada vez que se hace referencia el objeto del modelo como se muestra en la captura de pantalla siguiente:
 
-[![Código fuente NumTime](getting-started-with-mvc-part3/_static/image12.png)](getting-started-with-mvc-part3/_static/image11.png)
+[![NCódigo fuente umTime](getting-started-with-mvc-part3/_static/image12.png)](getting-started-with-mvc-part3/_static/image11.png)
 
 Ejecute la aplicación y visite `http://localhost:xx/HelloWorld/Welcome?name=Scott&numtimes=4` nuevo. Ahora le estamos redirigiendo los datos de la dirección URL, se pasa automáticamente a nuestro controlador, nuestro controlador empaqueta los datos en una clase ViewModel y pasa ese objeto en nuestra vista. La vista que muestra los datos como HTML al usuario.
 
-[![Página principal - Windows Internet Explorer](getting-started-with-mvc-part3/_static/image14.png)](getting-started-with-mvc-part3/_static/image13.png)
+[![WSTA es - Windows Internet Explorer](getting-started-with-mvc-part3/_static/image14.png)](getting-started-with-mvc-part3/_static/image13.png)
 
 Bueno, eso fue una especie de "M" para el modelo, pero no el tipo de base de datos. Veamos lo que hemos aprendido y crear una base de datos de películas.
 

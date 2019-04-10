@@ -8,15 +8,15 @@ ms.date: 10/09/2014
 ms.assetid: 151cd274-3daa-4f88-ad3b-bffb99a9d545
 msc.legacyurl: /mvc/overview/older-versions
 msc.type: chapter
-ms.openlocfilehash: 25057283e20e437027f4b89c3c5972bca1312093
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: a0aa547ee9c8fa29e9863c540046d2f8dbfdd45f
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57021952"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59417824"
 ---
-<a name="older-versions---mvc-3-and-4"></a>Versiones anteriores - MVC 3 y 4
-====================
+# <a name="older-versions---mvc-3-and-4"></a>Versiones anteriores - MVC 3 y 4
+
 > Vínculos a recursos para aprender a usar las versiones anteriores de ASP.NET MVC.
 
 
@@ -82,16 +82,16 @@ ms.locfileid: "57021952"
 - [Crear una aplicación de MVC 3 con Razor y JavaScript discreto](creating-a-mvc-3-application-with-razor-and-unobtrusive-javascript.md)
 - [Tienda de música de MVC 3](mvc-music-store/index.md)
 
-    - [Parte 1: Información general y archivo -> Nuevo proyecto](mvc-music-store/mvc-music-store-part-1.md)
+    - [Parte 1: Información general y Archivo -> Nuevo proyecto](mvc-music-store/mvc-music-store-part-1.md)
     - [Parte 2: Controladores](mvc-music-store/mvc-music-store-part-2.md)
-    - [Parte 3: Las vistas y ViewModels](mvc-music-store/mvc-music-store-part-3.md)
-    - [Parte 4: Acceso a datos y modelos](mvc-music-store/mvc-music-store-part-4.md)
+    - [Parte 3: Vistas y ViewModels](mvc-music-store/mvc-music-store-part-3.md)
+    - [Parte 4: Modelos y acceso a datos](mvc-music-store/mvc-music-store-part-4.md)
     - [Parte 5: Editar formularios y plantillas](mvc-music-store/mvc-music-store-part-5.md)
-    - [Parte 6: Uso de anotaciones de datos para la validación del modelo](mvc-music-store/mvc-music-store-part-6.md)
+    - [Parte 6: Usar anotaciones de datos para la validación del modelo](mvc-music-store/mvc-music-store-part-6.md)
     - [Parte 7: Pertenencia y autorización](mvc-music-store/mvc-music-store-part-7.md)
     - [Parte 8: Carro de la compra con las actualizaciones de Ajax](mvc-music-store/mvc-music-store-part-8.md)
-    - [Parte 9: Registro y la desprotección](mvc-music-store/mvc-music-store-part-9.md)
-    - [Parte 10: Actualizaciones de navegación y el diseño del sitio, conclusión finales](mvc-music-store/mvc-music-store-part-10.md)
+    - [Parte 9: Registro y finalización de la compra](mvc-music-store/mvc-music-store-part-9.md)
+    - [Parte 10: Actualizaciones finales de la navegación y el diseño del sitio, conclusión](mvc-music-store/mvc-music-store-part-10.md)
 - [MVC 3 - HTML5 y el calendario emergente Datepicker de la interfaz de usuario de jQuery](using-the-html5-and-jquery-ui-datepicker-popup-calendar-with-aspnet-mvc/index.md)
 
     - [HTML5 y calendario emergente Datepicker de jQuery UI con ASP.NET MVC - Parte 1](using-the-html5-and-jquery-ui-datepicker-popup-calendar-with-aspnet-mvc/using-the-html5-and-jquery-ui-datepicker-popup-calendar-with-aspnet-mvc-part-1.md)

@@ -8,15 +8,15 @@ ms.date: 07/21/2010
 ms.assetid: eaef475a-ca91-47ea-a4a7-d074005ed80c
 msc.legacyurl: /web-forms/overview/older-versions-getting-started/tailspin-spyworks/tailspin-spyworks-part-5
 msc.type: authoredcontent
-ms.openlocfilehash: e18acb66dbdb3bd3e0dfa21193f617dad82afc74
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: cf2cee3888228069e59e9e44ffc2bc56fbba10e3
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57047082"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59415666"
 ---
-<a name="part-5-business-logic"></a>Parte 5: Lógica empresarial
-====================
+# <a name="part-5-business-logic"></a>Parte 5: Lógica de negocios
+
 por [Joe Stagner](https://github.com/JoeStagner)
 
 > Tailspin Spyworks demuestra cómo extraordinariamente simple es crear aplicaciones eficaces y escalables para la plataforma. NET. Resalta cómo usar las características nuevas en ASP.NET 4 para crear una tienda en línea, incluida la compra, la desprotección y la administración.

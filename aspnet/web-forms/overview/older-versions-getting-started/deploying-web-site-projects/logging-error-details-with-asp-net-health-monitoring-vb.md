@@ -8,15 +8,15 @@ ms.date: 06/09/2009
 ms.assetid: 09a6c74e-936a-4c04-8547-5bb313a4e4a3
 msc.legacyurl: /web-forms/overview/older-versions-getting-started/deploying-web-site-projects/logging-error-details-with-asp-net-health-monitoring-vb
 msc.type: authoredcontent
-ms.openlocfilehash: f9aeeb0b3d21707324d239efad4deffcf0f7fead
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: a9dd4268ef20b58b674f8ec8313132398fc5f19d
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57058692"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59413131"
 ---
-<a name="logging-error-details-with-aspnet-health-monitoring-vb"></a>Registrar detalles de error con Supervisión de estado de ASP.NET (VB)
-====================
+# <a name="logging-error-details-with-aspnet-health-monitoring-vb"></a>Registrar detalles de error con Supervisión de estado de ASP.NET (VB)
+
 por [Scott Mitchell](https://twitter.com/ScottOnWriting)
 
 [Descargar código](http://download.microsoft.com/download/1/0/C/10CC829F-A808-4302-97D3-59989B8F9C01/ASPNET_Hosting_Tutorial_13_VB.zip) o [descargar PDF](http://download.microsoft.com/download/5/C/5/5C57DB8C-5DEA-4B3A-92CA-4405544D313B/aspnet_tutorial13_HealthMonitoring_vb.pdf)
@@ -147,8 +147,8 @@ Para obtener más información sobre los temas tratados en este tutorial, consul
 - [Información general de supervisión de estado de ASP.NET](https://msdn.microsoft.com/library/bb398933.aspx)
 - [Configurar y personalizar el sistema de ASP.NET de supervisión de estado](http://dotnetslackers.com/articles/aspnet/ConfiguringAndCustomizingTheHealthMonitoringSystemOfASPNET.aspx)
 - [Preguntas más frecuentes: supervisión del estado en ASP.NET 2.0](https://blogs.msdn.com/erikreitan/archive/2006/05/22/603586.aspx)
-- [Cómo: Enviar correo electrónico para notificaciones de supervisión de estado](https://msdn.microsoft.com/library/ms227553.aspx)
-- [Cómo: Utilice la supervisión del estado en ASP.NET](https://msdn.microsoft.com/library/ms998306.aspx)
+- [Cómo Enviar correo electrónico para notificaciones de supervisión de estado](https://msdn.microsoft.com/library/ms227553.aspx)
+- [Cómo Utilice la supervisión del estado en ASP.NET](https://msdn.microsoft.com/library/ms998306.aspx)
 - [Supervisión del estado en ASP.NET](http://aspnet.4guysfromrolla.com/articles/031407-1.aspx)
 
 > [!div class="step-by-step"]

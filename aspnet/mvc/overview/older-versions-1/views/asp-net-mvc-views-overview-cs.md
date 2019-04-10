@@ -8,15 +8,15 @@ ms.date: 02/16/2008
 ms.assetid: 152ab1e5-aec2-4ea7-b8cc-27a24dd9acb8
 msc.legacyurl: /mvc/overview/older-versions-1/views/asp-net-mvc-views-overview-cs
 msc.type: authoredcontent
-ms.openlocfilehash: a8e64a99549584f150d64d909ac97210257b1147
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: b4c35761f9cd44c866242cfe6f4f2d924e81d754
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57042972"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59421334"
 ---
-<a name="aspnet-mvc-views-overview-c"></a>Información general sobre las vistas de ASP.NET MVC (C#)
-====================
+# <a name="aspnet-mvc-views-overview-c"></a>Información general sobre las vistas de ASP.NET MVC (C#)
+
 by [Stephen Walther](https://github.com/StephenWalther)
 
 > ¿Qué es una vista de MVC de ASP.NET y cómo se diferencia de una página HTML? En este tutorial, Stephen Walther presenta las vistas y se muestra cómo puede sacar partido de la vista de datos y aplicaciones auxiliares HTML dentro de una vista.
@@ -104,7 +104,7 @@ Por ejemplo, la vista en el listado 4 se aprovecha de tres aplicaciones auxiliar
 [!code-aspx[Main](asp-net-mvc-views-overview-cs/samples/sample4.aspx)]
 
 
-[![El cuadro de diálogo nuevo proyecto](asp-net-mvc-views-overview-cs/_static/image1.jpg)](asp-net-mvc-views-overview-cs/_static/image1.png)
+[![Tel cuadro de diálogo nuevo proyecto](asp-net-mvc-views-overview-cs/_static/image1.jpg)](asp-net-mvc-views-overview-cs/_static/image1.png)
 
 **Figura 01**: Un formulario de inicio de sesión estándar ([haga clic aquí para ver imagen en tamaño completo](asp-net-mvc-views-overview-cs/_static/image2.png))
 

@@ -8,15 +8,15 @@ ms.date: 01/02/2018
 ms.assetid: ac86ec9c-6b69-485b-b9e0-8b9127b13e6b
 msc.legacyurl: /web-pages/overview/getting-started/introducing-aspnet-web-pages-2/updating-data
 msc.type: authoredcontent
-ms.openlocfilehash: 206d7e209857aceb3eb92c2405bb73f7ff7dbaeb
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: 4542ad3ac3e321629bb4de3cd4df12c22ff6cb20
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57048112"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59414626"
 ---
-<a name="introducing-aspnet-web-pages---updating-database-data"></a>Introducción a ASP.NET Web Pages: actualización de la base de datos
-====================
+# <a name="introducing-aspnet-web-pages---updating-database-data"></a>Introducción a ASP.NET Web Pages: actualización de la base de datos
+
 por [Tom FitzMacken](https://github.com/tfitzmac)
 
 > Este tutorial muestra cómo actualizar la entrada de una base de datos existente (cambiar) al usar ASP.NET Web Pages (Razor). Supone que ha completado la serie a través de [introducción de datos por uso de formularios utilizando ASP.NET Web Pages](entering-data.md).

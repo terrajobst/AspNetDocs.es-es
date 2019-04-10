@@ -8,15 +8,15 @@ ms.date: 06/10/2014
 ms.assetid: d1983524-e0d5-4ee6-9d87-1f552f7cb964
 msc.legacyurl: /signalr/overview/testing-and-debugging/unit-testing-signalr-applications
 msc.type: authoredcontent
-ms.openlocfilehash: cb4eb25aeedfe31ac2606de9fe7d280eb95ce2e6
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: 1556e8275da446e285c88d1f850d072725de057b
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57039292"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59415679"
 ---
-<a name="unit-testing-signalr-applications"></a>Pruebas unitarias de aplicaciones de SignalR
-====================
+# <a name="unit-testing-signalr-applications"></a>Pruebas unitarias de aplicaciones de SignalR
+
 por [Patrick Fletcher](https://github.com/pfletcher)
 
 [!INCLUDE [Consider ASP.NET Core SignalR](~/includes/signalr/signalr-version-disambiguation.md)]

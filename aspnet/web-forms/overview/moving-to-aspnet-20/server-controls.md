@@ -8,15 +8,15 @@ ms.date: 02/20/2005
 ms.assetid: 43f6ac47-76fc-4cf7-8e9f-c18ce673dfd8
 msc.legacyurl: /web-forms/overview/moving-to-aspnet-20/server-controls
 msc.type: authoredcontent
-ms.openlocfilehash: ecf99fa894c1f662542aa8a613195b828bf2c67b
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: bfbc151af40bf7ccceb5ac298ba812730d4e4ed9
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57061442"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59420762"
 ---
-<a name="server-controls"></a>Controles de servidor
-====================
+# <a name="server-controls"></a>Controles de servidor
+
 por [Microsoft](https://github.com/microsoft)
 
 > ASP.NET 2.0 mejora los controles de servidor de muchas maneras. En este módulo, trataremos algunos de los cambios de arquitectura a la forma en que ASP.NET 2.0 y Visual Studio 2005 se ocupa de los controles de servidor.
@@ -99,7 +99,7 @@ En ASP.NET 2.0, la definición de tipo de documento predeterminada es como sigue
 
 [!code-html[Main](server-controls/samples/sample7.html)]
 
-Si elige, puede modificar el cumplimiento de XHML predeterminada a través del nodo xhtmlConformance en el archivo de configuración. Por ejemplo, el siguiente nodo en el archivo web.config cambiará el cumplimiento de XHTML a XHTML 1.0 Strict:
+Si elige, puede modificar la compatibilidad con XHTML predeterminado a través del nodo xhtmlConformance en el archivo de configuración. Por ejemplo, el siguiente nodo en el archivo web.config cambiará el cumplimiento de XHTML a XHTML 1.0 Strict:
 
 [!code-xml[Main](server-controls/samples/sample8.xml)]
 

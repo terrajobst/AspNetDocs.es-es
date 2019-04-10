@@ -8,15 +8,15 @@ ms.date: 10/17/2013
 ms.assetid: 715a4059-d307-4631-abbb-c789c95d6eb4
 msc.legacyurl: /signalr/overview/older-versions/introduction-to-security
 msc.type: authoredcontent
-ms.openlocfilehash: 94a4598595d025267c69933a03be2c164066cc98
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: 08106dd6df491da817e0d449e85a09a8bc0fc77c
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57053182"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59422062"
 ---
-<a name="introduction-to-signalr-security-signalr-1x"></a>Introducción a la seguridad de SignalR (SignalR 1.x)
-====================
+# <a name="introduction-to-signalr-security-signalr-1x"></a>Introducción a la seguridad de SignalR (SignalR 1.x)
+
 por [Patrick Fletcher](https://github.com/pfletcher), [Tom FitzMacken](https://github.com/tfitzmac)
 
 [!INCLUDE [Consider ASP.NET Core SignalR](~/includes/signalr/signalr-version-disambiguation.md)]

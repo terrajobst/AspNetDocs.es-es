@@ -8,15 +8,15 @@ ms.date: 08/20/2008
 ms.assetid: 00a12df9-1f89-4fc5-9d43-19a8d5b80392
 msc.legacyurl: /mvc/videos/mvc-2/how-do-i/displaying-a-table-of-database-data
 msc.type: video
-ms.openlocfilehash: baf7a037b5315cc15f8d0fb78e509bc675863f18
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: 5b26ef9ddb1461d01f7e6862f1cd5605fee532a8
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57027492"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59421724"
 ---
-<a name="displaying-a-table-of-database-data"></a>Mostrar una tabla de los datos de la base de datos
-====================
+# <a name="displaying-a-table-of-database-data"></a>Mostrar una tabla de los datos de la base de datos
+
 by [Stephen Walther](https://github.com/StephenWalther)
 
 ¿Se necesita mostrar un conjunto de registros de base de datos en una vista de MVC de ASP.NET? Obtenga información acerca de los dos métodos de visualización de registros en una tabla HTML. Aprenda a realizar todo el formato insertado. También aprenderá a crear una plantilla con un control de usuario de ASP.NET MVC.

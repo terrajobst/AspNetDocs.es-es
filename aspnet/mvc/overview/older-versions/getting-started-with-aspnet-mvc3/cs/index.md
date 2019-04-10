@@ -8,15 +8,15 @@ ms.date: 04/12/2012
 ms.assetid: 807b50ae-2e7c-450c-b559-e04bd56457bd
 msc.legacyurl: /mvc/overview/older-versions/getting-started-with-aspnet-mvc3/cs
 msc.type: chapter
-ms.openlocfilehash: ee3b9f323a8d5a58d1ecdd7d7e664934ac5fec58
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: b476e9010e47043f12ce00c222382786c66f5c4e
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57019572"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59414314"
 ---
-<a name="getting-started-with-aspnet-mvc-3-c"></a>Introducción a ASP.NET MVC 3 (C#)
-====================
+# <a name="getting-started-with-aspnet-mvc-3-c"></a>Introducción a ASP.NET MVC 3 (C#)
+
 > Los conceptos básicos de la creación de una aplicación Web de ASP.NET MVC mediante Microsoft Visual Web Developer 2010 Express con C#.
 
 

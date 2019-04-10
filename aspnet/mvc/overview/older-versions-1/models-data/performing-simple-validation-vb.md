@@ -8,15 +8,15 @@ ms.date: 03/02/2009
 ms.assetid: df6cf4b7-0bb3-4c4e-b17a-bd78a759a6bc
 msc.legacyurl: /mvc/overview/older-versions-1/models-data/performing-simple-validation-vb
 msc.type: authoredcontent
-ms.openlocfilehash: 31faf2e89e6acb25854455902c1a6fdffebd293c
-ms.sourcegitcommit: 289e051cc8a90e8f7127e239fda73047bde4de12
+ms.openlocfilehash: c7a1b9e82defaae71f0a911e5e4321f6e15ad8bf
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/25/2019
-ms.locfileid: "58423187"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59422621"
 ---
-<a name="performing-simple-validation-vb"></a>Realizar una validación simple (VB)
-====================
+# <a name="performing-simple-validation-vb"></a>Realizar una validación simple (VB)
+
 by [Stephen Walther](https://github.com/StephenWalther)
 
 > Obtenga información sobre cómo realizar la validación en una aplicación ASP.NET MVC. En este tutorial, Stephen Walther presenta para el estado del modelo y las aplicaciones auxiliares de validación HTML.
@@ -32,7 +32,7 @@ Use el estado del modelo - o más concretamente, el diccionario de estado - para
 No estoy recomendar que agregar la lógica de validación o la base de datos a un controlador. Un controlador debe contener únicamente la lógica relacionada con control de flujo de la aplicación. Nos quedamos con un acceso directo a simplificar las cosas.
 
 
-**Listing 1 - Controllers\ProductController.vb**
+**Listado 1 - Controllers\ProductController.vb**
 
 [!code-vb[Main](performing-simple-validation-vb/samples/sample1.vb)]
 
@@ -56,12 +56,12 @@ Las aplicaciones auxiliares de Html.ValidationMessage() y Html.ValidationSummary
 Asegúrese de que compilar la aplicación antes de agregar una vista. En caso contrario, no aparecerá la lista de clases en el **Ver clase de datos** lista desplegable.
 
 
-[![El cuadro de diálogo nuevo proyecto](performing-simple-validation-vb/_static/image1.jpg)](performing-simple-validation-vb/_static/image1.png)
+[![Tel cuadro de diálogo nuevo proyecto](performing-simple-validation-vb/_static/image1.jpg)](performing-simple-validation-vb/_static/image1.png)
 
 **Figura 01**: Agregar una vista ([haga clic aquí para ver imagen en tamaño completo](performing-simple-validation-vb/_static/image2.png))
 
 
-[![El cuadro de diálogo nuevo proyecto](performing-simple-validation-vb/_static/image2.jpg)](performing-simple-validation-vb/_static/image3.png)
+[![Tel cuadro de diálogo nuevo proyecto](performing-simple-validation-vb/_static/image2.jpg)](performing-simple-validation-vb/_static/image3.png)
 
 **Figura 02**: Creación de una vista fuertemente tipada ([haga clic aquí para ver imagen en tamaño completo](performing-simple-validation-vb/_static/image4.png))
 
@@ -79,7 +79,7 @@ Se llama a la aplicación auxiliar de Html.ValidationMessage() junto a cada uno 
 La página en la figura 3 muestra los mensajes de error representados por las aplicaciones auxiliares de validación cuando se envía el formulario con los campos que faltan y valores no válidos.
 
 
-[![El cuadro de diálogo nuevo proyecto](performing-simple-validation-vb/_static/image3.jpg)](performing-simple-validation-vb/_static/image5.png)
+[![Tel cuadro de diálogo nuevo proyecto](performing-simple-validation-vb/_static/image3.jpg)](performing-simple-validation-vb/_static/image5.png)
 
 **Figura 03**: La vista de creación enviada con problemas ([haga clic aquí para ver imagen en tamaño completo](performing-simple-validation-vb/_static/image6.png))
 
@@ -104,7 +104,7 @@ Puede modificar estas clases de hoja de estilos en cascada y, por lo tanto, modi
 Si envía el formulario HTML para la creación de un producto y escriba un valor no válido para el campo de precio y ningún valor para el campo UnitsInStock, obtendrá los mensajes de validación que se muestra en la figura 4. ¿De dónde proceden estos mensajes de error de validación?
 
 
-[![El cuadro de diálogo nuevo proyecto](performing-simple-validation-vb/_static/image4.jpg)](performing-simple-validation-vb/_static/image7.png)
+[![Tel cuadro de diálogo nuevo proyecto](performing-simple-validation-vb/_static/image4.jpg)](performing-simple-validation-vb/_static/image7.png)
 
 **Figura 04**: Errores de validación de prebinding ([haga clic aquí para ver imagen en tamaño completo](performing-simple-validation-vb/_static/image8.png))
 

@@ -8,15 +8,15 @@ ms.date: 02/20/2009
 ms.assetid: 4805e75a-7911-46e3-b11b-229a6eed245e
 msc.legacyurl: /mvc/overview/older-versions-1/contact-manager/iteration-3-add-form-validation-vb
 msc.type: authoredcontent
-ms.openlocfilehash: b44aaab45f04f736e4171a43a8b24b71aaedca2f
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: e031417f2ee22533e7b5a606fc40526d7d911efc
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57039662"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59413339"
 ---
-<a name="iteration-3--add-form-validation-vb"></a>Iteración #3: agregar una validación de formulario (VB)
-====================
+# <a name="iteration-3--add-form-validation-vb"></a>Iteración #3: agregar una validación de formulario (VB)
+
 por [Microsoft](https://github.com/microsoft)
 
 [Descargue el código](iteration-3-add-form-validation-vb/_static/contactmanager_3_vb1.zip)
@@ -51,7 +51,7 @@ Creamos la aplicación a través de varias iteraciones. Con cada iteración, mej
 En esta segunda iteración de la aplicación de Contact Manager, se agrega una validación de formulario básico. Evitamos personas desde el envío de un contacto sin escribir valores para los campos obligatorios. También hemos validar números de teléfono y direcciones de correo electrónico (consulte la figura 1).
 
 
-[![El cuadro de diálogo nuevo proyecto](iteration-3-add-form-validation-vb/_static/image1.jpg)](iteration-3-add-form-validation-vb/_static/image1.png)
+[![Tel cuadro de diálogo nuevo proyecto](iteration-3-add-form-validation-vb/_static/image1.jpg)](iteration-3-add-form-validation-vb/_static/image1.png)
 
 **Figura 01**: Un formulario con la validación ([haga clic aquí para ver imagen en tamaño completo](iteration-3-add-form-validation-vb/_static/image2.png))
 
@@ -66,7 +66,7 @@ En esta iteración, para simplificar las cosas, se escribe todo el código de va
 
 Permiten s empiece por agregar lógica de validación a la vista de creación. Afortunadamente, dado que se genera la vista de creación con Visual Studio, la vista de creación ya contiene toda la lógica de interfaz de usuario necesarios para mostrar mensajes de validación. La vista de creación se encuentra en el listado 1.
 
-**Listing 1 - \Views\Contact\Create.aspx**
+**Listado 1 - \Views\Contact\Create.aspx**
 
 [!code-aspx[Main](iteration-3-add-form-validation-vb/samples/sample1.aspx)]
 
@@ -114,7 +114,7 @@ La acción Edit() actualiza un contacto. La acción Edit() necesita realizar exa
 
 La clase de controlador de contacto modificada está contenida en el listado 3. Esta clase tiene un nuevo método ValidateContact() que se llama en el Create() y Edit() las acciones.
 
-**Listing 3 - Controllers\ContactController.vb**
+**Listado 3 - Controllers\ContactController.vb**
 
 [!code-vb[Main](iteration-3-add-form-validation-vb/samples/sample3.vb)]
 

@@ -8,15 +8,15 @@ ms.date: 09/08/2014
 ms.assetid: 732a2316-e49f-4f72-becd-0cd72f14457e
 msc.legacyurl: /web-forms/overview/getting-started/getting-started-with-aspnet-45-web-forms/membership-and-administration
 msc.type: authoredcontent
-ms.openlocfilehash: 23d08d5a05a8321fbc794e2c9b54cc39c9b5baf6
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: 7263a7d7ee791be8a1369934aac4d091736a658b
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57031062"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59417486"
 ---
-<a name="membership-and-administration"></a>Pertenencia y administración
-====================
+# <a name="membership-and-administration"></a>Pertenencia y administración
+
 por [Erik Reitan](https://github.com/Erikre)
 
 [Descargar el proyecto de ejemplo de Wingtip Toys (C#)](http://go.microsoft.com/fwlink/?LinkID=389434&clcid=0x409) o [descargar eBook (PDF)](http://download.microsoft.com/download/0/F/B/0FBFAA46-2BFD-478F-8E56-7BF3C672DF9D/Getting%20Started%20with%20ASP.NET%204.5%20Web%20Forms%20and%20Visual%20Studio%202013.pdf)
@@ -66,12 +66,12 @@ Con ASP.NET Identity, puede agregar un rol personalizado y asignar a un usuario 
    La letra "A" al principio del método resaltado aparecerá subrayada.
 7. Mantenga el mouse sobre la letra "A" y haga clic en la interfaz de usuario que le permite generar código auxiliar de método para el `AddUserAndRole` método. 
 
-    ![Pertenencia y Advministration - generar código auxiliar del método](membership-and-administration/_static/image1.png)
+    ![Pertenencia y administración - generar código auxiliar del método](membership-and-administration/_static/image1.png)
 8. Haga clic en la opción titulada:  
     `Generate method stub for "AddUserAndRole" in "WingtipToys.Logic.RoleActions"`
 9. Abra el *RoleActions.cs* de archivos desde el *lógica* carpeta.  
    El `AddUserAndRole` método se ha agregado al archivo de clase.
-10. Modificar el *RoleActions.cs* archivo quitando la `NotImplementedeException` y agregue el código resaltado en amarillo, para que aparezca como sigue:  
+10. Modificar el *RoleActions.cs* archivo quitando la `NotImplementedException` y agregue el código resaltado en amarillo, para que aparezca como sigue:  
 
     [!code-csharp[Main](membership-and-administration/samples/sample3.cs?highlight=5-7,15-51)]
 

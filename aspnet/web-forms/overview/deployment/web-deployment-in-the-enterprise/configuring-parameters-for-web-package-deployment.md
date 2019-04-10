@@ -8,15 +8,15 @@ ms.date: 05/04/2012
 ms.assetid: 37947d79-ab1e-4ba9-9017-52e7a2757414
 msc.legacyurl: /web-forms/overview/deployment/web-deployment-in-the-enterprise/configuring-parameters-for-web-package-deployment
 msc.type: authoredcontent
-ms.openlocfilehash: 6660ad52ce68932be63e2874a5f6acb34336e575
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: f738d1c0b3cd99bb6df5f8b24dca907fa0b31f4d
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57052072"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59413105"
 ---
-<a name="configuring-parameters-for-web-package-deployment"></a>Configurar los parámetros para la implementación de paquetes web
-====================
+# <a name="configuring-parameters-for-web-package-deployment"></a>Configurar los parámetros para la implementación de paquetes web
+
 por [Jason Lee](https://github.com/jrjlee)
 
 [Descargar PDF](https://msdnshared.blob.core.windows.net/media/MSDNBlogsFS/prod.evol.blogs.msdn.com/CommunityServer.Blogs.Components.WeblogFiles/00/00/00/63/56/8130.DeployingWebAppsInEnterpriseScenarios.pdf)

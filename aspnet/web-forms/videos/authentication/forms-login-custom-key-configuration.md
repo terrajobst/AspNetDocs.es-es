@@ -8,15 +8,15 @@ ms.date: 07/16/2008
 ms.assetid: 6310b458-5e6e-497e-9989-9fbdf0ba9db4
 msc.legacyurl: /web-forms/videos/authentication/forms-login-custom-key-configuration
 msc.type: video
-ms.openlocfilehash: 1848f83566d79a636d7803a1551b53fb18437d77
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: 5441ef0c79c2c1acff0baed6668e3bae519d8d5f
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57053532"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59412611"
 ---
-<a name="forms-login-custom-key-configuration"></a>Configuración de claves personalizadas de inicio de sesión de los formularios
-====================
+# <a name="forms-login-custom-key-configuration"></a>Configuración de claves personalizadas de inicio de sesión de los formularios
+
 por [Joe Stagner](https://github.com/JoeStagner)
 
 Joe Stagner examinará la configuración de la clave de máquina en la aplicación ASP.NET. Para obtener más información sobre esta demostración, se encuentra un tutorial [aquí](../../overview/older-versions-security/introduction/forms-authentication-configuration-and-advanced-topics-vb.md).

@@ -8,15 +8,15 @@ ms.date: 06/05/2013
 ms.assetid: e608e263-264d-448b-b0eb-6eeb77713b22
 msc.legacyurl: /signalr/overview/older-versions/handling-connection-lifetime-events
 msc.type: authoredcontent
-ms.openlocfilehash: bf10cf3e3e1881a976e8a123b48007f7bd8821f7
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: a8121a2d7c4ed14e296dc72c72ca7c25939a2b50
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57048092"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59414015"
 ---
-<a name="understanding-and-handling-connection-lifetime-events-in-signalr-1x"></a>Entender y controlar eventos de duración de la conexión en SignalR 1.x
-====================
+# <a name="understanding-and-handling-connection-lifetime-events-in-signalr-1x"></a>Entender y controlar eventos de duración de la conexión en SignalR 1.x
+
 por [Patrick Fletcher](https://github.com/pfletcher), [Tom Dykstra](https://github.com/tdykstra)
 
 [!INCLUDE [Consider ASP.NET Core SignalR](~/includes/signalr/signalr-version-disambiguation.md)]

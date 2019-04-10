@@ -8,15 +8,15 @@ ms.date: 03/13/2007
 ms.assetid: 28d5bb59-9aad-4cdd-8088-1e9d3d230ac5
 msc.legacyurl: /web-forms/videos/aspnet-ajax/how-do-i-implement-the-incremental-page-display-pattern-using-http-get-and-post
 msc.type: video
-ms.openlocfilehash: c36b6d59dfa8d66f23542be466a1c614dfb263f2
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: e4766f6d20c17cf99c11fc634cf15743ef839716
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57056212"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59413716"
 ---
-<a name="how-do-i-implement-the-incremental-page-display-pattern-using-http-get-and-post"></a>[¿Cómo lo hago?:] ¿Implementar el patrón de presentación de página Incremental mediante HTTP GET y POST?
-====================
+# <a name="how-do-i-implement-the-incremental-page-display-pattern-using-http-get-and-post"></a>[¿Cómo lo hago?:] ¿Implementar el patrón de presentación de página Incremental mediante HTTP GET y POST?
+
 por [Joe Stagner](https://github.com/JoeStagner)
 
 Este vídeo examina otro AJAX Incremental página presentación patrón en el que la página Web se recupera y muestra de forma incremental. En este vídeo, los datos se recuperan desde el servidor mediante solicitudes HTTP GET y POST, en lugar de la demostración del uso de llamadas al servicio Web anterior.

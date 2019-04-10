@@ -8,15 +8,15 @@ ms.date: 02/10/2014
 ms.assetid: 4001cb9b-3bfd-4ace-8a89-1561d8421e2c
 msc.legacyurl: /web-pages/overview/api-reference/asp-net-web-pages-api-reference
 msc.type: authoredcontent
-ms.openlocfilehash: 656987f8a725f81dbca7a72594d7d03bc542fabe
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: 547b1932c4f8d3684c668561e3fe568a0f272925
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57063862"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59416511"
 ---
-<a name="aspnet-web-pages-razor-api-quick-reference"></a>Referencia rápida de la API de (Razor) de ASP.NET Web Pages
-====================
+# <a name="aspnet-web-pages-razor-api-quick-reference"></a>Referencia rápida de la API de (Razor) de ASP.NET Web Pages
+
 por [Tom FitzMacken](https://github.com/tfitzmac)
 
 > Esta página contiene una lista con ejemplos breves de los objetos más utilizados, propiedades y métodos de programación ASP.NET Web Pages con sintaxis Razor.
@@ -37,7 +37,7 @@ por [Tom FitzMacken](https://github.com/tfitzmac)
 Esta página contiene información de referencia para lo siguiente:
 
 - [Clases](#Classes)
-- [Data](#Data)
+- [Datos](#Data)
 - [Aplicaciones auxiliares](#Helpers)
 - [Validación](#Validation)
 
@@ -689,7 +689,7 @@ Envía un mensaje de correo electrónico.
 
 ### `WebMail.SmtpServer`
 
-Establece el nombre del servidor SMTP. Normalmente, debe establecer esta propiedad el<em>\_AppStart</em> página.
+Establece el nombre del servidor SMTP. Normalmente, debe establecer esta propiedad el  *\_AppStart* página.
 
 [!code-html[Main](asp-net-web-pages-api-reference/samples/sample105.html)]
 

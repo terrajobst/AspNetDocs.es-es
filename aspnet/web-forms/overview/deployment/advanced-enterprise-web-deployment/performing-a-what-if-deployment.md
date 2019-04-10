@@ -8,15 +8,15 @@ ms.date: 05/04/2012
 ms.assetid: c711b453-01ac-4e65-a48c-93d99bf22e58
 msc.legacyurl: /web-forms/overview/deployment/advanced-enterprise-web-deployment/performing-a-what-if-deployment
 msc.type: authoredcontent
-ms.openlocfilehash: 054b15e1e58164ec7e85c77c39fb47bcb47879b9
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: a222aa6bf52ee72e6a0f4ac5503b4b4f78d294fb
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57058312"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59414327"
 ---
-<a name="performing-a-what-if-deployment"></a>Realizar una implementación de hipótesis
-====================
+# <a name="performing-a-what-if-deployment"></a>Realizar una implementación de hipótesis
+
 por [Jason Lee](https://github.com/jrjlee)
 
 [Descargar PDF](https://msdnshared.blob.core.windows.net/media/MSDNBlogsFS/prod.evol.blogs.msdn.com/CommunityServer.Blogs.Components.WeblogFiles/00/00/00/63/56/8130.DeployingWebAppsInEnterpriseScenarios.pdf)

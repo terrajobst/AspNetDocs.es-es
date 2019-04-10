@@ -8,15 +8,15 @@ ms.date: 07/30/2013
 ms.assetid: 0d6fb83b-71f7-425d-8dec-981197d7ec42
 msc.legacyurl: /mvc/overview/older-versions/getting-started-with-ef-5-using-mvc-4/reading-related-data-with-the-entity-framework-in-an-asp-net-mvc-application
 msc.type: authoredcontent
-ms.openlocfilehash: 4767b015db0bad09942802827ce54162687fcabc
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: f86212c1cb559c164342997fb0e4208339b5e3cc
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57033792"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59421126"
 ---
-<a name="reading-related-data-with-the-entity-framework-in-an-aspnet-mvc-application-5-of-10"></a>Lectura de datos relacionados con Entity Framework en una aplicación ASP.NET MVC (5 de 10)
-====================
+# <a name="reading-related-data-with-the-entity-framework-in-an-aspnet-mvc-application-5-of-10"></a>Lectura de datos relacionados con Entity Framework en una aplicación ASP.NET MVC (5 de 10)
+
 por [Tom Dykstra](https://github.com/tdykstra)
 
 [Descargue el proyecto completado](http://code.msdn.microsoft.com/Getting-Started-with-dd0e2ed8)
@@ -152,11 +152,13 @@ El método acepta datos de ruta opcionales (`id`) y un parámetro de cadena de c
 > 
 > Datos de ruta son datos que el enlazador de modelos se encuentra en un segmento de dirección URL especificado en la tabla de enrutamiento. Por ejemplo, la ruta predeterminada especifica `controller`, `action`, y `id` segmentos:
 > 
+> ```csharp
 > routes.MapRoute(  
->  Nombre: "Default",  
+>  name: "Default",  
 >  url: "{controller}/{action}/{id}",  
 >  defaults: new { controller = "Home", action = "Index", id = UrlParameter.Optional }  
 > );
+> ```
 > 
 > En la siguiente dirección URL, la ruta predeterminada asigna `Instructor` como el `controller`, `Index` como el `action` y 1 como el `id`; estos son los valores de datos de ruta.
 > 

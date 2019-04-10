@@ -8,15 +8,15 @@ ms.date: 01/27/2009
 ms.assetid: 4341f5b1-6fe5-44c5-8b8a-18fa84f80177
 msc.legacyurl: /mvc/overview/older-versions-1/security/authenticating-users-with-forms-authentication-vb
 msc.type: authoredcontent
-ms.openlocfilehash: af91ae24cae505125dc237adfaa11b0ea4d60922
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: 0a4e8dc3ce5764c6b2ec59c7e3f507064f8a8cb5
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57051852"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59422166"
 ---
-<a name="authenticating-users-with-forms-authentication-vb"></a>Autenticar a los usuarios con la autenticación de formularios (VB)
-====================
+# <a name="authenticating-users-with-forms-authentication-vb"></a>Autenticar a los usuarios con la autenticación de formularios (VB)
+
 por [Microsoft](https://github.com/microsoft)
 
 > Obtenga información sobre cómo usar el atributo [Authorize] a contraseña proteger determinadas páginas en la aplicación MVC. Aprenda a usar la herramienta de administración de sitios Web para crear y administrar usuarios y roles. También aprenderá a configurar dónde se almacena la información de cuenta y el rol de usuario.
@@ -58,7 +58,7 @@ Puede requerir un usuario se autentique antes de que el usuario invoque una acci
 
 Por ejemplo, el controlador en el listado 1 expone una acción denominada CompanySecrets(). Dado que esta acción se decora con el atributo [Authorize], esta acción no se puede invocar a menos que un usuario está autenticado.
 
-**Listing 1 – Controllers\HomeController.vb**
+**Listado 1 – Controllers\HomeController.vb**
 
 [!code-vb[Main](authenticating-users-with-forms-authentication-vb/samples/sample1.vb)]
 
@@ -84,7 +84,7 @@ Una vez que inicie sesión correctamente, puede ver el CompanySecrets ver (consu
 
 Puede usar el atributo [Authorize] a restringir el acceso a una acción de controlador a un conjunto determinado de usuarios o un conjunto determinado de roles de usuario. Por ejemplo, el controlador Home modificado en el listado 2 contiene dos nuevas acciones denominadas StephenSecrets() y AdministratorSecrets().
 
-**Listing 2 – Controllers\HomeController.vb**
+**Listado 2 – Controllers\HomeController.vb**
 
 [!code-vb[Main](authenticating-users-with-forms-authentication-vb/samples/sample2.vb)]
 

@@ -8,15 +8,15 @@ ms.date: 06/26/2008
 ms.assetid: 81bd2d32-53c5-4bd9-8d09-dd8a2c734f3b
 msc.legacyurl: /web-forms/videos/how-do-i/how-do-i-pass-information-from-one-page-to-another-using-a-query-string
 msc.type: video
-ms.openlocfilehash: 27dead3763f40b916e682921097826736d2f60d5
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: cc52592bbb377e9f04e56f6cc1f02d16a271d158
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57025612"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59417005"
 ---
-<a name="how-do-i-pass-information-from-one-page-to-another-using-a-query-string"></a>[¿Cómo lo hago?:] Pasar información de una página a otra mediante una cadena de consulta
-====================
+# <a name="how-do-i-pass-information-from-one-page-to-another-using-a-query-string"></a>[¿Cómo lo hago?:] Pasar información de una página a otra mediante una cadena de consulta
+
 por [Chris Pels](https://twitter.com/chrispels)
 
 En este vídeo, Chris Pels mostrará cómo se puede pasar información de una página a otra mediante una cadena de consulta. En primer lugar, consulte cómo construir una cadena de consulta, incluidos los nombres de variables y valores de información en un formulario de entrada de datos. A continuación, vea cómo tener acceso a la información de la cadena de consulta cuando se envía la página, incluido cómo varias variables de cadena de consulta se controlan. Como parte del procesamiento de información de la cadena de consulta del lado servidor, consulte cómo implementar la validación de la existencia de variables de cadena de consulta y si contienen el tipo de datos esperado. Por último, obtenga información sobre cómo pasar los caracteres especiales, incluidos un espacio y una y comercial en una cadena de consulta mediante la codificación de la cadena.

@@ -8,15 +8,15 @@ ms.date: 11/11/2009
 ms.assetid: adb92a60-cdb7-4da5-a23d-267e2717953e
 msc.legacyurl: /web-forms/videos/visual-studio-2010/visual-studio-2010-quick-hit-new-web-project-template
 msc.type: video
-ms.openlocfilehash: ec953ad598793b55bb4627d03455f15bba92b2ae
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: aa3939f5514dd3c7c99c9b3f8362291d8e3ed06a
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57025062"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59416940"
 ---
-<a name="visual-studio-2010-quick-hit---new-web-project-template"></a>Visual Studio 2010 "Rápido Hit" - nueva plantilla de proyecto Web
-====================
+# <a name="visual-studio-2010-quick-hit---new-web-project-template"></a>Visual Studio 2010 "Rápido Hit" - nueva plantilla de proyecto Web
+
 por [Joe Stagner](https://github.com/JoeStagner)
 
 En este vídeo, aprenderá acerca de la plantilla de inicio de proyecto de nuevo web de Visual Studio.

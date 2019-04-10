@@ -8,15 +8,15 @@ ms.date: 12/15/2009
 ms.assetid: 42b0bd66-bf2f-4993-8b5a-bac3028201fc
 msc.legacyurl: /ajax
 msc.type: content
-ms.openlocfilehash: d8f3e54ed6f643ec57c4f36e407d0d1cb1891767
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: 43c0593e7e2f8dd8db1a89f57bcaa5dbae2ae00d
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57019392"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59420866"
 ---
-<a name="aspnet-ajax--enhanced-interactivity-and-responsiveness"></a>Ajax de ASP.NET: La capacidad de respuesta e interactividad mejorada
-====================
+# <a name="aspnet-ajax--enhanced-interactivity-and-responsiveness"></a>Ajax de ASP.NET: La capacidad de respuesta e interactividad mejorada
+
 - [AJAX Control Toolkit](https://go.devexpress.com/AjaxControlToolkit_ASP_Resources_ASP_AJAX_Index.aspx)
 - [jQuery](http://jquery.com/)
 - [Microsoft Ajax CDN](cdn/overview.md)

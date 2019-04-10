@@ -8,15 +8,15 @@ ms.date: 06/02/2008
 ms.assetid: de5500be-75e5-461a-8064-b70ae52ea6a4
 msc.legacyurl: /web-forms/overview/ajax-control-toolkit/collapsiblepanel/collapsing-and-expanding-a-panel-from-javascript-cs
 msc.type: authoredcontent
-ms.openlocfilehash: 325194fc1f980714ea2fc26cfaa13d86ae9d2f89
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: 157a486af3d11dfbd7431680b6c9fe4f0e262892
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57031352"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59422400"
 ---
-<a name="collapsing-and-expanding-a-panel-from-javascript-c"></a>Contraer y expandir un panel desde JavaScript (C#)
-====================
+# <a name="collapsing-and-expanding-a-panel-from-javascript-c"></a>Contraer y expandir un panel desde JavaScript (C#)
+
 por [Christian Wenz](https://github.com/wenz)
 
 [Descargar código](http://download.microsoft.com/download/8/a/a/8aab3c3e-de6f-463f-805c-5fda567eef6e/CollapsiblePanel1.cs.zip) o [descargar PDF](http://download.microsoft.com/download/b/6/a/b6ae89ee-df69-4c87-9bfb-ad1eb2b23373/collapsiblepanel1CS.pdf)
@@ -65,7 +65,7 @@ El tercer botón alterna el estado del panel: desde contraída en ampliado y vic
 [!code-javascript[Main](collapsing-and-expanding-a-panel-from-javascript-cs/samples/sample8.js)]
 
 
-[![El tercer botón cambia el estado del panel: desde contraído expandida y back-](collapsing-and-expanding-a-panel-from-javascript-cs/_static/image2.png)](collapsing-and-expanding-a-panel-from-javascript-cs/_static/image1.png)
+[![Tel tercer botón de cambia el estado del panel: desde contraído expandida y back](collapsing-and-expanding-a-panel-from-javascript-cs/_static/image2.png)](collapsing-and-expanding-a-panel-from-javascript-cs/_static/image1.png)
 
 El tercer botón cambia el estado del panel: desde contraído expandida y back-([haga clic aquí para ver imagen en tamaño completo](collapsing-and-expanding-a-panel-from-javascript-cs/_static/image3.png))
 

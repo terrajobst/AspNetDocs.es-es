@@ -8,15 +8,15 @@ ms.date: 09/28/2011
 ms.assetid: b21d9a30-6b5c-41ab-a8e4-2fa18acd8e9b
 msc.legacyurl: /mvc/overview/older-versions-1/unit-testing
 msc.type: chapter
-ms.openlocfilehash: d51c89c6b61c7092fcfcdbd11bd0cd7940afa70d
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: a0f530059ec98c238f4711020c9481eca604dba0
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57023872"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59417616"
 ---
-<a name="unit-testing"></a>Pruebas unitarias
-====================
+# <a name="unit-testing"></a>Pruebas unitarias
+
 > Esta serie de tutoriales muestra cómo crear pruebas unitarias para ASP.NET MVC con acciones de controlador.
 
 

@@ -8,15 +8,15 @@ ms.date: 01/30/2013
 ms.assetid: f9c07af0-4b20-4b08-af8f-47fc3df169a2
 msc.legacyurl: /single-page-application/overview/introduction/knockoutjs-template
 msc.type: authoredcontent
-ms.openlocfilehash: 60bc8bf95cace722244ffc87ff4c00126a0ed2a0
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: 20d2d4412345399acdde1535447cc18b6611b572
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57030402"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59412858"
 ---
-<a name="single-page-application-knockoutjs-template"></a>Aplicación de una sola página: Plantilla KnockoutJS
-====================
+# <a name="single-page-application-knockoutjs-template"></a>Aplicación de una sola página: Plantilla KnockoutJS
+
 por [Mike Wasson](https://github.com/MikeWasson)
 
 > La plantilla de Knockout MVC forma parte de ASP.NET y Web Tools 2012.2

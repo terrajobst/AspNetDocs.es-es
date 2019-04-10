@@ -8,15 +8,15 @@ ms.date: 02/24/2009
 ms.assetid: 23bdc2a7-417a-4ea8-b1ee-e3e1bd272223
 msc.legacyurl: /web-forms/videos/building-20-applications/watch-aspnet-development-in-action
 msc.type: video
-ms.openlocfilehash: 92d2acd300c74edeb52bb674b270e2634e911b87
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: 5e3c5682ced82ad42aaa0b28a7f5a6b67e43338f
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57047682"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59416563"
 ---
-<a name="watch-aspnet-development-in-action"></a>Ver el desarrollo de ASP.NET en acción
-====================
+# <a name="watch-aspnet-development-in-action"></a>Ver el desarrollo de ASP.NET en acción
+
 por [Joe Stagner](https://github.com/JoeStagner)
 
 Vea lo fácil que es crear un "para hacer" tareas de aplicación de lista desde cero mediante ASP.NET 2.0, AJAX de ASP.NET, SQL Server Express y Visual Web Developer. Microsoft Joe Stagner comienza creando una nueva base de datos y el código para tener acceso a sus datos. A continuación, veremos cómo definir una página de lista de tareas que muestre y actualice el contenido de la base de datos. Por último, obtenga información sobre cómo agregar funcionalidad AJAX a la página para mejorar la experiencia del usuario.

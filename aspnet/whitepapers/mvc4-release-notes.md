@@ -8,15 +8,15 @@ ms.date: 09/09/2011
 ms.assetid: f014524f-25c0-4094-b8e1-886d99536f00
 msc.legacyurl: /whitepapers/mvc4-release-notes
 msc.type: content
-ms.openlocfilehash: a4f78061850ef5ad8c3381daafdb5ea6bca4cb2f
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: 0f9b4e2ba0514df4c017a192f3c2136a7eec60c7
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57054292"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59413261"
 ---
-<a name="aspnet-mvc-4"></a>ASP.NET MVC 4
-====================
+# <a name="aspnet-mvc-4"></a>ASP.NET MVC 4
+
 > Este documento describe la versión de ASP.NET MVC 4.
 
 
@@ -26,7 +26,7 @@ ms.locfileid: "57054292"
 - [Requisitos de software](#_Toc303253805)
 - [Nuevas características de ASP.NET MVC 4](#_Toc303253807)
 
-    - [ASP.NET Web API](#_Toc317096197) (Más información sobre ASP.NET Web API)
+    - [ASP.NET Web API](#_Toc317096197)
     - [Mejoras en las plantillas de proyecto predeterminadas](#_Toc303253808)
     - [Plantilla de proyecto móvil](#_Toc303253809)
     - [Modos de presentación](#_Toc303253810)
@@ -63,7 +63,7 @@ Documentación de ASP.NET MVC está disponible en el sitio Web MSDN en la siguie
 Tutoriales y otra información sobre ASP.NET MVC están disponibles en la página de MVC 4 del sitio Web ASP.NET ([https://www.asp.net/mvc/mvc4](../mvc/mvc4.md)).
 
 <a id="_Toc303253804"></a>
-## <a name="support"></a>Compatibilidad
+## <a name="support"></a>Soporte técnico
 
 ASP.NET MVC 4 es totalmente compatible. Si tiene preguntas sobre cómo trabajar con esta versión puede publicarlos en el foro de ASP.NET MVC ([https://forums.asp.net/1146.aspx](https://forums.asp.net/1146.aspx)), donde los miembros de la Comunidad de ASP.NET son normalmente pueden ofrecer soporte técnico informal.
 

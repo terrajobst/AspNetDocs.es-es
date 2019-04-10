@@ -8,15 +8,15 @@ ms.date: 07/27/2010
 ms.assetid: 5c6371c0-a944-4adf-a28e-5afbdd011ca8
 msc.legacyurl: /mvc/overview/older-versions-1/nerddinner/nerddinner-wrap-up
 msc.type: authoredcontent
-ms.openlocfilehash: 97381ad6fb50c94df48a1950115cfc61ee1a53d3
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: 49c5f762fdd6d99f1af8a10d057852299a266e50
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57049452"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59421048"
 ---
-<a name="nerddinner-wrap-up"></a>Ajuste de NerdDinner
-====================
+# <a name="nerddinner-wrap-up"></a>Ajuste de NerdDinner
+
 por [Microsoft](https://github.com/microsoft)
 
 [Descargar PDF](http://aspnetmvcbook.s3.amazonaws.com/aspnetmvc-nerdinner_v1.pdf)

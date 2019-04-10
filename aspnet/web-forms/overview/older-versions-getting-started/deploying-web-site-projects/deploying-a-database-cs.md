@@ -8,15 +8,15 @@ ms.date: 04/23/2009
 ms.assetid: ff537a10-9f1f-43fe-9bcb-3dda161ba8f5
 msc.legacyurl: /web-forms/overview/older-versions-getting-started/deploying-web-site-projects/deploying-a-database-cs
 msc.type: authoredcontent
-ms.openlocfilehash: ca9ce2b41cfd10504304c30bc965e446a7188120
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: da63b39fcad58580dd1f9c86b811b1a2dcc1cf7e
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57059102"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59416654"
 ---
-<a name="deploying-a-database-c"></a>Implementar una base de datos (C#)
-====================
+# <a name="deploying-a-database-c"></a>Implementar una base de datos (C#)
+
 por [Scott Mitchell](https://twitter.com/ScottOnWriting)
 
 [Descargar código](http://download.microsoft.com/download/E/6/F/E6FE3A1F-EE3A-4119-989A-33D1A9F6F6DD/ASPNET_Hosting_Tutorial_07_CS.zip) o [descargar PDF](http://download.microsoft.com/download/C/3/9/C391A649-B357-4A7B-BAA4-48C96871FEA6/aspnet_tutorial07_DeployDB_cs.pdf)
@@ -47,7 +47,7 @@ El `Reviews.mdf` base de datos contiene cuatro tablas:
 Figura 1 muestra un diagrama de ER de estas cuatro tablas.
 
 
-[![La base de datos de aplicación Web de las revisiones de libro s es consta de cuatro tablas](deploying-a-database-cs/_static/image2.jpg)](deploying-a-database-cs/_static/image1.jpg) 
+[![TAplicación Web de Book Reviews s base de datos es consta de cuatro tablas](deploying-a-database-cs/_static/image2.jpg)](deploying-a-database-cs/_static/image1.jpg) 
 
 **Figura 1**: La base de datos de aplicación Web de las revisiones de libro s es consta de cuatro tablas ([haga clic aquí para ver imagen en tamaño completo](deploying-a-database-cs/_static/image3.jpg))
 
@@ -57,12 +57,12 @@ La versión anterior del sitio Web de reseñas de libros tenía una página ASP.
 Las figuras 2 y 3 muestran el `Genre.aspx` y `Review.aspx` páginas en acción. Tenga en cuenta la dirección URL en la barra de direcciones para cada página. En la figura 2 TI s Genre.aspx? ID = c 47-82a0-c8ec75de7e0e de la 85d164ba-1123-4. Dado que es 85d164ba-1123-4c47-82a0-c8ec75de7e0e el `GenreId` valor para el género de tecnología, las lecturas de encabezado de página s "De revisiones de tecnología" y la lista con viñetas enumera las revisiones en el sitio que se encuentran en este género.
 
 
-[![La página de género de tecnología](deploying-a-database-cs/_static/image5.jpg)](deploying-a-database-cs/_static/image4.jpg) 
+[![Tél tecnología género página](deploying-a-database-cs/_static/image5.jpg)](deploying-a-database-cs/_static/image4.jpg) 
 
 **Figura 2**: La página de tecnología de género ([haga clic aquí para ver imagen en tamaño completo](deploying-a-database-cs/_static/image6.jpg))
 
 
-[![La revisión para Teach Yourself ASP.NET 3.5 en 24 horas](deploying-a-database-cs/_static/image8.jpg)](deploying-a-database-cs/_static/image7.jpg) 
+[![Tél revisar para enseñar a usted mismo ASP.NET 3.5 en 24 horas](deploying-a-database-cs/_static/image8.jpg)](deploying-a-database-cs/_static/image7.jpg) 
 
 **Figura 3**: La revisión para *enseñar a usted mismo ASP.NET 3.5 en 24 horas* ([haga clic aquí para ver imagen en tamaño completo](deploying-a-database-cs/_static/image9.jpg))
 
@@ -96,7 +96,7 @@ Permiten s recorra utilizando al Asistente para publicación de base de datos pa
 Abra Visual Studio y navegue hasta la `Reviews.mdf` base de datos. Si usas Visual Web Developer, vaya al explorador de base de datos; Si utiliza Visual Studio, utilice el Explorador de servidores. Figura 4 se muestra el `Reviews.mdf` base de datos en el Explorador de base de datos en Visual Web Developer. Como se muestra en la figura 4, el `Reviews.mdf` base de datos se compone de cuatro tablas, tres procedimientos almacenados y una función definida por el usuario.
 
 
-[![Busque la base de datos en el Explorador de base de datos o el Explorador de servidores](deploying-a-database-cs/_static/image11.jpg)](deploying-a-database-cs/_static/image10.jpg) 
+[![Lbuscar la base de datos en el Explorador de base de datos o el Explorador de servidores](deploying-a-database-cs/_static/image11.jpg)](deploying-a-database-cs/_static/image10.jpg) 
 
 **Figura 4**: Busque la base de datos en el Explorador de base de datos o el Explorador de servidores ([haga clic aquí para ver imagen en tamaño completo](deploying-a-database-cs/_static/image12.jpg))
 
@@ -104,7 +104,7 @@ Abra Visual Studio y navegue hasta la `Reviews.mdf` base de datos. Si usas Visua
 Haga doble clic en el nombre de la base de datos y elija la opción "Publicar en proveedor" en el menú contextual. Esto inicia el Asistente para publicación de base de datos (consulte la figura 5). Haga clic en siguiente para ir más allá de la pantalla de presentación.
 
 
-[![La pantalla de bienvenida del Asistente de publicación de la base de datos](deploying-a-database-cs/_static/image14.jpg)](deploying-a-database-cs/_static/image13.jpg) 
+[![TPantalla de presentación de Asistente para publicación de base de datos](deploying-a-database-cs/_static/image14.jpg)](deploying-a-database-cs/_static/image13.jpg) 
 
 **Figura 5**: La pantalla de presentación de Asistente para publicación de base de datos ([haga clic aquí para ver imagen en tamaño completo](deploying-a-database-cs/_static/image15.jpg))
 
@@ -115,7 +115,7 @@ La segunda pantalla en el asistente enumera las bases de datos accesibles para e
 > Si se produce el error "no hay ningún objeto de base de datos *databaseName* de los tipos que admiten scripts este asistente" al hacer clic en siguiente en la pantalla se muestra en la figura 6, asegúrese de que la ruta de acceso al archivo de base de datos no es demasiado largo. Se detectó que el error puede producirse si la ruta de acceso al archivo de base de datos es demasiado largo.
 
 
-[![La pantalla de bienvenida del Asistente de publicación de la base de datos](deploying-a-database-cs/_static/image17.jpg)](deploying-a-database-cs/_static/image16.jpg) 
+[![TPantalla de presentación de Asistente para publicación de base de datos](deploying-a-database-cs/_static/image17.jpg)](deploying-a-database-cs/_static/image16.jpg) 
 
 **Figura 6**: La pantalla de presentación de Asistente para publicación de base de datos ([haga clic aquí para ver imagen en tamaño completo](deploying-a-database-cs/_static/image18.jpg))
 
@@ -123,7 +123,7 @@ La segunda pantalla en el asistente enumera las bases de datos accesibles para e
 Desde la pantalla siguiente puede generar un archivo de script o, si el host web lo admite, publicar la base de datos directamente en el servidor de base de datos web s de proveedor de host. Como se muestra en la figura 7, tengo la secuencia de comandos que se escriben en el archivo `C:\REVIEWS.MDF.sql`.
 
 
-[![La base de datos a un archivo de comandos o publicarlo directamente en su proveedor de hospedaje Web](deploying-a-database-cs/_static/image20.jpg)](deploying-a-database-cs/_static/image19.jpg) 
+[![Sla base de datos a un archivo cript o publicarlo directamente en su proveedor de hospedaje Web](deploying-a-database-cs/_static/image20.jpg)](deploying-a-database-cs/_static/image19.jpg) 
 
 **Figura 7**: La base de datos a un archivo de comandos o publicarlo directamente en su proveedor de hospedaje Web ([haga clic aquí para ver imagen en tamaño completo](deploying-a-database-cs/_static/image21.jpg))
 
@@ -133,7 +133,7 @@ La pantalla posterior le pide para una variedad de opciones de scripting. Puede 
 Como se muestra en la figura 8, tenemos configurado para colocar los objetos de base de datos existente, el Asistente para generar script para una base de datos de SQL Server 2008 y para publicar el esquema y los datos.
 
 
-[![Especifique la publicación de opciones](deploying-a-database-cs/_static/image23.jpg)](deploying-a-database-cs/_static/image22.jpg) 
+[![Sespecificar las opciones de publicación](deploying-a-database-cs/_static/image23.jpg)](deploying-a-database-cs/_static/image22.jpg) 
 
 **Figura 8**: Especifique las opciones de publicación ([haga clic aquí para ver imagen en tamaño completo](deploying-a-database-cs/_static/image24.jpg))
 
@@ -149,7 +149,7 @@ Un mejor enfoque consiste en conectar directamente al servidor de base de datos 
 Inicie SSMS y conéctese a su servidor de base de datos de web host s utilizando la información proporcionada por el proveedor de hospedaje web.
 
 
-[![Conectarse al servidor de base de datos Web Host proveedor s](deploying-a-database-cs/_static/image26.jpg)](deploying-a-database-cs/_static/image25.jpg) 
+[![Conectar con su proveedor de hospedaje Web s servidor de base de datos](deploying-a-database-cs/_static/image26.jpg)](deploying-a-database-cs/_static/image25.jpg) 
 
 **Figura 9**: Conectarse a su proveedor de hospedaje Web s. el servidor de base de datos ([haga clic aquí para ver imagen en tamaño completo](deploying-a-database-cs/_static/image27.jpg))
 
@@ -157,7 +157,7 @@ Inicie SSMS y conéctese a su servidor de base de datos de web host s utilizando
 Expandir la pestaña bases de datos y busque la base de datos. Haga clic en el botón de nueva consulta en la esquina superior izquierda de la barra de herramientas, pegue en los comandos SQL desde el archivo de script creado por el Asistente para publicación de base de datos y haga clic en el botón de ejecución para ejecutar estos comandos en el servidor de base de datos de producción. Si el archivo de script es especialmente grande puede tardar varios minutos para ejecutar los comandos.
 
 
-[![Conectarse al servidor de base de datos Web Host proveedor s](deploying-a-database-cs/_static/image29.jpg)](deploying-a-database-cs/_static/image28.jpg) 
+[![Conectar con su proveedor de hospedaje Web s servidor de base de datos](deploying-a-database-cs/_static/image29.jpg)](deploying-a-database-cs/_static/image28.jpg) 
 
 **Figura 10**: Conectarse a su proveedor de hospedaje Web s. el servidor de base de datos ([haga clic aquí para ver imagen en tamaño completo](deploying-a-database-cs/_static/image30.jpg))
 
@@ -165,12 +165,12 @@ Expandir la pestaña bases de datos y busque la base de datos. Haga clic en el b
 ¡Y ya está todo s! En este momento se duplicó la base de datos de desarrollo a producción. Si actualiza la base de datos en SSMS debería ver los nuevos objetos de base de datos. Figura 11 muestra las tablas de base de datos s de producción, procedimientos almacenados y funciones definidas por el usuario, que reflejan los de la base de datos de desarrollo. Y ya habíamos dado el Asistente para publicación de base de datos para publicar los datos, las tablas de s de base de datos de producción tienen los mismos datos como las tablas de s de base de datos de desarrollo en el momento en que se ejecutó el asistente. Figura 12 muestra los datos en el `Books` tabla en la base de datos de producción.
 
 
-[![Los objetos de base de datos se han duplicado en la base de datos de producción](deploying-a-database-cs/_static/image32.jpg)](deploying-a-database-cs/_static/image31.jpg) 
+[![Tque base de datos de objetos se han duplicado en la base de datos de producción](deploying-a-database-cs/_static/image32.jpg)](deploying-a-database-cs/_static/image31.jpg) 
 
 **Figura 11**: La base de datos de objetos se han duplicado en la base de datos de producción ([haga clic aquí para ver imagen en tamaño completo](deploying-a-database-cs/_static/image33.jpg))
 
 
-[![La base de datos de producción contiene los mismos datos que la base de datos de desarrollo](deploying-a-database-cs/_static/image35.jpg)](deploying-a-database-cs/_static/image34.jpg) 
+[![Tbase de datos de producción contiene los mismos datos que se encuentra en la base de datos de desarrollo](deploying-a-database-cs/_static/image35.jpg)](deploying-a-database-cs/_static/image34.jpg) 
 
 **Figura 12**: La base de datos de producción contiene los mismos datos que se encuentra en la base de datos de desarrollo ([haga clic aquí para ver imagen en tamaño completo](deploying-a-database-cs/_static/image36.jpg))
 

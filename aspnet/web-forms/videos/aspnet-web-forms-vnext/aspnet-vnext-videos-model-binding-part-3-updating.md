@@ -8,15 +8,15 @@ ms.date: 08/22/2011
 ms.assetid: 63c42590-08ac-44da-91f8-bd79489b9ecc
 msc.legacyurl: /web-forms/videos/aspnet-web-forms-vnext/aspnet-vnext-videos-model-binding-part-3-updating
 msc.type: video
-ms.openlocfilehash: bc278ae16c120eb62498055fa3753d7d2561e0ea
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: 25638d7af7f8e97160a2394173c685539fde1c68
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57026132"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59413417"
 ---
-<a name="aspnet-vnext-videos-model-binding-part-3---updating"></a>Vídeos ASP.NET vNext: Enlace de modelos, parte 3: Actualizar
-====================
+# <a name="aspnet-vnext-videos-model-binding-part-3---updating"></a>Vídeos ASP.NET vNext: Enlace de modelos, parte 3: Actualizar
+
 por [Damian Edwards](https://github.com/DamianEdwards)
 
 En este vídeo, Damian Edwards se completa la revisión del enlace de modelos que muestran cómo se actualizan los datos.

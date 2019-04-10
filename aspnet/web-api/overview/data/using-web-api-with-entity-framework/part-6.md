@@ -8,15 +8,15 @@ ms.date: 06/16/2014
 ms.assetid: 20360326-b123-4b1e-abae-1d350edf4ce4
 msc.legacyurl: /web-api/overview/data/using-web-api-with-entity-framework/part-6
 msc.type: authoredcontent
-ms.openlocfilehash: b5cb4d93c30ef80a48da48ffc51dd51411b1d0d0
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: 74f2cc4e5e401d690042b05b028dfc0c46ae282a
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57057532"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59413898"
 ---
-<a name="create-the-javascript-client"></a>Crear el cliente de JavaScript
-====================
+# <a name="create-the-javascript-client"></a>Crear el cliente de JavaScript
+
 por [Mike Wasson](https://github.com/MikeWasson)
 
 [Descargue el proyecto completado](https://github.com/MikeWasson/BookService)

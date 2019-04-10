@@ -8,15 +8,15 @@ ms.date: 08/15/2006
 ms.assetid: 811a6ef2-ec66-4c8e-a089-6f795056e288
 msc.legacyurl: /web-forms/overview/data-access/paging-and-sorting/paging-and-sorting-report-data-cs
 msc.type: authoredcontent
-ms.openlocfilehash: 15e23b09df13f11c69a2fd6c721981e632a25434
-ms.sourcegitcommit: 289e051cc8a90e8f7127e239fda73047bde4de12
+ms.openlocfilehash: dc5b2a2888eebb4b812caf3fc11bf109d54bb73d
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/25/2019
-ms.locfileid: "58422121"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59420697"
 ---
-<a name="paging-and-sorting-report-data-c"></a>Paginar y ordenar datos de informes (C#)
-====================
+# <a name="paging-and-sorting-report-data-c"></a>Paginar y ordenar datos de informes (C#)
+
 por [Scott Mitchell](https://twitter.com/ScottOnWriting)
 
 [Descargue la aplicación de ejemplo](http://download.microsoft.com/download/9/c/1/9c1d03ee-29ba-4d58-aa1a-f201dcc822ea/ASPNET_Data_Tutorial_24_CS.exe) o [descargar PDF](paging-and-sorting-report-data-cs/_static/datatutorial24cs1.pdf)
@@ -67,7 +67,7 @@ Con el fin de que la lista con viñetas muestre la paginación y ordenación tut
 
 ## <a name="step-2-displaying-product-information-in-a-gridview"></a>Paso 2: Muestra información del producto en un control GridView
 
-Antes de que realmente se implemente la paginación y capacidades de ordenación, permiten s en primer lugar cree un estándar no-srotable, no paginable GridView que muestra la información del producto. Esta es una tarea se ve hecho muchas veces a lo largo de esta serie de tutoriales para que estos pasos debe estar familiarizado. Comience abriendo la `SimplePagingSorting.aspx` página y arrastre un control GridView del cuadro de herramientas hasta el diseñador, establecer su `ID` propiedad `Products`. A continuación, cree un nuevo origen ObjectDataSource que usa la clase ProductsBLL s `GetProducts()` método para devolver toda la información de producto.
+Antes de que realmente se implemente la paginación y capacidades de ordenación, permiten s en primer lugar cree un estándar no ordenable, no paginable control GridView que muestra la información del producto. Esta es una tarea se ve hecho muchas veces a lo largo de esta serie de tutoriales para que estos pasos debe estar familiarizado. Comience abriendo la `SimplePagingSorting.aspx` página y arrastre un control GridView del cuadro de herramientas hasta el diseñador, establecer su `ID` propiedad `Products`. A continuación, cree un nuevo origen ObjectDataSource que usa la clase ProductsBLL s `GetProducts()` método para devolver toda la información de producto.
 
 
 ![Recuperar información acerca de todos los productos con el método GetProducts()](paging-and-sorting-report-data-cs/_static/image4.png)
@@ -91,7 +91,7 @@ A continuación, permiten s personalizar los campos de s GridView para que se mu
 Figura 6 muestra nuestro progreso hasta ahora, cuando se ve mediante un explorador. Tenga en cuenta que la página muestra todos los productos en una pantalla, que muestra cada nombre de producto s, categoría, proveedor, precio y no incluye el estado.
 
 
-[![Cada uno de los productos enumerados](paging-and-sorting-report-data-cs/_static/image7.png)](paging-and-sorting-report-data-cs/_static/image6.png)
+[![EACH de los productos se muestran](paging-and-sorting-report-data-cs/_static/image7.png)](paging-and-sorting-report-data-cs/_static/image6.png)
 
 **Figura 6**: Cada uno de los productos enumerados ([haga clic aquí para ver imagen en tamaño completo](paging-and-sorting-report-data-cs/_static/image8.png))
 
@@ -101,7 +101,7 @@ Figura 6 muestra nuestro progreso hasta ahora, cuando se ve mediante un explorad
 Enumerar *todas* de los productos en una pantalla puede dar lugar a la sobrecarga de información para el usuario examinando los datos. Para ayudar a que los resultados sean más fáciles de administrar, podemos dividir los datos en las páginas de datos más pequeños y permitir al usuario paso a paso a través de la página datos a la vez. Para lograr esto simplemente marque la casilla de verificación Habilitar paginación de la etiqueta inteligente de GridView s (Esto establece la s GridView [ `AllowPaging` propiedad](https://msdn.microsoft.com/library/system.web.ui.webcontrols.gridview.allowpaging.aspx) a `true`).
 
 
-[![Active la casilla de verificación Habilitar paginación para agregar compatibilidad con la paginación](paging-and-sorting-report-data-cs/_static/image10.png)](paging-and-sorting-report-data-cs/_static/image9.png)
+[![Cla paginación de casilla de verificación Habilitar para agregar compatibilidad de paginación documentales](paging-and-sorting-report-data-cs/_static/image10.png)](paging-and-sorting-report-data-cs/_static/image9.png)
 
 **Figura 7**: Active la casilla de la paginación de habilitar para agregar compatibilidad de paginación ([haga clic aquí para ver imagen en tamaño completo](paging-and-sorting-report-data-cs/_static/image11.png))
 
@@ -137,7 +137,7 @@ A continuación, abra el `GridView.skin` de archivos en el `DataWebControls` car
 Figura 8 se muestra la página web cuando visita a través del explorador después la casilla de verificación Habilitar paginación de GridView s se ha protegido y el `PagerStyle` y `PagerSettings` las configuraciones realizadas mediante la `GridView.skin` archivo. Tenga en cuenta cómo solo diez registros se muestran y la interfaz de paginación indica que nos estamos viendo la primera página de datos.
 
 
-[![Con la paginación está habilitada, se muestran solo un subconjunto de los registros a la vez](paging-and-sorting-report-data-cs/_static/image13.png)](paging-and-sorting-report-data-cs/_static/image12.png)
+[![Wi-ésimo de paginación habilitado, solo un subconjunto de los registros se muestran a la vez](paging-and-sorting-report-data-cs/_static/image13.png)](paging-and-sorting-report-data-cs/_static/image12.png)
 
 **Figura 8**: Con la paginación está habilitada, se muestran solo un subconjunto de los registros a la vez ([haga clic aquí para ver imagen en tamaño completo](paging-and-sorting-report-data-cs/_static/image14.png))
 
@@ -145,7 +145,7 @@ Figura 8 se muestra la página web cuando visita a través del explorador despu�
 Cuando el usuario hace clic en uno de los números de página en la interfaz de paginación, una devolución de datos que habrá trastornos y recarga de la página que muestra que la página s registros solicitados. Figura 9 muestra los resultados tras la participación para ver la última página de datos. Tenga en cuenta que la página final tiene solo un registro; Esto es porque hay 81 registros en total, lo que resulta en ocho páginas de 10 registros por página además una página con un único registro.
 
 
-[![Al hacer clic en un número de página hace que una devolución de datos y muestra el subconjunto adecuado de registros](paging-and-sorting-report-data-cs/_static/image16.png)](paging-and-sorting-report-data-cs/_static/image15.png)
+[![Celectrónicamente con un número de página hace que una devolución de datos y muestra el subconjunto de registros adecuados](paging-and-sorting-report-data-cs/_static/image16.png)](paging-and-sorting-report-data-cs/_static/image15.png)
 
 **Figura 9**: Al hacer clic en un número de página hace que una devolución de datos y muestra el subconjunto de registros adecuados ([haga clic aquí para ver imagen en tamaño completo](paging-and-sorting-report-data-cs/_static/image17.png))
 
@@ -182,7 +182,7 @@ Asigna este controlador de eventos el `PagingInformation` etiqueta s `Text` prop
 Con esta versión, el usuario ahora se muestra un mensaje que indica qué página está visitando y es el número total de páginas de datos no existe.
 
 
-[![Se muestran el número de página actual y el número Total de páginas](paging-and-sorting-report-data-cs/_static/image19.png)](paging-and-sorting-report-data-cs/_static/image18.png)
+[![Tse muestran que el número de página actual y número Total de páginas](paging-and-sorting-report-data-cs/_static/image19.png)](paging-and-sorting-report-data-cs/_static/image18.png)
 
 **Figura 10**: Se muestran el número de página actual y el número Total de páginas ([haga clic aquí para ver imagen en tamaño completo](paging-and-sorting-report-data-cs/_static/image20.png))
 
@@ -206,7 +206,7 @@ Por último, necesitamos crear un controlador de eventos para el s DropDownList 
 Como se muestra en la figura 11, cambiando solamente la s GridView `PageIndex` propiedad hace que los datos que se va a enlazar a GridView. En la s GridView `DataBound` controlador de eventos, DropDownList adecuado `ListItem` está seleccionada.
 
 
-[![El usuario es dirigirá automáticamente a la sexta página al seleccionar el elemento de lista desplegable de página 6](paging-and-sorting-report-data-cs/_static/image22.png)](paging-and-sorting-report-data-cs/_static/image21.png)
+[![TUsuario es dirigirá automáticamente a la sexta página al seleccionar el elemento de lista desplegable de página 6](paging-and-sorting-report-data-cs/_static/image22.png)](paging-and-sorting-report-data-cs/_static/image21.png)
 
 **Figura 11**: El usuario es dirigirá automáticamente a la sexta página al seleccionar el elemento de lista desplegable de página 6 ([haga clic aquí para ver imagen en tamaño completo](paging-and-sorting-report-data-cs/_static/image23.png))
 
@@ -231,7 +231,7 @@ Esta sintaxis indica que se utilice texto en blanco al mostrar los hipervínculo
 Después de esta adición de CSS, cuando se visita la página a través del explorador de la pantalla debe ser similar a la figura 12. En concreto, la figura 12 muestra los resultados después de que se ha hecho clic el vínculo de encabezado s del campo de precio.
 
 
-[![Los resultados están ordenados por el precio unitario en orden ascendente](paging-and-sorting-report-data-cs/_static/image25.png)](paging-and-sorting-report-data-cs/_static/image24.png)
+[![Tque los resultados están ordenados por el precio unitario en orden ascendente](paging-and-sorting-report-data-cs/_static/image25.png)](paging-and-sorting-report-data-cs/_static/image24.png)
 
 **Figura 12**: Los resultados están ordenados por el precio unitario en orden ascendente ([haga clic aquí para ver imagen en tamaño completo](paging-and-sorting-report-data-cs/_static/image26.png))
 
@@ -264,7 +264,7 @@ Un campo puede configurarse para que lo s no ordenable borrando su `SortExpressi
 Una vez el `SortExpression` se ha quitado la propiedad para el `UnitPrice` BoundField, el encabezado se representa como texto en lugar de como un vínculo, con lo que impide que los usuarios ordenar los datos por el precio.
 
 
-[![Cuando se quita la propiedad SortExpression, los usuarios ya No pueden ordenar los productos por precio](paging-and-sorting-report-data-cs/_static/image29.png)](paging-and-sorting-report-data-cs/_static/image28.png)
+[![By quitar la propiedad SortExpression, ya No los usuarios pueden ordenar los productos por precio](paging-and-sorting-report-data-cs/_static/image29.png)](paging-and-sorting-report-data-cs/_static/image28.png)
 
 **Figura 14**: Cuando se quita la propiedad SortExpression, los usuarios ya No pueden ordenar los productos por precio ([haga clic aquí para ver imagen en tamaño completo](paging-and-sorting-report-data-cs/_static/image30.png))
 
@@ -283,7 +283,7 @@ Para lograr esto agregar un control de botón Web a la página, establezca su `I
 Al hacer clic en este botón, se devuelve al usuario a la primera página con los productos ordenados por el precio de más costosas en menos costosa (vea la figura 15).
 
 
-[![Al hacer clic en el botón ordena los productos desde el más costoso al menos](paging-and-sorting-report-data-cs/_static/image32.png)](paging-and-sorting-report-data-cs/_static/image31.png)
+[![Celectrónicamente con los productos desde el más caro al menos los pedidos de botón](paging-and-sorting-report-data-cs/_static/image32.png)](paging-and-sorting-report-data-cs/_static/image31.png)
 
 **Figura 15**: Al hacer clic en el botón ordena los productos desde el más caro al menos ([haga clic aquí para ver imagen en tamaño completo](paging-and-sorting-report-data-cs/_static/image33.png))
 
