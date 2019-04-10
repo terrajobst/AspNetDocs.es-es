@@ -7,12 +7,12 @@ ms.author: riande
 ms.date: 10/29/2018
 ms.technology: aspnet
 msc.type: content
-ms.openlocfilehash: 5e2f3781623af5a32149e1db1c17b67ce43b7da0
-ms.sourcegitcommit: 289e051cc8a90e8f7127e239fda73047bde4de12
+ms.openlocfilehash: 443b33b5c3b964f731999834db580a6abbf6617b
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/25/2019
-ms.locfileid: "58423985"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59420424"
 ---
 # <a name="configuration-builders-for-aspnet"></a>Generadores de configuración de ASP.NET
 
@@ -252,7 +252,7 @@ El [AzureKeyVaultConfigBuilder](https://www.nuget.org/packages/Microsoft.Configu
 
 Detalles de atributos:
 
-* `directoryPath` - Requerido. Especifica una ruta de acceso para buscar los valores. Docker para Windows se almacenan los secretos en el *C:\ProgramData\Docker\secrets* directorio de forma predeterminada.
+* `directoryPath` -Required. Especifica una ruta de acceso para buscar los valores. Docker para Windows se almacenan los secretos en el *C:\ProgramData\Docker\secrets* directorio de forma predeterminada.
 * `ignorePrefix` -Archivos que comienzan por este prefijo se excluyen. El valor predeterminado es "ignore".".
 * `keyDelimiter` -El valor predeterminado es `null`. Si se especifica, el generador de configuración atraviesa varios niveles del directorio, la creación de nombres de clave con este delimitador. Si este valor es `null`, el generador de configuración solo se busca en el nivel superior del directorio.
 * `optional` -El valor predeterminado es `false`. Especifica si el generador de configuración debería producir errores si no existe el directorio de origen.
@@ -276,7 +276,7 @@ Proyectos de .NET core con frecuencia emplean archivos JSON para la configuraci�
 
 Detalles de atributos:
 
-* `jsonFile` - Requerido. Especifica el archivo JSON para leer. El `~` carácter puede usarse al principio para hacer referencia a la raíz de la aplicación.
+* `jsonFile` -Required. Especifica el archivo JSON para leer. El `~` carácter puede usarse al principio para hacer referencia a la raíz de la aplicación.
 * `optional` -Booleano, valor predeterminado es `true`. Evita producir excepciones si no se encuentra el archivo JSON.
 * `jsonMode` - `[Flat|Sectional]`. `Flat` es el valor predeterminado. Cuando `jsonMode` es `Flat`, el archivo JSON es un origen único clave-valor sin formato. El `EnvironmentConfigBuilder` y `AzureKeyVaultConfigBuilder` también son orígenes de clave-valor sin formato único. Cuando el `SimpleJsonConfigBuilder` está configurado en `Sectional` modo:
 

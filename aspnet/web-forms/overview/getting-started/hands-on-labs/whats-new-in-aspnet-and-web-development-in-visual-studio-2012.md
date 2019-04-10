@@ -8,15 +8,15 @@ ms.date: 02/18/2013
 ms.assetid: 6d40d276-1642-4a77-b6c9-02ac914f6805
 msc.legacyurl: /web-forms/overview/getting-started/hands-on-labs/whats-new-in-aspnet-and-web-development-in-visual-studio-2012
 msc.type: authoredcontent
-ms.openlocfilehash: 6d5af6563bdf3872110497f4b142dd7353c8d64c
-ms.sourcegitcommit: 289e051cc8a90e8f7127e239fda73047bde4de12
+ms.openlocfilehash: 3833e3f3c6c49ff2b317ad04aff33c9119cb1f41
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/25/2019
-ms.locfileid: "58426125"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59420216"
 ---
-<a name="whats-new-in-aspnet-and-web-development-in-visual-studio-2012"></a>Novedades de Desarrollo de ASP.NET y web en Visual Studio 2012
-====================
+# <a name="whats-new-in-aspnet-and-web-development-in-visual-studio-2012"></a>Novedades de Desarrollo de ASP.NET y web en Visual Studio 2012
+
 por [campamentos Web Team](https://twitter.com/webcamps)
 
 > La nueva versión de Visual Studio presenta a varias mejoras que se centra en mejorar la experiencia y el rendimiento cuando se trabaja con tecnologías Web. Editores de Visual Studio para HTML, CSS y JavaScript se ha reformado completamente para incluir muchas de las ayudas de código más solicitados, como IntelliSense y la sangría automática. Con respecto al rendimiento, las unión y minificación ahora se integran como tiempo de carga de las características integradas para reducir fácilmente la página.
@@ -63,7 +63,7 @@ Este laboratorio de prácticas incluye los ejercicios siguientes:
 1. [Ejercicio 1: Novedades en el Editor CSS](#Exercise1)
 2. [Ejercicio 2: Novedades en el Editor HTML](#Exercise2)
 3. [Ejercicio 3: Novedades en el Editor de JavaScript](#Exercise3)
-4. [Ejercicio 4: Unión y Minificación](#Exercise4)
+4. [Ejercicio 4: Unión y minificación](#Exercise4)
 
 Tiempo estimado para completar esta práctica: **60 minutos**.
 
@@ -720,7 +720,7 @@ Puede instalar **Microsoft Visual Studio Express 2012 para Web** u otro &quot;Ex
 
     *VS Express para el icono de Web*
 
-* * *
+---
 
 <a id="AppendixB"></a>
 

@@ -8,15 +8,15 @@ ms.date: 05/12/2009
 ms.assetid: 9f8fa166-49a2-402c-b236-20caef0c658f
 msc.legacyurl: /web-forms/overview/ajax-control-toolkit/getting-started/get-started-with-the-ajax-control-toolkit-vb
 msc.type: authoredcontent
-ms.openlocfilehash: bbf90d65a0be0eeb4150609aca9cf192f516abf3
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: 0b00fd5dc12c21183ef61d7ebb23211a1aa4719e
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57035432"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59418968"
 ---
-<a name="get-started-with-the-ajax-control-toolkit-vb"></a>Introducción a AJAX Control Toolkit (VB)
-====================
+# <a name="get-started-with-the-ajax-control-toolkit-vb"></a>Introducción a AJAX Control Toolkit (VB)
+
 por [Microsoft](https://github.com/microsoft)
 
 > Aprenda todo lo que necesita saber para empezar a usar AJAX Control Toolkit.
@@ -29,7 +29,7 @@ AJAX Control Toolkit contiene más de 30 controles gratuitos que puede usar en s
 El [AJAX Control Toolkit](http://devexpress.com/act) es un proyecto de código abierto desarrollado por los miembros de la Comunidad de ASP.NET y el equipo de ASP.NET.
 
 
-[![Descarga de AJAX Control Toolkit](get-started-with-the-ajax-control-toolkit-vb/_static/image1.jpg)](get-started-with-the-ajax-control-toolkit-vb/_static/image1.png)
+[![Downloading AJAX Control Toolkit](get-started-with-the-ajax-control-toolkit-vb/_static/image1.jpg)](get-started-with-the-ajax-control-toolkit-vb/_static/image1.png)
 
 **Figura 01**: Descarga de AJAX Control Toolkit ([haga clic aquí para ver imagen en tamaño completo](get-started-with-the-ajax-control-toolkit-vb/_static/image2.png))
 
@@ -37,7 +37,7 @@ El [AJAX Control Toolkit](http://devexpress.com/act) es un proyecto de código a
 Después de descargar el archivo, deberá desbloquear el archivo. Haga clic en el archivo, seleccione Propiedades y haga clic en el **desbloquear** botón (consulte la figura 2).
 
 
-[![Desbloquear el archivo ZIP de AJAX Control Toolkit](get-started-with-the-ajax-control-toolkit-vb/_static/image2.jpg)](get-started-with-the-ajax-control-toolkit-vb/_static/image3.png)
+[![Uel archivo ZIP de AJAX Control Toolkit nblocking](get-started-with-the-ajax-control-toolkit-vb/_static/image2.jpg)](get-started-with-the-ajax-control-toolkit-vb/_static/image3.png)
 
 **Figura 02**: Desbloquear el archivo ZIP de AJAX Control Toolkit ([haga clic aquí para ver imagen en tamaño completo](get-started-with-the-ajax-control-toolkit-vb/_static/image4.png))
 
@@ -49,7 +49,7 @@ Después de desbloquear el archivo, puede descomprimir el archivo: Haga clic en 
 La manera más fácil de usar AJAX Control Toolkit consiste en agregar el Kit de herramientas a su cuadro de herramientas de Visual Studio o Visual Web Developer (consulte la figura 3). De este modo, se puede simplemente arrastre un control del Kit de herramientas a una página cuando desee usarlo.
 
 
-[![AJAX Control Toolkit aparece en el cuadro de herramientas](get-started-with-the-ajax-control-toolkit-vb/_static/image3.jpg)](get-started-with-the-ajax-control-toolkit-vb/_static/image5.png)
+[![AKit de herramientas de Control de JAX aparece en el cuadro de herramientas](get-started-with-the-ajax-control-toolkit-vb/_static/image3.jpg)](get-started-with-the-ajax-control-toolkit-vb/_static/image5.png)
 
 **Figura 03**: AJAX Control Toolkit aparece en el cuadro de herramientas ([haga clic aquí para ver imagen en tamaño completo](get-started-with-the-ajax-control-toolkit-vb/_static/image6.png))
 
@@ -61,7 +61,7 @@ En primer lugar, deberá agregar una pestaña de AJAX Control Toolkit al cuadro 
 3. Escriba una nueva ficha denominada AJAX Control Toolkit.
 
 
-[![Agregar una nueva pestaña](get-started-with-the-ajax-control-toolkit-vb/_static/image4.jpg)](get-started-with-the-ajax-control-toolkit-vb/_static/image7.png)
+[![Auna nueva pestaña gregar](get-started-with-the-ajax-control-toolkit-vb/_static/image4.jpg)](get-started-with-the-ajax-control-toolkit-vb/_static/image7.png)
 
 **Figura 04**: Agregar una ficha nueva ([haga clic aquí para ver imagen en tamaño completo](get-started-with-the-ajax-control-toolkit-vb/_static/image8.png))
 
@@ -72,7 +72,7 @@ A continuación, deberá agregar los controles de AJAX Control Toolkit para la n
 - Vaya a la ubicación donde descomprimió el AJAX Control Toolkit y seleccione el ensamblado AjaxControlToolkit.dll.
 
 
-[![Elija los elementos que desea agregar al cuadro de herramientas](get-started-with-the-ajax-control-toolkit-vb/_static/image5.jpg)](get-started-with-the-ajax-control-toolkit-vb/_static/image9.png)
+[![CElija elementos a agregar al cuadro de herramientas](get-started-with-the-ajax-control-toolkit-vb/_static/image5.jpg)](get-started-with-the-ajax-control-toolkit-vb/_static/image9.png)
 
 **Figura 05**: Elija los elementos que desea agregar al cuadro de herramientas ([haga clic aquí para ver imagen en tamaño completo](get-started-with-the-ajax-control-toolkit-vb/_static/image10.png))
 

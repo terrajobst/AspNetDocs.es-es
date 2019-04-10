@@ -8,15 +8,15 @@ ms.date: 05/18/2012
 ms.assetid: 5418ba96-ff49-4a43-9cbb-09dea4949d23
 msc.legacyurl: /web-pages
 msc.type: categoryindex
-ms.openlocfilehash: 967c5687013cac75b5ec8dd665269026bd46601c
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: 832f89dfdecb71f2664431a4880978f7355246f4
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57023372"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59420229"
 ---
-<a name="aspnet-web-pages"></a>ASP.NET Web Pages
-====================
+# <a name="aspnet-web-pages"></a>ASP.NET Web Pages
+
 
 > [!NOTE] 
 > WebMatrix no se recomienda como un entorno de desarrollo integrado para ASP.NET Web Pages. Use [Visual Studio](xref:aspnet/web-pages/overview/getting-started/program-asp-net-web-pages-in-visual-studio) o [código de Visual Studio](https://code.visualstudio.com/).

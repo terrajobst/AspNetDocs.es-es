@@ -8,15 +8,15 @@ ms.date: 01/16/2019
 ms.assetid: 8bf2c4fb-4ee5-4841-bfc2-03462c1f7a7a
 msc.legacyurl: /web-forms/overview/deployment/visual-studio-web-deployment/deploying-to-iis
 msc.type: authoredcontent
-ms.openlocfilehash: d49dfad368ca4b81bb865103a99ec223a1cc66df
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: 39502e03196d2ba51e826d248ff0ff1e84258131
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57059582"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59420203"
 ---
-<a name="aspnet-web-deployment-using-visual-studio-deploying-to-test"></a>Implementación Web de ASP.NET con Visual Studio: Implementación de prueba
-====================
+# <a name="aspnet-web-deployment-using-visual-studio-deploying-to-test"></a>Implementación Web de ASP.NET con Visual Studio: Implementación de prueba
+
 por [Tom Dykstra](https://github.com/tdykstra)
 
 > Esta serie de tutoriales muestra cómo implementar (publicar) de ASP.NET en Azure App Service Web Apps o a un proveedor de hospedaje de terceros con Visual Studio 2017 de aplicación web. Para obtener información acerca de la serie, vea [el primer tutorial de la serie](introduction.md).
@@ -172,11 +172,11 @@ Puede configurar el perfil de publicación para ejecutar el script de concesión
 
 1. En Visual Studio, abra el *Grant.sql* archivo que creó anteriormente.
 
-2. Seleccione **conectar**. 
+2. Seleccione **Conectar**. 
 
     ![Botón Conectar](deploying-to-iis/_static/image11.png)
 
-3. En el **conectar al servidor** diálogo cuadro, escriba *. \SQLExpress* como el **nombre del servidor**. Seleccione **conectar**.
+3. En el **conectar al servidor** diálogo cuadro, escriba *. \SQLExpress* como el **nombre del servidor**. Seleccione **Conectar**.
 
 4. En la lista desplegable de base de datos seleccione **ContosoUniversity**. Seleccione **ejecutar**. 
 

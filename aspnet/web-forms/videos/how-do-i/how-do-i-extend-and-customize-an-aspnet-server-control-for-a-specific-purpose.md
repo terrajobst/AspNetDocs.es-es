@@ -8,15 +8,15 @@ ms.date: 05/20/2008
 ms.assetid: ed460e6b-8f4e-4fcb-83c4-2495180c1f14
 msc.legacyurl: /web-forms/videos/how-do-i/how-do-i-extend-and-customize-an-aspnet-server-control-for-a-specific-purpose
 msc.type: video
-ms.openlocfilehash: d360bfdc2e491c7aa94ebd4da1a03063a93251ad
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: 3562e9c4ec994f04b312476c1357d810f4b5e28a
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57040652"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59420164"
 ---
-<a name="how-do-i-extend-and-customize-an-aspnet-server-control-for-a-specific-purpose"></a>[¿Cómo lo hago?:] Ampliar y personalizar un Control de servidor ASP.NET para un propósito específico
-====================
+# <a name="how-do-i-extend-and-customize-an-aspnet-server-control-for-a-specific-purpose"></a>[¿Cómo lo hago?:] Ampliar y personalizar un Control de servidor ASP.NET para un propósito específico
+
 por [Chris Pels](https://twitter.com/chrispels)
 
 En este vídeo Chris Pels mostrará cómo ampliar un control de servidor ASP.NET estándar y personalizarlo para un propósito específico. Los controles especializados proporcionan una manera cómoda para implementar elementos de la interfaz de usuario estándar para varios sitios web de las personas o equipos de desarrolladores. En este ejemplo, vea cómo extender el control DropDownList para crear un control de selección de año de propósito especial. Obtenga información sobre cómo agregar propiedades para los atributos personalizados que controlan el comportamiento del intervalo de años que se pueden mostrar. A continuación, ver cómo se pueden establecer los atributos personalizados en una sintaxis declarativa similar a los atributos de un control estándar. Vea cómo varias propiedades adicionales, a continuación, se pueden agregar para proporcionar funcionalidad adicional para controlar el comportamiento de la lista. Por último, vea cómo se puede mover un control de servidor ASP.NET extendido a un ensamblado independiente para que se puede usar en varios sitios web.

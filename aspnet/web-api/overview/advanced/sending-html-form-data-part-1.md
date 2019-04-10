@@ -1,22 +1,23 @@
 ---
 uid: web-api/overview/advanced/sending-html-form-data-part-1
-title: 'Enviar datos de formulario HTML en ASP.NET Web API: Datos de formato form-urlencoded | Microsoft Docs'
+title: 'Enviar datos de formulario HTML en ASP.NET Web API: Datos de formato form-urlencoded - ASP.NET 4.x'
 author: MikeWasson
-description: ''
+description: En este artículo se describe cómo publicar datos de formato form-urlencoded a un controlador de API Web con ASP.NET 4.x
 ms.author: riande
 ms.date: 06/15/2012
+ms.custom: seoapril2019
 ms.assetid: 585351c4-809a-4bf5-bcbe-35d624f565fe
 msc.legacyurl: /web-api/overview/advanced/sending-html-form-data-part-1
 msc.type: authoredcontent
-ms.openlocfilehash: 2d01212cc408f8bb66fa3103464c9a1f7a1e21c6
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: fb0309af11910125943737ebb721b356b7bd08bc
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57049362"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59418305"
 ---
-<a name="sending-html-form-data-in-aspnet-web-api-form-urlencoded-data"></a>Enviar datos de formulario HTML en ASP.NET Web API: Datos con codificación URL de formulario
-====================
+# <a name="sending-html-form-data-in-aspnet-web-api-form-urlencoded-data"></a>Enviar datos de formulario HTML en ASP.NET Web API: Datos con codificación URL de formulario
+
 por [Mike Wasson](https://github.com/MikeWasson)
 
 ## <a name="part-1-form-urlencoded-data"></a>Parte 1: Datos con codificación URL de formulario

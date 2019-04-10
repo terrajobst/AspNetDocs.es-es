@@ -8,15 +8,15 @@ ms.date: 06/12/2014
 ms.assetid: ba6e6baa-9b9f-471f-b39d-b007a3addadc
 msc.legacyurl: /aspnet/overview/developing-apps-with-windows-azure/building-real-world-cloud-apps-with-windows-azure/automate-everything
 msc.type: authoredcontent
-ms.openlocfilehash: 18e988279b56e479b0bb27de2f01ab22a2e70301
-ms.sourcegitcommit: 289e051cc8a90e8f7127e239fda73047bde4de12
+ms.openlocfilehash: d27c8c1910a79cea8ccdf4231d3bc2b80a20dc68
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/25/2019
-ms.locfileid: "58422615"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59418370"
 ---
-<a name="automate-everything-building-real-world-cloud-apps-with-azure"></a>Automatizar todas las acciones (creación de aplicaciones de nube reales con Azure)
-====================
+# <a name="automate-everything-building-real-world-cloud-apps-with-azure"></a>Automatizar todas las acciones (creación de aplicaciones de nube reales con Azure)
+
 by [Mike Wasson](https://github.com/MikeWasson), [Rick Anderson]((https://twitter.com/RickAndMSFT)), [Tom Dykstra](https://github.com/tdykstra)
 
 [Descargar proyecto corregirlo](http://code.msdn.microsoft.com/Fix-It-app-for-Building-cdd80df4) o [descargar libro electrónico](http://blogs.msdn.com/b/microsoft_press/archive/2014/07/23/free-ebook-building-cloud-apps-with-microsoft-azure.aspx)
@@ -125,7 +125,7 @@ Lo primero que hace la secuencia de comandos es crear la aplicación web mediant
 
 ### <a name="create-the-storage-account"></a>Crear la cuenta de almacenamiento
 
-A continuación, ejecuta el script principal el <em>New AzureStorage.ps1</em> secuencia de comandos, especificando "<em>&lt;websitename&gt;</em>almacenamiento" para el nombre de cuenta de almacenamiento, y el mismos centro de datos ubicación como la aplicación web.
+A continuación, ejecuta el script principal el *New AzureStorage.ps1* secuencia de comandos, especificando "*&lt;websitename&gt;* almacenamiento" para el nombre de cuenta de almacenamiento, y el mismos centro de datos ubicación como la aplicación web.
 
 [!code-powershell[Main](automate-everything/samples/sample4.ps1?highlight=3)]
 

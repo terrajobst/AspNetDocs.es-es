@@ -1,22 +1,23 @@
 ---
 uid: web-api/overview/formats-and-model-binding/media-formatters
-title: Formateadores de contenido multimedia en ASP.NET Web API 2 | Microsoft Docs
+title: Formateadores de contenido multimedia en ASP.NET Web API 2 - ASP.NET 4.x
 author: MikeWasson
-description: ''
+description: Muestra cómo admitir formatos multimedia adicionales en ASP.NET Web API para ASP.NET 4.x.
 ms.author: riande
 ms.date: 01/20/2014
+ms.custom: seoapril2019
 ms.assetid: 4c56f64a-086a-44ce-99c2-4c69604cd7fd
 msc.legacyurl: /web-api/overview/formats-and-model-binding/media-formatters
 msc.type: authoredcontent
-ms.openlocfilehash: bd54a1d8ae3a2913c9d8a11c5b31ba1c829450d2
-ms.sourcegitcommit: 289e051cc8a90e8f7127e239fda73047bde4de12
+ms.openlocfilehash: da0c566dad302054d7d0a6435e4c6df178c64772
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/25/2019
-ms.locfileid: "58425319"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59418773"
 ---
-<a name="media-formatters-in-aspnet-web-api-2"></a>Formateadores de contenido multimedia en ASP.NET Web API 2
-====================
+# <a name="media-formatters-in-aspnet-web-api-2"></a>Formateadores de contenido multimedia en ASP.NET Web API 2
+
 por [Mike Wasson](https://github.com/MikeWasson)
 
 Este tutorial muestra cómo admitir formatos multimedia adicionales en ASP.NET Web API.

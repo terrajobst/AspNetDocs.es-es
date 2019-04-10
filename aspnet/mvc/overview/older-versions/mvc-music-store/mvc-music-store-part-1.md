@@ -8,15 +8,15 @@ ms.date: 04/21/2011
 ms.assetid: bd356ca3-5bdb-4067-9dac-c9e9923a86e8
 msc.legacyurl: /mvc/overview/older-versions/mvc-music-store/mvc-music-store-part-1
 msc.type: authoredcontent
-ms.openlocfilehash: 0f252fd5c0e5962353720e47ba888d2b6b325a1c
-ms.sourcegitcommit: 289e051cc8a90e8f7127e239fda73047bde4de12
+ms.openlocfilehash: 63d85ec5f1f2fbadd92fd0210e67332df30aab5a
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/25/2019
-ms.locfileid: "58421913"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59419605"
 ---
-<a name="part-1-overview-and-file-new-project"></a>Parte 1: Información general y Archivo -> Nuevo proyecto
-====================
+# <a name="part-1-overview-and-file-new-project"></a>Parte 1: Información general y Archivo -> Nuevo proyecto
+
 por [Jon Galloway](https://github.com/jongalloway)
 
 > El Store de música de MVC es una aplicación de tutorial que presenta y explica paso a paso cómo usar ASP.NET MVC y Visual Studio para el desarrollo web.  
@@ -112,13 +112,13 @@ La plantilla vacía MVC 3 no está completamente vacía, agrega una estructura d
 
 ASP.NET MVC hace uso de algunas convenciones de nomenclatura básicas para los nombres de carpeta:
 
-| **Carpeta** | **Propósito** |
+| **Carpeta** | **Finalidad** |
 | --- | --- |
 | **Y controladores** | Los controladores de responden a la entrada desde el explorador, decidir qué hacer con él y devolver la respuesta al usuario. |
 | **O vistas** | Las vistas contienen nuestras plantillas de interfaz de usuario |
 | **/ Modelos** | Modelos contienen y manipulan datos |
-| **/Content** | Esta carpeta contiene nuestras imágenes, CSS y cualquier otro contenido estático |
-| **/Scripts** | Esta carpeta contiene los archivos de JavaScript |
+| **/ Content** | Esta carpeta contiene nuestras imágenes, CSS y cualquier otro contenido estático |
+| **/ Scripts** | Esta carpeta contiene los archivos de JavaScript |
 
 Estas carpetas se incluyen incluso en una aplicación MVC de ASP.NET vacía porque el marco de ASP.NET MVC predeterminada usa un enfoque de "Convención sobre configuración" y hace algunas suposiciones predeterminadas según las convenciones de nomenclatura de carpeta. Por ejemplo, los controladores de buscarán las vistas en la carpeta Views predeterminada sin tener que especificarlo explícitamente en el código. Ceñirse a las convenciones predeterminadas reduce la cantidad de código que necesita para escribir, y puede también facilitan para otros desarrolladores a comprender el proyecto. Explicaremos estas convenciones más a medida que construimos nuestra aplicación.
 

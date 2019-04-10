@@ -8,15 +8,15 @@ ms.date: 04/11/2014
 ms.assetid: 07aa855a-92ee-4d43-ba66-5bfd7de20ee6
 msc.legacyurl: /aspnet/overview/owin-and-katana/host-owin-in-an-azure-worker-role
 msc.type: authoredcontent
-ms.openlocfilehash: dbf0964695dd2592d063b05c0778923edffe8e2e
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: 129b6a8f411d482de75e7e5edc5cc919b4d2de52
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57058042"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59419527"
 ---
-<a name="host-owin-in-an-azure-worker-role"></a>Hospedar OWIN en un rol de trabajo de Azure
-====================
+# <a name="host-owin-in-an-azure-worker-role"></a>Hospedar OWIN en un rol de trabajo de Azure
+
 por [Mike Wasson](https://github.com/MikeWasson)
 
 > Este tutorial muestra cómo autohospedaje OWIN en un rol de trabajo de Microsoft Azure.
@@ -116,7 +116,7 @@ El emulador de proceso asigna una dirección IP local para el punto de conexión
 
 [![](host-owin-in-an-azure-worker-role/_static/image10.png)](host-owin-in-an-azure-worker-role/_static/image9.png)
 
-Buscar la dirección IP en implementaciones de servicios de implementación [id], detalles del servicio. Abra un explorador web y vaya a http://<em>dirección</em>, donde <em>dirección</em> es la dirección IP asignada por el emulador de proceso; por ejemplo, `http://127.0.0.1:80`. Debería ver la página de bienvenida de OWIN:
+Buscar la dirección IP en implementaciones de servicios de implementación [id], detalles del servicio. Abra un explorador web y vaya a http:\/\/*dirección*, donde *dirección* es la dirección IP asignada por el emulador de proceso; por ejemplo, `http://127.0.0.1:80`. Debería ver la página de bienvenida de OWIN:
 
 ![](host-owin-in-an-azure-worker-role/_static/image11.png)
 

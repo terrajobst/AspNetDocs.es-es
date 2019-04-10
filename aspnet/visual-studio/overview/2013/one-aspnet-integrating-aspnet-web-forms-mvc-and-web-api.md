@@ -8,15 +8,15 @@ ms.date: 07/16/2014
 ms.assetid: 4fe2558d-67cc-4d12-a5c1-6fb9f6f16137
 msc.legacyurl: /visual-studio/overview/2013/one-aspnet-integrating-aspnet-web-forms-mvc-and-web-api
 msc.type: authoredcontent
-ms.openlocfilehash: 85e4369ee458043eec59fb27e317d18466f61f32
-ms.sourcegitcommit: 289e051cc8a90e8f7127e239fda73047bde4de12
+ms.openlocfilehash: 1023d9bef311e58fb5fb0bb24cde80e8320e6bac
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/25/2019
-ms.locfileid: "58422537"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59419059"
 ---
-<a name="hands-on-lab-one-aspnet-integrating-aspnet-web-forms-mvc-and-web-api"></a>Laboratorio práctico: One ASP.NET: Integrar formularios Web Forms de ASP.NET, MVC y Web API
-====================
+# <a name="hands-on-lab-one-aspnet-integrating-aspnet-web-forms-mvc-and-web-api"></a>Laboratorio práctico: One ASP.NET: Integrar formularios Web Forms de ASP.NET, MVC y Web API
+
 por [campamentos Web Team](https://twitter.com/webcamps)
 
 [Descargue el Kit de aprendizaje de campamentos de Web](https://aka.ms/webcamps-training-kit)
@@ -72,7 +72,7 @@ En todo el documento de laboratorio, se le pedirá que inserte los bloques de c�
 > Cada ejercicio viene acompañado por una solución inicial ubicada en el **comenzar** carpeta del ejercicio que le permite seguir cada ejercicio independientemente de los demás. Ten en cuenta que los fragmentos de código que se agregan durante un ejercicio faltan en estos a partir de las soluciones y es posible que no funcione hasta que haya completado el ejercicio. En el código fuente para un ejercicio, también encontrará un **final** carpeta que contiene una solución de Visual Studio con el código que se obtiene al completar los pasos descritos en el ejercicio correspondiente. Puede usar estas soluciones como instrucciones si necesita más ayuda mientras se trabaja a través de este laboratorio práctico.
 
 
-* * *
+---
 
 <a id="Exercises"></a>
 ## <a name="exercises"></a>Ejercicios
@@ -103,7 +103,7 @@ En esta tarea iniciará la creación de un nuevo sitio Web en Visual Studio seg�
 
     ![Crear un proyecto nuevo](one-aspnet-integrating-aspnet-web-forms-mvc-and-web-api/_static/image1.png)
 
-    *Crear un nuevo proyecto*
+    *Crear un proyecto nuevo*
 2. En el **nuevo proyecto** cuadro de diálogo, seleccione **aplicación Web ASP.NET** bajo el **Visual C# | Web** pestaña y asegúrese de que **.NET Framework 4.5** está seleccionada. Denomine el proyecto *MyHybridSite*, elija un **ubicación** y haga clic en **Aceptar**.
 
     ![Nuevo proyecto de aplicación Web ASP.NET](one-aspnet-integrating-aspnet-web-forms-mvc-and-web-api/_static/image2.png)
@@ -390,7 +390,7 @@ Cuando se crea una API Web, es útil crear una página de ayuda para que otros d
 
     ![Pestaña compilar](one-aspnet-integrating-aspnet-web-forms-mvc-and-web-api/_static/image32.png "sección compilación")
 
-    *Pestaña de la compilación*
+    *Pestaña Compilar*
 5. En **salida**, seleccione **archivo de documentación XML**. En el cuadro de edición, escriba **aplicación\_Data/XmlDocument.xml**.
 
     ![Salida de la sección en la pestaña compilación](one-aspnet-integrating-aspnet-web-forms-mvc-and-web-api/_static/image33.png "sección en la pestaña compilación de salida")
@@ -427,7 +427,7 @@ Cuando se crea una API Web, es útil crear una página de ayuda para que otros d
 
     *Página de información detallada*
 
-* * *
+---
 
 <a id="Summary"></a>
 ## <a name="summary"></a>Resumen

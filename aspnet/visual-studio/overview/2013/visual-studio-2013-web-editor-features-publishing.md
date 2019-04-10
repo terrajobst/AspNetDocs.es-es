@@ -8,15 +8,15 @@ ms.date: 10/17/2013
 ms.assetid: 27e27ef7-9c63-4e68-97e7-d943db68290f
 msc.legacyurl: /visual-studio/overview/2013/visual-studio-2013-web-editor-features-publishing
 msc.type: video
-ms.openlocfilehash: 5d56bbac2cd5e81e0bb9fe7a16a53b8c3b30caee
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: 4a7db29869ceb08faaaa132da7ff8eed1a1336f4
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57043862"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59418864"
 ---
-<a name="visual-studio-2013-web-editor-features---publishing"></a>Características del editor web de Visual Studio 2013 - Publicación
-====================
+# <a name="visual-studio-2013-web-editor-features---publishing"></a>Características del editor web de Visual Studio 2013 - Publicación
+
 por [Scott Hanselman](https://github.com/shanselman)
 
 Scott Hanselman información general sobre las características de publicación web en Visual Studio 2013.

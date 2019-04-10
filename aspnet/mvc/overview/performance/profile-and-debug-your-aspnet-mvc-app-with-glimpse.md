@@ -8,15 +8,15 @@ ms.date: 03/26/2015
 ms.assetid: c205805f-efdd-4fa7-9616-f26eab180611
 msc.legacyurl: /mvc/overview/performance/profile-and-debug-your-aspnet-mvc-app-with-glimpse
 msc.type: authoredcontent
-ms.openlocfilehash: ea149b6450cf02c993c7690752a05396802336be
-ms.sourcegitcommit: 289e051cc8a90e8f7127e239fda73047bde4de12
+ms.openlocfilehash: 078382191595d1f65b5ebe9d0de8d41cd70e376d
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/25/2019
-ms.locfileid: "58425059"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59419891"
 ---
-<a name="profile-and-debug-your-aspnet-mvc-app-with-glimpse"></a>Crear un perfil y depurar la aplicación de ASP.NET MVC con Glimpse
-====================
+# <a name="profile-and-debug-your-aspnet-mvc-app-with-glimpse"></a>Crear un perfil y depurar la aplicación de ASP.NET MVC con Glimpse
+
 by [Rick Anderson]((https://twitter.com/RickAndMSFT))
 
 > Glimpse es un próspero y aumentando la familia de paquetes de NuGet de código abierto que proporciona detallados de rendimiento, depuración e información de diagnóstico para aplicaciones de ASP.NET. Es muy fácil instalar, ultrarrápidas ligero y muestra las métricas clave de rendimiento en la parte inferior de cada página. Permite explorar en profundidad de la aplicación cuando necesite averiguar qué está ocurriendo en el servidor. Glimpse proporciona tanto información valiosa y que se recomienda que utilizarlo durante su ciclo de desarrollo, incluidos el entorno de prueba de Azure. Mientras [Fiddler](http://www.telerik.com/fiddler) y [herramientas de desarrollo F-12](https://msdn.microsoft.com/library/ie/gg589512(v=vs.85).aspx) proporcionan un cliente, vista de Glimpse proporciona una vista detallada del servidor. En este tutorial se centrará en utilizar los paquetes EF y un vistazo a ASP.NET MVC, pero hay muchos otros paquetes disponibles. Siempre que sea posible se vinculará a la correspondiente [vislumbrar docs](http://getglimpse.com/Docs/) que ayudan a mantener. Glimpse es un proyecto de código abierto, también puede contribuir en el código fuente y los documentos.

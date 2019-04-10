@@ -8,15 +8,15 @@ ms.date: 07/29/2010
 ms.assetid: 8e5cebbc-7e7b-4f1a-af6b-75a6ed398030
 msc.legacyurl: /web-forms/videos/authentication/implement-the-registration-verification-pattern
 msc.type: video
-ms.openlocfilehash: c71f5e40021aae0fa106d8ae3cfc8cd0f7e01598
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: 7b50c7944a3e0b01c81fb80f8665ba7a7fe4a6f5
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57043202"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59420333"
 ---
-<a name="implement-the-registration-verification-pattern"></a>Implementar el patrón de comprobación de registro
-====================
+# <a name="implement-the-registration-verification-pattern"></a>Implementar el patrón de comprobación de registro
+
 por [Joe Stagner](https://github.com/JoeStagner)
 
 En este vídeo, Joe Stagner extiende el proceso de registro en una aplicación ASP.NET agregando un paso de comprobación de correo electrónico.

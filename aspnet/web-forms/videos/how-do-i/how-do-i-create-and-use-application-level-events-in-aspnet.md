@@ -8,15 +8,15 @@ ms.date: 01/28/2008
 ms.assetid: 5f136ed5-a229-4b9c-83f8-bae74cdb98bd
 msc.legacyurl: /web-forms/videos/how-do-i/how-do-i-create-and-use-application-level-events-in-aspnet
 msc.type: video
-ms.openlocfilehash: 08bf65070133c8ebddadc362753ff6d834617b75
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: fc797454a3df103f7c6c5d314e3033e60959f3b8
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57062842"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59419488"
 ---
-<a name="how-do-i--create-and-use-application-level-events-in-aspnet"></a>[¿Cómo lo hago?:]  Crear y utilizar eventos de nivel de aplicación de ASP.NET
-====================
+# <a name="how-do-i--create-and-use-application-level-events-in-aspnet"></a>[¿Cómo lo hago?:]  Crear y utilizar eventos de nivel de aplicación de ASP.NET
+
 por [Chris Pels](https://twitter.com/chrispels)
 
 En este vídeo, Chris Pels mostrará cómo crear un archivo de clase de aplicación (Global.asax) que contiene los controladores de eventos de nivel de aplicación como aplicación\_inicial y aplicación\_BeginRequest. A continuación, la secuencia de eventos de nivel de aplicación en el ciclo de vida de la aplicación se tratarán como una base para determinar dónde sería mejor determinados tipos de operaciones realizadas durante el ciclo de vida de la aplicación.

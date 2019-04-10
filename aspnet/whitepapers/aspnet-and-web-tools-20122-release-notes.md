@@ -8,15 +8,15 @@ ms.date: 02/14/2013
 ms.assetid: bdb18d02-9f61-4676-836d-6fdea94f9282
 msc.legacyurl: /whitepapers/aspnet-and-web-tools-20122-release-notes
 msc.type: content
-ms.openlocfilehash: 50e96251f8add00f70193977e73f9af194571c49
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: 45e2d1b10665a8ca1965f0761bfa6bfd13444c8e
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57038912"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59419514"
 ---
-<a name="aspnet-and-web-tools-20122-release-notes"></a>Notas de la versión de ASP.NET and Web Tools 2012.2
-====================
+# <a name="aspnet-and-web-tools-20122-release-notes"></a>Notas de la versión de ASP.NET and Web Tools 2012.2
+
 > Este documento describe la versión de ASP.NET y Web Tools 2012.2. Es una actualización de herramientas Web de Visual Studio y ASP.NET.
 
 
@@ -26,12 +26,12 @@ ms.locfileid: "57038912"
 - [Requisitos de software](#_Software_Requirements)
 - [Nuevas características de ASP.NET y Web Tools 2012.2](#_New_Features_in)
 
-    - [Herramientas](#_Tooling)
+    - [Tooling](#_Tooling)
     - [Publicación en Web](#_Web_Publishing)
     - [Plantillas de ASP.NET MVC](#_Templates)
-    - [ASP.NET Web API](#_ASP.NET_Web_API) (Más información sobre ASP.NET Web API)
+    - [ASP.NET Web API](#_ASP.NET_Web_API)
 
-    - [SignalR de ASP.NET](#_ASP.NET_SignalR)
+    - [ASP.NET SignalR](#_ASP.NET_SignalR)
     - [ASP.NET Friendly URLs](#_ASP.NET_Friendly_URLs)
 - [Problemas conocidos y cambios importantes](#_Known_Issues_and)
 
@@ -58,7 +58,7 @@ También puede instalar ASP.NET y Web Tools 2012.2 manualmente. Debe tener Visua
 Tutoriales y otra información acerca de ASP.NET y Web Tools 2012.2 están disponibles en el sitio web de ASP.NET ( https://www.asp.net).
 
 <a id="_Support"></a>
-## <a name="support"></a>Compatibilidad
+## <a name="support"></a>Soporte técnico
 
 ASP.NET y Web Tools 2012.2 se lanzó oficialmente y admite. Puede usar el canal de soporte normales. También puede publicar preguntas en los foros ASP.NET ([https://forums.asp.net/](https://forums.asp.net/)), donde los miembros de la Comunidad de ASP.NET son normalmente pueden ofrecer soporte técnico informal.
 

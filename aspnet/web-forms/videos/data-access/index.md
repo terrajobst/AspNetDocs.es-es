@@ -8,32 +8,32 @@ ms.date: 11/14/2011
 ms.assetid: a923735c-2d34-456c-8327-40aa62a4c1d6
 msc.legacyurl: /web-forms/videos/data-access
 msc.type: chapter
-ms.openlocfilehash: f93a3b496b2a3bf7957687c7e1ba97db994b4712
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: b41843143dfbd957ef242c67e67101af79d9efba
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57022112"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59419410"
 ---
-<a name="data-access"></a>Acceso a datos en ASP.NET (Visual Studio)
-====================
+# <a name="data-access"></a>Acceso a datos en ASP.NET (Visual Studio)
+
 > Cómo crear una capa de acceso a datos (DAL).
 
 
-- [Servicios de datos de ADO.NET](adonet-data-services/index.md)
+- [Data Services de ADO.NET](adonet-data-services/index.md)
 
     - [Niveles de acceso a datos en aplicaciones de ASP.NET](adonet-data-services/data-access-layers-in-aspnet-applications.md)
     - [Enlazar manualmente un conjunto de datos a un control Datagrid](adonet-data-services/how-to-manually-bind-a-dataset-to-a-datagrid.md)
     - [Trabajar con conjuntos de datos y filtros de una aplicación ASP](adonet-data-services/how-to-work-with-datasets-and-filters-from-an-asp-application.md)
 - ["¿Cómo...?" con LINQ](how-do-i-with-linq/index.md)
 
-    - [LINQ to SQL: información general](how-do-i-with-linq/how-do-i-linq-to-sql-overview.md)
+    - [LINQ to SQL: Información general](how-do-i-with-linq/how-do-i-linq-to-sql-overview.md)
     - [LINQ to SQL: Modelo de datos](how-do-i-with-linq/how-do-i-linq-to-sql-data-model.md)
     - [LINQ to SQL: Consultar la base de datos](how-do-i-with-linq/how-do-i-linq-to-sql-querying-the-database.md)
-    - [LINQ to SQL: Actualizando la base de datos](how-do-i-with-linq/how-do-i-linq-to-sql-updating-the-database.md)
+    - [LINQ to SQL: Actualizar la base de datos](how-do-i-with-linq/how-do-i-linq-to-sql-updating-the-database.md)
     - [LINQ to SQL: LinqDataSource](how-do-i-with-linq/how-do-i-linq-to-sql-linqdatasource.md)
-    - [LINQ to SQL: Custom LinqDataSource](how-do-i-with-linq/how-do-i-linq-to-sql-custom-linqdatasource.md)
-    - [LINQ to SQL: Uso de procedimientos almacenados](how-do-i-with-linq/how-do-i-linq-to-sql-using-stored-procedures.md)
+    - [LINQ to SQL: LinqDataSource personalizado](how-do-i-with-linq/how-do-i-linq-to-sql-custom-linqdatasource.md)
+    - [LINQ to SQL: Utilizar procedimientos almacenados](how-do-i-with-linq/how-do-i-linq-to-sql-using-stored-procedures.md)
     - [LINQ to SQL: Actualizar con procedimientos almacenados](how-do-i-with-linq/how-do-i-linq-to-sql-updating-with-stored-procedures.md)
     - [LINQ to SQL: Ejecutar SQL arbitrario](how-do-i-with-linq/how-do-i-linq-to-sql-executing-arbitrary-sql.md)
 - [Vídeos de LINQ del equipo de VB](linq-videos-from-the-vb-team/index.md)
