@@ -12,18 +12,18 @@ ms.openlocfilehash: b357d386ae11869d4c16f2b1d42d0b713bbd57c4
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59381391"
 ---
-# <a name="working-with-data-part-1"></a><span data-ttu-id="63a94-103">Trabajar con datos (parte 1)</span><span class="sxs-lookup"><span data-stu-id="63a94-103">Working with Data (Part 1)</span></span>
+# <a name="working-with-data-part-1"></a><span data-ttu-id="a1b30-103">Trabajar con datos (parte 1)</span><span class="sxs-lookup"><span data-stu-id="a1b30-103">Working with Data (Part 1)</span></span>
 
-<span data-ttu-id="63a94-104">por [Joe Stagner](https://github.com/JoeStagner)</span><span class="sxs-lookup"><span data-stu-id="63a94-104">by [Joe Stagner](https://github.com/JoeStagner)</span></span>
+<span data-ttu-id="a1b30-104">por [Joe Stagner](https://github.com/JoeStagner)</span><span class="sxs-lookup"><span data-stu-id="a1b30-104">by [Joe Stagner](https://github.com/JoeStagner)</span></span>
 
-<span data-ttu-id="63a94-105">Vídeo acompañamiento para el trabajo con el tutorial de datos (parte 1)</span><span class="sxs-lookup"><span data-stu-id="63a94-105">Video accompaniment to the Working with Data tutorial (Part 1)</span></span>
+<span data-ttu-id="a1b30-105">Vídeo acompañamiento para el trabajo con el tutorial de datos (parte 1)</span><span class="sxs-lookup"><span data-stu-id="a1b30-105">Video accompaniment to the Working with Data tutorial (Part 1)</span></span>
 
-[<span data-ttu-id="63a94-106">&#9654;Vea el vídeo (8 minutos)</span><span class="sxs-lookup"><span data-stu-id="63a94-106">&#9654; Watch video (8 minutes)</span></span>](https://channel9.msdn.com/Blogs/ASP-NET-Site-Videos/working-with-data-part-1)
+[<span data-ttu-id="a1b30-106">&#9654;Vea el vídeo (8 minutos)</span><span class="sxs-lookup"><span data-stu-id="a1b30-106">&#9654; Watch video (8 minutes)</span></span>](https://channel9.msdn.com/Blogs/ASP-NET-Site-Videos/working-with-data-part-1)
 
 > [!div class="step-by-step"]
-> <span data-ttu-id="63a94-107">[Anterior](working-with-forms-part-2.md)
-> [Siguiente](working-with-data-part-2.md)</span><span class="sxs-lookup"><span data-stu-id="63a94-107">[Previous](working-with-forms-part-2.md)
+> <span data-ttu-id="a1b30-107">[Anterior](working-with-forms-part-2.md)
+> [Siguiente](working-with-data-part-2.md)</span><span class="sxs-lookup"><span data-stu-id="a1b30-107">[Previous](working-with-forms-part-2.md)
 [Next](working-with-data-part-2.md)</span></span>

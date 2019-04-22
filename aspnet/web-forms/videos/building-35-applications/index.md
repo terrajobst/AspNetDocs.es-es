@@ -12,27 +12,27 @@ ms.openlocfilehash: 2808f8811e06875a5b38585772763f45794d1fc2
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59388327"
 ---
-# <a name="building-35-applications"></a><span data-ttu-id="9ee25-103">Compilar aplicaciones 3.5</span><span class="sxs-lookup"><span data-stu-id="9ee25-103">Building 3.5 Applications</span></span>
+# <a name="building-35-applications"></a><span data-ttu-id="7d8da-103">Compilar aplicaciones 3.5</span><span class="sxs-lookup"><span data-stu-id="7d8da-103">Building 3.5 Applications</span></span>
 
-> <span data-ttu-id="9ee25-104">Los conceptos básicos de la creación de aplicaciones de formularios Web Forms de ASP.NET.</span><span class="sxs-lookup"><span data-stu-id="9ee25-104">The basics of creating ASP.NET Web Forms applications.</span></span>
+> <span data-ttu-id="7d8da-104">Los conceptos básicos de la creación de aplicaciones de formularios Web Forms de ASP.NET.</span><span class="sxs-lookup"><span data-stu-id="7d8da-104">The basics of creating ASP.NET Web Forms applications.</span></span>
 
 
-- [<span data-ttu-id="9ee25-105">Introducción a Visual Web Developer</span><span class="sxs-lookup"><span data-stu-id="9ee25-105">Intro to Visual Web Developer</span></span>](intro-to-visual-web-developer.md)
-- [<span data-ttu-id="9ee25-106">IntelliSense</span><span class="sxs-lookup"><span data-stu-id="9ee25-106">IntelliSense</span></span>](intellisense.md)
-- [<span data-ttu-id="9ee25-107">Introducción a los formularios Web Forms</span><span class="sxs-lookup"><span data-stu-id="9ee25-107">Intro to Web Forms</span></span>](intro-to-web-forms.md)
-- [<span data-ttu-id="9ee25-108">Diseño de página</span><span class="sxs-lookup"><span data-stu-id="9ee25-108">Page Layout</span></span>](page-layout.md)
-- [<span data-ttu-id="9ee25-109">Eventos del ciclo de vida de la página</span><span class="sxs-lookup"><span data-stu-id="9ee25-109">Page Lifecycle Events</span></span>](page-lifecycle-events.md)
-- [<span data-ttu-id="9ee25-110">Introducción a los controles de ASP.NET</span><span class="sxs-lookup"><span data-stu-id="9ee25-110">Intro to ASP.NET Controls</span></span>](intro-to-aspnet-controls.md)
-- [<span data-ttu-id="9ee25-111">Envío y postback</span><span class="sxs-lookup"><span data-stu-id="9ee25-111">Submit and Postback</span></span>](submit-and-postback.md)
-- [<span data-ttu-id="9ee25-112">Objetos de nivel de aplicación</span><span class="sxs-lookup"><span data-stu-id="9ee25-112">Application Level Objects</span></span>](application-level-objects.md)
-- [<span data-ttu-id="9ee25-113">Objetos de nivel de sesión</span><span class="sxs-lookup"><span data-stu-id="9ee25-113">Session Level Objects</span></span>](session-level-objects.md)
-- [<span data-ttu-id="9ee25-114">Depuración</span><span class="sxs-lookup"><span data-stu-id="9ee25-114">Debugging</span></span>](debugging.md)
-- [<span data-ttu-id="9ee25-115">CSS</span><span class="sxs-lookup"><span data-stu-id="9ee25-115">CSS</span></span>](css.md)
-- [<span data-ttu-id="9ee25-116">MasterPages</span><span class="sxs-lookup"><span data-stu-id="9ee25-116">MasterPages</span></span>](masterpages.md)
-- [<span data-ttu-id="9ee25-117">Introducción a los servicios web basados en SOAP con Visual Web Developer 2008</span><span class="sxs-lookup"><span data-stu-id="9ee25-117">Intro to SOAP Based Web Services with Visual Web Developer 2008</span></span>](an-introduction-to-soap-based-web-services-with-visual-web-developer-2008.md)
-- [<span data-ttu-id="9ee25-118">Servicios de estilo de AJAX con Microsoft Visual Web Developer 2008</span><span class="sxs-lookup"><span data-stu-id="9ee25-118">AJAX Style Services with Microsoft Visual Web Developer 2008</span></span>](ajax-style-services-with-microsoft-visual-web-developer-2008.md)
-- [<span data-ttu-id="9ee25-119">Validación</span><span class="sxs-lookup"><span data-stu-id="9ee25-119">Validation</span></span>](validation.md)
-- [<span data-ttu-id="9ee25-120">Controles de inicio de sesión</span><span class="sxs-lookup"><span data-stu-id="9ee25-120">Login Controls</span></span>](login-controls.md)
+- [<span data-ttu-id="7d8da-105">Introducción a Visual Web Developer</span><span class="sxs-lookup"><span data-stu-id="7d8da-105">Intro to Visual Web Developer</span></span>](intro-to-visual-web-developer.md)
+- [<span data-ttu-id="7d8da-106">IntelliSense</span><span class="sxs-lookup"><span data-stu-id="7d8da-106">IntelliSense</span></span>](intellisense.md)
+- [<span data-ttu-id="7d8da-107">Introducción a los formularios Web Forms</span><span class="sxs-lookup"><span data-stu-id="7d8da-107">Intro to Web Forms</span></span>](intro-to-web-forms.md)
+- [<span data-ttu-id="7d8da-108">Diseño de página</span><span class="sxs-lookup"><span data-stu-id="7d8da-108">Page Layout</span></span>](page-layout.md)
+- [<span data-ttu-id="7d8da-109">Eventos del ciclo de vida de la página</span><span class="sxs-lookup"><span data-stu-id="7d8da-109">Page Lifecycle Events</span></span>](page-lifecycle-events.md)
+- [<span data-ttu-id="7d8da-110">Introducción a los controles de ASP.NET</span><span class="sxs-lookup"><span data-stu-id="7d8da-110">Intro to ASP.NET Controls</span></span>](intro-to-aspnet-controls.md)
+- [<span data-ttu-id="7d8da-111">Envío y postback</span><span class="sxs-lookup"><span data-stu-id="7d8da-111">Submit and Postback</span></span>](submit-and-postback.md)
+- [<span data-ttu-id="7d8da-112">Objetos de nivel de aplicación</span><span class="sxs-lookup"><span data-stu-id="7d8da-112">Application Level Objects</span></span>](application-level-objects.md)
+- [<span data-ttu-id="7d8da-113">Objetos de nivel de sesión</span><span class="sxs-lookup"><span data-stu-id="7d8da-113">Session Level Objects</span></span>](session-level-objects.md)
+- [<span data-ttu-id="7d8da-114">Depuración</span><span class="sxs-lookup"><span data-stu-id="7d8da-114">Debugging</span></span>](debugging.md)
+- [<span data-ttu-id="7d8da-115">CSS</span><span class="sxs-lookup"><span data-stu-id="7d8da-115">CSS</span></span>](css.md)
+- [<span data-ttu-id="7d8da-116">MasterPages</span><span class="sxs-lookup"><span data-stu-id="7d8da-116">MasterPages</span></span>](masterpages.md)
+- [<span data-ttu-id="7d8da-117">Introducción a los servicios web basados en SOAP con Visual Web Developer 2008</span><span class="sxs-lookup"><span data-stu-id="7d8da-117">Intro to SOAP Based Web Services with Visual Web Developer 2008</span></span>](an-introduction-to-soap-based-web-services-with-visual-web-developer-2008.md)
+- [<span data-ttu-id="7d8da-118">Servicios de estilo de AJAX con Microsoft Visual Web Developer 2008</span><span class="sxs-lookup"><span data-stu-id="7d8da-118">AJAX Style Services with Microsoft Visual Web Developer 2008</span></span>](ajax-style-services-with-microsoft-visual-web-developer-2008.md)
+- [<span data-ttu-id="7d8da-119">Validación</span><span class="sxs-lookup"><span data-stu-id="7d8da-119">Validation</span></span>](validation.md)
+- [<span data-ttu-id="7d8da-120">Controles de inicio de sesión</span><span class="sxs-lookup"><span data-stu-id="7d8da-120">Login Controls</span></span>](login-controls.md)

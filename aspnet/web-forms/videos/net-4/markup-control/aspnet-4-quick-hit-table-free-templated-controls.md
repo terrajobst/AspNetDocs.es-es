@@ -12,18 +12,18 @@ ms.openlocfilehash: ad6ac3e88f0e619a254d03ca61e97adfbce5a90d
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59394398"
 ---
-# <a name="aspnet-4-quick-hit--table-free-templated-controls"></a><span data-ttu-id="43201-103">ASP.NET 4 controles con plantilla libre de tabla de "Se visita rápida".</span><span class="sxs-lookup"><span data-stu-id="43201-103">ASP.NET 4 "Quick Hit" – Table Free Templated Controls</span></span>
+# <a name="aspnet-4-quick-hit--table-free-templated-controls"></a><span data-ttu-id="13e7e-103">ASP.NET 4 controles con plantilla libre de tabla de "Se visita rápida".</span><span class="sxs-lookup"><span data-stu-id="13e7e-103">ASP.NET 4 "Quick Hit" – Table Free Templated Controls</span></span>
 
-<span data-ttu-id="43201-104">por [Joe Stagner](https://github.com/JoeStagner)</span><span class="sxs-lookup"><span data-stu-id="43201-104">by [Joe Stagner](https://github.com/JoeStagner)</span></span>
+<span data-ttu-id="13e7e-104">por [Joe Stagner](https://github.com/JoeStagner)</span><span class="sxs-lookup"><span data-stu-id="13e7e-104">by [Joe Stagner](https://github.com/JoeStagner)</span></span>
 
-<span data-ttu-id="43201-105">En este vídeo, aprenderá acerca de la propiedad RenderOuterTable controles con plantilla, que le permite controlar si se procesa la tabla externa a la página.</span><span class="sxs-lookup"><span data-stu-id="43201-105">In this video you will learn about the RenderOuterTable property for templated controls, which allows you to control whether or not the outer table is rendered to the page.</span></span> 
+<span data-ttu-id="13e7e-105">En este vídeo, aprenderá acerca de la propiedad RenderOuterTable controles con plantilla, que le permite controlar si se procesa la tabla externa a la página.</span><span class="sxs-lookup"><span data-stu-id="13e7e-105">In this video you will learn about the RenderOuterTable property for templated controls, which allows you to control whether or not the outer table is rendered to the page.</span></span> 
 
-[<span data-ttu-id="43201-106">&#9654;Vea el vídeo (5 minutos)</span><span class="sxs-lookup"><span data-stu-id="43201-106">&#9654; Watch video (5 minutes)</span></span>](https://channel9.msdn.com/Blogs/ASP-NET-Site-Videos/aspnet-4-quick-hit-table-free-templated-controls)
+[<span data-ttu-id="13e7e-106">&#9654;Vea el vídeo (5 minutos)</span><span class="sxs-lookup"><span data-stu-id="13e7e-106">&#9654; Watch video (5 minutes)</span></span>](https://channel9.msdn.com/Blogs/ASP-NET-Site-Videos/aspnet-4-quick-hit-table-free-templated-controls)
 
 > [!div class="step-by-step"]
-> <span data-ttu-id="43201-107">[Anterior](aspnet-4-quick-hit-new-rendering-option-for-check-box-lists-and-radio-button-lists.md)
-> [Siguiente](aspnet-4-quick-hit-tableless-menu-control.md)</span><span class="sxs-lookup"><span data-stu-id="43201-107">[Previous](aspnet-4-quick-hit-new-rendering-option-for-check-box-lists-and-radio-button-lists.md)
+> <span data-ttu-id="13e7e-107">[Anterior](aspnet-4-quick-hit-new-rendering-option-for-check-box-lists-and-radio-button-lists.md)
+> [Siguiente](aspnet-4-quick-hit-tableless-menu-control.md)</span><span class="sxs-lookup"><span data-stu-id="13e7e-107">[Previous](aspnet-4-quick-hit-new-rendering-option-for-check-box-lists-and-radio-button-lists.md)
 [Next](aspnet-4-quick-hit-tableless-menu-control.md)</span></span>

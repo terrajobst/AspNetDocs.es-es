@@ -12,18 +12,18 @@ ms.openlocfilehash: d0ee7dc47c6ec5ffd76baa6827b81a9ff02c6bfc
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59381021"
 ---
-# <a name="how-do-i-change-how-my-fields-render"></a><span data-ttu-id="eb0c6-105">¿Cómo se puede cambiar cómo se representan los campos?</span><span class="sxs-lookup"><span data-stu-id="eb0c6-105">How do I Change how my Fields render?</span></span>
+# <a name="how-do-i-change-how-my-fields-render"></a><span data-ttu-id="bc1d8-105">¿Cómo se puede cambiar cómo se representan los campos?</span><span class="sxs-lookup"><span data-stu-id="bc1d8-105">How do I Change how my Fields render?</span></span>
 
-<span data-ttu-id="eb0c6-106">por [Scott Hanselman](https://github.com/shanselman)</span><span class="sxs-lookup"><span data-stu-id="eb0c6-106">by [Scott Hanselman](https://github.com/shanselman)</span></span>
+<span data-ttu-id="bc1d8-106">por [Scott Hanselman](https://github.com/shanselman)</span><span class="sxs-lookup"><span data-stu-id="bc1d8-106">by [Scott Hanselman](https://github.com/shanselman)</span></span>
 
-<span data-ttu-id="eb0c6-107">En este vídeo aprenderá a cambiar la manera en que se representan los campos de datos.</span><span class="sxs-lookup"><span data-stu-id="eb0c6-107">In this video you learn how to change the way that data fields are rendered.</span></span> <span data-ttu-id="eb0c6-108">Tendrá que conectar en controles de terceros para algunos campos.</span><span class="sxs-lookup"><span data-stu-id="eb0c6-108">You will plug in third-party controls for some fields.</span></span>
+<span data-ttu-id="bc1d8-107">En este vídeo aprenderá a cambiar la manera en que se representan los campos de datos.</span><span class="sxs-lookup"><span data-stu-id="bc1d8-107">In this video you learn how to change the way that data fields are rendered.</span></span> <span data-ttu-id="bc1d8-108">Tendrá que conectar en controles de terceros para algunos campos.</span><span class="sxs-lookup"><span data-stu-id="bc1d8-108">You will plug in third-party controls for some fields.</span></span>
 
-[<span data-ttu-id="eb0c6-109">&#9654;Vea el vídeo (13 minutos)</span><span class="sxs-lookup"><span data-stu-id="eb0c6-109">&#9654; Watch video (13 minutes)</span></span>](https://channel9.msdn.com/Blogs/ASP-NET-Site-Videos/how-do-i-change-how-my-fields-render)
+[<span data-ttu-id="bc1d8-109">&#9654;Vea el vídeo (13 minutos)</span><span class="sxs-lookup"><span data-stu-id="bc1d8-109">&#9654; Watch video (13 minutes)</span></span>](https://channel9.msdn.com/Blogs/ASP-NET-Site-Videos/how-do-i-change-how-my-fields-render)
 
 > [!div class="step-by-step"]
-> <span data-ttu-id="eb0c6-110">[Anterior](how-do-i-enable-inline-gridview-editing.md)
-> [Siguiente](how-do-i-handle-business-logic-exceptions.md)</span><span class="sxs-lookup"><span data-stu-id="eb0c6-110">[Previous](how-do-i-enable-inline-gridview-editing.md)
+> <span data-ttu-id="bc1d8-110">[Anterior](how-do-i-enable-inline-gridview-editing.md)
+> [Siguiente](how-do-i-handle-business-logic-exceptions.md)</span><span class="sxs-lookup"><span data-stu-id="bc1d8-110">[Previous](how-do-i-enable-inline-gridview-editing.md)
 [Next](how-do-i-handle-business-logic-exceptions.md)</span></span>

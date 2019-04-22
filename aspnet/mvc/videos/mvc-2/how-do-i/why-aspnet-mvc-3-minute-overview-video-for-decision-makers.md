@@ -12,18 +12,18 @@ ms.openlocfilehash: 158a49553490e9faf01264b7934e48a8edece2c4
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59382126"
 ---
-# <a name="why-aspnet-mvc-3-minute-overview-video-for-decision-makers"></a><span data-ttu-id="eb76a-104">¿Por qué ASP.NET MVC?</span><span class="sxs-lookup"><span data-stu-id="eb76a-104">Why ASP.NET MVC?</span></span> <span data-ttu-id="eb76a-105">vídeo para tomar decisiones de información general de 3 minutos</span><span class="sxs-lookup"><span data-stu-id="eb76a-105">3 minute overview video for decision makers</span></span>
+# <a name="why-aspnet-mvc-3-minute-overview-video-for-decision-makers"></a><span data-ttu-id="d86b4-104">¿Por qué ASP.NET MVC?</span><span class="sxs-lookup"><span data-stu-id="d86b4-104">Why ASP.NET MVC?</span></span> <span data-ttu-id="d86b4-105">vídeo para tomar decisiones de información general de 3 minutos</span><span class="sxs-lookup"><span data-stu-id="d86b4-105">3 minute overview video for decision makers</span></span>
 
-<span data-ttu-id="eb76a-106">por [Rob Conery](https://github.com/robconery)</span><span class="sxs-lookup"><span data-stu-id="eb76a-106">by [Rob Conery](https://github.com/robconery)</span></span>
+<span data-ttu-id="d86b4-106">por [Rob Conery](https://github.com/robconery)</span><span class="sxs-lookup"><span data-stu-id="d86b4-106">by [Rob Conery](https://github.com/robconery)</span></span>
 
-<span data-ttu-id="eb76a-107">Una descripción general de ASP.NET MVC para encargados de tomar decisiones que les gustaría saber más sobre las ventajas de ASP.NET MVC.</span><span class="sxs-lookup"><span data-stu-id="eb76a-107">A high-level overview of ASP.NET MVC for decision-makers who would like to know more about benefits of ASP.NET MVC.</span></span>
+<span data-ttu-id="d86b4-107">Una descripción general de ASP.NET MVC para encargados de tomar decisiones que les gustaría saber más sobre las ventajas de ASP.NET MVC.</span><span class="sxs-lookup"><span data-stu-id="d86b4-107">A high-level overview of ASP.NET MVC for decision-makers who would like to know more about benefits of ASP.NET MVC.</span></span>
 
-[<span data-ttu-id="eb76a-108">&#9654;Vea el vídeo (3 minutos)</span><span class="sxs-lookup"><span data-stu-id="eb76a-108">&#9654; Watch video (3 minutes)</span></span>](https://channel9.msdn.com/Blogs/ASP-NET-Site-Videos/why-aspnet-mvc-3-minute-overview-video-for-decision-makers)
+[<span data-ttu-id="d86b4-108">&#9654;Vea el vídeo (3 minutos)</span><span class="sxs-lookup"><span data-stu-id="d86b4-108">&#9654; Watch video (3 minutes)</span></span>](https://channel9.msdn.com/Blogs/ASP-NET-Site-Videos/why-aspnet-mvc-3-minute-overview-video-for-decision-makers)
 
 > [!div class="step-by-step"]
-> <span data-ttu-id="eb76a-109">[Anterior](what-is-aspnet-mvc-80-minute-technical-video-for-developers-building-nerddinner.md)
-> [Siguiente](aspnet-mvc-how-10-minute-technical-video-for-developers.md)</span><span class="sxs-lookup"><span data-stu-id="eb76a-109">[Previous](what-is-aspnet-mvc-80-minute-technical-video-for-developers-building-nerddinner.md)
+> <span data-ttu-id="d86b4-109">[Anterior](what-is-aspnet-mvc-80-minute-technical-video-for-developers-building-nerddinner.md)
+> [Siguiente](aspnet-mvc-how-10-minute-technical-video-for-developers.md)</span><span class="sxs-lookup"><span data-stu-id="d86b4-109">[Previous](what-is-aspnet-mvc-80-minute-technical-video-for-developers-building-nerddinner.md)
 [Next](aspnet-mvc-how-10-minute-technical-video-for-developers.md)</span></span>

@@ -12,15 +12,15 @@ ms.openlocfilehash: fe82cbd43cf374439675ad811586282a1a79f488
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59409491"
 ---
-# <a name="supporting-odata-v3-in-aspnet-web-api"></a><span data-ttu-id="cf6fe-103">Compatibilidad con OData v3 en ASP.NET Web API</span><span class="sxs-lookup"><span data-stu-id="cf6fe-103">Supporting OData v3 in ASP.NET Web API</span></span>
+# <a name="supporting-odata-v3-in-aspnet-web-api"></a><span data-ttu-id="59ccc-103">Compatibilidad con OData v3 en ASP.NET Web API</span><span class="sxs-lookup"><span data-stu-id="59ccc-103">Supporting OData v3 in ASP.NET Web API</span></span>
 
-> <span data-ttu-id="cf6fe-104">Usar ASP.NET Web API para crear extremos que admiten OData versión 3.</span><span class="sxs-lookup"><span data-stu-id="cf6fe-104">Use ASP.NET Web API to create endpoints that support OData Version 3.</span></span>
+> <span data-ttu-id="59ccc-104">Usar ASP.NET Web API para crear extremos que admiten OData versión 3.</span><span class="sxs-lookup"><span data-stu-id="59ccc-104">Use ASP.NET Web API to create endpoints that support OData Version 3.</span></span>
 
 
-- [<span data-ttu-id="cf6fe-105">Crear un punto de conexión de OData v3</span><span class="sxs-lookup"><span data-stu-id="cf6fe-105">Creating an OData v3 Endpoint</span></span>](creating-an-odata-endpoint.md)
-- [<span data-ttu-id="cf6fe-106">Compatibilidad con las relaciones de entidad en OData v3</span><span class="sxs-lookup"><span data-stu-id="cf6fe-106">Supporting Entity Relations in OData v3</span></span>](working-with-entity-relations.md)
-- [<span data-ttu-id="cf6fe-107">Acciones de OData en Web API 2</span><span class="sxs-lookup"><span data-stu-id="cf6fe-107">OData Actions in Web API 2</span></span>](odata-actions.md)
-- [<span data-ttu-id="cf6fe-108">Llamar a un servicio OData desde un cliente .NET (C#)</span><span class="sxs-lookup"><span data-stu-id="cf6fe-108">Calling an OData Service From a .NET Client (C#)</span></span>](calling-an-odata-service-from-a-net-client.md)
+- [<span data-ttu-id="59ccc-105">Crear un punto de conexión de OData v3</span><span class="sxs-lookup"><span data-stu-id="59ccc-105">Creating an OData v3 Endpoint</span></span>](creating-an-odata-endpoint.md)
+- [<span data-ttu-id="59ccc-106">Compatibilidad con las relaciones de entidad en OData v3</span><span class="sxs-lookup"><span data-stu-id="59ccc-106">Supporting Entity Relations in OData v3</span></span>](working-with-entity-relations.md)
+- [<span data-ttu-id="59ccc-107">Acciones de OData en Web API 2</span><span class="sxs-lookup"><span data-stu-id="59ccc-107">OData Actions in Web API 2</span></span>](odata-actions.md)
+- [<span data-ttu-id="59ccc-108">Llamar a un servicio OData desde un cliente .NET (C#)</span><span class="sxs-lookup"><span data-stu-id="59ccc-108">Calling an OData Service From a .NET Client (C#)</span></span>](calling-an-odata-service-from-a-net-client.md)
