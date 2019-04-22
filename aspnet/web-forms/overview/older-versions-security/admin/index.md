@@ -12,17 +12,17 @@ ms.openlocfilehash: c89da16bf4783198d2b4c173eba1b7a7191257a0
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59383120"
 ---
-# <a name="aspnet-35---security-administration"></a><span data-ttu-id="f3e12-103">ASP.NET 3.5 - Administración de la seguridad</span><span class="sxs-lookup"><span data-stu-id="f3e12-103">ASP.NET 3.5 - Security Administration</span></span>
+# <a name="aspnet-35---security-administration"></a><span data-ttu-id="fcf4c-103">ASP.NET 3.5 - Administración de la seguridad</span><span class="sxs-lookup"><span data-stu-id="fcf4c-103">ASP.NET 3.5 - Security Administration</span></span>
 
-> <span data-ttu-id="f3e12-104">Esta serie de tutoriales muestra una forma de crear una página de administración que le permite administrar usuarios y roles.</span><span class="sxs-lookup"><span data-stu-id="f3e12-104">This tutorial series shows you one way to create an administration page that lets you manage users and roles.</span></span>
+> <span data-ttu-id="fcf4c-104">Esta serie de tutoriales muestra una forma de crear una página de administración que le permite administrar usuarios y roles.</span><span class="sxs-lookup"><span data-stu-id="fcf4c-104">This tutorial series shows you one way to create an administration page that lets you manage users and roles.</span></span>
 
 
-- [<span data-ttu-id="f3e12-105">Crear una interfaz para seleccionar una cuenta de usuario entre varias cuentas (C#)</span><span class="sxs-lookup"><span data-stu-id="f3e12-105">Building an Interface to Select One User Account from Many (C#)</span></span>](building-an-interface-to-select-one-user-account-from-many-cs.md)
-- [<span data-ttu-id="f3e12-106">Recuperar y cambiar las contraseñas (C#)</span><span class="sxs-lookup"><span data-stu-id="f3e12-106">Recovering and Changing Passwords (C#)</span></span>](recovering-and-changing-passwords-cs.md)
-- [<span data-ttu-id="f3e12-107">Desbloquear y autorizar cuentas de usuario (C#)</span><span class="sxs-lookup"><span data-stu-id="f3e12-107">Unlocking and Approving User Accounts (C#)</span></span>](unlocking-and-approving-user-accounts-cs.md)
-- [<span data-ttu-id="f3e12-108">Crear una interfaz para seleccionar una cuenta de usuario entre varias cuentas (VB)</span><span class="sxs-lookup"><span data-stu-id="f3e12-108">Building an Interface to Select One User Account from Many (VB)</span></span>](building-an-interface-to-select-one-user-account-from-many-vb.md)
-- [<span data-ttu-id="f3e12-109">Recuperar y cambiar las contraseñas (VB)</span><span class="sxs-lookup"><span data-stu-id="f3e12-109">Recovering and Changing Passwords (VB)</span></span>](recovering-and-changing-passwords-vb.md)
-- [<span data-ttu-id="f3e12-110">Desbloquear y autorizar cuentas de usuario (VB)</span><span class="sxs-lookup"><span data-stu-id="f3e12-110">Unlocking and Approving User Accounts (VB)</span></span>](unlocking-and-approving-user-accounts-vb.md)
+- [<span data-ttu-id="fcf4c-105">Crear una interfaz para seleccionar una cuenta de usuario entre varias cuentas (C#)</span><span class="sxs-lookup"><span data-stu-id="fcf4c-105">Building an Interface to Select One User Account from Many (C#)</span></span>](building-an-interface-to-select-one-user-account-from-many-cs.md)
+- [<span data-ttu-id="fcf4c-106">Recuperar y cambiar las contraseñas (C#)</span><span class="sxs-lookup"><span data-stu-id="fcf4c-106">Recovering and Changing Passwords (C#)</span></span>](recovering-and-changing-passwords-cs.md)
+- [<span data-ttu-id="fcf4c-107">Desbloquear y autorizar cuentas de usuario (C#)</span><span class="sxs-lookup"><span data-stu-id="fcf4c-107">Unlocking and Approving User Accounts (C#)</span></span>](unlocking-and-approving-user-accounts-cs.md)
+- [<span data-ttu-id="fcf4c-108">Crear una interfaz para seleccionar una cuenta de usuario entre varias cuentas (VB)</span><span class="sxs-lookup"><span data-stu-id="fcf4c-108">Building an Interface to Select One User Account from Many (VB)</span></span>](building-an-interface-to-select-one-user-account-from-many-vb.md)
+- [<span data-ttu-id="fcf4c-109">Recuperar y cambiar las contraseñas (VB)</span><span class="sxs-lookup"><span data-stu-id="fcf4c-109">Recovering and Changing Passwords (VB)</span></span>](recovering-and-changing-passwords-vb.md)
+- [<span data-ttu-id="fcf4c-110">Desbloquear y autorizar cuentas de usuario (VB)</span><span class="sxs-lookup"><span data-stu-id="fcf4c-110">Unlocking and Approving User Accounts (VB)</span></span>](unlocking-and-approving-user-accounts-vb.md)

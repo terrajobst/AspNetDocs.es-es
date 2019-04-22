@@ -12,13 +12,13 @@ ms.openlocfilehash: 15c4a0341afcbd273508a420518b637b07b3476f
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59381476"
 ---
-# <a name="how-do-i-create-a-multi-lingual-site-with-localization"></a><span data-ttu-id="94994-105">[¿Cómo lo hago?:] ¿Crear un sitio multilingüe con localización?</span><span class="sxs-lookup"><span data-stu-id="94994-105">[How Do I:] Create a Multi-Lingual Site with Localization?</span></span>
+# <a name="how-do-i-create-a-multi-lingual-site-with-localization"></a><span data-ttu-id="c1c7e-105">[¿Cómo lo hago?:] ¿Crear un sitio multilingüe con localización?</span><span class="sxs-lookup"><span data-stu-id="c1c7e-105">[How Do I:] Create a Multi-Lingual Site with Localization?</span></span>
 
-<span data-ttu-id="94994-106">por [Microsoft](https://github.com/microsoft)</span><span class="sxs-lookup"><span data-stu-id="94994-106">by [Microsoft](https://github.com/microsoft)</span></span>
+<span data-ttu-id="c1c7e-106">por [Microsoft](https://github.com/microsoft)</span><span class="sxs-lookup"><span data-stu-id="c1c7e-106">by [Microsoft](https://github.com/microsoft)</span></span>
 
-<span data-ttu-id="94994-107">Aprenda a crear contenido web basadas en la referencia cultural y específicas de la configuración regional con ningún código adicional.</span><span class="sxs-lookup"><span data-stu-id="94994-107">Learn how to create culture-aware and locale-specific web content with no additional code.</span></span> <span data-ttu-id="94994-108">Usar el Editor de recursos para crear recursos de nivel de página y nivel de aplicación.</span><span class="sxs-lookup"><span data-stu-id="94994-108">Use the Resource Editor to create page-level and application-level resources.</span></span>
+<span data-ttu-id="c1c7e-107">Aprenda a crear contenido web basadas en la referencia cultural y específicas de la configuración regional con ningún código adicional.</span><span class="sxs-lookup"><span data-stu-id="c1c7e-107">Learn how to create culture-aware and locale-specific web content with no additional code.</span></span> <span data-ttu-id="c1c7e-108">Usar el Editor de recursos para crear recursos de nivel de página y nivel de aplicación.</span><span class="sxs-lookup"><span data-stu-id="c1c7e-108">Use the Resource Editor to create page-level and application-level resources.</span></span>
 
-[<span data-ttu-id="94994-109">&#9654;Vea el vídeo (13 minutos)</span><span class="sxs-lookup"><span data-stu-id="94994-109">&#9654; Watch video (13 minutes)</span></span>](https://channel9.msdn.com/Blogs/ASP-NET-Site-Videos/how-do-i-create-a-multi-lingual-site-with-localization)
+[<span data-ttu-id="c1c7e-109">&#9654;Vea el vídeo (13 minutos)</span><span class="sxs-lookup"><span data-stu-id="c1c7e-109">&#9654; Watch video (13 minutes)</span></span>](https://channel9.msdn.com/Blogs/ASP-NET-Site-Videos/how-do-i-create-a-multi-lingual-site-with-localization)
