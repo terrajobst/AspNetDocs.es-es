@@ -12,13 +12,13 @@ ms.openlocfilehash: 917629c3ad457ade21dc832b248cb09102a5cf0c
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59395165"
 ---
-# <a name="americas-next-top-model-view-controller-framework"></a><span data-ttu-id="0a009-104">Tutorial "America's Next Top Model View Controller Framework"</span><span class="sxs-lookup"><span data-stu-id="0a009-104">America's Next Top Model View Controller Framework</span></span>
+# <a name="americas-next-top-model-view-controller-framework"></a><span data-ttu-id="a820f-104">Tutorial "America's Next Top Model View Controller Framework"</span><span class="sxs-lookup"><span data-stu-id="a820f-104">America's Next Top Model View Controller Framework</span></span>
 
-<span data-ttu-id="0a009-105">por [Phil Haack](https://github.com/Haacked)</span><span class="sxs-lookup"><span data-stu-id="0a009-105">by [Phil Haack](https://github.com/Haacked)</span></span>
+<span data-ttu-id="a820f-105">por [Phil Haack](https://github.com/Haacked)</span><span class="sxs-lookup"><span data-stu-id="a820f-105">by [Phil Haack](https://github.com/Haacked)</span></span>
 
-<span data-ttu-id="0a009-106">Vea cómo crear una aplicación simple que se resalta algunas de las funcionalidades principales de ASP.NET MVC.</span><span class="sxs-lookup"><span data-stu-id="0a009-106">See how to build a simple application that highlights some of the key capabilities of ASP.NET MVC.</span></span> <span data-ttu-id="0a009-107">Además, obtenga información sobre cómo mejorar la productividad con algunas de las herramientas nuevas características de texturas.</span><span class="sxs-lookup"><span data-stu-id="0a009-107">Also, learn how to improve productivity using some of the cool new tooling features.</span></span>
+<span data-ttu-id="a820f-106">Vea cómo crear una aplicación simple que se resalta algunas de las funcionalidades principales de ASP.NET MVC.</span><span class="sxs-lookup"><span data-stu-id="a820f-106">See how to build a simple application that highlights some of the key capabilities of ASP.NET MVC.</span></span> <span data-ttu-id="a820f-107">Además, obtenga información sobre cómo mejorar la productividad con algunas de las herramientas nuevas características de texturas.</span><span class="sxs-lookup"><span data-stu-id="a820f-107">Also, learn how to improve productivity using some of the cool new tooling features.</span></span>
 
-[<span data-ttu-id="0a009-108">&#9654;Vea el vídeo (70 minutos)</span><span class="sxs-lookup"><span data-stu-id="0a009-108">&#9654; Watch video (70 minutes)</span></span>](https://channel9.msdn.com/Blogs/ASP-NET-Site-Videos/americas-next-top-model-view-controller-framework)
+[<span data-ttu-id="a820f-108">&#9654;Vea el vídeo (70 minutos)</span><span class="sxs-lookup"><span data-stu-id="a820f-108">&#9654; Watch video (70 minutes)</span></span>](https://channel9.msdn.com/Blogs/ASP-NET-Site-Videos/americas-next-top-model-view-controller-framework)

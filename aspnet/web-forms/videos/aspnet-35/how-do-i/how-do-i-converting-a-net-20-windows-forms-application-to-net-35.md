@@ -12,18 +12,18 @@ ms.openlocfilehash: 673e15d247c50a0ae5dccdee5d962d6af36988a1
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59388041"
 ---
-# <a name="how-do-i-converting-a-net-20-windows-forms-application-to-net-35"></a><span data-ttu-id="44c2e-104">[¿Cómo lo hago?:] Conversión de una aplicación de .NET 2.0 de Windows Forms a .NET 3.5</span><span class="sxs-lookup"><span data-stu-id="44c2e-104">[How Do I:] Converting a .NET 2.0 Windows Forms Application to .NET 3.5</span></span>
+# <a name="how-do-i-converting-a-net-20-windows-forms-application-to-net-35"></a><span data-ttu-id="094ea-104">[¿Cómo lo hago?:] Conversión de una aplicación de .NET 2.0 de Windows Forms a .NET 3.5</span><span class="sxs-lookup"><span data-stu-id="094ea-104">[How Do I:] Converting a .NET 2.0 Windows Forms Application to .NET 3.5</span></span>
 
-<span data-ttu-id="44c2e-105">por Asli Bilgin</span><span class="sxs-lookup"><span data-stu-id="44c2e-105">by Asli Bilgin</span></span>
+<span data-ttu-id="094ea-105">por Asli Bilgin</span><span class="sxs-lookup"><span data-stu-id="094ea-105">by Asli Bilgin</span></span>
 
-<span data-ttu-id="44c2e-106">Mediante la nueva característica de múltiples versiones de Visual Studio 2008, demostraré actualizar un proyecto de .NET 2.0 para .NET 3.5.</span><span class="sxs-lookup"><span data-stu-id="44c2e-106">Using the new multi-targeting feature of Visual Studio 2008, I will demonstrate upgrading a project from .NET 2.0 to .NET 3.5.</span></span> <span data-ttu-id="44c2e-107">En este vídeo se tomará una aplicación de formularios de Windows de .NET 2.0 y actualizarla a .NET 3.5.</span><span class="sxs-lookup"><span data-stu-id="44c2e-107">In this video we will take a .NET 2.0 Windows forms application and upgrade it to .NET 3.5.</span></span>
+<span data-ttu-id="094ea-106">Mediante la nueva característica de múltiples versiones de Visual Studio 2008, demostraré actualizar un proyecto de .NET 2.0 para .NET 3.5.</span><span class="sxs-lookup"><span data-stu-id="094ea-106">Using the new multi-targeting feature of Visual Studio 2008, I will demonstrate upgrading a project from .NET 2.0 to .NET 3.5.</span></span> <span data-ttu-id="094ea-107">En este vídeo se tomará una aplicación de formularios de Windows de .NET 2.0 y actualizarla a .NET 3.5.</span><span class="sxs-lookup"><span data-stu-id="094ea-107">In this video we will take a .NET 2.0 Windows forms application and upgrade it to .NET 3.5.</span></span>
 
-[<span data-ttu-id="44c2e-108">&#9654;Vea el vídeo (8 minutos)</span><span class="sxs-lookup"><span data-stu-id="44c2e-108">&#9654; Watch video (8 minutes)</span></span>](https://channel9.msdn.com/Blogs/ASP-NET-Site-Videos/how-do-i-converting-a-net-20-windows-forms-application-to-net-35)
+[<span data-ttu-id="094ea-108">&#9654;Vea el vídeo (8 minutos)</span><span class="sxs-lookup"><span data-stu-id="094ea-108">&#9654; Watch video (8 minutes)</span></span>](https://channel9.msdn.com/Blogs/ASP-NET-Site-Videos/how-do-i-converting-a-net-20-windows-forms-application-to-net-35)
 
 > [!div class="step-by-step"]
-> <span data-ttu-id="44c2e-109">[Anterior](how-do-i-advance-cascading-style-sheet-features-and-management.md)
-> [Siguiente](how-do-i-get-started-with-the-entity-framework.md)</span><span class="sxs-lookup"><span data-stu-id="44c2e-109">[Previous](how-do-i-advance-cascading-style-sheet-features-and-management.md)
+> <span data-ttu-id="094ea-109">[Anterior](how-do-i-advance-cascading-style-sheet-features-and-management.md)
+> [Siguiente](how-do-i-get-started-with-the-entity-framework.md)</span><span class="sxs-lookup"><span data-stu-id="094ea-109">[Previous](how-do-i-advance-cascading-style-sheet-features-and-management.md)
 [Next](how-do-i-get-started-with-the-entity-framework.md)</span></span>

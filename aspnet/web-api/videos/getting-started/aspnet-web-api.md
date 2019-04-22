@@ -12,11 +12,11 @@ ms.openlocfilehash: d71a92f1c8b027a966cbe5a35c0947df009b2bba
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59391967"
 ---
-# <a name="aspnet-web-api"></a><span data-ttu-id="61f3a-103">ASP.NET Web API</span><span class="sxs-lookup"><span data-stu-id="61f3a-103">ASP.NET Web API</span></span>
+# <a name="aspnet-web-api"></a><span data-ttu-id="04266-103">ASP.NET Web API</span><span class="sxs-lookup"><span data-stu-id="04266-103">ASP.NET Web API</span></span>
 
-<span data-ttu-id="61f3a-104">por [Scott Hanselman](https://github.com/shanselman)</span><span class="sxs-lookup"><span data-stu-id="61f3a-104">by [Scott Hanselman](https://github.com/shanselman)</span></span>
+<span data-ttu-id="04266-104">por [Scott Hanselman](https://github.com/shanselman)</span><span class="sxs-lookup"><span data-stu-id="04266-104">by [Scott Hanselman](https://github.com/shanselman)</span></span>
 
-[<span data-ttu-id="61f3a-105">&#9654;Vea el vídeo (6 minutos)</span><span class="sxs-lookup"><span data-stu-id="61f3a-105">&#9654; Watch video (6 minutes)</span></span>](https://channel9.msdn.com/Blogs/ASP-NET-Site-Videos/aspnet-web-api)
+[<span data-ttu-id="04266-105">&#9654;Vea el vídeo (6 minutos)</span><span class="sxs-lookup"><span data-stu-id="04266-105">&#9654; Watch video (6 minutes)</span></span>](https://channel9.msdn.com/Blogs/ASP-NET-Site-Videos/aspnet-web-api)

@@ -12,18 +12,18 @@ ms.openlocfilehash: 0ce5a0c74f81e23601d9b5fe3ec82b591c867158
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59392812"
 ---
-# <a name="how-do-i-linq-to-sql-updating-the-database"></a><span data-ttu-id="8a266-103">[¿Cómo lo hago?:] LINQ to SQL: Actualizar la base de datos</span><span class="sxs-lookup"><span data-stu-id="8a266-103">[How Do I:] LINQ to SQL: Updating the Database</span></span>
+# <a name="how-do-i-linq-to-sql-updating-the-database"></a><span data-ttu-id="83981-103">[¿Cómo lo hago?:] LINQ to SQL: Actualizar la base de datos</span><span class="sxs-lookup"><span data-stu-id="83981-103">[How Do I:] LINQ to SQL: Updating the Database</span></span>
 
-<span data-ttu-id="8a266-104">por [Scott Stanfield](https://github.com/scottstanfield)</span><span class="sxs-lookup"><span data-stu-id="8a266-104">by [Scott Stanfield](https://github.com/scottstanfield)</span></span>
+<span data-ttu-id="83981-104">por [Scott Stanfield](https://github.com/scottstanfield)</span><span class="sxs-lookup"><span data-stu-id="83981-104">by [Scott Stanfield](https://github.com/scottstanfield)</span></span>
 
-<span data-ttu-id="8a266-105">En este vídeo, demostré cómo crear, actualizar y eliminar registros mediante LINQ, las transacciones simples, las actualizaciones a través de relaciones y la validación personalizada de columna y fila.</span><span class="sxs-lookup"><span data-stu-id="8a266-105">In this video I demonstrated how to create, update and delete records through LINQ, simple transactions, updates across relationships, and custom column and row validation.</span></span>
+<span data-ttu-id="83981-105">En este vídeo, demostré cómo crear, actualizar y eliminar registros mediante LINQ, las transacciones simples, las actualizaciones a través de relaciones y la validación personalizada de columna y fila.</span><span class="sxs-lookup"><span data-stu-id="83981-105">In this video I demonstrated how to create, update and delete records through LINQ, simple transactions, updates across relationships, and custom column and row validation.</span></span>
 
-[<span data-ttu-id="8a266-106">&#9654;Vea el vídeo (17 minutos)</span><span class="sxs-lookup"><span data-stu-id="8a266-106">&#9654; Watch video (17 minutes)</span></span>](https://channel9.msdn.com/Blogs/ASP-NET-Site-Videos/how-do-i-linq-to-sql-updating-the-database)
+[<span data-ttu-id="83981-106">&#9654;Vea el vídeo (17 minutos)</span><span class="sxs-lookup"><span data-stu-id="83981-106">&#9654; Watch video (17 minutes)</span></span>](https://channel9.msdn.com/Blogs/ASP-NET-Site-Videos/how-do-i-linq-to-sql-updating-the-database)
 
 > [!div class="step-by-step"]
-> <span data-ttu-id="8a266-107">[Anterior](how-do-i-linq-to-sql-querying-the-database.md)
-> [Siguiente](how-do-i-linq-to-sql-linqdatasource.md)</span><span class="sxs-lookup"><span data-stu-id="8a266-107">[Previous](how-do-i-linq-to-sql-querying-the-database.md)
+> <span data-ttu-id="83981-107">[Anterior](how-do-i-linq-to-sql-querying-the-database.md)
+> [Siguiente](how-do-i-linq-to-sql-linqdatasource.md)</span><span class="sxs-lookup"><span data-stu-id="83981-107">[Previous](how-do-i-linq-to-sql-querying-the-database.md)
 [Next](how-do-i-linq-to-sql-linqdatasource.md)</span></span>
