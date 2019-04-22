@@ -12,7 +12,7 @@ ms.openlocfilehash: dbcd25331387f8606343e551302bc3ed1f9b2c25
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59379513"
 ---
 # <a name="rendering-aspnet-web-pages-razor-sites-for-mobile-devices"></a>Representar sitios de ASP.NET Web Pages (Razor) para dispositivos móviles

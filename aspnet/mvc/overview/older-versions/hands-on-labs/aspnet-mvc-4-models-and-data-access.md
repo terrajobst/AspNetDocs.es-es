@@ -12,7 +12,7 @@ ms.openlocfilehash: 53ca3bc4e550f488f3ae4c41f02a636e747107cb
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59384895"
 ---
 # <a name="aspnet-mvc-4-models-and-data-access"></a>Acceso a datos y modelos de ASP.NET MVC 4
@@ -163,7 +163,7 @@ En esta tarea, creará un modelo de datos para interactuar con la base de datos 
 
     ![Propiedades de conexión](aspnet-mvc-4-models-and-data-access/_static/image9.png "las propiedades de conexión")
 
-    *Propiedades de la conexión*
+    *Propiedades de conexión*
 6. Debe tener el mismo nombre que la cadena de conexión de entidad, cambie su nombre a la clase generada **MusicStoreEntities** y haga clic en **siguiente**.
 
     ![Elegir la conexión de datos](aspnet-mvc-4-models-and-data-access/_static/image10.png "elegir la conexión de datos")
@@ -181,7 +181,7 @@ En esta tarea, creará un modelo de datos para interactuar con la base de datos 
 
     ![Diagrama de la entidad](aspnet-mvc-4-models-and-data-access/_static/image12.png "diagrama de entidades")
 
-    *Diagrama de entidades*
+    *Diagrama de la entidad*
 
     > [!NOTE]
     > Las plantillas T4 (.tt) ejecutan código para generar las clases de entidades y las clases existentes, sobrescribirán con el mismo nombre. En este ejemplo, las clases &quot;álbum&quot;, &quot;género&quot; y &quot;artista&quot; se sobrescribieron con el código generado.

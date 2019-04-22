@@ -12,7 +12,7 @@ ms.openlocfilehash: 15c4a0341afcbd273508a420518b637b07b3476f
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59381476"
 ---
 # <a name="how-do-i-create-a-multi-lingual-site-with-localization"></a>[¿Cómo lo hago?:] ¿Crear un sitio multilingüe con localización?

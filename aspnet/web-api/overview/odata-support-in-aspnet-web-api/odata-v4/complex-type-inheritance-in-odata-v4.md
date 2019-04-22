@@ -12,7 +12,7 @@ ms.openlocfilehash: 76db6325b8528af5b82ca3ea4e34284ca470ff6e
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59378606"
 ---
 # <a name="complex-type-inheritance-in-odata-v4-with-aspnet-web-api"></a>Herencia de tipo complejo en OData v4 con ASP.NET Web API

@@ -12,7 +12,7 @@ ms.openlocfilehash: d4003dba8530d2e72c514c572ffc28ef942fd437
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59379370"
 ---
 # <a name="improving-the-details-and-delete-methods-c"></a>Mejorar los métodos Details y Delete (C#)
@@ -74,8 +74,8 @@ Este tutorial básico de lo que a realizar los controladores de su asociación c
 
 Si desea implementar la aplicación, es útil probar primero la aplicación en el servidor local de IIS 7. Puede usar esto [instalador de plataforma Web](https://www.microsoft.com/web/gallery/install.aspx?appsxml=&amp;appid=ASPNET;) vínculo para habilitar la configuración de IIS para las aplicaciones de ASP.NET. Consulte los vínculos de implementación siguientes:
 
-- [Asignación de contenido de implementación ASP.NET](https://msdn.microsoft.com/library/dd394698.aspx)
-- [Habilitar IIS 7.x](https://blogs.msdn.com/b/rickandy/archive/2011/03/14/enabling-iis-7-x-on-windows-7-vista-sp1-windows-2008-windows-2008-r2.aspx)
+- [Mapa de contenido de implementación de ASP.NET](https://msdn.microsoft.com/library/dd394698.aspx)
+- [Enabling IIS 7.x](https://blogs.msdn.com/b/rickandy/archive/2011/03/14/enabling-iis-7-x-on-windows-7-vista-sp1-windows-2008-windows-2008-r2.aspx)
 - [Implementación de proyectos de aplicación Web](https://msdn.microsoft.com/library/dd394698.aspx)
 
 Ahora le animo a pasar a nuestro nivel intermedio [creación de un modelo de datos de Entity Framework para una aplicación ASP.NET MVC](../../../getting-started/getting-started-with-ef-using-mvc/creating-an-entity-framework-data-model-for-an-asp-net-mvc-application.md) y [MVC Music Store](../../mvc-music-store/mvc-music-store-part-1.md) tutoriales para explorar el [ASP.NET artículos en MSDN](https://msdn.microsoft.com/library/gg416514(VS.98).aspx)y consulte los vídeos y recursos en muchas [ https://asp.net/mvc ](https://asp.net/mvc) para obtener más información sobre ASP.NET MVC. El [foros de ASP.NET MVC](https://forums.asp.net/1146.aspx) son un buen lugar para formular preguntas.

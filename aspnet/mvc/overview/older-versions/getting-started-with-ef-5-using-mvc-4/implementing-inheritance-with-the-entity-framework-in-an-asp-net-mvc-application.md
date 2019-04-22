@@ -12,7 +12,7 @@ ms.openlocfilehash: fe2bc91c1bb37282389a45f662a34f8865dee301
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59381073"
 ---
 # <a name="implementing-inheritance-with-the-entity-framework-in-an-aspnet-mvc-application-8-of-10"></a>Implementar la herencia con Entity Framework en una aplicación ASP.NET MVC (8 de 10)

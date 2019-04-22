@@ -12,7 +12,7 @@ ms.openlocfilehash: ff143aa102973279c53fe4ba052c4766f099c77d
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59382217"
 ---
 # <a name="executing-animations-using-client-side-code-vb"></a>Ejecutar animaciones con código de cliente (VB)
@@ -63,7 +63,7 @@ Este es el código completo de JavaScript del lado cliente que emula el clic en 
 [!code-html[Main](executing-animations-using-client-side-code-vb/samples/sample8.html)]
 
 
-[![Tanimación de se ejecuta inmediatamente, sin un clic del mouse](executing-animations-using-client-side-code-vb/_static/image2.png)](executing-animations-using-client-side-code-vb/_static/image1.png)
+[![La animación se ejecuta inmediatamente, sin un clic del mouse](executing-animations-using-client-side-code-vb/_static/image2.png)](executing-animations-using-client-side-code-vb/_static/image1.png)
 
 La animación se ejecuta inmediatamente, sin un clic del mouse ([haga clic aquí para ver imagen en tamaño completo](executing-animations-using-client-side-code-vb/_static/image3.png))
 

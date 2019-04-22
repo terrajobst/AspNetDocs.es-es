@@ -12,7 +12,7 @@ ms.openlocfilehash: a47d428830fa6c43bcb9ce797d65b73891b44618
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59381892"
 ---
 # <a name="using-asynchronous-methods-in-aspnet-45"></a>Usar métodos asincrónicos en ASP.NET 4.5
@@ -192,7 +192,7 @@ Para obtener los beneficios de una aplicación web asincrónica, es posible que 
 
     - Abra el Administrador de IIS y navegue hasta el panel grupos de aplicaciones.
     - Haga clic con el botón derecho en el grupo de aplicaciones de destino y seleccione **configuración avanzada**.  
-        ![avanzada](using-asynchronous-methods-in-aspnet-45/_static/image4.png)
+        ![advanced](using-asynchronous-methods-in-aspnet-45/_static/image4.png)
     - En el **configuración avanzada** cuadro de diálogo, cambie *longitud de cola* de 1.000 a 5.000.  
         ![Longitud de cola](using-asynchronous-methods-in-aspnet-45/_static/image5.png)  
   

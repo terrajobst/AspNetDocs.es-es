@@ -12,7 +12,7 @@ ms.openlocfilehash: f648e0cb53dd410105adc22401f19a5a15f9e8c1
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59380813"
 ---
 # <a name="adding-a-create-method-and-create-view"></a>Agregar un método Create y una vista Create
@@ -38,7 +38,7 @@ Implementemos ahora la plantilla Create View que vamos a usar para mostrar un fo
 
 Seleccionaremos que se va a pasar a la plantilla de vista de una película"" como su clase de datos de vista e indicar que deseamos "aplicar la técnica scaffolding" una plantilla "Crear".
 
-[![Add View](getting-started-with-mvc-part6/_static/image2.png)](getting-started-with-mvc-part6/_static/image1.png)
+[![Agregar vista](getting-started-with-mvc-part6/_static/image2.png)](getting-started-with-mvc-part6/_static/image1.png)
 
 Tras hacer clic en el botón Agregar, plantilla de vista \Movies\Create.aspx se crearán automáticamente. Dado que hemos seleccionado "Crear" en la lista desplegable de "ver el contenido", el cuadro de diálogo Agregar vista automáticamente "scaffolding" algún contenido predeterminado para nosotros. La técnica de scaffolding crea un elemento HTML &lt;formulario&gt;, un lugar para error de validación de mensajes para ir y, ya que sabe scaffolding sobre películas, crea campos y etiqueta para cada propiedad de nuestra clase.
 
@@ -58,7 +58,7 @@ Echemos un vistazo en el segundo método de creación de nuestro nombre moviesco
 
 Este objeto de película, a continuación, se pasó a la versión [HttpPost] de nuestro método de acción Create, y se guardó en la base de datos y, a continuación, redirige al usuario al método de acción de Index() que mostrará los resultados guardados en la lista de películas:
 
-[![Movie lista - Windows Internet Explorer](getting-started-with-mvc-part6/_static/image6.png)](getting-started-with-mvc-part6/_static/image5.png)
+[![Lista de películas - Windows Internet Explorer](getting-started-with-mvc-part6/_static/image6.png)](getting-started-with-mvc-part6/_static/image5.png)
 
 Hemos no estamos comprobando si nuestra películas son correctas, sin embargo, y la base de datos no nos permite guardar una película con ningún título. Sería bueno si podemos decirle al usuario que antes de la base de datos produjo un error. Haremos esto a continuación mediante la adición de compatibilidad de validación a nuestra aplicación.
 

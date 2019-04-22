@@ -12,7 +12,7 @@ ms.openlocfilehash: 67ca6b1dc68dc2dde4e24d4d6c6ddae04fc4bb6d
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59383491"
 ---
 # <a name="signalr-older-versions"></a>Versiones anteriores de SignalR
@@ -25,8 +25,8 @@ ms.locfileid: "59383491"
 - [Alta frecuencia en tiempo real con SignalR 1.x](tutorial-high-frequency-realtime-with-signalr.md)
 - [Tutorial: Difusión de servidores con ASP.NET SignalR 1.x](tutorial-server-broadcast-with-aspnet-signalr.md)
 - [Guía de la API Hubs - Servidor](signalr-1x-hubs-api-guide-server.md)
-- [Guía de la API SignalR 1.x Hubs - Cliente JavaScript](signalr-1x-hubs-api-guide-javascript-client.md)
-- [Guía de la API Hubs - Cliente .NET](signalr-1x-hubs-api-guide-net-client.md)
+- [Guía de la API SignalR 1.x Hubs: Cliente JavaScript](signalr-1x-hubs-api-guide-javascript-client.md)
+- [Guía de la API Hubs: Cliente .NET](signalr-1x-hubs-api-guide-net-client.md)
 - [Comprender y controlar eventos de duración de la conexión en SignalR](handling-connection-lifetime-events.md)
 - [Trabajar con grupos en SignalR 1.x](working-with-groups.md)
 - [Asignar usuarios de SignalR a las conexiones en SignalR 1.x](mapping-users-to-connections.md)

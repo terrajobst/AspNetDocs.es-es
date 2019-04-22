@@ -12,7 +12,7 @@ ms.openlocfilehash: 198f8c907cf866bd0fd1ae67cf7169a63dda4bc9
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59384711"
 ---
 # <a name="running-windows-powershell-scripts-from-msbuild-project-files"></a>Ejecutar scripts de Windows PowerShell desde archivos de proyecto de MSBuild

@@ -12,7 +12,7 @@ ms.openlocfilehash: 5f8eeeaa9bd77c0259f680198e57ade8d49cd06b
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59382627"
 ---
 # <a name="creating-an-action-vb"></a>Crear una acción (VB)
@@ -28,7 +28,7 @@ El objetivo de este tutorial es explicar cómo puede crear una nueva acción de 
 
 Agregar una nueva acción a un controlador mediante la adición de un nuevo método al controlador. Por ejemplo, el controlador en el listado 1 contiene una acción denominada Index() y una acción denominada SayHello(). Ambos métodos se exponen como acciones.
 
-**Listado 1 - Controllers\HomeController.vb**
+**Listing 1 - Controllers\HomeController.vb**
 
 [!code-vb[Main](creating-an-action-vb/samples/sample1.vb)]
 
@@ -50,14 +50,14 @@ Cuando se agrega a cualquier método que no infrinja estos requisitos a un contr
 
 Si necesita crear un método público en una clase de controlador y no desea exponer el método como una acción de controlador, a continuación, puede impedir que el método que se invoca mediante el uso de la &lt;NonAction&gt; atributo. Por ejemplo, el controlador en el listado 2 contiene un método público denominado CompanySecrets() decorada con el &lt;NonAction&gt; atributo.
 
-**Listado 2 - Controllers\WorkController.vb**
+**Listing 2 - Controllers\WorkController.vb**
 
 [!code-vb[Main](creating-an-action-vb/samples/sample2.vb)]
 
 Si se intenta invocar la acción del controlador CompanySecrets() escribiendo /Work/CompanySecrets en la barra de direcciones del explorador, a continuación, obtendrá el mensaje de error en la figura 1.
 
 
-[![Iun método NonAction nvoking](creating-an-action-vb/_static/image1.jpg)](creating-an-action-vb/_static/image1.png)
+[![Invocar un método NonAction](creating-an-action-vb/_static/image1.jpg)](creating-an-action-vb/_static/image1.png)
 
 **Figura 01**: Invocar un método NonAction ([haga clic aquí para ver imagen en tamaño completo](creating-an-action-vb/_static/image2.png))
 

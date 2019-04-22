@@ -12,7 +12,7 @@ ms.openlocfilehash: 812bbe4acc6ae7f364bab98d3ffc4be0f1388c2b
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59378415"
 ---
 # <a name="working-with-forms-part-1"></a>Trabajar con formularios (parte 1)

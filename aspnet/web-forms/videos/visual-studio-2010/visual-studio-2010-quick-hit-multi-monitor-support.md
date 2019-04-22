@@ -12,7 +12,7 @@ ms.openlocfilehash: 8ed863a546c5ecb58308e292a0294e294e1e263e
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59378215"
 ---
 # <a name="visual-studio-2010-quick-hit---multi-monitor-support"></a>Visual Studio 2010 "Rápido Hit" - compatibilidad con varios Monitor

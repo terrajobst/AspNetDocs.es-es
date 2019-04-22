@@ -12,7 +12,7 @@ ms.openlocfilehash: 2b8cae61347f00712aba18fe6a2e91bc207cb9f3
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59380046"
 ---
 # <a name="aspnet-web-forms-connection-resiliency-and-command-interception"></a>Resistencia de la conexión e intercepción de comandos de Formularios Web Forms de ASP.NET

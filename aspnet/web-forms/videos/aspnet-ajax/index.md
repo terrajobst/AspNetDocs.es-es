@@ -12,7 +12,7 @@ ms.openlocfilehash: 5fc85b5ac4771d6784e9afa41e09d74474a605ba
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59381307"
 ---
 # <a name="aspnet-ajax"></a>ASP.NET AJAX

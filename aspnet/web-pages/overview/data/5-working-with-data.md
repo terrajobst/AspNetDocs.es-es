@@ -12,7 +12,7 @@ ms.openlocfilehash: 0fc828e39cfcce22d4cc226954cf7d1731b04e42
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59379786"
 ---
 # <a name="introduction-to-working-with-a-database-in-aspnet-web-pages-razor-sites"></a>Introducción al trabajo con una base de datos en ASP.NET Web Pages (Razor) sitios
@@ -51,7 +51,7 @@ Imagine una libreta de direcciones típico. Para cada entrada de la libreta de d
 
 Una forma habitual a los datos de imagen así es como una tabla con filas y columnas. En términos de la base de datos, cada fila se conoce a menudo como un registro. Cada columna (a veces denominada campos) contiene un valor para cada tipo de datos: nombre, nombre de la última y así sucesivamente.
 
-| **ID** | **Nombre** | **LastName** | **Dirección** | **Correo electrónico** | **Teléfono** |
+| **ID** | **FirstName** | **LastName** | **Dirección** | **Correo electrónico** | **Teléfono** |
 | --- | --- | --- | --- | --- | --- |
 | 1 | Jim | Abrus | 210 100th St SE Orcas WA 98031 | jim@contoso.com | 555 0100 |
 | 2 | Terry | Adams | 1234 Main St. Seattle WA 99011 | terry@cohowinery.com | 555 0101 |
@@ -69,7 +69,7 @@ Con este conocimiento básico de bases de datos, está listo para aprender a cre
 > En este artículo no vaya muy profundamente en bases de datos. Sin embargo, le resultará útil para comprender un poco sobre ellos. En una base de datos relacional, la información se divide lógicamente en tablas independientes. Por ejemplo, una base de datos para una escuela podría contener tablas independientes para los estudiantes y para las ofertas de clase. Los comandos eficaces de es compatible con software (por ejemplo, SQL Server) de base de datos que le permiten dinámicamente establecen relaciones entre las tablas. Por ejemplo, puede usar la base de datos relacional para establecer una relación lógica entre alumnos y clases con el fin de crear una programación. Almacenar datos en tablas independientes reduce la complejidad de la estructura de tabla y reduce la necesidad de conservar datos redundantes en tablas.
 
 
-## <a name="creating-a-database"></a>Creación de una base de datos
+## <a name="creating-a-database"></a>Crear una base de datos
 
 Este procedimiento muestra cómo crear una base de datos denominada SmallBakery mediante la herramienta de diseño de base de datos de SQL Server Compact se incluye en WebMatrix. Aunque puede crear una base de datos mediante código, es más habitual para crear la base de datos y tablas de base de datos mediante una herramienta de diseño como WebMatrix.
 

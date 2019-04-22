@@ -12,7 +12,7 @@ ms.openlocfilehash: 1f40e5fb5dcd141b19099d54276194ad97548adc
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59381950"
 ---
 # <a name="signalr-deployment-and-hosting"></a>Implementación de SignalR y hospedaje
@@ -20,5 +20,5 @@ ms.locfileid: "59381950"
 > Cómo implementar y hospedar aplicaciones de SignalR.
 
 
-- [Tutorial: Autohospedaje de SignalR](tutorial-signalr-self-host.md)
+- [Tutorial: Interna de SignalR](tutorial-signalr-self-host.md)
 - [Usar SignalR con Web Apps en Azure App Service](using-signalr-with-azure-web-sites.md)

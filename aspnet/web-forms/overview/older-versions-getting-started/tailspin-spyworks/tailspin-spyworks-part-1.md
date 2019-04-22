@@ -12,7 +12,7 @@ ms.openlocfilehash: 70d2efb789d694a0aaecc046615c7b3622079dc1
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59385363"
 ---
 # <a name="part-1-file--new-project"></a>Parte 1: Archivo -> Nuevo proyecto

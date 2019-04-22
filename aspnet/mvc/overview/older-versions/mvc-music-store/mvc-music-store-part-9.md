@@ -12,7 +12,7 @@ ms.openlocfilehash: c7151351b087439f17457b254cd9e373af21cae3
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59380904"
 ---
 # <a name="part-9-registration-and-checkout"></a>Parte 9: Registro y finalización de la compra

@@ -12,7 +12,7 @@ ms.openlocfilehash: be4948e5443a5eb4e1824c63dd0c445a7ee1928e
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59384699"
 ---
 # <a name="handling-entity-relations"></a>Controlar las relaciones de entidad

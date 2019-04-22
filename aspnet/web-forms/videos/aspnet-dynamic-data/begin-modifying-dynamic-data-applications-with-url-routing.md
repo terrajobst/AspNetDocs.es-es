@@ -12,7 +12,7 @@ ms.openlocfilehash: c3437e7f5200ece9766ec89d22a5c051cb17f13f
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59379240"
 ---
 # <a name="begin-modifying-dynamic-data-applications-with-url-routing"></a>Empezar a modificar las aplicaciones de datos dinámicos con el enrutamiento de direcciones URL

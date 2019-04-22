@@ -12,7 +12,7 @@ ms.openlocfilehash: 433756839532393b36935df8f237e93706b4f18c
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59383171"
 ---
 # <a name="using-auto-postback-with-cascadingdropdown-vb"></a>Usar el postback automático con CascadingDropDown (VB)
@@ -57,7 +57,7 @@ Carga de la página en el explorador rellenará la lista desplegable con los tre
 De este modo, una devolución de datos solo se ejecuta cuando hay elementos realmente en la lista y el usuario selecciona una entrada.
 
 
-[![Selección de un elemento de lista, produce un postback](using-auto-postback-with-cascadingdropdown-vb/_static/image2.png)](using-auto-postback-with-cascadingdropdown-vb/_static/image1.png)
+[![Al seleccionar un elemento de lista, una devolución de datos](using-auto-postback-with-cascadingdropdown-vb/_static/image2.png)](using-auto-postback-with-cascadingdropdown-vb/_static/image1.png)
 
 Al seleccionar un elemento de lista, una devolución de datos ([haga clic aquí para ver imagen en tamaño completo](using-auto-postback-with-cascadingdropdown-vb/_static/image3.png))
 
