@@ -12,7 +12,7 @@ ms.openlocfilehash: fa0573738fee8f1decc13c9797f644002931e09d
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59381502"
 ---
 # <a name="creating-an-odata-v3-endpoint-with-web-api-2"></a>Creación de un punto de conexión de OData v3 con Web API 2

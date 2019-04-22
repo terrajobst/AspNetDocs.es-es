@@ -12,7 +12,7 @@ ms.openlocfilehash: 1cce2b05f125902ab05d493bebe753b2060b4d95
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59384284"
 ---
 # <a name="disabling-actions-during-animation-c"></a>Deshabilitar las acciones durante la animación (C#)
@@ -55,7 +55,7 @@ También sería posible volver a habilitar al botón después de la animación, 
 Sin embargo en un escenario determinado sería inútil desde el botón se atenúa y no está visible al final de la animación.
 
 
-[![Tbotón está deshabilitado en cuanto se ejecuta la animación](disabling-actions-during-animation-cs/_static/image2.png)](disabling-actions-during-animation-cs/_static/image1.png)
+[![El botón está deshabilitado en cuanto se ejecuta la animación](disabling-actions-during-animation-cs/_static/image2.png)](disabling-actions-during-animation-cs/_static/image1.png)
 
 El botón está deshabilitado en cuanto se ejecuta la animación ([haga clic aquí para ver imagen en tamaño completo](disabling-actions-during-animation-cs/_static/image3.png))
 

@@ -12,7 +12,7 @@ ms.openlocfilehash: ba159c2306a50f24576623b8c2cafb79a138e91f
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59380553"
 ---
 # <a name="database-driven-site-maps"></a>Mapas del sitio controlados por la base de datos

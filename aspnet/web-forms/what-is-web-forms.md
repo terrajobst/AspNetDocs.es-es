@@ -12,7 +12,7 @@ ms.openlocfilehash: cb7a4ff9dbf746c0729129445042e53e506df5d2
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59385740"
 ---
 # <a name="what-is-web-forms"></a>¿Qué es Web Forms

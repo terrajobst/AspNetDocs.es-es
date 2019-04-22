@@ -12,7 +12,7 @@ ms.openlocfilehash: abff97e5cc2663465fdf61f41ff69d17104fe8b6
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59379474"
 ---
 # <a name="use-controllers-and-views-to-implement-a-listingdetails-ui"></a>Usar controladores y vistas para implementar una interfaz de usuario de lista/detalles
@@ -56,7 +56,7 @@ También se abrirá la nueva clase DinnersController dentro del editor de códig
 
 Queremos permitir a que los visitantes con nuestra aplicación para examinar una lista de instancias dinners próximas y permitirles hacer clic en cualquier cena en la lista para ver los detalles específicos sobre él. Haremos esto mediante la publicación de las siguientes direcciones URL desde nuestra aplicación:
 
-| **Resolución** | **Finalidad** |
+| **URL** | **Propósito** |
 | --- | --- |
 | */Dinners/* | Mostrar una lista HTML de próximas dinners |
 | */ Dinners/detalles / [id]* | Mostrar los detalles sobre una cena específico indicado por un parámetro "id" incrustado dentro de la dirección URL: que coincidirá con el DinnerID de la cena en la base de datos. Por ejemplo: /Dinners/Details/2 mostraría una página HTML con detalles acerca de la cena cuyo valor DinnerID es 2. |
@@ -91,9 +91,9 @@ Las rutas de". MapRoute() "llamada al método anterior registra una regla de enr
 
 A continuación es una tabla que muestra cómo una variedad de direcciones URL se asignan mediante el valor predeterminado "<em>/ {controladores} / {action} / {id}"</em>regla de ruta:
 
-| **Resolución** | **Clase de controlador** | **Método de acción** | **Parámetros pasados** |
+| **URL** | **Clase de controlador** | **Método de acción** | **Parámetros pasados** |
 | --- | --- | --- | --- |
-| */ Dinners/detalles/2* | DinnersController | Details(ID) | id=2 |
+| */Dinners/Details/2* | DinnersController | Details(ID) | id=2 |
 | */Dinners/Edit/5* | DinnersController | Edit(ID) | id=5 |
 | */Dinners/Create* | DinnersController | Create() | N/D |
 | */ Dinners* | DinnersController | Index() | N/D |

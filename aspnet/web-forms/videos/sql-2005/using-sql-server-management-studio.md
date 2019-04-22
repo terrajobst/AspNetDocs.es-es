@@ -12,7 +12,7 @@ ms.openlocfilehash: 6428bc6e31f143f10f9acb0d491c2813552f4938
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59381918"
 ---
 # <a name="using-sql-server-management-studio"></a>Usar SQL Server Management Studio

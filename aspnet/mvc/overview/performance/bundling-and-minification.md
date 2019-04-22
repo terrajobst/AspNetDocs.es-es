@@ -12,7 +12,7 @@ ms.openlocfilehash: 9e4a2a9fc56393ac816f25a1039b233aa8961608
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59383842"
 ---
 # <a name="bundling-and-minification"></a>Unión y minificación
@@ -52,7 +52,7 @@ Después de la minificación, la función se reduce a lo siguiente:
 
 Además de quitar los comentarios y espacios en blanco innecesarios, los siguientes parámetros y los nombres de variable se cambió el nombre (abreviado) como sigue:
 
-| **Original** | **Se cambia el nombre** |
+| **Original** | **Renamed** |
 | --- | --- |
 | imageTagAndImageID | n |
 | imageContext | m |
@@ -65,7 +65,7 @@ En la tabla siguiente se muestra varias diferencias importantes entre el listado
 |  | **Uso de B/M** | **Sin B/M** | **Cambio** |
 | --- | --- | --- | --- |
 | **Solicitudes de archivos** | 9 | 34 | 256% |
-| **KB Sent** | 3.26 | 11.92 | 266% |
+| **KB enviado** | 3.26 | 11.92 | 266% |
 | **KB recibido** | 388.51 | 530 | 36% |
 | **Tiempo de carga** | 510 MS | 780 MS | 53% |
 
@@ -165,7 +165,7 @@ Considere la posibilidad de un proyecto con los siguientes archivos JavaScript:
 
 La siguiente tabla muestra los archivos agregados a una agrupación mediante el carácter comodín, como se muestra:
 
-| **Llamar a** | **Archivos agregados o una excepción** |
+| **Call** | **Archivos agregados o una excepción** |
 | --- | --- |
 | Include("~/Scripts/Common/\*.js") | *AddAltToImg.js*, *ToggleDiv.js*, *ToggleImg.js* |
 | Include("~/Scripts/Common/T\*.js") | Excepción de patrón no válido. Solo se permite el carácter comodín en el prefijo o sufijo. |

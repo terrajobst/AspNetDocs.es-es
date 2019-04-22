@@ -12,7 +12,7 @@ ms.openlocfilehash: 938d7f696e12496fc4ae79c51e9446d71a898e3e
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59382893"
 ---
 # <a name="ajax-control-toolkit"></a>Ajax Control Toolkit
@@ -22,10 +22,10 @@ ms.locfileid: "59382893"
 
 - [Introducción a ASP.NET AJAX Control Toolkit](how-do-i-get-started-with-the-aspnet-ajax-control-toolkit.md)
 - [Extensor de control CascadingDropDown de ASP.NET AJAX](how-do-i-use-the-aspnet-ajax-cascadingdropdown-control-extender.md)
-- [Extensor de control TextBoxWatermark de ASP.NET AJAX](how-do-i-use-the-aspnet-ajax-textboxwatermark-control-extender.md)
-- [Extensor de control Popup de ASP.NET AJAX](how-do-i-use-the-aspnet-ajax-popup-control-extender.md)
-- [Extensor de control ModalPopup de ASP.NET AJAX](how-do-i-use-the-aspnet-ajax-modalpopup-extender-control.md)
-- [Extensor del control AlwaysVisible de ASP.NET AJAX](how-do-i-use-the-aspnet-ajax-alwaysvisible-control-extender.md)
+- [Extensor del control TextBoxWatermark de ASP.NET AJAX](how-do-i-use-the-aspnet-ajax-textboxwatermark-control-extender.md)
+- [Extensor del control Popup de ASP.NET AJAX](how-do-i-use-the-aspnet-ajax-popup-control-extender.md)
+- [Control extensor ModalPopup de ASP.NET AJAX](how-do-i-use-the-aspnet-ajax-modalpopup-extender-control.md)
+- [Extensor de control AlwaysVisible de ASP.NET AJAX](how-do-i-use-the-aspnet-ajax-alwaysvisible-control-extender.md)
 - [Control Accordion de ASP.NET AJAX](how-do-i-use-the-aspnet-ajax-accordion-control.md)
 - [Extensor de panel contraíble de ASP.NET AJAX](how-do-i-use-the-aspnet-ajax-collapsable-panel-extender.md)
 - [Extensor de panel arrastrable de ASP.NET AJAX](how-do-i-use-the-aspnet-ajax-draggable-panel-extender.md)
@@ -58,5 +58,5 @@ ms.locfileid: "59382893"
 - [Selector de colores](color-picker.md)
 - [Cuadro combinado](combo-box.md)
 - [Control de editor](editor-control.md)
-- [Control del editor personalizado](editor-control-custom.md)
+- [Control del Editor personalizado](editor-control-custom.md)
 - [Crear un extensor personalizado](create-a-new-custom-extender.md)

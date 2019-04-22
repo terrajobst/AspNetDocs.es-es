@@ -12,7 +12,7 @@ ms.openlocfilehash: 28e001059cb1853d21175da2a2b1af2c75364485
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59380371"
 ---
 # <a name="databinding-to-an-accordion-c"></a>Enlace de datos a Accordion (C#)
@@ -59,7 +59,7 @@ Para concluir este ejemplo, debe definir las dos clases CSS que se hace referenc
 [!code-css[Main](databinding-to-an-accordion-cs/samples/sample6.css)]
 
 
-[![Tlos datos en el acordeón viene directamente desde el origen de datos](databinding-to-an-accordion-cs/_static/image2.png)](databinding-to-an-accordion-cs/_static/image1.png)
+[![Los datos de la accordion proceden directamente del origen de datos](databinding-to-an-accordion-cs/_static/image2.png)](databinding-to-an-accordion-cs/_static/image1.png)
 
 Los datos de la accordion proceden directamente del origen de datos ([haga clic aquí para ver imagen en tamaño completo](databinding-to-an-accordion-cs/_static/image3.png))
 

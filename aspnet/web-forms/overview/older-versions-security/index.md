@@ -12,7 +12,7 @@ ms.openlocfilehash: afd786a25c8dc23eba1bbf6ed3f6512c64f2e72d
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59378580"
 ---
 # <a name="older-versions---security"></a>Versiones anteriores: Seguridad

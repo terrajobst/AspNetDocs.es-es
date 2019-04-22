@@ -12,7 +12,7 @@ ms.openlocfilehash: 2d4c786ca10e77353ac8b4746138cb1e314585ae
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59383790"
 ---
 # <a name="modifying-animations-from-the-server-side-c"></a>Modificar las animaciones desde el lado del servidor (C#)
@@ -55,7 +55,7 @@ Por último, agregue el `AnimationExtender` en el control a la página actual, e
 [!code-html[Main](modifying-animations-from-the-server-side-cs/samples/sample6.html)]
 
 
-[![Tanimación de se crea por parte del servidor C#código/VB](modifying-animations-from-the-server-side-cs/_static/image2.png)](modifying-animations-from-the-server-side-cs/_static/image1.png)
+[![La animación se crea con C# / VB código de servidor](modifying-animations-from-the-server-side-cs/_static/image2.png)](modifying-animations-from-the-server-side-cs/_static/image1.png)
 
 La animación se crea con C# / VB código de servidor ([haga clic aquí para ver imagen en tamaño completo](modifying-animations-from-the-server-side-cs/_static/image3.png))
 

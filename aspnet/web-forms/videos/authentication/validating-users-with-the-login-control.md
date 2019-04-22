@@ -12,7 +12,7 @@ ms.openlocfilehash: e89c917d40cfb09d0df33e50124db5d0c38817e4
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59384973"
 ---
 # <a name="validating-users-with-the-login-control"></a>Validar usuarios con el control de inicio de sesión

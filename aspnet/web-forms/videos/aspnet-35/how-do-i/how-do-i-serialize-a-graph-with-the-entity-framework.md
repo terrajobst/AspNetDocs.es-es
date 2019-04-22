@@ -12,7 +12,7 @@ ms.openlocfilehash: 7dd5e8908c0601306e45d2fb32db265a35a411c7
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59378096"
 ---
 # <a name="how-do-i-serialize-a-graph-with-the-entity-framework"></a>[¿Cómo lo hago?:] Serializar un gráfico con Entity Framework

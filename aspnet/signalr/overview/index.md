@@ -12,7 +12,7 @@ ms.openlocfilehash: 8bef8a53f6d47a9274a984e0650125fb538c23f0
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59380072"
 ---
 # <a name="signalr-guidance"></a>Guía de SignalR
@@ -25,12 +25,12 @@ ms.locfileid: "59380072"
     - [Tutorial: Introducción a SignalR 2 y MVC 5](getting-started/tutorial-getting-started-with-signalr-and-mvc.md)
     - [Tutorial: Alta frecuencia en tiempo real con SignalR 2](getting-started/tutorial-high-frequency-realtime-with-signalr.md)
     - [Tutorial: Difusión de servidores con SignalR 2](getting-started/tutorial-server-broadcast-with-signalr.md)
-    - [Laboratorio práctico: Aplicaciones web en tiempo real con SignalR](getting-started/real-time-web-applications-with-signalr.md)
+    - [Laboratorio práctico: Aplicaciones Web en tiempo real con SignalR](getting-started/real-time-web-applications-with-signalr.md)
 - [Guía de la API](guide-to-the-api/index.md)
 
     - [Guía de la API Hubs - Servidor (C#)](guide-to-the-api/hubs-api-guide-server.md)
-    - [Guía de la API Hubs - Cliente JavaScript](guide-to-the-api/hubs-api-guide-javascript-client.md)
-    - [Guía de la API Hubs - Cliente .NET (C#)](guide-to-the-api/hubs-api-guide-net-client.md)
+    - [Guía de la API Hubs: Cliente JavaScript](guide-to-the-api/hubs-api-guide-javascript-client.md)
+    - [Guía de la API Hubs: Cliente .NET (C#)](guide-to-the-api/hubs-api-guide-net-client.md)
     - [Comprender y controlar eventos de duración de la conexión en SignalR](guide-to-the-api/handling-connection-lifetime-events.md)
     - [Trabajar con grupos en SignalR](guide-to-the-api/working-with-groups.md)
     - [Asignar usuarios de SignalR a las conexiones](guide-to-the-api/mapping-users-to-connections.md)
@@ -55,7 +55,7 @@ ms.locfileid: "59380072"
     - [Usar los contadores de rendimiento de SignalR en un rol web de Azure](performance/using-signalr-performance-counters-in-an-azure-web-role.md)
 - [Implementación y hospedaje](deployment/index.md)
 
-    - [Tutorial: Autohospedaje de SignalR](deployment/tutorial-signalr-self-host.md)
+    - [Tutorial: Interna de SignalR](deployment/tutorial-signalr-self-host.md)
     - [Usar SignalR con Web Apps en Azure App Service](deployment/using-signalr-with-azure-web-sites.md)
 - [Avanzadas](advanced/index.md)
 
@@ -70,8 +70,8 @@ ms.locfileid: "59380072"
     - [Alta frecuencia en tiempo real con SignalR 1.x](older-versions/tutorial-high-frequency-realtime-with-signalr.md)
     - [Tutorial: Difusión de servidores con ASP.NET SignalR 1.x](older-versions/tutorial-server-broadcast-with-aspnet-signalr.md)
     - [Guía de la API Hubs - Servidor](older-versions/signalr-1x-hubs-api-guide-server.md)
-    - [Guía de la API SignalR 1.x Hubs - Cliente JavaScript](older-versions/signalr-1x-hubs-api-guide-javascript-client.md)
-    - [Guía de la API Hubs - Cliente .NET](older-versions/signalr-1x-hubs-api-guide-net-client.md)
+    - [Guía de la API SignalR 1.x Hubs: Cliente JavaScript](older-versions/signalr-1x-hubs-api-guide-javascript-client.md)
+    - [Guía de la API Hubs: Cliente .NET](older-versions/signalr-1x-hubs-api-guide-net-client.md)
     - [Comprender y controlar eventos de duración de la conexión en SignalR](older-versions/handling-connection-lifetime-events.md)
     - [Trabajar con grupos en SignalR 1.x](older-versions/working-with-groups.md)
     - [Asignar usuarios de SignalR a las conexiones en SignalR 1.x](older-versions/mapping-users-to-connections.md)

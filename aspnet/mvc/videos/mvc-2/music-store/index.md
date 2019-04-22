@@ -12,7 +12,7 @@ ms.openlocfilehash: 1fdf6d7ab19354b0079add99c3e6930c60f772cf
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59381983"
 ---
 # <a name="music-store"></a>Tienda de música
@@ -20,6 +20,6 @@ ms.locfileid: "59381983"
 > Compile la aplicación de ejemplo de Music Store de ASP.NET MVC
 
 
-- [Tienda de música de MVC, parte 1: Introducción, herramientas y estructura del proyecto](mvc-music-store-part-1-intro-tools-and-project-structure.md)
-- [Tienda de música de MVC, parte 2: Controladores](mvc-music-store-part-2-controllers.md)
-- [Tienda de música de MVC, parte 3: Vistas y ViewModels](mvc-music-store-part-3-views-and-viewmodels.md)
+- [Store música de MVC, parte 1: Introducción, herramientas y estructura del proyecto](mvc-music-store-part-1-intro-tools-and-project-structure.md)
+- [Store música de MVC, parte 2: Controladores](mvc-music-store-part-2-controllers.md)
+- [Store música de MVC, parte 3: Las vistas y ViewModels](mvc-music-store-part-3-views-and-viewmodels.md)

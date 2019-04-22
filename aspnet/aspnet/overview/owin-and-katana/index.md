@@ -12,7 +12,7 @@ ms.openlocfilehash: a8ba1ca6b54ae58c23e51981cedebc636fba679e
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59385597"
 ---
 # <a name="owin-and-katana"></a>OWIN y Katana

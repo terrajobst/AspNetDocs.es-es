@@ -12,7 +12,7 @@ ms.openlocfilehash: 3d4a6008ca8668b18599ccbff625df33f9ce7504
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59379136"
 ---
 # <a name="how-do-i-aspnet-ajax-enable-an-existing-web-service"></a>[¿Cómo lo hago?:] ¿ASP.NET AJAX habilita un servicio Web existente?

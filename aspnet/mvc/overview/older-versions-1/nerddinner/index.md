@@ -12,7 +12,7 @@ ms.openlocfilehash: 263ffc1ab815c1f7d6c1ee008f4fbe61316b7231
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59380748"
 ---
 # <a name="nerddinner"></a>NerdDinner
@@ -33,4 +33,4 @@ ms.locfileid: "59380748"
 - [Usar AJAX para entregar actualizaciones dinámicas](use-ajax-to-deliver-dynamic-updates.md)
 - [Usar AJAX para implementar escenarios de asignación](use-ajax-to-implement-mapping-scenarios.md)
 - [Habilitar las pruebas unitarias automatizadas](enable-automated-unit-testing.md)
-- [Ajuste de NerdDinner](nerddinner-wrap-up.md)
+- [Ajuste DE NerdDinner](nerddinner-wrap-up.md)

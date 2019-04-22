@@ -12,7 +12,7 @@ ms.openlocfilehash: c135bacd7f9f87fac87a3c8cf41bad359bb3c0a2
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59379188"
 ---
 # <a name="aspnet-mvc-routing-overview-vb"></a>Información general sobre el enrutamiento de ASP.NET MVC (VB)
@@ -95,7 +95,7 @@ Por último, al invocar el método Index() en el listado 5 con la/Home URL provo
 [!code-vb[Main](asp-net-mvc-routing-overview-vb/samples/sample5.vb)]
 
 
-[![Iuna acción de controlador que espera un valor de parámetro nvoking](asp-net-mvc-routing-overview-vb/_static/image1.jpg)](asp-net-mvc-routing-overview-vb/_static/image1.png)
+[![Invocar una acción de controlador que espera un valor de parámetro](asp-net-mvc-routing-overview-vb/_static/image1.jpg)](asp-net-mvc-routing-overview-vb/_static/image1.png)
 
 **Figura 01**: Invocar una acción de controlador que espera un valor de parámetro ([haga clic aquí para ver imagen en tamaño completo](asp-net-mvc-routing-overview-vb/_static/image2.png))
 

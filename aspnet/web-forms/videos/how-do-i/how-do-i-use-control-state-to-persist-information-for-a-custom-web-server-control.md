@@ -12,7 +12,7 @@ ms.openlocfilehash: 5411f6d15b6ae4d4ee7557c4fff0158d97574330
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59385207"
 ---
 # <a name="how-do-i-use-control-state-to-persist-information-for-a-custom-web-server-control"></a>[¿Cómo lo hago?:] Estado de Control de uso para conservar la información de un Control de servidor Web personalizado

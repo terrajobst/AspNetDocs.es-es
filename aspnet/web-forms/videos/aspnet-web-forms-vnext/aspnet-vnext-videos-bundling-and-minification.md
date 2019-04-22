@@ -12,7 +12,7 @@ ms.openlocfilehash: d2f994e4ede9cbbf5d3a3f9cbb392bffde4e1f4e
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59380345"
 ---
 # <a name="aspnet-vnext-videos-bundling-and-minification"></a>Vídeos ASP.NET vNext: Unión y minificación

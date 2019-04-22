@@ -13,7 +13,7 @@ ms.openlocfilehash: 11b1bc316f730e31b4a01924765db3c982783652
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59383023"
 ---
 # <a name="tutorial-handle-concurrency-with-ef-in-an-aspnet-mvc-5-app"></a>Tutorial: Controlar la simultaneidad con EF en una aplicación ASP.NET MVC 5
