@@ -12,7 +12,7 @@ ms.openlocfilehash: 055142be60257f0917eb22bc08471c0bec54ca2e
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59387183"
 ---
 # <a name="getting-started-with-aspnet-mvc-5"></a>Introducción a ASP.NET MVC 5
@@ -31,6 +31,6 @@ Esta serie de tutoriales siguiente trata de ASP.NET MVC: Código fuente ubicado 
 - [Obtener acceso a los datos del modelo desde un controlador](accessing-your-models-data-from-a-controller.md)
 - [Examinar los métodos y la vista Edit](examining-the-edit-methods-and-edit-view.md)
 - [Agregar una búsqueda](adding-search.md)
-- [Adición de un nuevo campo](adding-a-new-field.md)
+- [Agregar un nuevo campo](adding-a-new-field.md)
 - [Agregar una validación](adding-validation.md)
 - [Examinar los métodos Details y Delete](examining-the-details-and-delete-methods.md)

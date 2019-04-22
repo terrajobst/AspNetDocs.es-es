@@ -12,7 +12,7 @@ ms.openlocfilehash: 10c877e072d5caf23e78f49ebc71387fde20393d
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59393618"
 ---
 # <a name="using-textboxwatermark-in-a-formview-c"></a>Usar TextBoxWatermark en un FormView (C#)
@@ -49,7 +49,7 @@ Recuerde el nombre (`ID`) del origen de datos, ya que se usará en el `DataSourc
 Ahora cuando el usuario cambia al modo de inserción de la `FormView` controlar, el campo de texto para el nuevo proveedor se rellenarán automáticamente gracias a la `TextBoxWatermarkExtender` control. Un clic en el cuadro de texto permite que el texto de relleno desaparecen.
 
 
-[![Tmarca de agua en el campo procede el extensor](using-textboxwatermark-in-a-formview-cs/_static/image2.png)](using-textboxwatermark-in-a-formview-cs/_static/image1.png)
+[![La marca de agua en el campo procede el extensor](using-textboxwatermark-in-a-formview-cs/_static/image2.png)](using-textboxwatermark-in-a-formview-cs/_static/image1.png)
 
 La marca de agua en el campo procede el extensor ([haga clic aquí para ver imagen en tamaño completo](using-textboxwatermark-in-a-formview-cs/_static/image3.png))
 

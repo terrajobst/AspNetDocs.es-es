@@ -12,7 +12,7 @@ ms.openlocfilehash: 6367c1546235aa9a3c68ac54e4ae7270ce422124
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59396829"
 ---
 # <a name="visual-studio-2013-web-editor-features---javascript"></a>Características del editor web de Visual Studio 2013 - JavaScript

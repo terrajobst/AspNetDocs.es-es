@@ -12,7 +12,7 @@ ms.openlocfilehash: 46dd952fc4902b37c981a111dfa344dad79bb668
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59392487"
 ---
 # <a name="working-with-groups-in-signalr"></a>Trabajar con grupos en SignalR

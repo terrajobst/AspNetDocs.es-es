@@ -12,7 +12,7 @@ ms.openlocfilehash: d30dc8906a72a35d87db40701070fe8c8f71c174
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59394125"
 ---
 # <a name="tailspin-spyworks"></a>Tailspin Spyworks

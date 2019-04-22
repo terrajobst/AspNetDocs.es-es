@@ -12,7 +12,7 @@ ms.openlocfilehash: 0f3b376cee8d391eb087664a51cc25e3b58d16b9
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59390043"
 ---
 # <a name="profiles-themes-and-web-parts"></a>Perfiles, temas y elementos web
@@ -305,7 +305,7 @@ Los controles de interfaz de usuario de elementos Web, todos los cuales se deriv
 
 El conjunto de controles de elementos Web es extenso, pero algunos controles son esenciales porque son necesarios para los elementos Web trabajar, o porque son los controles utilizados con más frecuencia en las páginas de elementos Web. Ya empezar a usar elementos Web y crear páginas de elementos Web básicas, resulta útil estar familiarizado con los controles de elementos Web esenciales que se describe en la tabla siguiente.
 
-| **control de elementos web** | **Descripción** |
+| **Control de elementos Web** | **Descripción** |
 | --- | --- |
 | WebPartManager | Administra todos los controles de elementos Web en una página. Uno (y sólo uno) **WebPartManager** control es necesario para cada página de elementos Web. |
 | CatalogZone | Contiene controles CatalogPart. Utilice esta zona para crear un catálogo de controles de elementos Web desde el que los usuarios pueden seleccionar controles para agregar a una página. |

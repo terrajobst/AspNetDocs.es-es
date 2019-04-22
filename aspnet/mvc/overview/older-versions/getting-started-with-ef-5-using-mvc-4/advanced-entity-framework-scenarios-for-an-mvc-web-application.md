@@ -12,7 +12,7 @@ ms.openlocfilehash: a1218b1fb5a8ee28ea6ee3d3c5af979e86821ed7
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59391200"
 ---
 # <a name="advanced-entity-framework-scenarios-for-an-mvc-web-application-10-of-10"></a>Escenarios de opciones avanzadas de Entity Framework para una aplicación Web MVC (10 de 10)
@@ -316,8 +316,7 @@ Una causa de este problema es errores de validación cuando el `Seed` ejecucione
 
 Mensaje de error:
 
-*error HTTP 500.19: error interno del servidor  
-No se puede tener acceso la página solicitada porque los datos de configuración de la página no están válidos.*
+*HTTP Error 500.19 - Error interno del servidor la página solicitada no es accesible porque los datos de configuración de la página no están válidos.*
 
 Solución:
 
@@ -327,7 +326,7 @@ Una manera que puede obtener este error es de varias copias de la solución, cad
 
 Mensaje de error:
 
-*Error relacionado con la red o específico de la instancia mientras se establecía una conexión con el servidor SQL Server. No se encontró el servidor o éste no estaba accesible. Compruebe que el nombre de la instancia es correcto y que SQL Server está configurado para admitir conexiones remotas. (proveedor: Interfaces de red SQL, error: 26: error al buscar el servidor o la instancia especificados)*
+*Se produjo un error relacionado con la red o específico de la instancia al establecer una conexión a SQL Server. No se encontró el servidor o éste no estaba accesible. Compruebe que el nombre de instancia es correcto y que SQL Server está configurado para permitir conexiones remotas. (proveedor: Interfaces de red SQL, error: 26 - error al buscar el servidor/instancia especificado)*
 
 Solución:
 

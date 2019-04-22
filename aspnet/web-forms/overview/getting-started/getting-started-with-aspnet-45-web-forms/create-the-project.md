@@ -12,7 +12,7 @@ ms.openlocfilehash: 9e2cd1beca03b81140b9d58c5e43dbf7c6b8808b
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59393059"
 ---
 # <a name="create-the-project"></a>Crear el proyecto
@@ -70,11 +70,11 @@ Puede cambiar entre **diseño** vista y **origen** vista seleccionando una opci�
 > 
 > ASP.NET ofrece cuatro marcos de desarrollo principal:
 > 
-> - [Formularios Web Forms de ASP.NET](../../../index.md)  
+> - [Formularios Web Forms ASP.NET](../../../index.md)  
 >  El marco de trabajo de formularios Web Forms dirige a los desarrolladores que prefieren la programación declarativa y basada en control, como Microsoft Windows Forms (WinForms) y XAML de WPF o Silverlight. Ofrece un modelo de desarrollo controlado por el diseñador WYSIWYG, por lo que es popular con los desarrolladores que buscan un entorno de desarrollo (RAD) rápido de aplicaciones para el desarrollo web. Si está familiarizado con la programación web y está familiarizado con las herramientas de desarrollo de cliente de Microsoft RAD tradicionales (por ejemplo, para Visual Basic y Visual C#), puede crear rápidamente una aplicación web sin tener experiencia en HTML y JavaScript.
-> - [ASP.NET MVC](../../../../mvc/index.md)  
+> - [ASP.NET MVC](../../../../mvc/index.md) (Más información sobre ASP.NET MVC)  
 >  ASP.NET MVC se dirige a los desarrolladores interesados en patrones y principios, como desarrollo controlado por pruebas, la separación de preocupaciones, inversión de control (IoC) y la inserción de dependencias (DI). Este marco anima a separar la capa de lógica de negocios de una aplicación web de su capa de presentación.
-> - [ASP.NET Web Pages](../../../../web-pages/index.md)  
+> - [ASP.NET Web Pages](../../../../web-pages/index.md) (Más información sobre páginas web de ASP.NET)  
 >  Páginas Web de ASP.NET se dirige a los desarrolladores que desean una historia de desarrollo web simple, a lo largo de las líneas de PHP. En el modelo de páginas Web, crear páginas HTML y, a continuación, agregar código de servidor a la página con el fin de controlar cómo se procesa ese marcado de forma dinámica. Páginas Web está diseñado específicamente para ser un marco ligero, y es el punto de entrada más sencillo a ASP.NET para las personas que conoce HTML, pero no podrían tener amplia experiencia de programación: por ejemplo, los estudiantes o aficionados. También es una buena manera para los desarrolladores web que saben PHP o entornos similares para empezar a usar ASP.NET.
 > - [Aplicación de página única de ASP.NET](../../../../single-page-application/index.md)  
 >  Aplicación de una página ASP.NET única (SPA) le ayuda a crear aplicaciones que incluyen significativo interacciones del lado cliente con HTML 5, 3 de CSS y JavaScript. ASP.NET y Web Tools 2012.2 Update se incluye una nueva plantilla para crear aplicaciones de página única mediante knockout.js y ASP.NET Web API. Además de la nueva plantilla SPA, nuevas plantillas SPA creados por la Comunidad también están disponibles para su descarga.
@@ -93,7 +93,7 @@ En Visual Studio, el **el Explorador de soluciones** ventana le permite administ
 
 Visual Studio crea algunos iniciales carpetas y archivos para el proyecto. Los primeros archivos que trabajará con más adelante en este tutorial son los siguientes:
 
-| **Archivo** | **Finalidad** |
+| **Archivo** | **Propósito** |
 | --- | --- |
 | *Default.aspx* | Normalmente, la primera página que aparece cuando la aplicación se ejecuta en un explorador. |
 | *Site.Master* | Una página que le permite crear un diseño y el uso estándar un comportamiento coherente para las páginas en la aplicación. |
@@ -154,7 +154,7 @@ Cuando un servidor Web recibe una solicitud para una página, encuentra la pági
 > 
 > Usan las plantillas de proyecto de Visual Studio 2013 [Bootstrap](http://getbootstrap.com/), un marco de trabajo de diseño y creación de temas creado por Twitter. Bootstrap usa CSS3 para proporcionar un diseño dinámico, lo que significa que los diseños pueden adaptarse dinámicamente a los tamaños de ventana de explorador diferente. También puede usar características de creación de temas de Bootstrap para llevar a cabo fácilmente un cambio en apariencia y comportamiento de la aplicación. De forma predeterminada, la plantilla de aplicación Web ASP.NET en Visual Studio 2013 incluye Bootstrap como un paquete de NuGet.
 > 
-> **Paquetes NuGet**
+> **Paquetes de NuGet**
 > 
 > La plantilla de aplicación de formularios Web ASP.NET incluye un conjunto de [NuGet](http://www.nuget.org/) paquetes. Estos paquetes proporcionan funcionalidad formada por componentes en forma de herramientas y bibliotecas de código abierto. Hay una gran variedad de paquetes que le ayudarán a crear y probar sus aplicaciones. Visual Studio facilita agregar, quitar y actualizar paquetes de NuGet. Los desarrolladores pueden crear y agregar paquetes a NuGet también.
 > 
@@ -191,7 +191,7 @@ En este tutorial ha creado, revisado y ejecutar la aplicación de formularios We
 ## <a name="additional-resources"></a>Recursos adicionales
 
 [Elegir el modelo de programación correcto](../../../videos/how-do-i/choosing-the-right-programming-model.md)   
-[Proyectos de aplicación web frente a proyectos de sitio web](https://msdn.microsoft.com/library/dd547590.aspx)   
+[Proyectos de aplicación Web frente a proyectos de sitio Web](https://msdn.microsoft.com/library/dd547590.aspx)   
 [Información general de las páginas de ASP.NET Web Forms](https://msdn.microsoft.com/library/428509ah.aspx)
 
 > [!div class="step-by-step"]

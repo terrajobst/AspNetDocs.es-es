@@ -12,7 +12,7 @@ ms.openlocfilehash: 94c995ee1e636f1250efb3a90887d8d73badeca7
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59393644"
 ---
 # <a name="older-versions---web-forms-getting-started"></a>Versiones anteriores: formularios Web Forms de introducción
@@ -22,14 +22,14 @@ ms.locfileid: "59393644"
 - [ASP.NET 4 - Tailspin Spyworks](tailspin-spyworks/index.md)
 
     - [Parte 1: Archivo -> Nuevo proyecto](tailspin-spyworks/tailspin-spyworks-part-1.md)
-    - [Parte 2: Nivel de acceso a datos](tailspin-spyworks/tailspin-spyworks-part-2.md)
-    - [Parte 3: Diseño y menú Categoría](tailspin-spyworks/tailspin-spyworks-part-3.md)
+    - [Parte 2: Capa de acceso a datos](tailspin-spyworks/tailspin-spyworks-part-2.md)
+    - [Parte 3: Diseño y menú categoría](tailspin-spyworks/tailspin-spyworks-part-3.md)
     - [Parte 4: Lista de productos](tailspin-spyworks/tailspin-spyworks-part-4.md)
-    - [Parte 5: Lógica empresarial](tailspin-spyworks/tailspin-spyworks-part-5.md)
+    - [Parte 5: Lógica de negocios](tailspin-spyworks/tailspin-spyworks-part-5.md)
     - [Parte 6: Pertenencia a ASP.NET](tailspin-spyworks/tailspin-spyworks-part-6.md)
     - [Parte 7: Agregar características](tailspin-spyworks/tailspin-spyworks-part-7.md)
     - [Parte 8: Páginas finales, control de excepciones y conclusión](tailspin-spyworks/tailspin-spyworks-part-8.md)
-- [ASP.NET 4: Introducción a Entity Framework 4 y formularios Web Forms](getting-started-with-ef/index.md)
+- [ASP.NET 4 - Introducción a Entity Framework 4 y formularios Web Forms](getting-started-with-ef/index.md)
 
     - [Introducción a Entity Framework 4.0 Database First](getting-started-with-ef/the-entity-framework-and-aspnet-getting-started-part-1.md)
     - [Introducción a Entity Framework 4.0 Database First - Parte 2](getting-started-with-ef/the-entity-framework-and-aspnet-getting-started-part-2.md)
@@ -41,9 +41,9 @@ ms.locfileid: "59393644"
     - [Introducción a Entity Framework 4.0 Database First - Parte 8](getting-started-with-ef/the-entity-framework-and-aspnet-getting-started-part-8.md)
 - [ASP.NET 4 - Continuación de Entity Framework 4 y los formularios Web Forms](continuing-with-ef/index.md)
 
-    - [Entity Framework 4.0 y el control ObjectDataSource, parte 1: Introducción](continuing-with-ef/using-the-entity-framework-and-the-objectdatasource-control-part-1-getting-started.md)
-    - [Entity Framework 4.0 y el control ObjectDataSource, parte 2: Agregar una capa de lógica de negocios y pruebas unitarias](continuing-with-ef/using-the-entity-framework-and-the-objectdatasource-control-part-2-adding-a-business-logic-layer-and-unit-tests.md)
-    - [Entity Framework 4.0 y el control ObjectDataSource, parte 3: Ordenar y filtrar](continuing-with-ef/using-the-entity-framework-and-the-objectdatasource-control-part-3-sorting-and-filtering.md)
+    - [Entity Framework 4.0 y el Control ObjectDataSource, parte 1: Introducción a](continuing-with-ef/using-the-entity-framework-and-the-objectdatasource-control-part-1-getting-started.md)
+    - [Entity Framework 4.0 y el Control ObjectDataSource, parte 2: Agregar una capa de lógica empresarial y las pruebas unitarias](continuing-with-ef/using-the-entity-framework-and-the-objectdatasource-control-part-2-adding-a-business-logic-layer-and-unit-tests.md)
+    - [Entity Framework 4.0 y el Control ObjectDataSource, parte 3: Ordenar y filtrar](continuing-with-ef/using-the-entity-framework-and-the-objectdatasource-control-part-3-sorting-and-filtering.md)
     - [Controlar la simultaneidad con Entity Framework 4.0 en ASP.NET 4](continuing-with-ef/handling-concurrency-with-the-entity-framework-in-an-asp-net-web-application.md)
     - [Maximizar el rendimiento con Entity Framework 4.0 en ASP.NET 4](continuing-with-ef/maximizing-performance-with-the-entity-framework-in-an-asp-net-web-application.md)
     - [Novedades de Entity Framework 4.0](continuing-with-ef/what-s-new-in-the-entity-framework-4.md)
@@ -60,7 +60,7 @@ ms.locfileid: "59393644"
     - [Implementación web de Visual Studio con SQL Server Compact - Implementar una actualización de base de datos](deployment-to-a-hosting-provider/deployment-to-a-hosting-provider-deploying-a-database-update-9-of-12.md)
     - [Implementación web de Visual Studio con SQL Server Compact - Migración a SQL Server](deployment-to-a-hosting-provider/deployment-to-a-hosting-provider-migrating-to-sql-server-10-of-12.md)
     - [Implementación web de Visual Studio con SQL Server Compact - Implementar una actualización de la base de datos de SQL Server](deployment-to-a-hosting-provider/deployment-to-a-hosting-provider-deploying-a-sql-server-database-update-11-of-12.md)
-    - [Implementación web de Visual Studio con SQL Server Compact - Solución de problemas](deployment-to-a-hosting-provider/deployment-to-a-hosting-provider-creating-and-installing-deployment-packages-12-of-12.md)
+    - [Implementación web de Visual Studio con SQL Server Compact: Solución de problemas](deployment-to-a-hosting-provider/deployment-to-a-hosting-provider-creating-and-installing-deployment-packages-12-of-12.md)
 - [ASP.NET 3.5 - AJAX](aspnet-ajax/index.md)
 
     - [Descripción de las actualizaciones de página parcial con ASP.NET AJAX](aspnet-ajax/understanding-partial-page-updates-with-asp-net-ajax.md)
@@ -84,7 +84,7 @@ ms.locfileid: "59393644"
     - [Crear un diseño de todo el sitio mediante páginas maestras (VB)](master-pages/creating-a-site-wide-layout-using-master-pages-vb.md)
     - [Varios ContentPlaceHolders y contenido predeterminado (VB)](master-pages/multiple-contentplaceholders-and-default-content-vb.md)
     - [Especificar el título, etiquetas meta y otros encabezados HTML en la página maestra (VB)](master-pages/specifying-the-title-meta-tags-and-other-html-headers-in-the-master-page-vb.md)
-    - [Direcciones URL en páginas maestras (VB)](master-pages/urls-in-master-pages-vb.md)
+    - [Direcciones URL en Páginas maestras (VB)](master-pages/urls-in-master-pages-vb.md)
     - [Nomenclatura de los identificadores de control en las páginas de contenido (VB)](master-pages/control-id-naming-in-content-pages-vb.md)
     - [Interactuar con la página maestra desde la página de contenido (VB)](master-pages/interacting-with-the-master-page-from-the-content-page-vb.md)
     - [Interactuar con la página de contenido desde la página maestra (VB)](master-pages/interacting-with-the-content-page-from-the-master-page-vb.md)

@@ -12,7 +12,7 @@ ms.openlocfilehash: 7ed2f5da62f4521b42db737100230fac5ea71d67
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59385986"
 ---
 # <a name="creating-a-consistent-layout-in-aspnet-web-pages-razor-sites"></a>Crear un diseño coherente en los sitios de ASP.NET Web Pages (Razor)

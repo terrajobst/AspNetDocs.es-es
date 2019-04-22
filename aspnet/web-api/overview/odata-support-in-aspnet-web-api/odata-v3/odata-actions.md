@@ -12,7 +12,7 @@ ms.openlocfilehash: 62ac526a9b0861af73ab17e9714bde1266a86221
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59392370"
 ---
 # <a name="supporting-odata-actions-in-aspnet-web-api-2"></a>Compatibilidad con las acciones de OData en ASP.NET Web API 2

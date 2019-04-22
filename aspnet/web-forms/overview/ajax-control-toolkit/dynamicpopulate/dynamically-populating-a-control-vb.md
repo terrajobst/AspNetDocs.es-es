@@ -12,7 +12,7 @@ ms.openlocfilehash: c9fdbe5f0e24aa3f09f11a67c6d13a32897e8b85
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59388379"
 ---
 # <a name="dynamically-populating-a-control-vb"></a>Rellenar un control dinámicamente (VB)
@@ -66,7 +66,7 @@ Como puede ver, el control requiere cierta información pero puesta en marcha de
 Ejecute la página ASP.NET en el explorador y haga clic en el botón; recibirá la fecha actual en formato de mes-año.
 
 
-[![A Haga clic en el botón recupera la fecha del servidor](dynamically-populating-a-control-vb/_static/image2.png)](dynamically-populating-a-control-vb/_static/image1.png)
+[![Hacer clic en el botón recupera la fecha del servidor](dynamically-populating-a-control-vb/_static/image2.png)](dynamically-populating-a-control-vb/_static/image1.png)
 
 Hacer clic en el botón recupera la fecha del servidor ([haga clic aquí para ver imagen en tamaño completo](dynamically-populating-a-control-vb/_static/image3.png))
 

@@ -12,7 +12,7 @@ ms.openlocfilehash: b06f738d821d78f74069c3bf0f6c0880796195d2
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59393293"
 ---
 # <a name="part-5-creating-a-dynamic-ui-with-knockoutjs"></a>Parte 5: Crear una IU dinámica con Knockout.js

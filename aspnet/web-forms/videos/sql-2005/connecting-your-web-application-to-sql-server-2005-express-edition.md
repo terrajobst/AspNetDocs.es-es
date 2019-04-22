@@ -12,7 +12,7 @@ ms.openlocfilehash: eafe8f6dccb1114aaaa806e2fe6be2ca4e646a75
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59392656"
 ---
 # <a name="connecting-your-web-application-to-sql-server-2005-express-edition"></a>Conectar la aplicación web a SQL Server 2005 Express Edition

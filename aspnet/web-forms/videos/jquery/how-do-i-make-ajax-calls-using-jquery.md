@@ -12,7 +12,7 @@ ms.openlocfilehash: 588a85b3af658b71b14018c32507c59d776c7010
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59393852"
 ---
 # <a name="how-do-i-make-ajax-calls-using-jquery"></a>¿Cómo lo hago?: ¿Realizar llamadas de Ajax con jQuery?

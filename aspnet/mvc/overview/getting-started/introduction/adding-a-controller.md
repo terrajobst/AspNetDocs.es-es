@@ -12,7 +12,7 @@ ms.openlocfilehash: ad5f32a08270ce318c03e1b29acd74d12bbb3d3b
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59394060"
 ---
 # <a name="adding-a-controller"></a>Agregar un controlador

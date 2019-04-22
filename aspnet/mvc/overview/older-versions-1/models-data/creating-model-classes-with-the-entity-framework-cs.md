@@ -12,7 +12,7 @@ ms.openlocfilehash: 29f7dded2f6fc2e8ce588dab2949b59ddb6f1fc4
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59388912"
 ---
 # <a name="creating-model-classes-with-the-entity-framework-c"></a>Crear clases de modelo con Entity Framework (C#)
@@ -136,7 +136,7 @@ Usar cualquier sintaxis LINQ, sintaxis de método o sintaxis de consulta, que en
 
 La vista en el listado 2 se usa para mostrar los registros de la película.
 
-**Listado 2 – Views\Home\Index.aspx**
+**Listing 2 – Views\Home\Index.aspx**
 
 [!code-aspx[Main](creating-model-classes-with-the-entity-framework-cs/samples/sample3.aspx)]
 

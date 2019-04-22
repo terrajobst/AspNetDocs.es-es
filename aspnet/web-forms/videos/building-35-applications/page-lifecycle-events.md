@@ -12,7 +12,7 @@ ms.openlocfilehash: 28fc01819aeb1a0bc74ff80fadb44a9f69de3a88
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59390251"
 ---
 # <a name="page-lifecycle-events"></a>Eventos del ciclo de vida de la página

@@ -12,7 +12,7 @@ ms.openlocfilehash: adbaa5cbda4a60a8b222ba49bb148b28b2e214cc
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59389211"
 ---
 # <a name="aspnet-web-pages-razor-troubleshooting-guide"></a>Guía de solución de problemas de ASP.NET Web Pages (Razor)

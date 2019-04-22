@@ -12,7 +12,7 @@ ms.openlocfilehash: 1f2dc0fea9eeca64b9389881470353c5cca473e0
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59396322"
 ---
 # <a name="web-deployment-in-the-enterprise"></a>Implementación web en la empresa

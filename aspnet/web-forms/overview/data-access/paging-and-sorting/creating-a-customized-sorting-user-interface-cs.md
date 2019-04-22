@@ -12,7 +12,7 @@ ms.openlocfilehash: 34a182278cfa57369643ab151492532bc92bd623
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59393501"
 ---
 # <a name="creating-a-customized-sorting-user-interface-c"></a>Crear una interfaz de usuario de ordenación personalizada (C#)
@@ -31,7 +31,7 @@ Cuando se muestra una lista larga de datos ordenados donde hay solo un conjunto 
 Para ayudar a resaltar los límites entre grupos ordenados, muchos sitios Web emplean una interfaz de usuario que agrega un separador entre los grupos de este tipo. Separadores, como los que se muestran en la figura 1 permite que un usuario más rápido buscar un grupo determinado e identificar sus límites, así como determinar qué grupos distintos que existen en los datos.
 
 
-[![EGrupo de categorías ACH es claramente identifica](creating-a-customized-sorting-user-interface-cs/_static/image2.png)](creating-a-customized-sorting-user-interface-cs/_static/image1.png)
+[![Cada grupo de categorías es claramente identificado](creating-a-customized-sorting-user-interface-cs/_static/image2.png)](creating-a-customized-sorting-user-interface-cs/_static/image1.png)
 
 **Figura 1**: Cada grupo de categorías es claramente identifica ([haga clic aquí para ver imagen en tamaño completo](creating-a-customized-sorting-user-interface-cs/_static/image3.png))
 
@@ -50,7 +50,7 @@ A continuación, configure el control GridView tal que solo contiene el `Product
 Dedique un momento para ver nuestro progreso hasta ahora en un explorador. Figura 2 muestra el control GridView que se puede ordenar cuando sus datos se ordenan por categoría en orden alfabético.
 
 
-[![Tél s GridView que se puede ordenar datos se ordena por categoría](creating-a-customized-sorting-user-interface-cs/_static/image5.png)](creating-a-customized-sorting-user-interface-cs/_static/image4.png)
+[![Las operaciones de asignación GridView que se puede ordenar los datos se ordenan por categoría](creating-a-customized-sorting-user-interface-cs/_static/image5.png)](creating-a-customized-sorting-user-interface-cs/_static/image4.png)
 
 **Figura 2**: Las operaciones de asignación GridView que se puede ordenar datos se ordenan por categoría ([haga clic aquí para ver imagen en tamaño completo](creating-a-customized-sorting-user-interface-cs/_static/image6.png))
 
@@ -100,7 +100,7 @@ En lugar de los datos de mensajería antes de enlazarla a la GridView, podemos a
 Para agregar filas separador entre cada grupo de ordenación, se puede manipular directamente esta jerarquía de control una vez que se ha creado. Que podemos estar seguros de que se ha creado la jerarquía de controles GridView s por última vez en el momento en que se va a representar la página. Por lo tanto, este método invalida el `Page` clase s `Render` método, momento en que la jerarquía de control final s GridView se actualiza para incluir las filas de separador necesario. Figura 4 ilustra este proceso.
 
 
-[![ATécnica alternativa n manipula la jerarquía de controles GridView s](creating-a-customized-sorting-user-interface-cs/_static/image9.png)](creating-a-customized-sorting-user-interface-cs/_static/image8.png)
+[![Una técnica alternativa manipula la jerarquía de controles GridView s](creating-a-customized-sorting-user-interface-cs/_static/image9.png)](creating-a-customized-sorting-user-interface-cs/_static/image8.png)
 
 **Figura 4**: Una técnica alternativa manipula la jerarquía de controles de GridView s ([haga clic aquí para ver imagen en tamaño completo](creating-a-customized-sorting-user-interface-cs/_static/image10.png))
 
@@ -156,12 +156,12 @@ La clase CSS que se usa para dar formato a la fila de encabezado de grupo ordena
 Con el código actual, la interfaz de ordenación agrega encabezados de grupo de ordenación al ordenar por cualquier BoundField (consulte la figura 5, que muestra una captura de pantalla al ordenar por el proveedor). Sin embargo, al ordenar por cualquier otro tipo de campo (por ejemplo, un CampoCasillaVerificación o TemplateField), los encabezados de grupo de ordenación son ningún lugar donde se encuentra (consulte la figura 6).
 
 
-[![Tél ordenación interfaz incluye ordenar los encabezados de grupo al ordenar por BoundFields](creating-a-customized-sorting-user-interface-cs/_static/image12.png)](creating-a-customized-sorting-user-interface-cs/_static/image11.png)
+[![La interfaz de ordenación incluye los encabezados de grupo de ordenación al ordenar por BoundFields](creating-a-customized-sorting-user-interface-cs/_static/image12.png)](creating-a-customized-sorting-user-interface-cs/_static/image11.png)
 
 **Figura 5**: La ordenación interfaz incluye ordenación grupo encabezados al ordenar por BoundFields ([haga clic aquí para ver imagen en tamaño completo](creating-a-customized-sorting-user-interface-cs/_static/image13.png))
 
 
-[![TEncabezados de grupo de ordenación están falta al ordenar una CampoCasillaVerificación](creating-a-customized-sorting-user-interface-cs/_static/image15.png)](creating-a-customized-sorting-user-interface-cs/_static/image14.png)
+[![Los encabezados de grupo de ordenación son falta al ordenar una CampoCasillaVerificación](creating-a-customized-sorting-user-interface-cs/_static/image15.png)](creating-a-customized-sorting-user-interface-cs/_static/image14.png)
 
 **Figura 6**: Los encabezados de grupo de ordenación son falta al ordenar una CampoCasillaVerificación ([haga clic aquí para ver imagen en tamaño completo](creating-a-customized-sorting-user-interface-cs/_static/image16.png))
 
@@ -178,7 +178,7 @@ Este código examina la columna ordenada `TableCell` para la fila actual determi
 Con la adición de código anterior, los encabezados de grupo de ordenación están presentes cuando se ordena por el CampoCasillaVerificación suspendido (consulte la figura 7).
 
 
-[![TEncabezados de grupo de ordenación están ahora presente al ordenar una CampoCasillaVerificación](creating-a-customized-sorting-user-interface-cs/_static/image18.png)](creating-a-customized-sorting-user-interface-cs/_static/image17.png)
+[![Los encabezados de grupo de ordenación están ahora presente al ordenar una CampoCasillaVerificación](creating-a-customized-sorting-user-interface-cs/_static/image18.png)](creating-a-customized-sorting-user-interface-cs/_static/image17.png)
 
 **Figura 7**: Los encabezados de grupo de ordenación están ahora presente al ordenar una CampoCasillaVerificación ([haga clic aquí para ver imagen en tamaño completo](creating-a-customized-sorting-user-interface-cs/_static/image19.png))
 

@@ -13,7 +13,7 @@ ms.openlocfilehash: 1e5fecca826a74fd8ff60ecd415f39c4f51917a2
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59391369"
 ---
 # <a name="documentation-on-older-versions-of-web-api"></a>Documentación sobre las versiones anteriores de API Web

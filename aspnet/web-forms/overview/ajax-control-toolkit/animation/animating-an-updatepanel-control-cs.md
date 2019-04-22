@@ -12,7 +12,7 @@ ms.openlocfilehash: 36d1166e1bd2b4c97b3cf3dd0bc3a7e8010a9443
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59393698"
 ---
 # <a name="animating-an-updatepanel-control-c"></a>Animar un control UpdatePanel (C#)
@@ -50,7 +50,7 @@ En este escenario, el nuevo contenido de la `UpdatePanel` (después de la devolu
 Ahora cada vez que se produce un postback en UpdatePanel, el nuevo contenido del panel de fundido de entrada sin problemas.
 
 
-[![Tsiguiente paso del asistente se desvanece](animating-an-updatepanel-control-cs/_static/image2.png)](animating-an-updatepanel-control-cs/_static/image1.png)
+[![El siguiente paso del asistente se desvanece](animating-an-updatepanel-control-cs/_static/image2.png)](animating-an-updatepanel-control-cs/_static/image1.png)
 
 El siguiente paso del asistente se desvanece ([haga clic aquí para ver imagen en tamaño completo](animating-an-updatepanel-control-cs/_static/image3.png))
 

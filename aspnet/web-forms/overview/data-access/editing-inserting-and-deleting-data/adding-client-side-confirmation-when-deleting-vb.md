@@ -12,7 +12,7 @@ ms.openlocfilehash: fc5c99ce6c5da7d004b95462a3338aefbed31b36
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59388717"
 ---
 # <a name="adding-client-side-confirmation-when-deleting-vb"></a>Agregar la confirmación del cliente al eliminar (VB)
@@ -65,7 +65,7 @@ Puesto que se ha enlazado a un control ObjectDataSource que solo admite la elimi
 Con estos cambios, tenemos una página web totalmente funcional que permite que un usuario activar o desactivar a través de los productos de uno en uno, con la capacidad de eliminar un producto simplemente haciendo clic en el botón Eliminar. Figura 2 muestra una captura de pantalla de nuestro progreso hasta ahora, cuando se ve mediante un explorador.
 
 
-[![Tél FormView muestra información acerca de un solo producto](adding-client-side-confirmation-when-deleting-vb/_static/image3.png)](adding-client-side-confirmation-when-deleting-vb/_static/image2.png)
+[![FormView muestra información acerca de un solo producto](adding-client-side-confirmation-when-deleting-vb/_static/image3.png)](adding-client-side-confirmation-when-deleting-vb/_static/image2.png)
 
 **Figura 2**: El FormView muestra información acerca de un único producto ([haga clic aquí para ver imagen en tamaño completo](adding-client-side-confirmation-when-deleting-vb/_static/image4.png))
 
@@ -85,7 +85,7 @@ Después de este cambio debe ser la sintaxis declarativa de eliminar LinkButton 
 > La cadena pasó la `confirm(string)` función de JavaScript está delimitada por apóstrofos (en lugar de las comillas). En JavaScript, las cadenas se pueden delimitar con cualquier carácter. Usamos apóstrofos aquí para que los delimitadores de la cadena pasan `confirm(string)` no introducen una ambigüedad con los delimitadores que se utilizan para la `OnClientClick` valor de propiedad.
 
 
-[![A La confirmación es ahora muestra al hacer clic en el botón Eliminar](adding-client-side-confirmation-when-deleting-vb/_static/image6.png)](adding-client-side-confirmation-when-deleting-vb/_static/image5.png)
+[![Una confirmación es ahora muestra al hacer clic en el botón Eliminar.](adding-client-side-confirmation-when-deleting-vb/_static/image6.png)](adding-client-side-confirmation-when-deleting-vb/_static/image5.png)
 
 **Figura 3**: Una confirmación es ahora muestra al hacer clic en el botón Eliminar ([haga clic aquí para ver imagen en tamaño completo](adding-client-side-confirmation-when-deleting-vb/_static/image7.png))
 
@@ -127,7 +127,7 @@ Con estos cambios completa, al hacer clic en un botón Eliminar GridView muestra
 > Esta técnica también puede usarse para acceder mediante programación en el CommandField en DetailsView el botón Eliminar. Para DetailsView, pero d. crear un controlador de eventos para el `DataBound` eventos, ya que no tiene DetailsView un `RowDataBound` eventos.
 
 
-[![Cpulsando la s GridView eliminar botón muestra un cuadro de diálogo de confirmación personalizado](adding-client-side-confirmation-when-deleting-vb/_static/image9.png)](adding-client-side-confirmation-when-deleting-vb/_static/image8.png)
+[![Al hacer clic en el botón de eliminar s GridView muestra un cuadro de diálogo de confirmación personalizado](adding-client-side-confirmation-when-deleting-vb/_static/image9.png)](adding-client-side-confirmation-when-deleting-vb/_static/image8.png)
 
 **Figura 4**: Al hacer clic en el botón Eliminar de GridView s muestra un cuadro de diálogo de confirmación personalizado ([haga clic aquí para ver imagen en tamaño completo](adding-client-side-confirmation-when-deleting-vb/_static/image10.png))
 

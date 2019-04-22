@@ -12,7 +12,7 @@ ms.openlocfilehash: a398494df0ed2bf749620b717350b21669a1ae5c
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59395659"
 ---
 # <a name="control-id-naming-in-content-pages-c"></a>Nomenclatura de los identificadores de control en las páginas de contenido (C#)
@@ -83,7 +83,7 @@ En este punto marcado declarativo del control de su contenido debe ser similar a
 Figura 3 muestra la página cuando se ven a través del Diseñador de Visual Studio.
 
 
-[![THe página incluye tres controles Web: un cuadro de texto, un botón y una etiqueta](control-id-naming-in-content-pages-cs/_static/image4.png)](control-id-naming-in-content-pages-cs/_static/image3.png)
+[![La página incluye tres controles Web: un cuadro de texto, botón y etiqueta](control-id-naming-in-content-pages-cs/_static/image4.png)](control-id-naming-in-content-pages-cs/_static/image3.png)
 
 **Figura 03**: La página incluye tres controles Web: un cuadro de texto, botón y etiqueta ([haga clic aquí para ver imagen en tamaño completo](control-id-naming-in-content-pages-cs/_static/image5.png))
 
@@ -133,7 +133,7 @@ Aunque la sintaxis usada para llamar a la `FindControl` método difiere ligerame
 Después de escribir este código, visite la `IDIssues.aspx` página a través de un explorador, escriba su edad y haga clic en el botón "Enviar". Al hacer clic en el botón "Enviar" un `NullReferenceException` se genera (consulte la figura 5).
 
 
-[![A Se produce la excepción NullReferenceException](control-id-naming-in-content-pages-cs/_static/image8.png)](control-id-naming-in-content-pages-cs/_static/image7.png)
+[![Se produce una excepción NullReferenceException](control-id-naming-in-content-pages-cs/_static/image8.png)](control-id-naming-in-content-pages-cs/_static/image7.png)
 
 **Figura 05**: Un `NullReferenceException` se genera ([haga clic aquí para ver imagen en tamaño completo](control-id-naming-in-content-pages-cs/_static/image9.png))
 
@@ -173,7 +173,7 @@ Afortunadamente, una referencia a la página maestra es accesible a través de l
 Esta vez, visite la página a través de un explorador, escribir tu edad y haga clic en el botón "Enviar" muestra el mensaje en el `Results` etiquetar, según lo previsto.
 
 
-[![TEdad del usuario se muestra en la etiqueta](control-id-naming-in-content-pages-cs/_static/image11.png)](control-id-naming-in-content-pages-cs/_static/image10.png)
+[![La edad del usuario se muestra en la etiqueta](control-id-naming-in-content-pages-cs/_static/image11.png)](control-id-naming-in-content-pages-cs/_static/image10.png)
 
 **Figura 06**: La edad del usuario se muestra en la etiqueta ([haga clic aquí para ver imagen en tamaño completo](control-id-naming-in-content-pages-cs/_static/image12.png))
 
@@ -200,7 +200,7 @@ Agregue el código siguiente a la `PageExtensionMethods.cs` archivo de clase par
 Con este código en su lugar, volver a la `IDIssues.aspx` comentario actual y clase de código subyacente de la página `FindControl` llamadas al método. Sustitúyalas por llamadas a `Page.FindControlRecursive("controlID")`. ¿Qué es clara sobre los métodos de extensión es que aparecen directamente en las listas de la lista desplegable de IntelliSense. Como se muestra en la figura 7, cuando escriba página y, a continuación, presione período, el `FindControlRecursive` método está incluido en la lista desplegable, junto con el otro IntelliSense `Control` métodos de la clase.
 
 
-[![EMétodos xtensión se incluyen en las desplegables de IntelliSense](control-id-naming-in-content-pages-cs/_static/image14.png)](control-id-naming-in-content-pages-cs/_static/image13.png)
+[![Métodos de extensión se incluyen en las desplegables de IntelliSense](control-id-naming-in-content-pages-cs/_static/image14.png)](control-id-naming-in-content-pages-cs/_static/image13.png)
 
 **Figura 07**: Métodos de extensión se incluyen en IntelliSense listas desplegables ([haga clic aquí para ver imagen en tamaño completo](control-id-naming-in-content-pages-cs/_static/image15.png))
 
@@ -256,7 +256,7 @@ Para obtener más información sobre los temas tratados en este tutorial, consul
 - [Páginas maestras en ASP.NET y `FindControl`](http://www.west-wind.com/WebLog/posts/5127.aspx)
 - [Crear Interfaces de usuario de entrada de datos dinámicos](https://msdn.microsoft.com/library/aa479330.aspx)
 - [Extender la funcionalidad de tipo Base con métodos de extensión](http://aspnet.4guysfromrolla.com/articles/120507-1.aspx)
-- [Cómo Contenido de la página maestra ASP.NET de referencia](https://msdn.microsoft.com/library/xxwa0ff0.aspx)
+- [Cómo: Contenido de la página maestra ASP.NET de referencia](https://msdn.microsoft.com/library/xxwa0ff0.aspx)
 - [Importar en qué páginas: Sugerencias, trucos y capturas](http://www.odetocode.com/articles/450.aspx)
 - [Trabajar con el Script de cliente](https://msdn.microsoft.com/library/aa479302.aspx)
 

@@ -12,7 +12,7 @@ ms.openlocfilehash: 2b2bea92cd0f5ba08a9a5f71ed321864381c7587
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59387430"
 ---
 # <a name="set-up-your-development-environment-for-aspnet-35"></a>Configurar el entorno de desarrollo para ASP.NET 3.5

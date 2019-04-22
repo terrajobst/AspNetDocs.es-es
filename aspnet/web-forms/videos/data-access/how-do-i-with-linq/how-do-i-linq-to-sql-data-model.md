@@ -12,7 +12,7 @@ ms.openlocfilehash: 9053b5d006a703c9e10ede3a768adf1d90aab185
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59386117"
 ---
 # <a name="how-do-i-linq-to-sql-data-model"></a>[¿Cómo lo hago?:] LINQ to SQL: Modelo de datos

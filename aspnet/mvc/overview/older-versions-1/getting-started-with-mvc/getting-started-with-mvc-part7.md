@@ -12,7 +12,7 @@ ms.openlocfilehash: 3db6947f36eb51b41d929f8c7d8835a95db8ea75
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59392357"
 ---
 # <a name="adding-validation-to-the-model"></a>Agregar la validación al modelo
@@ -61,7 +61,7 @@ Además, agregue esta línea por encima de la Html.BeginForm:
 
 Este es el código que se muestra en el IDE.
 
-[![Movies - Microsoft Visual Web Developer 2010 Express (10)](getting-started-with-mvc-part7/_static/image4.png)](getting-started-with-mvc-part7/_static/image3.png)
+[![Películas - Microsoft Visual Web Developer 2010 Express (10)](getting-started-with-mvc-part7/_static/image4.png)](getting-started-with-mvc-part7/_static/image3.png)
 
 Ejecute la aplicación y vuelve a visitar /Movies/Create y haga clic en crear sin especificar ningún dato. Los mensajes de error aparecen inmediatamente sin la página que se asocia con el envío de datos de flash remontándose al servidor. Esto es porque ASP.NET MVC ahora se está validando la entrada tanto en el cliente (mediante JavaScript) y en el servidor.
 

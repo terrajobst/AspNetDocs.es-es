@@ -12,7 +12,7 @@ ms.openlocfilehash: ebd49295ea165ba4ef1a25398cff7dddcfa54f11
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59392201"
 ---
 # <a name="introducing-the-nerddinner-tutorial"></a>Introducción al tutorial de NerdDinner

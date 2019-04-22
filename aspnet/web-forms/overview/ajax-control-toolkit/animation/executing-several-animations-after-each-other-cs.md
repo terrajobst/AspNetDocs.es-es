@@ -12,7 +12,7 @@ ms.openlocfilehash: 644af2485c1a51f2de209e968ba1b3475350fa47
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59394073"
 ---
 # <a name="executing-several-animations-after-each-other-c"></a>Ejecutar varias animaciones una tras otra (C#)
@@ -51,12 +51,12 @@ Dentro de la `<Animations>` nodo, use `<OnLoad>` para ejecutar las animaciones d
 Al ejecutar este script, el panel de primera obtiene más anchos y, a continuación, más pequeños.
 
 
-[![Fimer que se aumenta el ancho](executing-several-animations-after-each-other-cs/_static/image2.png)](executing-several-animations-after-each-other-cs/_static/image1.png)
+[![En primer lugar el ancho aumenta](executing-several-animations-after-each-other-cs/_static/image2.png)](executing-several-animations-after-each-other-cs/_static/image1.png)
 
 En primer lugar se aumenta el ancho ([haga clic aquí para ver imagen en tamaño completo](executing-several-animations-after-each-other-cs/_static/image3.png))
 
 
-[![Tuando que se reduce el alto](executing-several-animations-after-each-other-cs/_static/image5.png)](executing-several-animations-after-each-other-cs/_static/image4.png)
+[![A continuación, se reduce la altura](executing-several-animations-after-each-other-cs/_static/image5.png)](executing-several-animations-after-each-other-cs/_static/image4.png)
 
 A continuación, se reduce el alto ([haga clic aquí para ver imagen en tamaño completo](executing-several-animations-after-each-other-cs/_static/image6.png))
 

@@ -12,7 +12,7 @@ ms.openlocfilehash: 4fbb165f8ce80d560589a43c60920a6e68893d46
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59390511"
 ---
 # <a name="masterdetail-filtering-across-two-pages-c"></a>Filtrado de maestro y detalles en dos páginas (C#)
@@ -37,7 +37,7 @@ En este tutorial, veremos un ejemplo que muestra las categorías en una lista co
 Es el primer paso para crear los informes de maestro y detalles para que comience por mostrar los registros de "master". Por lo tanto, nuestra primera tarea consiste en mostrar las categorías en la página "maestra". Abra el `CategoryListMaster.aspx` página en el `DataListRepeaterFiltering` carpeta, agregue un control Repeater y, en la etiqueta inteligente, optar por agregar un nuevo origen ObjectDataSource. Configurar el nuevo origen ObjectDataSource para que tiene acceso a sus datos desde el `CategoriesBLL` la clase `GetCategories` (método) (consulte la figura 1).
 
 
-[![Cconfigurar el origen ObjectDataSource para usar el método de la clase CategoriesBLL GetCategories](master-detail-filtering-acess-two-pages-datalist-cs/_static/image2.png)](master-detail-filtering-acess-two-pages-datalist-cs/_static/image1.png)
+[![Configurar el origen ObjectDataSource para usar el método de la clase CategoriesBLL GetCategories](master-detail-filtering-acess-two-pages-datalist-cs/_static/image2.png)](master-detail-filtering-acess-two-pages-datalist-cs/_static/image1.png)
 
 **Figura 1**: Configurar el origen ObjectDataSource que se usarán el `CategoriesBLL` la clase `GetCategories` método ([haga clic aquí para ver imagen en tamaño completo](master-detail-filtering-acess-two-pages-datalist-cs/_static/image3.png))
 
@@ -49,7 +49,7 @@ A continuación, defina las plantillas de Repeater, que muestra cada nombre de c
 Con este marcado completa, dedique un momento para ver nuestro progreso a través de un explorador. Como se muestra en la figura 2, el control Repeater se representa como una lista con viñetas que se muestra el nombre y una descripción de cada categoría.
 
 
-[![EACH que categoría se muestra como un elemento de lista con viñetas](master-detail-filtering-acess-two-pages-datalist-cs/_static/image5.png)](master-detail-filtering-acess-two-pages-datalist-cs/_static/image4.png)
+[![Cada categoría se muestra como un elemento de lista con viñetas](master-detail-filtering-acess-two-pages-datalist-cs/_static/image5.png)](master-detail-filtering-acess-two-pages-datalist-cs/_static/image4.png)
 
 **Figura 2**: Cada categoría se muestra como un elemento de lista con viñetas ([haga clic aquí para ver imagen en tamaño completo](master-detail-filtering-acess-two-pages-datalist-cs/_static/image6.png))
 
@@ -73,7 +73,7 @@ Una ventaja de usar el control de hipervínculo es que se puede tener acceso med
 Si está siguiendo el tutorial, no dude en usar el elemento delimitador o el método de control de hipervínculo en la página. Independientemente del enfoque, al ver la página a través de un explorador en cada nombre de categoría se debe representar como un vínculo a `ProductsForCategoryDetails.aspx`, pasando aplicable `CategoryID` valor (consulte la figura 3).
 
 
-[![Tél vínculo con ahora de los nombres de categoría a ProductsForCategoryDetails.aspx](master-detail-filtering-acess-two-pages-datalist-cs/_static/image8.png)](master-detail-filtering-acess-two-pages-datalist-cs/_static/image7.png)
+[![Los nombres de categoría ahora vinculan a ProductsForCategoryDetails.aspx](master-detail-filtering-acess-two-pages-datalist-cs/_static/image8.png)](master-detail-filtering-acess-two-pages-datalist-cs/_static/image7.png)
 
 **Figura 3**: Los nombres ahora vínculo de categoría a `ProductsForCategoryDetails.aspx` ([haga clic aquí para ver imagen en tamaño completo](master-detail-filtering-acess-two-pages-datalist-cs/_static/image9.png))
 
@@ -83,7 +83,7 @@ Si está siguiendo el tutorial, no dude en usar el elemento delimitador o el mé
 Con el `CategoryListMaster.aspx` página completa, ya estamos listos para prestar atención a la implementación de la página "Detalles", `ProductsForCategoryDetails.aspx`. Abra esta página, arrastre un control DataList de cuadro de herramientas hasta el diseñador y establezca su `ID` propiedad `ProductsInCategory`. A continuación, desde la etiqueta inteligente de DataList optar por agregar un nuevo origen ObjectDataSource a la página, asígnele el nombre `ProductsInCategoryDataSource`. Configurarlo de forma que llama a la `ProductsBLL` la clase `GetProductsByCategoryID(categoryID)` método; el conjunto de la lista desplegable se enumera en las pestañas INSERT, UPDATE y DELETE en (None).
 
 
-[![Cconfigurar el origen ObjectDataSource para usar GetProductsByCategoryID(categoryID) método la clase ProductsBLL](master-detail-filtering-acess-two-pages-datalist-cs/_static/image11.png)](master-detail-filtering-acess-two-pages-datalist-cs/_static/image10.png)
+[![Configurar el origen ObjectDataSource para usar el método de la clase ProductsBLL GetProductsByCategoryID(categoryID)](master-detail-filtering-acess-two-pages-datalist-cs/_static/image11.png)](master-detail-filtering-acess-two-pages-datalist-cs/_static/image10.png)
 
 **Figura 4**: Configurar el origen ObjectDataSource que se usarán el `ProductsBLL` la clase `GetProductsByCategoryID(categoryID)` método ([haga clic aquí para ver imagen en tamaño completo](master-detail-filtering-acess-two-pages-datalist-cs/_static/image12.png))
 
@@ -91,7 +91,7 @@ Con el `CategoryListMaster.aspx` página completa, ya estamos listos para presta
 Puesto que la `GetProductsByCategoryID(categoryID)` método acepta un parámetro de entrada (*`categoryID`*), el Asistente para orígenes de datos elija nos ofrece una oportunidad para especificar el origen del parámetro. Establecer el origen de los parámetros para la cadena de consulta mediante el QueryStringField `CategoryID`.
 
 
-[![Use el CategoryID de campo de cadena de consulta como origen del parámetro](master-detail-filtering-acess-two-pages-datalist-cs/_static/image14.png)](master-detail-filtering-acess-two-pages-datalist-cs/_static/image13.png)
+[![Utilice el CategoryID de campo de cadena de consulta como origen del parámetro](master-detail-filtering-acess-two-pages-datalist-cs/_static/image14.png)](master-detail-filtering-acess-two-pages-datalist-cs/_static/image13.png)
 
 **Figura 5**: Utilice el Querystring Field `CategoryID` como origen del parámetro ([haga clic aquí para ver imagen en tamaño completo](master-detail-filtering-acess-two-pages-datalist-cs/_static/image15.png))
 
@@ -103,7 +103,7 @@ Como hemos visto en los tutoriales anteriores después de completar el Asistente
 Para ver esta página en acción, inicie desde el `CategoryListMaster.aspx` página; a continuación, haga clic en un vínculo en la lista con viñetas de categorías. Si lo hace, le llevará a `ProductsForCategoryDetails.aspx`, pasando a lo largo de la `CategoryID` a través de la cadena de consulta. El `ProductsInCategoryDataSource` ObjectDataSource en `ProductsForCategoryDetails.aspx` , a continuación, obtendrá aquellos productos para la categoría especificada y mostrarlos en el control DataList, que representa los dos productos por cada fila. Figura 6 se muestra una captura de pantalla de `ProductsForCategoryDetails.aspx` cuando se visualizan las bebidas.
 
 
-[![THe aparecen bebidas, dos por fila](master-detail-filtering-acess-two-pages-datalist-cs/_static/image17.png)](master-detail-filtering-acess-two-pages-datalist-cs/_static/image16.png)
+[![Se muestran las bebidas, dos por fila](master-detail-filtering-acess-two-pages-datalist-cs/_static/image17.png)](master-detail-filtering-acess-two-pages-datalist-cs/_static/image16.png)
 
 **Figura 6**: Se muestran las bebidas, dos por fila ([haga clic aquí para ver imagen en tamaño completo](master-detail-filtering-acess-two-pages-datalist-cs/_static/image18.png))
 
@@ -115,7 +115,7 @@ Cuando un usuario hace clic en una categoría en `CategoryListMaster.aspx`, que 
 Para ello, agregue un FormView encima del control Repeater en `ProductsForCategoryDetails.aspx`. A continuación, agregue un nuevo origen ObjectDataSource a la página de etiquetas inteligentes de FormView denominado `CategoryDataSource` y configúrelo para utilizar el `CategoriesBLL` la clase `GetCategoryByCategoryID(categoryID)` método.
 
 
-[![AInformación acerca de la categoría a través de GetCategoryByCategoryID(categoryID) método la clase CategoriesBLL cceso](master-detail-filtering-acess-two-pages-datalist-cs/_static/image20.png)](master-detail-filtering-acess-two-pages-datalist-cs/_static/image19.png)
+[![Acceso a información sobre la categoría a través de GetCategoryByCategoryID(categoryID) método la clase CategoriesBLL](master-detail-filtering-acess-two-pages-datalist-cs/_static/image20.png)](master-detail-filtering-acess-two-pages-datalist-cs/_static/image19.png)
 
 **Figura 7**: Obtener acceso a información acerca de la categoría a través de la `CategoriesBLL` la clase `GetCategoryByCategoryID(categoryID)` método ([haga clic aquí para ver imagen en tamaño completo](master-detail-filtering-acess-two-pages-datalist-cs/_static/image21.png))
 
@@ -132,7 +132,7 @@ Figura 8 muestra una captura de pantalla cuando viendo esta página a través de
 > Además de FormView, he agregado un control de hipervínculo anteriormente FormView que llevará al usuario a la lista de categorías (`CategoryListMaster.aspx`). Puede colocar este vínculo en otro lugar o para omitirlo.
 
 
-[![CInformación de categorías es ahora se muestra en la parte superior de la página](master-detail-filtering-acess-two-pages-datalist-cs/_static/image23.png)](master-detail-filtering-acess-two-pages-datalist-cs/_static/image22.png)
+[![Información de categorías es ahora se muestra en la parte superior de la página](master-detail-filtering-acess-two-pages-datalist-cs/_static/image23.png)](master-detail-filtering-acess-two-pages-datalist-cs/_static/image22.png)
 
 **Figura 8**: Información de categorías es ahora se muestra en la parte superior de la página ([haga clic aquí para ver imagen en tamaño completo](master-detail-filtering-acess-two-pages-datalist-cs/_static/image24.png))
 
@@ -158,7 +158,7 @@ Todas las categorías en la base de datos Northwind se asocian con uno o varios 
 Después de actualizar la base de datos en consecuencia, volver a la `CategoryListMaster.aspx` página y haga clic en el vínculo de producir. Puesto que ya no hay productos que pertenecen a la categoría de productos, debería ver el mensaje "Hay productos para la categoría seleccionada...", tal como se muestra en la figura 9.
 
 
-[![A Si no hay ningún productos pertenecientes a la categoría seleccionada, se muestra el mensaje](master-detail-filtering-acess-two-pages-datalist-cs/_static/image26.png)](master-detail-filtering-acess-two-pages-datalist-cs/_static/image25.png)
+[![Se muestra un mensaje si hay n productos pertenecientes a la categoría seleccionada](master-detail-filtering-acess-two-pages-datalist-cs/_static/image26.png)](master-detail-filtering-acess-two-pages-datalist-cs/_static/image25.png)
 
 **Figura 9**: Se muestra un mensaje si hay n productos pertenecientes a la categoría seleccionada ([haga clic aquí para ver imagen en tamaño completo](master-detail-filtering-acess-two-pages-datalist-cs/_static/image27.png))
 

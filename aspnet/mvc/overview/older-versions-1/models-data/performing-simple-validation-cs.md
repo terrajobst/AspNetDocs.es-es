@@ -12,7 +12,7 @@ ms.openlocfilehash: 12fe89ec83a33ece2971c8186783326d165cbf79
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59388509"
 ---
 # <a name="performing-simple-validation-c"></a>Realizar una validación simple (C#)
@@ -56,12 +56,12 @@ Las aplicaciones auxiliares de Html.ValidationMessage() y Html.ValidationSummary
 Asegúrese de que compilar la aplicación antes de agregar una vista. En caso contrario, no aparecerá la lista de clases en el **Ver clase de datos** lista desplegable.
 
 
-[![Tel cuadro de diálogo nuevo proyecto](performing-simple-validation-cs/_static/image1.jpg)](performing-simple-validation-cs/_static/image1.png)
+[![El cuadro de diálogo nuevo proyecto](performing-simple-validation-cs/_static/image1.jpg)](performing-simple-validation-cs/_static/image1.png)
 
 **Figura 01**: Agregar una vista ([haga clic aquí para ver imagen en tamaño completo](performing-simple-validation-cs/_static/image2.png))
 
 
-[![Tel cuadro de diálogo nuevo proyecto](performing-simple-validation-cs/_static/image2.jpg)](performing-simple-validation-cs/_static/image3.png)
+[![El cuadro de diálogo nuevo proyecto](performing-simple-validation-cs/_static/image2.jpg)](performing-simple-validation-cs/_static/image3.png)
 
 **Figura 02**: Creación de una vista fuertemente tipada ([haga clic aquí para ver imagen en tamaño completo](performing-simple-validation-cs/_static/image4.png))
 
@@ -79,7 +79,7 @@ Se llama a la aplicación auxiliar de Html.ValidationMessage() junto a cada uno 
 La página en la figura 3 muestra los mensajes de error representados por las aplicaciones auxiliares de validación cuando se envía el formulario con los campos que faltan y valores no válidos.
 
 
-[![Tel cuadro de diálogo nuevo proyecto](performing-simple-validation-cs/_static/image3.jpg)](performing-simple-validation-cs/_static/image5.png)
+[![El cuadro de diálogo nuevo proyecto](performing-simple-validation-cs/_static/image3.jpg)](performing-simple-validation-cs/_static/image5.png)
 
 **Figura 03**: La vista de creación enviada con problemas ([haga clic aquí para ver imagen en tamaño completo](performing-simple-validation-cs/_static/image6.png))
 
@@ -104,7 +104,7 @@ Puede modificar estas clases de hoja de estilos en cascada y, por lo tanto, modi
 Si envía el formulario HTML para la creación de un producto y escriba un valor no válido para el campo de precio y ningún valor para el campo UnitsInStock, obtendrá los mensajes de validación que se muestra en la figura 4. ¿De dónde proceden estos mensajes de error de validación?
 
 
-[![Tel cuadro de diálogo nuevo proyecto](performing-simple-validation-cs/_static/image4.jpg)](performing-simple-validation-cs/_static/image7.png)
+[![El cuadro de diálogo nuevo proyecto](performing-simple-validation-cs/_static/image4.jpg)](performing-simple-validation-cs/_static/image7.png)
 
 **Figura 04**: Errores de validación de prebinding ([haga clic aquí para ver imagen en tamaño completo](performing-simple-validation-cs/_static/image8.png))
 

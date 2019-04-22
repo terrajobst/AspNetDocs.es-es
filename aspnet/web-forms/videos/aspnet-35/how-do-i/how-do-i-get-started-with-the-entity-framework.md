@@ -12,7 +12,7 @@ ms.openlocfilehash: d6559ebcbce82911a4bfa37327f08bccfa3ee52d
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59396874"
 ---
 # <a name="how-do-i-get-started-with-the-entity-framework"></a>[¿Cómo lo hago?:] Introducción a Entity Framework

@@ -12,7 +12,7 @@ ms.openlocfilehash: eeed594e785b99146140dcd2833a95bf6e467823
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59390446"
 ---
 # <a name="creating-an-entity-framework-data-model-for-an-aspnet-mvc-application-1-of-10"></a>Creación de un modelo de datos de Entity Framework para una aplicación ASP.NET MVC (1 de 10)

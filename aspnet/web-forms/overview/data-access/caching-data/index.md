@@ -12,7 +12,7 @@ ms.openlocfilehash: 5bf69b1caacf32fe6a5bce3bcd2da037b3defc26
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59395711"
 ---
 # <a name="caching-data"></a>Almacenar datos en caché

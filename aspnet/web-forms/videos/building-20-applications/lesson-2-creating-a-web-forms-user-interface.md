@@ -12,7 +12,7 @@ ms.openlocfilehash: bc4a4aeb6311c67e465068f507492bffd22c2b37
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59386793"
 ---
 # <a name="lesson-2-creating-a-web-forms-user-interface"></a>[Lección 2:] Crear una interfaz de usuario de Formularios Web Forms

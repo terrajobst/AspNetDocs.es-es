@@ -12,7 +12,7 @@ ms.openlocfilehash: 1af29955e8040c34840d4c77fc2006f59d2324dd
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59395282"
 ---
 # <a name="create-data-transfer-objects-dtos"></a>Crear objetos de transferencia de datos (DTO)

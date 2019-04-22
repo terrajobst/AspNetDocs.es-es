@@ -12,7 +12,7 @@ ms.openlocfilehash: 72f70faa151007558ecbb270143ecd5b37c2134d
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59392578"
 ---
 # <a name="an-overview-of-project-katana"></a>Información general del proyecto Katana

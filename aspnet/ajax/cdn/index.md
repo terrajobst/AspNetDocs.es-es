@@ -12,12 +12,12 @@ ms.openlocfilehash: 10ee617ff5653bcc478364b7bea75bac4f4770f6
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59388860"
 ---
 # <a name="microsoft-ajax-content-delivery-network"></a>Microsoft Ajax Content Delivery Network
 
-- [Microsoft Ajax Content Delivery Network](overview.md)
+- [Red de entrega de contenido de Microsoft Ajax](overview.md)
 - [jQuery UI](jquery-ui/index.md)
 
     - [jQuery UI 1.10.4 en la red CDN de Microsoft Ajax](jquery-ui/cdnjqueryui1104.md)
@@ -113,5 +113,5 @@ ms.locfileid: "59388860"
     - [jQuery DataTables 1.10.5](jquery-datatables/cdnjquerydatatables105.md)
 - [Formularios Web Forms de ASP.NET y Ajax 4](cdnajax4.md)
 - [ASP.NET Ajax 3.5](cdnajax35.md)
-- [Formularios Web Forms de ASP.NET y Ajax 4.5.2](cdnajax452.md)
-- [Formularios ASP.NET Web Forms y Ajax 4.5.1](cdnajax451.md)
+- [Formularios Web Forms ASP.NET y Ajax 4.5.2](cdnajax452.md)
+- [Formularios Web Forms ASP.NET y Ajax 4.5.1](cdnajax451.md)

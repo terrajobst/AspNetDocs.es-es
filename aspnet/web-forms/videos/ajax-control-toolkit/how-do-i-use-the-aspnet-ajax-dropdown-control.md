@@ -12,7 +12,7 @@ ms.openlocfilehash: 4efddfa898514f9f5f8caf1baca250d5b4ac85b5
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59392708"
 ---
 # <a name="how-do-i-use-the-aspnet-ajax-dropdown-control"></a>[¿Cómo lo hago?:] ¿Usar el Control de lista desplegable ASP.NET AJAX?

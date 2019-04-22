@@ -12,7 +12,7 @@ ms.openlocfilehash: 288f5017acde5a103460ace688933609fba0b02c
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59391031"
 ---
 # <a name="tutorial-getting-started-with-signalr-1x"></a>Tutorial: Introducción a SignalR 1.x
@@ -171,6 +171,6 @@ Puede realizar la aplicación de ejemplo en este tutorial u otras aplicaciones d
 
 Para obtener información sobre los conceptos más avanzados de los desarrollos de SignalR, visite los sitios siguientes para recursos y código fuente de SignalR:
 
-- [Proyecto de SignalR](http://signalr.net)
+- [SignalR Project](http://signalr.net)
 - [SignalR Github y ejemplos](https://github.com/SignalR/SignalR)
 - [SignalR Wiki](https://github.com/SignalR/SignalR/wiki)

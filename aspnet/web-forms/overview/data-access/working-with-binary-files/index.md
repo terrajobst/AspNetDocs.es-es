@@ -12,7 +12,7 @@ ms.openlocfilehash: 2382e37a0ce02d318840cf29266075bbb30cae4d
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59391174"
 ---
 # <a name="working-with-binary-files"></a>Trabajar con archivos binarios

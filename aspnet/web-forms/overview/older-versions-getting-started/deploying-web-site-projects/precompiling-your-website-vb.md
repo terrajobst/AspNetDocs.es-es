@@ -12,7 +12,7 @@ ms.openlocfilehash: 1f6e8fd2c31aa4eaf563edc719bbb8d2b3006866
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59386273"
 ---
 # <a name="precompiling-your-website-vb"></a>Precompilar el sitio web (VB)

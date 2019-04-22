@@ -12,7 +12,7 @@ ms.openlocfilehash: 83214b38d112707ef67ce94ff2757f1fc0f5f920
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59389812"
 ---
 # <a name="jquery-validate"></a>jQuery Validate

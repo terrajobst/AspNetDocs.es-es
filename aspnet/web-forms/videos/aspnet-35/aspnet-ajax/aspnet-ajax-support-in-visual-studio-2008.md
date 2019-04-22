@@ -12,7 +12,7 @@ ms.openlocfilehash: d90d69b7b03de4cb6fedffab83d4f82fd4f9d0b1
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59395620"
 ---
 # <a name="aspnet-ajax-support-in-visual-studio-2008"></a>Compatibilidad con ASP.NET AJAX en Visual Studio 2008

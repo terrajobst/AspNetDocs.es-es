@@ -12,7 +12,7 @@ ms.openlocfilehash: f88f7a31551abda029bee0ec16aa35ce2ef5d2f0
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59385961"
 ---
 # <a name="introducing-aspnet-web-pages---html-form-basics"></a>Introducción a las páginas Web ASP.NET - conceptos básicos de formularios HTML
@@ -356,7 +356,7 @@ En el siguiente tutorial, creará una página que usa un formulario para permiti
 
 ## <a name="additional-resources"></a>Recursos adicionales
 
-- [Introducción a la programación web de ASP.NET usando la sintaxis Razor](https://go.microsoft.com/fwlink/?LinkID=202890)
+- [Introducción a la programación Web de ASP.NET mediante la sintaxis Razor](https://go.microsoft.com/fwlink/?LinkID=202890)
 - [Cláusula WHERE de SQL](http://www.w3schools.com/sql/sql_where.asp) en el sitio W3Schools
 - [Las definiciones de método](http://www.w3.org/Protocols/rfc2616/rfc2616-sec9.html) artículo en el sitio de W3C
 

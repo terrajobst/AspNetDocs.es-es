@@ -12,7 +12,7 @@ ms.openlocfilehash: 7f846e807309f3123db52b3053b9aa8d6aca81e6
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59394840"
 ---
 # <a name="whats-new-in-aspnet-mvc-2"></a>Novedades de ASP.NET MVC 2
@@ -22,7 +22,7 @@ ms.locfileid: "59394840"
 
 [Introducción](#_TOC1)   
 [Actualizar un proyecto de ASP.NET MVC 1.0 a ASP.NET MVC 2](#_TOC2)   
-[Características nuevas](#_TOC3)   
+[Nuevas características](#_TOC3)   
 [Aplicaciones auxiliares con plantilla](#_TOC3_1)   
 [Áreas](#_TOC3_2)   
 [Compatibilidad con controladores asincrónicos](#_TOC3_3)   

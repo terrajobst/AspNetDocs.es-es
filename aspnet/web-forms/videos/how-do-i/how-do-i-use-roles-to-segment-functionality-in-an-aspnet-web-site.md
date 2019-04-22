@@ -12,7 +12,7 @@ ms.openlocfilehash: 9ecb64a52fd93498df1972846e4d7dfc21503cab
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59395776"
 ---
 # <a name="how-do-i-use-roles-to-segment-functionality-in-an-aspnet-web-site"></a>[¿Cómo lo hago?:] Usar Roles para segmentar la funcionalidad de un sitio Web ASP.NET

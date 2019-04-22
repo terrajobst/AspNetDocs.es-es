@@ -12,7 +12,7 @@ ms.openlocfilehash: 0b0c52c2a442e0cf8367fe168c6b2f99b1126a6b
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59396018"
 ---
 # <a name="javascript-intellisense-support-in-visual-studio-2008"></a>Compatibilidad con JavaScript IntelliSense en Visual Studio 2008

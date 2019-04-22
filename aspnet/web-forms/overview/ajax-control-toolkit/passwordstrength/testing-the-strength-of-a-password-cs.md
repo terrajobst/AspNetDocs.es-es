@@ -12,7 +12,7 @@ ms.openlocfilehash: d8ac50874d0325ed9583a16e1b4e19b3becabb99
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59391525"
 ---
 # <a name="testing-the-strength-of-a-password-c"></a>Probar la seguridad de una contraseña (C#)
@@ -44,7 +44,7 @@ El `StrengthIndicatorType` proporciona la información de presentación de la se
 Ejecute la página y escriba distancia: Después de escribir letras minúsculas, letras mayúsculas, dígitos y símbolos, la contraseña se considera como indivisible.
 
 
-[![Npermitir la contraseña es buena (bastante)](testing-the-strength-of-a-password-cs/_static/image2.png)](testing-the-strength-of-a-password-cs/_static/image1.png)
+[![Ahora, la contraseña es válida (bastante)](testing-the-strength-of-a-password-cs/_static/image2.png)](testing-the-strength-of-a-password-cs/_static/image1.png)
 
 Ahora, la contraseña es válida (bastante) ([haga clic aquí para ver imagen en tamaño completo](testing-the-strength-of-a-password-cs/_static/image3.png))
 

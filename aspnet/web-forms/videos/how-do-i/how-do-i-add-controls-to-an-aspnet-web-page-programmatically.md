@@ -12,7 +12,7 @@ ms.openlocfilehash: 44c4659a9e4de81943d1804421942b2d00a94654
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59395529"
 ---
 # <a name="how-do-i-add-controls-to-an-aspnet-web-page-programmatically"></a>[¿Cómo lo hago?:] Agregar controles a una página Web ASP.NET mediante programación

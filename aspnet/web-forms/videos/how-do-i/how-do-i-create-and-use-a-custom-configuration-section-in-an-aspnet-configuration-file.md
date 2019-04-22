@@ -12,7 +12,7 @@ ms.openlocfilehash: f1a1c73947bda381bf559e3cbe1e308d0079c2dc
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59392695"
 ---
 # <a name="how-do-i-create-and-use-a-custom-configuration-section-in-an-aspnet-configuration-file"></a>[¿Cómo lo hago?:] Crear y usar una sección de configuración personalizada en un archivo de configuración de ASP.NET

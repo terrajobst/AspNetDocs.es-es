@@ -12,7 +12,7 @@ ms.openlocfilehash: a1b099aedc6fa0824df3281cca55543bcfd4d159
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59386789"
 ---
 # <a name="how-to-enable-table-specific-routing-in-dynamic-data-applications"></a>Cómo habilitar el enrutamiento específico de tabla en aplicaciones de datos dinámicos

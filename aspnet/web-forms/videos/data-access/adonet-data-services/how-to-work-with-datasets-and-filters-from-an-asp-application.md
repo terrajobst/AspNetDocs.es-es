@@ -12,7 +12,7 @@ ms.openlocfilehash: 0884e561d4ff49f62503e662243f13ad52717c24
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59390576"
 ---
 # <a name="how-to-work-with-datasets-and-filters-from-an-asp-application"></a>Cómo trabajar con conjuntos de datos y los filtros de una aplicación ASP

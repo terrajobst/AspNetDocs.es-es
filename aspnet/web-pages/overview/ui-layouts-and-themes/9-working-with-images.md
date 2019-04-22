@@ -12,7 +12,7 @@ ms.openlocfilehash: fedd1013c036ebdb85877a868aaaa172733e5b8a
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59394710"
 ---
 # <a name="working-with-images-in-an-aspnet-web-pages-razor-site"></a>Trabajar con imágenes en un sitio Web de ASP.NET Pages (Razor)
@@ -74,7 +74,7 @@ El procedimiento descrito en esta sección muestra cómo mostrar una imagen sobr
 
     En el código, puede obtener la selección del usuario (en otras palabras, el nombre de archivo de imagen) de la lista mediante la lectura de `Request["photoChoice"]`. Aparece en primer lugar si hay una selección. Si no existe, construir una ruta de acceso para la imagen que se compone del nombre de la carpeta para las imágenes y nombre de archivo de imagen del usuario. (Si se ha intentado crear una ruta de acceso, pero no existía nada en `Request["photoChoice"]`, obtendría un error.) Esto da como resultado una ruta de acceso relativa similar al siguiente:
 
-    *imágenes/Photo1.jpg*
+    *images/Photo1.jpg*
 
     La ruta de acceso se almacena en la variable denominada `imagePath` que necesitará más adelante en la página.
 

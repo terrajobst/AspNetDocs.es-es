@@ -12,7 +12,7 @@ ms.openlocfilehash: 8e17b21c40df5f8f687059e0daa9028a3a823148
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59396504"
 ---
 # <a name="how-do-i-use-the-aspnet-ajax-updatepanelanimation-extender"></a>[¿Cómo lo hago?:] ¿Usar el extensor UpdatePanelAnimation ASP.NET AJAX?

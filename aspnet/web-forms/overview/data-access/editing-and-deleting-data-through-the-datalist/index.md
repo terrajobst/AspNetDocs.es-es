@@ -12,7 +12,7 @@ ms.openlocfilehash: b242803a1f5d7db519314dc9349f8b4f6b1d0c6a
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59393189"
 ---
 # <a name="editing-and-deleting-data-through-the-datalist"></a>Editar y eliminar datos mediante el control DataList

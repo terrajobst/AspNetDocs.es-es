@@ -12,7 +12,7 @@ ms.openlocfilehash: d71a92f1c8b027a966cbe5a35c0947df009b2bba
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59391967"
 ---
 # <a name="aspnet-web-api"></a>ASP.NET Web API

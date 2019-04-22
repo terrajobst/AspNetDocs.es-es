@@ -12,7 +12,7 @@ ms.openlocfilehash: a9990f27f8f5c17371b6b1738a0ee4fad0b77588
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59391655"
 ---
 # <a name="how-do-i-use-the-aspnet-ajax-passwordstrength-extender"></a>[¿Cómo lo hago?:] ¿Usar el extensor PasswordStrength ASP.NET AJAX?

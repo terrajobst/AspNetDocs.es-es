@@ -12,7 +12,7 @@ ms.openlocfilehash: 4850493e7a16aa9364396d1bbd3fe3e0db0f47db
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59388106"
 ---
 # <a name="using-a-confirmbutton-in-a-repeater-vb"></a>Usar un ConfirmButton en un control Repeater (VB)
@@ -47,7 +47,7 @@ A continuación, se puede usar este origen de datos dentro de un control repeate
 [!code-aspx[Main](using-a-confirmbutton-in-a-repeater-vb/samples/sample3.aspx)]
 
 
-[![TConfirme que aparece el botón situado junto a cada entrada del origen de datos](using-a-confirmbutton-in-a-repeater-vb/_static/image2.png)](using-a-confirmbutton-in-a-repeater-vb/_static/image1.png)
+[![El botón Confirmar aparece junto a cada entrada del origen de datos](using-a-confirmbutton-in-a-repeater-vb/_static/image2.png)](using-a-confirmbutton-in-a-repeater-vb/_static/image1.png)
 
 El botón Confirmar aparece junto a cada entrada del origen de datos ([haga clic aquí para ver imagen en tamaño completo](using-a-confirmbutton-in-a-repeater-vb/_static/image3.png))
 

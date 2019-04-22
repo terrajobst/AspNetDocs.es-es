@@ -12,7 +12,7 @@ ms.openlocfilehash: 0bb47794fc9173c2313596eaeb1984b5d848cdee
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59391135"
 ---
 # <a name="how-to-create-table-specific-custom-forms-in-an-aspnet-dynamic-data-application"></a>Cómo crear formularios personalizados específicos de tabla en una aplicación de datos dinámicos de ASP.NET

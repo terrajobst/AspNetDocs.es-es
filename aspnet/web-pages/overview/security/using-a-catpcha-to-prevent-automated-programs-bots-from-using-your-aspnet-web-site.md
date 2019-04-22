@@ -12,7 +12,7 @@ ms.openlocfilehash: e7baafda8c5b6de4ab0de46948f969a6f0cc21ad
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59390914"
 ---
 # <a name="using-a-captcha-to-prevent-bots-from-using-your-aspnet-web-razor-site"></a>Sitio de usar un CAPTCHA para evitar que los Bots usen su Razor de ASP.NET Web)
@@ -73,4 +73,4 @@ En las páginas ASP.NET, puede usar el `ReCaptcha` auxiliar para representar una
 
 
 - [Personalizar el comportamiento de todo el sitio para sitios de ASP.NET Web Pages](https://go.microsoft.com/fwlink/?LinkId=202906)
-- [Sitio de ReCaptcha](https://www.google.com/recaptcha)
+- [ReCaptcha site](https://www.google.com/recaptcha)

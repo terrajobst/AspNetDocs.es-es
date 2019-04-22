@@ -12,7 +12,7 @@ ms.openlocfilehash: a27f895d80e92686c9f1d7339b51185694661f78
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59389549"
 ---
 # <a name="use-viewdata-and-implement-viewmodel-classes"></a>Usar ViewData e implementar clases ViewModel

@@ -12,7 +12,7 @@ ms.openlocfilehash: 102e4c2f1fe122669021a159b60f0943fe92fbf2
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59396452"
 ---
 # <a name="secure-applications-using-authentication-and-authorization"></a>Proteger las aplicaciones mediante la autenticación y la autorización

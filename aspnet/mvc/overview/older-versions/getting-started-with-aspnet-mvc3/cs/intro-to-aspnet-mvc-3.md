@@ -12,7 +12,7 @@ ms.openlocfilehash: 5cdef14ec55e2e66c31219c8ccc95c8e361547d5
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59396372"
 ---
 # <a name="intro-to-aspnet-mvc-3-c"></a>Introducción a ASP.NET MVC 3 (C#)

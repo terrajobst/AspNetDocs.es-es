@@ -12,7 +12,7 @@ ms.openlocfilehash: 6f0e1aa85b5715ce602e94d2d94a5e96b9f93008
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59391774"
 ---
 # <a name="mvc2---html-encoding"></a>MVC2 - Codificación HTML

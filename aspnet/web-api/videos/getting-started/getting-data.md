@@ -12,7 +12,7 @@ ms.openlocfilehash: 2e584a7a924d985de57d7d61ab45812af19093d1
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59391915"
 ---
 # <a name="aspnet-web-api-part-2-getting-data"></a>ASP.NET Web API, parte 2: Obtener datos

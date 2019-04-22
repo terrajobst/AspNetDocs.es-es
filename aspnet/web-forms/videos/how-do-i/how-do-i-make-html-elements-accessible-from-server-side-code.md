@@ -12,7 +12,7 @@ ms.openlocfilehash: 7c3d70c0d91478e0f62fa9e009733485f9d5ad7e
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59394016"
 ---
 # <a name="how-do-i-make-html-elements-accessible-from-server-side-code"></a>[¿Cómo lo hago?:] Hacer los elementos HTML sean accesibles desde código de servidor

@@ -12,7 +12,7 @@ ms.openlocfilehash: 256536150a585a4bb0304f23c3524b18d0f552f0
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59392383"
 ---
 # <a name="iteration-4--make-the-application-loosely-coupled-vb"></a>Iteración #4: hacer que la aplicación tenga un acoplamiento (VB)
@@ -79,7 +79,7 @@ Implementar el patrón de repositorio requiere que complete los dos pasos siguie
 
 En primer lugar, necesitamos crear una interfaz que describe todos los métodos de acceso de datos que se deben realizar. La interfaz IContactManagerRepository está contenida en el listado 1. Esta interfaz describe cinco métodos: CreateContact(), DeleteContact(), EditContact(), GetContact y ListContacts().
 
-**Listado 1 - Models\IContactManagerRepository.vb**
+**Listing 1 - Models\IContactManagerRepository.vb**
 
 [!code-vb[Main](iteration-4-make-the-application-loosely-coupled-vb/samples/sample1.vb)]
 
@@ -112,7 +112,7 @@ Ahora que hemos hemos migrado nuestro código de acceso a datos a una clase de r
 
 El controlador modificado de contacto se encuentra en el listado 3.
 
-**Listado 3 - Controllers\ContactController.vb**
+**Listing 3 - Controllers\ContactController.vb**
 
 [!code-vb[Main](iteration-4-make-the-application-loosely-coupled-vb/samples/sample3.vb)]
 
@@ -147,13 +147,13 @@ Además, tenga en cuenta que el ContactManagerService implementa la interfaz ICo
 
 La interfaz IContactManagerService está contenida en el listado 5.
 
-**Listado 5 - Models\IContactManagerService.vb**
+**Listing 5 - Models\IContactManagerService.vb**
 
 [!code-vb[Main](iteration-4-make-the-application-loosely-coupled-vb/samples/sample5.vb)]
 
 La clase de controlador modificada de contacto se encuentra en el listado 6. Tenga en cuenta que el controlador de contacto ya no interactúa con el repositorio ContactManager. En su lugar, el controlador de contactos interactúa con el servicio de ContactManager. Cada capa se aísla tanto como sea posible desde otras capas.
 
-**Listado 6 - Controllers\ContactController.vb**
+**Listing 6 - Controllers\ContactController.vb**
 
 [!code-vb[Main](iteration-4-make-the-application-loosely-coupled-vb/samples/sample6.vb)]
 

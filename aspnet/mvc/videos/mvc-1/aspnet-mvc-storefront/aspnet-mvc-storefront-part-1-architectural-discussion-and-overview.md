@@ -12,7 +12,7 @@ ms.openlocfilehash: a3df375425c4c79f1274f466a6669997a1e3676f
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59390621"
 ---
 # <a name="aspnet-mvc-storefront-part-1-architectural-discussion-and-overview"></a>Escaparate de ASP.NET MVC, parte 1: Información general y debate sobre la arquitectura

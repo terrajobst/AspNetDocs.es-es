@@ -12,7 +12,7 @@ ms.openlocfilehash: 5f90f718ed267db90c95995c02c63872b497a005
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59393800"
 ---
 # <a name="aspnet-4-quick-hit---hidden-field-divs"></a>ASP.NET 4 "Rápido aciertos": oculta campo div

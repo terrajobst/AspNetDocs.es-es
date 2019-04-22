@@ -12,7 +12,7 @@ ms.openlocfilehash: 6d278b226ac8388222f32e9dfb8311b05b26a5cd
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59390563"
 ---
 # <a name="mvc-music-store-part-3-views-and-viewmodels"></a>Tienda de música de MVC, parte 3: Vistas y ViewModels

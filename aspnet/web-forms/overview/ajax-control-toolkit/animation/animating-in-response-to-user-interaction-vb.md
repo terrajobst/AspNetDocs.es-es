@@ -12,7 +12,7 @@ ms.openlocfilehash: c38160ffa9965384cf4eae2ebda52bd62b766bba
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59396244"
 ---
 # <a name="animating-in-response-to-user-interaction-vb"></a>Animaciones en respuesta a la interacción del usuario (VB)
@@ -59,7 +59,7 @@ En este escenario, `<OnClick>` se utiliza. Cuando el usuario hace clic en el pan
 [!code-aspx[Main](animating-in-response-to-user-interaction-vb/samples/sample5.aspx)]
 
 
-[![A clic del mouse inicia la animación](animating-in-response-to-user-interaction-vb/_static/image2.png)](animating-in-response-to-user-interaction-vb/_static/image1.png)
+[![La animación inicia un clic del mouse](animating-in-response-to-user-interaction-vb/_static/image2.png)](animating-in-response-to-user-interaction-vb/_static/image1.png)
 
 La animación inicia un clic del mouse ([haga clic aquí para ver imagen en tamaño completo](animating-in-response-to-user-interaction-vb/_static/image3.png))
 

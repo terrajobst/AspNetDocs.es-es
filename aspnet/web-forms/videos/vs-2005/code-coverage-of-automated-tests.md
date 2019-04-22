@@ -12,7 +12,7 @@ ms.openlocfilehash: 1345a18cff5a3397d153f654225232cec5ac465b
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59393982"
 ---
 # <a name="code-coverage-of-automated-tests"></a>Cobertura de código de pruebas automatizadas

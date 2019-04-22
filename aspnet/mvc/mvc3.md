@@ -12,7 +12,7 @@ ms.openlocfilehash: 42c28bb7082781ffdf8f2f0fb46f14387e614043
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59389536"
 ---
 # <a name="aspnet-mvc-3"></a>ASP.NET MVC 3

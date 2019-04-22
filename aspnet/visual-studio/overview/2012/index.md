@@ -12,7 +12,7 @@ ms.openlocfilehash: 9b057f68e90a985c4e6950a94e49d84f8a6d5a07
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59393371"
 ---
 # <a name="aspnet-and-visual-studio-2012"></a>ASP.NET y Visual Studio 2012
@@ -30,7 +30,7 @@ ms.locfileid: "59393371"
 - [Aplicación de sangría jerárquica del editor de CSS](visual-studio-vnext-videos-css-editor-hierarchical-indentation.md)
 - [Fragmentos de código del Editor CSS](visual-studio-vnext-videos-css-editor-snippets.md)
 - [Selector de colores del Editor CSS](visual-studio-vnext-videos-css-editor-color-picker.md)
-- [Inspector de página - Introducción](visual-studio-vnext-videos-page-inspector-introduction.md)
-- [Inspector de página - Descomponer la aplicación web](visual-studio-vnext-videos-page-inspector-decomposing-your-web-application.md)
+- [Inspector de página: Introducción](visual-studio-vnext-videos-page-inspector-introduction.md)
+- [Inspector de página: Descomponer la aplicación web](visual-studio-vnext-videos-page-inspector-decomposing-your-web-application.md)
 - [Autenticación de Windows Azure](windows-azure-authentication.md)
 - [Notas de la versión de ASP.NET and Web Tools 2012.2](aspnet-and-web-tools-20122-release-notes-rtw.md)

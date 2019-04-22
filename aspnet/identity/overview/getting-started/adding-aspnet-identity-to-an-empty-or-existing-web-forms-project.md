@@ -13,7 +13,7 @@ ms.openlocfilehash: 8f66cdb46e4cd02509092ea3bdcb7af9c292eb8f
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59394320"
 ---
 # <a name="adding-aspnet-identity-to-an-empty-or-existing-web-forms-project"></a>Agregar ASP.NET Identity a un proyecto de formularios Web Forms vacío o existente

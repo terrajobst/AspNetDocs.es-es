@@ -12,7 +12,7 @@ ms.openlocfilehash: 651ac82196b29d0f90c5dff41c9ce42b4bdcf627
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59395503"
 ---
 # <a name="older-versions---aspnet-20"></a>Versiones anteriores: ASP.NET 2.0
@@ -26,7 +26,7 @@ ms.locfileid: "59395503"
 - [Páginas maestras](master-pages.md)
 - [Controles de origen de datos](data-source-controls.md)
 - [Controles enlazados a datos](data-bound-controls.md)
-- [Almacenamiento en memoria caché](caching.md)
+- [Almacenamiento en caché](caching.md)
 - [Pertenencia](membership.md)
 - [Configuración e instrumentación](configuration-and-instrumentation.md)
 - [Perfiles, temas y elementos web](profiles-themes-and-web-parts.md)

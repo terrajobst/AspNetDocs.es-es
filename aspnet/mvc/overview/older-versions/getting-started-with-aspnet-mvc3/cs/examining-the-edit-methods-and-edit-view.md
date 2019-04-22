@@ -12,7 +12,7 @@ ms.openlocfilehash: aacc9132a71fdd6ceb210c97001e1030d978836e
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59393111"
 ---
 # <a name="examining-the-edit-methods-and-edit-view-c"></a>Examinar los métodos y la vista Edit (C#)

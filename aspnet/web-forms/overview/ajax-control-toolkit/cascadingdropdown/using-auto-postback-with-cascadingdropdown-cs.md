@@ -12,7 +12,7 @@ ms.openlocfilehash: 50bba1b798ddfaf69dd23098e31d446a7e7b9a1f
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59394619"
 ---
 # <a name="using-auto-postback-with-cascadingdropdown-c"></a>Usar el postback automático con CascadingDropDown (C#)
@@ -57,7 +57,7 @@ Carga de la página en el explorador rellenará la lista desplegable con los tre
 De este modo, una devolución de datos solo se ejecuta cuando hay elementos realmente en la lista y el usuario selecciona una entrada.
 
 
-[![Selección de un elemento de lista, produce un postback](using-auto-postback-with-cascadingdropdown-cs/_static/image2.png)](using-auto-postback-with-cascadingdropdown-cs/_static/image1.png)
+[![Al seleccionar un elemento de lista, una devolución de datos](using-auto-postback-with-cascadingdropdown-cs/_static/image2.png)](using-auto-postback-with-cascadingdropdown-cs/_static/image1.png)
 
 Al seleccionar un elemento de lista, una devolución de datos ([haga clic aquí para ver imagen en tamaño completo](using-auto-postback-with-cascadingdropdown-cs/_static/image3.png))
 

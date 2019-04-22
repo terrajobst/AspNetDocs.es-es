@@ -12,7 +12,7 @@ ms.openlocfilehash: 78192156bd9a3117d8cf75808f1de493a0d52a17
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59387048"
 ---
 # <a name="batch-inserting-vb"></a>Inserción por lotes (VB)
@@ -33,7 +33,7 @@ Este concepto también se puede aplicar cuando se agreguen registros. Imagine qu
 Podemos crear un lote de inserción de interfaz que permite al usuario elegir el proveedor y la categoría una vez, escriba una serie de nombres de producto y los precios de venta y, a continuación, haga clic en un botón para agregar los nuevos productos a la base de datos con un poco de trabajo (consulte la figura 1). Al agregar cada producto, su `ProductName` y `UnitPrice` campos de datos se asignan los valores especificados en los cuadros de texto, mientras que su `CategoryID` y `SupplierID` valores se asignan los valores de las listas desplegables en el fo superior del formulario. El `Discontinued` y `UnitsOnOrder` valores se establecen en los valores codificados de forma rígida de `False` y 0, respectivamente.
 
 
-[![TInterfaz de inserción por lotes](batch-inserting-vb/_static/image2.png)](batch-inserting-vb/_static/image1.png)
+[![La interfaz de inserción por lotes](batch-inserting-vb/_static/image2.png)](batch-inserting-vb/_static/image1.png)
 
 **Figura 1**: La interfaz de inserción por lotes ([haga clic aquí para ver imagen en tamaño completo](batch-inserting-vb/_static/image3.png))
 
@@ -49,7 +49,7 @@ Al crear una página que tiene dos interfaces, sólo uno de los cuales está vis
 Comience abriendo la `BatchInsert.aspx` página en el `BatchData` arrastrar un Panel desde el cuadro de herramientas hasta el diseñador y carpeta (consulte la figura 2). Establecer el Panel de s `ID` propiedad `DisplayInterface`. Cuando se agrega el Panel hasta el diseñador, su `Height` y `Width` propiedades se establecen en 50 px y 125px, respectivamente. Limpiar estos valores de propiedad de la ventana Propiedades.
 
 
-[![DTIR un Panel desde el cuadro de herramientas hasta el diseñador](batch-inserting-vb/_static/image5.png)](batch-inserting-vb/_static/image4.png)
+[![Arrastre un Panel desde el cuadro de herramientas hasta el diseñador](batch-inserting-vb/_static/image5.png)](batch-inserting-vb/_static/image4.png)
 
 **Figura 2**: Arrastre un Panel desde el cuadro de herramientas hasta el diseñador ([haga clic aquí para ver imagen en tamaño completo](batch-inserting-vb/_static/image6.png))
 
@@ -57,12 +57,12 @@ Comience abriendo la `BatchInsert.aspx` página en el `BatchData` arrastrar un P
 A continuación, arrastre un control de botón y GridView en el Panel. Establezca el botón s `ID` propiedad `ProcessShipment` y su `Text` propiedad proceso de envío del producto. Establezca la s GridView `ID` propiedad `ProductsGrid` y, en la etiqueta inteligente, de enlazarla a un nuevo origen ObjectDataSource denominado `ProductsDataSource`. Configurar el origen ObjectDataSource para extraer sus datos de la `ProductsBLL` clase s `GetProducts` método. Puesto que este GridView sólo se utiliza para mostrar los datos, establezca las listas desplegables en la actualización, INSERCIÓN y eliminar pestañas en (None). Haga clic en Finalizar para completar al Asistente para configurar orígenes de datos.
 
 
-[![DMostrar los datos devueltos desde la clase ProductsBLL s GetProducts método](batch-inserting-vb/_static/image8.png)](batch-inserting-vb/_static/image7.png)
+[![Mostrar los datos devueltos por el método de clase ProductsBLL s GetProducts](batch-inserting-vb/_static/image8.png)](batch-inserting-vb/_static/image7.png)
 
 **Figura 3**: Mostrar los datos devueltos desde el `ProductsBLL` clase s `GetProducts` método ([haga clic aquí para ver imagen en tamaño completo](batch-inserting-vb/_static/image9.png))
 
 
-[![Set las listas desplegables en la actualización, INSERCIÓN y eliminación pestañas en (None)](batch-inserting-vb/_static/image11.png)](batch-inserting-vb/_static/image10.png)
+[![Establecer las listas desplegables en la actualización, INSERCIÓN y eliminar las fichas en (None)](batch-inserting-vb/_static/image11.png)](batch-inserting-vb/_static/image10.png)
 
 **Figura 4**: Establecer la lista desplegable se enumeran en la actualización, INSERCIÓN y eliminar pestañas en (None) ([haga clic aquí para ver imagen en tamaño completo](batch-inserting-vb/_static/image12.png))
 
@@ -79,7 +79,7 @@ Tenga en cuenta que el marcado para el botón y GridView aparecen dentro de la a
 Dedique un momento para ver nuestro progreso a través de un explorador. Como se muestra en la figura 5, debería ver un botón de envío del producto de proceso por encima de un control GridView que muestra los diez productos a la vez.
 
 
-[![TGridView incluye los productos y ofrece la ordenación y paginación capacidades](batch-inserting-vb/_static/image14.png)](batch-inserting-vb/_static/image13.png)
+[![El control GridView enumera los productos y ofrece la ordenación y paginación capacidades](batch-inserting-vb/_static/image14.png)](batch-inserting-vb/_static/image13.png)
 
 **Figura 5**: El control GridView enumera los productos y ofrece la ordenación y paginación capacidades ([haga clic aquí para ver imagen en tamaño completo](batch-inserting-vb/_static/image15.png))
 
@@ -109,7 +109,7 @@ Esto `<table>` marcado no incluye todos los controles Web aún, vamos a agregarl
 Con este marcado, vuelva a la vista de diseño. Esto `<table>` debe aparecer como una tabla de cuatro columnas y siete filas en el diseñador, como se muestra en la figura 6.
 
 
-[![Ttiene que insertar la interfaz se compone de una tabla de una fila de siete de cuatro columnas](batch-inserting-vb/_static/image17.png)](batch-inserting-vb/_static/image16.png)
+[![La interfaz de inserción se compone de una tabla de una fila de siete de cuatro columnas](batch-inserting-vb/_static/image17.png)](batch-inserting-vb/_static/image16.png)
 
 **Figura 6**: La interfaz de inserción se compone de una tabla de una fila de siete de cuatro columnas ([haga clic aquí para ver imagen en tamaño completo](batch-inserting-vb/_static/image18.png))
 
@@ -119,7 +119,7 @@ Nos re ahora está listo para agregar los controles Web a la interfaz de inserci
 Establecer proveedor DropDownList s `ID` propiedad `Suppliers` y enlazarlo a un nuevo origen ObjectDataSource denominado `SuppliersDataSource`. Configurar el nuevo origen ObjectDataSource para recuperar sus datos desde el `SuppliersBLL` clase s `GetSuppliers` método y la actualización del conjunto pestaña lista desplegable de s en (None). Haga clic en Finalizar para completar al asistente.
 
 
-[![Cconfigurar el origen ObjectDataSource para usar la clase SuppliersBLL s GetSuppliers método](batch-inserting-vb/_static/image20.png)](batch-inserting-vb/_static/image19.png)
+[![Configurar el origen ObjectDataSource para usar el método de clase SuppliersBLL s GetSuppliers](batch-inserting-vb/_static/image20.png)](batch-inserting-vb/_static/image19.png)
 
 **Figura 7**: Configurar el origen ObjectDataSource que se usarán el `SuppliersBLL` clase s `GetSuppliers` método ([haga clic aquí para ver imagen en tamaño completo](batch-inserting-vb/_static/image21.png))
 
@@ -127,7 +127,7 @@ Establecer proveedor DropDownList s `ID` propiedad `Suppliers` y enlazarlo a un 
 Tiene la `Suppliers` DropDownList mostrar el `CompanyName` campo de datos y el uso la `SupplierID` del campo de datos como su `ListItem` s valores.
 
 
-[![DMostrar el campo de datos CompanyName y Use SupplierID como el valor](batch-inserting-vb/_static/image23.png)](batch-inserting-vb/_static/image22.png)
+[![Mostrar el campo de datos CompanyName y usar SupplierID como valor](batch-inserting-vb/_static/image23.png)](batch-inserting-vb/_static/image22.png)
 
 **Figura 8**: Mostrar el `CompanyName` campo de datos y Use `SupplierID` como el valor ([haga clic aquí para ver imagen en tamaño completo](batch-inserting-vb/_static/image24.png))
 
@@ -137,7 +137,7 @@ Nombre de la segunda DropDownList `Categories` y enlazarlo a un nuevo origen Obj
 Después de que estos dos DropDownLists han sido agregados y enlazado a ObjectDataSource configurado adecuadamente, la pantalla debe ser similar a la figura 9.
 
 
-[![TAhora, fila de encabezado contiene los proveedores y categorías DropDownLists](batch-inserting-vb/_static/image26.png)](batch-inserting-vb/_static/image25.png)
+[![La fila de encabezado contiene ahora los proveedores y categorías DropDownLists](batch-inserting-vb/_static/image26.png)](batch-inserting-vb/_static/image25.png)
 
 **Figura 9**: El encabezado de fila contiene ahora el `Suppliers` y `Categories` DropDownLists ([haga clic aquí para ver imagen en tamaño completo](batch-inserting-vb/_static/image27.png))
 
@@ -157,7 +157,7 @@ Por último, agregue un control ValidationSummary dentro de la `InsertingInterfa
 En este momento, la pantalla debe ser similar a la figura 10.
 
 
-[![Tél insertar interfaz ahora incluye cuadros de texto para los nombres de productos y los precios](batch-inserting-vb/_static/image29.png)](batch-inserting-vb/_static/image28.png)
+[![La interfaz de inserción incluye ahora los cuadros de texto para los productos de nombres y precios](batch-inserting-vb/_static/image29.png)](batch-inserting-vb/_static/image28.png)
 
 **Figura 10**: La inserción de interfaz ahora incluye cuadros de texto para los nombres de productos y los precios ([haga clic aquí para ver imagen en tamaño completo](batch-inserting-vb/_static/image30.png))
 
@@ -171,7 +171,7 @@ Arrastre un control Web de la etiqueta del cuadro de herramientas a la parte sup
 Figura 11 muestra el Diseñador de Visual Studio después de la etiqueta se ha agregado y configurado.
 
 
-[![Pcolocar el StatusLabel como Control encima de los dos controles de Panel](batch-inserting-vb/_static/image32.png)](batch-inserting-vb/_static/image31.png)
+[![Colocar el Control StatusLabel como encima de los dos controles de Panel](batch-inserting-vb/_static/image32.png)](batch-inserting-vb/_static/image31.png)
 
 **Figura 11**: Colocar el `StatusLabel` Control encima de los dos controles de Panel ([haga clic aquí para ver imagen en tamaño completo](batch-inserting-vb/_static/image33.png))
 
@@ -208,7 +208,7 @@ Dedique un momento para probar esta página en un explorador. Cuando se visita p
 > Durante la visualización de la interfaz de inserción, dedique un momento para probar la CompareValidators en el precio unitario de cuadros de texto. Debería ver un cuadro de mensajes del lado cliente de advertencia al hacer clic en Agregar productos de botón de envío con los valores de moneda no válido o los precios con un valor menor que cero.
 
 
-[![TInsertar interfaz de él se muestra tras hacer clic en el botón de envío del producto de proceso](batch-inserting-vb/_static/image35.png)](batch-inserting-vb/_static/image34.png)
+[![Se muestra la interfaz de inserción tras hacer clic en el botón de envío del producto de proceso](batch-inserting-vb/_static/image35.png)](batch-inserting-vb/_static/image34.png)
 
 **Figura 12**: Se muestra la interfaz de inserción tras hacer clic en el botón de envío del producto de proceso ([haga clic aquí para ver imagen en tamaño completo](batch-inserting-vb/_static/image36.png))
 
@@ -237,17 +237,17 @@ Si no hay productos se han especificado, la interfaz de inserción permanece en 
 Figura 13, 14 y 15 muestran la inserción de y mostrar interfaces en acción. En la figura 13, el usuario ha escrito un valor del precio unitario sin un nombre de producto correspondiente. Figura 14 se muestra la interfaz de la pantalla después de tres nuevos productos se han agregado correctamente, mientras que la figura 15 muestra dos de los productos recién agregados en el control GridView (el tercero es en la página anterior).
 
 
-[![A Nombre de producto es necesaria al escribir un precio unitario](batch-inserting-vb/_static/image38.png)](batch-inserting-vb/_static/image37.png)
+[![Un nombre de producto es necesaria al escribir un precio por unidad](batch-inserting-vb/_static/image38.png)](batch-inserting-vb/_static/image37.png)
 
 **Figura 13**: Un nombre de producto es necesaria al escribir un precio por unidad ([haga clic aquí para ver imagen en tamaño completo](batch-inserting-vb/_static/image39.png))
 
 
-[![Ttres nuevos verduras se han agregado para el s Mayumi proveedor](batch-inserting-vb/_static/image41.png)](batch-inserting-vb/_static/image40.png)
+[![Se han agregado tres verduras nuevo para el proveedor Mayumi s](batch-inserting-vb/_static/image41.png)](batch-inserting-vb/_static/image40.png)
 
 **Figura 14**: Tres nuevos verduras se han agregado para el s proveedor Mayumi ([haga clic aquí para ver imagen en tamaño completo](batch-inserting-vb/_static/image42.png))
 
 
-[![Ten la última página del control GridView se puede encontrar, nuevos productos](batch-inserting-vb/_static/image44.png)](batch-inserting-vb/_static/image43.png)
+[![Los nuevos productos pueden encontrarse en la última página del control GridView](batch-inserting-vb/_static/image44.png)](batch-inserting-vb/_static/image43.png)
 
 **Figura 15**: Los nuevos productos se encuentran en la última página del control GridView ([haga clic aquí para ver imagen en tamaño completo](batch-inserting-vb/_static/image45.png))
 

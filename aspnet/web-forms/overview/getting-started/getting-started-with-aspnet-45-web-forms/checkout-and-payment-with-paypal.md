@@ -12,7 +12,7 @@ ms.openlocfilehash: a0895c2246bc08f50645a865ce2dfffecfbb56a6
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59391161"
 ---
 # <a name="checkout-and-payment-with-paypal"></a>Finalización de la compra y pago con PayPal
@@ -190,7 +190,7 @@ Los pasos siguientes, podrá agregar un proveedor de autenticación de Google.
     [!code-csharp[Main](checkout-and-payment-with-paypal/samples/sample7.cs?highlight=64-65)]
 15. Presione **CTRL+F5** para compilar y ejecutar la aplicación. Haga clic en el **iniciarla** vínculo.
 16. En **utilice otro servicio para iniciar sesión**, haga clic en **Google**.  
-    ![Iniciar sesión](checkout-and-payment-with-paypal/_static/image11.png)
+    ![Inicia sesión](checkout-and-payment-with-paypal/_static/image11.png)
 17. Si tiene que escribir sus credenciales, se le redirigirá al sitio de google donde especificará sus credenciales.  
     ![Google: inicio de sesión](checkout-and-payment-with-paypal/_static/image12.png)
 18. Después de escribir sus credenciales, se le pedirá para conceder permisos a la aplicación web que acaba de crear.  
@@ -309,9 +309,9 @@ Colocará la mayoría del código de PayPal en una sola clase. Esta clase contie
 
 La clase NVPAPICaller contiene la mayor parte de la funcionalidad de PayPal. El código de la clase proporciona los métodos necesarios para realizar una prueba de compra desde el entorno de pruebas de PayPal. Las tres funciones de PayPal siguientes se utilizan para realizar compras:
 
-- `SetExpressCheckout` función
-- `GetExpressCheckoutDetails` función
-- `DoExpressCheckoutPayment` función
+- `SetExpressCheckout` Función
+- `GetExpressCheckoutDetails` Función
+- `DoExpressCheckoutPayment` Función
 
 El `ShortcutExpressCheckout` método recopila los detalles de producto y la información de compra de prueba de la cesta y llama a la `SetExpressCheckout` función PayPal. El `GetCheckoutDetails` método confirma los detalles de la compra y llama a la `GetExpressCheckoutDetails` PayPal función antes de realizar la compra de prueba. El `DoCheckoutPayment` método completa la compra de prueba desde el entorno de pruebas mediante una llamada a la `DoExpressCheckoutPayment` función PayPal. El código restante es compatible con los métodos de PayPal y proceso, como la codificación de cadenas, descodificación de cadenas, matrices de procesamiento y determinar las credenciales.
 

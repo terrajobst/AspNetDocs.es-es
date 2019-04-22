@@ -12,7 +12,7 @@ ms.openlocfilehash: b7722d5c282f07b35dd18d08911fa562dae6afc2
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59387937"
 ---
 # <a name="aspnet-mvc-4"></a>ASP.NET MVC 4
@@ -30,7 +30,7 @@ ms.locfileid: "59387937"
 - [Actualizar un proyecto de ASP.NET MVC 3 a ASP.NET MVC 4](#_Toc303253806)
 - [Nuevas características de ASP.NET MVC 4 Beta](#_Toc303253807)
 
-    - [ASP.NET Web API](#_Toc317096197)
+    - [ASP.NET Web API](#_Toc317096197) (Más información sobre ASP.NET Web API)
     - [Aplicación de página única de ASP.NET](#_Toc317096198)
     - [Mejoras en las plantillas de proyecto predeterminadas](#_Toc303253808)
     - [Plantilla de proyecto móvil](#_Toc303253809)

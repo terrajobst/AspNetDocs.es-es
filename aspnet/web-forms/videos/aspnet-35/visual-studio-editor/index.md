@@ -12,7 +12,7 @@ ms.openlocfilehash: fda6eaf86f3822bce0ca0dd834cd187897bce69d
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59392851"
 ---
 # <a name="visual-studio-editor"></a>Editor de Visual Studio

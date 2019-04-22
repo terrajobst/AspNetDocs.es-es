@@ -12,7 +12,7 @@ ms.openlocfilehash: 4786234ecd8b1022f48081278711a61305a949ee
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59390641"
 ---
 # <a name="understanding-views-view-data-and-html-helpers"></a>Descripción de vistas, datos de vistas y asistentes de HTML

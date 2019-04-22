@@ -12,7 +12,7 @@ ms.openlocfilehash: 2a4d991205351531129480bee221651021483967
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59396257"
 ---
 # <a name="using-the-dropdownlist-helper-with-aspnet-mvc"></a>Usar el asistente DropDownList con ASP.NET MVC
@@ -190,7 +190,7 @@ Abra el *Views\Home\MultiSelectCountry.cshtml* archivo y agregue un `htmlAttribu
 
 [!code-cshtml[Main](using-the-dropdownlist-helper-with-aspnet-mvc/samples/sample12.cshtml)]
 
-En el código anterior, estamos agregando el atributo HTML y el valor del atributo `class = "chzn-select"`. El \@ carácter clase anterior tiene nada que ver con el motor de vistas Razor. `class` es un [ C# palabra clave](https://msdn.microsoft.com/library/x53a06bb.aspx). Palabras clave de C# no se puede usar como identificadores a menos que incluyan \@ como prefijo. En el ejemplo anterior, `@class` es un identificador válido, pero **clase** no es porque **clase** es una palabra clave.
+En el código anterior, estamos agregando el atributo HTML y el valor del atributo `class = "chzn-select"`. El \@ carácter clase anterior tiene nada que ver con el motor de vistas Razor. `class` es un [palabra clave de C#](https://msdn.microsoft.com/library/x53a06bb.aspx). Palabras clave de C# no se puede usar como identificadores a menos que incluyan \@ como prefijo. En el ejemplo anterior, `@class` es un identificador válido, pero **clase** no es porque **clase** es una palabra clave.
 
 Agregue referencias a la *Chosen/chosen.jquery.js* y *Chosen/chosen.css* archivos. El *Chosen/chosen.jquery.js* e implementa la funcionalidad del complemento seleccionado. El *Chosen/chosen.css* archivo proporciona el estilo. Agregue estas referencias a la parte inferior de la *Views\Home\MultiSelectCountry.cshtml* archivo. El código siguiente muestra cómo hacer referencia el complemento elegido.
 

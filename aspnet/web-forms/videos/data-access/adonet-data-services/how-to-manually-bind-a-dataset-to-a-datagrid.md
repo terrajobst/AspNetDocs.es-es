@@ -12,7 +12,7 @@ ms.openlocfilehash: 5ce22e24160269c225d8497f31b64809ede93c71
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59389302"
 ---
 # <a name="how-to-manually-bind-a-dataset-to-a-datagrid"></a>Cómo enlazar manualmente un conjunto de datos a un control Datagrid

@@ -12,7 +12,7 @@ ms.openlocfilehash: 83228f9ec92e583c779f6b1b1b7a1b1d2ec6228e
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59396621"
 ---
 # <a name="preventing-javascript-injection-attacks"></a>Prevenir ataques por inyección de código de JavaScript

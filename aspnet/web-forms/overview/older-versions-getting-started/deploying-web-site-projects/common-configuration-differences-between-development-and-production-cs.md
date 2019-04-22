@@ -12,7 +12,7 @@ ms.openlocfilehash: b9d4ed08ea1e8429c1895d0631e1acac9c7eaba9
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59391460"
 ---
 # <a name="common-configuration-differences-between-development-and-production-c"></a>Diferencias de configuración comunes entre el desarrollo y la producción (C#)

@@ -12,7 +12,7 @@ ms.openlocfilehash: b1c828825f15e2708541f9cefa20f3bc2d17b9fb
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59392916"
 ---
 # <a name="aspnet-mvc-4"></a>ASP.NET MVC 4
@@ -29,7 +29,7 @@ ms.locfileid: "59392916"
 
 ### <a name="whats-new-in-aspnet-mvc-4"></a>Novedades de ASP.NET MVC 4
 
-- [ASP.NET Web API](../web-api/index.md)
+- [ASP.NET Web API](../web-api/index.md) (Más información sobre ASP.NET Web API)
 - Tutorial: [Características para móviles de ASP.NET MVC 4](overview/older-versions/aspnet-mvc-4-mobile-features.md)
 - [Notas de la versión de ASP.NET MVC 4](../whitepapers/mvc4-release-notes.md)
 - [Nueva serie de tutoriales de ASP.NET MVC 4](overview/older-versions/getting-started-with-aspnet-mvc4/intro-to-aspnet-mvc-4.md)
@@ -42,7 +42,7 @@ ms.locfileid: "59392916"
 
 ### <a name="install-visual-studio-2012-includes-aspnet-mvc-4"></a>Instalar Visual Studio 2012 (incluye ASP.NET MVC 4)
 
-- [Visual Studio 2012 Ultimate](https://go.microsoft.com/fwlink/?linkid=247148)
+- [Visual Studio 2012 Ultimate](https://go.microsoft.com/fwlink/?linkid=247148)
 
 
 ### <a name="getting-help-and-reporting-issues"></a>Obtención de ayuda y los informes de problemas
