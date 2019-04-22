@@ -12,7 +12,7 @@ ms.openlocfilehash: 81a708b5badecbb5bd134078d079a0fe3a63bb5f
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59380683"
 ---
 # <a name="introduction-to-aspnet-single-page-application"></a>Introducción a la aplicación de página única de ASP.NET
@@ -20,5 +20,5 @@ ms.locfileid: "59380683"
 > Contenido para el uso de la nueva plantilla SPA y Knockoutjs.
 
 
-- [Aplicación de una sola página: Plantilla KnockoutJS](knockoutjs-template.md)
+- [Aplicación una sola página: Plantilla KnockoutJS](knockoutjs-template.md)
 - [¿Conoce una biblioteca distinta de Knockout?](other-libraries.md)

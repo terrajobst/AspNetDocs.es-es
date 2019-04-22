@@ -12,7 +12,7 @@ ms.openlocfilehash: 5714b118a5894731820d8e9775c8f5c8a375856c
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59390134"
 ---
 # <a name="handling-bll--and-dal-level-exceptions-c"></a>Controlar las excepciones de nivel BLL y DAL (C#)
@@ -41,7 +41,7 @@ Nuestros tutoriales DataList, sin embargo, no están usando el origen ObjectData
 Antes de que nos preocupamos controlar las excepciones que se producen durante el flujo de trabajo de actualización, permiten s en primer lugar cree a un DataList editable. Abrir el `ErrorHandling.aspx` página en el `EditDeleteDataList` carpeta, agregue un control DataList hasta el diseñador, establece su `ID` propiedad a `Products`, y agregue un nuevo origen ObjectDataSource denominado `ProductsDataSource`. Configurar el origen ObjectDataSource para usar el `ProductsBLL` clase s `GetProducts()` registra el método para seleccionar; establece las listas desplegables en la instrucción INSERT, UPDATE y eliminar pestañas en (None).
 
 
-[![Rla información de producto mediante el método GetProducts() Volve](handling-bll-and-dal-level-exceptions-cs/_static/image2.png)](handling-bll-and-dal-level-exceptions-cs/_static/image1.png)
+[![Devolver la información de producto mediante el método GetProducts()](handling-bll-and-dal-level-exceptions-cs/_static/image2.png)](handling-bll-and-dal-level-exceptions-cs/_static/image1.png)
 
 **Figura 1**: Devolver la información de producto mediante la `GetProducts()` método ([haga clic aquí para ver imagen en tamaño completo](handling-bll-and-dal-level-exceptions-cs/_static/image3.png))
 
@@ -60,7 +60,7 @@ Después de estos cambios, el marcado declarativo s de página debe ser similar 
 Dedique unos minutos a ver nuestro progreso a través de un explorador (consulte la figura 2).
 
 
-[![EACH producto incluye un botón Editar](handling-bll-and-dal-level-exceptions-cs/_static/image5.png)](handling-bll-and-dal-level-exceptions-cs/_static/image4.png)
+[![Cada producto incluye un botón Editar](handling-bll-and-dal-level-exceptions-cs/_static/image5.png)](handling-bll-and-dal-level-exceptions-cs/_static/image4.png)
 
 **Figura 2**: Cada producto incluye un botón Editar ([haga clic aquí para ver imagen en tamaño completo](handling-bll-and-dal-level-exceptions-cs/_static/image6.png))
 
@@ -115,12 +115,12 @@ Para completar este tutorial, simplemente llame a la `DisplayExceptionDetails` m
 Con el `Try ... Catch` bloquear en su lugar, los usuarios recibirán un mensaje de error más informativo, como las figuras 4 y 5 show. Tenga en cuenta que, en caso de una excepción, el control DataList, permanece en modo de edición. Esto es porque una vez que se produce la excepción, el flujo de control se redirigirá inmediatamente a la `Catch` bloque, omitiendo el código que devuelve el control DataList a su estado de edición previamente.
 
 
-[![An mensaje de Error se muestra si un usuario la omita un campo necesario](handling-bll-and-dal-level-exceptions-cs/_static/image9.png)](handling-bll-and-dal-level-exceptions-cs/_static/image8.png)
+[![Se muestra un mensaje de Error si un usuario la omita un campo necesario](handling-bll-and-dal-level-exceptions-cs/_static/image9.png)](handling-bll-and-dal-level-exceptions-cs/_static/image8.png)
 
 **Figura 4**: Se muestra un mensaje de Error si un usuario la omita los campos opcionales ([haga clic aquí para ver imagen en tamaño completo](handling-bll-and-dal-level-exceptions-cs/_static/image10.png))
 
 
-[![An mensaje de Error es muestran al escribir un precio negativo](handling-bll-and-dal-level-exceptions-cs/_static/image12.png)](handling-bll-and-dal-level-exceptions-cs/_static/image11.png)
+[![Es de un mensaje de Error aparece cuando escribe un precio negativo](handling-bll-and-dal-level-exceptions-cs/_static/image12.png)](handling-bll-and-dal-level-exceptions-cs/_static/image11.png)
 
 **Figura 5**: Es de un mensaje de Error aparece cuando escribe un precio negativo ([haga clic aquí para ver imagen en tamaño completo](handling-bll-and-dal-level-exceptions-cs/_static/image13.png))
 

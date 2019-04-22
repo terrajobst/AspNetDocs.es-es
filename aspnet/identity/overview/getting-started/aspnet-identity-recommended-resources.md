@@ -13,7 +13,7 @@ ms.openlocfilehash: 8e476f8a4172ebbe55819cda1ceb5458426243bd
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59381905"
 ---
 # <a name="aspnet-identity-recommended-resources"></a>Recursos recomendados de ASP.NET Identity

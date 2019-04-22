@@ -12,7 +12,7 @@ ms.openlocfilehash: a4988acd4bfd2835d8e1cef61916b59ec6481a7e
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59382854"
 ---
 # <a name="how-do-i-learn-the-tips-and-tricks-of-experts"></a>[¿Cómo lo hago?:] ¿Obtenga información sobre las sugerencias y trucos de los expertos?

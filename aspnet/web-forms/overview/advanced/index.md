@@ -12,7 +12,7 @@ ms.openlocfilehash: c820cb0679d90ed4625f4e389e44989dbde6c6f4
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59382542"
 ---
 # <a name="aspnet-web-forms-advanced-topics"></a>Temas avanzados de ASP.NET Web Forms

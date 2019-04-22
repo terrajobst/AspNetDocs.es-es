@@ -12,7 +12,7 @@ ms.openlocfilehash: c81057a065e00834928eebe4bd129f3a4a8581f6
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59379019"
 ---
 # <a name="how-do-i-work-with-model-binders-in-an-mvc-application"></a>¿Cómo lo hago?: ¿Trabajar con los enlazadores de modelos en una aplicación MVC?

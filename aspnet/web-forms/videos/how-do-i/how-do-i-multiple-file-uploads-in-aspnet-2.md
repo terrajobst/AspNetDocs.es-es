@@ -12,7 +12,7 @@ ms.openlocfilehash: 0e7757e24fea52034d15728a8e4c37b0d1bd954e
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59421646"
 ---
 # <a name="how-do-i--multiple-file-uploads-in-aspnet2"></a>[¿Cómo lo hago?:]  Cargas de varios archivos en ASP.NET 2

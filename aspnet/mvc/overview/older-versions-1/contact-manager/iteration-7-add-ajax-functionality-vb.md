@@ -12,7 +12,7 @@ ms.openlocfilehash: 3df4258b2de309aed5a3a598caeb1e7332c321f6
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59383970"
 ---
 # <a name="iteration-7--add-ajax-functionality-vb"></a>Iteración #7: agregar funcionalidad de Ajax (VB)
@@ -94,14 +94,14 @@ Agregue el siguiente código de JavaScript que se incluye dentro de la &lt;head&
 Permiten s comenzamos por modificar la vista de índice para que al hacer clic en un grupo de contactos solo actualiza la región de la vista que muestra los contactos. El cuadro rojo en la figura 1 contiene el área que se va a actualizar.
 
 
-[![UDespués de actualizar sólo los contactos](iteration-7-add-ajax-functionality-vb/_static/image1.jpg)](iteration-7-add-ajax-functionality-vb/_static/image1.png)
+[![Actualizar solo los contactos](iteration-7-add-ajax-functionality-vb/_static/image1.jpg)](iteration-7-add-ajax-functionality-vb/_static/image1.png)
 
 **Figura 01**: Actualizar solo los contactos ([haga clic aquí para ver imagen en tamaño completo](iteration-7-add-ajax-functionality-vb/_static/image2.png))
 
 
 El primer paso es separar la parte de la vista que se va a actualizar de forma asincrónica en una parcial independiente (control de usuario de vista). La sección de la vista de índice que se muestra en la tabla de contactos se ha movido a la parcial en el listado 1.
 
-**Listado 1 - Views\Contact\ContactList.ascx**
+**Listing 1 - Views\Contact\ContactList.ascx**
 
 [!code-aspx[Main](iteration-7-add-ajax-functionality-vb/samples/sample2.aspx)]
 
@@ -194,7 +194,7 @@ Cuando un usuario presiona el botón de hacia delante o Atrás del explorador, s
 Actualmente, con el fin de eliminar un contacto, debe hacer clic en el vínculo Eliminar y, a continuación, haga clic en el botón Eliminar que se muestra en la página de confirmación de eliminación (consulte la figura 2). Esto parece una gran cantidad de solicitudes de página en algo tan simple como la eliminación de un registro de base de datos.
 
 
-[![Tél Eliminar página de confirmación](iteration-7-add-ajax-functionality-vb/_static/image2.jpg)](iteration-7-add-ajax-functionality-vb/_static/image3.png)
+[![La página de confirmación de eliminación](iteration-7-add-ajax-functionality-vb/_static/image2.jpg)](iteration-7-add-ajax-functionality-vb/_static/image3.png)
 
 **Figura 02**: La página de confirmación de eliminación ([haga clic aquí para ver imagen en tamaño completo](iteration-7-add-ajax-functionality-vb/_static/image4.png))
 
@@ -203,7 +203,7 @@ Es tentador para omitir la página de confirmación de borrado y eliminación de
 
 El vínculo Eliminar está contenido en el ContactList parcial. Una versión actualizada de la ContactList parcial se encuentra en el listado 6.
 
-**Listado 6 - Views\Contact\ContactList.ascx**
+**Listing 6 - Views\Contact\ContactList.ascx**
 
 [!code-aspx[Main](iteration-7-add-ajax-functionality-vb/samples/sample10.aspx)]
 

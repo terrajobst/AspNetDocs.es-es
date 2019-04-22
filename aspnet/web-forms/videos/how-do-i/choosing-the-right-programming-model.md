@@ -12,7 +12,7 @@ ms.openlocfilehash: fce7f7c28dd681fc8df5e111b29d08b6000885d3
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59397622"
 ---
 # <a name="choosing-the-right-programming-model"></a>Elegir el modelo de programación correcto

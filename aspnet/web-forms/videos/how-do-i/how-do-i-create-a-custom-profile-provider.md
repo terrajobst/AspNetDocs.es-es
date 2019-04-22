@@ -12,7 +12,7 @@ ms.openlocfilehash: d80c0b9be470ee26f87bb9fa700537569b42399e
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59418071"
 ---
 # <a name="how-do-i-create-a-custom-profile-provider"></a>[¿Cómo lo hago?:] ¿Crear un proveedor personalizado?

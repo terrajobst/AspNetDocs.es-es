@@ -12,7 +12,7 @@ ms.openlocfilehash: 5e410ac0c6d3430c00e171775d842ee30eeab021
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59383178"
 ---
 # <a name="webmatrix-content-guide"></a>Guía de contenido de WebMatrix
@@ -50,7 +50,7 @@ WebMatrix es un conjunto de herramientas que proporciona una manera sencilla par
 
 ## <a name="additional-resources"></a>Recursos adicionales
 
-**Leer**
+**Read**
 
 - [Kit de aprendizaje de Microsoft Web campamentos para WebMatrix](http://trainingkit.webcamps.ms/WebMatrix.htm)
 - [Enviar un error o una sugerencia](https://go.microsoft.com/fwlink/?LinkId=195940)

@@ -12,7 +12,7 @@ ms.openlocfilehash: 45a3d42d9e58469c789acfdc8cdaaf88b7920892
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59387100"
 ---
 # <a name="executing-animations-using-client-side-code-c"></a>Ejecutar animaciones con código de cliente (C#)
@@ -63,7 +63,7 @@ Este es el código completo de JavaScript del lado cliente que emula el clic en 
 [!code-html[Main](executing-animations-using-client-side-code-cs/samples/sample8.html)]
 
 
-[![Tanimación de se ejecuta inmediatamente, sin un clic del mouse](executing-animations-using-client-side-code-cs/_static/image2.png)](executing-animations-using-client-side-code-cs/_static/image1.png)
+[![La animación se ejecuta inmediatamente, sin un clic del mouse](executing-animations-using-client-side-code-cs/_static/image2.png)](executing-animations-using-client-side-code-cs/_static/image1.png)
 
 La animación se ejecuta inmediatamente, sin un clic del mouse ([haga clic aquí para ver imagen en tamaño completo](executing-animations-using-client-side-code-cs/_static/image3.png))
 

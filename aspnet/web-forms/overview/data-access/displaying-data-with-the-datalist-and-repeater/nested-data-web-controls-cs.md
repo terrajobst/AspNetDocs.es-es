@@ -12,7 +12,7 @@ ms.openlocfilehash: 5dcb0b302a814f25ab8f0e89fb8859fbc0ca665d
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59399507"
 ---
 # <a name="nested-data-web-controls-c"></a>Controles web de datos anidados (C#)
@@ -35,7 +35,7 @@ Las plantillas también pueden contener otros controles Web de datos. Es decir, 
 En este tutorial que exploraremos cómo usar un Repeater anidado dentro de otro Repeater. El control Repeater externo contendrá un elemento para cada categoría en la base de datos, mostrar el nombre de categoría s y la descripción. Cada elemento de categoría s Repeater interna mostrará la información de cada producto que pertenecen a esa categoría (consulte la figura 1) en una lista con viñetas. Nuestros ejemplos ilustran cómo rellenar la interno Repeater mediante declaración y mediante programación.
 
 
-[![EACH categoría, junto con sus productos, se muestran](nested-data-web-controls-cs/_static/image2.png)](nested-data-web-controls-cs/_static/image1.png)
+[![Cada categoría, junto con sus productos, se muestran](nested-data-web-controls-cs/_static/image2.png)](nested-data-web-controls-cs/_static/image1.png)
 
 **Figura 1**: Cada categoría, junto con sus productos, se enumeran ([haga clic aquí para ver imagen en tamaño completo](nested-data-web-controls-cs/_static/image3.png))
 
@@ -47,7 +47,7 @@ Cuando la creación de una página que usa anidados controles Web de datos, le r
 Comience abriendo la `NestedControls.aspx` página en el `DataListRepeaterBasics` carpeta y agregue un control Repeater a la página de configuración de su `ID` propiedad `CategoryList`. En la etiqueta inteligente de Repeater s, optar por crear un nuevo origen ObjectDataSource denominado `CategoriesDataSource`.
 
 
-[![Nel nuevo ObjectDataSource CategoriesDataSource AME](nested-data-web-controls-cs/_static/image5.png)](nested-data-web-controls-cs/_static/image4.png)
+[![Nombre de la nueva ObjectDataSource CategoriesDataSource](nested-data-web-controls-cs/_static/image5.png)](nested-data-web-controls-cs/_static/image4.png)
 
 **Figura 2**: Nombre del nuevo origen ObjectDataSource `CategoriesDataSource` ([haga clic aquí para ver imagen en tamaño completo](nested-data-web-controls-cs/_static/image6.png))
 
@@ -55,7 +55,7 @@ Comience abriendo la `NestedControls.aspx` página en el `DataListRepeaterBasics
 Configurar el origen ObjectDataSource para que extrae sus datos de la `CategoriesBLL` clase s `GetCategories` método.
 
 
-[![Cconfigurar el origen ObjectDataSource para usar la clase CategoriesBLL s método GetCategories](nested-data-web-controls-cs/_static/image8.png)](nested-data-web-controls-cs/_static/image7.png)
+[![Configurar el origen ObjectDataSource para usar el método de clase CategoriesBLL s GetCategories](nested-data-web-controls-cs/_static/image8.png)](nested-data-web-controls-cs/_static/image7.png)
 
 **Figura 3**: Configurar el origen ObjectDataSource que se usarán el `CategoriesBLL` clase s `GetCategories` método ([haga clic aquí para ver imagen en tamaño completo](nested-data-web-controls-cs/_static/image9.png))
 
@@ -68,7 +68,7 @@ Para especificar la plantilla de repetidor s contenido necesitamos ir a la vista
 Figura 4 muestra nuestro progreso cuando se ve mediante un explorador.
 
 
-[![EACH s nombre de categoría y descripción se muestra, separados por una regla Horizontal](nested-data-web-controls-cs/_static/image11.png)](nested-data-web-controls-cs/_static/image10.png)
+[![Se muestran cada s nombre de categoría y descripción, separada por una regla Horizontal](nested-data-web-controls-cs/_static/image11.png)](nested-data-web-controls-cs/_static/image10.png)
 
 **Figura 4**: Se muestran cada s nombre de categoría y descripción, separada por una regla Horizontal ([haga clic aquí para ver imagen en tamaño completo](nested-data-web-controls-cs/_static/image12.png))
 
@@ -116,7 +116,7 @@ Este controlador de eventos inicia asegurándose de que nos re tratar con datos 
 Con este controlador de eventos, el `ProductsByCategoryList` Repeater en cada `RepeaterItem` está enlazado a esos productos en el `RepeaterItem` categoría s. Figura 5 muestra una captura de pantalla de la salida resultante.
 
 
-[![Tél Outer Repeater enumera cada categoría; Lo interna enumera los productos de esa categoría](nested-data-web-controls-cs/_static/image14.png)](nested-data-web-controls-cs/_static/image13.png)
+[![El control Repeater externo enumera cada categoría; Lo interna enumera los productos de la categoría](nested-data-web-controls-cs/_static/image14.png)](nested-data-web-controls-cs/_static/image13.png)
 
 **Figura 5**: El control Repeater externo enumera cada categoría; las listas de uno interno los productos de esa categoría ([haga clic aquí para ver imagen en tamaño completo](nested-data-web-controls-cs/_static/image15.png))
 

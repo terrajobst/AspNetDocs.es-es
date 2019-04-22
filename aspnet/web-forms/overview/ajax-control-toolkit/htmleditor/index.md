@@ -12,7 +12,7 @@ ms.openlocfilehash: cb86b45368f827f456fb7dc3f8190e90105c926e
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59378863"
 ---
 # <a name="htmleditor"></a>HTMLEditor

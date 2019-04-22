@@ -12,7 +12,7 @@ ms.openlocfilehash: febba98be86f0151724af6d6c00fb14760ce1b91
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59378954"
 ---
 # <a name="creating-a-custom-route-constraint-vb"></a>Crear una restricción de ruta personalizada (VB)
@@ -34,7 +34,7 @@ El método devuelve un valor booleano. Si devuelve False, la ruta asociada con l
 
 La restricción de Localhost se encuentra en el listado 1.
 
-**Listado 1 - LocalhostConstraint.vb**
+**Listing 1 - LocalhostConstraint.vb**
 
 [!code-vb[Main](creating-a-custom-route-constraint-vb/samples/sample2.vb)]
 

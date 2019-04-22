@@ -12,7 +12,7 @@ ms.openlocfilehash: aa6a01a37b6f39f87e2b77d351b221aee415a3c5
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59418851"
 ---
 # <a name="visual-studio-2013-web-editor-features---page-inspector"></a>Características del editor web de Visual Studio 2013 - Inspector de página

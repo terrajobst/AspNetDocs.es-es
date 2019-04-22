@@ -12,7 +12,7 @@ ms.openlocfilehash: 552d047286adbc53e4161b412432cbf0b3bfb4c9
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59380306"
 ---
 # <a name="mobile"></a>Móvil

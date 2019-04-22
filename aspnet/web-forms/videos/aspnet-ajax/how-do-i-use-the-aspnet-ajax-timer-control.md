@@ -12,7 +12,7 @@ ms.openlocfilehash: 4db303bc941bb183e531f48634b5c51d37bc0f10
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59384752"
 ---
 # <a name="how-do-i-use-the-aspnet-ajax-timer-control"></a>[¿Cómo lo hago?:] ¿Usar el Control Timer ASP.NET AJAX?

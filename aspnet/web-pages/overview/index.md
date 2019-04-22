@@ -12,7 +12,7 @@ ms.openlocfilehash: b4c9e9eb85f6ba9a1e2b2d0a1bbaf027ee25bc0d
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59381853"
 ---
 # <a name="web-pages-guidance"></a>Orientación de las páginas Web

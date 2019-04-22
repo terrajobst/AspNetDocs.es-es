@@ -12,7 +12,7 @@ ms.openlocfilehash: deecb47497c802751cd0b940474052a7753156b9
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59384492"
 ---
 # <a name="visual-studio-2012-html-editing-features"></a>Características de edición HTML de Visual Studio 2012

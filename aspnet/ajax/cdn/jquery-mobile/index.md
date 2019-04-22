@@ -12,7 +12,7 @@ ms.openlocfilehash: f539911e5d7db6bf13f8e1ad41a1358c5b02c76c
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59383205"
 ---
 # <a name="jquery-mobile"></a>jQuery Mobile

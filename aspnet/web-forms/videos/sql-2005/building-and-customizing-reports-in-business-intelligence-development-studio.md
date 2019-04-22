@@ -12,7 +12,7 @@ ms.openlocfilehash: b1e08dd5ad2c6543570a43c58997ab15353d7f26
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59380364"
 ---
 # <a name="building-and-customizing-reports-in-business-intelligence-development-studio"></a>Crear y personalizar informes en Business Intelligence Development Studio

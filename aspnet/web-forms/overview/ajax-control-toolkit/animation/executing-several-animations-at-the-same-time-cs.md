@@ -12,7 +12,7 @@ ms.openlocfilehash: 0d9c566a301c8b64e33e67b0e9415a5955b5436e
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59388223"
 ---
 # <a name="executing-several-animations-at-the-same-time-c"></a>Ejecutar varias animaciones al mismo tiempo (C#)
@@ -55,7 +55,7 @@ Este es el un marcado posible para el `AnimationExtender` control difuminación 
 Y efectivamente: al ejecutar este script, el panel se muestra, a continuación, cambia automáticamente de tamaño (más de triplicando su ancho y mitad su alto) y atenúa al mismo tiempo.
 
 
-[![Tpanel se atenúa y cambiar el tamaño (incluido su contenido, gracias al motor de representación del explorador)](executing-several-animations-at-the-same-time-cs/_static/image2.png)](executing-several-animations-at-the-same-time-cs/_static/image1.png)
+[![El panel se atenúa y cambiar el tamaño (incluido su contenido, gracias al motor de representación del explorador)](executing-several-animations-at-the-same-time-cs/_static/image2.png)](executing-several-animations-at-the-same-time-cs/_static/image1.png)
 
 El panel se atenúa y cambiar el tamaño (incluido su contenido, gracias al motor de representación del explorador) ([haga clic aquí para ver imagen en tamaño completo](executing-several-animations-at-the-same-time-cs/_static/image3.png))
 

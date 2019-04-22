@@ -12,7 +12,7 @@ ms.openlocfilehash: 6cea53021ce92e3936b06481008a86dd0590a117
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59387443"
 ---
 # <a name="microsoft-ajax-content-delivery-network"></a>Microsoft Ajax Content Delivery Network
@@ -27,7 +27,7 @@ ms.locfileid: "59387443"
 ## <a name="table-of-contents"></a>Tabla de contenido
 
 **[AJAX.Microsoft.com ha cambiado a ajax.aspnetcdn.com](#ajaxmicrosoftcom_renamed_to_ajaxaspnetcdncom_18)**  
-**[Compatibilidad de Visual Studio .vsdoc](#Visual_Studio_vsdoc_Support_19)**  
+**[Visual Studio .vsdoc Support](#Visual_Studio_vsdoc_Support_19)**  
 **[Uso de Ajax de ASP.NET desde la red CDN](#Using_ASPNET_Ajax_from_the_CDN_20)**  
 **[Uso de jQuery desde la red CDN](#Using_jQuery_from_the_CDN_21)**  
 **[Mediante jQuery UI desde la red CDN](#Using_jQuery_UI_from_the_CDN_22)**  

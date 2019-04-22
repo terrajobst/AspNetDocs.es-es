@@ -12,7 +12,7 @@ ms.openlocfilehash: b8160c6f5ac090e120e86f4273749b756857967e
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59385714"
 ---
 # <a name="creating-a-numeric-updown-control-with-a-web-service-backend-c"></a>Crear un control NumericUpDown con un back-end de servicio web (C#)
@@ -54,7 +54,7 @@ Este es el marcado completo para la página:
 Si ejecuta la página, observe cómo el valor en el cuadro de texto siempre duplica cuando haga clic en el botón superior y se reduce a la mitad al hacer clic en el botón inferior.
 
 
-[![Oaparecen solo números que sean la potencia de 2](creating-a-numeric-up-down-control-with-a-web-service-backend-cs/_static/image2.png)](creating-a-numeric-up-down-control-with-a-web-service-backend-cs/_static/image1.png)
+[![Aparecen únicamente los números que sean la potencia de 2](creating-a-numeric-up-down-control-with-a-web-service-backend-cs/_static/image2.png)](creating-a-numeric-up-down-control-with-a-web-service-backend-cs/_static/image1.png)
 
 Aparecen únicamente los números que sean la potencia de 2 ([haga clic aquí para ver imagen en tamaño completo](creating-a-numeric-up-down-control-with-a-web-service-backend-cs/_static/image3.png))
 

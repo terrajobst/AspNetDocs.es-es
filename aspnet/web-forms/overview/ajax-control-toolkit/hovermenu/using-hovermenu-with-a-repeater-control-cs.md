@@ -12,7 +12,7 @@ ms.openlocfilehash: 7f64e90eb2f8f87e2f382cb7897793e7071d305d
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59384505"
 ---
 # <a name="using-hovermenu-with-a-repeater-control-c"></a>Usar HoverMenu con un control Repeater (C#)
@@ -53,7 +53,7 @@ Ahora, el `HoverMenuExtender` entra en juego. Para que todos los elementos del o
 Ahora, todos los elementos del origen de datos muestran un menú emergente a la derecha (`PopupPosition` atributo) después de un retraso de 50 milisegundos (`PopDelay` atributo).
 
 
-[![Tmenú de desplazamiento aparece junto a cada elemento del repetidor](using-hovermenu-with-a-repeater-control-cs/_static/image2.png)](using-hovermenu-with-a-repeater-control-cs/_static/image1.png)
+[![El menú de desplazamiento que aparece junto a cada elemento del control de repetidor](using-hovermenu-with-a-repeater-control-cs/_static/image2.png)](using-hovermenu-with-a-repeater-control-cs/_static/image1.png)
 
 El menú de desplazamiento que aparece junto a cada elemento en el control repeater ([haga clic aquí para ver imagen en tamaño completo](using-hovermenu-with-a-repeater-control-cs/_static/image3.png))
 

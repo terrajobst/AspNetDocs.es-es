@@ -12,7 +12,7 @@ ms.openlocfilehash: f5b7cecdd1a8dbd9be1bd781cec31c53c9096546
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59383231"
 ---
 # <a name="deploying-database-projects"></a>Implementar proyectos de base de datos
@@ -144,7 +144,7 @@ Estos temas en MSDN proporcionan orientación más amplio y obtener información
 
 - [Proyectos de base de datos de Visual Studio 2010 SQL Server](https://msdn.microsoft.com/library/ff678491.aspx)
 - [Administración de cambios de la base de datos](https://msdn.microsoft.com/library/aa833404.aspx)
-- [Filtrar Preparar una base de datos para la implementación desde un símbolo del sistema mediante VSDBCMD. EXE](https://msdn.microsoft.com/library/dd193258.aspx)
+- [Cómo: Preparar una base de datos para la implementación desde un símbolo del sistema mediante VSDBCMD. EXE](https://msdn.microsoft.com/library/dd193258.aspx)
 - [Información general de implementación y compilación de la base de datos](https://msdn.microsoft.com/library/aa833165.aspx)
 
 > [!div class="step-by-step"]

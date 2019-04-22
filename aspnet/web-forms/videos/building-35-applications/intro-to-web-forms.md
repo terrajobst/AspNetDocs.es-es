@@ -12,7 +12,7 @@ ms.openlocfilehash: 074f1467d93c707ecf5d42a1142c5d91d0807f33
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59412078"
 ---
 # <a name="intro-to-web-forms"></a>Introducción a los formularios Web Forms

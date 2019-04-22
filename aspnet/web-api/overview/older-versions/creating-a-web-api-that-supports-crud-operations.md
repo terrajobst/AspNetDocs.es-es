@@ -13,7 +13,7 @@ ms.openlocfilehash: 855c3fa35d82173c87d13adb51e10fd13698ade5
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59381359"
 ---
 # <a name="enabling-crud-operations-in-aspnet-web-api-1"></a>Habilitar las operaciones de CRUD en ASP.NET Web API 1

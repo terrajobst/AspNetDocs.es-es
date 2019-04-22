@@ -12,7 +12,7 @@ ms.openlocfilehash: 2d13fbfdb8d2fe66c5ff036060b9289017f79d14
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59421542"
 ---
 # <a name="using-multiple-popup-controls-c"></a>Usar varios controles emergentes (C#)
@@ -49,7 +49,7 @@ Ahora ampliar cada uno de los dos cuadros de texto con un `PopupControlExtender`
 Ahora al hacer clic dentro de un campo de texto, un calendario aparece debajo del campo, que le permite seleccionar una fecha. (Obtener la fecha seleccionada en los cuadros de texto se tratarán en otro tutorial.)
 
 
-[![Tél calendario aparece cuando el usuario hace clic en el cuadro de texto](using-multiple-popup-controls-cs/_static/image2.png)](using-multiple-popup-controls-cs/_static/image1.png)
+[![El calendario aparece cuando el usuario hace clic en el cuadro de texto](using-multiple-popup-controls-cs/_static/image2.png)](using-multiple-popup-controls-cs/_static/image1.png)
 
 El calendario aparece cuando el usuario hace clic en el cuadro de texto ([haga clic aquí para ver imagen en tamaño completo](using-multiple-popup-controls-cs/_static/image3.png))
 

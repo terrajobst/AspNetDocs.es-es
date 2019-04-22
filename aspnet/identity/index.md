@@ -12,7 +12,7 @@ ms.openlocfilehash: 48e75d6a2a151befe7ea796b149d2d030712d799
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59418357"
 ---
 # <a name="aspnet-identity"></a>ASP.NET Identity
@@ -25,7 +25,7 @@ ms.locfileid: "59418357"
         - [Recursos recomendados de ASP.NET Identity](overview/getting-started/aspnet-identity-recommended-resources.md)
         - [Agregar ASP.NET Identity a un proyecto de formularios Web Forms vacío o existente](overview/getting-started/adding-aspnet-identity-to-an-empty-or-existing-web-forms-project.md)
         - [Desarrollo de aplicaciones ASP.NET con Azure Active Directory](overview/getting-started/developing-aspnet-apps-with-windows-azure-active-directory.md)
-        - [ASP.NET Identity: Usar Almacenamiento de MySQL con un proveedor de MySQL de Entity Framework (C#)](overview/getting-started/aspnet-identity-using-mysql-storage-with-an-entityframework-mysql-provider.md)
+        - [Identidad de ASP.NET: Uso de MySQL con almacenamiento con un proveedor de MySQL de Entity Framework (C#)](overview/getting-started/aspnet-identity-using-mysql-storage-with-an-entityframework-mysql-provider.md)
     - [Características y API](overview/features-api/index.md)
 
         - [Prácticas recomendadas para implementar contraseñas y otros datos confidenciales en ASP.NET y Azure App Service](overview/features-api/best-practices-for-deploying-passwords-and-other-sensitive-data-to-aspnet-and-azure.md)

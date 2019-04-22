@@ -12,7 +12,7 @@ ms.openlocfilehash: 229d9b389d109160ba17406a9db69464c65a8632
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59418838"
 ---
 # <a name="aspnet-mvc-for-the-rest-of-us"></a>Vídeo "ASP.NET MVC For the Rest of Us"
@@ -20,7 +20,7 @@ ms.locfileid: "59418838"
 > Vídeo "ASP.NET MVC For the Rest of Us"
 
 
-- [Vídeo "ASP.NET MVC For the Rest of Us": parte 1](aspnet-mvc-for-the-rest-of-us-part-1.md)
-- [Vídeo "ASP.NET MVC For the Rest of Us": parte 2](aspnet-mvc-for-the-rest-of-us-part-2.md)
-- [Vídeo "ASP.NET MVC For the Rest of Us": parte 3](aspnet-mvc-for-the-rest-of-us-part-3.md)
-- [Vídeo "ASP.NET MVC For the Rest of Us": parte 4](aspnet-mvc-for-the-rest-of-us-part-4.md)
+- [ASP.NET MVC For the Rest of Us: Parte 1](aspnet-mvc-for-the-rest-of-us-part-1.md)
+- [ASP.NET MVC For the Rest of Us: Parte 2](aspnet-mvc-for-the-rest-of-us-part-2.md)
+- [ASP.NET MVC For the Rest of Us: Parte 3](aspnet-mvc-for-the-rest-of-us-part-3.md)
+- [ASP.NET MVC For the Rest of Us: Parte 4](aspnet-mvc-for-the-rest-of-us-part-4.md)

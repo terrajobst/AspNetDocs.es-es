@@ -12,7 +12,7 @@ ms.openlocfilehash: 84f9c822f041808184b2c586ce933ba3b24615dc
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59419839"
 ---
 # <a name="adding-a-controller"></a>Agregar un controlador
@@ -40,7 +40,7 @@ Vamos a crear un nuevo controlador de clic derecho en la carpeta controladores e
 
 Asigne un nombre al nuevo controlador "HelloWorldController" y haga clic en Agregar.
 
-[![Acuadro de diálogo controlador dd](getting-started-with-mvc-part2/_static/image4.png)](getting-started-with-mvc-part2/_static/image3.png)
+[![Agregar cuadro de diálogo de controlador](getting-started-with-mvc-part2/_static/image4.png)](getting-started-with-mvc-part2/_static/image3.png)
 
 Observe que en el Explorador de soluciones a la derecha que se ha creado un nuevo archivo para llamó a HelloWorldController.cs y ahora se abre ese archivo en el **IDE**.
 
@@ -58,13 +58,13 @@ ASP.NET MVC invoca diferentes clases de controlador (y diferentes métodos de ac
 
 La primera parte de la dirección URL determina la clase de controlador para ejecutar. Por lo que /HelloWorld se asigna a la clase HelloWorldController. La segunda parte de la dirección URL determina el método de acción en la clase que se ejecutará. /HelloWorld/Index causara el método Index() de la clase HelloWorldController para ejecutar. Tenga en cuenta que sólo se tenía visite /HelloWorld anterior y el método que index estaba implícito. Esto es porque un método denominado "Index" es el método predeterminado que se llamará en un controlador si no se especifica explícitamente.
 
-[![Tes mi acción predeterminada](getting-started-with-mvc-part2/_static/image8.png)](getting-started-with-mvc-part2/_static/image7.png)
+[![Ésta es mi acción predeterminada](getting-started-with-mvc-part2/_static/image8.png)](getting-started-with-mvc-part2/_static/image7.png)
 
 Ahora, vamos a visitar `http://localhost:xx/HelloWorld/Welcome.` ahora nuestro método principal se ejecuta y devuelve la cadena HTML.
 
 Nuevamente, / [Controller] / [ActionName] / [parámetros], por lo que el controlador es HelloWorld y bienvenida en este caso es el método. Aún no hemos hecho los parámetros.
 
-[![Tes el método de acción bienvenida](getting-started-with-mvc-part2/_static/image10.png)](getting-started-with-mvc-part2/_static/image9.png)
+[![Este es el método de acción bienvenida](getting-started-with-mvc-part2/_static/image10.png)](getting-started-with-mvc-part2/_static/image9.png)
 
 Vamos a modificar nuestro ejemplo ligeramente para que nos podemos pasar cierta información en de la dirección URL a nuestro controlador, por ejemplo así: / HelloWorld/Welcome? nombre = Scott&amp;numtimes = 4. Cambiar el método principal para que incluya dos parámetros y actualización como el siguiente. Tenga en cuenta que hemos usado para indicar que el parámetro numTimes debería valor predeterminado es 1 si no se pasa en la característica de parámetro opcional de C#.
 

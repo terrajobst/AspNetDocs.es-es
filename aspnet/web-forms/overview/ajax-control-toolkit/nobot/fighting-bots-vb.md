@@ -12,7 +12,7 @@ ms.openlocfilehash: 6baf5447d31d00b89cb7ddf526553456fecbbf6e
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59409478"
 ---
 # <a name="fighting-bots-vb"></a>Combatir los bots (VB)
@@ -65,7 +65,7 @@ Por último, necesita un formulario para enviar y un elemento de etiqueta para e
 Al ejecutar esta secuencia de comandos y desactivar JavaScript o enviar el formulario dentro de los primeros dos segundos o enviar el formulario siete veces dentro de treinta segundos, obtendrá un mensaje de error. Sin embargo con inteligencia a usar este control, puesto que sólo unos 90 95% de los usuarios tienen activados en JavaScript, por lo tanto, 5-10% de los usuarios se producirá un error `NoBot`de la prueba.
 
 
-[![Tsu mensaje de error podría deberse a un bot](fighting-bots-vb/_static/image2.png)](fighting-bots-vb/_static/image1.png)
+[![Este mensaje de error podría deberse a un bot](fighting-bots-vb/_static/image2.png)](fighting-bots-vb/_static/image1.png)
 
 Este mensaje de error podría deberse a un bot ([haga clic aquí para ver imagen en tamaño completo](fighting-bots-vb/_static/image3.png))
 

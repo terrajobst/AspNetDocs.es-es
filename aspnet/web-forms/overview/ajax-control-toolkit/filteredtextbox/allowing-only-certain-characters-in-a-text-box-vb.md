@@ -12,7 +12,7 @@ ms.openlocfilehash: 455d62d97808862f70692c46ae223f47270266f9
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59387625"
 ---
 # <a name="allowing-only-certain-characters-in-a-text-box-vb"></a>Permitir solo determinados caracteres en un cuadro de texto (VB)
@@ -56,7 +56,7 @@ Aquí está el marcado para la `FilteredTextBoxExtender` control que solo permit
 Ejecutar la página y vuelva a escribir una carta si JavaScript está habilitado, no funcionará; Sin embargo, dígitos aparecen en la página. Sin embargo, observe que la protección `FilteredTextBox` proporciona no es infalible: Si JavaScript está habilitado, todos los datos pueden especificarse en el cuadro de texto, por lo que debe usar medios de validación adicional, es decir, ASP. Controles de validación de la red.
 
 
-[![Opueden especificarse solo dígitos](allowing-only-certain-characters-in-a-text-box-vb/_static/image2.png)](allowing-only-certain-characters-in-a-text-box-vb/_static/image1.png)
+[![Pueden especificarse solo dígitos](allowing-only-certain-characters-in-a-text-box-vb/_static/image2.png)](allowing-only-certain-characters-in-a-text-box-vb/_static/image1.png)
 
 Pueden especificarse solo dígitos ([haga clic aquí para ver imagen en tamaño completo](allowing-only-certain-characters-in-a-text-box-vb/_static/image3.png))
 

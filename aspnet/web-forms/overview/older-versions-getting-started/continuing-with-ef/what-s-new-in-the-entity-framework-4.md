@@ -12,7 +12,7 @@ ms.openlocfilehash: 0bc24a59e09728a5ecb6e18378c4cde0c8e046f2
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59387456"
 ---
 # <a name="whats-new-in-the-entity-framework-40"></a>Novedades de Entity Framework 4.0
@@ -197,7 +197,7 @@ Para obtener más información sobre cómo usar el enfoque de code first al desa
 - [Desarrollo con 4 de Entity Framework Code First](https://weblogs.asp.net/scottgu/archive/2010/07/16/code-first-development-with-entity-framework-4.aspx). Se trata de un artículo de blog de desarrollo code first presentación de Scott Guthrie.
 - [Publicaciones de Blog del equipo de desarrollo de Entity Framework - CodeOnly etiquetada](https://blogs.msdn.com/b/efdesign/archive/tags/codeonly/)
 - [Entradas de Blog del equipo de desarrollo de Entity Framework - Code First etiquetadas](https://blogs.msdn.com/b/efdesign/archive/tags/code+first/)
-- [Tutorial de Store música de MVC - parte 4: Modelos y acceso a datos](../../../../mvc/overview/older-versions/mvc-music-store/mvc-music-store-part-4.md)
+- [Tutorial de Store música de MVC - parte 4: Acceso a datos y modelos](../../../../mvc/overview/older-versions/mvc-music-store/mvc-music-store-part-4.md)
 - [Introducción a MVC 3 - parte 4: Desarrollo de Code First de Entity Framework](../../../../mvc/overview/older-versions/getting-started-with-aspnet-mvc3/cs/adding-a-model.md)
 
 Además, se proyecta un nuevo tutorial de Code First de MVC que compila una aplicación similar a la aplicación Contoso University para publicarse en la primavera de 2011 a las [https://asp.net/entity-framework/tutorials](../../../../entity-framework.md)

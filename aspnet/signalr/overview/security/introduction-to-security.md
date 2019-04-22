@@ -12,7 +12,7 @@ ms.openlocfilehash: 6e96c9a086241b6f3fff40d4a5fb0a3636bfa4b7
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59387333"
 ---
 # <a name="introduction-to-signalr-security"></a>Introducción a la seguridad de SignalR

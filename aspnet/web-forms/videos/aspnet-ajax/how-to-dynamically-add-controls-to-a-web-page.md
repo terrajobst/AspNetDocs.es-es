@@ -12,7 +12,7 @@ ms.openlocfilehash: beffb10a649796c75c165ed28126bfcaf6bcdccf
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59381762"
 ---
 # <a name="how-to-dynamically-add-controls-to-a-web-page"></a>Cómo agregar controles dinámicamente a una página Web

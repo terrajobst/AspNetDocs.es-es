@@ -12,7 +12,7 @@ ms.openlocfilehash: 3f36f0c504678e1e8b40aef99db81ab99101568b
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59383943"
 ---
 # <a name="aspnet-web-deployment---recommended-resources"></a>Implementación web de ASP.NET - Recursos recomendados

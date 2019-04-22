@@ -12,7 +12,7 @@ ms.openlocfilehash: f7ca1b9adc781bbca4bc9fb9637f61660cdbf0a5
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59396881"
 ---
 # <a name="how-do-i-cache-portions-of-an-aspnet-page"></a>[¿Cómo lo hago?:] Algunas partes de la memoria caché de una página ASP.NET

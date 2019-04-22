@@ -12,7 +12,7 @@ ms.openlocfilehash: 3d8a6a102788cb6b5612e9bc537e1c13e7798c54
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59378941"
 ---
 # <a name="aspnet-web-deployment-using-visual-studio"></a>Implementación web de ASP.NET con Visual Studio
@@ -26,7 +26,7 @@ ms.locfileid: "59378941"
 - [Propiedades del proyecto](project-properties.md)
 - [Implementación de prueba](deploying-to-iis.md)
 - [Establecer permisos de carpeta](setting-folder-permissions.md)
-- [Implementar en entorno de producción](deploying-to-production.md)
+- [Implementación en entorno de producción](deploying-to-production.md)
 - [Implementar una actualización de código](deploying-a-code-update.md)
 - [Implementar una actualización de base de datos](deploying-a-database-update.md)
 - [Implementación de línea de comandos](command-line-deployment.md)

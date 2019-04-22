@@ -12,7 +12,7 @@ ms.openlocfilehash: f0695e491b9e8a29d1fcbdf9ae138083f8c0c531
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59422764"
 ---
 # <a name="tailspin-spyworks---implementing-and-using-the-also-purchased-control"></a>Tailspin Spyworks - implementar y utilizar el Control también adquirido

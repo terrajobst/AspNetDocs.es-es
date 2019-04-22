@@ -12,7 +12,7 @@ ms.openlocfilehash: bc91eba17938de15f03ecc1e745aac57c7eac7a1
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59419501"
 ---
 # <a name="create-the-data-access-layer"></a>Crear la capa de acceso a datos
@@ -178,7 +178,7 @@ En el siguiente tutorial, deberá actualizar la interfaz de usuario, Agregar nav
 
 ## <a name="additional-resources"></a>Recursos adicionales
 
-[Información general sobre Entity Framework](https://msdn.microsoft.com/library/bb399567.aspx)   
+[Introducción a Entity Framework](https://msdn.microsoft.com/library/bb399567.aspx)   
 [Guía para principiantes para ADO.NET Entity Framework](https://msdn.microsoft.com/data/ee712907)   
 [Desarrollo de primera con Entity Framework de código](http://www.msteched.com/2010/Europe/DEV212) (vídeo)   
 [API Fluent de Code First de relaciones](https://msdn.microsoft.com/data/hh134698)   

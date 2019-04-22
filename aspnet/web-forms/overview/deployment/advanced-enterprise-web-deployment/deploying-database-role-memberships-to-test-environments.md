@@ -12,7 +12,7 @@ ms.openlocfilehash: fd0914ed62a280fea290b9f1b150fc25c8ed6d40
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59385337"
 ---
 # <a name="deploying-database-role-memberships-to-test-environments"></a>Implementar las pertenencias a roles de base de datos en entornos de prueba

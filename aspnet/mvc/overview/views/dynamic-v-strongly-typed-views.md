@@ -12,7 +12,7 @@ ms.openlocfilehash: 3235fc58fbf93cb87946f8ebd4a478eff7ce80e3
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59386143"
 ---
 # <a name="dynamic-v-strongly-typed-views"></a>Vistas dinámicas frente a las vistas fuertemente tipadas

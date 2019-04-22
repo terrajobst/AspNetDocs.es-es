@@ -12,7 +12,7 @@ ms.openlocfilehash: 832f89dfdecb71f2664431a4880978f7355246f4
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59420229"
 ---
 # <a name="aspnet-web-pages"></a>ASP.NET Web Pages

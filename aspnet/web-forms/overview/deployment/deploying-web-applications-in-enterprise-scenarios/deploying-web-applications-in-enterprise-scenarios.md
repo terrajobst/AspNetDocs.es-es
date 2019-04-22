@@ -12,7 +12,7 @@ ms.openlocfilehash: f8d55cb98e6943ef2a7c7eb05f7f771b5f5e63ef
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59420411"
 ---
 # <a name="deploying-web-applications-in-enterprise-scenarios-using-visual-studio-2010"></a>Implementar aplicaciones web en escenarios empresariales mediante Visual Studio 2010

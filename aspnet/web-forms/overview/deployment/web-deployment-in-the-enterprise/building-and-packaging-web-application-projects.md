@@ -12,7 +12,7 @@ ms.openlocfilehash: 82134b8da7ab5ca49fef8e769128db9010fd231f
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59396335"
 ---
 # <a name="building-and-packaging-web-application-projects"></a>Crear y empaquetar proyectos de aplicación web

@@ -13,7 +13,7 @@ ms.openlocfilehash: 1f25a9afdf379d725496bd88f6ac192ab19930ca
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59384518"
 ---
 # <a name="tutorial-use-ef-migrations-in-an-aspnet-mvc-app-and-deploy-to-azure"></a>Tutorial: Usa migraciones de EF en una aplicación ASP.NET MVC e implementarlo en Azure

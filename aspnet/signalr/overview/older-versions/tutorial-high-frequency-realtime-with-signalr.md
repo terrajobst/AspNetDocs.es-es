@@ -12,7 +12,7 @@ ms.openlocfilehash: 179f6dd3a60f8c49770ee34af93d54defad0adc4
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59379422"
 ---
 # <a name="high-frequency-realtime-with-signalr-1x"></a>Alta frecuencia en tiempo real con SignalR 1.x
@@ -193,6 +193,6 @@ La aplicación completa creada en este tutorial se puede descargar desde [Galer�
 
 Para obtener más información sobre los conceptos de desarrollo de SignalR, visite los sitios siguientes para recursos y código fuente de SignalR:
 
-- [Proyecto de SignalR](http://signalr.net)
+- [SignalR Project](http://signalr.net)
 - [SignalR Github y ejemplos](https://github.com/SignalR/SignalR)
 - [SignalR Wiki](https://github.com/SignalR/SignalR/wiki)

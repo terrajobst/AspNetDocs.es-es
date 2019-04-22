@@ -12,7 +12,7 @@ ms.openlocfilehash: a0a7ca569bc5d1f7bfb38465e0ae5a701e713fcb
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59417083"
 ---
 # <a name="intro-to-aspnet-20-user-interface-elements"></a>[Introducción a ASP.NET 2.0:] Elementos de la interfaz de usuario

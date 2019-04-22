@@ -12,7 +12,7 @@ ms.openlocfilehash: b357d386ae11869d4c16f2b1d42d0b713bbd57c4
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59381391"
 ---
 # <a name="working-with-data-part-1"></a>Trabajar con datos (parte 1)

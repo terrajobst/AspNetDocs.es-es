@@ -12,7 +12,7 @@ ms.openlocfilehash: 38aea3b3480dde6ec6182a45c4f61f44eea8e05e
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59380228"
 ---
 # <a name="aspnet-mvc-4-fundamentals"></a>Conceptos básicos de ASP.NET MVC 4
@@ -276,7 +276,7 @@ En esta tarea, se pruebe la aplicación en un explorador web.
 
         ![Exploración StoreBrowse](aspnet-mvc-4-fundamentals/_static/image9.png "StoreBrowse de exploración")
 
-        *Exploración /Store/Browse*
+        *Browsing /Store/Browse*
 3. Cierre el explorador.
 
 <a id="Exercise3"></a>

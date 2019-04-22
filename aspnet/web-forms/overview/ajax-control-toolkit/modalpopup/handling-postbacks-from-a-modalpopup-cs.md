@@ -12,7 +12,7 @@ ms.openlocfilehash: 54dd3bae21e661e0b17cab6a71f0df33b6712bcd
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59388561"
 ---
 # <a name="handling-postbacks-from-a-modalpopup-c"></a>Controlar postbacks desde un ModalPopup (C#)
@@ -55,7 +55,7 @@ Además, los controles de cuadro de texto dentro de la ventana emergente modal d
 [!code-csharp[Main](handling-postbacks-from-a-modalpopup-cs/samples/sample6.cs)]
 
 
-[![Temergente modal provoca una devolución de datos](handling-postbacks-from-a-modalpopup-cs/_static/image2.png)](handling-postbacks-from-a-modalpopup-cs/_static/image1.png)
+[![El elemento emergente modal provoca una devolución de datos](handling-postbacks-from-a-modalpopup-cs/_static/image2.png)](handling-postbacks-from-a-modalpopup-cs/_static/image1.png)
 
 El elemento emergente modal produce un postback ([haga clic aquí para ver imagen en tamaño completo](handling-postbacks-from-a-modalpopup-cs/_static/image3.png))
 

@@ -12,7 +12,7 @@ ms.openlocfilehash: fa118b4d733d7848b838f80e9918d62ae60033af
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59378980"
 ---
 # <a name="creating-a-rating-control-c"></a>Crear un control de clasificación (C#)
@@ -66,7 +66,7 @@ En el código del lado servidor, obtener acceso al control de clasificación a t
 Guarde la página y cargarlos en el explorador. Cuando mantiene el mouse sobre los elementos de clasificación (inicialmente vacía), se produce un efecto de JavaScript: Los cambios de clasificación. Al hacer clic en el conjunto de estrellas, se conserva la clasificación actual. Por último, cuando se envía el formulario, el código del lado servidor da como resultado la clasificación seleccionada.
 
 
-[![Cun sistema de valoración con un código mínimo rear](creating-a-rating-control-cs/_static/image2.png)](creating-a-rating-control-cs/_static/image1.png)
+[![Creación de un sistema de clasificación con un código mínimo](creating-a-rating-control-cs/_static/image2.png)](creating-a-rating-control-cs/_static/image1.png)
 
 Creación de un sistema de clasificación con un código mínimo ([haga clic aquí para ver imagen en tamaño completo](creating-a-rating-control-cs/_static/image3.png))
 

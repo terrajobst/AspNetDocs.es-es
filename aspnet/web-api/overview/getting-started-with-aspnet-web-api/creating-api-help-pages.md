@@ -13,7 +13,7 @@ ms.openlocfilehash: e3f6a9b8a6835b034a075d580cd9a33136969990
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59395022"
 ---
 # <a name="creating-help-pages-for-aspnet-web-api"></a>Crear páginas de ayuda para ASP.NET Web API

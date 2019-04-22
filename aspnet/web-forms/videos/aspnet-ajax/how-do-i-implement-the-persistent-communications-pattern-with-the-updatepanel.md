@@ -12,7 +12,7 @@ ms.openlocfilehash: 2a0a286ad731751460cb9d924a4de4dfe63f45b8
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59378993"
 ---
 # <a name="how-do-i-implement-the-persistent-communications-pattern-with-the-updatepanel"></a>[¿Cómo lo hago?:] ¿Implementar el patrón de comunicaciones persistente con UpdatePanel?

@@ -12,7 +12,7 @@ ms.openlocfilehash: 0bc3127974341a65fb5f38ac0a974782099fffce
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59385922"
 ---
 # <a name="displaying-summary-information-in-the-gridviews-footer-c"></a>Mostrar información de resumen en el pie de página de GridView (C#)
@@ -37,7 +37,7 @@ Esta tarea presenta tres retos:
 En este tutorial, veremos cómo superar estos desafíos. En concreto, vamos a crear una página que enumera las categorías en una lista desplegable con los productos de la categoría seleccionada que se muestran en un control GridView. El control GridView incluirá una fila de pie de página que se muestra el precio medio y el número total de unidades en existencias y en orden para los productos de esa categoría.
 
 
-[![SResumen de que información se muestra en la fila de pie de página de GridView](displaying-summary-information-in-the-gridview-s-footer-cs/_static/image2.png)](displaying-summary-information-in-the-gridview-s-footer-cs/_static/image1.png)
+[![Información de resumen se muestra en la fila de pie de página de GridView](displaying-summary-information-in-the-gridview-s-footer-cs/_static/image2.png)](displaying-summary-information-in-the-gridview-s-footer-cs/_static/image1.png)
 
 **Figura 1**: Información de resumen se muestra en la fila de pie de página de GridView ([haga clic aquí para ver imagen en tamaño completo](displaying-summary-information-in-the-gridview-s-footer-cs/_static/image3.png))
 
@@ -51,12 +51,12 @@ Antes de que se refieren nosotros mismos con la incorporación de información d
 Comience abriendo la `SummaryDataInFooter.aspx` página en el `CustomFormatting` carpeta. Agregue un control DropDownList y establezca su `ID` a `Categories`. A continuación, haga clic en el vínculo Elegir origen de datos de etiqueta inteligente de DropDownList y optar por agregar un nuevo origen ObjectDataSource denominado `CategoriesDataSource` que invoca la `CategoriesBLL` la clase `GetCategories()` método.
 
 
-[![Aun nuevo CategoriesDataSource denominado de ObjectDataSource dd](displaying-summary-information-in-the-gridview-s-footer-cs/_static/image5.png)](displaying-summary-information-in-the-gridview-s-footer-cs/_static/image4.png)
+[![Agregar un nuevo origen ObjectDataSource denominado CategoriesDataSource](displaying-summary-information-in-the-gridview-s-footer-cs/_static/image5.png)](displaying-summary-information-in-the-gridview-s-footer-cs/_static/image4.png)
 
 **Figura 2**: Agregar un nuevo origen ObjectDataSource denominado `CategoriesDataSource` ([haga clic aquí para ver imagen en tamaño completo](displaying-summary-information-in-the-gridview-s-footer-cs/_static/image6.png))
 
 
-[![Have ObjectDataSource invocar al método de la clase CategoriesBLL GetCategories()](displaying-summary-information-in-the-gridview-s-footer-cs/_static/image8.png)](displaying-summary-information-in-the-gridview-s-footer-cs/_static/image7.png)
+[![Tiene el origen ObjectDataSource invocar el método de la clase CategoriesBLL GetCategories()](displaying-summary-information-in-the-gridview-s-footer-cs/_static/image8.png)](displaying-summary-information-in-the-gridview-s-footer-cs/_static/image7.png)
 
 **Figura 3**: Que el ObjectDataSource invoque la `CategoriesBLL` la clase `GetCategories()` método ([haga clic aquí para ver imagen en tamaño completo](displaying-summary-information-in-the-gridview-s-footer-cs/_static/image9.png))
 
@@ -64,7 +64,7 @@ Comience abriendo la `SummaryDataInFooter.aspx` página en el `CustomFormatting`
 Después de configurar el origen ObjectDataSource, el asistente devuelve nos de la configuración de DropDownList de origen de datos se debe mostrar el asistente desde el que se debe especificar qué valor de campo de datos y cuál debe corresponder al valor de la DropDownList `ListItem` s. Tiene la `CategoryName` campo mostrado y use el `CategoryID` como valor.
 
 
-[![Use CategoryName y CategoryID campos como el texto y el valor para el ListItems, respectivamente](displaying-summary-information-in-the-gridview-s-footer-cs/_static/image11.png)](displaying-summary-information-in-the-gridview-s-footer-cs/_static/image10.png)
+[![Utilice los campos de CategoryID y CategoryName como el texto y el valor para el ListItems, respectivamente](displaying-summary-information-in-the-gridview-s-footer-cs/_static/image11.png)](displaying-summary-information-in-the-gridview-s-footer-cs/_static/image10.png)
 
 **Figura 4**: Use la `CategoryName` y `CategoryID` campos como el `Text` y `Value` para el `ListItem` s, respectivamente ([haga clic aquí para ver imagen en tamaño completo](displaying-summary-information-in-the-gridview-s-footer-cs/_static/image12.png))
 
@@ -72,7 +72,7 @@ Después de configurar el origen ObjectDataSource, el asistente devuelve nos de 
 En este momento tenemos DropDownList (`Categories`) que enumeran las categorías en el sistema. Ahora tenemos que agregar un control GridView que se enumera los productos que pertenecen a la categoría seleccionada. Antes de hacer, sin embargo, dedique un momento para activar la casilla Habilitar AutoPostBack en la etiqueta inteligente de DropDownList. Como se describe en el *filtrado de maestro y detalles con un DropDownList* tutorial estableciendo la DropDownList `AutoPostBack` propiedad `true` la página, se publicarán nuevo cada vez que cambia el valor de DropDownList. Esto hará que el control GridView se actualice, que muestra los productos de la categoría recién seleccionada. Si el `AutoPostBack` propiedad está establecida en `false` (valor predeterminado), cambiar la categoría no causará una devolución de datos y, por tanto, no se actualizan los productos enumerados.
 
 
-[![Cla casilla de verificación AutoPostBack habilitar en la etiqueta inteligente de DropDownList documentales](displaying-summary-information-in-the-gridview-s-footer-cs/_static/image14.png)](displaying-summary-information-in-the-gridview-s-footer-cs/_static/image13.png)
+[![Active la casilla de AutoPostBack habilitar en la etiqueta inteligente de DropDownList](displaying-summary-information-in-the-gridview-s-footer-cs/_static/image14.png)](displaying-summary-information-in-the-gridview-s-footer-cs/_static/image13.png)
 
 **Figura 5**: Active la casilla de AutoPostBack habilitar en la etiqueta inteligente de DropDownList ([haga clic aquí para ver imagen en tamaño completo](displaying-summary-information-in-the-gridview-s-footer-cs/_static/image15.png))
 
@@ -80,7 +80,7 @@ En este momento tenemos DropDownList (`Categories`) que enumeran las categorías
 Agregar un control GridView a la página para mostrar los productos de la categoría seleccionada. Establezca la GridView `ID` a `ProductsInCategory` y enlazarlo a un nuevo origen ObjectDataSource denominado `ProductsInCategoryDataSource`.
 
 
-[![Aun nuevo ProductsInCategoryDataSource denominado de ObjectDataSource dd](displaying-summary-information-in-the-gridview-s-footer-cs/_static/image17.png)](displaying-summary-information-in-the-gridview-s-footer-cs/_static/image16.png)
+[![Agregar un nuevo origen ObjectDataSource denominado ProductsInCategoryDataSource](displaying-summary-information-in-the-gridview-s-footer-cs/_static/image17.png)](displaying-summary-information-in-the-gridview-s-footer-cs/_static/image16.png)
 
 **Figura 6**: Agregar un nuevo origen ObjectDataSource denominado `ProductsInCategoryDataSource` ([haga clic aquí para ver imagen en tamaño completo](displaying-summary-information-in-the-gridview-s-footer-cs/_static/image18.png))
 
@@ -88,7 +88,7 @@ Agregar un control GridView a la página para mostrar los productos de la catego
 Configurar el origen ObjectDataSource para que invoca el `ProductsBLL` la clase `GetProductsByCategoryID(categoryID)` método.
 
 
-[![Hla invocación de ObjectDataSource el método GetProductsByCategoryID(categoryID) ave](displaying-summary-information-in-the-gridview-s-footer-cs/_static/image20.png)](displaying-summary-information-in-the-gridview-s-footer-cs/_static/image19.png)
+[![Tiene el origen ObjectDataSource invoca el método GetProductsByCategoryID(categoryID)](displaying-summary-information-in-the-gridview-s-footer-cs/_static/image20.png)](displaying-summary-information-in-the-gridview-s-footer-cs/_static/image19.png)
 
 **Figura 7**: Que el ObjectDataSource invoque la `GetProductsByCategoryID(categoryID)` método ([haga clic aquí para ver imagen en tamaño completo](displaying-summary-information-in-the-gridview-s-footer-cs/_static/image21.png))
 
@@ -96,7 +96,7 @@ Configurar el origen ObjectDataSource para que invoca el `ProductsBLL` la clase 
 Puesto que el `GetProductsByCategoryID(categoryID)` método toma un parámetro de entrada, podemos especificar el origen del valor del parámetro en el paso final del asistente. Con el fin de mostrar los productos de la categoría seleccionada, tienen un parámetro que se extraen de la `Categories` DropDownList.
 
 
-[![Gel valor del parámetro de la DropDownList de categorías seleccionado categoryID et](displaying-summary-information-in-the-gridview-s-footer-cs/_static/image23.png)](displaying-summary-information-in-the-gridview-s-footer-cs/_static/image22.png)
+[![Obtener el valor del parámetro categoryID de DropDownList categorías seleccionadas](displaying-summary-information-in-the-gridview-s-footer-cs/_static/image23.png)](displaying-summary-information-in-the-gridview-s-footer-cs/_static/image22.png)
 
 **Figura 8**: Obtener el *`categoryID`* valor del parámetro de la DropDownList de categorías seleccionado ([haga clic aquí para ver imagen en tamaño completo](displaying-summary-information-in-the-gridview-s-footer-cs/_static/image24.png))
 
@@ -109,7 +109,7 @@ Después de completar al Asistente para el control GridView tendrá BoundField p
 En este momento tenemos un informe de maestro y detalles totalmente operativa que muestra el nombre, precio unitario, las unidades en existencias y unidades pedidas para aquellos productos que pertenecen a la categoría seleccionada.
 
 
-[![Gel valor del parámetro de la DropDownList de categorías seleccionado categoryID et](displaying-summary-information-in-the-gridview-s-footer-cs/_static/image26.png)](displaying-summary-information-in-the-gridview-s-footer-cs/_static/image25.png)
+[![Obtener el valor del parámetro categoryID de DropDownList categorías seleccionadas](displaying-summary-information-in-the-gridview-s-footer-cs/_static/image26.png)](displaying-summary-information-in-the-gridview-s-footer-cs/_static/image25.png)
 
 **Figura 9**: Obtener el *`categoryID`* valor del parámetro de la DropDownList de categorías seleccionado ([haga clic aquí para ver imagen en tamaño completo](displaying-summary-information-in-the-gridview-s-footer-cs/_static/image27.png))
 
@@ -119,7 +119,7 @@ En este momento tenemos un informe de maestro y detalles totalmente operativa qu
 El control GridView puede mostrar un encabezado y pie de página de fila. Estas filas se muestran según los valores de la `ShowHeader` y `ShowFooter` propiedades, respectivamente, con `ShowHeader` ejecuciones `true` y `ShowFooter` a `false`. Para incluir un pie de página en el control GridView simplemente establece su `ShowFooter` propiedad `true`.
 
 
-[![Set GridView ShowFooter propiedad en true](displaying-summary-information-in-the-gridview-s-footer-cs/_static/image29.png)](displaying-summary-information-in-the-gridview-s-footer-cs/_static/image28.png)
+[![Establezca ShowFooter propiedad de GridView en true](displaying-summary-information-in-the-gridview-s-footer-cs/_static/image29.png)](displaying-summary-information-in-the-gridview-s-footer-cs/_static/image28.png)
 
 **Figura 10**: Establezca la GridView `ShowFooter` propiedad `true` ([haga clic aquí para ver imagen en tamaño completo](displaying-summary-information-in-the-gridview-s-footer-cs/_static/image30.png))
 
@@ -127,7 +127,7 @@ El control GridView puede mostrar un encabezado y pie de página de fila. Estas 
 La fila de pie de página tiene una celda para cada uno de los campos definidos en el control GridView; Sin embargo, estas celdas están vacías de forma predeterminada. Dedique un momento para ver nuestro progreso en un explorador. Con el `ShowFooter` propiedad se establece ahora en `true`, el control GridView incluye una fila de pie de página vacía.
 
 
-[![TGridView ahora incluye una fila de pie de página](displaying-summary-information-in-the-gridview-s-footer-cs/_static/image32.png)](displaying-summary-information-in-the-gridview-s-footer-cs/_static/image31.png)
+[![GridView ahora incluye una fila de pie de página](displaying-summary-information-in-the-gridview-s-footer-cs/_static/image32.png)](displaying-summary-information-in-the-gridview-s-footer-cs/_static/image31.png)
 
 **Figura 11**: El control GridView ahora incluye una fila de pie de página ([haga clic aquí para ver imagen en tamaño completo](displaying-summary-information-in-the-gridview-s-footer-cs/_static/image33.png))
 
@@ -149,7 +149,7 @@ A continuación, para asociar esta clase CSS a pie de página de cada GridView, 
 A medida que la captura de pantalla siguiente se muestra, este cambio hace que el pie de página mayor claridad.
 
 
-[![TFila de pie de página de GridView ahora tiene un Color de fondo rojizo](displaying-summary-information-in-the-gridview-s-footer-cs/_static/image35.png)](displaying-summary-information-in-the-gridview-s-footer-cs/_static/image34.png)
+[![Fila de pie de página de GridView ahora tiene un Color de fondo rojizo](displaying-summary-information-in-the-gridview-s-footer-cs/_static/image35.png)](displaying-summary-information-in-the-gridview-s-footer-cs/_static/image34.png)
 
 **Figura 12**: Fila de pie de página de GridView ahora tiene un Color de fondo rojizo ([haga clic aquí para ver imagen en tamaño completo](displaying-summary-information-in-the-gridview-s-footer-cs/_static/image36.png))
 
@@ -203,7 +203,7 @@ Para mostrar texto en una celda de pie de página concreto, utilice `e.Row.Cells
 Figura 13 se muestra el informe después de agregar este código. Tenga en cuenta cómo el `ToString("c")` hace que la información de resumen de precio medio tener el formato como una moneda.
 
 
-[![TFila de pie de página de GridView ahora tiene un Color de fondo rojizo](displaying-summary-information-in-the-gridview-s-footer-cs/_static/image38.png)](displaying-summary-information-in-the-gridview-s-footer-cs/_static/image37.png)
+[![Fila de pie de página de GridView ahora tiene un Color de fondo rojizo](displaying-summary-information-in-the-gridview-s-footer-cs/_static/image38.png)](displaying-summary-information-in-the-gridview-s-footer-cs/_static/image37.png)
 
 **Figura 13**: Fila de pie de página de GridView ahora tiene un Color de fondo rojizo ([haga clic aquí para ver imagen en tamaño completo](displaying-summary-information-in-the-gridview-s-footer-cs/_static/image39.png))
 

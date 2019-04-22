@@ -12,7 +12,7 @@ ms.openlocfilehash: 8325662a34a8ca7c520cf65b50bbe928ce6b4b45
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59381047"
 ---
 # <a name="general-vs-2010-tips"></a>Consejos generales de VS 2010

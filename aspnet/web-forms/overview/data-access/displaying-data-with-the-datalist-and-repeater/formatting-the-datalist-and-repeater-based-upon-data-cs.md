@@ -12,7 +12,7 @@ ms.openlocfilehash: 7ea11f436d8f0455621d22c4d5a5b4d6b6ece68f
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59386429"
 ---
 # <a name="formatting-the-datalist-and-repeater-based-upon-data-c"></a>Dar formato a los controles DataList y Repeater en función de los datos (C#)
@@ -74,7 +74,7 @@ Antes de que preocuparse sobre el formato, s permiten crear una página que usa 
 Una vez que se ha replicado desde la funcionalidad de DataList y ObjectDataSource `Basics.aspx` en `Formatting.aspx`, dedique un momento para cambiar el control DataList s `ID` propiedad desde `DataList1` al más descriptivo `ItemDataBoundFormattingExample`. A continuación, puede ver al control DataList en un explorador. Como se muestra en la figura 1, la única diferencia formato entre cada producto es que alterna el color de fondo.
 
 
-[![TProductos se muestran en el Control DataList](formatting-the-datalist-and-repeater-based-upon-data-cs/_static/image2.png)](formatting-the-datalist-and-repeater-based-upon-data-cs/_static/image1.png)
+[![Los productos se muestran en el Control DataList](formatting-the-datalist-and-repeater-based-upon-data-cs/_static/image2.png)](formatting-the-datalist-and-repeater-based-upon-data-cs/_static/image1.png)
 
 **Figura 1**: Los productos se muestran en el Control DataList ([haga clic aquí para ver imagen en tamaño completo](formatting-the-datalist-and-repeater-based-upon-data-cs/_static/image3.png))
 
@@ -117,7 +117,7 @@ Para aplicar el formato, basta con establecer los dos controles Web Label `CssCl
 Con el `ItemDataBound` completado del controlador de eventos, repase la `Formatting.aspx` página en un explorador. Como se muestra en la figura 2, los productos que tengan un precio bajo 20,00 USD tienen su nombre y el precio de resaltado.
 
 
-[![Tmanguito productos menos que se resaltan 20,00 USD](formatting-the-datalist-and-repeater-based-upon-data-cs/_static/image5.png)](formatting-the-datalist-and-repeater-based-upon-data-cs/_static/image4.png)
+[![Se resaltan en esos productos inferior 20,00 USD](formatting-the-datalist-and-repeater-based-upon-data-cs/_static/image5.png)](formatting-the-datalist-and-repeater-based-upon-data-cs/_static/image4.png)
 
 **Figura 2**: Se resaltan en esos productos inferior 20,00 USD ([haga clic aquí para ver imagen en tamaño completo](formatting-the-datalist-and-repeater-based-upon-data-cs/_static/image6.png))
 
@@ -129,7 +129,7 @@ Con el `ItemDataBound` completado del controlador de eventos, repase la `Formatt
 El `RepeaterItem` s que componen el control Repeater, sin embargo, don t ofrecen estas propiedades de nivel de estilo. Por lo tanto, aplicar formato personalizado para el control Repeater requiere que la aplicación de propiedades de estilo a los controles Web dentro de las plantillas de Repeater s, tal como se hizo en la figura 2.
 
 
-[![TElemento de producto completo es destacó para productos en 20,00 USD](formatting-the-datalist-and-repeater-based-upon-data-cs/_static/image8.png)](formatting-the-datalist-and-repeater-based-upon-data-cs/_static/image7.png)
+[![Se resalta el elemento de producto completo de productos en 20,00 USD](formatting-the-datalist-and-repeater-based-upon-data-cs/_static/image8.png)](formatting-the-datalist-and-repeater-based-upon-data-cs/_static/image7.png)
 
 **Figura 3**: Se resalta el elemento de producto completo de productos en 20,00 USD ([haga clic aquí para ver imagen en tamaño completo](formatting-the-datalist-and-repeater-based-upon-data-cs/_static/image9.png))
 
@@ -141,7 +141,7 @@ En el *uso de TemplateFields en el GridView Control* tutorial hemos visto cómo 
 Para demostrar las funciones de formato, permiten s tiene la información del producto incluyen el texto [DISCONTINUED] junto al nombre del producto s si lo s discontinuado. Además, permiten s tiene if amarillo resaltado precio s menor 20,00 USD (como hicimos en el `ItemDataBound` ejemplo del controlador de eventos); si el precio es 20,00 USD o superior, permiten s no muestran el precio real, pero en su lugar, el texto, debe llamar a para una cotización. Figura 4 muestra una captura de pantalla de los productos con estas reglas de formato aplicadas.
 
 
-[![Fo productos caros, el precio se reemplaza con el texto, llame a para una cotización](formatting-the-datalist-and-repeater-based-upon-data-cs/_static/image11.png)](formatting-the-datalist-and-repeater-based-upon-data-cs/_static/image10.png)
+[![Para los productos costosa, el precio se sustituirá con el texto, llame a para una cotización](formatting-the-datalist-and-repeater-based-upon-data-cs/_static/image11.png)](formatting-the-datalist-and-repeater-based-upon-data-cs/_static/image10.png)
 
 **Figura 4**: Para productos caros, el precio se sustituirá con el texto, llame a para una cotización ([haga clic aquí para ver imagen en tamaño completo](formatting-the-datalist-and-repeater-based-upon-data-cs/_static/image12.png))
 
@@ -182,7 +182,7 @@ Para mostrar el precio, podemos establecer simplemente la `UnitPriceLabel` etiqu
 Con las llamadas a las funciones de formato en su lugar, tómese un momento para ver nuestro progreso en un explorador. La pantalla debe ser similar a la figura 5, con los productos discontinuados incluido el texto [DISCONTINUED] y esos productos cuyo costo es más de $20,00 tiene su precio reemplazan por el texto, la llamada para una cotización.
 
 
-[![Fo productos caros, el precio se reemplaza con el texto, llame a para una cotización](formatting-the-datalist-and-repeater-based-upon-data-cs/_static/image14.png)](formatting-the-datalist-and-repeater-based-upon-data-cs/_static/image13.png)
+[![Para los productos costosa, el precio se sustituirá con el texto, llame a para una cotización](formatting-the-datalist-and-repeater-based-upon-data-cs/_static/image14.png)](formatting-the-datalist-and-repeater-based-upon-data-cs/_static/image13.png)
 
 **Figura 5**: Para productos caros, el precio se sustituirá con el texto, llame a para una cotización ([haga clic aquí para ver imagen en tamaño completo](formatting-the-datalist-and-repeater-based-upon-data-cs/_static/image15.png))
 

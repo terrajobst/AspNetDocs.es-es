@@ -12,7 +12,7 @@ ms.openlocfilehash: 992cea256302231ee7031a21c798117b73eaa01c
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59384329"
 ---
 # <a name="url-routing"></a>Enrutamiento de direcciones URL
@@ -79,7 +79,7 @@ El segundo parámetro de la ruta incluye un valor dinámico especificado por lla
 
 > [!NOTE] 
 > 
-> **Optional**
+> **Opcional**
 > 
 > Le resultará más fácil de administrar el código al mover el `RegisterCustomRoutes` método en una clase independiente. En el *lógica* carpeta, cree otro `RouteActions` clase. Mover el anterior `RegisterCustomRoutes` método desde el *Global.asax.cs* archivo en el nuevo `RoutesActions` clase. Use la `RoleActions` clase y el `createAdmin` método como un ejemplo de cómo llamar a la `RegisterCustomRoutes` método desde el *Global.asax.cs* archivo.
 

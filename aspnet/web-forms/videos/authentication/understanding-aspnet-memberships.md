@@ -12,7 +12,7 @@ ms.openlocfilehash: 007c20834aed2de1d7584fd593b9e4580e0bba78
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59386208"
 ---
 # <a name="understanding-aspnet-memberships"></a>Descripción de las pertenencias a ASP.NET

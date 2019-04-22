@@ -12,7 +12,7 @@ ms.openlocfilehash: 44219c97cfcb1a17acbe22a7413a33eb8b8c52b7
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59388522"
 ---
 # <a name="aspnet-4-quick-hit---ajax-data-templates"></a>ASP.NET 4 "Rápido Hit" - plantillas de datos AJAX

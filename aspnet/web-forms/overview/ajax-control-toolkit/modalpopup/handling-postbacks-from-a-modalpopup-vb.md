@@ -12,7 +12,7 @@ ms.openlocfilehash: add305855d876b5033bbd7921ad24b5e840b9acc
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59386403"
 ---
 # <a name="handling-postbacks-from-a-modalpopup-vb"></a>Controlar postbacks desde un ModalPopup (VB)
@@ -55,7 +55,7 @@ Además, los controles de cuadro de texto dentro de la ventana emergente modal d
 [!code-vb[Main](handling-postbacks-from-a-modalpopup-vb/samples/sample6.vb)]
 
 
-[![Temergente modal provoca una devolución de datos](handling-postbacks-from-a-modalpopup-vb/_static/image2.png)](handling-postbacks-from-a-modalpopup-vb/_static/image1.png)
+[![El elemento emergente modal provoca una devolución de datos](handling-postbacks-from-a-modalpopup-vb/_static/image2.png)](handling-postbacks-from-a-modalpopup-vb/_static/image1.png)
 
 El elemento emergente modal produce un postback ([haga clic aquí para ver imagen en tamaño completo](handling-postbacks-from-a-modalpopup-vb/_static/image3.png))
 

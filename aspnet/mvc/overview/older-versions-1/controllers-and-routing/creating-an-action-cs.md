@@ -12,7 +12,7 @@ ms.openlocfilehash: c66e066bd3e241e667924dacc114f57151df822a
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59389562"
 ---
 # <a name="creating-an-action-c"></a>Crear una acción (C#)
@@ -57,7 +57,7 @@ Si necesita crear un método público en una clase de controlador y no desea exp
 Si se intenta invocar la acción del controlador CompanySecrets() escribiendo /Work/CompanySecrets en la barra de direcciones del explorador, a continuación, obtendrá el mensaje de error en la figura 1.
 
 
-[![Iun método NonAction nvoking](creating-an-action-cs/_static/image1.jpg)](creating-an-action-cs/_static/image1.png)
+[![Invocar un método NonAction](creating-an-action-cs/_static/image1.jpg)](creating-an-action-cs/_static/image1.png)
 
 **Figura 01**: Invocar un método NonAction ([haga clic aquí para ver imagen en tamaño completo](creating-an-action-cs/_static/image2.png))
 

@@ -12,7 +12,7 @@ ms.openlocfilehash: bfbc151af40bf7ccceb5ac298ba812730d4e4ed9
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59420762"
 ---
 # <a name="server-controls"></a>Controles de servidor

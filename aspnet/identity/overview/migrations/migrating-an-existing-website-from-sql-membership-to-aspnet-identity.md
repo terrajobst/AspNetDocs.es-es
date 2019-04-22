@@ -13,7 +13,7 @@ ms.openlocfilehash: f205dfd8692bc946ca2124655bf8bcefbdbd1779
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59394539"
 ---
 # <a name="migrating-an-existing-website-from-sql-membership-to-aspnet-identity"></a>Migrar un sitio web existente desde la pertenencia de SQL a ASP.NET Identity
@@ -83,15 +83,15 @@ Este archivo de script es específico para este ejemplo. Si creó el esquema par
 
 Para que las clases de ASP.NET Identity a trabajar inmediatamente con los datos de los usuarios existentes, es necesario migrar el esquema de base de datos a la que sea necesario mediante la identidad de ASP.NET. Esto se logra mediante la adición de nuevas tablas y copiar la información existente en esas tablas. De forma predeterminada, ASP.NET Identity utiliza Entity Framework para asignar las clases del modelo de identidad en la base de datos para almacenar o recuperar información. Estas clases de modelo implementan las interfaces de identidad de core definir objetos de rol y usuario. Las tablas y las columnas de la base de datos se basan en estas clases de modelo. Las clases de modelo de Entity Framework v2.1.0 de identidad y sus propiedades son tal como se define a continuación
 
-| **IdentityUser** | **Tipo** | **IdentityRole** | **IdentityUserRole** | **IdentityUserLogin** | **IdentityUserClaim** |
+| **IdentityUser** | **Type** | **IdentityRole** | **IdentityUserRole** | **IdentityUserLogin** | **IdentityUserClaim** |
 | --- | --- | --- | --- | --- | --- |
-| Id. | string | Id. | RoleId | ProviderKey | Id. |
-| Nombre de usuario | string | Name | UserId | UserId | ClaimType |
-| PasswordHash | string |  |  | LoginProvider | ClaimValue |
-| SecurityStamp | string |  |  |  | Usuario\_Id. |
-| Correo electrónico | string |  |  |  |  |
+| Id. | cadena | Id. | RoleId | ProviderKey | Id. |
+| Nombre de usuario | cadena | Name | UserId | UserId | ClaimType |
+| PasswordHash | cadena |  |  | LoginProvider | ClaimValue |
+| SecurityStamp | cadena |  |  |  | Usuario\_Id. |
+| Correo electrónico | cadena |  |  |  |  |
 | EmailConfirmed | bool |  |  |  |  |
-| PhoneNumber | string |  |  |  |  |
+| PhoneNumber | cadena |  |  |  |  |
 | PhoneNumberConfirmed | bool |  |  |  |  |
 | LockoutEnabled | bool |  |  |  |  |
 | LockoutEndDate | DateTime |  |  |  |  |
@@ -99,7 +99,7 @@ Para que las clases de ASP.NET Identity a trabajar inmediatamente con los datos 
 
 Es necesario tener tablas para cada uno de estos modelos con las columnas correspondientes a las propiedades. La asignación entre las clases y las tablas se define en el `OnModelCreating` método de la `IdentityDBContext`. Esto se conoce como el método de API fluido de configuración y se puede encontrar más información [aquí](https://msdn.microsoft.com/data/jj591617.aspx). La configuración de las clases es tal como se menciona más abajo
 
-| **Clase** | **Tabla** | **Clave principal** | **Clave externa** |
+| **Clase** | **Table** | **Clave principal** | **Clave externa** |
 | --- | --- | --- | --- |
 | IdentityUser | AspnetUsers | Id. |  |
 | IdentityRole | AspnetRoles | Id. |  |

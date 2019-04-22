@@ -12,7 +12,7 @@ ms.openlocfilehash: b0c9cd7ab36a8414e0d7d50a68b05bb09a5f24f1
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59387911"
 ---
 # <a name="enable-automated-unit-testing"></a>Habilitar las pruebas unitarias automatizadas

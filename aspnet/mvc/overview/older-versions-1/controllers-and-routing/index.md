@@ -12,7 +12,7 @@ ms.openlocfilehash: 1a994b37faefe0e20c99a6991768898185e51b43
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59417226"
 ---
 # <a name="controllers-and-routing"></a>Controladores y enrutamiento

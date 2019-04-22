@@ -12,7 +12,7 @@ ms.openlocfilehash: 1fa0e43b54d872fab6666311668f2684062062f6
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59419826"
 ---
 # <a name="how-do-i-use-the-aspnet-ajax-textboxwatermark-control-extender"></a>[¿Cómo lo hago?:] ¿Usar el extensor de Control TextBoxWatermark ASP.NET AJAX?

@@ -12,7 +12,7 @@ ms.openlocfilehash: 9aa31566f383b20d3c1ea8a637ce8a93107871c6
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59418396"
 ---
 # <a name="asp-forms-login-relocation"></a>Reubicación del inicio de sesión de los formularios ASP

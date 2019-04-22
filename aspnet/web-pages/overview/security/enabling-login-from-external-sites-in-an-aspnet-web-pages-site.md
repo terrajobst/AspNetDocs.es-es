@@ -12,7 +12,7 @@ ms.openlocfilehash: a93835e685716b3be59023b9f84a006e38f48e89
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59380461"
 ---
 # <a name="logging-in-using-external-sites-in-an-aspnet-web-pages-razor-site"></a>Iniciar sesión con sitios externos en un sitio Web de ASP.NET Pages (Razor)

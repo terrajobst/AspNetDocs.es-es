@@ -12,7 +12,7 @@ ms.openlocfilehash: e34430d17e22f73d1a4aaabdcf714e9ae9cc2752
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59386013"
 ---
 # <a name="how-do-i-use-the-aspnet-ajax-accordion-control"></a>[¿Cómo lo hago?:] ¿Usar el Control Accordion de ASP.NET AJAX?

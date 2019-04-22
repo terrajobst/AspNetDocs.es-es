@@ -12,7 +12,7 @@ ms.openlocfilehash: f8ad87a50c0f4fd4353e7a656c6b0adf197ed750
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59418188"
 ---
 # <a name="how-do-i-introducing-the-new-chart-control-in-visual-studio-2010"></a>¿Cómo lo hago?: Introducción del nuevo control de gráfico en Visual Studio 2010

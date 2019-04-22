@@ -12,7 +12,7 @@ ms.openlocfilehash: b7ef5109a0b87736881b9835b9b7e52689d9aa6d
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59421100"
 ---
 # <a name="mvc-3---working-with-the-dropdownlist-box-and-jquery"></a>MVC 3 - Trabajar con el cuadro DropDownList y jQuery

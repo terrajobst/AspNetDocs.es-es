@@ -12,7 +12,7 @@ ms.openlocfilehash: 6f325af39ea977a0a565f4546a3d8a74bcdbbd02
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59382555"
 ---
 # <a name="lesson-1-getting-started-with-visual-web-developer-express"></a>[Lección 1:] Introducción a Visual Web Developer Express

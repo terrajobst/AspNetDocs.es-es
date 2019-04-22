@@ -12,7 +12,7 @@ ms.openlocfilehash: 5dd5b96d0365c55cbbfa2dfe0856beda41f915e1
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59384771"
 ---
 # <a name="improving-performance-with-output-caching-c"></a>Mejorar el rendimiento con el almacenamiento en caché de resultados (C#)
@@ -44,7 +44,7 @@ No hay ninguna garantía de que el contenido se almacenará en caché para la ca
 
 El controlador Home en el listado 1 devuelve la vista de índice en el listado 2. No hay nada especial acerca de esta vista. La vista de índice simplemente muestra la hora actual (consulte la figura 1).
 
-**Listado 2 – Views\Home\Index.aspx**
+**Listing 2 – Views\Home\Index.aspx**
 
 [!code-aspx[Main](improving-performance-with-output-caching-cs/samples/sample2.aspx)]
 

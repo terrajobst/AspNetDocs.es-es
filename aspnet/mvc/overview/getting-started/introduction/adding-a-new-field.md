@@ -12,7 +12,7 @@ ms.openlocfilehash: a5de73d93d0af21a3b59d6c21014810184292adb
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59379357"
 ---
 # <a name="adding-a-new-field"></a>Adición de un nuevo campo

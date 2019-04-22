@@ -12,7 +12,7 @@ ms.openlocfilehash: d1809c869253ecb454e427a5092015a69009da5c
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59386949"
 ---
 # <a name="batch-updating-vb"></a>Actualización por lotes (VB)
@@ -31,7 +31,7 @@ En el [tutorial anterior](wrapping-database-modifications-within-a-transaction-v
 En este tutorial crearemos un GridView donde cada fila es editable (consulte la figura 1). Puesto que cada fila no se representa en la interfaz de edición, allí s necesidad de una columna de edición, actualizar y cancelar los botones. En su lugar, hay dos botones Actualizar productos en la página que, al hacer clic, enumerar las filas con GridView y actualizar la base de datos.
 
 
-[![EFilas en GridView ACH es modificable](batch-updating-vb/_static/image1.gif)](batch-updating-vb/_static/image1.png)
+[![Cada fila en el control GridView es modificable](batch-updating-vb/_static/image1.gif)](batch-updating-vb/_static/image1.png)
 
 **Figura 1**: Cada fila en el control GridView es Editable ([haga clic aquí para ver imagen en tamaño completo](batch-updating-vb/_static/image2.png))
 
@@ -57,12 +57,12 @@ En los próximos pasos varias vamos a crear un control GridView editable por com
 Antes de que preocuparse por crear un control GridView donde están las filas es editables, permiten s comience por mostrar simplemente la información del producto. Abra el `BatchUpdate.aspx` página en el `BatchData` carpetas y arrastre un control GridView del cuadro de herramientas hasta el diseñador. Establezca la s GridView `ID` a `ProductsGrid` y, en su etiqueta inteligente, elija para enlazarla a un nuevo origen ObjectDataSource denominado `ProductsDataSource`. Configurar el origen ObjectDataSource para recuperar sus datos desde el `ProductsBLL` clase s `GetProducts` método.
 
 
-[![Cconfigurar el origen ObjectDataSource para usar la clase ProductsBLL](batch-updating-vb/_static/image2.gif)](batch-updating-vb/_static/image3.png)
+[![Configurar el origen ObjectDataSource para usar la clase ProductsBLL](batch-updating-vb/_static/image2.gif)](batch-updating-vb/_static/image3.png)
 
 **Figura 2**: Configurar el origen ObjectDataSource que se usarán el `ProductsBLL` clase ([haga clic aquí para ver imagen en tamaño completo](batch-updating-vb/_static/image4.png))
 
 
-[![Rlos datos del producto con el método GetProducts etrieve](batch-updating-vb/_static/image3.gif)](batch-updating-vb/_static/image5.png)
+[![Recuperar los datos de producto mediante el método GetProducts](batch-updating-vb/_static/image3.gif)](batch-updating-vb/_static/image5.png)
 
 **Figura 3**: Recuperar los datos de producto mediante la `GetProducts` método ([haga clic aquí para ver imagen en tamaño completo](batch-updating-vb/_static/image6.png))
 
@@ -70,7 +70,7 @@ Antes de que preocuparse por crear un control GridView donde están las filas es
 Como GridView, las características de modificación de ObjectDataSource s están diseñadas para trabajar por fila. Para actualizar un conjunto de registros, debemos escribir algo de código en la clase de código subyacente de s de la página ASP.NET que procesa por lotes los datos y lo pasa a la capa BLL. Por consiguiente, establecer las listas desplegables en las operaciones de asignación ObjectDataSource pestañas UPDATE, INSERT y DELETE en (None). Haga clic en Finalizar para completar al asistente.
 
 
-[![Set las listas desplegables en la actualización, INSERCIÓN y eliminación pestañas en (None)](batch-updating-vb/_static/image4.gif)](batch-updating-vb/_static/image7.png)
+[![Establecer las listas desplegables en la actualización, INSERCIÓN y eliminar las fichas en (None)](batch-updating-vb/_static/image4.gif)](batch-updating-vb/_static/image7.png)
 
 **Figura 4**: Establecer la lista desplegable se enumeran en la actualización, INSERCIÓN y eliminar pestañas en (None) ([haga clic aquí para ver imagen en tamaño completo](batch-updating-vb/_static/image8.png))
 
@@ -107,7 +107,7 @@ Permiten s comenzar con la `ProductName` TemplateField. Haga clic en el vínculo
 A continuación, agregue un control RequiredFieldValidator a la `ItemTemplate` para asegurarse de que el usuario proporcione un valor para cada nombre de producto s. Establecer el `ControlToValidate` propiedad ProductName, el `ErrorMessage` la propiedad a la debe proporcionar el nombre del producto. y el `Text` propiedad \*. Después de realizar estas adiciones a la `ItemTemplate`, la pantalla debe ser similar a la figura 6.
 
 
-[![TTemplateField ProductName ahora incluye un cuadro de texto y un control RequiredFieldValidator](batch-updating-vb/_static/image6.gif)](batch-updating-vb/_static/image9.png)
+[![ProductName TemplateField ahora incluye un cuadro de texto y un control RequiredFieldValidator](batch-updating-vb/_static/image6.gif)](batch-updating-vb/_static/image9.png)
 
 **Figura 6**: El `ProductName` TemplateField ahora incluye un cuadro de texto y un control RequiredFieldValidator ([haga clic aquí para ver imagen en tamaño completo](batch-updating-vb/_static/image10.png))
 
@@ -117,7 +117,7 @@ Para el `UnitPrice` interfaz de edición, empiece por copiar en el cuadro de tex
 Agregue también un CompareValidator para los `UnitPrice` s `ItemTemplate` para asegurarse de que el valor especificado por el usuario es un valor de moneda válido mayor que o igual a 0,00 USD. Establece el validador s `ControlToValidate` propiedad UnitPrice, su `ErrorMessage` propiedad a la debe especificar un valor de moneda válidos. Por favor, omita cualquier moneda símbolos., su `Text` propiedad a \*, sus `Type` propiedad a `Currency`, sus `Operator` propiedad a `GreaterThanEqual`y su `ValueToCompare` propiedad en 0.
 
 
-[![Add un CompareValidator para asegurarse de que el precio especificado es un valor de moneda no negativo](batch-updating-vb/_static/image7.gif)](batch-updating-vb/_static/image11.png)
+[![Agregar un control CompareValidator para asegurarse de que el precio especificado es un valor de moneda no negativo](batch-updating-vb/_static/image7.gif)](batch-updating-vb/_static/image11.png)
 
 **Figura 7**: Agregar un control CompareValidator para asegurarse de que el precio especificado es un valor de moneda no negativo ([haga clic aquí para ver imagen en tamaño completo](batch-updating-vb/_static/image12.png))
 
@@ -135,12 +135,12 @@ La interfaz de edición en el `CategoryName` TemplateField s `EditItemTemplate` 
 Arrastre DropDownList desde el cuadro de herramientas hasta la `CategoryName` TemplateField s `ItemTemplate`, estableciendo su `ID` a `Categories`. En este momento se suele definiría el origen de datos de listas desplegables s a través de su etiqueta inteligente, crear un nuevo origen ObjectDataSource. Sin embargo, esta acción agregará ObjectDataSource dentro de la `ItemTemplate`, lo que producirá una instancia de origen ObjectDataSource creada para cada fila de GridView. En su lugar, permiten s crear fuera de la s GridView TemplateFields ObjectDataSource. Finalizar la edición de plantillas y arrastre un origen ObjectDataSource desde el cuadro de herramientas hasta el diseñador debajo el `ProductsDataSource` ObjectDataSource. Nombre del nuevo origen ObjectDataSource `CategoriesDataSource` y configúrelo para utilizar el `CategoriesBLL` clase s `GetCategories` método.
 
 
-[![Cconfigurar el origen ObjectDataSource para usar la clase CategoriesBLL](batch-updating-vb/_static/image8.gif)](batch-updating-vb/_static/image13.png)
+[![Configurar el origen ObjectDataSource para usar la clase CategoriesBLL](batch-updating-vb/_static/image8.gif)](batch-updating-vb/_static/image13.png)
 
 **Figura 8**: Configurar el origen ObjectDataSource que se usarán el `CategoriesBLL` clase ([haga clic aquí para ver imagen en tamaño completo](batch-updating-vb/_static/image14.png))
 
 
-[![Rlos datos de categoría mediante el método GetCategories etrieve](batch-updating-vb/_static/image9.gif)](batch-updating-vb/_static/image15.png)
+[![Recuperar los datos de categoría mediante el método GetCategories](batch-updating-vb/_static/image9.gif)](batch-updating-vb/_static/image15.png)
 
 **Figura 9**: Recuperar los datos de categoría mediante la `GetCategories` método ([haga clic aquí para ver imagen en tamaño completo](batch-updating-vb/_static/image16.png))
 
@@ -148,7 +148,7 @@ Arrastre DropDownList desde el cuadro de herramientas hasta la `CategoryName` Te
 Puesto que este origen ObjectDataSource se usa simplemente para recuperar los datos, establezca las listas desplegables en las fichas de UPDATE y DELETE en (None). Haga clic en Finalizar para completar al asistente.
 
 
-[![Set las listas desplegables en la actualización y eliminación pestañas (ninguna)](batch-updating-vb/_static/image10.gif)](batch-updating-vb/_static/image17.png)
+[![Conjunto de las listas desplegables en la actualización y eliminación pestañas en (None)](batch-updating-vb/_static/image10.gif)](batch-updating-vb/_static/image17.png)
 
 **Figura 10**: Establecer la lista desplegable se enumeran en las fichas de DELETE y UPDATE (ninguna) ([haga clic aquí para ver imagen en tamaño completo](batch-updating-vb/_static/image18.png))
 
@@ -161,7 +161,7 @@ Después de completar el asistente, la `CategoriesDataSource` marcado declarativ
 Con el `CategoriesDataSource` creada y configurada, volver a la `CategoryName` TemplateField s `ItemTemplate` y, en la etiqueta inteligente de DropDownList s, haga clic en el vínculo Elegir origen de datos. En el Asistente para configuración de orígenes de datos, seleccione el `CategoriesDataSource` opción en la primera lista desplegable y elija `CategoryName` utilizan para mostrar y `CategoryID` como valor.
 
 
-[![BIND DropDownList para la CategoriesDataSource](batch-updating-vb/_static/image11.gif)](batch-updating-vb/_static/image19.png)
+[![Enlazar el CategoriesDataSource DropDownList](batch-updating-vb/_static/image11.gif)](batch-updating-vb/_static/image19.png)
 
 **Figura 11**: Enlazar la DropDownList para la `CategoriesDataSource` ([haga clic aquí para ver imagen en tamaño completo](batch-updating-vb/_static/image20.png))
 
@@ -190,7 +190,7 @@ Tenga en cuenta cómo el `<asp:ListItem Value="">` : seleccione uno--tiene su `V
 Hemos llegado una serie de cambios en las plantillas de GridView s sin poner en pausa para ver nuestro progreso. Dedique un momento para ver nuestro progreso a través de un explorador. Como se muestra en la figura 13, cada fila se representa mediante su `ItemTemplate`, que contiene la celda interfaz de edición.
 
 
-[![EACH fila GridView es modificable](batch-updating-vb/_static/image13.gif)](batch-updating-vb/_static/image21.png)
+[![Cada fila GridView es modificable](batch-updating-vb/_static/image13.gif)](batch-updating-vb/_static/image21.png)
 
 **Figura 13**: Cada fila GridView es Editable ([haga clic aquí para ver imagen en tamaño completo](batch-updating-vb/_static/image22.png))
 
@@ -223,7 +223,7 @@ Después de realizar los pasos anteriores, los cambios de formato mencionó, los
 Figura 16 se muestra esta página cuando se ve mediante un explorador después de han agregado los controles Web de botón y realizados los cambios de formato.
 
 
-[![Tque ahora incluye dos actualización de productos de botones de página](batch-updating-vb/_static/image16.gif)](batch-updating-vb/_static/image23.png)
+[![Página ahora incluye dos botones de productos de actualización](batch-updating-vb/_static/image16.gif)](batch-updating-vb/_static/image23.png)
 
 **Figura 16**: La página ahora incluye dos actualización productos botones ([haga clic aquí para ver imagen en tamaño completo](batch-updating-vb/_static/image24.png))
 

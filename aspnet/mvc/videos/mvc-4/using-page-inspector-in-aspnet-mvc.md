@@ -12,7 +12,7 @@ ms.openlocfilehash: 89e274e447a67bda0b1f499ea70041365c2157cf
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59418123"
 ---
 # <a name="using-page-inspector-in-aspnet-mvc"></a>Usar el Inspector de página en ASP.NET MVC

@@ -12,7 +12,7 @@ ms.openlocfilehash: f4678ca375c55c7bd3b02fb9707059418adb1bb7
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59395191"
 ---
 # <a name="how-do-i-implement-the-ajax-incremental-page-display-pattern"></a>[¿Cómo lo hago?:] ¿Implementar el patrón de presentación de página Incremental de AJAX?

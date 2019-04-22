@@ -12,7 +12,7 @@ ms.openlocfilehash: 8674b06a2a751c9a7b1c6c9b19782974d0602a62
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59386572"
 ---
 # <a name="signalr-scaleout-with-sql-server-signalr-1x"></a>Escalabilidad horizontal de SignalR con SQL Server (SignalR 1.x)

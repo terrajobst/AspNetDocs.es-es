@@ -12,7 +12,7 @@ ms.openlocfilehash: 723a38de4569b0bb58817c70aabb84fef8e19591
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59395100"
 ---
 # <a name="using-browser-link-in-visual-studio-2013"></a>Mediante el vínculo de explorador en Visual Studio 2013

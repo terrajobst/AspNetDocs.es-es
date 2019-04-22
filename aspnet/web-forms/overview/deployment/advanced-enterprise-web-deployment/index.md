@@ -12,7 +12,7 @@ ms.openlocfilehash: 0d3a356aafcce499f50d3a5d3b98f44ca5643ede
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59417980"
 ---
 # <a name="aspnet-4---enterprise-deployment-series-4-advanced-topics"></a>ASP.NET 4 - Implementación de empresa, serie 4: temas avanzados
