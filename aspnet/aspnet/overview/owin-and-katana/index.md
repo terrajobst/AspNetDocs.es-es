@@ -12,19 +12,19 @@ ms.openlocfilehash: a8ba1ca6b54ae58c23e51981cedebc636fba679e
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59385597"
 ---
-# <a name="owin-and-katana"></a><span data-ttu-id="769c1-103">OWIN y Katana</span><span class="sxs-lookup"><span data-stu-id="769c1-103">OWIN and Katana</span></span>
+# <a name="owin-and-katana"></a><span data-ttu-id="efd01-103">OWIN y Katana</span><span class="sxs-lookup"><span data-stu-id="efd01-103">OWIN and Katana</span></span>
 
-> <span data-ttu-id="769c1-104">Katana es un conjunto flexible de componentes para crear y hospedar Open Web Interface para las aplicaciones web basadas en .NET OWIN.</span><span class="sxs-lookup"><span data-stu-id="769c1-104">Katana is a flexible set of components for building and hosting Open Web Interface for .NET (OWIN)-based web applications.</span></span>
+> <span data-ttu-id="efd01-104">Katana es un conjunto flexible de componentes para crear y hospedar Open Web Interface para las aplicaciones web basadas en .NET OWIN.</span><span class="sxs-lookup"><span data-stu-id="efd01-104">Katana is a flexible set of components for building and hosting Open Web Interface for .NET (OWIN)-based web applications.</span></span>
 
 
-- [<span data-ttu-id="769c1-105">Información general del proyecto Katana</span><span class="sxs-lookup"><span data-stu-id="769c1-105">An Overview of Project Katana</span></span>](an-overview-of-project-katana.md)
-- [<span data-ttu-id="769c1-106">Introducción a OWIN y Katana</span><span class="sxs-lookup"><span data-stu-id="769c1-106">Getting Started with OWIN and Katana</span></span>](getting-started-with-owin-and-katana.md)
-- [<span data-ttu-id="769c1-107">Ejemplos de Katana</span><span class="sxs-lookup"><span data-stu-id="769c1-107">Katana Samples</span></span>](katana-samples.md)
-- [<span data-ttu-id="769c1-108">Detección de la clase de inicio OWIN</span><span class="sxs-lookup"><span data-stu-id="769c1-108">OWIN Startup Class Detection</span></span>](owin-startup-class-detection.md)
-- [<span data-ttu-id="769c1-109">Habilitar la autenticación de Windows en Katana</span><span class="sxs-lookup"><span data-stu-id="769c1-109">Enabling Windows Authentication in Katana</span></span>](enabling-windows-authentication-in-katana.md)
-- [<span data-ttu-id="769c1-110">Middleware OWIN en la canalización integrada de IIS</span><span class="sxs-lookup"><span data-stu-id="769c1-110">OWIN Middleware in the IIS Integrated Pipeline</span></span>](owin-middleware-in-the-iis-integrated-pipeline.md)
-- [<span data-ttu-id="769c1-111">Servidor de autorización de OAuth 2.0 de OWIN</span><span class="sxs-lookup"><span data-stu-id="769c1-111">OWIN OAuth 2.0 Authorization Server</span></span>](owin-oauth-20-authorization-server.md)
-- [<span data-ttu-id="769c1-112">Hospedar OWIN en un rol de trabajo de Azure</span><span class="sxs-lookup"><span data-stu-id="769c1-112">Host OWIN in an Azure Worker Role</span></span>](host-owin-in-an-azure-worker-role.md)
+- [<span data-ttu-id="efd01-105">Información general del proyecto Katana</span><span class="sxs-lookup"><span data-stu-id="efd01-105">An Overview of Project Katana</span></span>](an-overview-of-project-katana.md)
+- [<span data-ttu-id="efd01-106">Introducción a OWIN y Katana</span><span class="sxs-lookup"><span data-stu-id="efd01-106">Getting Started with OWIN and Katana</span></span>](getting-started-with-owin-and-katana.md)
+- [<span data-ttu-id="efd01-107">Ejemplos de Katana</span><span class="sxs-lookup"><span data-stu-id="efd01-107">Katana Samples</span></span>](katana-samples.md)
+- [<span data-ttu-id="efd01-108">Detección de la clase de inicio OWIN</span><span class="sxs-lookup"><span data-stu-id="efd01-108">OWIN Startup Class Detection</span></span>](owin-startup-class-detection.md)
+- [<span data-ttu-id="efd01-109">Habilitar la autenticación de Windows en Katana</span><span class="sxs-lookup"><span data-stu-id="efd01-109">Enabling Windows Authentication in Katana</span></span>](enabling-windows-authentication-in-katana.md)
+- [<span data-ttu-id="efd01-110">Middleware OWIN en la canalización integrada de IIS</span><span class="sxs-lookup"><span data-stu-id="efd01-110">OWIN Middleware in the IIS Integrated Pipeline</span></span>](owin-middleware-in-the-iis-integrated-pipeline.md)
+- [<span data-ttu-id="efd01-111">Servidor de autorización de OAuth 2.0 de OWIN</span><span class="sxs-lookup"><span data-stu-id="efd01-111">OWIN OAuth 2.0 Authorization Server</span></span>](owin-oauth-20-authorization-server.md)
+- [<span data-ttu-id="efd01-112">Hospedar OWIN en un rol de trabajo de Azure</span><span class="sxs-lookup"><span data-stu-id="efd01-112">Host OWIN in an Azure Worker Role</span></span>](host-owin-in-an-azure-worker-role.md)
