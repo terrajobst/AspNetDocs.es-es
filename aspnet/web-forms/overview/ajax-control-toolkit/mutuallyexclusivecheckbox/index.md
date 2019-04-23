@@ -12,13 +12,13 @@ ms.openlocfilehash: b6441883d9d299810e0c95f2e883711387e96f70
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59421763"
 ---
-# <a name="mutuallyexclusivecheckbox"></a><span data-ttu-id="cdb61-103">MutuallyExclusiveCheckbox</span><span class="sxs-lookup"><span data-stu-id="cdb61-103">MutuallyExclusiveCheckbox</span></span>
+# <a name="mutuallyexclusivecheckbox"></a><span data-ttu-id="a4ba8-103">MutuallyExclusiveCheckbox</span><span class="sxs-lookup"><span data-stu-id="a4ba8-103">MutuallyExclusiveCheckbox</span></span>
 
-> <span data-ttu-id="cdb61-104">En este tutorial se muestra cómo usar el control MutuallyExclusiveCheckbox para crear las casillas de verificación que funcionan como botones de radio (mutuamente excluyente) pero que se pueden borrar completamente.</span><span class="sxs-lookup"><span data-stu-id="cdb61-104">This tutorial shows how to use the MutuallyExclusiveCheckbox control to create check boxes that work like radio buttons (mutually exclusive) but that can be completely cleared.</span></span>
+> <span data-ttu-id="a4ba8-104">En este tutorial se muestra cómo usar el control MutuallyExclusiveCheckbox para crear las casillas de verificación que funcionan como botones de radio (mutuamente excluyente) pero que se pueden borrar completamente.</span><span class="sxs-lookup"><span data-stu-id="a4ba8-104">This tutorial shows how to use the MutuallyExclusiveCheckbox control to create check boxes that work like radio buttons (mutually exclusive) but that can be completely cleared.</span></span>
 
 
-- [<span data-ttu-id="cdb61-105">Crear casillas de verificación mutuamente excluyentes (C#)</span><span class="sxs-lookup"><span data-stu-id="cdb61-105">Creating Mutually Exclusive Checkboxes (C#)</span></span>](creating-mutually-exclusive-checkboxes-cs.md)
-- [<span data-ttu-id="cdb61-106">Crear casillas de verificación mutuamente excluyentes (VB)</span><span class="sxs-lookup"><span data-stu-id="cdb61-106">Creating Mutually Exclusive Checkboxes (VB)</span></span>](creating-mutually-exclusive-checkboxes-vb.md)
+- [<span data-ttu-id="a4ba8-105">Crear casillas de verificación mutuamente excluyentes (C#)</span><span class="sxs-lookup"><span data-stu-id="a4ba8-105">Creating Mutually Exclusive Checkboxes (C#)</span></span>](creating-mutually-exclusive-checkboxes-cs.md)
+- [<span data-ttu-id="a4ba8-106">Crear casillas de verificación mutuamente excluyentes (VB)</span><span class="sxs-lookup"><span data-stu-id="a4ba8-106">Creating Mutually Exclusive Checkboxes (VB)</span></span>](creating-mutually-exclusive-checkboxes-vb.md)
