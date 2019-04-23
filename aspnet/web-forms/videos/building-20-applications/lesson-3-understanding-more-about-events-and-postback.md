@@ -12,18 +12,18 @@ ms.openlocfilehash: cefba04d5175ff3fb80f69074cdd0cc3f6c57fa6
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59400261"
 ---
-# <a name="lesson-3--understanding-more-about-events-and-postback"></a><span data-ttu-id="89acc-103">[Lección 3:] Información adicional sobre los eventos y postback</span><span class="sxs-lookup"><span data-stu-id="89acc-103">[Lesson 3:]  Understanding More About Events and Postback</span></span>
+# <a name="lesson-3--understanding-more-about-events-and-postback"></a><span data-ttu-id="665bf-103">[Lección 3:] Información adicional sobre los eventos y postback</span><span class="sxs-lookup"><span data-stu-id="665bf-103">[Lesson 3:]  Understanding More About Events and Postback</span></span>
 
-<span data-ttu-id="89acc-104">por [Microsoft](https://github.com/microsoft)</span><span class="sxs-lookup"><span data-stu-id="89acc-104">by [Microsoft](https://github.com/microsoft)</span></span>
+<span data-ttu-id="665bf-104">por [Microsoft](https://github.com/microsoft)</span><span class="sxs-lookup"><span data-stu-id="665bf-104">by [Microsoft](https://github.com/microsoft)</span></span>
 
-<span data-ttu-id="89acc-105">En esta lección, obtendrá información sobre cómo se pueden usar eventos en el código y cómo debe reaccionar cuando tienen lugar estos eventos.</span><span class="sxs-lookup"><span data-stu-id="89acc-105">In this lesson, you will learn how events can be used in your code, and how to react when those events occur.</span></span>
+<span data-ttu-id="665bf-105">En esta lección, obtendrá información sobre cómo se pueden usar eventos en el código y cómo debe reaccionar cuando tienen lugar estos eventos.</span><span class="sxs-lookup"><span data-stu-id="665bf-105">In this lesson, you will learn how events can be used in your code, and how to react when those events occur.</span></span>
 
-[<span data-ttu-id="89acc-106">&#9654;Vea el vídeo (17 minutos)</span><span class="sxs-lookup"><span data-stu-id="89acc-106">&#9654; Watch video (17 minutes)</span></span>](https://channel9.msdn.com/Blogs/ASP-NET-Site-Videos/lesson-3-understanding-more-about-events-and-postback)
+[<span data-ttu-id="665bf-106">&#9654;Vea el vídeo (17 minutos)</span><span class="sxs-lookup"><span data-stu-id="665bf-106">&#9654; Watch video (17 minutes)</span></span>](https://channel9.msdn.com/Blogs/ASP-NET-Site-Videos/lesson-3-understanding-more-about-events-and-postback)
 
 > [!div class="step-by-step"]
-> <span data-ttu-id="89acc-107">[Anterior](lesson-2-creating-a-web-forms-user-interface.md)
-> [Siguiente](lesson-4-understanding-web-application-state.md)</span><span class="sxs-lookup"><span data-stu-id="89acc-107">[Previous](lesson-2-creating-a-web-forms-user-interface.md)
+> <span data-ttu-id="665bf-107">[Anterior](lesson-2-creating-a-web-forms-user-interface.md)
+> [Siguiente](lesson-4-understanding-web-application-state.md)</span><span class="sxs-lookup"><span data-stu-id="665bf-107">[Previous](lesson-2-creating-a-web-forms-user-interface.md)
 [Next](lesson-4-understanding-web-application-state.md)</span></span>

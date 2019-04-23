@@ -12,13 +12,13 @@ ms.openlocfilehash: 846f34ae104f4b69dce18f6dace4fd341365f7a5
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59397895"
 ---
-# <a name="combobox"></a><span data-ttu-id="7fc40-103">ComboBox</span><span class="sxs-lookup"><span data-stu-id="7fc40-103">ComboBox</span></span>
+# <a name="combobox"></a><span data-ttu-id="2118d-103">ComboBox</span><span class="sxs-lookup"><span data-stu-id="2118d-103">ComboBox</span></span>
 
-> <span data-ttu-id="7fc40-104">Este tutorial muestra cómo usar el control de cuadro combinado, que combina la flexibilidad de un cuadro de texto con una lista de opciones que el usuario puede elegir.</span><span class="sxs-lookup"><span data-stu-id="7fc40-104">This tutorial shows how to use the ComboBox control, which combines the flexibility of a text box with a list of options that users can choose from.</span></span>
+> <span data-ttu-id="2118d-104">Este tutorial muestra cómo usar el control de cuadro combinado, que combina la flexibilidad de un cuadro de texto con una lista de opciones que el usuario puede elegir.</span><span class="sxs-lookup"><span data-stu-id="2118d-104">This tutorial shows how to use the ComboBox control, which combines the flexibility of a text box with a list of options that users can choose from.</span></span>
 
 
-- [<span data-ttu-id="7fc40-105">ComboBox (control) (C#)</span><span class="sxs-lookup"><span data-stu-id="7fc40-105">ComboBox Control (C#)</span></span>](how-do-i-use-the-combobox-control-cs.md)
-- [<span data-ttu-id="7fc40-106">ComboBox (control) (VB)</span><span class="sxs-lookup"><span data-stu-id="7fc40-106">ComboBox Control (VB)</span></span>](how-do-i-use-the-combobox-control-vb.md)
+- [<span data-ttu-id="2118d-105">ComboBox (control) (C#)</span><span class="sxs-lookup"><span data-stu-id="2118d-105">ComboBox Control (C#)</span></span>](how-do-i-use-the-combobox-control-cs.md)
+- [<span data-ttu-id="2118d-106">ComboBox (control) (VB)</span><span class="sxs-lookup"><span data-stu-id="2118d-106">ComboBox Control (VB)</span></span>](how-do-i-use-the-combobox-control-vb.md)

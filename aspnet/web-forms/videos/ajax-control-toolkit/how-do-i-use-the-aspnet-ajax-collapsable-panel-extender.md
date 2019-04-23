@@ -12,18 +12,18 @@ ms.openlocfilehash: dd652bf604e5b0ca838b5e50714b8923a4fb25c5
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59398363"
 ---
-# <a name="how-do-i-use-the-aspnet-ajax-collapsable-panel-extender"></a><span data-ttu-id="3de7b-104">[¿Cómo lo hago?:] ¿Usar el extensor de Panel contraíble de ASP.NET AJAX?</span><span class="sxs-lookup"><span data-stu-id="3de7b-104">[How Do I:] Use the ASP.NET AJAX Collapsable Panel Extender?</span></span>
+# <a name="how-do-i-use-the-aspnet-ajax-collapsable-panel-extender"></a><span data-ttu-id="094b7-104">[¿Cómo lo hago?:] ¿Usar el extensor de Panel contraíble de ASP.NET AJAX?</span><span class="sxs-lookup"><span data-stu-id="094b7-104">[How Do I:] Use the ASP.NET AJAX Collapsable Panel Extender?</span></span>
 
-<span data-ttu-id="3de7b-105">por [Joe Stagner](https://github.com/JoeStagner)</span><span class="sxs-lookup"><span data-stu-id="3de7b-105">by [Joe Stagner](https://github.com/JoeStagner)</span></span>
+<span data-ttu-id="094b7-105">por [Joe Stagner](https://github.com/JoeStagner)</span><span class="sxs-lookup"><span data-stu-id="094b7-105">by [Joe Stagner](https://github.com/JoeStagner)</span></span>
 
-<span data-ttu-id="3de7b-106">En este vídeo aprenderá a usar el extensor de Panel contraíble de ASP.NET AJAX para permitir al usuario mostrar u ocultar el contenido en una página web de dinámicamente.</span><span class="sxs-lookup"><span data-stu-id="3de7b-106">In this video you will learn how to use the ASP.NET AJAX Collapsable Panel Extender to allow the user to dynamically show or hide content on a web page.</span></span>
+<span data-ttu-id="094b7-106">En este vídeo aprenderá a usar el extensor de Panel contraíble de ASP.NET AJAX para permitir al usuario mostrar u ocultar el contenido en una página web de dinámicamente.</span><span class="sxs-lookup"><span data-stu-id="094b7-106">In this video you will learn how to use the ASP.NET AJAX Collapsable Panel Extender to allow the user to dynamically show or hide content on a web page.</span></span>
 
-[<span data-ttu-id="3de7b-107">&#9654;Vea el vídeo (11 minutos)</span><span class="sxs-lookup"><span data-stu-id="3de7b-107">&#9654; Watch video (11 minutes)</span></span>](https://channel9.msdn.com/Blogs/ASP-NET-Site-Videos/how-do-i-use-the-aspnet-ajax-collapsable-panel-extender)
+[<span data-ttu-id="094b7-107">&#9654;Vea el vídeo (11 minutos)</span><span class="sxs-lookup"><span data-stu-id="094b7-107">&#9654; Watch video (11 minutes)</span></span>](https://channel9.msdn.com/Blogs/ASP-NET-Site-Videos/how-do-i-use-the-aspnet-ajax-collapsable-panel-extender)
 
 > [!div class="step-by-step"]
-> <span data-ttu-id="3de7b-108">[Anterior](how-do-i-use-the-aspnet-ajax-accordion-control.md)
-> [Siguiente](how-do-i-use-the-aspnet-ajax-draggable-panel-extender.md)</span><span class="sxs-lookup"><span data-stu-id="3de7b-108">[Previous](how-do-i-use-the-aspnet-ajax-accordion-control.md)
+> <span data-ttu-id="094b7-108">[Anterior](how-do-i-use-the-aspnet-ajax-accordion-control.md)
+> [Siguiente](how-do-i-use-the-aspnet-ajax-draggable-panel-extender.md)</span><span class="sxs-lookup"><span data-stu-id="094b7-108">[Previous](how-do-i-use-the-aspnet-ajax-accordion-control.md)
 [Next](how-do-i-use-the-aspnet-ajax-draggable-panel-extender.md)</span></span>

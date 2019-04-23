@@ -12,12 +12,12 @@ ms.openlocfilehash: 63df5e45c817c90957a5818bd9f43c4d3162c679
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59397882"
 ---
-# <a name="signalr-advanced-topics"></a><span data-ttu-id="9b09c-103">Temas avanzados de SignalR</span><span class="sxs-lookup"><span data-stu-id="9b09c-103">SignalR Advanced Topics</span></span>
+# <a name="signalr-advanced-topics"></a><span data-ttu-id="f965c-103">Temas avanzados de SignalR</span><span class="sxs-lookup"><span data-stu-id="f965c-103">SignalR Advanced Topics</span></span>
 
-> <span data-ttu-id="9b09c-104">Documentación de SignalR: temas avanzados.</span><span class="sxs-lookup"><span data-stu-id="9b09c-104">SignalR documentation - advanced topics.</span></span>
+> <span data-ttu-id="f965c-104">Documentación de SignalR: temas avanzados.</span><span class="sxs-lookup"><span data-stu-id="f965c-104">SignalR documentation - advanced topics.</span></span>
 
 
-- [<span data-ttu-id="9b09c-105">Inserción de dependencias en SignalR</span><span class="sxs-lookup"><span data-stu-id="9b09c-105">Dependency Injection in SignalR</span></span>](dependency-injection.md)
+- [<span data-ttu-id="f965c-105">Inserción de dependencias en SignalR</span><span class="sxs-lookup"><span data-stu-id="f965c-105">Dependency Injection in SignalR</span></span>](dependency-injection.md)

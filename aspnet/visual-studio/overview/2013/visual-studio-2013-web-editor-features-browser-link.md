@@ -12,13 +12,13 @@ ms.openlocfilehash: 15fba4d22037482d1be2207a3547201e0c74173a
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59407671"
 ---
-# <a name="visual-studio-2013-web-editor-features---browser-link"></a><span data-ttu-id="0e78f-103">Características del editor web de Visual Studio 2013 - Vínculo con exploradores</span><span class="sxs-lookup"><span data-stu-id="0e78f-103">Visual Studio 2013 Web Editor Features - Browser Link</span></span>
+# <a name="visual-studio-2013-web-editor-features---browser-link"></a><span data-ttu-id="3c0af-103">Características del editor web de Visual Studio 2013 - Vínculo con exploradores</span><span class="sxs-lookup"><span data-stu-id="3c0af-103">Visual Studio 2013 Web Editor Features - Browser Link</span></span>
 
-<span data-ttu-id="0e78f-104">por [Scott Hanselman](https://github.com/shanselman)</span><span class="sxs-lookup"><span data-stu-id="0e78f-104">by [Scott Hanselman](https://github.com/shanselman)</span></span>
+<span data-ttu-id="3c0af-104">por [Scott Hanselman](https://github.com/shanselman)</span><span class="sxs-lookup"><span data-stu-id="3c0af-104">by [Scott Hanselman](https://github.com/shanselman)</span></span>
 
-<span data-ttu-id="0e78f-105">Scott Hanselman muestra el vínculo de explorador en Visual Studio 2013, que permite la comunicación bidireccional entre Visual Studio y múltiples exploradores conectados.</span><span class="sxs-lookup"><span data-stu-id="0e78f-105">Scott Hanselman demonstrates Browser Link in Visual Studio 2013, which allows for two-way communication between Visual Studio and multiple connected browsers.</span></span>
+<span data-ttu-id="3c0af-105">Scott Hanselman muestra el vínculo de explorador en Visual Studio 2013, que permite la comunicación bidireccional entre Visual Studio y múltiples exploradores conectados.</span><span class="sxs-lookup"><span data-stu-id="3c0af-105">Scott Hanselman demonstrates Browser Link in Visual Studio 2013, which allows for two-way communication between Visual Studio and multiple connected browsers.</span></span>
 
-[<span data-ttu-id="0e78f-106">&#9654;Vea el vídeo (3 minutos)</span><span class="sxs-lookup"><span data-stu-id="0e78f-106">&#9654; Watch video (3 minutes)</span></span>](https://channel9.msdn.com/Blogs/ASP-NET-Site-Videos/visual-studio-2013-web-editor-features-browser-link)
+[<span data-ttu-id="3c0af-106">&#9654;Vea el vídeo (3 minutos)</span><span class="sxs-lookup"><span data-stu-id="3c0af-106">&#9654; Watch video (3 minutes)</span></span>](https://channel9.msdn.com/Blogs/ASP-NET-Site-Videos/visual-studio-2013-web-editor-features-browser-link)

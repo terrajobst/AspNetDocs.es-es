@@ -12,18 +12,18 @@ ms.openlocfilehash: a034d6f934da055d06130302c288066e98d9a7e9
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59403719"
 ---
-# <a name="aspnet-4-quick-hit---imperative-webforms-routing"></a><span data-ttu-id="4dfe0-103">ASP.NET 4 "Rápido Hit": enrutamiento de WebForms imperativo</span><span class="sxs-lookup"><span data-stu-id="4dfe0-103">ASP.NET 4 "Quick Hit" - Imperative WebForms Routing</span></span>
+# <a name="aspnet-4-quick-hit---imperative-webforms-routing"></a><span data-ttu-id="59917-103">ASP.NET 4 "Rápido Hit": enrutamiento de WebForms imperativo</span><span class="sxs-lookup"><span data-stu-id="59917-103">ASP.NET 4 "Quick Hit" - Imperative WebForms Routing</span></span>
 
-<span data-ttu-id="4dfe0-104">por [Joe Stagner](https://github.com/JoeStagner)</span><span class="sxs-lookup"><span data-stu-id="4dfe0-104">by [Joe Stagner](https://github.com/JoeStagner)</span></span>
+<span data-ttu-id="59917-104">por [Joe Stagner](https://github.com/JoeStagner)</span><span class="sxs-lookup"><span data-stu-id="59917-104">by [Joe Stagner](https://github.com/JoeStagner)</span></span>
 
-<span data-ttu-id="4dfe0-105">En este vídeo aprenderá a usar un generador de expresiones para realizar el enrutamiento de manera imperativa de WebForms.</span><span class="sxs-lookup"><span data-stu-id="4dfe0-105">In this video you will learn how to use an expression builder to do WebForms routing imperatively.</span></span> 
+<span data-ttu-id="59917-105">En este vídeo aprenderá a usar un generador de expresiones para realizar el enrutamiento de manera imperativa de WebForms.</span><span class="sxs-lookup"><span data-stu-id="59917-105">In this video you will learn how to use an expression builder to do WebForms routing imperatively.</span></span> 
 
-[<span data-ttu-id="4dfe0-106">&#9654;Vea el vídeo (12 minutos)</span><span class="sxs-lookup"><span data-stu-id="4dfe0-106">&#9654; Watch video (12 minutes)</span></span>](https://channel9.msdn.com/Blogs/ASP-NET-Site-Videos/aspnet-4-quick-hit-imperative-webforms-routing)
+[<span data-ttu-id="59917-106">&#9654;Vea el vídeo (12 minutos)</span><span class="sxs-lookup"><span data-stu-id="59917-106">&#9654; Watch video (12 minutes)</span></span>](https://channel9.msdn.com/Blogs/ASP-NET-Site-Videos/aspnet-4-quick-hit-imperative-webforms-routing)
 
 > [!div class="step-by-step"]
-> <span data-ttu-id="4dfe0-107">[Anterior](aspnet-4-quick-hit-permanent-redirect.md)
-> [Siguiente](aspnet-4-quick-hit-declarative-webforms-routing.md)</span><span class="sxs-lookup"><span data-stu-id="4dfe0-107">[Previous](aspnet-4-quick-hit-permanent-redirect.md)
+> <span data-ttu-id="59917-107">[Anterior](aspnet-4-quick-hit-permanent-redirect.md)
+> [Siguiente](aspnet-4-quick-hit-declarative-webforms-routing.md)</span><span class="sxs-lookup"><span data-stu-id="59917-107">[Previous](aspnet-4-quick-hit-permanent-redirect.md)
 [Next](aspnet-4-quick-hit-declarative-webforms-routing.md)</span></span>
