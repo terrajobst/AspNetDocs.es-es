@@ -12,7 +12,7 @@ ms.openlocfilehash: 3db35464b448727ef3477a90149459a46e0f76d7
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59412169"
 ---
 # <a name="linq-videos-from-the-vb-team"></a>Vídeos de LINQ del equipo de VB

@@ -12,7 +12,7 @@ ms.openlocfilehash: 1e7103df41e4c355ca6f1291ef0a10269c5c403a
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59415562"
 ---
 # <a name="breezeangular-template"></a>Plantilla de Breeze/Angular

@@ -12,7 +12,7 @@ ms.openlocfilehash: 00e481ab8a24823fa4b52fb2d7ec38bc9f2cf739
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59409426"
 ---
 # <a name="jquery-ui"></a>jQuery UI

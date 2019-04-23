@@ -12,7 +12,7 @@ ms.openlocfilehash: 0d56a600b1b97d9d044fa90b678c942f0dc6fc00
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59413833"
 ---
 # <a name="specifying-the-master-page-programmatically-c"></a>Especificar la página maestra mediante programación (C#)
@@ -42,7 +42,7 @@ Cada vez que llega una solicitud en el servidor web para una página ASP.NET que
 Figura 1 ilustra esta fusión. Paso 1 en la figura 1 muestra el contenido inicial y las jerarquías de control de página maestra. En la parte final de la fase de PreInit el contenido controles en la página se agregan a la ContentPlaceHolders correspondiente en la página maestra (paso 2). Después de esta fusión, la página principal sirve como la raíz de la jerarquía de controles fusionadas. Esto fusionan control jerarquía, a continuación, se agrega a la página para generar la jerarquía de control finalizados (paso 3). El resultado neto es que la jerarquía de controles de la página incluye la jerarquía de controles fusionadas.
 
 
-[![Tél página maestra y las jerarquías de Control de la página de contenido que están en fusionan juntos durante la fase de PreInit](specifying-the-master-page-programmatically-cs/_static/image2.png)](specifying-the-master-page-programmatically-cs/_static/image1.png)
+[![La página maestra y las jerarquías de Control de la página de contenido son fusionan juntos durante la fase de PreInit](specifying-the-master-page-programmatically-cs/_static/image2.png)](specifying-the-master-page-programmatically-cs/_static/image1.png)
 
 **Figura 01**: La página maestra y las jerarquías de Control de la página de contenido son fusionan juntos durante la fase de PreInit ([haga clic aquí para ver imagen en tamaño completo](specifying-the-master-page-programmatically-cs/_static/image3.png))
 
@@ -97,7 +97,7 @@ Examinemos cómo cargar dinámicamente una página maestra en tiempo de ejecuci�
 Crear una nueva página principal en la carpeta raíz denominada `Alternate.master`. También, agregar una nueva hoja de estilos para el sitio Web denominado `AlternateStyles.css`.
 
 
-[![Add otra página maestra y archivo CSS para el sitio Web](specifying-the-master-page-programmatically-cs/_static/image8.png)](specifying-the-master-page-programmatically-cs/_static/image7.png)
+[![Agregue otro archivo CSS y página maestra al sitio Web](specifying-the-master-page-programmatically-cs/_static/image8.png)](specifying-the-master-page-programmatically-cs/_static/image7.png)
 
 **Figura 03**: Agregar otra página maestra y archivo CSS para el sitio Web ([haga clic aquí para ver imagen en tamaño completo](specifying-the-master-page-programmatically-cs/_static/image9.png))
 
@@ -108,7 +108,7 @@ He diseñado el `Alternate.master` página maestra para que el título que se mu
 > ASP.NET incluye la capacidad para definir *temas*. Un tema es una colección de imágenes, archivos CSS y relacionadas con el estilo Web propiedad configuración del control que se puede aplicar a una página en tiempo de ejecución. Los temas son la mejor opción si los diseños de su sitio difieren solo en las imágenes mostradas y sus reglas de CSS. Si el diseño difiere notablemente más, como el uso de controles Web diferentes o tiene un diseño radicalmente diferente, a continuación, deberá utilizar páginas principales independientes. Consulte la sección Lecturas adicionales al final de este tutorial para obtener más información acerca de los temas.
 
 
-[![Olas páginas de contenido pueden usar ahora un aspecto nuevo](specifying-the-master-page-programmatically-cs/_static/image11.png)](specifying-the-master-page-programmatically-cs/_static/image10.png)
+[![Nuestras páginas de contenido pueden usar ahora un nuevo aspecto](specifying-the-master-page-programmatically-cs/_static/image11.png)](specifying-the-master-page-programmatically-cs/_static/image10.png)
 
 **Figura 04**: Nuestras páginas de contenido pueden usar ahora un nuevo aspecto ([haga clic aquí para ver imagen en tamaño completo](specifying-the-master-page-programmatically-cs/_static/image12.png))
 
@@ -206,7 +206,7 @@ Vamos a crear una página web que permite al usuario elegir qué página maestra
 > Dado que `Site.master` y `Alternate.master` tener el mismo conjunto de controles ContentPlaceHolder no importa qué página maestra que elige al crear la nueva página de contenido. Para mantener la coherencia, sugiero usar `Site.master`.
 
 
-[![Auna nueva página de contenido al sitio Web de dd](specifying-the-master-page-programmatically-cs/_static/image14.png)](specifying-the-master-page-programmatically-cs/_static/image13.png)
+[![Agregue una nueva página de contenido al sitio Web](specifying-the-master-page-programmatically-cs/_static/image14.png)](specifying-the-master-page-programmatically-cs/_static/image13.png)
 
 **Figura 05**: Agregue una nueva página de contenido al sitio Web ([haga clic aquí para ver imagen en tamaño completo](specifying-the-master-page-programmatically-cs/_static/image15.png))
 
@@ -251,12 +251,12 @@ Con el `ChooseMasterPage.aspx` página completa, nuestra última tarea consiste 
 Con este código en su lugar, visite la `ChooseMasterPage.aspx` página. Inicialmente, el `Site.master` página maestra está seleccionado (vea la figura 6), pero el usuario puede seleccionar una página maestra diferente en la lista desplegable.
 
 
-[![Cse muestran las páginas de contenido mediante la página maestra Site.master](specifying-the-master-page-programmatically-cs/_static/image17.png)](specifying-the-master-page-programmatically-cs/_static/image16.png)
+[![Se muestran las páginas de contenido mediante la página maestra Site.master](specifying-the-master-page-programmatically-cs/_static/image17.png)](specifying-the-master-page-programmatically-cs/_static/image16.png)
 
 **Figura 06**: Contenido de las páginas son muestra utilizando el `Site.master` página maestra ([haga clic aquí para ver imagen en tamaño completo](specifying-the-master-page-programmatically-cs/_static/image18.png))
 
 
-[![CPáginas de contenido se muestran ahora con la página maestra Alternate.master](specifying-the-master-page-programmatically-cs/_static/image20.png)](specifying-the-master-page-programmatically-cs/_static/image19.png)
+[![Ahora se muestran las páginas de contenido mediante la página maestra Alternate.master](specifying-the-master-page-programmatically-cs/_static/image20.png)](specifying-the-master-page-programmatically-cs/_static/image19.png)
 
 **Figura 07**: Contenido de las páginas son ahora se muestran con el `Alternate.master` página maestra ([haga clic aquí para ver imagen en tamaño completo](specifying-the-master-page-programmatically-cs/_static/image21.png))
 

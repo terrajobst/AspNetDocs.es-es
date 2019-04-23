@@ -12,7 +12,7 @@ ms.openlocfilehash: c17e3afaf4406489a14d0537a33fef384d6c5a19
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59408971"
 ---
 # <a name="determining-what-files-need-to-be-deployed-c"></a>Determinar qué archivos se deben implementar (C#)
@@ -93,7 +93,7 @@ La descarga de este tutorial incluye una aplicación de ASP.NET denominada rese�
 Figura 1 muestra una captura de pantalla de la reseñas de libros del sitio Web cuando se ve mediante un explorador. Aquí verá la página ~ /`Tech/TYASP35.aspx`, que revisa el libro *enseñar a usted mismo ASP.NET 3.5 en 24 horas*. La ruta de navegación que abarca la parte superior de la página y el menú de la columna izquierda se basan en la estructura de mapa del sitio definida en `Web.sitemap`. La imagen en la esquina superior derecha es una de las imágenes ubicadas en la cubierta del libro la `Images` carpeta. Apariencia del sitio Web se definen mediante en cascada deletreadas los archivos CSS en la carpeta Styles, mientras que el diseño general de la página se define en la página maestra, reglas de hojas de estilos `Site.master`.
 
 
-[![Tsitio Web de libro de revisiones ofrece las revisiones de una gran variedad de títulos](determining-what-files-need-to-be-deployed-cs/_static/image2.png)](determining-what-files-need-to-be-deployed-cs/_static/image1.png)
+[![El sitio Web de libro de revisiones ofrece las revisiones de una gran variedad de títulos](determining-what-files-need-to-be-deployed-cs/_static/image2.png)](determining-what-files-need-to-be-deployed-cs/_static/image1.png)
 
 **Figura 1:** El sitio Web de libro de revisiones ofrece las revisiones de una gran variedad de títulos ([haga clic aquí para ver imagen en tamaño completo](determining-what-files-need-to-be-deployed-cs/_static/image3.png))
 
@@ -116,7 +116,7 @@ El modelo de proyecto de aplicación Web usa la compilación explícita: código
 Figura 2 muestra los archivos que componen el proyecto de aplicación Web de libreta de revisiones.
 
 
-[![Tel Explorador de soluciones incluye los archivos que componen el proyecto de aplicación Web](determining-what-files-need-to-be-deployed-cs/_static/image5.png)](determining-what-files-need-to-be-deployed-cs/_static/image4.png)
+[![El Explorador de soluciones muestra los archivos que componen el proyecto de aplicación Web](determining-what-files-need-to-be-deployed-cs/_static/image5.png)](determining-what-files-need-to-be-deployed-cs/_static/image4.png)
 
 **Figura 2**: El Explorador de soluciones muestra los archivos que componen el proyecto de aplicación Web
 
@@ -143,7 +143,7 @@ La opción de menú de la compilación en Visual Studio está presente en los pr
 Figura 3 muestra los archivos que componen el proyecto de sitio Web de las revisiones de libro.
 
 
- [![Tel Explorador de soluciones incluye los archivos que componen el proyecto de sitio Web](determining-what-files-need-to-be-deployed-cs/_static/image7.png)](determining-what-files-need-to-be-deployed-cs/_static/image6.png) 
+ [![El Explorador de soluciones muestra los archivos que componen el proyecto de sitio Web](determining-what-files-need-to-be-deployed-cs/_static/image7.png)](determining-what-files-need-to-be-deployed-cs/_static/image6.png) 
 
 **Figura 3**: El Explorador de soluciones muestra los archivos que componen el proyecto de sitio Web
 

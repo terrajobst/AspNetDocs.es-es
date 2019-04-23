@@ -12,7 +12,7 @@ ms.openlocfilehash: 8d41668b9302f6e775bba0d2cc661dc54e38a5dc
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59416069"
 ---
 # <a name="visual-studio-2012-hands-on-labs"></a>Laboratorios prácticos de Visual Studio 2012

@@ -12,7 +12,7 @@ ms.openlocfilehash: c85db4289698988ead44afd452da17054bab9f07
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59417213"
 ---
 # <a name="create-a-new-aspnet-mvc-project"></a>Crear un proyecto de ASP.NET MVC
@@ -60,13 +60,13 @@ Cuando se crea una nueva aplicación MVC de ASP.NET con Visual Studio, agrega au
 
 Proyectos de ASP.NET MVC predeterminada tienen seis directorios de nivel superior:
 
-| **Directorio** | **Finalidad** |
+| **Directorio** | **Propósito** |
 | --- | --- |
 | **Y controladores** | En la que colocar las clases de controlador que controlan las solicitudes URL |
 | **/ Modelos** | En la que colocar las clases que representan y manipulan datos |
 | **O vistas** | En la que colocar los archivos de plantilla de la interfaz de usuario que son responsables de la salida de representación |
-| **/ Scripts** | En la que colocar los archivos de biblioteca de JavaScript y los scripts (.js) |
-| **/ Content** | Dónde colocar CSS y archivos de imagen y otro contenido que no sean-dinámicos no admiten de JavaScript |
+| **/Scripts** | En la que colocar los archivos de biblioteca de JavaScript y los scripts (.js) |
+| **/Content** | Dónde colocar CSS y archivos de imagen y otro contenido que no sean-dinámicos no admiten de JavaScript |
 | **/ Aplicación\_datos** | Almacenar archivos de datos que desea lectura/escritura. |
 
 ASP.NET MVC no requiere esta estructura. De hecho, los desarrolladores que trabajan en aplicaciones de gran tamaño se normalmente realizan particiones de la aplicación de seguridad en varios proyectos para que sea más fácil de administrar (por ejemplo: clases de modelo de datos entran a menudo en un proyecto de biblioteca de clases independiente de la aplicación web). Sin embargo, la estructura del proyecto de forma predeterminada, proporcionar una convención de directorio predeterminada agradable que podemos usar para mantener limpio nuestros problemas de la aplicación.

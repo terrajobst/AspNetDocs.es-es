@@ -12,7 +12,7 @@ ms.openlocfilehash: 663dfc76dc3d07dbe9ddca002dc07cb3f9acdb1c
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59419345"
 ---
 # <a name="filling-a-list-using-cascadingdropdown-vb"></a>Rellenar una lista con CascadingDropDown (VB)
@@ -61,7 +61,7 @@ Por lo que lo más importante es que el método debe devolver una matriz de tipo
 Carga de la página en el explorador se desencadenará la lista que se va a rellenar con tres proveedores.
 
 
-[![Tlista se rellena automáticamente](filling-a-list-using-cascadingdropdown-vb/_static/image2.png)](filling-a-list-using-cascadingdropdown-vb/_static/image1.png)
+[![La lista se rellena automáticamente](filling-a-list-using-cascadingdropdown-vb/_static/image2.png)](filling-a-list-using-cascadingdropdown-vb/_static/image1.png)
 
 La lista se rellena automáticamente ([haga clic aquí para ver imagen en tamaño completo](filling-a-list-using-cascadingdropdown-vb/_static/image3.png))
 

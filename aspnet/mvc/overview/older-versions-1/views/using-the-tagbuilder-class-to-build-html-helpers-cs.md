@@ -12,7 +12,7 @@ ms.openlocfilehash: 3227560c1d0c48f7738e26c87a0dbb140c410eee
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59410102"
 ---
 # <a name="using-the-tagbuilder-class-to-build-html-helpers-c"></a>Uso de la clase TagBuilder para compilar aplicaciones auxiliares HTML (C#)
@@ -60,12 +60,12 @@ Tenga en cuenta cómo se usa el método TagBuilder.MergeAttribute() para agregar
 
 Después de crear la aplicación auxiliar de imagen, puede usar la aplicación auxiliar en las vistas de MVC de ASP.NET como cualquiera de las otras estándar las aplicaciones auxiliares HTML. La vista en el listado 2 usa la aplicación auxiliar de imagen para mostrar dos veces la misma imagen de una consola Xbox (consulte la figura 1). Se llama a la aplicación auxiliar de Image() con y sin una colección de atributos HTML.
 
-**Listado 2 - Home\Index.aspx**
+**Listing 2 - Home\Index.aspx**
 
 [!code-aspx[Main](using-the-tagbuilder-class-to-build-html-helpers-cs/samples/sample2.aspx)]
 
 
-[![Tel cuadro de diálogo nuevo proyecto](using-the-tagbuilder-class-to-build-html-helpers-cs/_static/image1.jpg)](using-the-tagbuilder-class-to-build-html-helpers-cs/_static/image1.png)
+[![El cuadro de diálogo nuevo proyecto](using-the-tagbuilder-class-to-build-html-helpers-cs/_static/image1.jpg)](using-the-tagbuilder-class-to-build-html-helpers-cs/_static/image1.png)
 
 **Figura 01**: Uso de la aplicación auxiliar de imagen ([haga clic aquí para ver imagen en tamaño completo](using-the-tagbuilder-class-to-build-html-helpers-cs/_static/image2.png))
 

@@ -12,7 +12,7 @@ ms.openlocfilehash: 3886d8b71f0bfef512e46cfb6c1accc711774d7b
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59419176"
 ---
 # <a name="masterpages"></a>MasterPages

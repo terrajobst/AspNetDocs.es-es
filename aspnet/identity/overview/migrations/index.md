@@ -13,7 +13,7 @@ ms.openlocfilehash: 725e66b6fc926d2466469f8455a3a0b949988dc4
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59416173"
 ---
 # <a name="migrating-to-aspnet-identity"></a>Migrar a ASP.NET Identity

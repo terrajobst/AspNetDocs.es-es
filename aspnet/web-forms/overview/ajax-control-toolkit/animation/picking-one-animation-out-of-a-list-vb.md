@@ -12,7 +12,7 @@ ms.openlocfilehash: 7d8807962e5cf668358e03821d5fd3bf755a0e7d
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59418890"
 ---
 # <a name="picking-one-animation-out-of-a-list-vb"></a>Seleccionar una animación de una lista (VB)
@@ -53,7 +53,7 @@ El marcado siguiente define las tres Subanimaciones: El ancho, el cambio de tama
 [!code-aspx[Main](picking-one-animation-out-of-a-list-vb/samples/sample5.aspx)]
 
 
-[![Ona de las animaciones de tres posibles: El panel obtiene más amplio](picking-one-animation-out-of-a-list-vb/_static/image2.png)](picking-one-animation-out-of-a-list-vb/_static/image1.png)
+[![Una de las animaciones de tres posibles: El panel obtiene más amplio](picking-one-animation-out-of-a-list-vb/_static/image2.png)](picking-one-animation-out-of-a-list-vb/_static/image1.png)
 
 Una de las animaciones de tres posibles: El panel obtiene más amplio ([haga clic aquí para ver imagen en tamaño completo](picking-one-animation-out-of-a-list-vb/_static/image3.png))
 

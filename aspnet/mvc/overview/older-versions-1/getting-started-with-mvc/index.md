@@ -12,7 +12,7 @@ ms.openlocfilehash: 08be9368049e97baecf9ae81e496950b1349d18f
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59414912"
 ---
 # <a name="getting-started-with-mvc"></a>Introducción a MVC

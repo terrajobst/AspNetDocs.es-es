@@ -12,7 +12,7 @@ ms.openlocfilehash: 61ae8f7cbf976dde326ebd51e4f7c97f600b6afd
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59419423"
 ---
 # <a name="login-controls"></a>Controles de inicio de sesión

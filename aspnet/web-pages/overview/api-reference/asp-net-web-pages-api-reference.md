@@ -12,7 +12,7 @@ ms.openlocfilehash: 547b1932c4f8d3684c668561e3fe568a0f272925
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59416511"
 ---
 # <a name="aspnet-web-pages-razor-api-quick-reference"></a>Referencia rápida de la API de (Razor) de ASP.NET Web Pages
@@ -37,7 +37,7 @@ por [Tom FitzMacken](https://github.com/tfitzmac)
 Esta página contiene información de referencia para lo siguiente:
 
 - [Clases](#Classes)
-- [Datos](#Data)
+- [Data](#Data)
 - [Aplicaciones auxiliares](#Helpers)
 - [Validación](#Validation)
 

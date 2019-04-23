@@ -12,7 +12,7 @@ ms.openlocfilehash: 7d300a1f29c7712408d17c6629da6cefb67b3cdb
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59410323"
 ---
 # <a name="how-do-i"></a>Cómo
@@ -36,7 +36,7 @@ ms.locfileid: "59410323"
 - [Implementar la reescritura de direcciones URL](how-do-i-implement-url-rewriting.md)
 - [Utilizar los adaptadores de controles descriptivos de CSS](how-do-i-utilize-the-css-friendly-control-adapters.md)
 - [Controlar eventos de aplicación mediante un HttpModule](how-do-i-handle-application-events-using-an-httpmodule.md)
-- [Usar hojas de estilos CSS para el diseño de página web](how-do-i-use-cascading-style-sheets-for-web-page-layout.md)
+- [Usar hojas de estilos en cascada para el diseño de página web](how-do-i-use-cascading-style-sheets-for-web-page-layout.md)
 - [Crear un proveedor de pertenencia personalizado](how-do-i-create-a-custom-membership-provider.md)
 - [Crear un proveedor de perfiles personalizado](how-do-i-create-a-custom-profile-provider.md)
 - [Implementar la navegación del sitio en ASP.NET](how-do-i-implement-site-navigation-in-aspnet.md)
@@ -110,8 +110,8 @@ ms.locfileid: "59410323"
 - [Crear un enfoque eficaz y estandarizado para implementar estilos CSS](how-do-i-create-an-efficient-and-standardized-approach-for-implementing-css-styles.md)
 - [¿Qué es ASP.NET?](what-is-asp-net.md)
 - [Elegir el modelo de programación correcto](choosing-the-right-programming-model.md)
-- [Crear su primera aplicación de ASP.NET con ASP.NET Web Forms](build-your-first-asp-net-application-with-asp-net-web-forms.md)
-- [Crear su primera aplicación de ASP.NET con ASP.NET MVC](build-your-first-asp-net-application-with-asp-net-mvc.md)
+- [Cree su primera aplicación de ASP.NET con ASP.NET Web Forms](build-your-first-asp-net-application-with-asp-net-web-forms.md)
+- [Cree su primera aplicación de ASP.NET con ASP.NET MVC](build-your-first-asp-net-application-with-asp-net-mvc.md)
 - [Aprendizaje óptimo de Formularios Web Forms de ASP.NET](how-to-best-learn-aspnet-web-forms.md)
 - [Introducción de 5 minutos a Formularios Web Forms de ASP.NET](5-minute-introduction-to-aspnet-web-forms.md)
 - [Instalar ASP.NET y las herramientas](how-to-install-asp-net-and-tools.md)

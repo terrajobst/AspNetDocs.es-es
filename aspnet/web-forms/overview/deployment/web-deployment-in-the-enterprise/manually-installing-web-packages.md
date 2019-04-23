@@ -12,7 +12,7 @@ ms.openlocfilehash: 9d0e57eb85242a0d6fa8ca9eef7f6c741862069d
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59408802"
 ---
 # <a name="manually-installing-web-packages"></a>Instalación manual de paquetes web

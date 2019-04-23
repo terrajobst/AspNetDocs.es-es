@@ -12,7 +12,7 @@ ms.openlocfilehash: 326abfe4fe86d0741b0bf807d5454d6cf87a7c12
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59411974"
 ---
 # <a name="enterprise-web-deployment-scenario-overview"></a>Implementación web de empresa: Información general del escenario

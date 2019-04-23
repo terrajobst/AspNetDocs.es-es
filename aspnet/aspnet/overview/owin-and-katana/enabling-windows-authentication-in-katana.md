@@ -12,7 +12,7 @@ ms.openlocfilehash: 6d90538ace07402b655b8cd1d9c6e4d5c6dff424
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59411207"
 ---
 # <a name="enabling-windows-authentication-in-katana"></a>Habilitar la autenticación de Windows en Katana
@@ -24,7 +24,7 @@ por [Mike Wasson](https://github.com/MikeWasson)
 
 Katana es la implementación de Microsoft [OWIN](http://owin.org/), la interfaz Web abierta para. NET. Puede leer una introducción a OWIN y Katana [aquí](an-overview-of-project-katana.md). La arquitectura OWIN consta de varios niveles:
 
-- Host: Administra el proceso en el que se ejecuta la canalización de OWIN.
+- Anfitrión: Administra el proceso en el que se ejecuta la canalización de OWIN.
 - Servidor: Se abre un socket de red y escucha las solicitudes.
 - Middleware: Procesa la solicitud y respuesta HTTP.
 

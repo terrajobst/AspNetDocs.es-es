@@ -12,7 +12,7 @@ ms.openlocfilehash: 7b7324c9e0518697c0978b96b0123cb44133722b
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59418942"
 ---
 # <a name="creating-custom-routes-c"></a>Crear rutas personalizadas (C#)
@@ -61,7 +61,7 @@ Tenga en cuenta que el método Entry() en el listado 2 acepta un parámetro de t
 **Figura 1: Error en la conversión de parámetro**
 
 
-[![Tel cuadro de diálogo nuevo proyecto](creating-custom-routes-cs/_static/image1.jpg)](creating-custom-routes-cs/_static/image1.png)
+[![El cuadro de diálogo nuevo proyecto](creating-custom-routes-cs/_static/image1.jpg)](creating-custom-routes-cs/_static/image1.png)
 
 **Figura 01**: Error en la conversión de parámetro ([haga clic aquí para ver imagen en tamaño completo](creating-custom-routes-cs/_static/image2.png))
 

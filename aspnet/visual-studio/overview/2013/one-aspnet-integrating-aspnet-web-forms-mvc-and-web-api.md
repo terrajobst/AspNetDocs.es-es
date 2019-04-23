@@ -12,7 +12,7 @@ ms.openlocfilehash: 1023d9bef311e58fb5fb0bb24cde80e8320e6bac
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59419059"
 ---
 # <a name="hands-on-lab-one-aspnet-integrating-aspnet-web-forms-mvc-and-web-api"></a>Laboratorio práctico: One ASP.NET: Integrar formularios Web Forms de ASP.NET, MVC y Web API
@@ -103,7 +103,7 @@ En esta tarea iniciará la creación de un nuevo sitio Web en Visual Studio seg�
 
     ![Crear un proyecto nuevo](one-aspnet-integrating-aspnet-web-forms-mvc-and-web-api/_static/image1.png)
 
-    *Crear un proyecto nuevo*
+    *Crear un nuevo proyecto*
 2. En el **nuevo proyecto** cuadro de diálogo, seleccione **aplicación Web ASP.NET** bajo el **Visual C# | Web** pestaña y asegúrese de que **.NET Framework 4.5** está seleccionada. Denomine el proyecto *MyHybridSite*, elija un **ubicación** y haga clic en **Aceptar**.
 
     ![Nuevo proyecto de aplicación Web ASP.NET](one-aspnet-integrating-aspnet-web-forms-mvc-and-web-api/_static/image2.png)
@@ -390,7 +390,7 @@ Cuando se crea una API Web, es útil crear una página de ayuda para que otros d
 
     ![Pestaña compilar](one-aspnet-integrating-aspnet-web-forms-mvc-and-web-api/_static/image32.png "sección compilación")
 
-    *Pestaña Compilar*
+    *Pestaña de la compilación*
 5. En **salida**, seleccione **archivo de documentación XML**. En el cuadro de edición, escriba **aplicación\_Data/XmlDocument.xml**.
 
     ![Salida de la sección en la pestaña compilación](one-aspnet-integrating-aspnet-web-forms-mvc-and-web-api/_static/image33.png "sección en la pestaña compilación de salida")

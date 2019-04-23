@@ -12,7 +12,7 @@ ms.openlocfilehash: 72ff6228e9a4983c701c101cf3ced7a816363017
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59415705"
 ---
 # <a name="interop-between-php-and-the-windows-platform"></a>Interoperabilidad entre PHP y la plataforma de Windows

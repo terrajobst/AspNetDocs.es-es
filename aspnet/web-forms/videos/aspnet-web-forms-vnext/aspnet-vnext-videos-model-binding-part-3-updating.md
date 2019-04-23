@@ -12,7 +12,7 @@ ms.openlocfilehash: 25638d7af7f8e97160a2394173c685539fde1c68
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59413417"
 ---
 # <a name="aspnet-vnext-videos-model-binding-part-3---updating"></a>Vídeos ASP.NET vNext: Enlace de modelos, parte 3: Actualizar

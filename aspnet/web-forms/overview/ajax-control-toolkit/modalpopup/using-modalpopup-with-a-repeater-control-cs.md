@@ -12,7 +12,7 @@ ms.openlocfilehash: 91758b7c329b78bcb3a3ab301650d6da6164d1a3
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59411194"
 ---
 # <a name="using-modalpopup-with-a-repeater-control-c"></a>Usar ModalPopup con un control Repeater (C#)
@@ -49,7 +49,7 @@ Con el fin de que el elemento emergente funcione del control Repeater, el `Modal
 A continuación, se muestra cada elemento del origen de datos con un botón junto a él que desencadena el elemento emergente modal.
 
 
-[![Telemento emergente modal de puede activarse para cada entrada del origen de datos](using-modalpopup-with-a-repeater-control-cs/_static/image2.png)](using-modalpopup-with-a-repeater-control-cs/_static/image1.png)
+[![El elemento emergente modal puede activarse para cada entrada del origen de datos](using-modalpopup-with-a-repeater-control-cs/_static/image2.png)](using-modalpopup-with-a-repeater-control-cs/_static/image1.png)
 
 El elemento emergente modal puede activarse para cada entrada del origen de datos ([haga clic aquí para ver imagen en tamaño completo](using-modalpopup-with-a-repeater-control-cs/_static/image3.png))
 

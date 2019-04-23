@@ -12,7 +12,7 @@ ms.openlocfilehash: 973878ef0afd62035b3fc840371e6c6223c8951c
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59413794"
 ---
 # <a name="iteration-3--add-form-validation-c"></a>Iteración #3: agregar una validación de formulario (C#)
@@ -51,7 +51,7 @@ Creamos la aplicación a través de varias iteraciones. Con cada iteración, mej
 En esta segunda iteración de la aplicación de Contact Manager, se agrega una validación de formulario básico. Evitamos personas desde el envío de un contacto sin escribir valores para los campos obligatorios. También hemos validar números de teléfono y direcciones de correo electrónico (consulte la figura 1).
 
 
-[![Tel cuadro de diálogo nuevo proyecto](iteration-3-add-form-validation-cs/_static/image1.jpg)](iteration-3-add-form-validation-cs/_static/image1.png)
+[![El cuadro de diálogo nuevo proyecto](iteration-3-add-form-validation-cs/_static/image1.jpg)](iteration-3-add-form-validation-cs/_static/image1.png)
 
 **Figura 01**: Un formulario con la validación ([haga clic aquí para ver imagen en tamaño completo](iteration-3-add-form-validation-cs/_static/image2.png))
 
@@ -66,7 +66,7 @@ En esta iteración, para simplificar las cosas, se escribe todo el código de va
 
 Permiten s empiece por agregar lógica de validación a la vista de creación. Afortunadamente, dado que se genera la vista de creación con Visual Studio, la vista de creación ya contiene toda la lógica de interfaz de usuario necesarios para mostrar mensajes de validación. La vista de creación se encuentra en el listado 1.
 
-**Listado 1 - \Views\Contact\Create.aspx**
+**Listing 1 - \Views\Contact\Create.aspx**
 
 [!code-aspx[Main](iteration-3-add-form-validation-cs/samples/sample1.aspx)]
 

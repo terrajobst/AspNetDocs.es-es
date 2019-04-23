@@ -12,7 +12,7 @@ ms.openlocfilehash: 8a7251971410ef2539e3957039de33af6e74371c
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59415458"
 ---
 # <a name="how-do-i"></a>¿Cómo...?
@@ -22,7 +22,7 @@ ms.locfileid: "59415458"
 
 - [Crear una página maestra en Visual Studio 2008](how-do-i-create-a-master-page-in-visual-studio-2008.md)
 - [Crear una página maestra anidada en Visual Studio 2008](how-do-i-create-nested-master-page-in-visual-studio-2008.md)
-- [Hojas de estilo CSS en Visual Studio 2008](how-do-i-cascading-style-sheets-in-visual-studio-2008.md)
+- [Hojas de estilos en cascada en Visual Studio 2008](how-do-i-cascading-style-sheets-in-visual-studio-2008.md)
 - [Trabajar con Visual Studio 2008 .NET Framework](how-do-i-working-with-visual-studio-2008-net-framework.md)
 - [Agregar elementos a un archivo CSS y crear CSS sobre la marcha](how-do-i-adding-elements-to-a-css-file-and-create-new-css-on-the-fly.md)
 - [Administración y características avanzadas de las hojas de estilos en cascada](how-do-i-advance-cascading-style-sheet-features-and-management.md)

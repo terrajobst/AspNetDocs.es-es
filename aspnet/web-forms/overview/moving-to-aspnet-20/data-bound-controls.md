@@ -12,7 +12,7 @@ ms.openlocfilehash: 016dfa2a5a5fb9aaed0e1c60194e53ac9ccb8b36
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59419592"
 ---
 # <a name="data-bound-controls"></a>Controles enlazados a datos
@@ -195,7 +195,7 @@ Puede personalizar la apariencia del control GridView estableciendo las propieda
 
 También puede mostrar u ocultar diferentes partes del control. En la tabla siguiente se enumera las propiedades que controlan qué partes se mostrarse u ocultas.
 
-| **Propiedad** | **Descripción** |
+| **Property** | **Descripción** |
 | --- | --- |
 | ShowFooter | Muestra u oculta la sección de pie de página del control GridView. |
 | ShowHeader | Muestra u oculta la sección de encabezado del control GridView. |
@@ -204,7 +204,7 @@ También puede mostrar u ocultar diferentes partes del control. En la tabla sigu
 
 El control GridView proporciona varios eventos que se pueden programar. Esto le permite ejecutar una rutina personalizada siempre que se produce un evento. En la tabla siguiente se enumera los eventos admitidos por el control GridView.
 
-| **evento** | **Descripción** |
+| **Event** | **Descripción** |
 | --- | --- |
 | PageIndexChanged | Se produce cuando se hace clic en uno de los botones de paginación, pero después de que el control GridView controla la operación de paginación. Este evento suele utilizarse cuando deba realizar una tarea una vez que el usuario navega a otra página en el control. |
 | PageIndexChanging | Se produce cuando se hace clic en uno de los botones de paginación, pero antes de GridView control administra la operación de paginación. Este evento se utiliza a menudo para cancelar la operación de paginación. |
@@ -262,7 +262,7 @@ El control FormView proporciona muchas funciones integradas que permiten al usua
 
 Dado que el control FormView utiliza plantillas, no proporciona una manera de generar automáticamente los botones de comando para llevar a cabo la actualización, eliminación o las operaciones de inserción. Debe incluir manualmente estos botones de comando en la plantilla adecuada. El control FormView reconoce ciertos botones que tienen sus **CommandName** propiedades establecidas en valores específicos. En la tabla siguiente se enumera los botones de comando que reconozca el control FormView.
 
-| **Botón** | **Valor de CommandName** | **Descripción** |
+| **Button** | **Valor de CommandName** | **Descripción** |
 | --- | --- | --- |
 | Cancelar | La opción "Cancelar" | Utilizado para actualizar o las operaciones de inserción para cancelar la operación y descartar los valores especificados por el usuario. A continuación, devuelve el control FormView para el modo especificado por la propiedad DefaultMode. |
 | Eliminar | “Eliminar” | Se usa en las operaciones de eliminación para eliminar el registro mostrado del origen de datos. Provoca los eventos ItemDeleting y ItemDeleted. |
@@ -296,7 +296,7 @@ Puede personalizar la apariencia del control FormView estableciendo las propieda
 
 El control FormView proporciona varios eventos que se pueden programar. Esto le permite ejecutar una rutina personalizada siempre que se produce un evento. En la tabla siguiente se enumera los eventos admitidos por el control FormView.
 
-| **evento** | **Descripción** |
+| **Event** | **Descripción** |
 | --- | --- |
 | ItemCommand | Se produce cuando se hace clic en un botón dentro de un control FormView. Este evento se usa a menudo para realizar una tarea cuando se hace clic en un botón en el control. |
 | ItemCreated | Se produce después de que todos los objetos FormViewRow se crean en el control FormView. Este evento se usa a menudo para modificar los valores de un registro antes de que se muestre. |
@@ -388,7 +388,7 @@ Puede personalizar la apariencia del control DetailsView estableciendo las propi
 
 El control DetailsView proporciona varios eventos que se pueden programar. Esto le permite ejecutar una rutina personalizada siempre que se produce un evento. En la tabla siguiente se enumera los eventos admitidos por el control DetailsView. El control DetailsView también hereda estos eventos de sus clases base: Enlace de datos, enlace de datos, eliminadas, Init, carga, PreRender y representación.
 
-| **evento** | **Descripción** |
+| **Event** | **Descripción** |
 | --- | --- |
 | ItemCommand | Se produce cuando se hace clic en un botón en el control DetailsView. |
 | ItemCreated | Se produce después de que todos los objetos DetailsViewRow se crean en el control DetailsView. Este evento se usa a menudo para modificar los valores de un registro antes de que se muestre. |
@@ -587,7 +587,7 @@ Un control SiteMapPath se compone de objetos SiteMapNodeItem. Hay tres tipos de 
 
 Las propiedades que controlan el funcionamiento del control SiteMapPath son como sigue:
 
-| **Propiedad** | **Descripción de propiedad** |
+| **Property** | **Descripción de propiedad** |
 | --- | --- |
 | ParentLevelsDisplayed | Controla cuántos nodos primarios se muestran. El valor predeterminado es -1 que no se impone ninguna restricción sobre el número de nodos primarios mostrados. |
 | PathDirection | Controla la dirección de SiteMapPath. Los valores válidos son RootToCurrent (valor predeterminado) y CurrentToRoot. |

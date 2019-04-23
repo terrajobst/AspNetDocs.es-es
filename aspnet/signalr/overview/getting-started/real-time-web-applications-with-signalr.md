@@ -12,7 +12,7 @@ ms.openlocfilehash: 9904582450d4386ef8b8656078f6d40dbd1e10be
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59412013"
 ---
 # <a name="hands-on-lab-real-time-web-applications-with-signalr"></a>Laboratorio práctico: Aplicaciones web en tiempo real con SignalR

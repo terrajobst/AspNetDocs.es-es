@@ -12,7 +12,7 @@ ms.openlocfilehash: 988aa9252cfd93067888734006e6003347f1fb5e
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59414756"
 ---
 # <a name="drag-and-drop-via-reorderlist-c"></a>Arrastrar y colocar mediante ReorderList (C#)
@@ -39,12 +39,12 @@ La manera más fácil de configurar la base de datos es usar Microsoft SQL Serve
 En esta base de datos, cree una nueva tabla denominada `AJAX` con las cuatro columnas siguientes:
 
 - `id` (entero de clave, principal, identidad, no es NULL)
-- `char` (char(1), NULL)
+- `char` (char (1), NULL)
 - `description` (varchar(50), NULL)
 - `position` (int, NULL)
 
 
-[![Tdiseño de de la tabla de AJAX](drag-and-drop-via-reorderlist-cs/_static/image2.png)](drag-and-drop-via-reorderlist-cs/_static/image1.png)
+[![El diseño de la tabla de AJAX](drag-and-drop-via-reorderlist-cs/_static/image2.png)](drag-and-drop-via-reorderlist-cs/_static/image1.png)
 
 El diseño de la tabla de AJAX ([haga clic aquí para ver imagen en tamaño completo](drag-and-drop-via-reorderlist-cs/_static/image3.png))
 
@@ -52,7 +52,7 @@ El diseño de la tabla de AJAX ([haga clic aquí para ver imagen en tamaño comp
 A continuación, rellene la tabla con un par de valores. Tenga en cuenta que la `position` columna contiene el criterio de ordenación de los elementos.
 
 
-[![Tdatos iniciales de en la tabla de AJAX](drag-and-drop-via-reorderlist-cs/_static/image5.png)](drag-and-drop-via-reorderlist-cs/_static/image4.png)
+[![Los datos iniciales en la tabla de AJAX](drag-and-drop-via-reorderlist-cs/_static/image5.png)](drag-and-drop-via-reorderlist-cs/_static/image4.png)
 
 Los datos iniciales en la tabla de AJAX ([haga clic aquí para ver imagen en tamaño completo](drag-and-drop-via-reorderlist-cs/_static/image6.png))
 
@@ -83,7 +83,7 @@ Por último, un `ScriptManager` control inicializa AJAX de ASP.NET para la pági
 Ejecutar este ejemplo en el explorador y reorganizar los elementos de lista un poco. A continuación, vuelva a cargar la página o eche un vistazo a la base de datos. Las posiciones modificadas se haya mantenido y también se reflejan en los valores de la `position` columna en la base de datos y todo ello sin ningún código, simplemente mediante el uso de marcado.
 
 
-[![Tque cambian datos de la base de datos según el orden de elemento de lista nuevo](drag-and-drop-via-reorderlist-cs/_static/image8.png)](drag-and-drop-via-reorderlist-cs/_static/image7.png)
+[![Los datos de los cambios de la base de datos según el orden de elemento de lista nuevo](drag-and-drop-via-reorderlist-cs/_static/image8.png)](drag-and-drop-via-reorderlist-cs/_static/image7.png)
 
 Elemento de datos en la base de datos cambia según la nueva lista de orden ([haga clic aquí para ver imagen en tamaño completo](drag-and-drop-via-reorderlist-cs/_static/image9.png))
 

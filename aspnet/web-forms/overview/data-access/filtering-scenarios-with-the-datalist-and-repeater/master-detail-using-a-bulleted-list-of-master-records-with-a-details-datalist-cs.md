@@ -12,7 +12,7 @@ ms.openlocfilehash: d5c881592140bdf73f25fa620d58213cc283153d
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59412039"
 ---
 # <a name="masterdetail-using-a-bulleted-list-of-master-records-with-a-details-datalist-c"></a>Maestro y detalles mediante una lista con viñetas de registros maestros con un control DataList de detalles (C#)
@@ -31,7 +31,7 @@ En el [tutorial anterior](master-detail-filtering-acess-two-pages-datalist-cs.md
 En este tutorial se comprimirán el tutorial de dos páginas en una sola página, que muestra una lista con viñetas de nombres de categoría en el lado izquierdo de la pantalla con cada nombre de categoría que se representa como un control LinkButton. Al hacer clic en uno de los nombres de categoría LinkButtons induce una devolución de datos y los productos de s de la categoría seleccionada se enlaza a un control DataList de dos columnas de la derecha de la pantalla. Además de mostrar cada nombre de categoría s, el control Repeater a la izquierda muestra cuántos productos total hay son para una categoría determinada (consulte la figura 1).
 
 
-[![Tél s nombre de categoría y Total de número de productos se muestran en la parte izquierda](master-detail-using-a-bulleted-list-of-master-records-with-a-details-datalist-cs/_static/image2.png)](master-detail-using-a-bulleted-list-of-master-records-with-a-details-datalist-cs/_static/image1.png)
+[![La s nombre de categoría y el número Total de productos se muestran a la izquierda](master-detail-using-a-bulleted-list-of-master-records-with-a-details-datalist-cs/_static/image2.png)](master-detail-using-a-bulleted-list-of-master-records-with-a-details-datalist-cs/_static/image1.png)
 
 **Figura 1**: La s nombre de categoría y el número Total de productos se muestran a la izquierda ([haga clic aquí para ver imagen en tamaño completo](master-detail-using-a-bulleted-list-of-master-records-with-a-details-datalist-cs/_static/image3.png))
 
@@ -62,7 +62,7 @@ A continuación, podemos reemplazar el `<div>` con `<div class="FloatLeft">`.
 Después de agregar la clase CSS y configurar el marcado en el `CategoriesAndProducts.aspx` página, vaya al diseñador. Debería ver el control Repeater flotante a la izquierda del control DataList (aunque derecha ambos solo aparecen ahora como candados desde que se ve aún para configurar sus orígenes de datos o plantillas).
 
 
-[![Tél Repeater flota hacia la izquierda del control DataList](master-detail-using-a-bulleted-list-of-master-records-with-a-details-datalist-cs/_static/image5.png)](master-detail-using-a-bulleted-list-of-master-records-with-a-details-datalist-cs/_static/image4.png)
+[![El control Repeater flota hacia la izquierda del control DataList](master-detail-using-a-bulleted-list-of-master-records-with-a-details-datalist-cs/_static/image5.png)](master-detail-using-a-bulleted-list-of-master-records-with-a-details-datalist-cs/_static/image4.png)
 
 **Figura 2**: El control Repeater flota hacia la izquierda del control DataList ([haga clic aquí para ver imagen en tamaño completo](master-detail-using-a-bulleted-list-of-master-records-with-a-details-datalist-cs/_static/image6.png))
 
@@ -81,7 +81,7 @@ Permiten s explorar ambas técnicas. El primer enfoque es más fácil de impleme
 Determinar el número de productos de cada categoría en el control Repeater s `ItemDataBound` controlador de eventos no requiere ninguna modificación en la capa de acceso a datos existentes. Se pueden realizar todas las modificaciones directamente en el `CategoriesAndProducts.aspx` página. Empiece agregando un nuevo origen ObjectDataSource denominado `CategoriesDataSource` a través de la etiqueta inteligente del control Repeater s. A continuación, configure el `CategoriesDataSource` ObjectDataSource, por lo que TI recupera sus datos desde el `CategoriesBLL` clase s `GetCategories()` método.
 
 
-[![Cconfigurar el origen ObjectDataSource para usar la clase CategoriesBLL s GetCategories() método](master-detail-using-a-bulleted-list-of-master-records-with-a-details-datalist-cs/_static/image8.png)](master-detail-using-a-bulleted-list-of-master-records-with-a-details-datalist-cs/_static/image7.png)
+[![Configurar el origen ObjectDataSource para usar la clase CategoriesBLL s GetCategories() (método)](master-detail-using-a-bulleted-list-of-master-records-with-a-details-datalist-cs/_static/image8.png)](master-detail-using-a-bulleted-list-of-master-records-with-a-details-datalist-cs/_static/image7.png)
 
 **Figura 3**: Configurar el origen ObjectDataSource que se usarán el `CategoriesBLL` clase s `GetCategories()` método ([haga clic aquí para ver imagen en tamaño completo](master-detail-using-a-bulleted-list-of-master-records-with-a-details-datalist-cs/_static/image9.png))
 
@@ -122,7 +122,7 @@ Empezamos por lo que garantiza que se está trabajando con un elemento de datos 
 Después de agregar este controlador de eventos, dedique un momento para probar la página a través de un explorador. Tenga en cuenta cómo cada categoría aparece en una lista con viñetas, mostrar el nombre de categoría s y el número de productos asociados con la categoría (consulte la figura 4).
 
 
-[![EACH s nombre de categoría y el número de productos se muestran](master-detail-using-a-bulleted-list-of-master-records-with-a-details-datalist-cs/_static/image11.png)](master-detail-using-a-bulleted-list-of-master-records-with-a-details-datalist-cs/_static/image10.png)
+[![Se muestran cada s nombre de categoría y el número de productos](master-detail-using-a-bulleted-list-of-master-records-with-a-details-datalist-cs/_static/image11.png)](master-detail-using-a-bulleted-list-of-master-records-with-a-details-datalist-cs/_static/image10.png)
 
 **Figura 4**: Se muestran cada s nombre de categoría y el número de productos ([haga clic aquí para ver imagen en tamaño completo](master-detail-using-a-bulleted-list-of-master-records-with-a-details-datalist-cs/_static/image12.png))
 
@@ -132,7 +132,7 @@ Después de agregar este controlador de eventos, dedique un momento para probar 
 En lugar de determinar el número de productos de cada categoría tal y como s enlazado a Repeater, podemos simplificar el proceso ajustando el `CategoriesDataTable` y `CategoriesTableAdapter` en la capa de acceso a datos para incluir esta información de forma nativa. Para lograr esto, debemos agregar una nueva columna a `CategoriesDataTable` para contener el número de productos asociados. Para agregar una nueva columna a un objeto DataTable, abra el conjunto de datos con tipo (`App_Code\DAL\Northwind.xsd`), haga doble clic en la DataTable para modificar y elija Agregar o columna. Agregar una nueva columna a la `CategoriesDataTable` (consulte la figura 5).
 
 
-[![Auna nueva columna a la CategoriesDataSource dd](master-detail-using-a-bulleted-list-of-master-records-with-a-details-datalist-cs/_static/image14.png)](master-detail-using-a-bulleted-list-of-master-records-with-a-details-datalist-cs/_static/image13.png)
+[![Agregar una nueva columna a la CategoriesDataSource](master-detail-using-a-bulleted-list-of-master-records-with-a-details-datalist-cs/_static/image14.png)](master-detail-using-a-bulleted-list-of-master-records-with-a-details-datalist-cs/_static/image13.png)
 
 **Figura 5**: Agregar una nueva columna a la `CategoriesDataSource` ([haga clic aquí para ver imagen en tamaño completo](master-detail-using-a-bulleted-list-of-master-records-with-a-details-datalist-cs/_static/image15.png))
 
@@ -155,7 +155,7 @@ Para agregar este nuevo `GetCategoriesAndNumberOfProducts()` método, el botón 
 **Figura 7**: Crear el método mediante una instrucción de SQL Ad Hoc ([haga clic aquí para ver imagen en tamaño completo](master-detail-using-a-bulleted-list-of-master-records-with-a-details-datalist-cs/_static/image19.png))
 
 
-[![Tque devuelve filas del informe de SQL](master-detail-using-a-bulleted-list-of-master-records-with-a-details-datalist-cs/_static/image21.png)](master-detail-using-a-bulleted-list-of-master-records-with-a-details-datalist-cs/_static/image20.png)
+[![La instrucción SQL devuelve filas](master-detail-using-a-bulleted-list-of-master-records-with-a-details-datalist-cs/_static/image21.png)](master-detail-using-a-bulleted-list-of-master-records-with-a-details-datalist-cs/_static/image20.png)
 
 **Figura 8**: La instrucción SQL devuelve las filas ([haga clic aquí para ver imagen en tamaño completo](master-detail-using-a-bulleted-list-of-master-records-with-a-details-datalist-cs/_static/image22.png))
 
@@ -166,7 +166,7 @@ La siguiente pantalla del asistente pide us para la consulta que se utilizará. 
 [!code-sql[Main](master-detail-using-a-bulleted-list-of-master-records-with-a-details-datalist-cs/samples/sample7.sql)]
 
 
-[![SEspecifique la consulta que se usarán](master-detail-using-a-bulleted-list-of-master-records-with-a-details-datalist-cs/_static/image24.png)](master-detail-using-a-bulleted-list-of-master-records-with-a-details-datalist-cs/_static/image23.png)
+[![Especifique la consulta que Use](master-detail-using-a-bulleted-list-of-master-records-with-a-details-datalist-cs/_static/image24.png)](master-detail-using-a-bulleted-list-of-master-records-with-a-details-datalist-cs/_static/image23.png)
 
 **Figura 9**: Especifique la consulta que Use ([haga clic aquí para ver imagen en tamaño completo](master-detail-using-a-bulleted-list-of-master-records-with-a-details-datalist-cs/_static/image25.png))
 
@@ -176,7 +176,7 @@ Tenga en cuenta que la subconsulta que calcula el número de productos asociados
 Después de escribir esta consulta, el último paso es elegir el nombre para el nuevo método. Use `FillWithNumberOfProducts` y `GetCategoriesAndNumberOfProducts` para rellenar una DataTable y devuelven un objeto DataTable patrones, respectivamente.
 
 
-[![Nla s nuevo TableAdapter métodos FillWithNumberOfProducts ombre y GetCategoriesAndNumberOfProducts](master-detail-using-a-bulleted-list-of-master-records-with-a-details-datalist-cs/_static/image27.png)](master-detail-using-a-bulleted-list-of-master-records-with-a-details-datalist-cs/_static/image26.png)
+[![Nombre de la nueva FillWithNumberOfProducts de métodos de TableAdapter s y GetCategoriesAndNumberOfProducts](master-detail-using-a-bulleted-list-of-master-records-with-a-details-datalist-cs/_static/image27.png)](master-detail-using-a-bulleted-list-of-master-records-with-a-details-datalist-cs/_static/image26.png)
 
 **Figura 10**: Nombre de los métodos de nuevo TableAdapter s `FillWithNumberOfProducts` y `GetCategoriesAndNumberOfProducts` ([haga clic aquí para ver imagen en tamaño completo](master-detail-using-a-bulleted-list-of-master-records-with-a-details-datalist-cs/_static/image28.png))
 
@@ -191,7 +191,7 @@ Con DAL y BLL completa, hemos re está listo para enlazar estos datos para el `C
 Con el control Repeater en su estado original, agregue un nuevo origen ObjectDataSource denominado `CategoriesDataSource` a través de la etiqueta inteligente del control Repeater s. Configurar el origen ObjectDataSource para usar el `CategoriesBLL` (clase), pero en lugar de tener usar el `GetCategories()` método, haya que usar `GetCategoriesAndNumberOfProducts()` en su lugar (consulte la figura 11).
 
 
-[![Cconfigurar el origen ObjectDataSource para usar el método GetCategoriesAndNumberOfProducts](master-detail-using-a-bulleted-list-of-master-records-with-a-details-datalist-cs/_static/image30.png)](master-detail-using-a-bulleted-list-of-master-records-with-a-details-datalist-cs/_static/image29.png)
+[![Configurar el origen ObjectDataSource para usar el método GetCategoriesAndNumberOfProducts](master-detail-using-a-bulleted-list-of-master-records-with-a-details-datalist-cs/_static/image30.png)](master-detail-using-a-bulleted-list-of-master-records-with-a-details-datalist-cs/_static/image29.png)
 
 **Figura 11**: Configurar el origen ObjectDataSource que se usarán el `GetCategoriesAndNumberOfProducts` método ([haga clic aquí para ver imagen en tamaño completo](master-detail-using-a-bulleted-list-of-master-records-with-a-details-datalist-cs/_static/image31.png))
 
@@ -218,7 +218,7 @@ Antes de que preocuparse por la falta de un `SelectedValue` para el control Repe
 En la etiqueta inteligente de DataList s, optar por agregar un nuevo origen ObjectDataSource denominado `CategoryProductsDataSource` y configúrelo para utilizar el `ProductsBLL` clase s `GetProductsByCategoryID(categoryID)` método. Puesto que el control DataList en este tutorial ofrece una interfaz de solo lectura, no dude en establecer las listas desplegables en la instrucción INSERT, UPDATE y eliminar las pestañas en (None).
 
 
-[![Configurar ObjectDataSource para uso ProductsBLL clase s GetProductsByCategoryID(categoryID) método](master-detail-using-a-bulleted-list-of-master-records-with-a-details-datalist-cs/_static/image33.png)](master-detail-using-a-bulleted-list-of-master-records-with-a-details-datalist-cs/_static/image32.png)
+[![Configurar el origen ObjectDataSource para usar el método de clase ProductsBLL s GetProductsByCategoryID(categoryID)](master-detail-using-a-bulleted-list-of-master-records-with-a-details-datalist-cs/_static/image33.png)](master-detail-using-a-bulleted-list-of-master-records-with-a-details-datalist-cs/_static/image32.png)
 
 **Figura 12**: Configurar el origen ObjectDataSource para uso `ProductsBLL` clase s `GetProductsByCategoryID(categoryID)` método ([haga clic aquí para ver imagen en tamaño completo](master-detail-using-a-bulleted-list-of-master-records-with-a-details-datalist-cs/_static/image34.png))
 
@@ -228,7 +228,7 @@ Puesto que la `GetProductsByCategoryID(categoryID)` método espera un parámetro
 Por ahora, establezca la lista desplegable de origen de parámetro en ninguno. Terminará asignar mediante programación el valor de este parámetro cuando una categoría que se hace clic en LinkButton en el control Repeater.
 
 
-[![Do no especificar un origen de parámetro para el parámetro categoryID](master-detail-using-a-bulleted-list-of-master-records-with-a-details-datalist-cs/_static/image36.png)](master-detail-using-a-bulleted-list-of-master-records-with-a-details-datalist-cs/_static/image35.png)
+[![Hacer no especificar un origen de los parámetros para el parámetro categoryID](master-detail-using-a-bulleted-list-of-master-records-with-a-details-datalist-cs/_static/image36.png)](master-detail-using-a-bulleted-list-of-master-records-with-a-details-datalist-cs/_static/image35.png)
 
 **Figura 13**: Hacer no especificar un origen de los parámetros para el *`categoryID`* parámetro ([haga clic aquí para ver imagen en tamaño completo](master-detail-using-a-bulleted-list-of-master-records-with-a-details-datalist-cs/_static/image37.png))
 
@@ -263,12 +263,12 @@ Después de asegurarse de que en el pasado `CommandName` valor es igual a ListPr
 Con estas incorporaciones, nuestro tutorial es completa. Dedique un momento para comenzar a probarlo en un explorador. Figura 14 se muestra la pantalla cuando se visita primero la página. Puesto que todavía debe seleccionarse una categoría, no hay productos se muestran. Al hacer clic en una categoría, como generar, muestra los productos en la categoría de producto en una vista en dos columnas (consulte la figura 15).
 
 
-[![Nlos productos o están muestra al primer visitar la página](master-detail-using-a-bulleted-list-of-master-records-with-a-details-datalist-cs/_static/image39.png)](master-detail-using-a-bulleted-list-of-master-records-with-a-details-datalist-cs/_static/image38.png)
+[![No hay productos son muestra al primer visitar la página](master-detail-using-a-bulleted-list-of-master-records-with-a-details-datalist-cs/_static/image39.png)](master-detail-using-a-bulleted-list-of-master-records-with-a-details-datalist-cs/_static/image38.png)
 
 **Figura 14**: No hay productos son muestra al primer visitar la página ([haga clic aquí para ver imagen en tamaño completo](master-detail-using-a-bulleted-list-of-master-records-with-a-details-datalist-cs/_static/image40.png))
 
 
-[![Celectrónicamente con las listas de categoría de producir los productos coincidentes a la derecha](master-detail-using-a-bulleted-list-of-master-records-with-a-details-datalist-cs/_static/image42.png)](master-detail-using-a-bulleted-list-of-master-records-with-a-details-datalist-cs/_static/image41.png)
+[![Al hacer clic en las listas de categoría de producir los productos correspondientes a la derecha](master-detail-using-a-bulleted-list-of-master-records-with-a-details-datalist-cs/_static/image42.png)](master-detail-using-a-bulleted-list-of-master-records-with-a-details-datalist-cs/_static/image41.png)
 
 **Figura 15**: Al hacer clic en la categoría de productos se enumeran los productos coincidentes a la derecha ([haga clic aquí para ver imagen en tamaño completo](master-detail-using-a-bulleted-list-of-master-records-with-a-details-datalist-cs/_static/image43.png))
 

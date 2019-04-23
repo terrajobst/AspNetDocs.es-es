@@ -12,7 +12,7 @@ ms.openlocfilehash: e4b8f059974dec33d6305e7b84919550713bf4e4
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59409894"
 ---
 # <a name="aspnet-error-handling"></a>Control de errores de ASP.NET
@@ -332,7 +332,7 @@ Más información sobre cómo implementar la aplicación web en Microsoft Azure,
 
 Gustaría agradecer a las siguientes personas que realizan aportaciones significativas al contenido de esta serie de tutoriales:
 
-- [Alberto Poblacion, MVP &amp; MCT, España](https://mvp.microsoft.com/mvp/Alberto%20Poblacion%20Bolano-36772)
+- [Alberto Poblacion, MVP &amp; MCT, Spain](https://mvp.microsoft.com/mvp/Alberto%20Poblacion%20Bolano-36772)
 - [Alex Thissen, países bajos](http://blog.alexthissen.nl/) (twitter: [ @alexthissen ](http://twitter.com/alexthissen))
 - [Andre Tournier, Estados Unidos](http://andret503.wordpress.com/)
 - Apurva Joshi, Microsoft

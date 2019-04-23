@@ -12,7 +12,7 @@ ms.openlocfilehash: 52b1aec577634dfb9fec7753e4f9b8bf46d159f0
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59416265"
 ---
 # <a name="logging-error-details-with-aspnet-health-monitoring-c"></a>Registrar detalles de error con Supervisión de estado de ASP.NET (C#)
@@ -147,8 +147,8 @@ Para obtener más información sobre los temas tratados en este tutorial, consul
 - [Información general de supervisión de estado de ASP.NET](https://msdn.microsoft.com/library/bb398933.aspx)
 - [Configurar y personalizar el sistema de ASP.NET de supervisión de estado](http://dotnetslackers.com/articles/aspnet/ConfiguringAndCustomizingTheHealthMonitoringSystemOfASPNET.aspx)
 - [Preguntas más frecuentes: supervisión del estado en ASP.NET 2.0](https://blogs.msdn.com/erikreitan/archive/2006/05/22/603586.aspx)
-- [Cómo Enviar correo electrónico para notificaciones de supervisión de estado](https://msdn.microsoft.com/library/ms227553.aspx)
-- [Cómo Utilice la supervisión del estado en ASP.NET](https://msdn.microsoft.com/library/ms998306.aspx)
+- [Cómo: Enviar correo electrónico para notificaciones de supervisión de estado](https://msdn.microsoft.com/library/ms227553.aspx)
+- [Cómo: Utilice la supervisión del estado en ASP.NET](https://msdn.microsoft.com/library/ms998306.aspx)
 - [Supervisión del estado en ASP.NET](http://aspnet.4guysfromrolla.com/articles/031407-1.aspx)
 
 > [!div class="step-by-step"]

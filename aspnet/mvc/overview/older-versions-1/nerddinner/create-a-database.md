@@ -12,7 +12,7 @@ ms.openlocfilehash: 6299e5d306ce59687d91658e36685cc6b3255269
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59415068"
 ---
 # <a name="create-a-database"></a>Crear una base de datos

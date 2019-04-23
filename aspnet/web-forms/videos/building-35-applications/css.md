@@ -12,7 +12,7 @@ ms.openlocfilehash: 04cea82af810f08e1d425fcbf3d3c2639fbc3775
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59412052"
 ---
 # <a name="css"></a>CSS

@@ -12,7 +12,7 @@ ms.openlocfilehash: 1b6675a933f04b3eb7f5111b2ccd16c44baab7ba
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59414353"
 ---
 # <a name="security-basics-and-aspnet-support-vb"></a>Conceptos básicos de seguridad y compatibilidad de ASP.NET (VB)
@@ -139,7 +139,7 @@ Microsoft incluye dos clases de proveedor de pertenencia en .NET Framework:
 Esta serie de tutoriales se centra exclusivamente en SqlMembershipProvider.
 
 
-[![Tél proveedor modelo permite implementaciones diferentes siendo perfectamente conectado en el marco de trabajo](security-basics-and-asp-net-support-vb/_static/image4.png)](security-basics-and-asp-net-support-vb/_static/image3.png)
+[![El modelo permite que diferentes implementaciones del proveedor siendo perfectamente conectado en el marco de trabajo](security-basics-and-asp-net-support-vb/_static/image4.png)](security-basics-and-asp-net-support-vb/_static/image3.png)
 
 **Figura 03**: El modelo permite que diferentes implementaciones del proveedor siendo perfectamente conectado en el marco de trabajo ([haga clic aquí para ver imagen en tamaño completo](security-basics-and-asp-net-support-vb/_static/image5.png))
 

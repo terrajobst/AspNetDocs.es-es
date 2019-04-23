@@ -12,7 +12,7 @@ ms.openlocfilehash: 8c6512cebfb141dbf2f4c19e614aac99ccd41dac
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59413703"
 ---
 # <a name="how-do-i-configure-email-notification-for-health-monitoring-on-an-aspnet-web-site"></a>[¿Cómo lo hago?:] Configurar notificación por correo electrónico para el estado de supervisión en un sitio Web ASP.NET

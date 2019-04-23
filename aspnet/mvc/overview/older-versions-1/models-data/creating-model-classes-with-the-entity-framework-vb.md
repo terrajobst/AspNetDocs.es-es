@@ -12,7 +12,7 @@ ms.openlocfilehash: b3c6726c2d08e2e6ac37501f2ab455e427df82bb
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59414062"
 ---
 # <a name="creating-model-classes-with-the-entity-framework-vb"></a>Crear clases de modelo con Entity Framework (VB)
@@ -116,7 +116,7 @@ No modifique el código en el archivo Designer.vb, puesto que los cambios se sob
 
 Vamos a empezar a crear nuestra aplicación de base de datos de películas mediante la creación de una página que muestra una lista de registros de películas. El controlador Home en el listado 1 expone una acción denominada Index(). La acción de Index() devuelve todos los registros de la película de la tabla de base de datos de película aprovechando las ventajas de Entity Framework.
 
-**Listado 1 – Controllers\HomeController.vb**
+**Listing 1 – Controllers\HomeController.vb**
 
 [!code-vb[Main](creating-model-classes-with-the-entity-framework-vb/samples/sample1.vb)]
 
@@ -132,7 +132,7 @@ Usar cualquier sintaxis LINQ, sintaxis de método o sintaxis de consulta, que en
 
 La vista en el listado 2 se usa para mostrar los registros de la película.
 
-**Listado 2 – Views\Home\Index.aspx**
+**Listing 2 – Views\Home\Index.aspx**
 
 [!code-aspx[Main](creating-model-classes-with-the-entity-framework-vb/samples/sample3.aspx)]
 

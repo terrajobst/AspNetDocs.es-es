@@ -12,7 +12,7 @@ ms.openlocfilehash: 8b0998a328f851ffccad7c4065f6a5eba9660427
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59410128"
 ---
 # <a name="visual-studio-2012-css-editor"></a>Editor CSS de Visual Studio 2012

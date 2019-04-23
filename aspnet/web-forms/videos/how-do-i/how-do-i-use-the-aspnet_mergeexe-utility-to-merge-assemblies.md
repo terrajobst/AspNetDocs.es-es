@@ -12,7 +12,7 @@ ms.openlocfilehash: 7e768c508441bc08ff53c04e3d9982179fdfc88f
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59410388"
 ---
 # <a name="how-do-i-use-the-aspnetmergeexe-utility-to-merge-assemblies"></a>[¿Cómo lo hago?:] Use la utilidad aspnet_merge.exe para combinar ensamblados

@@ -13,7 +13,7 @@ ms.openlocfilehash: a9e7ed63a55c146976e0221214e722f3a2292fee
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59408282"
 ---
 # <a name="json-and-xml-serialization-in-aspnet-web-api"></a>Serialización JSON y XML en ASP.NET Web API

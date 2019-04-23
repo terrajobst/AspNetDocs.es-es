@@ -12,7 +12,7 @@ ms.openlocfilehash: 5415913626eb063a4cb1013ba03857c130487f42
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59412182"
 ---
 # <a name="introducing-aspnet-web-pages---displaying-data"></a>Introducción a las páginas Web ASP.NET - mostrar datos
@@ -62,7 +62,7 @@ Gran parte del trabajo que hacer en las aplicaciones web consta de al leer infor
 
 Trabajo de base de datos puede ser extremadamente complejo y puede requerir conocimientos especializados. Sin embargo, para esta serie de tutoriales, tiene que conocer solo de los conceptos básicos, que todo se explicará a medida que avance.
 
-## <a name="creating-a-database"></a>Creación de una base de datos
+## <a name="creating-a-database"></a>Crear una base de datos
 
 WebMatrix incluye herramientas que facilitan la creación de una base de datos y crear tablas en la base de datos. (La estructura de una base de datos se conoce como la base de datos *esquema*.) Para este conjunto del tutorial, creará una base de datos que contiene solo una tabla de &mdash; películas.
 
@@ -333,7 +333,7 @@ En el siguiente tutorial, obtendrá información sobre cómo usar código de Raz
 
 ## <a name="additional-resources"></a>Recursos adicionales
 
-- [Introducción a la programación web de ASP.NET usando la sintaxis Razor](https://go.microsoft.com/fwlink/?LinkID=202890)
+- [Introducción a la programación Web de ASP.NET mediante la sintaxis Razor](https://go.microsoft.com/fwlink/?LinkID=202890)
 
 > [!div class="step-by-step"]
 > [Anterior](intro-to-web-pages-programming.md)

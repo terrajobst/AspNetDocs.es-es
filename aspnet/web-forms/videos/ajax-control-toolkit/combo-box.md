@@ -12,7 +12,7 @@ ms.openlocfilehash: 7d99e52103d6657392d9110d1dac2cf541ea400b
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59413248"
 ---
 # <a name="combo-box"></a>Cuadro combinado

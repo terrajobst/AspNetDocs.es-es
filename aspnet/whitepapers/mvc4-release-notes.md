@@ -12,7 +12,7 @@ ms.openlocfilehash: 0f9b4e2ba0514df4c017a192f3c2136a7eec60c7
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59413261"
 ---
 # <a name="aspnet-mvc-4"></a>ASP.NET MVC 4
@@ -26,7 +26,7 @@ ms.locfileid: "59413261"
 - [Requisitos de software](#_Toc303253805)
 - [Nuevas características de ASP.NET MVC 4](#_Toc303253807)
 
-    - [ASP.NET Web API](#_Toc317096197)
+    - [ASP.NET Web API](#_Toc317096197) (Más información sobre ASP.NET Web API)
     - [Mejoras en las plantillas de proyecto predeterminadas](#_Toc303253808)
     - [Plantilla de proyecto móvil](#_Toc303253809)
     - [Modos de presentación](#_Toc303253810)

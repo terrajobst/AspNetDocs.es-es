@@ -12,7 +12,7 @@ ms.openlocfilehash: 97dac03e4b305b3775214801143cbc57b4221a40
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59411493"
 ---
 # <a name="creating-a-tasklist-application-with-aspnet-mvc"></a>Crear una aplicación de lista de tareas con ASP.NET MVC

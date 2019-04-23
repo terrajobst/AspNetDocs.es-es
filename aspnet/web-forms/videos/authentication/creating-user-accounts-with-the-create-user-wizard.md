@@ -12,7 +12,7 @@ ms.openlocfilehash: d1eff0f8a0671f554b07f00328d7f28573553581
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59411636"
 ---
 # <a name="creating-user-accounts-with-the-create-user-wizard"></a>Crear cuentas de usuario con el Asistente para crear usuarios

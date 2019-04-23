@@ -12,7 +12,7 @@ ms.openlocfilehash: af40e6b4bf919783ef2e3cc1118783bf7e346074
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59408776"
 ---
 # <a name="working-with-files"></a>Trabajar con archivos

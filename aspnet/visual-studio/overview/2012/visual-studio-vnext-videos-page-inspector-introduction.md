@@ -12,7 +12,7 @@ ms.openlocfilehash: 239b3b236196c94a930bab4a04233b272d0062e4
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59415614"
 ---
 # <a name="visual-studio-vnext-videos-page-inspector---introduction"></a>Visual Studio vNext vídeos: Inspector de página - Introducción

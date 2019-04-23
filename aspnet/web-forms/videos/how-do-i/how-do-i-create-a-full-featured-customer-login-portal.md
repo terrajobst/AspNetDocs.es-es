@@ -12,7 +12,7 @@ ms.openlocfilehash: 05922d973e6390088ff0ef270513a7b4f60e36c0
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59414821"
 ---
 # <a name="how-do-i-create-a-full-featured-customer-login-portal"></a>[¿Cómo lo hago?:] ¿Crear un Portal de inicio de sesión de cliente completa?

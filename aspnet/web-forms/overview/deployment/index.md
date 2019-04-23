@@ -12,7 +12,7 @@ ms.openlocfilehash: 8536c771e5e343bd545b6824bec6f8b85489a7d4
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59416537"
 ---
 # <a name="deployment"></a>Implementación
@@ -28,7 +28,7 @@ ms.locfileid: "59416537"
     - [Propiedades del proyecto](visual-studio-web-deployment/project-properties.md)
     - [Implementación de prueba](visual-studio-web-deployment/deploying-to-iis.md)
     - [Establecer permisos de carpeta](visual-studio-web-deployment/setting-folder-permissions.md)
-    - [Implementar en entorno de producción](visual-studio-web-deployment/deploying-to-production.md)
+    - [Implementación en entorno de producción](visual-studio-web-deployment/deploying-to-production.md)
     - [Implementar una actualización de código](visual-studio-web-deployment/deploying-a-code-update.md)
     - [Implementar una actualización de base de datos](visual-studio-web-deployment/deploying-a-database-update.md)
     - [Implementación de línea de comandos](visual-studio-web-deployment/command-line-deployment.md)
@@ -37,8 +37,8 @@ ms.locfileid: "59416537"
 - [ASP.NET 4 - Introducción a la implementación de empresa](deploying-web-applications-in-enterprise-scenarios/index.md)
 
     - [Implementar aplicaciones web en escenarios empresariales mediante Visual Studio 2010](deploying-web-applications-in-enterprise-scenarios/deploying-web-applications-in-enterprise-scenarios.md)
-    - [Implementación web de empresa: Información general del escenario](deploying-web-applications-in-enterprise-scenarios/enterprise-web-deployment-scenario-overview.md)
-    - [Administración del ciclo de vida de las aplicaciones: De desarrollo a producción](deploying-web-applications-in-enterprise-scenarios/application-lifecycle-management-from-development-to-production.md)
+    - [Implementación Web de empresa: Información general del escenario](deploying-web-applications-in-enterprise-scenarios/enterprise-web-deployment-scenario-overview.md)
+    - [Administración del ciclo de vida de aplicaciones: Entornos de desarrollo a producción](deploying-web-applications-in-enterprise-scenarios/application-lifecycle-management-from-development-to-production.md)
 - [ASP.NET 4 - Implementación de empresa, serie 1](web-deployment-in-the-enterprise/index.md)
 
     - [Implementación web en la empresa](web-deployment-in-the-enterprise/web-deployment-in-the-enterprise.md)
@@ -56,9 +56,9 @@ ms.locfileid: "59416537"
 
     - [Configurar entornos de servidor para la implementación web](configuring-server-environments-for-web-deployment/configuring-server-environments-for-web-deployment.md)
     - [Elegir el enfoque adecuado para la implementación web](configuring-server-environments-for-web-deployment/choosing-the-right-approach-to-web-deployment.md)
-    - [Escenario: Configurar un entorno de prueba para la implementación web](configuring-server-environments-for-web-deployment/scenario-configuring-a-test-environment-for-web-deployment.md)
-    - [Escenario: Configurar un entorno de ensayo para la implementación web](configuring-server-environments-for-web-deployment/scenario-configuring-a-staging-environment-for-web-deployment.md)
-    - [Escenario: Configurar un entorno de producción para la implementación web](configuring-server-environments-for-web-deployment/scenario-configuring-a-production-environment-for-web-deployment.md)
+    - [Escenario: Configurar un entorno de prueba para la implementación de Web](configuring-server-environments-for-web-deployment/scenario-configuring-a-test-environment-for-web-deployment.md)
+    - [Escenario: Configuración de un entorno de ensayo para la implementación Web](configuring-server-environments-for-web-deployment/scenario-configuring-a-staging-environment-for-web-deployment.md)
+    - [Escenario: Configurar un entorno de producción para la implementación Web](configuring-server-environments-for-web-deployment/scenario-configuring-a-production-environment-for-web-deployment.md)
     - [Configurar un servidor web para la publicación de la implementación web (agente remoto)](configuring-server-environments-for-web-deployment/configuring-a-web-server-for-web-deploy-publishing-remote-agent.md)
     - [Configurar un servidor web para la publicación de la implementación web (controlador de implementación web)](configuring-server-environments-for-web-deployment/configuring-a-web-server-for-web-deploy-publishing-web-deploy-handler.md)
     - [Configurar un servidor web para la publicación de la implementación web (implementación sin conexión)](configuring-server-environments-for-web-deployment/configuring-a-web-server-for-web-deploy-publishing-offline-deployment.md)

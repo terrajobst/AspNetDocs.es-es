@@ -12,7 +12,7 @@ ms.openlocfilehash: 3833e3f3c6c49ff2b317ad04aff33c9119cb1f41
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59420216"
 ---
 # <a name="whats-new-in-aspnet-and-web-development-in-visual-studio-2012"></a>Novedades de Desarrollo de ASP.NET y web en Visual Studio 2012
@@ -63,7 +63,7 @@ Este laboratorio de prácticas incluye los ejercicios siguientes:
 1. [Ejercicio 1: Novedades en el Editor CSS](#Exercise1)
 2. [Ejercicio 2: Novedades en el Editor HTML](#Exercise2)
 3. [Ejercicio 3: Novedades en el Editor de JavaScript](#Exercise3)
-4. [Ejercicio 4: Unión y minificación](#Exercise4)
+4. [Ejercicio 4: Unión y Minificación](#Exercise4)
 
 Tiempo estimado para completar esta práctica: **60 minutos**.
 

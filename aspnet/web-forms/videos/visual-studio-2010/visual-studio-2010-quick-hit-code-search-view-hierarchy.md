@@ -12,7 +12,7 @@ ms.openlocfilehash: a6ae54ef28b9fbfe99c0efb1dde22084f1b1acfc
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59408815"
 ---
 # <a name="visual-studio-2010-quick-hit---code-search-view-hierarchy"></a>Visual Studio 2010 "Rápido Hit" - jerarquía de vistas de búsqueda de código

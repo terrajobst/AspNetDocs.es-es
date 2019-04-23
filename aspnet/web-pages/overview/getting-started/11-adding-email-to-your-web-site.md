@@ -12,7 +12,7 @@ ms.openlocfilehash: 0263f736b96f8e8572536f3783d86c261d7c0512
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59411233"
 ---
 # <a name="sending-email-from-an-aspnet-web-pages-razor-site"></a>Enviar correo electrónico desde un sitio Web de ASP.NET Pages (Razor)

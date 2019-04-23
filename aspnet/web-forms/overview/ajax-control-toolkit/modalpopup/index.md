@@ -12,7 +12,7 @@ ms.openlocfilehash: c797e6556282ef6570d50d8a3e77587ac30dbbea
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59415237"
 ---
 # <a name="modalpopup"></a>ModalPopup

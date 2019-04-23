@@ -12,7 +12,7 @@ ms.openlocfilehash: 4aec93a42f6766a043a5d672c9e084683b71076c
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59416251"
 ---
 # <a name="how-do-i-build-a-custom-aspnet-ajax-server-control"></a>[¿Cómo lo hago?:] ¿Crear un Control de servidor personalizados de ASP.NET AJAX?

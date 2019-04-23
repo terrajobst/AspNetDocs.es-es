@@ -11,9 +11,9 @@ msc.legacyurl: /entity-framework
 msc.type: content
 ms.openlocfilehash: bcbd98f88b1e7e292961326061404ce91d157b32
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59414561"
 ---
 # <a name="entity-framework"></a>Entity Framework

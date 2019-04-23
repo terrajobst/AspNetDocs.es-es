@@ -12,7 +12,7 @@ ms.openlocfilehash: 865e901618b48bc4bfdc6d7a3ca4e8868d4cb46b
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59412988"
 ---
 # <a name="customizing-database-deployments-for-multiple-environments"></a>Personalizar las implementaciones de la base de datos para varios entornos
@@ -68,7 +68,7 @@ Esta tabla muestra los valores típicos de implementación para distintos entorn
 
 |  | Desarrollo y pruebas | Integración y el almacenamiento provisional | Producción |
 | --- | --- | --- | --- |
-| **Intercalación de comparación de implementación** | Origen | Destino | Destino |
+| **Intercalación de comparación de implementación** | Source | Destino | Destino |
 | **Implementar propiedades de base de datos** | True | Sólo la primera vez | Sólo la primera vez |
 | **Siempre volver a crear la base de datos** | True | False | False |
 | **Bloquear implementación incremental si puede producirse pérdida de datos** | False | Quizás | True |
@@ -139,7 +139,7 @@ Para obtener más información sobre la implementación de proyectos de base de 
 Estos artículos en MSDN proporcionan una orientación más general sobre la implementación de la base de datos:
 
 - [Información general de configuración del proyecto de base de datos](https://msdn.microsoft.com/library/aa833291(v=VS.100).aspx)
-- [Filtrar Configurar las propiedades de los detalles de implementación](https://msdn.microsoft.com/library/dd172125.aspx)
+- [Cómo: Configurar las propiedades de los detalles de implementación](https://msdn.microsoft.com/library/dd172125.aspx)
 - [Compilar e implementar bases de datos en un entorno de desarrollo aislado](https://msdn.microsoft.com/library/dd193409.aspx)
 - [Compilar e implementar bases de datos en un entorno de producción o ensayo](https://msdn.microsoft.com/library/dd193413.aspx)
 

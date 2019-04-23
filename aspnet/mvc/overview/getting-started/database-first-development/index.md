@@ -12,7 +12,7 @@ ms.openlocfilehash: c30544586fdcbdc805e593fae0f186810a412be9
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59412377"
 ---
 # <a name="getting-started-with-entity-framework-6-database-first-using-mvc-5"></a>Introducción a Entity Framework 6 Database primero mediante MVC 5
@@ -25,4 +25,4 @@ ms.locfileid: "59412377"
 - [Generar vistas](generating-views.md)
 - [Cambiar la base de datos](changing-the-database.md)
 - [Personalizar una vista](customizing-a-view.md)
-- [Mejorar la validación de datos](enhancing-data-validation.md)
+- [Mejora de la validación de datos](enhancing-data-validation.md)

@@ -12,7 +12,7 @@ ms.openlocfilehash: 1bcad8a023500f4738edf09f4ef0635588cd5323
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59412715"
 ---
 # <a name="mvc-music-store-part-1-intro-tools-and-project-structure"></a>Tienda de música de MVC, parte 1: Introducción, herramientas y estructura del proyecto

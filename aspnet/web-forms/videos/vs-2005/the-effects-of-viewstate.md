@@ -12,7 +12,7 @@ ms.openlocfilehash: 7ec8719a25452efed9a0d46afa05b36f3cb07ce1
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59414808"
 ---
 # <a name="the-effects-of-viewstate"></a>Los efectos de ViewState

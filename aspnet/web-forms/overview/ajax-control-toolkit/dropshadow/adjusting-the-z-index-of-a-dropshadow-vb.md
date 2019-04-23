@@ -12,7 +12,7 @@ ms.openlocfilehash: b01913b3ad3291d90bdf9455c3d35bb7b36b3f28
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59415250"
 ---
 # <a name="adjusting-the-z-index-of-a-dropshadow-vb"></a>Ajustar el índice Z de un control DropShadow (VB)
@@ -56,12 +56,12 @@ Al ejecutar esta secuencia de comandos, las entradas de menú aparecen debajo de
 A continuación, la `DropShadowExtender` control no entra en conflicto ya con el control de menú.
 
 
-[![Before: La entrada de menú no está visible](adjusting-the-z-index-of-a-dropshadow-vb/_static/image2.png)](adjusting-the-z-index-of-a-dropshadow-vb/_static/image1.png)
+[![Antes: La entrada de menú no está visible](adjusting-the-z-index-of-a-dropshadow-vb/_static/image2.png)](adjusting-the-z-index-of-a-dropshadow-vb/_static/image1.png)
 
 Antes: La entrada de menú no está visible ([haga clic aquí para ver imagen en tamaño completo](adjusting-the-z-index-of-a-dropshadow-vb/_static/image3.png))
 
 
-[![Asalto: La entrada de menú aparece](adjusting-the-z-index-of-a-dropshadow-vb/_static/image5.png)](adjusting-the-z-index-of-a-dropshadow-vb/_static/image4.png)
+[![Después de: Aparece la entrada de menú](adjusting-the-z-index-of-a-dropshadow-vb/_static/image5.png)](adjusting-the-z-index-of-a-dropshadow-vb/_static/image4.png)
 
 Después: La entrada de menú aparece ([haga clic aquí para ver imagen en tamaño completo](adjusting-the-z-index-of-a-dropshadow-vb/_static/image6.png))
 

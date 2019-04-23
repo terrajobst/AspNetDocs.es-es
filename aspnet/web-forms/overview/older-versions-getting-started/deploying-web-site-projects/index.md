@@ -12,7 +12,7 @@ ms.openlocfilehash: 79e09dddb39bd00019584da2ab199c03a42c67f8
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59412546"
 ---
 # <a name="deploying-web-site-projects-in-visual-studio-2008-and-earlier"></a>Implementar proyectos de sitio web en Visual Studio 2008 y versiones anteriores

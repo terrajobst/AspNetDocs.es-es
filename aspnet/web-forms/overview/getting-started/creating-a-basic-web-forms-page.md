@@ -12,7 +12,7 @@ ms.openlocfilehash: bf3336c2467553ba3714bbd4fbb41a35a0490768
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59410609"
 ---
 # <a name="using-visual-studio-2013-to-create-a-basic-aspnet-45-web-forms-page"></a>Uso de Visual Studio 2013 para crear una página básica de ASP.NET 4.5 Web Forms
@@ -62,7 +62,7 @@ En esta parte del tutorial, creará un proyecto de aplicación Web y agregue una
 3. Seleccione el **plantillas**  - &gt; **Visual C#**  - &gt; **Web** grupo de plantillas de la izquierda.
 4. Elija la **aplicación Web ASP.NET** plantilla en la columna central.
 5. Nombre del proyecto ***BasicWebApp*** y haga clic en el **Aceptar** botón.   
-![Cuadro de diálogo Nuevo proyecto](creating-a-basic-web-forms-page/_static/image2.png)
+![Cuadro de diálogo nuevo proyecto](creating-a-basic-web-forms-page/_static/image2.png)
 6. A continuación, seleccione el **formularios Web Forms** plantilla y haga clic en el **Aceptar** botón para crear el proyecto.  
 ![Cuadro de diálogo nuevo proyecto de ASP.NET](creating-a-basic-web-forms-page/_static/image3.png)  
 
@@ -109,7 +109,7 @@ Cuando se crea una nueva aplicación de formularios Web Forms mediante el **apli
 2. En **el Explorador de soluciones**, haga clic en el nombre de la aplicación Web (en este tutorial es el nombre de la aplicación **BasicWebSite**) y, a continuación, haga clic en **agregar**  - &gt; **Nuevo elemento**.   
 Se abrirá el cuadro de diálogo **Agregar nuevo elemento**.
 3. Seleccione el **Visual C#**  - &gt; **Web** grupo de plantillas de la izquierda. A continuación, seleccione **formulario Web Forms** desde la parte central de lista y asígnele el nombre *FirstWebPage.aspx*.   
-    ![Cuadro de diálogo Agregar nuevo elemento](creating-a-basic-web-forms-page/_static/image6.png)
+    ![Agregar cuadro de diálogo nuevo elemento](creating-a-basic-web-forms-page/_static/image6.png)
 4. Haga clic en **agregar** para agregar la página web al proyecto.  
 Visual Studio crea la nueva página y lo abre.
 

@@ -12,7 +12,7 @@ ms.openlocfilehash: c24183b4a037f783c6154c96aabf758e3b8587a1
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59409114"
 ---
 # <a name="aspnet-4-quick-hit---the-scriptloader"></a>ASP.NET 4 "Rápido Hit" - la ScriptLoader

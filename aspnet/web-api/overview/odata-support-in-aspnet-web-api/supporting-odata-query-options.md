@@ -13,7 +13,7 @@ ms.openlocfilehash: 428e4942e42436585049c1e84cd7b07a4a79c0d1
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59411571"
 ---
 # <a name="supporting-odata-query-options-in-aspnet-web-api-2"></a>Compatibilidad con las opciones de consulta de OData en ASP.NET Web API 2
@@ -88,7 +88,7 @@ La opción $filter permite filtrar los resultados aplicando una expresión boole
 | Funciones de cadena: Devolver todos los productos con "zz" en el nombre. | `http://localhost/Products?$filter=substringof('zz',Name)` |
 | Funciones de fecha: Devolver todos los productos con ReleaseDate después de 2005. | `http://localhost/Products?$filter=year(ReleaseDate)` gt 2005 |
 
-**Ordenar**
+**Ordenación**
 
 Para ordenar los resultados, use el filtro $orderby.
 

@@ -12,7 +12,7 @@ ms.openlocfilehash: b9da2522cfaed324a23f43265d4e234ebb4950bd
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59411129"
 ---
 # <a name="whats-new-in-aspnet-mvc-4"></a>Novedades de ASP.NET MVC 4
@@ -547,7 +547,7 @@ En esta tarea, actualizará el diseño de escritorio para incluir al modificador
 
     ![Acerca de la página](whats-new-in-aspnet-mvc-4/_static/image33.png "acerca de la página")
 
-    *Página About*
+    *Acerca de la página*
 8. Por último, abra el sitio en un explorador Web de escritorio. Tenga en cuenta que ninguna de las actualizaciones anteriores ha afectado a la vista de escritorio.
 
     ![Vista de escritorio PhotoGallery](whats-new-in-aspnet-mvc-4/_static/image34.png "PhotoGallery vista del escritorio")

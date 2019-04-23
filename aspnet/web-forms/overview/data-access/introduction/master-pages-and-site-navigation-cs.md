@@ -12,7 +12,7 @@ ms.openlocfilehash: 2001378588db72103292be963af6c26277147c44
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59409647"
 ---
 # <a name="master-pages-and-site-navigation-c"></a>Páginas maestras y navegación del sitio (C#)
@@ -33,7 +33,7 @@ El [sistema de navegación del sitio](http://aspnet.4guysfromrolla.com/articles/
 Para ilustrar estos conceptos y hacer más fácil de usar nuestro sitio Web de tutoriales, dediquemos en esta lección, definir un diseño de página de todo el sitio, la implementación de un mapa del sitio y agregar la interfaz de usuario de navegación. Al final de este tutorial, tendrá un diseño de sitio Web perfeccionado para construir nuestras páginas web del tutorial.
 
 
-[![TResultados de final de este Tutorial](master-pages-and-site-navigation-cs/_static/image2.png)](master-pages-and-site-navigation-cs/_static/image1.png)
+[![El resultado final de este Tutorial](master-pages-and-site-navigation-cs/_static/image2.png)](master-pages-and-site-navigation-cs/_static/image1.png)
 
 **Figura 1**: El resultado final de este Tutorial ([haga clic aquí para ver imagen en tamaño completo](master-pages-and-site-navigation-cs/_static/image3.png))
 
@@ -51,7 +51,7 @@ El primer paso es crear la página principal del sitio. En este momento nuestro 
 Para crear una página principal, haga doble clic en el nombre del proyecto en el Explorador de soluciones y seleccione Agregar nuevo elemento. A continuación, seleccione el tipo de página maestra en la lista de plantillas y asígnele el nombre `Site.master`.
 
 
-[![Add una página principal nueva al sitio Web](master-pages-and-site-navigation-cs/_static/image6.png)](master-pages-and-site-navigation-cs/_static/image5.png)
+[![Agregar una página principal nueva al sitio Web](master-pages-and-site-navigation-cs/_static/image6.png)](master-pages-and-site-navigation-cs/_static/image5.png)
 
 **Figura 3**: Agregar una página principal nueva al sitio Web ([haga clic aquí para ver imagen en tamaño completo](master-pages-and-site-navigation-cs/_static/image7.png))
 
@@ -68,7 +68,7 @@ Una página principal define el diseño de página estática y las regiones que 
 Con el marcado anterior, cambiar a la vista Diseño, muestra el diseño de la página maestra. Todas las páginas ASP.NET que usan esta página principal tendrán este diseño uniforme y con capacidad para especificar el marcado para el `MainContent` región.
 
 
-[![Tque la página maestra, al ver a través de la vista de diseño](master-pages-and-site-navigation-cs/_static/image9.png)](master-pages-and-site-navigation-cs/_static/image8.png)
+[![La página maestra, cuando se ven a través de la vista de diseño](master-pages-and-site-navigation-cs/_static/image9.png)](master-pages-and-site-navigation-cs/_static/image8.png)
 
 **Figura 4**: La página maestra, al ver a través de la vista de diseño ([haga clic aquí para ver imagen en tamaño completo](master-pages-and-site-navigation-cs/_static/image10.png))
 
@@ -78,7 +78,7 @@ Con el marcado anterior, cambiar a la vista Diseño, muestra el diseño de la p�
 Con la página principal definida, ya estamos listos para agregar las páginas ASP.NET para el sitio Web. Comencemos por agregar `Default.aspx`, página principal de nuestro sitio Web. Haga doble clic en el nombre del proyecto en el Explorador de soluciones y seleccione Agregar nuevo elemento. Elija la opción formulario Web de la lista de plantillas y el nombre del archivo `Default.aspx`. Compruebe también la casilla de verificación "Seleccionar la página principal".
 
 
-[![Aun formulario Web nuevo, comprobación de la casilla de verificación Seleccionar la página maestra dd](master-pages-and-site-navigation-cs/_static/image12.png)](master-pages-and-site-navigation-cs/_static/image11.png)
+[![Agregue un nuevo formulario Web, comprobación de la casilla de verificación Seleccionar la página maestra](master-pages-and-site-navigation-cs/_static/image12.png)](master-pages-and-site-navigation-cs/_static/image11.png)
 
 **Figura 5**: Agregue un nuevo formulario Web, comprobación de la casilla de verificación Seleccionar la página maestra ([haga clic aquí para ver imagen en tamaño completo](master-pages-and-site-navigation-cs/_static/image13.png))
 
@@ -86,7 +86,7 @@ Con la página principal definida, ya estamos listos para agregar las páginas A
 Después de hacer clic en el botón Aceptar, se nos pide que seleccionemos la página principal que debe usar esta nueva página ASP.NET. Aunque es posible tener varias páginas principales en el proyecto, tengamos sólo una.
 
 
-[![CElija la página maestra este uso debería de página de ASP.NET](master-pages-and-site-navigation-cs/_static/image15.png)](master-pages-and-site-navigation-cs/_static/image14.png)
+[![Elija la página maestra que se debe usar esta página de ASP.NET](master-pages-and-site-navigation-cs/_static/image15.png)](master-pages-and-site-navigation-cs/_static/image14.png)
 
 **Figura 6**: Elija la página principal de esta página de ASP.NET debe utilice ([haga clic aquí para ver imagen en tamaño completo](master-pages-and-site-navigation-cs/_static/image16.png))
 
@@ -110,7 +110,7 @@ El `Title` atributo en el `@Page` directiva nos permite establecer título de la
 Cambiar a la vista Diseño, que podemos ver cómo se vería nuestra página en un explorador. Tenga en cuenta que en el diseño de la vista de la página ASP.NET que son editables solo las regiones contenidas editables la marca non-ContentPlaceHolder definida en la página maestra está atenuado.
 
 
-[![Tque la vista de diseño para las regiones no modificable y ASP.NET página muestra tanto el modificable](master-pages-and-site-navigation-cs/_static/image18.png)](master-pages-and-site-navigation-cs/_static/image17.png)
+[![La vista de diseño de la página ASP.NET muestra las regiones modificables y no modificables](master-pages-and-site-navigation-cs/_static/image18.png)](master-pages-and-site-navigation-cs/_static/image17.png)
 
 **Figura 7**: La vista de diseño para el ASP.NET página muestra tanto el modificable y regiones no modificable ([haga clic aquí para ver imagen en tamaño completo](master-pages-and-site-navigation-cs/_static/image19.png))
 
@@ -142,7 +142,7 @@ El sistema de navegación del sitio de ASP.NET 2.0 proporciona un medio para que
 Para este tutorial, sin embargo, vamos a usar el proveedor del mapa de sitio predeterminado que se incluye con ASP.NET 2.0. Para crear el mapa del sitio, simplemente haga doble clic en el nombre del proyecto en el Explorador de soluciones, seleccione Agregar nuevo elemento y elija la opción de mapa del sitio. Deje el nombre como `Web.sitemap` y haga clic en el botón Agregar.
 
 
-[![Aun mapa del sitio para el proyecto dd](master-pages-and-site-navigation-cs/_static/image22.png)](master-pages-and-site-navigation-cs/_static/image21.png)
+[![Agregar un mapa del sitio al proyecto](master-pages-and-site-navigation-cs/_static/image22.png)](master-pages-and-site-navigation-cs/_static/image21.png)
 
 **Figura 9**: Agregar un mapa del sitio para el proyecto ([haga clic aquí para ver imagen en tamaño completo](master-pages-and-site-navigation-cs/_static/image23.png))
 
@@ -159,7 +159,7 @@ Web.SiteMap
 El mapa del sitio define la estructura de navegación del sitio Web, que es una jerarquía que se describe las diversas secciones del sitio. Cada `<siteMapNode>` elemento `Web.sitemap` representa una sección de la estructura de navegación del sitio.
 
 
-[![Tél mapa del sitio representa una estructura de navegación jerárquica](master-pages-and-site-navigation-cs/_static/image25.png)](master-pages-and-site-navigation-cs/_static/image24.png)
+[![El mapa del sitio representa una estructura de navegación jerárquica](master-pages-and-site-navigation-cs/_static/image25.png)](master-pages-and-site-navigation-cs/_static/image24.png)
 
 **Figura 10**: El mapa del sitio representa una estructura de navegación jerárquica ([haga clic aquí para ver imagen en tamaño completo](master-pages-and-site-navigation-cs/_static/image26.png))
 
@@ -252,7 +252,7 @@ Los tutoriales en nuestro sitio están divididos en categorías diferentes Basic
 Vamos a mostrar una lista desordenada con un control Repeater, pero esta vez que veremos el título y la descripción de los tutoriales. Dado que el marcado y código para ello se deben repetir para cada `Default.aspx` página, podemos concretar esta lógica de la interfaz de usuario en un [Control de usuario](https://msdn.microsoft.com/library/y6wb1a0e.aspx). Cree una carpeta en el sitio Web denominado `UserControls` y agregar a la que un nuevo elemento de tipo de Control de usuario Web denominado `SectionLevelTutorialListing.ascx`y agregue el siguiente marcado:
 
 
-[![Aun nuevo Control de usuario Web a la carpeta UserControls dd](master-pages-and-site-navigation-cs/_static/image30.png)](master-pages-and-site-navigation-cs/_static/image29.png)
+[![Agregar un nuevo Control de usuario Web a la carpeta UserControls](master-pages-and-site-navigation-cs/_static/image30.png)](master-pages-and-site-navigation-cs/_static/image29.png)
 
 **Figura 13**: Agregar un nuevo Control de usuario Web para la `UserControls` carpeta ([haga clic aquí para ver imagen en tamaño completo](master-pages-and-site-navigation-cs/_static/image31.png))
 
@@ -272,12 +272,12 @@ En el ejemplo de Repeater anterior, enlazamos el `SiteMap` datos a Repeater medi
 Una vez que se ha creado este Repeater, abra el `Default.aspx` las páginas de cada una de las carpetas, vaya a la vista Diseño y basta con arrastrar el Control de usuario desde el Explorador de soluciones en la superficie de diseño donde desee que aparezca la lista de tutoriales.
 
 
-[![TControl de usuario tiene se han agregado a Default.aspx](master-pages-and-site-navigation-cs/_static/image33.png)](master-pages-and-site-navigation-cs/_static/image32.png)
+[![El Control de usuario tiene que se han agregado a Default.aspx](master-pages-and-site-navigation-cs/_static/image33.png)](master-pages-and-site-navigation-cs/_static/image32.png)
 
 **Figura 14**: El Control de usuario se ha agregado a `Default.aspx` ([haga clic aquí para ver imagen en tamaño completo](master-pages-and-site-navigation-cs/_static/image34.png))
 
 
-[![Tse enumeran los tutoriales de Reporting básico](master-pages-and-site-navigation-cs/_static/image36.png)](master-pages-and-site-navigation-cs/_static/image35.png)
+[![Se enumeran los tutoriales de Reporting básico](master-pages-and-site-navigation-cs/_static/image36.png)](master-pages-and-site-navigation-cs/_static/image35.png)
 
 **Figura 15**: Se enumeran los tutoriales de Reporting básico ([haga clic aquí para ver imagen en tamaño completo](master-pages-and-site-navigation-cs/_static/image37.png))
 
@@ -301,7 +301,7 @@ Para obtener más información sobre los temas tratados en este tutorial, consul
 - [Examen de ASP.NET 2.0 de la navegación del sitio](http://aspnet.4guysfromrolla.com/articles/111605-1.aspx)
 - [ASP.NET 2.0 Site Navigation Features](https://weblogs.asp.net/scottgu/archive/2005/11/20/431019.aspx)
 - [Understanding ASP.NET View State](https://msdn.microsoft.com/library/default.asp?url=/library/dnaspp/html/viewstate.asp)
-- [Filtrar Habilitar el seguimiento de una página ASP.NET](https://msdn.microsoft.com/library/94c55d08%28VS.80%29.aspx)
+- [Cómo: Habilitar el seguimiento de una página ASP.NET](https://msdn.microsoft.com/library/94c55d08%28VS.80%29.aspx)
 - [Controles de usuario ASP.NET](https://msdn.microsoft.com/library/y6wb1a0e.aspx)
 
 ## <a name="about-the-author"></a>Acerca del autor

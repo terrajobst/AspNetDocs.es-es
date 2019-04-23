@@ -12,7 +12,7 @@ ms.openlocfilehash: 7c92c77a2abff92a55d7972c8e383cddf8a6d1dd
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59409569"
 ---
 # <a name="session-level-objects"></a>Objetos de nivel de sesión

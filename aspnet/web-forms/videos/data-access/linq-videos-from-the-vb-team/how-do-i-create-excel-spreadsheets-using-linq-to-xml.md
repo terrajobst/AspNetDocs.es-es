@@ -12,7 +12,7 @@ ms.openlocfilehash: 1483030faf631099b8c044d1fbbdd000128f4fce
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59414197"
 ---
 # <a name="how-do-i-create-excel-spreadsheets-using-linq-to-xml"></a>[¿Cómo lo hago?:] ¿Crear hojas de cálculo de Excel mediante LINQ to XML?

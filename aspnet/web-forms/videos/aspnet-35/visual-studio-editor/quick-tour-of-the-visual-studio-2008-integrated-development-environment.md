@@ -12,7 +12,7 @@ ms.openlocfilehash: 3eaf2a59188c041fbe801f30f81e691aba2060a6
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59413521"
 ---
 # <a name="quick-tour-of-the-visual-studio-2008-integrated-development-environment"></a>Paseo rápido por el Entorno de desarrollo integrado de Visual Studio 2008

@@ -12,7 +12,7 @@ ms.openlocfilehash: 87de6c92375594ab6ee726f1b66a94a0db793fd2
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59417057"
 ---
 # <a name="aspnet-4---web-deployment-with-sql-server-compact-using-visual-studio"></a>ASP.NET 4 - Implementación web con SQL Server Compact mediante Visual Studio
@@ -31,4 +31,4 @@ ms.locfileid: "59417057"
 - [Implementación web de Visual Studio con SQL Server Compact - Implementar una actualización de base de datos](deployment-to-a-hosting-provider-deploying-a-database-update-9-of-12.md)
 - [Implementación web de Visual Studio con SQL Server Compact - Migración a SQL Server](deployment-to-a-hosting-provider-migrating-to-sql-server-10-of-12.md)
 - [Implementación web de Visual Studio con SQL Server Compact - Implementar una actualización de la base de datos de SQL Server](deployment-to-a-hosting-provider-deploying-a-sql-server-database-update-11-of-12.md)
-- [Implementación web de Visual Studio con SQL Server Compact - Solución de problemas](deployment-to-a-hosting-provider-creating-and-installing-deployment-packages-12-of-12.md)
+- [Implementación web de Visual Studio con SQL Server Compact: Solución de problemas](deployment-to-a-hosting-provider-creating-and-installing-deployment-packages-12-of-12.md)

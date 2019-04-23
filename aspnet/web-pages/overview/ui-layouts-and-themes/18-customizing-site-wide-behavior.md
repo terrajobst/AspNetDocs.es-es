@@ -12,7 +12,7 @@ ms.openlocfilehash: 2763cae0f8124cfcaccfd737622cb17b6dd947e1
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59413300"
 ---
 # <a name="customizing-site-wide-behavior-for-aspnet-web-pages-razor-sites"></a>Personalizar el comportamiento de todo el sitio para los sitios de ASP.NET Web Pages (Razor)

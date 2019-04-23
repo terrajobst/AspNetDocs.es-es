@@ -12,7 +12,7 @@ ms.openlocfilehash: 5d8a40b03a1997904a2736a339dbf6b4003ae7bd
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59410648"
 ---
 # <a name="creating-a-custom-route-constraint-c"></a>Crear una restricción de ruta personalizada (C#)

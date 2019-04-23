@@ -12,7 +12,7 @@ ms.openlocfilehash: 3e720dd895c609d5b35848dbc4d4a6989028ff7d
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59418760"
 ---
 # <a name="signalr-getting-started"></a>Introducción de SignalR
@@ -26,4 +26,4 @@ ms.locfileid: "59418760"
 - [Tutorial: Introducción a SignalR 2 y MVC 5](tutorial-getting-started-with-signalr-and-mvc.md)
 - [Tutorial: Alta frecuencia en tiempo real con SignalR 2](tutorial-high-frequency-realtime-with-signalr.md)
 - [Tutorial: Difusión de servidores con SignalR 2](tutorial-server-broadcast-with-signalr.md)
-- [Laboratorio práctico: Aplicaciones web en tiempo real con SignalR](real-time-web-applications-with-signalr.md)
+- [Laboratorio práctico: Aplicaciones Web en tiempo real con SignalR](real-time-web-applications-with-signalr.md)

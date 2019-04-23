@@ -12,7 +12,7 @@ ms.openlocfilehash: c708f0746cf0360e4241ebd29fa4cf61f6b0b8bb
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59409036"
 ---
 # <a name="tailspin-spyworks---category-menu"></a>Tailspin Spyworks - Menú Categoría

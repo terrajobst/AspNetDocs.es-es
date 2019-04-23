@@ -12,7 +12,7 @@ ms.openlocfilehash: 9119e16fbd6ac872cfcdf5497c5ca3d8d0b5d5e2
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59413625"
 ---
 # <a name="aspnet-35---web-forms-master-pages"></a>ASP.NET 3.5 - Páginas maestras de los formularios Web Forms
@@ -33,7 +33,7 @@ ms.locfileid: "59413625"
 - [Crear un diseño de todo el sitio mediante páginas maestras (VB)](creating-a-site-wide-layout-using-master-pages-vb.md)
 - [Varios ContentPlaceHolders y contenido predeterminado (VB)](multiple-contentplaceholders-and-default-content-vb.md)
 - [Especificar el título, etiquetas meta y otros encabezados HTML en la página maestra (VB)](specifying-the-title-meta-tags-and-other-html-headers-in-the-master-page-vb.md)
-- [Direcciones URL en páginas maestras (VB)](urls-in-master-pages-vb.md)
+- [Direcciones URL en Páginas maestras (VB)](urls-in-master-pages-vb.md)
 - [Nomenclatura de los identificadores de control en las páginas de contenido (VB)](control-id-naming-in-content-pages-vb.md)
 - [Interactuar con la página maestra desde la página de contenido (VB)](interacting-with-the-master-page-from-the-content-page-vb.md)
 - [Interactuar con la página de contenido desde la página maestra (VB)](interacting-with-the-content-page-from-the-master-page-vb.md)

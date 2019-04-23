@@ -12,7 +12,7 @@ ms.openlocfilehash: abedf2dbf6fbc632b1857bf447f70aeb8f826d81
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59410830"
 ---
 # <a name="tutorial-getting-started-with-signalr-1x-and-mvc-4"></a>Tutorial: Introducción a SignalR 1.x y MVC 4
@@ -172,6 +172,6 @@ Ha aprendido que SignalR es un marco para crear aplicaciones web en tiempo real.
 
 Para obtener información sobre los conceptos más avanzados de los desarrollos de SignalR, visite los sitios siguientes para recursos y código fuente de SignalR:
 
-- [Proyecto de SignalR](http://signalr.net)
+- [SignalR Project](http://signalr.net)
 - [SignalR Github y ejemplos](https://github.com/SignalR/SignalR)
 - [SignalR Wiki](https://github.com/SignalR/SignalR/wiki)

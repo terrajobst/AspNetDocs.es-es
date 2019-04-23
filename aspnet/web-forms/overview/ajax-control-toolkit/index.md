@@ -12,7 +12,7 @@ ms.openlocfilehash: 795283c33d63272b29b91fd7037c3463bc71abad
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59410752"
 ---
 # <a name="older-versions---ajax-control-toolkit"></a>Versiones anteriores - Ajax Control Toolkit
@@ -49,7 +49,7 @@ ms.locfileid: "59410752"
     - [Desencadenar una animación en otro control (C#)](animation/triggering-an-animation-in-another-control-cs.md)
     - [Modificar las animaciones desde el lado servidor (C#)](animation/modifying-animations-from-the-server-side-cs.md)
     - [Ejecutar animaciones con código de cliente (C#)](animation/executing-animations-using-client-side-code-cs.md)
-    - [Cambiar una animación con código de cliente (C#)](animation/changing-an-animation-using-client-side-code-cs.md)
+    - [Cambiar una animación con código del lado cliente (C#)](animation/changing-an-animation-using-client-side-code-cs.md)
     - [Animar un control UpdatePanel (C#)](animation/animating-an-updatepanel-control-cs.md)
     - [Controlar dinámicamente las animaciones UpdatePanel (C#)](animation/dynamically-controlling-updatepanel-animations-cs.md)
     - [Agregar animación a un control (VB)](animation/adding-animation-to-a-control-vb.md)
@@ -62,7 +62,7 @@ ms.locfileid: "59410752"
     - [Desencadenar una animación en otro control (VB)](animation/triggering-an-animation-in-another-control-vb.md)
     - [Modificar las animaciones desde el lado servidor (VB)](animation/modifying-animations-from-the-server-side-vb.md)
     - [Ejecutar animaciones con código de cliente (VB)](animation/executing-animations-using-client-side-code-vb.md)
-    - [Cambiar una animación con código de cliente (VB)](animation/changing-an-animation-using-client-side-code-vb.md)
+    - [Cambiar una animación con código del lado cliente (VB)](animation/changing-an-animation-using-client-side-code-vb.md)
     - [Animar un control UpdatePanel (VB)](animation/animating-an-updatepanel-control-vb.md)
     - [Controlar dinámicamente las animaciones UpdatePanel (VB)](animation/dynamically-controlling-updatepanel-animations-vb.md)
 - [CascadingDropdown](cascadingdropdown/index.md)
@@ -151,7 +151,7 @@ ms.locfileid: "59410752"
     - [Usar varios controles emergentes (VB)](popup/using-multiple-popup-controls-vb.md)
     - [Controlar los postbacks desde un control emergente con un UpdatePanel (VB)](popup/handling-postbacks-from-a-popup-control-with-an-updatepanel-vb.md)
     - [Controlar los postbacks desde un control emergente sin un UpdatePanel (VB)](popup/handling-postbacks-from-a-popup-control-without-an-updatepanel-vb.md)
-- [Calificación](rating/index.md)
+- [Clasificación](rating/index.md)
 
     - [Crear un control de clasificación (C#)](rating/creating-a-rating-control-cs.md)
     - [Crear un control de clasificación (VB)](rating/creating-a-rating-control-vb.md)

@@ -12,10 +12,10 @@ ms.openlocfilehash: cf2cee3888228069e59e9e44ffc2bc56fbba10e3
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59415666"
 ---
-# <a name="part-5-business-logic"></a>Parte 5: Lógica de negocios
+# <a name="part-5-business-logic"></a>Parte 5: Lógica empresarial
 
 por [Joe Stagner](https://github.com/JoeStagner)
 

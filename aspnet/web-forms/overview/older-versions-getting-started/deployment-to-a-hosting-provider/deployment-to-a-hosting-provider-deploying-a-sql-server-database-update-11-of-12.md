@@ -12,7 +12,7 @@ ms.openlocfilehash: 8f2c0e2ea50bccfd300e522dcf8b2ed5ab67cf83
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59408139"
 ---
 # <a name="deploying-an-aspnet-web-application-with-sql-server-compact-using-visual-studio-or-visual-web-developer-deploying-a-sql-server-database-update---11-of-12"></a>Implementar una aplicación Web de ASP.NET con SQL Server Compact con Visual Studio o Visual Web Developer: Implementar una actualización de base de datos SQL Server - 11 12
@@ -156,13 +156,13 @@ Con esto finaliza esta serie de tutoriales sobre la implementación de una aplic
 
 Gustaría agradecer a las siguientes personas que realizan aportaciones significativas al contenido de esta serie de tutoriales:
 
-- [Alberto Poblacion, MVP &amp; MCT, España](https://mvp.support.microsoft.com/profile/Alberto)
+- [Alberto Poblacion, MVP &amp; MCT, Spain](https://mvp.support.microsoft.com/profile/Alberto)
 - Jarod Ferguson, MVP de desarrollo de plataforma de datos, España
 - Harsh Mittal, Microsoft
 - [Kristina Olson, Microsoft](https://blogs.iis.net/krolson/default.aspx)
 - [Mike Pope, Microsoft](http://www.mikepope.com/blog/DisplayBlog.aspx)
 - Mohit Srivastava, Microsoft
-- [Raffaele Rialdi, Italia](http://www.iamraf.net/)
+- [Raffaele Rialdi, Italy](http://www.iamraf.net/)
 - [Rick Anderson, Microsoft](https://blogs.msdn.com/b/rickandy/)
 - [Sayed Hashimi, Microsoft](http://sedodream.com/default.aspx)(twitter: [ @sayedihashimi ](http://twitter.com/sayedihashimi))
 - [Scott Hanselman](http://www.hanselman.com/blog/) (twitter: [ @shanselman ](http://twitter.com/shanselman))

@@ -13,7 +13,7 @@ ms.openlocfilehash: fb0309af11910125943737ebb721b356b7bd08bc
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59418305"
 ---
 # <a name="sending-html-form-data-in-aspnet-web-api-form-urlencoded-data"></a>Enviar datos de formulario HTML en ASP.NET Web API: Datos con codificación URL de formulario

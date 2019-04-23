@@ -12,7 +12,7 @@ ms.openlocfilehash: f5431d60506f5b0a0f4bbcd8e86b316c728a1191
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59415926"
 ---
 # <a name="part-7-membership-and-authorization"></a>Parte 7: Pertenencia y autorización

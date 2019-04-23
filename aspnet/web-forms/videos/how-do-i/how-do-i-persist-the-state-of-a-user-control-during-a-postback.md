@@ -12,7 +12,7 @@ ms.openlocfilehash: c87bd6c5c993a1bde8f8a84f6d53b431e54541d9
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59414782"
 ---
 # <a name="how-do-i-persist-the-state-of-a-user-control-during-a-postback"></a>[¿Cómo]: Conservar el estado de un control de usuario durante un postback

@@ -12,7 +12,7 @@ ms.openlocfilehash: 61b3d54b73e33040baf93a8b7705dfb231835b40
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59410453"
 ---
 # <a name="an-overview-of-inserting-updating-and-deleting-data-c"></a>Información general de insertar, actualizar y eliminar datos (C#)
@@ -33,7 +33,7 @@ Recuerde que cuando creamos los TableAdapters en la capa DAL en [nuestro primer 
 Además su `Select()` método, también tiene el origen ObjectDataSource `Insert()`, `Update()`, y `Delete()` métodos. Al igual que el `Select()` método, estos tres métodos pueden asignarse a métodos en un objeto subyacente. Cuando se configura para insertar, actualizar o eliminar datos, los controles GridView, DetailsView y FormView proporcionan una interfaz de usuario para modificar los datos subyacentes. Esta interfaz de usuario llama a la `Insert()`, `Update()`, y `Delete()` métodos (consulte la figura 1) asociados a los métodos del origen ObjectDataSource, que, a continuación, invocan el objeto subyacente.
 
 
-[![Tde ObjectDataSource Insert(), Update() y Delete() métodos actuar como un Proxy en la capa BLL](an-overview-of-inserting-updating-and-deleting-data-cs/_static/image2.png)](an-overview-of-inserting-updating-and-deleting-data-cs/_static/image1.png)
+[![De ObjectDataSource Insert(), actualizar() y métodos Delete() actúan como un Proxy en el nivel de lógica empresarial](an-overview-of-inserting-updating-and-deleting-data-cs/_static/image2.png)](an-overview-of-inserting-updating-and-deleting-data-cs/_static/image1.png)
 
 **Figura 1**: El ObjectDataSource `Insert()`, `Update()`, y `Delete()` métodos actuar como un Proxy en la capa BLL ([haga clic aquí para ver imagen en tamaño completo](an-overview-of-inserting-updating-and-deleting-data-cs/_static/image3.png))
 
@@ -63,7 +63,7 @@ Antes de empezar a explorar cómo insertar, actualizar y eliminar datos, en prim
 Al igual que en las demás carpetas `Default.aspx` en el `EditInsertDelete` carpeta mostrará una lista de los tutoriales en su sección. Recuerde que el `SectionLevelTutorialListing.ascx` Control de usuario proporciona esta funcionalidad. Por lo tanto, agrega este Control de usuario a `Default.aspx` arrastrándolo desde el Explorador de soluciones en la vista de diseño de la página.
 
 
-[![Ael Control de usuario SectionLevelTutorialListing.ascx a Default.aspx dd](an-overview-of-inserting-updating-and-deleting-data-cs/_static/image6.png)](an-overview-of-inserting-updating-and-deleting-data-cs/_static/image5.png)
+[![Agregar el Control de usuario SectionLevelTutorialListing.ascx a Default.aspx](an-overview-of-inserting-updating-and-deleting-data-cs/_static/image6.png)](an-overview-of-inserting-updating-and-deleting-data-cs/_static/image5.png)
 
 **Figura 3**: Agregar el `SectionLevelTutorialListing.ascx` Control de usuario `Default.aspx` ([haga clic aquí para ver imagen en tamaño completo](an-overview-of-inserting-updating-and-deleting-data-cs/_static/image7.png))
 
@@ -88,7 +88,7 @@ Desde la GridView, DetailsView y FormView cada uno de ellos difieren en sus capa
 Abra el `Basics.aspx` página, arrastre un origen ObjectDataSource desde el cuadro de herramientas hasta el diseñador y haga clic en el vínculo Configurar origen de datos de su etiqueta inteligente. Puesto que el `ProductsBLL` es la única clase de nivel de lógica empresarial que proporciona la edición, inserción y eliminación de los métodos, configuran el origen ObjectDataSource para usar esta clase.
 
 
-[![Cconfigurar el origen ObjectDataSource para usar la clase ProductsBLL](an-overview-of-inserting-updating-and-deleting-data-cs/_static/image10.png)](an-overview-of-inserting-updating-and-deleting-data-cs/_static/image9.png)
+[![Configurar el origen ObjectDataSource para usar la clase ProductsBLL](an-overview-of-inserting-updating-and-deleting-data-cs/_static/image10.png)](an-overview-of-inserting-updating-and-deleting-data-cs/_static/image9.png)
 
 **Figura 5**: Configurar el origen ObjectDataSource que se usarán el `ProductsBLL` clase ([haga clic aquí para ver imagen en tamaño completo](an-overview-of-inserting-updating-and-deleting-data-cs/_static/image11.png))
 
@@ -96,7 +96,7 @@ Abra el `Basics.aspx` página, arrastre un origen ObjectDataSource desde el cuad
 En la siguiente pantalla podemos especificar qué métodos de la `ProductsBLL` clase se asignan a de ObjectDataSource `Select()`, `Insert()`, `Update()`, y `Delete()` , seleccione la ficha apropiada y elija el método en la lista desplegable. Figura 6, que debería resultar familiar en este momento, se asigna el ObjectDataSource `Select()` método a la `ProductsBLL` la clase `GetProducts()` método. El `Insert()`, `Update()`, y `Delete()` métodos se pueden configurar seleccionando la ficha correspondiente en la lista en la parte superior.
 
 
-[![Hguardar el origen ObjectDataSource devuelven todos los de los productos](an-overview-of-inserting-updating-and-deleting-data-cs/_static/image13.png)](an-overview-of-inserting-updating-and-deleting-data-cs/_static/image12.png)
+[![Dispone de ObjectDataSource devuelven todos los productos](an-overview-of-inserting-updating-and-deleting-data-cs/_static/image13.png)](an-overview-of-inserting-updating-and-deleting-data-cs/_static/image12.png)
 
 **Figura 6**: Tiene el origen ObjectDataSource devuelven todos los de los productos ([haga clic aquí para ver imagen en tamaño completo](an-overview-of-inserting-updating-and-deleting-data-cs/_static/image14.png))
 
@@ -104,17 +104,17 @@ En la siguiente pantalla podemos especificar qué métodos de la `ProductsBLL` c
 Pestañas de las figuras 7, 8 y 9 muestran el ObjectDataSource UPDATE, INSERT y DELETE. Configurar estas pestañas para que la `Insert()`, `Update()`, y `Delete()` métodos invocan la `ProductsBLL` la clase `UpdateProduct`, `AddProduct`, y `DeleteProduct` métodos, respectivamente.
 
 
-[![MPA Update() método de ObjectDataSource al método UpdateProduct por separado de la clase ProductBLL](an-overview-of-inserting-updating-and-deleting-data-cs/_static/image16.png)](an-overview-of-inserting-updating-and-deleting-data-cs/_static/image15.png)
+[![Map (método) de ObjectDataSource Update() al método UpdateProduct por separado de la clase ProductBLL](an-overview-of-inserting-updating-and-deleting-data-cs/_static/image16.png)](an-overview-of-inserting-updating-and-deleting-data-cs/_static/image15.png)
 
 **Figura 7**: Asignar el ObjectDataSource `Update()` método a la `ProductBLL` la clase `UpdateProduct` método ([haga clic aquí para ver imagen en tamaño completo](an-overview-of-inserting-updating-and-deleting-data-cs/_static/image17.png))
 
 
-[![MPA Insert() método de ObjectDataSource al método de la clase ProductBLL AddProduct](an-overview-of-inserting-updating-and-deleting-data-cs/_static/image19.png)](an-overview-of-inserting-updating-and-deleting-data-cs/_static/image18.png)
+[![Map (método) de ObjectDataSource Insert() al método de la clase ProductBLL AddProduct](an-overview-of-inserting-updating-and-deleting-data-cs/_static/image19.png)](an-overview-of-inserting-updating-and-deleting-data-cs/_static/image18.png)
 
 **Figura 8**: Asignar el ObjectDataSource `Insert()` método para el `ProductBLL` Add de la clase `Product` método ([haga clic aquí para ver imagen en tamaño completo](an-overview-of-inserting-updating-and-deleting-data-cs/_static/image20.png))
 
 
-[![MPA Delete() método de ObjectDataSource al método de la clase ProductBLL DeleteProduct](an-overview-of-inserting-updating-and-deleting-data-cs/_static/image22.png)](an-overview-of-inserting-updating-and-deleting-data-cs/_static/image21.png)
+[![Map (método) de ObjectDataSource Delete() al método de la clase ProductBLL DeleteProduct](an-overview-of-inserting-updating-and-deleting-data-cs/_static/image22.png)](an-overview-of-inserting-updating-and-deleting-data-cs/_static/image21.png)
 
 **Figura 9**: Asignar el ObjectDataSource `Delete()` método a la `ProductBLL` la clase `DeleteProduct` método ([haga clic aquí para ver imagen en tamaño completo](an-overview-of-inserting-updating-and-deleting-data-cs/_static/image23.png))
 
@@ -202,7 +202,7 @@ El CommandField contiene un número de `ShowXButton` propiedades que indican qu�
 En este momento, créase o no, hemos terminado con la incorporación de compatibilidad de eliminación en el control GridView! Como se muestra en la figura 11, al visitar esta página a través de un explorador, una columna de botones de Delete está presente.
 
 
-[![TCommandField agrega una columna de botones Eliminar](an-overview-of-inserting-updating-and-deleting-data-cs/_static/image26.png)](an-overview-of-inserting-updating-and-deleting-data-cs/_static/image25.png)
+[![El CommandField agrega una columna de botones de eliminación](an-overview-of-inserting-updating-and-deleting-data-cs/_static/image26.png)](an-overview-of-inserting-updating-and-deleting-data-cs/_static/image25.png)
 
 **Figura 11**: El CommandField agrega una columna de botones Eliminar ([haga clic aquí para ver imagen en tamaño completo](an-overview-of-inserting-updating-and-deleting-data-cs/_static/image27.png))
 
@@ -216,7 +216,7 @@ Si ha sido creando este tutorial desde el principio por su cuenta, al probar est
 Si, al intentar eliminar un producto, se produce una excepción cuyo mensaje es similar a "*ObjectDataSource 'ObjectDataSource1' no pudo encontrar un método no genérico 'DeleteProduct' que tiene parámetros: productID, original\_ ProductID*, "es probable que olvidamos eliminar la `OldValuesParameterFormatString` propiedad de ObjectDataSource. Con el `OldValuesParameterFormatString` especifica la propiedad, el origen ObjectDataSource intenta pasar tanto en `productID` y `original_ProductID` parámetros de entrada al `DeleteProduct` método. `DeleteProduct`, sin embargo, solo acepta un único parámetro de entrada, por lo tanto, la excepción. Quitar el `OldValuesParameterFormatString` propiedad (o si se establece en `{0}`) indica a ObjectDataSource para no intenta pasar el parámetro de entrada original.
 
 
-[![Ensure que se ha desactivado la propiedad OldValuesParameterFormatString Out](an-overview-of-inserting-updating-and-deleting-data-cs/_static/image29.png)](an-overview-of-inserting-updating-and-deleting-data-cs/_static/image28.png)
+[![Asegúrese de que se ha borrado la propiedad OldValuesParameterFormatString Out](an-overview-of-inserting-updating-and-deleting-data-cs/_static/image29.png)](an-overview-of-inserting-updating-and-deleting-data-cs/_static/image28.png)
 
 **Figura 12**: Asegúrese de que el `OldValuesParameterFormatString` propiedad ha sido desactivada Out ([haga clic aquí para ver imagen en tamaño completo](an-overview-of-inserting-updating-and-deleting-data-cs/_static/image30.png))
 
@@ -224,7 +224,7 @@ Si, al intentar eliminar un producto, se produce una excepción cuyo mensaje es 
 Incluso si se hubiera quitado el `OldValuesParameterFormatString` propiedad, todavía obtendrá una excepción al intentar eliminar un producto con el mensaje: "*Eliminar la instrucción en conflicto con la restricción de referencia ' FK\_orden\_detalles\_los productos*." La base de datos Northwind contiene una restricción foreign key entre el `Order Details` y `Products` tabla, lo que significa que no se puede eliminar un producto del sistema si hay uno o más registros para él en el `Order Details` tabla. Puesto que todos los productos en la base de datos Northwind no tiene al menos un registro en `Order Details`, no se puede eliminar todos los productos hasta que se eliminación en primer lugar los registros de detalles de pedido asociados del producto.
 
 
-[![A Restricción de clave externa prohíbe la eliminación de los productos](an-overview-of-inserting-updating-and-deleting-data-cs/_static/image32.png)](an-overview-of-inserting-updating-and-deleting-data-cs/_static/image31.png)
+[![Una restricción Foreign Key prohíbe la eliminación de productos](an-overview-of-inserting-updating-and-deleting-data-cs/_static/image32.png)](an-overview-of-inserting-updating-and-deleting-data-cs/_static/image31.png)
 
 **Figura 13**: Una restricción Foreign Key prohíbe la eliminación de productos ([haga clic aquí para ver imagen en tamaño completo](an-overview-of-inserting-updating-and-deleting-data-cs/_static/image33.png))
 
@@ -238,7 +238,7 @@ En este tutorial, vamos a eliminar todos los registros desde el `Order Details` 
 Vamos a eliminar todos los registros desde el `Order Details` tabla para evitar la restricción foreign key. Vaya al explorador de servidores en Visual Studio, haga doble clic en el `NORTHWND.MDF` nodo y elija la nueva consulta. A continuación, en la ventana de consulta, ejecute la siguiente instrucción SQL: `DELETE FROM [Order Details]`
 
 
-[![Deliminar todos los registros de la tabla Order Details](an-overview-of-inserting-updating-and-deleting-data-cs/_static/image35.png)](an-overview-of-inserting-updating-and-deleting-data-cs/_static/image34.png)
+[![Eliminar todos los registros de la tabla Order Details](an-overview-of-inserting-updating-and-deleting-data-cs/_static/image35.png)](an-overview-of-inserting-updating-and-deleting-data-cs/_static/image34.png)
 
 **Figura 14**: Eliminar todos los registros desde el `Order Details` tabla ([haga clic aquí para ver imagen en tamaño completo](an-overview-of-inserting-updating-and-deleting-data-cs/_static/image36.png))
 
@@ -283,7 +283,7 @@ Comprobación de la casilla de verificación Habilitar edición agregará un Com
 Eso es todo para agregar compatibilidad insuficiente con la edición. Como se muestra en Figure16, la interfaz de edición es bastante tosco cada BoundField cuyo `ReadOnly` propiedad está establecida en `false` (valor predeterminado) se representa como un cuadro de texto. Esto incluye campos como `CategoryID` y `SupplierID`, que son claves con otras tablas.
 
 
-[![Celectrónicamente Chai s modificar botón aparecerá con la fila en modo de edición](an-overview-of-inserting-updating-and-deleting-data-cs/_static/image39.png)](an-overview-of-inserting-updating-and-deleting-data-cs/_static/image38.png)
+[![Haga clic en botón de edición de s Chai muestra la fila en modo de edición](an-overview-of-inserting-updating-and-deleting-data-cs/_static/image39.png)](an-overview-of-inserting-updating-and-deleting-data-cs/_static/image38.png)
 
 **Figura 16**: Al hacer clic Chai s botón Editar muestra la fila en modo de edición ([haga clic aquí para ver imagen en tamaño completo](an-overview-of-inserting-updating-and-deleting-data-cs/_static/image40.png))
 
@@ -317,7 +317,7 @@ Como con el control GridView, adición de edición, inserción o eliminación de
 Tenga en cuenta que para DetailsView el CommandField aparece al final de la colección de columnas de forma predeterminada. Puesto que los campos de DetailsView se representan como filas, el CommandField aparece como una fila con Insert, editar y eliminar botones en la parte inferior de DetailsView.
 
 
-[![Configurar DetailsView a soporte técnico de edición, inserción y eliminación](an-overview-of-inserting-updating-and-deleting-data-cs/_static/image43.png)](an-overview-of-inserting-updating-and-deleting-data-cs/_static/image42.png)
+[![Configurar DetailsView al soporte técnico de edición, inserción y eliminación](an-overview-of-inserting-updating-and-deleting-data-cs/_static/image43.png)](an-overview-of-inserting-updating-and-deleting-data-cs/_static/image42.png)
 
 **Figura 18**: Configurar DetailsView a soporte técnico de edición, inserción y eliminación ([haga clic aquí para ver imagen en tamaño completo](an-overview-of-inserting-updating-and-deleting-data-cs/_static/image44.png))
 
@@ -329,7 +329,7 @@ Para insertar, el usuario final se le presentará un nuevo botón que, al hacer 
 Al enlazar un origen de datos a un DetailsView a través de la etiqueta inteligente, Visual Studio establece la `InsertVisible` propiedad `false` solamente para campos de incremento automático. Campos de solo lectura, como `CategoryName` y `SupplierName`, se mostrará en la interfaz de usuario de "modo de inserción", a menos que sus `InsertVisible` propiedad se establece explícitamente en `false`. Dedique un momento para establecer estos dos campos `InsertVisible` propiedades a `false`, ya sea a través de la sintaxis declarativa de DetailsView o editar campos vincular en la etiqueta inteligente. Figura 19 muestra cómo establecer el `InsertVisible` propiedades a `false` haciendo clic en Editar campos vincular.
 
 
-[![NAhora ofrece Acme té Traders orthwind](an-overview-of-inserting-updating-and-deleting-data-cs/_static/image46.png)](an-overview-of-inserting-updating-and-deleting-data-cs/_static/image45.png)
+[![Northwind Traders ahora ofrece té Acme](an-overview-of-inserting-updating-and-deleting-data-cs/_static/image46.png)](an-overview-of-inserting-updating-and-deleting-data-cs/_static/image45.png)
 
 **Figura 19**: Northwind Traders ahora ofrece Acme té ([haga clic aquí para ver imagen en tamaño completo](an-overview-of-inserting-updating-and-deleting-data-cs/_static/image47.png))
 
@@ -337,7 +337,7 @@ Al enlazar un origen de datos a un DetailsView a través de la etiqueta intelige
 Después de establecer el `InsertVisible` propiedades, ver la `Basics.aspx` página en un explorador y haga clic en el botón nuevo. Figura 20 muestra DetailsView al agregar un nuevo bebidas, té Acme, a nuestra línea de productos.
 
 
-[![NAhora ofrece Acme té Traders orthwind](an-overview-of-inserting-updating-and-deleting-data-cs/_static/image49.png)](an-overview-of-inserting-updating-and-deleting-data-cs/_static/image48.png)
+[![Northwind Traders ahora ofrece té Acme](an-overview-of-inserting-updating-and-deleting-data-cs/_static/image49.png)](an-overview-of-inserting-updating-and-deleting-data-cs/_static/image48.png)
 
 **Figura 20**: Northwind Traders ahora ofrece Acme té ([haga clic aquí para ver imagen en tamaño completo](an-overview-of-inserting-updating-and-deleting-data-cs/_static/image50.png))
 
@@ -372,7 +372,7 @@ La siguiente muestra el marcado declarativo para el FormView `ItemTemplate` desp
 Figura 22 muestra de FormView `ItemTemplate` cuando se ve mediante un explorador. Cada campo product aparece con los botones de nuevo, editar y eliminar en la parte inferior.
 
 
-[![Tél ItemTemplate de FormView predeterminada muestra cada campo de producto junto con el nuevo, editar y eliminar botones](an-overview-of-inserting-updating-and-deleting-data-cs/_static/image55.png)](an-overview-of-inserting-updating-and-deleting-data-cs/_static/image54.png)
+[![ItemTemplate FormView predeterminada muestra cada campo de producto junto con nuevas, modificar y eliminar botones](an-overview-of-inserting-updating-and-deleting-data-cs/_static/image55.png)](an-overview-of-inserting-updating-and-deleting-data-cs/_static/image54.png)
 
 **Figura 22**: Defaut FormView `ItemTemplate` enumera cada producto campo junto con nuevo, editar y eliminar botones ([haga clic aquí para ver imagen en tamaño completo](an-overview-of-inserting-updating-and-deleting-data-cs/_static/image56.png))
 
@@ -396,7 +396,7 @@ Nuestro `EditItemTemplate`, en este punto, se producirá una excepción que se p
 Figura 23 FormView se muestra en un explorador después de que se ha presionado el botón Editar para Chai. Tenga en cuenta que el `SupplierName` y `CategoryName` campos que se muestran en el `ItemTemplate` ya no están presentes, como se acaba de quitar de la `EditItemTemplate`. Cuando se hace clic en el botón Actualizar FormView procede a través de la misma secuencia de pasos que los controles GridView y DetailsView.
 
 
-[![BPredeterminado y EditItemTemplate muestra cada campo Editable de productos como un cuadro de texto o la casilla de verificación](an-overview-of-inserting-updating-and-deleting-data-cs/_static/image58.png)](an-overview-of-inserting-updating-and-deleting-data-cs/_static/image57.png)
+[![De forma predeterminada el EditItemTemplate muestra cada campo Editable de productos como un cuadro de texto o la casilla de verificación](an-overview-of-inserting-updating-and-deleting-data-cs/_static/image58.png)](an-overview-of-inserting-updating-and-deleting-data-cs/_static/image57.png)
 
 **Figura 23**: De forma predeterminada el `EditItemTemplate` muestra cada producto campo Editable como un cuadro de texto o la casilla de verificación ([haga clic aquí para ver imagen en tamaño completo](an-overview-of-inserting-updating-and-deleting-data-cs/_static/image59.png))
 
@@ -413,12 +413,12 @@ Hay un problema con la generación automática de FormView de la `InsertItemTemp
 Figura 24 muestra FormView en un explorador cuando se agrega un nuevo producto, Acme café. Tenga en cuenta que el `SupplierName` y `CategoryName` campos que se muestran en el `ItemTemplate` ya no están presentes, tal como se retiró. Cuando se presiona el botón de insertar la lleva a cabo a través de la misma secuencia de pasos que el control DetailsView FormView, agregar un nuevo registro a la `Products` tabla. Figura 25 muestra detalles del producto de café Acme FormView después de que se ha insertado.
 
 
-[![Tél InsertItemTemplate dicta insertar interfaz de FormView](an-overview-of-inserting-updating-and-deleting-data-cs/_static/image61.png)](an-overview-of-inserting-updating-and-deleting-data-cs/_static/image60.png)
+[![El InsertItemTemplate dicta la interfaz de inserción de FormView](an-overview-of-inserting-updating-and-deleting-data-cs/_static/image61.png)](an-overview-of-inserting-updating-and-deleting-data-cs/_static/image60.png)
 
 **Figura 24**: El `InsertItemTemplate` dicta la interfaz de inserción de FormView ([haga clic aquí para ver imagen en tamaño completo](an-overview-of-inserting-updating-and-deleting-data-cs/_static/image62.png))
 
 
-[![TDetalles para el nuevo producto, café Acme, se muestran en FormView](an-overview-of-inserting-updating-and-deleting-data-cs/_static/image64.png)](an-overview-of-inserting-updating-and-deleting-data-cs/_static/image63.png)
+[![Los detalles para el nuevo producto, café Acme, se muestran en FormView](an-overview-of-inserting-updating-and-deleting-data-cs/_static/image64.png)](an-overview-of-inserting-updating-and-deleting-data-cs/_static/image63.png)
 
 **Figura 25**: Los detalles para el nuevo producto, café Acme, se muestran en FormView ([haga clic aquí para ver imagen en tamaño completo](an-overview-of-inserting-updating-and-deleting-data-cs/_static/image65.png))
 

@@ -12,7 +12,7 @@ ms.openlocfilehash: 95943222a9869349784d4fd2686fb81725c65d44
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59409231"
 ---
 # <a name="more-patterns-and-guidance-building-real-world-cloud-apps-with-azure"></a>Más patrones y directrices (crear aplicaciones de nube reales con Azure)

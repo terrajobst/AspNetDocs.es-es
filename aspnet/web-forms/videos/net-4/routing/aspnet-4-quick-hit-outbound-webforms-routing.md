@@ -12,7 +12,7 @@ ms.openlocfilehash: f46a9841295a9526c2a5ef3069ecff8e6626d42d
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59418383"
 ---
 # <a name="aspnet-4-quick-hit---outbound-webforms-routing"></a>ASP.NET 4 "Rápido Hit": enrutamiento de WebForms de salida

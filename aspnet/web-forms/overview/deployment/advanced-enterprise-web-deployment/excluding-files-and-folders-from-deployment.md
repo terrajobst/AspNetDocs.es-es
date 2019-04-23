@@ -12,7 +12,7 @@ ms.openlocfilehash: 4da291af4042e6e09c6917703b160ca717eecd15
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59407996"
 ---
 # <a name="excluding-files-and-folders-from-deployment"></a>Excluir archivos y carpetas de la implementación

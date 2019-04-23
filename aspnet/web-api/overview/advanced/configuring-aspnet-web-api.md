@@ -13,7 +13,7 @@ ms.openlocfilehash: 39629ba404e536b29318db00bce8c4443a782497
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59411948"
 ---
 # <a name="configuring-aspnet-web-api-2"></a>Configuración de ASP.NET Web API 2

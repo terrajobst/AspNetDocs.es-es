@@ -12,7 +12,7 @@ ms.openlocfilehash: 17cdc46ec0605180bb7d98d0fa3796fde28ba686
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59420008"
 ---
 # <a name="aspnet-mvc-mvc-storefront-part-19-processing-orders-with-windows-workflow"></a>ASP.NET MVC escaparate MVC, parte 19: Procesar pedidos con el flujo de trabajo de Windows

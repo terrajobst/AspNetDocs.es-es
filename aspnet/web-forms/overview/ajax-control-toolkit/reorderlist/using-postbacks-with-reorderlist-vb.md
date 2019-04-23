@@ -12,7 +12,7 @@ ms.openlocfilehash: 22c7eecb841ff67196d21e6efeeda63a3456c5cb
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59409088"
 ---
 # <a name="using-postbacks-with-reorderlist-vb"></a>Usar postbacks con ReorderList (VB)
@@ -62,7 +62,7 @@ Por último, para activar la funcionalidad de AJAX de ASP.NET y el Kit de herram
 [!code-aspx[Main](using-postbacks-with-reorderlist-vb/samples/sample6.aspx)]
 
 
-[![Ereordenación ACH desencadena una devolución de datos](using-postbacks-with-reorderlist-vb/_static/image2.png)](using-postbacks-with-reorderlist-vb/_static/image1.png)
+[![Cada reordenación desencadena una devolución de datos](using-postbacks-with-reorderlist-vb/_static/image2.png)](using-postbacks-with-reorderlist-vb/_static/image1.png)
 
 Cada reordenación desencadena una devolución de datos ([haga clic aquí para ver imagen en tamaño completo](using-postbacks-with-reorderlist-vb/_static/image3.png))
 

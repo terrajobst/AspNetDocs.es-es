@@ -12,7 +12,7 @@ ms.openlocfilehash: ec11ca2e38eb53637d13d32f7287e3f15e1d38b3
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59410908"
 ---
 # <a name="aspnet-web-api-part-6-authorization"></a>ASP.NET Web API, parte 6: Autorización

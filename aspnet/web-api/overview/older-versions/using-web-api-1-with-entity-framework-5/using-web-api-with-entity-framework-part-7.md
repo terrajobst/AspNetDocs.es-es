@@ -12,7 +12,7 @@ ms.openlocfilehash: 028631f8855e4d94bebb0e965de75c4025e22859
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59409270"
 ---
 # <a name="part-7-creating-the-main-page"></a>Parte 7: Crear la página principal
@@ -83,7 +83,7 @@ Esto se recorre en iteración la matriz de productos y muestra el nombre y el pr
 
 Las llamadas del botón "Agregar a pedido" `addItemToCart` en el `ProductViewModel` instancia para el producto. Esto muestra una interesante característica de Knockout.js: Cuando un modelo de vista contiene otros modelos de vista, puede aplicar los enlaces para el modelo interno. En este ejemplo, los enlaces dentro de la `foreach` se aplican a cada uno de los `ProductViewModel` instancias. Este enfoque es mucho más limpio que poner toda la funcionalidad en un único modelo de vista.
 
-**Carro de compra**
+**Cart**
 
 Estos son los enlaces para el carro de compra:
 
@@ -91,7 +91,7 @@ Estos son los enlaces para el carro de compra:
 
 Esto se recorre en iteración la matriz de carro y muestra el nombre, precio y cantidad. Tenga en cuenta que el vínculo "Remove" y el botón "Crear un pedido" están enlazados a las funciones del modelo de vista.
 
-**Orders**
+**Pedidos**
 
 Estos son los enlaces de la lista de pedidos:
 

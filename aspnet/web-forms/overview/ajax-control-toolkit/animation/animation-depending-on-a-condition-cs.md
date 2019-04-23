@@ -12,7 +12,7 @@ ms.openlocfilehash: c05f0976a135615f7a272b8057eb4c56677e5117
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59412429"
 ---
 # <a name="animation-depending-on-a-condition-c"></a>Animación según una condición (C#)
@@ -53,7 +53,7 @@ Dentro de la `<Animations>` nodo, use `<OnLoad>` para ejecutar las animaciones d
 Tenga en cuenta que el signo menor que (`<`) en el `ConditionScript` atributo debe ser de escape (de). Cuando ejecute este script, no hay ejecuciones de animación, o uno de los dos, o ambas lo hacen.
 
 
-[![Tpanel se atenúa, sin cambiar el tamaño, por lo que no las segundas ejecuciones de animación, la primera de ellas](animation-depending-on-a-condition-cs/_static/image2.png)](animation-depending-on-a-condition-cs/_static/image1.png)
+[![El panel es difuminación sin cambiar el tamaño, por lo que no las segundas ejecuciones de animación, la primera de ellas](animation-depending-on-a-condition-cs/_static/image2.png)](animation-depending-on-a-condition-cs/_static/image1.png)
 
 El panel es difuminación sin cambiar el tamaño, por lo que no las segundas ejecuciones de animación, la primera de ellas ([haga clic aquí para ver imagen en tamaño completo](animation-depending-on-a-condition-cs/_static/image3.png))
 

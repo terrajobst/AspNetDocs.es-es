@@ -12,7 +12,7 @@ ms.openlocfilehash: f738d1c0b3cd99bb6df5f8b24dca907fa0b31f4d
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59413105"
 ---
 # <a name="configuring-parameters-for-web-package-deployment"></a>Configurar los parámetros para la implementación de paquetes web

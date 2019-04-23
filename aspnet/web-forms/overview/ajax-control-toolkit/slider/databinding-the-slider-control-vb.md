@@ -12,7 +12,7 @@ ms.openlocfilehash: a60e09b7cdda7f924a4287aab8cda32fef5a53ac
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59419774"
 ---
 # <a name="databinding-the-slider-control-vb"></a>Enlace de datos del control deslizante (VB)
@@ -45,7 +45,7 @@ El siguiente paso es ya el paso final. El `SliderExtender` control de ASP.NET AJ
 Como puede ver en el explorador, el enlace de datos funciona en ambas direcciones: escribir un nuevo valor en el cuadro de texto actualiza la posición del control deslizante. Si realiza el segundo cuadro de texto de solo lectura, puede agregar una protección no segura para el campo de texto para que resulte más difícil para el usuario actualizar manualmente el valor allí.
 
 
-[![Scuadro de texto y lider están sincronizadas](databinding-the-slider-control-vb/_static/image2.png)](databinding-the-slider-control-vb/_static/image1.png)
+[![Cuadro de texto y el control deslizante estén sincronizados](databinding-the-slider-control-vb/_static/image2.png)](databinding-the-slider-control-vb/_static/image1.png)
 
 Cuadro de texto y el control deslizante estén sincronizados ([haga clic aquí para ver imagen en tamaño completo](databinding-the-slider-control-vb/_static/image3.png))
 

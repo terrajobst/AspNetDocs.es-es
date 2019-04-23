@@ -12,7 +12,7 @@ ms.openlocfilehash: ec0058472f8bc1d8d58e7c78deeb8b6097532510
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59409738"
 ---
 # <a name="hands-on-lab-maintainable-azure-websites-managing-change-and-scale"></a>Laboratorio práctico: Sitios web de Azure fáciles de mantener Administrar cambios y escalado

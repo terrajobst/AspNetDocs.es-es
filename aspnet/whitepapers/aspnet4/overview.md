@@ -12,7 +12,7 @@ ms.openlocfilehash: 0991ce5c866aa9e31ef23812e953d9ee10dda3d1
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59409725"
 ---
 # <a name="aspnet-4-and-visual-studio-2010-web-development-overview"></a>Información general sobre la implementación web de ASP.NET 4 y Visual Studio 2010
@@ -413,13 +413,13 @@ El efecto de esta configuración es que, cuando la página carga por primera vez
 
 Deshabilitado `: [DynamicValue]`
 
-Habilitado:`[DynamicValue]`
+Habilitada:`[DynamicValue]`
 
 Después de un postback, sin embargo, se muestra el siguiente resultado:
 
 Deshabilitado `: [DeclaredValue]`
 
-Habilitado:`[DynamicValue]`
+Habilitada:`[DynamicValue]`
 
 El control label1 (cuyo *ViewStateMode* valor se establece en *deshabilitado*) no se conserva el valor que se ha establecido en el código. Sin embargo, controlar la label2 (cuyo *ViewStateMode* valor se establece en *habilitado*) se conserva su estado.
 
@@ -445,7 +445,7 @@ La siguiente lista muestra los archivos de definición de nueva ventana del expl
 
 - *blackberry.browser*
 - *chrome.browser*
-- *Default.Browser*
+- *Default.browser*
 - *firefox.browser*
 - *gateway.browser*
 - *generic.browser*
@@ -982,10 +982,10 @@ A continuación, puede definir una clase CSS que solo se aplica a la *oculto* el
 De forma predeterminada, los siguientes controles de servidor Web de ASP.NET que admiten las plantillas se ajustan automáticamente en una tabla externa que se usa para aplicar estilos en línea:
 
 - *FormView*
-- *Iniciar sesión*
+- *inicio de sesión*
 - *PasswordRecovery*
 - *ChangePassword*
-- *Asistente*
+- *Wizard*
 - *CreateUserWizard*
 
 Una nueva propiedad denominada *RenderOuterTable* se agregó a estos controles que permite la tabla externa se quitó el marcado. Por ejemplo, considere el siguiente ejemplo de un *FormView* control:

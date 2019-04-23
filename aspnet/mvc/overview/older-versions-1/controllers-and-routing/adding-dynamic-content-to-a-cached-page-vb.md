@@ -12,7 +12,7 @@ ms.openlocfilehash: 0dae280dfa3028df5fda95c4366132c99a0dc3b7
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59409205"
 ---
 # <a name="adding-dynamic-content-to-a-cached-page-vb"></a>Agregar contenido dinámico a una página almacenada en caché (VB)
@@ -38,13 +38,13 @@ Uso de la sustitución posterior a la caché, requiere dos pasos. En primer luga
 
 Por ejemplo, imagínese que desea mostrar los elementos de noticias diferente aleatoriamente en una página almacenada en caché. La clase en el listado 1 expone un solo método, denominado RenderNews(), que devuelve aleatoriamente un artículo de noticias de una lista de tres elementos de noticias.
 
-**Listado 1 – Models\News.vb**
+**Listing 1 – Models\News.vb**
 
 [!code-vb[Main](adding-dynamic-content-to-a-cached-page-vb/samples/sample1.vb)]
 
 Para aprovechar las ventajas de la sustitución posterior a la caché, se llama al método de HttpResponse.WriteSubstitution(). El método WriteSubstitution() establece el código para reemplazar una región de la página en caché con contenido dinámico. El método WriteSubstitution() se usa para mostrar el elemento de noticias aleatorio en la vista en el listado 2.
 
-**Listado 2 – Views\Home\Index.aspx**
+**Listing 2 – Views\Home\Index.aspx**
 
 [!code-aspx[Main](adding-dynamic-content-to-a-cached-page-vb/samples/sample2.aspx)]
 
@@ -52,7 +52,7 @@ El método RenderNews se pasa al método WriteSubstitution(). Tenga en cuenta qu
 
 La vista de índice se almacena en caché. Se devuelve la vista por el controlador en el listado 3. Tenga en cuenta que la acción de Index() está decorada con un &lt;OutputCache&gt; atributo que hace que la vista de índice en la memoria caché durante 60 segundos.
 
-**Listado 3 – Controllers\HomeController.vb**
+**Listing 3 – Controllers\HomeController.vb**
 
 [!code-vb[Main](adding-dynamic-content-to-a-cached-page-vb/samples/sample3.vb)]
 
@@ -66,7 +66,7 @@ Aunque la vista de índice se almacena en caché, se muestran elementos de notic
 
 Aprovechar las ventajas de la sustitución posterior a la caché de una manera más fácil consiste en encapsular la llamada al método WriteSubstitution() dentro de un método auxiliar personalizada. Este enfoque se ilustra el método auxiliar en el listado 4.
 
-**Listado 4 – Helpers\AdHelper.vb**
+**Listing 4 – Helpers\AdHelper.vb**
 
 [!code-vb[Main](adding-dynamic-content-to-a-cached-page-vb/samples/sample4.vb)]
 

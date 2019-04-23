@@ -12,7 +12,7 @@ ms.openlocfilehash: eaebe2a171a5dd57f1c8a35b85fadd10ebeadd80
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59410362"
 ---
 # <a name="how-do-i-create-data-driven-web-sites"></a>[¿Cómo lo hago?:] ¿Crear sitios Web controlados por datos?

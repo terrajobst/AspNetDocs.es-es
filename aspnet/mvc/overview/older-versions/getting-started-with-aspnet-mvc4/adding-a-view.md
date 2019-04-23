@@ -12,7 +12,7 @@ ms.openlocfilehash: 1ab1ea8b277b48b3b72edb9dd45aa4cc2937ffa8
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59418058"
 ---
 # <a name="adding-a-view"></a>Agregar una vista
@@ -75,7 +75,7 @@ En primer lugar, desea cambiar la &quot;su logotipo aquí.&quot; título en la p
 
 ![_LayoutCshtml](adding-a-view/_static/image7.png)
 
-Las plantillas de diseño permiten especificar el diseño del contenedor HTML del sitio en un solo lugar y, a continuación, aplicarla en varias páginas del sitio. Busque la línea `@RenderBody()`. `RenderBody` es un marcador de posición donde todas las específicas de vista páginas crear show, &quot;ajustado&quot; en la página de diseño. Por ejemplo, si selecciona el vínculo acerca la *Views\Home\About.cshtml* vista se representa dentro de la `RenderBody` método.
+Las plantillas de diseño permiten especificar el diseño del contenedor HTML del sitio en un solo lugar y, a continuación, aplicarla en varias páginas del sitio. Busque la línea `@RenderBody()`. `RenderBody` es un marcador de posición donde se mostrarán todas las páginas específicas de vista que cree, &quot;encapsuladas&quot; en la página de diseño. Por ejemplo, si selecciona el vínculo acerca la *Views\Home\About.cshtml* vista se representa dentro de la `RenderBody` método.
 
 Cambie el encabezado de título del sitio en la plantilla de diseño de &quot;su logotipo aquí&quot; a &quot;MVC Movie&quot;.
 

@@ -12,7 +12,7 @@ ms.openlocfilehash: 8c7b2274ff396f222382488ed877599e86ae5b99
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59412689"
 ---
 # <a name="creating-a-route-constraint-vb"></a>Crear una restricción de ruta (VB)
@@ -32,7 +32,7 @@ Por ejemplo, imagine que ha definido la ruta en el listado 1 en el archivo Globa
 
 Listado 1 contiene una ruta con el nombre de producto. Puede usar la ruta de producto para asignar las solicitudes del explorador a ProductController contenido en el listado 2.
 
-**Listado 2 - Controllers\ProductController.vb**
+**Listing 2 - Controllers\ProductController.vb**
 
 [!code-vb[Main](creating-a-route-constraint-vb/samples/sample2.vb)]
 
@@ -51,7 +51,7 @@ Por desgracia, la ruta también coincidirá con las direcciones URL siguientes:
 Dado que la acción Details() espera un parámetro entero, que realiza una solicitud que contiene un valor distinto de un valor entero se producirá un error. Por ejemplo, si escribe la dirección URL /Product/apple en el explorador, a continuación, obtendrá la página de error en la figura 1.
 
 
-[![Tel cuadro de diálogo nuevo proyecto](creating-a-route-constraint-vb/_static/image1.jpg)](creating-a-route-constraint-vb/_static/image1.png)
+[![El cuadro de diálogo nuevo proyecto](creating-a-route-constraint-vb/_static/image1.jpg)](creating-a-route-constraint-vb/_static/image1.png)
 
 **Figura 01**: Puede ver una página explode ([haga clic aquí para ver imagen en tamaño completo](creating-a-route-constraint-vb/_static/image2.png))
 

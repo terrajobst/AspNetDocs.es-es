@@ -12,7 +12,7 @@ ms.openlocfilehash: 6aee7a07402e407b4c7b0bcd7a5e926955bf96b1
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59410739"
 ---
 # <a name="using-dynamicpopulate-with-a-user-control-and-javascript-vb"></a>Usar DynamicPopulate con un control de usuario y JavaScript (VB)
@@ -67,7 +67,7 @@ Por último, agregue el control de usuario a la página. Solo tiene que establec
 Y listo. La página se comporta según lo esperado: Un usuario hace clic en uno de los botones de radio, el control en el Kit de herramientas, llama al servicio web y muestra la fecha actual en el formato deseado.
 
 
-[![Tbotones de radio residen en un control de usuario](using-dynamicpopulate-with-a-user-control-and-javascript-vb/_static/image2.png)](using-dynamicpopulate-with-a-user-control-and-javascript-vb/_static/image1.png)
+[![Los botones de radio residen en un control de usuario](using-dynamicpopulate-with-a-user-control-and-javascript-vb/_static/image2.png)](using-dynamicpopulate-with-a-user-control-and-javascript-vb/_static/image1.png)
 
 Los botones de radio residen en un control de usuario ([haga clic aquí para ver imagen en tamaño completo](using-dynamicpopulate-with-a-user-control-and-javascript-vb/_static/image3.png))
 

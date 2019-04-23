@@ -12,7 +12,7 @@ ms.openlocfilehash: bf9cf1f5be22a5b97ec964277c11ae21066676f0
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59412416"
 ---
 # <a name="building-real-world-cloud-apps-with-azure"></a>Creación de aplicaciones de nube reales con Azure
@@ -100,7 +100,7 @@ Este libro explica que trece recomienda patrones para el desarrollo de nube. "Pa
     - Habilitar la alta disponibilidad y mejorar la escalabilidad mediante los niveles web y trabajador de acoplamiento flexible.
     - Demostración: Colas de almacenamiento de Azure en la aplicación Fix It.
 - [Más patrones de aplicación y las directrices de la nube](more-patterns-and-guidance.md).
-- [Apéndice: Aplicación de ejemplo Reparar](the-fix-it-sample-application.md)
+- [Apéndice: Corrección de la aplicación de ejemplo](the-fix-it-sample-application.md)
 
     - Problemas conocidos
     - Procedimientos recomendados

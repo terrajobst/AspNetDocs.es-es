@@ -12,7 +12,7 @@ ms.openlocfilehash: b0e51b2fb73370164af1a38af5e5e15e24608843
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59418656"
 ---
 # <a name="aspnet-web-pages-razor-faq"></a>Preguntas frecuentes de ASP.NET Web Pages (Razor)

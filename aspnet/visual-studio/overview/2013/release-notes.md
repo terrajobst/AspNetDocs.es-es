@@ -12,7 +12,7 @@ ms.openlocfilehash: 8234bd1b7eb74d9b03e507f00d9ad937314288be
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59411285"
 ---
 # <a name="aspnet-and-web-tools-for-visual-studio-2013-release-notes"></a>Notas de la versión de ASP.NET and Web Tools para Visual Studio 2013
@@ -38,12 +38,12 @@ por [Microsoft](https://github.com/microsoft)
 - [Compatibilidad de aplicaciones Web de Azure App Service en Visual Studio](#waws)
 - [Mejoras de publicación Web](#publish)
 - [NuGet 2.7](#nuget)
-- [Formularios Web Forms de ASP.NET](#TOC9)
+- [Formularios Web Forms ASP.NET](#TOC9)
 - [ASP.NET MVC 5](#TOC10)
 - [ASP.NET Web API 2](#TOC11)
-- [ASP.NET SignalR](#TOC13)
+- [SignalR de ASP.NET](#TOC13)
 - [ASP.NET Identity](#TOC8)
-- [Microsoft OWIN Components](#TOC7)
+- [Componentes de Microsoft OWIN](#TOC7)
 - [Entity Framework 6](#ef6)
 - [3 de Razor de ASP.NET](#TOC14)
 - [Suspensión de aplicaciones ASP.NET](#TOC15)
@@ -135,7 +135,7 @@ En Visual Studio 2013 con Azure SDK para .NET 2.2, puede usar **Explorador de se
 Para obtener más información, vea los siguientes recursos:
 
 - [Crear una aplicación web ASP.NET en Azure App Service](https://azure.microsoft.com/documentation/articles/web-sites-dotnet-get-started/)
-- [Solución de problemas de una aplicación web en Azure App Service mediante Visual Studio](https://azure.microsoft.com/documentation/articles/web-sites-dotnet-troubleshoot-visual-studio/)
+- [Solución de problemas de una aplicación web en Azure App Service con Visual Studio](https://azure.microsoft.com/documentation/articles/web-sites-dotnet-troubleshoot-visual-studio/)
 
 <a id="publish"></a>
 ## <a name="web-publish-enhancements"></a>Mejoras de publicación Web

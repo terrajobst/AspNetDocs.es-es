@@ -12,7 +12,7 @@ ms.openlocfilehash: 45933ab64c2bf8caa5615e6e9c10aa7fbd5d02bc
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59410583"
 ---
 # <a name="how-do-i-use-the-aspnet-ajax-history-control"></a>[¿Cómo lo hago?:] ¿Usar el Control del historial ASP.NET AJAX?

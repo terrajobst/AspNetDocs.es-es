@@ -12,7 +12,7 @@ ms.openlocfilehash: 1e727e8124e1f045f8ef25ab7a3d4efbafd4290a
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59411220"
 ---
 # <a name="creating-a-team-project-in-tfs"></a>Crear un proyecto de equipo en TFS
@@ -106,8 +106,7 @@ A continuación, se debe conceder al usuario permiso para crear nuevos sitios de
 
    > [!NOTE]
    > Es posible que reciba un <strong>HTTP 404 no encontrado</strong> error debido a un error de codificación doble de HTTP. Si esto sucede, reemplace la dirección URL con este:   
-   > `[site_collection_URL]/_layouts/permsetup.aspx`
-   > Por ejemplo:  
+   > `[site_collection_URL]/_layouts/permsetup.aspx` Por ejemplo:  
    > `http://tfs/sites/Fabrikam%20Web%20Projects/_layouts/permsetup.aspx` 
 8. En el **configurar grupos para este sitio** página, agregue el usuario que creará proyectos de equipo para el **propietarios** de grupo y, a continuación, haga clic en **Aceptar**.
 

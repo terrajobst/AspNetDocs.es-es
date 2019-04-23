@@ -12,7 +12,7 @@ ms.openlocfilehash: 52320892844512f3f090e57c49587e75878ef6b7
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59411155"
 ---
 # <a name="how-do-i-perform-group-and-aggregate-queries"></a>[¿Cómo lo hago?:] ¿Realizar consultas de grupo y agregadas?

@@ -12,7 +12,7 @@ ms.openlocfilehash: e7b929c6e186e59b43180e8f26cf0f8b4608328f
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59417993"
 ---
 # <a name="how-do-i-send-templated-emails-for-health-monitoring-events-in-aspnet"></a>[¿Cómo lo hago?:] Enviar correos electrónicos con plantilla para el estado de supervisión de eventos en ASP.NET

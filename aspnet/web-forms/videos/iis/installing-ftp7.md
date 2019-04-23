@@ -12,7 +12,7 @@ ms.openlocfilehash: 7bf4d99754dbc5c7a5d7e5ef1ea7f0063b512780
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59412221"
 ---
 # <a name="installing-ftp7"></a>Instalar FTP7

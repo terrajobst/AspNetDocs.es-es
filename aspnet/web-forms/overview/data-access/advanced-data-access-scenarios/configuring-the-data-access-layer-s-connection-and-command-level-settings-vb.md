@@ -12,7 +12,7 @@ ms.openlocfilehash: a6097a32f0a67436b786fcdd808964ac6b832439
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59419579"
 ---
 # <a name="configuring-the-data-access-layers-connection--and-command-level-settings-vb"></a>Configurar las opciones de nivel comando y de conexión de la capa de acceso a datos (VB)
@@ -51,7 +51,7 @@ Excepto para el [ajuste modificaciones de base de datos dentro de una transacci�
 Cada clase de TableAdapter tiene un `Connection` propiedad que especifica la información de conexión de base de datos. Este tipo de datos de la propiedad s y `ConnectionString` valor viene determinado por las selecciones realizadas en el Asistente para configuración de TableAdapter. Recuerde que cuando se agrega primero un TableAdapter a un DataSet con tipo este asistente nos pide la base de datos de origen (consulte la figura 1). La lista desplegable en este primer paso incluye esas bases de datos especificadas en el archivo de configuración, así como otras bases de datos en las conexiones de datos de s Explorador de servidores. Si la base de datos que desea usar no existe en la lista desplegable, se puede especificar una nueva conexión de base de datos haciendo clic en el botón nueva conexión y proporcionar la información de conexión necesaria.
 
 
-[![Tél primer paso del Asistente para la configuración de TableAdapter](configuring-the-data-access-layer-s-connection-and-command-level-settings-vb/_static/image2.png)](configuring-the-data-access-layer-s-connection-and-command-level-settings-vb/_static/image1.png)
+[![El primer paso del Asistente para la configuración de TableAdapter](configuring-the-data-access-layer-s-connection-and-command-level-settings-vb/_static/image2.png)](configuring-the-data-access-layer-s-connection-and-command-level-settings-vb/_static/image1.png)
 
 **Figura 1**: El primer paso del Asistente para la configuración de TableAdapter ([haga clic aquí para ver imagen en tamaño completo](configuring-the-data-access-layer-s-connection-and-command-level-settings-vb/_static/image3.png))
 
@@ -109,7 +109,7 @@ Esta clase parcial expone sólo una propiedad del objeto de conexión subyacente
 Abra el `Northwind` conjunto de datos, haga clic en el `ProductsTableAdapter` en el diseñador y vaya a la ventana Propiedades. Allí verá el `ConnectionModifier` establecido en su valor predeterminado, `Assembly`. Para realizar la `Connection` disponible fuera del ensamblado del conjunto de datos con tipo s, cambio de propiedad el `ConnectionModifier` propiedad `Public`.
 
 
-[![Tél s nivel de accesibilidad de propiedad de conexión puede configurarse a través de la propiedad ConnectionModifier](configuring-the-data-access-layer-s-connection-and-command-level-settings-vb/_static/image7.png)](configuring-the-data-access-layer-s-connection-and-command-level-settings-vb/_static/image6.png)
+[![El nivel de accesibilidad de s de propiedad de conexión puede configurarse a través de la propiedad ConnectionModifier](configuring-the-data-access-layer-s-connection-and-command-level-settings-vb/_static/image7.png)](configuring-the-data-access-layer-s-connection-and-command-level-settings-vb/_static/image6.png)
 
 **Figura 4**: El `Connection` propiedad s accesibilidad nivel pueden configurarse a través de la `ConnectionModifier` propiedad ([haga clic aquí para ver imagen en tamaño completo](configuring-the-data-access-layer-s-connection-and-command-level-settings-vb/_static/image8.png))
 

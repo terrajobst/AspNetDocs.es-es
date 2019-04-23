@@ -13,7 +13,7 @@ ms.openlocfilehash: 34a0d62d7afcaffa8fbac0bc774d9266efb6b165
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59413053"
 ---
 # <a name="introduction-to-aspnet-identity"></a>Introducción a ASP.NET Identity
@@ -88,7 +88,7 @@ Teniendo en cuenta estos cambios en el desarrollo de aplicaciones web, ASP.NET I
 
     - Autenticación de ASP.NET se basa ahora en middleware OWIN que se puede usar en cualquier host basado en OWIN. ASP.NET Identity no tiene ninguna dependencia en System.Web. Es un marco OWIN totalmente compatible y puede usarse en cualquier aplicación hospedada de OWIN.
     - ASP.NET Identity utiliza la autenticación de OWIN para el registro en/log-horizontal de los usuarios en el sitio web. Esto significa que, en lugar de usar FormsAuthentication para generar la cookie, la aplicación usa OWIN CookieAuthentication hacer eso.
-- **Detección de**
+- **Paquete NuGet**
 
     - ASP.NET Identity se redistribuye como un paquete de NuGet que se instala en las plantillas de ASP.NET MVC, formularios Web Forms y Web API que se suministran con Visual Studio 2017. Puede descargar este paquete de NuGet desde la Galería de NuGet.
     - Liberación de ASP.NET Identity como NuGet paquete resulta más fácil para el equipo de ASP.NET iterar en las nuevas características y correcciones de errores y ofrecer a los desarrolladores de una manera ágil.

@@ -12,7 +12,7 @@ ms.openlocfilehash: b3e62d86cf991567dc7e481046a496b28165cf39
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59418786"
 ---
 # <a name="visual-studio-2013-web-editor-features---html-editor"></a>Características del editor web de Visual Studio 2013 - Editor HTML

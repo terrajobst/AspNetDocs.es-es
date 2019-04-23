@@ -12,7 +12,7 @@ ms.openlocfilehash: 5f50721b6f263b9cb025f5fa57c923dadeddcd28
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59410596"
 ---
 # <a name="whats-new-in-aspnet-45-and-visual-studio-2012"></a>Novedades de ASP.NET 4.5 y Visual Studio 2012
@@ -42,7 +42,7 @@ ms.locfileid: "59410596"
         - [Uso de la compilación JIT multinúcleo de inicio más rápido](#_Toc_perf_4)
         - [Optimización de la recolección de elementos para optimizar la memoria](#_Toc_perf_5)
         - [La captura previa para aplicaciones web](#_Toc_perf_6)
-- [Formularios Web Forms de ASP.NET](#_Toc318097385)
+- [Formularios Web Forms ASP.NET](#_Toc318097385)
 
     - [Controles de datos fuertemente tipados](#_Toc318097386)
     - [Enlace de modelos](#_Toc318097387)
@@ -71,7 +71,7 @@ ms.locfileid: "59410596"
         - [Generación de controladores de eventos](#_Toc318097404)
         - [Sangría inteligente](#_Toc318097405)
         - [Finalización de instrucciones de reducción automática](#_Toc318097406)
-    - [editor de JavaScript](#_Toc318097407)
+    - [Editor de JavaScript](#_Toc318097407)
 
         - [Esquematización de código](#_Toc318097408)
         - [Coincidencia de llaves](#_Toc318097409)
@@ -80,7 +80,7 @@ ms.locfileid: "59410596"
         - [IntelliSense de DOM](#_Toc318097412)
         - [Sobrecargas de firma VSDOC](#_Toc318097413)
         - [Referencias implícitas](#_Toc318097414)
-    - [Editor CSS](#_Toc318097415)
+    - [Editor de CSS](#_Toc318097415)
 
         - [Finalización de instrucciones de reducción automática](#_Toc318097416)
         - [Aplicación de sangría jerárquica.](#_Toc318097417)
@@ -93,7 +93,7 @@ ms.locfileid: "59410596"
     - [Inspector de página](#_Toc318097424)
     - [Publicación](#_Toc318097425)
 
-        - [Publicar los perfiles](#_Toc318097426)
+        - [Perfiles de publicación](#_Toc318097426)
         - [Combinar y precompilación de ASP.NET](#_Toc318097427)
 - [IIS Express](#_Toc318097428)
 - [Declinación de responsabilidades](#_Toc318097429)

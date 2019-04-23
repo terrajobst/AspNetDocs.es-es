@@ -12,7 +12,7 @@ ms.openlocfilehash: 1fd12181e26012c59bde3e6fe153c196d8bf0d31
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59413196"
 ---
 # <a name="launching-a-modal-popup-window-from-server-code-c"></a>Iniciar una ventana emergente modal desde el código del servidor (C#)
@@ -65,7 +65,7 @@ El `pageLoad()` función de JavaScript es una función especial que se ejecuta u
 El `$find()` función busca un elemento con nombre en la página y se espera que el identificador del lado servidor como un parámetro. Por lo tanto, `$find("mpe")` devuelve la representación del cliente del control ModalPopup; su `show()` método permite que aparezca la ventana emergente.
 
 
-[![Telemento emergente modal de aparece cuando se hace clic en cualquiera de los botones](launching-a-modal-popup-window-from-server-code-cs/_static/image2.png)](launching-a-modal-popup-window-from-server-code-cs/_static/image1.png)
+[![Aparece la ventana emergente modal cuando se hace clic en cualquiera de los botones](launching-a-modal-popup-window-from-server-code-cs/_static/image2.png)](launching-a-modal-popup-window-from-server-code-cs/_static/image1.png)
 
 Aparece la ventana emergente modal cuando se hace clic en cualquiera de los botones ([haga clic aquí para ver imagen en tamaño completo](launching-a-modal-popup-window-from-server-code-cs/_static/image3.png))
 
