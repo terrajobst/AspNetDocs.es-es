@@ -12,7 +12,7 @@ ms.openlocfilehash: b59cd34036c733579e678eab78097d3393f3e671
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59421087"
 ---
 # <a name="aspnet-web-deployment-using-visual-studio-troubleshooting"></a>Implementación Web de ASP.NET con Visual Studio: Solución de problemas
@@ -28,7 +28,7 @@ Esta página describen algunos problemas comunes que pueden surgir al implementa
 
 Los escenarios que se muestran se aplican a Azure y los proveedores de hospedaje de terceros. Para obtener más información sobre cómo solucionar problemas de aplicaciones web en Azure App Service, consulte los siguientes recursos:
 
-- [Solución de problemas de una aplicación web en Azure App Service mediante Visual Studio](https://azure.microsoft.com/documentation/articles/web-sites-dotnet-troubleshoot-visual-studio/)
+- [Solución de problemas de una aplicación web en Azure App Service con Visual Studio](https://azure.microsoft.com/documentation/articles/web-sites-dotnet-troubleshoot-visual-studio/)
 - [Supervisión de aplicaciones Web en Azure App Service](https://azure.microsoft.com/documentation/articles/web-sites-monitor//)
 - [Anuncio de la versión de Windows Azure SDK 2.0 para .NET](http://https://weblogs.asp.net/scottgu/announcing-the-release-of-windows-azure-sdk-2-0-for-net) (blog de ScottGu, se muestra cómo obtener los registros de diagnóstico en Visual Studio)
 
@@ -306,7 +306,7 @@ Publicación se produce un error que indica que no tiene autoridad para establec
 
 ### <a name="possible-cause-and-solution"></a>Causa y solución posibles
 
-De forma predeterminada, Visual Studio los conjuntos de permisos de lectura en la carpeta raíz del sitio y permisos de escritura en la aplicación\_carpeta de datos. Si sabe que los permisos predeterminados en las carpetas del sitio son correctos y no deben establecerse, deshabilitar este comportamiento agregando ** &lt;IncludeSetACLProviderOn destino&gt;False&lt;/ IncludeSetACLProviderOnDestination&gt; ** para el archivo de perfil de publicación (que afecta a un solo perfil) o para los archivos de destino.WPP (que afecta a todos los perfiles). Para obtener información acerca de cómo editar estos archivos, vea [Cómo: Editar la configuración de implementación de los archivos de perfil (.pubxml)](https://msdn.microsoft.com/library/ff398069.aspx).
+De forma predeterminada, Visual Studio los conjuntos de permisos de lectura en la carpeta raíz del sitio y permisos de escritura en la aplicación\_carpeta de datos. Si sabe que los permisos predeterminados en las carpetas del sitio son correctos y no deben establecerse, deshabilitar este comportamiento agregando **&lt;IncludeSetACLProviderOn destino&gt;False&lt;/ IncludeSetACLProviderOnDestination&gt;** para el archivo de perfil de publicación (que afecta a un solo perfil) o para los archivos de destino.WPP (que afecta a todos los perfiles). Para obtener información acerca de cómo editar estos archivos, vea [Cómo: Editar la configuración de implementación de los archivos de perfil (.pubxml)](https://msdn.microsoft.com/library/ff398069.aspx).
 
 ## <a name="access-denied-errors-when-the-application-tries-to-write-to-an-application-folder"></a>Errores de acceso denegado cuando la aplicación intenta escribir en una carpeta de aplicación
 
@@ -316,7 +316,7 @@ Los errores de aplicación cuando intenta crear o editar un archivo en una de la
 
 ### <a name="possible-cause-and-solution"></a>Causa y solución posibles
 
-De forma predeterminada, Visual Studio los conjuntos de permisos de lectura en la carpeta raíz del sitio y permisos de escritura en la aplicación\_carpeta de datos. Si la aplicación necesita acceso de escritura en una subcarpeta, puede establecer permisos para esa carpeta tal como se muestra en la configuración de permisos de carpeta e implementar con los tutoriales del entorno de producción en esta serie. Si la aplicación necesita acceso de escritura a la carpeta raíz del sitio, tendrá que evitar que la configuración de acceso de solo lectura en la carpeta raíz agregando ** &lt;IncludeSetACLProviderOn destino&gt;False&lt;/ IncludeSetACLProviderOnDestination&gt; ** para el archivo de perfil de publicación (que afecta a un solo perfil) o para los archivos de destino.WPP (que afecta a todos los perfiles). Para obtener información acerca de cómo editar estos archivos, vea [Cómo: Editar la configuración de implementación de los archivos de perfil (.pubxml)](https://msdn.microsoft.com/library/ff398069.aspx).
+De forma predeterminada, Visual Studio los conjuntos de permisos de lectura en la carpeta raíz del sitio y permisos de escritura en la aplicación\_carpeta de datos. Si la aplicación necesita acceso de escritura en una subcarpeta, puede establecer permisos para esa carpeta tal como se muestra en la configuración de permisos de carpeta e implementar con los tutoriales del entorno de producción en esta serie. Si la aplicación necesita acceso de escritura a la carpeta raíz del sitio, tendrá que evitar que la configuración de acceso de solo lectura en la carpeta raíz agregando **&lt;IncludeSetACLProviderOn destino&gt;False&lt;/ IncludeSetACLProviderOnDestination&gt;** para el archivo de perfil de publicación (que afecta a un solo perfil) o para los archivos de destino.WPP (que afecta a todos los perfiles). Para obtener información acerca de cómo editar estos archivos, vea [Cómo: Editar la configuración de implementación de los archivos de perfil (.pubxml)](https://msdn.microsoft.com/library/ff398069.aspx).
 
 <a id="aspnet45error"></a>
 
