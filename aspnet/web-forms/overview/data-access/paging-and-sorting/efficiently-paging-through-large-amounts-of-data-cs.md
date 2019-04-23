@@ -12,7 +12,7 @@ ms.openlocfilehash: 21f37dc1ffbcb7e8e15e4bed261b68ffc0388c21
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59388431"
 ---
 # <a name="efficiently-paging-through-large-amounts-of-data-c"></a>Pasar página por grandes cantidades de datos de forma eficaz (C#)
@@ -191,7 +191,7 @@ Después de crear el procedimiento almacenado, dedique un momento para probarlo.
 Después de elegir estos valores de parámetros de entrada, la ventana de salida mostrará los resultados. Figura 8 se muestran los resultados al pasar de 10 para ambos el `@startRowIndex` y `@maximumRows` parámetros.
 
 
-[![Tse devuelven, los registros que podrían aparecer en la segunda página de datos](efficiently-paging-through-large-amounts-of-data-cs/_static/image9.png)](efficiently-paging-through-large-amounts-of-data-cs/_static/image8.png)
+[![Los registros que podrían aparecer en la segunda página de datos se devuelven.](efficiently-paging-through-large-amounts-of-data-cs/_static/image9.png)](efficiently-paging-through-large-amounts-of-data-cs/_static/image8.png)
 
 **Figura 8**: Los registros que podrían aparecer en la segunda página de datos se devuelven ([haga clic aquí para ver imagen en tamaño completo](efficiently-paging-through-large-amounts-of-data-cs/_static/image10.png))
 
@@ -293,7 +293,7 @@ Tenga en cuenta que el `EnablePaging` y `SelectCountMethod` se han establecido l
 Después de realizar estos cambios, visite esta página a través de un explorador. Debería ver 10 productos en la lista, ordenadas alfabéticamente. Tómese un momento para paso a través de la página datos a la vez. Aunque no hay ninguna diferencia visual desde la perspectiva del usuario final s entre la paginación predeterminada y la paginación personalizada, más eficazmente la paginación personalizada páginas a través de grandes cantidades de datos, ya que recupera solo aquellos registros que deben mostrarse de una página determinada.
 
 
-[![Ttiene datos, ordenados por el nombre de producto, es paginado usando paginación personalizada](efficiently-paging-through-large-amounts-of-data-cs/_static/image20.png)](efficiently-paging-through-large-amounts-of-data-cs/_static/image19.png)
+[![Los datos, ordenado por el producto, nombre de s es paginado usando paginación personalizada](efficiently-paging-through-large-amounts-of-data-cs/_static/image20.png)](efficiently-paging-through-large-amounts-of-data-cs/_static/image19.png)
 
 **Figura 17**: Los datos, ordenado por el producto, nombre de s es paginado usando paginación personalizada ([haga clic aquí para ver imagen en tamaño completo](efficiently-paging-through-large-amounts-of-data-cs/_static/image21.png))
 
@@ -309,7 +309,7 @@ Al hacer clic en el último vínculo de página hace que una devolución de dato
 Nuestra implementación de paginación personalizada actual requiere que se especifique el orden por el que los datos están paginados a través de forma estática al crear el `GetProductsPaged` procedimiento almacenado. Sin embargo, es posible que haya anotado que la etiqueta inteligente de GridView s contiene una casilla de verificación Habilitar ordenación además de la opción de habilitar la paginación. Por desgracia, agregar compatibilidad con la ordenación en el control GridView con nuestra implementación de paginación personalizada actual, solo se ordenarán los registros en la página de datos está viendo actualmente. Por ejemplo, si configura el control GridView para admitir la paginación y, a continuación, al ver la primera página de datos, ordenar por nombre de producto en orden descendente, invertirá el orden de los productos en la página 1. Como se muestra en la figura 18, como muestra tigre Carnarvon como el primer producto al ordenar en orden alfabético inverso, que omite el 71 otros productos que venga después tigre Carnarvon, por orden alfabético; solo aquellos registros en la primera página se consideran en la ordenación.
 
 
-[![Osolo los datos que se muestra en la página actual se ordena](efficiently-paging-through-large-amounts-of-data-cs/_static/image23.png)](efficiently-paging-through-large-amounts-of-data-cs/_static/image22.png)
+[![Solo los datos que se muestra en la página actual se ordena.](efficiently-paging-through-large-amounts-of-data-cs/_static/image23.png)](efficiently-paging-through-large-amounts-of-data-cs/_static/image22.png)
 
 **Figura 18**: Solo los datos que se muestra en la página actual está ordenada ([haga clic aquí para ver imagen en tamaño completo](efficiently-paging-through-large-amounts-of-data-cs/_static/image24.png))
 
@@ -356,8 +356,8 @@ Un artículo mío, [paginación personalizada en ASP.NET 2.0 con SQL Server 2005
 | --- | --- | --- |
 | **Paginación a SQL Profiler predeterminada** | 1.411 | 383 |
 | **Profiler SQL de paginación personalizada** | 0.002 | 29 |
-| **Seguimiento de ASP.NET de paginación predeterminado** | 2.379 | *N/D* |
-| **Seguimiento de ASP.NET de paginación personalizada** | 0.029 | *N/D* |
+| **Seguimiento de ASP.NET de paginación predeterminado** | 2.379 | *N/A* |
+| **Seguimiento de ASP.NET de paginación personalizada** | 0.029 | *N/A* |
 
 
 Como puede ver, recuperar una determinada página de datos requerido por término medio 354 menos lecturas y finalizar en una fracción del tiempo. En la página ASP.NET personalizado la página fue capaz de representar en cerca de 1/100<sup>th</sup> del tiempo que tardó la paginación de forma predeterminada. Consulte [mi artículo](http://aspnet.4guysfromrolla.com/articles/031506-1.aspx) para obtener más información sobre estos resultados junto con una base de datos y el código se puede descargar para reproducir estas pruebas en su propio entorno.

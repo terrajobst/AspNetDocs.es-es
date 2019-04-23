@@ -12,7 +12,7 @@ ms.openlocfilehash: 84af745d338e38ece438fa58d51d0929c7b92967
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59408464"
 ---
 # <a name="aspnet-mvc-views-overview-vb"></a>Información general sobre las vistas de ASP.NET MVC (VB)
@@ -104,7 +104,7 @@ Por ejemplo, la vista en el listado 4 se aprovecha de tres aplicaciones auxiliar
 [!code-aspx[Main](asp-net-mvc-views-overview-vb/samples/sample4.aspx)]
 
 
-[![Tel cuadro de diálogo nuevo proyecto](asp-net-mvc-views-overview-vb/_static/image1.jpg)](asp-net-mvc-views-overview-vb/_static/image1.png)
+[![El cuadro de diálogo nuevo proyecto](asp-net-mvc-views-overview-vb/_static/image1.jpg)](asp-net-mvc-views-overview-vb/_static/image1.png)
 
 **Figura 01**: Un formulario de inicio de sesión estándar ([haga clic aquí para ver imagen en tamaño completo](asp-net-mvc-views-overview-vb/_static/image2.png))
 

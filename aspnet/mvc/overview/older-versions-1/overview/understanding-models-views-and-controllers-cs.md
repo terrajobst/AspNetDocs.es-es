@@ -12,7 +12,7 @@ ms.openlocfilehash: 8c57345c510ad0afccaabf377fda35afbfc05e17
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59383413"
 ---
 # <a name="understanding-models-views-and-controllers-c"></a>Descripción de los modelos, vistas y controladores (C#)
@@ -33,7 +33,7 @@ La plantilla de Visual Studio de forma predeterminada para crear aplicaciones We
 Crea una nueva aplicación MVC de ASP.NET con la plantilla MVC, inicie Visual Studio 2008 y seleccionar la opción de menú archivo, nuevo proyecto (consulte la figura 1). En el cuadro de diálogo nuevo proyecto, seleccione su lenguaje de programación favorito en tipos de proyecto (Visual Basic o C#) y seleccione **aplicación Web ASP.NET MVC** en plantillas. Haga clic en el botón Aceptar.
 
 
-[![Ncuadro de diálogo nuevo proyecto](understanding-models-views-and-controllers-cs/_static/image1.jpg)](understanding-models-views-and-controllers-cs/_static/image1.png)
+[![Cuadro de diálogo nuevo proyecto](understanding-models-views-and-controllers-cs/_static/image1.jpg)](understanding-models-views-and-controllers-cs/_static/image1.png)
 
 **Figura 01**: Cuadro de diálogo nuevo proyecto ([haga clic aquí para ver imagen en tamaño completo](understanding-models-views-and-controllers-cs/_static/image2.png))
 
@@ -41,7 +41,7 @@ Crea una nueva aplicación MVC de ASP.NET con la plantilla MVC, inicie Visual St
 Cuando se crea una nueva aplicación de ASP.NET MVC, la **crear proyecto de prueba unitaria** cuadro de diálogo aparece (consulte la figura 2). Este cuadro de diálogo le permite crear un proyecto independiente de la solución para probar la aplicación ASP.NET MVC. Seleccione la opción **No, no cree un proyecto de prueba unitaria** y haga clic en el **Aceptar** botón.
 
 
-[![Ccuadro de diálogo de pruebas unitarias de reate](understanding-models-views-and-controllers-cs/_static/image2.jpg)](understanding-models-views-and-controllers-cs/_static/image3.png)
+[![Crear el cuadro de diálogo de pruebas unitarias](understanding-models-views-and-controllers-cs/_static/image2.jpg)](understanding-models-views-and-controllers-cs/_static/image3.png)
 
 **Figura 02**: Crear el cuadro de diálogo de pruebas unitarias ([haga clic aquí para ver imagen en tamaño completo](understanding-models-views-and-controllers-cs/_static/image4.png))
 
@@ -51,7 +51,7 @@ Después de la nueva de ASP.NET MVC se crea la aplicación. Verá varias carpeta
 Si expande la carpeta Controllers, debería ver un archivo denominado AccountController.cs y un archivo denominado HomeController.cs. Si expande la carpeta Views, debería ver tres subcarpetas con el nombre de cuenta de inicio y compartido. Si expande la carpeta Inicio, verá dos archivos adicionales denominados About.aspx y Index.aspx (consulte la figura 3). Estos archivos constituyen la aplicación de ejemplo incluida con la plantilla predeterminada ASP.NET MVC.
 
 
-[![Tél ventana Explorador de soluciones](understanding-models-views-and-controllers-cs/_static/image3.jpg)](understanding-models-views-and-controllers-cs/_static/image5.png)
+[![La ventana del explorador de soluciones](understanding-models-views-and-controllers-cs/_static/image3.jpg)](understanding-models-views-and-controllers-cs/_static/image5.png)
 
 **Figura 03**: La ventana del explorador de soluciones ([haga clic aquí para ver imagen en tamaño completo](understanding-models-views-and-controllers-cs/_static/image6.png))
 
@@ -61,7 +61,7 @@ Puede ejecutar la aplicación de ejemplo seleccionando la opción de menú **dep
 Al ejecutar una aplicación ASP.NET en primer lugar, aparece el cuadro de diálogo en la figura 4 que se recomienda habilitar el modo de depuración. Haga clic en el botón Aceptar y la aplicación se ejecutará.
 
 
-[![Detener depuración no habilitada diálogo](understanding-models-views-and-controllers-cs/_static/image4.jpg)](understanding-models-views-and-controllers-cs/_static/image7.png)
+[![Cuadro de diálogo depuración no habilitada](understanding-models-views-and-controllers-cs/_static/image4.jpg)](understanding-models-views-and-controllers-cs/_static/image7.png)
 
 **Figura 04**: Cuadro de diálogo no está habilitada la depuración ([haga clic aquí para ver imagen en tamaño completo](understanding-models-views-and-controllers-cs/_static/image8.png))
 
@@ -69,7 +69,7 @@ Al ejecutar una aplicación ASP.NET en primer lugar, aparece el cuadro de diálo
 Al ejecutar una aplicación ASP.NET MVC, Visual Studio inicia la aplicación en el explorador web. La aplicación de ejemplo consta de dos páginas: la página de índice y la página About. Cuando la aplicación se inicia por primera vez, aparece la página de índice (consulte la figura 5). Puede navegar a la página About haciendo clic en el vínculo del menú en la parte superior derecha de la aplicación.
 
 
-[![TPágina de índice](understanding-models-views-and-controllers-cs/_static/image10.png)](understanding-models-views-and-controllers-cs/_static/image9.png)
+[![La página de índice](understanding-models-views-and-controllers-cs/_static/image10.png)](understanding-models-views-and-controllers-cs/_static/image9.png)
 
 **Figura 05**: La página de índice ([haga clic aquí para ver imagen en tamaño completo](understanding-models-views-and-controllers-cs/_static/image11.png))
 

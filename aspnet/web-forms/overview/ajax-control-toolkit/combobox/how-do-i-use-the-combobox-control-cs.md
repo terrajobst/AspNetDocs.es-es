@@ -12,7 +12,7 @@ ms.openlocfilehash: 2d23e65f817c11e45adab56ea054a7c46a35d4f3
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59386442"
 ---
 # <a name="how-do-i-use-the-combobox-control-c"></a>¿Cómo se puede utilizar el Control de cuadro combinado? (C#)
@@ -37,7 +37,7 @@ Si desea utilizar el control de cuadro combinado en la página, a continuación,
 A continuación, arrastre el control de cuadro combinado a la página. Puede encontrar el control de cuadro combinado en el cuadro de herramientas con los demás controles de AJAX Control Toolkit y los extensores de control (consulte la figura 1).
 
 
-[![Simple el formulario para crear una tarjeta de presentación](how-do-i-use-the-combobox-control-cs/_static/image1.jpg)](how-do-i-use-the-combobox-control-cs/_static/image1.png)
+[![Formulario simple para crear una tarjeta de presentación](how-do-i-use-the-combobox-control-cs/_static/image1.jpg)](how-do-i-use-the-combobox-control-cs/_static/image1.png)
 
 **Figura 01**: Seleccionar el control ComboBox desde el cuadro de herramientas ([haga clic aquí para ver imagen en tamaño completo](how-do-i-use-the-combobox-control-cs/_static/image2.png))
 
@@ -45,7 +45,7 @@ A continuación, arrastre el control de cuadro combinado a la página. Puede enc
 Se deberá usar el control ComboBox para mostrar una lista estática de opciones. El usuario puede seleccionar un nivel determinado de haber para su comida desde una lista de tres opciones: Suave, medio y nivel de acceso frecuente (consulte la figura 2).
 
 
-[![Selección de una lista de elementos estática](how-do-i-use-the-combobox-control-cs/_static/image2.jpg)](how-do-i-use-the-combobox-control-cs/_static/image3.png)
+[![Seleccionar de una lista estática de elementos](how-do-i-use-the-combobox-control-cs/_static/image2.jpg)](how-do-i-use-the-combobox-control-cs/_static/image3.png)
 
 **Figura 02**: Seleccionar de una lista estática de elementos ([haga clic aquí para ver imagen en tamaño completo](how-do-i-use-the-combobox-control-cs/_static/image4.png))
 
@@ -53,7 +53,7 @@ Se deberá usar el control ComboBox para mostrar una lista estática de opciones
 Hay dos formas que puede agregar estas opciones en el control ComboBox. En primer lugar, seleccione la opción de editar opciones de la tarea cuando mantiene el mouse sobre el control en la vista Diseño y abra el Editor de elementos (consulte la figura 3).
 
 
-[![Eelementos del cuadro combinado de dición](how-do-i-use-the-combobox-control-cs/_static/image3.jpg)](how-do-i-use-the-combobox-control-cs/_static/image5.png)
+[![Editar elementos de cuadro combinado](how-do-i-use-the-combobox-control-cs/_static/image3.jpg)](how-do-i-use-the-combobox-control-cs/_static/image5.png)
 
 **Figura 03**: Editar elementos de cuadro combinado ([haga clic aquí para ver imagen en tamaño completo](how-do-i-use-the-combobox-control-cs/_static/image6.png))
 
@@ -71,7 +71,7 @@ Sin embargo, también tiene la opción de escribir una nueva opción (por ejempl
 Independientemente de si elige preexistente elemento o especificar un elemento personalizado, al enviar el formulario, aparece su elección en el control de etiqueta. Cuando se envía el formulario, el btnSubmit\_haga clic en controlador se ejecuta y actualiza la etiqueta (consulte la figura 4).
 
 
-[![Del elemento seleccionado IsPlaying](how-do-i-use-the-combobox-control-cs/_static/image4.jpg)](how-do-i-use-the-combobox-control-cs/_static/image7.png)
+[![Mostrar el elemento seleccionado](how-do-i-use-the-combobox-control-cs/_static/image4.jpg)](how-do-i-use-the-combobox-control-cs/_static/image7.png)
 
 **Figura 04**: Mostrar el elemento seleccionado ([haga clic aquí para ver imagen en tamaño completo](how-do-i-use-the-combobox-control-cs/_static/image8.png))
 
@@ -104,12 +104,12 @@ Imagine que desea mostrar una lista de películas en un cuadro combinado. Desea 
 12. Haga clic en el botón Aceptar para cerrar al asistente.
 
 
-[![Choosing un origen de datos](how-do-i-use-the-combobox-control-cs/_static/image5.jpg)](how-do-i-use-the-combobox-control-cs/_static/image9.png)
+[![Elegir un origen de datos](how-do-i-use-the-combobox-control-cs/_static/image5.jpg)](how-do-i-use-the-combobox-control-cs/_static/image9.png)
 
 **Figura 05**: Elegir un origen de datos ([haga clic aquí para ver imagen en tamaño completo](how-do-i-use-the-combobox-control-cs/_static/image10.png))
 
 
-[![Choosing el texto de datos y campos de valor](how-do-i-use-the-combobox-control-cs/_static/image6.jpg)](how-do-i-use-the-combobox-control-cs/_static/image11.png)
+[![Elegir los campos de texto y el valor de datos](how-do-i-use-the-combobox-control-cs/_static/image6.jpg)](how-do-i-use-the-combobox-control-cs/_static/image11.png)
 
 **Figura 06**: Elegir los campos de texto y el valor de datos ([haga clic aquí para ver imagen en tamaño completo](how-do-i-use-the-combobox-control-cs/_static/image12.png))
 
@@ -123,7 +123,7 @@ Después de completar los pasos anteriores, el cuadro combinado está enlazado a
 Observe que el control de cuadro combinado tiene una propiedad DataSourceID que señala el control SqlDataSource. Al abrir la página en un explorador, se muestra la lista de películas de la base de datos (consulte la figura 7). Puede que una selección una película en la lista o escriba una película nueva escribiendo la película en el cuadro combinado.
 
 
-[![Duna lista de películas IsPlaying](how-do-i-use-the-combobox-control-cs/_static/image7.jpg)](how-do-i-use-the-combobox-control-cs/_static/image13.png)
+[![Mostrar una lista de películas](how-do-i-use-the-combobox-control-cs/_static/image7.jpg)](how-do-i-use-the-combobox-control-cs/_static/image13.png)
 
 **Figura 07**: Mostrar una lista de películas ([haga clic aquí para ver imagen en tamaño completo](how-do-i-use-the-combobox-control-cs/_static/image14.png))
 
@@ -150,17 +150,17 @@ Utilice la propiedad ComboBox AutoCompleteMode para especificar lo que sucede cu
 - SuggestAppend - ComboBox tanto muestra la lista y anexa el elemento correspondiente de la lista a lo que ha escrito (consulte la figura 10).
 
 
-[![Tcuadro combinado realiza una sugerencia](how-do-i-use-the-combobox-control-cs/_static/image8.jpg)](how-do-i-use-the-combobox-control-cs/_static/image15.png)
+[![El cuadro combinado hace que una sugerencia](how-do-i-use-the-combobox-control-cs/_static/image8.jpg)](how-do-i-use-the-combobox-control-cs/_static/image15.png)
 
 **Figura 08**: El cuadro combinado hace que una sugerencia ([haga clic aquí para ver imagen en tamaño completo](how-do-i-use-the-combobox-control-cs/_static/image16.png))
 
 
-[![ComboBox anexa texto coincidente](how-do-i-use-the-combobox-control-cs/_static/image9.jpg)](how-do-i-use-the-combobox-control-cs/_static/image17.png)
+[![Cuadro combinado anexa texto coincidente](how-do-i-use-the-combobox-control-cs/_static/image9.jpg)](how-do-i-use-the-combobox-control-cs/_static/image17.png)
 
 **Figura 09**: Cuadro combinado anexa texto coincidente ([haga clic aquí para ver imagen en tamaño completo](how-do-i-use-the-combobox-control-cs/_static/image18.png))
 
 
-[![Tél ComboBox sugiere y anexa](how-do-i-use-the-combobox-control-cs/_static/image10.jpg)](how-do-i-use-the-combobox-control-cs/_static/image19.png)
+[![El cuadro combinado se sugiere y anexa](how-do-i-use-the-combobox-control-cs/_static/image10.jpg)](how-do-i-use-the-combobox-control-cs/_static/image19.png)
 
 **Figura 10**: El cuadro combinado se sugieren y anexa ([haga clic aquí para ver imagen en tamaño completo](how-do-i-use-the-combobox-control-cs/_static/image20.png))
 
