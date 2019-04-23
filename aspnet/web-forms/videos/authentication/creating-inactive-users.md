@@ -12,18 +12,18 @@ ms.openlocfilehash: d0d9bb0f6471acd996530eab76a97cda2667dabd
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59413391"
 ---
-# <a name="creating-inactive-users"></a><span data-ttu-id="f1055-103">Crear usuarios inactivos</span><span class="sxs-lookup"><span data-stu-id="f1055-103">Creating Inactive Users</span></span>
+# <a name="creating-inactive-users"></a><span data-ttu-id="55f05-103">Crear usuarios inactivos</span><span class="sxs-lookup"><span data-stu-id="55f05-103">Creating Inactive Users</span></span>
 
-<span data-ttu-id="f1055-104">por [Joe Stagner](https://github.com/JoeStagner)</span><span class="sxs-lookup"><span data-stu-id="f1055-104">by [Joe Stagner](https://github.com/JoeStagner)</span></span>
+<span data-ttu-id="55f05-104">por [Joe Stagner](https://github.com/JoeStagner)</span><span class="sxs-lookup"><span data-stu-id="55f05-104">by [Joe Stagner](https://github.com/JoeStagner)</span></span>
 
-<span data-ttu-id="f1055-105">En este vídeo Joe Stagner analiza crear usuarios inactivos en el sistema de pertenencia ASP.NET y, a continuación, con una interfaz administrativa para activar los usuarios uno a la vez.</span><span class="sxs-lookup"><span data-stu-id="f1055-105">In this video Joe Stagner walks through creating inactive users in the ASP.NET membership system, and then using an administrative interface to activate the users one at a time.</span></span>
+<span data-ttu-id="55f05-105">En este vídeo Joe Stagner analiza crear usuarios inactivos en el sistema de pertenencia ASP.NET y, a continuación, con una interfaz administrativa para activar los usuarios uno a la vez.</span><span class="sxs-lookup"><span data-stu-id="55f05-105">In this video Joe Stagner walks through creating inactive users in the ASP.NET membership system, and then using an administrative interface to activate the users one at a time.</span></span>
 
-[<span data-ttu-id="f1055-106">&#9654;Vea el vídeo (23 minutos)</span><span class="sxs-lookup"><span data-stu-id="f1055-106">&#9654; Watch video (23 minutes)</span></span>](https://channel9.msdn.com/Blogs/ASP-NET-Site-Videos/creating-inactive-users)
+[<span data-ttu-id="55f05-106">&#9654;Vea el vídeo (23 minutos)</span><span class="sxs-lookup"><span data-stu-id="55f05-106">&#9654; Watch video (23 minutes)</span></span>](https://channel9.msdn.com/Blogs/ASP-NET-Site-Videos/creating-inactive-users)
 
 > [!div class="step-by-step"]
-> <span data-ttu-id="f1055-107">[Anterior](simple-web-service-authentication.md)
-> [Siguiente](sql-injection-defense.md)</span><span class="sxs-lookup"><span data-stu-id="f1055-107">[Previous](simple-web-service-authentication.md)
+> <span data-ttu-id="55f05-107">[Anterior](simple-web-service-authentication.md)
+> [Siguiente](sql-injection-defense.md)</span><span class="sxs-lookup"><span data-stu-id="55f05-107">[Previous](simple-web-service-authentication.md)
 [Next](sql-injection-defense.md)</span></span>

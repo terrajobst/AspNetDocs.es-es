@@ -12,16 +12,16 @@ ms.openlocfilehash: 1bcad8a023500f4738edf09f4ef0635588cd5323
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59412715"
 ---
-# <a name="mvc-music-store-part-1-intro-tools-and-project-structure"></a><span data-ttu-id="54267-103">Tienda de música de MVC, parte 1: Introducción, herramientas y estructura del proyecto</span><span class="sxs-lookup"><span data-stu-id="54267-103">MVC Music Store Part 1: Intro, Tools, and Project Structure</span></span>
+# <a name="mvc-music-store-part-1-intro-tools-and-project-structure"></a><span data-ttu-id="714cb-103">Tienda de música de MVC, parte 1: Introducción, herramientas y estructura del proyecto</span><span class="sxs-lookup"><span data-stu-id="714cb-103">MVC Music Store Part 1: Intro, Tools, and Project Structure</span></span>
 
-<span data-ttu-id="54267-104">por [Jon Galloway](https://github.com/jongalloway)</span><span class="sxs-lookup"><span data-stu-id="54267-104">by [Jon Galloway](https://github.com/jongalloway)</span></span>
+<span data-ttu-id="714cb-104">por [Jon Galloway](https://github.com/jongalloway)</span><span class="sxs-lookup"><span data-stu-id="714cb-104">by [Jon Galloway](https://github.com/jongalloway)</span></span>
 
-<span data-ttu-id="54267-105">Jon Galloway comienza el tutorial de MVC Music Store con una introducción, información general de la aplicación y la revisión de la estructura de directorios de una aplicación MVC.</span><span class="sxs-lookup"><span data-stu-id="54267-105">Jon Galloway begins the MVC Music Store tutorial with an introduction, overview of the application, and review of the directory structure of an MVC application.</span></span>
+<span data-ttu-id="714cb-105">Jon Galloway comienza el tutorial de MVC Music Store con una introducción, información general de la aplicación y la revisión de la estructura de directorios de una aplicación MVC.</span><span class="sxs-lookup"><span data-stu-id="714cb-105">Jon Galloway begins the MVC Music Store tutorial with an introduction, overview of the application, and review of the directory structure of an MVC application.</span></span>
 
-[<span data-ttu-id="54267-106">&#9654;Vea el vídeo (6 minutos)</span><span class="sxs-lookup"><span data-stu-id="54267-106">&#9654; Watch video (6 minutes)</span></span>](https://channel9.msdn.com/Blogs/ASP-NET-Site-Videos/mvc-music-store-part-1-intro-tools-and-project-structure)
+[<span data-ttu-id="714cb-106">&#9654;Vea el vídeo (6 minutos)</span><span class="sxs-lookup"><span data-stu-id="714cb-106">&#9654; Watch video (6 minutes)</span></span>](https://channel9.msdn.com/Blogs/ASP-NET-Site-Videos/mvc-music-store-part-1-intro-tools-and-project-structure)
 
 > [!div class="step-by-step"]
-> [<span data-ttu-id="54267-107">Siguiente</span><span class="sxs-lookup"><span data-stu-id="54267-107">Next</span></span>](mvc-music-store-part-2-controllers.md)
+> [<span data-ttu-id="714cb-107">Siguiente</span><span class="sxs-lookup"><span data-stu-id="714cb-107">Next</span></span>](mvc-music-store-part-2-controllers.md)

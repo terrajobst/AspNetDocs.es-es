@@ -12,18 +12,18 @@ ms.openlocfilehash: c24183b4a037f783c6154c96aabf758e3b8587a1
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59409114"
 ---
-# <a name="aspnet-4-quick-hit---the-scriptloader"></a><span data-ttu-id="204dc-103">ASP.NET 4 "Rápido Hit" - la ScriptLoader</span><span class="sxs-lookup"><span data-stu-id="204dc-103">ASP.NET 4 "Quick Hit" - The ScriptLoader</span></span>
+# <a name="aspnet-4-quick-hit---the-scriptloader"></a><span data-ttu-id="0c3d9-103">ASP.NET 4 "Rápido Hit" - la ScriptLoader</span><span class="sxs-lookup"><span data-stu-id="0c3d9-103">ASP.NET 4 "Quick Hit" - The ScriptLoader</span></span>
 
-<span data-ttu-id="204dc-104">por [Joe Stagner](https://github.com/JoeStagner)</span><span class="sxs-lookup"><span data-stu-id="204dc-104">by [Joe Stagner](https://github.com/JoeStagner)</span></span>
+<span data-ttu-id="0c3d9-104">por [Joe Stagner](https://github.com/JoeStagner)</span><span class="sxs-lookup"><span data-stu-id="0c3d9-104">by [Joe Stagner](https://github.com/JoeStagner)</span></span>
 
-<span data-ttu-id="204dc-105">En este vídeo aprenderá sobre el ScriptLoader.</span><span class="sxs-lookup"><span data-stu-id="204dc-105">In this video will learn about the ScriptLoader.</span></span>
+<span data-ttu-id="0c3d9-105">En este vídeo aprenderá sobre el ScriptLoader.</span><span class="sxs-lookup"><span data-stu-id="0c3d9-105">In this video will learn about the ScriptLoader.</span></span>
 
-[<span data-ttu-id="204dc-106">&#9654;Vea el vídeo (14 minutos)</span><span class="sxs-lookup"><span data-stu-id="204dc-106">&#9654; Watch video (14 minutes)</span></span>](https://channel9.msdn.com/Blogs/ASP-NET-Site-Videos/aspnet-4-quick-hit-the-scriptloader)
+[<span data-ttu-id="0c3d9-106">&#9654;Vea el vídeo (14 minutos)</span><span class="sxs-lookup"><span data-stu-id="0c3d9-106">&#9654; Watch video (14 minutes)</span></span>](https://channel9.msdn.com/Blogs/ASP-NET-Site-Videos/aspnet-4-quick-hit-the-scriptloader)
 
 > [!div class="step-by-step"]
-> <span data-ttu-id="204dc-107">[Anterior](aspnet-4-quick-hit-imperative-javascript-syntax-for-microsoft-client-side-controls.md)
-> [Siguiente](aspnet-4-quick-hit-jquery-syntax-for-microsoft-ajax.md)</span><span class="sxs-lookup"><span data-stu-id="204dc-107">[Previous](aspnet-4-quick-hit-imperative-javascript-syntax-for-microsoft-client-side-controls.md)
+> <span data-ttu-id="0c3d9-107">[Anterior](aspnet-4-quick-hit-imperative-javascript-syntax-for-microsoft-client-side-controls.md)
+> [Siguiente](aspnet-4-quick-hit-jquery-syntax-for-microsoft-ajax.md)</span><span class="sxs-lookup"><span data-stu-id="0c3d9-107">[Previous](aspnet-4-quick-hit-imperative-javascript-syntax-for-microsoft-client-side-controls.md)
 [Next](aspnet-4-quick-hit-jquery-syntax-for-microsoft-ajax.md)</span></span>

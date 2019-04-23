@@ -12,18 +12,18 @@ ms.openlocfilehash: 3ad5276dc8e4beea2cc423cf28c313a6041c680b
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59420060"
 ---
-# <a name="how-do-i-use-an-aspnet-ajax-scriptmanagerproxy"></a><span data-ttu-id="3fbcf-104">[¿Cómo lo hago?:] ¿Usar un objeto ScriptManagerProxy de ASP.NET AJAX?</span><span class="sxs-lookup"><span data-stu-id="3fbcf-104">[How Do I:] Use an ASP.NET AJAX ScriptManagerProxy?</span></span>
+# <a name="how-do-i-use-an-aspnet-ajax-scriptmanagerproxy"></a><span data-ttu-id="12e4a-104">[¿Cómo lo hago?:] ¿Usar un objeto ScriptManagerProxy de ASP.NET AJAX?</span><span class="sxs-lookup"><span data-stu-id="12e4a-104">[How Do I:] Use an ASP.NET AJAX ScriptManagerProxy?</span></span>
 
-<span data-ttu-id="3fbcf-105">por [Joe Stagner](https://github.com/JoeStagner)</span><span class="sxs-lookup"><span data-stu-id="3fbcf-105">by [Joe Stagner](https://github.com/JoeStagner)</span></span>
+<span data-ttu-id="12e4a-105">por [Joe Stagner](https://github.com/JoeStagner)</span><span class="sxs-lookup"><span data-stu-id="12e4a-105">by [Joe Stagner](https://github.com/JoeStagner)</span></span>
 
-<span data-ttu-id="3fbcf-106">Obtenga información sobre cómo un objeto ScriptManagerProxy permite una página de contenido pasar las referencias a ScriptManager colocado en su página principal de ASP.NET, lo que permite a cada página de contenido definir su propio comportamiento de AJAX.</span><span class="sxs-lookup"><span data-stu-id="3fbcf-106">Learn how a ScriptManagerProxy enables a content page to pass references to the ScriptManager placed on its ASP.NET master page, allowing each content page to define its own AJAX behavior.</span></span>
+<span data-ttu-id="12e4a-106">Obtenga información sobre cómo un objeto ScriptManagerProxy permite una página de contenido pasar las referencias a ScriptManager colocado en su página principal de ASP.NET, lo que permite a cada página de contenido definir su propio comportamiento de AJAX.</span><span class="sxs-lookup"><span data-stu-id="12e4a-106">Learn how a ScriptManagerProxy enables a content page to pass references to the ScriptManager placed on its ASP.NET master page, allowing each content page to define its own AJAX behavior.</span></span>
 
-[<span data-ttu-id="3fbcf-107">&#9654;Vea el vídeo (8 minutos)</span><span class="sxs-lookup"><span data-stu-id="3fbcf-107">&#9654; Watch video (8 minutes)</span></span>](https://channel9.msdn.com/Blogs/ASP-NET-Site-Videos/how-do-i-use-an-aspnet-ajax-scriptmanagerproxy)
+[<span data-ttu-id="12e4a-107">&#9654;Vea el vídeo (8 minutos)</span><span class="sxs-lookup"><span data-stu-id="12e4a-107">&#9654; Watch video (8 minutes)</span></span>](https://channel9.msdn.com/Blogs/ASP-NET-Site-Videos/how-do-i-use-an-aspnet-ajax-scriptmanagerproxy)
 
 > [!div class="step-by-step"]
-> <span data-ttu-id="3fbcf-108">[Anterior](how-do-i-use-the-aspnet-ajax-client-library-controls.md)
-> [Siguiente](how-do-i-use-the-aspnet-ajax-roundedcorners-extender.md)</span><span class="sxs-lookup"><span data-stu-id="3fbcf-108">[Previous](how-do-i-use-the-aspnet-ajax-client-library-controls.md)
+> <span data-ttu-id="12e4a-108">[Anterior](how-do-i-use-the-aspnet-ajax-client-library-controls.md)
+> [Siguiente](how-do-i-use-the-aspnet-ajax-roundedcorners-extender.md)</span><span class="sxs-lookup"><span data-stu-id="12e4a-108">[Previous](how-do-i-use-the-aspnet-ajax-client-library-controls.md)
 [Next](how-do-i-use-the-aspnet-ajax-roundedcorners-extender.md)</span></span>

@@ -12,20 +12,20 @@ ms.openlocfilehash: b476e9010e47043f12ce00c222382786c66f5c4e
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59414314"
 ---
-# <a name="getting-started-with-aspnet-mvc-3-c"></a><span data-ttu-id="822c0-103">Introducción a ASP.NET MVC 3 (C#)</span><span class="sxs-lookup"><span data-stu-id="822c0-103">Getting Started with ASP.NET MVC 3 (C#)</span></span>
+# <a name="getting-started-with-aspnet-mvc-3-c"></a><span data-ttu-id="3adbf-103">Introducción a ASP.NET MVC 3 (C#)</span><span class="sxs-lookup"><span data-stu-id="3adbf-103">Getting Started with ASP.NET MVC 3 (C#)</span></span>
 
-> <span data-ttu-id="822c0-104">Los conceptos básicos de la creación de una aplicación Web de ASP.NET MVC mediante Microsoft Visual Web Developer 2010 Express con C#.</span><span class="sxs-lookup"><span data-stu-id="822c0-104">The basics of building an ASP.NET MVC Web application using Microsoft Visual Web Developer 2010 Express using C#.</span></span>
+> <span data-ttu-id="3adbf-104">Los conceptos básicos de la creación de una aplicación Web de ASP.NET MVC mediante Microsoft Visual Web Developer 2010 Express con C#.</span><span class="sxs-lookup"><span data-stu-id="3adbf-104">The basics of building an ASP.NET MVC Web application using Microsoft Visual Web Developer 2010 Express using C#.</span></span>
 
 
-- [<span data-ttu-id="822c0-105">Introducción a ASP.NET MVC 3 (C#)</span><span class="sxs-lookup"><span data-stu-id="822c0-105">Intro to ASP.NET MVC 3 (C#)</span></span>](intro-to-aspnet-mvc-3.md)
-- [<span data-ttu-id="822c0-106">Agregar un controlador (C#)</span><span class="sxs-lookup"><span data-stu-id="822c0-106">Adding a Controller (C#)</span></span>](adding-a-controller.md)
-- [<span data-ttu-id="822c0-107">Agregar una vista (C#)</span><span class="sxs-lookup"><span data-stu-id="822c0-107">Adding a View (C#)</span></span>](adding-a-view.md)
-- [<span data-ttu-id="822c0-108">Agregar un modelo (C#)</span><span class="sxs-lookup"><span data-stu-id="822c0-108">Adding a Model (C#)</span></span>](adding-a-model.md)
-- [<span data-ttu-id="822c0-109">Obtener acceso a los datos del modelo desde un controlador (C#)</span><span class="sxs-lookup"><span data-stu-id="822c0-109">Accessing your Model's Data from a Controller (C#)</span></span>](accessing-your-models-data-from-a-controller.md)
-- [<span data-ttu-id="822c0-110">Examinar los métodos y la vista Edit (C#)</span><span class="sxs-lookup"><span data-stu-id="822c0-110">Examining the Edit Methods and Edit View (C#)</span></span>](examining-the-edit-methods-and-edit-view.md)
-- [<span data-ttu-id="822c0-111">Agregar un nuevo campo a la tabla y modelo de películas (C#)</span><span class="sxs-lookup"><span data-stu-id="822c0-111">Adding a New Field to the Movie Model and Table (C#)</span></span>](adding-a-new-field.md)
-- [<span data-ttu-id="822c0-112">Agregar la validación al modelo (C#)</span><span class="sxs-lookup"><span data-stu-id="822c0-112">Adding Validation to the Model (C#)</span></span>](adding-validation-to-the-model.md)
-- [<span data-ttu-id="822c0-113">Mejorar los métodos Details y Delete (C#)</span><span class="sxs-lookup"><span data-stu-id="822c0-113">Improving the Details and Delete Methods (C#)</span></span>](improving-the-details-and-delete-methods.md)
+- [<span data-ttu-id="3adbf-105">Introducción a ASP.NET MVC 3 (C#)</span><span class="sxs-lookup"><span data-stu-id="3adbf-105">Intro to ASP.NET MVC 3 (C#)</span></span>](intro-to-aspnet-mvc-3.md)
+- [<span data-ttu-id="3adbf-106">Agregar un controlador (C#)</span><span class="sxs-lookup"><span data-stu-id="3adbf-106">Adding a Controller (C#)</span></span>](adding-a-controller.md)
+- [<span data-ttu-id="3adbf-107">Agregar una vista (C#)</span><span class="sxs-lookup"><span data-stu-id="3adbf-107">Adding a View (C#)</span></span>](adding-a-view.md)
+- [<span data-ttu-id="3adbf-108">Agregar un modelo (C#)</span><span class="sxs-lookup"><span data-stu-id="3adbf-108">Adding a Model (C#)</span></span>](adding-a-model.md)
+- [<span data-ttu-id="3adbf-109">Obtener acceso a los datos del modelo desde un controlador (C#)</span><span class="sxs-lookup"><span data-stu-id="3adbf-109">Accessing your Model's Data from a Controller (C#)</span></span>](accessing-your-models-data-from-a-controller.md)
+- [<span data-ttu-id="3adbf-110">Examinar los métodos y la vista Edit (C#)</span><span class="sxs-lookup"><span data-stu-id="3adbf-110">Examining the Edit Methods and Edit View (C#)</span></span>](examining-the-edit-methods-and-edit-view.md)
+- [<span data-ttu-id="3adbf-111">Agregar un nuevo campo a la tabla y modelo de películas (C#)</span><span class="sxs-lookup"><span data-stu-id="3adbf-111">Adding a New Field to the Movie Model and Table (C#)</span></span>](adding-a-new-field.md)
+- [<span data-ttu-id="3adbf-112">Agregar la validación al modelo (C#)</span><span class="sxs-lookup"><span data-stu-id="3adbf-112">Adding Validation to the Model (C#)</span></span>](adding-validation-to-the-model.md)
+- [<span data-ttu-id="3adbf-113">Mejorar los métodos Details y Delete (C#)</span><span class="sxs-lookup"><span data-stu-id="3adbf-113">Improving the Details and Delete Methods (C#)</span></span>](improving-the-details-and-delete-methods.md)
