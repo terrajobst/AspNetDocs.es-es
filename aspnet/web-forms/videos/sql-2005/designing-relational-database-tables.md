@@ -12,7 +12,7 @@ ms.openlocfilehash: 59c015ebd2fafb24f41f8435c62ec1ccfbc67a57
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59421386"
 ---
 # <a name="designing-relational-database-tables"></a>Diseñar tablas de base de datos relacionales

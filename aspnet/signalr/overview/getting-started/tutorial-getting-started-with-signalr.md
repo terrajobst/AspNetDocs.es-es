@@ -9,12 +9,12 @@ ms.assetid: a8b3b778-f009-4369-85c7-e90f9878d8b4
 msc.legacyurl: /signalr/overview/getting-started/tutorial-getting-started-with-signalr
 msc.type: authoredcontent
 ms.topic: tutorial
-ms.openlocfilehash: b1e8b6b1b300665f6cd2466766e9adcff52733da
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: ecc235454d4b95ce660a4373387f44720826b076
+ms.sourcegitcommit: 2d53ed9e4c8b19d3526cbc689bfa8394c9449cec
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59422920"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59905649"
 ---
 # <a name="tutorial-real-time-chat-with-signalr-2"></a>Tutorial: Chat en tiempo real con SignalR 2
 
@@ -60,6 +60,10 @@ En esta sección se muestra cómo usar Visual Studio 2017 y SignalR 2 para crear
 1. En **Agregar nuevo elemento - SignalRChat** seleccione **instalado** > **Visual C#**   >  **Web** y, a continuación, Seleccione **clase de inicio OWIN**.
 
 1. Nombre de la clase *inicio* y agréguelo al proyecto.
+
+1. Reemplace el código predeterminado en *inicio* clase con este código:
+
+    [!code-csharp[Main](tutorial-getting-started-with-signalr/samples/sample2.cs)]
 
 1. En **el Explorador de soluciones**, haga clic en el proyecto y seleccione **agregar** > **página HTML**.
 
@@ -171,7 +175,7 @@ El código inicia la conexión y, a continuación, pasa una función para contro
 
 Para obtener más información acerca de SignalR, consulte los siguientes recursos:
 
-* [Proyecto de SignalR](http://signalr.net)
+* [SignalR Project](http://signalr.net)
 
 * [SignalR Github y ejemplos](https://github.com/SignalR/SignalR)
 

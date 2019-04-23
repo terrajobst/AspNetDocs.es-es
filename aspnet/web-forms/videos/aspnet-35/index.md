@@ -12,7 +12,7 @@ ms.openlocfilehash: b858dfc24a14e182319122320d8bb6af3b8fcb3c
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59422699"
 ---
 # <a name="aspnet-35"></a>ASP.NET 3.5
@@ -24,7 +24,7 @@ ms.locfileid: "59422699"
 
     - [Crear una página maestra en Visual Studio 2008](how-do-i/how-do-i-create-a-master-page-in-visual-studio-2008.md)
     - [Crear una página maestra anidada en Visual Studio 2008](how-do-i/how-do-i-create-nested-master-page-in-visual-studio-2008.md)
-    - [Hojas de estilo CSS en Visual Studio 2008](how-do-i/how-do-i-cascading-style-sheets-in-visual-studio-2008.md)
+    - [Hojas de estilos en cascada en Visual Studio 2008](how-do-i/how-do-i-cascading-style-sheets-in-visual-studio-2008.md)
     - [Trabajar con Visual Studio 2008 .NET Framework](how-do-i/how-do-i-working-with-visual-studio-2008-net-framework.md)
     - [Agregar elementos a un archivo CSS y crear CSS sobre la marcha](how-do-i/how-do-i-adding-elements-to-a-css-file-and-create-new-css-on-the-fly.md)
     - [Administración y características avanzadas de las hojas de estilos en cascada](how-do-i/how-do-i-advance-cascading-style-sheet-features-and-management.md)
@@ -38,13 +38,13 @@ ms.locfileid: "59422699"
     - [Compatibilidad con ASP.NET AJAX en Visual Studio 2008](aspnet-ajax/aspnet-ajax-support-in-visual-studio-2008.md)
     - [Agregar funcionalidad AJAX a una página ASP.NET existente](aspnet-ajax/adding-ajax-functionality-to-an-existing-aspnet-page.md)
     - [Crear y usar un servicio web habilitado para AJAX en un sitio web](aspnet-ajax/creating-and-using-an-ajax-enabled-web-service-in-a-web-site.md)
-    - [ASP.NET AJAX: Demostración de ASP.NET AJAX](aspnet-ajax/aspnet-ajax-a-demonstration-of-aspnet-ajax.md)
+    - [AJAX DE ASP.NET: Ver una demostración de AJAX de ASP.NET](aspnet-ajax/aspnet-ajax-a-demonstration-of-aspnet-ajax.md)
     - [Servicios de datos de ADO.NET con compatibilidad con ASP.NET AJAX](aspnet-ajax/adonet-data-services-with-aspnet-ajax-support.md)
     - [Introducción al historial de ASP.NET Ajax](aspnet-ajax/introduction-to-aspnet-ajax-history.md)
     - [Usar la combinación de scripts para mejorar el rendimiento de AJAX](aspnet-ajax/using-script-combining-to-improve-ajax-performance.md)
 - [Controles de datos](data-controls/index.md)
 
-    - [Control ListView](data-controls/the-listview-control.md)
+    - [ListView (Control)](data-controls/the-listview-control.md)
     - [Control DataPager](data-controls/the-datapager-control.md)
 - [Diseñador de Visual Studio](visual-studio-designer/index.md)
 

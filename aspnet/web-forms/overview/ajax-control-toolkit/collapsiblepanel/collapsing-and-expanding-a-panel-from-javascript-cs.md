@@ -12,7 +12,7 @@ ms.openlocfilehash: 157a486af3d11dfbd7431680b6c9fe4f0e262892
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59422400"
 ---
 # <a name="collapsing-and-expanding-a-panel-from-javascript-c"></a>Contraer y expandir un panel desde JavaScript (C#)
@@ -65,7 +65,7 @@ El tercer botón alterna el estado del panel: desde contraída en ampliado y vic
 [!code-javascript[Main](collapsing-and-expanding-a-panel-from-javascript-cs/samples/sample8.js)]
 
 
-[![Tel tercer botón de cambia el estado del panel: desde contraído expandida y back](collapsing-and-expanding-a-panel-from-javascript-cs/_static/image2.png)](collapsing-and-expanding-a-panel-from-javascript-cs/_static/image1.png)
+[![El tercer botón cambia el estado del panel: desde contraído expandida y back-](collapsing-and-expanding-a-panel-from-javascript-cs/_static/image2.png)](collapsing-and-expanding-a-panel-from-javascript-cs/_static/image1.png)
 
 El tercer botón cambia el estado del panel: desde contraído expandida y back-([haga clic aquí para ver imagen en tamaño completo](collapsing-and-expanding-a-panel-from-javascript-cs/_static/image3.png))
 

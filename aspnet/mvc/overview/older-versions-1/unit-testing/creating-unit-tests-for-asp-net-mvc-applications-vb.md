@@ -12,7 +12,7 @@ ms.openlocfilehash: 47d42b8017837f15e0d56dfb3565257164c97bbe
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59421035"
 ---
 # <a name="creating-unit-tests-for-aspnet-mvc-applications-vb"></a>Crear pruebas unitarias para aplicaciones de ASP.NET MVC (VB)
@@ -59,12 +59,12 @@ Esta acción de controlador también devuelve una vista denominada `Details`. Si
 Puede ejecutar la prueba unitaria en el listado 2 escribiendo la combinación de teclado **Ctrl-R, A** o haciendo clic en el **ejecutar todas las pruebas de la solución** (consulte la figura 1). Si se supera la prueba, verá la ventana de resultados de pruebas en la figura 2.
 
 
-[![RAnular todas las pruebas de la solución](creating-unit-tests-for-asp-net-mvc-applications-vb/_static/image2.png)](creating-unit-tests-for-asp-net-mvc-applications-vb/_static/image1.png)
+[![Ejecutar todas las pruebas de solución](creating-unit-tests-for-asp-net-mvc-applications-vb/_static/image2.png)](creating-unit-tests-for-asp-net-mvc-applications-vb/_static/image1.png)
 
 **Figura 01**: Ejecutar todas las pruebas de solución ([haga clic aquí para ver imagen en tamaño completo](creating-unit-tests-for-asp-net-mvc-applications-vb/_static/image3.png))
 
 
-[![Sorrecto!](creating-unit-tests-for-asp-net-mvc-applications-vb/_static/image5.png)](creating-unit-tests-for-asp-net-mvc-applications-vb/_static/image4.png)
+[![¡Success!](creating-unit-tests-for-asp-net-mvc-applications-vb/_static/image5.png)](creating-unit-tests-for-asp-net-mvc-applications-vb/_static/image4.png)
 
 **Figura 02**: Correcto ([Haga clic aquí para ver imagen en tamaño completo](creating-unit-tests-for-asp-net-mvc-applications-vb/_static/image6.png))
 

@@ -12,7 +12,7 @@ ms.openlocfilehash: f436044b0887d6b092ab18a6128019aa87747566
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59422309"
 ---
 # <a name="getting-started-with-entity-framework-40-database-first-and-aspnet-4-web-forms---part-2"></a>Introducción a Entity Framework 4.0 Database First y ASP.NET 4 Web Forms, parte 2

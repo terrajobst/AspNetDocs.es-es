@@ -8,12 +8,12 @@ ms.date: 10/14/2017
 ms.assetid: 8935bf14-ca6d-4a4e-9dbe-b96ce74cef49
 msc.legacyurl: /ajax/cdn
 msc.type: content
-ms.openlocfilehash: 6cea53021ce92e3936b06481008a86dd0590a117
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: d98fc8ff72f7d32502d88329ef9d056393b92c92
+ms.sourcegitcommit: 2d53ed9e4c8b19d3526cbc689bfa8394c9449cec
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59387443"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59905688"
 ---
 # <a name="microsoft-ajax-content-delivery-network"></a>Microsoft Ajax Content Delivery Network
 
@@ -163,6 +163,14 @@ La red CDN hospeda algunas de las bibliotecas de JavaScript de terceros más pop
 ### <a name="jquery-releases-on-the-cdn"></a>Versiones de jQuery en la red CDN
 
 Las siguientes versiones de jQuery se hospedan en la red CDN:
+
+#### <a name="jquery-version-340"></a>versión de jQuery 3.4.0
+- https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.4.0.js
+- https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.4.0.min.js
+- https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.4.0.min.map
+- https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.4.0.slim.js
+- https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.4.0.slim.min.js
+- https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.4.0.slim.min.map
 
 #### <a name="jquery-version-331"></a>versión de jQuery 3.3.1
 - https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.3.1.js

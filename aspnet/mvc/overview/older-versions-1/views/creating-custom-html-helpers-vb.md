@@ -12,7 +12,7 @@ ms.openlocfilehash: 1f36bffeda49c1777e964dc5330cbb473b01c1a9
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59421568"
 ---
 # <a name="creating-custom-html-helpers-vb"></a>Crear asistentes de HTML personalizados (VB)
@@ -49,7 +49,7 @@ El marco de ASP.NET MVC incluye el siguiente conjunto de aplicaciones auxiliares
 Por ejemplo, considere el formulario en el listado 1. Este formulario se representa con la Ayuda de dos de las aplicaciones auxiliares de HTML estándar (consulte la figura 1). Este formulario utiliza la `Html.BeginForm()` y `Html.TextBox()` métodos auxiliares.
 
 
-[![Pedad representado las aplicaciones auxiliares HTML](creating-custom-html-helpers-vb/_static/image2.png)](creating-custom-html-helpers-vb/_static/image1.png)
+[![Representa la página con las aplicaciones auxiliares HTML](creating-custom-html-helpers-vb/_static/image2.png)](creating-custom-html-helpers-vb/_static/image1.png)
 
 **Figura 01**: Representa la página con las aplicaciones auxiliares HTML ([haga clic aquí para ver imagen en tamaño completo](creating-custom-html-helpers-vb/_static/image3.png))
 
@@ -104,7 +104,7 @@ En segundo lugar, tenga en cuenta que el primer parámetro de la `Label()` méto
 Después de crear un método de extensión y compilar la aplicación correctamente, el método de extensión aparece en Intellisense en Visual Studio, como todos los otros métodos de una clase (consulte la figura 2). La única diferencia es que dicha extensión se muestran métodos con un símbolo especial junto a ellos (un icono de una flecha hacia abajo).
 
 
-[![UDestaque el método de extensión Html.Label()](creating-custom-html-helpers-vb/_static/image5.png)](creating-custom-html-helpers-vb/_static/image4.png)
+[![Mediante el método de extensión Html.Label()](creating-custom-html-helpers-vb/_static/image5.png)](creating-custom-html-helpers-vb/_static/image4.png)
 
 **Figura 02**: Mediante el método de extensión Html.Label() ([haga clic aquí para ver imagen en tamaño completo](creating-custom-html-helpers-vb/_static/image6.png))
 

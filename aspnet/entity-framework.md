@@ -6,15 +6,14 @@ description: ''
 ms.assetid: faa761a9-86b3-4859-b9c0-60d5c5bc5e93
 ms.author: riande
 ms.date: 03/12/2010
-ms.technology: aspnet
 msc.legacyurl: /entity-framework
 msc.type: content
-ms.openlocfilehash: bcbd98f88b1e7e292961326061404ce91d157b32
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
-ms.translationtype: HT
+ms.openlocfilehash: 26862565b23f60baf3698c0c6d63c7daa147abe0
+ms.sourcegitcommit: 2d53ed9e4c8b19d3526cbc689bfa8394c9449cec
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59414561"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59905662"
 ---
 # <a name="entity-framework"></a>Entity Framework
 

@@ -12,7 +12,7 @@ ms.openlocfilehash: 175e78d7ccc669c29c63dcb53af7aad1608c7d15
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59422361"
 ---
 # <a name="creating-page-layouts-with-view-master-pages-vb"></a>Crear diseños de página con páginas maestras de vista (VB)
@@ -37,7 +37,7 @@ En este tutorial, aprenderá a crear una nueva página principal de la vista y c
 Comencemos por crear una página maestra de la vista que define un diseño de dos columnas. Agregar una nueva página principal de la vista a un proyecto MVC hace doble clic en la carpeta Views\Shared, seleccionando la opción de menú **agregar, elemento nuevo**y seleccione la plantilla de página maestra de la vista de MVC (consulte la figura 1).
 
 
-[![Agregar una página maestra de vista](creating-page-layouts-with-view-master-pages-vb/_static/image2.png)](creating-page-layouts-with-view-master-pages-vb/_static/image1.png)
+[![Adición de una página maestra de la vista](creating-page-layouts-with-view-master-pages-vb/_static/image2.png)](creating-page-layouts-with-view-master-pages-vb/_static/image1.png)
 
 **Figura 01**: Agregar una página de vista maestra ([haga clic aquí para ver imagen en tamaño completo](creating-page-layouts-with-view-master-pages-vb/_static/image3.png))
 
@@ -55,7 +55,7 @@ Por ejemplo, la página principal de la vista en el listado 1 define un diseño 
 El cuerpo de la vista de página maestra en el listado 1 contiene dos `<div>` etiquetas que corresponden a las dos columnas. La clase de columna de la hoja de estilos en cascada se aplica a ambos `<div>` etiquetas. Esta clase se define en la hoja de estilos que se declaran en la parte superior de la página maestra. Puede ver cómo se presentará la página principal de la vista al cambiar a vista de diseño. Haga clic en la pestaña diseño en la parte inferior izquierda del editor de código fuente (consulte la figura 2).
 
 
-[![Previsar una página maestra en el diseñador](creating-page-layouts-with-view-master-pages-vb/_static/image5.png)](creating-page-layouts-with-view-master-pages-vb/_static/image4.png)
+[![Vista previa de una página maestra en el diseñador](creating-page-layouts-with-view-master-pages-vb/_static/image5.png)](creating-page-layouts-with-view-master-pages-vb/_static/image4.png)
 
 **Figura 02**: Vista previa de una página maestra en el diseñador ([haga clic aquí para ver imagen en tamaño completo](creating-page-layouts-with-view-master-pages-vb/_static/image6.png))
 
@@ -73,7 +73,7 @@ Después de crear una página maestra de la vista, puede crear vista de una o va
 Tras hacer clic en el botón Agregar, aparece un diálogo nuevo que le permite seleccionar una página maestra de la vista para asociar a la página de vista de contenido (consulte la figura 4). Puede navegar a la página maestra vista Site.master que creamos en la sección anterior.
 
 
-[![Selección de una página maestra](creating-page-layouts-with-view-master-pages-vb/_static/image11.png)](creating-page-layouts-with-view-master-pages-vb/_static/image10.png)
+[![Seleccionar una página maestra](creating-page-layouts-with-view-master-pages-vb/_static/image11.png)](creating-page-layouts-with-view-master-pages-vb/_static/image10.png)
 
 **Figura 04**: Seleccionar una página maestra ([haga clic aquí para ver imagen en tamaño completo](creating-page-layouts-with-view-master-pages-vb/_static/image12.png))
 
@@ -101,7 +101,7 @@ Por ejemplo, la vista de índice modificada en el listado 3 contiene sólo dos `
 Cuando se solicita la vista en el listado 3, representa la página en la figura 5. Tenga en cuenta que la vista presenta una página con dos columnas. Además, tenga en cuenta que el contenido de la página de contenido de la vista se combina con el contenido de la página principal de la vista.
 
 
-[![Tcontenido página de vista Index](creating-page-layouts-with-view-master-pages-vb/_static/image14.png)](creating-page-layouts-with-view-master-pages-vb/_static/image13.png)
+[![La página de contenido de la vista de índice](creating-page-layouts-with-view-master-pages-vb/_static/image14.png)](creating-page-layouts-with-view-master-pages-vb/_static/image13.png)
 
 **Figura 05**: La página de contenido de la vista de índice ([haga clic aquí para ver imagen en tamaño completo](creating-page-layouts-with-view-master-pages-vb/_static/image15.png))
 
@@ -117,7 +117,7 @@ Hay dos maneras en que puede modificar el título mostrado por una página de co
 Cuando se representa la vista de índice en el explorador, el título deseado aparece en la barra de título del explorador:
 
 
-[![Bbarra de título xplorador](creating-page-layouts-with-view-master-pages-vb/_static/image17.png)](creating-page-layouts-with-view-master-pages-vb/_static/image16.png)
+[![Barra de título del explorador](creating-page-layouts-with-view-master-pages-vb/_static/image17.png)](creating-page-layouts-with-view-master-pages-vb/_static/image16.png)
 
 
 Hay un requisito importante que debe satisfacer una página de vista maestra en orden para el atributo de título para que funcione. La página principal de la vista debe contener un `<head runat="server">` etiqueta en lugar de una normal `<head>` etiqueta para el encabezado. Si el `<head>` etiqueta no incluye el runat = atributo "server", a continuación, el título no aparecerá. La vista predeterminada incluye la página maestra `<head runat="server">` etiqueta.

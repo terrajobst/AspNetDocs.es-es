@@ -12,7 +12,7 @@ ms.openlocfilehash: a6b433f187495b8dcd874bcab8ddc607e6de61c9
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59422530"
 ---
 # <a name="dynamically-populating-a-control-using-javascript-code-c"></a>Rellenar dinámicamente un control mediante el código de JavaScript (C#)
@@ -55,7 +55,7 @@ Con el fin de que el ejemplo un poco más flexible, el usuario puede elegir entr
 Tenga en cuenta que dentro del contexto de un botón de radio, la expresión de JavaScript `this.value` hace referencia al valor del botón actual, que es exactamente la misma información de la `getDate()` método puede trabajar con.
 
 
-[![A Haga clic en el botón, recupera la fecha desde el servidor, en el formato especificado](dynamically-populating-a-control-using-javascript-code-cs/_static/image2.png)](dynamically-populating-a-control-using-javascript-code-cs/_static/image1.png)
+[![Hacer clic en el botón recupera la fecha del servidor, en el formato especificado](dynamically-populating-a-control-using-javascript-code-cs/_static/image2.png)](dynamically-populating-a-control-using-javascript-code-cs/_static/image1.png)
 
 Hacer clic en el botón recupera la fecha del servidor, en el formato especificado ([haga clic aquí para ver imagen en tamaño completo](dynamically-populating-a-control-using-javascript-code-cs/_static/image3.png))
 

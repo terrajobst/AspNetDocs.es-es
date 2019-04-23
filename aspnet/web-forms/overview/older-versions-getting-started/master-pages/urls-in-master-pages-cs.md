@@ -12,7 +12,7 @@ ms.openlocfilehash: a218dffb3d23ca95e9864fb7b272bc6a004386c4
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59421204"
 ---
 # <a name="urls-in-master-pages-c"></a>Direcciones URL en páginas maestras (C#)
@@ -75,7 +75,7 @@ El `~/Admin/Default.aspx` página de contenido se envía el mismo HTML para el `
 Dado que el `<img>` del elemento `src` el atributo es una dirección URL relativa, el explorador intenta buscar un `Images` carpeta relativa a la ubicación de la carpeta de la página web. En otras palabras, el explorador está buscando el archivo de imagen `Admin/Images/PoweredByASPNET.gif`.
 
 
-[![Tél PoweredByASPNET.gif imagen no se encuentra archivo](urls-in-master-pages-cs/_static/image3.png)](urls-in-master-pages-cs/_static/image2.png)
+[![No se encuentra el archivo de imagen PoweredByASPNET.gif](urls-in-master-pages-cs/_static/image3.png)](urls-in-master-pages-cs/_static/image2.png)
 
 **Figura 02**: El `PoweredByASPNET.gif` imagen no se encuentra el archivo ([haga clic aquí para ver imagen en tamaño completo](urls-in-master-pages-cs/_static/image4.png))
 
@@ -92,7 +92,7 @@ Para solucionar la imagen rota, se muestra en la figura 2, es necesario actualiz
 Dedique unos minutos a actualizar el `<img>` del elemento `src` atributo a una dirección URL absoluta mediante uno de los formularios mostrados anteriormente y, a continuación, visite la `~/Admin/Default.aspx` página a través de un explorador. Esta vez el explorador correctamente buscar y mostrar el `PoweredByASPNET.gif` archivo de imagen (consulte la figura 3).
 
 
-[![TImagen PoweredByASPNET.gif es ahora muestran](urls-in-master-pages-cs/_static/image6.png)](urls-in-master-pages-cs/_static/image5.png)
+[![La imagen PoweredByASPNET.gif es ahora muestran](urls-in-master-pages-cs/_static/image6.png)](urls-in-master-pages-cs/_static/image5.png)
 
 **Figura 03**: El `PoweredByASPNET.gif` imagen es ahora muestran ([haga clic aquí para ver imagen en tamaño completo](urls-in-master-pages-cs/_static/image7.png))
 

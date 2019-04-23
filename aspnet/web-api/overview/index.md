@@ -13,7 +13,7 @@ ms.openlocfilehash: 304c0d71e5e18f9d3f0768464fe39d6e6946600d
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59422907"
 ---
 # <a name="web-api-guidance"></a>Guía de Web API
@@ -24,13 +24,13 @@ ms.locfileid: "59422907"
     - [Resultados de la acción en Web API 2](getting-started-with-aspnet-web-api/action-results.md)
     - [Usar Web API con Formularios Web Forms de ASP.NET](getting-started-with-aspnet-web-api/using-web-api-with-aspnet-web-forms.md)
     - [Crear páginas de ayuda de Web API](getting-started-with-aspnet-web-api/creating-api-help-pages.md)
-    - [Laboratorio práctico: Compilar una aplicación de una página (SPA) con ASP.NET Web API y Angular.js](getting-started-with-aspnet-web-api/build-a-single-page-application-spa-with-aspnet-web-api-and-angularjs.md)
+    - [Laboratorio práctico: Crear una aplicación de página única (SPA) con ASP.NET Web API y Angular.js](getting-started-with-aspnet-web-api/build-a-single-page-application-spa-with-aspnet-web-api-and-angularjs.md)
 - [Enrutamiento](web-api-routing-and-actions/index.md)
 
     - [Enrutamiento en Web API](web-api-routing-and-actions/routing-in-aspnet-web-api.md)
     - [Enrutamiento y selección de una acción en Web API](web-api-routing-and-actions/routing-and-action-selection.md)
     - [Enrutamiento de atributos en Web API 2](web-api-routing-and-actions/attribute-routing-in-web-api-2.md)
-    - [Crear una API REST con enrutamiento de atributos en Web API 2](web-api-routing-and-actions/create-a-rest-api-with-attribute-routing.md)
+    - [Crear una API de REST con enrutamiento de atributos en Web API 2](web-api-routing-and-actions/create-a-rest-api-with-attribute-routing.md)
 - [Trabajar con datos](data/index.md)
 
     - [Usar Web API 2 con Entity Framework 6](data/using-web-api-with-entity-framework/index.md)
@@ -92,13 +92,13 @@ ms.locfileid: "59422907"
 - [Seguridad, autenticación y autorización](security/index.md)
 
     - [Autenticación y autorización en Web API](security/authentication-and-authorization-in-aspnet-web-api.md)
-    - [Proteger Web API con cuentas concretas en Web API 2.2](security/individual-accounts-in-web-api.md)
+    - [Proteger una API web con cuentas concretas en Web API 2.2](security/individual-accounts-in-web-api.md)
     - [Servicios de autenticación externa con Web API (C#)](security/external-authentication-services.md)
     - [Prevenir ataques de falsificación de solicitud entre sitios (CSRF) en Web API](security/preventing-cross-site-request-forgery-csrf-attacks.md)
     - [Habilitar las solicitudes entre orígenes en Web API 2](security/enabling-cross-origin-requests-in-web-api.md)
     - [Filtros de autenticación en Web API 2](security/authentication-filters.md)
     - [Autenticación básica en Web API](security/basic-authentication.md)
-    - [Autenticación de formularios en Web API](security/forms-authentication.md)
+    - [Autenticación de formularios en API Web](security/forms-authentication.md)
     - [Autenticación integrada de Windows](security/integrated-windows-authentication.md)
     - [Trabajar con SSL](security/working-with-ssl-in-web-api.md)
 - [Implementación y hospedaje](hosting-aspnet-web-api/index.md)
@@ -109,10 +109,10 @@ ms.locfileid: "59422907"
 
     - [Configurar Web API 2](advanced/configuring-aspnet-web-api.md)
     - [Inserción de dependencias en Web API 2](advanced/dependency-injection.md)
-    - [Llamar a Web API desde un cliente .NET (C#)](advanced/calling-a-web-api-from-a-net-client.md)
+    - [Llamar a una API web desde un cliente .NET (C#)](advanced/calling-a-web-api-from-a-net-client.md)
     - [Controladores de mensajes HTTP en Web API](advanced/http-message-handlers.md)
     - [Controladores de mensajes HttpClient en Web API](advanced/httpclient-message-handlers.md)
-    - [Enviar datos de formulario HTML en Web API: Datos con codificación URL de formulario](advanced/sending-html-form-data-part-1.md)
+    - [Enviar datos de formulario HTML en Web API: Datos de formato form-urlencoded](advanced/sending-html-form-data-part-1.md)
     - [Enviar datos de formulario HTML en Web API: Carga de archivos y MIME de varias partes](advanced/sending-html-form-data-part-2.md)
     - [Cookies HTTP en ASP.NET Web API](advanced/http-cookies.md)
 - [Versiones](releases/index.md)

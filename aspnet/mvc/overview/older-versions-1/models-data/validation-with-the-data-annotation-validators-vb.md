@@ -12,7 +12,7 @@ ms.openlocfilehash: 6893d1f2445452b1d802b89027b09d8294bdc5b7
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59422842"
 ---
 # <a name="validation-with-the-data-annotation-validators-vb"></a>Validación con los validadores de anotación de datos (VB)

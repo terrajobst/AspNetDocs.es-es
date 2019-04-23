@@ -6,13 +6,12 @@ description: Una lista de las guías paso a paso para desarrollar aplicaciones d
 ms.assetid: fddf8e5e-c055-4f81-b691-78deef871112
 ms.author: riande
 ms.date: 09/20/2017
-ms.technology: aspnet
-ms.openlocfilehash: 8f45f73c691600ae5138170db5cc4794246c4f2e
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: 240260a496ee797556ca5dbd2c8faec79d23ac64
+ms.sourcegitcommit: 2d53ed9e4c8b19d3526cbc689bfa8394c9449cec
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57025282"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59905675"
 ---
 # <a name="aspnet-tutorials"></a>Tutoriales de ASP.NET
 

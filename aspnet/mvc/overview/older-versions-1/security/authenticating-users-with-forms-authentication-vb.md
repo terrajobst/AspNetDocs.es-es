@@ -12,7 +12,7 @@ ms.openlocfilehash: 0a4e8dc3ce5764c6b2ec59c7e3f507064f8a8cb5
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59422166"
 ---
 # <a name="authenticating-users-with-forms-authentication-vb"></a>Autenticar a los usuarios con la autenticación de formularios (VB)
@@ -58,7 +58,7 @@ Puede requerir un usuario se autentique antes de que el usuario invoque una acci
 
 Por ejemplo, el controlador en el listado 1 expone una acción denominada CompanySecrets(). Dado que esta acción se decora con el atributo [Authorize], esta acción no se puede invocar a menos que un usuario está autenticado.
 
-**Listado 1 – Controllers\HomeController.vb**
+**Listing 1 – Controllers\HomeController.vb**
 
 [!code-vb[Main](authenticating-users-with-forms-authentication-vb/samples/sample1.vb)]
 
@@ -84,7 +84,7 @@ Una vez que inicie sesión correctamente, puede ver el CompanySecrets ver (consu
 
 Puede usar el atributo [Authorize] a restringir el acceso a una acción de controlador a un conjunto determinado de usuarios o un conjunto determinado de roles de usuario. Por ejemplo, el controlador Home modificado en el listado 2 contiene dos nuevas acciones denominadas StephenSecrets() y AdministratorSecrets().
 
-**Listado 2 – Controllers\HomeController.vb**
+**Listing 2 – Controllers\HomeController.vb**
 
 [!code-vb[Main](authenticating-users-with-forms-authentication-vb/samples/sample2.vb)]
 

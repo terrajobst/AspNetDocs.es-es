@@ -5,14 +5,13 @@ author: rick-anderson
 description: Obtenga información sobre cómo obtener datos de configuración de orígenes distintos a los valores del archivo web.config desde orígenes externos.
 ms.author: riande
 ms.date: 10/29/2018
-ms.technology: aspnet
 msc.type: content
-ms.openlocfilehash: 443b33b5c3b964f731999834db580a6abbf6617b
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
-ms.translationtype: HT
+ms.openlocfilehash: 2bec828aa01d2c17f5374c3b1804b7444ec03dda
+ms.sourcegitcommit: 2d53ed9e4c8b19d3526cbc689bfa8394c9449cec
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59420424"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59905701"
 ---
 # <a name="configuration-builders-for-aspnet"></a>Generadores de configuración de ASP.NET
 

@@ -12,7 +12,7 @@ ms.openlocfilehash: 266d2e3fda54a9e584622ccd595e41229c96e6b0
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59420749"
 ---
 # <a name="adding-validation-to-the-model"></a>Agregar la validación al modelo
@@ -49,7 +49,7 @@ Ahora, actualice el `Movie` clase para aprovechar las ventajas de los integrados
 
 Ejecute la aplicación y volverá a obtener el siguiente error de tiempo de ejecución:
 
-***El modelo que respalda el contexto 'MovieDBContext' ha cambiado desde que se creó la base de datos. Considere la posibilidad de usar migraciones de Code First para actualizar la base de datos ([https://go.microsoft.com/fwlink/?LinkId=238269](https://go.microsoft.com/fwlink/?LinkId=238269)).)).***
+***El modelo que respalda el contexto 'MovieDBContext' ha cambiado desde que se creó la base de datos. Considere la posibilidad de usar migraciones de Code First para actualizar la base de datos ([https://go.microsoft.com/fwlink/?LinkId=238269](https://go.microsoft.com/fwlink/?LinkId=238269)).***
 
 Se usará las migraciones para actualizar el esquema. Compile la solución y, a continuación, abra el **Package Manager Console** ventana y escriba los siguientes comandos:
 

@@ -12,7 +12,7 @@ ms.openlocfilehash: 66a784430de734c8b1387c950382472ce59d5ccc
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59422140"
 ---
 # <a name="configuring-a-web-server-for-web-deploy-publishing-offline-deployment"></a>Configurar un servidor web para la publicación de la implementación web (implementación sin conexión)

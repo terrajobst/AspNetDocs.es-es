@@ -12,7 +12,7 @@ ms.openlocfilehash: e37d2f4450c697f963d954c2fbb58e3ed20a1566
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59421152"
 ---
 # <a name="positioning-a-modalpopup-vb"></a>Colocar un ModalPopup (VB)
@@ -55,7 +55,7 @@ Y el `stopMoving()` función entra en juego cuando se cierra el menú emergente 
 [!code-aspx[Main](positioning-a-modalpopup-vb/samples/sample6.aspx)]
 
 
-[![Temergente modal aparece en la posición designada](positioning-a-modalpopup-vb/_static/image2.png)](positioning-a-modalpopup-vb/_static/image1.png)
+[![El elemento emergente modal aparece en la posición designada](positioning-a-modalpopup-vb/_static/image2.png)](positioning-a-modalpopup-vb/_static/image1.png)
 
 El elemento emergente modal aparece en la posición designada ([haga clic aquí para ver imagen en tamaño completo](positioning-a-modalpopup-vb/_static/image3.png))
 
