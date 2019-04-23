@@ -12,7 +12,7 @@ ms.openlocfilehash: 68c1acdaaf1e6674f4dc3bcca0557382407ca147
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59400118"
 ---
 # <a name="authentication"></a>Autenticación
@@ -32,7 +32,7 @@ ms.locfileid: "59400118"
 - [Cambiar la configuración de la pertenencia en el esquema de pertenencia predeterminado](changing-membership-settings-in-the-default-membership-schema.md)
 - [Crear cuentas de usuario con el Asistente para crear usuarios](creating-user-accounts-with-the-create-user-wizard.md)
 - [Crear cuentas de usuario mediante programación](creating-user-accounts-programmatically.md)
-- [Validar usuarios manualmente](validating-users-manually.md)
+- [Validación manual de usuarios](validating-users-manually.md)
 - [Validar usuarios con el control de inicio de sesión](validating-users-with-the-login-control.md)
 - [Agregar usuarios al sistema de pertenencia](adding-users-to-your-membership-system.md)
 - [Iniciar la sesión de los usuarios en el sistema de pertenencia](logging-users-into-your-membership-system.md)

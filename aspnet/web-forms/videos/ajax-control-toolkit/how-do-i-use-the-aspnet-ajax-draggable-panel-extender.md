@@ -12,7 +12,7 @@ ms.openlocfilehash: c6e7a23c2b642f0aab12a88b5aae6a215ad1e74c
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59404642"
 ---
 # <a name="how-do-i-use-the-aspnet-ajax-draggable-panel-extender"></a>[¿Cómo lo hago?:] ¿Usar el extensor de Panel arrastrable de ASP.NET AJAX?

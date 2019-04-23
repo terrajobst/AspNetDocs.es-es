@@ -12,7 +12,7 @@ ms.openlocfilehash: 9e6b0b3b86839efa393659531d8b74770226f383
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59401470"
 ---
 # <a name="understanding-and-handling-connection-lifetime-events-in-signalr"></a>Comprender y controlar eventos de duración de la conexión en SignalR
@@ -254,7 +254,7 @@ SignalR versión 2 no tiene una API de servidor integrada para se desconectan lo
 
 2.1 SignalR agrega una sobrecarga en el servidor `OnDisconnect` evento que indica si el cliente se desconectó deliberadamente en lugar de tiempo de espera. El `StopCalled` del parámetro es true si el cliente cierra explícitamente la conexión. En JavaScript, si un error de servidor liderado el cliente para desconectarse, la información de error se pasará al cliente como `$.connection.hub.lastError`.
 
-**C#código de servidor: `stopCalled` parámetro**
+**Código de servidor de C#: `stopCalled` parámetro**
 
 [!code-csharp[Main](handling-connection-lifetime-events/samples/sample7.cs?highlight=1,3)]
 

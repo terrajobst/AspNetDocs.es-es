@@ -12,7 +12,7 @@ ms.openlocfilehash: 74ebdc39a81d31fb3c1ef3e5bab1857915cdc247
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59400948"
 ---
 # <a name="aspnet-single-page-application"></a>Aplicación de página única de ASP.NET
@@ -21,9 +21,9 @@ ms.locfileid: "59400948"
 
     - [Introducción](overview/introduction/index.md)
 
-        - [Aplicación de una sola página: Plantilla KnockoutJS](overview/introduction/knockoutjs-template.md)
+        - [Aplicación una sola página: Plantilla KnockoutJS](overview/introduction/knockoutjs-template.md)
         - [¿Conoce una biblioteca distinta de Knockout?](overview/introduction/other-libraries.md)
-    - [Plantillas](overview/templates/index.md)
+    - [Templates](overview/templates/index.md) (Plantillas [C++])
 
         - [Plantilla de Backbone](overview/templates/backbonejs-template.md)
         - [Plantilla de Breeze/Angular](overview/templates/breezeangular-template.md)

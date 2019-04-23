@@ -12,7 +12,7 @@ ms.openlocfilehash: 728d56583fb4192d87d01febf512668068256150
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59398051"
 ---
 # <a name="animation"></a>Animación
@@ -30,7 +30,7 @@ ms.locfileid: "59398051"
 - [Desencadenar una animación en otro control (C#)](triggering-an-animation-in-another-control-cs.md)
 - [Modificar las animaciones desde el lado servidor (C#)](modifying-animations-from-the-server-side-cs.md)
 - [Ejecutar animaciones con código de cliente (C#)](executing-animations-using-client-side-code-cs.md)
-- [Cambiar una animación con código de cliente (C#)](changing-an-animation-using-client-side-code-cs.md)
+- [Cambiar una animación con código del lado cliente (C#)](changing-an-animation-using-client-side-code-cs.md)
 - [Animar un control UpdatePanel (C#)](animating-an-updatepanel-control-cs.md)
 - [Controlar dinámicamente las animaciones UpdatePanel (C#)](dynamically-controlling-updatepanel-animations-cs.md)
 - [Agregar animación a un control (VB)](adding-animation-to-a-control-vb.md)
@@ -43,6 +43,6 @@ ms.locfileid: "59398051"
 - [Desencadenar una animación en otro control (VB)](triggering-an-animation-in-another-control-vb.md)
 - [Modificar las animaciones desde el lado servidor (VB)](modifying-animations-from-the-server-side-vb.md)
 - [Ejecutar animaciones con código de cliente (VB)](executing-animations-using-client-side-code-vb.md)
-- [Cambiar una animación con código de cliente (VB)](changing-an-animation-using-client-side-code-vb.md)
+- [Cambiar una animación con código del lado cliente (VB)](changing-an-animation-using-client-side-code-vb.md)
 - [Animar un control UpdatePanel (VB)](animating-an-updatepanel-control-vb.md)
 - [Controlar dinámicamente las animaciones UpdatePanel (VB)](dynamically-controlling-updatepanel-animations-vb.md)

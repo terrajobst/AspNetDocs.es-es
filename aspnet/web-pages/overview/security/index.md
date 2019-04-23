@@ -12,7 +12,7 @@ ms.openlocfilehash: 1729fba7956ab16ab8b47cd33ad9be38c47b13fa
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59397687"
 ---
 # <a name="security"></a>Seguridad

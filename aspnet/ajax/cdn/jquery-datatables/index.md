@@ -12,7 +12,7 @@ ms.openlocfilehash: 386a4dc80f3d6823456632841a5632c5011c6fb9
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59401912"
 ---
 # <a name="jquery-datatables"></a>jQuery DataTables

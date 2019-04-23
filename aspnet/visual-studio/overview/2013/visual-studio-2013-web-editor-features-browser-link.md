@@ -12,7 +12,7 @@ ms.openlocfilehash: 15fba4d22037482d1be2207a3547201e0c74173a
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59407671"
 ---
 # <a name="visual-studio-2013-web-editor-features---browser-link"></a>Características del editor web de Visual Studio 2013 - Vínculo con exploradores

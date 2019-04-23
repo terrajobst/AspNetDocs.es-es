@@ -12,7 +12,7 @@ ms.openlocfilehash: 48a66eea839f7f48899040ad20bbfee95b9a1902
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59403914"
 ---
 # <a name="monitoring-and-telemetry-building-real-world-cloud-apps-with-azure"></a>Supervisión y telemetría (crear aplicaciones de nube reales con Azure)
@@ -72,7 +72,7 @@ Implementar la aplicación en Azure y empezar a usarlo. Crear Fix It algunas tar
 
 A continuación, vaya a la **New Relic** página en el **complementos** ficha del portal y haga clic en **administrar**. El portal le envía al portal de administración de New Relic, con inicio de sesión único para la autenticación para que no tenga que escribirlas de nuevo. La página información general presenta una variedad de estadísticas de rendimiento. (Haga clic en la imagen para ver el tamaño total de página de información general).
 
-[![Npestaña de supervisión Relic ueva](monitoring-and-telemetry/_static/image9.png)](monitoring-and-telemetry/_static/image8.png)
+[![Nueva pestaña de supervisión Relic](monitoring-and-telemetry/_static/image9.png)](monitoring-and-telemetry/_static/image8.png)
 
 Estos son sólo algunas de las estadísticas que se puede ver:
 

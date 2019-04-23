@@ -12,7 +12,7 @@ ms.openlocfilehash: 09f8389a04c5600ca9ee8365a9dc5a0d607c0a4d
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59403927"
 ---
 # <a name="the-aspnet-20-page-model"></a>El modelo de página 2.0 de ASP.NET
@@ -545,7 +545,7 @@ Los métodos de ClientScriptManager deben estar familiarizados para todos los de
 
 Este método agrega una secuencia de comandos a la parte superior de la página representada. Esto es útil para agregar funciones que se llama explícitamente en el cliente.
 
-Hay dos versiones sobrecargadas de este método. Tres de cuatro argumentos son comunes entre ellos. Estas sobrecargas son:
+Hay dos versiones sobrecargadas de este método. Tres de cuatro argumentos son comunes entre ellos. Son estos:
 
 `type (string)`
 

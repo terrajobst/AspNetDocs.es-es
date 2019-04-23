@@ -12,7 +12,7 @@ ms.openlocfilehash: b407f802dd4afd1de03a485709d87b886e8444e9
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59401327"
 ---
 # <a name="how-do-i-work-with-data-in-aspnet-mvc-partial-views"></a>¿Cómo lo hago?: ¿Trabajar con datos en las vistas parciales de ASP.NET MVC?

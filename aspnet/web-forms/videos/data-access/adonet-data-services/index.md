@@ -12,7 +12,7 @@ ms.openlocfilehash: 6b989e384612f2d663afd431e8daa3afd17f6e6b
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59399786"
 ---
 # <a name="adonet-data-services"></a>Data Services de ADO.NET

@@ -12,7 +12,7 @@ ms.openlocfilehash: fc819494ef58824d485144396e3a995d906c8b42
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59398714"
 ---
 # <a name="validating-with-a-service-layer-vb"></a>Validación con un nivel de servicio (VB)
@@ -30,13 +30,13 @@ Al compilar una aplicación ASP.NET MVC, no debe colocar la lógica de la base d
 
 Por ejemplo, el listado 1 contiene un repositorio simple denominado el ProductRepository. El repositorio de producto contiene todo el código de acceso de datos para la aplicación. La lista también incluye la interfaz IProductRepository que implementa el repositorio de producto.
 
-**Listado 1 - Models\ProductRepository.vb**
+**Listing 1 - Models\ProductRepository.vb**
 
 [!code-vb[Main](validating-with-a-service-layer-vb/samples/sample1.vb)]
 
 El controlador en el listado 2 usa la capa de repositorio en sus Index() y Create() acciones. Tenga en cuenta que este controlador no contiene ninguna lógica de la base de datos. Creación de una capa de repositorio le permite mantener una separación clara de intereses. Los controladores son responsables de la lógica de control de flujo de aplicación y el repositorio es responsable de la lógica de acceso a datos.
 
-**Listado 2 - Controllers\ProductController.vb**
+**Listing 2 - Controllers\ProductController.vb**
 
 [!code-vb[Main](validating-with-a-service-layer-vb/samples/sample2.vb)]
 
@@ -48,13 +48,13 @@ Un nivel de servicio es una capa adicional en una aplicación de ASP.NET MVC que
 
 Por ejemplo, la capa de servicio de producto en el listado 3 tiene un método CreateProduct(). El método CreateProduct() llama al método de ValidateProduct() para validar un nuevo producto antes de pasar el producto en el repositorio de producto.
 
-**Listado 3 - Models\ProductService.vb**
+**Listing 3 - Models\ProductService.vb**
 
 [!code-vb[Main](validating-with-a-service-layer-vb/samples/sample3.vb)]
 
 Se actualizó el controlador de producto en el listado 4 para usar la capa de servicio en lugar de la capa de repositorio. El nivel de controlador se comunica con el nivel de servicio. La capa de servicio se comunica con la capa de repositorio. Cada capa tiene una responsabilidad independiente.
 
-**Listado 4 - Controllers\ProductController.vb**
+**Listing 4 - Controllers\ProductController.vb**
 
 [!code-vb[Main](validating-with-a-service-layer-vb/samples/sample4.vb)]
 
@@ -74,7 +74,7 @@ En el listado 5 se actualizó el nivel de servicio para que ya no utiliza el est
 
 La interfaz IValidationDictionary se define en el listado 6. Esta interfaz simple tiene un solo método y una sola propiedad.
 
-**Listado 6 - Models\IValidationDictionary.cs**
+**Listing 6 - Models\IValidationDictionary.cs**
 
 [!code-vb[Main](validating-with-a-service-layer-vb/samples/sample6.vb)]
 
@@ -86,7 +86,7 @@ La clase en la lista 7, con el nombre de la clase ModelStateWrapper, implementa 
 
 Por último, el controlador actualizado del listado 8 usa el ModelStateWrapper al crear la capa de servicio en su constructor.
 
-**Listado 8 - Controllers\ProductController.vb**
+**Listing 8 - Controllers\ProductController.vb**
 
 [!code-vb[Main](validating-with-a-service-layer-vb/samples/sample8.vb)]
 

@@ -12,7 +12,7 @@ ms.openlocfilehash: 33544825403db67fc3b8f0e9eae5d7671b8d2e67
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59402198"
 ---
 # <a name="aspnet-mvc-controller-overview-vb"></a>Información general sobre el controlador de ASP.NET MVC (VB)
@@ -34,7 +34,7 @@ En este caso, se invoca un controlador llamado ProductController. ProductControl
 
 Listado 1 contiene un controlador simple llamado ProductController.
 
-**Listado 1 - Controllers\ProductController.vb**
+**Listing1 - Controllers\ProductController.vb**
 
 [!code-vb[Main](asp-net-mvc-controller-overview-vb/samples/sample1.vb)]
 
@@ -72,7 +72,7 @@ Todos estos resultados de acción se heredan de la clase ActionResult base.
 
 En la mayoría de los casos, una acción de controlador devuelve ViewResult. Por ejemplo, la acción de controlador de índice en el listado 2 devuelve ViewResult.
 
-**Listado 2 - Controllers\BookController.vb**
+**Listing 2 - Controllers\BookController.vb**
 
 [!code-vb[Main](asp-net-mvc-controller-overview-vb/samples/sample2.vb)]
 
@@ -97,7 +97,7 @@ Por lo tanto, si desea devolver una vista en el explorador, se llame al método 
 
 El resultado de acción ContentResult es especial. Puede usar el resultado de acción ContentResult para devolver un resultado de acción como texto sin formato. Por ejemplo, el método Index() en el listado 4 devuelve un mensaje como texto sin formato y no como HTML.
 
-**Listado 4 - Controllers\StatusController.vb**
+**Listing 4 - Controllers\StatusController.vb**
 
 > StatusController
 > 

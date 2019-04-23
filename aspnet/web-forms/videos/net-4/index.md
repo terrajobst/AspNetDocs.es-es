@@ -12,7 +12,7 @@ ms.openlocfilehash: ea11b464329a755d5625797327f5a0a3ccb0f426
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59400593"
 ---
 # <a name="net-4"></a>.NET 4
@@ -36,7 +36,7 @@ ms.locfileid: "59400593"
     - [Limpiar archivos Web.Config](core/aspnet-4-quick-hit-clean-webconfig-files.md)
     - [Id. de cliente predecibles](core/aspnet-4-quick-hit-predictable-client-ids.md)
     - [Método de utilidad HtmlEncoder](core/aspnet-4-quick-hit-the-htmlencoder-utility-method.md)
-- [Datos](data/index.md)
+- [Data](data/index.md)
 
     - [Selección persistente de filas del control GridView](data/aspnet-4-quick-hit-persistent-gridview-row-selection.md)
 - [Control de marcado](markup-control/index.md)

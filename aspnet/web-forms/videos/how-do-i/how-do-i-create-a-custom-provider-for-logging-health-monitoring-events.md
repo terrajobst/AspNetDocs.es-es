@@ -12,7 +12,7 @@ ms.openlocfilehash: 53eab74be18a8d62235fa2334e032d47a8dfaf9f
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59396712"
 ---
 # <a name="how-do-i-create-a-custom-provider-for-logging-health-monitoring-events"></a>[¿Cómo lo hago?:] Crear un proveedor personalizado para los eventos de supervisión de estado de registro

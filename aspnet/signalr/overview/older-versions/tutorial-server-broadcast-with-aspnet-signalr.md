@@ -12,7 +12,7 @@ ms.openlocfilehash: a63bca69f137a4d4765db6a4925ff027c9d8bf7d
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59403589"
 ---
 # <a name="tutorial-server-broadcast-with-aspnet-signalr-1x"></a>Tutorial: Difusión de servidores con ASP.NET SignalR 1.x
@@ -48,7 +48,7 @@ Este tutorial contiene las siguientes secciones:
 - [Configurar el código de servidor](#server)
 - [Configurar el código de cliente](#client)
 - [Probar la aplicación](#test)
-- [Habilite el registro](#enablelogging)
+- [Habilitar el registro](#enablelogging)
 - [Instalar y revise el ejemplo StockTicker completo](#fullsample)
 - [Pasos siguientes](#nextsteps)
 
@@ -412,7 +412,7 @@ Para ver tutoriales que muestran escenarios de comunicación punto a punto, cons
 
 Para obtener información sobre los conceptos más avanzados de desarrollo de SignalR, visite los sitios siguientes para recursos y código fuente de SignalR:
 
-- [ASP.NET SignalR](https://asp.net/signalr/)
-- [Proyecto de SignalR](http://signalr.net/)
+- [SignalR de ASP.NET](https://asp.net/signalr/)
+- [SignalR Project](http://signalr.net/)
 - [SignalR Github y ejemplos](https://github.com/SignalR/SignalR)
 - [SignalR Wiki](https://github.com/SignalR/SignalR/wiki)

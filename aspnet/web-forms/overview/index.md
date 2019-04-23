@@ -12,7 +12,7 @@ ms.openlocfilehash: 4b38d6b54f53508f7b568207fe7f1a624a7af5f3
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59402276"
 ---
 # <a name="aspnet-web-forms-guidance"></a>Guía de ASP.NET Web Forms
@@ -66,7 +66,7 @@ ms.locfileid: "59402276"
         - [Propiedades del proyecto](deployment/visual-studio-web-deployment/project-properties.md)
         - [Implementación de prueba](deployment/visual-studio-web-deployment/deploying-to-iis.md)
         - [Establecer permisos de carpeta](deployment/visual-studio-web-deployment/setting-folder-permissions.md)
-        - [Implementar en entorno de producción](deployment/visual-studio-web-deployment/deploying-to-production.md)
+        - [Implementación en entorno de producción](deployment/visual-studio-web-deployment/deploying-to-production.md)
         - [Implementar una actualización de código](deployment/visual-studio-web-deployment/deploying-a-code-update.md)
         - [Implementar una actualización de base de datos](deployment/visual-studio-web-deployment/deploying-a-database-update.md)
         - [Implementación de línea de comandos](deployment/visual-studio-web-deployment/command-line-deployment.md)
@@ -75,8 +75,8 @@ ms.locfileid: "59402276"
     - [ASP.NET 4 - Introducción a la implementación de empresa](deployment/deploying-web-applications-in-enterprise-scenarios/index.md)
 
         - [Implementar aplicaciones web en escenarios empresariales mediante Visual Studio 2010](deployment/deploying-web-applications-in-enterprise-scenarios/deploying-web-applications-in-enterprise-scenarios.md)
-        - [Implementación web de empresa: Información general del escenario](deployment/deploying-web-applications-in-enterprise-scenarios/enterprise-web-deployment-scenario-overview.md)
-        - [Administración del ciclo de vida de las aplicaciones: De desarrollo a producción](deployment/deploying-web-applications-in-enterprise-scenarios/application-lifecycle-management-from-development-to-production.md)
+        - [Implementación Web de empresa: Información general del escenario](deployment/deploying-web-applications-in-enterprise-scenarios/enterprise-web-deployment-scenario-overview.md)
+        - [Administración del ciclo de vida de aplicaciones: Entornos de desarrollo a producción](deployment/deploying-web-applications-in-enterprise-scenarios/application-lifecycle-management-from-development-to-production.md)
     - [ASP.NET 4 - Implementación de empresa, serie 1](deployment/web-deployment-in-the-enterprise/index.md)
 
         - [Implementación web en la empresa](deployment/web-deployment-in-the-enterprise/web-deployment-in-the-enterprise.md)
@@ -94,9 +94,9 @@ ms.locfileid: "59402276"
 
         - [Configurar entornos de servidor para la implementación web](deployment/configuring-server-environments-for-web-deployment/configuring-server-environments-for-web-deployment.md)
         - [Elegir el enfoque adecuado para la implementación web](deployment/configuring-server-environments-for-web-deployment/choosing-the-right-approach-to-web-deployment.md)
-        - [Escenario: Configurar un entorno de prueba para la implementación web](deployment/configuring-server-environments-for-web-deployment/scenario-configuring-a-test-environment-for-web-deployment.md)
-        - [Escenario: Configurar un entorno de ensayo para la implementación web](deployment/configuring-server-environments-for-web-deployment/scenario-configuring-a-staging-environment-for-web-deployment.md)
-        - [Escenario: Configurar un entorno de producción para la implementación web](deployment/configuring-server-environments-for-web-deployment/scenario-configuring-a-production-environment-for-web-deployment.md)
+        - [Escenario: Configurar un entorno de prueba para la implementación de Web](deployment/configuring-server-environments-for-web-deployment/scenario-configuring-a-test-environment-for-web-deployment.md)
+        - [Escenario: Configuración de un entorno de ensayo para la implementación Web](deployment/configuring-server-environments-for-web-deployment/scenario-configuring-a-staging-environment-for-web-deployment.md)
+        - [Escenario: Configurar un entorno de producción para la implementación Web](deployment/configuring-server-environments-for-web-deployment/scenario-configuring-a-production-environment-for-web-deployment.md)
         - [Configurar un servidor web para la publicación de la implementación web (agente remoto)](deployment/configuring-server-environments-for-web-deployment/configuring-a-web-server-for-web-deploy-publishing-remote-agent.md)
         - [Configurar un servidor web para la publicación de la implementación web (controlador de implementación web)](deployment/configuring-server-environments-for-web-deployment/configuring-a-web-server-for-web-deploy-publishing-web-deploy-handler.md)
         - [Configurar un servidor web para la publicación de la implementación web (implementación sin conexión)](deployment/configuring-server-environments-for-web-deployment/configuring-a-web-server-for-web-deploy-publishing-offline-deployment.md)
@@ -131,14 +131,14 @@ ms.locfileid: "59402276"
     - [ASP.NET 4 - Tailspin Spyworks](older-versions-getting-started/tailspin-spyworks/index.md)
 
         - [Parte 1: Archivo -> Nuevo proyecto](older-versions-getting-started/tailspin-spyworks/tailspin-spyworks-part-1.md)
-        - [Parte 2: Nivel de acceso a datos](older-versions-getting-started/tailspin-spyworks/tailspin-spyworks-part-2.md)
-        - [Parte 3: Diseño y menú Categoría](older-versions-getting-started/tailspin-spyworks/tailspin-spyworks-part-3.md)
+        - [Parte 2: Capa de acceso a datos](older-versions-getting-started/tailspin-spyworks/tailspin-spyworks-part-2.md)
+        - [Parte 3: Diseño y menú categoría](older-versions-getting-started/tailspin-spyworks/tailspin-spyworks-part-3.md)
         - [Parte 4: Lista de productos](older-versions-getting-started/tailspin-spyworks/tailspin-spyworks-part-4.md)
-        - [Parte 5: Lógica empresarial](older-versions-getting-started/tailspin-spyworks/tailspin-spyworks-part-5.md)
+        - [Parte 5: Lógica de negocios](older-versions-getting-started/tailspin-spyworks/tailspin-spyworks-part-5.md)
         - [Parte 6: Pertenencia a ASP.NET](older-versions-getting-started/tailspin-spyworks/tailspin-spyworks-part-6.md)
         - [Parte 7: Agregar características](older-versions-getting-started/tailspin-spyworks/tailspin-spyworks-part-7.md)
         - [Parte 8: Páginas finales, control de excepciones y conclusión](older-versions-getting-started/tailspin-spyworks/tailspin-spyworks-part-8.md)
-    - [ASP.NET 4: Introducción a Entity Framework 4 y formularios Web Forms](older-versions-getting-started/getting-started-with-ef/index.md)
+    - [ASP.NET 4 - Introducción a Entity Framework 4 y formularios Web Forms](older-versions-getting-started/getting-started-with-ef/index.md)
 
         - [Introducción a Entity Framework 4.0 Database First](older-versions-getting-started/getting-started-with-ef/the-entity-framework-and-aspnet-getting-started-part-1.md)
         - [Introducción a Entity Framework 4.0 Database First - Parte 2](older-versions-getting-started/getting-started-with-ef/the-entity-framework-and-aspnet-getting-started-part-2.md)
@@ -150,9 +150,9 @@ ms.locfileid: "59402276"
         - [Introducción a Entity Framework 4.0 Database First - Parte 8](older-versions-getting-started/getting-started-with-ef/the-entity-framework-and-aspnet-getting-started-part-8.md)
     - [ASP.NET 4 - Continuación de Entity Framework 4 y los formularios Web Forms](older-versions-getting-started/continuing-with-ef/index.md)
 
-        - [Entity Framework 4.0 y el control ObjectDataSource, parte 1: Introducción](older-versions-getting-started/continuing-with-ef/using-the-entity-framework-and-the-objectdatasource-control-part-1-getting-started.md)
-        - [Entity Framework 4.0 y el control ObjectDataSource, parte 2: Agregar una capa de lógica de negocios y pruebas unitarias](older-versions-getting-started/continuing-with-ef/using-the-entity-framework-and-the-objectdatasource-control-part-2-adding-a-business-logic-layer-and-unit-tests.md)
-        - [Entity Framework 4.0 y el control ObjectDataSource, parte 3: Ordenar y filtrar](older-versions-getting-started/continuing-with-ef/using-the-entity-framework-and-the-objectdatasource-control-part-3-sorting-and-filtering.md)
+        - [Entity Framework 4.0 y el Control ObjectDataSource, parte 1: Introducción a](older-versions-getting-started/continuing-with-ef/using-the-entity-framework-and-the-objectdatasource-control-part-1-getting-started.md)
+        - [Entity Framework 4.0 y el Control ObjectDataSource, parte 2: Agregar una capa de lógica empresarial y las pruebas unitarias](older-versions-getting-started/continuing-with-ef/using-the-entity-framework-and-the-objectdatasource-control-part-2-adding-a-business-logic-layer-and-unit-tests.md)
+        - [Entity Framework 4.0 y el Control ObjectDataSource, parte 3: Ordenar y filtrar](older-versions-getting-started/continuing-with-ef/using-the-entity-framework-and-the-objectdatasource-control-part-3-sorting-and-filtering.md)
         - [Controlar la simultaneidad con Entity Framework 4.0 en ASP.NET 4](older-versions-getting-started/continuing-with-ef/handling-concurrency-with-the-entity-framework-in-an-asp-net-web-application.md)
         - [Maximizar el rendimiento con Entity Framework 4.0 en ASP.NET 4](older-versions-getting-started/continuing-with-ef/maximizing-performance-with-the-entity-framework-in-an-asp-net-web-application.md)
         - [Novedades de Entity Framework 4.0](older-versions-getting-started/continuing-with-ef/what-s-new-in-the-entity-framework-4.md)
@@ -169,7 +169,7 @@ ms.locfileid: "59402276"
         - [Implementación web de Visual Studio con SQL Server Compact - Implementar una actualización de base de datos](older-versions-getting-started/deployment-to-a-hosting-provider/deployment-to-a-hosting-provider-deploying-a-database-update-9-of-12.md)
         - [Implementación web de Visual Studio con SQL Server Compact - Migración a SQL Server](older-versions-getting-started/deployment-to-a-hosting-provider/deployment-to-a-hosting-provider-migrating-to-sql-server-10-of-12.md)
         - [Implementación web de Visual Studio con SQL Server Compact - Implementar una actualización de la base de datos de SQL Server](older-versions-getting-started/deployment-to-a-hosting-provider/deployment-to-a-hosting-provider-deploying-a-sql-server-database-update-11-of-12.md)
-        - [Implementación web de Visual Studio con SQL Server Compact - Solución de problemas](older-versions-getting-started/deployment-to-a-hosting-provider/deployment-to-a-hosting-provider-creating-and-installing-deployment-packages-12-of-12.md)
+        - [Implementación web de Visual Studio con SQL Server Compact: Solución de problemas](older-versions-getting-started/deployment-to-a-hosting-provider/deployment-to-a-hosting-provider-creating-and-installing-deployment-packages-12-of-12.md)
     - [ASP.NET 3.5 - AJAX](older-versions-getting-started/aspnet-ajax/index.md)
 
         - [Descripción de las actualizaciones de página parcial con ASP.NET AJAX](older-versions-getting-started/aspnet-ajax/understanding-partial-page-updates-with-asp-net-ajax.md)
@@ -193,7 +193,7 @@ ms.locfileid: "59402276"
         - [Crear un diseño de todo el sitio mediante páginas maestras (VB)](older-versions-getting-started/master-pages/creating-a-site-wide-layout-using-master-pages-vb.md)
         - [Varios ContentPlaceHolders y contenido predeterminado (VB)](older-versions-getting-started/master-pages/multiple-contentplaceholders-and-default-content-vb.md)
         - [Especificar el título, etiquetas meta y otros encabezados HTML en la página maestra (VB)](older-versions-getting-started/master-pages/specifying-the-title-meta-tags-and-other-html-headers-in-the-master-page-vb.md)
-        - [Direcciones URL en páginas maestras (VB)](older-versions-getting-started/master-pages/urls-in-master-pages-vb.md)
+        - [Direcciones URL en Páginas maestras (VB)](older-versions-getting-started/master-pages/urls-in-master-pages-vb.md)
         - [Nomenclatura de los identificadores de control en las páginas de contenido (VB)](older-versions-getting-started/master-pages/control-id-naming-in-content-pages-vb.md)
         - [Interactuar con la página maestra desde la página de contenido (VB)](older-versions-getting-started/master-pages/interacting-with-the-master-page-from-the-content-page-vb.md)
         - [Interactuar con la página de contenido desde la página maestra (VB)](older-versions-getting-started/master-pages/interacting-with-the-content-page-from-the-master-page-vb.md)
@@ -262,7 +262,7 @@ ms.locfileid: "59402276"
         - [Desencadenar una animación en otro control (C#)](ajax-control-toolkit/animation/triggering-an-animation-in-another-control-cs.md)
         - [Modificar las animaciones desde el lado servidor (C#)](ajax-control-toolkit/animation/modifying-animations-from-the-server-side-cs.md)
         - [Ejecutar animaciones con código de cliente (C#)](ajax-control-toolkit/animation/executing-animations-using-client-side-code-cs.md)
-        - [Cambiar una animación con código de cliente (C#)](ajax-control-toolkit/animation/changing-an-animation-using-client-side-code-cs.md)
+        - [Cambiar una animación con código del lado cliente (C#)](ajax-control-toolkit/animation/changing-an-animation-using-client-side-code-cs.md)
         - [Animar un control UpdatePanel (C#)](ajax-control-toolkit/animation/animating-an-updatepanel-control-cs.md)
         - [Controlar dinámicamente las animaciones UpdatePanel (C#)](ajax-control-toolkit/animation/dynamically-controlling-updatepanel-animations-cs.md)
         - [Agregar animación a un control (VB)](ajax-control-toolkit/animation/adding-animation-to-a-control-vb.md)
@@ -275,7 +275,7 @@ ms.locfileid: "59402276"
         - [Desencadenar una animación en otro control (VB)](ajax-control-toolkit/animation/triggering-an-animation-in-another-control-vb.md)
         - [Modificar las animaciones desde el lado servidor (VB)](ajax-control-toolkit/animation/modifying-animations-from-the-server-side-vb.md)
         - [Ejecutar animaciones con código de cliente (VB)](ajax-control-toolkit/animation/executing-animations-using-client-side-code-vb.md)
-        - [Cambiar una animación con código de cliente (VB)](ajax-control-toolkit/animation/changing-an-animation-using-client-side-code-vb.md)
+        - [Cambiar una animación con código del lado cliente (VB)](ajax-control-toolkit/animation/changing-an-animation-using-client-side-code-vb.md)
         - [Animar un control UpdatePanel (VB)](ajax-control-toolkit/animation/animating-an-updatepanel-control-vb.md)
         - [Controlar dinámicamente las animaciones UpdatePanel (VB)](ajax-control-toolkit/animation/dynamically-controlling-updatepanel-animations-vb.md)
     - [CascadingDropdown](ajax-control-toolkit/cascadingdropdown/index.md)
@@ -364,7 +364,7 @@ ms.locfileid: "59402276"
         - [Usar varios controles emergentes (VB)](ajax-control-toolkit/popup/using-multiple-popup-controls-vb.md)
         - [Controlar los postbacks desde un control emergente con un UpdatePanel (VB)](ajax-control-toolkit/popup/handling-postbacks-from-a-popup-control-with-an-updatepanel-vb.md)
         - [Controlar los postbacks desde un control emergente sin un UpdatePanel (VB)](ajax-control-toolkit/popup/handling-postbacks-from-a-popup-control-without-an-updatepanel-vb.md)
-    - [Calificación](ajax-control-toolkit/rating/index.md)
+    - [Clasificación](ajax-control-toolkit/rating/index.md)
 
         - [Crear un control de clasificación (C#)](ajax-control-toolkit/rating/creating-a-rating-control-cs.md)
         - [Crear un control de clasificación (VB)](ajax-control-toolkit/rating/creating-a-rating-control-vb.md)
@@ -386,7 +386,7 @@ ms.locfileid: "59402276"
         - [Usar TextBoxWatermark con los controles de validación (C#)](ajax-control-toolkit/textboxwatermark/using-textboxwatermark-with-validation-controls-cs.md)
         - [Usar TextBoxWatermark en un FormView (VB)](ajax-control-toolkit/textboxwatermark/using-textboxwatermark-in-a-formview-vb.md)
         - [Usar TextBoxWatermark con los controles de validación (VB)](ajax-control-toolkit/textboxwatermark/using-textboxwatermark-with-validation-controls-vb.md)
-- [Versiones anteriores - Acceso a datos](data-access/index.md)
+- [Versiones anteriores: Acceso a datos](data-access/index.md)
 
     - [Introducción](data-access/introduction/index.md)
 
@@ -526,7 +526,7 @@ ms.locfileid: "59402276"
         - [Mostrar datos binarios en los controles web de datos (VB)](data-access/working-with-binary-files/displaying-binary-data-in-the-data-web-controls-vb.md)
         - [Incluir una opción de carga de archivos al agregar un nuevo registro (VB)](data-access/working-with-binary-files/including-a-file-upload-option-when-adding-a-new-record-vb.md)
         - [Actualizar y eliminar los datos binarios existentes (VB)](data-access/working-with-binary-files/updating-and-deleting-existing-binary-data-vb.md)
-    - [Almacenar datos en caché](data-access/caching-data/index.md)
+    - [Almacenamiento de datos en caché](data-access/caching-data/index.md)
 
         - [Almacenar datos en caché con ObjectDataSource (C#)](data-access/caching-data/caching-data-with-the-objectdatasource-cs.md)
         - [Almacenar datos en caché en la arquitectura (C#)](data-access/caching-data/caching-data-in-the-architecture-cs.md)
@@ -616,7 +616,7 @@ ms.locfileid: "59402276"
     - [Páginas maestras](moving-to-aspnet-20/master-pages.md)
     - [Controles de origen de datos](moving-to-aspnet-20/data-source-controls.md)
     - [Controles enlazados a datos](moving-to-aspnet-20/data-bound-controls.md)
-    - [Almacenamiento en memoria caché](moving-to-aspnet-20/caching.md)
+    - [Almacenamiento en caché](moving-to-aspnet-20/caching.md)
     - [Pertenencia](moving-to-aspnet-20/membership.md)
     - [Configuración e instrumentación](moving-to-aspnet-20/configuration-and-instrumentation.md)
     - [Perfiles, temas y elementos web](moving-to-aspnet-20/profiles-themes-and-web-parts.md)

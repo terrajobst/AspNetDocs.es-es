@@ -12,7 +12,7 @@ ms.openlocfilehash: 7a16533fd7265253d10a22dc5cc7c855250f8fe4
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59399572"
 ---
 # <a name="data-access-layers-in-aspnet-applications"></a>Niveles de acceso a datos en aplicaciones de ASP.NET

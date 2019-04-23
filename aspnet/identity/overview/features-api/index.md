@@ -13,7 +13,7 @@ ms.openlocfilehash: 5634a5d766cdceffc509962d80b0aaa8880d2f8b
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59397102"
 ---
 # <a name="aspnet-4x-identity-features--api"></a>API y características de identidad ASP.NET 4.x

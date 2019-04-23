@@ -12,7 +12,7 @@ ms.openlocfilehash: 0221539f5e468faacf3e38374452c0cc2a7d31d3
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59398753"
 ---
 # <a name="adding-a-model"></a>Agregar un modelo

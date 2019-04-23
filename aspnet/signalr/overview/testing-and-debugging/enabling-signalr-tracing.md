@@ -12,7 +12,7 @@ ms.openlocfilehash: 1dadbdb6fa1dc58b855402f1d6f18e8af861f756
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59399364"
 ---
 # <a name="enabling-signalr-tracing"></a>Habilitar el seguimiento de SignalR
@@ -64,7 +64,7 @@ Habilita el seguimiento en el servidor en el archivo de configuración de la apl
 
 Las categorías de eventos de servidor incluyen a los siguientes tipos de mensajes:
 
-| Origen | Mensajes |
+| Source | Mensajes |
 | --- | --- |
 | SignalR.SqlMessageBus | Instalación del proveedor de escalabilidad horizontal de Bus de mensajes de SQL, la operación de base de datos, errores y eventos de tiempo de espera |
 | SignalR.ServiceBusMessageBus | Creación de tema de proveedor de escalabilidad horizontal de bus de servicio y suscripción, errores y eventos de mensajería |

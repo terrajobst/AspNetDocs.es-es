@@ -12,7 +12,7 @@ ms.openlocfilehash: 9bad72d31a0ebc491910ebb128b3b3a7fb537958
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59402692"
 ---
 # <a name="introduction-to-scaleout-in-signalr-1x"></a>Introducción a la escalabilidad horizontal en SignalR 1.x

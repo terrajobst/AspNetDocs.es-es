@@ -12,7 +12,7 @@ ms.openlocfilehash: c1e0a596cf9928ebf8447dc1aaa1dbeac85c8605
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59404655"
 ---
 # <a name="aspnet-4-quick-hit---auto-start"></a>ASP.NET 4 "Aciertos rápido" - inicio automático

@@ -12,7 +12,7 @@ ms.openlocfilehash: db8db4e3bff8047b48a7528b5146873ab6d84714
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59398688"
 ---
 # <a name="part-8-final-pages-exception-handling-and-conclusion"></a>Parte 8: Páginas finales, control de excepciones y conclusión

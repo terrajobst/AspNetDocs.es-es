@@ -12,7 +12,7 @@ ms.openlocfilehash: 59c0a820e30f302ac56dd000837f40f7c13fe183
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59401132"
 ---
 # <a name="paging-and-sorting-with-the-datalist-and-repeater"></a>Paginación y ordenación con los controles DataList y Repeater

@@ -12,7 +12,7 @@ ms.openlocfilehash: af78f3841bf3021c15a5733e01d553b6d336279d
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59402432"
 ---
 # <a name="dropshadow"></a>DropShadow

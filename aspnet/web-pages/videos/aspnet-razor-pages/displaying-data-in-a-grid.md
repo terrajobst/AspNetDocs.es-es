@@ -12,7 +12,7 @@ ms.openlocfilehash: 64d13293ba4575c035965ce173e233f1ed612b72
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59403498"
 ---
 # <a name="displaying-data-in-a-grid"></a>Mostrar datos en una cuadrícula

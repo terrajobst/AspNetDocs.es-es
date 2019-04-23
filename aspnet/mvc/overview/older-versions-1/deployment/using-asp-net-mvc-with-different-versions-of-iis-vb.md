@@ -12,7 +12,7 @@ ms.openlocfilehash: 0446a125845134d2fad869094a540c960f6b0a25
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59406475"
 ---
 # <a name="using-aspnet-mvc-with-different-versions-of-iis-vb"></a>Usar ASP.NET MVC con distintas versiones de IIS (VB)
@@ -54,7 +54,7 @@ El modo de procesamiento de solicitud viene determinada por el grupo de aplicaci
 De forma predeterminada, IIS está configurado para admitir dos grupos de aplicaciones: **DefaultAppPool** y **Classic .NET AppPool**. Si se selecciona DefaultAppPool, la aplicación se está ejecutando en modo de procesamiento de solicitud integrada. Si se selecciona Classic .NET AppPool, la aplicación se ejecuta en modo de procesamiento de solicitudes clásico.
 
 
-[![Tel cuadro de diálogo nuevo proyecto](using-asp-net-mvc-with-different-versions-of-iis-vb/_static/image1.jpg)](using-asp-net-mvc-with-different-versions-of-iis-vb/_static/image1.png)
+[![El cuadro de diálogo nuevo proyecto](using-asp-net-mvc-with-different-versions-of-iis-vb/_static/image1.jpg)](using-asp-net-mvc-with-different-versions-of-iis-vb/_static/image1.png)
 
 **Figura 1**: Detectar el modo de procesamiento de solicitud ([haga clic aquí para ver imagen en tamaño completo](using-asp-net-mvc-with-different-versions-of-iis-vb/_static/image2.png))
 
@@ -97,7 +97,7 @@ O producto
 Lamentablemente, las versiones anteriores de IIS no pasan estas solicitudes para el marco de ASP.NET. Por lo tanto, estas solicitudes no se enrutan a un controlador. Por ejemplo, si se realiza una solicitud de explorador para el índice de/Home de dirección URL, a continuación, obtendrá la página de error en la figura 2.
 
 
-[![Tel cuadro de diálogo nuevo proyecto](using-asp-net-mvc-with-different-versions-of-iis-vb/_static/image2.jpg)](using-asp-net-mvc-with-different-versions-of-iis-vb/_static/image3.png)
+[![El cuadro de diálogo nuevo proyecto](using-asp-net-mvc-with-different-versions-of-iis-vb/_static/image2.jpg)](using-asp-net-mvc-with-different-versions-of-iis-vb/_static/image3.png)
 
 **Figura 2**: Recibir un error 404 no encontrado ([haga clic aquí para ver imagen en tamaño completo](using-asp-net-mvc-with-different-versions-of-iis-vb/_static/image4.png))
 
@@ -173,7 +173,7 @@ Le mostramos cómo habilitar una asignación de script comodín para IIS 7.0:
 7. Haga clic en el **Aceptar** botón
 
 
-[![Tel cuadro de diálogo nuevo proyecto](using-asp-net-mvc-with-different-versions-of-iis-vb/_static/image3.jpg)](using-asp-net-mvc-with-different-versions-of-iis-vb/_static/image5.png)
+[![El cuadro de diálogo nuevo proyecto](using-asp-net-mvc-with-different-versions-of-iis-vb/_static/image3.jpg)](using-asp-net-mvc-with-different-versions-of-iis-vb/_static/image5.png)
 
 **Figura 3**: Creación de una asignación de script comodín con IIS 7.0 ([haga clic aquí para ver imagen en tamaño completo](using-asp-net-mvc-with-different-versions-of-iis-vb/_static/image6.png))
 
@@ -190,7 +190,7 @@ Siga estos pasos para crear una asignación de script comodín con IIS 6.0:
 8. Haga clic en el **Aceptar** botón
 
 
-[![Tel cuadro de diálogo nuevo proyecto](using-asp-net-mvc-with-different-versions-of-iis-vb/_static/image4.jpg)](using-asp-net-mvc-with-different-versions-of-iis-vb/_static/image7.png)
+[![El cuadro de diálogo nuevo proyecto](using-asp-net-mvc-with-different-versions-of-iis-vb/_static/image4.jpg)](using-asp-net-mvc-with-different-versions-of-iis-vb/_static/image7.png)
 
 **Figura 4**: Creación de una asignación de script comodín con IIS 6.0 ([haga clic aquí para ver imagen en tamaño completo](using-asp-net-mvc-with-different-versions-of-iis-vb/_static/image8.png))
 
@@ -198,7 +198,7 @@ Siga estos pasos para crear una asignación de script comodín con IIS 6.0:
 Después de habilitar asignaciones de secuencia de comandos de comodines, deberá modificar la tabla de rutas en el archivo Global.asax para que incluya una ruta raíz. En caso contrario, aparecerá la página de error en la figura 5 cuando se realiza una solicitud para la página raíz de la aplicación. Puede usar el archivo Global.asax modificado en el listado 4.
 
 
-[![Tel cuadro de diálogo nuevo proyecto](using-asp-net-mvc-with-different-versions-of-iis-vb/_static/image5.jpg)](using-asp-net-mvc-with-different-versions-of-iis-vb/_static/image9.png)
+[![El cuadro de diálogo nuevo proyecto](using-asp-net-mvc-with-different-versions-of-iis-vb/_static/image5.jpg)](using-asp-net-mvc-with-different-versions-of-iis-vb/_static/image9.png)
 
 **Figura 5**: Falta el error de la ruta raíz ([haga clic aquí para ver imagen en tamaño completo](using-asp-net-mvc-with-different-versions-of-iis-vb/_static/image10.png))
 

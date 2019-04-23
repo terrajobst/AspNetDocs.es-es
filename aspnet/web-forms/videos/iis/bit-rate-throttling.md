@@ -12,7 +12,7 @@ ms.openlocfilehash: 4845c9f7311bf6e973c7be9230b32ac3fc1677ba
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59405279"
 ---
 # <a name="bit-rate-throttling"></a>Limitación de la velocidad de bits

@@ -12,7 +12,7 @@ ms.openlocfilehash: bb9ae940ba90620a6a4c2d373117635f80e14588
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59397453"
 ---
 # <a name="building-real-world-cloud-apps-with-azure"></a>Compilar aplicaciones en la nube del mundo real con Azure
@@ -35,4 +35,4 @@ ms.locfileid: "59397453"
 - [Almacenamiento en caché distribuido](distributed-caching.md)
 - [Patrón de trabajo centrado en la cola](queue-centric-work-pattern.md)
 - [Más patrones y directrices](more-patterns-and-guidance.md)
-- [Apéndice: Aplicación de ejemplo Reparar](the-fix-it-sample-application.md)
+- [Apéndice: Corrección de la aplicación de ejemplo](the-fix-it-sample-application.md)

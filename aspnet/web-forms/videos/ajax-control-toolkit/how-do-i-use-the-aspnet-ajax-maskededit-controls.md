@@ -12,7 +12,7 @@ ms.openlocfilehash: 4b97b05e16275867db5157e3eaf2ea8db28b4c30
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59397141"
 ---
 # <a name="how-do-i-use-the-aspnet-ajax-maskededit-controls"></a>[¿Cómo lo hago?:] ¿Utilice los controles MaskedEdit ASP.NET AJAX?

@@ -12,7 +12,7 @@ ms.openlocfilehash: ff12bc43ad68fdc4bbcd478624f47ea0d2774c2d
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59399312"
 ---
 # <a name="implement-efficient-data-paging"></a>Implementar la paginación de datos eficaz

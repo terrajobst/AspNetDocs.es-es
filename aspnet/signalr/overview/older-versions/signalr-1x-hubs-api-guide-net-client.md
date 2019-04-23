@@ -12,7 +12,7 @@ ms.openlocfilehash: 1551b4533e05a6cd7dcc29e4c6bc17e854889ee8
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59402250"
 ---
 # <a name="aspnet-signalr-hubs-api-guide---net-client-signalr-1x"></a>Guía de API de ASP.NET SignalR Hubs: cliente .NET (SignalR 1.x)

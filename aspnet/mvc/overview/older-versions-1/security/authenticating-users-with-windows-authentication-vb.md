@@ -12,7 +12,7 @@ ms.openlocfilehash: d6b48d676c2dd90fc052b338f31a389e0fb809be
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59402315"
 ---
 # <a name="authenticating-users-with-windows-authentication-vb"></a>Autenticar a los usuarios con la autenticación de Windows (VB)
@@ -69,7 +69,7 @@ Después de habilitar la autenticación de Windows, puede usar el &lt;Authorize&
 
 Por ejemplo, el controlador Home en el listado 1 expone tres acciones denominadas Index() CompanySecrets() y StephenSecrets(). Cualquier usuario puede invocar la acción de Index(). Sin embargo, solo los miembros del grupo de administradores locales de Windows pueden invocar la acción CompanySecrets(). Por último, solo el usuario de dominio de Windows denominado a Stephen (en el dominio Redmond) puede invocar la acción StephenSecrets().
 
-**Listado 1 – Controllers\HomeController.vb**
+**Listing 1 – Controllers\HomeController.vb**
 
 [!code-vb[Main](authenticating-users-with-windows-authentication-vb/samples/sample2.vb)]
 

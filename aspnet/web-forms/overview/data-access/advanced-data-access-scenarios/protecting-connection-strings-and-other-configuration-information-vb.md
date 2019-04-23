@@ -12,7 +12,7 @@ ms.openlocfilehash: cc5f283a6f97a83fdb157f54e5b3b020254f5203
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59404850"
 ---
 # <a name="protecting-connection-strings-and-other-configuration-information-vb"></a>Proteger las cadenas de conexión y otros datos de configuración (VB)
@@ -31,7 +31,7 @@ Información de configuración para las aplicaciones ASP.NET normalmente se alma
 Puesto que `Web.config` puede contener información confidencial como cadenas de conexión, es importante que el contenido de `Web.config` se mantiene segura y oculta de personas no autorizadas. De forma predeterminada, cualquier HTTP de solicitud en un archivo con el `.config` extensión se controla mediante el motor ASP.NET, que devuelve el *este tipo de página no sea atendido* mensaje que se muestra en la figura 1. Esto significa que los visitantes no se pueden ver su `Web.config` escribiendo simplemente el contenido de s del archivo http://www.YourServer.com/Web.config en su barra de direcciones del explorador s.
 
 
-[![Visiting Web.config a través de un explorador devuelve este tipo de página no es servido mensaje](protecting-connection-strings-and-other-configuration-information-vb/_static/image2.png)](protecting-connection-strings-and-other-configuration-information-vb/_static/image1.png)
+[![Visitar Web.config a través de un explorador devuelve este tipo de página no sea atendido mensaje](protecting-connection-strings-and-other-configuration-information-vb/_static/image2.png)](protecting-connection-strings-and-other-configuration-information-vb/_static/image1.png)
 
 **Figura 1**: Visitar `Web.config` a través de devoluciones de explorador a que este tipo de página no sea atendido mensaje ([haga clic aquí para ver imagen en tamaño completo](protecting-connection-strings-and-other-configuration-information-vb/_static/image3.png))
 
@@ -83,7 +83,7 @@ Bajo el cuadro de texto, agregue dos controles de botón denominados `EncryptCon
 En este momento, la pantalla debe ser similar a la figura 2.
 
 
-[![Add un cuadro de texto y dos controles Button de Web a la página](protecting-connection-strings-and-other-configuration-information-vb/_static/image5.png)](protecting-connection-strings-and-other-configuration-information-vb/_static/image4.png)
+[![Agregue un cuadro de texto y dos controles Button de Web a la página](protecting-connection-strings-and-other-configuration-information-vb/_static/image5.png)](protecting-connection-strings-and-other-configuration-information-vb/_static/image4.png)
 
 **Figura 2**: Agregue un cuadro de texto y dos controles Button de Web a la página ([haga clic aquí para ver imagen en tamaño completo](protecting-connection-strings-and-other-configuration-information-vb/_static/image6.png))
 
@@ -111,7 +111,7 @@ Después de llamar a la `ProtectSection(provider)` o `UnprotectSection` método,
 Una vez que ha escrito el código anterior, puede probarlo visitando el `EncryptingConfigSections.aspx` página a través de un explorador. Inicialmente verá una página que enumera el contenido de `Web.config` con el `<connectionStrings>` sección que se muestran en texto sin formato (consulte la figura 3).
 
 
-[![Add un cuadro de texto y dos controles Button de Web a la página](protecting-connection-strings-and-other-configuration-information-vb/_static/image8.png)](protecting-connection-strings-and-other-configuration-information-vb/_static/image7.png)
+[![Agregue un cuadro de texto y dos controles Button de Web a la página](protecting-connection-strings-and-other-configuration-information-vb/_static/image8.png)](protecting-connection-strings-and-other-configuration-information-vb/_static/image7.png)
 
 **Figura 3**: Agregue un cuadro de texto y dos controles Button de Web a la página ([haga clic aquí para ver imagen en tamaño completo](protecting-connection-strings-and-other-configuration-information-vb/_static/image9.png))
 
@@ -126,7 +126,7 @@ Para obtener más información sobre la validación de solicitud, su propósito,
 Después de deshabilitar la validación de solicitudes de la página, intente hacer clic en el botón cifrar cadenas de conexión de nuevo. En el postback, se tendrá acceso el archivo de configuración y su `<connectionStrings>` sección cifrada mediante el proveedor DPAPI. El cuadro de texto, a continuación, se actualiza para mostrar el nuevo `Web.config` contenido. Como se muestra en la figura 4, el `<connectionStrings>` información ahora está cifrada.
 
 
-[![Cpulsando el cifrar conexión cadenas botón cifra el &lt;connectionString&gt; sección](protecting-connection-strings-and-other-configuration-information-vb/_static/image11.png)](protecting-connection-strings-and-other-configuration-information-vb/_static/image10.png)
+[![Al hacer clic en el cifrar conexión cadenas botón cifra el &lt;connectionString&gt; sección](protecting-connection-strings-and-other-configuration-information-vb/_static/image11.png)](protecting-connection-strings-and-other-configuration-information-vb/_static/image10.png)
 
 **Figura 4**: Al hacer clic en el cifrar conexión cadenas botón cifra el `<connectionString>` sección ([haga clic aquí para ver imagen en tamaño completo](protecting-connection-strings-and-other-configuration-information-vb/_static/image12.png))
 
@@ -143,7 +143,7 @@ El cifrado `<connectionStrings>` siguiente sección generado en mi equipo, aunqu
 Cuando se tiene acceso a la información de la cadena de conexión de `Web.config` , ya sea por el código que escribimos, desde un control SqlDataSource, o el código generado automáticamente desde los TableAdapters en nuestros conjuntos de datos con tipo - se descifran automáticamente. En pocas palabras, no tenemos que agregar ningún código adicional o la lógica para descifrar el cifrado `<connectionString>` sección. Para demostrarlo, visite uno de los tutoriales anteriores en este momento, por ejemplo, el tutorial sencillo para mostrar de la sección informes básicos (`~/BasicReporting/SimpleDisplay.aspx`). Como se muestra en la figura 5, el tutorial funciona exactamente como se esperaría, que indica que la página ASP.NET que se descifra automáticamente la información de la cadena de conexión cifrada.
 
 
-[![TCapa de acceso a datos descifra automáticamente la información de la cadena de conexión](protecting-connection-strings-and-other-configuration-information-vb/_static/image14.png)](protecting-connection-strings-and-other-configuration-information-vb/_static/image13.png)
+[![La capa de acceso a datos descifra automáticamente la información de la cadena de conexión](protecting-connection-strings-and-other-configuration-information-vb/_static/image14.png)](protecting-connection-strings-and-other-configuration-information-vb/_static/image13.png)
 
 **Figura 5**: La capa de acceso a datos descifra automáticamente la información de la cadena de conexión ([haga clic aquí para ver imagen en tamaño completo](protecting-connection-strings-and-other-configuration-information-vb/_static/image15.png))
 
@@ -218,8 +218,8 @@ Para obtener más información sobre los temas tratados en este tutorial, consul
 - [Aplicaciones ASP.NET seguras de creación: Autenticación, autorización y comunicación segura](https://msdn.microsoft.com/library/aa302392.aspx)
 - [Cifrar información de configuración en ASP.NET 2.0 aplicaciones](http://aspnet.4guysfromrolla.com/articles/021506-1.aspx)
 - [Cifrar `Web.config` valores en ASP.NET 2.0](https://weblogs.asp.net/scottgu/archive/2006/01/09/434893.aspx)
-- [Cómo Cifrar secciones de configuración en ASP.NET 2.0 mediante DPAPI](https://msdn.microsoft.com/library/ms998280.aspx)
-- [Cómo Cifrar secciones de configuración en ASP.NET 2.0 mediante RSA](https://msdn.microsoft.com/library/ms998283.aspx)
+- [Cómo: Cifrar secciones de configuración en ASP.NET 2.0 mediante DPAPI](https://msdn.microsoft.com/library/ms998280.aspx)
+- [Cómo: Cifrar secciones de configuración en ASP.NET 2.0 mediante RSA](https://msdn.microsoft.com/library/ms998283.aspx)
 - [La API de configuración en .NET 2.0](http://www.odetocode.com/Articles/418.aspx)
 - [Protección de datos de Windows](https://msdn.microsoft.com/library/ms995355.aspx)
 

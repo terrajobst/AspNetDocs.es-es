@@ -12,7 +12,7 @@ ms.openlocfilehash: 3fc0ad6b366650d20d2710574a0b443f8cd994ee
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59396699"
 ---
 # <a name="validating-users-manually"></a>Validar usuarios manualmente

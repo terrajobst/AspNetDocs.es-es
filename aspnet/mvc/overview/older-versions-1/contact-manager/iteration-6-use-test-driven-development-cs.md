@@ -12,7 +12,7 @@ ms.openlocfilehash: 94885984ebad90523369dcf5771d0f77a753008f
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59405669"
 ---
 # <a name="iteration-6--use-test-driven-development-c"></a>Iteración #6: usar el desarrollo controlado por pruebas (C#)
@@ -113,7 +113,7 @@ Nuestro primer caso de usuario es que un usuario debe ser capaz de ver una lista
 Crear una nueva prueba unitaria con el botón secundario de la carpeta controladores en el proyecto ContactManager.Tests, seleccionar **Add, nueva prueba**y seleccionando la **de prueba unitaria** plantilla (consulte la figura 1). Nombre de la nueva unidad GroupControllerTest.cs de prueba y haga clic en el **Aceptar** botón.
 
 
-[![Ala prueba unitaria GroupControllerTest gregar](iteration-6-use-test-driven-development-cs/_static/image1.jpg)](iteration-6-use-test-driven-development-cs/_static/image1.png)
+[![Adición de la prueba unitaria GroupControllerTest](iteration-6-use-test-driven-development-cs/_static/image1.jpg)](iteration-6-use-test-driven-development-cs/_static/image1.png)
 
 **Figura 01**: Adición de la prueba unitaria GroupControllerTest ([haga clic aquí para ver imagen en tamaño completo](iteration-6-use-test-driven-development-cs/_static/image2.png))
 
@@ -141,7 +141,7 @@ La clase de controlador de grupo en el listado 2 contiene el mínimo de código 
 Una vez que se agregue las clases GroupController y grupo a nuestro proyecto, nuestra primera prueba unitaria se completa correctamente (consulte la figura 2). Lo que hemos hecho el trabajo mínimo necesario para pasar la prueba. Es el momento para celebrar.
 
 
-[![Sorrecto!](iteration-6-use-test-driven-development-cs/_static/image2.jpg)](iteration-6-use-test-driven-development-cs/_static/image3.png)
+[![¡Success!](iteration-6-use-test-driven-development-cs/_static/image2.jpg)](iteration-6-use-test-driven-development-cs/_static/image3.png)
 
 **Figura 02**: ¡Success! ([Haga clic aquí para ver imagen en tamaño completo](iteration-6-use-test-driven-development-cs/_static/image4.png))
 
@@ -243,7 +243,7 @@ Es necesario crear una nueva tabla de base de datos del grupo. Siga estos pasos:
 <a id="0.11_table01"></a>
 
 
-| **Nombre de columna** | **Tipo de datos** | **Permitir valores nulos** |
+| **Nombre de columna** | **Tipo de datos** | **Permitir valores null** |
 | --- | --- | --- |
 | Id. | int | False |
 | Name | nvarchar(50) | False |
@@ -267,12 +267,12 @@ A continuación, se debe definir una relación entre la tabla de base de datos d
 9. Haga clic en el botón Guardar para guardar los cambios en la tabla Contactos.
 
 
-[![Crear una relación de tabla de base de datos](iteration-6-use-test-driven-development-cs/_static/image3.jpg)](iteration-6-use-test-driven-development-cs/_static/image5.png)
+[![Creación de una relación de tabla de base de datos](iteration-6-use-test-driven-development-cs/_static/image3.jpg)](iteration-6-use-test-driven-development-cs/_static/image5.png)
 
 **Figura 03**: Creación de una relación de tabla de base de datos ([haga clic aquí para ver imagen en tamaño completo](iteration-6-use-test-driven-development-cs/_static/image6.png))
 
 
-[![Sespecificar las relaciones entre tablas](iteration-6-use-test-driven-development-cs/_static/image4.jpg)](iteration-6-use-test-driven-development-cs/_static/image7.png)
+[![Especificar las relaciones entre tablas](iteration-6-use-test-driven-development-cs/_static/image4.jpg)](iteration-6-use-test-driven-development-cs/_static/image7.png)
 
 **Figura 04**: Especificar las relaciones entre tablas ([haga clic aquí para ver imagen en tamaño completo](iteration-6-use-test-driven-development-cs/_static/image8.png))
 
@@ -288,7 +288,7 @@ A continuación, necesitamos actualizar nuestro modelo de datos para representar
 5. Haga clic en la propiedad de navegación de grupos que aparece en la parte inferior de la entidad Contact. Cambiar el nombre de la *grupos* propiedad de navegación para *grupo* (simples).
 
 
-[![UDespués de actualizar la base de datos de un modelo de Entity Framework](iteration-6-use-test-driven-development-cs/_static/image5.jpg)](iteration-6-use-test-driven-development-cs/_static/image9.png)
+[![Actualizar un modelo de Entity Framework desde la base de datos](iteration-6-use-test-driven-development-cs/_static/image5.jpg)](iteration-6-use-test-driven-development-cs/_static/image9.png)
 
 **Figura 05**: Actualizar un modelo de Entity Framework desde la base de datos ([haga clic aquí para ver imagen en tamaño completo](iteration-6-use-test-driven-development-cs/_static/image10.png))
 
@@ -296,7 +296,7 @@ A continuación, necesitamos actualizar nuestro modelo de datos para representar
 Después de completar estos pasos, el modelo de datos representa tanto los contactos y grupos de tablas. El Diseñador de entidades debería mostrar ambas entidades (consulte la figura 6).
 
 
-[![Entity diseñador mostrar, agrupar y póngase en contacto con](iteration-6-use-test-driven-development-cs/_static/image6.jpg)](iteration-6-use-test-driven-development-cs/_static/image11.png)
+[![Muestra el grupo y póngase en contacto con el Diseñador de entidades](iteration-6-use-test-driven-development-cs/_static/image6.jpg)](iteration-6-use-test-driven-development-cs/_static/image11.png)
 
 **Figura 06**: Muestra el grupo y póngase en contacto con el Diseñador de entidades ([haga clic aquí para ver imagen en tamaño completo](iteration-6-use-test-driven-development-cs/_static/image12.png))
 
@@ -329,7 +329,7 @@ Es necesario crear las siguientes nuevas vistas para administrar grupos de conta
 - Views\Group\Delete.aspx - formulario de confirmación de muestra para eliminar un grupo de contactos
 
 
-[![Tvista de índice de grupo](iteration-6-use-test-driven-development-cs/_static/image7.jpg)](iteration-6-use-test-driven-development-cs/_static/image13.png)
+[![La vista de índice de grupo](iteration-6-use-test-driven-development-cs/_static/image7.jpg)](iteration-6-use-test-driven-development-cs/_static/image13.png)
 
 **Figura 07**: La vista de índice de grupo ([haga clic aquí para ver imagen en tamaño completo](iteration-6-use-test-driven-development-cs/_static/image14.png))
 
@@ -343,7 +343,7 @@ Es necesario modificar las siguientes vistas existentes para que incluyan grupos
 Puede ver las vistas modificadas echando un vistazo a la aplicación de Visual Studio que acompaña a este tutorial. Por ejemplo, la figura 8 muestra la vista de índice de contacto.
 
 
-[![Tvista de índice del contacto](iteration-6-use-test-driven-development-cs/_static/image8.jpg)](iteration-6-use-test-driven-development-cs/_static/image15.png)
+[![La vista de índice de contacto](iteration-6-use-test-driven-development-cs/_static/image8.jpg)](iteration-6-use-test-driven-development-cs/_static/image15.png)
 
 **Figura 08**: La vista de índice de contacto ([haga clic aquí para ver imagen en tamaño completo](iteration-6-use-test-driven-development-cs/_static/image16.png))
 

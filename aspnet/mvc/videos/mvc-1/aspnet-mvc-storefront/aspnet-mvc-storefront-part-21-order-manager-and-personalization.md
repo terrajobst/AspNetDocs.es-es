@@ -12,7 +12,7 @@ ms.openlocfilehash: 58de55e6d19c01a367aaa571800da008b0c8c54c
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59403260"
 ---
 # <a name="aspnet-mvc-storefront-part-21-order-manager-and-personalization"></a>Escaparate de ASP.NET MVC, parte 21: Administrador de pedidos y personalización

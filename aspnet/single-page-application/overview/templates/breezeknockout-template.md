@@ -12,7 +12,7 @@ ms.openlocfilehash: 482119a97f30e24472231897e8db31685c451a0f
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59400794"
 ---
 # <a name="breezeknockout-template"></a>Plantilla de Breeze/Knockout

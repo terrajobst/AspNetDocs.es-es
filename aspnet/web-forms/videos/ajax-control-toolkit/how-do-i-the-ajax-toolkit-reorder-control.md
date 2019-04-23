@@ -12,7 +12,7 @@ ms.openlocfilehash: 81a2ff1ae7deb69902e9e366cc68f9bb4fdadc0b
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59407151"
 ---
 # <a name="how-do-i-the-ajax-toolkit-reorder-control"></a>[¿Cómo lo hago?:] El Control de reordenación de Kit de herramientas de AJAX

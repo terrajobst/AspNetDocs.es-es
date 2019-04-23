@@ -12,7 +12,7 @@ ms.openlocfilehash: 5e16415df5bd4203995bec943ffa682f7da82357
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59400209"
 ---
 # <a name="caching"></a>Almacenamiento en memoria caché
@@ -72,7 +72,7 @@ La línea de comandos siguiente registra la tabla Products en la base de datos d
 
 El siguiente es una explicación de los modificadores de línea de comandos utilizados en el comando anterior:
 
-| **Conmutador de línea de comandos** | **Finalidad** |
+| **Conmutador de línea de comandos** | **Propósito** |
 | --- | --- |
 | -S *server* | Especifica el nombre del servidor. |
 | -ed | Especifica que se debe habilitar la base de datos para la dependencia de caché SQL. |
@@ -211,9 +211,9 @@ Se puede manipular correctamente una instancia ControlCachePolicy solo entre las
 
 Hay varios cambios en la configuración de almacenamiento en caché en ASP.NET 2.0. El &lt;almacenamiento en caché&gt; elemento es nuevo en ASP.NET 2.0 y le permite realizar cambios de configuración de almacenamiento en caché en el archivo de configuración. Los siguientes atributos están disponibles.
 
-| **Elemento** | **Descripción** |
+| **Element** | **Descripción** |
 | --- | --- |
-| **caché** | Elemento opcional. Define la configuración de la caché global de la aplicación. |
+| **cache** | Elemento opcional. Define la configuración de la caché global de la aplicación. |
 | **outputCache** | Elemento opcional. Especifica la configuración de caché de resultados de toda la aplicación. |
 | **outputCacheSettings** | Elemento opcional. Especifica la configuración de caché de resultados que se puede aplicar a las páginas de la aplicación. |
 | **sqlCacheDependency** | Elemento opcional. Configura las dependencias de caché SQL para una aplicación ASP.NET. |
@@ -222,7 +222,7 @@ Hay varios cambios en la configuración de almacenamiento en caché en ASP.NET 2
 
 Los siguientes atributos están disponibles en el &lt;caché&gt; elemento:
 
-| **Atributo** | **Descripción** |
+| **Attribute** | **Descripción** |
 | --- | --- |
 | **disableMemoryCollection** | Opcional **booleano** atributo. Obtiene o establece un valor que indica si la colección de la memoria caché que se produce cuando el equipo está bajo presión de memoria está deshabilitada. |
 | **disableExpiration** | Opcional **booleano** atributo. Obtiene o establece un valor que indica si la expiración de caché está deshabilitada. Cuando está deshabilitado, los elementos en caché no caducan y eliminación de registros obsoletos en segundo plano de elementos de caché expirados no se produce. |
@@ -235,7 +235,7 @@ Los siguientes atributos están disponibles en el &lt;caché&gt; elemento:
 Los siguientes atributos están disponibles para el &lt;outputCache&gt; elemento.
 
 
-|       <strong>Atributo</strong>        |                                                                                                                                                                                                                                                       <strong>Descripción</strong>                                                                                                                                                                                                                                                       |
+|       <strong>Attribute</strong>        |                                                                                                                                                                                                                                                       <strong>Descripción</strong>                                                                                                                                                                                                                                                       |
 |-----------------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 |   <strong>enableOutputCache</strong>    |                                                                                                                                                          Opcional <strong>booleano</strong> atributo. Habilita o deshabilita la caché de resultados de página. Si deshabilita esta opción, no hay páginas se almacenan en caché independientemente de la configuración declarativa o mediante programación. Valor predeterminado es <strong>true</strong>.                                                                                                                                                           |
 |  <strong>enableFragmentCache</strong>   |                                                Opcional <strong>booleano</strong> atributo. Habilita o deshabilita la caché de fragmentos de la aplicación. Si deshabilita esta opción, no hay páginas se almacenan en caché sin tener en cuenta la [@ OutputCache](https://msdn.microsoft.com/library/hdxfb6cy.aspx) directiva o el almacenamiento en caché de perfil que se usa. Incluye un encabezado de control de caché que indica que no deben intentar servidores proxy de nivel superior, así como los clientes de explorador a la caché de resultados de página. Valor predeterminado es <strong>false</strong>.                                                 |
@@ -250,7 +250,7 @@ El &lt;outputCacheSettings&gt; elemento permite la creación de perfiles de memo
 
 Los siguientes atributos están disponibles para el &lt;sqlCacheDependency&gt; elemento.
 
-| **Atributo** | **Descripción** |
+| **Attribute** | **Descripción** |
 | --- | --- |
 | **enabled** | Requiere **booleano** atributo. Indica si se sondean los cambios. |
 | **pollTime** | Opcional **Int32** atributo. Establece la frecuencia con que SqlCacheDependency sondea la tabla de base de datos de los cambios. Este valor corresponde al número de milisegundos que transcurren entre sondeos sucesivos. No se puede establecer en menos de 500 milisegundos. Valor predeterminado es 1 minuto. |

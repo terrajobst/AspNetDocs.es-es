@@ -12,7 +12,7 @@ ms.openlocfilehash: c25945fab554114478c6b2e080335a664251639b
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59405357"
 ---
 # <a name="nested-master-pages-c"></a>Páginas maestras anidadas (C#)
@@ -84,7 +84,7 @@ A continuación, agregue el siguiente marcado dentro del formulario Web de `Simp
 Este marcado muestra un vínculo titulado "Nested Master Pages (Simple)" en la parte superior de la página en una fuente grande blanco sobre un fondo azul marino. Bajo el que el `MainContent` ContentPlaceHolder. La figura 1 muestra la `Simple.master` página principal cuando se carga en el Diseñador de Visual Studio.
 
 
-[![Tél Nested Master define contenido específica de la página a las páginas en la sección Administración](nested-master-pages-cs/_static/image2.png)](nested-master-pages-cs/_static/image1.png)
+[![La página maestra anidada define contenido determinado a las páginas en la sección de administración](nested-master-pages-cs/_static/image2.png)](nested-master-pages-cs/_static/image1.png)
 
 **Figura 01**: El anidado Master página define contenido específico a las páginas en la sección de administración ([haga clic aquí para ver imagen en tamaño completo](nested-master-pages-cs/_static/image3.png))
 
@@ -101,12 +101,12 @@ A continuación, haga clic en el botón Agregar. Esto mostrará el mismo, selecc
 > Si ha creado su sitio Web ASP.NET mediante el modelo de proyecto de aplicación Web en lugar del modelo de proyecto de sitio Web no verá la casilla de verificación "Seleccionar la página principal" en el cuadro de diálogo Agregar nuevo elemento que se muestra en la figura 2. Para crear una página maestra anidada al utilizar el modelo de proyecto de aplicación Web debe elegir la plantilla de página maestra anidada (en lugar de la plantilla de página maestra). Después de seleccionar la plantilla anidada página maestra y hacer clic en Agregar, el mismo seleccionar una página maestra, aparecerá el cuadro de diálogo que se muestra en la figura 3.
 
 
-[![Cmuchísimo la &quot;seleccionar la página maestra&quot; casilla de verificación para agregar una página maestra anidada](nested-master-pages-cs/_static/image5.png)](nested-master-pages-cs/_static/image4.png)
+[![Compruebe el &quot;seleccionar la página maestra&quot; casilla de verificación para agregar una página maestra anidada](nested-master-pages-cs/_static/image5.png)](nested-master-pages-cs/_static/image4.png)
 
 **Figura 02**: Active la casilla "Seleccionar la página principal" para agregar una página maestra anidada ([haga clic aquí para ver imagen en tamaño completo](nested-master-pages-cs/_static/image6.png))
 
 
-[![Bla página maestra anidada a la página principal Simple.master ind](nested-master-pages-cs/_static/image8.png)](nested-master-pages-cs/_static/image7.png)
+[![Enlazar la página maestra anidada a la página principal Simple.master](nested-master-pages-cs/_static/image8.png)](nested-master-pages-cs/_static/image7.png)
 
 **Figura 03**: Enlazar la página maestra anidada para el `Simple.master` página maestra ([haga clic aquí para ver imagen en tamaño completo](nested-master-pages-cs/_static/image9.png))
 
@@ -126,7 +126,7 @@ Actualice esta página maestra anidada para que se muestre el texto "Hello, from
 Después de realizar esta adición, guarde la página maestra anidada y, a continuación, agregue una nueva página de contenido para el `NestedMasterPages` carpeta denominada `Default.aspx`y enlazarlo a la `SimpleNested.master` página maestra. Al agregar esta página se sorprenderá al ver que no contiene los controles de contenido (consulte la figura 4)! Solo puede tener acceso una página de contenido su *primario* dominar ContentPlaceHolders de la página. `SimpleNested.master` no contiene todos los controles ContentPlaceHolder; por lo tanto, cualquier página de contenido enlazado a esta página maestra no puede contener los controles de contenido.
 
 
-[![Tél nuevo contenido página contiene sin controles de contenido](nested-master-pages-cs/_static/image11.png)](nested-master-pages-cs/_static/image10.png)
+[![La nueva página de contenido no contiene ningún control de contenido](nested-master-pages-cs/_static/image11.png)](nested-master-pages-cs/_static/image10.png)
 
 **Figura 04**: La nueva página contiene ningún contenido controles de contenido ([haga clic aquí para ver imagen en tamaño completo](nested-master-pages-cs/_static/image12.png))
 
@@ -149,7 +149,7 @@ Eliminar el `Default.aspx` página que acabamos de crear contenido y, a continua
 La figura 5 muestra las tres entidades involucradas en esto - `Simple.master`, `SimpleNested.master`, y `Default.aspx` - y cómo se relacionan entre sí. Como se muestra en el diagrama, la página maestra anidada implementa los controles de contenido para ContentPlaceHolder de su elemento primario. Si estas regiones deben poder acceder a la página de contenido, la página maestra anidada debe agregar su propio ContentPlaceHolders a los controles de contenido.
 
 
-[![TPáginas maestras anidadas y de nivel superior de él dictan el diseño de la página de contenido](nested-master-pages-cs/_static/image14.png)](nested-master-pages-cs/_static/image13.png)
+[![Las páginas maestras anidadas y de nivel superior dictan el diseño de la página de contenido](nested-master-pages-cs/_static/image14.png)](nested-master-pages-cs/_static/image13.png)
 
 **Figura 05**: Las páginas maestras anidadas y de nivel superior dictan el diseño de la página de contenido ([haga clic aquí para ver imagen en tamaño completo](nested-master-pages-cs/_static/image15.png))
 
@@ -157,7 +157,7 @@ La figura 5 muestra las tres entidades involucradas en esto - `Simple.master`, `
 Este comportamiento muestra cómo una página de contenido o página maestra solo está al corriente de su página principal del elemento primario. Este comportamiento también se indica mediante el Diseñador de Visual Studio. Figura 6 se muestra el diseñador para `Default.aspx`. Aunque el diseñador muestra claramente qué regiones son editables de la página de contenido y lo que no son partes, no eliminar la ambigüedad ¿cuáles son las regiones que no son editables de la página maestra anidada y cuáles son las regiones de la página principal de nivel superior.
 
 
-[![Tél contenido página ahora incluye controles de contenido para ContentPlaceHolders el anidado de la página maestra](nested-master-pages-cs/_static/image17.png)](nested-master-pages-cs/_static/image16.png)
+[![Contenido página ahora incluye controles de contenido para ContentPlaceHolders la página maestra anidada](nested-master-pages-cs/_static/image17.png)](nested-master-pages-cs/_static/image16.png)
 
 **Figura 06**: El contenido página ahora incluye controles de contenido para ContentPlaceHolders el anidado de la página maestra ([haga clic aquí para ver imagen en tamaño completo](nested-master-pages-cs/_static/image18.png))
 
@@ -189,7 +189,7 @@ Para demostrar la facilidad con la que se puede cambiar el diseño general del s
 Esto agrega dos vínculos a la parte superior de cada página que se enlaza a `Simple.master`, `SimpleNested.master`, o `SimpleNestedAlternate.master`; estos cambios se aplican a las páginas maestras anidadas todo y sus páginas de contenido inmediatamente. La figura 8 muestra `Alternate.aspx` cuando se ve mediante un explorador. Tenga en cuenta la adición de los vínculos en la parte superior de la página (en comparación con la figura 7).
 
 
-[![Ccambiarse a la página principal de nivel superior son reflejan inmediatamente en su anidados páginas maestras y sus páginas de contenido](nested-master-pages-cs/_static/image23.png)](nested-master-pages-cs/_static/image22.png)
+[![Puede cambiar a la página principal de nivel superior son reflejan inmediatamente en su anidados páginas maestras y sus páginas de contenido](nested-master-pages-cs/_static/image23.png)](nested-master-pages-cs/_static/image22.png)
 
 **Figura 08**: Puede cambiar a la página principal de nivel superior son reflejan inmediatamente en su anidados páginas maestras y sus páginas de contenido ([haga clic aquí para ver imagen en tamaño completo](nested-master-pages-cs/_static/image24.png))
 
@@ -219,7 +219,7 @@ Nuestra primera tarea consiste en crear la página maestra anidada que va a usar
 Vamos a usar la segunda opción. Crear un único archivo de página maestra anidada en la `~/Admin` carpeta denominada `AdminNested.master`. Dado que ambos `Site.master` y `Alternate.master` tienen el mismo conjunto de controles ContentPlaceHolder, no importa qué página maestra enlaza, aunque lo animo a enlazarlo a `Site.master` para fines de la coherencia.
 
 
-[![Add una página de maestra anidada a la carpeta ~/Admin.](nested-master-pages-cs/_static/image26.png)](nested-master-pages-cs/_static/image25.png)
+[![Agregue una página maestra anidada a la carpeta ~/Admin.](nested-master-pages-cs/_static/image26.png)](nested-master-pages-cs/_static/image25.png)
 
 **Figura 09**: Agregar una página maestra anidada para el `~/Admin` carpeta. ([Haga clic aquí para ver imagen en tamaño completo](nested-master-pages-cs/_static/image27.png))
 
@@ -246,7 +246,7 @@ Tenga en cuenta que cada control de contenido tiene un control ContentPlaceHolde
 La figura 10 muestra el `AdminNested.master` página maestra anidada cuando se ven a través del Diseñador de Visual Studio. Puede ver las instrucciones que aparecen en el cuadro amarillo en la parte superior de la `MainContent` control de contenido.
 
 
-[![TPágina principal de Nested amplía la página principal de nivel superior para incluir instrucciones para el administrador.](nested-master-pages-cs/_static/image29.png)](nested-master-pages-cs/_static/image28.png)
+[![La página maestra anidada amplía la página de principal de nivel superior para incluir instrucciones para el administrador.](nested-master-pages-cs/_static/image29.png)](nested-master-pages-cs/_static/image28.png)
 
 **Figura 10**: La página maestra anidada amplía la página de principal de nivel superior para incluir instrucciones para el administrador. ([Haga clic aquí para ver imagen en tamaño completo](nested-master-pages-cs/_static/image30.png))
 
@@ -275,7 +275,7 @@ A:
 Figura 11 se muestra cómo la página principal de nivel superior (`Site.master` o `Alternate.master`), la página maestra anidada (`AdminNested.master`), y las páginas de contenido de sección de administración se relacionan entre sí.
 
 
-[![Tél Nested Master define contenido específica de la página a las páginas en la sección Administración](nested-master-pages-cs/_static/image32.png)](nested-master-pages-cs/_static/image31.png)
+[![La página maestra anidada define contenido determinado a las páginas en la sección de administración](nested-master-pages-cs/_static/image32.png)](nested-master-pages-cs/_static/image31.png)
 
 **Figura 11**: El anidado Master página define contenido específico a las páginas en la sección de administración ([haga clic aquí para ver imagen en tamaño completo](nested-master-pages-cs/_static/image33.png))
 
@@ -313,7 +313,7 @@ Recuerde que el `@MasterType` directiva agrega una propiedad fuertemente tipados
 Con este código en su lugar, debe ser capaz de visitar y use las páginas de contenido de la sección de administración. Figura 12 se muestra el `~/Admin/Products.aspx` página cuando se ve mediante un explorador. Como puede ver, la página incluye el cuadro de instrucciones de administración, que se define en la página maestra anidada.
 
 
-[![Tque las páginas de contenido en la administración sección incluye instrucciones en la parte superior de cada página](nested-master-pages-cs/_static/image35.png)](nested-master-pages-cs/_static/image34.png)
+[![Las páginas de contenido en la sección de administración incluyen instrucciones que aparecen en la parte superior de cada página](nested-master-pages-cs/_static/image35.png)](nested-master-pages-cs/_static/image34.png)
 
 **Figura 12**: Las páginas de contenido en la administración sección incluye instrucciones en la parte superior de cada página ([haga clic aquí para ver imagen en tamaño completo](nested-master-pages-cs/_static/image36.png))
 
@@ -334,7 +334,7 @@ El `GetMasterPageFileFromSession` método, que se ha agregado a la `BasePage` cl
 Con este cambio en su lugar, selección de página principal del usuario se traslada a la sección de administración. Figura 13 se muestra la misma página que figura 12, pero después de que el usuario ha cambiado su selección de página maestra para `Alternate.master`.
 
 
-[![TPágina de administración Nested utiliza el nivel superior principal página seleccionada por el usuario](nested-master-pages-cs/_static/image38.png)](nested-master-pages-cs/_static/image37.png)
+[![La página de administración anidada usa la página de principal de nivel superior seleccionado por el usuario](nested-master-pages-cs/_static/image38.png)](nested-master-pages-cs/_static/image37.png)
 
 **Figura 13**: La página de administración Nested utiliza el nivel superior principal página seleccionada por el usuario ([haga clic aquí para ver imagen en tamaño completo](nested-master-pages-cs/_static/image39.png))
 

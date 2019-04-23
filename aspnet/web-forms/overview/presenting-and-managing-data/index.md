@@ -12,7 +12,7 @@ ms.openlocfilehash: c1bd52b47b42005ed22f107b9f8aaa65c0ed111a
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59402029"
 ---
 # <a name="working-with-data-in-aspnet-web-forms"></a>Trabajar con datos en formularios Web Forms ASP.NET

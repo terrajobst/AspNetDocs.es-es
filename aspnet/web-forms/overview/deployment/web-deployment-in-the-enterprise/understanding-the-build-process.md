@@ -12,7 +12,7 @@ ms.openlocfilehash: 6f526b9842e02031b54b0a7519486ef8aa69021b
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59397401"
 ---
 # <a name="understanding-the-build-process"></a>Descripción del proceso de compilación

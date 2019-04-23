@@ -12,7 +12,7 @@ ms.openlocfilehash: 952d13fec206bdb8d398cead70d10335731f583d
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59402224"
 ---
 # <a name="lifecycle-of-an-aspnet-mvc-5-application"></a>Ciclo de vida de una aplicación de ASP.NET MVC 5

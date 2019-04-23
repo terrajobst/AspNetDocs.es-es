@@ -12,7 +12,7 @@ ms.openlocfilehash: af97ff2488841b2d65e50122691736603be2a686
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59401418"
 ---
 # <a name="authentication-and-authorization-for-signalr-hubs-signalr-1x"></a>Autenticación y autorización de los concentradores de SignalR (SignalR 1.x)
@@ -37,7 +37,7 @@ Este tema contiene las siguientes secciones:
     - [Cookie de autenticación de formularios](#cookie)
     - [Autenticación de Windows](#windows)
     - [Encabezado de conexión](#header)
-    - [Certificado](#certificate)
+    - [Certificate](#certificate)
 
 <a id="authorizeattribute"></a>
 

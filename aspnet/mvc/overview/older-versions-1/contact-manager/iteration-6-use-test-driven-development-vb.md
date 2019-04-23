@@ -12,7 +12,7 @@ ms.openlocfilehash: 3fd252b94e55f02215a2733f218e68b26486691f
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59397115"
 ---
 # <a name="iteration-6--use-test-driven-development-vb"></a>Iteración #6: usar el desarrollo controlado por pruebas (VB)
@@ -113,14 +113,14 @@ Nuestro primer caso de usuario es que un usuario debe ser capaz de ver una lista
 Crear una nueva prueba unitaria con el botón secundario de la carpeta controladores en el proyecto ContactManager.Tests, seleccionar **Add, nueva prueba**y seleccionando la **de prueba unitaria** plantilla (consulte la figura 1). Nombre de la nueva unidad GroupControllerTest.vb de prueba y haga clic en el **Aceptar** botón.
 
 
-[![Ala prueba unitaria GroupControllerTest gregar](iteration-6-use-test-driven-development-vb/_static/image1.jpg)](iteration-6-use-test-driven-development-vb/_static/image1.png)
+[![Adición de la prueba unitaria GroupControllerTest](iteration-6-use-test-driven-development-vb/_static/image1.jpg)](iteration-6-use-test-driven-development-vb/_static/image1.png)
 
 **Figura 01**: Adición de la prueba unitaria GroupControllerTest ([haga clic aquí para ver imagen en tamaño completo](iteration-6-use-test-driven-development-vb/_static/image2.png))
 
 
 La primera prueba unitaria se encuentra en el listado 1. Esta prueba comprueba que el método Index() del controlador grupo devuelve un conjunto de grupos. La prueba comprueba que se devuelve en la vista una colección de grupos de datos.
 
-**Listado 1 - Controllers\GroupControllerTest.vb**
+**Listing 1 - Controllers\GroupControllerTest.vb**
 
 [!code-vb[Main](iteration-6-use-test-driven-development-vb/samples/sample1.vb)]
 
@@ -130,7 +130,7 @@ En este momento, se puede generar incluso t nuestra aplicación, por lo que se p
 
 La clase de controlador de grupo en el listado 2 contiene el mínimo de código necesario para pasar la prueba unitaria. La acción de Index() devuelve una lista codificada de forma estática de grupos (la clase del grupo se define en el listado 3).
 
-**Listado 2 - Controllers\GroupController.vb**
+**Listing 2 - Controllers\GroupController.vb**
 
 [!code-vb[Main](iteration-6-use-test-driven-development-vb/samples/sample2.vb)]
 
@@ -141,7 +141,7 @@ La clase de controlador de grupo en el listado 2 contiene el mínimo de código 
 Una vez que se agregue las clases GroupController y grupo a nuestro proyecto, nuestra primera prueba unitaria se completa correctamente (consulte la figura 2). Lo que hemos hecho el trabajo mínimo necesario para pasar la prueba. Es el momento para celebrar.
 
 
-[![Sorrecto!](iteration-6-use-test-driven-development-vb/_static/image2.jpg)](iteration-6-use-test-driven-development-vb/_static/image3.png)
+[![¡Success!](iteration-6-use-test-driven-development-vb/_static/image2.jpg)](iteration-6-use-test-driven-development-vb/_static/image3.png)
 
 **Figura 02**: ¡Success! ([Haga clic aquí para ver imagen en tamaño completo](iteration-6-use-test-driven-development-vb/_static/image4.png))
 
@@ -152,7 +152,7 @@ Ahora podemos pasar al segundo caso de usuario. Es necesario que pueda crear nue
 
 La prueba en el listado 4 comprueba que el método con un nuevo grupo agrega el grupo a la lista de grupos devueltos por el método Index() de Create() la llamada. En otras palabras, si creo un nuevo grupo, a continuación, debería poder obtener el nuevo grupo de la lista de grupos devueltos por el método Index().
 
-**Listado 4 - Controllers\GroupControllerTest.vb**
+**Listing 4 - Controllers\GroupControllerTest.vb**
 
 [!code-vb[Main](iteration-6-use-test-driven-development-vb/samples/sample4.vb)]
 
@@ -160,7 +160,7 @@ El método Create() con un nuevo grupo de contacto del controlador de grupo llam
 
 El controlador de grupo modificado en el listado 5 contiene el mínimo de los cambios necesarios para pasar la nueva prueba.
 
-**Listado 5 - Controllers\GroupController.vb**
+**Listing 5 - Controllers\GroupController.vb**
 
 [!code-vb[Main](iteration-6-use-test-driven-development-vb/samples/sample5.vb)]
 
@@ -174,7 +174,7 @@ Este requisito no se ha indicado explícitamente en el caso de usuario. Sin emba
 
 Listado 6 contiene una nueva prueba que expresa la intención. Esta prueba comprueba se intenta crear un grupo sin proporcionar un nombre da como resultado un mensaje de error de validación en el estado del modelo.
 
-**Listado 6 - Controllers\GroupControllerTest.vb**
+**Listing 6 - Controllers\GroupControllerTest.vb**
 
 [!code-vb[Main](iteration-6-use-test-driven-development-vb/samples/sample6.vb)]
 
@@ -184,7 +184,7 @@ Con el fin de satisfacer esta prueba, necesitamos agregar una propiedad de nombr
 
 [!code-vb[Main](iteration-6-use-test-driven-development-vb/samples/sample7.vb)]
 
-**Listado 8 - Controllers\GroupController.vb**
+**Listing 8 - Controllers\GroupController.vb**
 
 [!code-vb[Main](iteration-6-use-test-driven-development-vb/samples/sample8.vb)]
 
@@ -204,15 +204,15 @@ Listado 10 contiene los nuevos métodos que se agrega a la capa de servicio Cont
 
 Listado 11 contiene una nueva clase FakeContactManagerRepository que implementa la interfaz IContactManagerRepository. A diferencia de la clase EntityContactManagerRepository que también implementa la interfaz IContactManagerRepository, nuestra nueva clase FakeContactManagerRepository no se comunica con la base de datos. La clase FakeContactManagerRepository usa una colección en memoria como un proxy para la base de datos. Vamos a usar esta clase en nuestras pruebas de unidad como una capa de repositorio falsa.
 
-**Listado 9 - Controllers\GroupController.vb**
+**Listing 9 - Controllers\GroupController.vb**
 
 [!code-vb[Main](iteration-6-use-test-driven-development-vb/samples/sample9.vb)]
 
-**Listado 10 - Controllers\ContactManagerService.vb**
+**Listing 10 - Controllers\ContactManagerService.vb**
 
 [!code-vb[Main](iteration-6-use-test-driven-development-vb/samples/sample10.vb)]
 
-**Listado 11 - Controllers\FakeContactManagerRepository.vb**
+**Listing 11 - Controllers\FakeContactManagerRepository.vb**
 
 [!code-vb[Main](iteration-6-use-test-driven-development-vb/samples/sample11.vb)]
 
@@ -224,7 +224,7 @@ Modificar el IContactManagerRepository interfaz requiere utilizar para implement
 
 Por último, estos cambios en el diseño de nuestra aplicación nos obligan a realizar algunas modificaciones en nuestras pruebas unitarias. Ahora es necesario usar el FakeContactManagerRepository al realizar las pruebas unitarias. La clase GroupControllerTest actualizada se encuentra en el listado 12.
 
-**Listado 12 - Controllers\GroupControllerTest.vb**
+**Listing 12 - Controllers\GroupControllerTest.vb**
 
 [!code-vb[Main](iteration-6-use-test-driven-development-vb/samples/sample13.vb)]
 
@@ -244,7 +244,7 @@ Es necesario crear una nueva tabla de base de datos del grupo. Siga estos pasos:
 <a id="0.12_table01"></a>
 
 
-| **Nombre de columna** | **Tipo de datos** | **Permitir valores nulos** |
+| **Nombre de columna** | **Tipo de datos** | **Permitir valores null** |
 | --- | --- | --- |
 | Id. | int | False |
 | Name | nvarchar(50) | False |
@@ -268,12 +268,12 @@ A continuación, se debe definir una relación entre la tabla de base de datos d
 9. Haga clic en el botón Guardar para guardar los cambios en la tabla Contactos.
 
 
-[![Crear una relación de tabla de base de datos](iteration-6-use-test-driven-development-vb/_static/image3.jpg)](iteration-6-use-test-driven-development-vb/_static/image5.png)
+[![Creación de una relación de tabla de base de datos](iteration-6-use-test-driven-development-vb/_static/image3.jpg)](iteration-6-use-test-driven-development-vb/_static/image5.png)
 
 **Figura 03**: Creación de una relación de tabla de base de datos ([haga clic aquí para ver imagen en tamaño completo](iteration-6-use-test-driven-development-vb/_static/image6.png))
 
 
-[![Sespecificar las relaciones entre tablas](iteration-6-use-test-driven-development-vb/_static/image4.jpg)](iteration-6-use-test-driven-development-vb/_static/image7.png)
+[![Especificar las relaciones entre tablas](iteration-6-use-test-driven-development-vb/_static/image4.jpg)](iteration-6-use-test-driven-development-vb/_static/image7.png)
 
 **Figura 04**: Especificar las relaciones entre tablas ([haga clic aquí para ver imagen en tamaño completo](iteration-6-use-test-driven-development-vb/_static/image8.png))
 
@@ -289,7 +289,7 @@ A continuación, necesitamos actualizar nuestro modelo de datos para representar
 5. Haga clic en la propiedad de navegación de grupos que aparece en la parte inferior de la entidad Contact. Cambiar el nombre de la *grupos* propiedad de navegación para *grupo* (simples).
 
 
-[![UDespués de actualizar la base de datos de un modelo de Entity Framework](iteration-6-use-test-driven-development-vb/_static/image5.jpg)](iteration-6-use-test-driven-development-vb/_static/image9.png)
+[![Actualizar un modelo de Entity Framework desde la base de datos](iteration-6-use-test-driven-development-vb/_static/image5.jpg)](iteration-6-use-test-driven-development-vb/_static/image9.png)
 
 **Figura 05**: Actualizar un modelo de Entity Framework desde la base de datos ([haga clic aquí para ver imagen en tamaño completo](iteration-6-use-test-driven-development-vb/_static/image10.png))
 
@@ -297,7 +297,7 @@ A continuación, necesitamos actualizar nuestro modelo de datos para representar
 Después de completar estos pasos, el modelo de datos representa tanto los contactos y grupos de tablas. El Diseñador de entidades debería mostrar ambas entidades (consulte la figura 6).
 
 
-[![Entity diseñador mostrar, agrupar y póngase en contacto con](iteration-6-use-test-driven-development-vb/_static/image6.jpg)](iteration-6-use-test-driven-development-vb/_static/image11.png)
+[![Muestra el grupo y póngase en contacto con el Diseñador de entidades](iteration-6-use-test-driven-development-vb/_static/image6.jpg)](iteration-6-use-test-driven-development-vb/_static/image11.png)
 
 **Figura 06**: Muestra el grupo y póngase en contacto con el Diseñador de entidades ([haga clic aquí para ver imagen en tamaño completo](iteration-6-use-test-driven-development-vb/_static/image12.png))
 
@@ -306,7 +306,7 @@ Después de completar estos pasos, el modelo de datos representa tanto los conta
 
 A continuación, debemos implementar nuestra clase de repositorio. En el transcurso de esta iteración, hemos agregado varios métodos nuevos a la interfaz IContactManagerRepository al escribir código para satisfacer las pruebas unitarias. La versión final de la interfaz IContactManagerRepository se encuentra en el listado 14.
 
-**Listado 14 - Models\IContactManagerRepository.vb**
+**Listing 14 - Models\IContactManagerRepository.vb**
 
 [!code-vb[Main](iteration-6-use-test-driven-development-vb/samples/sample14.vb)]
 
@@ -330,7 +330,7 @@ Es necesario crear las siguientes nuevas vistas para administrar grupos de conta
 - Views\Group\Delete.aspx - formulario de confirmación de muestra para eliminar un grupo de contactos
 
 
-[![Tvista de índice de grupo](iteration-6-use-test-driven-development-vb/_static/image7.jpg)](iteration-6-use-test-driven-development-vb/_static/image13.png)
+[![La vista de índice de grupo](iteration-6-use-test-driven-development-vb/_static/image7.jpg)](iteration-6-use-test-driven-development-vb/_static/image13.png)
 
 **Figura 07**: La vista de índice de grupo ([haga clic aquí para ver imagen en tamaño completo](iteration-6-use-test-driven-development-vb/_static/image14.png))
 
@@ -344,7 +344,7 @@ Es necesario modificar las siguientes vistas existentes para que incluyan grupos
 Puede ver las vistas modificadas echando un vistazo a la aplicación de Visual Studio que acompaña a este tutorial. Por ejemplo, la figura 8 muestra la vista de índice de contacto.
 
 
-[![Tvista de índice del contacto](iteration-6-use-test-driven-development-vb/_static/image8.jpg)](iteration-6-use-test-driven-development-vb/_static/image15.png)
+[![La vista de índice de contacto](iteration-6-use-test-driven-development-vb/_static/image8.jpg)](iteration-6-use-test-driven-development-vb/_static/image15.png)
 
 **Figura 08**: La vista de índice de contacto ([haga clic aquí para ver imagen en tamaño completo](iteration-6-use-test-driven-development-vb/_static/image16.png))
 

@@ -12,7 +12,7 @@ ms.openlocfilehash: 18b84615d60deac2f06122d3d2b9689dc8efb09a
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59402861"
 ---
 # <a name="how-do-i--implement-health-monitoring-for-an-aspnet-application"></a>[¿Cómo lo hago?:]  ¿Implementar el seguimiento de estado para una aplicación ASP.NET?

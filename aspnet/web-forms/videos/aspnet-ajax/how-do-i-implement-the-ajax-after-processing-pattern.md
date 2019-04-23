@@ -12,7 +12,7 @@ ms.openlocfilehash: 3d4b4e0d12d8baa6810a90ff9225fcbf88fad58f
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59398636"
 ---
 # <a name="how-do-i-implement-the-ajax-after-processing-pattern"></a>[¿Cómo lo hago?:] ¿Implementar el AJAX después de procesar el modelo?

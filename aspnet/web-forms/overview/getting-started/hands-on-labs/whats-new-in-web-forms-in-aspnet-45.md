@@ -12,7 +12,7 @@ ms.openlocfilehash: 52f6ec17fb21019e93ebf2795e95d5b27e4edbe6
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59401749"
 ---
 # <a name="whats-new-in-web-forms-in-aspnet-45"></a>Novedades de los formularios Web Forms en ASP.NET 4.5
@@ -396,7 +396,7 @@ ASP.NET 4.5 introduce la validación de formularios Web Forms de anotaciones de 
     [!code-csharp[Main](whats-new-in-web-forms-in-aspnet-45/samples/sample23.cs)]
 
     > [!NOTE]
-    > .NET framework 4.5 se amplió la colección de anotaciones de datos existente. Estas son algunas de las anotaciones de datos que puede usar: [CreditCard], [Phone], [EmailAddress], [intervalo], [comparar], [Url], [FileExtensions], [Required], [clave], [RegularExpression].
+    > .NET framework 4.5 se amplió la colección de anotaciones de datos existente. Estas son algunas de las anotaciones de datos que puede usar: [CreditCard], [Phone], [EmailAddress], [intervalo], [comparar], [Url], [FileExtensions], [Required], [Key], [RegularExpression].
     > 
     > Algunos ejemplos de uso:
     > 

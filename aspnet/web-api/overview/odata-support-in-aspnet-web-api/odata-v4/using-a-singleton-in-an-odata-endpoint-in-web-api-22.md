@@ -12,7 +12,7 @@ ms.openlocfilehash: 935448a1f9770e1f11460c95997aa778c4208c9f
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59403342"
 ---
 # <a name="create-a-singleton-in-odata-v4-using-web-api-22"></a>Crear un Singleton en OData v4 usar Web API 2.2

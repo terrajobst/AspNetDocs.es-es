@@ -12,7 +12,7 @@ ms.openlocfilehash: 19ea64d706cf301722efa29e5eca952d004d1710
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59406800"
 ---
 # <a name="passwordstrength"></a>PasswordStrength

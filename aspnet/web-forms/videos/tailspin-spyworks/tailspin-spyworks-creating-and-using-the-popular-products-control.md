@@ -12,7 +12,7 @@ ms.openlocfilehash: e8ae1e4d284a32b9c5163a0339879eef0803fed9
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59404798"
 ---
 # <a name="tailspin-spyworks---creating-and-using-the-popular-products-control"></a>Tailspin Spyworks - crear y usar el Control de los productos más populares

@@ -12,7 +12,7 @@ ms.openlocfilehash: f1e03432d543d94fb03c579b39c09fa2da809e75
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59399182"
 ---
 # <a name="custom-button-actions"></a>Acciones de botones personalizados

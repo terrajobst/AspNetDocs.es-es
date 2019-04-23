@@ -12,7 +12,7 @@ ms.openlocfilehash: 204611513860e268001596b9c7ac9e9c023caa12
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59399858"
 ---
 # <a name="displaying-video-in-an-aspnet-web-pages-razor-site"></a>Mostrando el vídeo en un sitio Web de ASP.NET Pages (Razor)

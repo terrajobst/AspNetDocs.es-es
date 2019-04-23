@@ -12,7 +12,7 @@ ms.openlocfilehash: 36bc314c6709c34863d86158419257be99f4084f
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59407112"
 ---
 # <a name="aspnet-mvc-3"></a>ASP.NET MVC 3
@@ -507,7 +507,7 @@ Compatibilidad para modificar la lista de plantillas y los motores enumeran en e
 
 Las plantillas predeterminadas son las siguientes:
 
-Vacío. Contiene un conjunto mínimo de archivos para un proyecto de ASP.NET MVC, incluida la estructura del directorio predeterminado para los proyectos de ASP.NET MVC, un archivo Site.css que contiene el valor predeterminado que los estilos de ASP.NET MVC y un directorio de Scripts que contiene los archivos de JavaScript de forma predeterminada.
+Vacía. Contiene un conjunto mínimo de archivos para un proyecto de ASP.NET MVC, incluida la estructura del directorio predeterminado para los proyectos de ASP.NET MVC, un archivo Site.css que contiene el valor predeterminado que los estilos de ASP.NET MVC y un directorio de Scripts que contiene los archivos de JavaScript de forma predeterminada.
 
 Aplicación de Internet. Contiene la funcionalidad de ejemplo que muestra cómo usar el proveedor de pertenencia a ASP.NET MVC.
 
@@ -648,7 +648,7 @@ Compatibilidad para modificar la lista de plantillas y los motores enumeran en e
 
 Las plantillas predeterminadas son las siguientes:
 
-Vacío. Contiene un conjunto mínimo de archivos para un proyecto de ASP.NET MVC, incluida la estructura del directorio predeterminado para los proyectos de ASP.NET MVC, un pequeño archivo Site.css que contiene el valor predeterminado que los estilos de ASP.NET MVC y un directorio de Scripts que contiene los archivos de JavaScript de forma predeterminada.
+Vacía. Contiene un conjunto mínimo de archivos para un proyecto de ASP.NET MVC, incluida la estructura del directorio predeterminado para los proyectos de ASP.NET MVC, un pequeño archivo Site.css que contiene el valor predeterminado que los estilos de ASP.NET MVC y un directorio de Scripts que contiene los archivos de JavaScript de forma predeterminada.
 
 Aplicación de Internet. Contiene la funcionalidad de ejemplo que muestra cómo usar el proveedor de pertenencia de ASP.NET MVC.
 

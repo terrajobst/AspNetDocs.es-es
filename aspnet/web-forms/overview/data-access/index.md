@@ -12,7 +12,7 @@ ms.openlocfilehash: d2f9d48618a102df7ea24a6d2a80b5c3026c7752
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59405409"
 ---
 # <a name="older-versions---data-access"></a>Versiones anteriores - Acceso a datos
@@ -158,7 +158,7 @@ ms.locfileid: "59405409"
     - [Mostrar datos binarios en los controles web de datos (VB)](working-with-binary-files/displaying-binary-data-in-the-data-web-controls-vb.md)
     - [Incluir una opción de carga de archivos al agregar un nuevo registro (VB)](working-with-binary-files/including-a-file-upload-option-when-adding-a-new-record-vb.md)
     - [Actualizar y eliminar los datos binarios existentes (VB)](working-with-binary-files/updating-and-deleting-existing-binary-data-vb.md)
-- [Almacenar datos en caché](caching-data/index.md)
+- [Almacenamiento de datos en caché](caching-data/index.md)
 
     - [Almacenar datos en caché con ObjectDataSource (C#)](caching-data/caching-data-with-the-objectdatasource-cs.md)
     - [Almacenar datos en caché en la arquitectura (C#)](caching-data/caching-data-in-the-architecture-cs.md)

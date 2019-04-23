@@ -12,7 +12,7 @@ ms.openlocfilehash: 8237dc6b925ccefc5b411aebc8e7c399dcdc6746
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59407359"
 ---
 # <a name="introduction-to-aspnet-web-programming-using-the-razor-syntax-c"></a>Introducción a la programación Web de ASP.NET mediante la sintaxis Razor (C#)
@@ -443,7 +443,7 @@ Un operador es una palabra clave o el carácter que le indica a ASP.NET qué tip
 
 :::row:::
     :::column:::
-    <strong>Operador</strong>
+    <strong>Operator</strong>
     :::column-end:::
     :::column:::
     <strong>Descripción</strong>

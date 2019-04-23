@@ -12,7 +12,7 @@ ms.openlocfilehash: 1d7aa968b25aa353bd91f01dae85c2de8ac83fe7
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59403680"
 ---
 # <a name="aspnet-mvc-advanced-topics"></a>Temas avanzados de ASP.NET MVC

@@ -12,7 +12,7 @@ ms.openlocfilehash: 8148974eacd1db05947ba54fe40776df69f92290
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59404122"
 ---
 # <a name="backbone-template"></a>Plantilla de Backbone
@@ -56,7 +56,7 @@ Al hacer clic en "Mi cuenta", se abre la página de inicio de sesión:
 
 Vamos a comienza con el lado del cliente. Las secuencias de comandos de la aplicación cliente se encuentran en la carpeta ~/Scripts/application. La aplicación está escrita [TypeScript](http://www.typescriptlang.org/) (archivos .ts) que se compilan en JavaScript (archivos .js).
 
-**Application**
+**Aplicación**
 
 `Application` se define en application.ts. Este objeto inicializa la aplicación y actúa como el espacio de nombres raíz. Mantiene información de configuración y el estado que se comparte entre la aplicación, como si el usuario ha iniciado sesión.
 
@@ -68,7 +68,7 @@ Los eventos son siempre importantes al desarrollar débilmente acoplados compone
 
 [!code-csharp[Main](backbonejs-template/samples/sample1.cs)]
 
-**Enrutador**
+**Router**
 
 En Backbone.js, un enrutador proporciona métodos de enrutamiento de las páginas del lado cliente y conectarlos a las acciones y eventos. La plantilla define un único enrutador router.ts. El enrutador crea las vistas activable y mantiene el estado al cambiar de vista. (Vistas activable se describen en la sección siguiente). Inicialmente, el proyecto tiene dos vistas ficticias, principal y punto. También tiene una vista NotFound, que se muestra si no se conoce la ruta.
 
@@ -94,7 +94,7 @@ Los modelos se definen en ~/Scripts/application/modelos. Todos los modelos tenga
 
 [!code-javascript[Main](backbonejs-template/samples/sample5.js)]
 
-**Los complementos**
+**Plug-ins**
 
 La carpeta ~/Scripts/application/lib contiene algunos complementos de jQuery útil. El archivo form.ts define un complemento para trabajar con datos del formulario. A menudo necesitará serializar o deserializar los datos de formulario y mostrar los errores de validación del modelo. El complemento form.ts incorpora métodos como `serializeFields`, `deserializeFields`, y `showFieldErrors`. El ejemplo siguiente muestra cómo serializar un formulario a un modelo.
 

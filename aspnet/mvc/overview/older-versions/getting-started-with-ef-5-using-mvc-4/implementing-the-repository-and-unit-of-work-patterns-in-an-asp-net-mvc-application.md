@@ -12,7 +12,7 @@ ms.openlocfilehash: 71ff3c269c5d1ed43a67d19442eda8e9d4728295
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59405708"
 ---
 # <a name="implementing-the-repository-and-unit-of-work-patterns-in-an-aspnet-mvc-application-9-of-10"></a>Implementar el repositorio y unidad de patrones de trabajo en una aplicación de ASP.NET MVC (9 de 10)

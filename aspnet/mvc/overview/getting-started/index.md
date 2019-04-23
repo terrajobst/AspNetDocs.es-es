@@ -12,7 +12,7 @@ ms.openlocfilehash: f588af70f3928285274ef6bf14f58697190943ff
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59405825"
 ---
 # <a name="aspnet-mvc-getting-started"></a>Introducción de MVC de ASP.NET
@@ -30,7 +30,7 @@ ms.locfileid: "59405825"
     - [Obtener acceso a los datos del modelo desde un controlador](introduction/accessing-your-models-data-from-a-controller.md)
     - [Examinar los métodos y la vista Edit](introduction/examining-the-edit-methods-and-edit-view.md)
     - [Agregar una búsqueda](introduction/adding-search.md)
-    - [Adición de un nuevo campo](introduction/adding-a-new-field.md)
+    - [Agregar un nuevo campo](introduction/adding-a-new-field.md)
     - [Agregar una validación](introduction/adding-validation.md)
     - [Examinar los métodos Details y Delete](introduction/examining-the-details-and-delete-methods.md)
 - [Introducción a EF 6 mediante MVC 5](getting-started-with-ef-using-mvc/index.md)
@@ -54,7 +54,7 @@ ms.locfileid: "59405825"
     - [Generar vistas](database-first-development/generating-views.md)
     - [Cambiar la base de datos](database-first-development/changing-the-database.md)
     - [Personalizar una vista](database-first-development/customizing-a-view.md)
-    - [Mejorar la validación de datos](database-first-development/enhancing-data-validation.md)
+    - [Mejora de la validación de datos](database-first-development/enhancing-data-validation.md)
 - [Ciclo de vida de una aplicación de ASP.NET MVC 5](lifecycle-of-an-aspnet-mvc-5-application.md)
 - [Recursos recomendados de MVC](recommended-resources-for-mvc.md)
 - [Artículos y tutoriales recomendados de MVC](mvc-learning-sequence.md)

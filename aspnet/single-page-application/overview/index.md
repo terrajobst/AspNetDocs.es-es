@@ -12,16 +12,16 @@ ms.openlocfilehash: ba656ecc14204d833e9dc18b941a2c19ec5e06ef
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59397733"
 ---
 # <a name="single-page-application-overview"></a>Introducción a la aplicación de página única
 
 - [Introducción](introduction/index.md)
 
-    - [Aplicación de una sola página: Plantilla KnockoutJS](introduction/knockoutjs-template.md)
+    - [Aplicación una sola página: Plantilla KnockoutJS](introduction/knockoutjs-template.md)
     - [¿Conoce una biblioteca distinta de Knockout?](introduction/other-libraries.md)
-- [Plantillas](templates/index.md)
+- [Templates](templates/index.md) (Plantillas [C++])
 
     - [Plantilla de Backbone](templates/backbonejs-template.md)
     - [Plantilla de Breeze/Angular](templates/breezeangular-template.md)

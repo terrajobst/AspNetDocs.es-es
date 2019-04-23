@@ -12,7 +12,7 @@ ms.openlocfilehash: 6292ec084bbacdd41b5df63d9ac1017c43407b37
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59402510"
 ---
 # <a name="signalr-performance"></a>Rendimiento de SignalR

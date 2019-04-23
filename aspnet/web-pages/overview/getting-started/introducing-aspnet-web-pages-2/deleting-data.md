@@ -12,7 +12,7 @@ ms.openlocfilehash: e9ffe0ea3e2bf817675a4a771d3471ec6eb91133
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59406748"
 ---
 # <a name="introducing-aspnet-web-pages---deleting-database-data"></a>Introducción a ASP.NET Web Pages: eliminación de la base de datos

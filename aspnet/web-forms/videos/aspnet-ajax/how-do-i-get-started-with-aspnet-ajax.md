@@ -12,7 +12,7 @@ ms.openlocfilehash: e3e70c0d43c2f2db13180342730156728fa03cc2
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59399975"
 ---
 # <a name="how-do-i-get-started-with-aspnet-ajax"></a>[¿Cómo lo hago?:] ¿Empezar a trabajar con ASP.NET AJAX?

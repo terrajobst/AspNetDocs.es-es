@@ -12,7 +12,7 @@ ms.openlocfilehash: eb1060fd9cc9469dc2b1d2e918823316c36840cb
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59404824"
 ---
 # <a name="how-do-i-work-with-urls-in-aspnet-routing"></a>¿Cómo lo hago?: ¿Trabajar con direcciones URL en el enrutamiento de ASP.NET?

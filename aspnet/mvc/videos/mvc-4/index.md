@@ -12,7 +12,7 @@ ms.openlocfilehash: cddf4c754ab2c8e8ad2671819cf61d0a7f336bf0
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59407489"
 ---
 # <a name="aspnet-mvc-4"></a>ASP.NET MVC 4

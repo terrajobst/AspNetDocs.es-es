@@ -12,7 +12,7 @@ ms.openlocfilehash: bbedc11b9b1225b1047350c1c84a116ecef0c380
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59407411"
 ---
 # <a name="understanding-action-filters-vb"></a>Descripción de los filtros de acción (VB)
@@ -49,7 +49,7 @@ Por ejemplo, el controlador de datos en el listado 1 expone una acción denomina
 Si se invoca varias veces el `Index()` acción al introducir la dirección URL operaciones/Data/índice en la barra de direcciones del explorador y presionar la actualización de botón varias veces, verá la misma hora durante 10 segundos. La salida de la `Index()` acción se almacena en caché durante 10 segundos (consulte la figura 1).
 
 
-[![Ctiempo de caché](understanding-action-filters-vb/_static/image2.png)](understanding-action-filters-vb/_static/image1.png)
+[![Tiempo en caché](understanding-action-filters-vb/_static/image2.png)](understanding-action-filters-vb/_static/image1.png)
 
 **Figura 01**: Almacenar en caché de tiempo ([haga clic aquí para ver imagen en tamaño completo](understanding-action-filters-vb/_static/image3.png))
 
@@ -107,7 +107,7 @@ Para ilustrar cómo puede crear un filtro de acción personalizado, vamos a crea
 En el listado 2, el `OnActionExecuting()`, `OnActionExecuted()`, `OnResultExecuting()`, y `OnResultExecuted()` todos los métodos llaman a la `Log()` método. El nombre del método y los datos de ruta actual se pasa a la `Log()` método. El `Log()` método escribe un mensaje en la ventana de salida de Visual Studio (consulte la figura 2).
 
 
-[![Writing a la ventana de salida de Visual Studio](understanding-action-filters-vb/_static/image5.png)](understanding-action-filters-vb/_static/image4.png)
+[![Escribir en la ventana de salida de Visual Studio](understanding-action-filters-vb/_static/image5.png)](understanding-action-filters-vb/_static/image4.png)
 
 **Figura 02**: Escribir en la ventana de salida de Visual Studio ([haga clic aquí para ver imagen en tamaño completo](understanding-action-filters-vb/_static/image6.png))
 

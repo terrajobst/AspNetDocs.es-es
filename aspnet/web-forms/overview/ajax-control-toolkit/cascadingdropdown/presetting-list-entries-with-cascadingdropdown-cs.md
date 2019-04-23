@@ -12,7 +12,7 @@ ms.openlocfilehash: 188f98d013707178e50858f8ea26d8cf2af06bea
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59406020"
 ---
 # <a name="presetting-list-entries-with-cascadingdropdown-c"></a>Preconfigurar entradas de lista con CascadingDropDown (C#)
@@ -53,7 +53,7 @@ El método devuelve una matriz de tipo de valor CascadingDropDown. El constructo
 Carga de la página en el explorador rellenará la lista desplegable con los tres proveedores, la segunda se está preseleccionado.
 
 
-[![Tlista se rellena y preseleccionado automáticamente](presetting-list-entries-with-cascadingdropdown-cs/_static/image2.png)](presetting-list-entries-with-cascadingdropdown-cs/_static/image1.png)
+[![La lista se rellena y preseleccionada automáticamente](presetting-list-entries-with-cascadingdropdown-cs/_static/image2.png)](presetting-list-entries-with-cascadingdropdown-cs/_static/image1.png)
 
 La lista se rellena y preseleccionada automáticamente ([haga clic aquí para ver imagen en tamaño completo](presetting-list-entries-with-cascadingdropdown-cs/_static/image3.png))
 

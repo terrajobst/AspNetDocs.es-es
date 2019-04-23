@@ -12,7 +12,7 @@ ms.openlocfilehash: 17a144dfe2fb9f34ceb15644b44828ec6aeaf577
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59399676"
 ---
 # <a name="aspnet-mvc-for-the-rest-of-us-part-2"></a>Vídeo "ASP.NET MVC For the Rest of Us": parte 2

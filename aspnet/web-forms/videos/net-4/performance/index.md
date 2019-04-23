@@ -12,7 +12,7 @@ ms.openlocfilehash: c2dc613713747cef5ada2e44e2077fc36e7a2086
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59399793"
 ---
 # <a name="performance"></a>Rendimiento

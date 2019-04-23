@@ -12,7 +12,7 @@ ms.openlocfilehash: a0747f2d9c43cfc62a540c0296cf690d54477bf6
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59404993"
 ---
 # <a name="jquery-templates"></a>jQuery Templates

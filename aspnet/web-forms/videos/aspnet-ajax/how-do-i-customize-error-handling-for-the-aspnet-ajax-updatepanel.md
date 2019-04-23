@@ -12,7 +12,7 @@ ms.openlocfilehash: 34a4147a054b0a3ea025a08028af7c7a9563e01a
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59404135"
 ---
 # <a name="how-do-i-customize-error-handling-for-the-aspnet-ajax-updatepanel"></a>¿Cómo lo hago?: Personalizar el control de errores del UpdatePanel de ASP.NET AJAX

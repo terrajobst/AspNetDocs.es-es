@@ -12,7 +12,7 @@ ms.openlocfilehash: e6b63afb9492e810e19999c7c7ffe074ad510bda
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59406774"
 ---
 # <a name="introduction-to-aspnet-web-programming-using-the-razor-syntax-visual-basic"></a>Introducción a la programación Web de ASP.NET mediante la sintaxis Razor (Visual Basic)
@@ -745,4 +745,4 @@ Si el código no controla la excepción, verá una página de error similar a la
 ### <a name="reference-documentation"></a>Documentación de referencia
 
 - [ASP.NET](https://msdn.microsoft.com/library/ee532866.aspx)
-- [Lenguaje Visual Basic](https://msdn.microsoft.com/library/2x7h1hfk.aspx)
+- [Visual Basic (lenguaje)](https://msdn.microsoft.com/library/2x7h1hfk.aspx)

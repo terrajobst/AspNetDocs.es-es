@@ -12,7 +12,7 @@ ms.openlocfilehash: 78e4d3aedd183e8ec91a8c833e4b60894ae214ec
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59401197"
 ---
 # <a name="webmatrix-and-web-pages-video-training-from-pluralsight"></a>Vídeo de aprendizaje de WebMatrix y Web Pages de Pluralsight
@@ -27,7 +27,7 @@ ms.locfileid: "59401197"
 - [Sitios y áreas de trabajo de archivos](https://pluralsight.com/training/Player?author=matt-milner&name=webmatrix-introduction-m2&mode=live&clip=0&course=webmatrix-introduction)
 - [Trabajar con bases de datos](https://pluralsight.com/training/Player?author=matt-milner&name=webmatrix-introduction-m3&mode=live&clip=0&course=webmatrix-introduction)
 - [Trabajar con documentos Web estándar](https://pluralsight.com/training/Player?author=matt-milner&name=webmatrix-introduction-m4&mode=live&clip=0&course=webmatrix-introduction)
-- [ASP.NET Web Pages](https://pluralsight.com/training/Player?author=matt-milner&name=webmatrix-introduction-m5&mode=live&clip=0&course=webmatrix-introduction)
+- [ASP.NET Web Pages](https://pluralsight.com/training/Player?author=matt-milner&name=webmatrix-introduction-m5&mode=live&clip=0&course=webmatrix-introduction) (Más información sobre páginas web de ASP.NET)
 - [Informes y la implementación](https://pluralsight.com/training/Player?author=matt-milner&name=webmatrix-introduction-m8&mode=live&clip=0&course=webmatrix-introduction)
 - [Control de código fuente](https://pluralsight.com/training/Player?author=matt-milner&name=webmatrix-introduction-m9&mode=live&clip=0&course=webmatrix-introduction)
 - [Sitios Web móviles](https://pluralsight.com/training/Player?author=matt-milner&name=webmatrix-introduction-m10&mode=live&clip=0&course=webmatrix-introduction)

@@ -12,7 +12,7 @@ ms.openlocfilehash: 01d6d2988278d3d371d93b23bbdf089d83900405
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59397856"
 ---
 # <a name="creating-mutually-exclusive-checkboxes-c"></a>Crear casillas de verificación mutuamente excluyentes (C#)
@@ -47,7 +47,7 @@ Por último, se incluyen ASP.NET AJAX `ScriptManager` que es necesario para todo
 Guarde y ejecute la página: Se puede activar y desactivar ambas casillas de verificación, pero en ningún momento ambas casillas de verificación se puede comprobar.
 
 
-[![Ouna casilla de verificación solo se puede comprobar a la vez](creating-mutually-exclusive-checkboxes-cs/_static/image2.png)](creating-mutually-exclusive-checkboxes-cs/_static/image1.png)
+[![Se puede comprobar solo una casilla a la vez](creating-mutually-exclusive-checkboxes-cs/_static/image2.png)](creating-mutually-exclusive-checkboxes-cs/_static/image1.png)
 
 Se puede comprobar solo una casilla a la vez ([haga clic aquí para ver imagen en tamaño completo](creating-mutually-exclusive-checkboxes-cs/_static/image3.png))
 

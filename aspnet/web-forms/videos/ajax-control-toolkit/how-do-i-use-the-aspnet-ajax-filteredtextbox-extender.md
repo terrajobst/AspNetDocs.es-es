@@ -12,7 +12,7 @@ ms.openlocfilehash: fb59f9b4f4ac61c15874673f0121350ba05fdb84
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59400066"
 ---
 # <a name="how-do-i-use-the-aspnet-ajax-filteredtextbox-extender"></a>[¿Cómo lo hago?:] ¿Usar el extensor FilteredTextbox ASP.NET AJAX?

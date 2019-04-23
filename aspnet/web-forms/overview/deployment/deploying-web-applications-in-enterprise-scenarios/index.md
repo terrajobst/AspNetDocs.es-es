@@ -12,7 +12,7 @@ ms.openlocfilehash: f1f1e78a3b8d631d9a78c5aad8dc8c3b00c883fe
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59404382"
 ---
 # <a name="aspnet-4---enterprise-deployment-introduction"></a>ASP.NET 4 - Introducción a la implementación de empresa
@@ -21,5 +21,5 @@ ms.locfileid: "59404382"
 
 
 - [Implementar aplicaciones web en escenarios empresariales mediante Visual Studio 2010](deploying-web-applications-in-enterprise-scenarios.md)
-- [Implementación web de empresa: Información general del escenario](enterprise-web-deployment-scenario-overview.md)
-- [Administración del ciclo de vida de las aplicaciones: De desarrollo a producción](application-lifecycle-management-from-development-to-production.md)
+- [Implementación Web de empresa: Información general del escenario](enterprise-web-deployment-scenario-overview.md)
+- [Administración del ciclo de vida de aplicaciones: Entornos de desarrollo a producción](application-lifecycle-management-from-development-to-production.md)

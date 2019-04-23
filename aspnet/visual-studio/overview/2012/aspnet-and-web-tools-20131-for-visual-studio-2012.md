@@ -12,7 +12,7 @@ ms.openlocfilehash: 17315dbbbdc08412e4e928256783c221a8a2cb20
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59406813"
 ---
 # <a name="release-notes-for-aspnet-and-web-tools-20131-for-visual-studio-2012"></a>Notas de la versión de ASP.NET and Web Tools 2013.1 para Visual Studio 2012
@@ -29,7 +29,7 @@ por [Microsoft](https://github.com/microsoft)
 - Nuevas características de ASP.NET y Web Tools 2013.1 para Visual Studio 2012
 
     - [Bootstrap](#bootstrap)
-    - [Plantillas](#templates)
+    - [Templates](#templates) (Plantillas [C++])
 
         - [Plantilla de ASP.NET MVC 5](#mvc5template)
         - [Plantilla ASP.NET Web API 2](#apitemplate)
@@ -48,7 +48,7 @@ por [Microsoft](https://github.com/microsoft)
 
         - [Ver archivo cshtml explorar con ni F5 produce un error de servidor](#browseissue)
         - [Tilde(~) y reescritura de Url](#rewriteissue)
-    - [Plantillas](#templateissue)
+    - [Templates](#templateissue) (Plantillas [C++])
 
 <a id="install"></a>
 ## <a name="installation-notes"></a>Notas de instalación

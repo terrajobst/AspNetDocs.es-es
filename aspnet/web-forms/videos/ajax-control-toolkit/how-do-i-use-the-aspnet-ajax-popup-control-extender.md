@@ -12,7 +12,7 @@ ms.openlocfilehash: be086315943d9d680faa2a8bc784c2b995425903
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59398402"
 ---
 # <a name="how-do-i-use-the-aspnet-ajax-popup-control-extender"></a>[¿Cómo lo hago?:] ¿Usar el extensor de Control Popup de ASP.NET AJAX?

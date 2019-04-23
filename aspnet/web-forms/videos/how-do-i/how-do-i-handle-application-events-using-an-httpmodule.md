@@ -12,7 +12,7 @@ ms.openlocfilehash: 502268f7cedd599d0a2ccda25e2341c9dbc9c5d6
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59407463"
 ---
 # <a name="how-do-i-handle-application-events-using-an-httpmodule"></a>[¿Cómo lo hago?:] ¿Controlar eventos de aplicación mediante un HttpModule?

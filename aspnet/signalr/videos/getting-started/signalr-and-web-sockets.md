@@ -12,7 +12,7 @@ ms.openlocfilehash: 00588e910ae93a80dc3a91ca2ed6a37176f13a8e
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59400949"
 ---
 # <a name="signalr-and-web-sockets"></a>SignalR y Web Sockets

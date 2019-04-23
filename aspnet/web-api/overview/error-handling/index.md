@@ -13,7 +13,7 @@ ms.openlocfilehash: 62df1c144cdb14c83eb1407713dc051d39a1def7
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59401041"
 ---
 # <a name="error-handling-in-aspnet-web-api"></a>Control de errores en ASP.NET Web API

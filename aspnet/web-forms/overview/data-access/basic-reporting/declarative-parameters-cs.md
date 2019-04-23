@@ -12,7 +12,7 @@ ms.openlocfilehash: b3bdb44a0e3dc274c056bcadae3dcf90ab3c5507
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59401444"
 ---
 # <a name="declarative-parameters-c"></a>Parámetros declarativos (C#)
@@ -37,7 +37,7 @@ En este tutorial comenzar, creemos que ilustra cómo usar un parámetro establec
 Para el primer ejemplo, empiece por agregar un control DetailsView en la `DeclarativeParams.aspx` página en el `BasicReporting` carpeta. En las etiquetas inteligentes de DetailsView, seleccione &lt;nuevo origen de datos&gt; en la lista desplegable lista y elija Agregar un origen ObjectDataSource.
 
 
-[![Aun origen ObjectDataSource a la página dd](declarative-parameters-cs/_static/image2.png)](declarative-parameters-cs/_static/image1.png)
+[![Agregar un origen ObjectDataSource a la página](declarative-parameters-cs/_static/image2.png)](declarative-parameters-cs/_static/image1.png)
 
 **Figura 1**: Agregar un origen ObjectDataSource a la página ([haga clic aquí para ver imagen en tamaño completo](declarative-parameters-cs/_static/image3.png))
 
@@ -45,7 +45,7 @@ Para el primer ejemplo, empiece por agregar un control DetailsView en la `Declar
 Esto iniciará automáticamente el Asistente de Elegir origen de datos del control ObjectDataSource. Seleccione el `ProductsBLL` clase a partir de la primera pantalla del asistente.
 
 
-[![Soptar por la clase ProductsBLL](declarative-parameters-cs/_static/image5.png)](declarative-parameters-cs/_static/image4.png)
+[![Seleccione la clase ProductsBLL](declarative-parameters-cs/_static/image5.png)](declarative-parameters-cs/_static/image4.png)
 
 **Figura 2**: Seleccione el `ProductsBLL` clase ([haga clic aquí para ver imagen en tamaño completo](declarative-parameters-cs/_static/image6.png))
 
@@ -53,7 +53,7 @@ Esto iniciará automáticamente el Asistente de Elegir origen de datos del contr
 Puesto que queremos mostrar información sobre un producto determinado que deseamos utilizar el `GetProductByProductID(productID)` método.
 
 
-[![CElija el método GetProductByProductID(productID)](declarative-parameters-cs/_static/image8.png)](declarative-parameters-cs/_static/image7.png)
+[![Elija el método GetProductByProductID(productID)](declarative-parameters-cs/_static/image8.png)](declarative-parameters-cs/_static/image7.png)
 
 **Figura 3**: Elija la `GetProductByProductID(productID)` método ([haga clic aquí para ver imagen en tamaño completo](declarative-parameters-cs/_static/image9.png))
 
@@ -61,7 +61,7 @@ Puesto que queremos mostrar información sobre un producto determinado que desea
 Dado que el método seleccionamos incluye un parámetro, hay una pantalla más para que el asistente, donde se nos pide que defina el valor que se usará para el parámetro. La lista de la izquierda muestra todos los parámetros para el método seleccionado. Para `GetProductByProductID(productID)` solo hay un `productID`. Podemos especificar el valor para el parámetro seleccionado en la parte derecha. La lista desplegable de origen de parámetro enumera los distintos orígenes posibles para el valor del parámetro. Puesto que deseamos especificar un valor codificado de forma rígida de 5 para el `productID` parámetro, deje el origen del parámetro como Ninguno y escriba 5 en el cuadro de texto DefaultValue.
 
 
-[![A Codificado de forma rígida parámetro de valor de 5 se utilizará para el parámetro productID](declarative-parameters-cs/_static/image11.png)](declarative-parameters-cs/_static/image10.png)
+[![Un Hard-Coded parámetro de valor de 5 se utilizará para el parámetro productID](declarative-parameters-cs/_static/image11.png)](declarative-parameters-cs/_static/image10.png)
 
 **Figura 4**: Un Hard-Coded parámetro de valor de 5 se utilizará para el `productID` parámetro ([haga clic aquí para ver imagen en tamaño completo](declarative-parameters-cs/_static/image12.png))
 
@@ -77,7 +77,7 @@ Después de completar el Asistente para configurar orígenes de datos, que inclu
 Al visitar esta página, los datos de control Web invocará la ObjectDataSource `Select` método, que llamará el `ProductsBLL` la clase `GetProductByProductID(productID)` método utilizando el valor codificado de forma rígida de 5 para el `productID` parámetro de entrada. El método devolverá fuertemente tipadas `ProductDataTable` objeto que contiene una sola fila con información acerca tártara de Chef Antón (el producto con `ProductID` 5).
 
 
-[![Itártara para obtener más información sobre Chef Antón se muestran](declarative-parameters-cs/_static/image14.png)](declarative-parameters-cs/_static/image13.png)
+[![Se muestran tártara del información sobre Chef Antón](declarative-parameters-cs/_static/image14.png)](declarative-parameters-cs/_static/image13.png)
 
 **Figura 5**: Se muestran tártara del información sobre Chef Antón ([haga clic aquí para ver imagen en tamaño completo](declarative-parameters-cs/_static/image15.png))
 
@@ -87,7 +87,7 @@ Al visitar esta página, los datos de control Web invocará la ObjectDataSource 
 Parámetro de ObjectDataSource también se pueden establecer los valores según el valor de un control Web en la página. Para ilustrar esto, vamos a tener un control GridView que muestra todos los proveedores que se encuentran en un país o región especificado por el usuario. Para realizar este tutorial de inicio mediante la adición de un cuadro de texto a la página en la que el usuario puede escribir un nombre de país. Establecer este control de cuadro de texto `ID` propiedad `CountryName`. Agregue también un control de botón Web.
 
 
-[![Aun cuadro de texto a la página con el Id. de CountryName dd](declarative-parameters-cs/_static/image17.png)](declarative-parameters-cs/_static/image16.png)
+[![Agregue un cuadro de texto a la página con el Id. de CountryName](declarative-parameters-cs/_static/image17.png)](declarative-parameters-cs/_static/image16.png)
 
 **Figura 6**: Agregue un cuadro de texto a la página con `ID` `CountryName` ([haga clic aquí para ver imagen en tamaño completo](declarative-parameters-cs/_static/image18.png))
 
@@ -95,7 +95,7 @@ Parámetro de ObjectDataSource también se pueden establecer los valores según 
 A continuación, agregue un control GridView a la página y, en la etiqueta inteligente, optar por agregar un nuevo origen ObjectDataSource. Puesto que deseamos mostrar seleccionar información de proveedor la `SuppliersBLL` clase a partir de la pantalla del asistente primera. En la segunda pantalla, elija el `GetSuppliersByCountry(country)` método.
 
 
-[![CElija el método GetSuppliersByCountry(country)](declarative-parameters-cs/_static/image20.png)](declarative-parameters-cs/_static/image19.png)
+[![Elija el método GetSuppliersByCountry(country)](declarative-parameters-cs/_static/image20.png)](declarative-parameters-cs/_static/image19.png)
 
 **Figura 7**: Elija la `GetSuppliersByCountry(country)` método ([haga clic aquí para ver imagen en tamaño completo](declarative-parameters-cs/_static/image21.png))
 
@@ -103,7 +103,7 @@ A continuación, agregue un control GridView a la página y, en la etiqueta inte
 Puesto que el `GetSuppliersByCountry(country)` método tiene un parámetro de entrada, una vez más, el asistente incluye una pantalla final para elegir el valor del parámetro. Esta vez, establezca el parámetro source al Control. Esto rellenará la lista desplegable iDControl con los nombres de los controles en la página; Seleccione el `CountryName` control en la lista. Cuando primero se visita la página el `CountryName` TextBox estará en blanco, por lo que se devuelve ningún resultado y se muestra nada. Si desea mostrar algunos resultados de forma predeterminada, establezca el cuadro de texto DefaultValue en consecuencia.
 
 
-[![Sel valor del parámetro en el valor del Control CountryName et](declarative-parameters-cs/_static/image23.png)](declarative-parameters-cs/_static/image22.png)
+[![Establece el valor del parámetro en el valor del Control CountryName](declarative-parameters-cs/_static/image23.png)](declarative-parameters-cs/_static/image22.png)
 
 **Figura 8**: Establece el valor del parámetro en el `CountryName` valor de Control ([haga clic aquí para ver imagen en tamaño completo](declarative-parameters-cs/_static/image24.png))
 
@@ -117,7 +117,7 @@ Cuando se visita la página por primera vez el `CountryName` cuadro de texto est
 Una vez que el visitante entra en un país, sin embargo y hace clic en el botón Mostrar proveedores para que se produzca un postback, ObjectDataSource `Select` se requiere el método, pasando el control de cuadro de texto `Text` valor como el `country` parámetro.
 
 
-[![Tse muestra los proveedores de Canadá manguera](declarative-parameters-cs/_static/image26.png)](declarative-parameters-cs/_static/image25.png)
+[![Se muestran los proveedores de Canadá](declarative-parameters-cs/_static/image26.png)](declarative-parameters-cs/_static/image25.png)
 
 **Figura 9**: Se muestran los proveedores de Canadá ([haga clic aquí para ver imagen en tamaño completo](declarative-parameters-cs/_static/image27.png))
 
@@ -139,7 +139,7 @@ Cambiar el `GetSuppliersByCountry(country)` método en el `SuppliersBLL` clase a
 Con este cambio la `DeclarativeParams.aspx` página muestra todos los proveedores cuando visita en primer lugar (o cada vez que la `CountryName` cuadro de texto está vacía).
 
 
-[![All proveedores están ahora se muestran de forma predeterminada](declarative-parameters-cs/_static/image29.png)](declarative-parameters-cs/_static/image28.png)
+[![Todos los proveedores son ahora se muestran de forma predeterminada](declarative-parameters-cs/_static/image29.png)](declarative-parameters-cs/_static/image28.png)
 
 **Figura 10**: Todos los proveedores son ahora se muestran de forma predeterminada ([haga clic aquí para ver imagen en tamaño completo](declarative-parameters-cs/_static/image30.png))
 

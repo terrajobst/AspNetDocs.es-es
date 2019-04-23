@@ -12,7 +12,7 @@ ms.openlocfilehash: ff6e21dad7598146a681615913dcbd37f72001ee
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59404395"
 ---
 # <a name="how-to-setup-and-use-cookie-less-authentication-in-an-aspnet-application"></a>Cómo se instale y Use la autenticación sin cookies en una aplicación ASP.NET

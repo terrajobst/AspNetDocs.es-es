@@ -12,7 +12,7 @@ ms.openlocfilehash: 019383897daeb7d8885ea4b9c3609e7f8ef9f827
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59396673"
 ---
 # <a name="what-is-a-database"></a>¿Qué es una base de datos?

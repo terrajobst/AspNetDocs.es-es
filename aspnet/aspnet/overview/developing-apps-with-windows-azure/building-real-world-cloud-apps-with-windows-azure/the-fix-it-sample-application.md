@@ -12,7 +12,7 @@ ms.openlocfilehash: d3a965ccf7ca001d3178819f88836b59f2893bb0
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59406423"
 ---
 # <a name="appendix-the-fix-it-sample-application-building-real-world-cloud-apps-with-azure"></a>Apéndice: Corrección de la aplicación de ejemplo (creación de aplicaciones de nube reales con Azure)
