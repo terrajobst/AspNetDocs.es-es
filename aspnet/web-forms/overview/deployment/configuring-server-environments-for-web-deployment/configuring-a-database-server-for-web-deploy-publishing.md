@@ -8,12 +8,12 @@ ms.date: 05/04/2012
 ms.assetid: e7c447f9-eddf-4bbe-9f18-3326d965d093
 msc.legacyurl: /web-forms/overview/deployment/configuring-server-environments-for-web-deployment/configuring-a-database-server-for-web-deploy-publishing
 msc.type: authoredcontent
-ms.openlocfilehash: 2cd99e23904276e89cf043a2332ad07c0f01716d
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: ade3c1ba1c470092f512436f39b8831458408c2c
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59415354"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65131574"
 ---
 # <a name="configuring-a-database-server-for-web-deploy-publishing"></a>Configurar un servidor de base de datos para la publicación de la implementación web
 
@@ -24,7 +24,6 @@ por [Jason Lee](https://github.com/jrjlee)
 > Este tema describe cómo configurar un servidor de base de datos de SQL Server 2008 R2 para admitir la publicación e implementación de web.
 > 
 > Las tareas descritas en este tema son comunes a todos los escenarios de implementación&#x2014;no importa si los servidores web están configurados para usar el servicio de agente remoto de la herramienta de implementación Web de IIS (Web Deploy), el controlador de implementación Web o implementación sin conexión o su aplicación se ejecuta en un único servidor web o una granja de servidores. Puede cambiar la forma de implementar la base de datos según los requisitos de seguridad y otras consideraciones. Por ejemplo, podría implementar la base de datos con o sin datos de ejemplo y puede implementar las asignaciones de rol de usuario o configurarlos manualmente después de la implementación. Sin embargo, la forma de configurar el servidor de base de datos sigue siendo el mismo.
-
 
 No tienes que instalar otros productos y herramientas para configurar un servidor de base de datos para admitir la implementación web. Suponiendo que el servidor de base de datos y el servidor web se ejecutan en máquinas diferentes, basta con:
 
@@ -46,7 +45,6 @@ La instancia de SQL Server sólo tiene que incluir el **servicios de motor de ba
 
 > [!NOTE]
 > Para obtener más información sobre la unión a los equipos a un dominio, consulte [unir equipos al dominio e iniciar sesión](https://technet.microsoft.com/library/cc725618(v=WS.10).aspx). Para obtener más información sobre cómo configurar direcciones IP estáticas, consulte [configurar una dirección IP estática](https://technet.microsoft.com/library/cc754203(v=ws.10).aspx). Para obtener más información acerca de cómo instalar SQL Server, vea [instalar SQL Server 2008 R2](https://technet.microsoft.com/library/bb500395.aspx).
-
 
 ## <a name="enable-remote-access-to-sql-server"></a>Habilitar el acceso remoto a SQL Server
 
@@ -96,11 +94,9 @@ Suponiendo que usa una instancia predeterminada de SQL Server, deberá configura
 | --- | --- | --- | --- |
 | Entrada | Cualquiera | 1433 | TCP |
 | Saliente | 1433 | Cualquiera | TCP |
-  
 
 > [!NOTE]
 > Técnicamente, un equipo cliente utilizará un puerto TCP asignado de forma aleatoria entre 1024 y 5000 para comunicarse con SQL Server, y puede restringir las reglas de firewall en consecuencia. Para obtener más información sobre los puertos de SQL Server y los firewalls, consulte [números de puerto TCP/IP necesarios para comunicarse con SQL a través de un firewall](https://go.microsoft.com/?linkid=9805125) y [Cómo: Configurar un servidor para que escuche en un puerto de TCP específico (Administrador de configuración de SQL Server)](https://msdn.microsoft.com/library/ms177440.aspx).
-
 
 En la mayoría de los entornos de Windows Server, probablemente tendrá que configurar el Firewall de Windows en el servidor de base de datos. De forma predeterminada, Firewall de Windows permite todo el tráfico saliente a menos que una regla prohíba específicamente. Para habilitar el servidor web para llegar a la base de datos, deberá configurar una regla de entrada que permita el tráfico TCP en el número de puerto que utiliza la instancia de SQL Server. Si usa una instancia predeterminada de SQL Server, puede usar el procedimiento siguiente para configurar esta regla.
 
@@ -136,7 +132,6 @@ Si la aplicación web se ejecuta en una granja de servidores, en lugar de un sol
 
 > [!NOTE]
 > Para obtener más información sobre las identidades del grupo de aplicaciones y acceder a recursos de red, consulte [identidades del grupo de aplicación](https://go.microsoft.com/?linkid=9805123).
-
 
 Puede llevar estas tareas de varias maneras. Para crear el inicio de sesión, puede:
 
@@ -182,14 +177,12 @@ Aunque la asignación manual de los roles de base de datos a menudo resulta más
 > [!NOTE]
 > Para obtener más información sobre los proyectos de servidor y los proyectos de base de datos, vea [Visual Studio 2010 SQL Server Database Projects](https://msdn.microsoft.com/library/ff678491.aspx).
 
-
 ## <a name="configure-permissions-for-the-deployment-account"></a>Configurar permisos para la cuenta de implementación
 
 Si la cuenta que va a usar para ejecutar la implementación no es un administrador de SQL Server, también deberá crear un inicio de sesión para esta cuenta. Para crear la base de datos, la cuenta debe ser un miembro de la **dbcreator** rol de servidor o tener permisos equivalentes.
 
 > [!NOTE]
 > Al usar Web Deploy o VSDBCMD para implementar una base de datos, puede usar las credenciales de Windows o SQL Server (si la instancia de SQL Server está configurada para admitir la autenticación de modo mixto). El siguiente procedimiento se supone que va a utilizar las credenciales de Windows, pero no hay nada que le impida especificando un nombre de usuario de SQL Server y la contraseña en la cadena de conexión al configurar la implementación.
-
 
 **Para configurar permisos para la cuenta de implementación**
 
