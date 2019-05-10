@@ -8,12 +8,12 @@ ms.date: 06/02/2008
 ms.assetid: 219149e1-3ee9-4b79-8fe4-7433f6b7d15b
 msc.legacyurl: /web-forms/overview/ajax-control-toolkit/animation/executing-several-animations-at-the-same-time-cs
 msc.type: authoredcontent
-ms.openlocfilehash: 0d9c566a301c8b64e33e67b0e9415a5955b5436e
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: f6ca48ff8bc4be982e0eff55d8d9c3385176897b
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59388223"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65108228"
 ---
 # <a name="executing-several-animations-at-the-same-time-c"></a>Ejecutar varias animaciones al mismo tiempo (C#)
 
@@ -22,7 +22,6 @@ por [Christian Wenz](https://github.com/wenz)
 [Descargar código](http://download.microsoft.com/download/f/9/a/f9a26acd-8df4-4484-8a18-199e4598f411/Animation2.cs.zip) o [descargar PDF](http://download.microsoft.com/download/6/7/1/6718d452-ff89-4d3f-a90e-c74ec2d636a3/animation2CS.pdf)
 
 > El control de animación en ASP.NET AJAX Control Toolkit no es simplemente un control, pero un marco completo para agregar animaciones a un control. Lo que permite para ejecutar varias animaciones en paralelo.
-
 
 ## <a name="overview"></a>Información general
 
@@ -53,7 +52,6 @@ Este es el un marcado posible para el `AnimationExtender` control difuminación 
 [!code-aspx[Main](executing-several-animations-at-the-same-time-cs/samples/sample5.aspx)]
 
 Y efectivamente: al ejecutar este script, el panel se muestra, a continuación, cambia automáticamente de tamaño (más de triplicando su ancho y mitad su alto) y atenúa al mismo tiempo.
-
 
 [![El panel se atenúa y cambiar el tamaño (incluido su contenido, gracias al motor de representación del explorador)](executing-several-animations-at-the-same-time-cs/_static/image2.png)](executing-several-animations-at-the-same-time-cs/_static/image1.png)
 

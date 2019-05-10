@@ -8,17 +8,16 @@ ms.date: 10/05/2011
 ms.assetid: 754b8c66-cefc-42d6-9f02-685efabdfcc6
 msc.legacyurl: /web-forms/videos/aspnet-ajax
 msc.type: chapter
-ms.openlocfilehash: 5fc85b5ac4771d6784e9afa41e09d74474a605ba
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: 52cc785a92bc3e902f0f3266333d6157c6a78354
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59381307"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65116140"
 ---
 # <a name="aspnet-ajax"></a>ASP.NET AJAX
 
 > Formas de trabajar con ASP.NET AJAX para crear páginas de alta capacidad de respuesta, incluso si no es un experto en JavaScript.
-
 
 - [Introducción a ASP.NET AJAX](how-do-i-get-started-with-aspnet-ajax.md)
 - [Implementar actualizaciones dinámicas de página parcial con ASP.NET AJAX](how-do-i-implement-dynamic-partial-page-updates-with-aspnet-ajax.md)

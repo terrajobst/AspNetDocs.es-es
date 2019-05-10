@@ -8,17 +8,16 @@ ms.date: 10/05/2011
 ms.assetid: cf54a6fb-a362-4481-b967-c158b98092f7
 msc.legacyurl: /web-forms/overview/data-access
 msc.type: chapter
-ms.openlocfilehash: d2f9d48618a102df7ea24a6d2a80b5c3026c7752
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: 9bdc5cdb3ef3a2289e2f76ae498544d0584f36f5
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59405409"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65109019"
 ---
 # <a name="older-versions---data-access"></a>Versiones anteriores - Acceso a datos
 
 > Cómo realizar diversas tareas relacionadas con los datos mediante controles de datos de formularios Web Forms de ASP.NET.
-
 
 - [Introducción](introduction/index.md)
 

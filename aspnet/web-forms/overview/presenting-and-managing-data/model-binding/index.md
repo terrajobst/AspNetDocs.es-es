@@ -8,17 +8,16 @@ ms.date: 02/13/2013
 ms.assetid: b94c8eca-9cde-417e-a8bd-e0ff53600984
 msc.legacyurl: /web-forms/overview/presenting-and-managing-data/model-binding
 msc.type: chapter
-ms.openlocfilehash: e7915b2cf8378c8c4d797ecfd89454ce3f3a570b
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: 9612371b091d8e75cbf48f19e3fe42e353cf1a77
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59399845"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65112422"
 ---
 # <a name="model-binding-and-web-forms-in-visual-studio-2013"></a>Enlace de modelos y formularios Web Forms en Visual Studio 2013
 
 > Cómo trabajar con datos mediante el enlace de modelos y formularios Web Forms.
-
 
 - [Recuperar y mostrar datos](retrieving-data.md)
 - [Actualizar, eliminar y crear datos](updating-deleting-and-creating-data.md)

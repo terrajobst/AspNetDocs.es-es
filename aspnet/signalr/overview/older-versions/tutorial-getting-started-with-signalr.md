@@ -8,12 +8,12 @@ ms.date: 02/18/2013
 ms.assetid: fdc3599a-5217-44c1-951f-0eec9812dce7
 msc.legacyurl: /signalr/overview/older-versions/tutorial-getting-started-with-signalr
 msc.type: authoredcontent
-ms.openlocfilehash: 288f5017acde5a103460ace688933609fba0b02c
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: 87a90b47ae30bee43e0b0c1e078597db54b8e67d
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59391031"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65113874"
 ---
 # <a name="tutorial-getting-started-with-signalr-1x"></a>Tutorial: Introducción a SignalR 1.x
 
@@ -22,7 +22,6 @@ por [Patrick Fletcher](https://github.com/pfletcher), [Tim Teebken](https://gith
 [!INCLUDE [Consider ASP.NET Core SignalR](~/includes/signalr/signalr-version-disambiguation.md)]
 
 > En este tutorial se muestra cómo usar SignalR para crear una aplicación de chat en tiempo real. Agregará SignalR a una aplicación web ASP.NET vacía y cree una página HTML para enviar y mostrar mensajes.
-
 
 ## <a name="overview"></a>Información general
 
@@ -148,7 +147,6 @@ El código siguiente declara a un proxy para un concentrador.
 > [!NOTE]
 > En jQuery la referencia a la clase de servidor y sus miembros está en mayúsculas y minúsculas. El ejemplo de código hace referencia a C# **ChatHub** clase en jQuery como **chatHub**.
 
-
 El código siguiente es cómo crear una función de devolución de llamada en la secuencia de comandos. La clase de hub en el servidor llama a esta función para insertar las actualizaciones de contenido en cada cliente. Las dos líneas que codifica como HTML el contenido antes de mostrarla son opcionales y muestran una manera sencilla de evitar la inyección de script.
 
 [!code-html[Main](tutorial-getting-started-with-signalr/samples/sample7.html)]
@@ -157,7 +155,6 @@ El código siguiente muestra cómo abrir una conexión con el centro. El código
 
 > [!NOTE]
 > Este enfoque garantiza que la conexión se establece antes de que se ejecuta el controlador de eventos.
-
 
 [!code-javascript[Main](tutorial-getting-started-with-signalr/samples/sample8.js)]
 

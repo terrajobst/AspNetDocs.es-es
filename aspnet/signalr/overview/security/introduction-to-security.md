@@ -8,12 +8,12 @@ ms.date: 06/10/2014
 ms.assetid: ed562717-8591-4936-8e10-c7e63dcb570a
 msc.legacyurl: /signalr/overview/security/introduction-to-security
 msc.type: authoredcontent
-ms.openlocfilehash: 6e96c9a086241b6f3fff40d4a5fb0a3636bfa4b7
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: 24ce20b45543468de28ad017ba62d2f6e5a00f3b
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59387333"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65113665"
 ---
 # <a name="introduction-to-signalr-security"></a>Introducción a la seguridad de SignalR
 
@@ -39,7 +39,6 @@ por [Patrick Fletcher](https://github.com/pfletcher), [Tom FitzMacken](https://g
 > ## <a name="questions-and-comments"></a>Preguntas y comentarios
 >
 > Deje comentarios sobre cómo le gustó de este tutorial y que podíamos mejorar en los comentarios en la parte inferior de la página. Si tiene preguntas que no están directamente relacionados con el tutorial, puede publicarlos en el [foro de ASP.NET SignalR](https://forums.asp.net/1254.aspx/1?ASP+NET+SignalR) o [StackOverflow.com](http://stackoverflow.com/).
-
 
 ## <a name="overview"></a>Información general
 

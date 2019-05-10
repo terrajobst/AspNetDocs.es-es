@@ -8,12 +8,12 @@ ms.date: 06/10/2014
 ms.assetid: 7e781fc1-1c1f-45a8-bc1d-338e96dbe9c9
 msc.legacyurl: /signalr/overview/performance/scaleout-in-signalr
 msc.type: authoredcontent
-ms.openlocfilehash: 0d17308d1e97279c0870ea02933a42400ef338c9
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: 14dc22f99a43b566903c59fb23b7d419350f4a25
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59411558"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65113839"
 ---
 # <a name="introduction-to-scaleout-in-signalr"></a>Introducción a la escalabilidad horizontal en SignalR
 
@@ -37,7 +37,6 @@ por [Mike Wasson](https://github.com/MikeWasson), [Patrick Fletcher](https://git
 > ## <a name="questions-and-comments"></a>Preguntas y comentarios
 >
 > Deje comentarios sobre cómo le gustó de este tutorial y que podíamos mejorar en los comentarios en la parte inferior de la página. Si tiene preguntas que no están directamente relacionados con el tutorial, puede publicarlos en el [foro de ASP.NET SignalR](https://forums.asp.net/1254.aspx/1?ASP+NET+SignalR) o [StackOverflow.com](http://stackoverflow.com/).
-
 
 En general, hay dos formas de escalar una aplicación web: *escalar verticalmente* y *escalar horizontalmente*.
 

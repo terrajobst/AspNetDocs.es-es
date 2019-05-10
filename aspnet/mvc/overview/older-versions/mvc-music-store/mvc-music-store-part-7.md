@@ -8,12 +8,12 @@ ms.date: 10/13/2010
 ms.assetid: c8511ebe-68bc-4240-87c3-d5ced84a3f37
 msc.legacyurl: /mvc/overview/older-versions/mvc-music-store/mvc-music-store-part-7
 msc.type: authoredcontent
-ms.openlocfilehash: f5431d60506f5b0a0f4bbcd8e86b316c728a1191
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: a6a1a936e0ea29ea36721ba78f35845401f74c01
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59415926"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65112470"
 ---
 # <a name="part-7-membership-and-authorization"></a>Parte 7: Pertenencia y autorización
 
@@ -24,7 +24,6 @@ por [Jon Galloway](https://github.com/jongalloway)
 > El Store de música de MVC es una implementación de almacén de ejemplo ligera que vende álbumes de música en línea e implementa la administración básica del sitio, inicio de sesión de usuario y funcionalidad del carro de la compra.  
 >   
 > Esta serie de tutoriales detalla todos los pasos realizados para compilar la aplicación de ejemplo de Music Store de ASP.NET MVC. Parte 7 cubre la pertenencia y autorización.
-
 
 Nuestro controlador Store Manager está actualmente accesible para cualquier usuario visitar nuestro sitio. Vamos a cambiar esta opción para restringir los permisos a los administradores del sitio.
 

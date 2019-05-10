@@ -8,12 +8,12 @@ ms.date: 01/20/2011
 ms.assetid: 3124f28e-cc32-418a-afe3-519fa56f4c36
 msc.legacyurl: /whitepapers/add-mobile-pages-to-your-aspnet-web-forms-mvc-application
 msc.type: content
-ms.openlocfilehash: db8f336f3fd9a88dfb32f99510fc53cd7b4a5178
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: 63c555358d06a9506bb5c8c993800c3307108192
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59415991"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65114444"
 ---
 # <a name="how-to-add-mobile-pages-to-your-aspnet-web-forms--mvc-application"></a>Cómo Agregar páginas de dispositivos móviles a los formularios Web Forms o a la aplicación de MVC de ASP.NET
 
@@ -25,7 +25,6 @@ ms.locfileid: "59415991"
 > **Resumen**
 > 
 > Esta página se describe varias maneras de servir páginas optimizadas para dispositivos móviles de los formularios Web Forms de ASP.NET / aplicación de MVC y sugiere la arquitectura y diseño cuestiones a considerar cuando el destino es una amplia gama de dispositivos. Este documento también explica por qué los controles ASP.NET Mobile desde ASP.NET 2.0 a 3.5 ahora están obsoletos y se tratan algunas alternativas modernas.
-
 
 ## <a name="contents"></a>Contenido
 
@@ -158,7 +157,6 @@ Las páginas móviles pueden compartir recursos estáticos comunes (como imágen
 
 > [!NOTE]
 > Puesto que este enfoque implica normalmente algunas duplicaciones de código (las páginas móviles están probable que comparten algunas similitudes con páginas de escritorio), es importante el factor de cualquier negocio lógica o datos acceso código común en una capa subyacente compartida o un servicio. En caso contrario, deberá doble el esfuerzo de crear y mantener la aplicación.
-
 
 #### <a name="redirecting-mobile-visitors-to-your-mobile-pages"></a>Redirigir visitantes en dispositivos móviles a las páginas móviles
 
@@ -310,7 +308,6 @@ Para obtener más información, consulte [51degrees.mobi documentación Foundati
 
 > [!NOTE]
 > Le *puede* característica de redirección de la Fundación de 51Degrees.mobi de uso en aplicaciones de ASP.NET MVC, pero tendrá que definir la configuración de redirección en cuanto a direcciones URL sin formato, no en términos de los parámetros de enrutamiento o colocar filtros de MVC en acciones. Esto es porque (en el momento de redactar) 51Degrees.mobi Foundation no reconoce los filtros o enrutamiento.
-
 
 ### <a name="disabling-transcoders-and-proxy-servers"></a>Deshabilitar servidores Proxy y los transcodificadores
 

@@ -8,12 +8,12 @@ ms.date: 04/21/2011
 ms.assetid: 6b09413a-6d6a-425a-87c9-629f91b91b28
 msc.legacyurl: /mvc/overview/older-versions/mvc-music-store/mvc-music-store-part-5
 msc.type: authoredcontent
-ms.openlocfilehash: e02e15a8955fa42692fac486dadfa426540295f7
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: 20b99cbe57b5dfa623205838a5929733a6c2d70d
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59387496"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65112985"
 ---
 # <a name="part-5-edit-forms-and-templating"></a>Parte 5: Editar formularios y plantillas
 
@@ -24,7 +24,6 @@ por [Jon Galloway](https://github.com/jongalloway)
 > El Store de música de MVC es una implementación de almacén de ejemplo ligera que vende álbumes de música en línea e implementa la administración básica del sitio, inicio de sesión de usuario y funcionalidad del carro de la compra.
 > 
 > Esta serie de tutoriales detalla todos los pasos realizados para compilar la aplicación de ejemplo de Music Store de ASP.NET MVC. Parte 5 cubre editar formularios y plantillas.
-
 
 En el capítulo anterior, nos estábamos al cargar datos de nuestra base de datos y mostrarlos. En este capítulo, le permitiremos también editar los datos.
 
@@ -260,7 +259,6 @@ Ahora cuando se examina la dirección URL de /StoreManager/, los álbumes y tít
 ![](mvc-music-store-part-5/_static/image18.png)
 
 Nota: Esto muestra un caso simple de crear y usar una aplicación auxiliar en una vista. Para más información acerca de cómo crear aplicaciones auxiliares que puede usar en todo el sitio, consulte la entrada de mi blog: [http://bit.ly/mvc3-helper-options](http://bit.ly/mvc3-helper-options)
-
 
 > [!div class="step-by-step"]
 > [Anterior](mvc-music-store-part-4.md)

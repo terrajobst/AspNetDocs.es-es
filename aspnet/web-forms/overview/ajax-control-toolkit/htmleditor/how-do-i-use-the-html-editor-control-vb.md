@@ -8,12 +8,12 @@ ms.date: 05/12/2009
 ms.assetid: 32ec9321-7c8c-4b0f-8234-99acb56df6b5
 msc.legacyurl: /web-forms/overview/ajax-control-toolkit/htmleditor/how-do-i-use-the-html-editor-control-vb
 msc.type: authoredcontent
-ms.openlocfilehash: 5fa19ef52c4538f0db427eaa9a79b074c85001ac
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: 20f8a2f8148bc658370ba1a939ebf1b62d376bc0
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59415874"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65115483"
 ---
 # <a name="how-do-i-use-the-html-editor-control-vb"></a>¿Cómo se puede usar el Editor HTML Control? (VB)
 
@@ -21,22 +21,17 @@ por [Microsoft](https://github.com/microsoft)
 
 > HTMLEditor es un Control de AJAX de ASP.NET que le permite crear fácilmente y editar el contenido HTML a través de los botones de una barra de herramientas.
 
-
 El objetivo de este tutorial es proporcionarle una visión general del control de Editor HTML incluido con AJAX Control Toolkit. El Editor HTML incluye opciones para cambiar el tamaño de fuente, seleccionar una fuente, cambiar el color de fondo, modificar el color de primer plano, la adición de vínculos, agregar imágenes, cambiar la alineación del texto y realización de cortar, copiar y pegar (consulte la figura 1) de las operaciones.
-
 
 [![El Editor HTML](how-do-i-use-the-html-editor-control-vb/_static/image1.jpg)](how-do-i-use-the-html-editor-control-vb/_static/image1.png)
 
 **Figura 01**: El Editor HTML ([haga clic aquí para ver imagen en tamaño completo](how-do-i-use-the-html-editor-control-vb/_static/image2.png))
 
-
 El editor HTML le permite especificar el contenido mediante un modo de diseño o puede escribir HTML directamente. También se proporcionan con la opción para obtener una vista previa de su contenido HTML (consulte la figura 2).
-
 
 [![Vista previa, HTML y diseño de botones](how-do-i-use-the-html-editor-control-vb/_static/image2.jpg)](how-do-i-use-the-html-editor-control-vb/_static/image3.png)
 
 **Figura 02**: Vista previa, HTML y diseño de botones ([haga clic aquí para ver imagen en tamaño completo](how-do-i-use-the-html-editor-control-vb/_static/image4.png))
-
 
 En este tutorial, obtendrá información sobre cómo mostrar el Editor HTML, cómo personalizar los botones de barra de herramientas que aparecen en el Editor de HTML y cómo evitar la realización de ataques entre sitios.
 
@@ -48,11 +43,9 @@ Debe colocar el control ScriptManager en la parte superior de la página antes q
 
 El control de Editor HTML se encuentra en el cuadro de herramientas con el resto de los controles de AJAX Control Toolkit. Se llama el control del Editor (consulte la figura 3).
 
-
 [![El control de Editor HTML](how-do-i-use-the-html-editor-control-vb/_static/image3.jpg)](how-do-i-use-the-html-editor-control-vb/_static/image5.png)
 
 **Figura 03**: El control de Editor HTML ([haga clic aquí para ver imagen en tamaño completo](how-do-i-use-the-html-editor-control-vb/_static/image6.png))
-
 
 Después de arrastrar el Editor de HTML a una página, puede establecer sus propiedades en la hoja de propiedades. Por ejemplo, normalmente desea establecer las propiedades Width y Height. Listado 1 contiene el origen de una página ASP.NET que contiene un editor de HTML.
 
@@ -62,11 +55,9 @@ Después de arrastrar el Editor de HTML a una página, puede establecer sus prop
 
 La página del listado 1 contiene un control de Editor HTML, un control de botón y un control Literal. Al hacer clic en el botón, el contenido del Editor HTML aparece en el control Literal (consulte la figura 4).
 
-
 [![Enviar un formulario con un Editor de HTML](how-do-i-use-the-html-editor-control-vb/_static/image4.jpg)](how-do-i-use-the-html-editor-control-vb/_static/image7.png)
 
 **Figura 04**: Enviar un formulario con un Editor de HTML ([haga clic aquí para ver imagen en tamaño completo](how-do-i-use-the-html-editor-control-vb/_static/image8.png))
-
 
 La propiedad Editor HTML Content se usa para recuperar el contenido HTML especificado en el Editor de HTML. Tenga en cuenta que este contenido HTML puede contener JavaScript. En la siguiente sección, trataremos cómo puede impedir los ataques por inyección de código de JavaScript.
 
@@ -74,11 +65,9 @@ La propiedad Editor HTML Content se usa para recuperar el contenido HTML especif
 
 Puede personalizar exactamente los botones que aparecen en el editor. Por ejemplo, es posible que desee quitar la ficha HTML para evitar que los usuarios cambien el Editor HTML en el modo HTML. O bien, es posible que desea quitar de la lista desplegable de tamaño de fuente para evitar que los usuarios crear excesivamente grande de texto en un foro de publicación de mensajes (consulte la figura 5).
 
-
 [![Editor HTML personalizado](how-do-i-use-the-html-editor-control-vb/_static/image5.jpg)](how-do-i-use-the-html-editor-control-vb/_static/image9.png)
 
 **Figura 05**: A personalizar el Editor HTML ([haga clic aquí para ver imagen en tamaño completo](how-do-i-use-the-html-editor-control-vb/_static/image10.png))
-
 
 Personalizar los botones de barra de herramientas al derivar un nuevo Editor de HTML de la clase base del Editor. Por ejemplo, el editor personalizado en el listado 2 contiene solo los botones de barra de herramientas de negrita y cursiva. Se han quitado todos los demás botones de barra de herramientas. Además, la ficha HTML se ha quitado de la parte inferior del editor (pero las fichas Diseño y vista previa siguen estando disponibles).
 

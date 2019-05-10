@@ -8,19 +8,18 @@ ms.date: 01/26/2011
 ms.assetid: 4e43455e-dfa1-42db-83cb-c987703f04b5
 msc.legacyurl: /web-forms/overview/older-versions-getting-started/continuing-with-ef/maximizing-performance-with-the-entity-framework-in-an-asp-net-web-application
 msc.type: authoredcontent
-ms.openlocfilehash: 116c557ad0d6c158f983da75668e634c9eb9747c
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: 5630200a1ad1d30f6d89b38e15179f15b699fa9f
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59379597"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65108582"
 ---
 # <a name="maximizing-performance-with-the-entity-framework-40-in-an-aspnet-4-web-application"></a>Maximizar el rendimiento con Entity Framework 4.0 en una aplicación Web 4 de ASP.NET
 
 por [Tom Dykstra](https://github.com/tdykstra)
 
 > Esta serie de tutoriales se basa en la aplicación web de Contoso University creado por el [Introducción a Entity Framework 4.0](https://asp.net/entity-framework/tutorials#Getting%20Started) serie de tutoriales. Si no has completado los tutoriales anteriores, como un punto de partida para este tutorial puede [descargar la aplicación](https://code.msdn.microsoft.com/ASPNET-Web-Forms-97f8ee9a) que puede haberla creado. También puede [descargar la aplicación](https://code.msdn.microsoft.com/ASPNET-Web-Forms-6c7197aa) creado por la serie de tutoriales completa. Si tiene preguntas acerca de los tutoriales, puede publicarlos en el [foro de ASP.NET Entity Framework](https://forums.asp.net/1227.aspx).
-
 
 En el tutorial anterior, vimos cómo controlar los conflictos de simultaneidad. Este tutorial muestra opciones para mejorar el rendimiento de una aplicación web ASP.NET que usa Entity Framework. Obtendrá información sobre varios métodos para maximizar el rendimiento o para diagnosticar problemas de rendimiento.
 
@@ -43,7 +42,6 @@ Información que se presenta en la sección siguiente es potencialmente útil pa
 > Rendimiento de la aplicación Web se ve afectado por diversos factores, incluidos aspectos como el tamaño de los datos de solicitud y respuesta, la velocidad de las consultas de base de datos, cuántas solicitudes que puede poner en cola el servidor y la rapidez con que puede dar servicio ellos e incluso la eficacia de cualquiera bibliotecas de script de cliente puede que esté usando. Si el rendimiento es fundamental en su aplicación, o si las pruebas o la experiencia muestra que el rendimiento de la aplicación no es satisfactorio, debe seguir un protocolo normal para ajustar el rendimiento. Medición para determinar dónde se producen cuellos de botella de rendimiento y, a continuación, solucione las áreas que tendrán el mayor impacto en el rendimiento general de la aplicación.
 > 
 > En este tema se centra principalmente en formas en que potencialmente se puede mejorar el rendimiento específicamente de Entity Framework en ASP.NET. Las sugerencias aquí son útiles si determina que el acceso a datos es uno de los cuellos de botella de rendimiento en la aplicación. Excepto como se indicó, los métodos que se explican aquí no deben interpretarse como &quot;procedimientos recomendados&quot; en general, muchos de ellos son adecuados solo en situaciones excepcionales o a tipos muy específicos de dirección de los cuellos de botella de rendimiento.
-
 
 Para iniciar el tutorial, inicie Visual Studio y abra la aplicación web de Contoso University establecen que estaba trabajando con en el tutorial anterior.
 
@@ -179,7 +177,6 @@ Como alternativa, la característica de IntelliTrace en Visual Studio Ultimate p
 > [!NOTE]
 > Puede realizar los procedimientos siguientes solo si tiene Visual Studio Ultimate.
 
-
 Restaurar el código original de la `GetDepartmentsByName` método y, a continuación, ejecute el *Departments.aspx* página en el depurador.
 
 En Visual Studio, seleccione el **depurar** menú y, a continuación, **IntelliTrace**y, a continuación, **eventos de IntelliTrace**.
@@ -219,14 +216,12 @@ La consulta de los departamentos de TI se ha convertido en un sencillo `Select` 
 > [!NOTE]
 > Si deja diferida habilitado, el patrón que se observa aquí, con la misma consulta que se repiten muchas veces, la carga podría deberse a la carga diferida. Un patrón que normalmente se desea evitar es carga diferida datos relacionados para cada fila de la tabla principal. A menos que haya comprobado que una consulta de combinación solo es demasiado compleja para ser eficaz, normalmente podrá mejorar el rendimiento en estos casos, cambie la consulta principal para usar la carga diligente.
 
-
 ## <a name="pre-generating-views"></a>Generar vistas previamente
 
 Cuando un `ObjectContext` en primer lugar se crea el objeto en un dominio de aplicación, Entity Framework genera un conjunto de clases que utiliza para tener acceso a la base de datos. Estas clases se denominan *vistas*, y si tiene un modelo de datos muy grandes, generar estas vistas puede retrasar la respuesta de la carpeta del sitio web a la primera solicitud para una página después de Inicializa un nuevo dominio de aplicación. Puede reducir este retraso de la primera solicitud mediante la creación de las vistas en tiempo de compilación en lugar de en tiempo de ejecución.
 
 > [!NOTE]
 > Si la aplicación no tiene un modelo de datos extremadamente grandes, o si tiene un modelo de datos de gran tamaño, pero no le preocupa un problema de rendimiento que afecta a la primera solicitud de página después de que IIS se recicla, puede omitir esta sección. Vista de creación no ocurre cada vez que crea instancias de un `ObjectContext` de objeto, dado que las vistas se almacenan en caché en el dominio de aplicación. Por lo tanto, a menos que con frecuencia se recicla la aplicación en IIS, muy pocas solicitudes de página se beneficiarían de las vistas generadas previamente.
-
 
 Puede generar previamente vistas mediante el *EdmGen.exe* herramienta de línea de comandos o mediante un *Kit de herramientas de transformación de plantillas de texto* plantilla (T4). En este tutorial usará una plantilla T4.
 

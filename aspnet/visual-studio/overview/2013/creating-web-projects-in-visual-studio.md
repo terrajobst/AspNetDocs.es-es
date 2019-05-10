@@ -8,12 +8,12 @@ ms.date: 12/01/2014
 ms.assetid: 61941e64-0c0d-4996-9270-cb8ccfd0cabc
 msc.legacyurl: /visual-studio/overview/2013/creating-web-projects-in-visual-studio
 msc.type: authoredcontent
-ms.openlocfilehash: a62c821159cd097507019d5efb29e01958ec9fba
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: 3a446be8e2dff2ac66e2432c51b2d9f43bcb817d
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59398109"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65113184"
 ---
 # <a name="creating-aspnet-web-projects-in-visual-studio-2013"></a>Crear proyectos web de ASP.NET en Visual Studio 2013
 
@@ -29,7 +29,6 @@ por [Tom Dykstra](https://github.com/tdykstra)
 > - Nuevas características para formularios Web Forms que se proporcionan solo para MVC, tales como [creación del proyecto de pruebas automáticas](#testproj) y un [plantilla de sitio de Intranet](#winauth).
 > 
 > Para obtener información acerca de cómo crear un proyecto web para Azure Cloud Services o Azure Mobile Services, vea [empezar a trabajar con Azure Cloud Services y ASP.NET](https://azure.microsoft.com/documentation/articles/cloud-services-dotnet-get-started/) y [creación de un App Leaderboard con .NET de Azure Mobile Services Back-end](https://azure.microsoft.com/documentation/articles/mobile-services-dotnet-backend-windows-store-dotnet-leaderboard/).
-
 
 <a id="prerequisites"></a>
 ## <a name="prerequisites"></a>Requisitos previos
@@ -350,7 +349,6 @@ Si desea probar una de las opciones de Azure AD, pero aún no tiene una cuenta, 
 > Si elige una de las opciones de Azure AD, el proyecto requiere una base de datos y tendrá que iniciar sesión en una cuenta de administrador global para el inquilino de Azure AD. Escriba el nombre y la contraseña de una cuenta profesional (por ejemplo, admin@contoso.onmicrosoft.com) que tenga permisos administrativos para el inquilino de Azure AD.
 > 
 > **No escriba las credenciales de una cuenta de Microsoft (por ejemplo, contoso@hotmail.com) en el cuadro de diálogo de inicio de sesión.**
-
 
 <a id="orgauthsingle"></a>
 ### <a name="cloud---single-organization-authentication"></a>En la nube - autenticación de la organización única

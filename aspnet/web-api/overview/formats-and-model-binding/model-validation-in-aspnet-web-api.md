@@ -9,12 +9,12 @@ ms.custom: seoapril2019
 ms.assetid: 7d061207-22b8-4883-bafa-e89b1e7749ca
 msc.legacyurl: /web-api/overview/formats-and-model-binding/model-validation-in-aspnet-web-api
 msc.type: authoredcontent
-ms.openlocfilehash: d4e792f8cc2f79c2ab82c5a74fd50f49475fac4f
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: 531a66b7ab642bd012663517640f2766f1917f25
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59404577"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65112825"
 ---
 # <a name="model-validation-in-aspnet-web-api"></a>Validación de modelos en ASP.NET Web API
 
@@ -66,7 +66,6 @@ No desea que los usuarios actualizar la `IsAdmin` propiedad y elevar sus privile
 
 > [!NOTE]
 > Entrada de blog de Brad Wilson "[frente a la validación de entrada. Modelo de validación en ASP.NET MVC](http://bradwilson.typepad.com/blog/2010/01/input-validation-vs-model-validation-in-aspnet-mvc.html)"tiene una excelente explicación de debajo del registro y la publicación excesiva. Aunque es la entrada de blog sobre ASP.NET MVC 2, los problemas continúan siendo relevantes para la API Web.
-
 
 ## <a name="handling-validation-errors"></a>Control de errores de validación
 

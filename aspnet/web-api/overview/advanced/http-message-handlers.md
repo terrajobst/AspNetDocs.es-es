@@ -9,12 +9,12 @@ ms.custom: seoapril2019
 ms.assetid: 9002018b-3aa3-4358-bb1c-fbb5bc751d01
 msc.legacyurl: /web-api/overview/advanced/http-message-handlers
 msc.type: authoredcontent
-ms.openlocfilehash: 308d2e3dd21917e7656f7ffe889dc965d9275d74
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: a8e6f1da8df4802e1acf7779a2fc75bfe8ab876f
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59392111"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65115549"
 ---
 # <a name="http-message-handlers-in-aspnet-web-api"></a>Controladores de mensajes HTTP en ASP.NET Web API
 
@@ -47,7 +47,6 @@ Este diagrama muestra dos controladores personalizados que se inserta en la cana
 > [!NOTE]
 > En el lado cliente, HttpClient también usa controladores de mensajes. Para obtener más información, consulte [controladores de mensajes HttpClient](httpclient-message-handlers.md).
 
-
 ## <a name="custom-message-handlers"></a>Controladores de mensajes personalizado
 
 Para escribir un controlador de mensajes personalizado, que se derivan de **System.Net.Http.DelegatingHandler** e invalidar la **SendAsync** método. Este método tiene la siguiente firma:
@@ -67,7 +66,6 @@ Este es un ejemplo muy simple:
 
 > [!NOTE]
 > La llamada a `base.SendAsync` es asincrónica. Si el controlador no hace ningún trabajo después de esta llamada, use la **await** palabra clave, como se muestra.
-
 
 Un controlador de delegación puede omitir también el controlador interno y crear directamente la respuesta:
 
@@ -131,7 +129,6 @@ Si la solicitud no tiene una clave válida, el controlador crea un mensaje de re
 
 > [!NOTE]
 > Si la clave de API solo se aplica a determinadas acciones de controlador, considere la posibilidad de utilizar un filtro de acción en lugar de un controlador de mensajes. Los filtros de acción se ejecutan después de realiza el enrutamiento de URI.
-
 
 ## <a name="per-route-message-handlers"></a>Controladores de mensajes por ruta
 

@@ -8,19 +8,18 @@ ms.date: 06/27/2014
 ms.assetid: 4064ab14-26ee-4d5c-ae58-1bdda525ad06
 msc.legacyurl: /web-api/overview/odata-support-in-aspnet-web-api/odata-v4/using-a-singleton-in-an-odata-endpoint-in-web-api-22
 msc.type: authoredcontent
-ms.openlocfilehash: 935448a1f9770e1f11460c95997aa778c4208c9f
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: 218449c18759b306e425c55f8e7b573d837b4658
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59403342"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65113127"
 ---
 # <a name="create-a-singleton-in-odata-v4-using-web-api-22"></a>Crear un Singleton en OData v4 usar Web API 2.2
 
 por Zoe Luo
 
 > Tradicionalmente, una entidad solo se puede acceder si se encapsule dentro de un conjunto de entidades. Pero OData v4 proporciona dos opciones adicionales, Singleton y contención, ambos de los cuales admite WebAPI 2.2.
-
 
 En este artículo se muestra cómo definir un singleton en un extremo de OData en Web API 2.2. Para obtener información sobre un singleton de qué es y cómo puede beneficiarse de usarlo, consulte [mediante un singleton para definir la entidad especial](https://blogs.msdn.com/b/odatateam/archive/2014/03/05/use-singleton-to-define-your-special-entity.aspx). Para crear un punto de conexión de OData V4 en Web API, consulte [crear una mediante ASP.NET Web API 2.2 de OData v4 extremo](create-an-odata-v4-endpoint.md). 
 
