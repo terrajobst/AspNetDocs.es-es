@@ -8,19 +8,18 @@ ms.date: 02/10/2010
 ms.assetid: bdea2003-e964-4db5-9092-d56cc7560616
 msc.legacyurl: /whitepapers/side-by-side-with-10
 msc.type: content
-ms.openlocfilehash: c4a371958d8de72628c037b3568551aaa91e0153
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: d03919e8465c28cf00bf057193452396523cb1af
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59380709"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65125626"
 ---
 # <a name="aspnet-side-by-side-execution-of-net-framework-10-and-11"></a>Ejecución en paralelo de ASP.NET de .NET Framework 1.0 y 1.1
 
 > Estas notas del producto describen cómo instalar .NET 1.0 y 1.1 de .NET en el equipo, lo que permite a una aplicación Web ASP.NET para ejecutarse en cualquier versión de framework.
 > 
 > Se aplica a ASP.NET 1.0 y 1.1 de ASP.NET.
-
 
 En ASP.NET, se dice que las aplicaciones se ejecutan en paralelo cuando se instalan en el mismo equipo, pero usar diferentes versiones de .NET Framework. El siguiente tema describe cómo configurar las aplicaciones de ASP.NET para la ejecución en paralelo y proporciona pasos detallados para:
 

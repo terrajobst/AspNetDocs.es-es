@@ -8,19 +8,18 @@ ms.date: 08/15/2012
 ms.assetid: 27dc4fc8-1b51-43b0-933f-fc1b52476523
 msc.legacyurl: /mvc/overview/older-versions/aspnet-mvc-4-mobile-features
 msc.type: authoredcontent
-ms.openlocfilehash: de65e01b888d9ed15da3903f086b40c49b32b9fb
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: 62050f561440a2c0fbbe91ec49fb1f9e30885e9f
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59402419"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65130356"
 ---
 # <a name="aspnet-mvc-4-mobile-features"></a>Características para móviles de ASP.NET MVC 4
 
 by [Rick Anderson]((https://twitter.com/RickAndMSFT))
 
 > Ahora hay una versión de MVC 5 de este tutorial con ejemplos de código en [implementar una aplicación de ASP.NET MVC 5 Mobile Web en Azure websites](https://azure.microsoft.com/documentation/articles/web-sites-dotnet-deploy-aspnet-mvc-mobile-app/).
-
 
 Este tutorial le enseñará los aspectos básicos de cómo trabajar con características móviles en una aplicación Web de ASP.NET MVC 4. Para este tutorial, puede usar [Visual Studio Express 2012](https://www.microsoft.com/visualstudio/11/products/express) o Visual Web Developer 2010 Express Service Pack 1 (&quot;Visual Web Developer o VWD&quot;). Si ya tiene puede usar la versión de Visual Studio professional.
 
@@ -214,7 +213,6 @@ El código siguiente muestra la completa *Global.asax* archivo.
 > [!NOTE]
 > Si usa Internet Explorer 9 y no ve el `BundleMobileConfig` línea por encima de resaltado en amarillo, haga clic en el [botón de vista de compatibilidad](https://windows.microsoft.com/windows7/How-to-use-Compatibility-View-in-Internet-Explorer-9)![imagen del botón de vista de compatibilidad (desactivado)](http://res2.windows.microsoft.com/resbox/en/Windows 7/main/f080e77f-9b66-4ac8-9af0-803c4f8a859c_15.jpg " Imagen del botón de vista de compatibilidad (desactivado)") en Internet Explorer para que el icono de cambiar de un esquema ![imagen del botón de vista de compatibilidad (desactivado)](http://res2.windows.microsoft.com/resbox/en/Windows 7/main/f080e77f-9b66-4ac8-9af0-803c4f8a859c_15.jpg "imagen del botón de vista de compatibilidad (desactivado) ") a un color sólido ![imagen del botón de vista de compatibilidad (on)](http://res1.windows.microsoft.com/resbox/en/Windows 7/main/156805ff-3130-481b-a12d-4d3a96470f36_14.jpg "imagen del botón de vista de compatibilidad (on)"). También puede ver este tutorial en FireFox o Chrome.
 
-
 Abrir el *MvcMobile\Views\Shared\\_Layout.Mobile.cshtml* archivo y agregue el marcado siguiente directamente después de la `Html.Partial` llamar:
 
 [!code-cshtml[Main](aspnet-mvc-4-mobile-features/samples/sample12.cshtml)]
@@ -229,7 +227,6 @@ Compilar la aplicación y en el emulador de explorador móvil, vaya a la *AllTag
 
 > [!NOTE]
 > Puede depurar el código específico de dispositivos móvil por [establecer la cadena user agent](http://www.howtogeek.com/113439/how-to-change-your-browsers-user-agent-without-installing-any-extensions/) para Internet Explorer o Chrome para iPhone y, a continuación, usar las herramientas de desarrollo F-12. Si no se muestra el explorador móvil el **inicio**, **altavoz**, **etiqueta**, y **fecha** vínculos como botones, las referencias a jQuery Mobile los scripts y archivos CSS probablemente no son correctos.
-
 
 Además de los cambios de estilo, verá **Mostrar vista móvil** y un vínculo que le permite cambiar de vista móvil a la vista de escritorio. Elija la **vista de escritorio** se muestra el vínculo y la vista de escritorio.
 
@@ -251,7 +248,6 @@ Actualizar el *AllTags* vista en el explorador móvil. Ahora puede desplazarse e
 > y agregar el encabezado siguiente a la *Views\Shared\\_Layout.cshtml* archivo.
 >
 > [!code-html[Main](aspnet-mvc-4-mobile-features/samples/sample16.html)]
-
 
 Vaya a la *AllTags* página en un explorador de escritorio. El widget de modificador de vista no se muestra en un explorador de escritorio ya que solo se agrega a la página de diseño para dispositivos móviles. Más adelante en el tutorial verá cómo puede agregar el widget de modificador de vista a la vista de escritorio.
 

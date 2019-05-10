@@ -8,17 +8,16 @@ ms.date: 02/29/2012
 ms.assetid: ba1fabb4-31a3-4ebf-8327-41a6bbba6eaf
 msc.legacyurl: /whitepapers/whats-new-in-aspnet-45-and-visual-studio-2012
 msc.type: content
-ms.openlocfilehash: 5f50721b6f263b9cb025f5fa57c923dadeddcd28
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: 32fbf7c25b00f3f0796c4c3fdd38ca2a86c89199
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59410596"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65133689"
 ---
 # <a name="whats-new-in-aspnet-45-and-visual-studio-2012"></a>Novedades de ASP.NET 4.5 y Visual Studio 2012
 
 > Este documento describe las nuevas características y mejoras introducidas en ASP.NET 4.5. También se describe las mejoras para el desarrollo web en Visual Studio 2012. Este documento se publicó originalmente en 29 de febrero de 2012.
-
 
 - [Marco de trabajo y en tiempo de ejecución de ASP.NET Core](#_Toc318097372)
 
@@ -190,10 +189,8 @@ A continuación, puede usar el *HttpRequest.Unvalidated* propiedad que se va a l
 
 [!code-csharp[Main](whats-new-in-aspnet-45-and-visual-studio-2012/samples/sample6.cs)]
 
-
 > [!WARNING]
 > Security - *Use datos de la solicitud no validados con cuidado!* ASP.NET 4.5 agrega las propiedades de solicitud no validados y colecciones para facilitar el acceso a los datos de solicitud no validados muy específica. Sin embargo, todavía debe realizar validación personalizada en los datos de solicitud sin procesar para asegurarse de que no se representa texto peligrosa a los usuarios.
-
 
 <a id="_Toc318097382"></a>
 ### <a name="antixss-library"></a>Biblioteca de AntiXSS
@@ -383,11 +380,9 @@ Sin embargo, las expresiones de enlace de datos así no admiten características
 
 Para solucionar este problema, ASP.NET 4.5 agrega la capacidad de declarar el tipo de datos de los datos que está enlazado un control. Hacer esto con el nuevo *ItemType* propiedad. Al establecer esta propiedad, existen dos nuevas variables con tipo en el ámbito de las expresiones de enlace de datos: *Elemento* y *BindItem*. Dado que las variables están fuertemente tipadas, obtener todos los beneficios de la experiencia de desarrollo de Visual Studio.
 
-
 Para las expresiones de enlace de datos bidireccionales, use la *BindItem* variable:
 
 [!code-aspx[Main](whats-new-in-aspnet-45-and-visual-studio-2012/samples/sample21.aspx)]
-
 
 Mayoría de los controles en el marco de ASP.NET Web Forms que admiten el enlace de datos se han actualizado para admitir la *ItemType* propiedad.
 

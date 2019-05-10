@@ -8,12 +8,12 @@ ms.date: 11/27/2012
 ms.assetid: 6dfb51ea-9f4d-4e70-916c-8ef8344a88d6
 msc.legacyurl: /web-api/overview/security/authentication-and-authorization-in-aspnet-web-api
 msc.type: authoredcontent
-ms.openlocfilehash: 5dc4471039938a429a85c891594c3a6651c6ef9d
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: 368d2b9456d12b2bb4063a23333e5c8837faa3b8
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59388535"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65134711"
 ---
 # <a name="authentication-and-authorization-in-aspnet-web-api"></a>Autenticación y autorización en ASP.NET Web API
 
@@ -28,7 +28,6 @@ El primer artículo de la serie ofrece una visión general de autenticación y a
 
 > [!NOTE]
 > Gracias a las personas que revisan esta serie y proporcionaron sus valiosos comentarios: Rick Anderson, Levi Broderick, Barry Dorrans, Tom Dykstra, Hongmei Ge, David Matson, Daniel Roth, Tim Teebken.
-
 
 ## <a name="authentication"></a>Autenticación
 
@@ -101,7 +100,6 @@ En los ejemplos anteriores, el filtro permite que cualquier usuario autenticado 
 
 > [!NOTE]
 > El **AuthorizeAttribute** filtro para los controladores Web API se encuentra en la **System.Web.Http** espacio de nombres. Hay un filtro similar para los controladores MVC en el **System.Web.Mvc** espacio de nombres, que no es compatible con controladores de API Web.
-
 
 ### <a name="custom-authorization-filters"></a>Filtros de autorización personalizada
 

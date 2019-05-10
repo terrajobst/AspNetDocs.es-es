@@ -8,12 +8,12 @@ ms.date: 02/26/2014
 ms.assetid: 1e4c2eb4-b6cf-42ff-8a65-4d71ddca0394
 msc.legacyurl: /web-api/overview/odata-support-in-aspnet-web-api/odata-v3/working-with-entity-relations
 msc.type: authoredcontent
-ms.openlocfilehash: c78787aac83720eb9e8d6e9e0499f30a31951bc2
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: dc80a984911a7f000edc7974992a1ed936ebb348
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59393865"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65131470"
 ---
 # <a name="supporting-entity-relations-in-odata-v3-with-web-api-2"></a>Compatibilidad con las relaciones de entidad en OData v3 con Web API 2
 
@@ -31,7 +31,6 @@ por [Mike Wasson](https://github.com/MikeWasson)
 > - Web API 2
 > - OData versión 3
 > - Entity Framework 6
-
 
 ## <a name="add-a-supplier-entity"></a>Agregar una entidad de proveedor
 

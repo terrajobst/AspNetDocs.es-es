@@ -8,17 +8,16 @@ ms.date: 05/18/2012
 ms.assetid: 99253c4e-a125-4c21-85e7-a6dd74d93892
 msc.legacyurl: /web-pages/overview/getting-started
 msc.type: chapter
-ms.openlocfilehash: 3e5b9d1a3bac0cf1ab042f473f8fd508069000a5
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: 50a249d0e64cff2a8c4f16f38f530b6d52f755de
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59408581"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65133172"
 ---
 # <a name="getting-started-with-aspnet-web-pages"></a>Introducción a las páginas Web ASP.NET
 
 > ¿Qué páginas Web y WebMatrix son, además de cómo instalar todos los componentes, empezar a trabajar e implementar sitios.
-
 
 - [Programar ASP.NET Web Pages en Visual Studio](program-asp-net-web-pages-in-visual-studio.md)
 - [Introducción a la sintaxis de Razor de programación web de ASP.NET](introducing-razor-syntax-c.md)

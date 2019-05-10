@@ -8,12 +8,12 @@ ms.date: 05/04/2012
 ms.assetid: 200b973c-776b-4a9b-9e82-39fda6120a52
 msc.legacyurl: /web-forms/overview/deployment/web-deployment-in-the-enterprise/setting-up-the-contact-manager-solution
 msc.type: authoredcontent
-ms.openlocfilehash: d0a7c29a590fcde504e5f5227806df62454f6add
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: d9774ee01cb0515d7e733b24baa661f2648bd7c4
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59410492"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65131041"
 ---
 # <a name="setting-up-the-contact-manager-solution"></a>Configurar la solución Contact Manager
 
@@ -22,7 +22,6 @@ por [Jason Lee](https://github.com/jrjlee)
 [Descargar PDF](https://msdnshared.blob.core.windows.net/media/MSDNBlogsFS/prod.evol.blogs.msdn.com/CommunityServer.Blogs.Components.WeblogFiles/00/00/00/63/56/8130.DeployingWebAppsInEnterpriseScenarios.pdf)
 
 > Este tema describe cómo descargar y configurar la solución Contact Manager para ejecutarse localmente en una estación de trabajo de desarrollador.
-
 
 ## <a name="system-requirements"></a>Requisitos del sistema
 
@@ -70,7 +69,6 @@ El resto de esta sección proporciona más información sobre cómo completar es
 > [!NOTE]
 > Para obtener más información sobre aspnet\_regsql utilidad, vea [herramienta de registro de SQL Server de ASP.NET (Aspnet\_regsql.exe)](https://msdn.microsoft.com/library/ms229862(v=vs.100).aspx).
 
-
 El siguiente paso es asegurarse de que las cadenas de conexión en la solución Contact Manager señalan a la instancia local de SQL Server Express.
 
 **Para actualizar las cadenas de conexión**
@@ -97,7 +95,6 @@ Ahora estará preparado para ejecutar la solución Contact Manager en el equipo 
 
 > [!NOTE]
 > Si sigue estos pasos sin crear primero una base de datos de servicios de aplicación, ASP.NET creará la base de datos la primera vez que intente crear un usuario. Sin embargo, la creación manual de la base de datos ofrece mucho más control sobre el conjunto de características de servicios de aplicación que desea admitir.
-
 
 **Para ejecutar la solución Contact Manager**
 

@@ -8,12 +8,12 @@ ms.date: 01/13/2008
 ms.assetid: ab68a92b-fc81-40a4-a7dc-406625d2c5d4
 msc.legacyurl: /web-forms/overview/older-versions-security/introduction/security-basics-and-asp-net-support-vb
 msc.type: authoredcontent
-ms.openlocfilehash: 1b6675a933f04b3eb7f5111b2ccd16c44baab7ba
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: 731c007fd162e541af5ba1f559ae5caedf80c948
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59414353"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65126807"
 ---
 # <a name="security-basics-and-aspnet-support-vb"></a>Conceptos básicos de seguridad y compatibilidad de ASP.NET (VB)
 
@@ -22,7 +22,6 @@ por [Scott Mitchell](https://twitter.com/ScottOnWriting)
 [Descargar PDF](http://download.microsoft.com/download/2/F/7/2F705A34-F9DE-4112-BBDE-60098089645E/aspnet_tutorial01_Basics_vb.pdf)
 
 > Este es el primer tutorial de una serie de tutoriales que se explora las técnicas para autenticar a los visitantes a través de un formulario web Forms, autorizar el acceso a determinadas páginas y la funcionalidad y administrar cuentas de usuario en una aplicación ASP.NET.
-
 
 ## <a name="introduction"></a>Introducción
 
@@ -45,7 +44,6 @@ En este tutorial, trataremos los conceptos de seguridad importantes y qué funci
 
 > [!NOTE]
 > La seguridad es un aspecto importante de cualquier aplicación que abarca físico, tecnológico y las decisiones de directiva y requiere un alto grado de conocimientos de planeamiento y dominio. Esta serie de tutoriales no está pensada como una guía para el desarrollo de aplicaciones web seguras. En su lugar, se centra específicamente en roles, las cuentas de usuario, autorización y autenticación de formularios. Algunos conceptos de seguridad que pueda girar en torno a estos problemas se tratan en esta serie, mientras que otros usuarios se quedan sin explorar.
-
 
 ## <a name="authentication-authorization-user-accounts-and-roles"></a>Autenticación, autorización, las cuentas de usuario y funciones
 
@@ -75,11 +73,9 @@ El flujo de trabajo de autenticación de Windows usa una de las técnicas de aut
 
 Las tres técnicas funcionan en aproximadamente la misma manera: cuando un no autorizado, llega una solicitud anónima, el servidor web devuelve una respuesta HTTP que indica que autorización es necesaria para continuar. El explorador, a continuación, muestra un cuadro de diálogo modal que pide al usuario su nombre de usuario y contraseña (consulte la figura 1). Esta información se envía al servidor web a través de un encabezado HTTP.
 
-
 ![Cuadro de diálogo Modal solicita al usuario sus credenciales](security-basics-and-asp-net-support-vb/_static/image1.png)
 
 **Figura 1**: Cuadro de diálogo Modal solicita al usuario sus credenciales
-
 
 Se validan las credenciales proporcionadas con Store de usuario de Windows del servidor web. Esto significa que cada usuario autenticado en la aplicación web debe tener una cuenta de Windows en su organización. Esto es muy común en escenarios de intranet. De hecho, cuando se usa la autenticación integrada de Windows en una configuración de intranet, el explorador proporciona automáticamente el servidor web con las credenciales usadas para iniciar sesión en la red, con lo que se suprime el cuadro de diálogo que se muestra en la figura 1. Mientras la autenticación de Windows es excelente para aplicaciones de intranet, es imposible normalmente para aplicaciones de Internet ya que no desea crear las cuentas de Windows para cada usuario que se registra en el sitio.
 
@@ -93,11 +89,9 @@ Figura 2 se ilustra el flujo de trabajo de autenticación de formularios desde u
 
 Una vez que el usuario ha iniciado sesión correctamente, las solicitudes HTTP incluyen el vale de autenticación de formularios. El sistema de autenticación de formularios simplemente identifica al usuario: es el sistema de autorización que determina si el usuario puede acceder al recurso solicitado.
 
-
 ![El flujo de trabajo de autenticación de formularios](security-basics-and-asp-net-support-vb/_static/image2.png)
 
 **Figura 2**: El flujo de trabajo de autenticación de formularios
-
 
 Profundizar en la autenticación de formularios con mucho más detalle en los próximos dos tutoriales,[una visión general de autenticación mediante formularios](an-overview-of-forms-authentication-vb.md) y [configuración de autenticación de formularios y temas avanzados](forms-authentication-configuration-and-advanced-topics-vb.md). Para obtener más información sobre ASP. Opciones de autenticación de la red, consulte [autenticación ASP.NET](https://msdn.microsoft.com/library/eeyk640h.aspx).
 
@@ -138,11 +132,9 @@ Microsoft incluye dos clases de proveedor de pertenencia en .NET Framework:
 
 Esta serie de tutoriales se centra exclusivamente en SqlMembershipProvider.
 
-
 [![El modelo permite que diferentes implementaciones del proveedor siendo perfectamente conectado en el marco de trabajo](security-basics-and-asp-net-support-vb/_static/image4.png)](security-basics-and-asp-net-support-vb/_static/image3.png)
 
 **Figura 03**: El modelo permite que diferentes implementaciones del proveedor siendo perfectamente conectado en el marco de trabajo ([haga clic aquí para ver imagen en tamaño completo](security-basics-and-asp-net-support-vb/_static/image5.png))
-
 
 La ventaja del modelo de proveedor es que implementaciones alternativas pueden desarrolladas por Microsoft, proveedores o desarrolladores individuales y conectadas a la perfección en el marco de pertenencia. Por ejemplo, Microsoft ha lanzado [un proveedor de pertenencia para bases de datos de Microsoft Access](https://download.microsoft.com/download/5/5/b/55bc291f-4316-4fd7-9269-dbf9edbaada8/sampleaccessproviders.vsi). Para obtener más información sobre los proveedores de pertenencia, consulte el [Kit de herramientas de proveedor](https://msdn.microsoft.com/asp.net/aa336558.aspx), que incluye un tutorial de los proveedores de pertenencia, los proveedores personalizados de ejemplo, más de 100 páginas de documentación en el modelo de proveedor y el Complete el código fuente para los proveedores de pertenencia integrados (es decir, ActiveDirectoryMembershipProvider y SqlMembershipProvider).
 

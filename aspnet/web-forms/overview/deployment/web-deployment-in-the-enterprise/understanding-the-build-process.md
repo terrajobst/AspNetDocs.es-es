@@ -8,12 +8,12 @@ ms.date: 05/04/2012
 ms.assetid: 5b982451-547b-4a2f-a5dc-79bc64d84d40
 msc.legacyurl: /web-forms/overview/deployment/web-deployment-in-the-enterprise/understanding-the-build-process
 msc.type: authoredcontent
-ms.openlocfilehash: 6f526b9842e02031b54b0a7519486ef8aa69021b
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: 802d93f7ca987d018967275bae68b8c56d883a25
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59397401"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65130939"
 ---
 # <a name="understanding-the-build-process"></a>Descripción del proceso de compilación
 
@@ -25,7 +25,6 @@ por [Jason Lee](https://github.com/jrjlee)
 > 
 > > [!NOTE]
 > > El tema anterior, [descripción del archivo de proyecto](understanding-the-project-file.md), se describe los componentes clave de un archivo de proyecto de MSBuild e introdujo el concepto de división de archivos de proyecto para admitir la implementación en varios entornos de destino. Si no ya está familiarizado con estos conceptos, debe revisar [descripción del archivo de proyecto](understanding-the-project-file.md) antes de trabajar en este tema.
-
 
 En este tema forma parte de una serie de tutoriales que se basa en los requisitos de implementación empresarial de una compañía ficticia denominada Fabrikam, Inc. Esta serie de tutoriales usa una solución de ejemplo&#x2014;el [solución Contact Manager](the-contact-manager-solution.md)&#x2014;para representar una aplicación web con un nivel realista de complejidad, incluida una aplicación ASP.NET MVC 3, una comunicación de Windows Servicio Foundation (WCF) y un proyecto de base de datos.
 
@@ -64,54 +63,40 @@ Puede usar la solución de ejemplo para realizar un seguimiento de este proceso 
 > [!NOTE]
 > Para obtener instrucciones sobre cómo personalizar los archivos de proyecto específicos del entorno para sus propios entornos de servidor, consulte [configurar propiedades de implementación de un entorno de destino](../configuring-server-environments-for-web-deployment/configuring-deployment-properties-for-a-target-environment.md).
 
-
 ## <a name="invoking-the-build-and-deployment-process"></a>Invocar el proceso de implementación y compilación
 
 Para implementar la solución Contact Manager en un entorno de prueba para desarrolladores, el programador ejecuta la *publicar Dev.cmd* archivo de comandos. Esto invoca MSBuild.exe, especificar *Publish.proj* como para ejecutar el archivo de proyecto y *Env Dev.proj* como valor de parámetro.
 
-
 [!code-console[Main](understanding-the-build-process/samples/sample1.cmd)]
-
 
 > [!NOTE]
 > El **/fl** cambiar (abreviatura de **/fileLogger**) registra la salida de compilación en un archivo denominado *msbuild.log* en el directorio actual. Para obtener más información, consulte el [referencia de línea de comandos de MSBuild](https://msdn.microsoft.com/library/ms164311.aspx).
 
-
 En este momento, MSBuild comienza a ejecutarse, carga el *Publish.proj* archivo y empieza a procesar las instrucciones dentro de él. La primera instrucción indica a MSBuild para importar el proyecto de archivos que el **TargetEnvPropsFile** especifica el parámetro.
 
-
 [!code-xml[Main](understanding-the-build-process/samples/sample2.xml)]
-
 
 El **TargetEnvPropsFile** parámetro especifica el *Env Dev.proj* de archivos, por lo que MSBuild combina el contenido de la *Env Dev.proj* el archivo en el  *Publish.proj* archivo.
 
 Los siguientes elementos MSBuild que se encuentra en el archivo de proyecto combinadas son grupos de propiedades. Las propiedades se procesan en el orden en que aparecen en el archivo. MSBuild crea un par de clave y valor para cada propiedad, que proporciona que se cumplen las condiciones especificadas. Las propiedades definidas más adelante en el archivo sobrescribirá todas las propiedades con el mismo nombre que definió anteriormente en el archivo. Por ejemplo, considere la **OutputRoot** propiedades.
 
-
 [!code-xml[Main](understanding-the-build-process/samples/sample3.xml)]
-
 
 Cuando MSBuild procesa la primera **OutputRoot** elemento, que proporciona un parámetro con el mismo nombre no se ha proporcionado, Establece el valor de la **OutputRoot** propiedad **... \Publish\Out**. Cuando encuentra el segundo **OutputRoot** elemento, si la condición se evalúa como **true**, sobrescribirá el valor de la **OutputRoot** propiedad con el valor de la **OutDir** parámetro.
 
 El siguiente elemento que se encuentra MSBuild es un grupo de elemento único, que contiene un elemento denominado **ProjectsToBuild**.
 
-
 [!code-xml[Main](understanding-the-build-process/samples/sample4.xml)]
-
 
 MSBuild procesa esta instrucción mediante la creación de una lista de elementos denominada **ProjectsToBuild**. En este caso, la lista de elementos contiene un único valor&#x2014;la ruta de acceso y el nombre del archivo de solución.
 
 En este momento, los elementos restantes son objetivos. Destinos se procesan de forma diferente de propiedades y elementos&#x2014;básicamente, los destinos no se procesan a menos que se explícitamente especificados por el usuario o invocados por otra construcción dentro del archivo de proyecto. Recuerde que la apertura **proyecto** etiqueta incluye un **DefaultTargets** atributo.
 
-
 [!code-xml[Main](understanding-the-build-process/samples/sample5.xml)]
-
 
 Esto indica a MSBuild que invoque el **FullPublish** destino, si los destinos no están especificados cuando se invoca MSBuild.exe. El **FullPublish** destino no contiene ninguna tarea; en su lugar, simplemente especifica una lista de dependencias.
 
-
 [!code-xml[Main](understanding-the-build-process/samples/sample6.xml)]
-
 
 Esta dependencia indica a MSBuild que la fecha en orden para ejecutar el **FullPublish** destino, debe invocar esta lista de destinos en el orden indicado:
 
@@ -125,16 +110,13 @@ Esta dependencia indica a MSBuild que la fecha en orden para ejecutar el **FullP
 
 El **Clean** destino básicamente elimina el directorio de salida y todo su contenido, como preparación para una compilación nueva.
 
-
 [!code-xml[Main](understanding-the-build-process/samples/sample7.xml)]
-
 
 Tenga en cuenta que el destino incluye un **ItemGroup** elemento. Al definir las propiedades o elementos dentro de un **destino** elemento, que está creando *dinámica* propiedades y elementos. En otras palabras, las propiedades o elementos no se procesan hasta que se ejecuta el destino. El directorio de salida no existe o contiene archivos hasta que comience el proceso de compilación, lo que no se puede compilar el  **\_FilesToDelete** lista como un elemento estático; tendrá que esperar hasta que se están llevando a cabo la ejecución. Por lo tanto, se crea la lista como un elemento dinámico dentro del destino.
 
 > [!NOTE]
 > En este caso, porque el **Clean** destino es la primera que se ejecuta, no es necesario usar un grupo de elementos dinámicos real. Sin embargo, es recomendable usar las propiedades dinámicas y los elementos en este tipo de escenario, como es posible que desee ejecutar los destinos en un orden diferente en algún momento.  
 > También debe tratar de evitar la declaración de elementos que nunca se usará. Si tiene elementos que se usará sólo por un destino concreto, considere la posibilidad de colocarlas dentro del destino para quitar cualquier sobrecarga innecesaria en el proceso de compilación.
-
 
 Dinámica de elementos, el **Clean** destino es bastante sencillo y hace uso de los integrados **mensaje**, **eliminar**, y **RemoveDir**tareas para:
 
@@ -147,9 +129,7 @@ Dinámica de elementos, el **Clean** destino es bastante sencillo y hace uso de 
 
 El **BuildProjects** destino básicamente crea todos los proyectos de la solución de ejemplo.
 
-
 [!code-xml[Main](understanding-the-build-process/samples/sample8.xml)]
-
 
 Este destino se ha descrito en detalle en el tema anterior, [descripción del archivo de proyecto](understanding-the-project-file.md), para ilustrar cómo tareas y destinos de hacer referencia a propiedades y elementos. En este momento, le interesa principalmente la **MSBuild** tarea. Puede usar esta tarea para compilar varios proyectos. La tarea no crea una nueva instancia de MSBuild.exe; usa la instancia en ejecución actual para cada proyecto de compilación. Los puntos clave de interés en este ejemplo son las propiedades de implementación:
 
@@ -159,14 +139,11 @@ Este destino se ha descrito en detalle en el tema anterior, [descripción del ar
 > [!NOTE]
 > El **paquete** destino llama a la Web Publishing canalización (WPP), que proporciona la integración entre MSBuild y Web Deploy. Si desea Eche un vistazo a los destinos integrados que proporciona el WPP, revise el *Microsoft.Web.Publishing.targets* archivo en la carpeta de %\MSBuild\Microsoft\VisualStudio\v10.0\Web % PROGRAMFILES (x 86).
 
-
 ### <a name="the-gatherpackagesforpublishing-target"></a>El destino GatherPackagesForPublishing
 
 Si analiza el **GatherPackagesForPublishing** destino, observará que no contiene realmente ninguna tarea. En su lugar, contiene un grupo de elementos único que define tres elementos dinámicos.
 
-
 [!code-xml[Main](understanding-the-build-process/samples/sample9.xml)]
-
 
 Estos elementos hacen referencia a los paquetes de implementación que se crearon cuando la **BuildProjects** se ha ejecutado el destino. No se pudo define estos elementos estáticamente en el archivo de proyecto, ya que no existen los archivos a los que hacen referencia los elementos hasta que el **BuildProjects** se ejecuta el destino. En su lugar, los elementos deben estar definidos dinámicamente en un destino que no se invoca hasta después de la **BuildProjects** se ejecuta el destino.
 
@@ -177,7 +154,6 @@ El **DbPublishPackages** elemento contendrá un valor único, la ruta de acceso 
 > [!NOTE]
 > Un archivo .deploymanifest se genera cuando se compila un proyecto de base de datos y usa el mismo esquema como un archivo de proyecto de MSBuild. Contiene toda la información necesaria para implementar una base de datos, incluidos los detalles de los scripts anteriores y posteriores a la implementación y la ubicación del esquema de base de datos (.dbschema). Para obtener más información, consulte [una visión general de base de datos de compilación e implementación de](https://msdn.microsoft.com/library/aa833165.aspx).
 
-
 Aprenderá más acerca de cómo los paquetes de implementación y manifiestos de implementación de la base de datos se crean y utilizan en [compilar y empaquetar proyectos de aplicación Web](building-and-packaging-web-application-projects.md) y [implementar proyectos de base de datos](deploying-database-projects.md).
 
 ### <a name="the-publishdbpackages-target"></a>El destino PublishDbPackages
@@ -186,9 +162,7 @@ Hablar brevemente, la **PublishDbPackages** destino llama a la utilidad VSDBCMD 
 
 En primer lugar, observe que la etiqueta de apertura incluye un **salidas** atributo.
 
-
 [!code-xml[Main](understanding-the-build-process/samples/sample10.xml)]
-
 
 Este es un ejemplo de *procesamiento por lotes de destino*. En los archivos de proyecto de MSBuild, el procesamiento por lotes es una técnica para recorrer en iteración colecciones. El valor de la **salidas** atributo, **"% (DbPublishPackages.Identity)"**, hace referencia a la **identidad** propiedad de metadatos de la **DbPublishPackages**  lista de elementos. Esta notación, **Outputs=%***(ItemList.ItemMetadataName)*, se traduce como:
 
@@ -198,26 +172,20 @@ Este es un ejemplo de *procesamiento por lotes de destino*. En los archivos de p
 > [!NOTE]
 > **Identidad** es uno de los [valores de metadatos integradas](https://msdn.microsoft.com/library/ms164313.aspx) que se asigna a cada elemento en la creación. Hace referencia al valor de la **Include** atributo en el **elemento** elemento&#x2014;en otras palabras, la ruta de acceso y el nombre del elemento.
 
-
 En este caso, dado que nunca debería haber más de un elemento con la misma ruta de acceso y nombre de archivo, básicamente estamos trabajando con tamaños de lote de uno. El destino se ejecuta una vez para cada paquete de la base de datos.
 
 Puede ver una notación similar en el  **\_Cmd** propiedad, que se basa en un comando VSDBCMD con los modificadores adecuados.
 
-
 [!code-xml[Main](understanding-the-build-process/samples/sample11.xml)]
-
 
 En este caso, **%(DbPublishPackages.DatabaseConnectionString)**, **%(DbPublishPackages.TargetDatabase)**, y **%(DbPublishPackages.FullPath)** todas hacen referencia a los valores de metadatos de la **DbPublishPackages** colección de elementos. El  **\_Cmd** propiedad la usa el **Exec** tarea, que invoca el comando.
 
-
 [!code-xml[Main](understanding-the-build-process/samples/sample12.xml)]
-
 
 Como resultado de esta notación, la **Exec** tarea creará lotes basándose en combinaciones únicas de la **DatabaseConnectionString**, **TargetDatabase**y **FullPath** valores de metadatos y la tarea se ejecutarán una vez para cada lote. Este es un ejemplo de *tarea de procesamiento por lotes*. Sin embargo, dado que el nivel de destino de procesamiento por lotes, nuestra colección de elementos en lotes de elemento único, ya ha dividido el **Exec** tarea ejecutará solo una vez para cada iteración del destino. En otras palabras, esta tarea invoca la utilidad VSDBCMD una vez para cada paquete de la base de datos en la solución.
 
 > [!NOTE]
 > Para obtener más información sobre el procesamiento por lotes de tarea y de destino, vea MSBuild [procesamiento por lotes](https://msdn.microsoft.com/library/ms171473.aspx), [metadatos de elementos en procesamiento por lotes de destino](https://msdn.microsoft.com/library/ms228229.aspx), y [metadatos de elementos en procesamiento por lotes de tarea](https://msdn.microsoft.com/library/ms171474.aspx).
-
 
 ### <a name="the-publishwebpackages-target"></a>El destino PublishWebPackages
 
@@ -228,15 +196,11 @@ En este punto, se ha invocado el **BuildProjects** destino, que genera un paquet
 
 Al igual que el **PublishDbPackages** destino, el **PublishWebPackages** destino usa el procesamiento por lotes de destino para asegurarse de que el destino se ejecuta una vez para cada paquete de web.
 
-
 [!code-xml[Main](understanding-the-build-process/samples/sample13.xml)]
-
 
 En el destino, el **Exec** tarea se usa para ejecutar el *deploy.cmd* archivo para cada paquete de web.
 
-
 [!code-xml[Main](understanding-the-build-process/samples/sample14.xml)]
-
 
 Para obtener más información sobre cómo configurar la implementación de paquetes de web, consulte [compilar y empaquetar proyectos de aplicación Web](building-and-packaging-web-application-projects.md).
 

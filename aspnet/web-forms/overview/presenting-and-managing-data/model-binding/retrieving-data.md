@@ -8,15 +8,14 @@ ms.date: 02/27/2014
 ms.assetid: 9f24fb82-c7ac-48da-b8e2-51b3da17e365
 msc.legacyurl: /web-forms/overview/presenting-and-managing-data/model-binding/retrieving-data
 msc.type: authoredcontent
-ms.openlocfilehash: 29baaf2917e47ac46a78a252721be725b4e9b58f
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: 08cb65f9ef8f5c36070454e011f41554d81f333f
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59398480"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65131539"
 ---
 # <a name="retrieving-and-displaying-data-with-model-binding-and-web-forms"></a>Recuperar y mostrar datos con enlace de modelos y formularios web forms
-
 
 > Esta serie de tutoriales muestra los aspectos básicos del uso de enlace de modelos con un proyecto de formularios Web Forms de ASP.NET. Enlace de modelos permite interactuar con los datos más sencilla de tratar con datos de objetos de origen (como ObjectDataSource o SqlDataSource). Esta serie comienza con material introductorio y mueve a conceptos más avanzados en los tutoriales posteriores.
 > 
@@ -34,7 +33,6 @@ ms.locfileid: "59398480"
 > - Microsoft Visual Studio 2017 o Microsoft Visual Studio Community 2017
 >   
 > Este tutorial también funciona con Visual Studio 2012 y Visual Studio 2013, pero hay algunas diferencias en la plantilla de proyecto y la interfaz de usuario.
-
 
 ## <a name="what-youll-build"></a>¿Qué va a crear
 
@@ -96,7 +94,6 @@ En este tutorial, necesitará:
    4. Página principal del formulario web Forms, seleccione **Site.Master**.
    
    5. Seleccione **Aceptar**.
-   
 
 ## <a name="add-the-data-model"></a>Agregar el modelo de datos
 

@@ -8,12 +8,12 @@ ms.date: 02/18/2013
 ms.assetid: 969ab824-1b98-4552-81fe-b60ef5fc6887
 msc.legacyurl: /mvc/overview/older-versions/hands-on-labs/aspnet-mvc-4-custom-action-filters
 msc.type: authoredcontent
-ms.openlocfilehash: 32587c7b0fd3075cd46678922b40bda2019f3a26
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: eaeb32180f79fabf557cbc38ff067eb26b47fea7
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59381138"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65129750"
 ---
 # <a name="aspnet-mvc-4-custom-action-filters"></a>Filtros de acción personalizada de ASP.NET MVC 4
 
@@ -76,11 +76,10 @@ Tiempo estimado para completar esta práctica: **30 minutos**.
 > [!NOTE]
 > Cada ejercicio está acompañado por un **final** carpeta que contiene la solución resultante debe obtener después de completar los ejercicios. Puede usar esta solución como una guía si necesita ayuda adicional para trabajar a través de los ejercicios.
 
-
 <a id="Exercise1"></a>
 
 <a id="Exercise_1_Logging_Actions"></a>
-### <a name="exercise-1-logging-actions"></a>Ejercicio 1: Acciones de registro
+### <a name="exercise-1-logging-actions"></a>Ejercicio 1: Acciones de registro
 
 En este ejercicio, obtendrá información sobre cómo crear un filtro de acción personalizada de registro mediante el uso de proveedores de filtros de ASP.NET MVC 4. Para ello aplicará un filtro de registro para el sitio de Music Store tal que registrará todas las actividades en los controladores seleccionados.
 
@@ -95,7 +94,6 @@ El filtro se extenderá **ActionFilterAttributeClass** e invalidar **OnActionExe
 > - **Excepción** filtro, que se ejecuta si hay una excepción no controlada en algún lugar en el método de acción, empezando por los filtros de autorización y finalizando con la ejecución del resultado. Los filtros de excepciones pueden usarse para tareas como registrar o mostrar una página de error.
 > 
 > Para obtener más información acerca de los proveedores de filtros, visite este vínculo de MSDN: ([https://msdn.microsoft.com/library/dd410209.aspx](https://msdn.microsoft.com/library/dd410209.aspx)).
-
 
 <a id="AboutLoggingFeature"></a>
 
@@ -132,7 +130,6 @@ En esta tarea creará una clase de atributo de filtro personalizado que contendr
 > - **OnResultExecuted**(ResultExecutedContext filterContext): Después de ejecuta el resultado (después de representa la vista).
 > 
 > Al reemplazar cualquiera de estos métodos en una clase derivada, puede ejecutar su propio código de filtrado.
-
 
 1. Abra el **comenzar** solución ubicado en **\Source\Ex01-LoggingActions\Begin** carpeta.
 
@@ -219,7 +216,7 @@ En esta tarea, probará que funciona el filtro del registro. Se iniciará la apl
 <a id="Exercise2"></a>
 
 <a id="Exercise_2_Managing_Multiple_Action_Filters"></a>
-### <a name="exercise-2-managing-multiple-action-filters"></a>Ejercicio 2: Administrar varios filtros de acción
+### <a name="exercise-2-managing-multiple-action-filters"></a>Ejercicio 2: Administrar varios filtros de acción
 
 En este ejercicio agregará un segundo filtro de acción personalizado a la clase StoreController y definir el orden específico en el que se ejecutarán ambos filtros. A continuación, se actualizará el código para registrar el filtro global.
 
@@ -352,7 +349,6 @@ En esta tarea, actualizará la solución para registrar el nuevo filtro (**MyNew
 
 > [!NOTE]
 > Además, puede implementar esta aplicación a los siguientes sitios Web Windows Azure [Apéndice B: Publicar una aplicación de ASP.NET MVC 4 mediante Web Deploy](#AppendixB).
-
 
 ---
 

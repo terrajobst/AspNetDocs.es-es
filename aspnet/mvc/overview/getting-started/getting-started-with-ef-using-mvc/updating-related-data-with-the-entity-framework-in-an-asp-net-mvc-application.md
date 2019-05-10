@@ -9,12 +9,12 @@ ms.topic: tutorial
 ms.assetid: 7ba88418-5d0a-437d-b6dc-7c3816d4ec07
 msc.legacyurl: /mvc/overview/getting-started/getting-started-with-ef-using-mvc/updating-related-data-with-the-entity-framework-in-an-asp-net-mvc-application
 msc.type: authoredcontent
-ms.openlocfilehash: d90a327da40ffd6d7956c5fbe019cf9de30c706d
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: 4d5f6447fdccefdcdf9497a9e94f23243302a0e1
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59407515"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65120904"
 ---
 # <a name="tutorial-update-related-data-with-ef-in-an-aspnet-mvc-app"></a>Tutorial: Actualizar datos relacionados con EF en una aplicación ASP.NET MVC
 
@@ -126,7 +126,6 @@ Reemplace el `HttpPost` `Edit` método con el código siguiente. que controla la
 
 La referencia a `RetryLimitExceededException` requiere un `using` instrucción; para agregarlo: mantenga el mouse sobre `RetryLimitExceededException`. Aparece el mensaje siguiente: ![ Vuelva a intentar el mensaje de excepción](updating-related-data-with-the-entity-framework-in-an-asp-net-mvc-application/_static/image13.png)
 
-
 Seleccione **mostrar posibles correcciones**, a continuación, **con System.Data.Entity.Infrastructure**
 
 ![Resolver las excepciones de reintento](updating-related-data-with-the-entity-framework-in-an-asp-net-mvc-application/_static/image14.png)
@@ -234,7 +233,6 @@ Este código no controla el escenario de un instructor asignado como administrad
 ## <a name="add-office-location-and-courses-to-the-create-page"></a>Agregar la ubicación de la oficina y cursos a la página Create
 
 En *InstructorController.cs*, elimine el `HttpGet` y `HttpPost` `Create` métodos y, a continuación, agregue el código siguiente en su lugar:
-
 
 [!code-csharp[Main](updating-related-data-with-the-entity-framework-in-an-asp-net-mvc-application/samples/sample25.cs)]
 

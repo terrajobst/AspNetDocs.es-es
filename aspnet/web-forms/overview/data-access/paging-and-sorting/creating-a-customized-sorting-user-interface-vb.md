@@ -8,12 +8,12 @@ ms.date: 08/15/2006
 ms.assetid: f3897a74-cc6a-4032-8f68-465f155e296a
 msc.legacyurl: /web-forms/overview/data-access/paging-and-sorting/creating-a-customized-sorting-user-interface-vb
 msc.type: authoredcontent
-ms.openlocfilehash: 571e34a8c87bf54b8dd71c912f16ebcdab3c87a7
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: e2c2ab402c1ffeb9a9a54e0097eb4680158169ff
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59383452"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65134284"
 ---
 # <a name="creating-a-customized-sorting-user-interface-vb"></a>Crear una interfaz de usuario de ordenación personalizada (VB)
 
@@ -23,18 +23,15 @@ por [Scott Mitchell](https://twitter.com/ScottOnWriting)
 
 > Al mostrar una larga lista de los datos ordenados, puede ser muy útil para agrupar los datos relacionados mediante la introducción de las filas de separador. En este tutorial, veremos cómo crear este tipo una interfaz de usuario de ordenación.
 
-
 ## <a name="introduction"></a>Introducción
 
 Cuando se muestra una lista larga de datos ordenados donde hay solo un conjunto de valores diferentes en la columna ordenada, un usuario final resultará difícil distinguir dónde, exactamente, se producen los límites de diferencia. Por ejemplo, hay 81 productos en la base de datos, pero solo nueve opciones de categoría diferentes (ocho categorías exclusivas más el `NULL` opción). Considere el caso de un usuario que está interesado en Examinar los productos que se encuentran en la categoría Mariscos. Desde una página que enumera *todas* de los productos en un único GridView, el usuario puede decidir es su mejor opción Ordenar los resultados por categoría, que se vayan a agrupar todos los productos mariscos juntos. Después de ordenar por categoría, el usuario, a continuación, necesita buscando a través de la lista, buscando donde los productos agrupados por mariscos empezar y terminar. Puesto que los resultados se ordenan alfabéticamente por el nombre de categoría buscar los productos mariscos no es difícil, pero todavía requiere examinar detenidamente la lista de elementos de la cuadrícula.
 
 Para ayudar a resaltar los límites entre grupos ordenados, muchos sitios Web emplean una interfaz de usuario que agrega un separador entre los grupos de este tipo. Separadores, como los que se muestran en la figura 1 permite que un usuario más rápido buscar un grupo determinado e identificar sus límites, así como determinar qué grupos distintos que existen en los datos.
 
-
 [![Cada grupo de categorías es claramente identificado](creating-a-customized-sorting-user-interface-vb/_static/image2.png)](creating-a-customized-sorting-user-interface-vb/_static/image1.png)
 
 **Figura 1**: Cada grupo de categorías es claramente identifica ([haga clic aquí para ver imagen en tamaño completo](creating-a-customized-sorting-user-interface-vb/_static/image3.png))
-
 
 En este tutorial, veremos cómo crear este tipo una interfaz de usuario de ordenación.
 
@@ -44,16 +41,13 @@ Antes, exploramos cómo aumentar el control GridView para proporcionar la interf
 
 A continuación, configure el control GridView tal que solo contiene el `ProductName`, `CategoryName`, `SupplierName`, y `UnitPrice` BoundFields y CheckBoxField discontinuo. Por último, configure el control GridView para admitir la ordenación activando la casilla Habilitar la ordenación en la etiqueta inteligente de GridView s (o estableciendo su `AllowSorting` propiedad `true`). Después de realizar estas adiciones a la `CustomSortingUI.aspx` página, el marcado declarativo debe ser similar al siguiente:
 
-
 [!code-aspx[Main](creating-a-customized-sorting-user-interface-vb/samples/sample1.aspx)]
 
 Dedique un momento para ver nuestro progreso hasta ahora en un explorador. Figura 2 muestra el control GridView que se puede ordenar cuando sus datos se ordenan por categoría en orden alfabético.
 
-
 [![Las operaciones de asignación GridView que se puede ordenar los datos se ordenan por categoría](creating-a-customized-sorting-user-interface-vb/_static/image5.png)](creating-a-customized-sorting-user-interface-vb/_static/image4.png)
 
 **Figura 2**: Las operaciones de asignación GridView que se puede ordenar datos se ordenan por categoría ([haga clic aquí para ver imagen en tamaño completo](creating-a-customized-sorting-user-interface-vb/_static/image6.png))
-
 
 ## <a name="step-2-exploring-techniques-for-adding-the-separator-rows"></a>Paso 2: Exploración de las técnicas para agregar las filas de separador
 
@@ -73,11 +67,9 @@ Las otras dos opciones de agregar filas de separador para los datos reales que s
 
 Cuando el control GridView se enlaza a un origen de datos, crea un `GridViewRow` para cada registro devuelto por el origen de datos. Por lo tanto, nos podemos insertar las filas de separador necesario mediante la adición de registros de separador al origen de datos antes de enlazarla a la GridView. Figura 3 ilustra este concepto.
 
-
 ![Una técnica consiste en Agregar filas de separador para el origen de datos](creating-a-customized-sorting-user-interface-vb/_static/image7.png)
 
 **Figura 3**: Una técnica consiste en Agregar filas de separador para el origen de datos
-
 
 Usar los registros de separador de términos entre comillas porque no hay ningún registro de separación especial; en su lugar, nos debemos que algún modo Marcar que un registro determinado en el origen de datos actúa como un separador en lugar de una fila de datos normal. Para nuestros ejemplos, hemos re enlace un `ProductsDataTable` instancia en el control GridView, que se compone de `ProductRows`. Se puede marcar un registro como una fila de separación estableciendo su `CategoryID` propiedad `-1` (ya que dicho valor no se pudo existe normalmente).
 
@@ -99,22 +91,18 @@ En lugar de los datos de mensajería antes de enlazarla a la GridView, podemos a
 
 Para agregar filas separador entre cada grupo de ordenación, se puede manipular directamente esta jerarquía de control una vez que se ha creado. Que podemos estar seguros de que se ha creado la jerarquía de controles GridView s por última vez en el momento en que se va a representar la página. Por lo tanto, este método invalida el `Page` clase s `Render` método, momento en que la jerarquía de control final s GridView se actualiza para incluir las filas de separador necesario. Figura 4 ilustra este proceso.
 
-
 [![Una técnica alternativa manipula la jerarquía de controles GridView s](creating-a-customized-sorting-user-interface-vb/_static/image9.png)](creating-a-customized-sorting-user-interface-vb/_static/image8.png)
 
 **Figura 4**: Una técnica alternativa manipula la jerarquía de controles de GridView s ([haga clic aquí para ver imagen en tamaño completo](creating-a-customized-sorting-user-interface-vb/_static/image10.png))
-
 
 Para este tutorial, usaremos este último enfoque para personalizar la experiencia de usuario de ordenación.
 
 > [!NOTE]
 > El código m se presenta en este tutorial se basa en el ejemplo proporcionado en [Teemu Keiski](http://aspadvice.com/blogs/joteke/default.aspx) entrada de blog sobre s [jugar un poco con agrupación de ordenación de GridView](http://aspadvice.com/blogs/joteke/archive/2006/02/11/15130.aspx).
 
-
 ## <a name="step-3-adding-the-separator-rows-to-the-gridview-s-control-hierarchy"></a>Paso 3: Agregar el separador de filas a la jerarquía de controles GridView s
 
 Puesto que sólo deseamos agregar las filas de separador para la jerarquía de controles GridView s después de haber creado su jerarquía de controles y creado por última vez en esa página de visita, deseamos realizar esta adición al final del ciclo de vida de página, pero antes de la c real de GridView jerarquía ontrol se ha representado en HTML. El último punto posible en el que podemos lograr esto es el `Page` clase s `Render` evento, que es posible invalidar en nuestra clase de código subyacente mediante la firma del método siguiente:
-
 
 [!code-vb[Main](creating-a-customized-sorting-user-interface-vb/samples/sample2.vb)]
 
@@ -125,16 +113,13 @@ Para insertar los encabezados de grupo Ordenar primero es necesario para asegura
 > [!NOTE]
 > Si desea que el control GridView se ordene por una columna en particular cuando se carga la página por primera vez, llamar a la GridView `Sort` método en la primera visita de página (pero no en los postbacks subsiguientes). Para ello, agregue esta llamada en el `Page_Load` controlador de eventos dentro de un `if (!Page.IsPostBack)` condicional. Vuelva a consultar el [paginación y ordenación de datos de informe](paging-and-sorting-report-data-vb.md) información tutorial para obtener más información sobre la `Sort` método.
 
-
 Suponiendo que los datos se han ordenado, la siguiente tarea consiste en determinar qué columnas se ordenan los datos y, a continuación, para examinar las filas que se busca las diferencias en esa columna s valores. El código siguiente asegura que los datos se han ordenado y busca la columna por la que se han ordenado los datos:
-
 
 [!code-vb[Main](creating-a-customized-sorting-user-interface-vb/samples/sample3.vb)]
 
 Si tiene el control GridView aún ser ordenada, la s GridView `SortExpression` propiedad no habrá se ha establecido. Por lo tanto, solo queremos agregar las filas de separador si esta propiedad tiene algún valor. Si es así, a continuación se debe determinar el índice de la columna por la que se ordenan los datos. Esto se logra mediante un bucle a través de las operaciones de asignación GridView `Columns` colección, búsqueda de la columna cuya propiedad `SortExpression` propiedad es igual a la s GridView `SortExpression` propiedad. Además del índice de columna s también obtenemos el `HeaderText` propiedad, que se utiliza al mostrar las filas de separador.
 
 Con el índice de la columna por la que se ordenan los datos, el último paso es enumerar las filas del control GridView. Para cada fila es necesario determinar si el valor de columna ordenada s difiere la anterior fila s ordenados s del valor de columna. Si es así, es necesario insertar un nuevo `GridViewRow` instancia en la jerarquía de controles. Esto se logra con el código siguiente:
-
 
 [!code-vb[Main](creating-a-customized-sorting-user-interface-vb/samples/sample4.vb)]
 
@@ -143,33 +128,27 @@ Este código se inicia haciendo mediante programación el `Table` objeto encontr
 > [!NOTE]
 > Para determinar el valor de la columna de una fila determinada s ordenados utilizo la celda s `Text` propiedad. Esto funciona bien para BoundFields, pero no se funcionan según sea necesario para TemplateFields, CheckBoxFields y así sucesivamente. Echemos un vistazo cómo para tener en cuenta los campos de GridView alternativos en breve.
 
-
 El `currentValue` y `lastValue` , a continuación, se comparan las variables. Si difieren, necesitamos agregar una nueva fila de separación para la jerarquía de controles. Esto se logra al determinar el índice de la `GridViewRow` en el `Table` objeto s `Rows` colección, crear nuevas `GridViewRow` y `TableCell` instancias y, a continuación, agregar el `TableCell` y `GridViewRow` a la jerarquía de controles.
 
 Tenga en cuenta que el separador de fila única s `TableCell` es un formato que abarca todo el ancho del control GridView, se ha formateado con el `SortHeaderRowStyle` clase CSS y tiene su `Text` , que muestra tanto en el grupo Ordenar nombre de propiedad (por ejemplo, la categoría) y el valor de s de grupo (por ejemplo, bebidas). Por último, `lastValue` se actualiza en el valor de `currentValue`.
 
 La clase CSS que se usa para dar formato a la fila de encabezado de grupo ordenación `SortHeaderRowStyle` debe especificarse en el `Styles.css` archivo. No dude en usar cualquier configuración de estilo atractivo para usted. He usado la siguiente:
 
-
 [!code-css[Main](creating-a-customized-sorting-user-interface-vb/samples/sample5.css)]
 
 Con el código actual, la interfaz de ordenación agrega encabezados de grupo de ordenación al ordenar por cualquier BoundField (consulte la figura 5, que muestra una captura de pantalla al ordenar por el proveedor). Sin embargo, al ordenar por cualquier otro tipo de campo (por ejemplo, un CampoCasillaVerificación o TemplateField), los encabezados de grupo de ordenación son ningún lugar donde se encuentra (consulte la figura 6).
-
 
 [![La interfaz de ordenación incluye los encabezados de grupo de ordenación al ordenar por BoundFields](creating-a-customized-sorting-user-interface-vb/_static/image12.png)](creating-a-customized-sorting-user-interface-vb/_static/image11.png)
 
 **Figura 5**: La ordenación interfaz incluye ordenación grupo encabezados al ordenar por BoundFields ([haga clic aquí para ver imagen en tamaño completo](creating-a-customized-sorting-user-interface-vb/_static/image13.png))
 
-
 [![Los encabezados de grupo de ordenación son falta al ordenar una CampoCasillaVerificación](creating-a-customized-sorting-user-interface-vb/_static/image15.png)](creating-a-customized-sorting-user-interface-vb/_static/image14.png)
 
 **Figura 6**: Los encabezados de grupo de ordenación son falta al ordenar una CampoCasillaVerificación ([haga clic aquí para ver imagen en tamaño completo](creating-a-customized-sorting-user-interface-vb/_static/image16.png))
 
-
 La razón faltan los encabezados de grupo de ordenación al ordenar por un CampoCasillaVerificación es que el código actualmente usa simplemente el `TableCell` s `Text` propiedad para determinar el valor de la columna ordenada para cada fila. Para CheckBoxFields, el `TableCell` s `Text` propiedad es una cadena vacía; en su lugar, el valor está disponible a través de un control Web de casilla de verificación que se encuentra en la `TableCell` s `Controls` colección.
 
 Para controlar los tipos de campo que no sean BoundFields, debemos aumentar el código donde la `currentValue` variable se asigna a comprobar la existencia de una casilla en la `TableCell` s `Controls` colección. En lugar de usar `currentValue = gvr.Cells(sortColumnIndex).Text`, reemplace este código por lo siguiente:
-
 
 [!code-vb[Main](creating-a-customized-sorting-user-interface-vb/samples/sample6.vb)]
 
@@ -177,15 +156,12 @@ Este código examina la columna ordenada `TableCell` para la fila actual determi
 
 Con la adición de código anterior, los encabezados de grupo de ordenación están presentes cuando se ordena por el CampoCasillaVerificación suspendido (consulte la figura 7).
 
-
 [![Los encabezados de grupo de ordenación están ahora presente al ordenar una CampoCasillaVerificación](creating-a-customized-sorting-user-interface-vb/_static/image18.png)](creating-a-customized-sorting-user-interface-vb/_static/image17.png)
 
 **Figura 7**: Los encabezados de grupo de ordenación están ahora presente al ordenar una CampoCasillaVerificación ([haga clic aquí para ver imagen en tamaño completo](creating-a-customized-sorting-user-interface-vb/_static/image19.png))
 
-
 > [!NOTE]
 > Si tiene productos con `NULL` valores para la base de datos la `CategoryID`, `SupplierID`, o `UnitPrice` campos, esos valores se mostrarán como cadenas vacías en el control GridView de forma predeterminada, lo que significa que el texto de fila s separador para esos productos con `NULL`leerán los valores como categoría: (es decir, hay s sin nombre después de la categoría: al igual que con la categoría: Bebidas). Si desea que un valor que se muestran aquí se puede establecer el BoundFields [ `NullDisplayText` propiedad](https://msdn.microsoft.com/library/system.web.ui.webcontrols.boundfield.nulldisplaytext.aspx) al texto que desea mostrar o puede agregar una instrucción condicional en el método Render al asignar el `currentValue` para el separador fila s `Text` propiedad.
-
 
 ## <a name="summary"></a>Resumen
 

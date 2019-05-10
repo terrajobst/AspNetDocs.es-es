@@ -8,12 +8,12 @@ ms.date: 04/01/2009
 ms.assetid: 09279194-bcf9-4b59-a09d-c68e5926a758
 msc.legacyurl: /web-forms/overview/older-versions-getting-started/deploying-web-site-projects/deploying-your-site-using-an-ftp-client-vb
 msc.type: authoredcontent
-ms.openlocfilehash: 70640ac12b52d50c92d1d7f65c1116b2ec36d883
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: 3cfba5648dd7b9cacdc439de132bea48ee7447b1
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59381775"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65127140"
 ---
 # <a name="deploying-your-site-using-an-ftp-client-vb"></a>Implementar el sitio mediante un cliente FTP (VB)
 
@@ -23,17 +23,14 @@ por [Scott Mitchell](https://twitter.com/ScottOnWriting)
 
 > La manera más sencilla de implementar una aplicación ASP.NET es copiar manualmente los archivos necesarios del entorno de desarrollo en el entorno de producción. Este tutorial muestra cómo usar a un cliente FTP para obtener los archivos desde el escritorio, el proveedor de hospedaje web.
 
-
 ## <a name="introduction"></a>Introducción
 
 El tutorial anterior introdujo una aplicación web de ASP.NET de revisión del libro simple, que consta de un puñado de páginas ASP.NET, una página maestra, una base personalizada `Page` clase, un número de imágenes y hojas de estilos tres CSS. Ahora estamos preparados para implementar esta aplicación en un proveedor de hospedaje web, momento en que la aplicación será accesible a cualquier persona con una conexión a Internet!
-
 
 En nuestras conversaciones en el [ *determinar qué archivos se deben implementarse* ](determining-what-files-need-to-be-deployed-vb.md) tutorial, sabemos qué archivos se deben copiarse en el proveedor de hospedaje web. (Recuerde que qué archivos se copian depende de si la aplicación es explícita o automáticamente compilada). Pero, ¿cómo se obtienen los archivos del entorno de desarrollo (nuestro equipo de escritorio) hasta el entorno de producción (el servidor web administrado por el proveedor de hospedaje web)? El [ **F** ile **T** transferir **P** rotocol (FTP)](http://en.wikipedia.org/wiki/File_Transfer_Protocol) es un protocolo utilizado frecuentemente para copiar archivos desde un equipo a otro a través de una red. Otra opción es FrontPage Server Extensions (FPSE). En este tutorial se centra en usar el software de cliente FTP independiente para implementar los archivos necesarios del entorno de desarrollo para el entorno de producción.
 
 > [!NOTE]
 > Visual Studio incluye herramientas para publicar sitios Web a través de FTP; Estas herramientas, así como un vistazo a las herramientas que usan FPSE, se trata en el siguiente tutorial.
-
 
 Para copiar los archivos mediante FTP, necesitamos un *cliente FTP* en el entorno de desarrollo. Un cliente FTP es una aplicación que está diseñada para copiar archivos desde el equipo está instalado en un equipo que ejecuta un *servidor FTP*. (Si su proveedor de hospedaje web admite las transferencias de archivos a través de FTP, como hace la mayor parte, a continuación, hay un servidor FTP que se ejecutan en sus servidores web.) Hay un número de aplicaciones cliente FTP. El explorador web puede incluso doble como un cliente FTP. Mi cliente FTP favoritos y el va a utilizar para este tutorial, es [FileZilla](http://filezilla-project.org/), un cliente FTP gratuito, código abierto que está disponible para Windows, Linux y Mac. Cualquier cliente FTP funcionará, sin embargo, por lo que puede usar cualquier cliente se sienta más cómodo.
 
@@ -68,11 +65,9 @@ Figura 1 muestra FileZilla, una vez copiados los archivos necesarios. FileZilla 
 > [!NOTE]
 > No hay ningún riesgo de tener los archivos de código fuente en el servidor de producción, tal como se pasan por alto. ASP.NET prohíbe las solicitudes HTTP para archivos de código fuente de forma predeterminada para que incluso si los archivos de código fuente están presentes en el servidor de producción son inaccesibles para los visitantes de su sitio. (Es decir, si un usuario intenta visitar `http://www.yoursite.com/Default.aspx.vb` obtendrán una página de error que explica que estos tipos de archivos - `.vb` archivos - están prohibidas.)
 
-
 [![Usar a un cliente FTP para copiar los archivos necesarios desde el escritorio al servidor Web en el proveedor de hospedaje Web.](deploying-your-site-using-an-ftp-client-vb/_static/image2.png)](deploying-your-site-using-an-ftp-client-vb/_static/image1.png)
 
 **Figura 1**: Uso de un cliente FTP para copiar los archivos necesarios desde el escritorio al servidor Web en el proveedor de hospedaje Web ([haga clic aquí para ver imagen en tamaño completo](deploying-your-site-using-an-ftp-client-vb/_static/image3.png))
-
 
 Después de implementar su sitio, dedique un momento para probar el sitio. Si ha adquirido un nombre de dominio y configurar el DNS correctamente, puede visitar su sitio escribiendo su nombre de dominio. Como alternativa, el proveedor de hospedaje web debe ha proporcionado, con una dirección URL del sitio, que tendrá un aspecto parecido *accountname*. *webhostprovider*.com o *webhostprovider*.com /*accountname*. Por ejemplo, es la dirección URL de mi cuenta de ASP.NET de descuento: `http://httpruntime.web703.discountasp.net`.
 
@@ -81,11 +76,9 @@ Figura 2 muestra el sitio implementado de reseñas de libros. Tenga en cuenta qu
 > [!NOTE]
 > Si recibe un error al visualizar la aplicación dedique un momento para asegurarse de que ha implementado el conjunto correcto de archivos. A continuación, compruebe el mensaje de error para ver si revelan las pistas sobre el problema. A continuación, puede activar al departamento de soporte técnico de su compañía de host de web o publicar su pregunta en el foro adecuado en el [foros de ASP.NET](https://forums.asp.net/).
 
-
 [![El sitio de las revisiones del libro es ahora accesible para cualquier persona con una conexión a Internet.](deploying-your-site-using-an-ftp-client-vb/_static/image5.png)](deploying-your-site-using-an-ftp-client-vb/_static/image4.png)
 
 **Figura 2**: El sitio de las revisiones del libro es ahora accesible para cualquier persona con una conexión a Internet ([haga clic aquí para ver imagen en tamaño completo](deploying-your-site-using-an-ftp-client-vb/_static/image6.png))
-
 
 ## <a name="deploying-the-book-review-web-site-project"></a>Implementar el proyecto de sitio Web de revisión de libro
 
@@ -97,7 +90,6 @@ Una vez que ha creado correctamente el proyecto, use el cliente de FTP para copi
 
 > [!NOTE]
 > Si ya ha implementado el proyecto pero todavía desea intentar implementar el proyecto BookReviewsWSP de BookReviewsWAP, primero elimine todos los archivos en el servidor web que se han cargado al implementar BookReviewsWAP y, a continuación, implementar los archivos para BookReviewsWSP.
-
 
 - `~/Default.aspx`
 - `~/Default.aspx.vb`
@@ -123,11 +115,9 @@ Una vez que ha creado correctamente el proyecto, use el cliente de FTP para copi
 
 Figura 3 muestra FileZilla después de copiar los archivos necesarios. Como puede ver, ASP.NET archivos de código fuente, como `About.aspx.vb`, están presentes en el equipo local (el entorno de desarrollo) y el proveedor de hospedaje web (el entorno de producción) porque los archivos de código deben implementarse al usar automática compilación.
 
-
 [![Uso de un cliente FTP para copiar los archivos necesarios desde el escritorio al servidor Web en el proveedor de hospedaje Web](deploying-your-site-using-an-ftp-client-vb/_static/image8.png)](deploying-your-site-using-an-ftp-client-vb/_static/image7.png)
 
 **Figura 3**: Uso de un cliente FTP para copiar los archivos necesarios desde el escritorio al servidor Web en el proveedor de hospedaje Web ([haga clic aquí para ver imagen en tamaño completo](deploying-your-site-using-an-ftp-client-vb/_static/image9.png))
-
 
 La experiencia del usuario no se ve afectada por el modelo de compilación de la aplicación. Las mismas páginas ASP.NET son accesibles y su apariencia y el mismo comportamiento si se creó el sitio Web mediante el modelo de proyecto de aplicación Web o el modelo de proyecto de sitio Web.
 
@@ -139,7 +129,6 @@ Como cabría esperar, al volver a implementar una aplicación web, que basta con
 
 > [!NOTE]
 > Una cosa a tener en cuenta cuando se usa la compilación explícita es que, cada vez que agregue una nueva página ASP.NET para el proyecto o realizar cambios relacionados con el código, deberá volver a generar el proyecto, que actualiza el ensamblado en el `Bin` carpeta. Por lo tanto, deberá copiar este ensamblado actualizado en producción al actualizar una aplicación web en producción (junto con el otro contenido nuevo y actualizado).
-
 
 También comprender todos los cambios en el `Web.config` o los archivos en el `Bin` directory detiene y reinicia el grupo de aplicaciones del sitio Web. Si el estado de sesión se almacena utilizando la `InProc` modo (valor predeterminado), a continuación, los visitantes de su sitio perderá su estado de sesión cada vez que se modifican estos archivos de clave. Para evitar este problema, considere la posibilidad de almacenar la sesión mediante el `StateServer` o `SQLServer` modos. Para obtener más información sobre este tema, consulte [modos de estado de sesión](https://msdn.microsoft.com/library/ms178586.aspx).
 

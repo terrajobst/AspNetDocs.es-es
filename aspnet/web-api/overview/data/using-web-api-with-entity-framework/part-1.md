@@ -8,15 +8,14 @@ ms.date: 01/17/2019
 ms.assetid: e879487e-dbcd-4b33-b092-d67c37ae768c
 msc.legacyurl: /web-api/overview/data/using-web-api-with-entity-framework/part-1
 msc.type: authoredcontent
-ms.openlocfilehash: c681415920bb0bfb4bc1c012e42fb5a528db93ca
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: 0f5dc960f494af5bd4ce87863a510d1892319908
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59406839"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65126284"
 ---
 # <a name="using-web-api-2-with-entity-framework-6"></a>Usar Web API 2 con Entity Framework 6
-
 
 [Descargue el proyecto completado](https://github.com/MikeWasson/BookService)
 
@@ -68,7 +67,6 @@ En el **nuevo proyecto ASP.NET** cuadro de diálogo, seleccione el **API Web** p
 
 [![](part-1/_static/image12.png)](part-1/_static/image12.png)
 
-
 Seleccione **Aceptar** para crear el proyecto.
 
 ## <a name="configure-azure-settings-optional"></a>Configurar valores de Azure (opcionales)
@@ -98,7 +96,6 @@ Después de crear el proyecto, puede implementar en Azure App Service Web Apps e
     [![](part-1/_static/image17.png)](part-1/_static/image17.png)
    
     El perfil que creó para implementar la aplicación ahora está disponible. 
-
 
 > [!div class="step-by-step"]
 > [Siguiente](part-2.md)

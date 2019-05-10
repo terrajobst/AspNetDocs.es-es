@@ -8,12 +8,12 @@ ms.date: 02/18/2013
 ms.assetid: 84c7baca-1c54-4c44-8f52-4282122d6acb
 msc.legacyurl: /mvc/overview/older-versions/hands-on-labs/aspnet-mvc-4-dependency-injection
 msc.type: authoredcontent
-ms.openlocfilehash: 86781a1f46ce0c01a5d70b1f0cf8a81f3f96a032
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: 15c9d4dcb9e2c6b9f6adf54d65d15737b32cca3b
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59405929"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65129742"
 ---
 # <a name="aspnet-mvc-4-dependency-injection"></a>Inserción de dependencias de ASP.NET MVC 4
 
@@ -57,7 +57,6 @@ Las ventajas de usar el patrón de inserción de dependencias y la inversión de
 > [!NOTE]
 > Inserción de dependencias a veces se compara con el patrón de diseño Abstract Factory, pero hay una pequeña diferencia entre ambos enfoques. Inserción de dependencias tiene un marco de trabajo subyacente para resolver las dependencias mediante una llamada a los generadores y los servicios registrados.
 
-
 Ahora que comprende el patrón de inserción de dependencia, aprenderá a lo largo de este laboratorio aplicarlo en ASP.NET MVC 4. Se iniciará mediante la inserción de dependencia en el **controladores** para incluir un servicio de acceso de la base de datos. A continuación, se aplicará la inserción de dependencias para el **vistas** para consumir un servicio y mostrar información. Por último, extenderá la inserción de dependencias a los filtros de ASP.NET MVC 4, inyección de un filtro de acción personalizada en la solución.
 
 En este laboratorio práctico, aprenderá cómo:
@@ -69,7 +68,6 @@ En este laboratorio práctico, aprenderá cómo:
 
 > [!NOTE]
 > Este laboratorio usa Unity.Mvc3 paquete de NuGet para la resolución de dependencia, pero es posible adaptar cualquier marco de inserción de dependencia para que funcione con ASP.NET MVC 4.
-
 
 <a id="Prerequisites"></a>
 
@@ -107,13 +105,12 @@ Esta práctica se compone de los ejercicios siguientes:
 > [!NOTE]
 > Cada ejercicio está acompañado por un **final** carpeta que contiene la solución resultante debe obtener después de completar los ejercicios. Puede usar esta solución como una guía si necesita ayuda adicional para trabajar a través de los ejercicios.
 
-
 Tiempo estimado para completar esta práctica: **30 minutos**.
 
 <a id="Exercise1"></a>
 
 <a id="Exercise_1_Injecting_a_Controller"></a>
-### <a name="exercise-1-injecting-a-controller"></a>Ejercicio 1: Insertar un controlador
+### <a name="exercise-1-injecting-a-controller"></a>Ejercicio 1: Insertar un controlador
 
 En este ejercicio, obtendrá información sobre cómo usar la inserción de dependencias en controladores de MVC de ASP.NET mediante la integración de Unity mediante un paquete de NuGet. Por ese motivo, se van a incluir servicios en los controladores MvcMusicStore para separar la lógica de acceso a los datos. Los servicios creación una nueva dependencia en el constructor del controlador, que se resolverá mediante la inserción de dependencias con la Ayuda de **Unity**.
 
@@ -137,12 +134,10 @@ A continuación, encontrará el **StoreController** implementación tiene una de
 > 
 > Para resolver la dependencia, el controlador tiene que va a crear una fábrica abstracta (una clase que devuelve cualquier objeto del tipo especificado).
 
-
 [!code-csharp[Main](aspnet-mvc-4-dependency-injection/samples/sample2.cs)]
 
 > [!NOTE]
 > Se producirá un error cuando la clase intenta crear el StoreController sin necesidad de enviar el objeto de servicio, ya que no hay ningún constructor sin parámetros declarado.
-
 
 <a id="Ex1Task1"></a>
 
@@ -181,7 +176,6 @@ En esta tarea, se van a incluir **Unity.Mvc3** paquete NuGet para la solución.
 > Paquete Unity.Mvc3 se diseñó para ASP.NET MVC 3, pero es totalmente compatible con ASP.NET MVC 4.
 > 
 > Unity es un contenedor de inserción de dependencias ligero y extensible con compatibilidad opcional por ejemplo y la intercepción de tipos. Es un contenedor de uso general para su uso en cualquier tipo de aplicación. NET. Proporciona todas las características comunes de mecanismos de inyección de dependencia como: creación de objetos, la abstracción de los requisitos mediante la especificación de dependencias en tiempo de ejecución y la flexibilidad, mediante el aplazamiento de la configuración del componente al contenedor.
-
 
 1. Instalar **Unity.Mvc3** paquete NuGet en el **MvcMusicStore** proyecto. Para ello, abra el **Package Manager Console** desde **vista** | **Other Windows**.
 2. Ejecute el siguiente comando.
@@ -247,7 +241,7 @@ En los ejercicios siguientes obtendrá información sobre cómo ampliar el ámbi
 <a id="Exercise2"></a>
 
 <a id="Exercise_2_Injecting_a_View"></a>
-### <a name="exercise-2-injecting-a-view"></a>Ejercicio 2: Inserción de una vista
+### <a name="exercise-2-injecting-a-view"></a>Ejercicio 2: Inserción de una vista
 
 En este ejercicio, obtendrá información sobre cómo usar la inserción de dependencias en una vista con las nuevas características de ASP.NET MVC 4 para la integración de Unity. Para ello, llamará a un servicio personalizado dentro de la vista de examinar Store, que mostrará un mensaje y una imagen de abajo.
 
@@ -310,7 +304,6 @@ En la tarea anterior, se inserta una nueva dependencia dentro de una vista para 
 > 
 > 
 > [!code-csharp[Main](aspnet-mvc-4-dependency-injection/samples/sample11.cs)]
-
 
 1. Crear el /**generadores** carpeta en la carpeta raíz del proyecto.
 2. Incluir **CustomViewPageActivator.cs** a la solución de **/orígenes/recursos/** a **generadores** carpeta. Para ello, haga clic en el **/Factories** carpeta, seleccione **Add | Elemento existente** y, a continuación, seleccione **CustomViewPageActivator.cs**. Esta clase implementa la **IViewPageActivator** interfaz para albergar el contenedor de Unity.

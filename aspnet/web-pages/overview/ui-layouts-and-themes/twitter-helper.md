@@ -8,12 +8,12 @@ ms.date: 11/26/2018
 ms.assetid: c1a1244e-b9c8-42e6-a00b-8456a4ec027c
 msc.legacyurl: /web-pages/overview/ui-layouts-and-themes/twitter-helper
 msc.type: authoredcontent
-ms.openlocfilehash: 5dda267b146f11355dd94181ef2926e4a304a3ad
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: 76e32b7c808467a9a87c70017dac02bdb895e1df
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59399013"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65132770"
 ---
 # <a name="twitter-helper-with-aspnet-web-pages"></a>Asistente de Twitter con ASP.NET Web Pages
 
@@ -33,7 +33,6 @@ por [Tom FitzMacken](https://github.com/tfitzmac)
 >   
 > 
 > Este tutorial también funciona con ASP.NET Web Pages 2.
-
 
 ## <a name="introduction"></a>Introducción
 

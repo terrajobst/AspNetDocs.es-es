@@ -8,12 +8,12 @@ ms.date: 05/04/2012
 ms.assetid: 2e861511-450e-4752-a61e-4a01933f9b6e
 msc.legacyurl: /web-forms/overview/deployment/configuring-server-environments-for-web-deployment/scenario-configuring-a-production-environment-for-web-deployment
 msc.type: authoredcontent
-ms.openlocfilehash: 586508039b9a3d78492aa02a77a1f29c64668b5e
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: 2d76e715cdbf6ec484fa0ff98b3b3d1d8dfd3961
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59409699"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65125843"
 ---
 # <a name="scenario-configuring-a-production-environment-for-web-deployment"></a>Escenario: Configurar un entorno de producción para la implementación web
 
@@ -22,7 +22,6 @@ por [Jason Lee](https://github.com/jrjlee)
 [Descargar PDF](https://msdnshared.blob.core.windows.net/media/MSDNBlogsFS/prod.evol.blogs.msdn.com/CommunityServer.Blogs.Components.WeblogFiles/00/00/00/63/56/8130.DeployingWebAppsInEnterpriseScenarios.pdf)
 
 > En este tema se describe un escenario de implementación web típica para un entorno de producción y se explica las tareas que necesita para completar con el fin de configurar un entorno similar.
-
 
 El entorno de producción es el destino final de una aplicación web o un sitio Web. En este punto, la aplicación ha sido a través de las pruebas, se ha implementado en un entorno de ensayo y está lista "." Las características de un entorno de producción pueden variar enormemente según la naturaleza y el propósito del contenido web, el tamaño de su organización, la audiencia de destino y muchos otros factores. En un escenario de escala empresarial, el entorno de producción puede tener estas características:
 
@@ -33,7 +32,6 @@ El entorno de producción es el destino final de una aplicación web o un sitio 
 
 > [!NOTE]
 > Escalar horizontalmente una implementación de la base de datos en varios servidores está fuera del ámbito de este tutorial. Para obtener más información sobre este tema, consulte [libros en pantalla de SQL Server](https://technet.microsoft.com/library/ms130214.aspx).
-
 
 Por ejemplo, en nuestro [escenario del tutorial](../deploying-web-applications-in-enterprise-scenarios/enterprise-web-deployment-scenario-overview.md), un servidor de Team Build incluye definiciones de compilación que permiten a los usuarios compilar la solución Contact Manager e implementarlo en un entorno de ensayo en un solo paso. Cuando la aplicación está lista para implementarse en producción, debido a las restricciones impuestas por los requisitos de seguridad y la infraestructura de red, el Administrador de entorno de producción debe copiar el paquete web en un servidor web de producción e importe manualmente él a través del Administrador de Internet Information Services (IIS).
 

@@ -8,17 +8,16 @@ ms.date: 11/11/2011
 ms.assetid: 90b3a37e-2694-41c4-8b10-d6893b53a9d4
 msc.legacyurl: /web-forms/overview/ajax-control-toolkit/animation
 msc.type: chapter
-ms.openlocfilehash: 728d56583fb4192d87d01febf512668068256150
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: 1c0d8eac0314d989afecc5dcbd149f265a022bb6
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59398051"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65127361"
 ---
 # <a name="animation"></a>Animación
 
 > Este tutorial muestra cómo crear animaciones mediante el marco de animación y control de animación.
-
 
 - [Agregar animación a un control (C#)](adding-animation-to-a-control-cs.md)
 - [Ejecutar varias animaciones al mismo tiempo (C#)](executing-several-animations-at-the-same-time-cs.md)

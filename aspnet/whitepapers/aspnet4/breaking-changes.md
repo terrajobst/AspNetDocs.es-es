@@ -8,19 +8,18 @@ ms.date: 02/10/2010
 ms.assetid: d601c540-f86b-4feb-890c-20c806b3da6c
 msc.legacyurl: /whitepapers/aspnet4/breaking-changes
 msc.type: content
-ms.openlocfilehash: a6ae18529afc4df799d95d8b7a98f9bc5add9485
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: 65b13065ae5324ce64ec1b87b2127e5277542fb8
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59385545"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65125669"
 ---
 # <a name="aspnet-4-breaking-changes"></a>Cambios importantes de ASP.NET 4
 
 > Este documento describe los cambios que se han realizado para la versión de .NET Framework versión 4 que puede afectar a las aplicaciones que se crearon con versiones anteriores, incluidas las versiones de ASP.NET 4 Beta 1 y Beta 2.
 > 
 > [Descargue estas notas del producto](https://download.microsoft.com/download/7/1/A/71A105A9-89D6-4201-9CC5-AD6A3B7E2F22/ASP_NET_4_Breaking_Changes.pdf)
-
 
 <a id="0.1__Toc256768952"></a><a id="0.1__Toc256770056"></a>
 
@@ -112,7 +111,6 @@ Si la aplicación contiene definiciones de explorador personalizadas que heredan
 > [!NOTE]
 > El **HttpBrowserCapabilities** objeto (que se expone mediante la página **Request.Browser** propiedad) se controla mediante los archivos de definiciones del explorador. Por lo tanto, la información devuelta por el acceso a una propiedad de este objeto en ASP.NET 4 podría ser diferente de la información devuelta en una versión anterior de ASP.NET.
 
-
 Puede volver a los archivos de definición de explorador antiguo copiando los archivos de definición de explorador de la siguiente carpeta:
 
 [!code-console[Main](breaking-changes/samples/sample5.cmd)]
@@ -195,7 +193,6 @@ Las aplicaciones de ASP.NET 4 configuradas como elementos secundarios de aplicac
 La aplicación en el `childwebapp` carpeta producirá un error iniciar en IIS 7 o IIS 7.5 y notificará un error de configuración. El texto de error incluirá un mensaje similar al siguiente:
 
 - `The requested page cannot be accessed because the related configuration data for the page is invalid.`
-  
 
 - `The configuration section 'configSections' cannot be read because it is missing a section declaration.`
 
@@ -227,7 +224,6 @@ Cuando coloca el **configSections** elemento en la raíz `Web.config` archivo, p
 
 > [!NOTE]
 > En el ejemplo siguiente, las líneas se han ajustado para mejorar la legibilidad.
-
 
 [!code-xml[Main](breaking-changes/samples/sample8.xml)]
 
@@ -283,7 +279,7 @@ En ASP.NET 4, **HttpRequest** en su lugar, las propiedades tienen los siguientes
 
 ## <a name="aspnet-20-applications-might-generate-httpexception-errors-that-reference-eurlaxd"></a>ASP.NET 2.0 podrían generar errores HttpException que hacen referencia a eurl.axd a aplicaciones
 
-Después de que se ha habilitado ASP.NET 4 en IIS 6, las aplicaciones de ASP.NET 2.0 que se ejecutan en IIS 6 (en Windows Server 2003 o Windows Server 2003 R2) podrían generar errores como la siguiente:
+Una vez que se ha habilitado ASP.NET 4 en IIS 6, las aplicaciones de ASP.NET 2.0 que se ejecutan en IIS 6 (en Windows Server 2003 o Windows Server 2003 R2) podrían generar errores como el siguiente:
 
 `System.Web.HttpException: Path '/[yourApplicationRoot]/eurl.axd/[Value]' was not found.`
 
@@ -314,7 +310,6 @@ Si no resulta práctico volver a asignar el sitio Web para ASP.NET 2.0 o para ca
 
 > [!NOTE]
 > Establecer **EnableExtensionlessUrls** 1 habilita el comportamiento de dirección URL sin extensión. Se trata la configuración predeterminada si se especifica ningún valor.
-
 
 <a id="0.1__Toc252995494"></a><a id="0.1__Toc255587643"></a><a id="0.1__Toc256770154"></a><a id="0.1__Toc245724862"></a>
 
@@ -372,7 +367,6 @@ No se puede revertir un escenario en .NET Framework 4: aplicaciones de confianza
 > [!NOTE]
 > El **HtmlEncode** y **HtmlDecode** funcionalidad de la **System.Web.HttpUtility** clase se ha movido a la nueva versión de .NET Framework 4  **System.Net.WebUtility** clase. Si esta fue la única funcionalidad ASP.NET que se estaba usando, modifique el código de la aplicación para usar la nueva **WebUtility** clase en su lugar.
 
-
 Este es un resumen general de los cambios a la implementación de entidades emisoras de certificados predeterminada en ASP.NET 4:
 
 - Dominios de aplicación de ASP.NET ahora son dominios de aplicación homogénea. Conjuntos de concesión de plena confianza y de confianza parcial solo están disponibles en un dominio de aplicación.
@@ -399,7 +393,6 @@ Archivos (binarios) compilados que se crearon con versiones anteriores de ASP.NE
 Sin embargo, se producirá un error de las bibliotecas de clases que usan tipos de suscripción específica y que se han actualizado desde versiones anteriores de ASP.NET compilar cuando se utiliza en un proyecto de ASP.NET 4. Por ejemplo, puede producir un error de un proyecto de biblioteca de clases compilar y notificar un error como el siguiente:
 
 - `The type 'System.Web.Security.MembershipUser' is defined in an assembly that is not referenced. You must add a reference to assembly 'System.Web.ApplicationServices, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35'.`
-  
 
 - `The type name 'MembershipUser' could not be found. This type has been forwarded to assembly 'System.Web.ApplicationServices, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35'. Consider adding a reference to that assembly.`
 

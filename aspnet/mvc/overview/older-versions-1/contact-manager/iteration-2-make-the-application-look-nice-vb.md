@@ -8,12 +8,12 @@ ms.date: 02/20/2009
 ms.assetid: f65cb436-e493-46fd-9608-384b27385aa1
 msc.legacyurl: /mvc/overview/older-versions-1/contact-manager/iteration-2-make-the-application-look-nice-vb
 msc.type: authoredcontent
-ms.openlocfilehash: 21f7974fe066543d6db1d17d462398a998d0171e
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: cd392baaefcfc9eef3551bc534e0b912ccd349cc
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59382582"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65123968"
 ---
 # <a name="iteration-2--make-the-application-look-nice-vb"></a>Iteración #2: que la aplicación parezca interesante (VB)
 
@@ -23,9 +23,7 @@ por [Microsoft](https://github.com/microsoft)
 
 > En esta iteración, mejorar la apariencia de la aplicación mediante la modificación de la página principal de la vista de MVC de ASP.NET predeterminada y en cascada de hoja de estilos.
 
-
 ## <a name="building-a-contact-management-aspnet-mvc-application-vb"></a>Creación de una aplicación de ASP.NET MVC (VB) de administración de contactos
-  
 
 En esta serie de tutoriales, creamos una aplicación de administración de contactos completa desde el principio para finalizar. La aplicación de Contact Manager le permite almacenar información de contacto: los nombres, direcciones de correo electrónico y números de teléfono: para obtener una lista de personas.
 
@@ -49,11 +47,9 @@ Creamos la aplicación a través de varias iteraciones. Con cada iteración, mej
 
 El objetivo de esta iteración es mejorar la apariencia de la aplicación de Contact Manager. Actualmente, el Administrador de contactos usa la página principal de la vista de MVC de ASP.NET de forma predeterminada y la hoja de estilos en cascada (consulte la figura 1). Estos don t aspecto negativo, pero que no necesita el Administrador de contacto para el aspecto de cada otro sitio Web de ASP.NET MVC. Quiero reemplazar estos archivos con los archivos personalizados.
 
-
 [![El cuadro de diálogo nuevo proyecto](iteration-2-make-the-application-look-nice-vb/_static/image1.jpg)](iteration-2-make-the-application-look-nice-vb/_static/image1.png)
 
 **Figura 01**: La apariencia predeterminada de una aplicación ASP.NET MVC ([haga clic aquí para ver imagen en tamaño completo](iteration-2-make-the-application-look-nice-vb/_static/image2.png))
-
 
 En esta iteración, describen dos enfoques para mejorar el diseño visual de nuestra aplicación. En primer lugar, mostraré cómo aprovechar las ventajas de la Galería de diseño de MVC de ASP.NET para descargar una plantilla de diseño de MVC de ASP.NET gratuita. La Galería de diseño de MVC de ASP.NET le permite crear una aplicación web profesionales sin realizar ningún trabajo.
 
@@ -67,11 +63,9 @@ La Galería de diseño de MVC de ASP.NET es un recurso gratuito proporcionado po
 
 La Galería de diseño de MVC de ASP.NET hospeda una colección de diseños de sitio Web gratuito que se crearon específicamente para usar en un proyecto de ASP.NET MVC. Diseños se cargan los miembros de la Comunidad. Los visitantes de la Galería pueden votar por sus diseños favoritos (consulte la figura 2).
 
-
 [![El cuadro de diálogo nuevo proyecto](iteration-2-make-the-application-look-nice-vb/_static/image2.jpg)](iteration-2-make-the-application-look-nice-vb/_static/image3.png)
 
 **Figura 02**: La Galería de diseño de MVC de ASP.NET ([haga clic aquí para ver imagen en tamaño completo](iteration-2-make-the-application-look-nice-vb/_static/image4.png))
-
 
 Mientras escribo este tutorial, el diseño más popular en la galería es un diseño denominado octubre por David Hauser. Puede usar este diseño para un proyecto ASP.NET MVC mediante los pasos siguientes:
 
@@ -82,29 +76,23 @@ Mientras escribo este tutorial, el diseño más popular en la galería es un dis
 5. Haga clic en el nodo del proyecto ContactManager en la ventana Explorador de soluciones de Visual Studio y seleccione la opción de menú **pegar** (consulte la figura 4).
 6. Seleccione la opción de menú de Visual Studio **editar, buscar y reemplazar, reemplazo rápido** y reemplace *[MyProjectName]* con *ContactManager* (consulte la figura 5).
 
-
 [![El cuadro de diálogo nuevo proyecto](iteration-2-make-the-application-look-nice-vb/_static/image3.jpg)](iteration-2-make-the-application-look-nice-vb/_static/image5.png)
 
 **Figura 03**: Desbloquear un archivo descargado de Internet ([haga clic aquí para ver imagen en tamaño completo](iteration-2-make-the-application-look-nice-vb/_static/image6.png))
-
 
 [![El cuadro de diálogo nuevo proyecto](iteration-2-make-the-application-look-nice-vb/_static/image4.jpg)](iteration-2-make-the-application-look-nice-vb/_static/image7.png)
 
 **Figura 04**: Sobrescribiendo los archivos en el Explorador de soluciones ([haga clic aquí para ver imagen en tamaño completo](iteration-2-make-the-application-look-nice-vb/_static/image8.png))
 
-
 [![El cuadro de diálogo nuevo proyecto](iteration-2-make-the-application-look-nice-vb/_static/image5.jpg)](iteration-2-make-the-application-look-nice-vb/_static/image9.png)
 
 **Figura 05**: Sustituyendo [ProjectName] ContactManager ([haga clic aquí para ver imagen en tamaño completo](iteration-2-make-the-application-look-nice-vb/_static/image10.png))
 
-
 Después de completar estos pasos, la aplicación web usará el nuevo diseño. La página en la figura 6 muestra la apariencia de la aplicación de Contact Manager con el diseño de octubre.
-
 
 [![El cuadro de diálogo nuevo proyecto](iteration-2-make-the-application-look-nice-vb/_static/image6.jpg)](iteration-2-make-the-application-look-nice-vb/_static/image11.png)
 
 **Figura 06**: ContactManager con la plantilla de octubre ([haga clic aquí para ver imagen en tamaño completo](iteration-2-make-the-application-look-nice-vb/_static/image12.png))
-
 
 ## <a name="creating-a-custom-aspnet-mvc-design"></a>Crear un diseño MVC de ASP.NET personalizados
 
@@ -114,11 +102,9 @@ Sin embargo, es posible que deba crear un diseño completamente único para el s
 
 De Contact Manager de iteración 1 y lo envíe el proyecto a la empresa de diseño. No poseen (es lamentable en ellas!) de Visual Studio, pero que no presentan un problema. Podían descargar Microsoft Visual Web Developer de forma gratuita desde el [ https://www.asp.net ](https://www.asp.net) sitio Web y abra la aplicación de Contact Manager en Visual Web Developer. En un par de días, se hubiera producido el diseño en la figura 7.
 
-
 [![El cuadro de diálogo nuevo proyecto](iteration-2-make-the-application-look-nice-vb/_static/image7.jpg)](iteration-2-make-the-application-look-nice-vb/_static/image13.png)
 
 **Figura 07**: El diseño de ASP.NET MVC Contact Manager ([haga clic aquí para ver imagen en tamaño completo](iteration-2-make-the-application-look-nice-vb/_static/image14.png))
-
 
 El nuevo diseño del consistió en dos archivos principales: un nuevo archivo de hoja de estilos en cascada y un nuevo archivo de página de vista maestra. Una página maestra de la vista contiene el diseño y el contenido compartido de las vistas en una aplicación ASP.NET MVC. Por ejemplo, la página principal de la vista incluye el encabezado, las pestañas de navegación y pie de página que aparecen en la figura 7. Sobrescribió el Site.Master Vista página principal existente en la carpeta Views\Shared con el nuevo archivo Site.Master de la compañía de diseño
 
@@ -138,11 +124,9 @@ El método de Html.ActionLink() representa un hipervínculo HTML completo. El m�
 
 Además, tenga en cuenta que el nuevo diseño incluye pestañas seleccionadas o sin seleccionadas. Por ejemplo, en la figura 8, el **crear nuevo contacto** pestaña está seleccionada y el **Mis contactos** ficha no está seleccionada.
 
-
 [![El cuadro de diálogo nuevo proyecto](iteration-2-make-the-application-look-nice-vb/_static/image8.jpg)](iteration-2-make-the-application-look-nice-vb/_static/image15.png)
 
 **Figura 08**: Activada y desactivada pestañas ([haga clic aquí para ver imagen en tamaño completo](iteration-2-make-the-application-look-nice-vb/_static/image16.png))
-
 
 Para poder representar pestañas seleccionadas o sin seleccionadas, he creado una aplicación auxiliar HTML personalizada denominada el MenuItemHelper. Este método auxiliar representa cualquiera un &lt;li&gt; etiqueta o una &lt;clase li = "selected"&gt; etiqueta en función de si el controlador actual y la acción se corresponde con el nombre de acción y controlador pasado a la aplicación auxiliar. El código para el MenuItemHelper está contenido en el listado 1.
 

@@ -8,12 +8,12 @@ ms.date: 07/30/2013
 ms.assetid: 4ba029b6-ee7c-4e45-a0e7-b703c37e5d9a
 msc.legacyurl: /mvc/overview/older-versions/getting-started-with-ef-5-using-mvc-4/creating-an-entity-framework-data-model-for-an-asp-net-mvc-application
 msc.type: authoredcontent
-ms.openlocfilehash: eeed594e785b99146140dcd2833a95bf6e467823
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: abb59f16759a7d32c6900baf96fe3a1299170922
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59390446"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65129797"
 ---
 # <a name="creating-an-entity-framework-data-model-for-an-aspnet-mvc-application-1-of-10"></a>Creación de un modelo de datos de Entity Framework para una aplicación ASP.NET MVC (1 de 10)
 
@@ -57,7 +57,6 @@ por [Tom Dykstra](https://github.com/tdykstra)
 > ## <a name="original-version-of-the-tutorial"></a>Versión original del tutorial
 > 
 > La versión original de este tutorial está disponible en el [EF 4.1 o e-book de MVC 3](https://social.technet.microsoft.com/wiki/contents/articles/11608.e-book-gallery-for-microsoft-technologies.aspx#GettingStartedwiththeEntityFramework4.1usingASP.NETMVC).
-
 
 ## <a name="the-contoso-university-web-application"></a>La aplicación Web de Contoso University
 
@@ -130,7 +129,6 @@ En las secciones siguientes creará una clase para cada una de estas entidades.
 
 > [!NOTE]
 > Si intenta compilar el proyecto antes de finalizar la creación de todas estas clases de entidad, obtendrá errores del compilador.
-
 
 ### <a name="the-student-entity"></a>La entidad Student
 

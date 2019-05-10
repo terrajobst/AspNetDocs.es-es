@@ -8,12 +8,12 @@ ms.date: 07/21/2010
 ms.assetid: f70a310c-9557-4743-82cb-655265676d39
 msc.legacyurl: /web-forms/overview/older-versions-getting-started/tailspin-spyworks/tailspin-spyworks-part-6
 msc.type: authoredcontent
-ms.openlocfilehash: 34c8776636478e8c40064bb29ae0311ee4fdc8d8
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: b0caa89dc9ffb5bb7451fa2d9d346c7db2bf1466
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59409790"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65130874"
 ---
 # <a name="part-6-aspnet-membership"></a>Parte 6: Pertenencia a ASP.NET
 
@@ -22,7 +22,6 @@ por [Joe Stagner](https://github.com/JoeStagner)
 > Tailspin Spyworks demuestra cómo extraordinariamente simple es crear aplicaciones eficaces y escalables para la plataforma. NET. Resalta cómo usar las características nuevas en ASP.NET 4 para crear una tienda en línea, incluida la compra, la desprotección y la administración.
 > 
 > Esta serie de tutoriales detalla todos los pasos que se tarda en compilar la aplicación de ejemplo Tailspin Spyworks. Parte 6 agrega la pertenencia a ASP.NET.
-
 
 ## <a id="_Toc260221672"></a>  Trabajar con la pertenencia a ASP.NET
 
@@ -99,7 +98,6 @@ SubmitOrder hará lo siguiente:
 - Tomar todos los elementos de línea en el carro de la compra y usarlos para crear un nuevo registro de pedido y los registros de OrderDetails asociados.
 - Calcular la fecha de envío.
 - Desactive el carro de la compra.
-
 
 [!code-csharp[Main](tailspin-spyworks-part-6/samples/sample10.cs)]
 

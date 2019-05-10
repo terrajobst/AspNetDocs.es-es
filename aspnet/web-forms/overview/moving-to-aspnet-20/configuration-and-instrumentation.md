@@ -8,19 +8,18 @@ ms.date: 02/20/2005
 ms.assetid: 21ebbaee-7ed8-45ae-b6c1-c27c88342e48
 msc.legacyurl: /web-forms/overview/moving-to-aspnet-20/configuration-and-instrumentation
 msc.type: authoredcontent
-ms.openlocfilehash: b06f105b16087f97788e0ab360af41f538d2c1ac
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: cd5bedce5459e8cf8e72df8de69ebd82f2d97789
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59400807"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65131716"
 ---
 # <a name="configuration-and-instrumentation"></a>Configuración e instrumentación
 
 por [Microsoft](https://github.com/microsoft)
 
 > Hay cambios importantes en la configuración e instrumentación de ASP.NET 2.0. La nueva API de configuración de ASP.NET permite que se realicen mediante programación los cambios de configuración. Además, existen muchas nuevas opciones de configuración permiten nuevas configuraciones e instrumentación.
-
 
 Hay cambios importantes en la configuración e instrumentación de ASP.NET 2.0. La nueva API de configuración de ASP.NET permite que se realicen mediante programación los cambios de configuración. Además, existen muchas nuevas opciones de configuración permiten nuevas configuraciones e instrumentación.
 
@@ -40,7 +39,6 @@ La API de configuración de ASP.NET consta de un conjunto de objetos de administ
 > [!NOTE]
 > La API de configuración no admite la creación de aplicaciones de IIS.
 
-
 ## <a name="working-with-local-and-remote-configuration-settings"></a>Trabajar con valores de configuración Local y remoto
 
 Un objeto de configuración representa la vista combinada de las opciones de configuración que se aplican a una entidad física específica, como un equipo, o a una entidad lógica, como una aplicación o un sitio Web. La entidad lógica especificada puede existir en el equipo local o en un servidor remoto. Cuando no existe ningún archivo de configuración para una entidad especificada, el objeto de configuración representa la configuración predeterminada como se define en el archivo Machine.config.
@@ -58,7 +56,6 @@ Utilice el método GetSection o GetSectionGroup para leer información de config
 
 > [!NOTE]
 > Si usa un método GetSection estático que toma un parámetro de ruta de acceso, el parámetro de ruta de acceso debe hacer referencia a la aplicación en el que se ejecuta el código. En caso contrario, se omite el parámetro y se devuelve la información de configuración de la aplicación que se está ejecutando.
-
 
 ### <a name="writing"></a>Escritura
 
@@ -97,7 +94,6 @@ La configuración de objeto representa no representa un archivo de configuració
 
 > [!NOTE]
 > Tenga en cuenta que si no existe la ruta de acceso /ProductInfo, el código anterior devolverá la configuración predeterminada según lo especificado en el archivo machine.config.
-
 
 Una vez que el objeto de configuración, a continuación, puede usar el método GetSection o GetSectionGroup para profundizar en los valores de configuración. El ejemplo siguiente obtiene una referencia a la configuración de suplantación para la aplicación ProductInfo anterior:
 
@@ -199,7 +195,6 @@ También puede reenviar eventos al correo electrónico. Tenga cuidado sobre qué
 
 > [!NOTE]
 > Ninguno de estos proveedores de correo electrónico está configurado para usted. Deberá agregarlos al archivo Web.config.
-
 
 La diferencia principal entre estos proveedores de correo dos electrónico es que SimpleMailWebEventProvider envía mensajes de correo electrónico en una plantilla genérica que no se puede modificar. El archivo Web.config de ejemplo agrega este proveedor de correo electrónico a la lista de proveedores configurados mediante el uso de la siguiente regla:
 
@@ -313,7 +308,6 @@ También puede volver a compilar una aplicación en su lugar después de agregar
 > [!NOTE]
 > Compilación de una aplicación que contiene una aplicación anidada no compila la aplicación anidada. La aplicación anidada se debe compilar por separado.
 
-
 ### <a name="compiling-an-application-for-deploymenthttpsmsdnmicrosoftcomlibraryms229863aspx"></a>[Compilar una aplicación para la implementación](https://msdn.microsoft.com/library/ms229863.aspx)
 
 Compilar una aplicación para la implementación (compilación de una ubicación de destino) especificando el parámetro targetDir. TargetDir puede ser la ubicación final de la aplicación Web o la aplicación compilada se puede implementar más. Mediante el **-u** opción compila la aplicación de tal forma que puede realizar cambios en algunos archivos de la aplicación compilada sin recompilarla. ASPNET\_compiler.exe hace una distinción entre los tipos de archivos estáticos y dinámicos y se controla de manera diferente al crear la aplicación resultante.
@@ -371,7 +365,6 @@ Cada una de las siguientes prácticas se basa en los laboratorios anteriores. De
 2. Agregar un nuevo archivo de configuración Web al sitio.
 3. Agregue lo siguiente al archivo web.config:
 
-
 [!code-xml[Main](configuration-and-instrumentation/samples/sample14.xml)]
 
 Esto garantizará que tiene permiso para guardar los cambios en el archivo web.config.
@@ -381,22 +374,18 @@ Esto garantizará que tiene permiso para guardar los cambios en el archivo web.c
 3. Cambiar el identificador del control de botón a **btnToggleDebug** y el texto para **Alternar estado de depuración**.
 4. Abra la vista de código para el archivo de código subyacente de Default.aspx y agregue un **mediante** instrucción para **System.Web.Configuration** como sigue:
 
-
 [!code-csharp[Main](configuration-and-instrumentation/samples/sample15.cs)]
 
 1. Agregue dos variables privadas a la clase y una página\_Init (método) tal como se muestra a continuación:
-
 
 [!code-csharp[Main](configuration-and-instrumentation/samples/sample16.cs)]
 
 1. Agregue el código siguiente a la página\_carga:
 
-
 [!code-csharp[Main](configuration-and-instrumentation/samples/sample17.cs)]
 
 1. Guarde y examinar default.aspx. Tenga en cuenta que el control de etiqueta muestra el estado de depuración actual.
 2. Haga doble clic en el control de botón en el diseñador y agregue el siguiente código para el evento Click para el control de botón:
-
 
 [!code-csharp[Main](configuration-and-instrumentation/samples/sample18.cs)]
 
@@ -413,16 +402,13 @@ En este laboratorio, creará el código que le permitirá activar o desactivar e
 4. Agregar una nueva etiqueta a default.aspx. Cambie el identificador a **lblLogAppEvents**.
 5. Abra la vista de código subyacente para default.aspx y agregue una nueva declaración de una variable de tipo HealthMonitoringSection tal como se muestra a continuación:
 
-
 [!code-csharp[Main](configuration-and-instrumentation/samples/sample19.cs)]
 
 1. Agregue el código siguiente en el código existente en la página\_Init:
 
-
 [!code-csharp[Main](configuration-and-instrumentation/samples/sample20.cs)]
 
 1. Haga doble clic en DropDownList y agregue el código siguiente al evento SelectedIndexChanged:
-
 
 [!code-csharp[Main](configuration-and-instrumentation/samples/sample21.cs)]
 

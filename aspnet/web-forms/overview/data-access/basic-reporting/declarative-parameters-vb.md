@@ -8,12 +8,12 @@ ms.date: 03/31/2010
 ms.assetid: dc1234a3-114f-4c9a-8d25-50ca03cc8e8e
 msc.legacyurl: /web-forms/overview/data-access/basic-reporting/declarative-parameters-vb
 msc.type: authoredcontent
-ms.openlocfilehash: be792b0511e91b65cf3dd56458630b4e8ec3b5af
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: 2830b6070320e27a8ea367db229bfa9fe411b34c
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59384238"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65132432"
 ---
 # <a name="declarative-parameters-vb"></a>Parámetros declarativos (VB)
 
@@ -22,7 +22,6 @@ por [Scott Mitchell](https://twitter.com/ScottOnWriting)
 [Descargue la aplicación de ejemplo](http://download.microsoft.com/download/5/d/7/5d7571fc-d0b7-4798-ad4a-c976c02363ce/ASPNET_Data_Tutorial_5_VB.exe) o [descargar PDF](declarative-parameters-vb/_static/datatutorial05vb1.pdf)
 
 > En este tutorial le explicaremos cómo usar un parámetro establecido en un valor codificado de forma rígida para seleccionar los datos que se va a mostrar en un control DetailsView.
-
 
 ## <a name="introduction"></a>Introducción
 
@@ -36,35 +35,27 @@ En este tutorial comenzar, creemos que ilustra cómo usar un parámetro establec
 
 Para el primer ejemplo, empiece por agregar un control DetailsView en la `DeclarativeParams.aspx` página en el `BasicReporting` carpeta. En las etiquetas inteligentes de DetailsView, seleccione &lt;nuevo origen de datos&gt; en la lista desplegable lista y elija Agregar un origen ObjectDataSource.
 
-
 [![Agregar un origen ObjectDataSource a la página](declarative-parameters-vb/_static/image2.png)](declarative-parameters-vb/_static/image1.png)
 
 **Figura 1**: Agregar un origen ObjectDataSource a la página ([haga clic aquí para ver imagen en tamaño completo](declarative-parameters-vb/_static/image3.png))
 
-
 Esto iniciará automáticamente el Asistente de Elegir origen de datos del control ObjectDataSource. Seleccione el `ProductsBLL` clase a partir de la primera pantalla del asistente.
-
 
 [![Seleccione la clase ProductsBLL](declarative-parameters-vb/_static/image5.png)](declarative-parameters-vb/_static/image4.png)
 
 **Figura 2**: Seleccione el `ProductsBLL` clase ([haga clic aquí para ver imagen en tamaño completo](declarative-parameters-vb/_static/image6.png))
 
-
 Puesto que queremos mostrar información sobre un producto determinado que deseamos utilizar el `GetProductByProductID(productID)` método.
-
 
 [![Elija el método GetProductByProductID(productID)](declarative-parameters-vb/_static/image8.png)](declarative-parameters-vb/_static/image7.png)
 
 **Figura 3**: Elija la `GetProductByProductID(productID)` método ([haga clic aquí para ver imagen en tamaño completo](declarative-parameters-vb/_static/image9.png))
 
-
 Dado que el método seleccionamos incluye un parámetro, hay una pantalla más para que el asistente, donde se nos pide que defina el valor que se usará para el parámetro. La lista de la izquierda muestra todos los parámetros para el método seleccionado. Para `GetProductByProductID(productID)` solo hay un `productID`. Podemos especificar el valor para el parámetro seleccionado en la parte derecha. La lista desplegable de origen de parámetro enumera los distintos orígenes posibles para el valor del parámetro. Puesto que deseamos especificar un valor codificado de forma rígida de 5 para el `productID` parámetro, deje el origen del parámetro como Ninguno y escriba 5 en el cuadro de texto DefaultValue.
-
 
 [![Un Hard-Coded parámetro de valor de 5 se utilizará para el parámetro productID](declarative-parameters-vb/_static/image11.png)](declarative-parameters-vb/_static/image10.png)
 
 **Figura 4**: Un Hard-Coded parámetro de valor de 5 se utilizará para el `productID` parámetro ([haga clic aquí para ver imagen en tamaño completo](declarative-parameters-vb/_static/image12.png))
-
 
 Después de completar el Asistente para configurar orígenes de datos, que incluye marcado declarativo del control ObjectDataSource un `Parameter` objeto en el `SelectParameters` colección para cada uno de los parámetros de entrada esperados por el método definido en el `SelectMethod` propiedad. Puesto que el método que usamos en este ejemplo espera sólo un único parámetro de entrada, `parameterID`, hay sólo una entrada aquí. El `SelectParameters` colección puede contener cualquier clase que deriva el `Parameter` clase en el `System.Web.UI.WebControls` espacio de nombres. Para la base de los valores de parámetro codificado de forma rígida `Parameter` se usa la clase, pero para el otro parámetro de origen opciones una derivada `Parameter` se utiliza la clase; también puede crear sus propios [tipos de parámetros personalizados](http://www.leftslipper.com/ShowFaq.aspx?FaqId=11), si es necesario.
 
@@ -73,40 +64,31 @@ Después de completar el Asistente para configurar orígenes de datos, que inclu
 > [!NOTE]
 > Si, siga estos pasos en su propio equipo el marcado declarativo verá en este momento puede incluir los valores para el `InsertMethod`, `UpdateMethod`, y `DeleteMethod` propiedades, así como `DeleteParameters`. Asistente de Elegir origen de datos de ObjectDataSource especifica automáticamente los métodos de la `ProductBLL` que se usará para insertar, actualizar y eliminar, por lo que, a menos que se los horizontal desactiva explícitamente, deberá incluirse en el marcado anterior.
 
-
 Al visitar esta página, los datos de control Web invocará la ObjectDataSource `Select` método, que llamará el `ProductsBLL` la clase `GetProductByProductID(productID)` método utilizando el valor codificado de forma rígida de 5 para el `productID` parámetro de entrada. El método devolverá fuertemente tipadas `ProductDataTable` objeto que contiene una sola fila con información acerca tártara de Chef Antón (el producto con `ProductID` 5).
-
 
 [![Se muestran tártara del información sobre Chef Antón](declarative-parameters-vb/_static/image14.png)](declarative-parameters-vb/_static/image13.png)
 
 **Figura 5**: Se muestran tártara del información sobre Chef Antón ([haga clic aquí para ver imagen en tamaño completo](declarative-parameters-vb/_static/image15.png))
 
-
 ## <a name="setting-the-parameter-value-to-the-property-value-of-a-web-control"></a>Establecer el valor del parámetro con el valor de propiedad de un Control Web
 
 Parámetro de ObjectDataSource también se pueden establecer los valores según el valor de un control Web en la página. Para ilustrar esto, vamos a tener un control GridView que muestra todos los proveedores que se encuentran en un país o región especificado por el usuario. Para realizar este tutorial de inicio mediante la adición de un cuadro de texto a la página en la que el usuario puede escribir un nombre de país. Establecer este control de cuadro de texto `ID` propiedad `CountryName`. Agregue también un control de botón Web.
-
 
 [![Agregue un cuadro de texto a la página con el Id. de CountryName](declarative-parameters-vb/_static/image17.png)](declarative-parameters-vb/_static/image16.png)
 
 **Figura 6**: Agregue un cuadro de texto a la página con `ID` `CountryName` ([haga clic aquí para ver imagen en tamaño completo](declarative-parameters-vb/_static/image18.png))
 
-
 A continuación, agregue un control GridView a la página y, en la etiqueta inteligente, optar por agregar un nuevo origen ObjectDataSource. Puesto que deseamos mostrar seleccionar información de proveedor la `SuppliersBLL` clase a partir de la pantalla del asistente primera. En la segunda pantalla, elija el `GetSuppliersByCountry(country)` método.
-
 
 [![Elija el método GetSuppliersByCountry(country)](declarative-parameters-vb/_static/image20.png)](declarative-parameters-vb/_static/image19.png)
 
 **Figura 7**: Elija la `GetSuppliersByCountry(country)` método ([haga clic aquí para ver imagen en tamaño completo](declarative-parameters-vb/_static/image21.png))
 
-
 Puesto que el `GetSuppliersByCountry(country)` método tiene un parámetro de entrada, una vez más, el asistente incluye una pantalla final para elegir el valor del parámetro. Esta vez, establezca el parámetro source al Control. Esto rellenará la lista desplegable iDControl con los nombres de los controles en la página; Seleccione el `CountryName` control en la lista. Cuando primero se visita la página el `CountryName` TextBox estará en blanco, por lo que se devuelve ningún resultado y se muestra nada. Si desea mostrar algunos resultados de forma predeterminada, establezca el cuadro de texto DefaultValue en consecuencia.
-
 
 [![Establece el valor del parámetro en el valor del Control CountryName](declarative-parameters-vb/_static/image23.png)](declarative-parameters-vb/_static/image22.png)
 
 **Figura 8**: Establece el valor del parámetro en el `CountryName` valor de Control ([haga clic aquí para ver imagen en tamaño completo](declarative-parameters-vb/_static/image24.png))
-
 
 Marcado declarativo de ObjectDataSource difiere ligeramente de nuestro primer ejemplo, mediante un [ControlParameter](https://msdn.microsoft.com/library/system.web.ui.webcontrols.controlparameter.aspx) en lugar del estándar `Parameter` objeto. Un `ControlParameter` tiene propiedades adicionales para especificar el `ID` del control Web y el valor de propiedad que se utilizará para el parámetro (`PropertyName`). El Asistente para configurar orígenes de datos fue lo suficientemente inteligente como para determinar que, para un cuadro de texto, probablemente deseará usar la `Text` propiedad para el valor del parámetro. Si, sin embargo, desea utilizar un valor de propiedad diferente desde el control Web puede cambiar el `PropertyName` valor aquí o haciendo clic en el vínculo "Mostrar propiedades avanzadas" en el asistente.
 
@@ -116,11 +98,9 @@ Cuando se visita la página por primera vez el `CountryName` cuadro de texto est
 
 Una vez que el visitante entra en un país, sin embargo y hace clic en el botón Mostrar proveedores para que se produzca un postback, ObjectDataSource `Select` se requiere el método, pasando el control de cuadro de texto `Text` valor como el `country` parámetro.
 
-
 [![Se muestran los proveedores de Canadá](declarative-parameters-vb/_static/image26.png)](declarative-parameters-vb/_static/image25.png)
 
 **Figura 9**: Se muestran los proveedores de Canadá ([haga clic aquí para ver imagen en tamaño completo](declarative-parameters-vb/_static/image27.png))
-
 
 ## <a name="showing-all-suppliers-by-default"></a>Mostrar todos los proveedores de forma predeterminada
 
@@ -138,11 +118,9 @@ Cambiar el `GetSuppliersByCountry(country)` método en el `SuppliersBLL` clase a
 
 Con este cambio la `DeclarativeParams.aspx` página muestra todos los proveedores cuando visita en primer lugar (o cada vez que la `CountryName` cuadro de texto está vacía).
 
-
 [![Todos los proveedores son ahora se muestran de forma predeterminada](declarative-parameters-vb/_static/image29.png)](declarative-parameters-vb/_static/image28.png)
 
 **Figura 10**: Todos los proveedores son ahora se muestran de forma predeterminada ([haga clic aquí para ver imagen en tamaño completo](declarative-parameters-vb/_static/image30.png))
-
 
 ## <a name="summary"></a>Resumen
 

@@ -8,12 +8,12 @@ ms.date: 05/04/2012
 ms.assetid: ba92788f-9f03-44b1-b6b2-af8413e6a35d
 msc.legacyurl: /web-forms/overview/deployment/configuring-server-environments-for-web-deployment/configuring-a-web-server-for-web-deploy-publishing-offline-deployment
 msc.type: authoredcontent
-ms.openlocfilehash: 66a784430de734c8b1387c950382472ce59d5ccc
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: 873eb9e350d5fadb017b20c4b6d2889e0df00091
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59422140"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65126024"
 ---
 # <a name="configuring-a-web-server-for-web-deploy-publishing-offline-deployment"></a>Configurar un servidor web para la publicación de la implementación web (implementación sin conexión)
 
@@ -30,7 +30,6 @@ por [Jason Lee](https://github.com/jrjlee)
 > - Use *implementación sin conexión*. Este enfoque requiere una configuración mínima del servidor web, pero un administrador del servidor manualmente debe copiar el paquete web en el servidor e importarlo a través del Administrador de IIS.
 > 
 > Para obtener más información sobre las características clave, ventajas y desventajas de estos enfoques, vea [elegir el enfoque de derecha a la implementación Web](choosing-the-right-approach-to-web-deployment.md).
-
 
 Sí, si las restricciones de seguridad o la infraestructura de red impiden la implementación remota. Esto es más probable que sea el caso en entornos de producción a través de Internet, donde se aíslan los servidores web de &#x2014; ya sea físicamente o firewalls y subredes &#x2014; el resto de su infraestructura de servidor.
 
@@ -59,7 +58,6 @@ En este tema le mostrará cómo realizar cada uno de estos procedimientos. Las t
 > [!NOTE]
 > Para obtener más información sobre la unión a los equipos a un dominio, consulte [unir equipos al dominio e iniciar sesión](https://technet.microsoft.com/library/cc725618(v=WS.10).aspx). Para obtener más información sobre cómo configurar direcciones IP estáticas, consulte [configurar una dirección IP estática](https://technet.microsoft.com/library/cc754203(v=ws.10).aspx).
 
-
 ## <a name="install-products-and-components"></a>Instalar productos y componentes
 
 En esta sección le ayudará a instalar los componentes y los productos necesarios en el servidor web. Antes de comenzar, es una buena práctica ejecutar Windows Update para asegurarse de que el servidor está totalmente al día.
@@ -73,7 +71,6 @@ En este caso, deberá instalar estas cosas:
 
 > [!NOTE]
 > Este tutorial describe el uso del instalador de plataforma Web para instalar y configurar los distintos componentes. Aunque no tiene que usar al instalador de plataforma Web, simplifica el proceso de instalación al detectar las dependencias automáticamente y lo que garantiza que siempre obtendrá las versiones más recientes del producto. Para obtener más información, consulte [Microsoft Web Platform Installer 3.0](https://go.microsoft.com/?linkid=9805118).
-
 
 **Para instalar los componentes y productos necesarios**
 
@@ -180,7 +177,6 @@ Es el enfoque más común asignar permisos a la variable local **IIS\_IUSRS** ag
 > [!NOTE]
 > Para obtener más información sobre las identidades del grupo de aplicaciones en IIS 7.5, vea [identidades del grupo de aplicación](https://go.microsoft.com/?linkid=9805123).
 
-
 **Para configurar los permisos de carpeta para un sitio Web IIS**
 
 1. En el Explorador de Windows, vaya a la ubicación de la carpeta local.
@@ -199,7 +195,6 @@ Al instalar Web Deploy, el servicio del agente de implementación Web instalado 
 
 > [!NOTE]
 > No es necesario detener el servicio de agente remoto para importar e implementar un paquete web manualmente. Sin embargo, es una buena práctica para detener y deshabilitar el servicio si no va a usarlo.
-
 
 Puede detener y deshabilitar un servicio de varias formas, con varias utilidades de línea de comandos o los cmdlets de Windows PowerShell. Este procedimiento describe un enfoque sencillo basado en la interfaz de usuario.
 

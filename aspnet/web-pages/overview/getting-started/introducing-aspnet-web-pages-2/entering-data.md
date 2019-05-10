@@ -8,12 +8,12 @@ ms.date: 05/28/2015
 ms.assetid: d37c93fc-25fd-4e94-8671-0d437beef206
 msc.legacyurl: /web-pages/overview/getting-started/introducing-aspnet-web-pages-2/entering-data
 msc.type: authoredcontent
-ms.openlocfilehash: d76f607f1d5e779d43ee15d8f2d697e7b0f147ae
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: b9354a7b97a7df9020a681f709e16a92650cfcf0
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59380124"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65132968"
 ---
 # <a name="introducing-aspnet-web-pages---entering-database-data-by-using-forms"></a>Introducción a las páginas Web ASP.NET: introducción de datos de base de datos mediante el uso de formularios
 
@@ -36,7 +36,6 @@ por [Tom FitzMacken](https://github.com/tfitzmac)
 > - El código SQL `Insert Into` instrucción
 > - El `Validation` auxiliar.
 > - El método `Response.Redirect` .
-
 
 ## <a name="what-youll-build"></a>¿Qué va a crear
 
@@ -155,7 +154,6 @@ Obviamente, no desea que los usuarios puedan especificar información de la pel�
 > Ahora y, a continuación, es importante entender exactamente cuando un valor es null y cuándo es simplemente una cadena vacía. En el código para el *AddMovie* página, obtener los valores de los cuadros de texto mediante `Request.Form["title"]` y así sucesivamente. Cuando la página ejecuta primero (antes de hacer clic en el botón), el valor de `Request.Form["title"]` es null. Pero cuando se envía el formulario, `Request.Form["title"]` Obtiene el valor de la `title` cuadro de texto. No es obvio, pero un cuadro de texto vacío no es null; solo se tiene una cadena vacía en ella. Cuando se ejecuta el código en respuesta al botón, haga clic en, `Request.Form["title"]` tiene una cadena vacía en ella.
 > 
 > ¿Por qué es importante esta distinción? Cuando creó la *películas* tabla, explícitamente dijiste que ninguno de los campos podría ser nulo. Pero aquí tiene un formulario de entrada de nuevas películas, y se dejan los campos en blanco. Cabe esperar la base de datos se quejará cuando intentó guardar nuevas películas que no tienen valores para el género o un año. Pero eso es el punto de &mdash; incluso si se deja en blanco los cuadros de texto, los valores no null; están las cadenas vacías. Como resultado, podemos guardar películas nuevas en la base de datos con estas columnas vacías &mdash; pero no es null. valores &mdash;. Por lo tanto, tendrá que asegurarse de que los usuarios no enviar una cadena vacía, lo que puede hacer mediante la validación de la entrada del usuario.
-
 
 ### <a name="the-validation-helper"></a>Aplicación auxiliar de validación
 

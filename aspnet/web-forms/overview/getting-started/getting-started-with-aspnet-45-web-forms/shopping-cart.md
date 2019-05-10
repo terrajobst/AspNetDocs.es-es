@@ -8,12 +8,12 @@ ms.date: 09/08/2014
 ms.assetid: 6898c601-6c31-432f-8388-e6843f8a17cb
 msc.legacyurl: /web-forms/overview/getting-started/getting-started-with-aspnet-45-web-forms/shopping-cart
 msc.type: authoredcontent
-ms.openlocfilehash: e079318b37563b1b7afe0f842f5b463541de0a81
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: 1c54449e778eac96133cccdc90d86cbbaf05a70f
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59405435"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65132107"
 ---
 # <a name="shopping-cart"></a>Carro de la compra
 
@@ -22,7 +22,6 @@ por [Erik Reitan](https://github.com/Erikre)
 [Descargar el proyecto de ejemplo de Wingtip Toys (C#)](http://go.microsoft.com/fwlink/?LinkID=389434&clcid=0x409) o [descargar eBook (PDF)](http://download.microsoft.com/download/0/F/B/0FBFAA46-2BFD-478F-8E56-7BF3C672DF9D/Getting%20Started%20with%20ASP.NET%204.5%20Web%20Forms%20and%20Visual%20Studio%202013.pdf)
 
 > Esta serie de tutoriales aprenderá los conceptos básicos de la creación de una aplicación de formularios Web Forms ASP.NET con ASP.NET 4.5 y Microsoft Visual Studio Express 2013 para Web. Un Visual Studio 2013 [proyecto con código fuente de C#](https://go.microsoft.com/fwlink/?LinkID=389434&clcid=0x409) está disponible para acompañar esta serie de tutoriales.
-
 
 Este tutorial describe la lógica de negocios necesaria para agregar un carro de la compra a la aplicación de formularios Web Forms de ASP.NET de ejemplo Wingtip Toys. Este tutorial se basa en el tutorial anterior, "Mostrar datos de elementos y detalles" y forma parte de la serie de tutoriales de Wingtip Toys Store. Cuando haya completado este tutorial, los usuarios de la aplicación de ejemplo podrá agregar, quitar y modificar los productos de su carro de la compra.
 
@@ -49,7 +48,6 @@ Anteriormente en esta serie de tutoriales, agrega las páginas y el código para
 > [!NOTE] 
 > 
 > El estado de sesión de ASP.NET es un lugar conveniente para almacenar información específica del usuario que expirará después de que el usuario abandone el sitio. Mientras un uso incorrecto del estado de sesión puede tener implicaciones de rendimiento en los sitios más grandes, claro de uso de la sesión de estado funciona bien para fines de demostración. El proyecto de ejemplo Wingtip Toys muestra cómo utilizar el estado de sesión sin un proveedor externo, donde el estado de sesión está almacenado en proceso en el servidor web que hospeda el sitio. Para los sitios más grandes que proporcionan varias instancias de una aplicación o para sitios que ejecutan varias instancias de una aplicación en distintos servidores, considere el uso de **Windows Azure Cache Service**. Este servicio de caché proporciona un servicio de almacenamiento en caché distribuido que es externa al sitio web y se resuelve el problema del uso de estado de sesión en proceso. Para obtener más información, vea [cómo el estado de sesión de ASP.NET con sitios Web de Windows Azure de uso](https://docs.microsoft.com/azure/redis-cache/cache-aspnet-session-state-provider).
-
 
 ### <a name="add-cartitem-as-a-model-class"></a>Agregar CartItem como una clase de modelo
 
@@ -128,7 +126,6 @@ Como se mencionó anteriormente, creará una página de procesamiento denominada
 > [!NOTE] 
 > 
 > Se modifica el código subyacente (*AddToCart.aspx.cs*) para esta página, no la interfaz de usuario de página (*AddToCart.aspx*).
-
 
 #### <a name="to-create-the-add-to-cart-functionality"></a>Para crear el Add To Cart funcionalidad:
 
@@ -215,7 +212,6 @@ En primer lugar, el `GetTotal` método obtiene el identificador del carro de la 
 > [!NOTE] 
 > 
 > El código anterior usa el tipo que acepta valores null "`int?`". Tipos que aceptan valores null pueden representar todos los valores de un tipo subyacente y también como un valor null. Para obtener más información, vea [utilizar tipos que aceptan valores NULL](https://msdn.microsoft.com/library/2cf62fcy(v=vs.110).aspx).
-
 
 ### <a name="modify-the-shopping-cart-display"></a>Modificar la presentación del carro de la compra
 

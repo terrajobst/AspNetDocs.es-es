@@ -8,12 +8,12 @@ ms.date: 05/04/2012
 ms.assetid: c711b453-01ac-4e65-a48c-93d99bf22e58
 msc.legacyurl: /web-forms/overview/deployment/advanced-enterprise-web-deployment/performing-a-what-if-deployment
 msc.type: authoredcontent
-ms.openlocfilehash: a222aa6bf52ee72e6a0f4ac5503b4b4f78d294fb
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: 73a0e038cc0d4ebae0ffc8ed3fd2de4c9dad673c
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59414327"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65127075"
 ---
 # <a name="performing-a-what-if-deployment"></a>Realizar una implementación de hipótesis
 
@@ -22,7 +22,6 @@ por [Jason Lee](https://github.com/jrjlee)
 [Descargar PDF](https://msdnshared.blob.core.windows.net/media/MSDNBlogsFS/prod.evol.blogs.msdn.com/CommunityServer.Blogs.Components.WeblogFiles/00/00/00/63/56/8130.DeployingWebAppsInEnterpriseScenarios.pdf)
 
 > En este tema se describe cómo realizar "what if" (o simulados) las implementaciones que usan la herramienta de implementación Web de Internet Information Services (IIS) (Web Deploy) y VSDBCMD. Esto le permite determinar los efectos de la lógica de implementación en un entorno de destino determinado antes de implementar realmente la aplicación.
-
 
 En este tema forma parte de una serie de tutoriales que se basa en los requisitos de implementación empresarial de una compañía ficticia denominada Fabrikam, Inc. Esta serie de tutoriales usa una solución de ejemplo&#x2014;el [solución Contact Manager](../web-deployment-in-the-enterprise/the-contact-manager-solution.md)&#x2014;para representar una aplicación web con un nivel realista de complejidad, incluida una aplicación ASP.NET MVC 3, una comunicación de Windows Servicio Foundation (WCF) y un proyecto de base de datos.
 
@@ -42,31 +41,23 @@ Como se describe en [implementar paquetes de Web](../web-deployment-in-the-enter
 
 Si usa MSDeploy.exe directamente, puede ejecutar una implementación "what if" agregando el **– whatif** marca al comando. Por ejemplo, para evaluar qué sucedería si implementó el paquete ContactManager.Mvc.zip en un entorno de ensayo, el comando MSDeploy debe ser similar a esto:
 
-
 [!code-console[Main](performing-a-what-if-deployment/samples/sample1.cmd)]
-
 
 Cuando esté satisfecho con los resultados de la implementación "what if", puede quitar el **– whatif** marca para ejecutar una implementación en vivo.
 
 > [!NOTE]
 > Para obtener más información sobre las opciones de línea de comandos para MSDeploy.exe, consulte [Web implementar la configuración de operación](https://technet.microsoft.com/library/dd569089(WS.10).aspx).
 
-
 Si usas el *. deploy.cmd* archivo, puede ejecutar una implementación "what if" mediante la inclusión de la **/t** marca marca (modo de prueba) en lugar de la **/y** marca ("Sí", o el modo de actualización) en el comando. Por ejemplo, para lo que sucedería si implementó el paquete ContactManager.Mvc.zip mediante la ejecución de evaluar la *. deploy.cmd* archivo, el comando debe ser similar a esto:
-
 
 [!code-console[Main](performing-a-what-if-deployment/samples/sample2.cmd)]
 
-
 Cuando esté satisfecho con los resultados de la implementación de "modo de prueba", puede reemplazar el **/t** marca con un **/y** marca para ejecutar una implementación activa:
-
 
 [!code-console[Main](performing-a-what-if-deployment/samples/sample3.cmd)]
 
-
 > [!NOTE]
 > Para obtener más información sobre las opciones de línea de comandos para *. deploy.cmd* archivos, consulte [Cómo: Instalar un paquete de implementación utilizando el archivo deploy.cmd](https://msdn.microsoft.com/library/ff356104.aspx). Si ejecuta el *. deploy.cmd* archivo sin especificar ningún indicador, la línea de comandos mostrará una lista de los indicadores disponibles.
-
 
 ## <a name="performing-a-what-if-deployment-for-databases"></a>Realización de una implementación "What If" para las bases de datos
 
@@ -80,12 +71,9 @@ Cuando usas VSDBCMD en **implementar** modo, puede usar el **/dd** (o **/DeployT
 > [!NOTE]
 > Si va a implementar un archivo .deploymanifest en lugar de un archivo .dbschema, el comportamiento de la **/dd** conmutador es mucho más complicado. En esencia, VSDBCMD pasará por alto el valor de la **/dd** cambiar si el archivo .deploymanifest incluye un **DeployToDatabase** elemento con un valor de **True**. [Implementación de proyectos de base de datos](../web-deployment-in-the-enterprise/deploying-database-projects.md) describe este comportamiento en su totalidad.
 
-
 Por ejemplo, para generar un script de implementación para el **ContactManager** base de datos sin implementar realmente la base de datos, el comando VSDBCMD debe ser similar a esto:
 
-
 [!code-console[Main](performing-a-what-if-deployment/samples/sample4.cmd)]
-
 
 VSDBCMD es una herramienta de implementación de la base de datos diferencial y, por lo tanto se genera dinámicamente el script de implementación para que contenga todos los comandos SQL necesarios para actualizar la base de datos actual, si existe, al esquema especificado. Revisar el script de implementación es una manera útil para determinar qué afectar a la implementación tendrá en la base de datos actual y los datos que contiene. Por ejemplo, es posible que desee determinar:
 
@@ -107,29 +95,21 @@ Al integrar la implementación de varios paquetes de web o bases de datos en un 
 
 El *Publish.proj* archivo muestra cómo hacerlo. En primer lugar, deberá crear una propiedad para almacenar el valor "what if":
 
-
 [!code-xml[Main](performing-a-what-if-deployment/samples/sample5.xml)]
-
 
 En este caso, ha creado una propiedad denominada **WhatIf** con un valor predeterminado de **false**. Los usuarios pueden invalidar este valor estableciendo la propiedad en **true** en un parámetro de línea de comandos, como verá en breve.
 
 La siguiente fase es parametrizar cualquier Web Deploy y VSDBCMD comandos para que reflejen las marcas de la **WhatIf** valor de propiedad. Por ejemplo, el destino siguiente (procedente del *Publish.proj* de archivos y simplificado) se ejecuta el *. deploy.cmd* archivo para implementar un paquete de web. De forma predeterminada, el comando incluye un **/Y** conmutador ("Sí" o modo de actualización). Si **WhatIf** está establecido en **true**, ésta se reemplazará por un **/T** conmutador (versión de prueba o modo "what if").
 
-
 [!code-xml[Main](performing-a-what-if-deployment/samples/sample6.xml)]
-
 
 De forma similar, el destino siguiente usa la utilidad VSDBCMD para implementar una base de datos. De forma predeterminada, un **/dd** no se incluye el modificador. Esto significa que VSDBCMD generará un script de implementación, pero no implementará la base de datos&#x2014;en otras palabras, un "what if" escenario. Si el **WhatIf** propiedad no está establecida en **true**, un **/dd** se agrega el conmutador y VSDBCMD implementará la base de datos.
 
-
 [!code-xml[Main](performing-a-what-if-deployment/samples/sample7.xml)]
-
 
 Puede usar el mismo enfoque para parametrizar todos los comandos pertinentes en el archivo de proyecto. Cuando desea ejecutar una implementación "what if", a continuación, puede simplemente proporcionar un **WhatIf** valor de propiedad de la línea de comandos:
 
-
 [!code-console[Main](performing-a-what-if-deployment/samples/sample8.cmd)]
-
 
 De este modo, puede ejecutar una implementación "what if" para todos los componentes de proyecto en un solo paso.
 

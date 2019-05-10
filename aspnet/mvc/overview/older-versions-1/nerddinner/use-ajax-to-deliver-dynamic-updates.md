@@ -8,12 +8,12 @@ ms.date: 07/27/2010
 ms.assetid: 18700815-8e6c-4489-91af-7ea9dab6529e
 msc.legacyurl: /mvc/overview/older-versions-1/nerddinner/use-ajax-to-deliver-dynamic-updates
 msc.type: authoredcontent
-ms.openlocfilehash: 56ebc40aa500b62811bac0a5041fa9aa4f91f4ae
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: 3edc02fec546609505b5e085440fa684abe7acd0
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59391057"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65128232"
 ---
 # <a name="use-ajax-to-deliver-dynamic-updates"></a>Usar AJAX para entregar actualizaciones dinámicas
 
@@ -26,7 +26,6 @@ por [Microsoft](https://github.com/microsoft)
 > Paso 10 implementa compatibilidad con los usuarios conectados a RSVP su interés por asistir a una cena, mediante un enfoque basado en Ajax integrado en la página de detalles de la cena.
 > 
 > Si usa ASP.NET MVC 3, se recomienda que siga el [Introducción a trabajar con MVC 3](../../older-versions/getting-started-with-aspnet-mvc3/cs/intro-to-aspnet-mvc-3.md) o [MVC Music Store](../../older-versions/mvc-music-store/mvc-music-store-part-1.md) tutoriales.
-
 
 ## <a name="nerddinner-step-10-ajax-enabling-rsvps-accepts"></a>Paso 10 de NerdDinner: Habilitar las confirmaciones de asistencia de AJAX acepta
 

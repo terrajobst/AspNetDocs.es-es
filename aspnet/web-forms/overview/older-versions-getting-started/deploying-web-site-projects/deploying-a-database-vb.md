@@ -8,12 +8,12 @@ ms.date: 04/23/2009
 ms.assetid: 96ac3e69-04c7-4917-ad06-5f8968c3fbf1
 msc.legacyurl: /web-forms/overview/older-versions-getting-started/deploying-web-site-projects/deploying-a-database-vb
 msc.type: authoredcontent
-ms.openlocfilehash: f7731570a3c96f579c4717a0ab2b5e0d742457f7
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: add2ca4709ea16b10efb11491f6d3fcddb0efb2e
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59403511"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65125727"
 ---
 # <a name="deploying-a-database-vb"></a>Implementar una base de datos (VB)
 
@@ -22,7 +22,6 @@ por [Scott Mitchell](https://twitter.com/ScottOnWriting)
 [Descargar código](http://download.microsoft.com/download/E/6/F/E6FE3A1F-EE3A-4119-989A-33D1A9F6F6DD/ASPNET_Hosting_Tutorial_07_VB.zip) o [descargar PDF](http://download.microsoft.com/download/C/3/9/C391A649-B357-4A7B-BAA4-48C96871FEA6/aspnet_tutorial07_DeployDB_vb.pdf)
 
 > Implementar una aplicación web ASP.NET implica obtener los archivos necesarios y los recursos del entorno de desarrollo al entorno de producción. Para las aplicaciones web controladas por datos, esto incluye el esquema de base de datos y los datos. Este tutorial es el primero de una serie que explora los pasos necesarios para implementar correctamente la base de datos desde el entorno de desarrollo a producción.
-
 
 ### <a name="introduction"></a>Introducción
 
@@ -42,30 +41,24 @@ El `Reviews.mdf` base de datos contiene cuatro tablas:
 - `Books` -incluye un registro por cada revisión con columnas como `Title`, `GenreId`, `ReviewDate`, y `Review`, entre otros.
 - `Authors` : incluye información acerca de cada autor que ha contribuido a un libro revisado.
 - `BooksAuthors` -una tabla de combinación de varios a varios que especifica qué autores han escrito qué libros.
-  
 
 Figura 1 muestra un diagrama de ER de estas cuatro tablas.
-
 
 [![La base de datos de aplicación Web de las revisiones de libro s es consta de cuatro tablas](deploying-a-database-vb/_static/image2.jpg)](deploying-a-database-vb/_static/image1.jpg) 
 
 **Figura 1**: La base de datos de aplicación Web de las revisiones de libro s es consta de cuatro tablas ([haga clic aquí para ver imagen en tamaño completo](deploying-a-database-vb/_static/image3.jpg))
 
-
 La versión anterior del sitio Web de reseñas de libros tenía una página ASP.NET independiente para cada libro. Por ejemplo, hubo una página denominada `~/Tech/TYASP35.aspx` que contenía la revisión para *enseñar a usted mismo ASP.NET 3.5 en 24 horas*. Esta nueva versión controlada por datos del sitio Web tiene las revisiones que se almacenan en la base de datos y una sola página ASP.NET, Review.aspx?ID=*bookId*, que muestra la revisión para el libro especificado. Del mismo modo, hay un Genre.aspx?ID=*genreId* página que enumera los libros del género especificado revisados.
 
 Las figuras 2 y 3 muestran el `Genre.aspx` y `Review.aspx` páginas en acción. Tenga en cuenta la dirección URL en la barra de direcciones para cada página. En la figura 2 TI s Genre.aspx? ID = c 47-82a0-c8ec75de7e0e de la 85d164ba-1123-4. Dado que es 85d164ba-1123-4c47-82a0-c8ec75de7e0e el `GenreId` valor para el género de tecnología, las lecturas de encabezado de página s "De revisiones de tecnología" y la lista con viñetas enumera las revisiones en el sitio que se encuentran en este género.
-
 
 [![La página de género de tecnología](deploying-a-database-vb/_static/image5.jpg)](deploying-a-database-vb/_static/image4.jpg) 
 
 **Figura 2**: La página de tecnología de género ([haga clic aquí para ver imagen en tamaño completo](deploying-a-database-vb/_static/image6.jpg))
 
-
 [![La revisión para Teach Yourself ASP.NET 3.5 en 24 horas](deploying-a-database-vb/_static/image8.jpg)](deploying-a-database-vb/_static/image7.jpg) 
 
 **Figura 3**: La revisión para *enseñar a usted mismo ASP.NET 3.5 en 24 horas* ([haga clic aquí para ver imagen en tamaño completo](deploying-a-database-vb/_static/image9.jpg))
-
 
 La aplicación web de revisiones de libro también incluye una sección de administración donde los administradores pueden agregar, editar y eliminar géneros, revisiones y la información de autor. Actualmente, cualquier visitante puede tener acceso a la sección de administración. En un futuro tutorial analizaremos agregar compatibilidad para las cuentas de usuario y permitir que los usuarios autorizados solo en las páginas de administración.
 
@@ -95,48 +88,38 @@ Permiten s recorra utilizando al Asistente para publicación de base de datos pa
 
 Abra Visual Studio y navegue hasta la `Reviews.mdf` base de datos. Si usas Visual Web Developer, vaya al explorador de base de datos; Si utiliza Visual Studio, utilice el Explorador de servidores. Figura 4 se muestra el `Reviews.mdf` base de datos en el Explorador de base de datos en Visual Web Developer. Como se muestra en la figura 4, el `Reviews.mdf` base de datos se compone de cuatro tablas, tres procedimientos almacenados y una función definida por el usuario.
 
-
 [![Busque la base de datos en el Explorador de base de datos o el Explorador de servidores](deploying-a-database-vb/_static/image11.jpg)](deploying-a-database-vb/_static/image10.jpg) 
 
 **Figura 4**: Busque la base de datos en el Explorador de base de datos o el Explorador de servidores ([haga clic aquí para ver imagen en tamaño completo](deploying-a-database-vb/_static/image12.jpg))
 
-
 Haga doble clic en el nombre de la base de datos y elija la opción "Publicar en proveedor" en el menú contextual. Esto inicia el Asistente para publicación de base de datos (consulte la figura 5). Haga clic en siguiente para ir más allá de la pantalla de presentación.
-
 
 [![La pantalla de bienvenida del Asistente de publicación de la base de datos](deploying-a-database-vb/_static/image14.jpg)](deploying-a-database-vb/_static/image13.jpg) 
 
 **Figura 5**: La pantalla de presentación de Asistente para publicación de base de datos ([haga clic aquí para ver imagen en tamaño completo](deploying-a-database-vb/_static/image15.jpg))
-
 
 La segunda pantalla en el asistente enumera las bases de datos accesibles para el Asistente para publicación de base de datos y le permite elegir si desea incluir todos los objetos en la base de datos seleccionado o bien decidir qué objetos en el script. Seleccione la base de datos adecuada y deje activada la opción "Script todos los objetos en la base de datos seleccionada".
 
 > [!NOTE]
 > Si se produce el error "no hay ningún objeto de base de datos *databaseName* de los tipos que admiten scripts este asistente" al hacer clic en siguiente en la pantalla se muestra en la figura 6, asegúrese de que la ruta de acceso al archivo de base de datos no es demasiado largo. Como se indicó en [este elemento de discusión](http://www.codeplex.com/sqlhost/Thread/View.aspx?ThreadId=11014) en la página de proyecto de Asistente para publicación de base de datos, el error puede producirse si la ruta de acceso al archivo de base de datos es demasiado largo.
 
-
 [![La pantalla de bienvenida del Asistente de publicación de la base de datos](deploying-a-database-vb/_static/image17.jpg)](deploying-a-database-vb/_static/image16.jpg) 
 
 **Figura 6**: La pantalla de presentación de Asistente para publicación de base de datos ([haga clic aquí para ver imagen en tamaño completo](deploying-a-database-vb/_static/image18.jpg))
 
-
 Desde la pantalla siguiente puede generar un archivo de script o, si el host web lo admite, publicar la base de datos directamente en el servidor de base de datos web s de proveedor de host. Como se muestra en la figura 7, tengo la secuencia de comandos que se escriben en el archivo `C:\REVIEWS.MDF.sql`.
-
 
 [![La base de datos a un archivo de comandos o publicarlo directamente en su proveedor de hospedaje Web](deploying-a-database-vb/_static/image20.jpg)](deploying-a-database-vb/_static/image19.jpg) 
 
 **Figura 7**: La base de datos a un archivo de comandos o publicarlo directamente en su proveedor de hospedaje Web ([haga clic aquí para ver imagen en tamaño completo](deploying-a-database-vb/_static/image21.jpg))
 
-
 La pantalla posterior le pide para una variedad de opciones de scripting. Puede especificar si la secuencia de comandos debe incluir instrucciones drop para quitar estos objetos existentes. El valor predeterminado es true, lo cual está bien, al implementar una base de datos por primera vez. También puede especificar si la base de datos de destino es SQL Server 2000, SQL Server 2005 o SQL Server 2008. Por último, puede indicar si escribe el esquema y los datos, solo los datos, o simplemente el esquema. El esquema es la colección de objetos de base de datos, tablas, procedimientos almacenados, vistas y así sucesivamente. Los datos son la información que residen en las tablas.
 
 Como se muestra en la figura 8, tenemos configurado para colocar los objetos de base de datos existente, el Asistente para generar script para una base de datos de SQL Server 2008 y para publicar el esquema y los datos.
 
-
 [![Especifique la publicación de opciones](deploying-a-database-vb/_static/image23.jpg)](deploying-a-database-vb/_static/image22.jpg) 
 
 **Figura 8**: Especifique las opciones de publicación ([haga clic aquí para ver imagen en tamaño completo](deploying-a-database-vb/_static/image24.jpg))
-
 
 Las dos pantallas finales resumen las acciones que se va a realizarse y, a continuación, mostrar el estado de las secuencias de comandos. El resultado de ejecutar al asistente es que tenemos un archivo de script que contiene los comandos SQL necesarios para crear la base de datos en producción y rellenarlo con los mismos datos en el desarrollo.
 
@@ -148,32 +131,25 @@ Un mejor enfoque consiste en conectar directamente al servidor de base de datos 
 
 Inicie SSMS y conéctese a su servidor de base de datos de web host s utilizando la información proporcionada por el proveedor de hospedaje web.
 
-
 [![Conectarse al servidor de base de datos Web Host proveedor s](deploying-a-database-vb/_static/image26.jpg)](deploying-a-database-vb/_static/image25.jpg) 
 
 **Figura 9**: Conectarse a su proveedor de hospedaje Web s. el servidor de base de datos ([haga clic aquí para ver imagen en tamaño completo](deploying-a-database-vb/_static/image27.jpg))
 
-
 Expandir la pestaña bases de datos y busque la base de datos. Haga clic en el botón de nueva consulta en la esquina superior izquierda de la barra de herramientas, pegue en los comandos SQL desde el archivo de script creado por el Asistente para publicación de base de datos y haga clic en el botón de ejecución para ejecutar estos comandos en el servidor de base de datos de producción. Si el archivo de script es especialmente grande puede tardar varios minutos para ejecutar los comandos.
-
 
 [![Conectarse al servidor de base de datos Web Host proveedor s](deploying-a-database-vb/_static/image29.jpg)](deploying-a-database-vb/_static/image28.jpg) 
 
 **Figura 10**: Conectarse a su proveedor de hospedaje Web s. el servidor de base de datos ([haga clic aquí para ver imagen en tamaño completo](deploying-a-database-vb/_static/image30.jpg))
 
-
 ¡Y ya está todo s! En este momento se duplicó la base de datos de desarrollo a producción. Si actualiza la base de datos en SSMS debería ver los nuevos objetos de base de datos. Figura 11 muestra las tablas de base de datos s de producción, procedimientos almacenados y funciones definidas por el usuario, que reflejan los de la base de datos de desarrollo. Y ya habíamos dado el Asistente para publicación de base de datos para publicar los datos, las tablas de s de base de datos de producción tienen los mismos datos como las tablas de s de base de datos de desarrollo en el momento en que se ejecutó el asistente. Figura 12 muestra los datos en el `Books` tabla en la base de datos de producción.
-
 
 [![Los objetos de base de datos se han duplicado en la base de datos de producción](deploying-a-database-vb/_static/image32.jpg)](deploying-a-database-vb/_static/image31.jpg) 
 
 **Figura 11**: La base de datos de objetos se han duplicado en la base de datos de producción ([haga clic aquí para ver imagen en tamaño completo](deploying-a-database-vb/_static/image33.jpg))
 
-
 [![La base de datos de producción contiene los mismos datos que la base de datos de desarrollo](deploying-a-database-vb/_static/image35.jpg)](deploying-a-database-vb/_static/image34.jpg) 
 
 **Figura 12**: La base de datos de producción contiene los mismos datos que se encuentra en la base de datos de desarrollo ([haga clic aquí para ver imagen en tamaño completo](deploying-a-database-vb/_static/image36.jpg))
-
 
 En este momento sólo hemos implementado la base de datos de desarrollo a producción. Aún no hemos examinado la implementación de la propia aplicación web o examinar los cambios de configuración son necesarios para la aplicación en producción y usar la base de datos de producción. ¡Hablaremos sobre estos problemas en el siguiente tutorial!
 

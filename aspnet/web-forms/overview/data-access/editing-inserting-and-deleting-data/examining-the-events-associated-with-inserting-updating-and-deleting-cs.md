@@ -8,12 +8,12 @@ ms.date: 07/17/2006
 ms.assetid: dab291a0-a8b5-46fa-9dd8-3d35b249201f
 msc.legacyurl: /web-forms/overview/data-access/editing-inserting-and-deleting-data/examining-the-events-associated-with-inserting-updating-and-deleting-cs
 msc.type: authoredcontent
-ms.openlocfilehash: a8ed5c773a6b566e587f46dfe3a8504162d71c13
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: 8cec4f43063dfc6a624e4f3d819dacd5f1275242
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59395269"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65131594"
 ---
 # <a name="examining-the-events-associated-with-inserting-updating-and-deleting-c"></a>Examinar los eventos relacionados con la inserción, actualización y eliminación (C#)
 
@@ -22,7 +22,6 @@ por [Scott Mitchell](https://twitter.com/ScottOnWriting)
 [Descargue la aplicación de ejemplo](http://download.microsoft.com/download/9/c/1/9c1d03ee-29ba-4d58-aa1a-f201dcc822ea/ASPNET_Data_Tutorial_17_CS.exe) o [descargar PDF](examining-the-events-associated-with-inserting-updating-and-deleting-cs/_static/datatutorial17cs1.pdf)
 
 > En este tutorial que se examinarán con los eventos que se producen antes, durante y después de una inserción, actualizar o eliminar la operación de un control Web de datos ASP.NET. También verá cómo personalizar la interfaz de edición para actualizar solo un subconjunto de los campos de producto.
-
 
 ## <a name="introduction"></a>Introducción
 
@@ -36,11 +35,9 @@ Durante esta secuencia de pasos, un número de eventos se activan, lo que nos pe
 
 Figura 1 se muestra esta serie de eventos y pasos al actualizar un control GridView. El patrón de eventos en la figura 1 no es único a la actualización de un control GridView. Insertar, actualizar o eliminar datos de GridView, DetailsView o FormView precipita la misma secuencia de eventos previos y posteriores al niveles para el control de datos Web y el origen ObjectDataSource.
 
-
 [![Una serie de previo y Fire de eventos posteriores al actualizar datos en un control GridView](examining-the-events-associated-with-inserting-updating-and-deleting-cs/_static/image2.png)](examining-the-events-associated-with-inserting-updating-and-deleting-cs/_static/image1.png)
 
 **Figura 1**: Una serie de previos y los eventos posteriores Fire al actualizar los datos de un control GridView ([haga clic aquí para ver imagen en tamaño completo](examining-the-events-associated-with-inserting-updating-and-deleting-cs/_static/image3.png))
-
 
 En este tutorial que examinaremos usa estos eventos para extender las integradas de inserción, actualización y eliminación de las capacidades de los datos ASP.NET Web controla. También verá cómo personalizar la interfaz de edición para actualizar solo un subconjunto de los campos de producto.
 
@@ -52,31 +49,25 @@ Si desea proporcionar un control Web que permite al usuario final actualizar sol
 
 En concreto, vamos a crear una página que muestra solamente el `ProductName` y `UnitPrice` campos en un control GridView editable. Interfaz de edición de esta GridView sólo permitirá al usuario actualizar los campos que se muestran dos, `ProductName` y `UnitPrice`. Puesto que esta interfaz de edición proporciona solo un subconjunto de campos de un producto, o bien es necesario crear un origen ObjectDataSource que usa la capa BLL existente `UpdateProduct` método y que los valores de campo que faltan de producto establecido mediante programación en su `Updating` eventos controlador, o bien deberá crear un nuevo método BLL que espera que sólo el subconjunto de campos definidos en el control GridView. Para este tutorial, vamos a usar la última opción y crear una sobrecarga de la `UpdateProduct` método, que tarda en sólo tres parámetros de entrada: `productName`, `unitPrice`, y `productID`:
 
-
 [!code-csharp[Main](examining-the-events-associated-with-inserting-updating-and-deleting-cs/samples/sample1.cs)]
 
 Al igual que el original `UpdateProduct` esta sobrecarga de método, comienza comprobando para ver si hay un producto en la base de datos con los valores especificados `ProductID`. Si no, devuelve `false`, que indica que el error en la solicitud para actualizar la información del producto. En caso contrario, actualiza el registro de producto existente `ProductName` y `UnitPrice` campos según corresponda y confirma la actualización mediante una llamada del TableAdapter `Update()` método, pasando el `ProductsRow` instancia.
 
 Con esta adición a nuestro `ProductsBLL` (clase), estamos listos para crear la interfaz de GridView simplificada. Abra el `DataModificationEvents.aspx` en el `EditInsertDelete` carpeta y agregue un control GridView a la página. Crear un nuevo origen ObjectDataSource y configúrelo para utilizar el `ProductsBLL` clase con su `Select()` asignación del método a `GetProducts` y su `Update()` asignación del método a la `UpdateProduct` sobrecarga que toma solo en el `productName`, `unitPrice`, y `productID` parámetros de entrada. La figura 2 muestra el Asistente para crear orígenes de datos al asignar el ObjectDataSource `Update()` método a la `ProductsBLL` la nueva clase `UpdateProduct` sobrecarga del método.
 
-
 [![Map (método) Update() de ObjectDataSource a la nueva sobrecarga UpdateProduct](examining-the-events-associated-with-inserting-updating-and-deleting-cs/_static/image5.png)](examining-the-events-associated-with-inserting-updating-and-deleting-cs/_static/image4.png)
 
 **Figura 2**: Asignación de ObjectDataSource `Update()` método el nuevo `UpdateProduct` sobrecargar ([haga clic aquí para ver imagen en tamaño completo](examining-the-events-associated-with-inserting-updating-and-deleting-cs/_static/image6.png))
 
-
 Puesto que nuestro ejemplo inicialmente solo necesitarán la capacidad de modificar datos, pero no permite insertar o eliminar registros, dedique un momento para indicar explícitamente que el ObjectDataSource `Insert()` y `Delete()` métodos no deben asignarse a cualquiera de los `ProductsBLL` métodos de la clase, vaya a las pestañas INSERT y DELETE y elegir (ninguno) en la lista desplegable.
-
 
 [![Elija (ninguno) en la lista desplegable para las fichas DELETE y INSERT](examining-the-events-associated-with-inserting-updating-and-deleting-cs/_static/image8.png)](examining-the-events-associated-with-inserting-updating-and-deleting-cs/_static/image7.png)
 
 **Figura 3**: Elija (ninguno) de la lista desplegable para la INSERCIÓN y eliminar pestañas ([haga clic aquí para ver imagen en tamaño completo](examining-the-events-associated-with-inserting-updating-and-deleting-cs/_static/image9.png))
 
-
 Después de completar este asistente Active la casilla Habilitar edición de etiquetas inteligentes de GridView.
 
 Con la finalización del Asistente Crear origen de datos y enlazar a GridView, Visual Studio ha creado la sintaxis declarativa para ambos controles. Vaya a la vista de origen para inspeccionar el marcado declarativo de ObjectDataSource, que se indican a continuación:
-
 
 [!code-aspx[Main](examining-the-events-associated-with-inserting-updating-and-deleting-cs/samples/sample2.aspx)]
 
@@ -87,25 +78,19 @@ Tenga en cuenta que el ObjectDataSource `OldValuesParameterFormatString` propied
 > [!NOTE]
 > Si simplemente borre el `OldValuesParameterFormatString` seguirá existiendo en la sintaxis declarativa del valor de propiedad de la ventana de propiedades en la vista Diseño, la propiedad, pero se establecerá en una cadena vacía. Quite la propiedad completamente de la sintaxis declarativa o, en la ventana Propiedades, establezca el valor en el valor predeterminado, `{0}`.
 
-
 Mientras que solo tiene el origen ObjectDataSource `UpdateParameters` para el producto nombre, precio y el identificador, Visual Studio ha agregado un BoundField o CampoCasillaVerificación en GridView para cada uno de los campos del producto.
-
 
 [![GridView contiene un BoundField o CampoCasillaVerificación para cada uno de los campos del producto](examining-the-events-associated-with-inserting-updating-and-deleting-cs/_static/image11.png)](examining-the-events-associated-with-inserting-updating-and-deleting-cs/_static/image10.png)
 
 **Figura 4**: GridView contiene un BoundField o CampoCasillaVerificación para cada uno de los campos del producto ([haga clic aquí para ver imagen en tamaño completo](examining-the-events-associated-with-inserting-updating-and-deleting-cs/_static/image12.png))
 
-
 Cuando el usuario final se edita un producto y hace clic en el botón de actualización, el control GridView enumera los campos que no eran de solo lectura. A continuación, Establece el valor del parámetro correspondiente en el ObjectDataSource `UpdateParameters` colección en el valor especificado por el usuario. Si no es un parámetro correspondiente, el control GridView suma uno a la colección. Por lo tanto, si nuestra GridView contiene BoundFields y CheckBoxFields para todos los campos del producto, el origen ObjectDataSource terminará invocar el `UpdateProduct` sobrecarga que toma en todos estos parámetros, a pesar de que el ObjectDataSource marcado declarativo especifica sólo tres parámetros de entrada (consulte la figura 5). De forma similar, si hay alguna combinación de los que no son de solo lectura producto campos en el control GridView que no se corresponde con los parámetros de entrada para un `UpdateProduct` sobrecarga, se producirá una excepción al intentar actualizar.
-
 
 [![La GridView se realizará agregar parámetros a la colección de ObjectDataSource UpdateParameters](examining-the-events-associated-with-inserting-updating-and-deleting-cs/_static/image14.png)](examining-the-events-associated-with-inserting-updating-and-deleting-cs/_static/image13.png)
 
 **Figura 5**: El control GridView le agregar parámetros a de ObjectDataSource `UpdateParameters` colección ([haga clic aquí para ver imagen en tamaño completo](examining-the-events-associated-with-inserting-updating-and-deleting-cs/_static/image15.png))
 
-
 Para asegurarse de que el origen ObjectDataSource invoca el `UpdateProduct` sobrecarga que toma solo nombre del producto, precio y ID, se necesita restringir el control GridView a tener campos modificables para simplemente el `ProductName` y `UnitPrice`. Esto puede realizarse mediante la eliminación de los demás BoundFields y CheckBoxFields, estableciendo los otros campos `ReadOnly` propiedad `true`, o alguna combinación de ambos. En este tutorial vamos a basta con quitar todos los campos de GridView, excepto el `ProductName` y `UnitPrice` BoundFields, tras el cual marcado declarativo de GridView tendrá el siguiente aspecto:
-
 
 [!code-aspx[Main](examining-the-events-associated-with-inserting-updating-and-deleting-cs/samples/sample3.aspx)]
 
@@ -113,54 +98,42 @@ Aunque el `UpdateProduct` sobrecarga espera tres parámetros de entrada, sólo t
 
 Nuestro GridView, junto con el `UpdateProduct` sobrecarga, permite al usuario editar únicamente el nombre y el precio de un producto sin perder ninguno de los demás campos de producto.
 
-
 [![La interfaz permite simplemente el producto nombre y el precio de edición](examining-the-events-associated-with-inserting-updating-and-deleting-cs/_static/image17.png)](examining-the-events-associated-with-inserting-updating-and-deleting-cs/_static/image16.png)
 
 **Figura 6**: La interfaz permite que simplemente el producto nombre y el precio de edición ([haga clic aquí para ver imagen en tamaño completo](examining-the-events-associated-with-inserting-updating-and-deleting-cs/_static/image18.png))
 
-
 > [!NOTE]
 > Como se describe en el tutorial anterior, es sumamente importante que el control GridView s estado de vista habilitado (comportamiento predeterminado). Si establece la s GridView `EnableViewState` propiedad `false`, corre el riesgo de tener usuarios simultáneos que se eliminen o modifiquen de forma no intencionada de registros. Consulte [advertencia: Simultaneidad emitir con ASP.NET 2.0 GridView y DetailsView/FormViews que compatibilidad con la edición o eliminación y cuyo estado de vista está deshabilitado](http://scottonwriting.net/sowblog/archive/2006/10/03/163215.aspx) para obtener más información.
-
 
 ## <a name="improving-theunitpriceformatting"></a>Mejorar la`UnitPrice`formato
 
 Aunque el ejemplo de GridView que se muestra en la figura 6 funciona, el `UnitPrice` campo no tiene el formato en absoluto, lo que resulta en una pantalla de precio que carece de una moneda símbolos y tiene cuatro decimales. Para aplicar una formato para las filas que no son editables de moneda, basta con establecer la `UnitPrice` del BoundField `DataFormatString` propiedad `{0:c}` y su `HtmlEncode` propiedad `false`.
 
-
 [![Establezca el UnitPrice DataFormatString y HtmlEncode propiedades según corresponda](examining-the-events-associated-with-inserting-updating-and-deleting-cs/_static/image20.png)](examining-the-events-associated-with-inserting-updating-and-deleting-cs/_static/image19.png)
 
 **Figura 7**: Establecer el `UnitPrice`del `DataFormatString` y `HtmlEncode` propiedades según corresponda ([haga clic aquí para ver imagen en tamaño completo](examining-the-events-associated-with-inserting-updating-and-deleting-cs/_static/image21.png))
 
-
 Con este cambio, las filas que no son editables formatear el precio como una moneda; Sin embargo, la fila editada, aún muestra el valor con cuatro decimales y sin el símbolo de moneda.
-
 
 [![No se puede modificar filas son ahora con el formato como valores de moneda](examining-the-events-associated-with-inserting-updating-and-deleting-cs/_static/image23.png)](examining-the-events-associated-with-inserting-updating-and-deleting-cs/_static/image22.png)
 
 **Figura 8**: No se puede modificar filas son ahora con formato de los valores de moneda ([haga clic aquí para ver imagen en tamaño completo](examining-the-events-associated-with-inserting-updating-and-deleting-cs/_static/image24.png))
 
-
 Las instrucciones de formato especificadas en el `DataFormatString` propiedad se puede aplicar a la interfaz de edición estableciendo el BoundField `ApplyFormatInEditMode` propiedad `true` (el valor predeterminado es `false`). Dedique un momento para establecer esta propiedad en `true`.
-
 
 [![Establecer propiedad de ApplyFormatInEditMode de UnitPrice BoundField en true](examining-the-events-associated-with-inserting-updating-and-deleting-cs/_static/image26.png)](examining-the-events-associated-with-inserting-updating-and-deleting-cs/_static/image25.png)
 
 **Figura 9**: Establecer el `UnitPrice` del BoundField `ApplyFormatInEditMode` propiedad `true` ([haga clic aquí para ver imagen en tamaño completo](examining-the-events-associated-with-inserting-updating-and-deleting-cs/_static/image27.png))
 
-
 Con este cambio, el valor de la `UnitPrice` aparece en el texto editado también tiene formato de fila como una moneda.
-
 
 [![Valor de la fila editada UnitPrice es ahora el formato como una moneda](examining-the-events-associated-with-inserting-updating-and-deleting-cs/_static/image29.png)](examining-the-events-associated-with-inserting-updating-and-deleting-cs/_static/image28.png)
 
 **Figura 10**: La fila editada `UnitPrice` valor es ahora el formato como una moneda ([haga clic aquí para ver imagen en tamaño completo](examining-the-events-associated-with-inserting-updating-and-deleting-cs/_static/image30.png))
 
-
 Sin embargo, actualizar un producto con el símbolo de moneda en el cuadro de texto, como $19.00 produce un `FormatException`. Cuando el control GridView intenta asignar los valores proporcionados por el usuario a de ObjectDataSource `UpdateParameters` colección no puede convertir el `UnitPrice` cadena "19.00$" en el `decimal` requerido por el parámetro (consulte la figura 11). Para solucionar este problema podemos crear un controlador de eventos para el control de GridView `RowUpdating` evento y hacer que analizar el proporcionado por el usuario `UnitPrice` como un formato de moneda `decimal`.
 
 La GridView `RowUpdating` eventos acepta como su segundo parámetro de un objeto de tipo [GridViewUpdateEventArgs](https://msdn.microsoft.com/library/system.web.ui.webcontrols.gridviewupdateeventargs(VS.80).aspx), que incluye un `NewValues` diccionario como uno de sus propiedades que contiene los valores proporcionados por el usuario listos para ser asignado a de ObjectDataSource `UpdateParameters` colección. Nos podemos sobrescribir la existente `UnitPrice` valor en el `NewValues` colección con un valor decimal analiza con el formato de moneda con las siguientes líneas de código en el `RowUpdating` controlador de eventos:
-
 
 [!code-csharp[Main](examining-the-events-associated-with-inserting-updating-and-deleting-cs/samples/sample4.cs)]
 
@@ -168,11 +141,9 @@ Si el usuario especificó un `UnitPrice` valor (por ejemplo, "$ las 19: 00"), es
 
 Figura 11 muestra tanto el problema causado por símbolos de moneda de la proporcionada por el usuario `UnitPrice`, junto con cómo la GridView `RowUpdating` controlador de eventos puede utilizarse para analizar correctamente dicha entrada.
 
-
 [![Valor de la fila editada UnitPrice es ahora el formato como una moneda](examining-the-events-associated-with-inserting-updating-and-deleting-cs/_static/image32.png)](examining-the-events-associated-with-inserting-updating-and-deleting-cs/_static/image31.png)
 
 **Figura 11**: La fila editada `UnitPrice` valor es ahora el formato como una moneda ([haga clic aquí para ver imagen en tamaño completo](examining-the-events-associated-with-inserting-updating-and-deleting-cs/_static/image33.png))
-
 
 ## <a name="step-2-prohibitingnull-unitprices"></a>Paso 2: Lo que prohíbe`NULL UnitPrices`
 
@@ -182,34 +153,27 @@ El `GridViewUpdateEventArgs` objeto pasa a la GridView `RowUpdating` controlador
 
 Empiece agregando un control Web de la etiqueta a la página llamada `MustProvideUnitPriceMessage`. Este control de etiqueta se mostrará si el usuario no puede especificar un `UnitPrice` valor al actualizar un producto. Establezca la etiqueta `Text` propiedad "Debe proporcionar un precio para el producto". También he creado una nueva clase CSS en `Styles.css` denominado `Warning` con la siguiente definición:
 
-
 [!code-css[Main](examining-the-events-associated-with-inserting-updating-and-deleting-cs/samples/sample5.css)]
 
 Por último, establezca la etiqueta `CssClass` propiedad `Warning`. En este momento el diseñador debe mostrar el mensaje de advertencia en un color rojo, negrita, cursiva, el tamaño de fuente extra grande por encima del control GridView, tal como se muestra en la figura 12.
-
 
 [![Se ha agregado una etiqueta por encima del control GridView](examining-the-events-associated-with-inserting-updating-and-deleting-cs/_static/image35.png)](examining-the-events-associated-with-inserting-updating-and-deleting-cs/_static/image34.png)
 
 **Figura 12**: Una etiqueta tiene se ha agregado anteriormente GridView ([haga clic aquí para ver imagen en tamaño completo](examining-the-events-associated-with-inserting-updating-and-deleting-cs/_static/image36.png))
 
-
 De forma predeterminada, esta etiqueta debe ocultarse, así que establezca su `Visible` propiedad `false` en el `Page_Load` controlador de eventos:
-
 
 [!code-csharp[Main](examining-the-events-associated-with-inserting-updating-and-deleting-cs/samples/sample6.cs)]
 
 Si el usuario intenta actualizar un producto sin especificar el `UnitPrice`, desea cancelar la actualización y mostrar la etiqueta de advertencia. Aumentar la GridView `RowUpdating` controlador de eventos como sigue:
 
-
 [!code-csharp[Main](examining-the-events-associated-with-inserting-updating-and-deleting-cs/samples/sample7.cs)]
 
 Si un usuario intenta guardar un producto sin especificar un precio, se cancela la actualización y se muestra un mensaje útil. Mientras la base de datos (y la lógica de negocios) permite `NULL` `UnitPrice` s, esta página ASP.NET determinada no lo hace.
 
-
 [![Un usuario no puede dejar en blanco UnitPrice](examining-the-events-associated-with-inserting-updating-and-deleting-cs/_static/image38.png)](examining-the-events-associated-with-inserting-updating-and-deleting-cs/_static/image37.png)
 
 **Figura 13**: Un usuario no puede abandonar `UnitPrice` en blanco ([haga clic aquí para ver imagen en tamaño completo](examining-the-events-associated-with-inserting-updating-and-deleting-cs/_static/image39.png))
-
 
 Hasta ahora hemos visto cómo usar la GridView `RowUpdating` evento para modificar mediante programación los valores de parámetro asignados a de ObjectDataSource `UpdateParameters` colección así como la forma para cancelar la actualización de procesar por completo. Estos conceptos se transmitirán a los controles DetailsView y FormView y también se aplican a la inserción y eliminación.
 
@@ -228,19 +192,15 @@ Para configurar el origen ObjectDataSource, seleccione el vínculo Configurar or
 
 Deje el `Insert()` método al que apunta a la `AddProduct` método, pero volver a establecer la lista desplegable de la pestaña de la eliminación en (None).
 
-
 [![Establece la lista desplegable de la pestaña de INSERCIÓN en el método AddProduct](examining-the-events-associated-with-inserting-updating-and-deleting-cs/_static/image41.png)](examining-the-events-associated-with-inserting-updating-and-deleting-cs/_static/image40.png)
 
 **Figura 14**: Establece la lista desplegable de la pestaña Insertar en el `AddProduct` método ([haga clic aquí para ver imagen en tamaño completo](examining-the-events-associated-with-inserting-updating-and-deleting-cs/_static/image42.png))
-
 
 [![Establecer la lista desplegable de la pestaña de la eliminación en (None)](examining-the-events-associated-with-inserting-updating-and-deleting-cs/_static/image44.png)](examining-the-events-associated-with-inserting-updating-and-deleting-cs/_static/image43.png)
 
 **Figura 15**: Establecer la lista desplegable de la pestaña de eliminar en (None) ([haga clic aquí para ver imagen en tamaño completo](examining-the-events-associated-with-inserting-updating-and-deleting-cs/_static/image45.png))
 
-
 Después de realizar estos cambios, la sintaxis declarativa de ObjectDataSource se ampliará para incluir un `InsertParameters` colección, como se muestra a continuación:
-
 
 [!code-aspx[Main](examining-the-events-associated-with-inserting-updating-and-deleting-cs/samples/sample8.aspx)]
 
@@ -248,32 +208,25 @@ Volver a ejecutar el Asistente para agregar el `OldValuesParameterFormatString` 
 
 Con el origen ObjectDataSource que proporciona funciones de inserción, etiquetas inteligentes de DetailsView ahora incluyen la casilla de verificación Habilitar inserción; volver al diseñador y seleccione esta opción. A continuación, reducir DetailsView para que solo tiene dos BoundFields - `ProductName` y `UnitPrice` - y el CommandField. En este momento, la sintaxis declarativa de DetailsView debería ser similar:
 
-
 [!code-aspx[Main](examining-the-events-associated-with-inserting-updating-and-deleting-cs/samples/sample9.aspx)]
 
 Figura 16 se muestra esta página cuando se ve mediante un explorador en este momento. Como puede ver, DetailsView muestra el nombre y el precio del producto primera (Chai). Sin embargo, se lo que queremos es una interfaz de inserción que proporciona un medio para el usuario agregar rápidamente un nuevo producto a la base de datos.
-
 
 [![DetailsView está representando actualmente en modo de solo lectura](examining-the-events-associated-with-inserting-updating-and-deleting-cs/_static/image47.png)](examining-the-events-associated-with-inserting-updating-and-deleting-cs/_static/image46.png)
 
 **Figura 16**: DetailsView está representando actualmente en modo de solo lectura ([haga clic aquí para ver imagen en tamaño completo](examining-the-events-associated-with-inserting-updating-and-deleting-cs/_static/image48.png))
 
-
 Para poder mostrar DetailsView en su modo de inserción es necesario establecer la `DefaultMode` propiedad `Inserting`. Esto representa DetailsView en modo de inserción cuando visita en primer lugar y mantiene allí después de insertar un nuevo registro. Como se muestra en la figura 17, tal DetailsView proporciona una interfaz rápida para agregar un nuevo registro.
-
 
 [![DetailsView proporciona una interfaz para agregar rápidamente un nuevo producto](examining-the-events-associated-with-inserting-updating-and-deleting-cs/_static/image50.png)](examining-the-events-associated-with-inserting-updating-and-deleting-cs/_static/image49.png)
 
 **Figura 17**: DetailsView proporciona una interfaz para agregar rápidamente un nuevo producto ([haga clic aquí para ver imagen en tamaño completo](examining-the-events-associated-with-inserting-updating-and-deleting-cs/_static/image51.png))
 
-
 Cuando el usuario introduce un nombre de producto y el precio (por ejemplo, "Water Acme" y 1.99, como se muestra en la figura 17) y hace clic en Insertar, una devolución de datos que habrá trastornos y comienza el flujo de trabajo de inserción, y se culmina en un nuevo registro de producto que se va a agregar a la base de datos. DetailsView mantiene su interfaz de inserción y el control GridView se automáticamente vuelve a enlazar al origen de datos con el fin de incluir el nuevo producto, tal como se muestra en la figura 18.
-
 
 ![El producto](examining-the-events-associated-with-inserting-updating-and-deleting-cs/_static/image52.png)
 
 **Figura 18**: El producto "Agua Acme" se ha agregado a la base de datos
-
 
 Mientras el control GridView en la figura 18, no muestra los campos de producto que carecen de la interfaz DetailsView `CategoryID`, `SupplierID`, `QuantityPerUnit`, y así sucesivamente se asignan `NULL` los valores de la base de datos. Puede ver esto mediante la realización de los pasos siguientes:
 
@@ -284,11 +237,9 @@ Mientras el control GridView en la figura 18, no muestra los campos de producto 
 
 Esto mostrará todos los registros en el `Products` tabla. Como la figura 19 se muestra, todas las columnas de nuestro nuevo producto de distinto `ProductID`, `ProductName`, y `UnitPrice` tiene `NULL` valores.
 
-
 [![Los campos de producto no proporcionado en DetailsView están asignados los valores NULL](examining-the-events-associated-with-inserting-updating-and-deleting-cs/_static/image54.png)](examining-the-events-associated-with-inserting-updating-and-deleting-cs/_static/image53.png)
 
 **Figura 19**: Se asignan los campos de producto no proporcionado en DetailsView `NULL` valores ([haga clic aquí para ver imagen en tamaño completo](examining-the-events-associated-with-inserting-updating-and-deleting-cs/_static/image55.png))
-
 
 Nos conviene proporcionar un valor predeterminado distinto `NULL` para uno o varios de estos valores de columna, ya sea porque `NULL` no sea la mejor opción predeterminada o porque no permite la misma columna de base de datos `NULL` s. Para lograr esto podemos establecer mediante programación los valores de los parámetros de la DetailsView `InputParameters` colección. Esta asignación puede hacerse ya sea en el evento controlador para el DetailsView `ItemInserting` eventos o el ObjectDataSource `Inserting` eventos. Puesto que ya hemos analizado en el uso de los eventos anteriores y posteriores al niveles en los datos Web controlar el nivel, vamos a examinar mediante eventos de ObjectDataSource en este momento.
 
@@ -299,24 +250,19 @@ En este tutorial vamos a imaginar que para nuestra aplicación al agregar un nue
 > [!NOTE]
 > En una aplicación real, probablemente querría para permitir que el usuario especifica la categoría y el proveedor o podría seleccionar este valor para ellos según algunos criterios o business logic (en lugar de ciegamente seleccionando un identificador 1). No obstante, en el ejemplo se muestra cómo establecer mediante programación el valor de un parámetro de entrada de eventos en el nivel previamente de ObjectDataSource.
 
-
 Dedique un momento para crear un controlador de eventos para el origen de ObjectDataSource `Inserting` eventos. Tenga en cuenta que el segundo parámetro de entrada del controlador de eventos es un objeto de tipo `ObjectDataSourceMethodEventArgs`, que tiene una propiedad para tener acceso a la colección de parámetros (`InputParameters`) y una propiedad para cancelar la operación (`Cancel`).
-
 
 [!code-csharp[Main](examining-the-events-associated-with-inserting-updating-and-deleting-cs/samples/sample10.cs)]
 
 En este momento, el `InputParameters` propiedad contiene de ObjectDataSource `InsertParameters` colección con los valores asignados de DetailsView. Para cambiar el valor de uno de estos parámetros, basta con usar: `e.InputParameters["paramName"] = value`. Por lo tanto, para establecer el `CategoryID` y `SupplierID` a valores de 1, ajustar el `Inserting` controlador de eventos para el siguiente aspecto:
 
-
 [!code-csharp[Main](examining-the-events-associated-with-inserting-updating-and-deleting-cs/samples/sample11.cs)]
 
 Esta vez cuando se agrega un nuevo producto (por ejemplo, Acme Soda), el `CategoryID` y `SupplierID` columnas del nuevo producto que se establecen en 1 (Véase la figura 20).
 
-
 [![Nuevos productos ahora tienen sus CategoryID y SupplierID valores establecidos en 1](examining-the-events-associated-with-inserting-updating-and-deleting-cs/_static/image57.png)](examining-the-events-associated-with-inserting-updating-and-deleting-cs/_static/image56.png)
 
 **Figura 20**: Their de productos nuevos ahora tienen `CategoryID` y `SupplierID` valores se establecen en 1 ([haga clic aquí para ver imagen en tamaño completo](examining-the-events-associated-with-inserting-updating-and-deleting-cs/_static/image58.png))
-
 
 ## <a name="summary"></a>Resumen
 

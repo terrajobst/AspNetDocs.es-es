@@ -8,12 +8,12 @@ ms.date: 02/28/2014
 ms.assetid: 9c1e3a75-b644-4480-8326-11300b1ec4b3
 msc.legacyurl: /mvc/overview/getting-started/lifecycle-of-an-aspnet-mvc-5-application
 msc.type: authoredcontent
-ms.openlocfilehash: 952d13fec206bdb8d398cead70d10335731f583d
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: f4a9b3fb61552b070db11fba617b5627fcd71cd5
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59402224"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65124084"
 ---
 # <a name="lifecycle-of-an-aspnet-mvc-5-application"></a>Ciclo de vida de una aplicación de ASP.NET MVC 5
 
@@ -31,7 +31,6 @@ Aquí puede descargar un documento PDF que realizar una copia de los gráficos d
 - Selección de ubicación y el propósito de todos los métodos reemplazables en el [controlador](https://msdn.microsoft.com/library/system.web.mvc.controller.aspx) objeto en la canalización de procesamiento de solicitudes. Puede o no tener la necesidad de reemplazar un método de prueba, pero es importante comprender su rol en el ciclo de vida de la aplicación, por lo que puede escribir código en la fase del ciclo de vida adecuado para el efecto deseado.
 - Diagramas de corriente de copia de seguridad que muestra cómo cada uno de los tipos de filtro (autenticación, autorización, acción y resultados) se invoca.
 - Vincular a un artículo útil o el blog de cada punto de interés en la vista de detalle.
-
 
 ## <a name="next-steps"></a>Pasos siguientes
 

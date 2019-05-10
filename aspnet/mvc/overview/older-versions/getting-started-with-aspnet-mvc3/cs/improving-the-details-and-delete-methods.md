@@ -8,12 +8,12 @@ ms.date: 01/12/2011
 ms.assetid: 3f42edd9-c5b8-4712-9055-970f7d38e350
 msc.legacyurl: /mvc/overview/older-versions/getting-started-with-aspnet-mvc3/cs/improving-the-details-and-delete-methods
 msc.type: authoredcontent
-ms.openlocfilehash: d4003dba8530d2e72c514c572ffc28ef942fd437
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: d98699649d33a9fe17c2b39652d410afe2e883be
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59379370"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65130153"
 ---
 # <a name="improving-the-details-and-delete-methods-c"></a>Mejorar los métodos Details y Delete (C#)
 
@@ -32,7 +32,6 @@ by [Rick Anderson]((https://twitter.com/RickAndMSFT))
 > Si usa Visual Studio 2010, en lugar de Visual Web Developer 2010, instale los requisitos previos, haga clic en el siguiente vínculo: [Requisitos previos de Visual Studio 2010](https://www.microsoft.com/web/gallery/install.aspx?appsxml=&amp;appid=VS2010SP1Pack).
 > 
 > Un proyecto de Visual Web Developer con código fuente de C# está disponible como acompañamiento de este tema. [Descargue la versión de C#](https://code.msdn.microsoft.com/Introduction-to-MVC-3-10d1b098). Si prefiere Visual Basic, cambie a la [versión de Visual Basic](../vb/intro-to-aspnet-mvc-3.md) de este tutorial.
-
 
 En esta parte del tutorial, realizará algunas mejoras en el que se han generado automáticamente `Details` y `Delete` métodos. Estos cambios no son necesarios, pero con tan solo unos pequeños fragmentos de código, puede mejorar fácilmente la aplicación.
 

@@ -8,12 +8,12 @@ ms.date: 02/15/2013
 ms.assetid: ae4def81-fa37-4883-a13e-d9896cbf6c36
 msc.legacyurl: /web-forms/overview/deployment/visual-studio-web-deployment/preparing-databases
 msc.type: authoredcontent
-ms.openlocfilehash: 786be61d48f26e5765eac0c8d6fad7551897f711
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: 72d69c0690c52c41f899e6cbe7cc656e537fe112
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59387691"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65131102"
 ---
 # <a name="aspnet-web-deployment-using-visual-studio-preparing-for-database-deployment"></a>Implementación Web de ASP.NET con Visual Studio: Preparar la implementación de la base de datos
 
@@ -22,7 +22,6 @@ por [Tom Dykstra](https://github.com/tdykstra)
 [Descargar el proyecto de inicio](http://go.microsoft.com/fwlink/p/?LinkId=282627)
 
 > Esta serie de tutoriales muestra cómo implementar (publicar) una ASP.NET web application a Azure App Service Web Apps o a un proveedor de hospedaje de terceros, mediante el uso de Visual Studio 2012 o Visual Studio 2010. Para obtener información acerca de la serie, vea [el primer tutorial de la serie](introduction.md).
-
 
 ## <a name="overview"></a>Información general
 
@@ -134,7 +133,6 @@ Ahora el proyecto está listo para implementar el *ContosoUniversity* base de da
 > 
 > `Sql("UPDATE Department SET Budget = 1000");`
 
-
 ## <a name="create-scripts-for-membership-database-deployment"></a>Crear secuencias de comandos para la implementación de la base de datos de pertenencia
 
 La aplicación Contoso University usa la autenticación de formularios y el sistema de pertenencia a ASP.NET para autenticar y autorizar a los usuarios. El **actualización créditos** página solo es accesible para los usuarios que están en el rol de administrador.
@@ -160,14 +158,12 @@ Esta base de datos no está administrado por Entity Framework Code First, por lo
 > [!NOTE]
 > Se introdujo un nuevo sistema de pertenencia ASP.NET (ahora denominado ASP.NET Identity) con Visual Studio 2013. El nuevo sistema le permite mantener la aplicación y tablas de pertenencia en la misma base de datos, y puede usar migraciones de Code First para implementar ambos. La aplicación de ejemplo usa el sistema de pertenencia ASP.NET anterior, que no se puede implementar mediante el uso de migraciones de Code First. Los procedimientos para la implementación de esta base de datos de pertenencia se aplican también a cualquier otro escenario en el que la aplicación necesita para implementar una base de datos de SQL Server que no se crea por Entity Framework Code First.
 
-
 Aquí también, normalmente no desea que los mismos datos en producción que tiene en el desarrollo. Al implementar un sitio por primera vez, es habitual excluir la mayoría o todas las cuentas de usuario creadas para las pruebas. Por lo tanto, el proyecto descargado tiene dos bases de datos de pertenencia: *aspnet ContosoUniversity.mdf* con usuarios de desarrollo y *ContosoUniversity-aspnet-Prod.mdf* con los usuarios de producción. Para este tutorial, los nombres de usuario son los mismos en ambas bases de datos: *admin* y *nonadmin*. Ambos usuarios tienen la contraseña *devpwd* en la base de datos de desarrollo y *prodpwd* en la base de datos de producción.
 
 Los usuarios de desarrollo va a implementar en el entorno de prueba y los usuarios de producción, ensayo y producción. Hacer creará dos secuencias de comandos SQL en este tutorial, uno para el desarrollo y otra para producción y en los tutoriales posteriores configurará el proceso de publicación para ejecutarlos.
 
 > [!NOTE]
 > La base de datos de pertenencia almacena un hash de contraseñas de cuentas. Para implementar las cuentas de un equipo a otro, debe asegurarse de que las rutinas de hash no generan hash distintos del servidor de destino de como lo hacen en el equipo de origen. Generará el mismos hash cuando se usa ASP.NET Universal Providers, siempre y cuando no cambie el algoritmo predeterminado. El algoritmo predeterminado es HMACSHA256 y se especifica en el **validación** atributo de la **[machineKey](https://msdn.microsoft.com/library/system.web.configuration.machinekeysection.aspx)** elemento en el archivo Web.config.
-
 
 Puede crear scripts de implementación de datos manualmente, mediante el uso de SQL Server Management Studio (SSMS) o mediante una herramienta de terceros. En el resto de este tutorial le mostrará cómo hacerlo en SSMS, pero si prefiere no instalar y usar SSMS puede obtener las secuencias de comandos de la versión completa del proyecto y vaya a la sección donde se almacenan en la carpeta de soluciones.
 

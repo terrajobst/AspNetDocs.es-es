@@ -8,12 +8,12 @@ ms.date: 05/28/2015
 ms.assetid: c85ec591-f8d7-4882-b763-de6ab9f3df7a
 msc.legacyurl: /web-pages/overview/getting-started/introducing-aspnet-web-pages-2/layouts
 msc.type: authoredcontent
-ms.openlocfilehash: 58f3ec28914a604aa911cc3cb73733f0d58fd49f
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: 678eb7089e95e3d221d6b2d82034a62aefa75757
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59390421"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65131836"
 ---
 # <a name="introducing-aspnet-web-pages---creating-a-consistent-layout"></a>Introducción a las páginas Web ASP.NET - crear un diseño coherente
 
@@ -26,7 +26,6 @@ por [Tom FitzMacken](https://github.com/tfitzmac)
 > - Es lo que una página de diseño.
 > - Cómo se combinan las páginas de diseño con contenido dinámico.
 > - Cómo pasar valores a una página de diseño.
-
 
 ## <a name="about-layouts"></a>Acerca de los diseños
 
@@ -167,7 +166,6 @@ Si lo desea, puede ver el origen de la página en el explorador. Puede ver que e
 > Puede pasar cualquier número de valores mediante la `Page` objeto. Si desea pasar información de películas a la página de diseño, podría pasar valores mediante el uso de algo parecido a `Page.MovieTitle` y `Page.Genre` y `Page.MovieYear`. (O cualquier otro nombre que inventaron para almacenar la información.) El único requisito, que es probablemente obvio, es que se debe usar los mismos nombres en la página de contenido y la página de diseño.
 > 
 > La información que se pasa mediante el uso de la `Page` objeto no se limita a simplemente texto que se muestra en la página de diseño. Puede pasar un valor a la página de diseño y, a continuación, el código en la página de diseño puede utilizar el valor para decidir si se muestra una sección de la página, lo que *.css* archivo para usar y así sucesivamente. Los valores pasados en el `Page` objeto son como cualquier otro los valores que se utiliza en código. Simplemente es que los valores se originan en la página de contenido y se pasan a la página de diseño.
-
 
 Abra el *AddMovie.cshtml* página y agregue una línea a la parte superior del código que proporciona un título para el *AddMovie.cshtml* página:
 

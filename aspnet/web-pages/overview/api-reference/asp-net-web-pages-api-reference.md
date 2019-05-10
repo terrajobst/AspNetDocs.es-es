@@ -8,12 +8,12 @@ ms.date: 02/10/2014
 ms.assetid: 4001cb9b-3bfd-4ace-8a89-1561d8421e2c
 msc.legacyurl: /web-pages/overview/api-reference/asp-net-web-pages-api-reference
 msc.type: authoredcontent
-ms.openlocfilehash: 547b1932c4f8d3684c668561e3fe568a0f272925
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: e010307fc0576e8b003fbfe665cae77618d9c9a5
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59416511"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65132982"
 ---
 # <a name="aspnet-web-pages-razor-api-quick-reference"></a>Referencia rápida de la API de (Razor) de ASP.NET Web Pages
 
@@ -32,7 +32,6 @@ por [Tom FitzMacken](https://github.com/tfitzmac)
 >   
 > 
 > En este tutorial también funciona con ASP.NET Web Pages 2 y las páginas Web de ASP.NET 1.0 (excepto las características marcadas v2).
-
 
 Esta página contiene información de referencia para lo siguiente:
 

@@ -8,12 +8,12 @@ ms.date: 01/28/2019
 ms.assetid: 3bb8eb15-b518-44f5-a67d-a27e051aedc6
 msc.legacyurl: /web-api/overview/security/external-authentication-services
 msc.type: authoredcontent
-ms.openlocfilehash: de9b64e6c582059ec66ab352f60773f50af7b1ff
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: b2571552a3f8040ff42bfa0a9fa48981f71a1e4b
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57064922"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65133585"
 ---
 # <a name="external-authentication-services-with-aspnet-web-api-c"></a>Servicios de autenticación externos con ASP.NET Web API (C#)
 
@@ -72,7 +72,6 @@ Los ejemplos de este tutorial mostrará cómo configurar cada uno de los servici
 
 > [!NOTE]
 > Si es necesario, deberá agregar el FQDN a la configuración para el servicio de autenticación externo. Este requisito se basa en las restricciones de seguridad para algunos servicios de autenticación externo que requieren el FQDN de la configuración de la aplicación para que coincida con el FQDN utilizado por los clientes. (Los pasos para hacerlo varían en gran medida para cada servicio de autenticación externo; necesitará consultar la documentación para cada servicio de autenticación externa para ver si esto es necesario y cómo configurar estas opciones). Si necesita configurar IIS Express para usar un FQDN para este entorno de pruebas, consulte el [configurar IIS Express debe usar un nombre de dominio completo](#FQDN) sección más adelante en este tutorial.
-
 
 <a id="SAMPLE"></a>
 ## <a name="create-a-sample-web-application"></a>Crear una aplicación Web de ejemplo
@@ -139,7 +138,6 @@ Una vez ha obtenido el identificador de la aplicación y la clave secreta, siga 
 ## <a name="enabling-google-authentication"></a>Habilitar la autenticación de Google
 
 Con Google autenticación, deberá crear una cuenta de desarrollador de Google y el proyecto requerirá un Id. de aplicación y la clave secreta de Google para poder funcionar. Para obtener información sobre cómo crear una cuenta de desarrollador de Google y obtener el Id. de aplicación y la clave secreta, vea [ https://developers.google.com ](https://developers.google.com).
-
 
 Para habilitar la autenticación de Google para la aplicación web, siga estos pasos:
 

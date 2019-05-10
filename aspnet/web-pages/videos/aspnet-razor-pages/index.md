@@ -8,17 +8,16 @@ ms.date: 05/18/2012
 ms.assetid: ffad842d-548c-40c6-84c5-10858133e972
 msc.legacyurl: /web-pages/videos/aspnet-razor-pages
 msc.type: chapter
-ms.openlocfilehash: 3224039c29bfda085e74095f7089dcbfc68ce1cc
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: c1889f0eab6d2df41ac6e19d433303198c4789f4
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59401106"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65127795"
 ---
 # <a name="aspnet-web-pages"></a>ASP.NET Web Pages
 
 > Vídeos de qué puede ver para profundizar en Web Pages y WebMatrix.
-
 
 - [Introducción a WebMatrix y ASP.NET Web Pages](getting-started-with-webmatrix-and-aspnet-web-pages.md)
 - [Introducción a la sintaxis de Razor de programación web de ASP.NET](introduction-to-aspnet-web-programming-using-the-razor-syntax.md)

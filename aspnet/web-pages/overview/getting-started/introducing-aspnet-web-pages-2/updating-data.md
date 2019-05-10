@@ -8,12 +8,12 @@ ms.date: 01/02/2018
 ms.assetid: ac86ec9c-6b69-485b-b9e0-8b9127b13e6b
 msc.legacyurl: /web-pages/overview/getting-started/introducing-aspnet-web-pages-2/updating-data
 msc.type: authoredcontent
-ms.openlocfilehash: 4542ad3ac3e321629bb4de3cd4df12c22ff6cb20
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: 8f8bcfb7d9d2416a2699776cadbdaae8e12415ba
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59414626"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65131800"
 ---
 # <a name="introducing-aspnet-web-pages---updating-database-data"></a>Introducción a ASP.NET Web Pages: actualización de la base de datos
 
@@ -37,7 +37,6 @@ por [Tom FitzMacken](https://github.com/tfitzmac)
 > - El código SQL `Update` comando.
 > - El método `Database.Execute` .
 > - Campos ocultos (`<input type="hidden">`).
-
 
 ## <a name="what-youll-build"></a>¿Qué va a crear
 
@@ -129,7 +128,6 @@ Consta de la columna *sólo* del marcado que representa el vínculo, además de 
 > 
 > Obviamente, para usar parámetros con nombre, tendrá que conocer los nombres de los parámetros. WebMatrix IntelliSense puede *mostrar* los nombres, pero no puede actualmente rellenarlo para usted.
 
-
 ## <a name="creating-the-edit-page"></a>Creación de la página de edición
 
 Ahora puede crear el *EditMovie* página. Cuando los usuarios hacen clic los **editar** vínculo, terminará en esta página.
@@ -206,7 +204,6 @@ Puede especificar las columnas en cualquier orden, y no necesariamente deben act
 > 
 > **Importante** el `Where` cláusula con el Id. es muy importante, ya que es la manera en que la base de datos sabe qué base de datos de registro que desea actualizar. Si lo dejó el `Where` cláusula, la base de datos actualizaría *cada* registros en la base de datos. En la mayoría de los casos, eso sería un desastre.
 
-
 En el código, se pasan los valores para actualizar a la instrucción SQL mediante el uso de marcadores de posición. Repita lo que hemos dicho antes: por motivos de seguridad, *sólo* usar marcadores de posición para pasar valores a una instrucción SQL.
 
 Después de que el código usa `db.Execute` para ejecutar el `Update` instrucción, redirige a la página de lista, donde puede ver los cambios.
@@ -222,7 +219,6 @@ Después de que el código usa `db.Execute` para ejecutar el `Update` instrucci�
 > Por supuesto, el `Query` podría devolver una única fila de la base de datos. Sin embargo, ASP.NET siempre trata los resultados de la `Query` método como una colección. Incluso si el método devuelve una sola fila, deberá extraer esa única fila de la colección. Por lo tanto, en situaciones donde se *saber* obtendrá una única fila, es un poco más conveniente usar `QuerySingle`.
 > 
 > Hay algunos otros métodos que realizan determinados tipos de operaciones de base de datos. Puede encontrar una lista de métodos de la base de datos en el [referencia rápida de ASP.NET Web Pages API](../../api-reference/asp-net-web-pages-api-reference.md#Data).
-
 
 ## <a name="making-validation-for-the-id-more-robust"></a>Realizar la validación de Id. de más sólida
 

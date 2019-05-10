@@ -8,12 +8,12 @@ ms.date: 09/16/2014
 ms.assetid: a00d3600-9c2a-41bc-9460-06cc527904e2
 msc.legacyurl: /web-api/overview/odata-support-in-aspnet-web-api/odata-v4/complex-type-inheritance-in-odata-v4
 msc.type: authoredcontent
-ms.openlocfilehash: 76db6325b8528af5b82ca3ea4e34284ca470ff6e
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: 3d90216c8e594055f77577eb6d8b1d978ae4c24d
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59378606"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65132743"
 ---
 # <a name="complex-type-inheritance-in-odata-v4-with-aspnet-web-api"></a>Herencia de tipo complejo en OData v4 con ASP.NET Web API
 
@@ -28,7 +28,6 @@ por [Microsoft](https://github.com/microsoft)
 > 
 > - Web API OData 5.3
 > - OData v4
-
 
 ## <a name="model-hierarchy"></a>Jerarquía del modelo
 

@@ -8,12 +8,12 @@ ms.date: 08/15/2012
 ms.assetid: c7e4e1ab-4932-4614-9f53-aaf7c706d498
 msc.legacyurl: /mvc/overview/views/using-page-inspector-in-aspnet-mvc
 msc.type: authoredcontent
-ms.openlocfilehash: ef0ae42e1c6114849a311164eac242db6dab2b1d
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: 5da3e142c52a770f59222c21d9f9a53cbbdbf498
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59385805"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65126350"
 ---
 # <a name="using-page-inspector-in-aspnet-mvc"></a>Usar el Inspector de página en ASP.NET MVC
 
@@ -38,7 +38,6 @@ by Tim Ammann
 > - [Con el selector de Color CSS](#css_color_picker)
 > - [Asignación de elementos de página dinámica a JavaScript](#map_dynamic_elements)
 
-
 <a id="_prerequisites"></a><a id="_1_prerequisites"></a>
 
 ## <a name="prerequisites"></a>Requisitos previos
@@ -47,7 +46,6 @@ by Tim Ammann
 
 > [!NOTE]
 > Para obtener la versión más reciente de Inspector de página, use [instalador de plataforma Web](https://go.microsoft.com/fwlink/?LinkId=255386) para instalar el SDK de Windows Azure para .NET 2.0.
-
 
 Inspector de página se incluye con Microsoft Web Developer Tools. La versión más reciente es 1.3. Para comprobar qué versión tiene, ejecute Visual Studio y seleccione **acerca de Microsoft Visual Studio** desde el **ayuda** menú.
 
@@ -179,7 +177,6 @@ El **estilos** facilita la ventana que resulte fácil probar y obtener una vista
 > [!NOTE]
 > Esta característica requiere la versión 1.3 de Inspector de página.
 
-
 La característica de sincronización automática de CSS le permite editar directamente un archivo CSS y ver los cambios inmediatamente en el Explorador de Inspector de página.
 
 Haga clic en **inspeccionar** para poner Inspector de página en modo de inspección.
@@ -238,7 +235,6 @@ Con la versión 1.3, Inspector de página ahora puede asignar los elementos que 
 
 > [!NOTE]
 > La plantilla SPA requiere la [ASP.NET y Web Tools 2012.2](https://go.microsoft.com/fwlink/?LinkId=282650) actualizar.
-
 
 En Visual Studio, elija **archivo** &gt; **nuevo proyecto**. En el lado izquierdo, expanda **Visual C#**, seleccione **Web**y, a continuación, seleccione **aplicación Web de ASP.NET MVC 4**. Haga clic en **Aceptar**.
 

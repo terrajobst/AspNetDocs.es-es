@@ -8,12 +8,12 @@ ms.date: 07/30/2013
 ms.assetid: 44761193-04ba-4990-9f90-145d3c10a716
 msc.legacyurl: /mvc/overview/older-versions/getting-started-with-ef-5-using-mvc-4/implementing-the-repository-and-unit-of-work-patterns-in-an-asp-net-mvc-application
 msc.type: authoredcontent
-ms.openlocfilehash: 71ff3c269c5d1ed43a67d19442eda8e9d4728295
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: d0d6c9dd5234c8085b5c1dea5552854486314010
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59405708"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65129785"
 ---
 # <a name="implementing-the-repository-and-unit-of-work-patterns-in-an-aspnet-mvc-application-9-of-10"></a>Implementar el repositorio y unidad de patrones de trabajo en una aplicación de ASP.NET MVC (9 de 10)
 
@@ -26,7 +26,6 @@ por [Tom Dykstra](https://github.com/tdykstra)
 > > [!NOTE] 
 > > 
 > > Si surge un problema que no se puede resolver, [descargar el capítulo completado](building-the-ef5-mvc4-chapter-downloads.md) e intente reproducir el problema. Por lo general puede encontrar la solución al problema comparando el código para el código completo. Para que algunos errores comunes y cómo resolverlos, consulte [errores y soluciones alternativas.](advanced-entity-framework-scenarios-for-an-mvc-web-application.md#errors)
-
 
 En el tutorial anterior usa la herencia para reducir el código redundante en la `Student` y `Instructor` las clases de entidad. En este tutorial, verá algunas formas de usar el repositorio y unidad de patrones de trabajo para las operaciones CRUD. Como se muestra en el tutorial anterior, en éste va a cambiar la manera en que el código funciona con las páginas que ya creó en lugar de crear nuevas páginas.
 
@@ -51,7 +50,6 @@ No cree pruebas unitarias en esta serie de tutoriales. Para obtener una introduc
 
 > [!NOTE]
 > Hay muchas maneras de implementar el repositorio y unidad de patrones de trabajo. Puede usar las clases de repositorio con o sin una unidad de la clase de trabajo. Puede implementar un único repositorio para todos los tipos de entidad, o uno para cada tipo. Si implementa una para cada tipo, puede usar clases independientes, una clase base genérica y las clases derivadas, o una clase base abstracta y las clases derivadas. Puede incluir la lógica de negocios en el repositorio o restringirlo a la lógica de acceso a datos. También puede crear una capa de abstracción en la clase de contexto de base de datos mediante el uso de [IDbSet](https://msdn.microsoft.com/library/gg679233(v=vs.103).aspx) hay interfaces en lugar de [DbSet](https://msdn.microsoft.com/library/system.data.entity.dbset(v=vs.103).aspx) tipos para los conjuntos de entidades. El enfoque para implementar una capa de abstracción que se muestra en este tutorial es una opción para tener en cuenta, no una recomendación para todos los escenarios y entornos.
-
 
 ## <a name="creating-the-student-repository-class"></a>Creación de la clase de repositorio para estudiantes
 
@@ -142,7 +140,6 @@ En la versión original del código, `students` se escribe como un `IQueryable` 
 > [!code-sql[Main](implementing-the-repository-and-unit-of-work-patterns-in-an-asp-net-mvc-application/samples/sample16.sql)]
 > 
 > (El siguiente tutorial explica cómo examinar las consultas enviadas a SQL Server.)
-
 
 En la sección siguiente se muestra cómo implementar métodos de repositorio que le permiten especificar que debe hacer este trabajo por la base de datos.
 

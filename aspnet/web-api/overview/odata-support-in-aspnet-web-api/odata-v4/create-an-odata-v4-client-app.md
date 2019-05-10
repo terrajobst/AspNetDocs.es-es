@@ -8,12 +8,12 @@ ms.date: 06/26/2014
 ms.assetid: 47202362-3808-4add-9a69-c9d1f91d5e4e
 msc.legacyurl: /web-api/overview/odata-support-in-aspnet-web-api/odata-v4/create-an-odata-v4-client-app
 msc.type: authoredcontent
-ms.openlocfilehash: 14d4b01a2ea8a4582294053416b626e7f1801b50
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: a0016cf2cc7bffe6268664395ccb38e140090310
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59411519"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65126123"
 ---
 # <a name="create-an-odata-v4-client-app-c"></a>Crear una aplicación de cliente de OData v4 (C#)
 
@@ -27,7 +27,6 @@ Inicie una nueva instancia de Visual Studio y cree un nuevo proyecto de aplicaci
 
 > [!NOTE]
 > También puede agregar la aplicación de consola a la misma solución de Visual Studio que contiene el servicio de OData.
-
 
 ## <a name="install-the-odata-client-code-generator"></a>Instalar el generador de código de cliente de OData
 
@@ -43,7 +42,6 @@ Ejecute el proyecto ProductService desde Visual Studio. De forma predeterminada,
 
 > [!NOTE]
 > Si coloca ambos proyectos en la misma solución, asegúrese de ejecutar el proyecto ProductService sin depuración. En el paso siguiente, deberá mantener el servicio se está ejecutando mientras modifica el proyecto de aplicación de consola.
-
 
 ## <a name="generate-the-service-proxy"></a>Generar al Proxy de servicio
 

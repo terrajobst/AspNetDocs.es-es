@@ -8,12 +8,12 @@ ms.date: 01/27/2009
 ms.assetid: d1608db3-660d-4079-8c15-f452ff01f1db
 msc.legacyurl: /mvc/overview/older-versions-1/overview/understanding-the-asp-net-mvc-execution-process
 msc.type: authoredcontent
-ms.openlocfilehash: 4a47f51b08b66dfe9636b3992786df19d0ad72ad
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: 28940947253e0af43886cf1231f8aaf4615526cc
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59414938"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65125480"
 ---
 # <a name="understanding-the-aspnet-mvc-execution-process"></a>Descripción del proceso de ejecución de ASP.NET MVC
 
@@ -21,14 +21,12 @@ por [Microsoft](https://github.com/microsoft)
 
 > Obtenga información sobre cómo el marco de MVC de ASP.NET procesa una solicitud de explorador paso a paso.
 
-
 Las solicitudes a una aplicación Web basada en ASP.NET MVC que primero pasan por la **UrlRoutingModule** objeto, que es un módulo HTTP. Este módulo analiza la solicitud y realiza la selección de la ruta. El **UrlRoutingModule** objeto selecciona el primer objeto de ruta que coincida con la solicitud actual. (Un objeto de ruta es una clase que implementa **RouteBase**, y normalmente es una instancia de la **ruta** clase.) Si ninguna ruta coincide, el **UrlRoutingModule** objeto no hace nada y permite que la solicitud recurrir a la solicitud ASP.NET o IIS normal al procesamiento.
 
 Desde seleccionado **ruta** objeto, el **UrlRoutingModule** objeto obtiene la **IRouteHandler** objeto que está asociado el **ruta**objeto. Normalmente, en una aplicación MVC, esto será una instancia de **MvcRouteHandler**. El **IRouteHandler** instancia crea un **IHttpHandler** objeto y lo pasa la **IHttpContext** objeto. De forma predeterminada, el **IHttpHandler** instancia para MVC es el **MvcHandler** objeto. El **MvcHandler** objeto, a continuación, selecciona el controlador que en última instancia controlará la solicitud.
 
 > [!NOTE]
 > Cuando se ejecuta una aplicación Web de MVC de ASP.NET en IIS 7.0, extensión de nombre de archivo no es necesaria para los proyectos de MVC. Sin embargo, en IIS 6.0, el controlador requiere que asigne la extensión de nombre de archivo .mvc a la DLL de ISAPI de ASP.NET.
-
 
 El módulo y el controlador son los puntos de entrada para el marco de MVC de ASP.NET. Se realizan las siguientes acciones:
 

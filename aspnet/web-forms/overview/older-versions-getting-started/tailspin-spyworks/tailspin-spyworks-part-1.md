@@ -8,12 +8,12 @@ ms.date: 07/21/2010
 ms.assetid: 15d4652b-d5aa-4172-b186-2c7f96ba316d
 msc.legacyurl: /web-forms/overview/older-versions-getting-started/tailspin-spyworks/tailspin-spyworks-part-1
 msc.type: authoredcontent
-ms.openlocfilehash: 70d2efb789d694a0aaecc046615c7b3622079dc1
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: 05a3ace3d8fef9c1f3593f7948e42b4725d70134
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59385363"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65130583"
 ---
 # <a name="part-1-file--new-project"></a>Parte 1: Archivo -> Nuevo proyecto
 
@@ -23,7 +23,6 @@ por [Joe Stagner](https://github.com/JoeStagner)
 > 
 > Esta serie de tutoriales detalla todos los pasos que se tarda en compilar la aplicación de ejemplo Tailspin Spyworks. Parte 1 abarca información general y archivo/nuevo proyecto.
 
-
 ## <a id="_Toc260221666"></a>  Información general
 
 Este tutorial es una introducción a ASP.NET WebForms. Se comenzará lentamente, por lo que la experiencia de desarrollo de web de nivel principiante es correcto.
@@ -31,7 +30,6 @@ Este tutorial es una introducción a ASP.NET WebForms. Se comenzará lentamente,
 La aplicación que se va a compilar es una tienda en línea sencilla.
 
 ![](tailspin-spyworks-part-1/_static/image1.jpg)
-
 
 Los visitantes pueden examinar los productos por categoría:
 
@@ -54,7 +52,6 @@ Continuar con la desprotección le pedirá que
 Después de la ordenación, verán una pantalla de confirmación simple:
 
 ![](tailspin-spyworks-part-1/_static/image7.jpg)
-
 
 Comenzaremos por crear un nuevo proyecto de formularios Web Forms de ASP.NET en Visual Studio 2010 y vamos a agregar gradualmente funciones para crear una aplicación operativa completa. Por el camino, hablaremos sobre acceso a la base de datos, vistas de lista y la cuadrícula, las páginas de actualización de datos, validación de datos, mediante páginas maestras para diseño de página coherente, AJAX, validación, pertenencia a usuario y mucho más.
 

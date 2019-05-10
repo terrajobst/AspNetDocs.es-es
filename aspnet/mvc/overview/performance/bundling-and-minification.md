@@ -8,19 +8,18 @@ ms.date: 08/23/2012
 ms.assetid: 5894dc13-5d45-4dad-8096-136499120f1d
 msc.legacyurl: /mvc/overview/performance/bundling-and-minification
 msc.type: authoredcontent
-ms.openlocfilehash: 9e4a2a9fc56393ac816f25a1039b233aa8961608
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: 79d6b38c6464a749db9cd6d35e1f277b0adf2a02
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59383842"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65129435"
 ---
 # <a name="bundling-and-minification"></a>Unión y minificación
 
 by [Rick Anderson]((https://twitter.com/RickAndMSFT))
 
 > Unión y minificación son dos técnicas puede usar en ASP.NET 4.5 para mejorar el tiempo de carga de solicitud. Unión y minificación mejora el tiempo de carga por lo que reduce el número de solicitudes al servidor y reducir el tamaño de los activos solicitados (por ejemplo, CSS y JavaScript).
-
 
 La mayoría de los principales exploradores actuales limita el número de [conexiones simultáneas](http://www.browserscope.org/?category=network) por cada nombre de host a seis. Esto significa que mientras se están procesando seis solicitudes, las solicitudes adicionales para los recursos en un host se pondrán en el explorador. En la imagen siguiente, las fichas de red de herramientas de desarrollador F12 de Internet Explorer muestra el tiempo para los recursos requeridos por la vista About de una aplicación de ejemplo.
 
@@ -96,7 +95,6 @@ Para habilitar la unión y minificación, establezca el `debug` valor en "false"
 
 > [!NOTE]
 > A menos que `EnableOptimizations` es `true` o el atributo de depuración en el [elemento compilation](https://msdn.microsoft.com/library/s10awwz0.aspx) en el *Web.config* archivo se establece en `false`, archivos no se incluye o se han minimizado. Además, no se usará la versión .min de archivos, seleccionará las versiones de depuración completa. `EnableOptimizations` invalida el atributo de depuración en el [elemento compilation](https://msdn.microsoft.com/library/s10awwz0.aspx) en el *Web.config* archivo
-
 
 ## <a name="using-bundling-and-minification-with-aspnet-web-forms-and-web-pages"></a>Uso de la unión y Minificación con formularios Web Forms ASP.NET y páginas Web
 

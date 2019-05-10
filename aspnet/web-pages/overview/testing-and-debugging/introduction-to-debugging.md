@@ -8,12 +8,12 @@ ms.date: 02/20/2014
 ms.assetid: 68de4326-7611-4b9b-b5f6-79b7adc3069f
 msc.legacyurl: /web-pages/overview/testing-and-debugging/introduction-to-debugging
 msc.type: authoredcontent
-ms.openlocfilehash: d4be58f618ed990b1932b4388f84cd743c21f009
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: ae7d871e56326610c043dc20fe6e0919e1b4ac89
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59389614"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65127815"
 ---
 # <a name="introduction-to-debugging-aspnet-web-pages-razor-sites"></a>Introducción a la depuración de ASP.NET de Web Pages (Razor) sitios
 
@@ -41,7 +41,6 @@ por [Tom FitzMacken](https://github.com/tfitzmac)
 >
 >
 > Este tutorial también funciona con ASP.NET Web Pages 2. Puede usar WebMatrix 3, pero no se admite el depurador integrado.
-
 
 Un aspecto importante de la solución de problemas de errores y problemas del código es evitarlos en primer lugar. Puede hacerlo mediante la colocación de las secciones del código que pueden provocar errores en `try/catch` bloques. Para obtener más información, vea la sección sobre cómo controlar errores en [Introducción a ASP.NET Web programación mediante la sintaxis Razor](https://go.microsoft.com/fwlink/?LinkId=202890).
 

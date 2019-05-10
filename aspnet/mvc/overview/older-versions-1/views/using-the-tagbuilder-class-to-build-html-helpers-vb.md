@@ -8,19 +8,18 @@ ms.date: 03/02/2009
 ms.assetid: ec26f264-d0ea-4031-9943-825505a3ac4b
 msc.legacyurl: /mvc/overview/older-versions-1/views/using-the-tagbuilder-class-to-build-html-helpers-vb
 msc.type: authoredcontent
-ms.openlocfilehash: 4fe34858aadb705ffb59e06ba805493d89aa4028
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: 3b0aa9816209cc326d3dea4b8dfb1b13cf697fcd
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59403212"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65130361"
 ---
 # <a name="using-the-tagbuilder-class-to-build-html-helpers-vb"></a>Uso de la clase TagBuilder para compilar aplicaciones auxiliares HTML (VB)
 
 by [Stephen Walther](https://github.com/StephenWalther)
 
 > Stephen Walther presenta una clase de utilidad en el marco de MVC de ASP.NET con el nombre de la clase TagBuilder. Puede usar la clase TagBuilder para compilar fácilmente las etiquetas HTML.
-
 
 El marco ASP.NET MVC incluye una clase de utilidad con el nombre de la clase TagBuilder que puede usar al compilar aplicaciones auxiliares HTML. La clase TagBuilder, tal como sugiere el nombre de la clase, permite crear fácilmente las etiquetas HTML. En este breve tutorial, se proporciona una visión general de la clase TagBuilder y obtenga información sobre cómo usar esta clase al compilar una aplicación auxiliar HTML simple que representa HTML &lt;img&gt; etiquetas.
 
@@ -33,7 +32,6 @@ La clase TagBuilder está contenida en el espacio de nombres System.Web.Mvc. Tie
 - MergeAttribute(): le permite agregar atributos a una etiqueta. Existen varias sobrecargas de este método.
 - SetInnerText(): permite establecer el texto interno de la etiqueta. El texto interno es codifica como HTML.
 - ToString() – le permite representar la etiqueta. Puede especificar si desea crear una etiqueta normal, una etiqueta de apertura, una etiqueta de cierre o una etiqueta de autocierre.
-  
 
 La clase TagBuilder tiene cuatro propiedades importantes:
 
@@ -64,11 +62,9 @@ Después de crear la aplicación auxiliar de imagen, puede usar la aplicación a
 
 [!code-aspx[Main](using-the-tagbuilder-class-to-build-html-helpers-vb/samples/sample2.aspx)]
 
-
 [![El cuadro de diálogo nuevo proyecto](using-the-tagbuilder-class-to-build-html-helpers-vb/_static/image1.jpg)](using-the-tagbuilder-class-to-build-html-helpers-vb/_static/image1.png)
 
 **Figura 01**: Uso de la aplicación auxiliar de imagen ([haga clic aquí para ver imagen en tamaño completo](using-the-tagbuilder-class-to-build-html-helpers-vb/_static/image2.png))
-
 
 Tenga en cuenta que debe importar el espacio de nombres asociado a la aplicación auxiliar de imagen en la parte superior de la vista Index.aspx. La aplicación auxiliar se importa con la directiva siguiente:
 

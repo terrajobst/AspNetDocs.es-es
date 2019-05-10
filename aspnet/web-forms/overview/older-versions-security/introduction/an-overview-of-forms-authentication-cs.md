@@ -8,12 +8,12 @@ ms.date: 01/14/2008
 ms.assetid: de2d65b9-aadc-42ba-abe1-4e87e66521a0
 msc.legacyurl: /web-forms/overview/older-versions-security/introduction/an-overview-of-forms-authentication-cs
 msc.type: authoredcontent
-ms.openlocfilehash: 5bb3cf45e50e480d81a441280842c1eec58f4877
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: 0dd7c88bb001d326bf415dc3d3e8df0d4e5c77ed
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59406878"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65133254"
 ---
 # <a name="an-overview-of-forms-authentication-c"></a>Información general sobre la autenticación de formularios (C#)
 
@@ -24,7 +24,6 @@ por [Scott Mitchell](https://twitter.com/ScottOnWriting)
 > En este tutorial está se convertirá de explicación simple a la aplicación; en particular, veremos la implementación de autenticación de formularios. La aplicación web, que comenzamos a crear en este tutorial seguirán se basa en los tutoriales posteriores, conforme se mueve de la autenticación de formularios simples a la pertenencia y roles.
 > 
 > Vea este vídeo para obtener más información sobre este tema: [Uso básico de autenticación mediante formularios en ASP.NET](../../../videos/authentication/using-basic-forms-authentication-in-aspnet.md).
-
 
 ## <a name="introduction"></a>Introducción
 
@@ -47,11 +46,9 @@ El `FormsAuthenticationModule` intenta autenticar al usuario anterior a la `UrlA
 
 Es responsabilidad de la página de inicio de sesión determinar si las credenciales del usuario son válidas y, si es así, para crear un vale de autenticación de formularios y redirigir al usuario a la página estaban intentando visitar. El vale de autenticación se incluye en las solicitudes posteriores a las páginas en el sitio Web, que el `FormsAuthenticationModule` usa para identificar al usuario.
 
-
 ![El flujo de trabajo de autenticación de formularios](an-overview-of-forms-authentication-cs/_static/image1.png)
 
 **Figura 1**: El flujo de trabajo de autenticación de formularios
-
 
 ### <a name="remembering-the-authentication-ticket-across-page-visits"></a>Recordar el vale de autenticación a través de las visitas de la página
 
@@ -61,7 +58,6 @@ Un aspecto de cookies es su caducidad, que es la fecha y hora en que el explorad
 
 > [!NOTE]
 > Es posible que el agente de usuario utilizado para iniciar sesión en el sitio Web puede no admitir cookies. En tal caso, ASP.NET puede usar los vales de autenticación de formularios sin cookies. En este modo, se codifica el vale de autenticación en la dirección URL. Veremos cuando se usan vales de autenticación sin cookies y cómo se crean y administran en el siguiente tutorial.
-
 
 ### <a name="the-scope-of-forms-authentication"></a>El ámbito de autenticación de formularios
 
@@ -78,27 +74,22 @@ Para llegar a la audiencia más amplia posible, se creará el sitio Web de ASP.N
 > [!NOTE]
 > La aplicación web de demostración usada en cada tutorial está disponible como descarga. Esta aplicación descargable se creó con Visual Web Developer 2008 destinados a .NET Framework versión 3.5. Puesto que la aplicación está destinada a .NET 3.5, su archivo Web.config incluye elementos de configuración adicionales, 3.5 específica. En resumen, si aún tiene que instalar .NET 3.5 en el equipo, a continuación, la aplicación web que se pueden descargar no funcionará sin quitar primero el marcado específico de 3.5 de Web.config.
 
-
 Antes de que podemos configurar la autenticación de formularios, primero es necesario un sitio Web ASP.NET. Empiece por crear un nuevo archivo basado en el sistema sitio Web de ASP.NET. Para lograr esto, inicie Visual Web Developer y, a continuación, vaya al menú archivo y elija Nuevo sitio Web, mostrar el cuadro de diálogo nuevo sitio Web. Elija la plantilla de sitio Web de ASP.NET, Establece la lista desplegable de ubicación en el sistema de archivos, elija una carpeta para colocar el sitio web y establecer el lenguaje C#. Esto creará un nuevo sitio web con una página Default.aspx de ASP.NET, una aplicación\_carpeta de datos y un archivo Web.config.
 
 > [!NOTE]
 > Visual Studio admite dos modos de administración de proyectos: Proyectos de sitios Web y proyectos de aplicación Web. Proyectos de sitios Web carecen de un archivo de proyecto, mientras que los proyectos de aplicación Web imitar la arquitectura del proyecto en Visual Studio .NET 2002/2003: incluir un archivo de proyecto y compilar código fuente del proyecto en un único ensamblado, que está situado en la carpeta/bin. Visual Studio 2005 inicialmente solo compatibles proyectos de sitio Web, aunque el modelo de proyecto de aplicación Web se vuelve a insertar con Service Pack 1. Visual Studio 2008 ofrece ambos modelos de proyecto. Visual Web Developer 2005 y 2008 ediciones, sin embargo, solo admiten proyectos de sitio Web. Va a utilizar el modelo de proyecto de sitio Web. Si está usando una edición no Express y desea utilizar el [modelo de proyecto de aplicación Web](https://msdn.microsoft.com/library/aa730880%28vs.80%29.aspx) en su lugar, no dude en hacerlo, pero tenga en cuenta que puede haber algunas discrepancias entre lo que ve en la pantalla y los pasos que debe seguir frente a la capturas de pantalla se muestra y las instrucciones proporcionadas en estos tutoriales.
 
-
 [![Crear un nuevo archivo basado en el sistema sitio Web](an-overview-of-forms-authentication-cs/_static/image3.png)](an-overview-of-forms-authentication-cs/_static/image2.png)
 
 **Figura 2**: Crear un sitio Web de New File System-Based ([haga clic aquí para ver imagen en tamaño completo](an-overview-of-forms-authentication-cs/_static/image4.png))
-
 
 ### <a name="adding-a-master-page"></a>Adición de una página maestra
 
 A continuación, agregue una nueva página principal para el sitio en el directorio raíz denominado Site.master. [Páginas maestras](https://msdn.microsoft.com/library/wtxbf3hh.aspx) permiten a un desarrollador de la página Definir una plantilla de todo el sitio que se puede aplicar a las páginas ASP.NET. La principal ventaja de las páginas principales es que apariencia general de la carpeta del sitio se puede definir en una única ubicación, facilitando fáciles de actualizar o cambiar el diseño de la carpeta del sitio.
 
-
 [![Agregar una página maestra denominada Site.master al sitio Web](an-overview-of-forms-authentication-cs/_static/image6.png)](an-overview-of-forms-authentication-cs/_static/image5.png)
 
 **Figura 3**: Agregar un Site.master de denominado de página maestra al sitio Web ([haga clic aquí para ver imagen en tamaño completo](an-overview-of-forms-authentication-cs/_static/image7.png))
-
 
 Definir el diseño de página de todo el sitio aquí en la página maestra. Puede usar la vista de diseño y agregar los controles Web o de diseño que necesita, o puede agregar manualmente el marcado de forma manual en la vista del origen. Estructuré el diseño de mi página maestra para imitar el diseño utilizado en mi *[trabajar con datos en ASP.NET 2.0](../../data-access/index.md)* serie de tutoriales (consulte la figura 4). La página maestra [hojas de estilos en cascada](http://www.w3schools.com/css/default.asp) para colocar y estilos con configuración CSS definidos en el archivo Style.css (que se incluye en la descarga asociados de este tutorial). Mientras que no se puede deducirlo del marcado que se muestra a continuación, se definen las reglas de CSS que el panel de navegación &lt;div&gt;del absolutamente se coloca el contenido por lo que aparece a la izquierda y tiene un ancho fijo de 200 píxeles.
 
@@ -108,11 +99,9 @@ Una página principal define el diseño de página estática y las regiones que 
 
 Con el marcado anterior, cambiar a la vista Diseño, muestra el diseño de la página maestra. Todas las páginas ASP.NET que usan esta página principal tendrán este diseño uniforme y con capacidad para especificar el marcado para el `MainContent` región.
 
-
 [![La página maestra, cuando se ven a través de la vista de diseño](an-overview-of-forms-authentication-cs/_static/image9.png)](an-overview-of-forms-authentication-cs/_static/image8.png)
 
 **Figura 4**: La página maestra, al ver a través de la vista de diseño ([haga clic aquí para ver imagen en tamaño completo](an-overview-of-forms-authentication-cs/_static/image10.png))
-
 
 ### <a name="creating-content-pages"></a>Crear páginas de contenido
 
@@ -120,20 +109,16 @@ En este momento tenemos una página Default.aspx en nuestro sitio Web, pero no u
 
 A continuación, haga doble clic en el nombre del proyecto en el Explorador de soluciones y elija Agregar un formulario Web nuevo llamado Default.aspx. Este tiempo, active la casilla "Seleccionar la página principal" y elija la página maestra Site.master en la lista.
 
-
 [![Agregue una nueva página Default.aspx elegir seleccionar una página maestra](an-overview-of-forms-authentication-cs/_static/image12.png)](an-overview-of-forms-authentication-cs/_static/image11.png)
 
 **Figura 5**: Agregar una nueva elección de página Default.aspx para seleccionar una página maestra ([haga clic aquí para ver imagen en tamaño completo](an-overview-of-forms-authentication-cs/_static/image13.png))
-
 
 ![Utilice la página maestra Site.master](an-overview-of-forms-authentication-cs/_static/image14.png)
 
 **Figura 6**: Utilice la página maestra Site.master
 
-
 > [!NOTE]
 > El cuadro de diálogo Agregar nuevo elemento no incluye una casilla de verificación "Seleccionar la página principal" Si está utilizando el modelo de proyecto de aplicación Web. En su lugar, deberá agregar un elemento de tipo "Formulario de contenido de Web". Después de elegir la opción "Formulario de contenido Web" y hacer clic en Agregar, Visual Studio mostrará el mismo, seleccione un patrón de cuadro de diálogo se muestra en la figura 6.
-
 
 Marcado declarativo de la página Default.aspx nueva incluye simplemente un @Page directiva especifica la ruta de acceso al maestro de página MainContent ContentPlaceHolder de la página maestra archivo y un control de contenido.
 
@@ -157,11 +142,9 @@ De forma predeterminada, aplicaciones de ASP.NET usan la autenticación de Windo
 
 Si el proyecto aún no contiene un archivo Web.config, agregue uno ahora en el botón secundario en el nombre del proyecto en el Explorador de soluciones, elija Agregar nuevo elemento y, a continuación, agregar un archivo de configuración Web.
 
-
 [![Si el proyecto no tiene aún Web.config, agréguelo ahora](an-overview-of-forms-authentication-cs/_static/image16.png)](an-overview-of-forms-authentication-cs/_static/image15.png)
 
 **Figura 7**: Si su proyecto Does no todavía incluyen Web.config, agregue ahora ([haga clic aquí para ver imagen en tamaño completo](an-overview-of-forms-authentication-cs/_static/image17.png))
-
 
 A continuación, busque el `<authentication>` elemento y actualización que use autenticación de formularios. Después de este cambio, el marcado del archivo Web.config debe ser similar al siguiente:
 
@@ -169,7 +152,6 @@ A continuación, busque el `<authentication>` elemento y actualización que use 
 
 > [!NOTE]
 > Puesto que el archivo Web.config es un archivo XML, son importante mayúsculas y minúsculas. Asegúrese de establecer el atributo mode en formularios, con una letra mayúscula "F". Si usas un distinguen mayúsculas de minúsculas, por ejemplo, "forms", recibirá un error de configuración cuando se visita el sitio mediante un explorador.
-
 
 El `<authentication>` elemento puede incluir opcionalmente un `<forms>` elemento secundario que contiene la configuración específica de la autenticación de formularios. Por ahora, vamos a usar simplemente la configuración de autenticación de formularios de forma predeterminada. Exploraremos la `<forms>` elemento secundario con más detalle en el siguiente tutorial.
 
@@ -189,11 +171,9 @@ La página de inicio de sesión tiene tres responsabilidades:
 
 Vamos a empezar a trabajar con la primera tarea. Agregue una nueva página ASP.NET al directorio raíz de la carpeta del sitio llamado Login.aspx y asociarla a la página maestra Site.master.
 
-
 [![Agregue una nueva página de ASP.NET denominada Login.aspx](an-overview-of-forms-authentication-cs/_static/image19.png)](an-overview-of-forms-authentication-cs/_static/image18.png)
 
 **Figura 8**: Agregar una página de ASP.NET nueva llamada Login.aspx ([haga clic aquí para ver imagen en tamaño completo](an-overview-of-forms-authentication-cs/_static/image20.png))
-
 
 La interfaz de la página de inicio de sesión típico consta de dos cuadros de texto: uno para el nombre del usuario, uno para su contraseña y un botón para enviar el formulario. Los sitios Web a menudo, incluyen una casilla «Recordar mi cuenta» que, si está activada, se conserva el vale de autenticación resultante entre reinicios del explorador.
 
@@ -203,11 +183,9 @@ En este momento, la pantalla debe ser similar a la pantalla en la figura 9, y la
 
 [!code-aspx[Main](an-overview-of-forms-authentication-cs/samples/sample4.aspx)]
 
-
 [![La página de inicio de sesión contiene dos cuadros de texto, una casilla de verificación, un botón y una etiqueta](an-overview-of-forms-authentication-cs/_static/image22.png)](an-overview-of-forms-authentication-cs/_static/image21.png)
 
 **Figura 9**: El inicio de sesión página contiene dos cuadros de texto, una casilla de verificación, un botón y una etiqueta ([haga clic aquí para ver imagen en tamaño completo](an-overview-of-forms-authentication-cs/_static/image23.png))
-
 
 Por último, cree un controlador de eventos, haga clic en del LoginButton evento. En el diseñador, simplemente haga doble clic en el control de botón para crear este controlador de eventos.
 
@@ -249,11 +227,9 @@ Al crear los formularios de vale de autenticación se usa la propiedad de texto 
 
 Para probar la página de inicio de sesión, visite en un explorador. Empiece por escribir las credenciales no válidas, como un nombre de usuario de "Nope" y la contraseña de "incorrecta". Al hacer clic en el botón de inicio de sesión se producirá una devolución de datos y se mostrará la etiqueta InvalidCredentialsMessage.
 
-
 [![La etiqueta InvalidCredentialsMessage es muestran al escribir las credenciales no válidas](an-overview-of-forms-authentication-cs/_static/image25.png)](an-overview-of-forms-authentication-cs/_static/image24.png)
 
 **Figura 10**: La etiqueta InvalidCredentialsMessage es muestran al escribir las credenciales no válidas ([haga clic aquí para ver imagen en tamaño completo](an-overview-of-forms-authentication-cs/_static/image26.png))
-
 
 A continuación, escriba credenciales válidas y haga clic en el botón de inicio de sesión. Esta vez cuando la devolución de datos produce un vale de autenticación de formularios, se crea y se le redirigirá automáticamente a Default.aspx. En este momento han iniciado sesión el sitio Web, aunque no hay ningún indicaciones visuales para indicar que actualmente se registran. En el paso 4, que veremos cómo determinar mediante programación si un usuario se registra en o no, así como también identificar al usuario visitar la página.
 
@@ -267,7 +243,6 @@ A menos que su sitio Web contiene información confidencial, solo deberá utiliz
 
 > [!NOTE]
 > Muchos sitios Web financieros y médicos están configurados para utilizar SSL en *todas* páginas accesibles a los usuarios autentican. Si está creando un sitio Web de este tipo puede configurar el sistema de autenticación de formularios para que el vale de autenticación de formularios sólo se transmite a través de una conexión segura. Asimismo, estudiaremos las distintas opciones de configuración de autenticación de formularios en el siguiente tutorial,  *[configuración de autenticación de formularios y temas avanzados](forms-authentication-configuration-and-advanced-topics-cs.md)*.
-
 
 ## <a name="step-4-detecting-authenticated-visitors-and-determining-their-identity"></a>Paso 4: Detectar los visitantes autenticados y determinar su identidad
 
@@ -285,16 +260,13 @@ El [Request.IsAuthenticated propiedad](https://msdn.microsoft.com/library/system
 
 Con este código en su lugar, visite Default.aspx a través de un explorador. Suponiendo que todavía tiene que iniciar sesión, verá un vínculo a la página de inicio de sesión (consulte la figura 11). Haga clic en este vínculo e inicie sesión en el sitio. Como hemos visto en el paso 3, después de escribir las credenciales se devolverán a Default.aspx, pero esta vez la página muestra la "Bienvenido nuevo". mensaje (consulte la figura 12).
 
-
 ![Cuando visite forma anónima, un vínculo de registro se muestra](an-overview-of-forms-authentication-cs/_static/image27.png)
 
 **Figura 11**: Cuando visite forma anónima, un vínculo de registro se muestra
 
-
 ![Los usuarios autenticados se muestran el](an-overview-of-forms-authentication-cs/_static/image28.png)
 
 **Figura 12**: Los usuarios autenticados se muestran la "Bienvenido de nuevo!" Mensaje
-
 
 Podemos determinar identidad del usuario ha iniciado sesión actualmente a través de la [objeto HttpContext](https://msdn.microsoft.com/library/system.web.httpcontext.aspx)del [propiedad usuario](https://msdn.microsoft.com/library/system.web.httpcontext.user.aspx). El objeto HttpContext representa información sobre la solicitud actual y es la página principal para objetos ASP.NET comunes como respuesta, la solicitud y la sesión, entre otros. La propiedad de usuario representa el contexto de seguridad de la solicitud HTTP actual y la implementa el [interfaz IPrincipal](https://msdn.microsoft.com/library/system.security.principal.iprincipal.aspx).
 
@@ -321,11 +293,9 @@ WelcomeBackMessage.Text = "Bienvenido de nuevo" + User.Identity.Name + "!";
 
 Figura 13 muestra el efecto de esta modificación (al iniciar sesión como usuario Scott).
 
-
 ![El mensaje de bienvenida incluye actualmente ha iniciado en el nombre del usuario](an-overview-of-forms-authentication-cs/_static/image29.png)
 
 **Figura 13**: El mensaje de bienvenida incluye actualmente ha iniciado en el nombre del usuario
-
 
 ### <a name="using-the-loginview-and-loginname-controls"></a>Utilizando los controles de LoginName y LoginView
 
@@ -341,7 +311,6 @@ Vamos a agregar el control LoginView a la página principal de nuestro sitio, Si
 > [!NOTE]
 > Además del AnonymousTemplate y LoggedInTemplate, el control LoginView puede incluir plantillas específicas de funciones. Plantillas específicas de funciones mostrar marcado únicamente a aquellos usuarios que pertenecen a un rol especificado. Examinaremos las características basadas en rol del control LoginView en un futuro tutorial.
 
-
 Empiece agregando un ContentPlaceHolder denominado LoginContent en la página maestra en el panel de navegación &lt;div&gt; elemento. Simplemente puede arrastrar un control ContentPlaceHolder desde el cuadro de herramientas en la vista del origen, colocar el marcado resultante justo encima de la "lista de tareas: Menú aparecerá aquí..." texto.
 
 [!code-aspx[Main](an-overview-of-forms-authentication-cs/samples/sample9.aspx)]
@@ -350,11 +319,9 @@ A continuación, agregue un control LoginView dentro el LoginContent ContentPlac
 
 El LoginView y otros controles relacionados con el inicio de sesión se encuentran en la pestaña de inicio de sesión del cuadro de herramientas.
 
-
 ![El Control LoginView en el cuadro de herramientas](an-overview-of-forms-authentication-cs/_static/image30.png)
 
 **Figura 14**: El Control LoginView en el cuadro de herramientas
-
 
 A continuación, agregue dos &lt;br /&gt; elementos inmediatamente después del control LoginView, pero todavía en el ContentPlaceHolder. En este momento, el panel de navegación &lt;div&gt; marcado del elemento debe ser similar al siguiente:
 
@@ -370,33 +337,26 @@ Después de realizar estas adiciones a las plantillas de LoginView, el marcado d
 
 Con esta adición a la página maestra Site.master, cada página en nuestro sitio Web mostrará un mensaje diferente dependiendo de si el usuario está autenticado. Figura 15 muestra la página Default.aspx al usuario Jisun visitado mediante un explorador. El mensaje "Bienvenido, Jisun" se repite dos veces: una vez en la sección de exploración de la página principal de la izquierda (mediante el control LoginView que acabamos de agregar) y una vez en el Default.aspx de contenido (a través de controles de Panel y la lógica de programación).
 
-
 ![Muestra el Control LoginView](an-overview-of-forms-authentication-cs/_static/image31.png)
 
 **Figura 15**: El Control LoginView muestra "Bienvenido de nuevo, Jisun."
 
-
 Como el LoginView se han agregado a la página maestra, puede aparecer en cada página en nuestro sitio. Sin embargo, puede haber páginas web donde no queremos que aparezca este mensaje. Una página es la página de inicio de sesión, puesto que parece un vínculo a la página de inicio de sesión fuera de lugar allí. Puesto que el control LoginView se coloca en un ContentPlaceHolder en la página principal, es posible invalidar este marcado de forma predeterminada en nuestra página de contenido. Abra Login.aspx y vaya al diseñador. Puesto que no hemos definido explícitamente un control de contenido en Login.aspx para el LoginContent ContentPlaceHolder en la página principal, la página de inicio de sesión mostrará marcado de la página maestra predeterminada para este ContentPlaceHolder. Puede ver esto a través del diseñador: el LoginContent ContentPlaceHolder muestra el marcado predeterminado (el control LoginView).
-
 
 [![La página de inicio de sesión muestra el valor predeterminado el contenido de LoginContent ContentPlaceHolder la página maestra](an-overview-of-forms-authentication-cs/_static/image33.png)](an-overview-of-forms-authentication-cs/_static/image32.png)
 
 **Figura 16**: La página de inicio de sesión muestra el contenido predeterminado para LoginContent ContentPlaceHolder's Page the Master ([haga clic aquí para ver imagen en tamaño completo](an-overview-of-forms-authentication-cs/_static/image34.png))
-
 
 Para invalidar el marcado predeterminado para el LoginContent ContentPlaceHolder, simplemente haga doble clic en la región en el diseñador y elija la opción de crear contenido personalizado en el menú contextual. (Cuando se usa el control ContentPlaceHolder de Visual Studio 2008 incluye un de etiquetas inteligentes que, cuando se selecciona, ofrece la misma opción.) Esto agrega un nuevo control de contenido para marcado de la página y, por tanto, nos permite definir contenido personalizado de esta página. Puede agregar un mensaje personalizado en este caso, como "Inicie sesión en...", pero vamos a déjelo en blanco.
 
 > [!NOTE]
 > En Visual Studio 2005, crear contenido personalizado crea un control en la página ASP.NET de contenido. En Visual Studio 2008, sin embargo, crear contenido personalizado copia contenido de la página maestra predeterminada en el control de contenido recién creado. Si usa Visual Studio 2008, a continuación, después de crear el nuevo control de contenido Asegúrese de que borrar el contenido copiado a través de la página maestra.
 
-
 Figura 17 se muestra la página Login.aspx cuando visita desde un explorador después de realizar este cambio. Tenga en cuenta que no hay ningún "Hola, stranger" o "Bienvenido de nuevo, *username*" mensaje en el panel de navegación izquierdo &lt;div&gt; porque no hay cuando se visita Default.aspx.
-
 
 [![La página de inicio de sesión oculta el marcado de LoginContent ContentPlaceHolder el valor predeterminado](an-overview-of-forms-authentication-cs/_static/image36.png)](an-overview-of-forms-authentication-cs/_static/image35.png)
 
 **Figura 17**: La página de inicio de sesión oculta marcado del valor predeterminado LoginContent ContentPlaceHolder ([haga clic aquí para ver imagen en tamaño completo](an-overview-of-forms-authentication-cs/_static/image37.png))
-
 
 ## <a name="step-5-logging-out"></a>Paso 5: El cierre de sesión
 
@@ -423,20 +383,16 @@ Puesto que LoginStatus está fuera del control LoginView, aparecerá para los us
 
 Figura 18 se muestra Default.aspx cuando visita Jisun. Tenga en cuenta que la columna izquierda muestra el mensaje, "Bienvenido de nuevo, Jisun" junto con un vínculo para cerrar sesión. Al hacer clic en el registro de salida LinkButton produce un postback, cierra sesión en el sistema Jisun y redirige a ella a Logout.aspx. Como se muestra en la figura 19, en el momento en que llega a Jisun Logout.aspx que ya se ha cerrado y, por tanto, es anónimo. Por lo tanto, la columna izquierda muestra el texto "Bienvenido, stranger" y un vínculo a la página de inicio de sesión.
 
-
 [![Se muestra en default.aspx](an-overview-of-forms-authentication-cs/_static/image39.png)](an-overview-of-forms-authentication-cs/_static/image38.png)
 
 **Figura 18**: Default.aspx muestra "Bienvenido de nuevo, Jisun" junto con un LinkButton "Logout" ([haga clic aquí para ver imagen en tamaño completo](an-overview-of-forms-authentication-cs/_static/image40.png))
-
 
 [![Logout.aspx Shows](an-overview-of-forms-authentication-cs/_static/image42.png)](an-overview-of-forms-authentication-cs/_static/image41.png)
 
 **Figura 19**: Logout.aspx muestra "Welcome stranger" junto con un LinkButton "Login" ([haga clic aquí para ver imagen en tamaño completo](an-overview-of-forms-authentication-cs/_static/image43.png))
 
-
 > [!NOTE]
 > Le animo a personalizar la página Logout.aspx para ocultar LoginContent ContentPlaceHolder la página maestra (como hicimos para Login.aspx en el paso 4). La razón es que "Login" LinkButton representada por el control LoginStatus (lo debajo de "Hola, stranger") a la página de inicio de sesión pasa la dirección URL actual en el parámetro de cadena de consulta ReturnUrl a enviar al usuario. En resumen, si hace clic en un usuario que ha cerrado este LoginStatus LinkButton "Login" y a continuación, registra en, le redirigirá a Logout.aspx, lo que podría confundir fácilmente el usuario.
-
 
 ## <a name="summary"></a>Resumen
 

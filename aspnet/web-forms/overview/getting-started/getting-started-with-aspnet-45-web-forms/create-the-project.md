@@ -8,12 +8,12 @@ ms.date: 09/08/2014
 ms.assetid: 2ce36f78-8ecb-4ab1-b748-6d0ab633ea3f
 msc.legacyurl: /web-forms/overview/getting-started/getting-started-with-aspnet-45-web-forms/create-the-project
 msc.type: authoredcontent
-ms.openlocfilehash: 9e2cd1beca03b81140b9d58c5e43dbf7c6b8808b
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: 1819704a4cfd3e6b82de1d8db916e729459d244f
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59393059"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65130910"
 ---
 # <a name="create-the-project"></a>Crear el proyecto
 
@@ -22,7 +22,6 @@ por [Erik Reitan](https://github.com/Erikre)
 [Descargar el proyecto de ejemplo de Wingtip Toys (C#)](http://go.microsoft.com/fwlink/?LinkID=389434&clcid=0x409) o [descargar eBook (PDF)](http://download.microsoft.com/download/0/F/B/0FBFAA46-2BFD-478F-8E56-7BF3C672DF9D/Getting%20Started%20with%20ASP.NET%204.5%20Web%20Forms%20and%20Visual%20Studio%202013.pdf)
 
 > Esta serie de tutoriales aprenderá los conceptos básicos de la creación de una aplicación de formularios Web Forms ASP.NET con ASP.NET 4.5 y Microsoft Visual Studio Express 2013 para Web. Un Visual Studio 2013 [proyecto con código fuente de C#](https://go.microsoft.com/fwlink/?LinkID=389434&clcid=0x409) está disponible para acompañar esta serie de tutoriales.
-
 
 En este tutorial se crea, revise y ejecute el proyecto de forma predeterminada en Visual Studio, que le permitirán familiarizarse con las características de ASP.NET. Además, revisará el entorno de Visual Studio.
 
@@ -83,7 +82,6 @@ Puede cambiar entre **diseño** vista y **origen** vista seleccionando una opci�
 > 
 > - [ASP.NET Web API](../../../../web-api/index.md) -un marco para crear servicios HTTP que lleguen a una amplia gama de clientes, incluidos los exploradores y dispositivos móviles.
 > - [ASP.NET SignalR](../../../../signalr/index.md) -una biblioteca que simplifica la funcionalidad de desarrollo web en tiempo real.
-
 
 ### <a name="reviewing-the-project"></a>Revisar el proyecto
 

@@ -8,12 +8,12 @@ ms.date: 05/28/2015
 ms.assetid: 7e85c70e-1a88-4408-8b3d-29611c7713ed
 msc.legacyurl: /web-pages/overview/getting-started/introducing-aspnet-web-pages-2/publishing
 msc.type: authoredcontent
-ms.openlocfilehash: ece436d44908497d6cf10017ba1ee285bfb4a5b2
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: 49a841dbda183bf1d59153b83f694c9f517e0b94
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59382111"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65127757"
 ---
 # <a name="introducing-aspnet-web-pages---publishing-a-site-by-using-webmatrix"></a>Introducción a las páginas Web ASP.NET - publicar un sitio mediante el uso de WebMatrix
 
@@ -26,7 +26,6 @@ por [Tom FitzMacken](https://github.com/tfitzmac)
 > - Microsoft Azure
 > - Empresa de hospedaje Web
 
-
 ## <a name="about-publishing-your-site"></a>Acerca de cómo publicar su sitio
 
 Hasta ahora, ha hecho todo el trabajo en un equipo local, incluidas las pruebas de las páginas. Para ejecutar su<em>.cshtml</em> páginas, ha usado el servidor web que está integrado en WebMatrix, es decir, IIS Express. Pero por supuesto nadie puede ver el sitio, excepto ha creado. Para permitir que otros usuarios a trabajar con su sitio, debe publicarlo en Internet.
@@ -35,7 +34,6 @@ A menos que todavía tiene acceso a un servidor web pública, publicación signi
 
 > [!NOTE]
 > Podría tener acceso a un servidor web pública mediante el proveedor de servicios de internet (ISP) que usar para obtener el servicio de internet en casa. Sin embargo, el proveedor de hospedaje debe admitir ASP.NET Web Pages. Muchos ISP no, aunque siempre resulta conveniente comprobar.
-
 
 En este tutorial, se le ofrece información general de cómo publicar. No es práctico proporcionar los detalles exactos para todo, ya que el proceso es un poco diferente para cada proveedor de hospedaje. Pero obtendrá una buena idea de cómo funciona el proceso.
 
@@ -142,7 +140,6 @@ Elija una que le guste. Para este tutorial, hemos seleccionado DiscountASP.NET, 
 > [!NOTE]
 > Nuestra opción de un proveedor de hospedaje para este tutorial no debe interpretarse como un patrocinio de dicha empresa a través de cualquier otro. Pero tuvimos que elegir una fines ilustrativos y DiscountASP.NET es una de las empresas que es compatible con ASP.NET Web Pages y el protocolo Web Deploy para la publicación.
 
-
 Normalmente, una vez que se ha registrado con el proveedor de hospedaje, la compañía envía un correo electrónico que contiene un nombre de usuario y una contraseña, la dirección URL del servidor de web y así sucesivamente. Si la empresa de hospedaje admite protocolos Web Deploy, podría enviar es un archivo que contiene la configuración de publicación o le permiten descargar uno. Un archivo de configuración de publicación, simplifica el proceso para usted.
 
 Cuando se ha registrado y esté preparado para publicar, haga clic en el **publicar** botón en la cinta de opciones de WebMatrix. El **configuración de publicación** se muestra el cuadro de diálogo.
@@ -196,7 +193,6 @@ Haga clic en el **publicar** botón en la cinta de opciones. WebMatrix determina
 > 
 > De forma predeterminada, WebMatrix publica la base de datos (*.sdf* archivo) solo la primera vez que publique el sitio. Una vez que se publica el sitio y las personas interactúan con el sitio Web, la base de datos en el sitio activo tiene normalmente los datos reales de la carpeta del sitio. Hay que tener cuidado de no sobrescribir la base de datos en directo con el *.sdf* archivo en su equipo, que normalmente contiene solo los datos de prueba. Por esta razón aparece la advertencia **publicación sobrescribirá las bases de datos remotos**, y por qué la casilla de verificación *WebPagesMovies.sdf* está desactivada de forma predeterminada.
 
-
 Haga clic en **Continuar**. WebMatrix publica los archivos modificados y muestra un mensaje de confirmación, como lo hizo la primera vez que publicó.
 
 Vaya al sitio activo (puede hacer clic en el vínculo en el mensaje de éxito si se sigue mostrando) y compruebe que el cambio se ha publicado.
@@ -210,7 +206,6 @@ Vaya al sitio activo (puede hacer clic en el vínculo en el mensaje de éxito si
 > Edición remota es una manera fácil de realizar cambios en el sitio activo. Sin embargo, los cambios que realice esta forma no están sincronizados con los archivos en el sitio local. Para sincronizar los archivos locales con el sitio remoto, puede descargar los archivos remotos. Este proceso funciona de forma similar, la publicación, excepto en orden inverso.
 > 
 > No se describirá más acerca de la edición remota y remoto descarga instalaciones de WebMatrix aquí. Son muy útiles si tienen varias personas trabajando en el mismo sitio en equipos diferentes. Para obtener más información, consulte [publicar y modificar un sitio remoto con la versión Beta 2 de WebMatrix](https://go.microsoft.com/fwlink/?LinkId=251591).
-
 
 ## <a name="additional-resources"></a>Recursos adicionales
 

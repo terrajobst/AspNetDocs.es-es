@@ -8,12 +8,12 @@ ms.date: 05/04/2012
 ms.assetid: 787a53fd-9901-4a11-9d58-61e0509cda45
 msc.legacyurl: /web-forms/overview/deployment/configuring-server-environments-for-web-deployment/choosing-the-right-approach-to-web-deployment
 msc.type: authoredcontent
-ms.openlocfilehash: 65b77b016e02c2d9c8ff2b925b1567f26a6a05cc
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: 13f784dd8e6404806104d56b026b3c41ca178892
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59407918"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65128486"
 ---
 # <a name="choosing-the-right-approach-to-web-deployment"></a>Elegir el enfoque adecuado para la implementación web
 
@@ -30,7 +30,6 @@ por [Jason Lee](https://github.com/jrjlee)
 > 
 > Cómo configurar los servidores web de destino dependerá de qué enfoque de implementación que desea usar. En este tema le ayudará a decidir qué enfoque de implementación es adecuada para usted.
 
-
 Esta tabla muestra las principales ventajas y desventajas de cada enfoque de implementación, junto con los escenarios que normalmente se adapten a cada enfoque.
 
 | Enfoque | Ventajas | Desventajas | Escenarios típicos |
@@ -39,35 +38,26 @@ Esta tabla muestra las principales ventajas y desventajas de cada enfoque de imp
 | Agente temporal | No hay ninguna necesidad de instalar Web Deploy en el equipo de destino. Automáticamente se usa la versión más reciente de Web Deploy. | El usuario debe ser administrador en el servidor de destino. el usuario no puede proporcionar credenciales alternativas. | Entornos de desarrollo. Entornos de prueba. |
 | Controlador de implementación Web | Los usuarios no administradores pueden implementar el contenido. Es adecuado para las actualizaciones periódicas para las aplicaciones web y el contenido. | Es mucho más difícil de configurar. | Entornos de ensayo. Entornos de producción de la intranet. Entornos hospedados. |
 | Implementación sin conexión | Es muy fácil de configurar. Es adecuado para entornos aislados. | El administrador del servidor manualmente debe copiar e importar el paquete web cada vez. | Entornos de producción a través de Internet. Entornos aislados de red. |
-  
 
 ## <a name="using-the-remote-agent"></a>Mediante el agente remoto
 
 Al instalar Web Deploy con la configuración predeterminada en un servidor de destino, el servicio de agente de implementación Web (el "agente remoto") automáticamente instalado e iniciado. De forma predeterminada, el agente remoto expone un extremo HTTP en esta dirección:
 
-
 [!code-console[Main](choosing-the-right-approach-to-web-deployment/samples/sample1.cmd)]
-
 
 > [!NOTE]
 > Puede reemplazar [*server*] con el nombre del equipo del servidor web, una dirección IP para el servidor web o un nombre de host que se resuelve en el servidor web.
 
-
 Los administradores de servidor pueden implementar paquetes web desde una ubicación remota, como una máquina de desarrollo o en un servidor de compilación especificando la dirección de punto de conexión. Por ejemplo, suponga que Matt Hink en Fabrikam, Inc. ha generado el proyecto de aplicación web ContactManager.Mvc en su máquina de desarrollador. El proceso de compilación genera un paquete web, junto con un *. deploy.cmd* archivo que contiene los comandos de Web Deploy, debe para instalar el paquete. Si Matt es un administrador del servidor en el servidor TESTWEB1, puede implementar la aplicación web para el servidor web de prueba, ejecute este comando en su equipo de desarrollo:
-
 
 [!code-console[Main](choosing-the-right-approach-to-web-deployment/samples/sample2.cmd)]
 
-
 En realidad, el archivo ejecutable de Web Deploy puede deducir la dirección de punto de conexión del agente remoto si proporciona el nombre del equipo, por lo que solo debe Matt escriba esto:
-
 
 [!code-console[Main](choosing-the-right-approach-to-web-deployment/samples/sample3.cmd)]
 
-
 > [!NOTE]
 > Para obtener más información sobre la sintaxis de línea de comandos de Web Deploy y *. deploy.cmd* archivos, consulte [Cómo: Instalar un paquete de implementación utilizando el archivo deploy.cmd](https://msdn.microsoft.com/library/ff356104.aspx).
-
 
 El agente remoto ofrece una manera sencilla de implementar el contenido desde una ubicación remota, y este enfoque puede funcionar bien con la implementación automatizada o de un solo clic. Sin embargo, el usuario que ejecuta el comando de implementación también debe ser un administrador de dominio o un miembro del grupo Administradores local en el servidor de destino. Además, el agente remoto no admite la autenticación básica, por lo que no se puede pasar credenciales alternativas en la línea de comandos.
 
@@ -81,13 +71,10 @@ El enfoque de agente temporal para la implementación es similar al enfoque de a
 
 Si desea utilizar la configuración de proveedor temporal del agente, agregue el **/g** marca a su comando de implementación:
 
-
 [!code-console[Main](choosing-the-right-approach-to-web-deployment/samples/sample4.cmd)]
-
 
 > [!NOTE]
 > No puede usar al agente temporal si está instalado el servicio del agente de implementación web en el equipo de destino, incluso si no se está ejecutando el servicio.
-
 
 La ventaja de este enfoque es que no es necesario mantener las instalaciones de Web Deploy en los servidores de destino. Además, no es necesario para asegurarse de que los equipos de origen y destino se está ejecutando la misma versión de Web Deploy. Sin embargo, este método tiene las mismas limitaciones de entidad de seguridad que el enfoque de agente remoto, es decir, que debe ser un administrador local en el servidor de destino con el fin de implementar el contenido y se admite únicamente la autenticación NTLM. El enfoque de agente temporal también requiere configuración mucho más inicial del entorno de destino.
 
@@ -99,31 +86,23 @@ Para IIS 7 y versiones posteriores, Web Deploy ofrece un enfoque de implementaci
 
 De forma predeterminada, el agente remoto expone un extremo HTTP en esta dirección:
 
-
 [!code-console[Main](choosing-the-right-approach-to-web-deployment/samples/sample5.cmd)]
-
 
 > [!NOTE]
 > Puede reemplazar [*server*] con el nombre del equipo del servidor web, una dirección IP para el servidor web o un nombre de host que se resuelve en el servidor web.
-
 
 La gran ventaja del controlador de implementación Web sobre el agente remoto y el agente temporal, es que puede configurar IIS para permitir que los usuarios sin privilegios de administrador implementar aplicaciones y contenido a determinados sitios Web IIS. El controlador de implementación Web también admite la autenticación básica, por lo que puede proporcionar credenciales alternativas como parámetros en los comandos de Web Deploy. El principal inconveniente es que el controlador de implementación Web es inicialmente mucho más complicado instalar y configurar.
 
 En el caso de los usuarios sin privilegios de administrador, el servicio de administración Web (WMSvc) sólo permitirá al usuario para conectarse a IIS mediante una conexión de nivel de sitio, en lugar de una conexión de nivel de servidor. Para obtener acceso a un sitio determinado, puede incluir una cadena de consulta específica del sitio en la dirección del extremo:
 
-
 [!code-console[Main](choosing-the-right-approach-to-web-deployment/samples/sample6.cmd)]
-
 
 Por ejemplo, suponga que un proceso de compilación está configurado para implementar automáticamente una aplicación web en un entorno de ensayo después de cada compilación correcta. Si utiliza el enfoque de agente remoto, deberá realizar un administrador de la identidad del proceso de compilación en los servidores de destino. En cambio, con el enfoque de implementación de controlador de Web puede dar un usuario sin privilegios de administrador&#x2014;**FABRIKAM\stagingdeployer** en este caso&#x2014;permiso para un específico sitio Web de IIS solo y el proceso de compilación puede proporcionar estos credenciales para implementar el paquete de web.
 
-
 [!code-console[Main](choosing-the-right-approach-to-web-deployment/samples/sample7.cmd)]
-
 
 > [!NOTE]
 > Para obtener más información sobre las operaciones de línea de comandos de Web Deploy y la sintaxis, vea [referencia de línea de comandos de implementación Web](https://technet.microsoft.com/library/dd568991(v=ws.10).aspx). Para obtener más información sobre el uso de la *. deploy.cmd* de archivos, vea [Cómo: Instalar un paquete de implementación utilizando el archivo deploy.cmd](https://msdn.microsoft.com/library/ff356104.aspx).
-
 
 El controlador de implementación Web proporciona un enfoque útil para la implementación en entornos, entornos hospedados y entornos de producción basados en intranet, donde el acceso remoto al servidor está disponible, pero las credenciales de administrador no son de almacenamiento provisional.
 

@@ -9,12 +9,12 @@ ms.custom: seoapril2019
 ms.assetid: 1cd7525d-de5e-4ab6-94f0-51480d3255d1
 msc.legacyurl: /web-api/overview/formats-and-model-binding/json-and-xml-serialization
 msc.type: authoredcontent
-ms.openlocfilehash: a9e7ed63a55c146976e0221214e722f3a2292fee
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: 00fa07f00eabf7e6c883c5e9ceaf9a38a8f49605
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59408282"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65126171"
 ---
 # <a name="json-and-xml-serialization-in-aspnet-web-api"></a>Serialización JSON y XML en ASP.NET Web API
 
@@ -221,7 +221,6 @@ Tenga en cuenta que el serializador agrega un &quot;$id&quot; propiedad a ambos 
 
 > [!NOTE]
 > Las referencias a objetos no son estándar en JSON. Antes de usar esta característica, considere si los clientes podrán analizar los resultados. Podría ser preferible simplemente quitar ciclos del gráfico. Por ejemplo, el vínculo desde el empleado al departamento no es necesario realmente en este ejemplo.
-
 
 Para conservar las referencias de objeto en XML, tiene dos opciones. La opción más sencilla consiste en agregar `[DataContract(IsReference=true)]` a la clase de modelo. El *IsReference* parámetro permite referencias a objetos. Recuerde que **DataContract** hace serialización participar en, por lo que también deberá agregar **DataMember** atributos a las propiedades:
 

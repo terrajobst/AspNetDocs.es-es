@@ -9,12 +9,12 @@ ms.custom: seoapril2019
 ms.assetid: a7f3c1b5-69d9-4261-b082-19ffafa5f16a
 msc.legacyurl: /web-api/overview/advanced/sending-html-form-data-part-2
 msc.type: authoredcontent
-ms.openlocfilehash: 70e150a32f208cf75086f959d484d86e8501c6bd
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: f5aaebb96f631dfb6b0da1fbca96cd93a6a7fe2d
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59419930"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65126225"
 ---
 # <a name="sending-html-form-data-in-aspnet-web-api-file-upload-and-multipart-mime"></a>Enviar datos de formulario HTML en ASP.NET Web API: Carga de archivos y MIME de varias partes
 
@@ -26,7 +26,6 @@ Este tutorial muestra cómo cargar archivos a una API web. También se describe 
 
 > [!NOTE]
 > [Descargue el proyecto completado](https://code.msdn.microsoft.com/ASPNET-Web-API-File-Upload-a8c0fb0d).
-
 
 Este es un ejemplo de un formulario HTML para cargar un archivo:
 
@@ -44,7 +43,6 @@ Este mensaje se divide en dos *partes*, uno para cada control de formulario. Los
 
 > [!NOTE]
 > El límite de la parte incluye un componente aleatorio (&quot;41184676334&quot;) para asegurarse de que la cadena delimitadora no accidentalmente aparecen dentro de una parte de mensaje.
-
 
 Cada parte del mensaje contiene uno o varios encabezados, seguidos por el contenido del elemento.
 

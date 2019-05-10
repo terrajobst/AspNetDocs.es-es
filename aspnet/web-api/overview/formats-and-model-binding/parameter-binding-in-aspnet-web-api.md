@@ -9,12 +9,12 @@ ms.custom: seoapril2019
 ms.assetid: e42c8388-04ed-4341-9fdb-41b1b4c06320
 msc.legacyurl: /web-api/overview/formats-and-model-binding/parameter-binding-in-aspnet-web-api
 msc.type: authoredcontent
-ms.openlocfilehash: f121f12ce689a079412bbd5392fde4fea863ff1f
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: da0b9e12fcbe5cd2bfb5478162b7453d34931edf
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59401977"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65127523"
 ---
 # <a name="parameter-binding-in-aspnet-web-api"></a>Parámetro de enlace en ASP.NET Web API
 
@@ -173,7 +173,6 @@ El **ExecuteBindingAsync** método realiza el enlace. Dentro de este método, ag
 
 > [!NOTE]
 > Si su **ExecuteBindingAsync** método lee el cuerpo del mensaje de solicitud, reemplace el **WillReadBody** propiedad devuelva true. El cuerpo de solicitud podría ser una secuencia sin almacenamiento en búfer que solo se puede leer una vez, por lo que la API Web se aplica una regla que a lo sumo un enlace puede leer el cuerpo del mensaje.
-
 
 Para aplicar un personalizado **HttpParameterBinding**, puede definir un atributo que se deriva de **ParameterBindingAttribute**. Para `ETagParameterBinding`, definiremos dos atributos, uno para `if-match` encabezados y otra para `if-none-match` encabezados. Ambos derivan de una clase base abstracta.
 

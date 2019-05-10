@@ -8,12 +8,12 @@ ms.date: 04/01/2008
 ms.assetid: 19c4d042-4e34-4b44-9f1d-6bf2253ba366
 msc.legacyurl: /web-forms/overview/older-versions-security/admin/recovering-and-changing-passwords-cs
 msc.type: authoredcontent
-ms.openlocfilehash: e3e097663568b21ee3f84c7006a0bd89718ac6c2
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: f5eab787d9eadbb2e19389c73db8319ba33c24af
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59380286"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65130590"
 ---
 # <a name="recovering-and-changing-passwords-c"></a>Recuperar y cambiar las contraseñas (C#)
 
@@ -22,7 +22,6 @@ por [Scott Mitchell](https://twitter.com/ScottOnWriting)
 [Descargar código](http://download.microsoft.com/download/6/0/e/60e1bd94-e5f9-4d5a-a079-f23c98f4f67d/CS.13.zip) o [descargar PDF](http://download.microsoft.com/download/6/0/e/60e1bd94-e5f9-4d5a-a079-f23c98f4f67d/aspnet_tutorial13_ChangingPasswords_cs.pdf)
 
 > ASP.NET incluye dos controles Web de ayudar a recuperar y cambiar las contraseñas. El control PasswordRecovery permite a un visitante recuperar su contraseña perdida. El control ChangePassword permite al usuario que actualice su contraseña. Al igual que otros controles Web relacionados con el inicio de sesión que hemos visto a lo largo de esta serie de tutoriales, la PasswordRecovery y ChangePassword de los controles con el marco de pertenencia en segundo plano para restablecer o modificar las contraseñas de usuario.
-
 
 ## <a name="introduction"></a>Introducción
 
@@ -38,7 +37,6 @@ Todos los sitios Web que admiten las cuentas de usuario deben proporcionar a los
 
 > [!NOTE]
 > Dado que los mensajes de correo electrónico se transmiten a través de la red en texto sin formato intervienen los riesgos de seguridad con el envío de contraseña de un usuario por correo electrónico.
-
 
 El control PasswordRecovery consta de tres vistas:
 
@@ -59,18 +57,14 @@ Después de que el usuario ha proporcionado su nombre de usuario - o su respuest
 > [!NOTE]
 > Recuerde que el `SqlMembershipProvider` almacena las contraseñas de usuario en uno de los tres formatos: Clear, Hashed (valor predeterminado) o cifrado. El mecanismo de almacenamiento utilizado depende de las opciones de configuración de pertenencia; la aplicación de demostración usa el formato de la contraseña con hash. Cuando se usa el formato de la contraseña Hashed el `EnablePasswordRetrieval` opción debe establecerse en False porque el sistema no puede determinar la contraseña del usuario real de la versión con hash almacenada en la base de datos.
 
-
 Figura 1 ilustra cómo el PasswordRecovery interfaz y el comportamiento se ve afectada por la configuración de pertenencia.
-
 
 [![El RequiresQuestionAndAnswer y EnablePasswordRetrieval EnablePasswordReset influir en apariencia y el comportamiento del control PasswordRecovery](recovering-and-changing-passwords-cs/_static/image2.png)](recovering-and-changing-passwords-cs/_static/image1.png)
 
 **Figura 1**: El `RequiresQuestionAndAnswer`, `EnablePasswordRetrieval`, y `EnablePasswordReset` influir en la apariencia y el comportamiento del control PasswordRecovery ([haga clic aquí para ver imagen en tamaño completo](recovering-and-changing-passwords-cs/_static/image3.png))
 
-
 > [!NOTE]
 > En el <a id="_msoanchor_2"> </a> [ *crear el esquema de pertenencia en SQL Server* ](../membership/creating-the-membership-schema-in-sql-server-cs.md) tutorial hemos configurado el proveedor de pertenencia estableciendo `RequiresQuestionAndAnswer` en True, `EnablePasswordRetrieval` a Es False, y `EnablePasswordReset` en True.
-
 
 ### <a name="using-the-passwordrecovery-control"></a>Uso del Control PasswordRecovery
 
@@ -85,34 +79,27 @@ Se especifica la configuración de entrega de correo electrónico a través de l
 > [!NOTE]
 > `<system.net>` es un elemento secundario de la raíz `<configuration>` elemento y un elemento relacionado de `<system.web>`. Por lo tanto, no coloque la `<system.net>` elemento dentro de la `<system.web>` elemento; en su lugar, se coloca en el mismo nivel.
 
-
 [!code-xml[Main](recovering-and-changing-passwords-cs/samples/sample1.xml)]
 
 Además de utilizar un servidor SMTP en la red, o bien puede especificar un directorio de recogida donde se deben depositar los mensajes de correo electrónico se envíen.
 
 Una vez haya configurado la configuración de SMTP, visite la `RecoverPassword.aspx` página a través de un explorador. En primer lugar pruebe a escribir un nombre de usuario que no existe en el almacén del usuario. Como se muestra en la figura 2, el control PasswordRecovery muestra un mensaje que indica que no se accede a la información de usuario. Se puede personalizar el texto del mensaje a través del control [ `UserNameFailureText` propiedad](https://msdn.microsoft.com/library/system.web.ui.webcontrols.passwordrecovery.usernamefailuretext.aspx).
 
-
 [![Se muestra un mensaje de Error si se escribe un nombre de usuario no válido](recovering-and-changing-passwords-cs/_static/image5.png)](recovering-and-changing-passwords-cs/_static/image4.png)
 
 **Figura 2**: Se muestra un mensaje de Error si se escribe un nombre de usuario no válido ([haga clic aquí para ver imagen en tamaño completo](recovering-and-changing-passwords-cs/_static/image6.png))
 
-
 Ahora, escriba un nombre de usuario. Use el nombre de usuario de una cuenta en el sistema con una dirección de correo electrónico que puede acceder y responder a cuya seguridad se conoce. Después de escribir el nombre de usuario y hacer clic en enviar, el control PasswordRecovery muestra su vista de pregunta. Como con la vista de nombre de usuario, si escribe una incorrecta responda el control PasswordRecovery muestra un mensaje de error (consulte la figura 3). Use la [ `QuestionFailureText` propiedad](https://msdn.microsoft.com/library/system.web.ui.webcontrols.passwordrecovery.questionfailuretext.aspx) para personalizar este mensaje de error.
-
 
 [![Se muestra un mensaje de Error si el usuario escribe una respuesta de seguridad no válido](recovering-and-changing-passwords-cs/_static/image8.png)](recovering-and-changing-passwords-cs/_static/image7.png)
 
 **Figura 3**: Se muestra un mensaje de Error si el usuario escribe una respuesta de seguridad no válido ([haga clic aquí para ver imagen en tamaño completo](recovering-and-changing-passwords-cs/_static/image9.png))
 
-
 Por último, escriba la respuesta de seguridad correcta y haga clic en enviar. En segundo plano, el control PasswordRecovery genera una contraseña aleatoria, lo asigna a la cuenta de usuario, envía un correo electrónico que informa al usuario de su nueva contraseña (consulte la figura 4) y, a continuación, muestra la vista correcto.
-
 
 [![El usuario se envía un correo electrónico con su nueva contraseña](recovering-and-changing-passwords-cs/_static/image11.png)](recovering-and-changing-passwords-cs/_static/image10.png)
 
 **Figura 4**: El usuario se envía un correo electrónico con su nueva contraseña ([haga clic aquí para ver imagen en tamaño completo](recovering-and-changing-passwords-cs/_static/image12.png))
-
 
 ### <a name="customizing-the-email"></a>Personalizar el correo electrónico
 
@@ -144,11 +131,9 @@ Por último, elija el `MailDefinition`del [ `BodyFileName` propiedad](https://ms
 
 Después de realizar estos cambios a consultar el `RecoverPassword.aspx` página y escriba su nombre de usuario y seguridad la respuesta. Recibirá debe un correo electrónico que parezca más en la figura 5. Tenga en cuenta que `webmaster@example.com` ha sido CC debería y que se han actualizado el asunto y cuerpo.
 
-
 [![Se han actualizado el asunto y cuerpo de la lista CC](recovering-and-changing-passwords-cs/_static/image14.png)](recovering-and-changing-passwords-cs/_static/image13.png)
 
 **Figura 5**: El asunto, el cuerpo y se han actualizado CC lista ([haga clic aquí para ver imagen en tamaño completo](recovering-and-changing-passwords-cs/_static/image15.png))
-
 
 Enviar un correo electrónico con formato HTML establecer [ `IsBodyHtml` ](https://msdn.microsoft.com/library/system.web.ui.webcontrols.maildefinition.isbodyhtml.aspx) en True (el valor predeterminado es False) y actualización de la plantilla de correo electrónico para incluir HTML.
 
@@ -156,7 +141,6 @@ El `MailDefinition` propiedad no es única en la clase PasswordRecovery. Como ve
 
 > [!NOTE]
 > Actualmente hay no hay vínculos en el panel de navegación izquierdo para llegar a la `RecoverPassword.aspx` página. Un usuario solo estaría interesado en visitar esta página si ella no pudo iniciar sesión en el sitio. Por lo tanto, actualizar la `Login.aspx` página para incluir un vínculo a la `RecoverPassword.aspx` página.
-
 
 ### <a name="programmatically-resetting-a-users-password"></a>Mediante programación al restablecer una contraseña de usuario
 
@@ -183,7 +167,6 @@ El `GeneratePassword` método utiliza un generador de números aleatorios cripto
 > [!NOTE]
 > El `SqlMembershipProvider` clase siempre genera una contraseña aleatoria al menos 14 caracteres, por lo que si `MinRequiredPasswordLength` es inferior a 14, a continuación, se omite su valor.
 
-
 ## <a name="step-2-changing-passwords"></a>Paso 2: Cambio de contraseñas
 
 Son difíciles de recordar las contraseñas generada aleatoriamente. Tenga en cuenta la contraseña que se muestra en la figura 4: `WWGUZv(f2yM:Bd`. Pruebe confirmar en memoria. Huelga decir, cuando un usuario se envía una contraseña generada de forma aleatoria de este tipo, ella quiera cambiar la contraseña a algo más fácil de recordar.
@@ -193,14 +176,11 @@ Utilice el control ChangePassword para crear una interfaz para un usuario que ca
 > [!NOTE]
 > El control ChangePassword modifica la contraseña del usuario mediante la invocación del `MembershipUser` del objeto [ `ChangePassword` método](https://msdn.microsoft.com/library/system.web.security.membershipuser.changepassword.aspx). El método ChangePassword acepta dos `string` de entrada de los parámetros - *oldPassword* y *newPassword*- y actualiza la cuenta de usuario con el *newPassword*, Suponiendo que el proporcionado *oldPassword* es correcta.
 
-
 Abra el `ChangePassword.aspx` página y agregue un control ChangePassword a la página, asígnele el nombre `ChangePwd`. En este momento, la vista de diseño debe mostrar el cambio de contraseña ver (consulte la figura 6). Al igual que con el control PasswordRecovery, puede alternar entre las vistas a través de la etiqueta inteligente del control. Además, las apariencias de estas vistas son personalizables a través de las propiedades de estilo diversas o mediante su conversión a una plantilla.
-
 
 [![Agregar un Control ChangePassword a la página](recovering-and-changing-passwords-cs/_static/image17.png)](recovering-and-changing-passwords-cs/_static/image16.png)
 
 **Figura 6**: Agregar un ChangePassword Control a la página ([haga clic aquí para ver imagen en tamaño completo](recovering-and-changing-passwords-cs/_static/image18.png))
-
 
 El control ChangePassword puede actualizar la contraseña del usuario con sesión iniciada actualmente *o* la contraseña de otro usuario especificado. Como se muestra en la figura 6, la vista Cambiar contraseña predeterminada representa sólo tres controles de cuadro de texto: uno para la contraseña anterior y dos para la nueva contraseña. Esta interfaz predeterminada se utiliza para actualizar la contraseña del usuario ha iniciado sesión actualmente.
 
@@ -211,14 +191,11 @@ Establecer `DisplayUserName` a True es útil si desea permitir que los usuarios 
 > [!NOTE]
 > Puede parecer que el `DisplayUserName` propiedad resulta útil para permitir que los administradores cambiar las contraseñas de otros usuarios. Sin embargo, incluso cuando `DisplayUserName` está establecido en True, la contraseña antigua correcta debe sabe y escribirse. Hablaremos sobre las técnicas para permitir que los administradores cambiar las contraseñas de usuario en el paso 3.
 
-
 Visite el `ChangePassword.aspx` página a través de un explorador y cambie su contraseña. Tenga en cuenta que se muestra un mensaje de error si escribe una nueva contraseña que no cumple la longitud de contraseña y los requisitos de caracteres no alfanuméricos especificados en la configuración de pertenencia (consulte la figura 7).
-
 
 [![Agregar un Control ChangePassword a la página](recovering-and-changing-passwords-cs/_static/image20.png)](recovering-and-changing-passwords-cs/_static/image19.png)
 
 **Figura 7**: Agregar un ChangePassword Control a la página ([haga clic aquí para ver imagen en tamaño completo](recovering-and-changing-passwords-cs/_static/image21.png))
-
 
 Después de escribir la contraseña antigua correcta y una contraseña nueva válida, el inicio de sesión del usuario de contraseña se cambia y muestra la vista correcto.
 
@@ -234,11 +211,9 @@ A continuación, establezca el control ChangePassword `MailDefinition` la propie
 
 Después de realizar estos cambios, volver a visitar la página y volver a cambiar su contraseña. Esta vez, el control ChangePassword envía un correo electrónico personalizado, con formato HTML a la dirección de correo electrónico del usuario en el archivo (consulte la figura 8).
 
-
 [![Un mensaje de correo electrónico que informa de que ha cambiado la contraseña del usuario que sus](recovering-and-changing-passwords-cs/_static/image23.png)](recovering-and-changing-passwords-cs/_static/image22.png)
 
 **Figura 8**: Un mensaje de correo electrónico que informa de que ha cambiado la contraseña del usuario que sus ([haga clic aquí para ver imagen en tamaño completo](recovering-and-changing-passwords-cs/_static/image24.png))
-
 
 ## <a name="step-3-allowing-administrators-to-change-users-passwords"></a>Paso 3: Permitir que los administradores cambiar las contraseñas de usuario
 
@@ -267,20 +242,16 @@ Fui con antelación e implementa el tercer enfoque, escribir código que omite e
 > [!NOTE]
 > Cuando se trabaja directamente con la base de datos, se daña la encapsulación proporcionada por el marco de pertenencia. Esta decisión nos vincula el `SqlMembershipProvider`, por lo que nuestro código menos portable. Además, este código puede no funcionar según lo previsto en futuras versiones de ASP.NET si cambia el esquema de pertenencia. Este enfoque es una solución alternativa y, al igual que la mayoría de las soluciones alternativas, no es un ejemplo de procedimientos recomendados.
 
-
 El código tiene algunos bits poco atractivo y es bastante largo. Por lo tanto, no quiero provocar un desorden en este tutorial con un estudio detallado del mismo. Si está interesado en obtener más información, descargue el código para este tutorial y visite el `~/Administration/ManageUsers.aspx` página. Esta página, que hemos creado en el <a id="_msoanchor_5"> </a> [tutorial anterior](building-an-interface-to-select-one-user-account-from-many-cs.md), enumera cada usuario. He actualizado el control GridView para incluir un vínculo a la `UserInformation.aspx` página, pasando el nombre de usuario del usuario seleccionado a través de la cadena de consulta. El `UserInformation.aspx` página muestra información sobre el usuario seleccionado y los cuadros de texto para cambiar su contraseña (consulte la figura 9).
 
 Después de escribir la nueva contraseña, que se confirma en el segundo cuadro de texto y, al hacer clic en el botón de actualización de usuario, una devolución de datos que habrá trastornos y `aspnet_Membership_SetPassword` se invoca el procedimiento almacenado, actualizar la contraseña del usuario. Lo animo a aquellos lectores interesados en esta funcionalidad esté más familiarizados con el código y vuelva a extender la funcionalidad para incluir enviar un correo electrónico al usuario cuya contraseña se cambió.
-
 
 [![Un administrador puede cambiar la contraseña de un usuario](recovering-and-changing-passwords-cs/_static/image26.png)](recovering-and-changing-passwords-cs/_static/image25.png)
 
 **Figura 9**: Un administrador puede cambiar la contraseña de un usuario ([haga clic aquí para ver imagen en tamaño completo](recovering-and-changing-passwords-cs/_static/image27.png))
 
-
 > [!NOTE]
 > El `UserInformation.aspx` página actualmente solo funciona si el marco de pertenencia está configurado para almacenar contraseñas en formato cifrado o Hashed. Contiene el código para cifrar la contraseña nueva, aunque lo invitamos a agregar esta funcionalidad. Es la manera en que recomienda agregar el código necesario con un descompilador como [Reflector](http://www.aisto.com/roeder/dotnet/) para examinar el código fuente para los métodos de .NET Framework; comenzar examinando la `SqlMembershipProvider` la clase `ChangePassword` método. Ésta es la técnica que usa para escribir el código para crear un hash de la contraseña.
-
 
 ## <a name="summary"></a>Resumen
 

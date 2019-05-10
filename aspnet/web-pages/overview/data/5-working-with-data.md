@@ -8,12 +8,12 @@ ms.date: 02/18/2014
 ms.assetid: 673d502f-2c16-4a6f-bb63-dbfd9a77ef47
 msc.legacyurl: /web-pages/overview/data/5-working-with-data
 msc.type: authoredcontent
-ms.openlocfilehash: 0fc828e39cfcce22d4cc226954cf7d1731b04e42
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: 4ed2a2a1ee3cff7a50e67b6571b85f74d01efab7
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59379786"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65133214"
 ---
 # <a name="introduction-to-working-with-a-database-in-aspnet-web-pages-razor-sites"></a>Introducción al trabajo con una base de datos en ASP.NET Web Pages (Razor) sitios
 
@@ -44,7 +44,6 @@ por [Tom FitzMacken](https://github.com/tfitzmac)
 > 
 > Este tutorial también funciona con WebMatrix 3. Puede usar 3 páginas Web de ASP.NET y Visual Studio 2013 (o Visual Studio Express 2013 para Web); Sin embargo, la interfaz de usuario será diferente.
 
-
 ## <a name="introduction-to-databases"></a>Introducción a las bases de datos
 
 Imagine una libreta de direcciones típico. Para cada entrada de la libreta de direcciones (es decir, para cada persona) tiene varias piezas de información como el nombre, apellido, dirección, dirección de correo electrónico y número de teléfono.
@@ -67,7 +66,6 @@ Con este conocimiento básico de bases de datos, está listo para aprender a cre
 > Puede almacenar datos de muchas maneras, incluidas las hojas de cálculo y archivos de texto. Sin embargo, para la mayoría de los casos de negocios, datos se almacenan en una base de datos relacional.
 > 
 > En este artículo no vaya muy profundamente en bases de datos. Sin embargo, le resultará útil para comprender un poco sobre ellos. En una base de datos relacional, la información se divide lógicamente en tablas independientes. Por ejemplo, una base de datos para una escuela podría contener tablas independientes para los estudiantes y para las ofertas de clase. Los comandos eficaces de es compatible con software (por ejemplo, SQL Server) de base de datos que le permiten dinámicamente establecen relaciones entre las tablas. Por ejemplo, puede usar la base de datos relacional para establecer una relación lógica entre alumnos y clases con el fin de crear una programación. Almacenar datos en tablas independientes reduce la complejidad de la estructura de tabla y reduce la necesidad de conservar datos redundantes en tablas.
-
 
 ## <a name="creating-a-database"></a>Crear una base de datos
 
@@ -173,7 +171,6 @@ Cuando esté satisfecho con una base de datos con datos en ella, puede mostrar l
 > 
 > Existen docenas de comandos SQL, pero siguen un patrón similar al siguiente. Puede usar los comandos SQL para crear tablas de base de datos, contar el número de registros en una tabla, calcular precios y realizar muchas más operaciones.
 
-
 ## <a name="inserting-data-in-a-database"></a>Insertar datos en una base de datos
 
 En esta sección se muestra cómo crear una página que permite a los usuarios agregar un nuevo producto a la *producto* tabla de base de datos. Después de inserta un nuevo registro de producto, la página muestra la tabla actualizada mediante la *ListProducts.cshtml* página que ha creado en la sección anterior.
@@ -238,7 +235,6 @@ Después de que se han especificado datos en una tabla, es posible que deba actu
 > [!NOTE] 
 > 
 > **Importante** en un sitio Web de producción, normalmente restringe quién se puede realizar cambios en los datos. Para obtener información acerca de cómo configurar la pertenencia y formas de autorizar a los usuarios realizar tareas en el sitio, consulte [agregar seguridad y la pertenencia a un sitio de ASP.NET Web Pages](https://go.microsoft.com/fwlink/?LinkId=202904).
-
 
 1. En el sitio Web, cree un nuevo archivo CSHTML denominado *EditProducts.cshtml*.
 2. Reemplace el marcado existente en el archivo con lo siguiente:
@@ -321,7 +317,6 @@ Esta sección muestra cómo permitir que los usuarios eliminar un producto de la
 > 
 > **Importante** en un sitio Web de producción, normalmente restringe quién se puede realizar cambios en los datos. Para obtener información acerca de cómo configurar la pertenencia y formas de autorizar el usuario para realizar tareas en el sitio, consulte [agregar seguridad y la pertenencia a un sitio de ASP.NET Web Pages](https://go.microsoft.com/fwlink/?LinkId=202904).
 
-
 1. En el sitio Web, cree un nuevo archivo CSHTML denominado *ListProductsForDelete.cshtml*.
 2. Reemplace el marcado existente por lo siguiente:
 
@@ -384,7 +379,6 @@ Esta sección muestra cómo permitir que los usuarios eliminar un producto de la
 > Como se indicó, el `Database.Open` método le permite pasar un nombre de base de datos o una cadena de conexión y lo averiguará que se va a usar. Esto es muy útil al implementar (publicar) su sitio Web. Puede usar un *.sdf* de archivos en el *aplicación\_datos* carpeta cuando desarrolla y prueba el sitio. Al mover su sitio en un servidor de producción, puede usar una cadena de conexión en el *Web.config* archivo que tiene el mismo nombre que su *.sdf* pero que apunta a un proveedor de hospedaje &#8212;sin tener que cambiar el código.
 > 
 > Por último, si desea trabajar directamente con una cadena de conexión, puede llamar a la `Database.OpenConnectionString` método y pase, la conexión real de cadenas en lugar de simplemente el nombre de un elemento de la *Web.config* archivo. Esto puede resultar útil en situaciones donde por alguna razón no tiene acceso a la cadena de conexión (o los valores en él, como el *.sdf* nombre de archivo) hasta que la página se está ejecutando. Sin embargo, para la mayoría de los escenarios, puede usar `Database.Open` tal como se describe en este artículo.
-
 
 ## <a name="additional-resources"></a>Recursos adicionales
 

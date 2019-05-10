@@ -8,19 +8,18 @@ ms.date: 03/02/2009
 ms.assetid: 3a8a9d9f-82dd-4959-b7c6-960e9ce95df1
 msc.legacyurl: /mvc/overview/older-versions-1/models-data/validating-with-the-idataerrorinfo-interface-vb
 msc.type: authoredcontent
-ms.openlocfilehash: c64e1ea1562c3a0cfe4fb33f1c3033bb9c31bd2c
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: 8ff3adc5db8114dcca2c66d937e1706f0bac0d30
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59402744"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65117546"
 ---
 # <a name="validating-with-the-idataerrorinfo-interface-vb"></a>Validación de la interfaz IDataErrorInfo (VB)
 
 by [Stephen Walther](https://github.com/StephenWalther)
 
 > Stephen Walther muestra cómo mostrar los mensajes de error de validación personalizada implementando la interfaz IDataErrorInfo en una clase de modelo.
-
 
 El objetivo de este tutorial es explicar un método para realizar la validación en una aplicación ASP.NET MVC. Aprenda a evitar que alguien envíe un formulario HTML sin proporcionar valores para los campos obligatorios. En este tutorial, aprenderá a realizar la validación mediante la interfaz IErrorDataInfo.
 
@@ -30,7 +29,6 @@ En este tutorial, usará la base de datos MoviesDB y la tabla de base de datos d
 
 <a id="0.6_table01"></a>
 
-
 | **Nombre de columna** | **Tipo de datos** | **Permitir valores null** |
 | --- | --- | --- |
 | Id. | Valor int. | False |
@@ -38,19 +36,15 @@ En este tutorial, usará la base de datos MoviesDB y la tabla de base de datos d
 | Director | Nvarchar(100) | False |
 | DateReleased | DateTime | False |
 
-
 En este tutorial, usar Microsoft Entity Framework para generar mis clases de modelo de base de datos. La clase Movie generada por Entity Framework se muestra en la figura 1.
-
 
 [![La entidad de película](validating-with-the-idataerrorinfo-interface-vb/_static/image1.jpg)](validating-with-the-idataerrorinfo-interface-vb/_static/image1.png)
 
 **Figura 01**: La entidad de la película ([haga clic aquí para ver imagen en tamaño completo](validating-with-the-idataerrorinfo-interface-vb/_static/image2.png))
 
-
 > [!NOTE] 
 > 
 > Para más información sobre cómo usar Entity Framework para generar las clases de modelo de base de datos, vea que mi tutorial titulada Crear clases de modelo con Entity Framework.
-
 
 ## <a name="the-controller-class"></a>La clase de controlador
 
@@ -72,11 +66,9 @@ La propiedad IsValid devuelve false cuando hay un error de validación. En ese c
 
 La clase Movie se genera por Entity Framework. Puede ver el código de la clase Movie si expandir el archivo MoviesDBModel.edmx en la ventana Explorador de soluciones y abra el archivo MoviesDBModel.Designer.vb en el Editor de código (consulte la figura 2).
 
-
 [![El código de la entidad de película](validating-with-the-idataerrorinfo-interface-vb/_static/image2.jpg)](validating-with-the-idataerrorinfo-interface-vb/_static/image3.png)
 
 **Figura 02**: El código de la entidad de la película ([haga clic aquí para ver imagen en tamaño completo](validating-with-the-idataerrorinfo-interface-vb/_static/image4.png))
-
 
 La clase Movie es una clase parcial. Esto significa que podemos agregar otra clase parcial con el mismo nombre para ampliar la funcionalidad de la clase de la película. Vamos a agregar la lógica de validación a la nueva clase parcial.
 
@@ -110,7 +102,6 @@ Puede aprovechar estos métodos parciales para agregar lógica de validación a 
 > [!NOTE] 
 > 
 > Un método parcial es un método definido en una clase que no son necesarios para implementar. Si no se implementa un método parcial, a continuación, el compilador quita la firma del método y todas las llamadas al método ahí no están costos de tiempo de ejecución asociados con el método parcial. En el Editor de código de Visual Studio, puede agregar un método parcial escribiendo la palabra clave *parcial* seguida por un espacio para ver una lista de parciales para implementar.
-
 
 **Listado 3 - Models\Movie.vb**
 
@@ -146,11 +137,9 @@ En el listado 4, se comprueba la propiedad de indizador el \_colección de error
 
 No es necesario modificar el controlador Home en alguna forma de usar la clase Movie modificada. La página se muestra en la figura 3 muestra lo que sucede cuando se especifica ningún valor para el título o Director campos del formulario.
 
-
 [![Creación automática de los métodos de acción](validating-with-the-idataerrorinfo-interface-vb/_static/image3.jpg)](validating-with-the-idataerrorinfo-interface-vb/_static/image5.png)
 
 **Figura 03**: Un formulario con los valores que faltan ([haga clic aquí para ver imagen en tamaño completo](validating-with-the-idataerrorinfo-interface-vb/_static/image6.png))
-
 
 Tenga en cuenta que el valor DateReleased se valida automáticamente. Dado que la propiedad DateReleased no acepta valores NULL, el DefaultModelBinder genera automáticamente un error de validación para esta propiedad cuando no tiene un valor. Si desea modificar el mensaje de error para la propiedad DateReleased, a continuación, deberá crear un enlazador de modelos personalizado.
 

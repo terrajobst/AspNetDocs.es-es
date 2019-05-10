@@ -8,12 +8,12 @@ ms.date: 06/27/2014
 ms.assetid: 0e6fb03c-b16d-4bb0-ab0b-552bd2b6ece1
 msc.legacyurl: /web-api/overview/odata-support-in-aspnet-web-api/odata-v4/odata-actions-and-functions
 msc.type: authoredcontent
-ms.openlocfilehash: 6b0388c0e60f4a81ddb52a13fe2d05c2c7d27313
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: f5af94e93e5b7f2351d40febbf1a468d635c9db1
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59380865"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65133149"
 ---
 # <a name="actions-and-functions-in-odata-v4-using-aspnet-web-api-22"></a>Acciones y funciones en OData v4 con ASP.NET Web API 2.2
 
@@ -49,7 +49,6 @@ Vamos a definir una acción para valorar un producto.
 
 > [!NOTE]
 > Este tutorial se basa en el tutorial [crear OData v4 extremo mediante ASP.NET Web API 2](create-an-odata-v4-endpoint.md)
-
 
 En primer lugar, agregue un `ProductRating` modelo para representar las clasificaciones.
 

@@ -8,12 +8,12 @@ ms.date: 06/19/2013
 ms.assetid: 7a87f16f-0e19-4f15-a88a-094ae866c4a2
 msc.legacyurl: /mvc/overview/older-versions/using-oauth-providers-with-mvc
 msc.type: authoredcontent
-ms.openlocfilehash: c2fe74c3d7b1aa0d230f1893f6ba7dcaa7a88419
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: 5dfd1305376a62f4987caea242ca0f6aac1018e9
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59396989"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65129634"
 ---
 # <a name="using-oauth-providers-with-mvc-4"></a>Usar proveedores OAuth con MVC 4
 
@@ -24,7 +24,6 @@ por [Tom FitzMacken](https://github.com/tfitzmac)
 > Para usar credenciales externas en una aplicación web ASP.NET MVC 5, consulte [crear una aplicación de ASP.NET MVC 5 con Facebook y Google OAuth2 y OpenID Sign-on](../security/create-an-aspnet-mvc-5-app-with-facebook-and-google-oauth2-and-openid-sign-on.md).
 > 
 > Habilitar estas credenciales en los sitios web proporciona una ventaja considerable porque millones de usuarios ya tienen cuentas con estos proveedores externos. Estos usuarios pueden ser más propensos a suscribirse a su sitio si no tienen que crear y recordar un nuevo conjunto de credenciales. Además, después de que un usuario haya iniciado sesión a través de uno de estos proveedores, puede incorporar operaciones sociales desde el proveedor.
-
 
 ## <a name="what-youll-build"></a>¿Qué va a crear
 

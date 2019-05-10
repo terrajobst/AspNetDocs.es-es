@@ -8,12 +8,12 @@ ms.date: 05/04/2012
 ms.assetid: 3e9f6e7d-8967-4586-94d5-d3a122f12529
 msc.legacyurl: /web-forms/overview/deployment/advanced-enterprise-web-deployment/taking-web-applications-offline-with-web-deploy
 msc.type: authoredcontent
-ms.openlocfilehash: 017eceb8567859fdbe28bb87af844eee20dfa525
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: ba54454bcb6f5e4ceb269b128a6b72a4b75f64be
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59415484"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65131410"
 ---
 # <a name="taking-web-applications-offline-with-web-deploy"></a>Desconectar aplicaciones web con Web Deploy
 
@@ -22,7 +22,6 @@ por [Jason Lee](https://github.com/jrjlee)
 [Descargar PDF](https://msdnshared.blob.core.windows.net/media/MSDNBlogsFS/prod.evol.blogs.msdn.com/CommunityServer.Blogs.Components.WeblogFiles/00/00/00/63/56/8130.DeployingWebAppsInEnterpriseScenarios.pdf)
 
 > Este tema describe cómo tomar una aplicación web sin conexión para la duración de una implementación automatizada mediante la herramienta de implementación Web de Internet Information Services (IIS) (Web Deploy). Los usuarios que vaya a la aplicación web se redirigen a un *aplicación\_offline.htm* archivo hasta que se complete la implementación.
-
 
 En este tema forma parte de una serie de tutoriales que se basa en los requisitos de implementación empresarial de una compañía ficticia denominada Fabrikam, Inc. Esta serie de tutoriales usa una solución de ejemplo&#x2014;el [solución Contact Manager](../web-deployment-in-the-enterprise/the-contact-manager-solution.md)&#x2014;para representar una aplicación web con un nivel realista de complejidad, incluida una aplicación ASP.NET MVC 3, una comunicación de Windows Servicio Foundation (WCF) y un proyecto de base de datos.
 
@@ -70,18 +69,13 @@ El paso siguiente es modificar la lógica de implementación para copiar el arch
 > [!NOTE]
 > El siguiente procedimiento se da por supuesto que está usando un archivo de proyecto de MSBuild personalizado para controlar el proceso de implementación, como se describe en [descripción del archivo de proyecto](../web-deployment-in-the-enterprise/understanding-the-project-file.md). Si va a implementar directamente desde Visual Studio, deberá usar un enfoque diferente. Sayed Ibrahim Hashimi describe uno de estos métodos en [cómo tomar su aplicación sin conexión durante la publicación en Web](http://sedodream.com/2012/01/08/HowToTakeYourWebAppOfflineDuringPublishing.aspx).
 
-
 Para implementar un *aplicación\_sin conexión* archivo a un sitio Web IIS de destino, deberá invocar MSDeploy.exe mediante el [Web Deploy **contentPath** proveedor](https://technet.microsoft.com/library/dd569034(WS.10).aspx). El **contentPath** proveedor es compatible con las rutas de acceso del directorio físico y rutas de aplicación o sitio Web IIS, lo que facilita la elección ideal para la sincronización de un archivo de una carpeta de proyecto de Visual Studio y una aplicación web IIS. Para implementar el archivo, el comando MSDeploy debería parecerse a esto:
-
 
 [!code-console[Main](taking-web-applications-offline-with-web-deploy/samples/sample1.cmd)]
 
-
 Para quitar el archivo desde el sitio de destino al final del proceso de implementación, el comando MSDeploy debería parecerse a esto:
 
-
 [!code-console[Main](taking-web-applications-offline-with-web-deploy/samples/sample2.cmd)]
-
 
 Para automatizar estos comandos como parte de un proceso de compilación e implementación, deberá integrarlos en el archivo de proyecto de MSBuild personalizado. El procedimiento siguiente describe cómo hacerlo.
 
@@ -129,9 +123,7 @@ La canalización de publicación de Web (WPP) usa una lista de elementos denomin
 
 El *. wpp.targets* archivo debe ser similar a esto:
 
-
 [!code-xml[Main](taking-web-applications-offline-with-web-deploy/samples/sample8.xml)]
-
 
 Estos son los puntos clave de interés en este ejemplo:
 
@@ -160,7 +152,6 @@ La próxima vez que creación y empaquetado el proyecto de aplicación web, el W
 
 > [!NOTE]
 > Si se produce un error en la implementación, el *aplicación\_offline.htm* archivo seguirá estando en su lugar y la aplicación permanecerá sin conexión. Esto suele ser el comportamiento deseado. Para conectar la aplicación en línea, puede eliminar el *aplicación\_offline.htm* archivo desde el servidor web. Como alternativa, si se corrija los errores y ejecuta una implementación correcta, el *aplicación\_offline.htm* archivo se quitará.
-
 
 ## <a name="conclusion"></a>Conclusión
 

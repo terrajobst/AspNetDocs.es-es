@@ -8,12 +8,12 @@ ms.date: 02/10/2014
 ms.assetid: f3f4b8c8-e8f6-4474-ad94-69228a6c01ee
 msc.legacyurl: /web-pages/overview/ui-layouts-and-themes/4-working-with-forms
 msc.type: authoredcontent
-ms.openlocfilehash: 680739cbcf54bc9ca7a3bd8167d043ff537eaad5
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: ec5ad784978b2d5191d59398fc4b5ed25ae516fb
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59417538"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65128405"
 ---
 # <a name="working-with-html-forms-in-aspnet-web-pages-razor-sites"></a>Trabajar con formularios HTML en sitios de ASP.NET Web Pages (Razor)
 
@@ -42,7 +42,6 @@ por [Tom FitzMacken](https://github.com/tfitzmac)
 >   
 > 
 > Este tutorial también funciona con ASP.NET Web Pages 2.
-
 
 ## <a name="creating-a-simple-html-form"></a>Creación de un formulario HTML Simple
 
@@ -89,7 +88,6 @@ Para procesar el formulario, agregue código que lee los valores de campo enviad
 > Es una buena idea usar cualquier tiempo mostrar cadenas de codificación HTML (entrada) que obtuvo de un usuario. Si no lo hace, un usuario puede intentar obtener la página web para ejecutar un script malintencionado o hacer algo más que pone en peligro la seguridad del sitio o que es simplemente no lo que piensa. (Esto es especialmente importante si necesitan entradas del usuario, almacenarlo en lugar y, a continuación, mostrar más adelante &#8212; por ejemplo, como un comentario en el blog, revisión de usuario o algo así.)
 > 
 > Para ayudar a evitar estos problemas, ASP.NET Web Pages automáticamente codifica en HTML el texto de contenido que desde el código de salida. Por ejemplo, al mostrar el contenido de una variable o una expresión mediante código como `@MyVar`, ASP.NET Web Pages automáticamente codifica la salida.
-
 
 ## <a name="validating-user-input"></a>Validar la entrada del usuario
 
