@@ -8,16 +8,15 @@ ms.date: 09/08/2014
 ms.assetid: c29776f2-10b5-4632-b383-5f43656d5900
 msc.legacyurl: /web-pages/overview/api-reference
 msc.type: chapter
-ms.openlocfilehash: 87eee84da3d696d7294632a490b1a13c65794b26
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: 755d8ce57ba9df18f2adb5f00c98cad6ef8e545a
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59410011"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65130533"
 ---
-# <a name="api-reference"></a><span data-ttu-id="5faf9-103">Referencia de API</span><span class="sxs-lookup"><span data-stu-id="5faf9-103">API Reference</span></span>
+# <a name="api-reference"></a><span data-ttu-id="adbce-103">Referencia de API</span><span class="sxs-lookup"><span data-stu-id="adbce-103">API Reference</span></span>
 
-> <span data-ttu-id="5faf9-104">Documentación de referencia de API para ASP.NET Web Pages.</span><span class="sxs-lookup"><span data-stu-id="5faf9-104">API Reference documentation for ASP.NET Web Pages.</span></span>
+> <span data-ttu-id="adbce-104">Documentación de referencia de API para ASP.NET Web Pages.</span><span class="sxs-lookup"><span data-stu-id="adbce-104">API Reference documentation for ASP.NET Web Pages.</span></span>
 
-
-- [<span data-ttu-id="5faf9-105">Referencia rápida de la API de ASP.NET</span><span class="sxs-lookup"><span data-stu-id="5faf9-105">ASP.NET API Quick Reference</span></span>](asp-net-web-pages-api-reference.md)
+- [<span data-ttu-id="adbce-105">Referencia rápida de la API de ASP.NET</span><span class="sxs-lookup"><span data-stu-id="adbce-105">ASP.NET API Quick Reference</span></span>](asp-net-web-pages-api-reference.md)
