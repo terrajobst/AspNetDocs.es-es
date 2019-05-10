@@ -8,17 +8,16 @@ ms.date: 10/05/2011
 ms.assetid: 320b7d26-837f-4fa7-a242-1ab82f8bdbe9
 msc.legacyurl: /web-forms/overview/data-access/custom-formatting
 msc.type: chapter
-ms.openlocfilehash: 180059218bdbff4cb25249b0848fb2752fbbb75c
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: e7e54bd1c5d4b0e9a0afcd011c3389c267b891ec
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59402926"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65128690"
 ---
 # <a name="custom-formatting"></a>Formato personalizado
 
 > Estos tutoriales describe cómo personalizar la presentación de datos durante el enlace de datos mediante el uso de controladores de eventos en los controles GridView, DetailsView y FormView.
-
 
 - [Formato personalizado basado en datos (C#)](custom-formatting-based-upon-data-cs.md)
 - [Usar TemplateFields en el control GridView (C#)](using-templatefields-in-the-gridview-control-cs.md)

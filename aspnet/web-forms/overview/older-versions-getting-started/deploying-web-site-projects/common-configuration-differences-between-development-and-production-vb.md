@@ -8,12 +8,12 @@ ms.date: 04/01/2009
 ms.assetid: 548e75f6-4d6c-4cb4-8da8-417915eb8393
 msc.legacyurl: /web-forms/overview/older-versions-getting-started/deploying-web-site-projects/common-configuration-differences-between-development-and-production-vb
 msc.type: authoredcontent
-ms.openlocfilehash: 48af71fc5ff4dad3371687726660a5d914236df5
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: 5ff344bdff379a72a5fc3d26ab66afb095cd2e0d
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59379383"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65125752"
 ---
 # <a name="common-configuration-differences-between-development-and-production-vb"></a>Diferencias de configuración comunes entre el desarrollo y la producción (VB)
 
@@ -23,9 +23,7 @@ por [Scott Mitchell](https://twitter.com/ScottOnWriting)
 
 > En los tutoriales anteriores, hemos implementado nuestro sitio Web copiando todos los archivos pertinentes desde el entorno de desarrollo en el entorno de producción. Sin embargo, no es raro que haya diferencias de configuración entre entornos, lo que necesita que cada entorno tiene un único archivo Web.config. Este tutorial examina las diferencias de configuración típicos y se examina las estrategias para mantener la información de configuración independiente.
 
-
 ## <a name="introduction"></a>Introducción
-
 
 Los dos últimos tutoriales ha avanzado a través de la implementación de una aplicación web sencilla. El [ *implementar el sitio mediante un cliente FTP* ](deploying-your-site-using-an-ftp-client-vb.md) tutorial ha mostrado cómo usar un cliente FTP independiente para copiar los archivos necesarios del entorno de desarrollo hasta la producción. El tutorial anterior, [ *implementar su sitio con Visual Studio*](deploying-your-site-using-visual-studio-vb.md), buscar en la implementación mediante la herramienta Copiar sitio Web y la opción de publicación de Visual Studio. En ambos tutoriales todos los archivos en el entorno de producción era una copia de un archivo en el entorno de desarrollo. Sin embargo, no es infrecuente que los archivos de configuración en el entorno de producción diferentes a los del entorno de desarrollo. Configuración de la aplicación web se almacena en la `Web.config` de archivos y suele incluir información acerca de los recursos externos, como la base de datos, web y servidores de correo electrónico. También detalla el comportamiento de la aplicación en determinadas situaciones, como el curso de acción que se realizará cuando se produce una excepción no controlada.
 
@@ -40,7 +38,6 @@ Cadenas de conexiones de base de datos son un buen ejemplo de información de co
 > [!NOTE]
 > Tutoriales futuros exploran la implementación de aplicaciones controladas por datos, momento en que analizaremos en profundidad los detalles de cómo se almacenan cadenas de conexión de base de datos en el archivo de configuración.
 
-
 El comportamiento previsto de los entornos de desarrollo y producción difiere considerablemente. Una aplicación web en el entorno de desarrollo se está creando, probado y depurado por un pequeño grupo de desarrolladores. En el entorno de producción que se está visitando la misma aplicación por distintos usuarios simultáneos. ASP.NET incluye una serie de características que ayudan a los desarrolladores probar y depurar una aplicación, pero se deben deshabilitar estas características por motivos de seguridad en el entorno de producción y rendimiento. Echemos un vistazo a algunas opciones de configuración de dicha configuración.
 
 ### <a name="configuration-settings-that-impact-performance"></a>Opciones de configuración que afectan al rendimiento
@@ -51,7 +48,6 @@ El atributo de depuración es uno de los atributos más importantes en el `<comp
 
 > [!NOTE]
 > `WebResource.axd` es un controlador HTTP integrado presentado en ASP.NET 2.0 que utilizan los controles de servidor para recuperar los recursos incrustados, como archivos de script, imágenes, archivos CSS y otro contenido. Para obtener más información acerca de cómo `WebResource.axd` funciona y cómo puede utilizarlo para tener acceso a los recursos incrustados desde los controles de servidor personalizado, vea [acceso incrustado recursos a través de una dirección URL usando `WebResource.axd` ](http://aspnet.4guysfromrolla.com/articles/080906-1.aspx).
-
 
 El `<compilation>` del elemento `debug` atributo normalmente se establece en "true" en el entorno de desarrollo. De hecho, este atributo debe establecerse en "true" para depurar una aplicación web; Si se intenta depurar una aplicación ASP.NET desde Visual Studio y el `debug` está establecido en "false", Visual Studio mostrará un mensaje que explica que no se puede depurar la aplicación hasta que el `debug` atributo está establecido en "true" y le oferta para realizar este cambio automáticamente.
 
@@ -71,7 +67,6 @@ Al desarrollar y probar una aplicación que ayuda a ver los detalles de cualquie
 
 > [!NOTE]
 > El valor predeterminado `<customErrors>` valor de la sección muestra los detalles de la excepción del mensaje sólo cuando la página se visita a través de localhost y, en caso contrario, muestra la página de error genérico en tiempo de ejecución. Esto no es lo ideal, pero se garantiza para saber que el comportamiento predeterminado no mostrar los detalles de excepción para los visitantes no locales. Un futuro tutorial examina el `<customErrors>` sección con más detalle y se muestra cómo hacer que una página de error personalizado que se muestra cuando se produce un error en producción.
-
 
 Otra característica ASP.NET que es útil durante el desarrollo de seguimiento. Seguimiento, si está habilitada, registra información acerca de cada solicitud entrante y proporciona una página web especial, `Trace.axd`, para ver los detalles de solicitud reciente. Puede activar y configurar el seguimiento a través de la [ `<trace>` elemento](https://msdn.microsoft.com/library/6915t83k.aspx) en `Web.config`.
 
@@ -111,7 +106,6 @@ Para obtener información sobre cómo usar el proyecto de implementación Web, c
 
 > [!NOTE]
 > No se puede usar el proyecto de implementación Web con Visual Web Developer porque el proyecto de implementación Web se implementa como un Visual Studio Add-In y Visual Studio Express Editions (incluyendo Visual Web Developer) no admiten complementos.
-
 
 ## <a name="summary"></a>Resumen
 

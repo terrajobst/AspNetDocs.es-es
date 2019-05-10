@@ -8,12 +8,12 @@ ms.date: 02/10/2014
 ms.assetid: 2a2c1833-0bfe-4e2e-9cc0-341b52c7b121
 msc.legacyurl: /web-pages/overview/testing-and-debugging/aspnet-web-pages-razor-troubleshooting-guide
 msc.type: authoredcontent
-ms.openlocfilehash: adbaa5cbda4a60a8b222ba49bb148b28b2e214cc
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: fc03767c16f46c1e282d24ee3a7df2409a7c38bb
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59389211"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65128572"
 ---
 # <a name="aspnet-web-pages-razor-troubleshooting-guide"></a>Guía de solución de problemas de ASP.NET Web Pages (Razor)
 
@@ -28,7 +28,6 @@ por [Tom FitzMacken](https://github.com/tfitzmac)
 >   
 > 
 > Este tutorial también funciona con ASP.NET Web Pages 2 y las páginas Web de ASP.NET 1.0.
-
 
 Este tema contiene las siguientes secciones:
 
@@ -150,7 +149,6 @@ Sustituya los valores adecuados para `your-SMTP-server-name`, y así sucesivamen
 
 > [!NOTE]
 > Quite el código que muestra el error (`@errorMessage`) antes de publicar la página en un sitio activo. No es una buena idea permitir que los usuarios ver los mensajes de error que obtienen de un servidor.
-
 
 <a id="AdditionalResources"></a>
 ## <a name="additional-resources"></a>Recursos adicionales

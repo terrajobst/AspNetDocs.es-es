@@ -8,19 +8,18 @@ ms.date: 02/20/2005
 ms.assetid: 92df4051-77c6-492c-bd34-23d24189cea4
 msc.legacyurl: /web-forms/overview/moving-to-aspnet-20/profiles-themes-and-web-parts
 msc.type: authoredcontent
-ms.openlocfilehash: 0f3b376cee8d391eb087664a51cc25e3b58d16b9
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: cf5c45781be6d003d28c6aa27efa08032579a6dd
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59390043"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65132782"
 ---
 # <a name="profiles-themes-and-web-parts"></a>Perfiles, temas y elementos web
 
 por [Microsoft](https://github.com/microsoft)
 
 > Hay cambios importantes en la configuración e instrumentación de ASP.NET 2.0. La nueva API de configuración de ASP.NET permite que se realicen mediante programación los cambios de configuración. Además, existen muchas nuevas opciones de configuración permiten nuevas configuraciones e instrumentación.
-
 
 ASP.NET 2.0 constituye una mejora sustancial en el área de sitios Web personalizados. Además de las características de pertenencia que ya hemos tratado, los perfiles de ASP.NET, temas y elementos Web mejoran considerablemente la personalización de sitios Web.
 
@@ -155,16 +154,13 @@ El archivo de máscara es un archivo XML que contiene las definiciones de propie
 
 **Figura 1** siguiente se muestra una página ASP.NET pequeña puede examinar sin un tema aplicado. **Figura 2** muestra el mismo archivo con un tema aplicado. El color de fondo y el color del texto se configuran a través de un archivo CSS. La apariencia del botón y el cuadro de texto se configuran mediante el archivo de máscara mencionado anteriormente.
 
-
 ![Sin tema](profiles-themes-and-web-parts/_static/image1.gif)
 
 **Figura 1**: Sin tema
 
-
 ![Tema aplicado](profiles-themes-and-web-parts/_static/image2.gif)
 
 **Figura 2**: Tema aplicado
-
 
 El archivo de máscara mencionado anteriormente define una máscara predeterminada para todos los controles de cuadro de texto y controles de botón. Esto significa que cada control de cuadro de texto y el control de botón insertado en una página tendrá este aspecto. También puede definir una máscara que se puede aplicar a instancias específicas de estos controles mediante el **SkinID** propiedad del control.
 
@@ -329,7 +325,6 @@ En esta parte del tutorial, creará una página que utiliza controles de element
 > [!NOTE]
 > No es necesario hacer nada para habilitar la personalización de elementos Web; está habilitado de forma predeterminada para el conjunto de controles de elementos Web. Cuando ejecuta por primera vez una página de elementos Web en un sitio, ASP.NET configura un proveedor de personalización predeterminado para almacenar la configuración de personalización del usuario. Para obtener más información sobre la personalización, vea información general de personalización de elementos Web.
 
-
 ### <a name="to-create-a-page-for-containing-web-parts-controls"></a>Para crear una página que contiene controles de elementos Web
 
 1. Cierre la página predeterminada y agregue una nueva página en el sitio denominado WebPartsDemo.aspx.
@@ -402,11 +397,9 @@ Ahora puede probar la página, navegue a ella en el explorador. La página muest
 
 **Página de demostración de elementos Web con dos zonas**
 
-
 ![Captura de pantalla del tutorial 1 de Web partes frente a](profiles-themes-and-web-parts/_static/image3.gif)
 
 **Figura 3**: Captura de pantalla del tutorial 1 de Web partes frente a
-
 
 En el título de la barra de cada control es una flecha hacia abajo que proporciona acceso a un menú de verbos de acciones disponibles que puede realizar en un control. Haga clic en el menú de verbos para uno de los controles, a continuación, haga clic en el **minimizar** verbo y tenga en cuenta que el control se minimiza. En el menú de verbos, haga clic en **restaurar**, y el control vuelve a su tamaño normal.
 
@@ -449,11 +442,9 @@ Ahora puede probar la capacidad de editar páginas y cambiar el diseño.
 
 ### <a name="web-parts-demo-page-with-my-links-control-moved"></a>Página de demostración de elementos Web con el control de Mis vínculos movido
 
-
 ![Captura de pantalla de tutorial 2 Web partes frente a](profiles-themes-and-web-parts/_static/image4.gif)
 
 **Figura 4**: Captura de pantalla de tutorial 2 Web partes frente a
-
 
 1. Haga clic en el **modo de presentación** menú desplegable y seleccione **examinar**. Actualice la página, desaparecen los nombres de zona y el **Mis vínculos** control sigue siendo donde ha colocado.
 2. Para demostrar que la personalización funciona, cierre el explorador y, a continuación, vuelva a cargar la página. Los cambios realizados se guardan para futuras sesiones del explorador.
@@ -467,22 +458,18 @@ Ahora puede probar la capacidad de editar páginas y cambiar el diseño.
 
 ### <a name="web-parts-demo-page-in-edit-mode"></a>Página de demostración de elementos Web en modo de edición
 
-
 ![Captura de pantalla de tutorial 3 Web partes frente a](profiles-themes-and-web-parts/_static/image5.gif)
 
 **Figura 5**: Captura de pantalla de tutorial 3 Web partes frente a
-
 
 1. Haga clic en el **modo de presentación** menú y seleccione **examinar** para volver al modo de exploración.
 2. El control tiene ahora un título actualizado y no tiene borde, como se muestra en la captura de pantalla siguiente.
 
 ### <a name="edited-web-parts-demo-page"></a>Editar página de demostración de elementos Web
 
-
 ![Captura de pantalla de tutorial 4 Web partes frente a](profiles-themes-and-web-parts/_static/image6.gif)
 
 **Figura 4**: Captura de pantalla de tutorial 4 Web partes frente a
-
 
 ### <a name="adding-web-parts-at-run-time"></a>Agregar elementos Web en tiempo de ejecución
 

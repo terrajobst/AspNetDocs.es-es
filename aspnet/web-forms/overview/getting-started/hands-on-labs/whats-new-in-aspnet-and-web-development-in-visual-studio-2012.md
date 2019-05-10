@@ -8,12 +8,12 @@ ms.date: 02/18/2013
 ms.assetid: 6d40d276-1642-4a77-b6c9-02ac914f6805
 msc.legacyurl: /web-forms/overview/getting-started/hands-on-labs/whats-new-in-aspnet-and-web-development-in-visual-studio-2012
 msc.type: authoredcontent
-ms.openlocfilehash: 3833e3f3c6c49ff2b317ad04aff33c9119cb1f41
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: 80c77ec65ed86b06e417d3f6ba608e404c46768b
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59420216"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65132100"
 ---
 # <a name="whats-new-in-aspnet-and-web-development-in-visual-studio-2012"></a>Novedades de Desarrollo de ASP.NET y web en Visual Studio 2012
 
@@ -30,7 +30,6 @@ por [campamentos Web Team](https://twitter.com/webcamps)
 > Esta práctica le guiará a través de las mejoras y nuevas características descritas anteriormente aplicando cambios menores a una aplicación Web de ejemplo proporcionada en la carpeta de origen.
 > 
 > Todo el código de ejemplo y fragmentos de código se incluyen en el Kit de entrenamiento campamentos de Web, que está disponible en [ https://go.microsoft.com/fwlink/?LinkID=248297&clcid=0x409 ](https://go.microsoft.com/fwlink/?LinkID=248297&clcid=0x409).
-
 
 <a id="Objectives"></a>
 
@@ -70,7 +69,7 @@ Tiempo estimado para completar esta práctica: **60 minutos**.
 <a id="Exercise1"></a>
 
 <a id="Exercise_1_Whats_New_in_the_CSS_Editor"></a>
-### <a name="exercise-1-whats-new-in-the-css-editor"></a>Ejercicio 1: Novedades en el Editor CSS
+### <a name="exercise-1-whats-new-in-the-css-editor"></a>Ejercicio 1: Novedades en el Editor CSS
 
 Los desarrolladores Web deben estar familiarizados con muchas de las dificultades relacionadas con la edición de CSS. Uno de los principales problemas de estilos CSS es la compatibilidad de exploradores. A menudo sucede que, después de aplicar estilos a su sitio, tenga en cuenta que tiene un aspecto distinto si lo abre en otro explorador o dispositivo. Por lo tanto, puede dedicar un tiempo considerable sobre cómo solucionar esos problemas visuales para que tenga en cuenta que, cuando finalmente se realice funciona en un explorador, se divide en los demás.
 
@@ -204,7 +203,7 @@ En esta tarea, obtendrá información sobre cómo usar fragmentos de CSS3 de exp
 <a id="Exercise2"></a>
 
 <a id="Exercise_2_Whats_New_in_the_HTML_Editor"></a>
-### <a name="exercise-2-whats-new-in-the-html-editor"></a>Ejercicio 2: Novedades en el Editor HTML
+### <a name="exercise-2-whats-new-in-the-html-editor"></a>Ejercicio 2: Novedades en el Editor HTML
 
 Visual Studio tiene un editor de HTML mejorado. Algunas de las mejoras incluidas en esta versión son sangría inteligente en documentos HTML, fragmentos de HTML5, inicio HTML y coincidencia de etiqueta final y validación de HTML. En este ejercicio, verá cómo estos cambios mejoran la fluidez cuando se trabaja en el marcado del sitio Web.
 
@@ -331,7 +330,6 @@ Uno de los procedimientos recomendados en HTML es aplicar sangría a los element
 > [!NOTE]
 > En la versión anterior de Visual Studio, la sangría inteligente estaba disponible en el editor XML, pero no en el editor HTML.
 
-
 1. Asegúrese de que la configuración de sangría en el Editor de HTML se establece en la aplicación de sangría inteligente. Para ello, seleccione el **herramientas | Opciones de** opción de menú y, a continuación, seleccione el **Editor de texto | HTML | Pestañas** página en el panel izquierdo de la pantalla. Seleccione la opción de sangría inteligente.
 
     ![Configuración del Editor HTML](whats-new-in-aspnet-and-web-development-in-visual-studio-2012/_static/image33.png "configuración del Editor HTML")
@@ -433,7 +431,6 @@ En esta tarea, descubrirá la nueva validación de JavaScript para el estándar 
 > [!NOTE]
 > Visual Studio 2010 había implementado ECMAStript3 cumplimiento, mientras que Visual Studio 2012 proporciona compatibilidad de ECMAScript5.
 
-
 1. Abra **ECMA5script5.js** ubicado en el **Scripts\custom** carpeta del proyecto. Ahora va a probar la validación de ECMAScript5 estándar.
 
     [!code-html[Main](whats-new-in-aspnet-and-web-development-in-visual-studio-2012/samples/sample8.html)]
@@ -494,11 +491,10 @@ En esta tarea, explorará las características de Visual Studio para la document
 > [!NOTE]
 > Asegúrese de que no hay errores de sintaxis cuente GotoDefinition.js antes de guardar el archivo.
 
-
 <a id="Exercise4"></a>
 
 <a id="Exercise_4_Bundling_and_Minification"></a>
-### <a name="exercise-4-bundling-and-minification"></a>Ejercicio 4: Unión y minificación
+### <a name="exercise-4-bundling-and-minification"></a>Ejercicio 4: Unión y minificación
 
 ¿Cuántas veces ¿sus sitios Web que incluyen JavaScript o CSS de más de un archivo? Se trata de un escenario muy común donde pueden ayudar unión y minificación para reducir el tamaño del archivo y que el sitio funcione con mayor rapidez. La nueva característica de unión en ASP.NET 4.5 empaqueta un conjunto de archivos JS o CSS en un único elemento y reduce su tamaño por minificar el contenido (es decir, quitar los espacios en blanco no es necesarios, quitar comentarios, lo que reduce los identificadores).
 
@@ -675,7 +671,6 @@ En este ejemplo, obtendrá información sobre cómo usar el **DynamicFolderBundl
 
 > [!NOTE]
 > Además, puede implementar esta aplicación a los siguientes sitios Web Windows Azure [Apéndice B: Publicar una aplicación de ASP.NET MVC 4 mediante Web Deploy](#AppendixB).
-
 
 <a id="Summary"></a>
 ## <a name="summary"></a>Resumen

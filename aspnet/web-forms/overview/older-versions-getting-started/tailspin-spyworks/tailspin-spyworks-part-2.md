@@ -8,12 +8,12 @@ ms.date: 07/21/2010
 ms.assetid: 5a9d5429-d70b-411c-8474-f42cf7ef8a2b
 msc.legacyurl: /web-forms/overview/older-versions-getting-started/tailspin-spyworks/tailspin-spyworks-part-2
 msc.type: authoredcontent
-ms.openlocfilehash: 3fbc6fe4d94534a038a81532b3cd8ca30ddf9b11
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: 342d2c54dfba5d052570e890f85dcf9739f9884f
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59378397"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65130611"
 ---
 # <a name="part-2-data-access-layer"></a>Parte 2: Nivel de acceso a datos
 
@@ -22,7 +22,6 @@ por [Joe Stagner](https://github.com/JoeStagner)
 > Tailspin Spyworks demuestra cómo extraordinariamente simple es crear aplicaciones eficaces y escalables para la plataforma. NET. Resalta cómo usar las características nuevas en ASP.NET 4 para crear una tienda en línea, incluida la compra, la desprotección y la administración.
 > 
 > Esta serie de tutoriales detalla todos los pasos que se tarda en compilar la aplicación de ejemplo Tailspin Spyworks. Parte 2 describe cómo agregar la capa de acceso a datos.
-
 
 ## <a id="_Toc260221668"></a>  Adición de la capa de acceso a datos
 

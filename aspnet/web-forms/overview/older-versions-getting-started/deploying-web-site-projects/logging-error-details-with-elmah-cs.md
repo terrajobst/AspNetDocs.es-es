@@ -8,12 +8,12 @@ ms.date: 06/09/2009
 ms.assetid: 11f6fe44-64ef-4a38-a3b4-35c7bb992352
 msc.legacyurl: /web-forms/overview/older-versions-getting-started/deploying-web-site-projects/logging-error-details-with-elmah-cs
 msc.type: authoredcontent
-ms.openlocfilehash: 02c4371cccb56f0ef7c0a6244c3dcd8a30d241b0
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: fedf3261fd1c73107575ea94186c6c895a7fd529
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59415653"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65127903"
 ---
 # <a name="logging-error-details-with-elmah-c"></a>Registrar detalles de error con ELMAH (C#)
 
@@ -22,7 +22,6 @@ por [Scott Mitchell](https://twitter.com/ScottOnWriting)
 [Descargar código](http://download.microsoft.com/download/1/0/C/10CC829F-A808-4302-97D3-59989B8F9C01/ASPNET_Hosting_Tutorial_14_CS.zip) o [descargar PDF](http://download.microsoft.com/download/5/C/5/5C57DB8C-5DEA-4B3A-92CA-4405544D313B/aspnet_tutorial14_ELMAH_cs.pdf)
 
 > Error de registro de módulos y controladores (ELMAH) ofrece otro enfoque para registrar errores en tiempo de ejecución en un entorno de producción. ELMAH es una biblioteca de registro de errores de código abierto gratuito que incluye características como filtrado del error y la capacidad para ver el registro de errores en una página web, como una fuente RSS, o para descargarla como un archivo delimitado por comas. Este tutorial le guía a través de la descarga y la configuración ELMAH.
-
 
 ## <a name="introduction"></a>Introducción
 
@@ -36,7 +35,6 @@ Este tutorial le guía a través de los pasos necesarios para agregar ELMAH a un
 
 > [!NOTE]
 > El estado de supervisión del sistema y ELMAH ambos tienen sus propios conjuntos de ventajas y desventajas. Le animo a probar ambos sistemas y decidir qué se ajusta mejor a sus necesidades.
-
 
 ## <a name="adding-elmah-to-an-aspnet-web-application"></a>Agregar ELMAH a una aplicación Web ASP.NET
 
@@ -56,12 +54,10 @@ ELMAH 1.0 BETA 3 (compilación 10617), la versión más reciente en el momento d
 > [!NOTE]
 > El `Elmah.dll` archivo se encuentra en la descarga `Bin` carpeta, que tiene subcarpetas para diferentes versiones de .NET Framework y para las compilaciones de lanzamiento y depuración. Use la versión de lanzamiento para la versión de framework adecuado. Por ejemplo, si está creando una aplicación web de ASP.NET 3.5, copie el `Elmah.dll` de archivos desde el `Bin\net-3.5\Release` carpeta.
 
-
 A continuación, abra Visual Studio y agregue el ensamblado al proyecto con el botón secundario en el nombre de sitio Web en el Explorador de soluciones y elegir la opción Agregar referencia en el menú contextual. Se abrirá el cuadro de diálogo Agregar referencia. Vaya a la pestaña Examinar y elija el `Elmah.dll` archivo. Esta acción agrega el `Elmah.dll` a la aplicación web `Bin` carpeta.
 
 > [!NOTE]
 > El tipo de proyecto de aplicación Web (WAP) no se muestra el `Bin` carpeta en el Explorador de soluciones. En su lugar, muestra estos elementos en la carpeta de referencias.
-
 
 El `Elmah.dll` ensamblado incluye las clases utilizadas por el sistema ELMAH. Estas clases se dividen en tres categorías:
 
@@ -100,7 +96,6 @@ ELMAH busca sus opciones de configuración en el sitio de Web `Web.config` archi
 > [!NOTE]
 > Si está configurando ELMAH para una aplicación ASP.NET 1.x, a continuación, quite el `requirePermission="false"` atributo desde el `<section>` elementos anteriores.
 
-
 La sintaxis anterior registra personalizado `<elmah>` sección y sus subsecciones: `<security>`, `<errorLog>`, `<errorMail>`, y `<errorFilter>`.
 
 A continuación, agregue el `<elmah>` sección a `Web.config`. En esta sección debe aparecer en el mismo nivel que el `<system.web>` elemento. Dentro de la `<elmah>` Agregar sección la `<security>` y `<errorLog>` secciones de este modo:
@@ -113,7 +108,6 @@ El `<errorLog>` sección define el origen de registro de error que indica dónde
 
 > [!NOTE]
 > ELMAH se suministra con los proveedores de registro de error adicional que pueden usarse para registrar los errores a un archivo XML, una base de datos de Microsoft Access, una base de datos de Oracle y otros almacenes de datos. Consulte el ejemplo `Web.config` archivo que se incluye con la descarga ELMAH para obtener información sobre cómo usar estos proveedores de registro de error alternativa.
-
 
 ### <a name="step-4-creating-the-error-log-source-infrastructure"></a>Paso 4: Creación de la infraestructura de origen del registro de errores
 
@@ -137,7 +131,6 @@ ELMAH no afecta a qué contenido se muestra al usuario cuando se produce una exc
 
 > [!NOTE]
 > También puede usar el `elmah.axd` página para indicar a ELMAH para generar un error de prueba. Visitar `elmah.axd/test` (como en `http://localhost/BookReviews/elmah.axd/test`) hace que ELMAH producir una excepción de tipo `Elmah.TestException`, que tiene el mensaje de error: " Esto es una excepción de prueba puede omitirse."
-
 
 **Figura 3** muestra el registro de errores cuando se visita `elmah.axd` desde el entorno de desarrollo.
 
@@ -184,7 +177,6 @@ La siguiente configuración permite que solo los usuarios en el rol de administr
 > [!NOTE]
 > El rol de administrador y los tres usuarios en el sistema - Scott, Alicia y Jisun - se agregaron en el [ *configurar un sitio Web que usa servicios de aplicación* tutorial](configuring-a-website-that-uses-application-services-cs.md). Los usuarios Scott y Jisun son miembros del rol de administrador. Para obtener más información sobre la autenticación y autorización, consulte mi [tutoriales de seguridad del sitio Web](../../older-versions-security/introduction/security-basics-and-asp-net-support-cs.md).
 
-
 El registro de errores en el entorno de producción ahora se puede ver los usuarios remotos; Vuelva a consultar **figuras 3**, **4**, y **5** para capturas de pantalla de la página web de registro de error. Sin embargo, si un usuario anónimo o que no es administrador intenta ver la página de registro de errores se redirijan automáticamente a la página de inicio de sesión (`Login.aspx`), como **figura 7** muestra.
 
 [![](logging-error-details-with-elmah-cs/_static/image18.png)](logging-error-details-with-elmah-cs/_static/image17.png)
@@ -229,7 +221,6 @@ El marcado siguiente indica a ELMAH para no registrar 404 errores.
 
 > [!NOTE]
 > No se olvide, con el fin de usar el filtrado de error debe registrar el `ErrorFilterModule` módulo HTTP.
-
 
 El `<equal>` elemento dentro de la `<test>` sección se conoce como una aserción. Si la aserción se evalúa como true, a continuación, se filtra el error de registro del ELMAH. Hay disponibles, incluidas otras aserciones: `<greater>`, `<greater-or-equal>`, `<not-equal>`, `<lesser>`, `<lesser-or-equal>`, y así sucesivamente. También puede combinar las aserciones mediante el `<and>` y `<or>` operadores booleanos. Además, incluso puede incluir una expresión de JavaScript simple como una aserción o escribir sus propias aserciones en C# o Visual Basic.
 

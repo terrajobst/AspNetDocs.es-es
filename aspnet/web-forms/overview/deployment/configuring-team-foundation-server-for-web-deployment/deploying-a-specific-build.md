@@ -8,12 +8,12 @@ ms.date: 05/04/2012
 ms.assetid: c979535f-48a3-4ec4-a633-a77889b86ddb
 msc.legacyurl: /web-forms/overview/deployment/configuring-team-foundation-server-for-web-deployment/deploying-a-specific-build
 msc.type: authoredcontent
-ms.openlocfilehash: 0ab58aee6f1203beaf3990536b059f8209e66547
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: 6bede6b36c24ade928ab052e14daec1e017bd0b2
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59393488"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65131934"
 ---
 # <a name="deploying-a-specific-build"></a>Implementar una compilación concreta
 
@@ -22,7 +22,6 @@ por [Jason Lee](https://github.com/jrjlee)
 [Descargar PDF](https://msdnshared.blob.core.windows.net/media/MSDNBlogsFS/prod.evol.blogs.msdn.com/CommunityServer.Blogs.Components.WeblogFiles/00/00/00/63/56/8130.DeployingWebAppsInEnterpriseScenarios.pdf)
 
 > Este tema describe cómo implementar paquetes web y scripts de base de datos desde una compilación anterior específico a un nuevo destino, como un entorno de ensayo o producción.
-
 
 En este tema forma parte de una serie de tutoriales que se basa en los requisitos de implementación empresarial de una compañía ficticia denominada Fabrikam, Inc. Esta serie de tutoriales usa una solución de ejemplo&#x2014;el [solución Contact Manager](../web-deployment-in-the-enterprise/the-contact-manager-solution.md)&#x2014;para representar una aplicación web con un nivel realista de complejidad, incluida una aplicación ASP.NET MVC 3, una comunicación de Windows Servicio Foundation (WCF) y un proyecto de base de datos.
 
@@ -47,21 +46,15 @@ En el [solución de ejemplo](../web-deployment-in-the-enterprise/the-contact-man
 > [!NOTE]
 > **OutputRoot** es un nombre de propiedad usados. Los archivos de proyecto de Visual C# y Visual Basic también declaran esta propiedad para almacenar la ubicación raíz de todos los resultados de la compilación.
 
-
 [!code-xml[Main](deploying-a-specific-build/samples/sample1.xml)]
-
 
 Si desea que el archivo de proyecto para implementar paquetes de web y scripts desde una ubicación diferente de la base de datos&#x2014;como los resultados de una compilación anterior de TFS&#x2014;deberá reemplazar el **OutputRoot** propiedad. Debe establecer el valor de propiedad a la carpeta de compilación relevantes en el servidor de Team Build. Si se estaba ejecutando MSBuild desde la línea de comandos, puede especificar un valor para **OutputRoot** como un argumento de línea de comandos:
 
-
 [!code-console[Main](deploying-a-specific-build/samples/sample2.cmd)]
-
 
 En la práctica, sin embargo, ¿también desea omitir la **compilar** destino&#x2014;hay ningún punto en la creación de la solución si no va a usar los resultados de compilación. Puede hacerlo mediante la especificación de los destinos que quiera ejecutar desde la línea de comandos:
 
-
 [!code-console[Main](deploying-a-specific-build/samples/sample3.cmd)]
-
 
 Sin embargo, en la mayoría de los casos, deseará crear su lógica de implementación en una definición de compilación TFS. Esto permite a los usuarios con el **compilaciones en cola** permiso para desencadenar la implementación de cualquier instalación de Visual Studio con una conexión al servidor TFS.
 

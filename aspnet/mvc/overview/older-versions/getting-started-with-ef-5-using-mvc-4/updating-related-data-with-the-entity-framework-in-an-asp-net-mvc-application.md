@@ -8,12 +8,12 @@ ms.date: 07/30/2013
 ms.assetid: 7871dc05-2750-470f-8b4c-3a52511949bc
 msc.legacyurl: /mvc/overview/older-versions/getting-started-with-ef-5-using-mvc-4/updating-related-data-with-the-entity-framework-in-an-asp-net-mvc-application
 msc.type: authoredcontent
-ms.openlocfilehash: 5dc49d7467db01e62db147c7083ed62379d23940
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: 68f8bdeeb85bc66cf790c2005cf0f0ff24b3b653
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59394164"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65129768"
 ---
 # <a name="updating-related-data-with-the-entity-framework-in-an-aspnet-mvc-application-6-of-10"></a>Actualización de datos relacionados con Entity Framework en una aplicación ASP.NET MVC (6 de 10)
 
@@ -26,7 +26,6 @@ por [Tom Dykstra](https://github.com/tdykstra)
 > > [!NOTE] 
 > > 
 > > Si surge un problema que no se puede resolver, [descargar el capítulo completado](building-the-ef5-mvc4-chapter-downloads.md) e intente reproducir el problema. Por lo general puede encontrar la solución al problema comparando el código para el código completo. Para que algunos errores comunes y cómo resolverlos, consulte [errores y soluciones alternativas.](advanced-entity-framework-scenarios-for-an-mvc-web-application.md#errors)
-
 
 En el tutorial anterior se muestran datos relacionados; en este tutorial, actualizará datos relacionados. Para la mayoría de las relaciones, esto puede hacerse mediante la actualización de los campos de clave externos correspondientes. Para las relaciones de varios a varios, Entity Framework no expone la tabla de combinación directamente, por lo que debe agregar explícitamente y quitar entidades hacia y desde las propiedades de navegación correspondientes.
 
@@ -194,14 +193,12 @@ Haga clic en **editar** en un instructor para ver la página de edición.
 Cambie algunas asignaciones de cursos y haga clic en **guardar**. Los cambios que haga se reflejan en la página de índice.
 
  Nota: El enfoque adoptado para editar datos cursos del instructor funciona bien cuando hay un número limitado de cursos. Para las colecciones que son mucho más grandes, se necesitaría una interfaz de usuario y un método de actualización diferentes.  
- 
 
 ## <a name="update-the-delete-method"></a>Actualizar el método Delete
 
 Cambie el código en el método HttpPost Delete para que el registro de asignación de office (si existe) se elimina cuando se elimine el instructor:
 
 [!code-csharp[Main](updating-related-data-with-the-entity-framework-in-an-asp-net-mvc-application/samples/sample22.cs?highlight=6,10)]
-
 
 Si se intenta eliminar un instructor está asignado a un departamento como administrador, obtendrá un error de integridad referencial. Consulte [la versión actual de este tutorial](../../getting-started/getting-started-with-ef-using-mvc/updating-related-data-with-the-entity-framework-in-an-asp-net-mvc-application.md) código adicional que se quitará automáticamente el instructor de cualquier departamento donde el instructor está asignado como administrador.
 

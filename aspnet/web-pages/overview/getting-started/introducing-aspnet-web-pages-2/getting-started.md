@@ -8,12 +8,12 @@ ms.date: 05/28/2015
 ms.assetid: a36d3bdf-ef1b-47a4-b932-3a0cf4cad716
 msc.legacyurl: /web-pages/overview/getting-started/introducing-aspnet-web-pages-2/getting-started
 msc.type: authoredcontent
-ms.openlocfilehash: 796e0c5e605d1103a4b9937b4e698c5c9412c013
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: bb863f8605e6f8faca3b285607b63a3e88e83012
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59402302"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65128541"
 ---
 # <a name="getting-started"></a>Introducción
 
@@ -53,7 +53,6 @@ por [Tom FitzMacken](https://github.com/tfitzmac)
 > 
 > - ASP.NET Web Pages (Razor) 2
 > - WebMatrix 3
-
 
 ## <a name="what-should-you-know"></a>¿Qué debería saber?
 

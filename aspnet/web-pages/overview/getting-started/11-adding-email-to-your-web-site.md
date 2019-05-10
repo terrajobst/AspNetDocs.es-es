@@ -8,12 +8,12 @@ ms.date: 02/20/2014
 ms.assetid: fc49bcb9-f1a9-4048-8c3f-b60951853200
 msc.legacyurl: /web-pages/overview/getting-started/11-adding-email-to-your-web-site
 msc.type: authoredcontent
-ms.openlocfilehash: 0263f736b96f8e8572536f3783d86c261d7c0512
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: 23e9717329525fb5a0ed505c9dc94505d4f9dbbe
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59411233"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65130549"
 ---
 # <a name="sending-email-from-an-aspnet-web-pages-razor-site"></a>Enviar correo electrónico desde un sitio Web de ASP.NET Pages (Razor)
 
@@ -39,7 +39,6 @@ por [Tom FitzMacken](https://github.com/tfitzmac)
 > 
 > Este tutorial también funciona con ASP.NET Web Pages 2.
 
-
 <a id="Sending_Email_Messages"></a>
 ## <a name="sending-email-messages-from-your-website"></a>Envío de mensajes de correo electrónico desde su sitio Web
 
@@ -57,7 +56,6 @@ En este procedimiento, creará dos páginas. La primera página tiene un formula
 
 > [!NOTE]
 > Para simplificar este ejemplo, el código inicializa el `WebMail` derecha de la aplicación auxiliar en la página donde se utilice. Sin embargo, para los sitios Web real, es mejor colocar código de inicialización similar al siguiente en un archivo global, por lo que inicializa el `WebMail` auxiliar para todos los archivos en su sitio Web. Para obtener más información, consulte [personalizar el comportamiento de todo el sitio para ASP.NET Web Pages](https://go.microsoft.com/fwlink/?LinkId=202906#Setting_Values_For_Helpers).
-
 
 1. Cree un nuevo sitio Web.
 2. Agregar una nueva página denominada *EmailRequest.cshtml* y agregue el siguiente marcado: 
@@ -133,7 +131,6 @@ También puede enviar los archivos que se adjuntan a los mensajes de correo elec
 
 <a id="Additional_Resources"></a>
 ## <a name="additional-resources"></a>Recursos adicionales
-
 
 - [Guía de solución de problemas de ASP.NET Web Pages (Razor)](https://go.microsoft.com/fwlink/?LinkId=253001)
 - [Protocolo de transferencia de correo electrónico simple](https://msdn.microsoft.com/library/aa480435.aspx)

@@ -8,17 +8,16 @@ ms.date: 04/09/2012
 ms.assetid: dc6aa59a-9cb0-4a81-b5f3-ec545a0e958d
 msc.legacyurl: /web-forms/overview/getting-started/getting-started-with-aspnet-45-web-forms
 msc.type: chapter
-ms.openlocfilehash: 4bbda0aa56dd23a1e05e7681f88eefc4d9aa35a3
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: 75ac7d454462a7f7f1e071ce5ee9d892eb329c6f
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59403550"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65131393"
 ---
 # <a name="getting-started-with-aspnet-45-web-forms-and-visual-studio-2013"></a>Introducción a los formularios Web Forms de ASP.NET 4.5 y Visual Studio 2013
 
 > Esta serie de tutoriales aprenderá los conceptos básicos de la creación de una aplicación de formularios Web Forms ASP.NET con ASP.NET 4.5 y Microsoft Visual Studio Express 2013 para Web. Un proyecto de Visual Studio 2013 con código fuente de C# está disponible para acompañar esta serie de tutoriales.
-
 
 - [Introducción a los formularios Web Forms y Visual Studio](introduction-and-overview.md)
 - [Crear el proyecto](create-the-project.md)

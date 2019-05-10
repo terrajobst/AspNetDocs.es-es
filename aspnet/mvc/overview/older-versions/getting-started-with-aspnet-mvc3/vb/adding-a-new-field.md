@@ -8,12 +8,12 @@ ms.date: 01/12/2011
 ms.assetid: 28970e1b-1845-4015-86ef-121e52a6c397
 msc.legacyurl: /mvc/overview/older-versions/getting-started-with-aspnet-mvc3/vb/adding-a-new-field
 msc.type: authoredcontent
-ms.openlocfilehash: 387c0ab407df2badfd8ff848b6a13c68769fbba7
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: c723134e829da23db8a43ef228db47ce9826f3e8
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59379864"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65129993"
 ---
 # <a name="adding-a-new-field-to-the-movie-model-and-database-table-vb"></a>Agregar un nuevo campo a la tabla de base de datos y modelo de películas (VB)
 
@@ -28,7 +28,6 @@ by [Rick Anderson]((https://twitter.com/RickAndMSFT))
 > Si usa Visual Studio 2010, en lugar de Visual Web Developer 2010, instale los requisitos previos, haga clic en el siguiente vínculo: [Requisitos previos de Visual Studio 2010](https://www.microsoft.com/web/gallery/install.aspx?appsxml=&amp;appid=VS2010SP1Pack).
 > 
 > Un proyecto de Visual Web Developer con código fuente VB.NET está disponible como acompañamiento de este tema. [Descargue la versión VB.NET](https://code.msdn.microsoft.com/Introduction-to-MVC-3-10d1b098). Si lo prefiere C#, cambie a la [C# versión](../cs/adding-a-new-field.md) de este tutorial.
-
 
 En esta sección podrá realizar algunos cambios en las clases del modelo y obtenga información sobre cómo se puede actualizar el esquema de base de datos para que coincida con los cambios del modelo.
 
@@ -80,7 +79,6 @@ Vamos a actualizar la aplicación para que Code First automáticamente se quita 
 > [!NOTE] 
 > 
 > **Advertencia** debe habilitar este enfoque de automáticamente eliminar y volver a crear la base de datos solo cuando se usa una base de datos de prueba o desarrollo, y *nunca* en una base de datos de producción que contiene datos reales. En uso en un servidor de producción puede provocar la pérdida de datos.
-
 
 En **el Explorador de soluciones**, haga clic en el *modelos* carpeta, seleccione **agregar**y, a continuación, seleccione **clase**.
 

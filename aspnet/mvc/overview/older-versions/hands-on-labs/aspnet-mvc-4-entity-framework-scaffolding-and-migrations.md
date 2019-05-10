@@ -8,12 +8,12 @@ ms.date: 02/18/2013
 ms.assetid: 093c1362-f10b-407c-a708-be370f4b62b0
 msc.legacyurl: /mvc/overview/older-versions/hands-on-labs/aspnet-mvc-4-entity-framework-scaffolding-and-migrations
 msc.type: authoredcontent
-ms.openlocfilehash: ca47f6fe6d55153354d38fcf1ba5e844215279b2
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: 2b26224390af70e19ca0593abe93a6867140f8ab
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59389042"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65129726"
 ---
 # <a name="aspnet-mvc-4-entity-framework-scaffolding-and-migrations"></a>Scaffolding y migraciones de Entity Framework de ASP.NET MVC 4
 
@@ -72,13 +72,12 @@ El ejercicio siguiente conforman este laboratorio práctico:
 > [!NOTE]
 > Este ejercicio está acompañado por un **final** carpeta que contiene la solución resultante debe obtener después de completar el ejercicio. Puede usar esta solución como una guía si necesita ayuda adicional para trabajar por el ejercicio.
 
-
 Tiempo estimado para completar esta práctica: **30 minutos**
 
 <a id="Exercise1"></a>
 
 <a id="Exercise_1_Using_ASPNET_MVC_4_Scaffolding_with_Entity_Framework_Migrations"></a>
-### <a name="exercise-1-using-aspnet-mvc-4-scaffolding-with-entity-framework-migrations"></a>Ejercicio 1: Uso de Scaffolding de ASP.NET MVC 4 con migraciones de Entity Framework
+### <a name="exercise-1-using-aspnet-mvc-4-scaffolding-with-entity-framework-migrations"></a>Ejercicio 1: Uso de Scaffolding de ASP.NET MVC 4 con migraciones de Entity Framework
 
 Scaffolding de ASP.NET MVC proporciona una forma rápida para generar las operaciones CRUD de manera estándar para crear la lógica necesaria que permite a las aplicaciones interactúan con la capa de base de datos.
 

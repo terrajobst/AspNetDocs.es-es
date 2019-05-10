@@ -8,12 +8,12 @@ ms.date: 03/31/2010
 ms.assetid: 83efb21f-b231-446e-9356-f4c6cbcc6713
 msc.legacyurl: /web-forms/overview/data-access/custom-formatting/using-templatefields-in-the-detailsview-control-cs
 msc.type: authoredcontent
-ms.openlocfilehash: 8a6239f716aa0f63caaae84e34807ee007005f16
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: 7db524b12fca5fab996d80f20faa43a6ac098ab6
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59395408"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65128513"
 ---
 # <a name="using-templatefields-in-the-detailsview-control-c"></a>Usar TemplateFields en el control DetailsView (C#)
 
@@ -22,7 +22,6 @@ por [Scott Mitchell](https://twitter.com/ScottOnWriting)
 [Descargue la aplicación de ejemplo](http://download.microsoft.com/download/9/6/9/969e5c94-dfb6-4e47-9570-d6d9e704c3c1/ASPNET_Data_Tutorial_13_CS.exe) o [descargar PDF](using-templatefields-in-the-detailsview-control-cs/_static/datatutorial13cs1.pdf)
 
 > Las mismas funcionalidades disponibles con el control GridView de TemplateFields también están disponibles con el control DetailsView. En este tutorial se mostrará uno de los productos a la vez mediante un DetailsView que contiene TemplateFields.
-
 
 ## <a name="introduction"></a>Introducción
 
@@ -34,11 +33,9 @@ TemplateField ofrece un mayor grado de flexibilidad en la representación de dat
 
 Las mismas funcionalidades disponibles con el control GridView de TemplateFields también están disponibles con el control DetailsView. En este tutorial se mostrará uno de los productos a la vez mediante un DetailsView que contiene dos TemplateFields. El primer TemplateField combinará el `UnitPrice`, `UnitsInStock`, y `UnitsOnOrder` campos de datos en una fila de DetailsView. El segundo TemplateField mostrará el valor de la `Discontinued` campo, pero debe utilizar un método de formato para mostrar "Sí" si `Discontinued` es `true`y "NO" en caso contrario.
 
-
 [![Dos TemplateFields se usan para personalizar la presentación](using-templatefields-in-the-detailsview-control-cs/_static/image2.png)](using-templatefields-in-the-detailsview-control-cs/_static/image1.png)
 
 **Figura 1**: Dos TemplateFields se usan para personalizar la presentación ([haga clic aquí para ver imagen en tamaño completo](using-templatefields-in-the-detailsview-control-cs/_static/image3.png))
-
 
 Comencemos.
 
@@ -48,26 +45,21 @@ Como se describe en el tutorial anterior, cuando se trabaja con TemplateFields a
 
 Abra el `DetailsViewTemplateField.aspx` página y arrastre un DetailsView desde el cuadro de herramientas hasta el diseñador. Desde la etiqueta inteligente de DetailsView optar por agregar un nuevo control ObjectDataSource que invoca la `ProductsBLL` la clase `GetProducts()` método.
 
-
 [![Agregar un nuevo Control ObjectDataSource que invoca el método GetProducts()](using-templatefields-in-the-detailsview-control-cs/_static/image5.png)](using-templatefields-in-the-detailsview-control-cs/_static/image4.png)
 
 **Figura 2**: Agregar un nuevo ObjectDataSource Control ese Invokes el `GetProducts()` método ([haga clic aquí para ver imagen en tamaño completo](using-templatefields-in-the-detailsview-control-cs/_static/image6.png))
-
 
 Para este informe, quite el `ProductID`, `SupplierID`, `CategoryID`, y `ReorderLevel` BoundFields. A continuación, volver a ordenar el BoundFields para que el `CategoryName` y `SupplierName` BoundFields aparecen inmediatamente después de la `ProductName` BoundField. No dude en ajustar la `HeaderText` propiedades y las propiedades de formato para el BoundFields como considere oportuno. Al igual que con el control GridView, estas modificaciones BoundField nivel pueden realizarse a través del cuadro de diálogo campos (accesible, haga clic en el vínculo Editar campos de etiqueta inteligente de DetailsView) o a través de la sintaxis declarativa. Por último, borre el DetailsView `Height` y `Width` los valores de propiedad con el fin de permitir DetailsView controlar para expandir en función de los datos mostrados y Active la casilla Habilitar paginación en la etiqueta inteligente.
 
 Después de realizar estos cambios, el marcado declarativo del control DetailsView debe ser similar al siguiente:
 
-
 [!code-aspx[Main](using-templatefields-in-the-detailsview-control-cs/samples/sample1.aspx)]
 
 Dedique un momento para ver la página mediante un explorador. En este momento debería ver un único producto enumerado (Chai) con las filas que se muestra el nombre del producto, categoría, proveedor, precio, unidades en existencias, las unidades en orden y su estado no incluida.
 
-
 [![Se muestran los detalles del producto mediante una serie de BoundFields](using-templatefields-in-the-detailsview-control-cs/_static/image8.png)](using-templatefields-in-the-detailsview-control-cs/_static/image7.png)
 
 **Figura 3**: Se muestran los detalles del producto con una serie de BoundFields ([haga clic aquí para ver imagen en tamaño completo](using-templatefields-in-the-detailsview-control-cs/_static/image9.png))
-
 
 ## <a name="step-2-combining-the-price-units-in-stock-and-units-on-order-into-one-row"></a>Paso 2: Combinar el precio, unidades en existencias y las unidades en el orden en una fila
 
@@ -75,11 +67,9 @@ DetailsView tiene una fila para el `UnitPrice`, `UnitsInStock`, y `UnitsOnOrder`
 
 Iniciar, haga clic en el vínculo Editar campos de etiqueta inteligente de ovládacího prvku DetailsView. para que aparezca el cuadro de diálogo campos. A continuación, agregue un nuevo TemplateField y establezca su `HeaderText` propiedad "Precio e inventario" y movimiento TemplateField nuevo, por lo que TI se coloca sobre el `UnitPrice` BoundField.
 
-
 [![Agregar un nuevo TemplateField en el Control DetailsView](using-templatefields-in-the-detailsview-control-cs/_static/image11.png)](using-templatefields-in-the-detailsview-control-cs/_static/image10.png)
 
 **Figura 4**: Agregar un nuevo TemplateField en el DetailsView Control ([haga clic aquí para ver imagen en tamaño completo](using-templatefields-in-the-detailsview-control-cs/_static/image12.png))
-
 
 Puesto que este nuevo TemplateField contendrá los valores que se muestra actualmente en el `UnitPrice`, `UnitsInStock`, y `UnitsOnOrder` BoundFields, vamos a quitarlos.
 
@@ -87,21 +77,17 @@ La última tarea de este paso es definir el `ItemTemplate` marcado para el preci
 
 Para este tutorial, empiece por agregar un control de etiqueta para el precio y del inventario TemplateField `ItemTemplate`. A continuación, haga clic en el vínculo Editar DataBindings de etiqueta inteligente del control de etiqueta Web y enlazar el `Text` propiedad a la `UnitPrice` campo.
 
-
 [![Enlazar la propiedad Text de etiqueta para el campo de datos UnitPrice](using-templatefields-in-the-detailsview-control-cs/_static/image14.png)](using-templatefields-in-the-detailsview-control-cs/_static/image13.png)
 
 **Figura 5**: Enlazar la etiqueta `Text` propiedad a la `UnitPrice` campo de datos ([haga clic aquí para ver imagen en tamaño completo](using-templatefields-in-the-detailsview-control-cs/_static/image15.png))
-
 
 ## <a name="formatting-the-price-as-a-currency"></a>El precio de formato como una moneda
 
 Con esta versión, el control de etiqueta Web precio y el inventario TemplateField ahora muestran sólo el precio del producto seleccionado. Figura 6 muestra una captura de pantalla de nuestro progreso hasta ahora, cuando se ve mediante un explorador.
 
-
 [![El precio se muestra el precio y el inventario TemplateField](using-templatefields-in-the-detailsview-control-cs/_static/image17.png)](using-templatefields-in-the-detailsview-control-cs/_static/image16.png)
 
 **Figura 6**: El precio se muestra el precio y el inventario TemplateField ([haga clic aquí para ver imagen en tamaño completo](using-templatefields-in-the-detailsview-control-cs/_static/image18.png))
-
 
 Tenga en cuenta que los precios del producto no tiene el formato como una moneda. Con BoundField, formato es posible estableciendo el `HtmlEncode` propiedad `false` y el `DataFormatString` propiedad a `{0:formatSpecifier}`. Para un TemplateField, sin embargo, las instrucciones de formato deben especificarse en la sintaxis de enlace de datos o mediante el uso de un método de formato definido en alguna parte dentro del código de la aplicación (como en la clase de código subyacente de la página ASP.NET).
 
@@ -109,14 +95,11 @@ Para especificar el formato de la sintaxis de enlace de datos utilizada en el co
 
 Para el `UnitPrice` campo use el formato de moneda se especifica seleccionando el valor de la lista desplegable correspondiente o escribiendo en `{0:C}` a mano.
 
-
 [![Dar formato el precio de una moneda](using-templatefields-in-the-detailsview-control-cs/_static/image20.png)](using-templatefields-in-the-detailsview-control-cs/_static/image19.png)
 
 **Figura 7**: El precio como una moneda de formato ([haga clic aquí para ver imagen en tamaño completo](using-templatefields-in-the-detailsview-control-cs/_static/image21.png))
 
-
 Mediante declaración, la especificación de formato se indica como segundo parámetro en el `Bind` o `Eval` métodos. La configuración que acaba de crear a través del resultado del diseñador en la siguiente expresión de enlace de datos en el marcado declarativo:
-
 
 [!code-aspx[Main](using-templatefields-in-the-detailsview-control-cs/samples/sample2.aspx)]
 
@@ -131,16 +114,13 @@ Agregue el marcado estático, los controles Web de la etiqueta y sintaxis de enl
 
 Después de realizar esta tarea marcado declarativo de su DetailsView debe ser similar al siguiente:
 
-
 [!code-aspx[Main](using-templatefields-in-the-detailsview-control-cs/samples/sample3.aspx)]
 
 Con estos cambios se ha consolidado la precios e información de inventario en una sola fila DetailsView.
 
-
 [![El precio y la información de inventario se muestra en una única fila](using-templatefields-in-the-detailsview-control-cs/_static/image23.png)](using-templatefields-in-the-detailsview-control-cs/_static/image22.png)
 
 **Figura 8**: El precio y la información de inventario se muestra en una única fila ([haga clic aquí para ver imagen en tamaño completo](using-templatefields-in-the-detailsview-control-cs/_static/image24.png))
-
 
 ## <a name="step-3-customizing-the-discontinued-field-information"></a>Paso 3: Personalizar la información de campo no incluida
 
@@ -148,16 +128,13 @@ El `Products` la tabla `Discontinued` columna es un valor de bits que indica si 
 
 En lugar de mostrar el CampoCasillaVerificación nos conviene en su lugar mostrará el texto que indica si el producto no está disponible. Para realizar esta acción podríamos quitar el CampoCasillaVerificación DetailsView y, a continuación, agregue un BoundField cuyo `DataField` propiedad se estableció en `Discontinued`. Dedique un momento para hacerlo. Después de este cambio DetailsView muestra el texto "True" para productos discontinuados y "False" para los productos que siguen estando activos.
 
-
 [![Las cadenas True y False se usan para mostrar el estado no incluido](using-templatefields-in-the-detailsview-control-cs/_static/image26.png)](using-templatefields-in-the-detailsview-control-cs/_static/image25.png)
 
 **Figura 9**: Las cadenas de True y False se usan para mostrar el estado suspendido ([haga clic aquí para ver imagen en tamaño completo](using-templatefields-in-the-detailsview-control-cs/_static/image27.png))
 
-
 Imagine que no queremos que las cadenas "True" o "False" para utilizar, pero "YES" y "NO", en su lugar. Dicha personalización puede realizarse con la Ayuda de TemplateField y un método de formato. Un método de formato puede tardar en cualquier número de parámetros de entrada, pero debe devolver el código HTML (como una cadena) para insertar en la plantilla.
 
 Agregar un método de formato para el `DetailsViewTemplateField.aspx` clase de código subyacente de la página denominada `DisplayDiscontinuedAsYESorNO` que acepta un valor booleano como un parámetro de entrada y devuelve una cadena. Como se describe en el tutorial anterior, este método *debe* marcarse como `protected` o `public` con el fin de ser accesibles desde la plantilla.
-
 
 [!code-csharp[Main](using-templatefields-in-the-detailsview-control-cs/samples/sample4.cs)]
 
@@ -166,19 +143,15 @@ Este método comprueba el parámetro de entrada (`discontinued`) y devuelve "Sí
 > [!NOTE]
 > En el método de formato que se examinan en la recuperación de tutorial anterior que nos estábamos pasando un campo de datos que puede contener `NULL` s y, por tanto, es necesario para comprobar si el empleado `HiredDate` valor de la propiedad tenía una base de datos `NULL` valor antes obtener acceso a la `EmployeesRow`del `HiredDate` propiedad. Esta comprobación no es necesario aquí porque el `Discontinued` columna nunca puede tener la base de datos `NULL` valores asignados. Además, es por esta razón el método puede aceptar un valor booleano de entrada parámetro en lugar de tener que aceptar una `ProductsRow` instancia o un parámetro de tipo `object`.
 
-
 Con este método de formato completo, todo lo que queda es llamar desde el TemplateField `ItemTemplate`. Para crear TemplateField quite el `Discontinued` BoundField y agregar un nuevo TemplateField o convertir el `Discontinued` BoundField en TemplateField. A continuación, en la vista de marcado declarativo, editar TemplateField para que contenga sólo una ItemTemplate que invoca la `DisplayDiscontinuedAsYESorNO` método, pasando el valor del elemento actual `ProductRow` la instancia `Discontinued` propiedad. Esto se puede acceder mediante el `Eval` método. En concreto, el marcado del TemplateField debería ser similar:
-
 
 [!code-aspx[Main](using-templatefields-in-the-detailsview-control-cs/samples/sample5.aspx)]
 
 Esto hará que el `DisplayDiscontinuedAsYESorNO` método que se invocará cuando representación DetailsView, pasando el `ProductRow` la instancia `Discontinued` valor. Puesto que la `Eval` método devuelve un valor de tipo `object`, pero la `DisplayDiscontinuedAsYESorNO` método espera un parámetro de entrada de tipo `bool`, se puede convertir el `Eval` métodos devuelven el valor a `bool`. El `DisplayDiscontinuedAsYESorNO` método, a continuación, devolverá "Sí" o "NO" dependiendo del valor recibe. El valor devuelto es lo que se muestra en este DetailsView de fila (consulte la figura 10).
 
-
 [![Los valores Sí o NO son ahora se muestra en la fila Discontinued](using-templatefields-in-the-detailsview-control-cs/_static/image29.png)](using-templatefields-in-the-detailsview-control-cs/_static/image28.png)
 
 **Figura 10**: Los valores Sí o NO son ahora se muestra en la fila Discontinued ([haga clic aquí para ver imagen en tamaño completo](using-templatefields-in-the-detailsview-control-cs/_static/image30.png))
-
 
 ## <a name="summary"></a>Resumen
 

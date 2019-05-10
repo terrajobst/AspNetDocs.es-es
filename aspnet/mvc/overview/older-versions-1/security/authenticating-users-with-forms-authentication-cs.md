@@ -8,19 +8,18 @@ ms.date: 01/27/2009
 ms.assetid: 239fd3ca-5630-4b8d-bc4b-2f906b1d3504
 msc.legacyurl: /mvc/overview/older-versions-1/security/authenticating-users-with-forms-authentication-cs
 msc.type: authoredcontent
-ms.openlocfilehash: b52abab12503918603419c9ccfabefcffdfd7e06
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: bed2eafa47fec25ac04cb07e0037f596494bb7d9
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59418279"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65128189"
 ---
 # <a name="authenticating-users-with-forms-authentication-c"></a>Autenticar a los usuarios con la autenticación de formularios (C#)
 
 por [Microsoft](https://github.com/microsoft)
 
 > Obtenga información sobre cómo usar el atributo [Authorize] a contraseña proteger determinadas páginas en la aplicación MVC. Aprenda a usar la herramienta de administración de sitios Web para crear y administrar usuarios y roles. También aprenderá a configurar dónde se almacena la información de cuenta y el rol de usuario.
-
 
 El objetivo de este tutorial es explicar cómo puede usar formularios de autenticación de contraseña de proteger las vistas en las aplicaciones de ASP.NET MVC. Aprenda a usar la herramienta de administración de sitios Web para crear usuarios y roles. También aprenderá cómo impedir que los usuarios no autorizados de invocar acciones de controlador. Por último, aprenderá a configurar dónde se almacenan los nombres de usuario y contraseñas.
 
@@ -117,7 +116,6 @@ El Asistente para instalación de servidor SQL de ASP.NET le permite seleccionar
 > Si no desea usar al Asistente para la instalación de ASP.NET SQL Server, puede encontrar scripts SQL para agregar los objetos de base de datos de servicios de aplicaciones en la siguiente carpeta:
 > 
 > > C:\Windows\Microsoft.NET\Framework\v2.0.50727
-
 
 Después de crear los objetos de base de datos necesarios, deberá modificar la conexión de base de datos utilizada por la aplicación de MVC. Modifique la cadena de conexión de ApplicationServices en el archivo de configuración (web.config) web para que apunte a la base de datos de producción. Por ejemplo, la conexión modificada en el listado 3 apunta a una base de datos denominada MyProductionDB (la cadena de conexión de ApplicationServices original se ha comentado con).
 

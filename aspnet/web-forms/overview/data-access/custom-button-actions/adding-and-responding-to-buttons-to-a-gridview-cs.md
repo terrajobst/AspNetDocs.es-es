@@ -8,12 +8,12 @@ ms.date: 09/13/2006
 ms.assetid: 128fdb5f-4c5e-42b5-b485-f3aee90a8e38
 msc.legacyurl: /web-forms/overview/data-access/custom-button-actions/adding-and-responding-to-buttons-to-a-gridview-cs
 msc.type: authoredcontent
-ms.openlocfilehash: a8cc1d98c0574145b0b74b64d53772bd50517067
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: fd646dede766dd91156f8cd2763dd1989f090f1f
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59404200"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65131739"
 ---
 # <a name="adding-and-responding-to-buttons-to-a-gridview-c"></a>Agregar y responder a los botones en un control GridView (C#)
 
@@ -23,18 +23,15 @@ por [Scott Mitchell](https://twitter.com/ScottOnWriting)
 
 > En este tutorial, buscaremos en cómo agregar botones personalizados tanto a los campos de un control GridView o DetailsView a una plantilla. En concreto, vamos a crear una interfaz que tiene un FormView que permite al usuario desplazarse por los proveedores.
 
-
 ## <a name="introduction"></a>Introducción
 
 Aunque muchos escenarios de informes implican el acceso de solo lectura a los datos del informe, no es raro que los informes incluyan la capacidad para realizar acciones en función de los datos mostrados. Normalmente esto implica la adición de un control Button, LinkButton o ImageButton Web con cada registro que se muestra en el informe que, al hacer clic, produce un postback e invoca el código del lado servidor. Edición y eliminación de los datos de registro por registro son el ejemplo más común. De hecho, como hemos visto a partir de la [información general de insertar, actualizar y eliminar datos](../editing-inserting-and-deleting-data/an-overview-of-inserting-updating-and-deleting-data-cs.md) tutorial, edición y eliminación es tan común que los controles GridView, DetailsView y FormView pueden admitir dicha funcionalidad sin el se necesita para escribir una sola línea de código.
 
 Además para editar y eliminar botones, el control GridView, DetailsView y FormView controles pueden incluir también los botones, LinkButtons o ImageButtons que, al hacer clic, realizar alguna lógica personalizada de servidor. En este tutorial, buscaremos en cómo agregar botones personalizados tanto a los campos de un control GridView o DetailsView a una plantilla. En concreto, vamos a crear una interfaz que tiene un FormView que permite al usuario desplazarse por los proveedores. Para un proveedor determinado y FormView mostrará información sobre el proveedor junto con un control de botón Web que, si hace clic en, marcará todos sus productos asociados como discontinuo. Además, un control GridView enumera los productos proporcionados por el proveedor seleccionado, con cada fila que contenga aumentar de precio y botones de precio de descuento que, si hace clic en, aumentar o reducir el producto `UnitPrice` en un 10% (consulte la figura 1).
 
-
 [![FormView y GridView contienen botones que realizan acciones personalizadas](adding-and-responding-to-buttons-to-a-gridview-cs/_static/image2.png)](adding-and-responding-to-buttons-to-a-gridview-cs/_static/image1.png)
 
 **Figura 1**: FormView y GridView contienen botones que realice acciones personalizadas ([haga clic aquí para ver imagen en tamaño completo](adding-and-responding-to-buttons-to-a-gridview-cs/_static/image3.png))
-
 
 ## <a name="step-1-adding-the-button-tutorial-web-pages"></a>Paso 1: Adición de las páginas Web Tutorial de botón
 
@@ -43,19 +40,15 @@ Antes de adentrarnos en cómo agregar un botones personalizados, en primer lugar
 - `Default.aspx`
 - `CustomButtons.aspx`
 
-
 ![Agregar las páginas ASP.NET para los tutoriales relacionados con los botones personalizados](adding-and-responding-to-buttons-to-a-gridview-cs/_static/image4.png)
 
 **Figura 2**: Agregar las páginas ASP.NET para los tutoriales relacionados con los botones personalizados
 
-
 Al igual que en las demás carpetas `Default.aspx` en el `CustomButtons` carpeta mostrará una lista de los tutoriales en su sección. Recuerde que el `SectionLevelTutorialListing.ascx` Control de usuario proporciona esta funcionalidad. Por lo tanto, agrega este Control de usuario a `Default.aspx` arrastrándolo desde el Explorador de soluciones en la vista de diseño de la página.
-
 
 [![Agregar el Control de usuario SectionLevelTutorialListing.ascx a Default.aspx](adding-and-responding-to-buttons-to-a-gridview-cs/_static/image6.png)](adding-and-responding-to-buttons-to-a-gridview-cs/_static/image5.png)
 
 **Figura 3**: Agregar el `SectionLevelTutorialListing.ascx` Control de usuario `Default.aspx` ([haga clic aquí para ver imagen en tamaño completo](adding-and-responding-to-buttons-to-a-gridview-cs/_static/image7.png))
-
 
 Por último, agregue las páginas como entradas para el `Web.sitemap` archivo. En concreto, agregue el siguiente marcado después de la paginación y ordenación `<siteMapNode>`:
 
@@ -63,11 +56,9 @@ Por último, agregue las páginas como entradas para el `Web.sitemap` archivo. E
 
 Después de actualizar `Web.sitemap`, dedique un momento para ver el sitio Web de tutoriales a través de un explorador. El menú de la izquierda ahora incluye elementos para la edición, inserción y eliminación de tutoriales.
 
-
 ![El mapa del sitio incluye ahora la entrada para el Tutorial de botones personalizados](adding-and-responding-to-buttons-to-a-gridview-cs/_static/image8.png)
 
 **Figura 4**: El mapa del sitio incluye ahora la entrada para el Tutorial de botones personalizados
-
 
 ## <a name="step-2-adding-a-formview-that-lists-the-suppliers"></a>Paso 2: Agregar un FormView que enumera los proveedores
 
@@ -75,19 +66,15 @@ Vamos a empezar a trabajar con este tutorial agregando FormView que enumera los 
 
 Comience abriendo la `CustomButtons.aspx` página en el `CustomButtons` carpeta. Agregar un FormView a la página arrastrándolo desde el cuadro de herramientas hasta el diseñador y el conjunto de sus `ID` propiedad `Suppliers`. Desde las etiquetas inteligentes de FormView, optar por crear un nuevo origen ObjectDataSource denominado `SuppliersDataSource`.
 
-
 [![Crear un nuevo origen ObjectDataSource denominado SuppliersDataSource](adding-and-responding-to-buttons-to-a-gridview-cs/_static/image10.png)](adding-and-responding-to-buttons-to-a-gridview-cs/_static/image9.png)
 
 **Figura 5**: Crear un nuevo origen ObjectDataSource denominado `SuppliersDataSource` ([haga clic aquí para ver imagen en tamaño completo](adding-and-responding-to-buttons-to-a-gridview-cs/_static/image11.png))
 
-
 Configurar este nuevo origen ObjectDataSource que realiza una consulta desde el `SuppliersBLL` la clase `GetSuppliers()` (método) (consulte la figura 6). Puesto que este FormView no proporciona una interfaz para actualizar la información del proveedor, seleccione el (ninguno) opción de la lista desplegable en la pestaña de la actualización.
-
 
 [![Configurar el origen de datos para utilizar la clase SuppliersBLL s GetSuppliers() (método)](adding-and-responding-to-buttons-to-a-gridview-cs/_static/image13.png)](adding-and-responding-to-buttons-to-a-gridview-cs/_static/image12.png)
 
 **Figura 6**: Configurar el origen de datos para utilizar el `SuppliersBLL` la clase `GetSuppliers()` método ([haga clic aquí para ver imagen en tamaño completo](adding-and-responding-to-buttons-to-a-gridview-cs/_static/image14.png))
-
 
 Después de configurar el origen ObjectDataSource, Visual Studio generará un `InsertItemTemplate`, `EditItemTemplate`, y `ItemTemplate` de FormView. Quitar el `InsertItemTemplate` y `EditItemTemplate` y modificar el `ItemTemplate` para que muestre solo del proveedor empresa nombre y número de teléfono. Finalmente, activar la compatibilidad con la paginación para FormView activando la casilla Habilitar paginación en la etiqueta inteligente de (o estableciendo su `AllowPaging` propiedad `True`). Después de estos cambios marcado declarativo de la página debe ser similar al siguiente:
 
@@ -95,37 +82,29 @@ Después de configurar el origen ObjectDataSource, Visual Studio generará un `I
 
 Figura 7 muestra la página CustomButtons.aspx cuando se ve mediante un explorador.
 
-
 [![FormView enumera los campos de teléfono del proveedor seleccionado actualmente y CompanyName](adding-and-responding-to-buttons-to-a-gridview-cs/_static/image16.png)](adding-and-responding-to-buttons-to-a-gridview-cs/_static/image15.png)
 
 **Figura 7**: Las listas de FormView el `CompanyName` y `Phone` campos desde el proveedor seleccionado actualmente ([haga clic aquí para ver imagen en tamaño completo](adding-and-responding-to-buttons-to-a-gridview-cs/_static/image17.png))
-
 
 ## <a name="step-3-adding-a-gridview-that-lists-the-selected-suppliers-products"></a>Paso 3: Agregar un control GridView que se enumera los productos del proveedor seleccionado
 
 Antes de agregar el botón de productos interrumpir todo a plantillas de FormView, vamos a agregar primero una clase GridView debajo de FormView que enumera los productos proporcionados por el proveedor seleccionado. Para lograr esto, agregue un control GridView a la página, establezca su `ID` propiedad `SuppliersProducts`, y agregue un nuevo origen ObjectDataSource denominado `SuppliersProductsDataSource`.
 
-
 [![Crear un nuevo origen ObjectDataSource denominado SuppliersProductsDataSource](adding-and-responding-to-buttons-to-a-gridview-cs/_static/image19.png)](adding-and-responding-to-buttons-to-a-gridview-cs/_static/image18.png)
 
 **Figura 8**: Crear un nuevo origen ObjectDataSource denominado `SuppliersProductsDataSource` ([haga clic aquí para ver imagen en tamaño completo](adding-and-responding-to-buttons-to-a-gridview-cs/_static/image20.png))
 
-
 Configurar este origen ObjectDataSource para usar la clase ProductsBLL `GetProductsBySupplierID(supplierID)` (método) (consulte la figura 9). Mientras esta GridView permitirá por precio de un producto que se ajusten, no usará la integrada, editar o eliminar características desde el control GridView. Por lo tanto, podemos establecer la lista desplegable en (None) de ObjectDataSource UPDATE, INSERT y DELETE pestañas.
-
 
 [![Configurar el origen de datos para utilizar la clase ProductsBLL s GetProductsBySupplierID(supplierID) (método)](adding-and-responding-to-buttons-to-a-gridview-cs/_static/image22.png)](adding-and-responding-to-buttons-to-a-gridview-cs/_static/image21.png)
 
 **Figura 9**: Configurar el origen de datos para utilizar el `ProductsBLL` la clase `GetProductsBySupplierID(supplierID)` método ([haga clic aquí para ver imagen en tamaño completo](adding-and-responding-to-buttons-to-a-gridview-cs/_static/image23.png))
 
-
 Puesto que el `GetProductsBySupplierID(supplierID)` método acepta un parámetro de entrada, el ObjectDataSource wizard nos pide el origen de este valor de parámetro. Para pasar el `SupplierID` valor de FormView, establezca la lista desplegable de origen de parámetro para el Control y la lista desplegable de ControlID a `Suppliers` (el Id. de FormView creado en el paso 2).
-
 
 [![Indicar que la columna supplierID parámetro debe provenir del FormView Control de proveedores](adding-and-responding-to-buttons-to-a-gridview-cs/_static/image25.png)](adding-and-responding-to-buttons-to-a-gridview-cs/_static/image24.png)
 
 **Figura 10**: Indicar que el *`supplierID`* parámetro debe provenir de la `Suppliers` FormView Control ([haga clic aquí para ver imagen en tamaño completo](adding-and-responding-to-buttons-to-a-gridview-cs/_static/image26.png))
-
 
 Después de completar al Asistente de ObjectDataSource en GridView se contendrá un BoundField o CampoCasillaVerificación para cada uno de los campos de datos del producto. Vamos a reducir esto para mostrar solamente el `ProductName` y `UnitPrice` BoundFields junto con el `Discontinued` CampoCasillaVerificación; Además, vamos a dar formato el `UnitPrice` BoundField tal que el texto tiene formato de moneda. El control GridView y `SuppliersProductsDataSource` marcado declarativo de ObjectDataSource debe ser similar al código de marcado siguiente:
 
@@ -133,11 +112,9 @@ Después de completar al Asistente de ObjectDataSource en GridView se contendrá
 
 En este momento en este tutorial muestra un informe de detalles y maestras, lo que permite al usuario a elegir un proveedor de FormView en la parte superior y ver los productos proporcionados por ese proveedor a través del control GridView en la parte inferior. Figura 11 muestra una captura de pantalla de esta página al seleccionar el proveedor Comercial Tasmania de FormView.
 
-
 [![Los productos de s del proveedor seleccionado se muestran en el control GridView](adding-and-responding-to-buttons-to-a-gridview-cs/_static/image28.png)](adding-and-responding-to-buttons-to-a-gridview-cs/_static/image27.png)
 
 **Figura 11**: Los productos del proveedor seleccionado se muestran en el control GridView ([haga clic aquí para ver imagen en tamaño completo](adding-and-responding-to-buttons-to-a-gridview-cs/_static/image29.png))
-
 
 ## <a name="step-4-creating-dal-and-bll-methods-to-discontinue-all-products-for-a-supplier"></a>Paso 4: Crear métodos BLL y DAL para suspender todos los productos para un proveedor
 
@@ -145,19 +122,15 @@ Antes de que podemos agregar un botón a FormView que, al hacer clic, interrumpe
 
 Como se ha hecho en los tutoriales anteriores, vamos a usar un enfoque de abajo a arriba, a partir de crear el método DAL, a continuación, el método BLL y, por último, implementar la funcionalidad en la página ASP.NET. Abra el `Northwind.xsd` DataSet con tipo en el `App_Code/DAL` carpeta y agregue un nuevo método a la `ProductsTableAdapter` (haga doble clic en el `ProductsTableAdapter` y elija Agregar consulta). Si lo hace, se abrirá el Asistente de configuración de la consulta de TableAdapter, que nos guía a través del proceso de agregar el nuevo método. Para empezar, que indica que el método DAL usará una instrucción de SQL ad hoc.
 
-
 [![Crear el método de DAL mediante una instrucción de SQL Ad Hoc](adding-and-responding-to-buttons-to-a-gridview-cs/_static/image31.png)](adding-and-responding-to-buttons-to-a-gridview-cs/_static/image30.png)
 
 **Figura 12**: Crear el método DAL mediante una instrucción de SQL Ad Hoc ([haga clic aquí para ver imagen en tamaño completo](adding-and-responding-to-buttons-to-a-gridview-cs/_static/image32.png))
 
-
 A continuación, el asistente pide nos sobre qué tipo de consulta para crear. Puesto que la `DiscontinueAllProductsForSupplier(supplierID)` método deberá actualizar el `Products` tabla de base de datos, establecer el `Discontinued` en 1 para todos los productos proporcionados por el campo *`supplierID`*, necesitamos crear una consulta que actualiza los datos.
-
 
 [![Elija el tipo de consulta de actualización](adding-and-responding-to-buttons-to-a-gridview-cs/_static/image34.png)](adding-and-responding-to-buttons-to-a-gridview-cs/_static/image33.png)
 
 **Figura 13**: Elija el tipo de consulta de actualización ([haga clic aquí para ver imagen en tamaño completo](adding-and-responding-to-buttons-to-a-gridview-cs/_static/image35.png))
-
 
 La siguiente pantalla del asistente proporciona el TableAdapter existente del `UPDATE` instrucción, que se actualiza cada uno de los campos definidos en el `Products` DataTable. Reemplace el texto de consulta con la siguiente instrucción:
 
@@ -165,11 +138,9 @@ La siguiente pantalla del asistente proporciona el TableAdapter existente del `U
 
 Después de escribir esta consulta y haga clic en siguiente, se solicita la última pantalla del Asistente para utilizar el nombre del nuevo método `DiscontinueAllProductsForSupplier`. Complete el asistente, haga clic en el botón Finalizar. Al volver al diseñador de DataSet debería ver un nuevo método en el `ProductsTableAdapter` denominado `DiscontinueAllProductsForSupplier(@SupplierID)`.
 
-
 [![Nombre de la nueva DiscontinueAllProductsForSupplier DAL (método)](adding-and-responding-to-buttons-to-a-gridview-cs/_static/image37.png)](adding-and-responding-to-buttons-to-a-gridview-cs/_static/image36.png)
 
 **Figura 14**: Nombre del nuevo método DAL `DiscontinueAllProductsForSupplier` ([haga clic aquí para ver imagen en tamaño completo](adding-and-responding-to-buttons-to-a-gridview-cs/_static/image38.png))
-
 
 Con el `DiscontinueAllProductsForSupplier(supplierID)` método creado en la capa de acceso a datos, la siguiente tarea consiste en crear el `DiscontinueAllProductsForSupplier(supplierID)` método en la capa de lógica empresarial. Para ello, abra el `ProductsBLL` archivo de clase y agregue lo siguiente:
 
@@ -180,16 +151,13 @@ Este método simplemente llama a la `DiscontinueAllProductsForSupplier(supplierI
 > [!NOTE]
 > A diferencia de la `UpdateProduct` sobrecargas en la `ProductsBLL` (clase), el `DiscontinueAllProductsForSupplier(supplierID)` firma del método no incluye el `DataObjectMethodAttribute` atributo (`<System.ComponentModel.DataObjectMethodAttribute(System.ComponentModel.DataObjectMethodType.Update, Boolean)>`). Esto impide la `DiscontinueAllProductsForSupplier(supplierID)` método de la lista desplegable del Asistente de ObjectDataSource Configurar origen de datos en la pestaña de la actualización. Se ve omite este atributo porque se llamará a la `DiscontinueAllProductsForSupplier(supplierID)` método directamente desde un controlador de eventos en nuestra página ASP.NET.
 
-
 ## <a name="step-5-adding-a-discontinue-all-products-button-to-the-formview"></a>Paso 5: Agregar un interrumpir el botón de todos los productos a FormView
 
 Con el `DiscontinueAllProductsForSupplier(supplierID)` método en el BLL y DAL completa, el último paso para agregar la capacidad de suspender todos los productos para el proveedor seleccionado es agregar un control de botón Web a la FormView `ItemTemplate`. Vamos a agregar un botón a continuación del número de teléfono del proveedor con el texto del botón, interrumpir todos los productos y una `ID` el valor de propiedad `DiscontinueAllProductsForSupplier`. Puede agregar este control de botón Web a través del diseñador, haga clic en el vínculo Editar plantillas en la etiqueta inteligente de FormView (consulte la figura 15), o directamente a través de la sintaxis declarativa.
 
-
 [![Agregar un interrumpir todos los productos botón Web Control FormView s ItemTemplate](adding-and-responding-to-buttons-to-a-gridview-cs/_static/image40.png)](adding-and-responding-to-buttons-to-a-gridview-cs/_static/image39.png)
 
 **Figura 15**: Agregar un interrumpir todos los productos Web Control de botón a la FormView `ItemTemplate` ([haga clic aquí para ver imagen en tamaño completo](adding-and-responding-to-buttons-to-a-gridview-cs/_static/image41.png))
-
 
 Cuando se hace clic en el botón una visita del usuario que habrá trastornos la página, una devolución de datos y de FormView [ `ItemCommand` evento](https://msdn.microsoft.com/library/system.web.ui.webcontrols.formview.itemcommand.aspx) se activa. Para ejecutar código personalizado en respuesta a este botón se hizo clic, podemos crear un controlador de eventos para este evento. Comprender, sin embargo, que el `ItemCommand` cada vez que se activa el evento *cualquier* se hace clic en control de botón, LinkButton o ImageButton Web dentro de FormView. Esto significa que cuando el usuario se mueve de una página a otra en FormView, el `ItemCommand` desencadena el evento; de lo mismo cuando el usuario hace clic en nuevo, editar o eliminar en un FormView que admite la inserción, actualización o eliminación.
 
@@ -211,21 +179,17 @@ Con el `ItemCommand` controlador de eventos creado, dedique un momento para prob
 
 Imagine que Cooperativa de Quesos 'Las Cabras' ha salido del negocio y, por tanto, sus productos se interrumpa. Haga clic en el botón de todos los productos de prestar. Esto mostrará el cuadro de diálogo de confirmación del lado cliente cuadro (consulte la figura 16).
 
-
 [![Cooperativa de Quesos Las Cabras ofrece dos productos activos](adding-and-responding-to-buttons-to-a-gridview-cs/_static/image43.png)](adding-and-responding-to-buttons-to-a-gridview-cs/_static/image42.png)
 
 **Figura 16**: Cooperativa de Quesos Las Cabras ofrece dos productos activos ([haga clic aquí para ver imagen en tamaño completo](adding-and-responding-to-buttons-to-a-gridview-cs/_static/image44.png))
-
 
 Si hace clic en Aceptar en el cuadro de diálogo de confirmación del lado cliente, el envío del formulario continuará, lo que provoca una devolución de datos en el que el FormView `ItemCommand` evento se activará. El controlador de eventos se crea, a continuación, se ejecutará, invocar el `DiscontinueAllProductsForSupplier(supplierID)` método y dejar el Queso Cabrales y Queso Manchego La Pastora productos.
 
 Si ha deshabilitado el estado de vista de GridView, el control GridView es que se va a enlazar en el almacén de datos subyacente en cada devolución de datos y, por tanto, inmediatamente se actualizará para reflejar que estos dos productos ahora están suspendidos (consulte la figura 17). Si, sin embargo, no ha deshabilitado el estado de vista en el control GridView, deberá enlazar manualmente los datos en GridView después de realizar este cambio. Para ello, basta con realizar una llamada a la GridView `DataBind()` método inmediatamente después de invocar el `DiscontinueAllProductsForSupplier(supplierID)` método.
 
-
 [![Después el botón interrumpir todos los productos, los productos de proveedor s son actualiza en consecuencia](adding-and-responding-to-buttons-to-a-gridview-cs/_static/image46.png)](adding-and-responding-to-buttons-to-a-gridview-cs/_static/image45.png)
 
 **Figura 17**: Después el botón interrumpir todos los productos, los productos del proveedor son actualiza en consecuencia ([haga clic aquí para ver imagen en tamaño completo](adding-and-responding-to-buttons-to-a-gridview-cs/_static/image47.png))
-
 
 ## <a name="step-6-creating-an-updateproduct-overload-in-the-business-logic-layer-for-adjusting-a-products-price"></a>Paso 6: Creación de una sobrecarga UpdateProduct por separado en la capa de lógica empresarial para ajustar el precio de un producto
 
@@ -247,19 +211,15 @@ El ButtonField tiene un `CommandName` propiedad que se asigna el valor especific
 
 Vamos a agregar dos ButtonFields nuevo en el control GridView, uno con un texto del botón precio + 10% y el otro con el texto de precios -10%. Para agregar estos ButtonFields, haga clic en el vínculo Editar columnas de etiqueta inteligente de GridView, seleccione el tipo de campo ButtonField en la lista en la parte superior izquierda y haga clic en el botón Agregar.
 
-
 ![Agregue dos ButtonFields en GridView](adding-and-responding-to-buttons-to-a-gridview-cs/_static/image48.png)
 
 **Figura 18**: Agregue dos ButtonFields en GridView
 
-
 Mueva el dos ButtonFields para que aparezcan como los dos primeros campos de GridView. A continuación, establezca el `Text` las propiedades de estos dos ButtonFields a + 10% de precio y precio -10% y el `CommandName` propiedades IncreasePrice y DecreasePrice, respectivamente. De forma predeterminada, un ButtonField representa su columna de botones como LinkButtons. Esto se puede cambiar, sin embargo, mediante el ButtonField [ `ButtonType` propiedad](https://msdn.microsoft.com/library/system.web.ui.webcontrols.buttonfieldbase.buttontype.aspx). Vamos a tener estos dos ButtonFields representan como botones normales de inserción; Por consiguiente, establecer el `ButtonType` propiedad `Button`. Figura 19 muestra los campos de cuadro de diálogo una vez realizados estos cambios; Después de que es el marcado declarativo de GridView.
-
 
 ![Configurar las propiedades de ButtonType, CommandName y ButtonFields texto](adding-and-responding-to-buttons-to-a-gridview-cs/_static/image49.png)
 
 **Figura 19**: Configurar la ButtonFields `Text`, `CommandName`, y `ButtonType` propiedades
-
 
 [!code-aspx[Main](adding-and-responding-to-buttons-to-a-gridview-cs/samples/sample9.aspx)]
 
@@ -275,21 +235,17 @@ Como con el botón interrumpir todos los productos, si ha deshabilitado el estad
 
 Figura 20 se muestra la página al ver los productos proporcionados por el Homestead de su abuela Kelly. Figura 21 muestra los resultados después el precio + 10% botón se ha hecho clic dos veces en el botón de precios -10% y Boysenberry Spread de su abuela una vez para arándanos Northwoods.
 
-
 [![El control GridView incluye precio + 10% y botones de precios -10%](adding-and-responding-to-buttons-to-a-gridview-cs/_static/image51.png)](adding-and-responding-to-buttons-to-a-gridview-cs/_static/image50.png)
 
 **Figura 20**: El precio de GridView incluye + 10% y botones de precios -10% ([haga clic aquí para ver imagen en tamaño completo](adding-and-responding-to-buttons-to-a-gridview-cs/_static/image52.png))
-
 
 [![Se han actualizado los precios para el producto primero y tercero mediante el precio + 10% y botones de precios -10%](adding-and-responding-to-buttons-to-a-gridview-cs/_static/image54.png)](adding-and-responding-to-buttons-to-a-gridview-cs/_static/image53.png)
 
 **Figura 21**: Los precios de la primera y tercera del producto se han actualizado a través del precio + 10% y botones de precios -10% ([haga clic aquí para ver imagen en tamaño completo](adding-and-responding-to-buttons-to-a-gridview-cs/_static/image55.png))
 
-
 > [!NOTE]
 > El control GridView (y DetailsView) también pueden tener botones, LinkButtons o ImageButtons agregado a su TemplateFields. Como con el BoundField, estos botones, al hacer clic, inducen una devolución de datos, provocar la GridView `RowCommand` eventos. Al agregar los botones en TemplateField, sin embargo, el botón `CommandArgument` no se establece automáticamente en el índice de la fila ya que es cuando se usa ButtonFields. Si necesita determinar el índice de fila del botón que se hizo clic en el `RowCommand` controlador de eventos, deberá establecer manualmente el botón `CommandArgument` propiedad en su sintaxis declarativa en TemplateField, mediante código similar al siguiente:  
 > `<asp:Button runat="server" ... CommandArgument='<%# ((GridViewRow) Container).RowIndex %>'`.
-
 
 ## <a name="summary"></a>Resumen
 
