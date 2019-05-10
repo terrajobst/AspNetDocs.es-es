@@ -8,12 +8,12 @@ ms.date: 02/20/2009
 ms.assetid: 829f589f-e201-4f6e-9ae6-08ae84322065
 msc.legacyurl: /mvc/overview/older-versions-1/contact-manager/iteration-4-make-the-application-loosely-coupled-cs
 msc.type: authoredcontent
-ms.openlocfilehash: 8caa88d928517e1c71210cbe55e3961d4baf461a
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: ce8e3c4ff8a59be9f2f572813db599604216119d
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59381281"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65117797"
 ---
 # <a name="iteration-4--make-the-application-loosely-coupled-c"></a>Iteración #4: hacer que la aplicación tenga un acoplamiento (C#)
 
@@ -22,7 +22,6 @@ por [Microsoft](https://github.com/microsoft)
 [Descargue el código](iteration-4-make-the-application-loosely-coupled-cs/_static/contactmanager_4_cs1.zip)
 
 > En este cuarta iteración, aprovechamos de varios patrones de diseño de software para que sea más fácil de mantener y modificar la aplicación de Contact Manager. Por ejemplo, se refactoriza nuestra aplicación para usar el patrón de repositorio y la inserción de dependencias.
-
 
 ## <a name="building-a-contact-management-aspnet-mvc-application-c"></a>Creación de una aplicación de MVC de ASP.NET de la administración de contactos (C#)
 
@@ -54,7 +53,6 @@ Actualmente, toda la lógica de acceso y la validación de datos utilizada por l
 > 
 > (SRP), una clase nunca debe tener más de una razón para cambiar. Mezcla de controlador, validación y lógica de la base de datos es una infracción del principio de responsabilidad única masiva.
 
-
 Hay varias razones que es posible que deba modificar la aplicación. Es posible que deba agregar una nueva característica a la aplicación, es posible que deba corregir un error en la aplicación, o es posible que deba modificar cómo se implementa una característica de la aplicación. Las aplicaciones son estáticas con poca frecuencia. Tienden a crecer y se modifique con el tiempo.
 
 Por ejemplo, imagine que decide cambiar cómo implementar la capa de acceso a datos. Derecha ahora, la aplicación de Contact Manager utiliza Microsoft Entity Framework para tener acceso a la base de datos. Sin embargo, podría decidir migrar a una tecnología de acceso de datos nuevas o alternativas como ADO.NET Data Services o NHibernate. Sin embargo, dado que el código de acceso a datos no está aislado de la validación y el controlador de código, no hay ninguna manera para modificar el código de acceso a datos en la aplicación sin modificar otro código que no está directamente relacionado con el acceso a datos.
@@ -66,7 +64,6 @@ En esta iteración, aprovechamos de varios patrones de diseño de software que n
 > [!NOTE] 
 > 
 > La refactorización es el proceso de volver a escribir una aplicación de manera que no pierda ninguna funcionalidad existente.
-
 
 ## <a name="using-the-repository-software-design-pattern"></a>Con el patrón de diseño de Software de repositorio
 
@@ -105,7 +102,6 @@ La programación de interfaces (abstracciones) en lugar de clases concretas hace
 > 
 > Puede crear rápidamente una interfaz de una clase concreta dentro de Visual Studio seleccionando la opción de menú refactorizar Extraer interfaz. Por ejemplo, puede crear la clase EntityContactManagerRepository primero y, a continuación, utilizar Extraer interfaz para generar la interfaz IContactManagerRepository automáticamente.
 
-
 ## <a name="using-the-dependency-injection-software-design-pattern"></a>Usar el patrón de diseño de Software de inyección de dependencia
 
 Ahora que hemos hemos migrado nuestro código de acceso a datos a una clase de repositorio independiente, necesitamos modificar nuestro controlador de contacto para utilizar esta clase. Se aprovechará un patrón de diseño de software denominado inyección de dependencia para usar la clase de repositorio en nuestro controlador.
@@ -127,7 +123,6 @@ Inserción de dependencias de constructor también hace que la clase de controla
 > [!NOTE] 
 > 
 > Si desea desacoplar por completo la clase de controlador de contacto de una implementación concreta de la interfaz IContactManagerRepository, a continuación, se pueden aprovechar las ventajas de un marco que admite la inserción de dependencias, como StructureMap o Microsoft Entity Framework (MEF). Aprovechando las ventajas de un marco de inserción de dependencias, nunca debe hacer referencia a una clase concreta en el código.
-
 
 ## <a name="creating-a-service-layer"></a>Creación de una capa de servicio
 

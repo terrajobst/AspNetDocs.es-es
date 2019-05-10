@@ -8,12 +8,12 @@ ms.date: 04/21/2011
 ms.assetid: 26b2f55e-ed42-4277-89b0-c941eb754145
 msc.legacyurl: /mvc/overview/older-versions/mvc-music-store/mvc-music-store-part-8
 msc.type: authoredcontent
-ms.openlocfilehash: 2ba210d8c541c6c330dda74706470fa73a81474a
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: 89897ad41b217764cbd17317d4bf5d6a5c5d488f
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59379487"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65112906"
 ---
 # <a name="part-8-shopping-cart-with-ajax-updates"></a>Parte 8: Carro de la compra con las actualizaciones de Ajax
 
@@ -24,7 +24,6 @@ por [Jon Galloway](https://github.com/jongalloway)
 > El Store de música de MVC es una implementación de almacén de ejemplo ligera que vende álbumes de música en línea e implementa la administración básica del sitio, inicio de sesión de usuario y funcionalidad del carro de la compra.  
 >   
 > Esta serie de tutoriales detalla todos los pasos realizados para compilar la aplicación de ejemplo de Music Store de ASP.NET MVC. Parte 8 cubre el carro de la compra con las actualizaciones de Ajax.
-
 
 Permitiremos que los usuarios que coloquen álbumes en su carro de compra sin registrar, pero debe registrar como invitados desproteger completa. El proceso de la compra y la desprotección se dividirá en dos controladores: un controlador de ShoppingCart que permite anónimamente agregar elementos a un carro de compra y un controlador de desprotección que controla el proceso de pago. Se deberá comenzar con el carro de la compra en esta sección y luego crear el proceso de pago en la sección siguiente.
 
@@ -156,7 +155,6 @@ Después de cargar su carro de la compra, puede hacer clic en quitar el desde el
 ![](mvc-music-store-part-8/_static/image8.png)
 
 Hemos creado un trabajo carro que permite a los usuarios no registrados agregar elementos al carro de la compra. En la sección siguiente, se permiten para registrar y realizar el proceso de pago.
-
 
 > [!div class="step-by-step"]
 > [Anterior](mvc-music-store-part-7.md)

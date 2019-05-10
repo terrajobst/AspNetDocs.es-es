@@ -8,12 +8,12 @@ ms.date: 06/10/2014
 ms.assetid: 98358b6e-9139-4239-ba3a-2d7dd74dd664
 msc.legacyurl: /signalr/overview/performance/scaleout-with-sql-server
 msc.type: authoredcontent
-ms.openlocfilehash: c0c214ea32ad13b3a63be9ef84bcb4b8bc7311aa
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: 709a9ebf8f3396842bee0d87e621c00ae1418ec1
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59393586"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65113634"
 ---
 # <a name="signalr-scaleout-with-sql-server"></a>Escalabilidad horizontal de SignalR con SQL Server
 
@@ -37,7 +37,6 @@ por [Mike Wasson](https://github.com/MikeWasson), [Patrick Fletcher](https://git
 > ## <a name="questions-and-comments"></a>Preguntas y comentarios
 >
 > Deje comentarios sobre cómo le gustó de este tutorial y que podíamos mejorar en los comentarios en la parte inferior de la página. Si tiene preguntas que no están directamente relacionados con el tutorial, puede publicarlos en el [foro de ASP.NET SignalR](https://forums.asp.net/1254.aspx/1?ASP+NET+SignalR) o [StackOverflow.com](http://stackoverflow.com/).
-
 
 En este tutorial, usará SQL Server para distribuir los mensajes a través de una aplicación de SignalR que se implementa en dos instancias independientes de IIS. También puede ejecutar este tutorial en un equipo de prueba único, pero para obtener el efecto completo, deberá implementar la aplicación de SignalR en dos o más servidores. También debe instalar a SQL Server en uno de los servidores o en un servidor dedicado independiente. Otra opción consiste en ejecutar el tutorial sobre el uso de máquinas virtuales en Azure.
 
@@ -87,7 +86,6 @@ Para habilitar a Service Broker, use la siguiente consulta SQL:
 
 > [!NOTE]
 > Si esta consulta se parece a un interbloqueo, asegúrese de que no hay ninguna aplicación conectada a la base de datos.
-
 
 Si ha habilitado el seguimiento, los seguimientos se mostrarán también si Service Broker está habilitado.
 

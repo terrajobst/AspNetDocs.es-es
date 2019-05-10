@@ -8,19 +8,18 @@ ms.date: 01/27/2009
 ms.assetid: 418bb07e-f369-4119-b4b0-08f890f7abb2
 msc.legacyurl: /mvc/overview/older-versions-1/security/authenticating-users-with-windows-authentication-cs
 msc.type: authoredcontent
-ms.openlocfilehash: 3c12f2a3d253df1ed9d8b25001edf13a04da26f5
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: bb3909bff2791c15a8737fc12cac69f79b55733f
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59394892"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65125439"
 ---
 # <a name="authenticating-users-with-windows-authentication-c"></a>Autenticar a los usuarios con la autenticación de Windows (C#)
 
 por [Microsoft](https://github.com/microsoft)
 
 > Obtenga información sobre cómo usar la autenticación de Windows en el contexto de una aplicación MVC. Obtenga información sobre cómo habilitar la autenticación de Windows en el archivo de configuración de la aplicación web y cómo configurar la autenticación con IIS. Por último, aprenderá a usar el atributo [Authorize] para restringir el acceso a las acciones de controlador a grupos o usuarios de Windows determinados.
-
 
 El objetivo de este tutorial es explicar cómo puede aprovechar las ventajas de la seguridad de características integradas en Internet Information Services para la contraseña de protegen las vistas en las aplicaciones MVC. Obtendrá información sobre cómo permitir que las acciones de controlador se invoca sólo determinados usuarios de Windows o los usuarios que son miembros de grupos de Windows determinados.
 
@@ -50,7 +49,6 @@ Para una aplicación web de producción, en la mano, utiliza IIS como servidor w
 > 
 > Para obtener una descripción más detallada de estos diferentes tipos de autenticación, consulte [ https://msdn.microsoft.com/library/aa292114(VS.71).aspx ](https://msdn.microsoft.com/library/aa292114(VS.71).aspx).
 
-
 Puede usar el Administrador de Internet Information Services para habilitar a un determinado tipo de autenticación. Tenga en cuenta que todos los tipos de autenticación no están disponibles en el caso de cada sistema operativo. Además, si usa IIS 7.0 con Windows Vista, deberá habilitar a los diferentes tipos de autenticación de Windows antes de que aparezcan en el Administrador de Internet Information Services. Abra **Panel de Control, programas, programas y características, activar o desactivar las características de Windows Active**y expanda el nodo de Internet Information Services (consulte la figura 2).
 
 **Ilustración 2: características de habilitar IIS de Windows**
@@ -76,7 +74,6 @@ Por ejemplo, el controlador Home en el listado 1 expone tres acciones denominada
 > [!NOTE] 
 > 
 > Debido a Windows cuentas de usuario Control (UAC), cuando se trabaja con Windows Vista o Windows Server 2008, el grupo de administradores locales se comportará de forma diferente a otros grupos. El atributo [Authorize] no reconoce correctamente un miembro del grupo Administradores local a menos que modifique la configuración del equipo UAC.
-
 
 Exactamente lo que sucede cuando se intenta invocar una acción de controlador sin que se va a los permisos adecuados depende del tipo de autenticación habilitado. De forma predeterminada, cuando se usa el servidor de desarrollo de ASP.NET, obtener simplemente una página en blanco. Se sirve la página con un **401 no autorizado** estado de respuesta HTTP.
 

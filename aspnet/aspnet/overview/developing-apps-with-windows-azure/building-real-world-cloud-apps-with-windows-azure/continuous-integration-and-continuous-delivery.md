@@ -8,12 +8,12 @@ ms.date: 06/12/2014
 ms.assetid: eaece9f5-f80c-428b-b771-5db66d275b7d
 msc.legacyurl: /aspnet/overview/developing-apps-with-windows-azure/building-real-world-cloud-apps-with-windows-azure/continuous-integration-and-continuous-delivery
 msc.type: authoredcontent
-ms.openlocfilehash: 0fb0a331a2a6e2af5c5097db8b57942525d24ffc
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: 25767303e3a8a3bfd9fc6c7c10cda32d73e9994d
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59384310"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65118860"
 ---
 # <a name="continuous-integration-and-continuous-delivery-building-real-world-cloud-apps-with-azure"></a>La integración continua y entrega continua (crear aplicaciones de nube reales con Azure)
 
@@ -22,7 +22,6 @@ by [Mike Wasson](https://github.com/MikeWasson), [Rick Anderson]((https://twitte
 [Descargar proyecto corregirlo](http://code.msdn.microsoft.com/Fix-It-app-for-Building-cdd80df4) o [descargar libro electrónico](http://blogs.msdn.com/b/microsoft_press/archive/2014/07/23/free-ebook-building-cloud-apps-with-microsoft-azure.aspx)
 
 > El **Building Real World Cloud Apps with Azure** eBook se basa en una presentación desarrollada por Scott Guthrie. Se explican el 13 patrones y prácticas que pueden ayudarle a tener éxito el desarrollo de aplicaciones web para la nube. Para obtener información sobre el libro electrónico, consulte [el primer capítulo](introduction.md).
-
 
 Los dos primeros recomienda patrones de desarrollo de procesos eran [automatizar todo](automate-everything.md) y [Control de código fuente](source-control.md), y combina el tercer modelo de proceso. Integración continua (CI) significa que cada vez que un desarrollador protege en el código para el repositorio de origen, se desencadena automáticamente una compilación. Entrega continua (CD) lleva esto un paso adicional: después de una compilación y pruebas unitarias automatizadas son correctas, implementar automáticamente la aplicación en un entorno donde puede realizar más pruebas de profundidad.
 
@@ -50,7 +49,6 @@ Servicios de Azure DevOps proporciona una serie de características para ayudarl
 - Es compatible con las pruebas de carga automatizada. Las pruebas de carga es fundamental para una aplicación de nube, pero a menudo la deformación hasta que sea demasiado tarde. Las pruebas de carga simulan un uso intensivo de una aplicación por miles de usuarios, lo que le permite encontrar cuellos de botella y mejore el rendimiento, antes de publicar la aplicación en producción.
 - Admite la colaboración en equipo sala, lo que facilita la comunicación en tiempo real y la colaboración para pequeños equipos ágiles.
 - Admite la administración de proyectos ágiles.
-
 
 Para obtener más información sobre la integración continua y las características de entrega de servicios de DevOps de Azure, consulte [la documentación de Azure DevOps](/azure/devops/index).
 

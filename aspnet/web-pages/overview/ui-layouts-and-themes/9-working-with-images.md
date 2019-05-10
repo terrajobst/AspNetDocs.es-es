@@ -8,12 +8,12 @@ ms.date: 02/20/2014
 ms.assetid: 778c4e58-4372-4d25-bab9-aec4a8d8e38d
 msc.legacyurl: /web-pages/overview/ui-layouts-and-themes/9-working-with-images
 msc.type: authoredcontent
-ms.openlocfilehash: fedd1013c036ebdb85877a868aaaa172733e5b8a
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: 53514b3c314fc182a43c82974ffcfa8158a636a1
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59394710"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65114375"
 ---
 # <a name="working-with-images-in-an-aspnet-web-pages-razor-site"></a>Trabajar con imágenes en un sitio Web de ASP.NET Pages (Razor)
 
@@ -44,7 +44,6 @@ por [Tom FitzMacken](https://github.com/tfitzmac)
 >   
 > 
 > Este tutorial también funciona con WebMatrix 3.
-
 
 <a id="Adding_an_Image"></a>
 ## <a name="adding-an-image-to-a-web-page-dynamically"></a>Agregar una imagen a una página Web de forma dinámica
@@ -133,7 +132,6 @@ El ejemplo anterior mostró cómo mostrar una imagen de forma dinámica, pero ha
 > 
 > Un GUID (identificador único global) es un identificador que normalmente se representa en un formato similar al siguiente: `936DA01F-9ABD-4d9d-80C7-02AF85C822A8`. Los números y letras (de A-F) distinto para cada GUID, pero siguen el patrón de uso de grupos de caracteres de 8-4-4-4-12. (Técnicamente, un GUID es un número de 16 bytes o 128 bits). Cuando se necesita un GUID, puede llamar a código especializado que genera un GUID para usted. La idea detrás de los GUID es que entre el tamaño de la cantidad enorme (3,4 x 10<sup>38</sup>) y el algoritmo para que lo genera, el número resultante es prácticamente garantiza que uno de cada tipo. Por lo tanto, los GUID son una buena forma de generar los nombres de las cosas cuando debe garantizar que no use el mismo nombre dos veces. La desventaja, por supuesto, es que los GUID no son especialmente descriptivos, por lo que tienden a utilizarse cuando se utiliza el nombre en el código.
 
-
 <a id="Resizing_an_Image"></a>
 ## <a name="resizing-an-image"></a>Cambiar el tamaño de una imagen
 
@@ -218,7 +216,6 @@ En lugar de texto para una marca de agua, puede usar otra imagen. Personas a vec
 
 <a id="Additional_Resources"></a>
 ## <a name="additional-resources"></a>Recursos adicionales
-
 
 [Trabajar con archivos en un sitio de ASP.NET Web Pages](https://go.microsoft.com/fwlink/?LinkId=202896)
 

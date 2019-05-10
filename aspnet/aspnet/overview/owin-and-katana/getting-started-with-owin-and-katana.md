@@ -8,12 +8,12 @@ ms.date: 09/27/2013
 ms.assetid: 6dae249f-5ac6-4f6e-bc49-13bcd5a54a70
 msc.legacyurl: /aspnet/overview/owin-and-katana/getting-started-with-owin-and-katana
 msc.type: authoredcontent
-ms.openlocfilehash: 5b5ecfcc7561e3e7bc13e1c8819a548e73ae1ab3
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: 4dfd7b8ebb2bb48d7ef800fd522b79a7b4a045c2
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59408100"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65118345"
 ---
 # <a name="getting-started-with-owin-and-katana"></a>Introducción a OWIN y Katana
 
@@ -59,7 +59,6 @@ Este código agrega un simple fragmento de middleware a la canalización OWIN, q
 
 > [!NOTE]
 > La plantilla de clase de inicio OWIN está disponible en Visual Studio 2013. Si utiliza Visual Studio 2012, solo tiene que agregar una nueva clase vacía denominada `Startup1`y pegue el código siguiente:
-
 
 [!code-csharp[Main](getting-started-with-owin-and-katana/samples/sample2.cs)]
 

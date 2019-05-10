@@ -8,12 +8,12 @@ ms.date: 02/20/2013
 ms.assetid: a3cef801-a54b-4ebd-93c3-55764e2e14b1
 msc.legacyurl: /visual-studio/overview/2012/windows-azure-authentication
 msc.type: authoredcontent
-ms.openlocfilehash: cd3eed8c14103d29a66acd475fafe5ff3122a960
-ms.sourcegitcommit: 289e051cc8a90e8f7127e239fda73047bde4de12
+ms.openlocfilehash: 46dd491b275b43be4e76c029b53f9454146663ae
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/25/2019
-ms.locfileid: "58421588"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65126196"
 ---
 # <a name="windows-azure-authentication"></a>Autenticación de Windows Azure
 
@@ -26,7 +26,6 @@ by [Rick Anderson]((https://twitter.com/RickAndMSFT))
 > Para obtener más información sobre cómo configurar la sincronización entre Active Directory local y el inquilino de Azure Active Directory de Windows consulte [usar AD FS 2.0 para implementar y administrar inicio de sesión único](https://technet.microsoft.com/library/jj205462.aspx).
 >
 > Windows Azure Active Directory está disponible actualmente como una [gratis el servicio en versión preliminar](https://azure.microsoft.com/free/?WT.mc_id=A443DD604).
-
 
 ## <a name="requirements"></a>Requisitos:
 

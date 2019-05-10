@@ -8,12 +8,12 @@ ms.date: 06/02/2008
 ms.assetid: e6ee90bf-32a5-4987-a384-15cc7dd30c8a
 msc.legacyurl: /web-forms/overview/ajax-control-toolkit/textboxwatermark/using-textboxwatermark-in-a-formview-cs
 msc.type: authoredcontent
-ms.openlocfilehash: 10c877e072d5caf23e78f49ebc71387fde20393d
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: 80d5dcec7f211f92cd9fbf2386bb7219d13ffe19
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59393618"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65124590"
 ---
 # <a name="using-textboxwatermark-in-a-formview-c"></a>Usar TextBoxWatermark en un FormView (C#)
 
@@ -22,7 +22,6 @@ por [Christian Wenz](https://github.com/wenz)
 [Descargar código](http://download.microsoft.com/download/9/3/f/93f8daea-bebd-4821-833b-95205389c7d0/TextBoxWatermark1.cs.zip) o [descargar PDF](http://download.microsoft.com/download/b/6/a/b6ae89ee-df69-4c87-9bfb-ad1eb2b23373/textboxwatermark1CS.pdf)
 
 > El control TextBoxWatermark de AJAX Control Toolkit amplía un cuadro de texto para que se muestra un texto dentro del cuadro. Cuando un usuario hace clic en el cuadro, se vacía. Si el usuario deja la casilla sin escribir texto, vuelve a aparecer el texto rellenado previamente. Esto también es posible dentro de un control FormView.
-
 
 ## <a name="overview"></a>Información general
 
@@ -47,7 +46,6 @@ Recuerde el nombre (`ID`) del origen de datos, ya que se usará en el `DataSourc
 [!code-aspx[Main](using-textboxwatermark-in-a-formview-cs/samples/sample3.aspx)]
 
 Ahora cuando el usuario cambia al modo de inserción de la `FormView` controlar, el campo de texto para el nuevo proveedor se rellenarán automáticamente gracias a la `TextBoxWatermarkExtender` control. Un clic en el cuadro de texto permite que el texto de relleno desaparecen.
-
 
 [![La marca de agua en el campo procede el extensor](using-textboxwatermark-in-a-formview-cs/_static/image2.png)](using-textboxwatermark-in-a-formview-cs/_static/image1.png)
 

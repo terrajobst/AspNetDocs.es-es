@@ -8,12 +8,12 @@ ms.date: 11/17/2011
 ms.assetid: 2b0df3d9-450b-4ea6-b315-4c9650722cad
 msc.legacyurl: /web-forms/overview/older-versions-getting-started/deployment-to-a-hosting-provider/deployment-to-a-hosting-provider-web-config-file-transformations-3-of-12
 msc.type: authoredcontent
-ms.openlocfilehash: 2b289099f7f9a928b2d63a09ac5ccd685d9d4386
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: ed442e2bd3140264facc7644d89589dbbe8840e7
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59406541"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65119372"
 ---
 # <a name="deploying-an-aspnet-web-application-with-sql-server-compact-using-visual-studio-or-visual-web-developer-webconfig-file-transformations---3-of-12"></a>Implementar una aplicación Web de ASP.NET con SQL Server Compact con Visual Studio o Visual Web Developer: Transformaciones del archivo Web.Config - 3 de 12
 
@@ -24,7 +24,6 @@ por [Tom Dykstra](https://github.com/tdykstra)
 > Esta serie de tutoriales muestra cómo implementar un ASP.NET (publicar) proyecto de aplicación web que incluye una base de datos de SQL Server Compact mediante Visual Studio 2012 RC o Visual Studio Express 2012 RC para Web. También puede usar Visual Studio 2010 si instala la actualización de publicación en Web. Para obtener una introducción a la serie, consulte [el primer tutorial de la serie](deployment-to-a-hosting-provider-introduction-1-of-12.md).
 > 
 > Para ver un tutorial que muestra las características de implementación introducidas después de la versión de Visual Studio 2012 RC, se muestra cómo implementar las ediciones de SQL Server que no sea de SQL Server Compact y se muestra cómo se implementa en Azure App Service Web Apps, consulte [implementación Web de ASP.NET con Visual Studio](../../deployment/visual-studio-web-deployment/introduction.md).
-
 
 ## <a name="overview"></a>Información general
 
@@ -95,7 +94,6 @@ No es necesario restringir el acceso de registro de error en el entorno de prueb
 > [!NOTE] 
 > 
 > **Nota de seguridad** nunca mostrar detalles del error para el público en una aplicación de producción, o almacenar esa información en una ubicación pública. Los atacantes pueden usar la información de error para detectar vulnerabilidades en un sitio. Si usas ELMAH en su propia aplicación, asegúrese de investigar formas en que se puede configurar ELMAH para minimizar los riesgos de seguridad. El ejemplo ELMAH en este tutorial no debe considerarse una configuración recomendada. Es un ejemplo que se ha elegido para ilustrar cómo controlar una carpeta que la aplicación debe ser capaz de crear archivos.
-
 
 ## <a name="setting-an-environment-indicator"></a>Establecer un indicador de entorno
 

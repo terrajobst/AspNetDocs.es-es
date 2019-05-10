@@ -8,17 +8,16 @@ ms.date: 10/05/2011
 ms.assetid: 27591afa-3c14-47e6-8323-573f8f7aa862
 msc.legacyurl: /web-forms/videos/how-do-i
 msc.type: chapter
-ms.openlocfilehash: 7d300a1f29c7712408d17c6629da6cefb67b3cdb
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: 12c988e64c5b724e04b6fc5f8eddc6a181764e1d
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59410323"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65114923"
 ---
 # <a name="how-do-i"></a>Cómo
 
 > Cómo realizar diversas tareas comunes.
-
 
 - [Aprender las sugerencias y los trucos de los expertos](how-do-i-learn-the-tips-and-tricks-of-experts.md)
 - [Crear un sitio multilingüe con localización](how-do-i-create-a-multi-lingual-site-with-localization.md)

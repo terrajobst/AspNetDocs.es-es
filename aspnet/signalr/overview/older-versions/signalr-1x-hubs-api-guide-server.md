@@ -8,12 +8,12 @@ ms.date: 04/17/2013
 ms.assetid: 03e4b9f5-0fea-4d94-959f-014b2762a301
 msc.legacyurl: /signalr/overview/older-versions/signalr-1x-hubs-api-guide-server
 msc.type: authoredcontent
-ms.openlocfilehash: 7d75c832f704ea88d365f6a8b83c1c3a024b30ca
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: d9cd3fad36c0300d96c6dbdc61291ef119da2327
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59382256"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65113035"
 ---
 # <a name="aspnet-signalr-hubs-api-guide---server-signalr-1x"></a>Guía de API de ASP.NET SignalR Hubs - servidor (SignalR 1.x)
 
@@ -26,7 +26,6 @@ por [Patrick Fletcher](https://github.com/pfletcher), [Tom Dykstra](https://gith
 > La API de concentradores de SignalR permite realizar llamadas a procedimiento remoto (RPC) de un servidor a los clientes conectados y de clientes en el servidor. En el código de servidor, definir los métodos que se pueden llamar a los clientes y llamar a métodos que se ejecutan en el cliente. En el código de cliente, definir los métodos que pueden llamarse desde el servidor y llamar a métodos que se ejecutan en el servidor. SignalR se ocupa de todos los mecanismos de cliente a servidor para usted.
 > 
 > SignalR también ofrece una API de nivel inferior denominada conexiones persistentes. Para obtener una introducción a SignalR, concentradores y conexiones persistentes, o para ver un tutorial que muestra cómo crear una aplicación de SignalR completa, consulte [SignalR - Introducción a](index.md).
-
 
 ## <a name="overview"></a>Información general
 
@@ -516,7 +515,6 @@ En la clase de Hub, puede tener acceso a estos datos en el `Clients.Caller` prop
 
 > [!NOTE]
 > Este mecanismo para conservar el estado no está diseñada para grandes cantidades de datos, desde todo lo coloca en el `state` o `Clients.Caller` propiedad es de ida y vuelta con cada invocación del método. Es útil para los elementos más pequeños, como los nombres de usuario o los contadores.
-
 
 <a id="handleErrors"></a>
 

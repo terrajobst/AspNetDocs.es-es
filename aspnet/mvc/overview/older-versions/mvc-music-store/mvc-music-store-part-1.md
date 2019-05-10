@@ -8,12 +8,12 @@ ms.date: 04/21/2011
 ms.assetid: bd356ca3-5bdb-4067-9dac-c9e9923a86e8
 msc.legacyurl: /mvc/overview/older-versions/mvc-music-store/mvc-music-store-part-1
 msc.type: authoredcontent
-ms.openlocfilehash: 63d85ec5f1f2fbadd92fd0210e67332df30aab5a
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: 48428ff4ab5888253ed93ac41e79006eec823ad2
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59419605"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65112928"
 ---
 # <a name="part-1-overview-and-file-new-project"></a>Parte 1: Información general y Archivo -> Nuevo proyecto
 
@@ -24,7 +24,6 @@ por [Jon Galloway](https://github.com/jongalloway)
 > El Store de música de MVC es una implementación de almacén de ejemplo ligera que vende álbumes de música en línea e implementa la administración básica del sitio, inicio de sesión de usuario y funcionalidad del carro de la compra.  
 >   
 > Esta serie de tutoriales detalla todos los pasos realizados para compilar la aplicación de ejemplo de Music Store de ASP.NET MVC. Parte 1 abarca información general y archivo -&gt;nuevo proyecto.
-
 
 ## <a name="overview"></a>Información general
 
@@ -74,11 +73,9 @@ Puede seguir paso a paso, o bien puede descargar la aplicación completa de [MVC
 
 Puede usar Visual Studio 2010 SP1 o Visual Web Developer 2010 Express SP1 (una versión gratuita de Visual Studio 2010) para compilar la aplicación. Vamos a usar SQL Server Compact (también disponible) para hospedar la base de datos. Antes de empezar, asegúrese de que ha instalado los requisitos previos descritos a continuación.
 
-
 - [Requisitos previos de visual Studio Web Developer Express SP1]
 - [ASP.NET MVC 3 Tools Update]
 - [SQL Server Compact 4.0] - incluida la compatibilidad en tiempo de ejecución y herramientas
-
 
 ### <a name="creating-a-new-aspnet-mvc-3-project"></a>Crear un nuevo proyecto de ASP.NET MVC 3
 

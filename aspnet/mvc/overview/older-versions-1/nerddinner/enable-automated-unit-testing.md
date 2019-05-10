@@ -8,12 +8,12 @@ ms.date: 07/27/2010
 ms.assetid: a19ff2ce-3f7e-4358-9a51-a1403da9c63e
 msc.legacyurl: /mvc/overview/older-versions-1/nerddinner/enable-automated-unit-testing
 msc.type: authoredcontent
-ms.openlocfilehash: b0c9cd7ab36a8414e0d7d50a68b05bb09a5f24f1
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: 09a7aa186605a6cce48ee94028425ded957c00d3
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59387911"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65117357"
 ---
 # <a name="enable-automated-unit-testing"></a>Habilitar las pruebas unitarias automatizadas
 
@@ -26,7 +26,6 @@ por [Microsoft](https://github.com/microsoft)
 > Paso 12 muestra cómo desarrollar un conjunto de pruebas unitarias automatizadas que comprueben la funcionalidad de NerdDinner, y que nos proporcionará la confianza para realizar cambios y mejoras a la aplicación en el futuro.
 > 
 > Si usa ASP.NET MVC 3, se recomienda que siga el [Introducción a trabajar con MVC 3](../../older-versions/getting-started-with-aspnet-mvc3/cs/intro-to-aspnet-mvc-3.md) o [MVC Music Store](../../older-versions/mvc-music-store/mvc-music-store-part-1.md) tutoriales.
-
 
 ## <a name="nerddinner-step-12-unit-testing"></a>NerdDinner paso 12: Pruebas unitarias
 
@@ -264,7 +263,6 @@ El escenario de prueba nuevo interesante soporte con este método de acción es 
 A continuación se muestran dos pruebas que se muestra cómo podemos proporcionarle registrado los valores para el método auxiliar UpdateModel() utilizar el formulario. Se deberá hacer esto creando y rellenando un objeto ColecciónFormulario y, a continuación, asignarlo a la propiedad "ValueProvider" en el controlador.
 
 La primera prueba comprueba que en una operación de guardar correctamente el explorador se redirige a la acción de detalles. La segunda prueba comprueba que cuando se publica la entrada no es válida la acción vuelve a mostrar la vista de edición nuevo con un mensaje de error.
-
 
 [!code-csharp[Main](enable-automated-unit-testing/samples/sample17.cs)]
 

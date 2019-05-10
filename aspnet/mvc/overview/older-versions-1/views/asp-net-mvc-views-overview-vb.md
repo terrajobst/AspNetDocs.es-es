@@ -8,19 +8,18 @@ ms.date: 02/16/2008
 ms.assetid: c28ba88d-3a93-47f5-a306-049bd766714d
 msc.legacyurl: /mvc/overview/older-versions-1/views/asp-net-mvc-views-overview-vb
 msc.type: authoredcontent
-ms.openlocfilehash: 84af745d338e38ece438fa58d51d0929c7b92967
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: f02728ed248f29b09d654e509977ed43889cbb83
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59408464"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65117436"
 ---
 # <a name="aspnet-mvc-views-overview-vb"></a>Información general sobre las vistas de ASP.NET MVC (VB)
 
 by [Stephen Walther](https://github.com/StephenWalther)
 
 > ¿Qué es una vista de MVC de ASP.NET y cómo se diferencia de una página HTML? En este tutorial, Stephen Walther presenta las vistas y se muestra cómo puede sacar partido de la vista de datos y aplicaciones auxiliares HTML dentro de una vista.
-
 
 El propósito de este tutorial es proporcionar una breve introducción a las vistas de ASP.NET MVC, ver los datos y aplicaciones auxiliares HTML. Al final de este tutorial, debe comprender cómo crear nuevas vistas, pasar datos de un controlador a una vista y usar aplicaciones auxiliares HTML para generar contenido en una vista.
 
@@ -68,7 +67,6 @@ Cuando se ejecuta esta línea de código, se devuelve una vista de la ruta de ac
 > 
 > Si va a crear pruebas unitarias para la aplicación de ASP.NET MVC es una buena idea de ser explícito acerca de los nombres de vista. De este modo, puede crear una prueba unitaria para comprobar que la vista esperada se devolvió mediante una acción de controlador.
 
-
 ## <a name="adding-content-to-a-view"></a>Agregar contenido a una vista
 
 Una vista es un estándar de (documento HTML que puede contener las secuencias de comandos X). Usar secuencias de comandos para agregar contenido dinámico a una vista.
@@ -103,11 +101,9 @@ Por ejemplo, la vista en el listado 4 se aprovecha de tres aplicaciones auxiliar
 
 [!code-aspx[Main](asp-net-mvc-views-overview-vb/samples/sample4.aspx)]
 
-
 [![El cuadro de diálogo nuevo proyecto](asp-net-mvc-views-overview-vb/_static/image1.jpg)](asp-net-mvc-views-overview-vb/_static/image1.png)
 
 **Figura 01**: Un formulario de inicio de sesión estándar ([haga clic aquí para ver imagen en tamaño completo](asp-net-mvc-views-overview-vb/_static/image2.png))
-
 
 Todos los métodos de las aplicaciones auxiliares HTML se llaman en la propiedad Html de la vista. Por ejemplo, representa un cuadro de texto llamando al método Html.TextBox().
 

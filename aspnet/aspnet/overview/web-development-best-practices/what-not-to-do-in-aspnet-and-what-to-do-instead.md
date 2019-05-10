@@ -8,17 +8,16 @@ ms.date: 01/28/2019
 ms.assetid: c39b9965-545c-4b04-8f55-21be7f28a9e5
 msc.legacyurl: /aspnet/overview/web-development-best-practices/what-not-to-do-in-aspnet-and-what-to-do-instead
 msc.type: authoredcontent
-ms.openlocfilehash: a09169327d8eed45a83b232354af74a14aa89817
-ms.sourcegitcommit: 289e051cc8a90e8f7127e239fda73047bde4de12
+ms.openlocfilehash: 980d3544df70643043391e6573803ce21b3a824f
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/25/2019
-ms.locfileid: "58425046"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65118175"
 ---
 # <a name="what-not-to-do-in-aspnet-and-what-to-do-instead"></a>Qué no se debe hacer en ASP.NET y qué hacer en su lugar
 
 > En este tema se describe varios errores comunes que las personas dentro de los proyectos web ASP.NET. Se proporcionan recomendaciones sobre lo que debe hacer para evitar estos errores comunes. Se basa en un [presentación](http://vimeo.com/68390507) por **Damian Edwards** en corona conferencia para desarrolladores.
-
 
 ## <a name="disclaimer"></a>Declinación de responsabilidades
 
@@ -105,7 +104,7 @@ En versiones anteriores de ASP.NET, las características admitidas para cada exp
 
 <a id="validation"></a>
 
-### <a name="request-validation"></a>La validación de solicitudes
+### <a name="request-validation"></a>Validación de solicitudes
 
 Recomendación: Validar entrada de usuario y codifique la salida de los usuarios.
 

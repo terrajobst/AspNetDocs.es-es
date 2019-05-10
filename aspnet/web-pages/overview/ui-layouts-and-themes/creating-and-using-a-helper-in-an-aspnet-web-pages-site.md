@@ -8,12 +8,12 @@ ms.date: 02/17/2014
 ms.assetid: 46bff772-01e0-40f0-9ae6-9e18c5442ee6
 msc.legacyurl: /web-pages/overview/ui-layouts-and-themes/creating-and-using-a-helper-in-an-aspnet-web-pages-site
 msc.type: authoredcontent
-ms.openlocfilehash: 28cb3af081f68c20dd9cd9e0b2578f5656d2d652
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: 1f5109324ff3ce919e88fe976587a179eeaa5a5d
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59389445"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65116029"
 ---
 # <a name="creating-and-using-a-helper-in-an-aspnet-web-pages-razor-site"></a>Crear y usar una aplicación auxiliar en un sitio ASP.NET Web Pages (Razor)
 
@@ -37,7 +37,6 @@ por [Tom FitzMacken](https://github.com/tfitzmac)
 >   
 > 
 > Este tutorial también funciona con ASP.NET Web Pages 2.
-
 
 ## <a name="overview-of-helpers"></a>Información general de las aplicaciones auxiliares
 
@@ -75,7 +74,6 @@ Este procedimiento muestra cómo crear la aplicación auxiliar que crea la nota,
     ![Captura de pantalla que muestra la página en el explorador y cómo la aplicación auxiliar genera marcado que coloca un cuadro alrededor del texto especificado.](creating-and-using-a-helper-in-an-aspnet-web-pages-site/_static/image1.jpg)
 
 ## <a name="additional-resources"></a>Recursos adicionales
-
 
 [Menú horizontal como una aplicación auxiliar de Razor](http://mikepope.com/blog/DisplayBlog.aspx?permalink=2341). Por Mike Pope esta entrada de blog muestra cómo crear un menú horizontal como una aplicación auxiliar con marcado, CSS y código.
 

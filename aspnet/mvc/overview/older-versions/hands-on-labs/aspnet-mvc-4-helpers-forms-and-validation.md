@@ -8,12 +8,12 @@ ms.date: 02/18/2013
 ms.assetid: 187ee9cd-bc70-479b-bfed-f568b8da96eb
 msc.legacyurl: /mvc/overview/older-versions/hands-on-labs/aspnet-mvc-4-helpers-forms-and-validation
 msc.type: authoredcontent
-ms.openlocfilehash: 639a8e0e5fd9557221c95aee1bef0294df047ae8
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: 0e2605a4188eaf814f6ab0ebfeaabed4457bcfa3
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59406319"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65112507"
 ---
 # <a name="aspnet-mvc-4-helpers-forms-and-validation"></a>Validación, formularios y asistentes de ASP.NET MVC 4
 
@@ -90,13 +90,12 @@ Los ejercicios siguientes constituyen este laboratorio práctico:
 > [!NOTE]
 > Cada ejercicio está acompañado por un **final** carpeta que contiene la solución resultante debe obtener después de completar los ejercicios. Puede usar esta solución como una guía si necesita ayuda adicional para trabajar a través de los ejercicios.
 
-
 Tiempo estimado para completar esta práctica: **60 minutos**
 
 <a id="Exercise1"></a>
 
 <a id="Exercise_1_Creating_the_Store_Manager_controller_and_its_Index_view"></a>
-### <a name="exercise-1-creating-the-store-manager-controller-and-its-index-view"></a>Ejercicio 1: Crear el controlador de Store Manager y su vista de índice
+### <a name="exercise-1-creating-the-store-manager-controller-and-its-index-view"></a>Ejercicio 1: Crear el controlador de Store Manager y su vista de índice
 
 En este ejercicio, obtendrá información sobre cómo crear un nuevo controlador para admitir operaciones CRUD, personalizar su método de acción de índice para devolver una lista de álbumes de la base de datos y, por último, generar una plantilla de vista de índice que aprovecha el scaffolding de ASP.NET MVC función para mostrar las propiedades de los álbumes en una tabla HTML.
 
@@ -177,7 +176,6 @@ En esta tarea, se ajustará la plantilla de vista simple creada con la caracter�
 > [!NOTE]
 > El **scaffolding** compatibilidad dentro de ASP.NET MVC genera una plantilla de vista simple que enumera todos los campos en el modelo de álbum. **Scaffolding** proporciona una forma rápida de empezar a trabajar en una vista fuertemente tipada: en lugar de tener que escribir manualmente la plantilla de vista, scaffolding rápidamente genera una plantilla predeterminada y, a continuación, puede modificar el código generado.
 
-
 1. Revise el código creado. La lista de campos generada formarán parte de los siguientes valores de tabla HTML que **Scaffolding** usa para mostrar datos tabulares.
 
     [!code-cshtml[Main](aspnet-mvc-4-helpers-forms-and-validation/samples/sample4.cshtml)]
@@ -205,7 +203,7 @@ En esta tarea, probará que la **StoreManager** **índice** plantilla de vista m
 <a id="Exercise2"></a>
 
 <a id="Exercise_2_Adding_an_HTML_Helper"></a>
-### <a name="exercise-2-adding-an-html-helper"></a>Ejercicio 2: Agregar una aplicación auxiliar HTML
+### <a name="exercise-2-adding-an-html-helper"></a>Ejercicio 2: Agregar una aplicación auxiliar HTML
 
 La página de índice StoreManager tiene un problema potencial: Propiedades de título y el nombre del intérprete tanto pueden ser lo suficientemente largo para deshacerse del formato de tabla. En este ejercicio obtendrá información sobre cómo agregar una aplicación auxiliar HTML personalizada para truncar ese texto.
 
@@ -224,7 +222,6 @@ En esta tarea, agregará un nuevo método **Truncate** a la **HTML** objeto expu
 
 > [!NOTE]
 > Para obtener más información acerca de **métodos de extensión**, visite este artículo de msdn. [https://msdn.microsoft.com/library/bb383977.aspx](https://msdn.microsoft.com/library/bb383977.aspx).
-
 
 1. Abra el **comenzar** solución ubicado en **origen/Ex2-AddingAnHTMLHelper/inicio/** carpeta. En caso contrario, es posible que siga usando la **final** solución obtenido completando el ejercicio anterior.
 
@@ -404,7 +401,7 @@ En esta tarea, probará que la **StoreManager edición** página ver realmente g
 <a id="Exercise4"></a>
 
 <a id="Exercise_4_Adding_a_Create_View"></a>
-### <a name="exercise-4-adding-a-create-view"></a>Ejercicio 4: Agregar una vista Create
+### <a name="exercise-4-adding-a-create-view"></a>Ejercicio 4: Agregar una vista Create
 
 Ahora que la **StoreManagerController** admite el **editar** capacidad, en este ejercicio obtendrá información sobre cómo agregar una plantilla Create View para que pueda almacenar los administradores agregarán álbumes nuevos a la aplicación.
 
@@ -505,7 +502,7 @@ En esta tarea, probará que la **StoreManager crear** ver página le permite cre
 <a id="Exercise5"></a>
 
 <a id="Exercise_5_Handling_Deletion"></a>
-### <a name="exercise-5-handling-deletion"></a>Ejercicio 5: Eliminación de control
+### <a name="exercise-5-handling-deletion"></a>Ejercicio 5: Eliminación de control
 
 La capacidad de eliminar álbumes aún no está implementada. Esto es lo que este ejercicio será aproximadamente. Como antes, se implementará el escenario de eliminación utilizando dos métodos independientes dentro de la **StoreManagerController** clase:
 
@@ -665,7 +662,6 @@ En este ejercicio, obtendrá información sobre cómo habilitar la validación d
 
 > [!NOTE]
 > JQuery discreta usa el prefijo de datos ajax JavaScript para invocar métodos de acción en el servidor en lugar de manera intrusiva emitir los scripts de cliente en línea.
-
 
 <a id="Ex7Task1"></a>
 

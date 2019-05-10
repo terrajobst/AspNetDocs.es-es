@@ -8,12 +8,12 @@ ms.date: 01/28/2019
 ms.assetid: 20acee16-c70c-41e9-b38f-92bfcf9a4c1c
 msc.legacyurl: /aspnet/overview/owin-and-katana/owin-oauth-20-authorization-server
 msc.type: authoredcontent
-ms.openlocfilehash: d5c8262d48c79616ca3069c37077ba99ffafb650
-ms.sourcegitcommit: 289e051cc8a90e8f7127e239fda73047bde4de12
+ms.openlocfilehash: 6523d09e41fe10475d1bcb7fca06b2e0e2d3182c
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/25/2019
-ms.locfileid: "58426056"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65118195"
 ---
 # <a name="owin-oauth-20-authorization-server"></a>Servidor de autorización de OAuth 2.0 de OWIN
 
@@ -34,7 +34,6 @@ ms.locfileid: "58426056"
 > ## <a name="questions-and-comments"></a>Preguntas y comentarios
 >
 > Si tiene preguntas que no están directamente relacionados con el tutorial, puede publicarlos en [proyecto Katana en GitHub](https://github.com/aspnet/AspNetKatana/). Para preguntas y comentarios sobre el tutorial en Sí, consulte la sección de comentarios en la parte inferior de la página.
-
 
 El [OAuth 2.0 framework](http://tools.ietf.org/html/rfc6749) permite que una aplicación de terceros obtener acceso limitado a un servicio HTTP. En lugar de usar las credenciales del propietario del recurso para tener acceso a un recurso protegido, el cliente obtiene un token de acceso (que es una cadena que denota un ámbito específico, duración y otros atributos de acceso). Un servidor de autorización emite tokens de acceso a los clientes de terceros con la aprobación del propietario del recurso.
 
@@ -175,7 +174,6 @@ Esta es la implementación de ejemplo para `Provider.GrantResourceOwnerCredentia
 > [!NOTE]
 > El código anterior está diseñado para explicar en esta sección del tutorial y no debe usarse en seguro o aplicaciones de producción. No comprueba las credenciales de los propietarios de recursos. Se supone que cada credencial es válida y cuando crea una nueva identidad. La nueva identidad se utilizará para generar el token de acceso y el token de actualización. Reemplace el código con su propio código de administración de cuenta segura.
 
-
 ### <a name="client-credentials-grant"></a>Concesión de credenciales de cliente
 
 Consulte el IETF OAuth 2 [concesión de credenciales de cliente](http://tools.ietf.org/html/rfc6749#section-4.4) sección ahora.
@@ -195,7 +193,6 @@ Esta es la implementación de ejemplo para `Provider.GrantClientCredentials`:
 
 > [!NOTE]
 > El código anterior está diseñado para explicar en esta sección del tutorial y no debe usarse en seguro o aplicaciones de producción. Reemplace el código con su propio código de administración de cliente segura.
-
 
 ### <a name="refresh-token"></a>Token de actualización
 
@@ -274,7 +271,6 @@ Este es el código de ejemplo de la `HomeController` del cliente.
 > [!WARNING]
 > Security - nunca deshabilitar SSL en una aplicación de producción. Ahora las credenciales de inicio de sesión se envían en texto sin cifrar a través de la conexión. El código anterior es solo para la depuración de ejemplo local y la exploración.
 
-
 ### <a name="implicit-grant-client"></a>Cliente de concesión implícita
 
 Este cliente está usando JavaScript para:
@@ -296,7 +292,6 @@ Este es el código de control de devolución de llamada *SignIn.cshtml* archivo:
 
 > [!NOTE]
 > Una práctica recomendada es mover el código JavaScript a un archivo externo y no se incrusta con el marcado de Razor. Para simplificar este ejemplo, se han combinado.
-
 
 ### <a name="resource-owner-password-credentials-grant-client"></a>Concesión de cliente de credenciales de contraseña de propietario de recursos
 

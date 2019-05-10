@@ -8,12 +8,12 @@ ms.date: 01/06/2019
 ms.assetid: 9f35ca15-e216-4db6-9ebf-24380b0f31b4
 msc.legacyurl: /mvc/overview/getting-started/introduction/adding-validation
 msc.type: authoredcontent
-ms.openlocfilehash: 2b5d2a355a27bfe9a3aa8b2fa4a2de79c7f74314
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: 6894d01af7cd142a5579f73ae5209ca13756ca52
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59387131"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65120749"
 ---
 # <a name="adding-validation"></a>Agregar una validación
 
@@ -84,7 +84,6 @@ Haga clic en el **crear nuevo** el vínculo para agregar una nueva película. Re
 > [!NOTE]
 > para admitir la validación de jQuery para configuraciones regionales distintas del inglés que usan una coma (",") para un punto decimal, debe incluir el paquete NuGet globalizar como se describió anteriormente en este tutorial.
 
-
 Observe cómo el formulario automáticamente usa un color de borde de color rojo para resaltar los cuadros de texto que contienen datos no válidos y se genera un mensaje de error de validación adecuado junto a cada uno de ellos. Los errores se aplican en el lado cliente (con JavaScript y jQuery) y en el lado servidor (cuando un usuario tiene JavaScript deshabilitado).
 
 Una ventaja real es que no necesita cambiar una sola línea de código en el `MoviesController` clase o en el *Create.cshtml* vista con el fin de habilitar esta interfaz de usuario de validación. El controlador y las vistas que creó en pasos anteriores de este tutorial seleccionaron automáticamente las reglas de validación que especificó mediante atributos de validación en las propiedades de la clase del modelo `Movie`. Pruebe la aplicación mediante el método de acción `Edit` y se aplicará la misma validación.
@@ -135,9 +134,7 @@ El [DataType](https://msdn.microsoft.com/library/system.componentmodel.dataannot
 
 El atributo `DisplayFormat` se usa para especificar el formato de fecha de forma explícita:
 
-
 [!code-csharp[Main](adding-validation/samples/sample8.cs)]
-
 
 El `ApplyFormatInEditMode` configuración especifica que el formato especificado también se debe aplicar cuando el valor se muestra en un cuadro de texto para su edición. (No es posible que desee que algunos campos, por ejemplo, para los valores de moneda, es posible que no desea el símbolo de moneda en el cuadro de texto para su edición.)
 
@@ -155,7 +152,6 @@ Si usas el `DataType` atributo con un campo de fecha, tendrá que especificar el
 > [!code-csharp[Main](adding-validation/samples/sample9.cs)]
 > 
 > Deberá deshabilitar la validación de la fecha de jQuery para usar el [intervalo](https://msdn.microsoft.com/library/system.componentmodel.dataannotations.rangeattribute.aspx) con el atributo [DateTime](https://msdn.microsoft.com/library/system.datetime.aspx). Por lo general no resulta una buena práctica para compilar fechas fijas en los modelos, por lo que usar el [intervalo](https://msdn.microsoft.com/library/system.componentmodel.dataannotations.rangeattribute.aspx) atributo y [DateTime](https://msdn.microsoft.com/library/system.datetime.aspx) es en absoluto.
-
 
 El código siguiente muestra la combinación de atributos en una línea:
 

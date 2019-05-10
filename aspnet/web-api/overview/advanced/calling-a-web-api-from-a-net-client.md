@@ -8,12 +8,12 @@ ms.date: 11/24/2017
 ms.custom: seoapril2019
 msc.legacyurl: /web-api/overview/advanced/calling-a-web-api-from-a-net-client
 msc.type: authoredcontent
-ms.openlocfilehash: 113600ca1e77ae9667465464da505478fc948c9b
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: ca3b9424f30f48c7b8c71b850ffeca64244b123b
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59421113"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65112844"
 ---
 # <a name="call-a-web-api-from-a-net-client-c"></a>Llamar a una API Web desde un cliente .NET (C#)
 
@@ -165,7 +165,7 @@ Una solicitud de eliminación, como GET, no tiene un cuerpo de solicitud. No es 
 
 Para probar la aplicación cliente:
 
-1. [Descargar](https://github.com/aspnet/AspNetDocs/tree/master/aspnet/web-api/overview/advanced/calling-a-web-api-from-a-net-client/sample/server) y ejecutar la aplicación de servidor. [Instrucciones de descarga](/aspnet/core/tutorials/#how-to-download-a-sample). Comprobar que funciona la aplicación de servidor. Por ejemplo, `http://localhost:64195/api/products` debe devolver una lista de productos.
+1. [Descargar](https://github.com/aspnet/AspNetDocs/tree/master/aspnet/web-api/overview/advanced/calling-a-web-api-from-a-net-client/sample/server) y ejecutar la aplicación de servidor. [Instrucciones de descarga](/aspnet/core/#how-to-download-a-sample). Comprobar que funciona la aplicación de servidor. Por ejemplo, `http://localhost:64195/api/products` debe devolver una lista de productos.
 2. Establecer el URI base para las solicitudes HTTP. Cambiar el número de puerto para el puerto usado en la aplicación de servidor.
     [!code-csharp[Main](calling-a-web-api-from-a-net-client/sample/client/Program.cs?name=snippet5&highlight=2)]
 

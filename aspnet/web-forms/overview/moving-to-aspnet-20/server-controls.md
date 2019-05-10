@@ -8,19 +8,18 @@ ms.date: 02/20/2005
 ms.assetid: 43f6ac47-76fc-4cf7-8e9f-c18ce673dfd8
 msc.legacyurl: /web-forms/overview/moving-to-aspnet-20/server-controls
 msc.type: authoredcontent
-ms.openlocfilehash: bfbc151af40bf7ccceb5ac298ba812730d4e4ed9
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: c02a633013f061c09141d4f98871848c011a799e
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59420762"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65116712"
 ---
 # <a name="server-controls"></a>Controles de servidor
 
 por [Microsoft](https://github.com/microsoft)
 
 > ASP.NET 2.0 mejora los controles de servidor de muchas maneras. En este módulo, trataremos algunos de los cambios de arquitectura a la forma en que ASP.NET 2.0 y Visual Studio 2005 se ocupa de los controles de servidor.
-
 
 ASP.NET 2.0 mejora los controles de servidor de muchas maneras. En este módulo, trataremos algunos de los cambios de arquitectura a la forma en que ASP.NET 2.0 y Visual Studio 2005 se ocupa de los controles de servidor.
 
@@ -59,15 +58,11 @@ En ASP.NET 2.0, el estado de control resuelve el problema bien a través de la i
 > [!NOTE]
 > Se conserva el estado de control junto con el estado de vista en el \_ \_campo de formulario oculto de VIEWSTATE.
 
-
 Este vídeo es un tutorial sobre el estado de vista y estado de control.
-
 
 ![](server-controls/_static/image1.png)
 
-
 [Abra vídeo de pantalla completa](server-controls/_static/state1.wmv)
-
 
 En el orden de un control de servidor leer y escribir para controlar el estado, debe realizar tres pasos.
 
@@ -114,7 +109,6 @@ En ASP.NET 1.x, el archivo de configuración contenido un &lt;browserCaps&gt; se
 > [!NOTE]
 > Esta clase es una clase abstracta.
 
-
 De forma similar a la &lt;browserCaps&gt; sección en la versión 1.x, el archivo de definición de explorador usa una expresión Regular para analizar la cadena de agente de usuario con el fin de identificar el explorador solicitante. Se les define funciones concretas para que el agente de usuario. ControlAdapter representa el control mediante el método Render. Por lo tanto, si invalida el método Render, no debe llamar Render en la clase base. Si lo hace, para que se realicen dos veces, una vez para el adaptador y otra para el propio control de representación.
 
 ## <a name="developing-a-custom-adapter"></a>Desarrollar un adaptador personalizado
@@ -157,21 +151,17 @@ Los siguientes son nuevos controles de servidor en ASP.NET 2.0. Describiremos co
 
 El control de mapa de imágenes permite agregar puntos de conexión a una imagen que se puede iniciar una devolución de datos o navegar a una dirección URL. Hay tres tipos de puntos de conexión disponibles. CircleHotSpot, RectangleHotSpot y PolygonHotSpot. Puntos de conexión se agregan a través de un editor de colecciones en Visual Studio o mediante programación en el código. No hay ninguna interfaz de usuario disponibles para dibujar los puntos de conexión en una imagen. Las coordenadas y el tamaño o el radio de la zona activa se debe especificar mediante declaración. No hay ninguna representación visual de un punto de conexión en el diseñador. Si un punto de conexión está configurado para navegar a una dirección URL, se especifica la dirección URL a través de la propiedad NavigateUrl de zona activa. En el caso de una publicación de realizar una copia de zona activa, el PostBackValue propiedad le permite pasar una cadena en la devolución de llamada que se puede recuperar en el código del lado servidor.
 
-
 ![Editor de colección de hotSpot en Visual Studio](server-controls/_static/image1.jpg)
 
 **Figura 1**: Editor de colección de hotSpot en Visual Studio
-
 
 ## <a name="bulletedlist-control"></a>Control BulletedList
 
 El control BulletedList es una lista con viñetas que fácilmente se puede enlazar a datos. La lista puede ordenarse (numerados) o sin ordenar de a través de la propiedad BulletStyle. Cada elemento de la lista se representa mediante un objeto ListItem.
 
-
 ![Control BulletedList en Visual Studio](server-controls/_static/image1.gif)
 
 **Figura 2**: Control BulletedList en Visual Studio
-
 
 ## <a name="hiddenfield-control"></a>Control HiddenField
 
@@ -204,15 +194,11 @@ Es bastante habitual encontrar los desarrolladores de ASP.NET debe enfrentarse a
 > [!NOTE]
 > El control de asistente realiza un seguimiento de su estado usando el estado de control ASP.NET. Por lo tanto, se puede establecer la propiedad EnableViewState en false sin perjuicio alguno.
 
-
 Este vídeo es un tutorial sobre el control de asistente.
-
 
 ![](server-controls/_static/image2.png)
 
-
 [Abra vídeo de pantalla completa](server-controls/_static/wizard1.wmv)
-
 
 ## <a name="localize-control"></a>Localizar el Control
 

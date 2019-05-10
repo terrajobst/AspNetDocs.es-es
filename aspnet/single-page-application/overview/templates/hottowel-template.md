@@ -8,12 +8,12 @@ ms.date: 02/09/2013
 ms.assetid: 75af2e17-6ed3-4d24-8ea1-bc340027c318
 msc.legacyurl: /single-page-application/overview/templates/hottowel-template
 msc.type: authoredcontent
-ms.openlocfilehash: 017f550e2caffe1b20823e9b1880cbb4e968005a
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: f3457840d1597d06c1a1b1ec2a865dd70726446c
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59379942"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65113341"
 ---
 # <a name="hot-towel-template"></a>Plantilla de Hot Towel
 
@@ -30,13 +30,11 @@ por [Mads Kristensen](https://github.com/madskristensen)
 > 
 > Toalla activa: Dado que no desea ir a la SPA sin uno!
 
-
 ¿Si desea crear una SPA, pero no se puede decidir dónde empezar? Utilizar una toalla activo y en segundos, tendrá una SPA y todas las herramientas que necesita para crear en él!
 
 Hot toalla crea un excelente punto de partida para la creación de una aplicación de página única (SPA) con ASP.NET. De fábrica se proporciona una estructura modular para su código, navegación de la vista, el enlace de datos, administración de datos enriquecidos y estilo sencilla pero elegante. Hot toalla proporciona todo lo que necesita para crear una SPA, para que pueda centrarse en la aplicación, no las conexiones subyacentes.
 
 > Más información acerca de cómo crear una SPA de [vídeos, tutoriales y cursos de Pluralsight de John Papa](http://johnpapa.net/spa?vsix).
-
 
 ## <a name="application-structure"></a>Estructura de la aplicación
 

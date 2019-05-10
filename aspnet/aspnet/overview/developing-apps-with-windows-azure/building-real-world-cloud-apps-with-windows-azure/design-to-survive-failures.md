@@ -8,12 +8,12 @@ ms.date: 06/12/2014
 ms.assetid: 364ce84e-5af8-4e08-afc9-75a512b01f84
 msc.legacyurl: /aspnet/overview/developing-apps-with-windows-azure/building-real-world-cloud-apps-with-windows-azure/design-to-survive-failures
 msc.type: authoredcontent
-ms.openlocfilehash: fbe618acfc70711933996f97657a4326d389b3dd
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: 54bfa40a7d853e29c42512ba375271587fb6f565
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59411246"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65118837"
 ---
 # <a name="design-to-survive-failures-building-real-world-cloud-apps-with-azure"></a>Diseño para sobrevivir a errores (crear aplicaciones de nube reales con Azure)
 
@@ -22,7 +22,6 @@ by [Mike Wasson](https://github.com/MikeWasson), [Rick Anderson]((https://twitte
 [Descargar proyecto corregirlo](http://code.msdn.microsoft.com/Fix-It-app-for-Building-cdd80df4) o [descargar libro electrónico](http://blogs.msdn.com/b/microsoft_press/archive/2014/07/23/free-ebook-building-cloud-apps-with-microsoft-azure.aspx)
 
 > El **Building Real World Cloud Apps with Azure** eBook se basa en una presentación desarrollada por Scott Guthrie. Se explican el 13 patrones y prácticas que pueden ayudarle a tener éxito el desarrollo de aplicaciones web para la nube. Para obtener información sobre el libro electrónico, consulte [el primer capítulo](introduction.md).
-
 
 Una de las cosas que debe considerar al compilar cualquier tipo de aplicación, pero especialmente uno que se ejecutará en la nube donde una gran cantidad de personas lo va a usar, es cómo diseñar la aplicación para que pueda controlar los errores correctamente y seguirán ofreciendo valor tanto como es posible. Con el tiempo suficiente, las cosas van a algún problema en cualquier entorno o cualquier sistema de software. Cómo la aplicación trata esas situaciones determina cómo malestar obtendrán los clientes y cuánto tiempo se debe analizar y corregir problemas.
 

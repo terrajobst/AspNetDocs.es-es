@@ -8,12 +8,12 @@ ms.date: 07/16/2014
 ms.assetid: 4fe2558d-67cc-4d12-a5c1-6fb9f6f16137
 msc.legacyurl: /visual-studio/overview/2013/one-aspnet-integrating-aspnet-web-forms-mvc-and-web-api
 msc.type: authoredcontent
-ms.openlocfilehash: 1023d9bef311e58fb5fb0bb24cde80e8320e6bac
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: 165d104b5d3ef3281af449cc8673ad96f531d628
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59419059"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65113079"
 ---
 # <a name="hands-on-lab-one-aspnet-integrating-aspnet-web-forms-mvc-and-web-api"></a>Laboratorio práctico: One ASP.NET: Integrar formularios Web Forms de ASP.NET, MVC y Web API
 
@@ -26,7 +26,6 @@ por [campamentos Web Team](https://twitter.com/webcamps)
 > Visual Studio 2013 presenta un nuevo sistema de proyecto unificado que le permite crear una aplicación y usar todas las tecnologías ASP.NET en un proyecto. Esta característica elimina la necesidad de elegir una tecnología al principio de un proyecto y stick con él y en su lugar, recomienda el uso de varios marcos ASP.NET dentro de un proyecto.
 > 
 > Todo el código de ejemplo y fragmentos de código se incluyen en el Kit de entrenamiento campamentos de Web, que está disponible en [ https://aka.ms/webcamps-training-kit ](https://aka.ms/webcamps-training-kit).
-
 
 <a id="Overview"></a>
 ## <a name="overview"></a>Información general
@@ -62,7 +61,6 @@ Para poder ejecutar los ejercicios en este laboratorio práctico, deberá config
 > [!NOTE]
 > Asegúrese de que ha comprobado todas las dependencias para este laboratorio antes de ejecutar el programa de instalación.
 
-
 <a id="CodeSnippets"></a>
 ### <a name="using-the-code-snippets"></a>Uso de los fragmentos de código
 
@@ -70,7 +68,6 @@ En todo el documento de laboratorio, se le pedirá que inserte los bloques de c�
 
 > [!NOTE]
 > Cada ejercicio viene acompañado por una solución inicial ubicada en el **comenzar** carpeta del ejercicio que le permite seguir cada ejercicio independientemente de los demás. Ten en cuenta que los fragmentos de código que se agregan durante un ejercicio faltan en estos a partir de las soluciones y es posible que no funcione hasta que haya completado el ejercicio. En el código fuente para un ejercicio, también encontrará un **final** carpeta que contiene una solución de Visual Studio con el código que se obtiene al completar los pasos descritos en el ejercicio correspondiente. Puede usar estas soluciones como instrucciones si necesita más ayuda mientras se trabaja a través de este laboratorio práctico.
-
 
 ---
 
@@ -88,9 +85,8 @@ Tiempo estimado para completar esta práctica: **60 minutos**
 > [!NOTE]
 > Primera vez que inicie Visual Studio, debe seleccionar una de las colecciones de configuraciones predefinidas. Cada colección predefinida está diseñado para que coincida con un estilo de desarrollo determinado y determina los diseños de ventana, comportamiento del editor, fragmentos de código de IntelliSense y opciones del cuadro de diálogo. Los procedimientos de este laboratorio describen las acciones necesarias para realizar una tarea concreta en Visual Studio cuando se usa el **configuración General de desarrollo** colección. Si elige una colección de configuraciones diferentes para el entorno de desarrollo, puede haber diferencias en los pasos que debe tener en cuenta.
 
-
 <a id="Exercise1"></a>
-### <a name="exercise-1-creating-a-new-web-forms-project"></a>Ejercicio 1: Crear un nuevo proyecto de formularios Web
+### <a name="exercise-1-creating-a-new-web-forms-project"></a>Ejercicio 1: Crear un nuevo proyecto de formularios Web
 
 En este ejercicio creará un nuevo sitio de formularios Web Forms en Visual Studio 2013 usando la **One ASP.NET** unificada experiencia en el proyecto, que le permitirá integrar fácilmente los componentes de formularios Web Forms, MVC y Web API en la misma aplicación. A continuación, explorará la solución generada e identificar sus partes, y, por último, verá el sitio Web en acción.
 
@@ -177,7 +173,7 @@ En esta tarea se ejecute la solución generada, explore la aplicación y algunas
 6. Vuelva a Visual Studio y presione **MAYÚS + F5** para detener la depuración.
 
 <a id="Exercise2"></a>
-### <a name="exercise-2-creating-an-mvc-controller-using-scaffolding"></a>Ejercicio 2: Creación de un controlador MVC con Scaffolding
+### <a name="exercise-2-creating-an-mvc-controller-using-scaffolding"></a>Ejercicio 2: Creación de un controlador MVC con Scaffolding
 
 En este ejercicio se aprovechará el marco de ASP.NET Scaffolding proporcionado por Visual Studio para crear un controlador de ASP.NET MVC 5 con acciones y vistas de Razor para realizar operaciones de CRUD, sin necesidad de escribir una sola línea de código. El proceso de scaffolding usará Entity Framework Code First para generar el contexto de datos y el esquema de base de datos en la base de datos SQL.
 
@@ -189,7 +185,6 @@ El flujo de trabajo de modelado de Entity Framework Code First le permite usar s
 
 > [!NOTE]
 > Puede aprender más acerca de Entity Framework [aquí](../../../entity-framework.md).
-
 
 <a id="Ex2Task1"></a>
 #### <a name="task-1--creating-a-new-model"></a>Tarea 1: crear un nuevo modelo
@@ -342,7 +337,6 @@ En esta tarea usará el Explorador de Internet **herramientas de desarrollo F12*
 > ![Opción de Internet Explorer](one-aspnet-integrating-aspnet-web-forms-mvc-and-web-api/_static/image27.png)
 > 
 > El **herramientas de desarrollo F12** tiene un amplio conjunto de funcionalidad que no se trata en este laboratorio práctico. Si desea obtener más información, consulte [mediante herramientas de desarrollo F12](https://msdn.microsoft.com/library/ie/bg182326(v=vs.85)).
-
 
 1. Presione **F5** para ejecutar la solución.
 

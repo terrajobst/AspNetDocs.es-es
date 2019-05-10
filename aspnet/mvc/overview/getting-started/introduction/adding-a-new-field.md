@@ -8,12 +8,12 @@ ms.date: 10/17/2013
 ms.assetid: 4085de68-d243-4378-8a64-86236ea8d2da
 msc.legacyurl: /mvc/overview/getting-started/introduction/adding-a-new-field
 msc.type: authoredcontent
-ms.openlocfilehash: a5de73d93d0af21a3b59d6c21014810184292adb
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: 55e635c967e07e193dda0358b020638af46c688e
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59379357"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65120836"
 ---
 # <a name="adding-a-new-field"></a>Adición de un nuevo campo
 
@@ -79,7 +79,6 @@ Si lo hace, agrega la siguiente instrucción using:
 > 
 > Para obtener más información sobre la [AddOrUpdate](https://msdn.microsoft.com/library/system.data.entity.migrations.idbsetextensions.addorupdate(v=vs.103).aspx) método, consulte [tener cuidado con el método de EF 4.3 AddOrUpdate](http://thedatafarm.com/blog/data-access/take-care-with-ef-4-3-addorupdate-method/)...
 
-
 **Presione CTRL-MAYÚS-B para compilar el proyecto.** (Los pasos siguientes se producirá un error si no se crea en este momento.)
 
 El siguiente paso es crear un `DbMigration` clase para la migración inicial. Esta migración crea una nueva base de datos, por eso se eliminó el *movie.mdf* archivo en el paso anterior.
@@ -138,13 +137,11 @@ El modelo que respalda el contexto 'MovieDBContext' ha cambiado desde que se cre
 
 Si ve este error porque la actualización `Movie` ahora es diferente del esquema de clase de modelo en la aplicación la `Movie` tabla de la base de datos existente. (No hay ninguna columna `Rating` en la tabla de la base de datos).
 
-
 Este error se puede resolver de varias maneras:
 
 1. Haga que Entity Framework quite de forma automática la base de datos y la vuelva a crear basándose en el nuevo esquema de la clase del modelo. Este enfoque resulta muy conveniente al principio del ciclo de desarrollo cuando se está realizando el desarrollo activo en una base de datos de prueba; permite desarrollar rápidamente el esquema del modelo y la base de datos juntos. La desventaja, sin embargo, es la que se pierden los datos existentes en la base de datos, por lo que se *no* va a utilizar este enfoque en una base de datos de producción. Usar un inicializador para inicializar automáticamente una base de datos con datos de prueba suele ser una manera productiva de desarrollar una aplicación. Para obtener más información sobre los inicializadores de base de datos de Entity Framework, vea [tutorial de ASP.NET MVC/Entity Framework](../getting-started-with-ef-using-mvc/creating-an-entity-framework-data-model-for-an-asp-net-mvc-application.md).
 2. Modifique explícitamente el esquema de la base de datos existente para que coincida con las clases del modelo. La ventaja de este enfoque es que se conservan los datos. Puede realizar este cambio de forma manual o mediante la creación de un script de cambio de base de datos.
 3. Use Migraciones de Code First para actualizar el esquema de la base de datos.
-
 
 Para este tutorial se usa Migraciones de Code First.
 

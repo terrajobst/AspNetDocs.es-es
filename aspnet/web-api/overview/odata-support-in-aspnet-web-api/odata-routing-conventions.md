@@ -9,19 +9,18 @@ ms.custom: seoapril2019
 ms.assetid: adbc175a-14eb-4ab2-a441-d056ffa8266f
 msc.legacyurl: /web-api/overview/odata-support-in-aspnet-web-api/odata-routing-conventions
 msc.type: authoredcontent
-ms.openlocfilehash: 8916f8b7a024636be1be055457081487f46a7936
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: 63df4a82cd8df92631485b2544117844cfd0ca56
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59421633"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65130467"
 ---
 # <a name="routing-conventions-in-aspnet-web-api-2-odata"></a>Convenciones de enrutamiento en ASP.NET Web API 2 Odata
 
 por [Mike Wasson](https://github.com/MikeWasson)
 
 > Este artículo describe las convenciones de enrutamiento que Web API 2 en ASP.NET 4.x usa para los puntos de conexión de OData.
-
 
 Cuando la API Web obtiene una solicitud de OData, asigna la solicitud para un nombre de controlador y un nombre de acción. La asignación se basa en el método HTTP y el URI. Por ejemplo, `GET /odata/Products(1)` se asigna a `ProductsController.GetProduct`.
 
@@ -53,7 +52,6 @@ Por lo que esta ruta de acceso recoge el proveedor del producto 1.
 
 > [!NOTE]
 > Segmentos de ruta de acceso de OData no siempre se corresponde con segmentos de URI. Por ejemplo, "1" se considera un segmento de ruta de acceso.
-
 
 **Nombres de controlador.** El nombre del controlador siempre se deriva de la entidad establecidos en la raíz de la ruta de acceso del recurso. Por ejemplo, si la ruta de acceso del recurso es `/Products(1)/Supplier`, Web API busca un controlador denominado `ProductsController`.
 

@@ -9,12 +9,12 @@ ms.assetid: 248f5fe7-39ba-40ea-ab1e-71a69b0bd649
 ms.custom: seoapril2019
 msc.legacyurl: /identity/overview/extensibility/implementing-a-custom-mysql-aspnet-identity-storage-provider
 msc.type: authoredcontent
-ms.openlocfilehash: 224fa56a455affcbbdf76eceee5422850415037e
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: 227a48d76f099f948d89f38219e25ced026d7dcd
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59420775"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65118109"
 ---
 # <a name="implementing-a-custom-mysql-aspnet-identity-storage-provider"></a>Implementar un proveedor de almacenamiento personalizado de ASP.NET Identity de MySQL
 
@@ -31,7 +31,6 @@ por [Raquel Soares De Almeida](https://github.com/raquelsa), [Suhas Joshi](https
 > - Muestra cómo reemplazar el valor predeterminado de implementación de almacenamiento de información de identidad de ASP.NET con nuestra implementación personalizada en un proyecto de aplicación MVC.
 > 
 > En este tutorial se escribió originalmente por Raquel Soares De Almeida y Rick Anderson ( [ @RickAndMSFT ](https://twitter.com/#!/RickAndMSFT) ). Se actualizó el proyecto de ejemplo para identidad 2.0 por Suhas Joshi. El tema se ha actualizado por Tom FitzMacken identidad 2.0.
-
 
 ## <a name="download-completed-project"></a>Proyecto de descarga completada
 

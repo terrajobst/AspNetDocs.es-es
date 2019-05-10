@@ -8,12 +8,12 @@ ms.date: 06/10/2014
 ms.assetid: 6ecd08c1-e364-4cd7-ad4c-806521911585
 msc.legacyurl: /signalr/overview/performance/scaleout-with-redis
 msc.type: authoredcontent
-ms.openlocfilehash: 78efe409ab59df17ae71c26d4e280cc9971a64d2
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: 58a7affa1769523955adc76455a1c33be6f49751
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59393256"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65114310"
 ---
 # <a name="signalr-scaleout-with-redis"></a>Escalabilidad horizontal de SignalR con Redis
 
@@ -38,7 +38,6 @@ por [Mike Wasson](https://github.com/MikeWasson)
 >
 > Deje comentarios sobre cómo le gustó de este tutorial y que podíamos mejorar en los comentarios en la parte inferior de la página. Si tiene preguntas que no están directamente relacionados con el tutorial, puede publicarlos en el [foro de ASP.NET SignalR](https://forums.asp.net/1254.aspx/1?ASP+NET+SignalR) o [StackOverflow.com](http://stackoverflow.com/).
 
-
 En este tutorial, usará [Redis](http://redis.io/) para distribuir los mensajes a través de una aplicación de SignalR que se implementa en dos instancias independientes de IIS.
 
 Redis es un almacén de pares clave-valor en memoria. También admite un sistema de mensajería con un modelo de publicación/suscripción. El backplane SignalR Redis usa la característica de pub/sub para reenviar los mensajes a otros servidores.
@@ -57,7 +56,6 @@ Aunque este tutorial usa la implementación de Redis oficial, hay también un [W
 > [!NOTE]
 >
 > Escalabilidad horizontal de SignalR con Redis no admite clústeres de Redis.
-
 
 ## <a name="overview"></a>Información general
 

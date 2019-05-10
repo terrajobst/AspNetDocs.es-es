@@ -8,19 +8,18 @@ ms.date: 01/27/2009
 ms.assetid: 521c9117-81cd-4d8d-9d96-0256dc7bf50f
 msc.legacyurl: /mvc/overview/older-versions-1/controllers-and-routing/improving-performance-with-output-caching-cs
 msc.type: authoredcontent
-ms.openlocfilehash: 5dd5b96d0365c55cbbfa2dfe0856beda41f915e1
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: 548c5bea2e9cf26e0574e72d2c0ea204dbd90f9c
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59384771"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65123379"
 ---
 # <a name="improving-performance-with-output-caching-c"></a>Mejorar el rendimiento con el almacenamiento en caché de resultados (C#)
 
 por [Microsoft](https://github.com/microsoft)
 
 > En este tutorial, obtendrá información sobre cómo puede mejorar considerablemente el rendimiento de las aplicaciones web de ASP.NET MVC aprovechando las ventajas de la caché de resultados. Aprenda a almacenar en caché el resultado devuelto de una acción de controlador para que no tenga el mismo contenido a crearse cada vez que un nuevo usuario invoca la acción.
-
 
 El objetivo de este tutorial es explicar cómo puede mejorar considerablemente el rendimiento de una aplicación ASP.NET MVC aprovechando las ventajas de la caché de resultados. La caché de resultados le permite almacenar en caché el contenido devuelto por una acción de controlador. De este modo, no necesita el mismo contenido va a generar cada vez que se invoca la misma acción de controlador.
 
@@ -78,7 +77,6 @@ Puede establecer la propiedad Location en cualquiera de los siguientes valores:
 > 
 > · ServerAndClient
 
-
 De forma predeterminada, la propiedad de ubicación tiene el valor Any. Sin embargo, hay situaciones en que desee solo en el explorador o solo en el servidor de caché. Por ejemplo, si se almacenan en caché información personalizada para cada usuario, a continuación, se debe no almacenar en caché la información en el servidor. Si va a mostrar información diferente a distintos usuarios, a continuación, se debe almacenar en caché la información únicamente en el cliente.
 
 Por ejemplo, el controlador en el listado 3 expone una acción denominada GetName() que devuelve el nombre de usuario actual. Si Jack inicia sesión en el sitio Web e invoca la acción GetName(), a continuación, la acción devuelve la cadena "Jack Hi". Si, posteriormente, Jill inicia sesión en el sitio Web e invoca la acción GetName(), a continuación, también obtendrá la cadena "Jack Hi". La cadena se almacena en caché en el servidor web para todos los usuarios después de Jack inicialmente invoca la acción del controlador.
@@ -134,7 +132,6 @@ Puede establecer la propiedad VaryByParam en los siguientes valores:
 > None = nunca crear diferentes versiones en caché
 > 
 > Lista de puntos y comas de parámetros = crear diferentes versiones en caché siempre que cualquiera de los parámetros de cadena de consulta o formulario en la lista varía
-
 
 ## <a name="creating-a-cache-profile"></a>Crear un perfil de caché
 

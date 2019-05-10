@@ -9,12 +9,12 @@ ms.topic: tutorial
 ms.assetid: 095abad4-3bfe-4f06-b092-ae6a735b7e49
 msc.legacyurl: /mvc/overview/getting-started/database-first-development/setting-up-database
 msc.type: authoredcontent
-ms.openlocfilehash: d99fdb5382037038d4428ff1946f39aee380fb75
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: a760767839a834a9c7e9fe358a3fd806a833261f
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57055912"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65121179"
 ---
 # <a name="tutorial-get-started-with-ef-database-first-using-mvc-5"></a>Tutorial: Introducción a EF Database First con MVC 5
 
@@ -35,14 +35,11 @@ En este tutorial ha:
 
 [Visual Studio 2017](https://visualstudio.microsoft.com/downloads/)
 
-
 ## <a name="set-up-the-database"></a>Configurar la base de datos
 
 Para imitar el entorno de tener una base de datos existente, creará primero una base de datos con algunos datos previamente rellenadas y, a continuación, cree la aplicación web que se conecta a la base de datos.
 
-
 En este tutorial se desarrolló con LocalDB con Visual Studio 2017. Puede usar un servidor de base de datos existente en lugar de LocalDB, pero según la versión de Visual Studio y el tipo de base de datos, todas las herramientas de datos en Visual Studio podrían no admitirse. Si las herramientas no están disponibles para la base de datos, deberá realizar algunos de los pasos específicos de la base de datos dentro del paquete de administración de la base de datos.
-
 
 Si tiene un problema con las herramientas de base de datos en su versión de Visual Studio, asegúrese de que ha instalado la versión más reciente de las herramientas de base de datos. Para obtener información sobre cómo actualizar o instalar las herramientas de base de datos, vea [Microsoft SQL Server Data Tools](https://msdn.microsoft.com/data/hh297027).
 

@@ -8,12 +8,12 @@ ms.date: 03/27/2007
 ms.assetid: b381b1da-feb3-4776-bc1b-75db53eb90ab
 msc.legacyurl: /web-forms/overview/data-access/working-with-binary-files/uploading-files-cs
 msc.type: authoredcontent
-ms.openlocfilehash: 02fbd3ca162309aefbefdba9a453af6e55b3900b
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: 450c6fa2532061f1abe43db8df77f61f8bbe914a
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59382750"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65119534"
 ---
 # <a name="uploading-files-c"></a>Carga de archivos (C#)
 
@@ -23,7 +23,6 @@ por [Scott Mitchell](https://twitter.com/ScottOnWriting)
 
 > Obtenga información sobre cómo permitir a los usuarios cargar archivos binarios (como documentos de Word o PDF) al sitio Web donde pueden almacenarse en el sistema de archivos del servidor o la base de datos.
 
-
 ## <a name="introduction"></a>Introducción
 
 Todos los tutoriales se ve examinar hasta ahora ha trabajado exclusivamente con datos de texto. Sin embargo, muchas aplicaciones tienen modelos de datos que capturan datos binarios y texto. Un sitio de tratamiento de fechas en línea podría permitir a los usuarios cargar una imagen para asociar su perfil. Un sitio Web de contratación podría permitir que los usuarios cargar su reanudación, como un documento de Microsoft Word o PDF.
@@ -32,7 +31,6 @@ Trabajar con datos binarios, agrega un nuevo conjunto de desafíos. Debemos deci
 
 > [!NOTE]
 > Datos binarios que forma parte de un modelo de datos de aplicación s se denominan a veces un [BLOB](http://en.wikipedia.org/wiki/Binary_large_object), acrónimo de objetos binarios grandes. En estos tutoriales he elegido usar los datos binarios de terminología, aunque el término BLOB es sinónimo.
-
 
 ## <a name="step-1-creating-the-working-with-binary-data-web-pages"></a>Paso 1: Crear el trabajo con datos binarios Web Pages
 
@@ -44,42 +42,33 @@ Antes de comenzar a explorar los desafíos asociados con la adición de compatib
 - `UploadInDetailsView.aspx`
 - `UpdatingAndDeleting.aspx`
 
-
 ![Agregar las páginas ASP.NET para los tutoriales relacionados con los datos binarios](uploading-files-cs/_static/image1.gif)
 
 **Figura 1**: Agregar las páginas ASP.NET para los tutoriales relacionados con los datos binarios
 
-
 Al igual que en las demás carpetas `Default.aspx` en el `BinaryData` carpeta mostrará una lista de los tutoriales en su sección. Recuerde que el `SectionLevelTutorialListing.ascx` Control de usuario proporciona esta funcionalidad. Por lo tanto, agrega este Control de usuario a `Default.aspx` arrastrándolo desde el Explorador de soluciones en la página de vista de diseño de s.
-
 
 [![Agregar el Control de usuario SectionLevelTutorialListing.ascx a Default.aspx](uploading-files-cs/_static/image2.gif)](uploading-files-cs/_static/image1.png)
 
 **Figura 2**: Agregar el `SectionLevelTutorialListing.ascx` Control de usuario `Default.aspx` ([haga clic aquí para ver imagen en tamaño completo](uploading-files-cs/_static/image2.png))
 
-
 Por último, agregue estas páginas como entradas para el `Web.sitemap` archivo. En concreto, agregue el siguiente marcado después de la mejora el control GridView `<siteMapNode>`:
-
 
 [!code-xml[Main](uploading-files-cs/samples/sample1.xml)]
 
 Después de actualizar `Web.sitemap`, dedique un momento para ver el sitio Web de tutoriales a través de un explorador. El menú de la izquierda ahora incluye elementos para el trabajo con los tutoriales de datos binarios.
 
-
 ![El mapa del sitio incluye ahora entradas para el trabajo con los tutoriales de datos binarios](uploading-files-cs/_static/image3.gif)
 
 **Figura 3**: El mapa del sitio incluye ahora entradas para el trabajo con los tutoriales de datos binarios
-
 
 ## <a name="step-2-deciding-where-to-store-the-binary-data"></a>Paso 2: Decidir dónde Store los datos binarios
 
 Datos binarios que está asociados con el modelo de datos de aplicación s pueden almacenarse en uno de estos dos lugares: en el sistema de archivos de s de servidor web con una referencia al archivo almacenado en la base de datos; o directamente dentro de la base de datos (consulte la figura 4). Cada enfoque tiene su propio conjunto de ventajas y desventajas y merece una explicación más detallada.
 
-
 [![Se pueden almacenar datos binarios en el sistema de archivos o directamente en la base de datos](uploading-files-cs/_static/image4.gif)](uploading-files-cs/_static/image3.png)
 
 **Figura 4**: Se pueden almacenar datos binarios en el sistema de archivos o directamente en la base de datos ([haga clic aquí para ver imagen en tamaño completo](uploading-files-cs/_static/image4.png))
-
 
 Imagine que deseaba ampliar la base de datos Northwind para asociar una imagen de cada producto. Una opción sería almacenar estos archivos de imagen en el sistema de archivos web server s y registre la ruta de acceso en el `Products` tabla. Con este enfoque, d agregamos un `ImagePath` columna a la `Products` tabla de tipo `varchar(200)`, tal vez. Cuando un usuario carga una imagen de Chai, esa imagen podría almacenarse en el sistema de archivos de s de servidor web en `~/Images/Tea.jpg`, donde `~` representa la ruta de acceso física s. Es decir, si el sitio web se ha modificado en la ruta de acceso física `C:\Websites\Northwind\`, `~/Images/Tea.jpg` sería equivalente a `C:\Websites\Northwind\Images\Tea.jpg`. Después de cargar el archivo de imagen, d actualizamos el registro Chai en el `Products` tabla para que su `ImagePath` hace referencia a la ruta de acceso de la nueva imagen de la columna. Podríamos usar `~/Images/Tea.jpg` o simplemente `Tea.jpg` si decidimos que todas las imágenes de producto se colocarían en la aplicación s `Images` carpeta.
 
@@ -98,7 +87,6 @@ La principal ventaja de almacenar datos binarios directamente en la base de dato
 > [!NOTE]
 > En Microsoft SQL Server 2000 y versiones anteriores, el `varbinary` tipo de datos tiene un límite máximo de 8.000 bytes. Para almacenar hasta 2 GB de datos binarios el [ `image` tipo de datos](https://msdn.microsoft.com/library/ms187993.aspx) debe usarse en su lugar. Con la adición de `MAX` en SQL Server 2005, sin embargo, el `image` tipo de datos está desusado. Lo s todavía admite para versiones anteriores, pero Microsoft ha anunciado que el `image` tipo de datos se quitará en una versión futura de SQL Server.
 
-
 Si está trabajando con un modelo de datos más antiguo, es posible que vea el `image` tipo de datos. La base de datos Northwind s `Categories` tabla tiene un `Picture` columna que se puede usar para almacenar los datos binarios de un archivo de imagen para la categoría. Puesto que la base de datos Northwind tiene sus raíces en Microsoft Access y las versiones anteriores de SQL Server, esta columna es de tipo `image`.
 
 En este tutorial y los tres siguientes, vamos a usar ambos enfoques. El `Categories` tabla ya tiene un `Picture` columna para almacenar el contenido binario de una imagen de la categoría. Vamos a agregar una columna adicional, `BrochurePath`, para almacenar una ruta de acceso a un archivo PDF en el sistema de archivos de s de servidor web que se puede usar para proporcionar información general de la categoría de calidad de impresión y perfeccionada.
@@ -109,11 +97,9 @@ La tabla Categories tiene actualmente solo cuatro columnas: `CategoryID`, `Categ
 
 Agregue un nuevo `varchar(200)` columna a la `Categories` tabla denominada `BrochurePath` y permite `NULL` s y haga clic en el icono Guardar (o presione Ctrl + S).
 
-
 [![Agregar una columna BrochurePath a la tabla de categorías](uploading-files-cs/_static/image5.gif)](uploading-files-cs/_static/image5.png)
 
 **Figura 5**: Agregar un `BrochurePath` columna a la `Categories` tabla ([haga clic aquí para ver imagen en tamaño completo](uploading-files-cs/_static/image6.png))
-
 
 ## <a name="step-4-updating-the-architecture-to-use-thepictureandbrochurepathcolumns"></a>Paso 4: Actualizar la arquitectura para usar el`Picture`y`BrochurePath`columnas
 
@@ -131,11 +117,9 @@ Tenga en cuenta que ninguna de estas consultas devuelven el `Categories` tabla s
 
 Empiece por agregar estas dos columnas a la `CategoriesDataTable`. Haga doble clic en el `CategoriesDataTable` encabezado s, seleccione Agregar en el menú contextual y, a continuación, elija la opción de columna. Esto creará un nuevo `DataColumn` en la tabla de datos denominada `Column1`. Cambiar el nombre de esta columna a `Picture`. En la ventana Propiedades, establezca la `DataColumn` s `DataType` propiedad `System.Byte[]` (Esto no es una opción en la lista desplegable; debe escribir en).
 
-
 [![Crear una imagen de DataColumn denominado cuyo tipo de datos es System.Byte](uploading-files-cs/_static/image6.gif)](uploading-files-cs/_static/image7.png)
 
 **Figura 6**: Crear un `DataColumn` con nombre `Picture` cuyo `DataType` es `System.Byte[]` ([haga clic aquí para ver imagen en tamaño completo](uploading-files-cs/_static/image8.png))
-
 
 Agregue otro `DataColumn` a la DataTable, asígnele el nombre `BrochurePath` con el valor predeterminado `DataType` valor (`System.String`).
 
@@ -145,61 +129,48 @@ Con estos dos `DataColumn` agregadas a la `CategoriesDataTable`, que está listo
 
 Para actualizar la consulta de TableAdapter principal, haga doble clic en el `CategoriesTableAdapter` encabezado s y elija la opción de configurar en el menú contextual. Se abrirá el Asistente de configuración de adaptador de tabla que se ve en una serie de tutoriales anteriores. Actualice la consulta para devolver el `BrochurePath` y haga clic en Finalizar.
 
-
 [![Actualizar la lista de columnas en la instrucción SELECT para devolver también BrochurePath](uploading-files-cs/_static/image7.gif)](uploading-files-cs/_static/image9.png)
 
 **Figura 7**: Actualizar la lista de columnas en el `SELECT` instrucción para devolver también `BrochurePath` ([haga clic aquí para ver imagen en tamaño completo](uploading-files-cs/_static/image10.png))
 
-
 Al usar instrucciones SQL ad-hoc del TableAdapter, actualizar la lista de columnas en la consulta principal actualiza la lista de columnas para todos los `SELECT` métodos de consulta en el TableAdapter. Esto significa que el `GetCategoryByCategoryID(categoryID)` método se ha actualizado para devolver el `BrochurePath` columna, que sería lo que se pretendía. Sin embargo, también actualiza la lista de columnas en el `GetCategoriesAndNumberOfProducts()` método, quitar la subconsulta que devuelve el número de productos de cada categoría! Por lo tanto, es necesario actualizar este método s `SELECT` consulta. Haga doble clic en el `GetCategoriesAndNumberOfProducts()` método, elija Configurar y revertir el `SELECT` consulta a su valor original:
-
 
 [!code-sql[Main](uploading-files-cs/samples/sample2.sql)]
 
 A continuación, cree un nuevo método de TableAdapter que devuelva una categoría determinada s `Picture` valor de la columna. Haga doble clic en el `CategoriesTableAdapter` encabezado s y elija la opción de Agregar consulta para iniciar el Asistente para configuración de consulta de TableAdapter. El primer paso de este asistente nos pregunta que si desea consultar los datos mediante una instrucción de SQL ad hoc, un nuevo procedimiento almacenado, o uno ya existente. Seleccione Usar instrucciones SQL y haga clic en siguiente. Puesto que se van a devolver una fila, seleccione el que devuelve la opción de filas del segundo paso.
 
-
 [![Seleccione la opción instrucciones de uso de SQL](uploading-files-cs/_static/image8.gif)](uploading-files-cs/_static/image11.png)
 
 **Figura 8**: Seleccione la opción instrucciones de uso de SQL ([haga clic aquí para ver imagen en tamaño completo](uploading-files-cs/_static/image12.png))
-
 
 [![Puesto que la consulta devolverá un registro de la tabla Categories, elija SELECT que devuelve filas](uploading-files-cs/_static/image9.gif)](uploading-files-cs/_static/image13.png)
 
 **Figura 9**: Puesto que la consulta devolverá un registro de la tabla Categories, elija Seleccionar que devuelve filas ([haga clic aquí para ver imagen en tamaño completo](uploading-files-cs/_static/image14.png))
 
-
 En el tercer paso, escriba la siguiente consulta SQL y haga clic en siguiente:
-
 
 [!code-sql[Main](uploading-files-cs/samples/sample3.sql)]
 
 El último paso es elegir el nombre para el nuevo método. Use `FillCategoryWithBinaryDataByCategoryID` y `GetCategoryWithBinaryDataByCategoryID` para rellenar una DataTable y devuelven un objeto DataTable patrones, respectivamente. Haga clic en Finalizar para completar al asistente.
 
-
 [![Elija los nombres de los métodos de TableAdapter s](uploading-files-cs/_static/image10.gif)](uploading-files-cs/_static/image15.png)
 
 **Figura 10**: Elija los nombres de los métodos de TableAdapter s ([haga clic aquí para ver imagen en tamaño completo](uploading-files-cs/_static/image16.png))
 
-
 > [!NOTE]
 > Después de completar al Asistente para configuración de consulta de adaptador de tabla es posible que vea un cuadro de diálogo que le informa de que el texto del nuevo comando devuelve datos con un esquema diferente desde el esquema de la consulta principal. En resumen, el Asistente está teniendo en cuenta que la consulta principal de TableAdapter s `GetCategories()` devuelve un esquema diferente a la que acabamos de crear. Pero esto es lo que queremos, por lo que puede pasar por alto este mensaje.
-
 
 Además, tenga en cuenta que si usa instrucciones SQL ad hoc y usar el Asistente para cambiar la consulta principal de TableAdapter s en algún momento posterior en el tiempo, modificará la `GetCategoryWithBinaryDataByCategoryID` método s `SELECT` lista de columnas de la instrucción s para incluir solo las columnas de la la consulta principal (es decir, quitará la `Picture` columna de la consulta). Tendrá que actualizar manualmente la lista de columnas para devolver el `Picture` columna, similar a lo que hicimos con la `GetCategoriesAndNumberOfProducts()` método anteriormente en este paso.
 
 Después de agregar los dos `DataColumn` s para el `CategoriesDataTable` y `GetCategoryWithBinaryDataByCategoryID` método a la `CategoriesTableAdapter`, estas clases en el Diseñador de DataSet con tipo deben ser similar a la captura de pantalla en la figura 11.
 
-
 ![El Diseñador de DataSet incluye las nuevas columnas y el método](uploading-files-cs/_static/image11.gif)
 
 **Figura 11**: El Diseñador de DataSet incluye las nuevas columnas y el método
 
-
 ## <a name="updating-the-business-logic-layer-bll"></a>Actualización de la capa de lógica empresarial (BLL)
 
 Con la capa DAL actualizada, todo lo que queda es aumentar la capa de lógica empresarial (BLL) para incluir un método para el nuevo `CategoriesTableAdapter` método. Agregue el método siguiente a la `CategoriesBLL` clase:
-
 
 [!code-csharp[Main](uploading-files-cs/samples/sample4.cs)]
 
@@ -211,22 +182,17 @@ ASP.NET 2.0 s nuevo [control FileUpload Web](https://msdn.microsoft.com/library/
 
 Para demostrar la carga de archivos, abra el `FileUpload.aspx` página en el `BinaryData` carpeta, arrastre un control FileUpload desde el cuadro de herramientas hasta el diseñador y establezca el control s `ID` propiedad `UploadTest`. A continuación, agregue un control de botón Web establecer su `ID` y `Text` propiedades a `UploadButton` y cargar el archivo seleccionado, respectivamente. Por último, coloque un control Web de la etiqueta debajo del botón, desactive su `Text` propiedad y establezca su `ID` propiedad `UploadDetails`.
 
-
 [![Agregar un Control FileUpload a la página de ASP.NET](uploading-files-cs/_static/image12.gif)](uploading-files-cs/_static/image17.png)
 
 **Figura 12**: Agregar un Control FileUpload a la página de ASP.NET ([haga clic aquí para ver imagen en tamaño completo](uploading-files-cs/_static/image18.png))
 
-
 Figura 13 se muestra esta página cuando se ve mediante un explorador. Tenga en cuenta que al hacer clic en el botón Examinar abre un cuadro de diálogo de selección de archivo, que permite al usuario seleccionar un archivo desde su equipo. Una vez que se ha seleccionado un archivo, haga clic en el botón Cargar archivo seleccionada hace que una devolución de datos que envía el contenido binario de s de archivo seleccionado en el servidor web.
-
 
 [![El usuario puede seleccionar un archivo para cargarlo desde su equipo al servidor](uploading-files-cs/_static/image13.gif)](uploading-files-cs/_static/image19.png)
 
 **Figura 13**: El usuario puede seleccionar un archivo para cargar desde su equipo al servidor ([haga clic aquí para ver imagen en tamaño completo](uploading-files-cs/_static/image20.png))
 
-
 En el postback, se puede guardar el archivo cargado en el sistema de archivos o sus datos binarios pueden actuar directamente a través de un Stream. En este ejemplo, permitir s crear un `~/Brochures` carpeta y guarde allí el archivo cargado. Empiece agregando el `Brochures` carpeta en el sitio como una subcarpeta del directorio raíz. A continuación, cree un controlador de eventos para el `UploadButton` s `Click` eventos y agregue el código siguiente:
-
 
 [!code-csharp[Main](uploading-files-cs/samples/sample5.cs)]
 
@@ -235,21 +201,17 @@ El control FileUpload proporciona una serie de propiedades para trabajar con los
 > [!NOTE]
 > Para asegurarse de que el usuario carga un archivo que se puede comprobar el `HasFile` propiedad y mostrar una advertencia si se s `false`, o bien puede usar el [control RequiredFieldValidator](https://quickstarts.asp.net/QuickStartv20/aspnet/doc/validation/default.aspx) en su lugar.
 
-
 La s FileUpload `SaveAs(filePath)` guarda el archivo cargado especificado *filePath*. *filePath* debe ser un *ruta de acceso física* (`C:\Websites\Brochures\SomeFile.pdf`) en lugar de un *virtual* *ruta* (`/Brochures/SomeFile.pdf`). El [ `Server.MapPath(virtPath)` método](https://msdn.microsoft.com/library/system.web.httpserverutility.mappath.aspx) toma una ruta de acceso virtual y devuelve su ruta de acceso física correspondiente. En este caso, es la ruta de acceso virtual `~/Brochures/fileName`, donde *fileName* es el nombre del archivo cargado. Consulte [usando Server.MapPath](http://www.4guysfromrolla.com/webtech/121799-1.shtml) para obtener más información sobre las rutas de acceso virtuales y físicas y el uso `Server.MapPath`.
 
 Después de completar la `Click` controlador de eventos, dedique un momento para probar la página en un explorador. Haga clic en el botón Examinar y seleccionar un archivo de disco duro y, a continuación, haga clic en el botón Cargar archivo seleccionado. La devolución de datos se enviará el contenido del archivo seleccionado en el servidor web, que, a continuación, se mostrará información sobre el archivo antes de guardarlo en el `~/Brochures` carpeta. Después de cargar el archivo, vuelva a Visual Studio y haga clic en el botón Actualizar en el Explorador de soluciones. Debería ver el archivo que acaba de cargar en la carpeta ~/Brochures!
-
 
 [![Se ha cargado el EvolutionValley.jpg de archivo en el servidor Web](uploading-files-cs/_static/image14.gif)](uploading-files-cs/_static/image21.png)
 
 **Figura 14**: El archivo `EvolutionValley.jpg` se ha cargado en el servidor Web ([haga clic aquí para ver imagen en tamaño completo](uploading-files-cs/_static/image22.png))
 
-
 ![EvolutionValley.jpg se guardó en la carpeta ~/Brochures](uploading-files-cs/_static/image15.gif)
 
 **Figura 15**: `EvolutionValley.jpg` Se ha guardado en el `~/Brochures` carpeta
-
 
 ## <a name="subtleties-with-saving-uploaded-files-to-the-file-system"></a>Sutilezas con guardar los archivos cargados en el sistema de archivos
 

@@ -8,12 +8,12 @@ ms.date: 05/04/2012
 ms.assetid: 239c7aa8-d09a-4d02-9c0e-6bd52be5f0d5
 msc.legacyurl: /web-forms/overview/deployment/configuring-server-environments-for-web-deployment/configuring-a-web-server-for-web-deploy-publishing-remote-agent
 msc.type: authoredcontent
-ms.openlocfilehash: d915cb5d7d40bb2cc355a5e45befe124a7b60dc4
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: b3293a9b6a35a162d4e27f061dfd3bfd28e0eda5
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59398493"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65126001"
 ---
 # <a name="configuring-a-web-server-for-web-deploy-publishing-remote-agent"></a>Configurar un servidor web para la publicación de la implementación web (agente remoto)
 
@@ -30,7 +30,6 @@ por [Jason Lee](https://github.com/jrjlee)
 > - Use *implementación sin conexión*. Este enfoque requiere una configuración mínima del servidor web, pero un administrador del servidor manualmente debe copiar el paquete web en el servidor e importarlo a través del Administrador de IIS.
 > 
 > Para obtener más información sobre las características clave, ventajas y desventajas de estos enfoques, vea [elegir el enfoque de derecha a la implementación Web](choosing-the-right-approach-to-web-deployment.md).
-
 
 ## <a name="is-the-web-deploy-remote-agent-the-right-approach-for-you"></a>¿Es la Web implementar a agente remoto el enfoque adecuado para usted?
 
@@ -64,7 +63,6 @@ En este tema le mostrará cómo realizar cada uno de estos procedimientos. Las t
 > [!NOTE]
 > Para obtener más información sobre la unión a los equipos a un dominio, consulte [unir equipos al dominio e iniciar sesión](https://technet.microsoft.com/library/cc725618(v=WS.10).aspx). Para obtener más información sobre cómo configurar direcciones IP estáticas, consulte [configurar una dirección IP estática](https://technet.microsoft.com/library/cc754203(v=ws.10).aspx). El servicio del agente remoto es compatible con IIS 6 y versiones posteriores y no requiere que esté unido a un dominio. Sin embargo, los pasos descritos en este tutorial se desarrollaron y probaron en IIS 7.5 y procedimientos para otras versiones pueden variar.
 
-
 ## <a name="install-products-and-components"></a>Instalar productos y componentes
 
 En esta sección le ayudará a instalar los componentes y los productos necesarios en el servidor web. Antes de comenzar, es una buena práctica ejecutar Windows Update para asegurarse de que el servidor está totalmente al día.
@@ -78,7 +76,6 @@ En este caso, deberá instalar estas cosas:
 
 > [!NOTE]
 > Este tutorial describe el uso del instalador de plataforma Web para instalar y configurar los componentes necesarios. Aunque no tiene que usar al instalador de plataforma Web, simplifica el proceso de instalación al detectar las dependencias automáticamente y lo que garantiza que siempre obtendrá las versiones más recientes del producto. Para obtener más información, consulte [Microsoft Web Platform Installer 3.0](https://go.microsoft.com/?linkid=9805118).
-
 
 **Para instalar los componentes y productos necesarios**
 
@@ -184,7 +181,6 @@ Es el enfoque más común asignar permisos a la variable local **IIS\_IUSRS** gr
 
 > [!NOTE]
 > Para obtener más información sobre las identidades del grupo de aplicaciones en IIS 7.5, vea [identidades del grupo de aplicación](https://go.microsoft.com/?linkid=9805123).
-
 
 **Para configurar los permisos de carpeta para un sitio Web IIS**
 

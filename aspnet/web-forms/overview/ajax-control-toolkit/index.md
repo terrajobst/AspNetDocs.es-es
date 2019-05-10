@@ -8,12 +8,12 @@ ms.date: 10/05/2011
 ms.assetid: 76242ce9-e611-41d2-95e8-dc5f406d4bfc
 msc.legacyurl: /web-forms/overview/ajax-control-toolkit
 msc.type: chapter
-ms.openlocfilehash: 795283c33d63272b29b91fd7037c3463bc71abad
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: d7d0426ed427f3b8fc8c7f9c2fe1518b1887d695
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59410752"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65115372"
 ---
 # <a name="older-versions---ajax-control-toolkit"></a>Versiones anteriores - Ajax Control Toolkit
 
@@ -21,7 +21,6 @@ ms.locfileid: "59410752"
 > 
 > 
 > ![](index/_static/image1.png) DevExpress, los desarrolladores de formularios Web Forms de ASP.NET, MVC y controles de interfaz de usuario HTML5 y marcos, galardonado ha asumido el mantenimiento de ASP.NET AJAX Control Toolkit con el fin de volver a poner esta biblioteca de código abierto muy exigidos en un estado confiable. [Obtenga más información](https://go.devexpress.com/AjaxControlToolkit_ASP_Resources_Tutorials.aspx).
-
 
 - [Introducción](getting-started/index.md)
 

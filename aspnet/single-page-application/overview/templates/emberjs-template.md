@@ -8,12 +8,12 @@ ms.date: 01/30/2013
 ms.assetid: 04d5f142-5f62-494a-b5ea-4f3d068d34cb
 msc.legacyurl: /single-page-application/overview/templates/emberjs-template
 msc.type: authoredcontent
-ms.openlocfilehash: e2bb8a13a0036f1fcfdcfd03a6a6e74e886a7f2c
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: 1aefa46dd0841b1b06675409cc8a09f9a218d7ac
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59406865"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65113502"
 ---
 # <a name="emberjs-template"></a>Plantilla de EmberJS
 
@@ -22,7 +22,6 @@ por [Xinyang Qiu](https://github.com/xqiu)
 > La plantilla de EmberJS MVC está escrita por Nathan Totten, Thiago Santos y Xinyang Qiu.
 > 
 > [Descargue la plantilla de EmberJS MVC](https://go.microsoft.com/fwlink/?LinkId=282647)
-
 
 La plantilla de EmberJS SPA está diseñada para ayudarle a comenzar a crear rápidamente aplicaciones web interactivas del lado cliente mediante EmberJS.
 

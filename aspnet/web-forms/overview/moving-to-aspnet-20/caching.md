@@ -8,19 +8,18 @@ ms.date: 02/20/2005
 ms.assetid: 2bb109d2-e299-46ea-9054-fa0263b59165
 msc.legacyurl: /web-forms/overview/moving-to-aspnet-20/caching
 msc.type: authoredcontent
-ms.openlocfilehash: 5e16415df5bd4203995bec943ffa682f7da82357
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: 39f4eb7b0859cf52fe3ed2531e9c349b465b9327
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59400209"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65116862"
 ---
 # <a name="caching"></a>Almacenamiento en memoria caché
 
 por [Microsoft](https://github.com/microsoft)
 
 > Una descripción del almacenamiento en caché es importante para una aplicación ASP.NET de buen rendimiento. ASP.NET 1.x que ofrecen tres opciones distintas para el almacenamiento en caché; caché de resultados, almacenamiento en caché y la API de caché.
-
 
 Una descripción del almacenamiento en caché es importante para una aplicación ASP.NET de buen rendimiento. ASP.NET 1.x que ofrecen tres opciones distintas para el almacenamiento en caché; caché de resultados, almacenamiento en caché y la API de caché. ASP.NET 2.0 ofrece las tres de estos métodos, pero agrega algunas importantes características adicionales. Hay varias nuevas dependencias de caché y los desarrolladores ahora tienen la opción de crear dependencias de caché personalizadas también. La configuración de almacenamiento en caché también se han mejorado considerablemente en ASP.NET 2.0.
 
@@ -63,7 +62,6 @@ SQL Server 7 y 2000 utilizan el modelo basado en sondeo de dependencias de cach�
 > [!NOTE]
 > SQL Server 2005 también puede usar el modelo basado en sondeo, pero dado que el modelo basado en sondeo no es el modelo más eficiente, es aconsejable utilizar un modelo basado en consultas (descrito más adelante) con SQL Server 2005.
 
-
 En orden para una dependencia de caché SQL mediante el modelo basado en sondeo funcione correctamente, las tablas deben tener habilitadas las notificaciones. Esto puede realizarse mediante programación utilizando la clase SqlCacheDependencyAdmin o mediante el uso de aspnet\_regsql.exe utilidad.
 
 La línea de comandos siguiente registra la tabla Products en la base de datos de Northwind que se encuentra en una instancia de SQL Server denominada *dbase* dependencia de caché de SQL.
@@ -84,12 +82,10 @@ El siguiente es una explicación de los modificadores de línea de comandos util
 > [!NOTE]
 > Hay otros modificadores disponibles para aspnet\_regsql.exe. ¿Para obtener una lista completa, ejecute aspnet\_regsql.exe-? desde una línea de comandos.
 
-
 Cuando este comando ejecuta los siguientes cambios se realizan en la base de datos de SQL Server:
 
 - Un **AspNet\_SqlCacheTablesForChangeNotification** se agrega la tabla. Esta tabla contiene una fila por cada tabla en la base de datos para el que se ha habilitado una dependencia de caché SQL.
 - Los siguientes procedimientos almacenados se crean dentro de la base de datos:
-
 
 | AspNet\_SqlCachePollingStoredProcedure | Consulta AspNet\_SqlCacheTablesForChangeNotification tabla y devuelve todas las tablas habilitadas para la dependencia de caché de SQL y el valor de changeId para cada tabla. Este procedimiento almacenado se utiliza para el sondeo para determinar si los datos han cambiado. |
 | --- | --- |
@@ -97,7 +93,6 @@ Cuando este comando ejecuta los siguientes cambios se realizan en la base de dat
 | AspNet\_SqlCacheRegisterTableStoredProcedure | Registra una tabla para la dependencia de caché SQL mediante la adición de la entrada necesaria en la tabla de notificación y agrega el desencadenador. |
 | AspNet\_SqlCacheUnRegisterTableStoredProcedure | Anula el registro de una tabla para la dependencia de caché SQL mediante la eliminación de la entrada en la tabla de notificación y elimina el desencadenador. |
 | AspNet\_SqlCacheUpdateChangeIdStoredProcedure | Actualiza la tabla de notificación al incrementar el changeId para la tabla modificada. ASP.NET usa este valor para determinar si los datos han cambiado. Como se indica a continuación, este procedimiento almacenado se ejecuta el desencadenador que se crea cuando se habilita en la tabla. |
-
 
 - Llama un desencadenador de SQL Server ***tabla\_nombre *\_AspNet\_SqlCacheNotification\_desencadenador** se crea para la tabla. Este desencadenador ejecuta AspNet\_SqlCacheUpdateChangeIdStoredProcedure cuando se realiza una INSERCIÓN, actualización o eliminación en la tabla.
 - Un rol de SQL Server denominada **aspnet\_ChangeNotification\_ReceiveNotificationsOnlyAccess** se agrega a la base de datos.
@@ -161,7 +156,6 @@ También puede especificar que todos los orígenes de datos esté habilitada par
 
 > [!NOTE]
 > Para obtener más información sobre las notificaciones de consulta en SQL Server 2005, vea los libros en pantalla de SQL Server.
-
 
 Otro método de configuración de una dependencia de caché basada en consulta SQL es hacerlo mediante programación con la clase SqlCacheDependency. Ejemplo de código siguiente muestra cómo se consigue.
 
@@ -233,7 +227,6 @@ Los siguientes atributos están disponibles en el &lt;caché&gt; elemento:
 ### <a name="the-ltoutputcachegt-element"></a>El &lt;outputCache&gt; elemento
 
 Los siguientes atributos están disponibles para el &lt;outputCache&gt; elemento.
-
 
 |       <strong>Attribute</strong>        |                                                                                                                                                                                                                                                       <strong>Descripción</strong>                                                                                                                                                                                                                                                       |
 |-----------------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|

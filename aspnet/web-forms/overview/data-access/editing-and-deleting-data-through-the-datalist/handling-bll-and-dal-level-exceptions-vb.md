@@ -8,12 +8,12 @@ ms.date: 10/30/2006
 ms.assetid: ca665073-b379-4239-9404-f597663ca65e
 msc.legacyurl: /web-forms/overview/data-access/editing-and-deleting-data-through-the-datalist/handling-bll-and-dal-level-exceptions-vb
 msc.type: authoredcontent
-ms.openlocfilehash: 358d8605ed602720c7dd1687c8bdbb4275753529
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: 5108c1f04d73da4ce236fd0a872e0f64b82cbafa
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59386104"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65119581"
 ---
 # <a name="handling-bll--and-dal-level-exceptions-vb"></a>Controlar las excepciones de nivel BLL y DAL (VB)
 
@@ -22,7 +22,6 @@ por [Scott Mitchell](https://twitter.com/ScottOnWriting)
 [Descargue la aplicación de ejemplo](http://download.microsoft.com/download/9/c/1/9c1d03ee-29ba-4d58-aa1a-f201dcc822ea/ASPNET_Data_Tutorial_38_VB.exe) o [descargar PDF](handling-bll-and-dal-level-exceptions-vb/_static/datatutorial38vb1.pdf)
 
 > En este tutorial, veremos cómo controlar las excepciones producidas durante el flujo de trabajo actualización de un DataList editable de manera discreta.
-
 
 ## <a name="introduction"></a>Introducción
 
@@ -35,38 +34,30 @@ Nuestros tutoriales DataList, sin embargo, no están usando el origen ObjectData
 > [!NOTE]
 > En el *una visión general de edición y eliminación de datos en el control DataList* tutorial analizamos las distintas técnicas para editar y eliminar datos desde el control DataList, algunas técnicas conlleva el uso de un origen ObjectDataSource para actualizar y Eliminando. Si emplea estas técnicas, puede controlar las excepciones de la capa BLL o DAL a través de las operaciones de asignación ObjectDataSource `Updated` o `Deleted` controladores de eventos.
 
-
 ## <a name="step-1-creating-an-editable-datalist"></a>Paso 1: Creación de un control DataList Editable
 
 Antes de que nos preocupamos controlar las excepciones que se producen durante el flujo de trabajo de actualización, permiten s en primer lugar cree a un DataList editable. Abrir el `ErrorHandling.aspx` página en el `EditDeleteDataList` carpeta, agregue un control DataList hasta el diseñador, establece su `ID` propiedad a `Products`, y agregue un nuevo origen ObjectDataSource denominado `ProductsDataSource`. Configurar el origen ObjectDataSource para usar el `ProductsBLL` clase s `GetProducts()` registra el método para seleccionar; establece las listas desplegables en la instrucción INSERT, UPDATE y eliminar pestañas en (None).
-
 
 [![Devolver la información de producto mediante el método GetProducts()](handling-bll-and-dal-level-exceptions-vb/_static/image2.png)](handling-bll-and-dal-level-exceptions-vb/_static/image1.png)
 
 **Figura 1**: Devolver la información de producto mediante la `GetProducts()` método ([haga clic aquí para ver imagen en tamaño completo](handling-bll-and-dal-level-exceptions-vb/_static/image3.png))
 
-
 Después de completar el ObjectDataSource wizard, Visual Studio creará automáticamente un `ItemTemplate` para el control DataList. Reemplácelo con un `ItemTemplate` que muestra cada nombre de producto s y el precio y se incluye un botón de edición. A continuación, cree un `EditItemTemplate` con un control de cuadro de texto Web para el nombre y el precio y botones Actualizar y Cancelar. Por último, establezca el control DataList s `RepeatColumns` propiedad en 2.
 
 Después de estos cambios, el marcado declarativo s de página debe ser similar al siguiente. Vuelva a comprobar para la edición, Cancelar, asegúrese de que y los botones de actualización tienen sus `CommandName` establecer propiedades para editar, Cancelar y actualizar, respectivamente.
-
 
 [!code-aspx[Main](handling-bll-and-dal-level-exceptions-vb/samples/sample1.aspx)]
 
 > [!NOTE]
 > En este tutorial, el control DataList debe habilitarse el estado de vista s.
 
-
 Dedique unos minutos a ver nuestro progreso a través de un explorador (consulte la figura 2).
-
 
 [![Cada producto incluye un botón Editar](handling-bll-and-dal-level-exceptions-vb/_static/image5.png)](handling-bll-and-dal-level-exceptions-vb/_static/image4.png)
 
 **Figura 2**: Cada producto incluye un botón Editar ([haga clic aquí para ver imagen en tamaño completo](handling-bll-and-dal-level-exceptions-vb/_static/image6.png))
 
-
 Actualmente, el botón Editar solo produce un postback, t aún hacen que el producto editable. Para habilitar la edición, necesitamos crear controladores de eventos para el control DataList s `EditCommand`, `CancelCommand`, y `UpdateCommand` eventos. El `EditCommand` y `CancelCommand` eventos solo tiene que actualizar el control DataList s `EditItemIndex` propiedad y volver a vincular los datos para el control DataList:
-
 
 [!code-vb[Main](handling-bll-and-dal-level-exceptions-vb/samples/sample2.vb)]
 
@@ -74,16 +65,13 @@ El `UpdateCommand` controlador de eventos es un poco más complicado. Tiene que 
 
 Por ahora, s permiten usar simplemente exactamente el mismo código de la `UpdateCommand` controlador de eventos en el *información general de la edición y eliminación de datos en el control DataList* tutorial. Vamos a agregar el código para controlar correctamente las excepciones en el paso 2.
 
-
 [!code-vb[Main](handling-bll-and-dal-level-exceptions-vb/samples/sample3.vb)]
 
 En caso de entrada no válida que puede ser en forma de un precio por unidad con formato incorrecto, un valor del precio de unidad no válida, como-$5.00 o la omisión del nombre de s del producto, se generará una excepción. Puesto que el `UpdateCommand` controlador de eventos no incluye ninguna en este momento, el código de control de excepciones, la excepción que se elevará hasta el tiempo de ejecución ASP.NET, donde se mostrarán al usuario final (consulte la figura 3).
 
-
 ![Cuando se produce una excepción no controlada, el usuario final ve una página de Error](handling-bll-and-dal-level-exceptions-vb/_static/image7.png)
 
 **Figura 3**: Cuando se produce una excepción no controlada, el usuario final ve una página de Error
-
 
 ## <a name="step-2-gracefully-handling-exceptions-in-the-updatecommand-event-handler"></a>Paso 2: Administrar correctamente las excepciones en el controlador de eventos UpdateCommand
 
@@ -93,13 +81,11 @@ Cuando se produce una excepción, queremos mostrar un mensaje informativo en la 
 
 Cuando se produce un error, solamente queremos la etiqueta que se mostrará una vez. Es decir, en los postbacks subsiguientes, el mensaje de advertencia de etiqueta s debería desaparecer. Esto puede realizarse borrando la etiqueta s `Text` propiedad o la configuración de su `Visible` propiedad `False` en el `Page_Load` controlador de eventos (como hicimos en el [BLL - control y excepciones de nivel DAL en ASP Página .NET](../editing-inserting-and-deleting-data/handling-bll-and-dal-level-exceptions-in-an-asp-net-page-vb.md) tutorial) o si se deshabilita la compatibilidad de estado de vista de la etiqueta s. Permitir que s use la última opción.
 
-
 [!code-aspx[Main](handling-bll-and-dal-level-exceptions-vb/samples/sample4.aspx)]
 
 Cuando se produce una excepción, asignaremos los detalles de la excepción para el `ExceptionDetails` control s etiqueta `Text` propiedad. Puesto que su estado de vista está deshabilitado, en los postbacks subsiguientes del `Text` cambios mediante programación la propiedad s se perderán, vuelve a establecerse en el texto predeterminado (una cadena vacía), ocultando de esta manera el mensaje de advertencia.
 
 Para determinar cuándo se han se produce un error con el fin de mostrar un mensaje útil en la página, necesitamos agregar un `Try ... Catch` bloquear a los `UpdateCommand` controlador de eventos. El `Try` parte contiene el código que puede provocar una excepción, mientras que el `Catch` bloque contiene código que se ejecuta en el caso de una excepción. Consulte la [Fundamentos del control de excepciones](https://msdn.microsoft.com/library/2w8f0bss.aspx) sección en la documentación de .NET Framework para obtener más información sobre la `Try ... Catch` bloque.
-
 
 [!code-vb[Main](handling-bll-and-dal-level-exceptions-vb/samples/sample5.vb)]
 
@@ -107,23 +93,19 @@ Cuando se produce una excepción de cualquier tipo de código dentro de la `Try`
 
 Podemos proporcionar una explicación más útil para el usuario final al basar el texto del mensaje en el tipo de excepción detectada. El siguiente código que se usó de forma casi idéntica en el [BLL - control y excepciones de nivel DAL en una página ASP.NET](../editing-inserting-and-deleting-data/handling-bll-and-dal-level-exceptions-in-an-asp-net-page-vb.md) tutorial proporciona este nivel de detalle:
 
-
 [!code-vb[Main](handling-bll-and-dal-level-exceptions-vb/samples/sample6.vb)]
 
 Para completar este tutorial, simplemente llame a la `DisplayExceptionDetails` método desde el `Catch` bloque pasando detectado `Exception` instancia (`ex`).
 
 Con el `Try ... Catch` bloquear en su lugar, los usuarios recibirán un mensaje de error más informativo, como las figuras 4 y 5 show. Tenga en cuenta que, en caso de una excepción, el control DataList, permanece en modo de edición. Esto es porque una vez que se produce la excepción, el flujo de control se redirigirá inmediatamente a la `Catch` bloque, omitiendo el código que devuelve el control DataList a su estado de edición previamente.
 
-
 [![Se muestra un mensaje de Error si un usuario la omita un campo necesario](handling-bll-and-dal-level-exceptions-vb/_static/image9.png)](handling-bll-and-dal-level-exceptions-vb/_static/image8.png)
 
 **Figura 4**: Se muestra un mensaje de Error si un usuario la omita los campos opcionales ([haga clic aquí para ver imagen en tamaño completo](handling-bll-and-dal-level-exceptions-vb/_static/image10.png))
 
-
 [![Es de un mensaje de Error aparece cuando escribe un precio negativo](handling-bll-and-dal-level-exceptions-vb/_static/image12.png)](handling-bll-and-dal-level-exceptions-vb/_static/image11.png)
 
 **Figura 5**: Es de un mensaje de Error aparece cuando escribe un precio negativo ([haga clic aquí para ver imagen en tamaño completo](handling-bll-and-dal-level-exceptions-vb/_static/image13.png))
-
 
 ## <a name="summary"></a>Resumen
 

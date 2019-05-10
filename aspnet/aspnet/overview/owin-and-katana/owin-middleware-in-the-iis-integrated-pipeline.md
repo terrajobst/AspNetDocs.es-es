@@ -8,19 +8,18 @@ ms.date: 11/07/2013
 ms.assetid: d031c021-33c2-45a5-bf9f-98f8fa78c2ab
 msc.legacyurl: /aspnet/overview/owin-and-katana/owin-middleware-in-the-iis-integrated-pipeline
 msc.type: authoredcontent
-ms.openlocfilehash: 484c01f19014639cc30244ed4f4d014794594aa2
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: bb1211de0a3fe876f5640538034ab5a58b3a070c
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59391707"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65118225"
 ---
 # <a name="owin-middleware-in-the-iis-integrated-pipeline"></a>Middleware de OWIN en la canalización integrada de IIS
 
 por [Praburaj Thiagarajan](https://github.com/Praburaj), [Rick Anderson]((https://twitter.com/RickAndMSFT))
 
 > En este artículo se muestra cómo ejecutar componentes de middleware OWIN (OMCs) en la canalización integrada de IIS, y cómo establecer el evento de la canalización un OMC se ejecuta en. Debe revisar [una visión general del proyecto Katana](an-overview-of-project-katana.md) y [detección de clase de inicio OWIN](owin-startup-class-detection.md) antes de leer este tutorial. En este tutorial se escribió por Rick Anderson ( [ @RickAndMSFT ](https://twitter.com/#!/RickAndMSFT) ), Howard Dierking, Chris Ross y Praburaj Thiagarajan ( [ @howard \_dierking](https://twitter.com/howard_dierking) ).
-
 
 Aunque [OWIN](an-overview-of-project-katana.md) componentes de middleware (OMCs) están diseñados principalmente para ejecutarse en una canalización independiente del servidor, es posible ejecutar una OMC en así la canalización integrada de IIS (**es el modo clásico *no* admite**). ¿Se pueden hacer un OMC para trabajar en la canalización integrada de IIS al instalar el paquete siguiente desde la consola de administrador de paquetes (PMC):
 

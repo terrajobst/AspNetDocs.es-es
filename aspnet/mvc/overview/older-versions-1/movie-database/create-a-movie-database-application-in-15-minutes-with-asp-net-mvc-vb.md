@@ -8,12 +8,12 @@ ms.date: 01/27/2009
 ms.assetid: e4ba9786-734c-4eb3-91bb-089793325d0d
 msc.legacyurl: /mvc/overview/older-versions-1/movie-database/create-a-movie-database-application-in-15-minutes-with-asp-net-mvc-vb
 msc.type: authoredcontent
-ms.openlocfilehash: 51e5c6f5c1b4007e0e7f927a4d758f3784cdf22b
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: 6b9ac7fdae75b2dc2d34a73019d27f8283140bc9
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59412728"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65122310"
 ---
 # <a name="create-a-movie-database-application-in-15-minutes-with-aspnet-mvc-vb"></a>Crear una aplicación de base de datos de película en 15 minutos con ASP.NET MVC (VB)
 
@@ -22,7 +22,6 @@ by [Stephen Walther](https://github.com/StephenWalther)
 [Descargue el código](http://download.microsoft.com/download/7/2/8/728F8794-E59A-4D18-9A56-7AD2DB05BD9D/MovieApp_VB.zip)
 
 > Stephen Walther crea una completa controlado por base de datos ASP.NET MVC aplicación desde el principio para finalizar. Este tutorial es una introducción excelente para las personas que está familiarizado con el marco de MVC de ASP.NET y que quieren tener una idea del proceso de creación de una aplicación ASP.NET MVC.
-
 
 El propósito de este tutorial es proporcionarle una idea de "lo que es similar a" para crear una aplicación ASP.NET MVC. En este tutorial, insultar a través de la creación de una aplicación ASP.NET MVC toda de principio a fin. Mostrarle cómo crear una sencilla aplicación controlada por base de datos que se muestra cómo enumerar, crear y editar registros de base de datos.
 
@@ -72,19 +71,15 @@ Después de instalar Visual Studio 2008 o Visual Web Developer 2008, deberá ins
 > 
 > [https://www.microsoft.com/web/gallery/Install.aspx](https://www.microsoft.com/web/gallery/Install.aspx)
 
-
 ## <a name="creating-an-aspnet-mvc-web-application-project"></a>Crear un proyecto de aplicación Web de ASP.NET MVC
 
 Comencemos creando un nuevo proyecto de aplicación Web ASP.NET MVC en Visual Studio 2008. Seleccione la opción de menú **archivo, nuevo proyecto** y verá el cuadro de diálogo nuevo proyecto en la figura 1. Seleccione Visual Basic como lenguaje de programación y seleccione la plantilla de proyecto de aplicación Web ASP.NET MVC. Asigne al proyecto el nombre MovieApp y haga clic en el botón Aceptar.
-
 
 [![El cuadro de diálogo nuevo proyecto](create-a-movie-database-application-in-15-minutes-with-asp-net-mvc-vb/_static/image1.jpg)](create-a-movie-database-application-in-15-minutes-with-asp-net-mvc-vb/_static/image1.png)
 
 **Figura 01**: El cuadro de diálogo nuevo proyecto ([haga clic aquí para ver imagen en tamaño completo](create-a-movie-database-application-in-15-minutes-with-asp-net-mvc-vb/_static/image2.png))
 
-
 Asegúrese de que seleccione .NET Framework 3.5 en la lista desplegable en la parte superior del cuadro de diálogo nuevo proyecto o la plantilla de proyecto de aplicación Web ASP.NET MVC no aparecerá.
-
 
 Siempre que cree un nuevo proyecto de aplicación Web de MVC, Visual Studio le pedirá que cree un proyecto de prueba de unidad independiente. Aparece el cuadro de diálogo en la figura 2. Dado que no se puede crear pruebas en este tutorial debido a restricciones de tiempo (y Sí, debemos sentirnos culpables un poco acerca de esto) seleccione la **No** opción y haga clic en el **Aceptar** botón.
 
@@ -92,11 +87,9 @@ Siempre que cree un nuevo proyecto de aplicación Web de MVC, Visual Studio le p
 > 
 > Visual Web Developer no admite proyectos de prueba.
 
-
 [![El cuadro de diálogo nuevo proyecto](create-a-movie-database-application-in-15-minutes-with-asp-net-mvc-vb/_static/image2.jpg)](create-a-movie-database-application-in-15-minutes-with-asp-net-mvc-vb/_static/image3.png)
 
 **Figura 02**: El cuadro de diálogo Crear proyecto de prueba unitaria ([haga clic aquí para ver imagen en tamaño completo](create-a-movie-database-application-in-15-minutes-with-asp-net-mvc-vb/_static/image4.png))
-
 
 Una aplicación de MVC de ASP.NET tiene un conjunto de carpetas estándar: una carpeta de modelos, vistas y controladores. Puede ver este conjunto estándar de carpetas en la ventana Explorador de soluciones. Necesitamos agregar archivos a cada una de las carpetas de modelos, vistas y controladores para compilar la aplicación de base de datos de película.
 
@@ -119,16 +112,13 @@ Después de crear la base de datos, puede conectarse a la base de datos haciendo
 > 
 > La ventana del explorador de servidores se denomina la ventana del explorador de base de datos en el caso de Visual Web Developer.
 
-
 [![El cuadro de diálogo nuevo proyecto](create-a-movie-database-application-in-15-minutes-with-asp-net-mvc-vb/_static/image3.jpg)](create-a-movie-database-application-in-15-minutes-with-asp-net-mvc-vb/_static/image5.png)
 
 **Figura 03**: Creación de una base de datos de Microsoft SQL Server ([haga clic aquí para ver imagen en tamaño completo](create-a-movie-database-application-in-15-minutes-with-asp-net-mvc-vb/_static/image6.png))
 
-
 A continuación, necesitamos crear una nueva tabla de base de datos. Desde dentro de la ventana Explorador de servidores, haga clic en la carpeta Tables y seleccione la opción de menú **agregar nueva tabla**. Al seleccionar esta opción de menú, abre el Diseñador de tablas de base de datos. Cree las siguientes columnas de la base de datos:
 
 <a id="0.2_table01"></a>
-
 
 | **Nombre de columna** | **Tipo de datos** | **Permitir valores null** |
 | --- | --- | --- |
@@ -137,24 +127,19 @@ A continuación, necesitamos crear una nueva tabla de base de datos. Desde dentr
 | Director | Nvarchar(100) | False |
 | DateReleased | DateTime | False |
 
-
 La primera columna, la columna Id, tiene dos propiedades especiales. En primer lugar, deberá marcar la columna de identificador como columna de clave principal. Después de seleccionar la columna de identificador, haga clic en el **establecer clave principal** botón (es el icono que parece una clave). En segundo lugar, deberá marcar la columna de identificador como una columna de identidad. En la ventana Propiedades de columna, desplácese hacia abajo hasta la sección de la especificación de identidad y expándalo. Cambiar el **identidad** valor para la propiedad **Sí**. Cuando haya terminado, la tabla debería parecerse a la figura 4.
-
 
 [![El cuadro de diálogo nuevo proyecto](create-a-movie-database-application-in-15-minutes-with-asp-net-mvc-vb/_static/image4.jpg)](create-a-movie-database-application-in-15-minutes-with-asp-net-mvc-vb/_static/image7.png)
 
 **Figura 04**: La tabla de base de datos de películas ([haga clic aquí para ver imagen en tamaño completo](create-a-movie-database-application-in-15-minutes-with-asp-net-mvc-vb/_static/image8.png))
 
-
 Es el último paso guardar la nueva tabla. Haga clic en el botón Guardar (el icono del disquete) y proporcionar las películas de nombre de la nueva tabla.
 
 Cuando termine de crear la tabla, agregue algunos registros de la película a la tabla. Haga clic en la tabla de películas en la ventana del explorador de servidores y seleccione la opción de menú **mostrar datos de tabla**. Escriba una lista de las películas favoritas (consulte la figura 5).
 
-
 [![El cuadro de diálogo nuevo proyecto](create-a-movie-database-application-in-15-minutes-with-asp-net-mvc-vb/_static/image5.jpg)](create-a-movie-database-application-in-15-minutes-with-asp-net-mvc-vb/_static/image9.png)
 
 **Figura 05**: Escribir registros de películas ([haga clic aquí para ver imagen en tamaño completo](create-a-movie-database-application-in-15-minutes-with-asp-net-mvc-vb/_static/image10.png))
-
 
 ## <a name="creating-the-model"></a>Creación del modelo
 
@@ -163,7 +148,6 @@ A continuación, se debe crear un conjunto de clases para representar la base de
 > [!NOTE] 
 > 
 > El marco de MVC de ASP.NET no está asociado a Microsoft Entity Framework. Puede crear la base de datos de las clases de modelo aprovechando las ventajas de una variedad de asignación relacional de objetos (o / M) herramientas de LINQ to SQL, Subsonic y NHibernate.
-
 
 Siga estos pasos para iniciar al Asistente para Entity Data Model:
 
@@ -177,19 +161,15 @@ Tras hacer clic en el botón Agregar, el Asistente para Entity Data Model aparec
 2. En el **elegir la conexión de datos** paso, utilice el *MoviesDB.mdf* conexión de datos y el nombre *MoviesDBEntities* para la configuración de conexión. Haga clic en el **siguiente** botón.
 3. En el **elija los objetos de base de datos** paso, expanda el nodo tablas, seleccione la tabla de películas. Escriba el espacio de nombres *MovieApp.Models* y haga clic en el **finalizar** botón.
 
-
 [![El cuadro de diálogo nuevo proyecto](create-a-movie-database-application-in-15-minutes-with-asp-net-mvc-vb/_static/image6.jpg)](create-a-movie-database-application-in-15-minutes-with-asp-net-mvc-vb/_static/image11.png)
 
 **Figura 06**: Generar un modelo de base de datos con el Asistente para Entity Data Model ([haga clic aquí para ver imagen en tamaño completo](create-a-movie-database-application-in-15-minutes-with-asp-net-mvc-vb/_static/image12.png))
 
-
 Después de completar al Asistente para Entity Data Model, se abre el Entity Data Model Designer. El diseñador debe mostrar la tabla de base de datos de películas (consulte la figura 7).
-
 
 [![El cuadro de diálogo nuevo proyecto](create-a-movie-database-application-in-15-minutes-with-asp-net-mvc-vb/_static/image7.jpg)](create-a-movie-database-application-in-15-minutes-with-asp-net-mvc-vb/_static/image13.png)
 
 **Figura 07**: El Entity Data Model Designer ([haga clic aquí para ver imagen en tamaño completo](create-a-movie-database-application-in-15-minutes-with-asp-net-mvc-vb/_static/image14.png))
-
 
 Es necesario realizar un cambio antes de continuar. El Asistente para Entity Data genera una clase de modelo denominada películas que representa la tabla de base de datos de películas. Dado que vamos a usar la clase de películas para representar una película concreta, es necesario modificar el nombre de la clase se *película* en lugar de *películas* (singular lugar plural).
 
@@ -207,11 +187,9 @@ Siga estos pasos:
 
 Después de completar estos pasos, se crea el controlador en el listado 1. Tenga en cuenta que contiene métodos con el nombre de índice, detalles, crear y editar. En las secciones siguientes, agregaremos el código necesario para obtener estos métodos para trabajar.
 
-
 [![El cuadro de diálogo nuevo proyecto](create-a-movie-database-application-in-15-minutes-with-asp-net-mvc-vb/_static/image8.jpg)](create-a-movie-database-application-in-15-minutes-with-asp-net-mvc-vb/_static/image15.png)
 
 **Figura 08**: Agregar un nuevo controlador de MVC de ASP.NET ([haga clic aquí para ver imagen en tamaño completo](create-a-movie-database-application-in-15-minutes-with-asp-net-mvc-vb/_static/image16.png))
-
 
 **Listing 1 – Controllers\HomeController.vb**
 
@@ -235,9 +213,7 @@ La lista de películas se pasa a la vista. Todo lo que se pasa al método View()
 
 El método Index() devuelve una vista llamada Index. Es necesario crear esta vista para mostrar la lista de registros de base de datos de películas. Siga estos pasos:
 
-
 Debe compilar el proyecto (seleccione la opción de menú **crear, compilar solución**) antes de abrir el **agregar vista** cuadro de diálogo o clases no aparecerá en el **Ver clase de datos** lista desplegable.
-
 
 1. Haga clic en el método Index() en el editor de código y seleccione la opción de menú **agregar vista** (consulte la figura 9).
 2. En el cuadro de diálogo Agregar vista, compruebe que la casilla de verificación con la etiqueta **crear una vista fuertemente tipada** está activada.
@@ -247,26 +223,21 @@ Debe compilar el proyecto (seleccione la opción de menú **crear, compilar solu
 
 Después de completar estos pasos, se agrega una nueva vista denominada Index.aspx a la carpeta Views\Home. El contenido de la vista de índice se incluye en el listado 3.
 
-
 [![El cuadro de diálogo nuevo proyecto](create-a-movie-database-application-in-15-minutes-with-asp-net-mvc-vb/_static/image9.jpg)](create-a-movie-database-application-in-15-minutes-with-asp-net-mvc-vb/_static/image17.png)
 
 **Figura 09**: Agregar una vista de una acción de controlador ([haga clic aquí para ver imagen en tamaño completo](create-a-movie-database-application-in-15-minutes-with-asp-net-mvc-vb/_static/image18.png))
-
 
 [![El cuadro de diálogo nuevo proyecto](create-a-movie-database-application-in-15-minutes-with-asp-net-mvc-vb/_static/image10.jpg)](create-a-movie-database-application-in-15-minutes-with-asp-net-mvc-vb/_static/image19.png)
 
 **Figura 10**: Crear una nueva vista con el cuadro de diálogo Agregar vista ([haga clic aquí para ver imagen en tamaño completo](create-a-movie-database-application-in-15-minutes-with-asp-net-mvc-vb/_static/image20.png))
 
-
 [!code-aspx[Main](create-a-movie-database-application-in-15-minutes-with-asp-net-mvc-vb/samples/sample3.aspx)]
 
 La vista de índice muestra todos los registros de la película de la tabla de base de datos de películas en una tabla HTML. La vista contiene una para cada bucle que recorre en iteración cada película representado por la propiedad ViewData.Model. Si ejecuta la aplicación presionando la tecla F5, verá la página web en la figura 11.
 
-
 [![El cuadro de diálogo nuevo proyecto](create-a-movie-database-application-in-15-minutes-with-asp-net-mvc-vb/_static/image11.jpg)](create-a-movie-database-application-in-15-minutes-with-asp-net-mvc-vb/_static/image21.png)
 
 **Figura 11**: La vista de índice ([haga clic aquí para ver imagen en tamaño completo](create-a-movie-database-application-in-15-minutes-with-asp-net-mvc-vb/_static/image22.png))
-
 
 ## <a name="creating-new-database-records"></a>Creación de nuevos registros de base de datos
 
@@ -282,7 +253,6 @@ Este segundo método Create() se ha modificado en la clase HomeController actual
 > 
 > Tenga en cuenta el atributo Bind. Dado que no desea actualizar la propiedad de Id. de película de formulario HTML, es necesario excluir explícitamente de esta propiedad.
 
-
 **Listado 4 – Controllers\HomeController.vb (método Create modificado)**
 
 [!code-vb[Main](create-a-movie-database-application-in-15-minutes-with-asp-net-mvc-vb/samples/sample4.vb)]
@@ -295,11 +265,9 @@ Visual Studio resulta muy sencillo crear el formulario para crear una nueva base
 4. Desde el **Ver clase de datos** lista desplegable, seleccione el valor *MovieApp.Movie*.
 5. Haga clic en el **agregar** botón para crear la nueva vista.
 
-
 [![El cuadro de diálogo nuevo proyecto](create-a-movie-database-application-in-15-minutes-with-asp-net-mvc-vb/_static/image12.jpg)](create-a-movie-database-application-in-15-minutes-with-asp-net-mvc-vb/_static/image23.png)
 
 **Figura 12**: Adición de la vista de creación ([haga clic aquí para ver imagen en tamaño completo](create-a-movie-database-application-in-15-minutes-with-asp-net-mvc-vb/_static/image24.png))
-
 
 Visual Studio genera automáticamente la vista en el listado 5. Esta vista contiene un formulario HTML que incluye los campos que corresponden a cada una de las propiedades de la clase de la película.
 
@@ -311,16 +279,13 @@ Visual Studio genera automáticamente la vista en el listado 5. Esta vista conti
 > 
 > El formulario HTML generado por el cuadro de diálogo Agregar vista genera un campo de formulario de Id. Dado que la columna de identificador es una columna de identidad, no necesitamos este campo de formulario y se puede eliminar sin riesgos.
 
-
 Después de agregar la vista de creación, puede agregar nuevos registros de película a la base de datos. Ejecute la aplicación presionando la tecla F5 y haga clic en el vínculo Crear nuevo para ver el formulario en la figura 13. Si se complete y envíe el formulario, se crea un nuevo registro de base de datos de la película.
 
 Tenga en cuenta que se obtiene automáticamente una validación de formulario. Si no especifica una fecha de lanzamiento para una película, o escriba una fecha de lanzamiento no válido, se vuelve a mostrar el formulario y se resalta el campo de fecha de lanzamiento.
 
-
 [![El cuadro de diálogo nuevo proyecto](create-a-movie-database-application-in-15-minutes-with-asp-net-mvc-vb/_static/image13.jpg)](create-a-movie-database-application-in-15-minutes-with-asp-net-mvc-vb/_static/image25.png)
 
 **Figura 13**: Crear un nuevo registro de base de datos de películas ([haga clic aquí para ver imagen en tamaño completo](create-a-movie-database-application-in-15-minutes-with-asp-net-mvc-vb/_static/image26.png))
-
 
 ## <a name="editing-existing-database-records"></a>Editar los registros de base de datos existentes
 
@@ -336,16 +301,13 @@ En primer lugar, tenemos que generar el formulario de edición. Este paso es fá
 
 Completar estos pasos, agrega una nueva vista denominada Edit.aspx a la carpeta Views\Home. Esta vista contiene un formulario HTML para editar un registro de la película.
 
-
 [![El cuadro de diálogo nuevo proyecto](create-a-movie-database-application-in-15-minutes-with-asp-net-mvc-vb/_static/image14.jpg)](create-a-movie-database-application-in-15-minutes-with-asp-net-mvc-vb/_static/image27.png)
 
 **Figura 14**: Adición de la vista de edición ([haga clic aquí para ver imagen en tamaño completo](create-a-movie-database-application-in-15-minutes-with-asp-net-mvc-vb/_static/image28.png))
 
-
 > [!NOTE] 
 > 
 > La vista de edición contiene un campo de formulario HTML que se corresponde con la propiedad de Id. de película. Dado que no desea que las personas que editar el valor de la propiedad Id, debe quitar este campo de formulario.
-
 
 Por último, se debe modificar el controlador Home para que admita la edición de un registro de base de datos. La clase HomeController actualizada se encuentra en el listado 6.
 

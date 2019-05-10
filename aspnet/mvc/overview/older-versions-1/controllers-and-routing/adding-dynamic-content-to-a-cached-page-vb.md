@@ -8,12 +8,12 @@ ms.date: 01/27/2009
 ms.assetid: 68acd884-fb57-4486-a1be-aaa93e380780
 msc.legacyurl: /mvc/overview/older-versions-1/controllers-and-routing/adding-dynamic-content-to-a-cached-page-vb
 msc.type: authoredcontent
-ms.openlocfilehash: 0dae280dfa3028df5fda95c4366132c99a0dc3b7
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: f2f4372498e5a38bbfcb96d6e9f6338b0ef4df1f
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59409205"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65123665"
 ---
 # <a name="adding-dynamic-content-to-a-cached-page-vb"></a>Agregar contenido dinámico a una página almacenada en caché (VB)
 
@@ -21,16 +21,13 @@ por [Microsoft](https://github.com/microsoft)
 
 > Obtenga información sobre cómo mezclar contenido dinámico y almacenado en caché en la misma página. La substitución posterior a la caché le permite mostrar contenido dinámico, como anuncios de pancarta o elementos de noticias, dentro de una página que ha sido de salida almacenados en caché.
 
-
 Aprovechando las ventajas de la caché de resultados, puede mejorar considerablemente el rendimiento de una aplicación ASP.NET MVC. En lugar de volver a generar una página cada vez que se solicita la página, la página se puede generar una vez y almacena en caché en memoria para varios usuarios.
 
 Pero hay un problema. ¿Qué ocurre si necesita mostrar contenido dinámico en la página? Por ejemplo, imagine que desea mostrar un anuncio de banner en la página. No desea que el anuncio de banner en la memoria caché para que cada usuario ve el anuncio mismo. No generar dinero de este modo.
 
 Afortunadamente, hay una solución sencilla. Puede aprovechar una característica de ASP.NET framework llama *sustitución tras la caché*. La substitución posterior a la caché permite sustituir el contenido dinámico en una página que se ha almacenado en memoria.
 
-
 Normalmente, cuando los resultados de caché una página mediante el uso de la &lt;OutputCache&gt; atributo, la página se almacena en caché en el servidor y el cliente (el explorador web). Cuando se usa la sustitución posterior a la caché, se almacena en caché una página solo en el servidor.
-
 
 #### <a name="using-post-cache-substitution"></a>Uso de la sustitución posterior a la caché
 

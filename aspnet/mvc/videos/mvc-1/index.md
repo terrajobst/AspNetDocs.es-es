@@ -8,17 +8,16 @@ ms.date: 11/14/2011
 ms.assetid: a780d06b-36cd-410a-b95a-b6b935b5a7fa
 msc.legacyurl: /mvc/videos/mvc-1
 msc.type: chapter
-ms.openlocfilehash: 6b023d1a823ba780d0c4aee8b6d16483a46b8d6a
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: abfd0d416e93adb6c691e5268c919e8b8b8f42d0
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59405604"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65120614"
 ---
 # <a name="aspnet-mvc-1"></a>ASP.NET MVC 1
 
 > ASP.NET MVC 1
-
 
 - [Escaparate de ASP.NET MVC](aspnet-mvc-storefront/index.md)
 

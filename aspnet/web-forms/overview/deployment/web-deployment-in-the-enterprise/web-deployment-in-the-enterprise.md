@@ -8,12 +8,12 @@ ms.date: 05/04/2012
 ms.assetid: b8283698-7b82-42a8-8d83-3aeb18ca7fcc
 msc.legacyurl: /web-forms/overview/deployment/web-deployment-in-the-enterprise/web-deployment-in-the-enterprise
 msc.type: authoredcontent
-ms.openlocfilehash: 1f2dc0fea9eeca64b9389881470353c5cca473e0
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: bc7bb676a71af4ec3451aa3adf3c03ce3b5200d5
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59396322"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65114764"
 ---
 # <a name="web-deployment-in-the-enterprise"></a>Implementación web en la empresa
 
@@ -24,7 +24,6 @@ por [Jason Lee](https://github.com/jrjlee)
 > Este tutorial describe cómo satisfacer una gran cantidad de los desafíos que encontrará al administrar la implementación de aplicaciones web a escala empresarial en entornos de desarrollo, prueba, ensayo y producción. El tutorial incluye una solución de referencia junto con una combinación de contenido conceptual y orientados a tareas a guiarle a través de varias tareas comunes y procedimientos.
 > 
 > Para una traducción de italiano de estos tutoriales, visite [ http://www.lucamorelli.it ](http://www.lucamorelli.it).
-
 
 ## <a name="enterprise-deployment-challenges"></a>Desafíos de la implementación empresarial
 

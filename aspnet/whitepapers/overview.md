@@ -8,12 +8,12 @@ ms.date: 11/15/2011
 ms.assetid: d5e79470-01f2-4d65-8077-11c3e10a6784
 msc.legacyurl: /whitepapers
 msc.type: content
-ms.openlocfilehash: 4745e68053fae38019b6121295382a170fd2d858
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: 1a3a9fe5d685d4b38efe666fc88ff57016482ada
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59412936"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65114518"
 ---
 # <a name="whitepapers"></a>Notas del producto
 
@@ -24,7 +24,6 @@ ms.locfileid: "59412936"
 > - [Instalación y configuración de las notas del producto](#setup)
 > - [SQL Server Whitepapers](#sql)
 > - [Notas del producto de general](#general)
-
 
 <a id="aspnet4"></a>
 ## <a name="aspnet-4"></a>ASP.NET 4

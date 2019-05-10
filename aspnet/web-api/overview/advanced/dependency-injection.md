@@ -9,12 +9,12 @@ ms.custom: seoapril2019
 ms.assetid: e3d3e7ba-87f0-4032-bdd3-31f3c1aa9d9c
 msc.legacyurl: /web-api/overview/advanced/dependency-injection
 msc.type: authoredcontent
-ms.openlocfilehash: 0ad0b3c63741803e05274df4da3fcbe5481d32a4
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: 138ccb5800e801d382c11e3989ec3e3c074a79fe
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59391941"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65115703"
 ---
 # <a name="dependency-injection-in-aspnet-web-api-2"></a>Inserción de dependencias en ASP.NET Web API 2
 
@@ -30,7 +30,6 @@ por [Mike Wasson](https://github.com/MikeWasson)
 > - Web API 2
 > - [Bloque de aplicaciones de Unity](https://www.nuget.org/packages/Unity/)
 > - Entity Framework 6 (versión 5 también funciona)
-
 
 ## <a name="what-is-dependency-injection"></a>¿Qué es la inserción de dependencias?
 
@@ -88,7 +87,6 @@ Un contenedor de IoC es un componente de software que se encarga de administrar 
 > [!NOTE]
 > "IoC" es el acrónimo "inversión de control", que es un patrón general que llama un marco de trabajo en el código de la aplicación. Un contenedor de IoC construye los objetos, que "invierte" el flujo de control normal.
 
-
 Para este tutorial, vamos a usar [Unity](https://msdn.microsoft.com/library/ff647202.aspx) desde Microsoft Patterns &amp; prácticas. (Incluyen otras bibliotecas populares [Castle Windsor](http://www.castleproject.org/), [Spring.Net](http://www.springframework.net/), [Autofac](https://code.google.com/p/autofac/), [Ninject](http://www.ninject.org/), y [StructureMap ](http://structuremap.github.io/documentation/).) Puede usar el Administrador de paquetes de NuGet para instalar Unity. Desde el **herramientas** menú en Visual Studio, seleccione **Administrador de paquetes de NuGet**, a continuación, seleccione **Package Manager Console**. En la ventana de consola de administrador de paquetes, escriba el siguiente comando:
 
 [!code-console[Main](dependency-injection/samples/sample7.cmd)]
@@ -99,7 +97,6 @@ Esta es una implementación de **IDependencyResolver** que ajusta un contenedor 
 
 > [!NOTE]
 > Si el **GetService** método no puede resolver un tipo, debe devolver **null**. Si el **GetServices** método no puede resolver un tipo, debe devolver un objeto de colección vacía. No producir excepciones para los tipos desconocidos.
-
 
 ## <a name="configuring-the-dependency-resolver"></a>Configurar a la resolución de dependencia
 

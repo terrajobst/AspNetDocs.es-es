@@ -8,19 +8,18 @@ ms.date: 02/16/2009
 ms.assetid: a4f4bf4e-abcc-4650-8f43-527e48b52fe6
 msc.legacyurl: /mvc/overview/older-versions-1/controllers-and-routing/creating-a-custom-route-constraint-cs
 msc.type: authoredcontent
-ms.openlocfilehash: 5d8a40b03a1997904a2736a339dbf6b4003ae7bd
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: 98d5839e3d2623665770ccc5689c28f9eb29c8f6
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59410648"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65123481"
 ---
 # <a name="creating-a-custom-route-constraint-c"></a>Crear una restricción de ruta personalizada (C#)
 
 by [Stephen Walther](https://github.com/StephenWalther)
 
 > Stephen Walther demuestra cómo puede crear una restricción de ruta personalizada. Implementamos una restricción personalizada simple que impide que una ruta que se va a coincidir cuando se realiza una solicitud de explorador desde un equipo remoto.
-
 
 El objetivo de este tutorial es mostrar cómo puede crear una restricción de ruta personalizada. Una restricción de ruta personalizada le permite impedir que una ruta que se coteja a menos que se hace coincidir con alguna condición personalizada.
 

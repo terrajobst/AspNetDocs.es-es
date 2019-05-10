@@ -8,12 +8,12 @@ ms.date: 06/12/2014
 ms.assetid: ba6e6baa-9b9f-471f-b39d-b007a3addadc
 msc.legacyurl: /aspnet/overview/developing-apps-with-windows-azure/building-real-world-cloud-apps-with-windows-azure/automate-everything
 msc.type: authoredcontent
-ms.openlocfilehash: d27c8c1910a79cea8ccdf4231d3bc2b80a20dc68
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: fd78385e563b7204b29beb4180b7bc932266bdec
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59418370"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65119019"
 ---
 # <a name="automate-everything-building-real-world-cloud-apps-with-azure"></a>Automatizar todas las acciones (creación de aplicaciones de nube reales con Azure)
 
@@ -22,7 +22,6 @@ by [Mike Wasson](https://github.com/MikeWasson), [Rick Anderson]((https://twitte
 [Descargar proyecto corregirlo](http://code.msdn.microsoft.com/Fix-It-app-for-Building-cdd80df4) o [descargar libro electrónico](http://blogs.msdn.com/b/microsoft_press/archive/2014/07/23/free-ebook-building-cloud-apps-with-microsoft-azure.aspx)
 
 > El **Building Real World Cloud Apps with Azure** eBook se basa en una presentación desarrollada por Scott Guthrie. Se explican el 13 patrones y prácticas que pueden ayudarle a tener éxito el desarrollo de aplicaciones web para la nube. Para obtener una introducción para el libro electrónico, consulte [el primer capítulo](introduction.md).
-
 
 Los tres primeros patrones que examinaremos realmente se aplican a cualquier proyecto de desarrollo de software, pero especialmente para los proyectos en la nube. Este patrón es acerca de cómo automatizar las tareas de desarrollo. Es un tema importante porque los procesos manuales son lentos y propensos a errores; automatizar muchas de ellas como posible ayuda a configurar un flujo de trabajo de agile, confiable y rápida. Es importante de forma exclusiva para el desarrollo de nube porque se puede automatizar fácilmente muchas tareas que son difíciles o imposibles de automatizar en un entorno local. Por ejemplo, puede configurar pruebas completa entornos como nuevo servidor web y máquinas virtuales de back-end, bases de datos de blob storage (almacenamiento de archivo), colas, etcetera.
 
@@ -58,10 +57,8 @@ El primer script que examinaremos se denomina *New AzureWebsiteEnv.ps1*. Crea un
 
 ### <a name="run-the-script"></a>Ejecute el script
 
-
 > [!NOTE]
 > Esta parte del capítulo muestra ejemplos de secuencias de comandos y los comandos que especifique para poder ejecutarlos. Esta una demostración y no ofrece todo lo que necesita saber para poder ejecutar las secuencias de comandos. Para obtener instrucciones paso a paso how-to--it, consulte [Apéndice: Corrección de la aplicación de ejemplo](the-fix-it-sample-application.md#deploybase).
-
 
 Debe instalar la consola de PowerShell de Azure y configurarlo para que funcione con su suscripción de Azure para ejecutar un script de PowerShell que administra los servicios de Azure. Una vez que esté listo, puede ejecutar el Fix It entorno script de creación con un comando como este:
 

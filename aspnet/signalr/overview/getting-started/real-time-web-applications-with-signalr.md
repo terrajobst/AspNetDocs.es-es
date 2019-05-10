@@ -8,15 +8,14 @@ ms.date: 07/16/2014
 ms.assetid: ba07958c-42e1-4da0-81db-ba6925ed6db0
 msc.legacyurl: /signalr/overview/getting-started/real-time-web-applications-with-signalr
 msc.type: authoredcontent
-ms.openlocfilehash: 9904582450d4386ef8b8656078f6d40dbd1e10be
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: 9e39fd3f2fc9d4e791002450085215096c222fcd
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59412013"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65120004"
 ---
 # <a name="hands-on-lab-real-time-web-applications-with-signalr"></a>Laboratorio práctico: Aplicaciones web en tiempo real con SignalR
-
 
 por [campamentos Web Team](https://twitter.com/webcamps)
 
@@ -66,7 +65,6 @@ Para poder ejecutar los ejercicios en este laboratorio práctico, deberá config
 > [!NOTE]
 > Asegúrese de que ha comprobado todas las dependencias para este laboratorio antes de ejecutar el programa de instalación.
 
-
 <a id="CodeSnippets"></a>
 ### <a name="using-the-code-snippets"></a>Uso de los fragmentos de código
 
@@ -74,7 +72,6 @@ En todo el documento de laboratorio, se le pedirá que inserte los bloques de c�
 
 > [!NOTE]
 > Cada ejercicio viene acompañado por una solución inicial ubicada en el **comenzar** carpeta del ejercicio que le permite seguir cada ejercicio independientemente de los demás. Ten en cuenta que los fragmentos de código que se agregan durante un ejercicio faltan en estos a partir de las soluciones y es posible que no funcione hasta que haya completado el ejercicio. En el código fuente para un ejercicio, también encontrará un **final** carpeta que contiene una solución de Visual Studio con el código que se obtiene al completar los pasos descritos en el ejercicio correspondiente. Puede usar estas soluciones como instrucciones si necesita más ayuda mientras se trabaja a través de este laboratorio práctico.
-
 
 ---
 
@@ -91,9 +88,8 @@ Tiempo estimado para completar esta práctica: **60 minutos**
 > [!NOTE]
 > Primera vez que inicie Visual Studio, debe seleccionar una de las colecciones de configuraciones predefinidas. Cada colección predefinida está diseñado para que coincida con un estilo de desarrollo determinado y determina los diseños de ventana, comportamiento del editor, fragmentos de código de IntelliSense y opciones del cuadro de diálogo. Los procedimientos de este laboratorio describen las acciones necesarias para realizar una tarea concreta en Visual Studio cuando se usa el **configuración General de desarrollo** colección. Si elige una colección de configuraciones diferentes para el entorno de desarrollo, puede haber diferencias en los pasos que debe tener en cuenta.
 
-
 <a id="Exercise1"></a>
-### <a name="exercise-1-working-with-real-time-data-using-signalr"></a>Ejercicio 1: Trabajar con datos en tiempo real con SignalR
+### <a name="exercise-1-working-with-real-time-data-using-signalr"></a>Ejercicio 1: Trabajar con datos en tiempo real con SignalR
 
 Mientras chat a menudo se usa como ejemplo, puede hacer un conjunto mucho más con la funcionalidad Web en tiempo real. Siempre que un usuario actualiza una página web para ver los nuevos datos o implementa la página Ajax largo de sondeo para recuperar los datos nuevos, puede usar SignalR.
 
@@ -250,7 +246,7 @@ En esta tarea, ejecutará la solución para comprobar que la vista de las estad�
     *Página de estadísticas actualizado después de la respuesta*
 
 <a id="Exercise2"></a>
-### <a name="exercise-2-scaling-out-using-sql-server"></a>Ejercicio 2: Escalado horizontal con SQL Server
+### <a name="exercise-2-scaling-out-using-sql-server"></a>Ejercicio 2: Escalado horizontal con SQL Server
 
 Al escalar una aplicación web, por lo general puede elegir entre *escalado* y *ampliación* opciones. *Escalar verticalmente* implica el uso de un servidor más grande, con más recursos (CPU, RAM, etc.) al *escalar horizontalmente* significa agregar más servidores para administrar la carga. El problema con este último es que los clientes pueden obtener enrutar a diferentes servidores. Un cliente que está conectado a un servidor no recibirá los mensajes enviados desde otro servidor.
 
@@ -274,7 +270,6 @@ Para obtener más información sobre cómo funciona el backplane SignalR, lea es
 > - [Difusión de servidor](tutorial-server-broadcast-with-signalr.md) (p. ej., tablero de cotizaciones): Planos posteriores funcionan bien para este escenario, porque el servidor controla la velocidad a la que se envían los mensajes.
 > - [Cliente a cliente](tutorial-getting-started-with-signalr.md) (p. ej., chat): En este escenario, el backplane podría ser un cuello de botella si el número de mensajes se escala con el número de clientes; es decir, si aumenta la tasa de mensajes unir más proporcionalmente como clientes.
 > - [En tiempo real de alta frecuencia](tutorial-high-frequency-realtime-with-signalr.md) (por ejemplo, juegos en tiempo real): No se recomienda un backplane para este escenario.
-
 
 En este ejercicio, usará **SQL Server** para distribuir los mensajes a través de la **"geek" Quiz** aplicación. Estas tareas ejecutará en un equipo de prueba individual para obtener información sobre cómo establecer la configuración, sino con el fin de obtener el efecto completo, deberá implementar la aplicación de SignalR en dos o más servidores. También debe instalar a SQL Server en uno de los servidores o en un servidor dedicado independiente.
 

@@ -8,19 +8,18 @@ ms.date: 01/27/2009
 ms.assetid: 4341f5b1-6fe5-44c5-8b8a-18fa84f80177
 msc.legacyurl: /mvc/overview/older-versions-1/security/authenticating-users-with-forms-authentication-vb
 msc.type: authoredcontent
-ms.openlocfilehash: 0a4e8dc3ce5764c6b2ec59c7e3f507064f8a8cb5
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: a2c2140631d59a7f8b21aa73613a92ea5c7a91d0
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59422166"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65122079"
 ---
 # <a name="authenticating-users-with-forms-authentication-vb"></a>Autenticar a los usuarios con la autenticación de formularios (VB)
 
 por [Microsoft](https://github.com/microsoft)
 
 > Obtenga información sobre cómo usar el atributo [Authorize] a contraseña proteger determinadas páginas en la aplicación MVC. Aprenda a usar la herramienta de administración de sitios Web para crear y administrar usuarios y roles. También aprenderá a configurar dónde se almacena la información de cuenta y el rol de usuario.
-
 
 El objetivo de este tutorial es explicar cómo puede usar formularios de autenticación de contraseña de proteger las vistas en las aplicaciones de ASP.NET MVC. Aprenda a usar la herramienta de administración de sitios Web para crear usuarios y roles. También aprenderá cómo impedir que los usuarios no autorizados de invocar acciones de controlador. Por último, aprenderá a configurar dónde se almacenan los nombres de usuario y contraseñas.
 
@@ -117,7 +116,6 @@ El Asistente para instalación de servidor SQL de ASP.NET le permite seleccionar
 > 
 > 
 > C:\Windows\Microsoft.NET\Framework\v2.0.50727
-
 
 Después de crear los objetos de base de datos necesarios, deberá modificar la conexión de base de datos utilizada por la aplicación de MVC. Modifique la cadena de conexión de ApplicationServices en el archivo de configuración (web.config) web para que apunte a la base de datos de producción. Por ejemplo, la conexión modificada en el listado 3 apunta a una base de datos denominada MyProductionDB (la cadena de conexión de ApplicationServices original se ha comentado con).
 

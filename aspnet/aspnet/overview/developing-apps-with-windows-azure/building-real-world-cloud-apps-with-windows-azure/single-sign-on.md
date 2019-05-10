@@ -8,12 +8,12 @@ ms.date: 06/12/2014
 ms.assetid: 7d82d5e9-0619-4f22-9e03-32a6d52940a5
 msc.legacyurl: /aspnet/overview/developing-apps-with-windows-azure/building-real-world-cloud-apps-with-windows-azure/single-sign-on
 msc.type: authoredcontent
-ms.openlocfilehash: da1136e085776c63886b6ac25533521fa1479d4f
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: 8f6c23eb71ea323b6ab06943097f927f717a8099
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59406293"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65118744"
 ---
 # <a name="single-sign-on-building-real-world-cloud-apps-with-azure"></a>Inicio de sesión único (crear aplicaciones de nube reales con Azure)
 
@@ -22,7 +22,6 @@ by [Mike Wasson](https://github.com/MikeWasson), [Rick Anderson]((https://twitte
 [Descargar proyecto corregirlo](http://code.msdn.microsoft.com/Fix-It-app-for-Building-cdd80df4) o [descargar libro electrónico](http://blogs.msdn.com/b/microsoft_press/archive/2014/07/23/free-ebook-building-cloud-apps-with-microsoft-azure.aspx)
 
 > El **Building Real World Cloud Apps with Azure** eBook se basa en una presentación desarrollada por Scott Guthrie. Se explican el 13 patrones y prácticas que pueden ayudarle a tener éxito el desarrollo de aplicaciones web para la nube. Para obtener información sobre el libro electrónico, consulte [el primer capítulo](introduction.md).
-
 
 Hay muchos problemas de seguridad que pensar cuando está desarrollando una aplicación de nube, pero en esta serie nos centraremos en uno solo: inicio de sesión único. Una pregunta a la gente a menudo pregunta es: "Estoy principalmente creando aplicaciones para los empleados de mi empresa; cómo hospedar estas aplicaciones en la nube y que todavía puedan utilizar el mismo modelo de seguridad que Mis empleados conocen y usar en el entorno local cuando se ejecutan las aplicaciones que se hospedan dentro del firewall?" Una de las maneras en que se habilitan este escenario se denomina Azure Active Directory (Azure AD). Azure AD le permite tomar enterprise aplicaciones de línea de negocio (LOB) disponibles a través de Internet y permite hacer que estas aplicaciones estén disponibles para asociados de negocios también.
 

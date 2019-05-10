@@ -8,12 +8,12 @@ ms.date: 06/12/2014
 ms.assetid: 513837a7-cfea-4568-a4e9-1f5901245d24
 msc.legacyurl: /aspnet/overview/developing-apps-with-windows-azure/building-real-world-cloud-apps-with-windows-azure/data-partitioning-strategies
 msc.type: authoredcontent
-ms.openlocfilehash: 1050018794526e12aad43cd473665de5ff575d7d
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: 3aecd64bc59ffa961aa97dd30b037f9aeb2acdd8
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59403563"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65118896"
 ---
 # <a name="data-partitioning-strategies-building-real-world-cloud-apps-with-azure"></a>(Crear aplicaciones de nube reales con Azure) de las estrategias de partición de datos
 
@@ -22,7 +22,6 @@ by [Mike Wasson](https://github.com/MikeWasson), [Rick Anderson]((https://twitte
 [Descargar proyecto corregirlo](http://code.msdn.microsoft.com/Fix-It-app-for-Building-cdd80df4) o [descargar libro electrónico](http://blogs.msdn.com/b/microsoft_press/archive/2014/07/23/free-ebook-building-cloud-apps-with-microsoft-azure.aspx)
 
 > El **Building Real World Cloud Apps with Azure** eBook se basa en una presentación desarrollada por Scott Guthrie. Se explican el 13 patrones y prácticas que pueden ayudarle a tener éxito el desarrollo de aplicaciones web para la nube. Para obtener información acerca de la serie, vea [el primer capítulo](introduction.md).
-
 
 Anteriormente hemos visto lo fácil que es escalar el nivel web de una aplicación en la nube, mediante la adición y eliminación de servidores web. Pero si todo está alcanzando el mismo almacén de datos, el cuello de botella de la aplicación se mueve desde el front-end al back-end, y es el más difícil de escalar la capa de datos. En este capítulo, veremos cómo puede hacer la capa de datos escalable mediante la partición de datos en varias bases de datos relacionales, o mediante la combinación de almacenamiento de base de datos relacional con otras opciones de almacenamiento de datos.
 

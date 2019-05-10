@@ -8,12 +8,12 @@ ms.date: 10/17/2013
 ms.assetid: ebbc93a8-e6c4-4122-8e0d-3aa42293c747
 msc.legacyurl: /signalr/overview/older-versions/mapping-users-to-connections
 msc.type: authoredcontent
-ms.openlocfilehash: 75c8d2f4a102bef541195280a01d75271331dec4
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: 9d948495e9b8821fcb465611b6926603c3756a19
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59422517"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65117096"
 ---
 # <a name="mapping-signalr-users-to-connections-in-signalr-1x"></a>Asignar usuarios de SignalR a las conexiones en SignalR 1.x
 
@@ -22,7 +22,6 @@ por [Patrick Fletcher](https://github.com/pfletcher), [Tom FitzMacken](https://g
 [!INCLUDE [Consider ASP.NET Core SignalR](~/includes/signalr/signalr-version-disambiguation.md)]
 
 > En este tema se muestra cómo conservar la información acerca de los usuarios y sus conexiones.
-
 
 ## <a name="introduction"></a>Introducción
 

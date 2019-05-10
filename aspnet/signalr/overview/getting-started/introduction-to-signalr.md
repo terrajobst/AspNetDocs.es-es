@@ -8,20 +8,18 @@ ms.date: 06/10/2014
 ms.assetid: 0fab5e35-8c1f-43d4-8635-b8aba8766a71
 msc.legacyurl: /signalr/overview/getting-started/introduction-to-signalr
 msc.type: authoredcontent
-ms.openlocfilehash: 43ff1bdf3999e67506d6d58d8a7a5d41fadc82b4
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: 3598ac3d16a2065d1fb76d1637f0ae84797f630c
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59420957"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65120099"
 ---
 # <a name="introduction-to-signalr"></a>Introducción a SignalR
-
 
 por [Patrick Fletcher](https://github.com/pfletcher)
 
 [!INCLUDE [Consider ASP.NET Core SignalR](~/includes/signalr/signalr-version-disambiguation.md)]
-
 
 > Este artículo describe qué es SignalR y algunas de las soluciones que se diseñó para crear. 
 > 

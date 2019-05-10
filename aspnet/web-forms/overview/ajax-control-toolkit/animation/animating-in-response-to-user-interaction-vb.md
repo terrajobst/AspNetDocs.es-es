@@ -8,12 +8,12 @@ ms.date: 06/02/2008
 ms.assetid: c8204c05-ec27-40fe-933d-88e4e727a482
 msc.legacyurl: /web-forms/overview/ajax-control-toolkit/animation/animating-in-response-to-user-interaction-vb
 msc.type: authoredcontent
-ms.openlocfilehash: c38160ffa9965384cf4eae2ebda52bd62b766bba
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: fa774eecd872e79e3b05f6a6ebe177be895b8191
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59396244"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65112925"
 ---
 # <a name="animating-in-response-to-user-interaction-vb"></a>Animaciones en respuesta a la interacción del usuario (VB)
 
@@ -22,7 +22,6 @@ por [Christian Wenz](https://github.com/wenz)
 [Descargar código](http://download.microsoft.com/download/f/9/a/f9a26acd-8df4-4484-8a18-199e4598f411/Animation6.vb.zip) o [descargar PDF](http://download.microsoft.com/download/6/7/1/6718d452-ff89-4d3f-a90e-c74ec2d636a3/animation6VB.pdf)
 
 > El control de animación en ASP.NET AJAX Control Toolkit no es simplemente un control, pero un marco completo para agregar animaciones a un control. Las animaciones pueden iniciar automáticamente o pueden activarse mediante la interacción del usuario, por ejemplo, haciendo clic con el mouse.
-
 
 ## <a name="overview"></a>Información general
 
@@ -57,7 +56,6 @@ Dentro de la `<Animations>` nodo, existen cinco formas de iniciar la animación 
 En este escenario, `<OnClick>` se utiliza. Cuando el usuario hace clic en el panel, se cambia el tamaño y atenúa al mismo tiempo.
 
 [!code-aspx[Main](animating-in-response-to-user-interaction-vb/samples/sample5.aspx)]
-
 
 [![La animación inicia un clic del mouse](animating-in-response-to-user-interaction-vb/_static/image2.png)](animating-in-response-to-user-interaction-vb/_static/image1.png)
 

@@ -8,12 +8,12 @@ ms.date: 02/18/2013
 ms.assetid: b7dba543-73c3-4534-a9a0-ba70fa2c6a8a
 msc.legacyurl: /mvc/overview/older-versions/hands-on-labs/aspnet-mvc-4-fundamentals
 msc.type: authoredcontent
-ms.openlocfilehash: 38aea3b3480dde6ec6182a45c4f61f44eea8e05e
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: 95e9b9f55b2080c0ed01dc34e3a32f9f1c905644
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59380228"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65117249"
 ---
 # <a name="aspnet-mvc-4-fundamentals"></a>Conceptos básicos de ASP.NET MVC 4
 
@@ -108,13 +108,12 @@ Esta práctica se compone de los ejercicios siguientes:
 > [!NOTE]
 > Cada ejercicio está acompañado por un **final** carpeta que contiene la solución resultante debe obtener después de completar los ejercicios. Puede usar esta solución como una guía si necesita ayuda adicional para trabajar a través de los ejercicios.
 
-
 Tiempo estimado para completar esta práctica: **60 minutos**.
 
 <a id="Exercise1"></a>
 
 <a id="Exercise_1_Creating_MusicStore_ASPNET_MVC_Web_Application_Project"></a>
-### <a name="exercise-1-creating-musicstore-aspnet-mvc-web-application-project"></a>Ejercicio 1: Crear proyecto de aplicación Web de Music Store tal ASP.NET MVC
+### <a name="exercise-1-creating-musicstore-aspnet-mvc-web-application-project"></a>Ejercicio 1: Crear proyecto de aplicación Web de Music Store tal ASP.NET MVC
 
 En este ejercicio, obtendrá información sobre cómo crear una aplicación ASP.NET MVC en Visual Studio 2012 Express para Web, así como su organización de la carpeta principal. Además, obtendrá información sobre cómo agregar un nuevo controlador y que se muestre una cadena sencilla en la página principal de la aplicación.
 
@@ -210,7 +209,7 @@ En esta tarea, se pruebe la aplicación en un explorador web.
 <a id="Exercise2"></a>
 
 <a id="Exercise_2_Creating_a_Controller"></a>
-### <a name="exercise-2-creating-a-controller"></a>Ejercicio 2: Creación de un controlador
+### <a name="exercise-2-creating-a-controller"></a>Ejercicio 2: Creación de un controlador
 
 En este ejercicio, obtendrá información sobre cómo actualizar el controlador para implementar funciones sencillas de la aplicación Music Store. Ese controlador definirá métodos de acción para cada una de las solicitudes específicas siguientes:
 
@@ -359,7 +358,7 @@ En esta tarea, va a probar la aplicación en un explorador web y usar el **Id** 
 <a id="Exercise4"></a>
 
 <a id="Exercise_4_Creating_a_View"></a>
-### <a name="exercise-4-creating-a-view"></a>Ejercicio 4: Creación de una vista
+### <a name="exercise-4-creating-a-view"></a>Ejercicio 4: Creación de una vista
 
 Hasta ahora ha sido devolver cadenas acciones de controlador. Aunque es una forma útil de comprender cómo funcionan los controladores, no es, cómo se compilan las aplicaciones Web reales. Las vistas son componentes que proporcionan un mejor enfoque para generar HTML al explorador con el uso de archivos de plantilla.
 
@@ -471,7 +470,7 @@ Con la aplicación se abre en un explorador, debe tener en cuenta:
 <a id="Exercise5"></a>
 
 <a id="Exercise_5_Creating_a_View_Model"></a>
-### <a name="exercise-5-creating-a-view-model"></a>Ejercicio 5: Creación de un modelo de vista
+### <a name="exercise-5-creating-a-view-model"></a>Ejercicio 5: Creación de un modelo de vista
 
 Hasta ahora, realiza sus vistas Mostrar HTML codificados, pero, con el fin de crear aplicaciones web dinámicas, la plantilla de vista debería recibir información desde el controlador. Una técnica común que se usará para ese propósito es el **ViewModel** patrón, que permite que un controlador empaquetar toda la información necesaria para generar la respuesta HTML adecuada.
 
@@ -945,7 +944,6 @@ En este ejercicio, explorará las mejoras en las plantillas de proyecto de ASP.N
 
 > [!NOTE]
 > Además, puede implementar esta aplicación a los siguientes sitios Web Windows Azure [Apéndice B: Publicar una aplicación de ASP.NET MVC 4 mediante Web Deploy](#AppendixB).
-
 
 ---
 
