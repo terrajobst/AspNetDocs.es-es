@@ -8,12 +8,12 @@ ms.date: 10/16/2008
 ms.assetid: 37a1ebae-8773-408f-8645-d21da7ff9ae1
 msc.legacyurl: /mvc/overview/older-versions-1/views/passing-data-to-view-master-pages-vb
 msc.type: authoredcontent
-ms.openlocfilehash: 7de5a1545ee59e671058f09789ce69d5062d3655
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: ebf670fc0d8cf2cfd7df01d07d4119122b61a6a1
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59380982"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65130421"
 ---
 # <a name="passing-data-to-view-master-pages-vb"></a>Pasar datos a las páginas maestras de vista (VB)
 
@@ -23,7 +23,6 @@ por [Microsoft](https://github.com/microsoft)
 
 > El objetivo de este tutorial es explicar cómo puede pasar datos de un controlador a una página maestra de la vista. Se examinan dos estrategias para pasar datos a una página maestra de la vista. En primer lugar, se describe una solución sencilla que da como resultado una aplicación que es difícil de mantener. A continuación, examinaremos una solución mucho mejor que requiere un poco más trabajo inicial, pero los resultados en una aplicación de mucho más fácil de mantener.
 
-
 ## <a name="passing-data-to-view-master-pages"></a>Pasar datos a las páginas maestras de vista
 
 El objetivo de este tutorial es explicar cómo puede pasar datos de un controlador a una página maestra de la vista. Se examinan dos estrategias para pasar datos a una página maestra de la vista. En primer lugar, se describe una solución sencilla que da como resultado una aplicación que es difícil de mantener. A continuación, examinaremos una solución mucho mejor que requiere un poco más trabajo inicial, pero los resultados en una aplicación de mucho más fácil de mantener.
@@ -32,11 +31,9 @@ El objetivo de este tutorial es explicar cómo puede pasar datos de un controlad
 
 Imagine que está creando una aplicación de base de datos de películas y desea mostrar la lista de las categorías de películas en todas las páginas en la aplicación (consulte la figura 1). Además, imagine que la lista de las categorías de películas se almacena en una tabla de base de datos. En ese caso tendría sentido para recuperar las categorías de la base de datos y presentar la lista de categorías de película dentro de una página maestra de la vista.
 
-
 [![Mostrar las categorías de películas en una página maestra de la vista](passing-data-to-view-master-pages-vb/_static/image2.png)](passing-data-to-view-master-pages-vb/_static/image1.png)
 
 **Figura 01**: Mostrar las categorías de películas en una página de vista maestra ([haga clic aquí para ver imagen en tamaño completo](passing-data-to-view-master-pages-vb/_static/image3.png))
-
 
 Éste es el problema. ¿Cómo se recuperar la lista de categorías de la película en la página principal? Es tentador para llamar a métodos de las clases de modelo en la página maestra directamente. En otras palabras, es tentador para incluir el código para recuperar los datos de la derecha de la base de datos en la página maestra. Sin embargo, omitiendo los controladores MVC para tener acceso a la base de datos infringiría la separación clara de intereses es una de las principales ventajas de la creación de una aplicación MVC.
 
@@ -58,11 +55,9 @@ Tenga en cuenta que tanto el `Index()` y `Details()` acciones de agregan dos ele
 
 El `Details()` acción también agrega dos claves denominada categorías y películas. La clave de categorías, una vez más, representa la lista de las categorías de películas que se muestra en la página principal de la vista. La clave de películas representa la lista de películas en una categoría determinada que se muestra en la página de vista de detalles (consulte la figura 2).
 
-
 [![La vista de detalles](passing-data-to-view-master-pages-vb/_static/image5.png)](passing-data-to-view-master-pages-vb/_static/image4.png)
 
 **Figura 02**: La vista de detalles ([haga clic aquí para ver imagen en tamaño completo](passing-data-to-view-master-pages-vb/_static/image6.png))
-
 
 La vista de índice se encuentra en el listado 2. Simplemente recorre en iteración la lista de películas representada por el elemento de películas en datos de la vista.
 

@@ -8,12 +8,12 @@ ms.date: 03/14/2008
 ms.assetid: c1a35f18-bab9-41f7-8497-15530c37a09d
 msc.legacyurl: /web-forms/overview/older-versions-getting-started/aspnet-ajax/understanding-asp-net-ajax-localization
 msc.type: authoredcontent
-ms.openlocfilehash: 11e70493478d6810d63ba6b3ac813e32f03052eb
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: ef4ee57496337fb13b4d1c09c058e89e04eb3138
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59381333"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65114600"
 ---
 # <a name="understanding-aspnet-ajax-localization"></a>Descripción de localización de ASP.NET AJAX
 
@@ -22,7 +22,6 @@ por [Scott Cate](https://github.com/scottcate)
 [Descargar PDF](http://download.microsoft.com/download/C/1/9/C19A3451-1D14-477C-B703-54EF22E197EE/AJAX_tutorial04_Localization_cs.pdf)
 
 > La localización es el proceso de diseño y la integración de soporte técnico para un idioma específico y la referencia cultural en una aplicación o un componente de aplicación. La plataforma de Microsoft ASP.NET proporciona una amplia compatibilidad para la localización de aplicaciones de ASP.NET estándar integrando el modelo de localización estándar. NET; el marco de AJAX de Microsoft usan el modelo integrado para admitir los diversos escenarios en los que se puede realizar la localización.
-
 
 ## <a name="introduction"></a>Introducción
 
@@ -105,16 +104,13 @@ Para quienes no conocen la sintaxis de JavaScript Regex, texto dentro únicas ba
 1. Presione F5. Si se le pida, habilite la depuración. Cuando se carga la página, presione el botón Eliminar. Tenga en cuenta que deberá en inglés (a menos que el equipo se configura para preferir recursos de idioma de español de forma predeterminada) para la confirmación.
 2. Cierre la ventana del explorador y vuelva a default.aspx. En el @Page directiva de encabezado, auto de reemplazo para Culture y UICulture con es-es al directorio. Presione F5 de nuevo para iniciar la aplicación web nuevo en el explorador. Esta vez, tenga en cuenta que deberá eliminar el archivo en español:
 
-
 [![](understanding-asp-net-ajax-localization/_static/image2.png)](understanding-asp-net-ajax-localization/_static/image1.png)
 
 ([Haga clic aquí para ver imagen en tamaño completo](understanding-asp-net-ajax-localization/_static/image3.png))
 
-
 [![](understanding-asp-net-ajax-localization/_static/image5.png)](understanding-asp-net-ajax-localization/_static/image4.png)
 
 ([Haga clic aquí para ver imagen en tamaño completo](understanding-asp-net-ajax-localization/_static/image6.png))
-
 
 Tenga en cuenta que hay diversas variaciones para este tutorial. Por ejemplo, las secuencias de comandos se puede registrar con el control ScriptManager mediante programación durante la carga de página.
 

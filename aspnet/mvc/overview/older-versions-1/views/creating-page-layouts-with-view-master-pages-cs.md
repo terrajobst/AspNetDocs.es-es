@@ -8,12 +8,12 @@ ms.date: 10/16/2008
 ms.assetid: dff54fcb-68b1-4488-89a2-ca97532d6a4c
 msc.legacyurl: /mvc/overview/older-versions-1/views/creating-page-layouts-with-view-master-pages-cs
 msc.type: authoredcontent
-ms.openlocfilehash: d09a38c2bea9e8beb91e322ed7e4a9d337fa0843
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: 45349dd3c3063c1c6d0b5c78297df46b42fcf725
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59412637"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65126580"
 ---
 # <a name="creating-page-layouts-with-view-master-pages-c"></a>Crear diseños de página con páginas maestras de vista (C#)
 
@@ -22,7 +22,6 @@ por [Microsoft](https://github.com/microsoft)
 [Descargar PDF](http://download.microsoft.com/download/e/f/3/ef3f2ff6-7424-48f7-bdaa-180ef64c3490/ASPNET_MVC_Tutorial_12_CS.pdf)
 
 > En este tutorial, aprenderá a crear un diseño de página común para varias páginas en la aplicación aprovechando las ventajas de vista de las páginas maestras. Puede usar una página maestra de la vista, por ejemplo, para definir un diseño de página de dos columnas y usar el diseño de dos columnas para todas las páginas en la aplicación web.
-
 
 ## <a name="creating-page-layouts-with-view-master-pages"></a>Crear diseños de página con páginas maestras de vista
 
@@ -36,11 +35,9 @@ En este tutorial, aprenderá a crear una nueva página principal de la vista y c
 
 Comencemos por crear una página maestra de la vista que define un diseño de dos columnas. Agregar una nueva página principal de la vista a un proyecto MVC hace doble clic en la carpeta Views\Shared, seleccionando la opción de menú **agregar, nuevo elemento**y seleccionando la **página maestra de la vista de MVC** plantilla (consulte la figura 1).
 
-
 [![Adición de una página maestra de la vista](creating-page-layouts-with-view-master-pages-cs/_static/image2.png)](creating-page-layouts-with-view-master-pages-cs/_static/image1.png)
 
 **Figura 01**: Agregar una página de vista maestra ([haga clic aquí para ver imagen en tamaño completo](creating-page-layouts-with-view-master-pages-cs/_static/image3.png))
-
 
 Puede crear más de una página maestra de la vista en una aplicación. Cada página principal de la vista puede definir un diseño de página diferentes. Por ejemplo, puede que desee ciertas páginas que tienen un diseño de dos columnas y otras páginas que tienen un diseño de tres columnas.
 
@@ -54,29 +51,23 @@ Por ejemplo, la página principal de la vista en el listado 1 define un diseño 
 
 El cuerpo de la vista de página maestra en el listado 1 contiene dos `<div>` etiquetas que corresponden a las dos columnas. La clase de columna de la hoja de estilos en cascada se aplica a ambos `<div>` etiquetas. Esta clase se define en la hoja de estilos que se declaran en la parte superior de la página maestra. Puede ver cómo se presentará la página principal de la vista al cambiar a vista de diseño. Haga clic en la pestaña diseño en la parte inferior izquierda del editor de código fuente (consulte la figura 2).
 
-
 [![Vista previa de una página maestra en el diseñador](creating-page-layouts-with-view-master-pages-cs/_static/image5.png)](creating-page-layouts-with-view-master-pages-cs/_static/image4.png)
 
 **Figura 02**: Vista previa de una página maestra en el diseñador ([haga clic aquí para ver imagen en tamaño completo](creating-page-layouts-with-view-master-pages-cs/_static/image6.png))
-
 
 ### <a name="creating-a-view-content-page"></a>Creación de una página de contenido de vista
 
 Después de crear una página maestra de la vista, puede crear vista de una o varias páginas de contenido basadas en la página principal de la vista. Por ejemplo, puede crear una página de contenido de la vista de índice para el controlador Home hace doble clic en la carpeta Views\Home, seleccionar **agregar, nuevo elemento**, seleccionando la **página de contenido de vista de MVC** plantilla, escriba el nombre Index.aspx y haga clic en el **agregar** (consulte la figura 3).
 
-
 [![Agregar una página de contenido de vista](creating-page-layouts-with-view-master-pages-cs/_static/image8.png)](creating-page-layouts-with-view-master-pages-cs/_static/image7.png)
 
 **Figura 03**: Agregar una página de contenido de vista ([haga clic aquí para ver imagen en tamaño completo](creating-page-layouts-with-view-master-pages-cs/_static/image9.png))
 
-
 Tras hacer clic en el botón Agregar, aparece un diálogo nuevo que le permite seleccionar una página maestra de la vista para asociar a la página de vista de contenido (consulte la figura 4). Puede navegar a la página maestra vista Site.master que creamos en la sección anterior.
-
 
 [![Seleccionar una página maestra](creating-page-layouts-with-view-master-pages-cs/_static/image11.png)](creating-page-layouts-with-view-master-pages-cs/_static/image10.png)
 
 **Figura 04**: Seleccionar una página maestra ([haga clic aquí para ver imagen en tamaño completo](creating-page-layouts-with-view-master-pages-cs/_static/image12.png))
-
 
 Después de crear una nueva página de contenido de vista basada en la página maestra Site.master, obtenga el archivo en el listado 2.
 
@@ -100,11 +91,9 @@ Por ejemplo, la vista de índice modificada en el listado 3 contiene sólo dos `
 
 Cuando se solicita la vista en el listado 3, representa la página en la figura 5. Tenga en cuenta que la vista presenta una página con dos columnas. Además, tenga en cuenta que el contenido de la página de contenido de la vista se combina con el contenido de la página principal de la vista
 
-
 [![La página de contenido de la vista de índice](creating-page-layouts-with-view-master-pages-cs/_static/image14.png)](creating-page-layouts-with-view-master-pages-cs/_static/image13.png)
 
 **Figura 05**: La página de contenido de la vista de índice ([haga clic aquí para ver imagen en tamaño completo](creating-page-layouts-with-view-master-pages-cs/_static/image15.png))
-
 
 ### <a name="modifying-view-master-page-content"></a>Modificar el contenido de la página de vista maestra
 
@@ -116,9 +105,7 @@ Hay dos maneras en que puede modificar el título mostrado por una página de co
 
 Cuando se representa la vista de índice en el explorador, el título deseado aparece en la barra de título del explorador:
 
-
 [![Barra de título del explorador](creating-page-layouts-with-view-master-pages-cs/_static/image17.png)](creating-page-layouts-with-view-master-pages-cs/_static/image16.png)
-
 
 Hay un requisito importante que debe satisfacer una página de vista maestra en orden para el atributo de título para que funcione. La página principal de la vista debe contener un `<head runat="server">` etiqueta en lugar de una normal `<head>` etiqueta para el encabezado. Si el `<head>` etiqueta no incluye el runat = atributo "server", a continuación, el título no aparecerá. La vista predeterminada incluye la página maestra `<head runat="server">` etiqueta.
 

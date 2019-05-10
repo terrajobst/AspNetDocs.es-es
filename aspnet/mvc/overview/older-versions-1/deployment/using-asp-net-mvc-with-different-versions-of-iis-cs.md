@@ -8,19 +8,18 @@ ms.date: 08/19/2008
 ms.assetid: b0cf4a34-2c1d-4717-bb54-ff029e722990
 msc.legacyurl: /mvc/overview/older-versions-1/deployment/using-asp-net-mvc-with-different-versions-of-iis-cs
 msc.type: authoredcontent
-ms.openlocfilehash: 0ca34f670202a35c627a514d3394fa430f5d8f26
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: 3b0a9509c0600f3598fd1218a7b383430548d4c0
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59396348"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65123242"
 ---
 # <a name="using-aspnet-mvc-with-different-versions-of-iis-c"></a>Usar ASP.NET MVC con distintas versiones de IIS (C#)
 
 por [Microsoft](https://github.com/microsoft)
 
 > En este tutorial, aprenderá a usar ASP.NET MVC y el enrutamiento de direcciones URL, con diferentes versiones de Internet Information Services. Aprenda estrategias distintas para usar ASP.NET MVC con IIS 7.0 (modo clásico), IIS 6.0 y versiones anteriores de IIS.
-
 
 El marco de MVC de ASP.NET depende de enrutamiento de ASP.NET para enrutar las solicitudes del explorador a acciones del controlador. Para sacar provecho de enrutamiento de ASP.NET, es posible que deba realizar pasos de configuración adicionales en el servidor web. Todo depende de la versión de Internet Information Services (IIS) y el modo de la aplicación de procesamiento de solicitudes.
 

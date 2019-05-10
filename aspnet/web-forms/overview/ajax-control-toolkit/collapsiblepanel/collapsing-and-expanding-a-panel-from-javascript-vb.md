@@ -8,12 +8,12 @@ ms.date: 06/02/2008
 ms.assetid: 298789b4-2964-49f5-a0a8-d4dbeb9ff2c2
 msc.legacyurl: /web-forms/overview/ajax-control-toolkit/collapsiblepanel/collapsing-and-expanding-a-panel-from-javascript-vb
 msc.type: authoredcontent
-ms.openlocfilehash: b41423cb1e587df121828b1e57045cabfede7cb5
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: f9e279e8700024f28cf589581f09a4bbd95118de
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59390836"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65133546"
 ---
 # <a name="collapsing-and-expanding-a-panel-from-javascript-vb"></a>Contraer y expandir un panel desde JavaScript (VB)
 
@@ -22,7 +22,6 @@ por [Christian Wenz](https://github.com/wenz)
 [Descargar código](http://download.microsoft.com/download/8/a/a/8aab3c3e-de6f-463f-805c-5fda567eef6e/CollapsiblePanel1.vb.zip) o [descargar PDF](http://download.microsoft.com/download/b/6/a/b6ae89ee-df69-4c87-9bfb-ad1eb2b23373/collapsiblepanel1VB.pdf)
 
 > El control CollapsiblePanel en ASP.NET AJAX Control Toolkit extiende un panel y lo proporciona la capacidad necesaria para contraer su contenido y volver a ampliar. Estas dos acciones también pueden activarse desde código JavaScript personalizado.
-
 
 ## <a name="overview"></a>Información general
 
@@ -63,7 +62,6 @@ Para cerrar o contraer el panel, el `_doClose()` método se debe ejecutar. Así 
 El tercer botón alterna el estado del panel: desde contraída en ampliado y viceversa. El `CollapsiblePanelExtender` expone el `toggle()` método que hace exactamente eso: invierte el estado del panel. Sin embargo hay también otro método (que se utiliza internamente el `toggle()` método): El `get_Collapsed()` método de la `CollapsiblePanelExtender()` nos indica si el panel se contrae o no. Dependiendo del valor devuelto de esta función, el panel es, a continuación, ya sea expandido (`_doOpen()` método) o se contrae (`_doClose()`) método:
 
 [!code-javascript[Main](collapsing-and-expanding-a-panel-from-javascript-vb/samples/sample8.js)]
-
 
 [![El tercer botón cambia el estado del panel: desde contraído expandida y back-](collapsing-and-expanding-a-panel-from-javascript-vb/_static/image2.png)](collapsing-and-expanding-a-panel-from-javascript-vb/_static/image1.png)
 

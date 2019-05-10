@@ -8,12 +8,12 @@ ms.date: 02/17/2014
 ms.assetid: a8aac1ac-89de-4415-afe0-97a41c6423d2
 msc.legacyurl: /web-pages/overview/routing/creating-readable-urls-in-aspnet-web-pages-sites
 msc.type: authoredcontent
-ms.openlocfilehash: bfce6120b76d68a3f212639eafa6aa091d7e345d
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: 832db8e144cab730f16c78f67c12feb9b7c92c7c
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59381788"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65131771"
 ---
 # <a name="creating-readable-urls-in-aspnet-web-pages-razor-sites"></a>Crear direcciones URL legibles en sitios de ASP.NET Web Pages (Razor)
 
@@ -33,7 +33,6 @@ por [Tom FitzMacken](https://github.com/tfitzmac)
 >   
 > 
 > Este tutorial también funciona con ASP.NET Web Pages 2.
-
 
 ## <a name="about-routing"></a>Acerca del enrutamiento
 
@@ -77,7 +76,6 @@ Si coincide con la búsqueda encuentra no exacta para *.cshtml* archivos en sus 
 > [!NOTE]
 > Para ser claros, las solicitudes de páginas específicas (es decir, las solicitudes que incluyen la *.cshtml* extensión de nombre de archivo) funcionan tal como se esperaría. Una solicitud como `http://www.contoso.com/a/b.cshtml` ejecutará la página *b.cshtml* perfectamente.
 
-
 Dentro de una página, puede obtener la información de ruta de acceso a través de la página `UrlData` propiedad, que es un diccionario. Imagine que tiene un archivo denominado *ViewCustomers.cshtml* y su sitio obtiene esta solicitud:
 
 `http://mysite.com/myWebSite/ViewCustomers/1000`
@@ -88,7 +86,6 @@ Como se describe en las reglas anteriores, la solicitud irá a la página. Dentr
 
 > [!NOTE]
 > Dado que el enrutamiento no implica que los nombres de archivo completo, puede haber ambigüedad si tiene páginas que tienen el mismo nombre pero diferentes extensiones de nombre de archivo (por ejemplo, *MyPage.cshtml* y *MyPage.html*) . Con el fin de evitar problemas con el enrutamiento, es mejor asegurarse de que no tienen páginas de su sitio cuyos nombres difieren solo en su extensión.
-
 
 <a id="Additional_Resources"></a>
 ## <a name="additional-resources"></a>Recursos adicionales

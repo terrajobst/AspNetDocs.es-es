@@ -8,12 +8,12 @@ ms.date: 05/04/2012
 ms.assetid: 07978d9d-341c-4524-bcba-62976f390f77
 msc.legacyurl: /web-forms/overview/deployment/web-deployment-in-the-enterprise/understanding-the-project-file
 msc.type: authoredcontent
-ms.openlocfilehash: d774a8e13e108d1be4c39e1e909d3d9683968a0d
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: f57d7597a1454a53f5e87b4d69eee8ec8972e37c
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59404928"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65121931"
 ---
 # <a name="understanding-the-project-file"></a>Descripción del archivo de proyecto
 
@@ -30,7 +30,6 @@ por [Jason Lee](https://github.com/jrjlee)
 > - Cómo entender los componentes clave de un archivo de proyecto.
 > - ¿Cómo puede usar los archivos de proyecto para compilar e implementar aplicaciones complejas.
 
-
 ## <a name="msbuild-and-the-project-file"></a>MSBuild y el archivo de proyecto
 
 Al crear y compilar soluciones en Visual Studio, Visual Studio utiliza MSBuild para compilar cada proyecto de la solución. Cada proyecto de Visual Studio incluye un archivo de proyecto de MSBuild, con una extensión de archivo que refleja el tipo de proyecto&#x2014;por ejemplo, un proyecto de C# (.csproj), un proyecto de Visual Basic.NET (.vbproj) o un proyecto de base de datos (.dbproj). Para compilar un proyecto, MSBuild debe procesar el archivo de proyecto asociado al proyecto. El archivo de proyecto es un documento XML que contiene toda la información y las instrucciones que MSBuild se necesita para compilar el proyecto, como el contenido para incluir los requisitos de la plataforma, información de versiones, servidor web o configuración del servidor de base de datos y la tareas que deben realizarse.
@@ -39,7 +38,6 @@ Archivos de proyecto de MSBuild se basan en el [esquema XML de MSBuild](https://
 
 > [!NOTE]
 > También puede usar archivos de proyecto de MSBuild con el servicio de Team Build en Team Foundation Server (TFS). Por ejemplo, puede usar archivos de proyecto en escenarios de integración continua (CI) para automatizar la implementación en un entorno de prueba cuando se proteja nuevo código. Para obtener más información, consulte [configurar Team Foundation Server para automatizar la implementación Web](../configuring-team-foundation-server-for-web-deployment/configuring-team-foundation-server-for-web-deployment.md).
-
 
 ### <a name="project-file-naming-conventions"></a>Convenciones de nomenclatura de archivo de proyecto
 
@@ -61,7 +59,6 @@ La buena noticia es que puede sacar partido de los puntos de integración que el
 > [!NOTE]
 > Para obtener más información sobre cómo funciona el proceso de implementación de aplicación web, consulte [proyecto de ASP.NET Web Application Deployment Overview](https://msdn.microsoft.com/library/dd394698.aspx).
 
-
 ## <a name="the-anatomy-of-a-project-file"></a>Anatomía de un archivo de proyecto
 
 Antes de examinar más detalladamente el proceso de compilación, es la pena dedicar unos minutos a familiarizarse con la estructura básica de un archivo de proyecto de MSBuild. En esta sección se proporciona información general de los elementos más comunes que encontrará cuando revise, editar o crear un archivo de proyecto. En concreto, aprenderá lo siguiente:
@@ -78,45 +75,33 @@ Esto muestra la relación entre los elementos clave de un archivo de proyecto de
 
 El [proyecto](https://msdn.microsoft.com/library/bcxfsh87.aspx) elemento es el elemento raíz de cada archivo de proyecto. Además de identificar el esquema XML para el archivo de proyecto, el **proyecto** elemento puede incluir atributos para especificar los puntos de entrada para el proceso de compilación. Por ejemplo, en el [solución de ejemplo de Contact Manager](the-contact-manager-solution.md), *Publish.proj* archivo Especifica que la compilación debe empezar por llamar el destino denominado **FullPublish**.
 
-
 [!code-xml[Main](understanding-the-project-file/samples/sample1.xml)]
-
 
 ### <a name="properties-and-conditions"></a>Propiedades y condiciones
 
 Normalmente necesita un archivo de proyecto proporcionar una gran cantidad de diferentes partes de información con el fin de generar e implementar los proyectos correctamente. Estos fragmentos de información podrían incluir nombres de servidor, las cadenas de conexión, credenciales, las configuraciones de compilación, rutas de acceso de archivo de origen y destino y cualquier otra información que van a incluir para admitir la personalización. En un archivo de proyecto, se deben definir las propiedades dentro de un [PropertyGroup](https://msdn.microsoft.com/library/t4w159bs.aspx) elemento. Propiedades de MSBuild constan de pares clave-valor. Dentro de la **PropertyGroup** elemento, el nombre del elemento define la clave de propiedad y el contenido del elemento define el valor de propiedad. Por ejemplo, podría definir propiedades denominadas **ServerName** y **ConnectionString** para almacenar una cadena de conexión y nombre de servidor estático.
 
-
 [!code-xml[Main](understanding-the-project-file/samples/sample2.xml)]
-
 
 Para recuperar un valor de propiedad, use el formato **$(***PropertyName***) ***.* Por ejemplo, para recuperar el valor de la **ServerName** propiedad, escribiría:
 
-
 [!code-powershell[Main](understanding-the-project-file/samples/sample3.ps1)]
-
 
 > [!NOTE]
 > Verá ejemplos de cómo y cuándo se debe usar los valores de propiedad más adelante en este tema.
 
-
 Incrustación de información como propiedades estáticas en un archivo de proyecto no siempre es el enfoque ideal para administrar el proceso de compilación. En muchos escenarios, deseará obtener la información de otros orígenes o permitir al usuario que proporcione la información desde el símbolo del sistema. MSBuild permite especificar cualquier valor de propiedad como un parámetro de línea de comandos. Por ejemplo, el usuario podría proporcionar un valor para **ServerName** cuando que se ejecuta MSBuild.exe desde la línea de comandos.
-
 
 [!code-console[Main](understanding-the-project-file/samples/sample4.cmd)]
 
-
 > [!NOTE]
 > Para obtener más información sobre los argumentos y modificadores que puede utilizar con MSBuild.exe, vea [referencia de línea de comandos de MSBuild](https://msdn.microsoft.com/library/ms164311.aspx).
-
 
 Puede usar la misma sintaxis de propiedad para obtener los valores de variables de entorno y las propiedades de proyecto integradas. Se define una gran cantidad de propiedades utilizadas para usted, y puede usarlos en los archivos de proyecto, incluido el nombre de parámetro pertinente. Por ejemplo, para recuperar la plataforma del proyecto actual&#x2014;por ejemplo, **x86** o **AnyCpu**&#x2014;puede incluir el **$(Platform)** referencia de propiedad en el archivo de proyecto. Para obtener más información, consulte [Macros para propiedades y comandos de compilación](https://msdn.microsoft.com/library/c02as0cs.aspx), [propiedades comunes de proyectos de MSBuild](https://msdn.microsoft.com/library/bb629394.aspx), y [propiedades reservadas](https://msdn.microsoft.com/library/ms164309.aspx).
 
 Las propiedades se utilizan a menudo junto con *condiciones*. La mayoría de los elementos de MSBuild admite la **condición** atributo, que le permite especificar los criterios que MSBuild debe evaluar el elemento. Por ejemplo, tenga en cuenta esta definición de propiedad:
 
-
 [!code-xml[Main](understanding-the-project-file/samples/sample5.xml)]
-
 
 Cuando MSBuild procesa esta definición de propiedad, en primer lugar comprueba para ver si un **$(OutputRoot)** valor de propiedad está disponible. Si el valor de propiedad está en blanco&#x2014;en otras palabras, el usuario no ha proporcionado un valor para esta propiedad&#x2014;la condición se evalúa como **true** y el valor de propiedad se establece en **... \Publish\Out**. Si el usuario ha proporcionado un valor para esta propiedad, la condición se evalúa como **false** y no se utiliza el valor de propiedad estática.
 
@@ -126,27 +111,20 @@ Para obtener más información sobre las diferentes maneras en que puede especif
 
 Uno de los roles del archivo del proyecto importante es definir las entradas en el proceso de compilación. Normalmente, estas entradas son archivos&#x2014;código archivos, archivos de configuración, archivos de comandos y otros archivos que necesita para procesar o copiar como parte del proceso de compilación. En el esquema de proyecto de MSBuild, estas entradas se representan mediante [elemento](https://msdn.microsoft.com/library/ms164283.aspx) elementos. En un archivo de proyecto, se deben definir los elementos dentro de un [ItemGroup](https://msdn.microsoft.com/library/646dk05y.aspx) elemento. Al igual que **propiedad** elementos, puede denominar un **elemento** elemento que desee. Sin embargo, debe especificar un **Include** atributo para identificar el archivo o comodín que representa el elemento.
 
-
 [!code-xml[Main](understanding-the-project-file/samples/sample6.xml)]
-
 
 Si especifica varios **elemento** elementos con el mismo nombre, en realidad está creando una lista de recursos con nombre. Una buena forma de ver esto en acción es echar una mirada dentro de uno de los archivos de proyecto que crea Visual Studio. Por ejemplo, el *ContactManager.Mvc.csproj* archivo en la solución de ejemplo incluye una gran cantidad de grupos de elementos, cada uno con varios con el mismo nombre **elemento** elementos.
 
-
 [!code-xml[Main](understanding-the-project-file/samples/sample7.xml)]
-
 
 De este modo, el archivo de proyecto es indicar a MSBuild para crear listas de archivos que deben procesarse en la misma manera&#x2014;el **referencia** lista incluye los ensamblados que deben cumplirse para una compilación correcta, el  **Compilar** lista incluye archivos de código que se deben compilar, y el **contenido** lista incluye los recursos que deben copiarse sin modificaciones. Veremos cómo el proceso de compilación hace referencia y utiliza estos elementos más adelante en este tema.
 
 También pueden incluir elementos [ItemMetadata](https://msdn.microsoft.com/library/ms164284.aspx) elementos secundarios. Estos son pares de clave-valor definidos por el usuario y básicamente representan las propiedades que son específicas de ese elemento. Por ejemplo, muchos de los **compilar** incluyen elementos en el archivo de proyecto **DependentUpon** elementos secundarios.
 
-
 [!code-xml[Main](understanding-the-project-file/samples/sample8.xml)]
-
 
 > [!NOTE]
 > Además de metadatos de elementos creados por el usuario, todos los elementos se asignan varios metadatos comunes en la creación. Para obtener más información, consulte [Metadatos de elementos conocidos](https://msdn.microsoft.com/library/ms164313.aspx).
-
 
 Puede crear **ItemGroup** elementos en el nivel raíz **proyecto** elemento o dentro de específico **destino** elementos. **ItemGroup** también admiten elementos **condición** atributos, que le permite adaptar las entradas en el proceso de compilación según condiciones como la plataforma o configuración del proyecto.
 
@@ -163,30 +141,21 @@ En el esquema de MSBuild, un [tarea](https://msdn.microsoft.com/library/77f2hx1s
 > [!NOTE]
 > Para obtener detalles completos de las tareas que están disponibles de fábrica, consulte [referencia de tareas de MSBuild](https://msdn.microsoft.com/library/7z253716.aspx). Para obtener más información sobre las tareas, incluida la forma de crear sus propias tareas personalizadas, vea [las tareas de MSBuild](https://msdn.microsoft.com/library/ms171466.aspx).
 
-
 Las tareas siempre deben incluirse dentro [destino](https://msdn.microsoft.com/library/t50z2hka.aspx) elementos. Un **destino** elemento es un conjunto de uno o más tareas que se ejecutan secuencialmente y un archivo de proyecto puede contener varios destinos. Cuando desea ejecutar una tarea o un conjunto de tareas, invoque el destino que los contiene. Por ejemplo, suponga que tiene un archivo de proyecto simple registra un mensaje.
-
 
 [!code-xml[Main](understanding-the-project-file/samples/sample9.xml)]
 
-
 Puede invocar el destino de la línea de comandos mediante la **/t** modificador para especificar el destino.
-
 
 [!code-console[Main](understanding-the-project-file/samples/sample10.cmd)]
 
-
 Como alternativa, puede agregar un **DefaultTargets** atributo a la **proyecto** elemento para especificar los destinos que se desean invocar.
-
 
 [!code-xml[Main](understanding-the-project-file/samples/sample11.xml)]
 
-
 En este caso, no es necesario especificar el destino de la línea de comandos. Simplemente puede especificar el archivo de proyecto, y MSBuild que invocará el **FullPublish** destino por usted.
 
-
 [!code-console[Main](understanding-the-project-file/samples/sample12.cmd)]
-
 
 Destinos y tareas pueden incluir **condición** atributos. Por lo tanto, puede elegir omitir todos destinos o tareas individuales si se cumplen ciertas condiciones.
 
@@ -198,12 +167,9 @@ Por lo general, al crear tareas útiles y destinos, necesita hacer referencia a 
 > [!NOTE]
 > Recuerde que si crea varios elementos con el mismo nombre, va a compilar una lista. En cambio, si crea varias propiedades con el mismo nombre, el último valor de propiedad que proporcione sobrescribirá todas las propiedades anteriores con el mismo nombre&#x2014;una propiedad sólo puede contener un valor único.
 
-
 Por ejemplo, en el *Publish.proj* de archivos en la solución de ejemplo, eche un vistazo a la **BuildProjects** destino.
 
-
 [!code-xml[Main](understanding-the-project-file/samples/sample13.xml)]
-
 
 En este ejemplo, se pueden observar estos puntos clave:
 
@@ -221,7 +187,6 @@ También puede ver que el **MSBuild** tarea invoca un destino denominado **compi
 > [!NOTE]
 > Para obtener más información sobre los destinos, consulte [destinos de MSBuild](https://msdn.microsoft.com/library/ms171462.aspx).
 
-
 ## <a name="splitting-project-files-to-support-multiple-environments"></a>Dividir archivos de proyecto para admitir varios entornos
 
 Suponga que desea ser capaz de implementar una solución en varios entornos, como servidores de prueba, ensayo plataformas y entornos de producción. La configuración puede variar considerablemente entre estos entornos&#x2014;no solo en cuanto a los nombres de servidor, las cadenas de conexión y así sucesivamente, sino también potencialmente en cuanto a las credenciales, la configuración de seguridad y muchos otros factores. Si tiene que hacer esto con regularidad, no es muy conveniente modificar varias propiedades en el archivo de proyecto cada vez que cambie el entorno de destino. Ni es una solución ideal para requerir una lista interminable de valores de propiedad que se proporcionan para el proceso de compilación.
@@ -233,15 +198,11 @@ Afortunadamente, hay una alternativa. MSBuild permite dividir la configuración 
 
 Ahora observe que la *Publish.proj* archivo incluye una [importación](https://msdn.microsoft.com/library/92x05xfs.aspx) elemento inmediatamente debajo de la apertura **proyecto** etiqueta.
 
-
 [!code-xml[Main](understanding-the-project-file/samples/sample16.xml)]
-
 
 El **importar** elemento se usa para importar el contenido de otro archivo de proyecto de MSBuild en el archivo de proyecto de MSBuild actual. En este caso, el **TargetEnvPropsFile** parámetro proporciona el nombre de archivo del archivo del proyecto que desea importar. Puede proporcionar un valor para este parámetro al ejecutar MSBuild.
 
-
 [!code-console[Main](understanding-the-project-file/samples/sample17.cmd)]
-
 
 Esto combina eficazmente el contenido de los dos archivos en un único archivo de proyecto. Con este enfoque, puede crear un archivo de proyecto que contiene la configuración de compilación universal y varios archivos de proyecto adicionales que contiene propiedades específicas del entorno. Como resultado, basta con ejecutar un comando con un valor de parámetro diferentes le permite implementar la solución en un entorno diferente.
 
@@ -251,7 +212,6 @@ División de los archivos de proyecto de esta manera es una buena práctica para
 
 > [!NOTE]
 > Para obtener instrucciones sobre cómo personalizar los archivos de proyecto específicos del entorno para sus propios entornos de servidor, consulte [configurar propiedades de implementación de un entorno de destino](../configuring-server-environments-for-web-deployment/configuring-deployment-properties-for-a-target-environment.md).
-
 
 ## <a name="conclusion"></a>Conclusión
 

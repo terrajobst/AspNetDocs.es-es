@@ -8,17 +8,16 @@ ms.date: 09/28/2011
 ms.assetid: 6b0f1fd7-6768-4549-ae9c-be9131103c4d
 msc.legacyurl: /mvc/overview/older-versions-1/contact-manager
 msc.type: chapter
-ms.openlocfilehash: 4faccca531b330cc52c338bae98fab484de753f9
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: 3ec9811be5afc00a126936529480082bf2d620e9
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59379006"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65124143"
 ---
 # <a name="contact-manager"></a>Contact Manager
 
 > Cómo crear una aplicación de administración de contactos completa desde el principio para finalizar.
-
 
 - [Iteración n.º 1: Crear la aplicación (C#)](iteration-1-create-the-application-cs.md)
 - [Iteración n.º 2: Hacer que la aplicación tenga un buen aspecto (C#)](iteration-2-make-the-application-look-nice-cs.md)

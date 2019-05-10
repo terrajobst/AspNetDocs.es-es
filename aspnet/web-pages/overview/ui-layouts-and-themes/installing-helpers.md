@@ -8,12 +8,12 @@ ms.date: 02/18/2014
 ms.assetid: 5e968ead-906a-45ea-ac2a-c70e57e1a9b1
 msc.legacyurl: /web-pages/overview/ui-layouts-and-themes/installing-helpers
 msc.type: authoredcontent
-ms.openlocfilehash: 3ffb2f88fd8d2ad32fb8ea7d476ca10fdd9ac430
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: 41e33c04a53a6ad257c3937cdadcec767e9217c8
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59398337"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65124154"
 ---
 # <a name="installing-a-helper-in-an-aspnet-web-pages-razor-site"></a>Instalar una aplicación auxiliar en un sitio Web de ASP.NET Pages (Razor)
 
@@ -30,7 +30,6 @@ por [Tom FitzMacken](https://github.com/tfitzmac)
 > 
 > 
 > - WebMatrix 3
-
 
 ## <a name="overview-of-helpers"></a>Información general de las aplicaciones auxiliares
 
@@ -57,7 +56,6 @@ La versión más reciente de la API de Twitter no es compatible con la aplicaci�
 
 <a id="Additional_Resources"></a>
 ## <a name="additional-resources"></a>Recursos adicionales
-
 
 [Presentación de ASP.NET Web Pages 2: conceptos básicos de programación](../getting-started/introducing-razor-syntax-c.md)
 

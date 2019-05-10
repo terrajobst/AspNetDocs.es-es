@@ -8,12 +8,12 @@ ms.date: 10/07/2008
 ms.assetid: d6e758b6-6571-484d-a132-34ee6c47747a
 msc.legacyurl: /mvc/overview/older-versions-1/models-data/displaying-a-table-of-database-data-cs
 msc.type: authoredcontent
-ms.openlocfilehash: 99b18de33e266adb626f4ab53ff20b1f52102900
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: c5ee59873468b4928b45ec586386e28cbe94c728
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59417590"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65122437"
 ---
 # <a name="displaying-a-table-of-database-data-c"></a>Mostrar una tabla de los datos de la base de datos (C#)
 
@@ -23,7 +23,6 @@ por [Microsoft](https://github.com/microsoft)
 
 > En este tutorial, muestran dos métodos para mostrar un conjunto de registros de base de datos. Muestran dos métodos para dar formato a un conjunto de registros de base de datos en una tabla HTML. En primer lugar, voy a mostrar cómo dar formato a los registros de base de datos directamente dentro de una vista. A continuación, demuestro cómo puede sacar partido de parciales al dar formato a los registros de la base de datos.
 
-
 El objetivo de este tutorial es explicar cómo se puede mostrar una tabla HTML de la base de datos en una aplicación ASP.NET MVC. En primer lugar, obtenga información sobre cómo usar las herramientas de scaffolding incluidas en Visual Studio para generar una vista que muestra automáticamente un conjunto de registros. A continuación, obtenga información sobre cómo usar una parcial como una plantilla al dar formato a los registros de la base de datos.
 
 ## <a name="create-the-model-classes"></a>Crear las clases del modelo
@@ -32,7 +31,6 @@ Vamos a mostrar el conjunto de registros de la tabla de base de datos de pelícu
 
 <a id="0.3_table01"></a>
 
-
 | **Nombre de columna** | **Tipo de datos** | **Permitir valores null** |
 | --- | --- | --- |
 | Id. | Valor int. | False |
@@ -40,13 +38,11 @@ Vamos a mostrar el conjunto de registros de la tabla de base de datos de pelícu
 | Director | NVarchar(50) | False |
 | DateReleased | DateTime | False |
 
-
 Para representar la tabla de películas en nuestra aplicación de ASP.NET MVC, necesitamos crear una clase de modelo. En este tutorial, usamos Microsoft Entity Framework para crear nuestras clases de modelo.
 
 > [!NOTE] 
 > 
 > En este tutorial, usamos Microsoft Entity Framework. Sin embargo, es importante entender que puede usar una variedad de tecnologías diferentes para interactuar con una base de datos desde una aplicación ASP.NET MVC, además de LINQ to SQL, NHibernate o ADO.NET.
-
 
 Siga estos pasos para iniciar al Asistente para Entity Data Model:
 
@@ -60,19 +56,15 @@ Tras hacer clic en el botón Agregar, el Asistente para Entity Data Model aparec
 2. En el **elegir la conexión de datos** paso, utilice el *MoviesDB.mdf* conexión de datos y el nombre *MoviesDBEntities* para la configuración de conexión. Haga clic en el **siguiente** botón.
 3. En el **elija los objetos de base de datos** paso, expanda el nodo tablas, seleccione la tabla de películas. Escriba el espacio de nombres *modelos* y haga clic en el **finalizar** botón.
 
-
 [![Creación de LINQ a las clases SQL](displaying-a-table-of-database-data-cs/_static/image1.jpg)](displaying-a-table-of-database-data-cs/_static/image1.png)
 
 **Figura 01**: Creación de LINQ a las clases SQL ([haga clic aquí para ver imagen en tamaño completo](displaying-a-table-of-database-data-cs/_static/image2.png))
 
-
 Después de completar al Asistente para Entity Data Model, se abre el Entity Data Model Designer. El diseñador debe mostrar la entidad de películas (consulte la figura 2).
-
 
 [![El Entity Data Model Designer](displaying-a-table-of-database-data-cs/_static/image2.jpg)](displaying-a-table-of-database-data-cs/_static/image3.png)
 
 **Figura 02**: El Entity Data Model Designer ([haga clic aquí para ver imagen en tamaño completo](displaying-a-table-of-database-data-cs/_static/image4.png))
-
 
 Es necesario realizar un cambio antes de continuar. El Asistente para Entity Data genera una clase de modelo denominada *películas* que representa la tabla de base de datos de películas. Dado que vamos a usar la clase de películas para representar una película concreta, es necesario modificar el nombre de la clase se *película* en lugar de *películas* (singular lugar plural).
 
@@ -82,19 +74,15 @@ Haga doble clic en el nombre de la clase en la superficie del diseñador y cambi
 
 Ahora que tenemos una forma de representar nuestros registros de base de datos, podemos crear un controlador que devuelve la colección de películas. En la ventana Explorador de soluciones de Visual Studio, haga clic en la carpeta Controllers y seleccione la opción de menú **Add, controlador** (consulte la figura 3).
 
-
 [![El controlador menú Agregar](displaying-a-table-of-database-data-cs/_static/image3.jpg)](displaying-a-table-of-database-data-cs/_static/image5.png)
 
 **Figura 03**: Agregar controlador de menú ([haga clic aquí para ver imagen en tamaño completo](displaying-a-table-of-database-data-cs/_static/image6.png))
 
-
 Cuando el **Agregar controlador** aparece el cuadro de diálogo, escriba el nombre del controlador MovieController (consulte la figura 4). Haga clic en el **agregar** para agregar el nuevo controlador.
-
 
 [![El cuadro de diálogo Agregar controlador](displaying-a-table-of-database-data-cs/_static/image4.jpg)](displaying-a-table-of-database-data-cs/_static/image7.png)
 
 **Figura 04**: El cuadro de diálogo Agregar controlador ([haga clic aquí para ver imagen en tamaño completo](displaying-a-table-of-database-data-cs/_static/image8.png))
-
 
 Es necesario modificar la acción de Index() expuesta por el controlador de película para que devuelva el conjunto de registros de base de datos. Modificar el controlador de modo que quede como el controlador en el listado 1.
 
@@ -116,19 +104,15 @@ Compile la aplicación seleccionando la opción de menú **crear, compilar soluc
 
 Haga clic en la acción de Index() y seleccione la opción de menú **agregar vista** (consulte la figura 5).
 
-
 [![Agregar una vista](displaying-a-table-of-database-data-cs/_static/image5.jpg)](displaying-a-table-of-database-data-cs/_static/image9.png)
 
 **Figura 05**: Agregar una vista ([haga clic aquí para ver imagen en tamaño completo](displaying-a-table-of-database-data-cs/_static/image10.png))
 
-
 En el **agregar vista** cuadro de diálogo, active la casilla etiquetada **crear una vista fuertemente tipada**. Seleccione la clase Movie como el **Ver clase de datos**. Seleccione *lista* como el **ver contenido** (consulte la figura 6). Al seleccionar estas opciones, se generará una vista fuertemente tipada que muestra una lista de películas.
-
 
 [![El cuadro de diálogo Agregar vista](displaying-a-table-of-database-data-cs/_static/image6.jpg)](displaying-a-table-of-database-data-cs/_static/image11.png)
 
 **Figura 06**: El cuadro de diálogo Agregar vista ([haga clic aquí para ver imagen en tamaño completo](displaying-a-table-of-database-data-cs/_static/image12.png))
-
 
 Tras hacer clic en el **agregar** botón, la vista en el listado 2 se genera automáticamente. Esta vista contiene el código necesario para recorrer en iteración la colección de películas y mostrar las propiedades de una película.
 
@@ -138,11 +122,9 @@ Tras hacer clic en el **agregar** botón, la vista en el listado 2 se genera aut
 
 Puede ejecutar la aplicación seleccionando la opción de menú **depurar, Iniciar depuración** (o presionar la tecla F5). Se ejecuta la aplicación, inicia Internet Explorer. Si navega a la dirección URL de /Movie verá la página en la figura 7.
 
-
 [![Una tabla de películas](displaying-a-table-of-database-data-cs/_static/image7.jpg)](displaying-a-table-of-database-data-cs/_static/image13.png)
 
 **Figura 07**: Una tabla de películas ([haga clic aquí para ver imagen en tamaño completo](displaying-a-table-of-database-data-cs/_static/image14.png))
-
 
 Si no le gusta nada acerca de la apariencia de la cuadrícula de registros de base de datos en la figura 7, a continuación, simplemente puede modificar la vista de índice. Por ejemplo, puede cambiar el *DateReleased* encabezado a *fecha de lanzamiento* mediante la modificación de la vista de índice.
 
@@ -178,9 +160,7 @@ La vista en el listado 4 contiene un bucle foreach que itera a través de todas 
 
 La vista de índice modificada representa la tabla HTML muy misma de los registros de base de datos. Sin embargo, la vista se ha simplificado en gran medida.
 
-
 El método RenderPartial() es diferente que la mayoría de los otros métodos auxiliares, porque no devuelve una cadena. Por lo tanto, debe llamar el método RenderPartial() mediante &lt;% Html.RenderPartial(); %&gt; en lugar de &lt;% = Html.RenderPartial(); %&gt;.
-
 
 ## <a name="summary"></a>Resumen
 

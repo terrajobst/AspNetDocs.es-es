@@ -8,12 +8,12 @@ ms.date: 02/14/2014
 ms.assetid: 961e525b-7700-469e-8a68-d7010b6fb68c
 msc.legacyurl: /web-pages/overview/performance-and-traffic/15-caching-to-improve-the-performance-of-your-website
 msc.type: authoredcontent
-ms.openlocfilehash: 10b853966ba80b673e1a6786987893f919369e7a
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: 01796d3ca699a6af5d9162b22a926551435c2040
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59412910"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65134590"
 ---
 # <a name="caching-data-in-an-aspnet-web-pages-razor-site-for-better-performance"></a>Para mejorar el rendimiento de almacenamiento en caché datos en un sitio Web de ASP.NET Pages (Razor)
 
@@ -38,7 +38,6 @@ por [Tom FitzMacken](https://github.com/tfitzmac)
 > 
 > Este tutorial también funciona con ASP.NET Web Pages 2.
 
-
 Cada vez que un usuario solicita una página del sitio, el servidor web tiene que realizar algún trabajo con el fin de satisfacer la solicitud. Algunos de sus páginas, el servidor podría tener que realizar las tareas que toman (relativamente) mucho tiempo, como la recuperación de datos desde una base de datos. Incluso si estas tareas no tardan tiempo en términos absolutos, si su sitio experimenta una gran cantidad de tráfico, puede agregar una serie completa de las solicitudes individuales que hacer que el servidor web realizar la tarea complicada o lenta hasta una gran cantidad de trabajo. En última instancia, esto puede afectar al rendimiento del sitio.
 
 Es una manera de mejorar el rendimiento de su sitio Web en casos como este en caché los datos. Si su sitio obtiene repetir las solicitudes de la misma información y la información no deben modificarse para cada persona y no es tiempo confidencial, en lugar de volver a capturar o volver a calcularse, puede capturar los datos una vez y, a continuación, almacenar los resultados. La próxima vez que llega una solicitud para que obtener información, simplemente obtenerlo fuera de la memoria caché.
@@ -47,7 +46,6 @@ En general, se almacenan en caché información que no cambia con frecuencia. Al
 
 > [!NOTE]
 > Las entradas de la memoria caché podrían quitarse por motivos de distinto que han caducado. Por ejemplo, el servidor web podría temporalmente quede sin memoria y una manera de reclamar la memoria es generando entradas de la memoria caché. Como verá, incluso si ha poner información en la caché, tendrá que comprobar para asegurarse de que sigue ahí es cuando los necesite.
-
 
 Imagine que su sitio Web tiene una página que muestra la temperatura actual y la previsión meteorológica. Para obtener este tipo de información, puede enviar una solicitud a un servicio externo. Puesto que esta información no cambia mucho (dentro de un período de tiempo de dos horas, por ejemplo) y ya que las llamadas externas requieren tiempo y ancho de banda, es un buen candidato para almacenar en caché.
 
@@ -77,7 +75,6 @@ ASP.NET incluye un `WebCache` auxiliar que facilita agregar almacenamiento en ca
 
 <a id="Additional_Resources"></a>
 ## <a name="additional-resources"></a>Recursos adicionales
-
 
 - [Mostrar datos en un gráfico](https://go.microsoft.com/fwlink/?LinkId=202895)
 - [Referencia de API WebCache](https://msdn.microsoft.com/library/system.web.helpers.webcache(v=vs.99).aspx) (MSDN)

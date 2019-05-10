@@ -8,19 +8,18 @@ ms.date: 11/13/2013
 ms.assetid: ca26e5bb-630e-41d2-8512-2a9386c431cb
 msc.legacyurl: /visual-studio/overview/2012/aspnet-and-web-tools-20131-for-visual-studio-2012
 msc.type: authoredcontent
-ms.openlocfilehash: 17315dbbbdc08412e4e928256783c221a8a2cb20
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: 260af1018064d60d80cbb1002001f28c4daffffd
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59406813"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65126152"
 ---
 # <a name="release-notes-for-aspnet-and-web-tools-20131-for-visual-studio-2012"></a>Notas de la versión de ASP.NET and Web Tools 2013.1 para Visual Studio 2012
 
 por [Microsoft](https://github.com/microsoft)
 
 > Este documento describe la versión de ASP.NET y Web Tools 2013.1 para Visual Studio 2012.
-
 
 ## <a name="contents"></a>Contenido
 

@@ -8,12 +8,12 @@ ms.date: 10/07/2008
 ms.assetid: f96f4800-19ef-44c0-b457-55e777eb5de8
 msc.legacyurl: /mvc/overview/older-versions-1/views/creating-custom-html-helpers-vb
 msc.type: authoredcontent
-ms.openlocfilehash: 1f36bffeda49c1777e964dc5330cbb473b01c1a9
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: 667867647fea75ddfa5881b73ea3c5b28c8135a5
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59421568"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65117389"
 ---
 # <a name="creating-custom-html-helpers-vb"></a>Crear asistentes de HTML personalizados (VB)
 
@@ -22,7 +22,6 @@ por [Microsoft](https://github.com/microsoft)
 [Descargar PDF](http://download.microsoft.com/download/1/1/f/11f721aa-d749-4ed7-bb89-a681b68894e6/ASPNET_MVC_Tutorial_9_VB.pdf)
 
 > El objetivo de este tutorial es mostrar cómo puede crear aplicaciones auxiliares de HTML personalizado que puede usar en las vistas MVC. Aprovechando las ventajas de las aplicaciones auxiliares HTML, puede reducir la cantidad de una mecanografía tediosa de etiquetas HTML que debe realizar para crear una página HTML estándar.
-
 
 El objetivo de este tutorial es mostrar cómo puede crear aplicaciones auxiliares de HTML personalizado que puede usar en las vistas MVC. Aprovechando las ventajas de las aplicaciones auxiliares HTML, puede reducir la cantidad de una mecanografía tediosa de etiquetas HTML que debe realizar para crear una página HTML estándar.
 
@@ -48,11 +47,9 @@ El marco de ASP.NET MVC incluye el siguiente conjunto de aplicaciones auxiliares
 
 Por ejemplo, considere el formulario en el listado 1. Este formulario se representa con la Ayuda de dos de las aplicaciones auxiliares de HTML estándar (consulte la figura 1). Este formulario utiliza la `Html.BeginForm()` y `Html.TextBox()` métodos auxiliares.
 
-
 [![Representa la página con las aplicaciones auxiliares HTML](creating-custom-html-helpers-vb/_static/image2.png)](creating-custom-html-helpers-vb/_static/image1.png)
 
 **Figura 01**: Representa la página con las aplicaciones auxiliares HTML ([haga clic aquí para ver imagen en tamaño completo](creating-custom-html-helpers-vb/_static/image3.png))
-
 
 **Listado 1: `Views\Home\Index.aspx`**
 
@@ -103,11 +100,9 @@ En segundo lugar, tenga en cuenta que el primer parámetro de la `Label()` méto
 
 Después de crear un método de extensión y compilar la aplicación correctamente, el método de extensión aparece en Intellisense en Visual Studio, como todos los otros métodos de una clase (consulte la figura 2). La única diferencia es que dicha extensión se muestran métodos con un símbolo especial junto a ellos (un icono de una flecha hacia abajo).
 
-
 [![Mediante el método de extensión Html.Label()](creating-custom-html-helpers-vb/_static/image5.png)](creating-custom-html-helpers-vb/_static/image4.png)
 
 **Figura 02**: Mediante el método de extensión Html.Label() ([haga clic aquí para ver imagen en tamaño completo](creating-custom-html-helpers-vb/_static/image6.png))
-
 
 La vista de índice modificada en el listado 4 usa el método de extensión Html.Label() para representar todos sus &lt;etiqueta&gt; etiquetas.
 

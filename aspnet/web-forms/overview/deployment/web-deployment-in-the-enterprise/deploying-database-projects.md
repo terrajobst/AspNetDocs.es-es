@@ -8,12 +8,12 @@ ms.date: 05/04/2012
 ms.assetid: 832f226a-1aa3-4093-8c29-ce4196793259
 msc.legacyurl: /web-forms/overview/deployment/web-deployment-in-the-enterprise/deploying-database-projects
 msc.type: authoredcontent
-ms.openlocfilehash: f5b7cecdd1a8dbd9be1bd781cec31c53c9096546
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: 221808758492aedb8e8329364e511df28fd11105
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59383231"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65119312"
 ---
 # <a name="deploying-database-projects"></a>Implementar proyectos de base de datos
 
@@ -23,7 +23,6 @@ por [Jason Lee](https://github.com/jrjlee)
 
 > [!NOTE]
 > En muchos escenarios de implementación de enterprise, necesita la capacidad de publicar actualizaciones incrementales en una base de datos implementada. La alternativa consiste en volver a crear la base de datos en cada implementación, lo que significa que se pierde ningún dato en la base de datos existente. Cuando se trabaja con Visual Studio 2010, usando VSDBCMD es el enfoque recomendado para la publicación de base de datos incrementales. Sin embargo, la próxima versión de Visual Studio y la canalización de publicación de Web (WPP) incluirá las herramientas, que admite la publicación incremental directamente.
-
 
 Si abre la solución de ejemplo de Contact Manager en Visual Studio 2010, verá que el proyecto de base de datos incluye una carpeta de las propiedades que contiene cuatro archivos.
 
@@ -81,9 +80,7 @@ El resto de este tema describe el uso de VSDBCMD con MSBuild para implementar pr
 
 La utilidad VSDBCMD le permite implementar una base de datos con el esquema de base de datos (el archivo .dbschema) o el manifiesto de implementación (el archivo .deploymanifest). En la práctica, casi siempre usará el manifiesto de implementación, como el manifiesto de implementación le permite proporcionar los valores predeterminados para las distintas propiedades de implementación e identificar cualquier script SQL anterior o posterior a la implementación que desea ejecutar. Por ejemplo, este comando VSDBCMD se usa para implementar el **ContactManager** base de datos a un servidor de base de datos en un entorno de prueba:
 
-
 [!code-console[Main](deploying-database-projects/samples/sample1.cmd)]
-
 
 En este caso:
 
@@ -107,21 +104,17 @@ El comportamiento de la **/dd** o **/DeployToDatabase** conmutador depende de si
 
 Si usa un archivo .deploymanifest, el comportamiento es mucho más complicado. Esto es porque el archivo .deploymanifest contiene un nombre de propiedad **DeployToDatabase** que también determina si se ha implementado la base de datos.
 
-
 [!code-xml[Main](deploying-database-projects/samples/sample2.xml)]
-
 
 El valor de esta propiedad se establece según las propiedades del proyecto de base de datos. Si establece la **implementar acción** a **crear un script de implementación (. SQL)**, el valor será **False**. Si establece la **implementar acción** a **crear un script de implementación (. SQL) e implementar en la base de datos**, el valor será **True**.
 
 > [!NOTE]
 > Estos valores están asociados con una plataforma y configuración de compilación específica. Por ejemplo, si establece la configuración para el **depurar** configuración y, a continuación, publicar utilizando la **versión** configuración, no se usará la configuración.
 
-
 ![](deploying-database-projects/_static/image3.png)
 
 > [!NOTE]
 > En este escenario, el **implementar acción** siempre debe establecerse en **crear un script de implementación (. SQL)**, ya que no desea que Visual Studio 2010 para implementar la base de datos. En otras palabras, el **DeployToDatabase** propiedad siempre debe ser **False**.
-
 
 Cuando un **DeployToDatabase** propiedad se especifica, el **/dd** conmutador solo invalidará la propiedad si el valor de propiedad es **false**:
 

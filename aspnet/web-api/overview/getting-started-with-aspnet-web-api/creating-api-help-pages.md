@@ -9,12 +9,12 @@ ms.custom: seoapril2019
 ms.assetid: 0150e67b-c50d-4613-83ea-7b4ef8cacc5a
 msc.legacyurl: /web-api/overview/getting-started-with-aspnet-web-api/creating-api-help-pages
 msc.type: authoredcontent
-ms.openlocfilehash: e3f6a9b8a6835b034a075d580cd9a33136969990
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: 8308dab8bd66aa8f5a3c5fb4133fc7a3df78f671
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59395022"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65125241"
 ---
 # <a name="creating-help-pages-for-aspnet-web-api"></a>Crear páginas de ayuda para ASP.NET Web API
 
@@ -92,7 +92,6 @@ A continuación, abra el código para el `ValuesController` controlador de API, 
 
 > [!NOTE]
 > Sugerencia: Si se sitúe el símbolo de intercalación en la línea antes del método y escribe tres barras diagonales, Visual Studio inserta automáticamente los elementos XML. A continuación, puede rellenar los espacios en blanco.
-
 
 Ahora compilar y ejecutar la aplicación de nuevo y vaya a las páginas de ayuda. Las cadenas de documentación deben aparecer en la tabla de API.
 

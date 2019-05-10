@@ -8,12 +8,12 @@ ms.date: 01/27/2009
 ms.assetid: 2dcb44a4-5cbf-4d62-b363-718104082d86
 msc.legacyurl: /mvc/overview/older-versions-1/overview/asp-net-mvc-overview
 msc.type: authoredcontent
-ms.openlocfilehash: 149312e2ddf0a5023a4a12f5b05852f7da6b18f8
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: 73965c71f37de13e3813df089a253fde528ea7ee
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59418175"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65128223"
 ---
 # <a name="aspnet-mvc-overview"></a>Información general sobre ASP.NET MVC
 
@@ -21,18 +21,15 @@ por [Microsoft](https://github.com/microsoft)
 
 > Obtenga información sobre las diferencias entre la aplicación MVC de ASP.NET y aplicaciones de formularios Web Forms de ASP.NET. Obtenga información sobre cómo decidir cuándo se debe compilar una aplicación ASP.NET MVC.
 
-
 El modelo de arquitectura Model-View-Controller (MVC) separa una aplicación en tres componentes principales: el modelo, la vista y el controlador. El marco de ASP.NET MVC proporciona una alternativa al modelo de formularios Web Forms ASP.NET para crear aplicaciones Web basadas en MVC. El marco de ASP.NET MVC es un marco de presentación de poca que (al igual que con las aplicaciones basadas en formularios Web Forms) se integra con las características ASP.NET existentes, como páginas maestras y la autenticación basada en pertenencia. El marco de MVC se define en el **System.Web.Mvc** espacio de nombres y es una pieza fundamental admitida de la **System.Web** espacio de nombres.   
   
 MVC es un patrón de diseño estándar que muchos desarrolladores están familiarizados con. Algunos tipos de aplicaciones Web se beneficiarán del marco de MVC. Otros continuará con el patrón de aplicación de ASP.NET tradicional basada en formularios Web Forms y devoluciones de datos. Otros tipos de aplicaciones Web combinarán las dos estrategias; no excluye a la otra.   
   
 El marco de MVC incluye los siguientes componentes:
 
-
 [![Invocar una acción de controlador que espera un valor de parámetro](asp-net-mvc-overview/_static/image1.jpg)](asp-net-mvc-overview/_static/image1.png)
 
 **Figura 01**: Invocar una acción de controlador que espera un valor de parámetro ([haga clic aquí para ver imagen en tamaño completo](asp-net-mvc-overview/_static/image2.png))
-
 
 - **Modelos**. Objetos de modelo son las partes de la aplicación que implementan la lógica del dominio de aplicación s datos. A menudo, los objetos del modelo recuperar y almacenan el estado del modelo en una base de datos. Por ejemplo, un objeto de producto podría recuperar información de una base de datos, operar en ella y, a continuación, escribir la información actualizada en una tabla de productos de SQL Server.
 

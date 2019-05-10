@@ -8,15 +8,14 @@ ms.date: 01/15/2019
 ms.assetid: a9fd4dc0-1b96-4443-82ca-932a5b4a8ea4
 msc.legacyurl: /signalr/overview/guide-to-the-api/hubs-api-guide-javascript-client
 msc.type: authoredcontent
-ms.openlocfilehash: b4c6d850062e1b65eacd97ffc4f34c80fedea503
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: 8befe133c3627dac1f7d011959c68e2054d345da
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59404317"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65119650"
 ---
 # <a name="aspnet-signalr-hubs-api-guide---javascript-client"></a>Guía de API de ASP.NET SignalR Hubs: cliente JavaScript
-
 
 [!INCLUDE [Consider ASP.NET Core SignalR](~/includes/signalr/signalr-version-disambiguation.md)]
 
@@ -124,7 +123,6 @@ En el ejemplo anterior, la referencia al proxy de SignalR generado es código Ja
 > [!NOTE]
 > Para los clientes de JavaScript de Windows 8 (Windows Store), use el archivo de proxy físico en lugar del generada dinámicamente. Para obtener más información, consulte [cómo crear un archivo físico para SignalR genera proxy](#manualproxy) más adelante en este tema.
 
-
 En ASP.NET MVC 4 o 5 vista de Razor, use la tilde para hacer referencia a la raíz de la aplicación en la referencia del archivo de proxy:
 
 [!code-html[Main](hubs-api-guide-javascript-client/samples/sample5.html)]
@@ -193,7 +191,6 @@ De forma predeterminada, la ubicación del concentrador es el servidor actual; S
 > [!NOTE]
 > Normalmente registra controladores de eventos antes de llamar a la `start` método para establecer la conexión. Si desea registrar algunos controladores de eventos después de establecer la conexión, puede hacerlo, pero debe registrar al menos uno de los controladores de los eventos antes de llamar a la `start` método. Una razón para esto es que puede haber muchos centros en una aplicación, pero que no desea que activen la `OnConnected` eventos en cada centro si solo va a usar para uno de ellos. Cuando se establece la conexión, la presencia de un método de cliente de proxy de un concentrador es que le indica a SignalR para desencadenar la `OnConnected` eventos. Si no registra los controladores de eventos antes de llamar a la `start` método, podrá invocar métodos en el concentrador, pero el concentrador `OnConnected` no se llamará al método y no se invocará ningún método de cliente desde el servidor.
 
-
 <a id="connequivalence"></a>
 
 ### <a name="connectionhub-is-the-same-object-that-hubconnection-creates"></a>$. connection.hub es el mismo objeto crea ese $.hubConnection()
@@ -251,7 +248,6 @@ El código siguiente muestra cómo se habilita la CORS o JSONP en un proyecto de
 > - Para obtener información sobre el uso de las conexiones entre dominios con Internet Explorer 9, consulte [este hilo](http://stackoverflow.com/questions/13573397/siganlr-ie9-cross-domain-request-dont-work).
 > - Para obtener información sobre el uso de las conexiones entre dominios con Chrome, consulte [este hilo](http://stackoverflow.com/questions/15467373/signalr-1-0-1-cross-domain-request-cors-with-chrome).
 > - El código de ejemplo usa el valor predeterminado "/ signalr" dirección URL para conectarse a su servicio SignalR. Para obtener información sobre cómo especificar una dirección URL base diferente, consulte [Guía de la API de ASP.NET SignalR Hubs - Server - la dirección URL de /signalr](hubs-api-guide-server.md#signalrurl).
-
 
 <a id="configureconnection"></a>
 

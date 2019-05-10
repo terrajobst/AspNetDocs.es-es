@@ -8,12 +8,12 @@ ms.date: 01/02/2018
 ms.assetid: 75b5c1cf-84bd-434f-8a86-85c568eb5b09
 msc.legacyurl: /web-pages/overview/getting-started/introducing-aspnet-web-pages-2/deleting-data
 msc.type: authoredcontent
-ms.openlocfilehash: e9ffe0ea3e2bf817675a4a771d3471ec6eb91133
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: c8620fc1abc61d514bdc039c66f7a84e67e89abe
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59406748"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65133490"
 ---
 # <a name="introducing-aspnet-web-pages---deleting-database-data"></a>Introducción a ASP.NET Web Pages: eliminación de la base de datos
 
@@ -33,7 +33,6 @@ por [Tom FitzMacken](https://github.com/tfitzmac)
 > - El `WebGrid` auxiliar.
 > - El código SQL `Delete` comando.
 > - El `Database.Execute` método para ejecutar una instancia de SQL `Delete` comando.
-
 
 ## <a name="what-youll-build"></a>¿Qué va a crear
 
@@ -86,7 +85,6 @@ Ahora puede crear la página que será el destino de la **eliminar** vínculo en
 > Cuando la aplicación permite a los usuarios cambiar el registro, deberá presentar el registro al usuario para la edición de todos modos. Pero podría verse tentado a omitir este paso para eliminar un registro. No omita este paso, sin embargo. (También es útil para los usuarios vean el registro y confirme que está eliminando el registro que está previsto).
 > 
 > En un conjunto de tutoriales posteriores, verá cómo agregar funcionalidad de inicio de sesión para que un usuario tendría que iniciar sesión antes de eliminar un registro.
-
 
 Cree una página denominada *DeleteMovie.cshtml* y sustituir lo que aparece en el archivo con el siguiente marcado:
 

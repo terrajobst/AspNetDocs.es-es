@@ -8,12 +8,12 @@ ms.date: 02/21/2014
 ms.assetid: ef852096-a5bf-47b3-9945-125cde065093
 msc.legacyurl: /web-pages/overview/security/enabling-login-from-external-sites-in-an-aspnet-web-pages-site
 msc.type: authoredcontent
-ms.openlocfilehash: a93835e685716b3be59023b9f84a006e38f48e89
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: 860b75422c3df1d191ed861344963bfc19270e8f
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59380461"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65124170"
 ---
 # <a name="logging-in-using-external-sites-in-an-aspnet-web-pages-razor-site"></a>Iniciar sesión con sitios externos en un sitio Web de ASP.NET Pages (Razor)
 
@@ -170,7 +170,6 @@ Ahora realizar cambios en dos páginas en su sitio Web para que los usuarios pod
 
 <a id="Additional_Resources"></a>
 ## <a name="additional-resources"></a>Recursos adicionales
-
 
 - [Personalizar el comportamiento de todo el sitio](https://go.microsoft.com/fwlink/?LinkId=202906)
 - [Agregar seguridad y pertenencia a un sitio ASP.NET Web Pages](https://go.microsoft.com/fwlink/?LinkID=202904)

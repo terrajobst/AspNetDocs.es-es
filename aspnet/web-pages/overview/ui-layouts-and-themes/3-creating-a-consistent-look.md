@@ -8,12 +8,12 @@ ms.date: 03/10/2014
 ms.assetid: d7bd001b-6db2-4422-9b78-f3d08b743b00
 msc.legacyurl: /web-pages/overview/ui-layouts-and-themes/3-creating-a-consistent-look
 msc.type: authoredcontent
-ms.openlocfilehash: 7ed2f5da62f4521b42db737100230fac5ea71d67
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: 7d580b3812c4a09d6bc8d34c46dc82339ba40ee8
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59385986"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65133374"
 ---
 # <a name="creating-a-consistent-layout-in-aspnet-web-pages-razor-sites"></a>Crear un diseño coherente en los sitios de ASP.NET Web Pages (Razor)
 
@@ -42,7 +42,6 @@ por [Tom FitzMacken](https://github.com/tfitzmac)
 >   
 > 
 > Este tutorial también funciona con ASP.NET Web Pages 2.
-
 
 ## <a name="about-layout-pages"></a>Acerca de las páginas de diseño
 
@@ -218,6 +217,5 @@ El siguiente procedimiento muestra cómo pasar datos de una página de contenido
 6. Haga clic en el **Mostrar lista** botón y la lista se muestra de nuevo.
 
 ## <a name="additional-resources"></a>Recursos adicionales
-
 
 [Personalizar el comportamiento de todo el sitio de ASP.NET Web Pages](https://go.microsoft.com/fwlink/?LinkId=202906)

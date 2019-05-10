@@ -8,15 +8,14 @@ ms.date: 01/09/2019
 ms.assetid: 9b96eaa1-8ef0-4338-a2e8-e0f970bfaf68
 msc.legacyurl: /web-forms/overview/getting-started/getting-started-with-aspnet-45-web-forms/introduction-and-overview
 msc.type: authoredcontent
-ms.openlocfilehash: 3a39e8d1979a743101d728eb3430e9aa0efb1252
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: ad491193c0d669464721d82f86a78b79f45b93aa
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59415640"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65131382"
 ---
 # <a name="getting-started-with-aspnet-45-web-forms-and-visual-studio-2017"></a>Introducción a ASP.NET 4.5 Web Forms y Visual Studio 2017
-
 
 [Descargar el proyecto de ejemplo de Wingtip Toys (C#)](http://go.microsoft.com/fwlink/?LinkID=389434&clcid=0x409) o [descargar eBook (PDF)](http://download.microsoft.com/download/0/F/B/0FBFAA46-2BFD-478F-8E56-7BF3C672DF9D/Getting%20Started%20with%20ASP.NET%204.5%20Web%20Forms%20and%20Visual%20Studio%202013.pdf)
 
@@ -116,7 +115,6 @@ Si selecciona **productos**, se muestran todos los productos disponibles.
 ![Wingtip Toys - productos](introduction-and-overview/_static/image2.png)
 
 Si selecciona un producto específico, se muestran detalles del producto.
-
 
 ![Wingtip Toys - detalles del producto](introduction-and-overview/_static/image3.png)
 

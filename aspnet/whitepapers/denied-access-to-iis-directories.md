@@ -8,19 +8,18 @@ ms.date: 02/10/2010
 ms.assetid: 3cb27b8a-354f-4332-bfe0-232b13bbf8aa
 msc.legacyurl: /whitepapers/denied-access-to-iis-directories
 msc.type: content
-ms.openlocfilehash: 789bf26df82d275c45e633de50c3cce1d82838b6
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: a3a53aa88abbe1bcaaea7d691406800c8f9b988b
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59406631"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65134550"
 ---
 # <a name="aspnet-denied-access-to-iis-directories"></a>Acceso denegado de ASP.NET a los directorios de IIS
 
 > Estas notas del producto describen lo que debe hacer si una solicitud para la aplicación ASP.NET devuelve el error, "denegado el acceso a *DirectoryName* directory. No se pudo iniciar la supervisión de cambios de directorio."
 > 
 > Se aplica a ASP.NET 1.0 y 1.1 de ASP.NET.
-
 
 ASP.NET V1 RTM ahora se ejecuta con un menor con privilegios de cuenta de windows - registrado como la cuenta de "ASPNET" en un equipo local.
 

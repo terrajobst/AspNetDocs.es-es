@@ -9,12 +9,12 @@ ms.assetid: 053e23c4-13c9-40fa-87cb-3e9b0823b31e
 ms.custom: seoapril2019
 msc.legacyurl: /identity/overview/features-api/two-factor-authentication-using-sms-and-email-with-aspnet-identity
 msc.type: authoredcontent
-ms.openlocfilehash: c41fc06ad98665f7d48efde030c1341b06e49dd0
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: 4ca9c141b0b48acf2c775a083398d3fb66b51cc2
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59395296"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65121422"
 ---
 # <a name="two-factorauthentication-using-sms-and-email-with-aspnet-identity"></a>Autenticación en dos fases mediante SMS y correo electrónico con ASP.NET Identity
 
@@ -23,7 +23,6 @@ por [Hao Kung](https://github.com/HaoK), [Pranav Rastogi](https://github.com/rus
 > Este tutorial le mostrará cómo configurar la autenticación en dos fases (2FA) mediante SMS y correo electrónico.
 > 
 > En este artículo se escribió por Rick Anderson ([@RickAndMSFT](https://twitter.com/#!/RickAndMSFT)), Pranav Rastogi ([@rustd](https://twitter.com/rustd)), Hao Kung y Suhas Joshi. El ejemplo de NuGet se ha escrito principalmente por Hao Kung.
-
 
 En este tema se trata los siguientes:
 
@@ -43,7 +42,6 @@ En esta sección, usará NuGet para descargar un ejemplo que vamos a trabajar co
 > [!NOTE]
 > Advertencia: Debe instalar Visual Studio [2013 Update 2](https://go.microsoft.com/fwlink/?LinkId=390521) para completar este tutorial.
 
-
 1. Cree un nuevo ***vacía*** proyecto Web de ASP.NET.
 2. En la consola de administrador de paquetes, escriba lo siguiente los siguientes comandos:  
   
@@ -58,7 +56,6 @@ En esta sección, usará NuGet para descargar un ejemplo que vamos a trabajar co
 
 > [!NOTE]
 > Advertencia: Si cambia la configuración de seguridad en este ejemplo, las aplicaciones de producción debe someterse a una auditoría de seguridad que se llama explícitamente a los cambios realizados.
-
 
 <a id="SMS"></a>
 
@@ -212,7 +209,6 @@ Puede agregar más proveedores 2FA, como los generadores de código QR o puede e
 
 > [!NOTE]
 > Los códigos 2FA se generan mediante [algoritmo de la contraseña de un solo uso basado en tiempo](http://en.wikipedia.org/wiki/Time-based_One-time_Password_Algorithm) y códigos son válidos durante seis minutos. Si tiene más de seis minutos para escribir el código, obtendrá un mensaje de error de código no válido.
-
 
 <a id="combine"></a>
 

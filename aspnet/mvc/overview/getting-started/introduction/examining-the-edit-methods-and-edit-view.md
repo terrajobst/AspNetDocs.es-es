@@ -8,12 +8,12 @@ ms.date: 01/06/2019
 ms.assetid: 52a4d5fe-aa31-4471-b3cb-a064f82cb791
 msc.legacyurl: /mvc/overview/getting-started/introduction/examining-the-edit-methods-and-edit-view
 msc.type: authoredcontent
-ms.openlocfilehash: 4a4627bdce8b8f2085150aa08cdc4c1271e09e09
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: c42ec77b5d5107f3ef70e13b779fc1bebef70a14
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59422010"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65120702"
 ---
 # <a name="examining-the-edit-methods-and-edit-view"></a>Examinar los métodos y la vista Edit
 
@@ -98,7 +98,6 @@ Todas las `HttpGet` métodos siguen un patrón similar. Obtienen un objeto de pe
 ## <a name="jquery-validation-for-non-english-locales"></a>validación de jQuery para configuraciones regionales no inglesas
 
 Si usas un equipo de inglés de Estados Unidos, puede omitir esta sección y vaya al siguiente tutorial. Puede descargar la versión Globalize de este tutorial [aquí](https://archive.msdn.microsoft.com/Project/Download/FileDownload.aspx?ProjectName=aspnetmvcsamples&amp;DownloadId=16475). Para un excelente tutorial de dos partes en la internacionalización, consulte [ASP.NET MVC 5 internacionalización de Nadeem](http://afana.me/post/aspnet-mvc-internationalization.aspx).
-
 
 > [!NOTE]
 > Para admitir la validación de jQuery para configuraciones regionales distintas del inglés que usan una coma (&quot;,&quot;) para un separador decimal y formatos de fecha distintos del inglés de EE. UU., se debe incluir *globalize.js* y específica de su  *Cultures/globalize.Cultures.js* archivo (desde [ https://github.com/jquery/globalize ](https://github.com/jquery/globalize) ) y JavaScript para usar `Globalize.parseFloat`. Puede obtener la validación de jQuery no inglesas de NuGet. (No instale Globalize si usa una configuración regional en inglés).

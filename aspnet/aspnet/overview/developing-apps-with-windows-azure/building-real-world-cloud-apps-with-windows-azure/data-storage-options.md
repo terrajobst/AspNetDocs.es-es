@@ -8,12 +8,12 @@ ms.date: 06/12/2014
 ms.assetid: e51fcecb-cb33-4f9e-8428-6d2b3d0fe1bf
 msc.legacyurl: /aspnet/overview/developing-apps-with-windows-azure/building-real-world-cloud-apps-with-windows-azure/data-storage-options
 msc.type: authoredcontent
-ms.openlocfilehash: 9969a68a3e1aa043845fb5affd6d3b73dec4136d
-ms.sourcegitcommit: 289e051cc8a90e8f7127e239fda73047bde4de12
+ms.openlocfilehash: 8656f4a4211c2e97d71d76dd2f799412539896ca
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/25/2019
-ms.locfileid: "58425397"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65118842"
 ---
 # <a name="data-storage-options-building-real-world-cloud-apps-with-azure"></a>Opciones de almacenamiento de datos (creación de aplicaciones de nube reales con Azure)
 
@@ -22,7 +22,6 @@ by [Mike Wasson](https://github.com/MikeWasson), [Rick Anderson]((https://twitte
 [Descargar proyecto corregirlo](http://code.msdn.microsoft.com/Fix-It-app-for-Building-cdd80df4) o [descargar libro electrónico](http://blogs.msdn.com/b/microsoft_press/archive/2014/07/23/free-ebook-building-cloud-apps-with-microsoft-azure.aspx)
 
 > El **Building Real World Cloud Apps with Azure** eBook se basa en una presentación desarrollada por Scott Guthrie. Se explican el 13 patrones y prácticas que pueden ayudarle a tener éxito el desarrollo de aplicaciones web para la nube. Para obtener información sobre el libro electrónico, consulte [el primer capítulo](introduction.md).
-
 
 La mayoría de los usuarios está acostumbrados bases de datos relacionales y tienden a pasar por alto otras opciones de almacenamiento de datos cuando diseña una aplicación de nube. El resultado puede ser aún peor, gastos alta o rendimiento no óptimo porque [NoSQL](http://en.wikipedia.org/wiki/NoSQL) bases de datos (no relacionales) pueden controlar algunas tareas de forma más eficaz que las bases de datos relacionales. Cuando los clientes pedirnos ayuda para resolver un problema de almacenamiento de datos críticos, es a menudo porque tienen una base de datos relacional en una de las opciones de NoSQL habría funcionado mejor. En esas situaciones el cliente habría sido preferible si hubiera implementado la solución NoSQL antes de implementar la aplicación en producción.
 

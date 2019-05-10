@@ -8,12 +8,12 @@ ms.date: 06/09/2009
 ms.assetid: cb061642-faf3-41b2-9372-69e13444d458
 msc.legacyurl: /web-forms/overview/older-versions-getting-started/deploying-web-site-projects/displaying-a-custom-error-page-cs
 msc.type: authoredcontent
-ms.openlocfilehash: 0ccb1a737fdfc3cf2ffdcc22131650e1b79cd2cb
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: f56241a6a3d1d54f917d366b08edb4a1a43bbce8
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59407229"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65134446"
 ---
 # <a name="displaying-a-custom-error-page-c"></a>Mostrar una página de error personalizado (C#)
 
@@ -22,7 +22,6 @@ por [Scott Mitchell](https://twitter.com/ScottOnWriting)
 [Descargar código](http://download.microsoft.com/download/1/0/C/10CC829F-A808-4302-97D3-59989B8F9C01/ASPNET_Hosting_Tutorial_11_CS.zip) o [descargar PDF](http://download.microsoft.com/download/5/C/5/5C57DB8C-5DEA-4B3A-92CA-4405544D313B/aspnet_tutorial11_CustomErrors_cs.pdf)
 
 > ¿Lo que ve el usuario cuando se produce un error en tiempo de ejecución en una aplicación web ASP.NET? La respuesta depende de la del sitio Web &lt;customErrors&gt; configuración. De forma predeterminada, los usuarios ven una pantalla amarilla cadenas tan antiestética proclamando que se ha producido un error en tiempo de ejecución. Este tutorial muestra cómo personalizar esta configuración a la página de error personalizada para mostrar un estéticamente agradables que coincida con la apariencia de su sitio.
-
 
 ## <a name="introduction"></a>Introducción
 
@@ -47,7 +46,6 @@ Los desarrolladores de la página de error más familiarizado con son el YSOD de
 > [!NOTE]
 > Para reproducir este error en la aplicación de demostración web disponible para su descarga, puede visitar `Genre.aspx?ID=foo` directamente o haga clic en el vínculo "Generar un Error en tiempo de ejecución" `Default.aspx`.
 
-
 Tenga en cuenta la información de excepción que se presentan en **figura 1**. El mensaje de excepción, "Error de conversión al convertir de una cadena de caracteres a uniqueidentifier" está presente en la parte superior de la página. El tipo de la excepción, `System.Data.SqlClient.SqlException`, se muestra, también. También es el seguimiento de pila.
 
 [![](displaying-a-custom-error-page-cs/_static/image2.png)](displaying-a-custom-error-page-cs/_static/image1.png)
@@ -61,7 +59,6 @@ De forma predeterminada, se muestra el YSOD de Error en tiempo de ejecución a l
 
 > [!NOTE]
 > Si está siguiendo y usa DiscountASP.NET como host de web, es posible que tenga en cuenta que el YSOD de Error en tiempo de ejecución no se muestran cuando se visita el sitio activo. Esto es porque DiscountASP.NET tiene sus servidores configurados para mostrar el YSOD detalles de excepción de forma predeterminada. La buena noticia es que puede invalidar este comportamiento predeterminado mediante la adición de un `<customErrors>` sección a su `Web.config` archivo. La sección de "configuración que Error es mostrar la página" examina el `<customErrors>` sección detalladamente.
-
 
 [![](displaying-a-custom-error-page-cs/_static/image5.png)](displaying-a-custom-error-page-cs/_static/image4.png)
 
@@ -140,7 +137,6 @@ Con este cambio en su lugar, cada vez que un usuario que visita de forma remota 
 > [!NOTE]
 > Desproteger [404 páginas de Error, una vez más](http://www.smashingmagazine.com/2009/01/29/404-error-pages-one-more-time/) para obtener instrucciones sobre cómo crear eficaces páginas de error 404.
 
-
 [![](displaying-a-custom-error-page-cs/_static/image19.png)](displaying-a-custom-error-page-cs/_static/image18.png)**Figura 7**: La página de Error 404 personalizado muestra un mensaje más orientado a `Oops.aspx`  
  ([Haga clic aquí para ver imagen en tamaño completo](displaying-a-custom-error-page-cs/_static/image20.png)) 
 
@@ -148,7 +144,6 @@ Dado que sabe que la `404.aspx` página solo se alcanza cuando el usuario realiz
 
 > [!NOTE]
 > Solo se muestra la página de error personalizado cuando se realiza una solicitud a un recurso controlado por el motor de ASP.NET. Como se explicó en la [diferencias principales entre IIS y el servidor de desarrollo de ASP.NET](core-differences-between-iis-and-the-asp-net-development-server-cs.md) tutorial, el servidor web puede controlar determinadas solicitudes de sí mismo. De forma predeterminada, IIS web server procesa las solicitudes de contenido estático como imágenes y archivos HTML sin invocar el motor de ASP.NET. Por lo tanto, si el usuario solicita un archivo de imagen inexistente obtendrá nuevo mensaje de error 404 predeterminado de IIS en lugar de ASP. Página de error configurada de la red.
-
 
 ## <a name="summary"></a>Resumen
 

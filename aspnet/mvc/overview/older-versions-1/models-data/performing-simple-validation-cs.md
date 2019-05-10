@@ -8,12 +8,12 @@ ms.date: 03/02/2009
 ms.assetid: 21383c9d-6aea-4bad-a99b-b5f2c9d6503f
 msc.legacyurl: /mvc/overview/older-versions-1/models-data/performing-simple-validation-cs
 msc.type: authoredcontent
-ms.openlocfilehash: 12fe89ec83a33ece2971c8186783326d165cbf79
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: e33f522af74efe97b5a245e956bc0b918ea769af
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59388509"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65122351"
 ---
 # <a name="performing-simple-validation-c"></a>Realizar una validación simple (C#)
 
@@ -21,16 +21,13 @@ by [Stephen Walther](https://github.com/StephenWalther)
 
 > Obtenga información sobre cómo realizar la validación en una aplicación ASP.NET MVC. En este tutorial, Stephen Walther presenta para el estado del modelo y las aplicaciones auxiliares de validación HTML.
 
-
 El objetivo de este tutorial es explicar cómo se puede realizar la validación dentro de una aplicación ASP.NET MVC. Por ejemplo, obtendrá información sobre cómo evitar que alguien envíe un formulario que no contiene un valor para un campo obligatorio. Aprenda a usar el estado del modelo y las aplicaciones auxiliares HTML de validación.
 
 ## <a name="understanding-model-state"></a>Estado del modelo de descripción
 
 Use el estado del modelo - o más concretamente, el diccionario de estado - para representar errores de validación. Por ejemplo, la acción Create() en el listado 1 valida las propiedades de una clase de producto antes de agregar la clase de producto a una base de datos.
 
-
 No estoy recomendar que agregar la lógica de validación o la base de datos a un controlador. Un controlador debe contener únicamente la lógica relacionada con control de flujo de la aplicación. Nos quedamos con un acceso directo a simplificar las cosas.
-
 
 **Listado 1 - Controllers\ProductController.cs**
 
@@ -52,19 +49,15 @@ Las aplicaciones auxiliares de Html.ValidationMessage() y Html.ValidationSummary
 4. Desde el **ver contenido** lista desplegable, seleccione crear.
 5. Haga clic en el botón **Agregar**.
 
-
 Asegúrese de que compilar la aplicación antes de agregar una vista. En caso contrario, no aparecerá la lista de clases en el **Ver clase de datos** lista desplegable.
-
 
 [![El cuadro de diálogo nuevo proyecto](performing-simple-validation-cs/_static/image1.jpg)](performing-simple-validation-cs/_static/image1.png)
 
 **Figura 01**: Agregar una vista ([haga clic aquí para ver imagen en tamaño completo](performing-simple-validation-cs/_static/image2.png))
 
-
 [![El cuadro de diálogo nuevo proyecto](performing-simple-validation-cs/_static/image2.jpg)](performing-simple-validation-cs/_static/image3.png)
 
 **Figura 02**: Creación de una vista fuertemente tipada ([haga clic aquí para ver imagen en tamaño completo](performing-simple-validation-cs/_static/image4.png))
-
 
 Después de completar estos pasos, obtenga la vista de creación en el listado 2.
 
@@ -78,11 +71,9 @@ Se llama a la aplicación auxiliar de Html.ValidationMessage() junto a cada uno 
 
 La página en la figura 3 muestra los mensajes de error representados por las aplicaciones auxiliares de validación cuando se envía el formulario con los campos que faltan y valores no válidos.
 
-
 [![El cuadro de diálogo nuevo proyecto](performing-simple-validation-cs/_static/image3.jpg)](performing-simple-validation-cs/_static/image5.png)
 
 **Figura 03**: La vista de creación enviada con problemas ([haga clic aquí para ver imagen en tamaño completo](performing-simple-validation-cs/_static/image6.png))
-
 
 Tenga en cuenta que el aspecto del HTML entrada campos también se modifican cuando hay un error de validación. Las representaciones de aplicación auxiliar Html.TextBox() un *clase = "error de validación de entrada"* atributo cuando hay un error de validación asociado con la propiedad representada por la aplicación auxiliar de Html.TextBox().
 
@@ -98,16 +89,13 @@ Puede modificar estas clases de hoja de estilos en cascada y, por lo tanto, modi
 > 
 > La clase HtmlHelper incluye propiedades estáticas de sólo lectura para recuperar los nombres de la validación de CSS en relación con las clases. Estas propiedades estáticas se denominan ValidationInputCssClassName, ValidationFieldCssClassName y ValidationSummaryCssClassName.
 
-
 ## <a name="prebinding-validation-and-postbinding-validation"></a>Prebinding validación y la validación de Postbinding
 
 Si envía el formulario HTML para la creación de un producto y escriba un valor no válido para el campo de precio y ningún valor para el campo UnitsInStock, obtendrá los mensajes de validación que se muestra en la figura 4. ¿De dónde proceden estos mensajes de error de validación?
 
-
 [![El cuadro de diálogo nuevo proyecto](performing-simple-validation-cs/_static/image4.jpg)](performing-simple-validation-cs/_static/image7.png)
 
 **Figura 04**: Errores de validación de prebinding ([haga clic aquí para ver imagen en tamaño completo](performing-simple-validation-cs/_static/image8.png))
-
 
 Hay realmente dos tipos de mensajes de error de validación - los generados antes de que los campos del formulario HTML están enlazados a una clase y los generan después de los campos del formulario se enlazan a la clase. En otras palabras, hay prebinding errores de validación y postbinding errores de validación.
 

@@ -8,12 +8,12 @@ ms.date: 07/04/2012
 ms.assetid: 6b9ae3c4-0274-4170-a1bb-9df9c546b2a9
 msc.legacyurl: /web-api/overview/older-versions/using-web-api-1-with-entity-framework-5/using-web-api-with-entity-framework-part-3
 msc.type: authoredcontent
-ms.openlocfilehash: de4bb063d2a6c1bdb4aeffdadb161ef19efd2b78
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: bb9c234f541308c2165c32de29c97663e4d76f50
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59390953"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65134731"
 ---
 # <a name="part-3-creating-an-admin-controller"></a>Parte 3: Crear un controlador de administración
 
@@ -35,7 +35,6 @@ En el **Agregar controlador** cuadro de diálogo, el nombre del controlador `Adm
 
 > [!NOTE]
 > Si el **clase modelo** desplegable no muestra todas las clases de modelo, asegúrese de que ha compilado el proyecto. Entity Framework usa la reflexión, por lo que necesita el ensamblado compilado.
-
 
 Seleccione "&lt;nuevo contexto de datos&gt;" se abrirá el **nuevo contexto de datos** cuadro de diálogo. Nombre del contexto de datos `ProductStore.Models.OrdersContext`.
 

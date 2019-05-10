@@ -8,19 +8,18 @@ ms.date: 08/14/2010
 ms.assetid: e8f1515c-c277-47ff-a23e-224118f13f02
 msc.legacyurl: /mvc/overview/older-versions-1/getting-started-with-mvc/getting-started-with-mvc-part3
 msc.type: authoredcontent
-ms.openlocfilehash: 3eff3aceea302c51e6970bb13fbee3a8bf98a71d
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: 462b1210c45da67058899193afcea973f3daf122
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59411987"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65123048"
 ---
 # <a name="adding-a-view"></a>Agregar una vista
 
 por [Scott Hanselman](https://github.com/shanselman)
 
 > Este es un tutorial para principiantes que presenta los conceptos básicos de ASP.NET MVC. Creará una aplicación web simple que lee y escribe desde una base de datos. Visite el [centro de aprendizaje de ASP.NET MVC](../../../index.md) para buscar otros ASP.NET MVC, tutoriales y ejemplos.
-
 
 En esta sección vamos a ver cómo podemos tenemos nuestra clase HelloWorldController usar un archivo de plantilla de vista para encapsular limpiamente generar respuestas HTML a un cliente.
 
@@ -99,7 +98,6 @@ Incluso aunque esté en varias líneas, nuestro método bienvenida realmente es 
 Ahora tenemos una plantilla de vista principal. Haga clic con el botón derecho en el método principal y seleccione Agregar vista. Esta vez, se deberá comprobar "Crear una vista fuertemente tipada" y seleccione nuestra clase WelcomeViewModel en la lista desplegable. Esta nueva vista sabrá solo sobre WelcomeViewModels y ningún otro tipo de objetos.
 
 > *NOTA: Deberá ha compilado una vez después de agregar su WelcomeViewModel para que aparezcan en la lista desplegable.*
-
 
 Este es el aspecto que debería su cuadro de diálogo Agregar vista. Haga clic en el botón Agregar. ![Agregar que vista en un círculo](getting-started-with-mvc-part3/_static/image10.png)
 

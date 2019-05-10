@@ -9,12 +9,12 @@ ms.custom: seoapril2019
 ms.assetid: 9e10a700-8d91-4d2e-a31e-b8b569fe867c
 msc.legacyurl: /web-api/overview/advanced/configuring-aspnet-web-api
 msc.type: authoredcontent
-ms.openlocfilehash: 39629ba404e536b29318db00bce8c4443a782497
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: 4f76728fa5e4602e35e1b7cb2d41b2245093cad8
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59411948"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65115960"
 ---
 # <a name="configuring-aspnet-web-api-2"></a>Configuración de ASP.NET Web API 2
 
@@ -45,7 +45,6 @@ Opciones de configuración de Web API se definen en el [HttpConfiguration](https
 | **Propiedades** | Un contenedor de propiedades genéricas. |
 | **Rutas** | La colección de rutas. Consulte [enrutar en ASP.NET Web API](../web-api-routing-and-actions/routing-in-aspnet-web-api.md). |
 | **Servicios** | La colección de servicios. Consulte [servicios](#services). |
-
 
 ## <a name="prerequisites"></a>Requisitos previos
 
@@ -91,11 +90,9 @@ El **HttpConfiguration.Services** colección contiene un conjunto de servicios g
 > [!NOTE]
 > El **servicios** colección no es un mecanismo general para la inserción de dependencia o la detección de servicio. Solo almacena los tipos de servicio que se sabe que el marco API Web.
 
-
 El **servicios** colección se inicializa con un conjunto predeterminado de servicios, y puede proporcionar sus propias implementaciones personalizadas. Algunos servicios admiten varias instancias, mientras que otros usuarios pueden tener solo una instancia. (Sin embargo, también puede proporcionar servicios en el nivel de controlador; vea [controlador de configuración](#percontrollerconfig).
 
 Servicios de instancia única
-
 
 | web de Office | Descripción |
 | --- | --- |
@@ -116,7 +113,6 @@ Servicios de instancia única
 | **IModelValidatorCache** | Proporciona una memoria caché de validadores del modelo. |
 
 Servicios de varias instancias
-
 
 |                 web de Office                 |                                                                                                              Descripción                                                                                                               |
 |-----------------------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|

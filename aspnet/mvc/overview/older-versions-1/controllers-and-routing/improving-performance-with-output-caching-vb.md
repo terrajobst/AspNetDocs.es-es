@@ -8,19 +8,18 @@ ms.date: 01/27/2009
 ms.assetid: 0e7b4d85-2c46-4eaf-b6a8-6cd566a67334
 msc.legacyurl: /mvc/overview/older-versions-1/controllers-and-routing/improving-performance-with-output-caching-vb
 msc.type: authoredcontent
-ms.openlocfilehash: 0f824bd5e080d42a9df3525ca47b87bcef407f7a
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: b713b56e149f196794b3223ba88e3b41bf3e34c4
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59405630"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65123373"
 ---
 # <a name="improving-performance-with-output-caching-vb"></a>Mejorar el rendimiento con el almacenamiento en caché de resultados (VB)
 
 por [Microsoft](https://github.com/microsoft)
 
 > En este tutorial, obtendrá información sobre cómo puede mejorar considerablemente el rendimiento de las aplicaciones web de ASP.NET MVC aprovechando las ventajas de la caché de resultados. Aprenda a almacenar en caché el resultado devuelto de una acción de controlador para que no tenga el mismo contenido a crearse cada vez que un nuevo usuario invoca la acción.
-
 
 El objetivo de este tutorial es explicar cómo puede mejorar considerablemente el rendimiento de una aplicación ASP.NET MVC aprovechando las ventajas de la caché de resultados. La caché de resultados le permite almacenar en caché el contenido devuelto por una acción de controlador. De este modo, no necesita el mismo contenido va a generar cada vez que se invoca la misma acción de controlador.
 
@@ -36,9 +35,7 @@ Habilitar almacenamiento en caché de salida mediante la adición de un &lt;Outp
 
 [!code-vb[Main](improving-performance-with-output-caching-vb/samples/sample1.vb)]
 
-
 En las versiones Beta de ASP.NET MVC, la caché de resultados no funciona para una dirección URL como [ http://www.MySite.com/ ](http://www.mysite.com/). En su lugar, debe especificar una dirección URL como [ http://www.MySite.com/Home/Index ](http://www.mysite.com/Home/Index).
-
 
 En el listado 1, se almacena en caché el resultado de la acción de Index() durante 10 segundos. Si lo prefiere, puede especificar una duración mucho mayor de la memoria caché. Por ejemplo, si desea almacenar en caché el resultado de una acción del controlador durante un día, a continuación, puede especificar una duración de caché de 86400 segundos (60 segundos \* 60 minutos \* 24 horas).
 
@@ -79,7 +76,6 @@ Puede establecer la propiedad Location en cualquiera de los siguientes valores:
 > · Ninguno
 > 
 > · ServerAndClient
-
 
 De forma predeterminada, la propiedad de ubicación tiene el valor Any. Sin embargo, hay situaciones en que desee solo en el explorador o solo en el servidor de caché. Por ejemplo, si se almacenan en caché información personalizada para cada usuario, a continuación, se debe no almacenar en caché la información en el servidor. Si va a mostrar información diferente a distintos usuarios, a continuación, se debe almacenar en caché la información únicamente en el cliente.
 
@@ -136,7 +132,6 @@ Puede establecer la propiedad VaryByParam en los siguientes valores:
 > None = nunca crear diferentes versiones en caché
 > 
 > Lista de puntos y comas de parámetros = crear diferentes versiones en caché siempre que cualquiera de los parámetros de cadena de consulta o formulario en la lista varía
-
 
 #### <a name="creating-a-cache-profile"></a>Crear un perfil de caché
 

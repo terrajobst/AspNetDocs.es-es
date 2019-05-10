@@ -8,17 +8,16 @@ ms.date: 10/05/2011
 ms.assetid: 0078ceb6-3447-4ce4-90c2-d0e013ebc000
 msc.legacyurl: /web-forms/videos/iis
 msc.type: chapter
-ms.openlocfilehash: 883b5c3ad39922ddd51ea1d07b8d52d1c74d2153
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: 30a6f4f944ba070d02aa8677085b9c7a07f5c162
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59384297"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65114494"
 ---
 # <a name="general-iis-tips"></a>Consejos generales de IIS
 
 > Cómo configurar IIS para que funcione con aplicaciones ASP.NET.
-
 
 - [Desarrollo e implementación en un hospedaje compartido](developing-and-deploying-in-a-shared-hosting.md)
 - [Trabajar con la administración delegada de IIS7](working-with-iis7-deligated-admin.md)

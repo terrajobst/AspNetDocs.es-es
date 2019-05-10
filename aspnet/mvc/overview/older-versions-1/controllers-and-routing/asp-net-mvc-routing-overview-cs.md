@@ -8,19 +8,18 @@ ms.date: 08/19/2008
 ms.assetid: 5b39d2d5-4bf9-4d04-94c7-81b84dfeeb31
 msc.legacyurl: /mvc/overview/older-versions-1/controllers-and-routing/asp-net-mvc-routing-overview-cs
 msc.type: authoredcontent
-ms.openlocfilehash: e2f2246e2126bd6e648f861bcb296fab62a748bb
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: 5e1155ca676e7a25b5bfc63e251c6387a010eb34
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59380111"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65123656"
 ---
 # <a name="aspnet-mvc-routing-overview-c"></a>Información general sobre el enrutamiento de ASP.NET MVC (C#)
 
 by [Stephen Walther](https://github.com/StephenWalther)
 
 > En este tutorial, Stephen Walther explica cómo el marco de MVC de ASP.NET asigna las solicitudes del explorador a acciones del controlador.
-
 
 En este tutorial, se le presenta una característica importante de cada aplicación de ASP.NET MVC llama *enrutamiento de ASP.NET*. El módulo de enrutamiento de ASP.NET es responsable de asignar las solicitudes entrantes a acciones del controlador MVC concreto. Al final de este tutorial, comprenderá cómo la tabla de enrutamiento estándar asigna las solicitudes a acciones del controlador.
 
@@ -94,11 +93,9 @@ Por último, al invocar el método Index() en el listado 5 con la/Home URL provo
 
 [!code-csharp[Main](asp-net-mvc-routing-overview-cs/samples/sample5.cs)]
 
-
 [![Invocar una acción de controlador que espera un valor de parámetro](asp-net-mvc-routing-overview-cs/_static/image1.jpg)](asp-net-mvc-routing-overview-cs/_static/image1.png)
 
 **Figura 01**: Invocar una acción de controlador que espera un valor de parámetro ([haga clic aquí para ver imagen en tamaño completo](asp-net-mvc-routing-overview-cs/_static/image2.png))
-
 
 / Home de dirección URL/índice/3, por otro lado, funciona bien con la acción de controlador de índice en el listado 5. La solicitud /Home/Index/3 hace que el método Index() se llamen con un parámetro de identificador que tiene el valor 3.
 

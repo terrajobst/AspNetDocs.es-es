@@ -8,19 +8,18 @@ ms.date: 08/14/2010
 ms.assetid: aa7b3e8e-e23d-49f1-b160-f99a7f2982bd
 msc.legacyurl: /mvc/overview/older-versions-1/getting-started-with-mvc/getting-started-with-mvc-part7
 msc.type: authoredcontent
-ms.openlocfilehash: 3db6947f36eb51b41d929f8c7d8835a95db8ea75
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: 9403be574324c34edf93bef1e0e4fd7ba68a3a9d
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59392357"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65122779"
 ---
 # <a name="adding-validation-to-the-model"></a>Agregar la validación al modelo
 
 por [Scott Hanselman](https://github.com/shanselman)
 
 > Este es un tutorial para principiantes que presenta los conceptos básicos de ASP.NET MVC. Creará una aplicación web simple que lee y escribe desde una base de datos. Visite el [centro de aprendizaje de ASP.NET MVC](../../../index.md) para buscar otros ASP.NET MVC, tutoriales y ejemplos.
-
 
 En esta sección vamos a implementar la compatibilidad necesaria para habilitar la validación de entrada dentro de nuestra aplicación. Le garantizamos que el contenido de la base de datos siempre es correcto y proporcionar mensajes de error útiles a los usuarios finales cuando pruebe y escriba los datos de la película que no es válidos. Empezaremos por agregar lógica de validación de un poco a la clase Movie.
 

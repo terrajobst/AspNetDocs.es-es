@@ -8,19 +8,18 @@ ms.date: 02/20/2005
 ms.assetid: 9c0cce4d-efd9-4c14-b0e8-a1a140abb3f4
 msc.legacyurl: /web-forms/overview/moving-to-aspnet-20/master-pages
 msc.type: authoredcontent
-ms.openlocfilehash: 348e28778e0e7d96230534df1d61386ed39f8f11
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: 36f2caf7c2c9bcafd22c8f6681c1d6b19fe5078a
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59381151"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65131071"
 ---
 # <a name="master-pages"></a>Páginas maestras
 
 por [Microsoft](https://github.com/microsoft)
 
 > Uno de los componentes clave para un sitio Web tenga éxito es un aspecto coherente. En ASP.NET 1.x, los desarrolladores usan controles de usuario para replicar elementos comunes de la página a través de una aplicación Web. Aunque ciertamente es una solución operativa, utilizando los controles de usuario tiene algunas desventajas. Por ejemplo, un cambio en la posición de un control de usuario requiere un cambio en varias páginas en un sitio. Los controles de usuario no se representan también en la vista de diseño después de que se va a insertar en una página.
-
 
 Uno de los componentes clave para un sitio Web tenga éxito es un aspecto coherente. En ASP.NET 1.x, los desarrolladores usan controles de usuario para replicar elementos comunes de la página a través de una aplicación Web. Aunque ciertamente es una solución operativa, utilizando los controles de usuario tiene algunas desventajas. Por ejemplo, un cambio en la posición de un control de usuario requiere un cambio en varias páginas en un sitio. Los controles de usuario no se representan también en la vista de diseño después de que se va a insertar en una página.
 
@@ -47,14 +46,11 @@ Una página principal puede contener cualquier número de controles ContentPlace
 > [!NOTE]
 > A menudo escuchará las personas se describen las páginas maestras como una clase base para otras páginas. Thats realmente no es true. La relación entre las páginas maestras y las páginas de contenido no es uno de herencia.
 
-
 **Figura 1** muestra una página maestra y una página de contenido asociada, tal y como aparecen en Visual Studio 2005. Puede ver el control ContentPlaceHolder en la página maestra y el correspondiente control en la página de contenido de contenido. Tenga en cuenta que el contenido de las páginas maestras que se encuentra fuera del control ContentPlaceHolder es visible pero atenuadas en la página de contenido. Solo el contenido existente en el ContentPlaceHolder puede ser suplantado por la página de contenido. Resto del contenido que proviene de la página maestra es inmutable.
-
 
 ![Una página maestra y la página de contenido asociada](master-pages/_static/image1.jpg)
 
 **Figura 1**: Una página maestra y la página de contenido asociada
-
 
 ## <a name="creating-a-master-page"></a>Creación de una página maestra
 
@@ -65,11 +61,9 @@ Para crear una nueva página principal:
 3. Elegir archivo maestro desde el cuadro de diálogo Agregar nuevo elemento, como se muestra en **figura 2**.
 4. Haga clic en Agregar.
 
-
 ![Crear una nueva página maestra](master-pages/_static/image2.jpg)
 
 **Figura 2**: Crear una nueva página maestra
-
 
 Tenga en cuenta que la extensión de archivo para una página maestra es *.master*. Esta es una de las maneras en que una página maestra difiere de una página normal. La principal diferencia es que en lugar de un @Page la directiva, la página maestra contiene un @Master directiva. Cambie a vista de origen para el patrón de página que acaba de crear y revisar el código.
 
@@ -86,29 +80,23 @@ En este laboratorio, creará una nueva página maestra y definir tres controles 
     3. Seleccione el control ContentPlaceHolder haciendo clic en el borde sombreado superior del control y, a continuación, eliminarlo presionando la tecla SUPR del teclado.
     4. Insertar una nueva tabla con el *encabezado y lado* plantilla tal como se muestra en la figura 3. Cambiar el ancho y alto en el 90% para que esté visible en el Diseñador de toda la tabla.
 
-
 ![](master-pages/_static/image3.jpg)
 
 **Figura 3**
-
 
 1. Coloque el cursor en cada celda de la tabla y establezca el *valign* propiedad *superior*.
 2. Desde el cuadro de herramientas, inserte un control ContentPlaceHolder en la celda superior de la tabla (la celda de encabezado).
 3. Cuando se inserta este control ContentPlaceHolder, observará que el alto de fila ocupa casi toda la página como se muestra en la figura 4. No preocuparse de en este momento.
 
-
 ![Es el espacio vacío en la misma celda, como el control ContentPlaceHolder](master-pages/_static/image1.gif)
 
 **Figura 4**: Es el espacio vacío en la misma celda, como el control ContentPlaceHolder
 
-
 1. Coloque un control ContentPlaceHolder en las dos celdas. Una vez que se han insertado los demás controles ContentPlaceHolder, el tamaño de las celdas de tabla debe ser como se esperaría. La página debe parecerse a la página que aparece en **figura 5**.
-
 
 ![El maestro con todos los controles ContentPlaceHolder. Tenga en cuenta que el alto de celda para la celda de encabezado es ahora lo que debe ser](master-pages/_static/image2.gif)
 
 **Figura 5**: El maestro con todos los controles ContentPlaceHolder. Tenga en cuenta que el alto de celda para la celda de encabezado es ahora lo que debe ser
-
 
 1. Escriba algún texto que prefiera en cada uno de los tres controles ContentPlaceHolder.
 2. Guarde la página maestra como exercise1.master.
@@ -117,11 +105,9 @@ En este laboratorio, creará una nueva página maestra y definir tres controles 
 5. Seleccione **formulario Web Forms** en el cuadro de diálogo Agregar nuevo elemento.
 6. Asegúrese de que esté marcada la casilla de verificación Seleccionar la página principal tal como se muestra en la figura 6.
 
-
 ![Agregar una nueva página de contenido](master-pages/_static/image3.gif)
 
 **Figura 6**: Agregar una nueva página de contenido
-
 
 1. Haga clic en Agregar.
 2. Seleccione exercise1.master en seleccionar un cuadro de diálogo página principal como se muestra en la figura 7.
@@ -129,11 +115,9 @@ En este laboratorio, creará una nueva página maestra y definir tres controles 
 
 Aparece la página de contenido nuevo en Visual Studio con un control de contenido para cada control ContentPlaceHolder en la página maestra. De forma predeterminada, los controles de contenido están vacíos, por lo que puede agregar su propio contenido. Si desea que les permite utilizar el contenido desde el control ContentPlaceHolder en la página maestra, simplemente haga clic en el símbolo de etiqueta inteligente (la pequeña flecha negra en la esquina superior derecha del control) y elija *predeterminado el contenido de patrones* en la etiqueta inteligente tal como se muestra en **figura 8**. Al hacerlo, el elemento de menú cambia a *crear contenido personalizado*. Al hacer clic en él en ese momento, se quita el contenido de la página maestra que le permite definir contenido personalizado para ese control de contenido determinado.
 
-
 ![Establecer un Control de contenido en el valor predeterminado el contenido de las páginas principal](master-pages/_static/image4.gif)
 
 **Figura 7**: Establecer un Control de contenido en el valor predeterminado el contenido de las páginas principal
-
 
 ## <a name="connecting-master-page-and-content-pages"></a>Conexión de la página maestra y las páginas de contenido
 
@@ -183,15 +167,11 @@ Tenga en cuenta que en este escenario, el maestro secundario es también una pá
 > [!NOTE]
 > Compatibilidad con el diseñador no está disponible para las páginas maestras anidadas. Cuando está desarrollando con patrones anidados, deberá usar la vista del origen.
 
-
 Este vídeo muestra un tutorial sobre cómo usar las páginas maestras anidadas.
-
 
 ![](master-pages/_static/image1.png)
 
-
 [Abra vídeo de pantalla completa](master-pages/_static/nested1.wmv)
-
 
 ![Seleccionar una página maestra](master-pages/_static/image4.jpg)
 

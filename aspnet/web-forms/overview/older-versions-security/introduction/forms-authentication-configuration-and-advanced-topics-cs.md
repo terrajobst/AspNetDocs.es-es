@@ -8,12 +8,12 @@ ms.date: 01/14/2008
 ms.assetid: b9c29865-a34e-48bb-92c0-c443a72cb860
 msc.legacyurl: /web-forms/overview/older-versions-security/introduction/forms-authentication-configuration-and-advanced-topics-cs
 msc.type: authoredcontent
-ms.openlocfilehash: 9665dafb23b885fdf9e4ea5f1a515a0c6dcc9a9a
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: 75e7da4c993bc59a2ff34c2838f36312e1571668
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59410635"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65134403"
 ---
 # <a name="forms-authentication-configuration-and-advanced-topics-c"></a>Configuración de la autenticación de formularios y temas avanzados (C#)
 
@@ -22,7 +22,6 @@ por [Scott Mitchell](https://twitter.com/ScottOnWriting)
 [Descargar código](http://download.microsoft.com/download/2/F/7/2F705A34-F9DE-4112-BBDE-60098089645E/ASPNET_Security_Tutorial_03_CS.zip) o [descargar PDF](http://download.microsoft.com/download/2/F/7/2F705A34-F9DE-4112-BBDE-60098089645E/aspnet_tutorial03_AuthAdvanced_cs.pdf)
 
 > En este tutorial examinaremos las distintas configuraciones de autenticación de formularios y vea cómo modificarlos mediante el elemento de formularios. Esto supondrá una visión detallada de personalizar el valor de tiempo de espera del vale de autenticación de formularios, con una página de inicio de sesión con una dirección URL personalizada (por ejemplo, SignIn.aspx en lugar de Login.aspx) y vales de autenticación de formularios sin cookies.
-
 
 ## <a name="introduction"></a>Introducción
 
@@ -37,7 +36,6 @@ El sistema de autenticación de formularios de ASP.NET ofrece una serie de opcio
 [!code-xml[Main](forms-authentication-configuration-and-advanced-topics-cs/samples/sample1.xml)]
 
 La tabla 1 resume las propiedades que se pueden personalizar mediante la &lt;formularios&gt; elemento. Puesto que el archivo Web.config es un archivo XML, los nombres de atributo en la columna izquierda distinguen mayúsculas de minúsculas.
-
 
 | <strong>Attribute</strong> |                                                                                                                                                                                                                                     <strong>Descripción</strong>                                                                                                                                                                                                                                      |
 |----------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
@@ -60,7 +58,6 @@ En ASP.NET 2.0 y versiones posteriores, el valor predeterminado los valores de a
 > [!NOTE]
 > Varias opciones de autenticación de formularios, como el tiempo de espera, el dominio y la ruta de acceso, especifican los detalles de la cookie de vale de autenticación de formularios resultante. Para obtener más información sobre las cookies, cómo funcionan y sus diversas propiedades, lea [este tutorial Cookies](http://www.quirksmode.org/js/cookies.html).
 
-
 ### <a name="specifying-the-tickets-timeout-value"></a>Especifica el valor de tiempo de espera del vale
 
 El vale de autenticación de formularios es un token que representa una identidad. Con los vales de autenticación basada en cookies, este token se mantiene en forma de una cookie y se envían al servidor web en cada solicitud. Posesión del token, en esencia, se declara, pues soy *username*, ya ha iniciado sesión y se usa para que la identidad de un usuario se puede guardar todas las visitas de la página.
@@ -72,7 +69,6 @@ Un bit de este tipo de información incluida en el vale es un *expiración*, que
 > [!NOTE]
 > Paso 3 detalles adicionales técnicas usadas por el sistema de autenticación de formularios para proteger el vale de autenticación.
 
-
 Al crear el vale de autenticación, el sistema de autenticación de formularios determina su expiración consultando la configuración de tiempo de espera. Como se indicó en la tabla 1, el tiempo de espera de establecer los valores predeterminados en 30 minutos, lo que significa que cuando se crea el vale de autenticación de formularios su expiración se establece en una fecha y hora, 30 minutos en el futuro.
 
 La expiración define un tiempo absoluto en el futuro cuando expira el vale de autenticación de formularios. Pero normalmente los desarrolladores desean implementar una expiración deslizante, que se restablece cada vez que el usuario vuelve a visitar el sitio. Este comportamiento viene determinada por la configuración de slidingExpiration. Si establece en true (valor predeterminado), cada vez FormsAuthenticationModule autentica un usuario, actualiza expiración del vale. Si se establece en false, la expiración no se actualiza en cada solicitud, lo que provoca el vale para expirar exactamente el tiempo de espera número de minutos transcurridos tras cuando el vale fue el primero creado.
@@ -80,28 +76,22 @@ La expiración define un tiempo absoluto en el futuro cuando expira el vale de a
 > [!NOTE]
 > La expiración que se almacenan en el vale de autenticación es una fecha absoluta y el valor de tiempo, como el 2 de agosto de 2008 11:34 AM. Además, la fecha y hora son con respecto a la hora de local del servidor web. Esta decisión de diseño puede tener algunos efectos interesantes alrededor del horario de verano (DST), que es cuando los relojes de los Estados Unidos se adelanta una hora (suponiendo que el servidor web se hospeda en una configuración regional donde se observa el horario de verano). Tenga en cuenta lo que sucedería para un sitio Web ASP.NET con una expiración de 30 minutos cerca del momento en que comienza el horario de verano (que es a las 2:00 A.M.). Imagine que un visitante inicia sesión en el sitio del 11 de marzo de 2008 a las 1:55 AM. Esto generaría un vale de autenticación de formularios que expira a las 11 de marzo de 2008 a 2:25 a. M. (30 minutos en el futuro). Sin embargo, una vez RTM 2:00 A.M., el reloj salta a 3:00 A.M. a causa de horario de verano. Cuando el usuario cargue una nueva página de seis minutos después de iniciar sesión (a las 3:01 AM), FormsAuthenticationModule observa que el vale ha caducado y redirige al usuario a la página de inicio de sesión. Para obtener una explicación más completa sobre esto y otras rarezas de tiempo de espera de vale de autenticación, así como soluciones alternativas, adquiera un ejemplar de Stefan Schackow *Professional ASP.NET 2.0 seguridad pertenencia y administración de roles* (ISBN: 978-0-7645-9698-8).
 
-
 Figura 1 ilustra el flujo de trabajo cuando slidingExpiration se establece en false y el tiempo de espera se establece en 30. Tenga en cuenta que el vale de autenticación que se generan en el inicio de sesión contiene la fecha de expiración, y este valor no se actualiza en las solicitudes subsiguientes. Si FormsAuthenticationModule detecta que el vale ha caducado, se descarta y trata la solicitud como anónimo.
-
 
 [![Una representación gráfica de slidingExpiration de expiración cuando del vale autenticación de formularios es false](forms-authentication-configuration-and-advanced-topics-cs/_static/image2.png)](forms-authentication-configuration-and-advanced-topics-cs/_static/image1.png)
 
 **Figura 01**: Una representación gráfica de slidingExpiration de expiración cuando del vale autenticación de formularios es false ([haga clic aquí para ver imagen en tamaño completo](forms-authentication-configuration-and-advanced-topics-cs/_static/image3.png))
 
-
 La figura 2 muestra el flujo de trabajo cuando slidingExpiration se establece en true y el tiempo de espera se establece en 30. Cuando se recibe una solicitud autenticada (con un vale no hayan caducado) se actualiza su expiración en tiempo de espera número de minutos en el futuro.
-
 
 [![Una representación gráfica del vale de autenticación de formularios cuando slidingExpiration es true](forms-authentication-configuration-and-advanced-topics-cs/_static/image5.png)](forms-authentication-configuration-and-advanced-topics-cs/_static/image4.png)
 
 **Figura 02**: Una representación gráfica del vale de autenticación de formularios cuando es true slidingExpiration ([haga clic aquí para ver imagen en tamaño completo](forms-authentication-configuration-and-advanced-topics-cs/_static/image6.png))
 
-
 Cuando se utiliza vales de autenticación basada en cookies (el valor predeterminado), esta explicación se convierte en un poco más confusa porque las cookies también pueden tener sus propios expirados especificados. Expiración de una cookie (o falta de preparación) indica al explorador cuando se debe destruir la cookie. Si la cookie no tiene una fecha de expiración, se destruye cuando se cierra el explorador. Si una fecha de expiración está presente, sin embargo, la cookie permanece almacenada en el equipo del usuario hasta la fecha y ha pasado el tiempo especificado en la expiración. Cuando se destruye una cookie del explorador, ya no se envía al servidor web. Por lo tanto, la destrucción de una cookie es análoga al usuario cerrar la sesión en el sitio.
 
 > [!NOTE]
 > Por supuesto, un usuario puede quitar proactivamente las cookies almacenadas en su equipo. En Internet Explorer 7, podría ir a herramientas, opciones y haga clic en el botón Eliminar en la sección de historial de exploración. Desde allí, haga clic en el botón de eliminar las cookies.
-
 
 El sistema de autenticación de formularios crea cookies de sesión o expiración dependiendo del valor pasado a la *persistCookie* parámetro. Recuerde que los métodos de la clase FormsAuthentication GetAuthCookie SetAuthCookie y RedirectFromLoginPage toman dos parámetros de entrada: *username* y *persistCookie*. La página de inicio de sesión que se creó en el tutorial anterior incluye una casilla Recordar mi cuenta, que determina si se creó una cookie persistente. Las cookies persistentes son basado en expiración; las cookies no persistentes son basados en sesión.
 
@@ -137,7 +127,6 @@ La configuración de detección automática y UseDeviceProfile se basan en un *p
 > [!NOTE]
 > Esta base de datos de las capacidades del dispositivo se almacena en un número de archivos XML que cumplen el [esquema de archivo de definición de explorador](https://msdn.microsoft.com/library/ms228122.aspx). Los archivos de perfil de dispositivo de forma predeterminada se encuentran en % WINDIR%\Microsoft.Net\Framework\v2.0.50727\CONFIG\Browsers. También puede agregar archivos personalizados a la aplicación de la aplicación\_carpeta exploradores. Para obtener más información, vea el tema sobre [cómo Detectar tipos de exploradores de ASP.NET Web Pages](https://msdn.microsoft.com/library/3yekbd5b.aspx).
 
-
 Dado que el valor predeterminado es UseDeviceProfile, vales de autenticación de formularios sin cookies se usará cuando se visita el sitio de un dispositivo cuyo perfil notifica que no es compatible con las cookies.
 
 ### <a name="encoding-the-authentication-ticket-in-the-url"></a>El vale de autenticación en la dirección URL de codificación
@@ -169,7 +158,6 @@ La dirección URL SomePage.aspx en el vínculo se convierte automáticamente en 
 > [!NOTE]
 > Vales de autenticación de formularios sin cookies cumplen las mismas directivas de tiempo de espera que los vales de autenticación basada en cookies. Sin embargo, los vales de autenticación sin cookies son más propensas a ataques de reproducción, puesto que el vale de autenticación está incrustado directamente en la dirección URL. Imagine un usuario que visita un sitio Web, inicia sesión y, a continuación, se pega la dirección URL en un correo electrónico a un compañero de trabajo. Si su compañero hace clic en ese vínculo antes de alcanza la expiración, iniciará sesión en que el usuario que envió el correo electrónico.
 
-
 ## <a name="step-3-securing-the-authentication-ticket"></a>Paso 3: Proteger el vale de autenticación
 
 El vale de autenticación de formularios se transmite a través de la conexión en una cookie o incrustados directamente en la dirección URL. Además de información de identidad, el vale de autenticación también puede incluir datos de usuario (como veremos en el paso 4). Por lo tanto, es importante que se cifren los datos del vale de ojos espía y (incluso más importante) que el sistema de autenticación de formularios puede garantizar que no se ha alterado el vale.
@@ -180,11 +168,9 @@ Para garantizar la autenticidad de un vale, el sistema de autenticación de form
 
 Al crear (o modificar) una incidencia, el sistema de autenticación de formularios crea un equipo MAC y lo adjunta a los datos del vale. Cuando llega una solicitud posterior, el sistema de autenticación de formularios compara los datos de MAC y el vale para validar la autenticidad de los datos del vale. Figura 3 ilustra gráficamente este flujo de trabajo.
 
-
 [![Se garantiza la autenticidad del vale a través de un equipo MAC](forms-authentication-configuration-and-advanced-topics-cs/_static/image8.png)](forms-authentication-configuration-and-advanced-topics-cs/_static/image7.png)
 
 **Figura 03**: Se garantiza la autenticidad del vale a través de un equipo MAC ([haga clic aquí para ver imagen en tamaño completo](forms-authentication-configuration-and-advanced-topics-cs/_static/image9.png))
-
 
 ¿Qué medidas de seguridad se aplican al vale de autenticación depende de la configuración de protección en el &lt;formularios&gt; elemento. La configuración de protección puede asignarse a uno de los tres valores siguientes:
 
@@ -226,7 +212,6 @@ Para obtener más información consulte [How To: Configurar MachineKey en ASP.NE
 > [!NOTE]
 > Los valores decryptionKey y validationKey se realizaron desde [Steve Gibson](http://www.grc.com/stevegibson.htm)del [perfecto contraseñas web página](https://www.grc.com/passwords.htm), lo que genera 64 caracteres hexadecimales aleatorios cada vez que visito página. Para reducir la probabilidad de que estas claves incorporarlas a sus aplicaciones de producción, se recomienda reemplazar las claves anteriores junto con generado aleatoriamente que desde la página de contraseñas perfecto.
 
-
 ## <a name="step-4-storing-additional-user-data-in-the-ticket"></a>Paso 4: Almacenar datos de usuario adicionales en el vale
 
 Muchas aplicaciones web mostrar información sobre o mostrar la página de base en el usuario ha iniciado sesión actualmente. Por ejemplo, una página web puede mostrar el nombre de usuario y la fecha por última vez que inició sesión en la esquina superior de cada página. El vale de autenticación de formularios almacena el nombre de usuario del usuario ha iniciado sesión actualmente, pero cuando se necesita cualquier otra información, la página debe ir a la tienda de usuario - normalmente una base de datos - para buscar la información no almacenada en el vale de autenticación.
@@ -237,11 +222,9 @@ Para almacenar datos de usuario en el vale de autenticación, se debe escribir u
 
 Cada vez que se necesita tener acceso a los datos almacenados en el vale, podemos hacerlo; para hacerlo FormsAuthenticationTicket de la solicitud actual y deserializar la propiedad UserData. En el caso de la fecha de nacimiento y el empresario ejemplo de nombre, se podría dividir la cadena de UserData en dos subcadenas según el delimitador (|).
 
-
 [![Información adicional del usuario se puede almacenar en el vale de autenticación](forms-authentication-configuration-and-advanced-topics-cs/_static/image11.png)](forms-authentication-configuration-and-advanced-topics-cs/_static/image10.png)
 
 **Figura 04**: Adicionales usuario información puede almacenarse en el vale de autenticación ([haga clic aquí para ver imagen en tamaño completo](forms-authentication-configuration-and-advanced-topics-cs/_static/image12.png))
-
 
 ### <a name="writing-information-to-userdata"></a>Escribir información en UserData
 
@@ -288,7 +271,6 @@ Todo este código es necesario porque la propiedad UserData es de solo lectura y
 > [!NOTE]
 > El código que simplemente examinamos almacena información específica del usuario en un vale de autenticación basada en cookies. El responsable de serializar el vale de autenticación de formularios a la dirección URL de las clases son internas a .NET Framework. Larga historia breve, no se puede almacenar datos de usuario en un vale de autenticación de formularios sin cookies.
 
-
 ### <a name="accessing-the-userdata-information"></a>Acceso a la información de UserData
 
 En este momento el nombre de la empresa y el título de cada usuario se almacena en UserData propiedad del vale autenticación de formularios cuando inicie sesión. Esta información puede obtenerse desde el vale de autenticación en cualquier página sin necesidad de un viaje en el almacén de usuario. Para ilustrar cómo se puede recuperar esta información de la propiedad UserData, vamos a actualizar Default.aspx para que su mensaje de bienvenida incluye no sólo el nombre del usuario, pero también la compañía que trabajan para y su título.
@@ -301,15 +283,12 @@ Si Request.IsAuthenticated es true, entonces la propiedad de texto del WelcomeBa
 
 Figura 5 muestra una captura de pantalla de esta presentación en acción. Inicie sesión como Scott muestra un mensaje de back-Bienvenido que incluye la empresa y el título de Scott.
 
-
 [![Empresa actualmente ha iniciado en del usuario y el título se muestran](forms-authentication-configuration-and-advanced-topics-cs/_static/image14.png)](forms-authentication-configuration-and-advanced-topics-cs/_static/image13.png)
 
 **Figura 05**: Empresa actualmente ha iniciado en del usuario y el título se muestran ([haga clic aquí para ver imagen en tamaño completo](forms-authentication-configuration-and-advanced-topics-cs/_static/image15.png))
 
-
 > [!NOTE]
 > Propiedad de UserData del vale de autenticación actúa como una memoria caché para el almacén del usuario. Al igual que cualquier caché, debe actualizarse cuando se modifican los datos subyacentes. Por ejemplo, si hay una página web desde el que los usuarios pueden actualizar su perfil, los campos almacenados en caché en la propiedad UserData deben actualizarse para reflejar los cambios realizados por el usuario.
-
 
 ## <a name="step-5-using-a-custom-principal"></a>Paso 5: Uso de una entidad personalizada
 
@@ -322,7 +301,6 @@ La clase GenericPrincipal satisface las necesidades para escenarios de autentica
 > [!NOTE]
 > Como veremos en el futuro tutoriales, cuando ASP. Está habilitada framework de Roles de .NET crea un objeto principal personalizado del tipo [RolePrincipal](https://msdn.microsoft.com/library/system.web.security.roleprincipal.aspx) y sobrescribe el objeto GenericPrincipal creado para la autenticación de formularios. Lo hace para personalizar el método IsInRole de la entidad de seguridad para interactuar con la API de .NET framework de Roles.
 
-
 Puesto que nos hemos no le preocupa nosotros mismos roles aún, la única razón que para crear a una entidad personalizada en ese momento, tendríamos sería asociar un objeto IIdentity personalizado a la entidad de seguridad. En el paso 4 analizamos almacenar información adicional del usuario en la propiedad UserData del vale de autenticación, en particular, su título y el nombre de la empresa del usuario. Sin embargo, la información de UserData solo es accesible mediante el vale de autenticación y, a continuación, solo como una cadena serializada, lo que significa que, cuando queremos ver la información de usuario almacenada en el vale se necesita analizar la propiedad UserData.
 
 Podemos mejorar la experiencia del desarrollador mediante la creación de una clase que implementa IIdentity e incluye las propiedades de título y CompanyName. De este modo, un desarrollador puede tener acceso a nombre de la empresa del usuario ha iniciado sesión actualmente, y título directamente a través de las propiedades de título y CompanyName sin que sea necesario saber cómo analizar la propiedad UserData.
@@ -334,14 +312,11 @@ Para este tutorial, vamos a crear los objetos principal e identity personalizado
 > [!NOTE]
 > La aplicación\_carpeta de código solo debe usarse al administrar el proyecto mediante el modelo de proyecto de sitio Web. Si usas el [modelo de proyecto de aplicación Web](https://msdn.microsoft.com/asp.net/Aa336618.aspx), cree una carpeta estándar y agregue las clases a la. Por ejemplo, podría agregar una carpeta nueva denominada clases y colocar el código allí.
 
-
 A continuación, agregue dos nuevos archivos de clase a la aplicación\_carpeta de código, una CustomIdentity.cs con nombre y otro denominan archivo CustomPrincipal.cs.
-
 
 [![Agregue las clases de CustomPrincipal y CustomIdentity al proyecto](forms-authentication-configuration-and-advanced-topics-cs/_static/image17.png)](forms-authentication-configuration-and-advanced-topics-cs/_static/image16.png)
 
 **Figura 06**: Agregar las clases de CustomPrincipal y CustomIdentity a su proyecto ([haga clic aquí para ver imagen en tamaño completo](forms-authentication-configuration-and-advanced-topics-cs/_static/image18.png))
-
 
 La clase CustomIdentity es responsable de implementar la interfaz de IIdentity, que define las propiedades de nombre, IsAuthenticated y AuthenticationType. Además de las propiedades necesarias, estamos interesados en exponer el subyacente vale de autenticación de formularios, así como propiedades de nombre de la empresa y el título del usuario. Escriba el código siguiente en la clase CustomIdentity.
 
@@ -361,19 +336,15 @@ La canalización de ASP.NET toma una solicitud entrante y lo procesa mediante un
 
 Después del evento AuthenticateRequest, la canalización de ASP.NET genera el [PostAuthenticateRequest eventos](https://msdn.microsoft.com/library/system.web.httpapplication.postauthenticaterequest.aspx), que es donde podemos reemplazar el objeto GenericPrincipal creado por FormsAuthenticationModule con una instancia de nuestra Objeto CustomPrincipal. Figura 7 muestra este flujo de trabajo.
 
-
 [![El objeto GenericPrincipal se sustituye por un CustomPrincipal en el evento PostAuthenticationRequest](forms-authentication-configuration-and-advanced-topics-cs/_static/image20.png)](forms-authentication-configuration-and-advanced-topics-cs/_static/image19.png)
 
 **Figura 07**: El objeto GenericPrincipal se sustituye por un CustomPrincipal en el evento PostAuthenticationRequest ([haga clic aquí para ver imagen en tamaño completo](forms-authentication-configuration-and-advanced-topics-cs/_static/image21.png))
 
-
 Para ejecutar código en respuesta a un evento de la canalización ASP.NET, nos podemos crear el controlador de eventos apropiado en Global.asax o crear nuestro propio módulo HTTP. En este tutorial vamos a crear el controlador de eventos en Global.asax. Empiece agregando Global.asax a su sitio Web. Haga doble clic en el nombre del proyecto en el Explorador de soluciones y agregue un elemento de tipo de clase de aplicación Global denominada Global.asax.
-
 
 [![Agregue un archivo Global.asax para su sitio Web](forms-authentication-configuration-and-advanced-topics-cs/_static/image23.png)](forms-authentication-configuration-and-advanced-topics-cs/_static/image22.png)
 
 **Figura 08**: Agregue un archivo Global.asax para su sitio Web ([haga clic aquí para ver imagen en tamaño completo](forms-authentication-configuration-and-advanced-topics-cs/_static/image24.png))
-
 
 La plantilla predeterminada de Global.asax incluye controladores de eventos para un número de los eventos de canalización ASP.NET, incluido el inicio, fin y [evento de Error](https://msdn.microsoft.com/library/system.web.httpapplication.error.aspx), entre otros. No dude en quitar estos controladores de eventos, ya no se necesita para esta aplicación. El evento que nos interesa es PostAuthenticateRequest. Actualice el archivo Global.asax para que su marcado tiene un aspecto similar al siguiente:
 

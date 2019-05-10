@@ -8,12 +8,12 @@ ms.date: 06/02/2008
 ms.assetid: 5138b8fe-98ff-4e73-a00b-e263fc3ff11d
 msc.legacyurl: /web-forms/overview/ajax-control-toolkit/animation/dynamically-controlling-updatepanel-animations-cs
 msc.type: authoredcontent
-ms.openlocfilehash: 0767b66a035069629c15e658c1e75ea78a7bd07b
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: 29c2673aa7b018cbe8c66eb72c256b69a2193a47
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59407658"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65134054"
 ---
 # <a name="dynamically-controlling-updatepanel-animations-c"></a>Controlar dinámicamente las animaciones UpdatePanel (C#)
 
@@ -23,7 +23,6 @@ por [Christian Wenz](https://github.com/wenz)
 
 > El control de animación en ASP.NET AJAX Control Toolkit no es simplemente un control, pero un marco completo para agregar animaciones a un control. Para el contenido de un UpdatePanel, un extensor especial existe que se basa principalmente en el marco de animación: UpdatePanelAnimation. También puede trabajar junto con los desencadenadores UpdatePanel.
 
-
 ## <a name="overview"></a>Información general
 
 El control de animación en ASP.NET AJAX Control Toolkit no es simplemente un control, pero un marco completo para agregar animaciones a un control. Para el contenido de un `UpdatePanel`, existe un extensor especial que se basa principalmente en el marco de animación: `UpdatePanelAnimation`. También puede trabajar junto con `UpdatePanel` desencadenadores.
@@ -32,31 +31,25 @@ El control de animación en ASP.NET AJAX Control Toolkit no es simplemente un co
 
 El primer paso es como es habitual incluir el `ScriptManager` en la página para que se carga la biblioteca AJAX de ASP.NET y se puede usar el Kit de herramientas de Control:
 
-
 [!code-aspx[Main](dynamically-controlling-updatepanel-animations-cs/samples/sample1.aspx)]
 
 La animación en este escenario se aplicarán a una presentación de la hora actual. Esta información se puede escribir en una etiqueta con el `Page_Load()` método, o (por motivos de simplicidad) se usa el siguiente código en línea:
-
 
 [!code-aspx[Main](dynamically-controlling-updatepanel-animations-cs/samples/sample2.aspx)]
 
 Además, se crea un botón para desencadenar la actualización de la hora:
 
-
 [!code-aspx[Main](dynamically-controlling-updatepanel-animations-cs/samples/sample3.aspx)]
 
 Este código, a continuación, se coloca en el `<ContentTemplate>` sección de un `UpdatePanel` elemento. El panel `UpdateMode` atributo debe establecerse en `"Conditional"`, ya que solo los desencadenadores pueden actualizar el contenido del panel. En el `<Triggers>` sección de la `UpdatePanel`, crea un desencadenador de postback asincrónico y vinculado a la `Click` eventos del botón. Por lo tanto, si el usuario hace clic en el botón, el `UpdatePanel` se actualiza. Aquí está el marcado para el `UpdatePanel` control:
-
 
 [!code-aspx[Main](dynamically-controlling-updatepanel-animations-cs/samples/sample4.aspx)]
 
 Por último, el `UpdatePanelAnimationExtender` debe configurarse: Establecer el `TargetControlID` para el Id. del panel de atributo y define una animación en el dispositivo extender. Difuminación en hace sentido, lo que crea un énfasis visual interesante en la hora de actualización. El marcado de extensor es posible que, a continuación, este aspecto:
 
-
 [!code-aspx[Main](dynamically-controlling-updatepanel-animations-cs/samples/sample5.aspx)]
 
 Ejecute el archivo en el explorador. Al hacer clic en el botón, se muestra la hora actual en el panel, siempre desvanece durante un segundo.
-
 
 [![Se desvanece la hora actual](dynamically-controlling-updatepanel-animations-cs/_static/image2.png)](dynamically-controlling-updatepanel-animations-cs/_static/image1.png)
 

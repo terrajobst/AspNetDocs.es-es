@@ -8,12 +8,12 @@ ms.date: 10/17/2013
 ms.assetid: cc764f3b-6921-486a-8f44-c6ccd1249acd
 msc.legacyurl: /mvc/overview/getting-started/introduction/adding-a-controller
 msc.type: authoredcontent
-ms.openlocfilehash: ad5f32a08270ce318c03e1b29acd74d12bbb3d3b
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: da914986ff020879dfe634967b39b32250cbf43b
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59394060"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65120847"
 ---
 # <a name="adding-a-controller"></a>Agregar un controlador
 
@@ -34,13 +34,11 @@ Se va a cubrir todos estos conceptos en esta serie de tutoriales y mostrarle có
 
 Comencemos por crear una clase de controlador. En **el Explorador de soluciones**, haga clic en el *controladores* carpeta y, a continuación, haga clic en **agregar**, a continuación, **controlador**.
 
-
 ![](adding-a-controller/_static/image1.png)
 
 En el **agregar Scaffold** cuadro de diálogo, haga clic en **controlador MVC 5 - vacío**y, a continuación, haga clic en **agregar**.
 
 ![](adding-a-controller/_static/image2.png)  
- 
 
 Asigne un nombre al nuevo controlador "HelloWorldController" y haga clic en **agregar**.
 
@@ -80,7 +78,6 @@ Vamos a modificar el ejemplo ligeramente para que pueda pasar cierta informació
 
 > [!NOTE]
 > Nota de seguridad: El código anterior usa [HttpUtility.HtmlEncode](https://msdn.microsoft.com/library/ee360286(v=vs.110).aspx) para proteger la aplicación de entradas malintencionadas (es decir, JavaScript). Para obtener más información, vea [Cómo: Protegerse de ataques mediante scripts en una aplicación Web aplicando codificación HTML a las cadenas](https://msdn.microsoft.com/library/a2a4yykt(v=vs.100).aspx).
-
 
  Ejecute la aplicación y vaya a la dirección URL de ejemplo (`http://localhost:xxxx/HelloWorld/Welcome?name=Scott&numtimes=4`). Puede probar distintos valores para `name` y `numtimes` en la dirección URL. El [sistema de enlace de modelos ASP.NET MVC](http://odetocode.com/Blogs/scott/archive/2009/04/27/6-tips-for-asp-net-mvc-model-binding.aspx) asigna automáticamente los parámetros con nombre de la cadena de consulta en la barra de direcciones para los parámetros del método.
 

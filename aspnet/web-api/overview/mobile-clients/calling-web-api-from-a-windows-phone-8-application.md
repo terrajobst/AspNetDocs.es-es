@@ -9,12 +9,12 @@ ms.custom: seoapril2019
 ms.assetid: b9775f41-352a-4f82-baa6-23e95b342e20
 msc.legacyurl: /web-api/overview/mobile-clients/calling-web-api-from-a-windows-phone-8-application
 msc.type: authoredcontent
-ms.openlocfilehash: a5c7804c2336e91dc171b5da52819436472e81cf
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: c5da14a6856f551343b6fb14f0aedc659e792f6b
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59412455"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65122070"
 ---
 # <a name="calling-web-api-from-a-windows-phone-8-application-c"></a>Llamar a Web API desde una aplicación de Windows Phone 8 (C#)
 
@@ -40,7 +40,6 @@ En este tutorial de extremo a otro, obtendrá información sobre cómo usar la A
 > [!NOTE]
 > Si va a probar la conectividad entre la API Web y proyectos de Windows Phone 8 en su sistema local, deberá seguir las instrucciones de la *[conectando el emulador de Windows Phone 8 a las aplicaciones de API Web en una variable Local Equipo](https://go.microsoft.com/fwlink/?LinkId=324014)* artículo para configurar el entorno de pruebas.
 
-
 <a id="STEP1"></a>
 ### <a name="step-1-creating-the-web-api-bookstore-project"></a>Paso 1: Crear el proyecto de la librería de API Web
 
@@ -50,20 +49,16 @@ El primer paso de este tutorial de extremo a otro es crear un proyecto Web API q
 2. Haga clic en **archivo**, a continuación, **nueva**y, a continuación, **proyecto**.
 3. Cuando el **nuevo proyecto** se muestra el cuadro de diálogo, expanda **instalado**, a continuación, **plantillas**, a continuación, **Visual C#** y, a continuación, **Web**.
 
-
    | [![](calling-web-api-from-a-windows-phone-8-application/_static/image2.png)](calling-web-api-from-a-windows-phone-8-application/_static/image1.png) |
    |-----------------------------------------------------------------------------------------------------------------------------------------------------|
    |                                                                Haga clic en la imagen para expandir                                                                |
 
-
 4. Resaltar **aplicación Web ASP.NET**, escriba **librería** para el nombre del proyecto y, a continuación, haga clic en **Aceptar**.
 5. Cuando el **nuevo proyecto ASP.NET** se muestra el cuadro de diálogo, seleccione el **API Web** plantilla y, a continuación, haga clic en **Aceptar**.
-
 
    | [![](calling-web-api-from-a-windows-phone-8-application/_static/image4.png)](calling-web-api-from-a-windows-phone-8-application/_static/image3.png) |
    |-----------------------------------------------------------------------------------------------------------------------------------------------------|
    |                                                                Haga clic en la imagen para expandir                                                                |
-
 
 6. Cuando se abre el proyecto Web API, quite el controlador de ejemplo del proyecto:
 
@@ -195,8 +190,6 @@ Si la aplicación no puede comunicarse con la API Web, se mostrará un mensaje d
 
 Si pulsa en el mensaje de error, se mostrará detalles adicionales sobre el error:
 
-
 | [![](calling-web-api-from-a-windows-phone-8-application/_static/image16.png)](calling-web-api-from-a-windows-phone-8-application/_static/image15.png) |
 |-------------------------------------------------------------------------------------------------------------------------------------------------------|
 |                                                                 Haga clic en la imagen para expandir                                                                 |
-

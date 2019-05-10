@@ -8,12 +8,12 @@ ms.date: 09/12/2011
 ms.assetid: 1279f5b1-390f-4b4b-9e6e-f947cb1ef5f5
 msc.legacyurl: /mvc/mvc4
 msc.type: content
-ms.openlocfilehash: b1c828825f15e2708541f9cefa20f3bc2d17b9fb
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: 72719cb9c3aaf03f2b12ff788259fc4927785d05
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59392916"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65121327"
 ---
 # <a name="aspnet-mvc-4"></a>ASP.NET MVC 4
 
@@ -26,7 +26,6 @@ ms.locfileid: "59392916"
 - Compatibilidad mejorada para los métodos asincrónicos
 - *Leer la lista de todas las características en el [notas de la versión](../whitepapers/mvc4-release-notes.md)*
 
-
 ### <a name="whats-new-in-aspnet-mvc-4"></a>Novedades de ASP.NET MVC 4
 
 - [ASP.NET Web API](../web-api/index.md) (Más información sobre ASP.NET Web API)
@@ -34,16 +33,13 @@ ms.locfileid: "59392916"
 - [Notas de la versión de ASP.NET MVC 4](../whitepapers/mvc4-release-notes.md)
 - [Nueva serie de tutoriales de ASP.NET MVC 4](overview/older-versions/getting-started-with-aspnet-mvc4/intro-to-aspnet-mvc-4.md)
 
-
 ### <a name="install-aspnet-mvc-4-for-visual-studio-2010"></a>Instalar ASP.NET MVC 4 para Visual Studio 2010
 
 - Descargue el independiente ASP.NET [ejecutable de instalador de MVC 4](https://www.microsoft.com/download/details.aspx?id=30683)
 
-
 ### <a name="install-visual-studio-2012-includes-aspnet-mvc-4"></a>Instalar Visual Studio 2012 (incluye ASP.NET MVC 4)
 
 - [Visual Studio 2012 Ultimate](https://go.microsoft.com/fwlink/?linkid=247148)
-
 
 ### <a name="getting-help-and-reporting-issues"></a>Obtención de ayuda y los informes de problemas
 

@@ -8,12 +8,12 @@ ms.date: 06/26/2007
 ms.assetid: ac6916d0-a5ab-4218-9760-7ba9e72d258c
 msc.legacyurl: /web-forms/overview/data-access/working-with-batched-data/batch-deleting-cs
 msc.type: authoredcontent
-ms.openlocfilehash: da913e08cd007a89b659f87ef30ea15160692c09
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: 9ee8834cdcf9f8ec5bbdd5188113ea28aa2a9ec7
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59416953"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65134461"
 ---
 # <a name="batch-deleting-c"></a>Eliminación por lotes (C#)
 
@@ -23,48 +23,39 @@ por [Scott Mitchell](https://twitter.com/ScottOnWriting)
 
 > Obtenga información sobre cómo eliminar varios registros de base de datos en una sola operación. En la capa de interfaz de usuario, se basan en un mejorados de GridView creado en un tutorial anterior. En la capa de acceso a datos se encapsulan las varias operaciones de eliminación en una transacción para asegurarse de que todas las eliminaciones se realizan correctamente o se revierten todas las eliminaciones.
 
-
 ## <a name="introduction"></a>Introducción
 
 El [tutorial anterior](batch-updating-cs.md) explora cómo crear un lote mediante un GridView editable totalmente de interfaz de edición. En situaciones donde los usuarios normalmente edita muchos registros al mismo tiempo, un lote en la interfaz de edición requerirá muchas menos devoluciones de datos y el contexto de teclado para mouse conmutadores, lo que mejora la eficiencia de s del usuario final. Esta técnica es útil de forma similar para las páginas donde es habitual que los usuarios puedan eliminar muchos registros en una sola operación.
 
 Cualquiera que haya usado un cliente de correo electrónico en línea ya está familiarizado con uno del lote más comunes de eliminación de interfaces: botón de una casilla de verificación de cada fila en una cuadrícula con un correspondiente eliminar todos los elementos seleccionados (consulte la figura 1). Este tutorial es bastante corta porque se ve que se ha hecho todo el trabajo duro en los tutoriales anteriores en la creación de la interfaz basada en web y un método para eliminar una serie de registros como una única operación atómica. En el [agregar una columna GridView de casillas de verificación](../enhancing-the-gridview/adding-a-gridview-column-of-checkboxes-cs.md) tutorial, creamos un GridView con una columna de casillas de verificación y, en el [ajuste modificaciones de base de datos dentro de una transacción](wrapping-database-modifications-within-a-transaction-cs.md) creamos un método en el tutorial la capa BLL que usaría una transacción para eliminar un `List<T>` de `ProductID` valores. En este tutorial, se compilará tras y combinar nuestras experiencias para crear un lote de trabajo al eliminar el ejemplo anteriores.
 
-
 [![Cada fila incluye una casilla de verificación](batch-deleting-cs/_static/image1.gif)](batch-deleting-cs/_static/image1.png)
 
 **Figura 1**: Cada fila incluye una casilla de verificación ([haga clic aquí para ver imagen en tamaño completo](batch-deleting-cs/_static/image2.png))
-
 
 ## <a name="step-1-creating-the-batch-deleting-interface"></a>Paso 1: Crear el lote de eliminación de interfaz
 
 Dado que ya creado el lote de eliminación de la interfaz en el [agregar una columna GridView de casillas de verificación](../enhancing-the-gridview/adding-a-gridview-column-of-checkboxes-cs.md) tutorial, nos podemos simplemente cópielo en `BatchDelete.aspx` en lugar de crearla desde cero. Comience abriendo la `BatchDelete.aspx` página en el `BatchData` carpeta y el `CheckBoxField.aspx` página en el `EnhancedGridView` carpeta. Desde el `CheckBoxField.aspx` página, vaya a la vista del origen y copie el marcado entre la `<asp:Content>` etiquetas como se muestra en la figura 2.
 
-
 [![Copie el marcado declarativo de CheckBoxField.aspx en el Portapapeles](batch-deleting-cs/_static/image2.gif)](batch-deleting-cs/_static/image3.png)
 
 **Figura 2**: Copie el marcado declarativo de `CheckBoxField.aspx` en el Portapapeles ([haga clic aquí para ver imagen en tamaño completo](batch-deleting-cs/_static/image4.png))
 
-
 A continuación, vaya a la vista del origen en `BatchDelete.aspx` y pegue el contenido del Portapapeles en el `<asp:Content>` etiquetas. También copiar y pegar el código desde dentro de la clase de código subyacente en `CheckBoxField.aspx.cs` a dentro de la clase de código subyacente en `BatchDelete.aspx.cs` (el `DeleteSelectedProducts` botón s `Click` controlador de eventos, el `ToggleCheckState` método y el `Click` controladores de eventos para el `CheckAll` y `UncheckAll` botones). Después de copiar a través de este contenido, el `BatchDelete.aspx` clase de código subyacente de la página s debe contener el código siguiente:
-
 
 [!code-csharp[Main](batch-deleting-cs/samples/sample1.cs)]
 
 Después de copiar en el marcado declarativo y el código fuente, dedique un momento para probar `BatchDelete.aspx` viendo a través de un explorador. Debería ver un lista de los diez primeros productos en un control GridView con cada fila de mostrar el nombre de producto s, la categoría y el precio, junto con una casilla de verificación de GridView. Debe haber tres botones: Marque todo, desactivar todo y eliminar productos seleccionados. Al hacer clic en el botón Comprobar todo selecciona todas las casillas, aunque desactive todos los borra todas las casillas. Al hacer clic en eliminar los productos seleccionados se muestra un mensaje que se enumera los `ProductID` los valores de los productos seleccionados, pero no elimina realmente los productos.
 
-
 [![La interfaz de CheckBoxField.aspx se ha movido a BatchDeleting.aspx](batch-deleting-cs/_static/image3.gif)](batch-deleting-cs/_static/image5.png)
 
 **Figura 3**: La interfaz de `CheckBoxField.aspx` se ha movido a `BatchDeleting.aspx` ([haga clic aquí para ver imagen en tamaño completo](batch-deleting-cs/_static/image6.png))
-
 
 ## <a name="step-2-deleting-the-checked-products-using-transactions"></a>Paso 2: Eliminación de los productos activados mediante transacciones
 
 En el lote de eliminación de la interfaz que se copian correctamente en `BatchDeleting.aspx`, todos los que queda es actualizar el código para que el botón Eliminar productos seleccionados elimina los productos activados mediante el `DeleteProductsWithTransaction` método en el `ProductsBLL` clase. Este método, agregada en el [ajuste modificaciones de base de datos dentro de una transacción](wrapping-database-modifications-within-a-transaction-cs.md) tutorial, se acepta como entrada un `List<T>` de `ProductID` valores y la elimina cada uno correspondiente `ProductID` dentro del ámbito de un transacción.
 
 El `DeleteSelectedProducts` botón s `Click` controlador de eventos utiliza actualmente lo `foreach` bucle para recorrer en iteración cada fila GridView:
-
 
 [!code-csharp[Main](batch-deleting-cs/samples/sample2.cs)]
 
@@ -74,27 +65,22 @@ El código anterior no elimina realmente los registros como la llamada a la `Pro
 
 Para garantizar la atomicidad, es necesario usar en su lugar el `ProductsBLL` clase s `DeleteProductsWithTransaction` método. Dado que este método acepta una lista de `ProductID` valores, es necesario compilar primero esta lista de la cuadrícula y, a continuación, páselo como un parámetro. Primero creamos una instancia de un `List<T>` de tipo `int`. Dentro de la `foreach` bucle tenemos que agregar los productos seleccionados `ProductID` valores a este `List<T>`. Después del bucle esto `List<T>` debe pasarse a la `ProductsBLL` clase s `DeleteProductsWithTransaction` método. Actualización de la `DeleteSelectedProducts` botón s `Click` controlador de eventos con el código siguiente:
 
-
 [!code-csharp[Main](batch-deleting-cs/samples/sample3.cs)]
 
 El código actualizado se crea un `List<T>` de tipo `int` (`productIDsToDelete`) y lo rellena con el `ProductID` para eliminar los valores. Después de la `foreach` bucle, si hay al menos un producto seleccionado, el `ProductsBLL` clase s `DeleteProductsWithTransaction` método se llama y pasa esta lista. El `DeleteResults` también se muestra la etiqueta y los datos vuelve a enlazar el control GridView (de modo que los registros recién eliminados ya no aparecen como filas en la cuadrícula).
 
 Figura 4 muestra el control GridView después de un número de filas se han seleccionado para su eliminación. Figura 5 muestra la pantalla después de que se ha hecho clic el botón Eliminar productos seleccionados. Tenga en cuenta que en la figura 5 la `ProductID` valores de los registros eliminados se muestran en la etiqueta debajo del control GridView y las filas ya no están en GridView.
 
-
 [![Los productos seleccionados se eliminarán.](batch-deleting-cs/_static/image4.gif)](batch-deleting-cs/_static/image7.png)
 
 **Figura 4**: El seleccionado productos se eliminará ([haga clic aquí para ver imagen en tamaño completo](batch-deleting-cs/_static/image8.png))
-
 
 [![Los valores de ProductID de productos eliminados son aparece debajo de GridView](batch-deleting-cs/_static/image5.gif)](batch-deleting-cs/_static/image9.png)
 
 **Figura 5**: Los productos eliminados `ProductID` los valores son aparece debajo de GridView ([haga clic aquí para ver imagen en tamaño completo](batch-deleting-cs/_static/image10.png))
 
-
 > [!NOTE]
 > Para probar la `DeleteProductsWithTransaction` atomicidad método s, agregue manualmente una entrada para un producto en el `Order Details` de tabla y, a continuación, intenta eliminar ese producto (junto con otros usuarios). Recibirá una infracción de restricción de clave externa cuando se intenta eliminar el producto con un pedido asociados, pero tenga en cuenta cómo se revierten las eliminaciones de otros productos seleccionados.
-
 
 ## <a name="summary"></a>Resumen
 

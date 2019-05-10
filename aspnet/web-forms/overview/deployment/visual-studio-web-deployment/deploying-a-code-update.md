@@ -8,12 +8,12 @@ ms.date: 02/15/2013
 ms.assetid: c76dbc35-a914-4ee3-919c-4f4d1fa05104
 msc.legacyurl: /web-forms/overview/deployment/visual-studio-web-deployment/deploying-a-code-update
 msc.type: authoredcontent
-ms.openlocfilehash: 6e66c03a4521f339f0ee9c7c0e7b8129f241113c
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: 36d1575808925de38b909d6816e46bb6cb69cf72
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59379418"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65134254"
 ---
 # <a name="aspnet-web-deployment-using-visual-studio-deploying-a-code-update"></a>Implementación Web de ASP.NET con Visual Studio: Implementar una actualización de código
 
@@ -22,7 +22,6 @@ por [Tom Dykstra](https://github.com/tdykstra)
 [Descargar el proyecto de inicio](http://go.microsoft.com/fwlink/p/?LinkId=282627)
 
 > Esta serie de tutoriales muestra cómo implementar (publicar) una ASP.NET web application a Azure App Service Web Apps o a un proveedor de hospedaje de terceros, mediante el uso de Visual Studio 2012 o Visual Studio 2010. Para obtener información acerca de la serie, vea [el primer tutorial de la serie](introduction.md).
-
 
 ## <a name="overview"></a>Información general
 
@@ -54,7 +53,7 @@ Para poder usar los perfiles de publicación para implementar en la prueba, ensa
 
 1. Abra el **publicación Web** Asistente haciendo clic en el proyecto ContosoUniversity y haga clic en **publicar**.
 2. Haga clic en el **prueba** de perfil en el **perfil** lista desplegable.
-3. Haga clic en el **configuración** ficha.
+3. Haga clic en la pestaña **Configuración** .
 4. En **DefaultConnection** en el **bases de datos** sección, desactive la **Actualizar base de datos** casilla de verificación.
 5. Haga clic en el **perfil** pestaña y, a continuación, haga clic en el **ensayo** de perfil en el **perfil** lista desplegable.
 6. Cuando se le pregunte si desea guardar los cambios realizados en el **prueba** de perfil, haga clic en **Sí**.

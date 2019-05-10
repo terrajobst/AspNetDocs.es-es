@@ -8,12 +8,12 @@ ms.date: 05/04/2012
 ms.assetid: 44a22ac7-1fc7-4174-b946-c6129fb6a19b
 msc.legacyurl: /web-forms/overview/deployment/configuring-server-environments-for-web-deployment/scenario-configuring-a-test-environment-for-web-deployment
 msc.type: authoredcontent
-ms.openlocfilehash: 7ea8c74a6621200e3a0d52a7c37fed6b5eeff4e5
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: d580e550f2461837f0e8a4e477273348b49cb53e
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59391629"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65132390"
 ---
 # <a name="scenario-configuring-a-test-environment-for-web-deployment"></a>Escenario: Configurar un entorno de prueba para la implementación web
 
@@ -22,7 +22,6 @@ por [Jason Lee](https://github.com/jrjlee)
 [Descargar PDF](https://msdnshared.blob.core.windows.net/media/MSDNBlogsFS/prod.evol.blogs.msdn.com/CommunityServer.Blogs.Components.WeblogFiles/00/00/00/63/56/8130.DeployingWebAppsInEnterpriseScenarios.pdf)
 
 > En este tema se describe un escenario de implementación web típico para desarrolladores o entornos de prueba y se explican las tareas que necesita para completar con el fin de configurar un entorno similar.
-
 
 Cuando los desarrolladores trabajan en aplicaciones web, a menudo se les otorga acceso a un entorno de servidor que pueden usar para probar los cambios en sus aplicaciones en una configuración realista. Este tipo de entorno de desarrollo o prueba normalmente tiene estas características:
 
@@ -47,7 +46,6 @@ El entorno de prueba debe admitir paso a paso o automatizar la implementación d
 
 > [!NOTE]
 > También puede usar [implementar Web bajo demanda](https://technet.microsoft.com/library/ee517345(WS.10).aspx) (el "agente temp"). Esto es similar al enfoque de agente remoto en cuanto a los requisitos y restricciones.
-
 
 En este caso, los desarrolladores tienen privilegios de administrador en los servidores de destino y el entorno de prueba no está sujeto a restricciones de seguridad estricta, por lo que es la elección lógica configurar el servidor de prueba web para admitir la implementación mediante el agente remoto. Esto es menos complejo y requiere la configuración inicial menor que el método de controlador de implementación Web. También deberá configurar el servidor de base de datos para admitir la implementación y el acceso remoto.
 

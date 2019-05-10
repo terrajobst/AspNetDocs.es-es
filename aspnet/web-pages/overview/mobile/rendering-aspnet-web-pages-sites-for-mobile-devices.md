@@ -8,12 +8,12 @@ ms.date: 02/17/2014
 ms.assetid: f15ab392-c05e-4269-83bf-7c6d2b8c8ec8
 msc.legacyurl: /web-pages/overview/mobile/rendering-aspnet-web-pages-sites-for-mobile-devices
 msc.type: authoredcontent
-ms.openlocfilehash: dbcd25331387f8606343e551302bc3ed1f9b2c25
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: c012348d65e48a275cb0e4808fef2a7f31e5fb33
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59379513"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65133516"
 ---
 # <a name="rendering-aspnet-web-pages-razor-sites-for-mobile-devices"></a>Representar sitios de ASP.NET Web Pages (Razor) para dispositivos móviles
 
@@ -33,7 +33,6 @@ por [Tom FitzMacken](https://github.com/tfitzmac)
 >   
 > 
 > Este tutorial también funciona con ASP.NET Web Pages 2.
-
 
 ASP.NET Web Pages le permite crear pantallas personalizadas para representar el contenido en dispositivos móviles o de otros dispositivos.
 
@@ -55,9 +54,7 @@ El ejemplo siguiente muestra cómo habilitar la representación de dispositivos 
 > [!NOTE]
 > Para probar las páginas móviles, puede usar un simulador de dispositivos móviles que se ejecuta en un equipo de escritorio. Esta herramienta le permite probar las páginas web tal como aparecen en los dispositivos móviles (es decir, normalmente con mucho menor Mostrar área). Un ejemplo de un simulador es el [complemento modificador del agente de usuario](http://addons.mozilla.org/firefox/addon/user-agent-switcher/) para Mozilla Firefox, que le permite emular varios exploradores móviles desde una versión de escritorio de Firefox.
 
-
 <a id="Additional_Resources"></a>
 ## <a name="additional-resources"></a>Recursos adicionales
-
 
 [Emulador de Windows Phone](https://msdn.microsoft.com/library/ff402563(v=VS.92).aspx)

@@ -9,12 +9,12 @@ ms.custom: seoapril2019
 ms.assetid: cbebeb37-2594-41f2-b71a-f4f26520d512
 msc.legacyurl: /web-api/overview/error-handling/exception-handling
 msc.type: authoredcontent
-ms.openlocfilehash: 08b3663c1f9a08b8b3600113c32aeffb36c0d990
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: dbdbab6aefec840e2fec9e9cd33f3d124093750e
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59399325"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65125312"
 ---
 # <a name="exception-handling-in-aspnet-web-api"></a>Control de excepciones en ASP.NET Web API
 
@@ -49,7 +49,6 @@ Filtros de excepción implementan la **System.Web.Http.Filters.IExceptionFilter*
 
 > [!NOTE]
 > Los filtros de excepciones en ASP.NET Web API son similares a los de ASP.NET MVC. Sin embargo, se declaran en un espacio de nombres independiente y una función por separado. En concreto, el **HandleErrorAttribute** clase usada en MVC no controla las excepciones producidas por controladores de API Web.
-
 
 Este es un filtro que convierte **NotImplementedException** excepciones en código de estado HTTP 501, no se ha implementado el código:
 

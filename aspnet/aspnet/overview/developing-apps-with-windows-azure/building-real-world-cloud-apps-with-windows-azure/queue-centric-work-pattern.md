@@ -8,12 +8,12 @@ ms.date: 06/12/2014
 ms.assetid: cc1ad51b-40c3-4c68-8620-9aaa0fd1f6cf
 msc.legacyurl: /aspnet/overview/developing-apps-with-windows-azure/building-real-world-cloud-apps-with-windows-azure/queue-centric-work-pattern
 msc.type: authoredcontent
-ms.openlocfilehash: 0d6d8375425f3a0cb915c2f7844f6c5191ea4e95
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: 9081691207a1a8ccd58e1a93a0be06af15c0b2d0
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59392019"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65118713"
 ---
 # <a name="queue-centric-work-pattern-building-real-world-cloud-apps-with-azure"></a>Patrón centrado en colas de trabajo (crear aplicaciones de nube reales con Azure)
 
@@ -22,7 +22,6 @@ by [Mike Wasson](https://github.com/MikeWasson), [Rick Anderson]((https://twitte
 [Descargar proyecto corregirlo](http://code.msdn.microsoft.com/Fix-It-app-for-Building-cdd80df4) o [descargar libro electrónico](http://blogs.msdn.com/b/microsoft_press/archive/2014/07/23/free-ebook-building-cloud-apps-with-microsoft-azure.aspx)
 
 > El **Building Real World Cloud Apps with Azure** eBook se basa en una presentación desarrollada por Scott Guthrie. Se explican el 13 patrones y prácticas que pueden ayudarle a tener éxito el desarrollo de aplicaciones web para la nube. Para obtener información sobre el libro electrónico, consulte [el primer capítulo](introduction.md).
-
 
 Anteriormente, vimos que varios servicios de uso pueden producir un SLA "compuesto", donde es el SLA efectivo de la aplicación la *producto* de los SLA individuales. Por ejemplo, la aplicación Fix It usa sitios Web, almacenamiento y base de datos SQL. Si se produce un error en cualquiera de estos servicios, la aplicación devolverá un error al usuario.
 

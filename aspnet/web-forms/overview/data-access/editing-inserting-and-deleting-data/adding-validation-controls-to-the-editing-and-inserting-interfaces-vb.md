@@ -8,12 +8,12 @@ ms.date: 07/17/2006
 ms.assetid: e3d7028a-7a22-4a4f-babe-d53afc41c0e2
 msc.legacyurl: /web-forms/overview/data-access/editing-inserting-and-deleting-data/adding-validation-controls-to-the-editing-and-inserting-interfaces-vb
 msc.type: authoredcontent
-ms.openlocfilehash: c5dd64cd3b60f7c231be8ce1c464af1582f23f5d
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: 02547e73dc1920f4c9228a9acd6a45344a875a55
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59402712"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65134701"
 ---
 # <a name="adding-validation-controls-to-the-editing-and-inserting-interfaces-vb"></a>Agregar controles de validación a las interfaces de edición e inserción (VB)
 
@@ -22,7 +22,6 @@ por [Scott Mitchell](https://twitter.com/ScottOnWriting)
 [Descargue la aplicación de ejemplo](http://download.microsoft.com/download/9/c/1/9c1d03ee-29ba-4d58-aa1a-f201dcc822ea/ASPNET_Data_Tutorial_19_VB.exe) o [descargar PDF](adding-validation-controls-to-the-editing-and-inserting-interfaces-vb/_static/datatutorial19vb1.pdf)
 
 > En este tutorial veremos lo fácil que es agregar los controles de validación a las plantillas EditItemTemplate e InsertItemTemplate de un control Web de datos para proporcionar una interfaz de usuario infalible.
-
 
 ## <a name="introduction"></a>Introducción
 
@@ -38,11 +37,9 @@ En este tutorial veremos lo fácil que es agregar los controles de validación a
 
 En el [examinando los eventos asociados con la inserción, actualización y eliminación](examining-the-events-associated-with-inserting-updating-and-deleting-vb.md) tutorial hemos creado una página que muestra los nombres y los precios de los productos en un control GridView editable. Además, la página incluye un DetailsView cuyo `DefaultMode` propiedad se estableció en `Insert`, representación, por tanto, siempre en modo de inserción. Desde este DetailsView, el usuario podría escriba el nombre y el precio de un producto nuevo, haga clic en Insertar y hacer que se agregue al sistema (consulte la figura 1).
 
-
 [![El ejemplo anterior permite a los usuarios agregar productos nuevos y editar las existentes](adding-validation-controls-to-the-editing-and-inserting-interfaces-vb/_static/image2.png)](adding-validation-controls-to-the-editing-and-inserting-interfaces-vb/_static/image1.png)
 
 **Figura 1**: El anterior ejemplo permite a los usuarios agregar productos nuevos y editar los existentes ([haga clic aquí para ver imagen en tamaño completo](adding-validation-controls-to-the-editing-and-inserting-interfaces-vb/_static/image3.png))
-
 
 El objetivo de este tutorial es aumentar la DetailsView y GridView para proporcionar controles de validación. En concreto, nuestra lógica de validación hará lo siguiente:
 
@@ -56,11 +53,9 @@ Antes de que podemos observar enriquecidas con el ejemplo anterior para incluir 
 2. Vaya al marcado declarativo de la página (haga clic en el botón de origen en la parte inferior de la página)
 3. Copie el texto dentro de la `<asp:Content>` y `</asp:Content>` etiquetas (las líneas 3 a 44), como se muestra en la figura 2.
 
-
 [![Copie el texto dentro de la &lt;asp: Content&gt; Control](adding-validation-controls-to-the-editing-and-inserting-interfaces-vb/_static/image5.png)](adding-validation-controls-to-the-editing-and-inserting-interfaces-vb/_static/image4.png)
 
 **Figura 2**: Copie el texto dentro de la `<asp:Content>` Control ([haga clic aquí para ver imagen en tamaño completo](adding-validation-controls-to-the-editing-and-inserting-interfaces-vb/_static/image6.png))
-
 
 1. Abra el `UIValidation.aspx` página
 2. Vaya al marcado declarativo de la página
@@ -74,11 +69,9 @@ Después de migrar el contenido y el código de `DataModificationEvents.aspx` a 
 
 Para agregar controles de validación a las interfaces de edición e inserción, debe convertirse en TemplateFields el BoundFields utilizados por los controles GridView y DetailsView. Para ello, haga clic en los vínculos Editar columnas y campos de edición de GridView y de DetailsView etiquetas inteligentes, respectivamente. Allí, seleccione cada uno de los BoundFields y haga clic en el vínculo "Convert this field into a TemplateField".
 
-
 [![Cada una de la de DetailsView y de GridView BoundFields convertir TemplateFields](adding-validation-controls-to-the-editing-and-inserting-interfaces-vb/_static/image8.png)](adding-validation-controls-to-the-editing-and-inserting-interfaces-vb/_static/image7.png)
 
 **Figura 3**: Convertir cada uno de los de DetailsView y de GridView BoundFields en TemplateFields ([haga clic aquí para ver imagen en tamaño completo](adding-validation-controls-to-the-editing-and-inserting-interfaces-vb/_static/image9.png))
-
 
 Convertir un BoundField en TemplateField a través del cuadro de diálogo campos genera TemplateField que exhibe las mismas interfaces de solo lectura, edición e Insertar como el BoundField propio. El marcado siguiente muestra la sintaxis declarativa para el `ProductName` campo DetailsView después de se ha convertido en TemplateField:
 
@@ -94,7 +87,6 @@ Al hacer clic en la función "Convert this field into a TemplateField", Visual S
 
 > [!NOTE]
 > No dude en Personalizar las interfaces de edición de las plantillas según sea necesario. Por ejemplo, puede que convenga tener el cuadro de texto el `UnitPrice` TemplateFields se representa como un cuadro de texto más pequeño que el `ProductName` cuadro de texto. Para realizar esta acción puede establecer el cuadro de texto `Columns` propiedad en un valor adecuado o proporcionar un ancho absoluto a través de la `Width` propiedad. En el siguiente tutorial veremos cómo personalizar completamente la interfaz de edición si se reemplaza el cuadro de texto con una entrada de datos alternativos control Web.
-
 
 ## <a name="step-3-adding-the-validation-controls-to-the-gridviewsedititemtemplate-s"></a>Paso 3: Agregar los controles de validación a la GridView`EditItemTemplate` s
 
@@ -113,40 +105,31 @@ En este tutorial se deberá usar un control RequiredFieldValidator en las de Gri
 > [!NOTE]
 > Aunque ASP.NET 1.x tenía estos mismos controles de validación de cinco, ASP.NET 2.0 ha agregado una serie de mejoras, los principales dos de script de cliente compatibilidad con exploradores distintos de Internet Explorer y la capacidad de los controles de validación de partición en una página en grupos de validación. Para obtener más información sobre las nuevas características de control de validación de 2.0, consulte [Disecar los controles de validación en ASP.NET 2.0](http://aspnet.4guysfromrolla.com/articles/112305-1.aspx).
 
-
 Comencemos por agregar los controles de validación necesaria para la `EditItemTemplate` s en TemplateFields de GridView. Para ello, haga clic en el vínculo Editar plantillas de etiqueta inteligente de GridView para que aparezca la interfaz de edición de plantilla. Desde aquí, puede seleccionar qué plantilla para editar en la lista desplegable. Puesto que deseamos aumentar la interfaz de edición, tenemos que agregar los controles de validación para el `ProductName` y `UnitPrice`del `EditItemTemplate` s.
-
 
 [![Es necesario ampliar el ProductName y EditItemTemplates de UnitPrice](adding-validation-controls-to-the-editing-and-inserting-interfaces-vb/_static/image11.png)](adding-validation-controls-to-the-editing-and-inserting-interfaces-vb/_static/image10.png)
 
 **Figura 4**: Es necesario extender el `ProductName` y `UnitPrice`del `EditItemTemplate` s ([haga clic aquí para ver imagen en tamaño completo](adding-validation-controls-to-the-editing-and-inserting-interfaces-vb/_static/image12.png))
 
-
 En el `ProductName` `EditItemTemplate`, agregue un control RequiredFieldValidator arrastrándolo desde el cuadro de herramientas en la interfaz de edición de plantilla, colocar después el cuadro de texto.
-
 
 [![Agregar un control RequiredFieldValidator a ProductName EditItemTemplate](adding-validation-controls-to-the-editing-and-inserting-interfaces-vb/_static/image14.png)](adding-validation-controls-to-the-editing-and-inserting-interfaces-vb/_static/image13.png)
 
 **Figura 5**: Agregue un control RequiredFieldValidator a la `ProductName` `EditItemTemplate` ([haga clic aquí para ver imagen en tamaño completo](adding-validation-controls-to-the-editing-and-inserting-interfaces-vb/_static/image15.png))
 
-
 Todos los controles de validación funcionan mediante la validación de la entrada de un solo control Web de ASP.NET. Por lo tanto, debemos indicar que debe validar el control RequiredFieldValidator que acabamos de agregar en el cuadro de texto en el `EditItemTemplate`; Esto se logra estableciendo el control de validación [propiedad ControlToValidate](https://msdn.microsoft.com/library/system.web.ui.webcontrols.basevalidator.controltovalidate(VS.80).aspx) a la `ID` del control Web adecuado. El cuadro de texto tiene actualmente en su lugar no distintivo `ID` de `TextBox1`, pero vamos a cambiar a algo más adecuado. Haga clic en el cuadro de texto en la plantilla y, a continuación, en la ventana Propiedades, cambie la `ID` desde `TextBox1` a `EditProductName`.
-
 
 [![Cambie el identificador del cuadro de texto a EditProductName](adding-validation-controls-to-the-editing-and-inserting-interfaces-vb/_static/image17.png)](adding-validation-controls-to-the-editing-and-inserting-interfaces-vb/_static/image16.png)
 
 **Figura 6**: Cambie el cuadro de texto `ID` a `EditProductName` ([haga clic aquí para ver imagen en tamaño completo](adding-validation-controls-to-the-editing-and-inserting-interfaces-vb/_static/image18.png))
 
-
 A continuación, establezca el RequiredFieldValidator `ControlToValidate` propiedad `EditProductName`. Por último, establezca el [propiedad ErrorMessage](https://msdn.microsoft.com/library/system.web.ui.webcontrols.basevalidator.errormessage(VS.80).aspx) "Debe proporcionar el nombre del producto" y el [propiedad Text](https://msdn.microsoft.com/library/system.web.ui.webcontrols.basevalidator.text(VS.80).aspx) a "\*". El `Text` valor de propiedad, si se proporciona, es el texto que se muestra el control de validación si se produce un error en la validación. El `ErrorMessage` el valor de propiedad, que es necesario, se utiliza el control ValidationSummary; si el `Text` se omite el valor de propiedad, el `ErrorMessage` valor de propiedad también es el texto mostrado por el control de validación de entrada no válida.
 
 Después de establecer estas tres propiedades de RequiredFieldValidator, la pantalla debe ser similar a la figura 7.
 
-
 [![Establecer el RequiredFieldValidator ControlToValidate ErrorMessage y propiedades de texto](adding-validation-controls-to-the-editing-and-inserting-interfaces-vb/_static/image20.png)](adding-validation-controls-to-the-editing-and-inserting-interfaces-vb/_static/image19.png)
 
 **Figura 7**: Establecer el RequiredFieldValidator `ControlToValidate`, `ErrorMessage`, y `Text` propiedades ([haga clic aquí para ver imagen en tamaño completo](adding-validation-controls-to-the-editing-and-inserting-interfaces-vb/_static/image21.png))
-
 
 Con el control RequiredFieldValidator agregado a la `ProductName` `EditItemTemplate`, todos los que queda es agregar la validación necesaria para la `UnitPrice` `EditItemTemplate`. Puesto que hemos decidido que, para esta página, el `UnitPrice` opcional cuando edita un registro, no tenemos que agregar un control RequiredFieldValidator. , Sin embargo, necesitamos agregar un control CompareValidator para asegurarse de que el `UnitPrice`, si se proporciona, se tiene el formato correcto como moneda y es mayor o igual que 0.
 
@@ -161,11 +144,9 @@ Después de realizar estos cambios, abra la página en un explorador. Si intenta
 > [!NOTE]
 > Recuerde que en el *eventos asociados con la inserción, actualización y eliminación* tutorial establecemos el BoundField `DataFormatString` propiedad `{0:c}` con el fin de dar el formato de una moneda. Además, hemos establecido el `ApplyFormatInEditMode` propiedad en true, lo que hace que el control GridView de edición del interfaz para dar formato a la `UnitPrice` como una moneda. Al convertir el BoundField en TemplateField, Visual Studio se ha indicado a esta configuración y con el formato del cuadro de texto `Text` propiedad como una moneda mediante la sintaxis de enlace de datos `<%# Bind("UnitPrice", "{0:c}") %>`.
 
-
 [![Aparece un asterisco junto a los cuadros de texto con la entrada no válida](adding-validation-controls-to-the-editing-and-inserting-interfaces-vb/_static/image23.png)](adding-validation-controls-to-the-editing-and-inserting-interfaces-vb/_static/image22.png)
 
 **Figura 8**: Un asterisco aparece junto a los cuadros de texto con la entrada no válida ([haga clic aquí para ver imagen en tamaño completo](adding-validation-controls-to-the-editing-and-inserting-interfaces-vb/_static/image24.png))
-
 
 Mientras que las obras de validación como-es, el usuario debe quitar manualmente el símbolo de moneda al editar un registro, que no es aceptable. Para solucionar esto, tenemos tres opciones:
 
@@ -175,22 +156,18 @@ Mientras que las obras de validación como-es, el usuario debe quitar manualment
 
 Vamos a con la opción #1 para este ejercicio. Actualmente la `UnitPrice` se da formato como una moneda debido a la expresión de enlace de datos para el cuadro de texto en el `EditItemTemplate`: `<%# Bind("UnitPrice", "{0:c}") %>`. Cambie la instrucción de enlace a `Bind("UnitPrice", "{0:n2}")`, lo que da formato al resultado como un número con dos dígitos de precisión. Esto se puede hacer directamente a través de la sintaxis declarativa o haciendo clic en el vínculo Editar DataBindings de la `EditUnitPrice` cuadro de texto en el `UnitPrice` del TemplateField `EditItemTemplate` (consulte las figuras 9 y 10).
 
-
 [![Haga clic en vínculo de Editar DataBindings del cuadro de texto](adding-validation-controls-to-the-editing-and-inserting-interfaces-vb/_static/image26.png)](adding-validation-controls-to-the-editing-and-inserting-interfaces-vb/_static/image25.png)
 
 **Figura 9**: Haga clic en vínculo de Editar DataBindings del cuadro de texto ([haga clic aquí para ver imagen en tamaño completo](adding-validation-controls-to-the-editing-and-inserting-interfaces-vb/_static/image27.png))
-
 
 [![Especifique el especificador de formato en la instrucción de enlace](adding-validation-controls-to-the-editing-and-inserting-interfaces-vb/_static/image29.png)](adding-validation-controls-to-the-editing-and-inserting-interfaces-vb/_static/image28.png)
 
 **Figura 10**: Especifique el especificador de formato en el `Bind` instrucción ([haga clic aquí para ver imagen en tamaño completo](adding-validation-controls-to-the-editing-and-inserting-interfaces-vb/_static/image30.png))
 
-
 Con este cambio, el precio con formato en la interfaz de edición incluye la coma como separador de grupo y un punto como separador decimal, pero se cierra el símbolo de moneda.
 
 > [!NOTE]
 > El `UnitPrice` `EditItemTemplate` no incluye un control RequiredFieldValidator, lo que permite negativas derivadas de la devolución de datos y la lógica de actualización para comenzar. Sin embargo, el `RowUpdating` controlador de eventos que se copian desde el *examinando los eventos asociados con la inserción, actualización y eliminación* tutorial incluye una comprobación de programación que garantiza que el `UnitPrice` se proporciona. No dude en quitar esta lógica, déjelo en como-es, o agregar un control RequiredFieldValidator a la `UnitPrice` `EditItemTemplate`.
-
 
 ## <a name="step-4-summarizing-data-entry-problems"></a>Paso 4: Resumen de problemas de entrada de datos
 
@@ -198,11 +175,9 @@ Además de los controles de validación de cinco, ASP.NET incluye el [control Va
 
 Para ello, arrastre un control ValidationSummary desde el cuadro de herramientas hasta el diseñador. La ubicación del control de validación no importa realmente, puesto que vamos a configurarlo para mostrar únicamente el resumen como un cuadro de mensajes. Después de agregar el control, establezca su [propiedad ShowSummary](https://msdn.microsoft.com/library/system.web.ui.webcontrols.validationsummary.showsummary(VS.80).aspx) a `False` y su [propiedad ShowMessageBox](https://msdn.microsoft.com/library/system.web.ui.webcontrols.validationsummary.showmessagebox(VS.80).aspx) a `True`. Con esta versión, se resumen los errores de validación en un cuadro de mensajes del lado cliente.
 
-
 [![Los errores de validación se resumen en un cuadro de mensajes del lado cliente](adding-validation-controls-to-the-editing-and-inserting-interfaces-vb/_static/image32.png)](adding-validation-controls-to-the-editing-and-inserting-interfaces-vb/_static/image31.png)
 
 **Figura 11**: Los errores de validación se resumen en un cuadro de mensajes del lado cliente ([haga clic aquí para ver imagen en tamaño completo](adding-validation-controls-to-the-editing-and-inserting-interfaces-vb/_static/image33.png))
-
 
 ## <a name="step-5-adding-the-validation-controls-to-the-detailsviewsinsertitemtemplate"></a>Paso 5: Agregar los controles de validación a prvku DetailsView.`InsertItemTemplate`
 
@@ -214,31 +189,25 @@ Puesto que la `UnitPrice` es necesario para esta página cuando se agrega un nue
 
 Después de agregar estos controles de validación, un producto nuevo no se puede agregar al sistema si no se proporciona su nombre o si su precio es un número negativo o forma no autorizada con formato.
 
-
 [![Lógica de validación se ha agregado a la interfaz de inserción de DetailsView](adding-validation-controls-to-the-editing-and-inserting-interfaces-vb/_static/image35.png)](adding-validation-controls-to-the-editing-and-inserting-interfaces-vb/_static/image34.png)
 
 **Figura 12**: Lógica de validación se ha agregado a la interfaz de inserción de DetailsView ([haga clic aquí para ver imagen en tamaño completo](adding-validation-controls-to-the-editing-and-inserting-interfaces-vb/_static/image36.png))
-
 
 ## <a name="step-6-partitioning-the-validation-controls-into-validation-groups"></a>Paso 6: Partición de los controles de validación en los grupos de validación
 
 Nuestra página consta de dos conjuntos dispares de forma lógica de los controles de validación: los que corresponden a la GridView de la interfaz de edición y los que corresponden a DetailsView de la inserción de interfaz. De forma predeterminada, se produce un postback *todas* se comprueban los controles de validación de la página. Sin embargo, al editar un registro no queremos controles de validación insertar de la interfaz de DetailsView para validar. Figura 13 se muestra este dilema actual cuando un usuario edita un producto con los valores legales perfectamente, haciendo clic en Update produce un error de validación porque los valores de nombre y el precio de la interfaz de inserción están en blanco.
 
-
 [![Actualizar un producto hace que los controles de validación de la interfaz insertar Fire](adding-validation-controls-to-the-editing-and-inserting-interfaces-vb/_static/image38.png)](adding-validation-controls-to-the-editing-and-inserting-interfaces-vb/_static/image37.png)
 
 **Figura 13**: Actualizar un producto hace que los controles de validación de la interfaz insertar Fire ([haga clic aquí para ver imagen en tamaño completo](adding-validation-controls-to-the-editing-and-inserting-interfaces-vb/_static/image39.png))
-
 
 Los controles de validación en ASP.NET 2.0 se pueden crear particiones en grupos de validación a través de sus `ValidationGroup` propiedad. Para asociar un conjunto de controles de validación de un grupo, basta con establecer sus `ValidationGroup` propiedad en el mismo valor. En este tutorial, establezca la `ValidationGroup` las propiedades de los controles de validación de TemplateFields de GridView para `EditValidationControls` y el `ValidationGroup` propiedades de TemplateFields ovládacího prvku DetailsView a `InsertValidationControls`. Estos cambios pueden realizarse directamente en el marcado declarativo o a través de la ventana Propiedades cuando se usa el diseñador edición la interfaz de la plantilla.
 
 Además de la validación de controles, el botón y los controles de botón en ASP.NET 2.0 también incluyen un `ValidationGroup` propiedad. Validadores de un grupo de validación se comprueban la validez solo cuando una devolución de datos sea inducido por un botón que tiene el mismo `ValidationGroup` configuración de la propiedad. Por ejemplo, en orden en de DetailsView botón de inserción desencadenar la `InsertValidationControls` grupo de validación se debe establecer el CommandField `ValidationGroup` propiedad `InsertValidationControls` (vea la figura 14). Además, establezca la GridView del CommandField `ValidationGroup` propiedad `EditValidationControls`.
 
-
 [![Propiedad de ValidationGroup del CommandField a InsertValidationControls de conjunto DetailsView](adding-validation-controls-to-the-editing-and-inserting-interfaces-vb/_static/image41.png)](adding-validation-controls-to-the-editing-and-inserting-interfaces-vb/_static/image40.png)
 
 **Figura 14**: Establecer el DetailsView de CommandField `ValidationGroup` propiedad a `InsertValidationControls` ([haga clic aquí para ver imagen en tamaño completo](adding-validation-controls-to-the-editing-and-inserting-interfaces-vb/_static/image42.png))
-
 
 Después de estos cambios, el DetailsView de GridView TemplateFields y CommandFields debe ser similar al siguiente:
 

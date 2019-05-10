@@ -8,12 +8,12 @@ ms.date: 02/20/2014
 ms.assetid: b5c268dd-ca6a-4562-b94c-a220fcf01f58
 msc.legacyurl: /web-pages/overview/ui-layouts-and-themes/displaying-maps-in-an-aspnet-web-pages-site
 msc.type: authoredcontent
-ms.openlocfilehash: 6e5c01c3602bd313ebca467b65563b7abfd7ffe2
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: 36f3b753cf312504892872ff54bef49854588990
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59400105"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65124179"
 ---
 # <a name="displaying-maps-in-an-aspnet-web-pages-razor-site"></a>Mostrar mapas en un sitio Web de ASP.NET Pages (Razor)
 
@@ -40,7 +40,6 @@ por [Tom FitzMacken](https://github.com/tfitzmac)
 >   
 > 
 > Este tutorial también funciona con WebMatrix 3.
-
 
 En las páginas Web, puede mostrar mapas en una página mediante `Maps` auxiliar. Puede generar asignaciones basadas en una dirección o en un conjunto de coordenadas de longitud y latitud. La `Maps` clase le permite llamar a los motores de mapa populares como Bing, Google, Yahoo y MapQuest.
 
@@ -109,6 +108,5 @@ En este ejemplo se muestra cómo crear un mapa en función de las coordenadas. E
 
 <a id="Additional_Resources"></a>
 ## <a name="additional-resources"></a>Recursos adicionales
-
 
 [Referencia de la API Microsoft.Maps](https://msdn.microsoft.com/library/gg427611.aspx)

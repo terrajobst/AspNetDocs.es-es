@@ -8,12 +8,12 @@ ms.date: 06/10/2014
 ms.assetid: a14121ae-02cf-4024-8af0-9dd0dc810690
 msc.legacyurl: /signalr/overview/advanced/dependency-injection
 msc.type: authoredcontent
-ms.openlocfilehash: 1b5d36529b52dfcbebf34cbfa230b3b3b4e83b81
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: 52978b10b6c131ac8eff4535216cc60b43fdf3de
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59405383"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65120103"
 ---
 # <a name="dependency-injection-in-signalr"></a>Inserción de dependencias en SignalR
 
@@ -37,7 +37,6 @@ por [Mike Wasson](https://github.com/MikeWasson), [Patrick Fletcher](https://git
 > ## <a name="questions-and-comments"></a>Preguntas y comentarios
 >
 > Deje comentarios sobre cómo le gustó de este tutorial y que podíamos mejorar en los comentarios en la parte inferior de la página. Si tiene preguntas que no están directamente relacionados con el tutorial, puede publicarlos en el [foro de ASP.NET SignalR](https://forums.asp.net/1254.aspx/1?ASP+NET+SignalR) o [StackOverflow.com](http://stackoverflow.com/).
-
 
 Inserción de dependencias es una manera de quitar las dependencias codificadas de forma rígida entre objetos, facilitando la tarea para reemplazar las dependencias de un objeto, ya sea por pruebas (con objetos ficticios) o para cambiar el comportamiento de tiempo de ejecución. Este tutorial muestra cómo realizar la inserción de dependencias en concentradores de SignalR. También muestra cómo usar contenedores de IoC con SignalR. Un contenedor de IoC es un marco general para la inserción de dependencias.
 
@@ -93,7 +92,6 @@ Una solución consiste en usar un contenedor de IoC. Un contenedor de IoC es un 
 
 > [!NOTE]
 > "IoC" es el acrónimo "inversión de control", que es un patrón general que llama un marco de trabajo en el código de la aplicación. Un contenedor de IoC construye los objetos, que "invierte" el flujo de control normal.
-
 
 ## <a name="using-ioc-containers-in-signalr"></a>Uso de contenedores de IoC en SignalR
 

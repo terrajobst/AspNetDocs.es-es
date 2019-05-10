@@ -8,12 +8,12 @@ ms.date: 12/14/2018
 ms.assetid: bcf2d223-cb7f-411e-be05-f43e96a14015
 msc.legacyurl: /web-api/overview/web-api-routing-and-actions/routing-and-action-selection
 msc.type: authoredcontent
-ms.openlocfilehash: 238efd312a73e2452ca5f679f2b8f5ed1336c4dc
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: 62114e56fb29e80c93b82dcb78ce2bc2a123a83b
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59385883"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65133655"
 ---
 # <a name="routing-and-action-selection-in-aspnet-web-api"></a>Enrutamiento y selección de acción en ASP.NET Web API
 
@@ -23,7 +23,6 @@ En este artículo se describe cómo ASP.NET Web API enruta una solicitud HTTP a 
 
 > [!NOTE]
 > Para obtener una visión general del enrutamiento, consulte [Routing in ASP.NET Web API](routing-in-aspnet-web-api.md).
-
 
 Este artículo examina los detalles del proceso de enrutamiento. Si crea un proyecto Web API y búsqueda que no hagan algunas solicitudes enruta según que lo previsto, espero que este artículo le ayude.
 
@@ -135,7 +134,6 @@ Los tipos simples incluyen todos los [tipos primitivos de .NET Framework](https:
 
 > [!NOTE]
 > Es posible invalidar las reglas de enlace predeterminada. Consulte [enlace de parámetros de WebAPI debajo del capó](https://blogs.msdn.com/b/jmstall/archive/2012/05/11/webapi-parameter-binding-under-the-hood.aspx).
-
 
 Con esa información, aquí es el algoritmo de selección de acción.
 

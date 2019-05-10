@@ -8,12 +8,12 @@ ms.date: 04/11/2014
 ms.assetid: 07aa855a-92ee-4d43-ba66-5bfd7de20ee6
 msc.legacyurl: /aspnet/overview/owin-and-katana/host-owin-in-an-azure-worker-role
 msc.type: authoredcontent
-ms.openlocfilehash: 129b6a8f411d482de75e7e5edc5cc919b4d2de52
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: 59d2e0d549427093f8a2424b17af81169b78ef30
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59419527"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65118261"
 ---
 # <a name="host-owin-in-an-azure-worker-role"></a>Hospedar OWIN en un rol de trabajo de Azure
 
@@ -31,7 +31,6 @@ por [Mike Wasson](https://github.com/MikeWasson)
 > - [Visual Studio 2013](https://my.visualstudio.com/Downloads?q=visual%20studio%202013)
 > - [Azure SDK para .NET 2.3](https://azure.microsoft.com/downloads/)
 > - [Microsoft.Owin.Selfhost 2.1.0](http://www.nuget.org/packages/Microsoft.Owin.SelfHost/2.1.0)
-
 
 ## <a name="create-a-microsoft-azure-project"></a>Crear un proyecto de Microsoft Azure
 

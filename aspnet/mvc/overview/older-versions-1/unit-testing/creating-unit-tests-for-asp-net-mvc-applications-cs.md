@@ -8,12 +8,12 @@ ms.date: 08/19/2008
 ms.assetid: d3a270b9-d7b1-47f2-8775-fc3beb518b5c
 msc.legacyurl: /mvc/overview/older-versions-1/unit-testing/creating-unit-tests-for-asp-net-mvc-applications-cs
 msc.type: authoredcontent
-ms.openlocfilehash: 1193d7dc6fc29dfdac5637c9391a82f9f3566073
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: 633e28a100937c5d40d62fe5cc151e613171cc8f
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59407736"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65126880"
 ---
 # <a name="creating-unit-tests-for-aspnet-mvc-applications-c"></a>Crear pruebas unitarias para aplicaciones de ASP.NET MVC (C#)
 
@@ -22,7 +22,6 @@ by [Stephen Walther](https://github.com/StephenWalther)
 [Descargar PDF](http://download.microsoft.com/download/8/4/8/84843d8d-1575-426c-bcb5-9d0c42e51416/ASPNET_MVC_Tutorial_07_CS.pdf)
 
 > Obtenga información sobre cómo crear pruebas unitarias para las acciones de controlador. En este tutorial, Stephen Walther muestra cómo probar si una acción de controlador devuelve una vista determinada, devuelve un conjunto de datos determinado o devuelve un tipo diferente del resultado de la acción.
-
 
 El objetivo de este tutorial es demostrar cómo puede escribir pruebas unitarias para los controladores en su ASP.NET MVC aplicaciones. Se describe cómo crear tres tipos diferentes de las pruebas unitarias. Obtenga información sobre cómo probar la vista devuelta por una acción de controlador, los datos de vista devuelta por una acción de controlador de pruebas y cómo probar si una acción de controlador le redirige a una segunda acción de controlador.
 
@@ -58,16 +57,13 @@ Esta acción de controlador también devuelve una vista denominada `Details`. Si
 
 Puede ejecutar la prueba unitaria en el listado 2 escribiendo la combinación de teclado **Ctrl-R, A** o haciendo clic en el **ejecutar todas las pruebas de la solución** (consulte la figura 1). Si se supera la prueba, verá la ventana de resultados de pruebas en la figura 2.
 
-
 [![Ejecutar todas las pruebas de solución](creating-unit-tests-for-asp-net-mvc-applications-cs/_static/image2.png)](creating-unit-tests-for-asp-net-mvc-applications-cs/_static/image1.png)
 
 **Figura 01**: Ejecutar todas las pruebas de solución ([haga clic aquí para ver imagen en tamaño completo](creating-unit-tests-for-asp-net-mvc-applications-cs/_static/image3.png))
 
-
 [![¡Success!](creating-unit-tests-for-asp-net-mvc-applications-cs/_static/image5.png)](creating-unit-tests-for-asp-net-mvc-applications-cs/_static/image4.png)
 
 **Figura 02**: Correcto ([Haga clic aquí para ver imagen en tamaño completo](creating-unit-tests-for-asp-net-mvc-applications-cs/_static/image6.png))
-
 
 ## <a name="testing-the-view-data-returned-by-a-controller"></a>Comprobación de los datos de vista devuelta por un controlador
 

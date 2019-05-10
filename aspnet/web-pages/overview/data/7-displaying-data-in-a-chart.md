@@ -8,12 +8,12 @@ ms.date: 05/22/2012
 ms.assetid: f889fd46-4dac-4ecb-83d8-60e64c22036e
 msc.legacyurl: /web-pages/overview/data/7-displaying-data-in-a-chart
 msc.type: authoredcontent
-ms.openlocfilehash: f97f214abeaeb88634dd10aaebacc0d58e91ab84
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: 6dad67d4e3d38d57a761c567d937d714a3184ea9
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59422465"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65133711"
 ---
 # <a name="displaying-data-in-a-chart-with-aspnet-web-pages-razor"></a>Mostrar datos en un gráfico con ASP.NET Web Pages (Razor)
 
@@ -33,7 +33,6 @@ por [Microsoft](https://github.com/microsoft)
 > 
 > > [!NOTE]
 > > La información de este artículo se aplica a las páginas Web de ASP.NET 1.0 y Web Pages 2.
-
 
 <a id="The_Chart_Helper"></a>
 ## <a name="the-chart-helper"></a>La aplicación auxiliar de gráfico
@@ -152,7 +151,6 @@ La tercera opción de gráficos es usar un archivo XML como los datos para el gr
 > [!code-cshtml[Main](7-displaying-data-in-a-chart/samples/sample8.cshtml)]
 > 
 > Puede agregar `using` instrucciones para otros espacios de .NET Framework que desea hacer referencia. Sin embargo, como se indicó, no tendrá que hacer esto con frecuencia, dado que la mayoría de las clases que va a trabajar con está en espacios de nombres que se importan automáticamente por ASP.NET para su uso en *.cshtml* y *.vbhtml* páginas.
-
 
 <a id="Displaying_Charts"></a>
 ## <a name="displaying-charts-inside-a-web-page"></a>Mostrar gráficos dentro de una página Web

@@ -8,17 +8,16 @@ ms.date: 10/05/2011
 ms.assetid: bac10aee-6731-4a0f-84d7-9eef5e560ae5
 msc.legacyurl: /web-forms/videos/net-4
 msc.type: chapter
-ms.openlocfilehash: ea11b464329a755d5625797327f5a0a3ccb0f426
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: 47d4c49762768351246402b48373374f99fd636f
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59400593"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65128468"
 ---
 # <a name="net-4"></a>.NET 4
 
 > Las nuevas características ASP.NET y la funcionalidad disponible en .NET Framework 4.
-
 
 - [Ajax](ajax/index.md)
 

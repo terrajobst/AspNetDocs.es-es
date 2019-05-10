@@ -8,12 +8,12 @@ ms.date: 02/20/2009
 ms.assetid: 28ad8f80-b8a5-444e-b478-8b15a846060c
 msc.legacyurl: /mvc/overview/older-versions-1/contact-manager/iteration-5-create-unit-tests-cs
 msc.type: authoredcontent
-ms.openlocfilehash: 68080859e205283f56d8f543bfa06b76bb22a39d
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: 32e81cce34a0e0b1f6b01934334e1b66dce89651
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59408867"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65123917"
 ---
 # <a name="iteration-5--create-unit-tests-c"></a>Iteración #5: crear pruebas unitarias (C#)
 
@@ -22,7 +22,6 @@ por [Microsoft](https://github.com/microsoft)
 [Descargue el código](iteration-5-create-unit-tests-cs/_static/contactmanager_5_cs1.zip)
 
 > En la iteración quinta, realizamos nuestra aplicación más fácil de mantener y modificar mediante la adición de las pruebas unitarias. Hemos simular nuestras clases de modelo de datos y generar pruebas unitarias para nuestros controladores y la lógica de validación.
-
 
 ## <a name="building-a-contact-management-aspnet-mvc-application-c"></a>Creación de una aplicación de MVC de ASP.NET de la administración de contactos (C#)
 
@@ -43,7 +42,6 @@ Creamos la aplicación a través de varias iteraciones. Con cada iteración, mej
 - Iteración #6: usar el desarrollo controlado por pruebas. En esta iteración sexta, se agregan nuevas funciones a nuestra aplicación escribir pruebas unitarias en primer lugar y escribir código en las pruebas unitarias. En esta iteración, se agrega grupos de contactos.
 
 - Iteración #7: agregar funcionalidad Ajax. En la iteración séptima, mejorar la capacidad de respuesta y el rendimiento de nuestra aplicación agregando compatibilidad con Ajax.
-
 
 ## <a name="this-iteration"></a>Esta iteración
 
@@ -69,7 +67,6 @@ En esta iteración, agregamos las pruebas unitarias a nuestra aplicación de Con
 > 
 > Hay una variedad de marcos como NUnit, xUnit.net y MbUnit de pruebas unitarias. En este tutorial, usamos incluido con Visual Studio del marco de pruebas unitarias. Sin embargo, podría podríamos usar uno de estos marcos de trabajo alternativos.
 
-
 ## <a name="what-gets-tested"></a>¿Qué Obtiene probado
 
 En el mundo perfecto, todo el código podría estar cubierto por las pruebas unitarias. En el mundo perfecto, tendría la red de seguridad perfecta. Sería capaz de modificar cualquier línea de código en la aplicación y sepa al instante, mediante la ejecución de las pruebas unitarias, si el cambio interrumpió la funcionalidad existente.
@@ -88,11 +85,9 @@ Si la vista contiene una lógica complicada, a continuación, puede mover la ló
 > 
 > Mientras prueba escribir la lógica de acceso a datos o lógica de la vista no es una buena idea al escribir pruebas unitarias, estas pruebas pueden ser muy valiosas al construcción funcional o la integración de las pruebas.
 
-
 > [!NOTE] 
 > 
 > ASP.NET MVC es el motor de vistas de formularios Web. Mientras el motor de vistas de formularios Web depende de un servidor web, no pueden ser otros motores de vista.
-
 
 ## <a name="using-a-mock-object-framework"></a>Uso de un marco de objeto ficticio
 
@@ -116,16 +111,13 @@ Para poder usar Moq, es preciso completar los pasos siguientes:
 4. Agregue una referencia al ensamblado Moq haciendo clic en la carpeta referencias del proyecto ContactManager.Tests y seleccionar **Agregar referencia**. En la pestaña Examinar, vaya a la carpeta donde descomprimió Moq y seleccione el ensamblado Moq.dll. Haga clic en el **Aceptar** botón.
 5. Después de completar estos pasos, la carpeta de referencias debe parecerse a la figura 2.
 
-
 [![Moq desbloqueo](iteration-5-create-unit-tests-cs/_static/image1.jpg)](iteration-5-create-unit-tests-cs/_static/image1.png)
 
 **Figura 01**: Moq desbloqueo ([haga clic aquí para ver imagen en tamaño completo](iteration-5-create-unit-tests-cs/_static/image2.png))
 
-
 [![Referencias después de agregar Moq](iteration-5-create-unit-tests-cs/_static/image2.jpg)](iteration-5-create-unit-tests-cs/_static/image3.png)
 
 **Figura 02**: Referencias después de agregar Moq ([haga clic aquí para ver imagen en tamaño completo](iteration-5-create-unit-tests-cs/_static/image4.png))
-
 
 ## <a name="creating-unit-tests-for-the-service-layer"></a>Crear pruebas unitarias para el nivel de servicio
 
@@ -137,11 +129,9 @@ Cree una nueva carpeta denominada Models en el proyecto ContactManager.Tests. A 
 > 
 > En general, conviene que la estructura de carpetas del proyecto de prueba para que coincida con la estructura de carpetas del proyecto de ASP.NET MVC. Por ejemplo, coloque las pruebas del controlador en una carpeta de controladores, las pruebas de modelo en una carpeta Models y así sucesivamente.
 
-
 [![Models\ContactManagerServiceTest.cs](iteration-5-create-unit-tests-cs/_static/image3.jpg)](iteration-5-create-unit-tests-cs/_static/image5.png)
 
 **Figura 03**: Models\ContactManagerServiceTest.cs ([haga clic aquí para ver imagen en tamaño completo](iteration-5-create-unit-tests-cs/_static/image6.png))
-
 
 Inicialmente, va a probar el método CreateContact() expone la clase ContactManagerService. Vamos a crear las cinco pruebas siguientes:
 
@@ -159,9 +149,7 @@ El código para estas pruebas se encuentra en el listado 1.
 
 [!code-csharp[Main](iteration-5-create-unit-tests-cs/samples/sample1.cs)]
 
-
 Dado que se usa la clase Contact en el listado 1, tenemos que agregar una referencia a Microsoft Entity Framework para nuestro proyecto de prueba. Agregue una referencia al ensamblado System.Data.Entity.
-
 
 Listado 1 contiene un método denominado Initialize() decorada con el atributo [TestInitialize]. Este método es llamado automáticamente antes de que se ejecuta cada una de las pruebas unitarias (se llama justo antes de cada una de las pruebas unitarias 5 veces). El método Initialize() crea un repositorio ficticio con la siguiente línea de código:
 
@@ -173,7 +161,6 @@ Esta línea de código usa el marco de trabajo Moq para generar un repositorio s
 > 
 > Cuando se usa el marco de trabajo Moq, hay una diferencia entre \_mockRepository y \_mockRepository.Object. El primero se refiere a la simulación&lt;IContactManagerRepository&gt; clase que contiene métodos para especificar cómo se comportará el repositorio ficticio. El segundo se refiere al repositorio ficticio real que implementa la interfaz IContactManagerRepository.
 
-
 Al crear una instancia de la clase ContactManagerService, se usa el repositorio ficticio en el método Initialize(). Todas las pruebas unitarias individuales utilizan esta instancia de la clase ContactManagerService.
 
 Listado 1 contiene cinco métodos que corresponden a cada una de las pruebas unitarias. Cada uno de estos métodos se decora con el atributo [TestMethod]. Al ejecutar las pruebas unitarias, se llama a cualquier método que tenga este atributo. En otras palabras, cualquier método esté decorado con el atributo [TestMethod] es una prueba unitaria.
@@ -184,11 +171,9 @@ Las pruebas restantes comprueban que cuando se llama al método CreateContact() 
 
 Puede ejecutar las pruebas unitarias en el listado 1 seleccionando la opción de menú **pruebas, ejecutar, todas las pruebas de la solución (CTRL + R, A)**. Los resultados de las pruebas se muestran en la ventana Resultados de pruebas (consulte la figura 4).
 
-
 [![Resultados de pruebas](iteration-5-create-unit-tests-cs/_static/image4.jpg)](iteration-5-create-unit-tests-cs/_static/image7.png)
 
 **Figura 04**: Los resultados de pruebas ([haga clic aquí para ver imagen en tamaño completo](iteration-5-create-unit-tests-cs/_static/image8.png))
-
 
 ## <a name="creating-unit-tests-for-controllers"></a>Crear pruebas unitarias para los controladores
 
@@ -212,7 +197,6 @@ La segunda prueba unitaria comprueba que la acción Create() devuelve la vista d
 
 Si el método Create() se comporta tal como esperábamos, a continuación, debe devolver la vista de creación cuando el nivel de servicio devuelve el valor false. De este modo, el controlador puede mostrar los mensajes de error de validación en la vista de creación y el usuario tiene la oportunidad de corregir ese propiedades del contacto no válido.
 
-
 Si va a crear pruebas unitarias para los controladores debe devolver los nombres de vista explícita de sus acciones de controlador. Por ejemplo, no devuelven una vista similar al siguiente:
 
 devolver View();
@@ -222,7 +206,6 @@ En su lugar, devuelve la vista similar al siguiente:
 devolver View("Create");
 
 Si no es explícito al devolver una vista de la propiedad ViewResult.ViewName devuelve una cadena vacía.
-
 
 **Listing 2 - Controllers\ContactControllerTest.cs**
 

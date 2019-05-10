@@ -8,12 +8,12 @@ ms.date: 05/04/2012
 ms.assetid: a5c5eed2-8683-40a5-a2e1-35c9f8d17c29
 msc.legacyurl: /web-forms/overview/deployment/web-deployment-in-the-enterprise/deploying-web-packages
 msc.type: authoredcontent
-ms.openlocfilehash: c42fa327c324ac2b721268c56782a24755ec7225
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: 91b99e6e250342851aea6860164b6f6af54818d1
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59391071"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65119318"
 ---
 # <a name="deploying-web-packages"></a>Implementar paquetes web
 
@@ -37,7 +37,6 @@ por [Jason Lee](https://github.com/jrjlee)
 > - Ha compilado y empaqueta la aplicación web, como se describe en [compilar y empaquetar proyectos de aplicación Web](building-and-packaging-web-application-projects.md).
 > - Ha modificado el *SetParameters.xml* archivo para proporcionar los valores de parámetro correctos para su entorno de destino, como se describe en [configurar parámetros para la implementación del paquete Web](configuring-parameters-for-web-package-deployment.md).
 
-
 Ejecutar el [*nombre del proyecto*]*. deploy.cmd* archivo es la manera más sencilla de implementar un paquete de web. En particular, mediante la *. deploy.cmd* archivo ofrece estas ventajas con respecto a MSDeploy.exe directamente:
 
 - No es necesario especificar la ubicación del paquete de implementación web&#x2014;el *. deploy.cmd* archivo ya sepa dónde está.
@@ -52,9 +51,7 @@ Antes de usar el *. deploy.cmd* archivo para implementar un paquete web, debe as
 
 El *. deploy.cmd* archivo es compatible con distintas opciones de línea de comandos. Al ejecutar el archivo desde un símbolo del sistema, ésta es la sintaxis básica:
 
-
 [!code-console[Main](deploying-web-packages/samples/sample1.cmd)]
-
 
 Debe especificar un **/T** marca o un **/Y** marca para indicar si desea realizar una ejecución de prueba o una implementación en vivo, respectivamente (no utilice ambos marcadores en el mismo comando). Esta tabla explica el propósito de cada una de estas marcas.
 
@@ -71,7 +68,6 @@ Debe especificar un **/T** marca o un **/Y** marca para indicar si desea realiza
 
 > [!NOTE]
 > Cada vez que el proceso de compilación crea un paquete web, también crea un archivo denominado *[nombre de proyecto] Deploy-readme.txt* que describen estas opciones de implementación.
-
 
 Además de estas marcas, puede especificar la configuración de operación de Web Deploy como adicionales *. deploy.cmd* parámetros. Cualquier configuración adicional que especifique simplemente se pasa al comando MSDeploy.exe subyacente. Para obtener más información sobre estas opciones, consulte [Web implementar la configuración de operación](https://technet.microsoft.com/library/dd569089(WS.10).aspx).
 
@@ -94,9 +90,7 @@ En este ejemplo:
 
 Para ilustrar cómo, al utilizar el *. deploy.cmd* archivo simplifica el proceso de implementación, eche un vistazo en la línea de comandos MSDeploy.exe que obtiene genera y ejecuta al ejecutar *ContactManager.Mvc.deploy.cmd* uso de las opciones mostradas anteriormente.
 
-
 [!code-console[Main](deploying-web-packages/samples/sample3.cmd)]
-
 
 Para obtener más información sobre el uso de la *. deploy.cmd* archivo para implementar un paquete de web, consulte [Cómo: Instalar un paquete de implementación utilizando el archivo deploy.cmd](https://msdn.microsoft.com/library/ff356104.aspx).
 
@@ -152,13 +146,10 @@ En muchos escenarios empresariales, desea implementar los paquetes de web como p
 
 En la solución Contact Manager de ejemplo, eche un vistazo a la **PublishWebPackages** tener como destino en el *Publish.proj* archivo. Este destino se ejecuta una vez para cada *. deploy.cmd* archivo identificado por una lista de elementos denominada **PublishPackages**. El destino utiliza las propiedades y metadatos de elementos para crear un conjunto completo de valores de argumento para cada *. deploy.cmd* archivo y, a continuación, usa el **Exec** tarea para ejecutar el comando.
 
-
 [!code-xml[Main](deploying-web-packages/samples/sample8.xml)]
-
 
 > [!NOTE]
 > Información general más amplia del modelo de archivo de proyecto en la solución de ejemplo y una introducción a los archivos de proyecto personalizadas en general, consulte [descripción del archivo de proyecto](understanding-the-project-file.md) y [descripción del proceso de compilación](understanding-the-build-process.md).
-
 
 ## <a name="endpoint-considerations"></a>Consideraciones de punto de conexión
 
@@ -166,33 +157,24 @@ Independientemente de si implementa el paquete web ejecutando el *. deploy.cmd* 
 
 Si el servidor web de destino está configurado para la implementación con el servicio del agente remoto de implementación Web, especifique la dirección URL de servicio de destino como el destino.
 
-
 [!code-console[Main](deploying-web-packages/samples/sample9.cmd)]
-
 
 Como alternativa, puede especificar el nombre del servidor por sí sola como destino y Web Deploy deducirá la dirección URL del servicio del agente remoto.
 
-
 [!code-console[Main](deploying-web-packages/samples/sample10.cmd)]
-
 
 Si el servidor web de destino está configurado para la implementación con el controlador de implementación Web, deberá especificar la dirección del extremo del servicio de administración de IIS Web (WMSvc) como destino. De forma predeterminada, esto toma la forma:
 
-
 [!code-console[Main](deploying-web-packages/samples/sample11.cmd)]
-
 
 Puede dirigirse a cualquiera de estos puntos de conexión mediante el *. deploy.cmd* MSDeploy.exe directamente o archivo. Sin embargo, si desea implementar en el controlador de implementación Web como un usuario sin privilegios de administrador, como se describe en [configurar un servidor Web para la publicación de implementar en Web (controlador de implementación Web)](../configuring-server-environments-for-web-deployment/configuring-a-web-server-for-web-deploy-publishing-web-deploy-handler.md), deberá agregar una cadena de consulta a la dirección del punto de conexión de servicio.
 
-
 [!code-console[Main](deploying-web-packages/samples/sample12.cmd)]
-
 
 Esto es porque el usuario sin privilegios de administrador no tiene acceso de nivel de servidor en IIS. solo tiene acceso a un sitio Web IIS específico. En el momento de escribir, debido a un error en la canalización de publicación Web (WPP), no se puede ejecutar el *. deploy.cmd* de archivos mediante una dirección de punto de conexión que incluye una cadena de consulta. En este escenario, deberá implementar el paquete web directamente mediante MSDeploy.exe.
 
 > [!NOTE]
 > Para obtener más información sobre el servicio del agente remoto de implementación Web y el controlador de implementación de Web, consulte [elegir el enfoque de derecha a la implementación Web](../configuring-server-environments-for-web-deployment/choosing-the-right-approach-to-web-deployment.md). Para obtener instrucciones sobre cómo configurar los archivos de proyecto específicos del entorno para implementar en estos puntos de conexión, consulte [configurar propiedades de implementación de un entorno de destino](../configuring-server-environments-for-web-deployment/configuring-deployment-properties-for-a-target-environment.md).
-
 
 ## <a name="authentication-considerations"></a>Consideraciones sobre la autenticación
 

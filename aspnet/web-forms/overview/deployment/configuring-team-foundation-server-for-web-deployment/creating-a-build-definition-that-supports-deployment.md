@@ -8,12 +8,12 @@ ms.date: 05/04/2012
 ms.assetid: fe47a018-f6d0-4979-80e7-5b1fa75a5865
 msc.legacyurl: /web-forms/overview/deployment/configuring-team-foundation-server-for-web-deployment/creating-a-build-definition-that-supports-deployment
 msc.type: authoredcontent
-ms.openlocfilehash: 97a60274d9306ea0ee332fcc1ab9e487355dbedb
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: e11c91a824446572aaf0b3bc6954b9b8ffb4eaff
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59384947"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65133958"
 ---
 # <a name="creating-a-build-definition-that-supports-deployment"></a>Crear una definición de compilación que admita la implementación
 
@@ -22,7 +22,6 @@ por [Jason Lee](https://github.com/jrjlee)
 [Descargar PDF](https://msdnshared.blob.core.windows.net/media/MSDNBlogsFS/prod.evol.blogs.msdn.com/CommunityServer.Blogs.Components.WeblogFiles/00/00/00/63/56/8130.DeployingWebAppsInEnterpriseScenarios.pdf)
 
 > Si desea realizar cualquier tipo de compilación en Team Foundation Server (TFS) 2010, deberá crear una definición de compilación dentro de su proyecto de equipo. Este tema describe cómo crear una nueva definición de compilación en TFS y cómo controlar la implementación web como parte del proceso de compilación en Team Build.
-
 
 En este tema forma parte de una serie de tutoriales que se basa en los requisitos de implementación empresarial de una compañía ficticia denominada Fabrikam, Inc. Esta serie de tutoriales usa una solución de ejemplo&#x2014;el [solución Contact Manager](../web-deployment-in-the-enterprise/the-contact-manager-solution.md)&#x2014;para representar una aplicación web con un nivel realista de complejidad, incluida una aplicación ASP.NET MVC 3, una comunicación de Windows Servicio Foundation (WCF) y un proyecto de base de datos.
 
@@ -40,7 +39,6 @@ Una definición de compilación es el mecanismo que controla cómo y cuándo se 
 
 > [!NOTE]
 > Para obtener más información sobre las definiciones de compilación, consulte [definir el proceso de compilación](https://msdn.microsoft.com/library/ms181715.aspx).
-
 
 En este tema le mostrará cómo crear una definición de compilación que usa integración continua, por lo que se desencadena una compilación cuando un desarrollador protege contenido nuevo. Si la compilación se realiza correctamente, el servicio de compilación ejecuta un archivo de proyecto personalizadas para implementar la solución en un entorno de prueba.
 
@@ -60,7 +58,6 @@ La siguiente sección explica cómo implementar este proceso mediante la creaci�
 
 > [!NOTE]
 > Este procedimiento&#x2014;en que una sola automatizada proceso compilaciones, pruebas y se implementa una solución&#x2014;es probable que sea más adecuado para la implementación en entornos de prueba. Para entornos de ensayo y producción está mucho más probable que desee implementar el contenido desde una compilación anterior que ya ha comprobado y validado en un entorno de prueba. Este enfoque se describe en el tema siguiente, [implementar una compilación específica](deploying-a-specific-build.md).
-
 
 ### <a name="who-performs-this-procedure"></a>¿Que lleva a cabo este procedimiento?
 
@@ -142,7 +139,6 @@ Puede usar esta información para solucionar un error de compilación y resolver
 
 > [!NOTE]
 > Es probable que las compilaciones que ejecutan la lógica de implementación a un error hasta que se hayan concedido al servidor de compilación de los permisos necesarios en el entorno de destino. Para obtener más información, consulte [configurar permisos para la implementación de equipo de compilación](configuring-permissions-for-team-build-deployment.md).
-
 
 ## <a name="monitor-the-build-process"></a>Supervisar el proceso de compilación
 

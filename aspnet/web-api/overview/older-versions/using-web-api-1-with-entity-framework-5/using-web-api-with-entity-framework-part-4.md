@@ -8,12 +8,12 @@ ms.date: 07/04/2012
 ms.assetid: 792f4513-a508-4d14-a0dd-1a2fe282c7bb
 msc.legacyurl: /web-api/overview/older-versions/using-web-api-1-with-entity-framework-5/using-web-api-with-entity-framework-part-4
 msc.type: authoredcontent
-ms.openlocfilehash: 54b3afac9b19962b02336a35909b208c4e3f7504
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: 9e045b17434d46fa1b6e7942db95ecad67c34a46
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59400560"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65134757"
 ---
 # <a name="part-4-adding-an-admin-view"></a>Parte 4: Agregar una vista de administración
 
@@ -52,7 +52,6 @@ En el Explorador de soluciones, expanda la carpeta Views y, a continuación, exp
 > [!NOTE]
 > En el proyecto de ejemplo, he realizado algunos otros cambios cosméticos, por ejemplo, reemplazando la cadena "Su logotipo aquí". Estos no afectan a la funcionalidad de la aplicación. Puede descargar el proyecto y compare los archivos.
 
-
 Ejecute la aplicación y haga clic en el vínculo "Admin" que aparece en la parte superior de la página principal. La página de administración debe tener el siguiente aspecto:
 
 ![](using-web-api-with-entity-framework-part-4/_static/image3.png)
@@ -79,7 +78,6 @@ Abra el archivo AdminController.cs y agregue el **Authorize** atributo a toda la
 
 > [!NOTE]
 > MVC y Web API definen **Authorize** atributos, en diferentes espacios de nombres. MVC usa **System.Web.Mvc.AuthorizeAttribute**, mientras que usa la API Web **System.Web.Http.AuthorizeAttribute**.
-
 
 Ahora solo los administradores pueden ver la página de administración. Además, si envía una solicitud HTTP al controlador de administración, la solicitud debe contener una cookie de autenticación. Si no es así, el servidor envía una respuesta HTTP 401 (no autorizado). Puede ver esto en Fiddler, envíe una solicitud GET a `http://localhost:*port*/api/admin`.
 

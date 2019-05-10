@@ -8,12 +8,12 @@ ms.date: 02/17/2014
 ms.assetid: 360bc6e1-84c5-4b8e-a84c-ea48ab807aa4
 msc.legacyurl: /web-pages/overview/performance-and-traffic/14-analyzing-traffic
 msc.type: authoredcontent
-ms.openlocfilehash: a99ed5cc8875ef9f39234e3f394b46b5782d0bc1
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: 095a5572c755446e0661c052ca9de82d636429fd
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59390225"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65134597"
 ---
 # <a name="tracking-visitor-information-analytics-for-an-aspnet-web-pages-razor-site"></a>Información de seguimiento visitante (análisis) para un sitio Web de ASP.NET Pages (Razor)
 
@@ -35,7 +35,6 @@ por [Tom FitzMacken](https://github.com/tfitzmac)
 > 
 > - ASP.NET Web Pages (Razor) 2
 > - ASP.NET Web Helpers Library (paquete de NuGet)
-
 
 Analytics es un término general para la tecnología que mide el tráfico en su sitio Web para que pueda comprender cómo se usa el sitio. Muchos de los servicios de análisis están disponibles, incluidos los servicios de Google, Yahoo, StatCounter y otros.
 
@@ -60,7 +59,6 @@ En este procedimiento, creará una página de diseño que usa el `GetGoogleHtml`
 
 > [!NOTE]
 > Cuando se crea una cuenta de análisis, registrar la dirección URL del sitio que desea realizar el seguimiento. Si va a probar todo en el equipo local, no se seguimiento tráfico real (es el único tráfico), por lo que no será capaz de registrar y ver las estadísticas del sitio. Pero este procedimiento muestra cómo agregar una aplicación auxiliar de analytics a una página. Al publicar su sitio, el sitio activo enviará información a su proveedor de análisis.
-
 
 1. Agregue la ASP.NET Web Helpers Library a su sitio Web, como se describe en [las aplicaciones auxiliares de la instalación en un sitio de ASP.NET Web Pages](https://go.microsoft.com/fwlink/?LinkId=252372), si aún no lo ha agregado.
 2. Cree una cuenta con Google Analytics y registre el nombre de cuenta.

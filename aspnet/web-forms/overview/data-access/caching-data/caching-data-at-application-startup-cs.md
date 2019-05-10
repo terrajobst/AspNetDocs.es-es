@@ -8,12 +8,12 @@ ms.date: 05/30/2007
 ms.assetid: 22ca8efa-7cd1-45a7-b9ce-ce6eb3b3ff95
 msc.legacyurl: /web-forms/overview/data-access/caching-data/caching-data-at-application-startup-cs
 msc.type: authoredcontent
-ms.openlocfilehash: 7e858fe4c1f8e93f6e6fa30b33f5682945d03c32
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: 2d0fff78885ed90825f3e3a612f1582c004b317e
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59403082"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65119740"
 ---
 # <a name="caching-data-at-application-startup-c"></a>Almacenar datos en caché al iniciar la aplicación (C#)
 
@@ -22,7 +22,6 @@ por [Scott Mitchell](https://twitter.com/ScottOnWriting)
 [Descargar PDF](caching-data-at-application-startup-cs/_static/datatutorial60cs1.pdf)
 
 > En cualquier aplicación Web algunos datos se usará con frecuencia y algunos datos se utilizarán con poca frecuencia. Podemos mejorar el rendimiento de nuestra aplicación de ASP.NET mediante la carga de antemano los datos usados con frecuencia, una técnica conocida como. Este tutorial muestra un enfoque de carga automático, que se usa para cargar datos en la memoria caché al iniciarse la aplicación.
-
 
 ## <a name="introduction"></a>Introducción
 
@@ -35,18 +34,15 @@ Otro tipo de carga automática y el tipo que vamos a explorar en este tutorial, 
 > [!NOTE]
 > Para una información más detallada sobre las diferencias entre la carga proactiva y reactiva, así como listas de ventajas, desventajas y recomendaciones para la implementación, consulte el [administrar el contenido de una memoria caché](https://msdn.microsoft.com/library/ms978503.aspx) sección de la [ Almacenamiento en caché de la Guía de arquitectura para aplicaciones de .NET Framework](https://msdn.microsoft.com/library/ms978498.aspx).
 
-
 ## <a name="step-1-determining-what-data-to-cache-at-application-startup"></a>Paso 1: Determinar qué datos en memoria caché al iniciarse la aplicación
 
 Los ejemplos de almacenamiento en caché mediante la carga reactivo hemos visto en el trabajo de dos tutoriales anteriores bien con datos que se pueden cambiar periódicamente y que no tardará mucho exorbitantly para generar. Pero si los datos en caché nunca cambian, la expiración utilizada por la carga reactiva es superflua. Del mismo modo, si los datos se almacenen en caché tardan un tiempo extremadamente largo para generar, se recupera los usuarios cuyas solicitudes se encuentra vacía de la memoria caché tendrán a tolerar una espera prolongada mientras los datos subyacentes. Considere la posibilidad de almacenar en caché datos estáticos y datos que se tarda demasiado tiempo a generar al iniciarse la aplicación.
 
 Mientras que las bases de datos tienen muchas dinámicos, valores cambian con frecuencia, la mayoría también tienen una gran cantidad de datos estáticos. Por ejemplo, prácticamente todos los modelos de datos tienen una o varias columnas que contienen un valor determinado de un conjunto fijo de opciones. Un `Patients` tabla de base de datos podría tener un `PrimaryLanguage` columna, cuyo conjunto de valores podría ser, por ejemplo, inglés, español, francés, ruso, japonés y así sucesivamente. A menudo, estos tipos de columnas se implementan mediante *tablas de búsqueda*. En lugar de almacenar la cadena de inglés o francés en el `Patients` tabla, una segunda tabla se crea que, normalmente, tiene dos columnas: un identificador único y una descripción de cadena - con un registro para cada valor posible. El `PrimaryLanguage` columna en el `Patients` tabla almacena el identificador único correspondiente en la tabla de búsqueda. En la figura 1, idioma principal del paciente John Doe es el inglés, mientras que es el de Ed Johnson ruso.
 
-
 ![La tabla de lenguajes es una tabla de búsqueda usa por la tabla Patients](caching-data-at-application-startup-cs/_static/image1.png)
 
 **Figura 1**: El `Languages` tabla es una tabla de búsqueda utilizado por el `Patients` tabla
-
 
 La interfaz de usuario para editar o crear un nuevo paciente incluye una lista desplegable de idiomas permitidos rellenada con los registros en el `Languages` tabla. Sin almacenamiento en caché, cada vez que esta interfaz visitó el sistema debe consultar la `Languages` tabla. Esto es derrochador e innecesario, ya que los valores de tabla de búsqueda con muy poca frecuencia, cambian si alguna vez.
 
@@ -60,13 +56,11 @@ Puede almacenar mediante programación información en una aplicación ASP.NET c
 
 Cuando se trabaja con una clase, normalmente la clase primero se debe crear instancias poder acceder a sus miembros. Por ejemplo, para invocar un método de una de las clases de la capa de lógica empresarial, debemos primero creamos una instancia de la clase:
 
-
 [!code-csharp[Main](caching-data-at-application-startup-cs/samples/sample1.cs)]
 
 Antes de que podemos llamar *SomeMethod* o trabajar con *SomeProperty*, primero debemos crear una instancia de la clase utilizando el `new` palabra clave. *SomeMethod* y *SomeProperty* están asociados con una instancia determinada. La duración de estos miembros se vincula a la duración de su objeto asociado. *Los miembros estáticos*, por otro lado, están las variables, propiedades y métodos que se comparten entre *todas* instancias de la clase y, por lo tanto, tienen una duración siempre y cuando la clase. Los miembros estáticos se indican mediante la palabra clave `static`.
 
 Además de los miembros estáticos, datos pueden almacenarse en caché con el estado de la aplicación. Cada aplicación de ASP.NET mantiene una colección de nombre/valor que se comparte entre todos los usuarios y las páginas de la aplicación. Esta colección se puede acceder mediante el [ `HttpContext` clase](https://msdn.microsoft.com/library/system.web.httpcontext.aspx)del [ `Application` propiedad](https://msdn.microsoft.com/library/system.web.httpcontext.application.aspx)y usar desde la clase de código subyacente de una página ASP.NET siguiente manera:
-
 
 [!code-csharp[Main](caching-data-at-application-startup-cs/samples/sample2.cs)]
 
@@ -78,14 +72,11 @@ La base de datos de tablas se ve implementado hasta la fecha de Northwind no inc
 
 Para empezar, cree una nueva clase denominada `StaticCache.cs` en el `CL` carpeta.
 
-
 ![Crear la clase StaticCache.cs en la carpeta de CL](caching-data-at-application-startup-cs/_static/image2.png)
 
 **Figura 2**: Crear el `StaticCache.cs` clase en el `CL` carpeta
 
-
 Necesitamos agregar un método que carga los datos en el inicio en el almacén de caché adecuada, así como los métodos que devuelven datos de esta caché.
-
 
 [!code-csharp[Main](caching-data-at-application-startup-cs/samples/sample3.cs)]
 
@@ -93,13 +84,11 @@ El código anterior usa una variable de miembro estático, `suppliers`, para alm
 
 En lugar de usar una variable miembro estática como el almacén de caché, podríamos haber usado también el estado de aplicación o la caché de datos. El código siguiente muestra la clase reformó para usar el estado de la aplicación:
 
-
 [!code-csharp[Main](caching-data-at-application-startup-cs/samples/sample4.cs)]
 
 En `LoadStaticCache()`, se almacena la información del proveedor a la variable de aplicación *clave*. Se devuelve como el tipo adecuado (`Northwind.SuppliersDataTable`) desde `GetSuppliers()`. Mientras el estado de la aplicación puede tener acceso en las clases de código subyacente de las páginas ASP.NET mediante `Application["key"]`, en la arquitectura debemos usar `HttpContext.Current.Application["key"]` con el fin de obtener actual `HttpContext`.
 
 Del mismo modo, la caché de datos puede usarse como un almacén de caché, como se muestra en el código siguiente:
-
 
 [!code-csharp[Main](caching-data-at-application-startup-cs/samples/sample5.cs)]
 
@@ -107,7 +96,6 @@ Para agregar un elemento a la caché de datos con sin expiración basado en tiem
 
 > [!NOTE]
 > Descarga de este tutorial implementa el `StaticCache` clase mediante el enfoque de variable de miembro estático. El código de las técnicas de caché de estado y los datos de aplicación está disponible en los comentarios en el archivo de clase.
-
 
 ## <a name="step-4-executing-code-at-application-startup"></a>Paso 4: Código que se ejecuta al iniciarse la aplicación
 
@@ -118,11 +106,9 @@ Agregar el `Global.asax` archivo al directorio raíz de la aplicación web, con 
 > [!NOTE]
 > Si ya tiene un `Global.asax` archivo del proyecto, el tipo de elemento no aparecerá en el cuadro de diálogo Agregar nuevo elemento de clase de aplicación Global.
 
-
 [![Agregar el archivo Global.asax al directorio raíz de la aplicación Web](caching-data-at-application-startup-cs/_static/image4.png)](caching-data-at-application-startup-cs/_static/image3.png)
 
 **Figura 3**: Agregar el `Global.asax` archivo al directorio raíz de su aplicación Web ([haga clic aquí para ver imagen en tamaño completo](caching-data-at-application-startup-cs/_static/image5.png))
-
 
 El valor predeterminado `Global.asax` plantilla de archivo incluye cinco métodos dentro de un servidor `<script>` etiqueta:
 
@@ -136,20 +122,16 @@ El `Application_Start` se llama al controlador de eventos sólo una vez durante 
 
 Estos tutoriales sólo tenemos que agregar código a la `Application_Start` método, por lo que si quiere, puede quitar las demás. En `Application_Start`, basta con llamar a la `StaticCache` la clase `LoadStaticCache()` método, que se cargará y almacenar en caché la información del proveedor:
 
-
 [!code-aspx[Main](caching-data-at-application-startup-cs/samples/sample6.aspx)]
 
 Así de simple. Al iniciarse la aplicación, el `LoadStaticCache()` método tomará la información del proveedor de BLL y almacenarlo en una variable de miembro estático (o cualquier caché almacenar acabé por uso en el `StaticCache` clase). Para comprobar este comportamiento, establezca un punto de interrupción el `Application_Start` método y ejecutar la aplicación. Tenga en cuenta que el punto de interrupción tras el inicio de la aplicación. Hacen que las solicitudes posteriores, sin embargo, el `Application_Start` ejecución del método.
-
 
 [![Usar un punto de interrupción para verificar que el controlador de eventos Application_Start es que se está ejecutando](caching-data-at-application-startup-cs/_static/image7.png)](caching-data-at-application-startup-cs/_static/image6.png)
 
 **Figura 4**: Usar un punto de interrupción para comprobar que la `Application_Start` controlador de eventos es que se está ejecutando ([haga clic aquí para ver imagen en tamaño completo](caching-data-at-application-startup-cs/_static/image8.png))
 
-
 > [!NOTE]
 > Si no se produce la `Application_Start` punto de interrupción al primero iniciar la depuración, es que ya ha iniciado la aplicación. Forzar la aplicación se reinicie modificando su `Global.asax` o `Web.config` archivos y, a continuación, vuelva a intentarlo. Puede simplemente agregar (o quitar) una línea en blanco al final de uno de estos archivos rápidamente reiniciar la aplicación.
-
 
 ## <a name="step-5-displaying-the-cached-data"></a>Paso 5: Mostrar los datos en caché
 
@@ -157,29 +139,23 @@ En este momento la `StaticCache` clase tiene una versión de los datos de provee
 
 Comience abriendo la `AtApplicationStartup.aspx` página en el `Caching` carpeta. Arrastre un control GridView del cuadro de herramientas hasta el diseñador, establecer su `ID` propiedad `Suppliers`. A continuación, desde la etiqueta inteligente de GridView optar por crear un nuevo origen ObjectDataSource denominado `SuppliersCachedDataSource`. Configurar el origen ObjectDataSource para usar el `StaticCache` la clase `GetSuppliers()` método.
 
-
 [![Configurar el origen ObjectDataSource para usar la clase StaticCache](caching-data-at-application-startup-cs/_static/image10.png)](caching-data-at-application-startup-cs/_static/image9.png)
 
 **Figura 5**: Configurar el origen ObjectDataSource para usar el `StaticCache` clase ([haga clic aquí para ver imagen en tamaño completo](caching-data-at-application-startup-cs/_static/image11.png))
-
 
 [![Utilice el método GetSuppliers() para recuperar los datos de proveedor almacenado en caché](caching-data-at-application-startup-cs/_static/image13.png)](caching-data-at-application-startup-cs/_static/image12.png)
 
 **Figura 6**: Use la `GetSuppliers()` método para recuperar los datos de proveedor almacenado en caché ([haga clic aquí para ver imagen en tamaño completo](caching-data-at-application-startup-cs/_static/image14.png))
 
-
 Después de completar el asistente, Visual Studio agregará automáticamente BoundFields para cada uno de los campos de datos en `SuppliersDataTable`. El control GridView y de ObjectDataSource marcado declarativo debe ser similar al siguiente:
-
 
 [!code-aspx[Main](caching-data-at-application-startup-cs/samples/sample7.aspx)]
 
 Figura 7 muestra la página cuando se ve mediante un explorador. El resultado es el mismo si hubiéramos extrae los datos de la capa de BLL `SuppliersBLL` clase, pero utilizando el `StaticCache` clase devuelve los datos de proveedor como en caché al iniciarse la aplicación. Puede establecer puntos de interrupción el `StaticCache` la clase `GetSuppliers()` método para comprobar este comportamiento.
 
-
 [![Los datos de proveedor almacenado en caché se muestra en un control GridView](caching-data-at-application-startup-cs/_static/image16.png)](caching-data-at-application-startup-cs/_static/image15.png)
 
 **Figura 7**: Los datos de proveedor almacenado en caché se muestra en un control GridView ([haga clic aquí para ver imagen en tamaño completo](caching-data-at-application-startup-cs/_static/image17.png))
-
 
 ## <a name="summary"></a>Resumen
 

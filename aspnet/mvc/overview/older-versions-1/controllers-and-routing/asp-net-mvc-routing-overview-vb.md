@@ -8,19 +8,18 @@ ms.date: 08/19/2008
 ms.assetid: 4bc8d19a-80f1-44b4-adbf-95ed22d691ca
 msc.legacyurl: /mvc/overview/older-versions-1/controllers-and-routing/asp-net-mvc-routing-overview-vb
 msc.type: authoredcontent
-ms.openlocfilehash: c135bacd7f9f87fac87a3c8cf41bad359bb3c0a2
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: ed043d76b89ce31945cf3423b0c5afca9383cc21
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59379188"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65123641"
 ---
 # <a name="aspnet-mvc-routing-overview-vb"></a>Información general sobre el enrutamiento de ASP.NET MVC (VB)
 
 by [Stephen Walther](https://github.com/StephenWalther)
 
 > En este tutorial, Stephen Walther explica cómo el marco de MVC de ASP.NET asigna las solicitudes del explorador a acciones del controlador.
-
 
 En este tutorial, se le presenta una característica importante de cada aplicación de ASP.NET MVC llama *enrutamiento de ASP.NET*. El módulo de enrutamiento de ASP.NET es responsable de asignar las solicitudes entrantes a acciones del controlador MVC concreto. Al final de este tutorial, comprenderá cómo la tabla de enrutamiento estándar asigna las solicitudes a acciones del controlador.
 
@@ -94,11 +93,9 @@ Por último, al invocar el método Index() en el listado 5 con la/Home URL provo
 
 [!code-vb[Main](asp-net-mvc-routing-overview-vb/samples/sample5.vb)]
 
-
 [![Invocar una acción de controlador que espera un valor de parámetro](asp-net-mvc-routing-overview-vb/_static/image1.jpg)](asp-net-mvc-routing-overview-vb/_static/image1.png)
 
 **Figura 01**: Invocar una acción de controlador que espera un valor de parámetro ([haga clic aquí para ver imagen en tamaño completo](asp-net-mvc-routing-overview-vb/_static/image2.png))
-
 
 / Home de dirección URL/índice/3, por otro lado, funciona bien con la acción de controlador de índice en el listado 5. La solicitud /Home/Index/3 hace que el método Index() se llamen con un parámetro de identificador que tiene el valor 3.
 

@@ -8,19 +8,18 @@ ms.date: 02/20/2005
 ms.assetid: af4575a3-0ae3-4638-ba4d-218fad7a1642
 msc.legacyurl: /web-forms/overview/moving-to-aspnet-20/the-asp-net-2-0-page-model
 msc.type: authoredcontent
-ms.openlocfilehash: 09f8389a04c5600ca9ee8365a9dc5a0d607c0a4d
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: bcb71b2b5a484e8756406867e08e8aa699a9024d
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59403927"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65127918"
 ---
 # <a name="the-aspnet-20-page-model"></a>El modelo de página 2.0 de ASP.NET
 
 por [Microsoft](https://github.com/microsoft)
 
 > En ASP.NET 1.x, los desarrolladores tenían una elección entre un modelo de código en línea y un modelo de código de código subyacente. Código subyacente podría implementarse mediante el atributo Src o el atributo de código subyacente de la @Page directiva. En ASP.NET 2.0, los desarrolladores tienen todavía una elección entre el código en línea y código subyacente, pero ha habido importantes mejoras en el modelo de código subyacente.
-
 
 En ASP.NET 1.x, los desarrolladores tenían una elección entre un modelo de código en línea y un modelo de código de código subyacente. Código subyacente podría implementarse mediante el atributo Src o el atributo de código subyacente de la @Page directiva. En ASP.NET 2.0, los desarrolladores tienen todavía una elección entre el código en línea y código subyacente, pero ha habido importantes mejoras en el modelo de código subyacente.
 
@@ -47,12 +46,10 @@ Una definición de clase típica en un archivo de código subyacente de ASP.NET 
 > [!NOTE]
 > C# y Visual Basic son los únicos lenguajes administrados que son compatibles con las clases parciales. Por lo tanto, los desarrolladores que usan J# no podrá utilizar el modelo de código subyacente en ASP.NET 2.0.
 
-
 El nuevo modelo mejora el modelo de código subyacente porque los desarrolladores ahora tendrá los archivos de código que contienen sólo el código que han creado. También proporciona una separación de código y contenido true porque no hay ninguna declaración de variable de instancia en el archivo de código subyacente.
 
 > [!NOTE]
 > Dado que la clase parcial para la página ASPX es donde realiza el enlace de eventos, los desarrolladores de Visual Basic pueden conseguir un aumento de ligeramente el rendimiento mediante el uso de la palabra clave Handles en el código subyacente para enlazar eventos. C# no tiene ninguna palabra clave equivalente.
-
 
 ## <a name="new--page-directive-attributes"></a>Nuevos atributos de la directiva @ Page
 
@@ -128,12 +125,9 @@ Otra nueva capacidad de la directiva @ Page en ASP.NET 2.0 es la capacidad para 
 
 El **SomeText** atributo de la directiva @ Page establece el valor inicial de la propiedad SomeText en la clase base para *Hello!*. El vídeo siguiente es un tutorial de cómo configurar el valor inicial de una propiedad pública de una clase base mediante la directiva @ Page.
 
-
 ![](the-asp-net-2-0-page-model/_static/image1.png)
 
-
 [Abra vídeo de pantalla completa](the-asp-net-2-0-page-model/_static/setprop1.wmv)
-
 
 ## <a name="new-public-properties-of-the-page-class"></a>Nuevas propiedades públicas de la clase de página
 
@@ -365,12 +359,9 @@ Cuando se devuelve la página, la página que inicia la devolución de datos es 
 
 El vídeo siguiente es un tutorial de un postback entre páginas.
 
-
 ![](the-asp-net-2-0-page-model/_static/image2.png)
 
-
 [Abra vídeo de pantalla completa](the-asp-net-2-0-page-model/_static/xpage1.wmv)
-
 
 ## <a name="more-details-on-cross-page-postbacks"></a>Obtener más detalles sobre las devoluciones entre páginas
 
@@ -423,16 +414,12 @@ El siguiente paso es llamar al método AddOnPreRenderCompleteAsync en un momento
 
 El siguiente vídeo es un tutorial de una solicitud de página asincrónica.
 
-
 ![](the-asp-net-2-0-page-model/_static/image3.png)
-
 
 [Abra vídeo de pantalla completa](the-asp-net-2-0-page-model/_static/async1.wmv)
 
-
 > [!NOTE]
 > Una página asincrónica no se representará en el explorador hasta que se ha completado la EndEventHandler. Sin duda, pero surgirán algunos desarrolladores solicitudes asincrónicas es similar a las devoluciones de llamada asincrónica. Es importante tener en cuenta que no se encuentran. La ventaja para las solicitudes asincrónicas es que se puede devolver el primer subproceso de trabajo al grupo de subprocesos para atender nuevas solicitudes, lo que reduce la contención debido a que están enlazados de E/S, etcetera.
-
 
 ## <a name="script-callbacks-in-aspnet-20"></a>Devoluciones de llamada de secuencia de comandos en ASP.NET 2.0
 
@@ -459,14 +446,12 @@ Como se mencionó anteriormente, la llamada de XMLHttp se encapsula en el contro
 > [!NOTE]
 > \_\_doPostBack aún se representa en la página en un escenario de devolución de llamada del script de cliente. Sin embargo, no se utiliza para la devolución de llamada.
 
-
 Los argumentos para los formularios Web Forms\_DoCallback (función) del lado cliente se proporcionan a través de la función de servidor GetCallbackEventReference que normalmente se llama en la página\_carga. Una llamada a GetCallbackEventReference típica podría tener este aspecto:
 
 [!code-csharp[Main](the-asp-net-2-0-page-model/samples/sample12.cs)]
 
 > [!NOTE]
 > En este caso, cm es una instancia de ClientScriptManager. La clase ClientScriptManager se tratarán más adelante en este módulo.
-
 
 Hay varias versiones sobrecargadas de GetCallbackEventReference. En este caso, los argumentos son como sigue:
 
@@ -522,12 +507,9 @@ El ICallbackEventHandler contiene dos métodos que se deben implementar en el c�
 
 Una vez completados los pasos anteriores, está listo para realizar una devolución de llamada de secuencia de comandos en ASP.NET 2.0.
 
-
 ![](the-asp-net-2-0-page-model/_static/image4.png)
 
-
 [Abra vídeo de pantalla completa](the-asp-net-2-0-page-model/_static/callback1.wmv)
-
 
 Las devoluciones de llamada de secuencia de comandos en ASP.NET son compatibles con cualquier explorador que admita la realización de llamadas XMLHttp. Esto incluye todos los exploradores modernos en uso hoy en día. Internet Explorer utiliza el objeto XMLHttp ActiveX mientras que otros exploradores modernos (incluido el próximo Internet Explorer 7) usan un objeto XMLHttp intrínseco. Para determinar mediante programación si un explorador es compatible con las devoluciones de llamada, puede usar el **Request.Browser.SupportCallback** propiedad. Esta propiedad devolverá **true** si el cliente que admite las devoluciones de llamada de secuencia de comandos.
 
@@ -537,7 +519,6 @@ Scripts de cliente en ASP.NET 2.0 se administran mediante el uso de la clase Cli
 
 > [!NOTE]
 > Después de una secuencia de comandos se ha registrado correctamente en una página, todos los intentos posteriores para registrar la misma secuencia de comandos simplemente dará como resultado de la secuencia de comandos no está registrada una segunda vez. No hay scripts duplicados se agregan y se produce ninguna excepción. Para evitar el cálculo innecesario, hay métodos que puede usar para determinar si una secuencia de comandos ya está registrado para que no intenta registrarlo más de una vez.
-
 
 Los métodos de ClientScriptManager deben estar familiarizados para todos los desarrolladores ASP.NET actuales:
 
@@ -580,7 +561,6 @@ Este código genera el siguiente código en la página representada:
 > [!NOTE]
 > El bloque de script se representa en la parte inferior de la página.
 
-
 Utilice el método IsClientScriptIncludeRegistered para determinar si se ha registrado una secuencia de comandos. Esto le permite evitar un intento para volver a registrar un script.
 
 ## <a name="registerstartupscript"></a>RegisterStartupScript
@@ -590,13 +570,11 @@ El método RegisterStartupScript toma los mismos argumentos que el método Regis
 > [!NOTE]
 > Si registra una función con RegisterStartupScript, esa función no se ejecutará hasta que se llama explícitamente en el código del lado cliente.
 
-
 Utilice el método IsStartupScriptRegistered comprobó para determinar si se ha registrado una secuencia de comandos y evitar un intento para volver a registrar un script.
 
 ## <a name="other-clientscriptmanager-methods"></a>Otros métodos ClientScriptManager
 
 Estos son algunos de los otros métodos útiles de la clase ClientScriptManager.
-
 
 |  <strong>GetCallbackEventReference</strong>   |                                                 Vea las devoluciones de llamada del script anterior de este módulo.                                                 |
 |-----------------------------------------------|----------------------------------------------------------------------------------------------------------------------------------------------|
@@ -606,4 +584,3 @@ Estos son algunos de los otros métodos útiles de la clase ClientScriptManager.
 | <strong>RegisterClientScriptResource</strong> |     Registra un recurso Web con la página. Estos son los recursos incrustados en un ensamblado y controlados por el nuevo controlador WebResource.axd.      |
 |     <strong>RegisterHiddenField</strong>      |                                                 Registra un campo de formulario oculto en la página.                                                 |
 |  <strong>RegisterOnSubmitStatement</strong>   |                                  Registra el código del lado cliente que se ejecuta cuando se envía el formulario HTML.                                   |
-

@@ -8,12 +8,12 @@ ms.date: 10/16/2008
 ms.assetid: e83812f2-c53e-4a43-a7c1-d64c59ecf694
 msc.legacyurl: /mvc/overview/older-versions-1/controllers-and-routing/understanding-action-filters-vb
 msc.type: authoredcontent
-ms.openlocfilehash: bbedc11b9b1225b1047350c1c84a116ecef0c380
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: fb3ed252a9232a2f5a1ad4257156a142bbe5b174
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59407411"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65123174"
 ---
 # <a name="understanding-action-filters-vb"></a>Descripción de los filtros de acción (VB)
 
@@ -22,7 +22,6 @@ por [Microsoft](https://github.com/microsoft)
 [Descargar PDF](http://download.microsoft.com/download/e/f/3/ef3f2ff6-7424-48f7-bdaa-180ef64c3490/ASPNET_MVC_Tutorial_14_VB.pdf)
 
 > El objetivo de este tutorial es explicar los filtros de acción. Un filtro de acción es un atributo que se puede aplicar a una acción de controlador o un controlador de todo, que modifica la forma en que se ejecuta la acción.
-
 
 ## <a name="understanding-action-filters"></a>Descripción de los filtros de acción
 
@@ -48,11 +47,9 @@ Por ejemplo, el controlador de datos en el listado 1 expone una acción denomina
 
 Si se invoca varias veces el `Index()` acción al introducir la dirección URL operaciones/Data/índice en la barra de direcciones del explorador y presionar la actualización de botón varias veces, verá la misma hora durante 10 segundos. La salida de la `Index()` acción se almacena en caché durante 10 segundos (consulte la figura 1).
 
-
 [![Tiempo en caché](understanding-action-filters-vb/_static/image2.png)](understanding-action-filters-vb/_static/image1.png)
 
 **Figura 01**: Almacenar en caché de tiempo ([haga clic aquí para ver imagen en tamaño completo](understanding-action-filters-vb/_static/image3.png))
-
 
 En el listado 1, un filtro de acción única: el `OutputCache` filtro de acción: se aplica a la `Index()` método. Si necesita, puede aplicar varios filtros de acción a la misma acción. Por ejemplo, desea aplicar tanto la `OutputCache` y `HandleError` los filtros de acción a la misma acción.
 
@@ -106,11 +103,9 @@ Para ilustrar cómo puede crear un filtro de acción personalizado, vamos a crea
 
 En el listado 2, el `OnActionExecuting()`, `OnActionExecuted()`, `OnResultExecuting()`, y `OnResultExecuted()` todos los métodos llaman a la `Log()` método. El nombre del método y los datos de ruta actual se pasa a la `Log()` método. El `Log()` método escribe un mensaje en la ventana de salida de Visual Studio (consulte la figura 2).
 
-
 [![Escribir en la ventana de salida de Visual Studio](understanding-action-filters-vb/_static/image5.png)](understanding-action-filters-vb/_static/image4.png)
 
 **Figura 02**: Escribir en la ventana de salida de Visual Studio ([haga clic aquí para ver imagen en tamaño completo](understanding-action-filters-vb/_static/image6.png))
-
 
 El controlador Home en el listado 3 muestra cómo puede aplicar el filtro de acción de registro a una clase de controlador completo. Cada vez que cualquiera de las acciones expuestas por el controlador Home se invocan: ya sea el `Index()` método o la `About()` método – las fases de procesamiento de la acción se registran en la ventana de salida de Visual Studio.
 

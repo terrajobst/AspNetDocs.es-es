@@ -8,12 +8,12 @@ ms.date: 05/04/2012
 ms.assetid: c61560e9-9f6c-4985-834a-08a3eabf9c3c
 msc.legacyurl: /web-forms/overview/deployment/web-deployment-in-the-enterprise/creating-and-running-a-deployment-command-file
 msc.type: authoredcontent
-ms.openlocfilehash: cbad35c9ef83b41e9d3f9a48ff37672d22338e7e
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: f1477ff423e4898385066a35b42503f3c70dcc68
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59395230"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65119459"
 ---
 # <a name="creating-and-running-a-deployment-command-file"></a>Crear y ejecutar un archivo de comandos de implementación
 
@@ -22,7 +22,6 @@ por [Jason Lee](https://github.com/jrjlee)
 [Descargar PDF](https://msdnshared.blob.core.windows.net/media/MSDNBlogsFS/prod.evol.blogs.msdn.com/CommunityServer.Blogs.Components.WeblogFiles/00/00/00/63/56/8130.DeployingWebAppsInEnterpriseScenarios.pdf)
 
 > Este tema describe cómo crear un archivo de comandos que le permitirá ejecutar una implementación con los archivos de proyecto de Microsoft Build Engine (MSBuild) como un proceso paso a paso y repetible.
-
 
 En este tema forma parte de una serie de tutoriales que se basa en los requisitos de implementación empresarial de una compañía ficticia denominada Fabrikam, Inc. Esta serie de tutoriales usa una solución de ejemplo&#x2014;el [Contact Manager](the-contact-manager-solution.md) solución&#x2014;para representar una aplicación web con un nivel realista de complejidad, incluida una aplicación ASP.NET MVC 3, una comunicación de Windows Servicio Foundation (WCF) y un proyecto de base de datos.
 
@@ -41,9 +40,7 @@ Como se describe en [descripción del proceso de compilación](understanding-the
 
 El *Publish.proj* archivo usa un **importar** elemento que se va a importar el archivo de proyecto específicos del entorno.
 
-
 [!code-xml[Main](creating-and-running-a-deployment-command-file/samples/sample1.xml)]
-
 
 Por lo tanto, si usa MSBuild.exe para compilar e implementar la solución Contact Manager, deberá:
 
@@ -52,19 +49,14 @@ Por lo tanto, si usa MSBuild.exe para compilar e implementar la solución Contac
 
 Para ello, el comando MSBuild debe ser similar a esto:
 
-
 [!code-console[Main](creating-and-running-a-deployment-command-file/samples/sample2.cmd)]
-
 
 Desde aquí, es un simple paso para mover a una implementación repetible y paso a paso. Todo lo que necesita hacer es agregar el comando de MSBuild en un archivo cmd. En la solución Contact Manager, la carpeta de publicación incluye un archivo denominado *publicar Dev.cmd* que hace exactamente esto.
 
-
 [!code-console[Main](creating-and-running-a-deployment-command-file/samples/sample3.cmd)]
-
 
 > [!NOTE]
 > El **/fl** modificador indica a MSBuild que cree un archivo de registro denominado *msbuild.log* en el directorio de trabajo en el que se invocó MSBuild.exe.
-
 
 Para implementar o volver a implementar la solución Contact Manager, todo lo que necesita hacer es ejecutar el *publicar Dev.cmd* archivo. Al ejecutar el archivo, MSBuild hará lo siguiente:
 
@@ -99,19 +91,14 @@ Cuando haya creado un archivo de comandos para el entorno de destino, debe ser c
 
 Creación de un archivo de comandos que contiene las instrucciones de MSBuild proporciona una manera rápida y sencilla de crear e implementar una solución de varios proyectos en un entorno de destino específico. Si tiene que implementar la solución repetidamente a varios entornos de destino, puede crear varios archivos de comandos. En cada archivo de comandos, el comando MSBuild compilará el mismo archivo de proyecto universal, pero especificará un archivo de proyecto específicos del entorno diferente. Por ejemplo, un archivo de comandos para publicar en un desarrollador o el entorno de prueba podría contener este comando de MSBuild:
 
-
 [!code-console[Main](creating-and-running-a-deployment-command-file/samples/sample4.cmd)]
-
 
 Un archivo de comandos para publicar en un entorno de ensayo puede contener este comando de MSBuild:
 
-
 [!code-console[Main](creating-and-running-a-deployment-command-file/samples/sample5.cmd)]
-
 
 > [!NOTE]
 > Para obtener instrucciones sobre cómo personalizar los archivos de proyecto específicos del entorno para sus propios entornos de servidor, consulte [configurar propiedades de implementación de un entorno de destino](../configuring-server-environments-for-web-deployment/configuring-deployment-properties-for-a-target-environment.md).
-
 
 También puede personalizar el proceso de compilación para cada entorno reemplazar propiedades o estableciendo diversos otros modificadores en el comando de MSBuild. Para obtener más información, consulte [referencia de línea de comandos de MSBuild](https://msdn.microsoft.com/library/ms164311.aspx).
 

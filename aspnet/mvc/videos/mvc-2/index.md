@@ -8,17 +8,16 @@ ms.date: 11/14/2011
 ms.assetid: 68968b8a-4f60-449e-8639-978fc40aed70
 msc.legacyurl: /mvc/videos/mvc-2
 msc.type: chapter
-ms.openlocfilehash: aa713d30ad09152155e0834d40d5d757b1fecf78
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: d2ddf52b01b8a1ae0e6c3b8db104d16775d144e6
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59386026"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65120175"
 ---
 # <a name="aspnet-mvc-2"></a>ASP.NET MVC 2
 
 > ASP.NET MVC 2
-
 
 - [¿Cómo puedo...?](how-do-i/index.md)
 

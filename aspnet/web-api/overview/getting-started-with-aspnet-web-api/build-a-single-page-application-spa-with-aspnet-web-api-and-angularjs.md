@@ -9,12 +9,12 @@ ms.custom: seoapril2019
 ms.assetid: 719727b7-bef3-45ad-bfe9-ba5bcdb2305f
 msc.legacyurl: /web-api/overview/getting-started-with-aspnet-web-api/build-a-single-page-application-spa-with-aspnet-web-api-and-angularjs
 msc.type: authoredcontent
-ms.openlocfilehash: 1f093e348216750cbadb6e52f524e5edd4d6c498
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: 86833a890da759e489dd11dc9afb128a9b7a75e3
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59390277"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65125255"
 ---
 # <a name="hands-on-lab-build-a-single-page-application-spa-with-aspnet-web-api-and-angularjs"></a>Laboratorio práctico: Compilar una aplicación de una página (SPA) con ASP.NET Web API y Angular.js
 
@@ -34,7 +34,6 @@ En las aplicaciones web tradicionales, el cliente (explorador) inicia la comunic
 > 
 > 
 > Todo el código de ejemplo y fragmentos de código se incluyen en el Kit de entrenamiento campamentos de Web, que está disponible en [ https://aka.ms/webcamps-training-kit ](https://aka.ms/webcamps-training-kit).
-
 
 ## <a name="overview"></a>Información general
 
@@ -66,7 +65,6 @@ Para poder ejecutar los ejercicios en este laboratorio práctico, deberá config
 > [!NOTE]
 > Asegúrese de que ha comprobado todas las dependencias para este laboratorio antes de ejecutar el programa de instalación.
 
-
 <a id="CodeSnippets"></a>
 ### <a name="using-the-code-snippets"></a>Uso de los fragmentos de código
 
@@ -74,7 +72,6 @@ En todo el documento de laboratorio, se le pedirá que inserte los bloques de c�
 
 > [!NOTE]
 > Cada ejercicio viene acompañado por una solución inicial ubicada en el **comenzar** carpeta del ejercicio que le permite seguir cada ejercicio independientemente de los demás. Ten en cuenta que los fragmentos de código que se agregan durante un ejercicio faltan en estos a partir de las soluciones y es posible que no funcione hasta que haya completado el ejercicio. En el código fuente para un ejercicio, también encontrará un **final** carpeta que contiene una solución de Visual Studio con el código que se obtiene al completar los pasos descritos en el ejercicio correspondiente. Puede usar estas soluciones como instrucciones si necesita más ayuda mientras se trabaja a través de este laboratorio práctico.
-
 
 ---
 
@@ -91,9 +88,8 @@ Tiempo estimado para completar esta práctica: **60 minutos**
 > [!NOTE]
 > Primera vez que inicie Visual Studio, debe seleccionar una de las colecciones de configuraciones predefinidas. Cada colección predefinida está diseñado para que coincida con un estilo de desarrollo determinado y determina los diseños de ventana, comportamiento del editor, fragmentos de código de IntelliSense y opciones del cuadro de diálogo. Los procedimientos de este laboratorio describen las acciones necesarias para realizar una tarea concreta en Visual Studio cuando se usa el **configuración General de desarrollo** colección. Si elige una colección de configuraciones diferentes para el entorno de desarrollo, puede haber diferencias en los pasos que debe tener en cuenta.
 
-
 <a id="Exercise1"></a>
-### <a name="exercise-1-creating-a-web-api"></a>Ejercicio 1: Creación de una API Web
+### <a name="exercise-1-creating-a-web-api"></a>Ejercicio 1: Creación de una API Web
 
 Una de las partes principales de una SPA es la capa de servicio. Es responsable de procesar las llamadas Ajax enviadas por la interfaz de usuario y la devolución de datos en respuesta a esa llamada. Los datos recuperados deben presentarse en un formato legible para analizarse y consumido por el cliente.
 
@@ -251,7 +247,6 @@ En esta tarea comprobará que el servicio de API Web creado en la tarea anterior
 > 
 > ![Opción de Internet Explorer](build-a-single-page-application-spa-with-aspnet-web-api-and-angularjs/_static/image9.png)
 
-
 1. Presione **F5** para ejecutar la solución. El **iniciarla** página debería aparecer en el explorador.
 
     > [!NOTE]
@@ -296,7 +291,7 @@ En esta tarea comprobará que el servicio de API Web creado en la tarea anterior
 8. Vuelva a Visual Studio y presione **MAYÚS + F5** para detener la depuración.
 
 <a id="Exercise2"></a>
-### <a name="exercise-2-creating-the-spa-interface"></a>Ejercicio 2: Creación de la interfaz SPA
+### <a name="exercise-2-creating-the-spa-interface"></a>Ejercicio 2: Creación de la interfaz SPA
 
 En este ejercicio primero creará la parte de front-end web de cuestionarios "geek", centrándose en la interacción de aplicaciones de página única mediante **AngularJS**. A continuación, mejorará la experiencia del usuario con CSS3 para realizar las animaciones y proporcionan un efecto visual de contexto al realizar la transición de una pregunta a la siguiente.
 
@@ -309,7 +304,6 @@ Se iniciará mediante la instalación de AngularJS desde la consola de administr
 
 > [!NOTE]
 > Para obtener más información acerca de AngularJS, consulte [ [ http://angularjs.org/ ](http://angularjs.org/) ](http://angularjs.org/).
-
 
 1. Abra **Visual Studio Express 2013 para Web** y abra el **GeekQuiz.sln** solución se encuentra en la **Begin/origen/Ex2-CreatingASPAInterface** carpeta. Como alternativa, puede continuar con la solución que obtuvo en el ejercicio anterior.
 2. Abra el **Package Manager Console** desde **herramientas** > **Administrador de paquetes de NuGet**. Escriba el siguiente comando para instalar el **AngularJS.Core** paquete NuGet.

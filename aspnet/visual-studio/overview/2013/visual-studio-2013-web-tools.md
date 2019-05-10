@@ -8,12 +8,12 @@ ms.date: 07/16/2014
 ms.assetid: 09e82351-816b-402d-acd1-0f9ac6901d16
 msc.legacyurl: /visual-studio/overview/2013/visual-studio-2013-web-tools
 msc.type: authoredcontent
-ms.openlocfilehash: 874542305bd3f47066cfae595919285ed079aa53
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: 2fb987dd9b26ad9f0e8a88fd881bde4505ec4148
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59421074"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65115897"
 ---
 # <a name="hands-on-lab-visual-studio-2013-web-tools"></a>Laboratorio práctico: Herramientas web de Visual Studio 2013
 
@@ -28,7 +28,6 @@ por [campamentos Web Team](https://twitter.com/webcamps)
 > Toda esta potencia también está disponible para las extensiones, de forma que sea fácil de ampliar los editores con características nuevas y eficaces para satisfacer sus necesidades. Web Essentials es una colección (principalmente) mejoras relacionadas con la web para Visual Studio. Incluye una gran cantidad de nuevas finalizaciones de IntelliSense (especialmente para CSS), nuevas características de vínculo de explorador, automatic JSHint para JavaScript, archivos, nuevas advertencias para HTML y CSS y muchas otras características que son esenciales para el desarrollo web moderno.
 > 
 > Todo el código de ejemplo y fragmentos de código se incluyen en el Kit de entrenamiento campamentos de Web, que está disponible en [ https://aka.ms/webcamps-training-kit ](https://aka.ms/webcamps-training-kit).
-
 
 <a id="Overview"></a>
 ## <a name="overview"></a>Información general
@@ -64,7 +63,6 @@ Para poder ejecutar los ejercicios en este laboratorio práctico, deberá config
 > [!NOTE]
 > Asegúrese de que ha comprobado todas las dependencias para este laboratorio antes de ejecutar el programa de instalación.
 
-
 <a id="CodeSnippets"></a>
 ### <a name="using-the-code-snippets"></a>Uso de los fragmentos de código
 
@@ -72,7 +70,6 @@ En todo el documento de laboratorio, se le pedirá que inserte los bloques de c�
 
 > [!NOTE]
 > Cada ejercicio viene acompañado por una solución inicial ubicada en el **comenzar** carpeta del ejercicio que le permite seguir cada ejercicio independientemente de los demás. Ten en cuenta que los fragmentos de código que se agregan durante un ejercicio faltan en estos a partir de las soluciones y es posible que no funcione hasta que haya completado el ejercicio. En el código fuente para un ejercicio, también encontrará un **final** carpeta que contiene una solución de Visual Studio con el código que se obtiene al completar los pasos descritos en el ejercicio correspondiente. Puede usar estas soluciones como instrucciones si necesita más ayuda mientras se trabaja a través de este laboratorio práctico.
-
 
 ---
 
@@ -87,9 +84,8 @@ Este laboratorio práctico incluye los ejercicios siguientes:
 > [!NOTE]
 > Primera vez que inicie Visual Studio, debe seleccionar una de las colecciones de configuraciones predefinidas. Cada colección predefinida está diseñado para que coincida con un estilo de desarrollo determinado y determina los diseños de ventana, comportamiento del editor, fragmentos de código de IntelliSense y opciones del cuadro de diálogo. Los procedimientos de este laboratorio describen las acciones necesarias para realizar una tarea concreta en Visual Studio cuando se usa el **configuración General de desarrollo** colección. Si elige una colección de configuraciones diferentes para el entorno de desarrollo, puede haber diferencias en los pasos que debe tener en cuenta.
 
-
 <a id="Exercise1"></a>
-### <a name="exercise-1-working-with-browser-link-and-web-essentials"></a>Ejercicio 1: Trabajar con el vínculo con exploradores y Web Essentials
+### <a name="exercise-1-working-with-browser-link-and-web-essentials"></a>Ejercicio 1: Trabajar con el vínculo con exploradores y Web Essentials
 
 **Web Essentials** es una extensión de Visual Studio que se agrega una variedad de características útiles para el desarrollo web moderno, centrado principalmente en hacer que la experiencia de desarrollo web mucho más rápida y más agradable. Web Essentials puede instalar desde la Galería de extensiones de Visual Studio.
 
@@ -338,7 +334,7 @@ En esta tarea, utilizará el vínculo de explorador **el modo de diseño** carac
 5. Cambie el valor de la **contenido** atributo *GeekQuiz* y guarde el archivo.
 
 <a id="Exercise2"></a>
-### <a name="exercise-2-taking-advantage-of-code-snippets-and-intellisense"></a>Ejercicio 2: Sacar partido de IntelliSense y fragmentos de código
+### <a name="exercise-2-taking-advantage-of-code-snippets-and-intellisense"></a>Ejercicio 2: Sacar partido de IntelliSense y fragmentos de código
 
 Web Essentials, el editor HTML se ha ampliado con funcionalidad adicional. En este ejercicio, verá algunas características nuevas que resultan útiles al desarrollar aplicaciones web.
 

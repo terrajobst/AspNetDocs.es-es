@@ -8,12 +8,12 @@ ms.date: 05/28/2015
 ms.assetid: b3a006a0-3ea2-4d45-b833-e20e3a3c0a1a
 msc.legacyurl: /web-pages/overview/getting-started/introducing-aspnet-web-pages-2/displaying-data
 msc.type: authoredcontent
-ms.openlocfilehash: 5415913626eb063a4cb1013ba03857c130487f42
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: 9e665ca8dd064c23a8b8bd3593014969d0c3da48
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59412182"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65128508"
 ---
 # <a name="introducing-aspnet-web-pages---displaying-data"></a>Introducción a las páginas Web ASP.NET - mostrar datos
 
@@ -34,7 +34,6 @@ por [Tom FitzMacken](https://github.com/tfitzmac)
 > 
 > - Herramientas de base de datos de WebMatrix.
 > - `WebGrid` aplicación auxiliar.
-
 
 ## <a name="what-youll-build"></a>¿Qué va a crear
 
@@ -96,7 +95,6 @@ Tabulador para ir a la **tipo de datos** lista y elija **int**. Este valor espec
 
 > [!NOTE]
 > No lo llamamos cualquier más aquí (mucho), pero puede usar gestos de teclado estándares de Windows para navegar en esta cuadrícula. Por ejemplo, puede cambiar entre los campos, simplemente puede empezar a escribir con el fin de seleccionar un elemento en una lista y así sucesivamente.
-
 
 Tabulador, cambie el **Default Value** cuadro (es decir, déjelo en blanco). Tabulador para ir a la **es la clave principal** casilla y selecciónelo. Esta opción indica a la base de datos que el *ID* columna contendrá los datos que identifica las filas individuales. (Es decir, cada fila tendrá un valor único en la columna de identificador que puede usar para encontrar esa fila.)
 
@@ -177,7 +175,6 @@ Para ejecutar la cuadrícula, tendrá que escribir unas cuantas líneas de códi
 > [!NOTE]
 > Tiene muchas opciones para mostrar los datos en una página; en realidad el `WebGrid` auxiliar es solo uno. Se eligió para este tutorial porque es la manera más fácil para mostrar los datos y porque es bastante flexible. En el conjunto del tutorial siguiente, verá cómo usar la forma "manual" más para trabajar con datos en la página, que ofrece un control más directo sobre cómo mostrar los datos.
 
-
 En el panel izquierdo en WebMatrix, haga clic en el **archivos** área de trabajo.
 
 Es la nueva base de datos que creó en el *aplicación\_datos* carpeta. Si aún no existe la carpeta, WebMatrix creó para la nueva base de datos. (Podría haber existido la carpeta si había instalado previamente las aplicaciones auxiliares).
@@ -241,7 +238,6 @@ En esta fase, se ha abierto la base de datos, ha obtenido los datos que desea y 
 > Para algunas de estas operaciones (por ejemplo, insertar y eliminar registros), el proceso que solicita la operación debe tener los permisos adecuados en la base de datos. Es por eso para bases de datos de producción a menudo tiene que proporcionar un nombre de usuario y una contraseña cuando se conecta a la base de datos.
 > 
 > Existen docenas de comandos SQL, pero siguen un patrón similar a los comandos que aparecen aquí. Puede usar los comandos SQL para crear tablas de base de datos, contar el número de registros en una tabla, calcular precios y realizar muchas más operaciones.
-
 
 ### <a name="adding-markup-to-display-the-data"></a>Adición de marcado para mostrar los datos
 

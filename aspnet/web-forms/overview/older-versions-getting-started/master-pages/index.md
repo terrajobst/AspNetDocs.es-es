@@ -8,17 +8,16 @@ ms.date: 11/04/2011
 ms.assetid: bc30f0ec-cf8f-4a33-9eee-513be872ac9c
 msc.legacyurl: /web-forms/overview/older-versions-getting-started/master-pages
 msc.type: chapter
-ms.openlocfilehash: 9119e16fbd6ac872cfcdf5497c5ca3d8d0b5d5e2
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: 3847269a495d54b0986bab245023daff4a43386a
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59413625"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65134152"
 ---
 # <a name="aspnet-35---web-forms-master-pages"></a>ASP.NET 3.5 - Páginas maestras de los formularios Web Forms
 
 > Cómo crear y usar páginas maestras de ASP.NET y páginas de contenido para crear un diseño coherente en las aplicaciones de formularios Web Forms.
-
 
 - [Crear un diseño de todo el sitio mediante páginas maestras (C#)](creating-a-site-wide-layout-using-master-pages-cs.md)
 - [Varios ContentPlaceHolders y contenido predeterminado (C#)](multiple-contentplaceholders-and-default-content-cs.md)

@@ -8,12 +8,12 @@ ms.date: 11/17/2011
 ms.assetid: c3c76516-4c48-4153-bd03-d70e3a3edbb0
 msc.legacyurl: /web-forms/overview/older-versions-getting-started/deployment-to-a-hosting-provider/deployment-to-a-hosting-provider-deploying-sql-server-compact-databases-2-of-12
 msc.type: authoredcontent
-ms.openlocfilehash: cc8568847e050e868a3e7563b5fc1fc6fbf25d86
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: b265d210ff3b1eeb8697a973cc245f6c97b3eb07
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59405487"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65134175"
 ---
 # <a name="deploying-an-aspnet-web-application-with-sql-server-compact-using-visual-studio-or-visual-web-developer-deploying-sql-server-compact-databases---2-of-12"></a>Implementar una aplicación Web de ASP.NET con SQL Server Compact con Visual Studio o Visual Web Developer: Implementación de SQL Server Compact las bases de datos - 2 de 12
 
@@ -24,7 +24,6 @@ por [Tom Dykstra](https://github.com/tdykstra)
 > Esta serie de tutoriales muestra cómo implementar un ASP.NET (publicar) proyecto de aplicación web que incluye una base de datos de SQL Server Compact mediante Visual Studio 2012 RC o Visual Studio Express 2012 RC para Web. También puede usar Visual Studio 2010 si instala la actualización de publicación en Web. Para obtener una introducción a la serie, consulte [el primer tutorial de la serie](deployment-to-a-hosting-provider-introduction-1-of-12.md).
 > 
 > Para ver un tutorial que muestra las características de implementación introducidas después de la versión de Visual Studio 2012 RC, se muestra cómo implementar las ediciones de SQL Server que no sea de SQL Server Compact y se muestra cómo se implementa en Azure App Service Web Apps, consulte [implementación Web de ASP.NET con Visual Studio](../../deployment/visual-studio-web-deployment/introduction.md).
-
 
 ## <a name="overview"></a>Información general
 
@@ -144,7 +143,6 @@ Esta selección de menú agrega el código siguiente a la `using` las instruccio
 > 
 > En este ejemplo se muestra para este tutorial se usa el `AddOrUpdate` método en el `Seed` método de las migraciones de Code First `Configuration` clase. El código llama a migraciones de First el `Seed` después de cada migración, este método y actualiza las filas que ya se han insertado o insertan si aún no existen. El `AddOrUpdate` método podría no ser la mejor opción para su escenario. Para obtener más información, consulte [tener cuidado con el método de EF 4.3 AddOrUpdate](http://thedatafarm.com/blog/data-access/take-care-with-ef-4-3-addorupdate-method/) en el blog de Julie.
 
-
 Presione CTRL-MAYÚS-B para compilar el proyecto.
 
 El siguiente paso es crear un `DbMigration` clase para la migración inicial. Desea que esta migración para crear una nueva base de datos, por lo que debe eliminar la base de datos que ya existe. Las bases de datos de SQL Server Compact se encuentran en *.sdf* archivos en el *aplicación\_datos* carpeta. En **el Explorador de soluciones**, expanda *aplicación\_datos* en el proyecto ContosoUniversity para ver las dos bases de datos de SQL Server Compact, que se representan mediante *.sdf*archivos.
@@ -187,7 +185,6 @@ Al implementar un sitio por primera vez, es habitual excluir la mayoría o todas
 
 > [!NOTE]
 > La base de datos de pertenencia almacena un hash de contraseñas de cuentas. Para implementar las cuentas de un equipo a otro, debe asegurarse de que las rutinas de hash no generan hash distintos del servidor de destino de como lo hacen en el equipo de origen. Generará el mismos hash cuando se usa ASP.NET Universal Providers, siempre y cuando no cambie el algoritmo predeterminado. El algoritmo predeterminado es HMACSHA256 y se especifica en el **validación** atributo de la **[machineKey](https://msdn.microsoft.com/library/w8h3skw9.aspx)** elemento en el archivo Web.config.
-
 
 No se mantiene la base de datos de pertenencia mediante migraciones de Code First y no hay ningún inicializador automática que propaga la base de datos con las cuentas de prueba (como sucede con la base de datos School). Por lo tanto, para mantener los datos de prueba disponibles hará una copia de la base de datos de prueba antes de crear uno nuevo.
 

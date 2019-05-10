@@ -8,12 +8,12 @@ ms.date: 05/04/2012
 ms.assetid: 4d8c8d19-055b-4b70-9ee1-f748f0db3a01
 msc.legacyurl: /web-forms/overview/deployment/web-deployment-in-the-enterprise/the-contact-manager-solution
 msc.type: authoredcontent
-ms.openlocfilehash: 7998b5bb2983410479123514661a4ddb67afc8c6
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: 12ed7827f7392e559e04121386f7cd045de8462b
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59398376"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65130938"
 ---
 # <a name="the-contact-manager-solution"></a>La solución Contact Manager
 
@@ -24,7 +24,6 @@ por [Jason Lee](https://github.com/jrjlee)
 > Esto [serie de tutoriales](web-deployment-in-the-enterprise.md) usa una solución de ejemplo&#x2014;la solución Contact Manager&#x2014;para representar una aplicación de escala empresarial con un nivel de complejidad realista. En este tema presenta la solución Contact Manager, se describe los componentes claves de la solución e identifica los desafíos en la implementación de este tipo de aplicación en diferentes plataformas de destino en un entorno empresarial.
 > 
 > Cuando se trabaja con los temas en estos tutoriales, puede usar la solución Contact Manager como una implementación de referencia que se muestra cómo puede satisfacer los desafíos específicos en escenarios de implementación de la empresa. El tema siguiente, [configuración de la solución de Contact Manager](setting-up-the-contact-manager-solution.md), se describe cómo descargar y ejecutar la solución en la estación de trabajo de desarrollador.
-
 
 ## <a name="solution-overview"></a>Introducción a la solución
 
@@ -45,7 +44,6 @@ En un nivel conceptual, los componentes de la solución encajan similar al sigui
 
 > [!NOTE]
 > Mientras que la aplicación web de ASP.NET MVC 3 utiliza el proveedor de pertenencia ASP.NET, todas las páginas dentro de la aplicación web permiten acceso anónimo. Esto claramente no es una configuración realista. Sin embargo, la solución se configura en este modo para que sea más fácil de implementar y probar la solución sin necesidad de configurar los roles y las cuentas de usuario.
-
 
 ## <a name="deployment-challenges"></a>Desafíos de la implementación
 

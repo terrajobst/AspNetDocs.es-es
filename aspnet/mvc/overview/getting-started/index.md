@@ -8,17 +8,16 @@ ms.date: 08/31/2011
 ms.assetid: d916dbe0-1895-491b-8bb6-93f4594ce757
 msc.legacyurl: /mvc/overview/getting-started
 msc.type: chapter
-ms.openlocfilehash: f588af70f3928285274ef6bf14f58697190943ff
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: 8e25c3a01634df6c3d9c81df8ab1738cc079d341
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59405825"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65121119"
 ---
 # <a name="aspnet-mvc-getting-started"></a>Introducción de MVC de ASP.NET
 
 > Las instrucciones siguientes explican qué es ASP.NET MVC y se muestra cómo empezar a trabajar.
-
 
 - [Introducción a ASP.NET MVC 5](introduction/index.md)
 

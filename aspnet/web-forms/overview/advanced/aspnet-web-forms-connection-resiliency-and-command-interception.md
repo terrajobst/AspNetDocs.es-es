@@ -8,12 +8,12 @@ ms.date: 03/31/2014
 ms.assetid: 6d497001-fa80-4765-b4cc-181fe90b894e
 msc.legacyurl: /web-forms/overview/advanced/aspnet-web-forms-connection-resiliency-and-command-interception
 msc.type: authoredcontent
-ms.openlocfilehash: 2b8cae61347f00712aba18fe6a2e91bc207cb9f3
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: 95f0b5635c12d5ef88622e5766c1278c6570dd4d
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59380046"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65133646"
 ---
 # <a name="aspnet-web-forms-connection-resiliency-and-command-interception"></a>Resistencia de la conexión e intercepción de comandos de Formularios Web Forms de ASP.NET
 
@@ -25,7 +25,6 @@ En este tutorial, modificará la aplicación de ejemplo Wingtip Toys para admiti
 > 
 > Este tutorial de formularios Web Forms se basaba en el siguiente tutorial de MVC de Tom Dykstra:  
 > [Resistencia de conexión e intercepción de comandos con Entity Framework en una aplicación ASP.NET MVC](../../../mvc/overview/getting-started/getting-started-with-ef-using-mvc/connection-resiliency-and-command-interception-with-the-entity-framework-in-an-asp-net-mvc-application.md)
-
 
 ## <a name="what-youll-learn"></a>Lo que aprenderá:
 

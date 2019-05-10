@@ -8,12 +8,12 @@ ms.date: 06/09/2009
 ms.assetid: b1abb452-642a-4ff3-8504-37b85590ff79
 msc.legacyurl: /web-forms/overview/older-versions-getting-started/deploying-web-site-projects/logging-error-details-with-asp-net-health-monitoring-cs
 msc.type: authoredcontent
-ms.openlocfilehash: 52b1aec577634dfb9fec7753e4f9b8bf46d159f0
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: 6b444de67f3bce3d09dd8c3c172895cf07f58df8
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59416265"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65134410"
 ---
 # <a name="logging-error-details-with-aspnet-health-monitoring-c"></a>Registrar detalles de error con Supervisión de estado de ASP.NET (C#)
 
@@ -22,7 +22,6 @@ por [Scott Mitchell](https://twitter.com/ScottOnWriting)
 [Descargar código](http://download.microsoft.com/download/1/0/C/10CC829F-A808-4302-97D3-59989B8F9C01/ASPNET_Hosting_Tutorial_13_CS.zip) o [descargar PDF](http://download.microsoft.com/download/5/C/5/5C57DB8C-5DEA-4B3A-92CA-4405544D313B/aspnet_tutorial13_HealthMonitoring_cs.pdf)
 
 > Sistema de supervisión de estado de Microsoft proporciona una manera fácil y personalizable para iniciar varios eventos de web, incluidos las excepciones no controladas. Este tutorial le guía a través de la supervisión del sistema de estado para iniciar las excepciones no controladas en una base de datos y para notificar a los desarrolladores a través de un mensaje de correo electrónico.
-
 
 ## <a name="introduction"></a>Introducción
 
@@ -67,7 +66,6 @@ La `SqlWebEventProvider` clase forma parte del sistema de supervisión de estado
 > [!NOTE]
 > El `aspnet_regsql.exe` herramienta explicada en el [ *configurar un sitio Web que usa servicios de aplicación* tutorial](configuring-a-website-that-uses-application-services-cs.md) cuando se ha agregado compatibilidad con ASP. Servicios de aplicación de la red. Por lo tanto, base de datos del sitio Web de reseñas de libros ya contiene el `aspnet_WebEvent_LogEvent` procedimiento almacenado, que almacena la información de evento en una tabla denominada `aspnet_WebEvent_Events`.
 
-
 Una vez que el procedimiento almacenado necesario y la tabla que se agrega a la base de datos, todo lo que queda es indicar a para registrar todas las excepciones no controladas en la base de datos de supervisión de estado. Esto se consigue agregando el siguiente marcado para su sitio Web `Web.config` archivo:
 
 [!code-xml[Main](logging-error-details-with-asp-net-health-monitoring-cs/samples/sample2.xml)]
@@ -82,7 +80,6 @@ Esta información de configuración indica el estado de supervisión del sistema
 
 > [!NOTE]
 > El `WebBaseErrorEvent` evento se desencadena solo para errores de servidor; no se genera para los errores HTTP, como una solicitud de un recurso de ASP.NET que no se encuentra. Esto difiere del comportamiento de la `HttpApplication` la clase `Error` evento, que se desencadena para el servidor y errores HTTP.
-
 
 Para ver el estado del sistema en la acción de supervisión, visite el sitio Web y generan un error en tiempo de ejecución, visite `Genre.aspx?ID=foo`. Debería ver la página de error adecuado: la excepción detalles amarillo pantalla de la muerte (cuando se visita localmente) o en la página de error personalizada (cuando se visita el sitio de producción). En segundo plano, el sistema de supervisión de estado registra la información de error en la base de datos. Debe haber un registro de la `aspnet_WebEvent_Events` tabla (consulte **figura 1**); este registro contiene información sobre el error en tiempo de ejecución que acaba de producirse.
 
@@ -99,7 +96,6 @@ Si crea una página, asegúrese de que siga los pasos para permitir que solo los
 
 > [!NOTE]
 > El tutorial posterior explora un sistema de registro y notificación de error alternativas denominado ELMAH. ELMAH incluye un mecanismo integrado para ver el registro de errores de página web y como una fuente RSS.
-
 
 ## <a name="logging-events-to-email"></a>Registro de eventos al correo electrónico
 

@@ -8,19 +8,18 @@ ms.date: 08/19/2008
 ms.assetid: a106374a-5e74-4fd0-9ac0-1a32280e5d0d
 msc.legacyurl: /mvc/overview/older-versions-1/overview/understanding-models-views-and-controllers-vb
 msc.type: authoredcontent
-ms.openlocfilehash: 879a771c3b85c85d35d470f056173f230a36e906
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: cc7988e0c9802e8cd376396eb5da15b5393d6088
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59388963"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65125492"
 ---
 # <a name="understanding-models-views-and-controllers-vb"></a>Descripción de los modelos, vistas y controladores (VB)
 
 by [Stephen Walther](https://github.com/StephenWalther)
 
 > ¿Tiene dudas acerca de los modelos, vistas y controladores? En este tutorial, Stephen Walther se presentan las distintas partes de una aplicación ASP.NET MVC.
-
 
 Este tutorial proporciona una descripción general de ASP.NET MVC modelos, vistas y controladores. En otras palabras, explica la M', V' y C' en ASP.NET MVC.
 
@@ -32,47 +31,37 @@ La plantilla de Visual Studio de forma predeterminada para crear aplicaciones We
 
 Crea una nueva aplicación MVC de ASP.NET con la plantilla MVC, inicie Visual Studio 2008 y seleccionar la opción de menú archivo, nuevo proyecto (consulte la figura 1). En el cuadro de diálogo nuevo proyecto, seleccione su lenguaje de programación favorito en tipos de proyecto (Visual Basic o C#) y seleccione **aplicación Web ASP.NET MVC** en plantillas. Haga clic en el botón Aceptar.
 
-
 [![Cuadro de diálogo nuevo proyecto](understanding-models-views-and-controllers-vb/_static/image1.jpg)](understanding-models-views-and-controllers-vb/_static/image1.png)
 
 **Figura 01**: Cuadro de diálogo nuevo proyecto ([haga clic aquí para ver imagen en tamaño completo](understanding-models-views-and-controllers-vb/_static/image2.png))
 
-
 Cuando se crea una nueva aplicación de ASP.NET MVC, la **crear proyecto de prueba unitaria** cuadro de diálogo aparece (consulte la figura 2). Este cuadro de diálogo le permite crear un proyecto independiente de la solución para probar la aplicación ASP.NET MVC. Seleccione la opción **No, no cree un proyecto de prueba unitaria** y haga clic en el **Aceptar** botón.
-
 
 [![Crear el cuadro de diálogo de pruebas unitarias](understanding-models-views-and-controllers-vb/_static/image2.jpg)](understanding-models-views-and-controllers-vb/_static/image3.png)
 
 **Figura 02**: Crear el cuadro de diálogo de pruebas unitarias ([haga clic aquí para ver imagen en tamaño completo](understanding-models-views-and-controllers-vb/_static/image4.png))
 
-
 Después de la nueva de ASP.NET MVC se crea la aplicación. Verá varias carpetas y archivos en la ventana Explorador de soluciones. En concreto, verá tres carpetas denominadas modelos, vistas y controladores. Como puede imaginar desde los nombres de carpeta, estas carpetas contienen los archivos para la implementación de modelos, vistas y controladores.
 
 Si expande la carpeta Controllers, debería ver un archivo denominado AccountController.vb y un archivo denominado HomeController.vb. Si expande la carpeta Views, debería ver tres subcarpetas con el nombre de cuenta de inicio y compartido. Si expande la carpeta Inicio, verá dos archivos adicionales denominados About.aspx y Index.aspx (consulte la figura 3). Estos archivos constituyen la aplicación de ejemplo incluida con la plantilla predeterminada ASP.NET MVC.
-
 
 [![La ventana del explorador de soluciones](understanding-models-views-and-controllers-vb/_static/image3.jpg)](understanding-models-views-and-controllers-vb/_static/image5.png)
 
 **Figura 03**: La ventana del explorador de soluciones ([haga clic aquí para ver imagen en tamaño completo](understanding-models-views-and-controllers-vb/_static/image6.png))
 
-
 Puede ejecutar la aplicación de ejemplo seleccionando la opción de menú **depurar, Iniciar depuración**. Como alternativa, puede presionar la tecla F5.
 
 Al ejecutar una aplicación ASP.NET en primer lugar, aparece el cuadro de diálogo en la figura 4 que se recomienda habilitar el modo de depuración. Haga clic en el botón Aceptar y la aplicación se ejecutará.
-
 
 [![Cuadro de diálogo depuración no habilitada](understanding-models-views-and-controllers-vb/_static/image4.jpg)](understanding-models-views-and-controllers-vb/_static/image7.png)
 
 **Figura 04**: Cuadro de diálogo no está habilitada la depuración ([haga clic aquí para ver imagen en tamaño completo](understanding-models-views-and-controllers-vb/_static/image8.png))
 
-
 Al ejecutar una aplicación ASP.NET MVC, Visual Studio inicia la aplicación en el explorador web. La aplicación de ejemplo consta de dos páginas: la página de índice y la página About. Cuando la aplicación se inicia por primera vez, aparece la página de índice (consulte la figura 5). Puede navegar a la página About haciendo clic en el vínculo del menú en la parte superior derecha de la aplicación.
-
 
 [![La página de índice](understanding-models-views-and-controllers-vb/_static/image5.jpg)](understanding-models-views-and-controllers-vb/_static/image9.png)
 
 **Figura 05**: La página de índice ([haga clic aquí para ver imagen en tamaño completo](understanding-models-views-and-controllers-vb/_static/image10.png))
-
 
 Tenga en cuenta las direcciones URL en la barra de direcciones del explorador. Por ejemplo, al hacer clic en el vínculo del menú About, la dirección URL en la barra de direcciones del explorador cambia a **/Home/About**.
 
