@@ -8,12 +8,12 @@ ms.date: 03/31/2010
 ms.assetid: 67b25f4c-2823-42b6-b07d-1d650b3fd711
 msc.legacyurl: /web-forms/overview/data-access/custom-formatting/using-the-formview-s-templates-vb
 msc.type: authoredcontent
-ms.openlocfilehash: 268403a7b832596421120a24c64580f63eb987c3
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: ae21259a14378ea6b41f5d45cf2cac6954175dfa
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59383930"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65109105"
 ---
 # <a name="using-the-formviews-templates-vb"></a>Uso de las plantillas de FormView (VB)
 
@@ -22,7 +22,6 @@ por [Scott Mitchell](https://twitter.com/ScottOnWriting)
 [Descargue la aplicación de ejemplo](http://download.microsoft.com/download/5/7/0/57084608-dfb3-4781-991c-407d086e2adc/ASPNET_Data_Tutorial_14_VB.exe) o [descargar PDF](using-the-formview-s-templates-vb/_static/datatutorial14vb1.pdf)
 
 > A diferencia de DetailsView, FormView no se compone de campos. En su lugar, FormView se representa mediante plantillas. En este tutorial que se examinarán utilizando el control FormView para presentar una presentación de datos menos rígida.
-
 
 ## <a name="introduction"></a>Introducción
 
@@ -39,21 +38,17 @@ A diferencia de DetailsView, FormView no se compone de campos. No se puede agreg
 
 En este tutorial que se examinarán utilizando el control FormView para presentar una presentación menos rígida de productos. En lugar de tener campos para el nombre, categoría, proveedores y así sucesivamente, FormView `ItemTemplate` mostrará estos valores mediante una combinación de un elemento de encabezado y un `<table>` (consulte la figura 1).
 
-
 [![FormView se interrumpe del diseño de cuadrícula visto en DetailsView](using-the-formview-s-templates-vb/_static/image2.png)](using-the-formview-s-templates-vb/_static/image1.png)
 
 **Figura 1**: FormView sale el diseño Grid-Like visto en DetailsView ([haga clic aquí para ver imagen en tamaño completo](using-the-formview-s-templates-vb/_static/image3.png))
-
 
 ## <a name="step-1-binding-the-data-to-the-formview"></a>Paso 1: Enlace de datos a FormView
 
 Abra el `FormView.aspx` página y arrastre un FormView desde el cuadro de herramientas hasta el diseñador. Cuando se agrega primero FormView aparece como un cuadro gris, que nos indica que un `ItemTemplate` es necesaria.
 
-
 [![FormView no se puede representar en el diseñador hasta que se proporcione una plantilla ItemTemplate](using-the-formview-s-templates-vb/_static/image5.png)](using-the-formview-s-templates-vb/_static/image4.png)
 
 **Figura 2**: El FormView no se puede representar en el Diseñador de hasta un `ItemTemplate` se proporciona ([haga clic aquí para ver imagen en tamaño completo](using-the-formview-s-templates-vb/_static/image6.png))
-
 
 El `ItemTemplate` pueden crearse de forma manual (a través de la sintaxis declarativa) o puede ser creado automáticamente mediante el enlace a un control de origen de datos a través del Diseñador de FormView. Esto crea automáticamente `ItemTemplate` contiene código HTML que enumera el nombre de cada campo y una etiqueta de control cuya `Text` está enlazada la propiedad para el valor del campo. Este enfoque también auto-crea una `InsertItemTemplate` y `EditItemTemplate`, ambos de los cuales se rellenan con los controles de entrada para cada uno de los campos de datos devueltos por el control de origen de datos.
 
@@ -62,7 +57,6 @@ Si desea crear automáticamente la plantilla, de la etiqueta inteligente de Form
 Si prefiere crear el `ItemTemplate` manualmente, puede agregar y configurar el origen ObjectDataSource arrastrándolo desde el cuadro de herramientas hasta el diseñador. Sin embargo, no establezca origen de datos de FormView desde el diseñador. En su lugar, vaya a la vista del origen y configurar manualmente el FormView `DataSourceID` propiedad a la `ID` valor del origen ObjectDataSource. A continuación, agregue manualmente el `ItemTemplate`.
 
 Independientemente de qué enfoque ha decidido aprovechar, en este punto marcado declarativo de su FormView aspecto que deberían:
-
 
 [!code-aspx[Main](using-the-formview-s-templates-vb/samples/sample1.aspx)]
 
@@ -76,7 +70,6 @@ Este marcado se puede escribir en a través de la interfaz de edición de planti
 
 El marcado siguiente muestra el marcado declarativo FormView después el `ItemTemplate`de estructura se ha completado:
 
-
 [!code-aspx[Main](using-the-formview-s-templates-vb/samples/sample2.aspx)]
 
 Tenga en cuenta que la sintaxis de enlace de datos - `<%# Eval("ProductName") %>`, por ejemplo puede insertar directamente en la salida de la plantilla. Es decir, se necesita no asignar a un control de etiqueta `Text` propiedad. Por ejemplo, tenemos la `ProductName` valor mostrado en un `<h3>` elemento mediante `<h3><%# Eval("ProductName") %></h3>`, lo que, para el producto Chai se representará como `<h3>Chai</h3>`.
@@ -87,16 +80,13 @@ Puesto que no hay ningún CheckBoxFields disponibles con FormView, con el fin de
 
 Con el `ItemTemplate` haya finalizado, se muestra la información de producto de una manera mucho más fluida. Compare el resultado de DetailsView desde el último tutorial (figura 3) con la salida generada por FormView en este tutorial (figura 4).
 
-
 [![La salida de DetailsView rígido](using-the-formview-s-templates-vb/_static/image8.png)](using-the-formview-s-templates-vb/_static/image7.png)
 
 **Figura 3**: La salida de DetailsView rígido ([haga clic aquí para ver imagen en tamaño completo](using-the-formview-s-templates-vb/_static/image9.png))
 
-
 [![La salida de FormView fluido](using-the-formview-s-templates-vb/_static/image11.png)](using-the-formview-s-templates-vb/_static/image10.png)
 
 **Figura 4**: La salida de FormView dinámica de fluidos ([haga clic aquí para ver imagen en tamaño completo](using-the-formview-s-templates-vb/_static/image12.png))
-
 
 ## <a name="summary"></a>Resumen
 

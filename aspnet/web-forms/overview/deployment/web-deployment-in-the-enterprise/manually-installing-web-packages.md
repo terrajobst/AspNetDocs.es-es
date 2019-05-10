@@ -8,12 +8,12 @@ ms.date: 05/04/2012
 ms.assetid: f11d22a7-5d32-4ad0-8a9b-276460a61c06
 msc.legacyurl: /web-forms/overview/deployment/web-deployment-in-the-enterprise/manually-installing-web-packages
 msc.type: authoredcontent
-ms.openlocfilehash: 9d0e57eb85242a0d6fa8ca9eef7f6c741862069d
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: f778549d3e26989a2e71ef21171adec521842729
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59408802"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65132124"
 ---
 # <a name="manually-installing-web-packages"></a>Instalación manual de paquetes web
 
@@ -29,7 +29,6 @@ por [Jason Lee](https://github.com/jrjlee)
 > 
 > En estos casos, puede ser la única opción para el paquete web en el servidor de destino de puerto e importarlo manualmente en IIS. Aunque este enfoque impide la implementación automatizada, sigue siendo una técnica muy eficaz para publicar una aplicación web&#x2014;simplemente copiar un solo archivo zip en su servidor web y usar un Asistente para guiarle por el proceso de importación.
 
-
 En este tema forma parte de una serie de tutoriales que se basa en los requisitos de implementación empresarial de una compañía ficticia denominada Fabrikam, Inc. Esta serie de tutoriales usa una solución de ejemplo&#x2014;el [solución Contact Manager](the-contact-manager-solution.md)&#x2014;para representar una aplicación web con un nivel realista de complejidad, incluida una aplicación ASP.NET MVC 3, una comunicación de Windows Servicio Foundation (WCF) y un proyecto de base de datos.
 
 ## <a name="task-overview"></a>Información general de tarea
@@ -44,7 +43,6 @@ En este tema le mostrará cómo realizar estos procedimientos. Las tareas y los 
 
 > [!NOTE]
 > En este tema se usa junto con mejor [configurar un servidor Web de publicación Web de implementar (implementación sin conexión)](../configuring-server-environments-for-web-deployment/configuring-a-web-server-for-web-deploy-publishing-offline-deployment.md), que explica cómo instalar los componentes necesarios y preparar un sitio Web de IIS para la importación del paquete.
-
 
 ## <a name="create-a-web-deployment-package"></a>Crear un paquete de implementación Web
 
@@ -68,9 +66,7 @@ Puede crear un paquete de implementación web para un proyecto de aplicación we
 
 Puede crear un paquete de implementación web desde la línea de comandos mediante la invocación del **paquete** destino en el proyecto de aplicación web con MSBuild. El comando debe ser similar a esto:
 
-
 [!code-console[Main](manually-installing-web-packages/samples/sample1.cmd)]
-
 
 El enfoque que utilice, el resultado final es el mismo. El WPP crea un paquete de implementación web como un archivo zip, junto con varios recursos de apoyo, en la carpeta de salida para el proyecto de aplicación web.
 

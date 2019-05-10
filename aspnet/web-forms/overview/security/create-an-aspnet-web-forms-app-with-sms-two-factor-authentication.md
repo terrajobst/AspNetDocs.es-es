@@ -8,12 +8,12 @@ ms.date: 10/09/2014
 ms.assetid: 716264ae-ab72-45de-bfc5-53a6237089cf
 msc.legacyurl: /web-forms/overview/security/create-an-aspnet-web-forms-app-with-sms-two-factor-authentication
 msc.type: authoredcontent
-ms.openlocfilehash: 2010de510cf44bba1b95d29dbdb573ab78f452f7
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: 02c511f0e99e306daaf595da5bc618fe738e806c
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59411363"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65106786"
 ---
 # <a name="create-an-aspnet-web-forms-app-with-sms-two-factor-authentication-c"></a>Crear una aplicación de formularios Web Forms de ASP.NET con la autenticación en dos fases de SMS (C#)
 
@@ -22,7 +22,6 @@ por [Erik Reitan](https://github.com/Erikre)
 [Descargue la aplicación de ASP.NET Web Forms con correo electrónico y SMS autenticación en dos fases](https://code.msdn.microsoft.com/ASPNET-Web-Forms-App-with-5a0ff94e)
 
 > Este tutorial muestra cómo compilar una aplicación de formularios Web Forms de ASP.NET con la autenticación en dos fases. En este tutorial se ha diseñado para complementar el tutorial titulado [crear una aplicación de formularios Web Forms ASP.NET segura con el registro de usuario, correo electrónico de confirmación y restablecimiento de contraseña](create-a-secure-aspnet-web-forms-app-with-user-registration-email-confirmation-and-password-reset.md). Además, este tutorial se basaba en de Rick Anderson [tutorial de MVC](../../../mvc/overview/security/aspnet-mvc-5-app-with-sms-and-email-two-factor-authentication.md).
-
 
 ## <a name="introduction"></a>Introducción
 
@@ -42,7 +41,6 @@ Comience por instalar y ejecutar [Visual Studio Express 2013 para Web](https://g
 
 > [!NOTE]
 > Importante: Debe instalar [Visual Studio 2013 Update 3](https://go.microsoft.com/fwlink/?LinkId=390465) o superior para completar este tutorial.
-
 
 1. Cree un nuevo proyecto (**archivo**  - &gt; **nuevo proyecto**) y seleccione el **aplicación Web ASP.NET** plantilla junto con .NET Framework la versión 4.5.2 desde el **nuevo proyecto** cuadro de diálogo.
 2. Desde el **nuevo proyecto ASP.NET** cuadro de diálogo, seleccione el **formularios Web Forms** plantilla. Deje la autenticación predeterminada como **cuentas de usuario individuales**. A continuación, haga clic en **Aceptar** para crear el nuevo proyecto.  

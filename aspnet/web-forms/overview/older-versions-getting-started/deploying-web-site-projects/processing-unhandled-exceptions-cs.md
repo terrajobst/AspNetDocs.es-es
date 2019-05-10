@@ -8,12 +8,12 @@ ms.date: 06/09/2009
 ms.assetid: 5bc1afd5-2484-4528-b158-ab218ba150e8
 msc.legacyurl: /web-forms/overview/older-versions-getting-started/deploying-web-site-projects/processing-unhandled-exceptions-cs
 msc.type: authoredcontent
-ms.openlocfilehash: 2940c17e8466eae1e72d3f7cbc6ff7127c8588b7
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: 0a048527aeaa44a452324530625583c00239d6f2
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59415861"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65109299"
 ---
 # <a name="processing-unhandled-exceptions-c"></a>Procesar excepciones no controladas (C#)
 
@@ -22,7 +22,6 @@ por [Scott Mitchell](https://twitter.com/ScottOnWriting)
 [Vea o descargue el código de ejemplo](https://github.com/aspnet/AspNetDocs/tree/master/aspnet/web-forms/overview/older-versions-getting-started/deploying-web-site-projects/processing-unhandled-exceptions-cs/samples) ([cómo descargarlo](/aspnet/core/tutorials/index#how-to-download-a-sample))
 
 > Cuando se produce un error en tiempo de ejecución en una aplicación web en producción es importante para notificar a un desarrollador y que registre el error para que se pueden diagnosticar en un momento posterior en el tiempo. En este tutorial se proporciona información general sobre cómo ASP.NET procesa los errores en tiempo de ejecución y examina una manera de tener código personalizado se ejecute cada vez que un burbujas de excepción no controlada al tiempo de ejecución de ASP.NET.
-
 
 ## <a name="introduction"></a>Introducción
 
@@ -34,7 +33,6 @@ Este tutorial muestra cómo obtener acceso a los detalles de una excepción no c
 
 > [!NOTE]
 > La información que se examinan en este tutorial es muy útil si necesita procesar excepciones no controladas de alguna manera único o personalizada. En casos donde sólo necesita registrar la excepción y notificar a un desarrollador, mediante una biblioteca de registro de error es la mejor opción. Los siguientes dos tutoriales proporcionan una visión general de estas dos bibliotecas.
-
 
 ## <a name="executing-code-when-theerrorevent-is-raised"></a>Ejecutar código cuando el`Error`provoca el evento
 
@@ -56,7 +54,6 @@ El `Global.asax` archivo creado en un WAP mediante la plantilla de clase de apli
 > [!NOTE]
 > Al implementar la aplicación de ASP.NET debe copiar el `Global.asax` archivo en el entorno de producción. El `Global.asax.cs` no es necesario el archivo, que se crea en el WAP, que se copiarán en producción porque este código se compila en el ensamblado del proyecto.
 
-
 Los controladores de eventos creados por la plantilla de clase de aplicación Global de Visual Studio no son exhaustivas. Puede agregar un controlador de eventos para cualquier `HttpApplication` eventos asignando el controlador de eventos `Application_EventName`. Por ejemplo, podría agregar el código siguiente a la `Global.asax` archivo para crear un controlador de eventos para el [ `AuthorizeRequest` eventos](https://msdn.microsoft.com/library/system.web.httpapplication.authorizerequest.aspx):
 
 [!code-cs[Main](processing-unhandled-exceptions-cs/samples/sample1.cs)]
@@ -65,7 +62,6 @@ Del mismo modo, puede quitar los controladores de eventos creados por la plantil
 
 > [!NOTE]
 > *Los módulos HTTP* ofrecen otra manera de definir controladores de eventos para `HttpApplication` eventos. Los módulos HTTP se crean como un archivo de clase que se puede colocar directamente en el proyecto de aplicación web o separaron en una biblioteca de clases independiente. Debido a pueden dividirse en una biblioteca de clases, módulos HTTP ofrecen un modelo más flexible y reutilizable para crear `HttpApplication` controladores de eventos. Mientras que la `Global.asax` archivo es específico para la aplicación web en el que reside, los módulos HTTP se pueden compilar en ensamblados, momento en que agregar el módulo HTTP a un sitio Web es tan sencillo como colocando el ensamblado el `Bin` carpeta y registrar el Módulo de `Web.config`. En este tutorial no se fija en la creación y uso de módulos HTTP, pero las bibliotecas de registro de errores en dos utilizadas en los siguientes tutoriales de dos se implementan como módulos HTTP. Para obtener más información sobre las ventajas de los módulos HTTP que hacen referencia a [uso de módulos y controladores HTTP para crear los componentes ASP.NET conectables](https://msdn.microsoft.com/library/aa479332.aspx).
-
 
 ## <a name="retrieving-information-about-the-unhandled-exception"></a>Al recuperar la información sobre la excepción no controlada
 
@@ -92,7 +88,6 @@ Las clases de .NET Framework en el [ `System.Net.Mail` espacio de nombres](https
 > [!NOTE]
 > El `<system.net>` elemento contiene la configuración del servidor SMTP utilizada por el `SmtpClient` clase al enviar un correo electrónico. Su empresa probable de hospedaje tiene un servidor SMTP que puede usar para enviar correo electrónico desde su aplicación. Consulte la sección de soporte técnico de su host de web para obtener información sobre la configuración del servidor SMTP que debe usar en su aplicación web.
 
-
 Agregue el código siguiente a la `Application_Error` controlador de eventos para enviar un correo electrónico de un desarrollador cuando se produce un error:
 
 [!code-csharp[Main](processing-unhandled-exceptions-cs/samples/sample4.cs)]
@@ -105,7 +100,6 @@ El último paso consiste en enviar la `MailMessage`. Esto se hace creando un nue
 
 > [!NOTE]
 > Antes de usar este código en su aplicación web desea cambiar los valores de la `ToAddress` y `FromAddress` constantes de support@example.com a cualquier correo electrónico se enviarán a dirección de correo electrónico de notificación de error y se originan en. También deberá especificar la configuración del servidor SMTP en el `<system.net>` sección `Web.config`. Consulte a su proveedor de host de web para determinar la configuración del servidor SMTP para usar.
-
 
 Con este código en su lugar siempre que hay un error al desarrollador se envía un mensaje de correo electrónico que resume el error e incluye el YSOD. En el tutorial anterior se mostró un error en tiempo de ejecución al visitar Genre.aspx y pasando un no válido `ID` valor a través de la cadena de consulta, como `Genre.aspx?ID=foo`. Visitar la página con el `Global.asax` archivo en su lugar genera la misma experiencia de usuario como en el tutorial anterior: en el entorno de desarrollo seguirá apareciendo el excepción detalles amarillo pantalla de la muerte, mientras que en el entorno de producción deberá Consulte la página de error personalizado. Además de este comportamiento existente, el programador se envía un correo electrónico.
 

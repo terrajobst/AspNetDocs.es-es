@@ -8,12 +8,12 @@ ms.date: 06/09/2009
 ms.assetid: dbc54313-5d05-4285-98b3-726edea6d0c9
 msc.legacyurl: /web-forms/overview/older-versions-getting-started/deploying-web-site-projects/users-and-roles-on-the-production-website-cs
 msc.type: authoredcontent
-ms.openlocfilehash: 691de0a29ce4798d2f18a58141b833db9cddb2d5
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: 2c213d443197e24168b4799056374ec25d0b6e0f
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59396608"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65134219"
 ---
 # <a name="users-and-roles-on-the-production-website-c"></a>Los usuarios y Roles en el sitio Web de producción (C#)
 
@@ -22,7 +22,6 @@ por [Scott Mitchell](https://twitter.com/ScottOnWriting)
 [Descargar PDF](http://download.microsoft.com/download/5/C/5/5C57DB8C-5DEA-4B3A-92CA-4405544D313B/aspnet_tutorial16_CustomAWAT_cs.pdf)
 
 > La herramienta de administración de sitio Web de ASP.NET (WSAT) proporciona una interfaz de usuario basada en web para configurar las opciones de pertenencia y funciones y para crear, modificar y eliminar usuarios y roles. Lamentablemente, el WSAT solo funciona cuando visita desde localhost, lo que significa que no puede llegar la herramienta de administración del sitio Web de producción a través del explorador. La buena noticia es que hay soluciones alternativas que hacen posible administrar usuarios y roles en producción. Este tutorial trata estas soluciones alternativas y otros.
-
 
 ## <a name="introduction"></a>Introducción
 
@@ -80,7 +79,6 @@ No se puede iniciar sesión como Sam en el entorno de desarrollo porque la infor
 
 > [!NOTE]
 > No olvide cambiar la cadena de conexión en el `databaseConnectionStrings.config` archivo a la base de datos de desarrollo de la cadena de conexión cuando haya terminado trabajando con el WSAT si no va a trabajar con datos de producción al probar el sitio mediante el desarrollo entorno. También tenga en cuenta que mientras que la técnica que acabamos de describir nos permite utilizar el WSAT para administrar usuarios y roles de forma remota, los cambios realizados en cualquiera de las otras opciones de configuración de WSAT (reglas de acceso, SMTP configuración, depuración y traza configuración y así sucesivamente) modifican el `Web.config` archivo. Por lo tanto, los cambios realizados en la configuración se aplican al entorno de desarrollo y no al entorno de producción.
-
 
 ## <a name="creating-custom-user-and-role-management-web-pages"></a>Creación de usuario personalizado y las páginas Web de administración de roles
 

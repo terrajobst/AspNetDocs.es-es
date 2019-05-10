@@ -8,12 +8,12 @@ ms.date: 04/05/2010
 ms.assetid: cfe2a6a0-1e56-4dc8-9537-c8ec76ba96a4
 msc.legacyurl: /web-forms/overview/data-access/introduction/creating-a-data-access-layer-cs
 msc.type: authoredcontent
-ms.openlocfilehash: 4d8afd13fc693c828850bec53664a4db7d91dede
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: e4019ce141a12f20edd488b708682a76e2a3d3fb
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59420606"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65108981"
 ---
 # <a name="creating-a-data-access-layer-c"></a>Crear una capa de acceso a datos (C#)
 
@@ -22,7 +22,6 @@ por [Scott Mitchell](https://twitter.com/ScottOnWriting)
 [Descargar PDF](creating-a-data-access-layer-cs/_static/datatutorial01cs1.pdf)
 
 > En este tutorial comenzaremos desde el principio y crear la capa de acceso de datos (DAL), que con objetos DataSet con tipo, para acceder a la información en una base de datos.
-
 
 ## <a name="introduction"></a>Introducción
 
@@ -36,11 +35,9 @@ En este tutorial comenzaremos desde el principio y crear la capa de acceso de da
 
 Para poder crear nuestro nivel de acceso de datos (DAL), primero es necesario crear un sitio web y configurar la base de datos. Empiece por crear un nuevo sitio de web ASP.NET basada en el sistema de archivos. Para ello, vaya al menú archivo y elija Nuevo sitio Web, mostrar el cuadro de diálogo nuevo sitio Web. Elija la plantilla de sitio Web de ASP.NET, Establece la lista desplegable de ubicación en el sistema de archivos, elija una carpeta para colocar el sitio web y establecer el lenguaje C#.
 
-
 [![Crear un nuevo archivo basado en el sistema sitio Web](creating-a-data-access-layer-cs/_static/image2.png)](creating-a-data-access-layer-cs/_static/image1.png)
 
 **Figura 1**: Crear un sitio Web de New File System-Based ([haga clic aquí para ver imagen en tamaño completo](creating-a-data-access-layer-cs/_static/image3.png))
-
 
 Esto creará un nuevo sitio web con un **Default.aspx** página ASP.NET y un **aplicación\_datos** carpeta.
 
@@ -62,11 +59,9 @@ Como alternativa, puede conectarse a una base de datos Northwind instalada en un
 
 Una vez que tenga instalada la base de datos, vaya al explorador de servidores en Visual Studio, haga doble clic en el nodo Conexiones de datos y elija Agregar conexión. Si no ve el Explorador de servidores para que vaya a la vista / Explorador de servidores o Ctrl + Alt + S posicionamiento. Se abrirá el cuadro de diálogo Agregar conexión, donde puede especificar el servidor al que conectarse, la información de autenticación y el nombre de la base de datos. Una vez que ha configurado la información de conexión de base de datos y hace clic en el botón Aceptar, se agregará la base de datos como un nodo bajo el nodo Conexiones de datos. Puede expandir el nodo de base de datos para explorar sus tablas, vistas, procedimientos almacenados y así sucesivamente.
 
-
 ![Agregar una conexión a la base de datos del servidor de la base de datos Northwind](creating-a-data-access-layer-cs/_static/image4.png)
 
 **Figura 2**: Agregar una conexión a la base de datos del servidor de la base de datos Northwind
-
 
 ## <a name="step-2-creating-the-data-access-layer"></a>Paso 2: Creación de la capa de acceso a datos
 
@@ -88,24 +83,19 @@ Para devolver objetos fuertemente tipados, los desarrolladores pueden crear sus 
 > [!NOTE]
 > Para obtener más información sobre las ventajas y desventajas de utilizar DataSets con tipo frente a objetos de negocios personalizados, consulte [diseñar componentes de capa de datos y pasar datos a través de niveles](https://msdn.microsoft.com/library/ms978496.aspx).
 
-
 Vamos a usar conjuntos de datos fuertemente tipados para la arquitectura de estos tutoriales. Figura 3 ilustra el flujo de trabajo entre los diferentes niveles de una aplicación que utilice conjuntos de datos con tipo.
-
 
 [![Código de acceso de todos los datos es relegado a la capa DAL](creating-a-data-access-layer-cs/_static/image6.png)](creating-a-data-access-layer-cs/_static/image5.png)
 
 **Figura 3**: Código de acceso de todos los datos es relegado a la capa DAL ([haga clic aquí para ver imagen en tamaño completo](creating-a-data-access-layer-cs/_static/image7.png))
 
-
 ## <a name="creating-a-typed-dataset-and-table-adapter"></a>Creación de un DataSet con tipo y el adaptador de tabla
 
 Para empezar a crear nuestro DAL, comenzamos agregando un DataSet con tipo para nuestro proyecto. Para ello, haga doble clic en el nodo del proyecto en el Explorador de soluciones y elija Agregar un nuevo elemento. Seleccione la opción de conjunto de datos de la lista de plantillas y asígnele el nombre **Northwind.xsd**.
 
-
 [![Optar por agregar un nuevo conjunto de datos al proyecto](creating-a-data-access-layer-cs/_static/image9.png)](creating-a-data-access-layer-cs/_static/image8.png)
 
 **Figura 4**: Optar por agregar un nuevo conjunto de datos en el proyecto ([haga clic aquí para ver imagen en tamaño completo](creating-a-data-access-layer-cs/_static/image10.png))
-
 
 Después de hacer clic en Agregar, cuando se le pida que agregue el conjunto de datos a la **aplicación\_código** carpeta, elija Sí. A continuación, se mostrará el diseñador para el conjunto de datos con tipo y se iniciará el Asistente para configuración de TableAdapter, lo que permite agregar su primera TableAdapter al conjunto de datos con tipo.
 
@@ -115,53 +105,41 @@ Tenga en cuenta que DataTables fuertemente tipada no incluyen ninguna informaci�
 
 El Asistente para configuración de TableAdapter comienza con la que le pide que seleccione a qué base de datos para trabajar con. La lista desplegable muestra esas bases de datos en el Explorador de servidores. Si no agregó la base de datos Northwind en el Explorador de servidores, haga clic en el botón nueva conexión en este momento para hacerlo.
 
-
 [![Elija la base de datos Northwind en la lista desplegable](creating-a-data-access-layer-cs/_static/image12.png)](creating-a-data-access-layer-cs/_static/image11.png)
 
 **Figura 5**: Elija la base de datos Northwind en la lista desplegable ([haga clic aquí para ver imagen en tamaño completo](creating-a-data-access-layer-cs/_static/image13.png))
 
-
 Después de seleccionar la base de datos y hacer clic en siguiente, se le preguntará si desea guardar la cadena de conexión en el **Web.config** archivo. Al guardar la cadena de conexión que se evitará tener duro codificadas en las clases TableAdapter, lo que simplifica las cosas si cambia la información de cadena de conexión en el futuro. Si decide para guardar la cadena de conexión en el archivo de configuración se coloca en el **&lt;connectionStrings&gt;** sección, que puede ser [opcionalmente cifrados](http://aspnet.4guysfromrolla.com/articles/021506-1.aspx) mejorado seguridad o modificados más adelante a través de la nueva página de propiedades de ASP.NET 2.0 dentro de la herramienta de administración de GUI de IIS, que es más adecuado para los administradores.
-
 
 [![Guardar la cadena de conexión en Web.config](creating-a-data-access-layer-cs/_static/image15.png)](creating-a-data-access-layer-cs/_static/image14.png)
 
 **Figura 6**: Guardar la cadena de conexión a **Web.config** ([haga clic aquí para ver imagen en tamaño completo](creating-a-data-access-layer-cs/_static/image16.png))
 
-
 A continuación, se debe definir el esquema para la primera DataTable fuertemente tipadas y proporcionan el primer método para nuestro TableAdapter que se utilizará al rellenar el conjunto de datos fuertemente tipados. Estos dos pasos se llevan a cabo al mismo tiempo mediante la creación de una consulta que devuelve las columnas de la tabla que queremos reflejados en nuestra tabla de datos. Al final del asistente, se asignará a un nombre de método para esta consulta. Una vez que se ha logrado, este método se puede invocar desde nuestro nivel de presentación. El método ejecutará la consulta definida y rellenar un DataTable fuertemente tipado.
 
 Para empezar a definir la consulta SQL que debemos indicamos cómo queremos TableAdapter para emitir la consulta. Podemos usar una instrucción de SQL ad hoc, cree un nuevo procedimiento almacenado o usar un procedimiento almacenado existente. Estos tutoriales, vamos a usar instrucciones SQL ad hoc. Consulte [Brian Noyes](http://briannoyes.net/)del artículo, [crear una capa de acceso a datos con el Diseñador de DataSet de Visual Studio 2005](http://www.theserverside.net/articles/showarticle.tss?id=DataSetDesigner) para obtener un ejemplo del uso de procedimientos almacenados.
-
 
 [![Consultar los datos mediante una instrucción de SQL Ad Hoc](creating-a-data-access-layer-cs/_static/image18.png)](creating-a-data-access-layer-cs/_static/image17.png)
 
 **Figura 7**: Consultar los datos mediante una instrucción de SQL Ad Hoc ([haga clic aquí para ver imagen en tamaño completo](creating-a-data-access-layer-cs/_static/image19.png))
 
-
 En este momento además podemos escribir en la consulta SQL a mano. Al crear el primer método en TableAdapter normalmente desea que la consulta devuelva las columnas que deben expresarse en la correspondiente DataTable. Podemos lograrlo mediante la creación de una consulta que devuelve todas las columnas y todas las filas de la **productos** tabla:
-
 
 [![Escriba la consulta SQL en el cuadro de texto](creating-a-data-access-layer-cs/_static/image21.png)](creating-a-data-access-layer-cs/_static/image20.png)
 
 **Figura 8**: Escriba la consulta SQL en el Textbox ([haga clic aquí para ver imagen en tamaño completo](creating-a-data-access-layer-cs/_static/image22.png))
 
-
 Como alternativa, use el generador de consultas y construir gráficamente la consulta, como se muestra en la figura 9.
-
 
 [![Crear la consulta gráficamente, mediante el Editor de consultas](creating-a-data-access-layer-cs/_static/image24.png)](creating-a-data-access-layer-cs/_static/image23.png)
 
 **Figura 9**: Crear la consulta gráficamente, mediante el Editor de consultas ([haga clic aquí para ver imagen en tamaño completo](creating-a-data-access-layer-cs/_static/image25.png))
 
-
 Después de crear la consulta, pero antes de pasar a la siguiente pantalla, haga clic en el botón Opciones avanzadas. En los proyectos de sitio Web, "generar Insert, Update y Delete instrucciones" es la única opción seleccionada de forma predeterminada; avanzada Si ejecuta a este asistente desde una biblioteca de clases o un proyecto de Windows también se seleccionará la opción "Usar simultaneidad optimista". Deje la opción "Usar simultaneidad optimista" desactivada por ahora. Examinaremos la simultaneidad optimista en tutoriales futuros.
-
 
 [![Seleccione solo las generar Insert, Update y Delete instrucciones opción](creating-a-data-access-layer-cs/_static/image27.png)](creating-a-data-access-layer-cs/_static/image26.png)
 
 **Figura 10**: Seleccione solo las generar Insert, Update y Delete instrucciones opción ([haga clic aquí para ver imagen en tamaño completo](creating-a-data-access-layer-cs/_static/image28.png))
-
 
 Después de comprobar las opciones avanzadas, haga clic en siguiente para ir a la pantalla final. Aquí se nos pide que seleccione los métodos van a agregar a TableAdapter. Hay dos patrones para rellenar los datos:
 
@@ -172,19 +150,15 @@ Puede tener el TableAdapter implementar uno o ambos de estos patrones. También 
 
 Si está activada, la casilla de verificación final, "GenerateDBDirectMethods", crea **Insert()**, **Update()**, y **Delete()** métodos del TableAdapter. Si deja esta opción desactivada, todas las actualizaciones se deben realizarse a través de sole del TableAdapter **Update()** método, que toma en el conjunto de datos con tipo, un objeto DataTable, una sola fila de datos o una matriz de objetos DataRow. (Si ha desactivado el "generar Insert, Update y Delete instrucciones" opción de las propiedades avanzadas en la figura 9, esta casilla de verificación configuración no tiene ningún efecto.) Vamos a dejar activada esta casilla.
 
-
 [![Cambie el nombre de método GetData GetProducts](creating-a-data-access-layer-cs/_static/image30.png)](creating-a-data-access-layer-cs/_static/image29.png)
 
 **Figura 11**: Cambiar el nombre del método de **GetData** a **GetProducts** ([haga clic aquí para ver imagen en tamaño completo](creating-a-data-access-layer-cs/_static/image31.png))
 
-
 Complete el asistente, haga clic en Finalizar. Después de cerrarse el Asistente nos estamos devuelto en el Diseñador de DataSet que muestra la DataTable que acabamos de crear. Puede ver la lista de columnas en el **productos** DataTable (**ProductID**, **ProductName**, y así sucesivamente), así como los métodos de la  **ProductsTableAdapter** (**Fill()** y **GetProducts()**).
-
 
 [![Los productos de DataTable y ProductsTableAdapter se han agregado al conjunto de datos con tipo](creating-a-data-access-layer-cs/_static/image33.png)](creating-a-data-access-layer-cs/_static/image32.png)
 
 **Figura 12**: El **productos** DataTable y **ProductsTableAdapter** se han agregado al conjunto de datos con tipo ([haga clic aquí para ver imagen en tamaño completo](creating-a-data-access-layer-cs/_static/image34.png))
-
 
 En este momento tenemos un conjunto de datos con tipo con un único DataTable (**Northwind.Products**) y una clase fuertemente tipada de DataAdapter (**NorthwindTableAdapters.ProductsTableAdapter**) con un  **GetProducts()** método. Estos objetos pueden utilizarse para tener acceso a una lista de todos los productos de código similar al siguiente:
 
@@ -202,11 +176,9 @@ AllProducts.aspx.cs
 
 [!code-csharp[Main](creating-a-data-access-layer-cs/samples/sample3.cs)]
 
-
 [![Se muestra la lista de productos en un control GridView](creating-a-data-access-layer-cs/_static/image36.png)](creating-a-data-access-layer-cs/_static/image35.png)
 
 **Figura 13**: Se muestra la lista de productos en un control GridView ([haga clic aquí para ver imagen en tamaño completo](creating-a-data-access-layer-cs/_static/image37.png))
-
 
 Aunque este ejemplo escribimos tres líneas de código en nuestra página ASP.NET es necesario **página\_carga** controlador de eventos, en el futuro tutoriales examinaremos cómo usar ObjectDataSource para recuperar los datos de forma declarativa la DAL. Con el origen ObjectDataSource, no tendrá que escribir ningún código y obtendrá también soporte de paginación y ordenación!
 
@@ -216,53 +188,41 @@ En este momento nuestros **ProductsTableAdapter** clase tiene, pero un método, 
 
 Vamos a agregar el **GetProductsByCategoryID (*categoryID*)** método. Para agregar un nuevo método a la capa DAL, vuelva al diseñador de DataSet, haga clic en el **ProductsTableAdapter** sección y seleccionar Add Query.
 
-
 ![Haga doble clic en el TableAdapter y elija Agregar consulta](creating-a-data-access-layer-cs/_static/image38.png)
 
 **Figura 14**: Haga doble clic en el TableAdapter y elija Agregar consulta
 
-
 En primer lugar, se nos pide sobre si desea tener acceso a la base de datos mediante una instrucción de SQL ad hoc o un procedimiento almacenado nuevo o existente. Vamos a optar por usar una instrucción de SQL ad hoc a intentarlo. A continuación, se nos pide qué tipo de consulta SQL le gustaría utilizar. Puesto que queremos devolver todos los productos que pertenecen a una categoría especificada, que queremos escribir un **seleccione** instrucción que devuelve filas.
-
 
 [![Optar por crear una instrucción SELECT que devuelve filas](creating-a-data-access-layer-cs/_static/image40.png)](creating-a-data-access-layer-cs/_static/image39.png)
 
 **Figura 15**: Optar por crear un **seleccione** que devuelve filas del informe de ([haga clic aquí para ver imagen en tamaño completo](creating-a-data-access-layer-cs/_static/image41.png))
 
-
 El siguiente paso es definir la consulta SQL utilizada para tener acceso a los datos. Puesto que queremos devolver solo los productos que pertenecen a una categoría determinada, usar el mismo <strong>seleccione</strong> instrucción desde <strong>GetProducts()</strong>, pero agregue el siguiente <strong>donde</strong> cláusula: <strong>DONDE CategoryID = @CategoryID</strong> . El <strong>@CategoryID</strong> parámetro indica el Asistente de TableAdapter para que el método que estamos creando requerirá un parámetro de entrada del tipo correspondiente (es decir, un entero que acepta valores NULL).
-
 
 [![Escriba una consulta para devolver sólo los productos en una categoría especificada](creating-a-data-access-layer-cs/_static/image43.png)](creating-a-data-access-layer-cs/_static/image42.png)
 
 **Figura 16**: Escriba una consulta para devolver sólo los productos en una categoría especificada ([haga clic aquí para ver imagen en tamaño completo](creating-a-data-access-layer-cs/_static/image44.png))
 
-
 En el paso final podemos elegir que los patrones para usar, así como personalizar los nombres de los métodos generados de acceso a datos. Para la trama de relleno, vamos a cambiar el nombre a <strong>FillByCategoryID</strong> y devolver un DataTable devolver patrón (el <strong>obtener*X</strong>*  métodos), vamos a usar  <strong>GetProductsByCategoryID</strong>.
-
 
 [![Elija los nombres de los métodos de TableAdapter](creating-a-data-access-layer-cs/_static/image46.png)](creating-a-data-access-layer-cs/_static/image45.png)
 
 **Figura 17**: Elija los nombres de los métodos de TableAdapter ([haga clic aquí para ver imagen en tamaño completo](creating-a-data-access-layer-cs/_static/image47.png))
 
-
 Después de completar al asistente, el Diseñador de DataSet incluye los nuevos métodos de TableAdapter.
-
 
 ![Los productos ahora pueden ser consultadas por categoría](creating-a-data-access-layer-cs/_static/image48.png)
 
 **Figura 18**: Los productos ahora pueden ser consultadas por categoría
 
-
 Dedique un momento para agregar un **GetProductByProductID (*productID*)** método utilizando la misma técnica.
 
 Estas consultas con parámetros se pueden probar directamente desde el Diseñador de DataSet. Haga doble clic en el método en TableAdapter y elija la vista previa de datos. A continuación, escriba los valores para los parámetros y haga clic en vista previa.
 
-
 [![Se muestran la pertenencia de esos productos a la categoría de bebidas](creating-a-data-access-layer-cs/_static/image50.png)](creating-a-data-access-layer-cs/_static/image49.png)
 
 **Figura 19**: Se muestran la pertenencia de esos productos a la categoría bebidas ([haga clic aquí para ver imagen en tamaño completo](creating-a-data-access-layer-cs/_static/image51.png))
-
 
 Con el **GetProductsByCategoryID (*categoryID*)** método nuestro DAL, ahora podemos crear una página ASP.NET que muestra solo los productos en una categoría especificada. El ejemplo siguiente muestra todos los productos que se encuentran en la categoría Bebidas, que tienen un **CategoryID** de 1.
 
@@ -274,47 +234,37 @@ Beverages.aspx.cs
 
 [!code-csharp[Main](creating-a-data-access-layer-cs/samples/sample5.cs)]
 
-
 [![Se muestran los productos de la categoría Bebidas](creating-a-data-access-layer-cs/_static/image53.png)](creating-a-data-access-layer-cs/_static/image52.png)
 
 **Figura 20**: Se muestran los productos de la categoría bebidas ([haga clic aquí para ver imagen en tamaño completo](creating-a-data-access-layer-cs/_static/image54.png))
-
 
 ## <a name="step-4-inserting-updating-and-deleting-data"></a>Paso 4: Insertar, actualizar y eliminar datos
 
 Hay dos patrones usados para insertar, actualizar y eliminar datos. El primer patrón, que llamaré el patrón de base de datos directa, implica la creación de métodos que, cuando se invoca, problema una **insertar**, **actualización**, o **eliminar** comando a la base de datos que actúa sobre un registro de base de datos única. Estos métodos se pasan normalmente en una serie de valores escalares (enteros, cadenas, booleanos, fechas y horas etc.) que corresponden a los valores para insertar, actualizar o eliminar. Por ejemplo, con este patrón para el **productos** tabla tardaría el método delete en un parámetro de entero que indica el **ProductID** del registro que desea eliminar, mientras que el método insert tardaría un la cadena para la **ProductName**, un decimal para la **UnitPrice**, un entero para el **UnitsOnStock**, y así sucesivamente.
 
-
 [![Cada Insert, Update y Delete de solicitud se envían a la base de datos inmediatamente](creating-a-data-access-layer-cs/_static/image56.png)](creating-a-data-access-layer-cs/_static/image55.png)
 
 **Figura 21**: Cada Insert, Update y Delete de solicitud se envían a la base de datos inmediatamente ([haga clic aquí para ver imagen en tamaño completo](creating-a-data-access-layer-cs/_static/image57.png))
 
-
 El otro patrón, que me referiré a como el lote de actualizaciones de patrón, consiste en actualizar un DataSet, DataTable o colección de filas de datos en una llamada al método completo. Con este patrón de un desarrollador elimina, inserta y modifica las filas de datos en una tabla de datos y, a continuación, pasa esos objetos DataRow o DataTable a un método de actualización. Este método, a continuación, enumera las DataRows pasados, determina si ha ha modificado, agregados o eliminado (a través de la DataRow [propiedad RowState](https://msdn.microsoft.com/library/system.data.datarow.rowstate.aspx) valor) y emite la solicitud de base de datos adecuada para cada registro.
-
 
 [![Todos los cambios se sincronizan con la base de datos cuando se invoca el método de actualización](creating-a-data-access-layer-cs/_static/image59.png)](creating-a-data-access-layer-cs/_static/image58.png)
 
 **Figura 22**: Todos los cambios se sincronizan con la base de datos cuando se invoca el método de actualización ([haga clic aquí para ver imagen en tamaño completo](creating-a-data-access-layer-cs/_static/image60.png))
 
-
 TableAdapter usa el patrón de actualización por lotes de forma predeterminada, pero también admite el patrón directo de la base de datos. Puesto que hemos seleccionado la opción "generar Insert, Update y Delete instrucciones" desde las propiedades avanzadas al crear nuestra TableAdapter, el **ProductsTableAdapter** contiene un **Update()** método, que implementa el patrón de actualización por lotes. En concreto, lo TableAdapter contiene un **Update()** método que se puede pasar el conjunto de datos con tipo, una tabla de datos fuertemente tipados o uno o más filas de datos. Si deja la casilla de verificación "GenerateDBDirectMethods" activada cuando creando primero el TableAdapter en el patrón directo de la base de datos también se implementará a través de **Insert()**, **Update()**, y **Delete()**  métodos.
 
 Ambos patrones de modificación de datos utiliza el TableAdapter **InsertCommand**, **UpdateCommand**, y **DeleteCommand** propiedades para emitir sus **insertar** , **Actualización**, y **eliminar** comandos para la base de datos. Puede inspeccionar y modificar el **InsertCommand**, **UpdateCommand**, y **DeleteCommand** propiedades haciendo clic en el TableAdapter en el Diseñador de DataSet y, a continuación, va en la ventana Propiedades. (Asegúrese de que ha seleccionado el TableAdapter y que la **ProductsTableAdapter** objeto es el seleccionado en la lista desplegable en la ventana Propiedades.)
-
 
 [![El TableAdapter tiene InsertCommand, UpdateCommand y DeleteCommand propiedades](creating-a-data-access-layer-cs/_static/image62.png)](creating-a-data-access-layer-cs/_static/image61.png)
 
 **Figura 23**: Tiene el TableAdapter **InsertCommand**, **UpdateCommand**, y **DeleteCommand** propiedades ([haga clic aquí para ver imagen en tamaño completo](creating-a-data-access-layer-cs/_static/image63.png))
 
-
 Para examinar o modificar cualquiera de estas propiedades de comando de base de datos, haga clic en el **CommandText** subpropiedades, que se abrirá el generador de consultas.
-
 
 [![Configurar la INSERCIÓN, actualización y las instrucciones DELETE en el generador de consultas](creating-a-data-access-layer-cs/_static/image65.png)](creating-a-data-access-layer-cs/_static/image64.png)
 
 **Figura 24**: Configurar la **insertar**, **actualización**, y **eliminar** instrucciones en el generador de consultas ([haga clic aquí para ver imagen en tamaño completo](creating-a-data-access-layer-cs/_static/image66.png))
-
 
 El ejemplo de código siguiente muestra cómo usar el patrón de actualización por lotes para doblar el precio de todos los productos que no se han suspendido y que tiene 25 unidades en existencias o menos:
 
@@ -330,37 +280,29 @@ El **Insert()**, **Update()**, y **Delete()** métodos creados por el método di
 
 Para crear este tipo de método personalizado, vuelva al diseñador de DataSet. Haga doble clic en el TableAdapter y elija Agregar consulta devolver para el Asistente de TableAdapter. Podemos indicar el tipo de consulta para crear en la segunda pantalla. Vamos a crear un método que agrega un nuevo producto y, a continuación, devuelve el valor del registro recién agregado **ProductID**. Por lo tanto, optar por crear un **insertar** consulta.
 
-
 [![Cree un método para agregar una nueva fila a la tabla de productos](creating-a-data-access-layer-cs/_static/image68.png)](creating-a-data-access-layer-cs/_static/image67.png)
 
 **Figura 25**: Cree un método para agregar una fila nueva a la **productos** tabla ([haga clic aquí para ver imagen en tamaño completo](creating-a-data-access-layer-cs/_static/image69.png))
 
-
 En la siguiente pantalla del **InsertCommand**del **CommandText** aparece. Aumentar esta consulta agregando **seleccionar ámbito\_IDENTITY()** al final de la consulta que devolverá el último valor identity insertado en un **identidad** columna en el mismo ámbito. (Consulte la [documentación técnica](https://msdn.microsoft.com/library/ms190315.aspx) para obtener más información acerca de **ámbito\_IDENTITY()** y por qué lo más conveniente [utilizar ámbito\_IDENTITY() en lugar de @ @IDENTITY](http://weblogs.sqlteam.com/travisl/archive/2003/10/29/405.aspx).) Asegúrese de que finalice la **insertar** instrucción con un punto y coma antes de agregar el **seleccione** instrucción.
-
 
 [![Aumentar la consulta para devolver el valor SCOPE_IDENTITY)](creating-a-data-access-layer-cs/_static/image71.png)](creating-a-data-access-layer-cs/_static/image70.png)
 
 **Figura 26**: Aumentar la consulta para devolver el **ámbito\_IDENTITY()** valor ([haga clic aquí para ver imagen en tamaño completo](creating-a-data-access-layer-cs/_static/image72.png))
 
-
 Por último, nombre del nuevo método **InsertProduct**.
-
 
 [![Asigne al nuevo método InsertProduct](creating-a-data-access-layer-cs/_static/image74.png)](creating-a-data-access-layer-cs/_static/image73.png)
 
 **Figura 27**: Establece el nombre del nuevo método en **InsertProduct** ([haga clic aquí para ver imagen en tamaño completo](creating-a-data-access-layer-cs/_static/image75.png))
 
-
 Cuando vuelva al diseñador de DataSet que verá el **ProductsTableAdapter** contiene un método nuevo, **InsertProduct**. Si este nuevo método no tiene un parámetro para cada columna de la **productos** tabla, lo más probable es que haya olvidado de finalizar la **insertar** instrucción con un punto y coma. Configurar la **InsertProduct** método y asegúrese de que tiene un punto y coma de delimitación el **insertar** y **seleccione** instrucciones.
 
 De forma predeterminada, inserte el problema no sea una consulta métodos, lo que significa que devuelven el número de filas afectadas. Sin embargo, deseamos la **InsertProduct** método para devolver el valor devuelto por la consulta, no el número de filas afectadas. Para ello, ajuste el **InsertProduct** del método **ExecuteMode** propiedad **escalares**.
 
-
 [![Cambiar la propiedad ExecuteMode para escalar](creating-a-data-access-layer-cs/_static/image77.png)](creating-a-data-access-layer-cs/_static/image76.png)
 
 **Figura 28**: Cambiar el **ExecuteMode** propiedad **escalares** ([haga clic aquí para ver imagen en tamaño completo](creating-a-data-access-layer-cs/_static/image78.png))
-
 
 El código siguiente muestra esta nueva **InsertProduct** método en acción:
 
@@ -374,19 +316,15 @@ Esto puede suponer un problema, sin embargo, como los métodos del TableAdapter 
 
 [!code-sql[Main](creating-a-data-access-layer-cs/samples/sample9.sql)]
 
-
 [![Actualización de la instrucción SELECT para el método GetProducts()](creating-a-data-access-layer-cs/_static/image80.png)](creating-a-data-access-layer-cs/_static/image79.png)
 
 **Figura 29**: Actualización de la **seleccione** instrucción para el **GetProducts()** método ([haga clic aquí para ver imagen en tamaño completo](creating-a-data-access-layer-cs/_static/image81.png))
 
-
 Después de actualizar el **GetProducts()** método que se usará esta nueva consulta la tabla de datos incluirá dos nuevas columnas: **CategoryName** y **NombreProveedor**.
-
 
 ![La tabla de datos de productos tiene dos nuevas columnas](creating-a-data-access-layer-cs/_static/image82.png)
 
 **Figura 30**: El **productos** DataTable tiene dos nuevas columnas
-
 
 Dedique unos minutos a actualizar el **seleccione** cláusula en la **GetProductsByCategoryID (*categoryID*)** método así.
 
@@ -443,29 +381,23 @@ Tardar unos minutos en crear los siguientes métodos con las siguientes consulta
 
       [!code-sql[Main](creating-a-data-access-layer-cs/samples/sample21.sql)]
 
-
 [![El Diseñador de DataSet después de haber agregado los cuatro TableAdapters](creating-a-data-access-layer-cs/_static/image84.png)](creating-a-data-access-layer-cs/_static/image83.png)
 
 **Figura 31**: El conjunto de datos diseñador después de los cuatro TableAdapters se han agregado ([haga clic aquí para ver imagen en tamaño completo](creating-a-data-access-layer-cs/_static/image85.png))
-
 
 ## <a name="adding-custom-code-to-the-dal"></a>Agregar código personalizado a la capa DAL
 
 Los TableAdapters y las DataTables que agregó al conjunto de datos con tipo se expresan como un archivo de definición de esquemas XML (**Northwind.xsd**). Puede ver esta información del esquema con el botón secundario en el **Northwind.xsd** de archivos en el Explorador de soluciones y elija Ver código.
 
-
 [![El archivo de definición (XSD) del esquema XML para el Northwinds escribió el conjunto de datos](creating-a-data-access-layer-cs/_static/image87.png)](creating-a-data-access-layer-cs/_static/image86.png)
 
 **Figura 32**: El archivo de definición de esquemas XML (XSD) del conjunto de datos Northwinds escrito ([haga clic aquí para ver imagen en tamaño completo](creating-a-data-access-layer-cs/_static/image88.png))
 
-
 Esta información del esquema se traduce en código C# o Visual Basic en tiempo de diseño cuando se compila o en tiempo de ejecución (si es necesario), momento en que puede ir a través de él con el depurador. Para ver el código generado automáticamente, vaya a la vista de clases y la exploración en profundidad hacia abajo a las clases TableAdapter o conjunto de datos con tipo. Si no ve la vista de clases en la pantalla, vaya al menú Ver y seleccionarlo desde allí o presione Ctrl + Mayús + C. Desde la vista de clases puede ver las propiedades, métodos y eventos de las clases de conjunto de datos con tipo y un TableAdapter. Para ver el código para un método concreto, haga doble clic en el nombre del método en la vista de clases o haga doble clic en él y elija Ir a definición.
-
 
 ![Inspeccionar el código generado automáticamente por seleccionar ir a definición de la vista de clases](creating-a-data-access-layer-cs/_static/image89.png)
 
 **Figura 33**: Inspeccionar el código generado automáticamente por seleccionar ir a definición de la vista de clases
-
 
 Aunque el código generado automáticamente puede ser un gran ahorro de tiempo, el código es muy genérico, a menudo y debe personalizarse para satisfacer las necesidades exclusivas de una aplicación. El riesgo de extender el código generado automáticamente, sin embargo, es que la herramienta que generó el código podría decidir es el momento "regenerar" y sobrescribir las personalizaciones. Con el nuevo concepto de clase parcial de .NET 2.0, es fácil dividir una clase en varios archivos. Esto nos permite agregar nuestra propia métodos, propiedades y eventos para las clases generadas automáticamente sin tener que preocuparse acerca de Visual Studio sobrescribir las personalizaciones de nuestro.
 
@@ -475,11 +407,9 @@ Para demostrar cómo personalizar la capa DAL, vamos a agregar un **GetProducts(
 
 Esta clase parcial indica al compilador que, cuando generar el **Northwind.SuppliersRow** clase para que incluya el **GetProducts()** que acabamos de definir el método. Si compila el proyecto y, a continuación, volver a la vista de clases verá **GetProducts()** ahora aparece como un método de **Northwind.SuppliersRow**.
 
-
 ![El método GetProducts() es ahora parte de la clase Northwind.SuppliersRow](creating-a-data-access-layer-cs/_static/image90.png)
 
 **Figura 34**: El **GetProducts()** método forma ahora parte de la **Northwind.SuppliersRow** clase
-
 
 El **GetProducts()** método puede utilizarse para enumerar el conjunto de productos para un determinado proveedor, como se muestra en el código siguiente:
 
@@ -500,11 +430,9 @@ SuppliersAndProducts.aspx.cs
 
 [!code-csharp[Main](creating-a-data-access-layer-cs/samples/sample25.cs)]
 
-
 [![Nombre de la compañía del proveedor aparece en la columna izquierda, sus productos en la derecha](creating-a-data-access-layer-cs/_static/image92.png)](creating-a-data-access-layer-cs/_static/image91.png)
 
 **Figura 35**: Nombre de la compañía del proveedor aparece en la columna izquierda, sus productos en la derecha ([haga clic aquí para ver imagen en tamaño completo](creating-a-data-access-layer-cs/_static/image93.png))
-
 
 ## <a name="summary"></a>Resumen
 

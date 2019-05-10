@@ -8,12 +8,12 @@ ms.date: 08/03/2007
 ms.assetid: 57459065-ed7c-4dfe-ac9c-54c093abc261
 msc.legacyurl: /web-forms/overview/data-access/advanced-data-access-scenarios/working-with-computed-columns-cs
 msc.type: authoredcontent
-ms.openlocfilehash: b9419b3834b2d592858a510befcd5de460b97044
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: 91568543496904f3db0146eee4e414eb2c61c49e
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59401665"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65108553"
 ---
 # <a name="working-with-computed-columns-c"></a>Trabajar con columnas calculadas (C#)
 
@@ -22,7 +22,6 @@ por [Scott Mitchell](https://twitter.com/ScottOnWriting)
 [Descargar código](http://download.microsoft.com/download/3/9/f/39f92b37-e92e-4ab3-909e-b4ef23d01aa3/ASPNET_Data_Tutorial_71_CS.zip) o [descargar PDF](working-with-computed-columns-cs/_static/datatutorial71cs1.pdf)
 
 > Al crear una tabla de base de datos, Microsoft SQL Server permite definir una columna calculada cuyo valor se calcula a partir de una expresión que normalmente hace referencia a otros valores en el mismo registro de base de datos. Estos valores son de solo lectura en la base de datos, lo que requiere consideraciones especiales cuando se trabaja con los TableAdapters. En este tutorial se aprenderá cómo afrontar los desafíos que suponen las columnas calculadas.
-
 
 ## <a name="introduction"></a>Introducción
 
@@ -42,7 +41,6 @@ La base de datos Northwind no tiene ninguna columna calculada por lo que necesit
 
 Comience abriendo la `Suppliers` definición de tabla con el botón secundario en el `Suppliers` de tabla en el Explorador de servidores y elija Abrir definición de tabla en el menú contextual. Esto mostrará las columnas de la tabla y sus propiedades, como su tipo de datos, si permiten `NULL` s y así sucesivamente. Para agregar una columna calculada, empiece escribiendo el nombre de la columna en la definición de tabla. A continuación, escriba la expresión en el cuadro de texto (fórmula) en la sección de la especificación de columna calculada en la ventana Propiedades de columna (consulte la figura 1). Nombre de la columna calculada `FullContactName` y utilice la siguiente expresión:
 
-
 [!code-sql[Main](working-with-computed-columns-cs/samples/sample1.sql)]
 
 Tenga en cuenta que se pueden concatenar cadenas en SQL mediante el `+` operador. El `CASE` instrucción se puede usar como una instrucción condicional en un lenguaje de programación tradicional. En la expresión anterior el `CASE` instrucción se puede leer como: Si `ContactTitle` no `NULL` de salida, a continuación, el `ContactTitle` valor concatenado con una coma, en caso contrario, emitir nada. Para obtener más información sobre la utilidad de la `CASE` instrucción, consulte [la potencia de SQL `CASE` instrucciones](http://www.4guysfromrolla.com/webtech/102704-1.shtml).
@@ -50,19 +48,15 @@ Tenga en cuenta que se pueden concatenar cadenas en SQL mediante el `+` operador
 > [!NOTE]
 > En lugar de usar un `CASE` instrucción aquí, podríamos haber también usado `ISNULL(ContactTitle, '')`. [`ISNULL(checkExpression, replacementValue)`](https://msdn.microsoft.com/library/ms184325.aspx) Devuelve *checkExpression* si es distinto de NULL, de lo contrario devuelve *replacementValue*. Aunque cualquiera `ISNULL` o `CASE` funcionará en este caso, existen escenarios más complejos donde la flexibilidad de la `CASE` instrucción no puede coincidir con `ISNULL`.
 
-
 Después de agregar esta columna calculada, la pantalla debería parecerse a la pantalla en la figura 1.
-
 
 [![Agregar una columna calculada denominada FullContactName a la tabla Suppliers](working-with-computed-columns-cs/_static/image2.png)](working-with-computed-columns-cs/_static/image1.png)
 
 **Figura 1**: Agregar una columna calculada denominada `FullContactName` a la `Suppliers` tabla ([haga clic aquí para ver imagen en tamaño completo](working-with-computed-columns-cs/_static/image3.png))
 
-
 Después de la columna calculada de nomenclatura y especificar su expresión, guardar los cambios en la tabla haciendo clic en el icono Guardar en la barra de herramientas, presionando Ctrl + S o, en el menú archivo y elija Guardar `Suppliers`.
 
 Guardar la tabla debe actualizar el Explorador de servidores, incluida la columna recién agregados en el `Suppliers` lista de columnas de la tabla s. Además, se ajustará automáticamente la expresión escrita en el cuadro de texto (fórmula) en una expresión equivalente que elimina espacios en blanco innecesarios, rodea los nombres de columna entre corchetes (`[]`) e incluye los paréntesis para mostrar más explícitamente el orden de operaciones:
-
 
 [!code-sql[Main](working-with-computed-columns-cs/samples/sample2.sql)]
 
@@ -71,18 +65,15 @@ Para obtener más información sobre las columnas calculadas de Microsoft SQL Se
 > [!NOTE]
 > De forma predeterminada, las columnas calculadas no se almacenan físicamente en la tabla, pero en su lugar, se vuelven a calcular cada vez que se hace referencia a una consulta. Activando la casilla de verificación se conserva, sin embargo, puede indicar a SQL Server para almacenar físicamente la columna calculada en la tabla. Esto permite que un índice que se crearán en la columna calculada, lo que puede mejorar el rendimiento de las consultas que utilizan el valor de columna calculada en sus `WHERE` cláusulas. Consulte [crear índices en columnas calculadas](https://msdn.microsoft.com/library/ms189292.aspx) para obtener más información.
 
-
 ## <a name="step-2-viewing-the-computed-column-s-values"></a>Paso 2: Visualización de los valores de columna calculada s
 
 Antes de que se inicia el trabajo en la capa de acceso a datos, permiten s Tómese un minuto para ver el `FullContactName` valores. Desde el Explorador de servidores, haga doble clic en el `Suppliers` nombre de la tabla y elija la nueva consulta en el menú contextual. Se abrirá una ventana de consulta que nos pedirá que elija qué tablas se deben incluir en la consulta. Agregue el `Suppliers` de tabla y haga clic en Cerrar. A continuación, compruebe el `CompanyName`, `ContactName`, `ContactTitle`, y `FullContactName` las columnas de la tabla Suppliers. Por último, haga clic en el icono de exclamación rojo en la barra de herramientas para ejecutar la consulta y ver los resultados.
 
 Como se muestra en la figura 2, los resultados incluyen `FullContactName`, que muestra la `CompanyName`, `ContactName`, y `ContactTitle` columnas mediante el formato ldquo;`ContactName` (`ContactTitle`, `CompanyName`) .
 
-
 [![El FullContactName utiliza formato ContactName (título de contacto, CompanyName)](working-with-computed-columns-cs/_static/image5.png)](working-with-computed-columns-cs/_static/image4.png)
 
 **Figura 2**: El `FullContactName` utiliza el formato `ContactName` (`ContactTitle`, `CompanyName`) ([haga clic aquí para ver imagen en tamaño completo](working-with-computed-columns-cs/_static/image6.png))
-
 
 ## <a name="step-3-adding-thesupplierstableadapterto-the-data-access-layer"></a>Paso 3: Agregar el`SuppliersTableAdapter`a la capa de acceso a datos
 
@@ -96,32 +87,25 @@ Para este tutorial, permiten s Agregar un nuevo TableAdapter y hacer que se cree
 
 Comience abriendo la `NorthwindWithSprocs` conjunto de datos en el `~/App_Code/DAL` carpeta. Haga clic en el diseñador y, en el menú contextual, elija Agregar un nuevo TableAdapter. Esto iniciará al Asistente para configuración de TableAdapter. Especificar la base de datos para consultar datos desde (`NORTHWNDConnectionString` desde `Web.config`) y haga clic en siguiente. Dado que no hemos creado todavía ningún procedimiento almacenado para consultar o modificar el `Suppliers` tabla, seleccione el crear nuevos procedimientos almacenados de opción para que el asistente crea para nosotros y haga clic en siguiente.
 
-
 [![Elija los procedimientos almacenados nueva opción de crear](working-with-computed-columns-cs/_static/image8.png)](working-with-computed-columns-cs/_static/image7.png)
 
 **Figura 3**: Elija los procedimientos almacenados nueva opción de crear ([haga clic aquí para ver imagen en tamaño completo](working-with-computed-columns-cs/_static/image9.png))
 
-
 El paso posterior nos pide la consulta principal. Escriba la siguiente consulta, que devuelve el `SupplierID`, `CompanyName`, `ContactName`, y `ContactTitle` columnas para cada proveedor. Tenga en cuenta que esta consulta intencionadamente omite la columna calculada (`FullContactName`); se actualizará el procedimiento almacenado correspondiente para incluir esta columna en el paso 4.
-
 
 [!code-sql[Main](working-with-computed-columns-cs/samples/sample3.sql)]
 
 Después de escribir la consulta principal y hacer clic en siguiente, el Asistente nos permite nombrar los cuatro procedimientos almacenados que generará. Nombre de estos procedimientos almacenados `Suppliers_Select`, `Suppliers_Insert`, `Suppliers_Update`, y `Suppliers_Delete`, como se muestra en la figura 4.
 
-
 [![Personalizar los nombres de los procedimientos almacenados generados automáticamente](working-with-computed-columns-cs/_static/image11.png)](working-with-computed-columns-cs/_static/image10.png)
 
 **Figura 4**: Personalizar los nombres de los procedimientos almacenados de Auto-Generated ([haga clic aquí para ver imagen en tamaño completo](working-with-computed-columns-cs/_static/image12.png))
 
-
 El siguiente paso del asistente nos permite a los métodos de TableAdapter s el nombre y especifique los patrones que se usa para obtener acceso y actualizar los datos. Deje todas las tres casillas de verificación activadas, pero cambie el nombre de la `GetData` método `GetSuppliers`. Haga clic en Finalizar para completar al asistente.
-
 
 [![Cambie el nombre del método GetData a GetSuppliers](working-with-computed-columns-cs/_static/image14.png)](working-with-computed-columns-cs/_static/image13.png)
 
 **Figura 5**: Cambiar el nombre de la `GetData` método `GetSuppliers` ([haga clic aquí para ver imagen en tamaño completo](working-with-computed-columns-cs/_static/image15.png))
-
 
 Al hacer clic en Finalizar, el asistente creará los cuatro procedimientos almacenados y agregar el TableAdapter y la correspondiente DataTable al conjunto de datos con tipo.
 
@@ -134,26 +118,21 @@ Ahora necesitamos actualizar TableAdapter y DataTable que creó en el paso 3 par
 
 Comience por navegar en el Explorador de servidores y explore en profundidad la carpeta procedimientos almacenados. Abra el `Suppliers_Select` procedimiento almacenado y actualización de la `SELECT` consulta incluya el `FullContactName` columna calculada:
 
-
 [!code-sql[Main](working-with-computed-columns-cs/samples/sample4.sql)]
 
 Guardar los cambios en el procedimiento almacenado, haga clic en el icono Guardar en la barra de herramientas, presionando Ctrl + S o eligiendo el guardar `Suppliers_Select` opción en el menú archivo.
 
 A continuación, vuelva al diseñador de DataSet, haga doble clic en el `SuppliersTableAdapter`y elija Configurar en el menú contextual. Tenga en cuenta que el `Suppliers_Select` columna ahora incluye la `FullContactName` columna en su colección de columnas de datos.
 
-
 [![Ejecute el Asistente para configuración de TableAdapter s para actualizar las columnas de DataTable s](working-with-computed-columns-cs/_static/image17.png)](working-with-computed-columns-cs/_static/image16.png)
 
 **Figura 6**: Ejecute el Asistente para configuración para actualizar las columnas de DataTable s s de TableAdapter ([haga clic aquí para ver imagen en tamaño completo](working-with-computed-columns-cs/_static/image18.png))
 
-
 Haga clic en Finalizar para completar al asistente. Esto agregará automáticamente una columna correspondiente a la `SuppliersDataTable`. El Asistente de TableAdapter es lo suficientemente inteligente como para detectar que la `FullContactName` columna es una columna calculada y, por tanto, de solo lectura. Por lo tanto, Establece la columna s `ReadOnly` propiedad `true`. Para comprobarlo, seleccione la columna de la `SuppliersDataTable` y, a continuación, vaya a la ventana Propiedades (consulte la figura 7). Tenga en cuenta que el `FullContactName` columna s `DataType` y `MaxLength` propiedades también se establecen en consecuencia.
-
 
 [![La columna FullContactName está marcada como de solo lectura](working-with-computed-columns-cs/_static/image20.png)](working-with-computed-columns-cs/_static/image19.png)
 
 **Figura 7**: El `FullContactName` columna está marcada como de solo lectura ([haga clic aquí para ver imagen en tamaño completo](working-with-computed-columns-cs/_static/image21.png))
-
 
 ## <a name="step-5-adding-agetsupplierbysupplieridmethod-to-the-tableadapter"></a>Paso 5: Agregar un`GetSupplierBySupplierID`método a TableAdapter
 
@@ -161,32 +140,25 @@ En este tutorial crearemos una página ASP.NET que muestra los proveedores en un
 
 Haga doble clic en el `SuppliersTableAdapter` en el diseño de conjunto de datos y elija la opción de Agregar consulta en el menú contextual. Como hicimos en el paso 3, permiten el Asistente para generar un nuevo procedimiento almacenado para que podamos seleccionando la opción de crear nuevo procedimiento almacenado (consulte la vuelta a la figura 3 para captura de pantalla de este paso del asistente). Puesto que este método devolverá un registro con varias columnas, indican que desea usar una consulta SQL que es una instrucción SELECT que devuelve filas y haga clic en siguiente.
 
-
 [![Elija la selección que devuelve filas, opción](working-with-computed-columns-cs/_static/image23.png)](working-with-computed-columns-cs/_static/image22.png)
 
 **Figura 8**: Elija la selección que devuelve filas opción ([haga clic aquí para ver imagen en tamaño completo](working-with-computed-columns-cs/_static/image24.png))
 
-
 El paso posterior nos pedirá para la consulta que se utilizará para este método. Escriba lo siguiente, que devuelve los mismos campos de datos como la consulta principal, pero de un determinado proveedor.
-
 
 [!code-sql[Main](working-with-computed-columns-cs/samples/sample5.sql)]
 
 La siguiente pantalla nos pide el nombre del procedimiento almacenado que se generarán automáticamente. Nombre de este procedimiento almacenado `Suppliers_SelectBySupplierID` y haga clic en siguiente.
 
-
 [![Nombre del procedimiento almacenado de Suppliers_SelectBySupplierID](working-with-computed-columns-cs/_static/image26.png)](working-with-computed-columns-cs/_static/image25.png)
 
 **Figura 9**: Nombre del procedimiento almacenado `Suppliers_SelectBySupplierID` ([haga clic aquí para ver imagen en tamaño completo](working-with-computed-columns-cs/_static/image27.png))
 
-
 Por último, las instrucciones del asistente nos para los datos de acceso a patrones y los nombres de método que se usará para el TableAdapter. Deje ambas casillas seleccionadas, pero cambie el nombre de la `FillBy` y `GetDataBy` métodos para `FillBySupplierID` y `GetSupplierBySupplierID`, respectivamente.
-
 
 [![Nombre de la FillBySupplierID de métodos de TableAdapter y GetSupplierBySupplierID](working-with-computed-columns-cs/_static/image29.png)](working-with-computed-columns-cs/_static/image28.png)
 
 **Figura 10**: Nombre de los métodos de TableAdapter `FillBySupplierID` y `GetSupplierBySupplierID` ([haga clic aquí para ver imagen en tamaño completo](working-with-computed-columns-cs/_static/image30.png))
-
 
 Haga clic en Finalizar para completar al asistente.
 
@@ -196,7 +168,6 @@ Antes de crear una página ASP.NET que usa la columna calculada que creó en el 
 
 Crear un nuevo archivo de clase denominado `SuppliersBLLWithSprocs` en el `~/App_Code/BLL` carpeta y agregue el código siguiente:
 
-
 [!code-csharp[Main](working-with-computed-columns-cs/samples/sample6.cs)]
 
 Al igual que las clases BLL, `SuppliersBLLWithSprocs` tiene un `protected` `Adapter` propiedad que devuelve una instancia de la `SuppliersTableAdapter` clase junto con dos `public` métodos: `GetSuppliers` y `UpdateSupplier`. El `GetSuppliers` método llama y devuelve el `SuppliersDataTable` devuelto por la correspondiente `GetSupplier` método en la capa de acceso a datos. El `UpdateSupplier` método recupera información sobre el proveedor particular está actualizando mediante una llamada a la s DAL `GetSupplierBySupplierID(supplierID)` método. A continuación, actualiza el `CategoryName`, `ContactName`, y `ContactTitle` propiedades y confirma estos cambios en la base de datos mediante una llamada a la capa de acceso a datos de s `Update` método, pasando el modificado `SuppliersRow` objeto.
@@ -204,16 +175,13 @@ Al igual que las clases BLL, `SuppliersBLLWithSprocs` tiene un `protected` `Adap
 > [!NOTE]
 > Excepto para `SupplierID` y `CompanyName`, permitir que todas las columnas de la tabla Suppliers `NULL` valores. Por lo tanto, si en el pasado `contactName` o `contactTitle` parámetros son `null` es necesario establecer la correspondiente `ContactName` y `ContactTitle` propiedades para un `NULL` valor de base de datos mediante el `SetContactNameNull` y `SetContactTitleNull`métodos, respectivamente.
 
-
 ## <a name="step-7-working-with-the-computed-column-from-the-presentation-layer"></a>Paso 7: Trabajar con la columna calculada de la capa de presentación
 
 Con la columna calculada que se agrega a la `Suppliers` tabla y DAL y BLL se actualizan en consecuencia, estamos preparados crear una página ASP.NET que funciona con la `FullContactName` columna calculada. Comience abriendo la `ComputedColumns.aspx` página en el `AdvancedDAL` carpetas y arrastre un control GridView del cuadro de herramientas hasta el diseñador. Establezca la s GridView `ID` propiedad `Suppliers` y, en la etiqueta inteligente, de enlazarla a un nuevo origen ObjectDataSource denominado `SuppliersDataSource`. Configurar el origen ObjectDataSource para usar el `SuppliersBLLWithSprocs` clase agregamos copia en el paso 6 y haga clic en siguiente.
 
-
 [![Configurar el origen ObjectDataSource para usar la clase SuppliersBLLWithSprocs](working-with-computed-columns-cs/_static/image32.png)](working-with-computed-columns-cs/_static/image31.png)
 
 **Figura 11**: Configurar el origen ObjectDataSource que se usarán el `SuppliersBLLWithSprocs` clase ([haga clic aquí para ver imagen en tamaño completo](working-with-computed-columns-cs/_static/image33.png))
-
 
 Hay solo dos métodos definidos en el `SuppliersBLLWithSprocs` clase: `GetSuppliers` y `UpdateSupplier`. Asegúrese de que estos dos métodos se especifican en la instrucción SELECT y UPDATE fichas, respectivamente y haga clic en Finalizar para completar la configuración del origen ObjectDataSource.
 
@@ -223,30 +191,24 @@ Además de agregar BoundFields a GridView, finalizar el Asistente de origen de d
 
 Después de realizar estas modificaciones en el control GridView y ObjectDataSource, su marcado declarativo debe tener un aspecto similar al siguiente:
 
-
 [!code-aspx[Main](working-with-computed-columns-cs/samples/sample7.aspx)]
 
 A continuación, visite esta página a través de un explorador. Como se muestra en la figura 12, cada proveedor se muestra en una cuadrícula que incluye el `FullContactName` formato de columna, cuyo valor es simplemente la concatenación de las tres columnas `ContactName` (`ContactTitle`, `CompanyName`).
-
 
 [![Cada proveedor se muestra en la cuadrícula](working-with-computed-columns-cs/_static/image35.png)](working-with-computed-columns-cs/_static/image34.png)
 
 **Figura 12**: Cada proveedor se muestra en la cuadrícula ([haga clic aquí para ver imagen en tamaño completo](working-with-computed-columns-cs/_static/image36.png))
 
-
 Al hacer clic en el botón Editar para un determinado proveedor produce un postback y presenta esa fila en su edición de la interfaz (consulte la figura 13). Las tres primeras columnas se representan en su interfaz de edición de predeterminado: control de un cuadro de texto cuya `Text` propiedad está establecida en el valor del campo de datos. La `FullContactName` columna, sin embargo, permanece como texto. Cuando el BoundFields se agregaron en el control GridView en la finalización del Asistente para configuración de orígenes de datos, el `FullContactName` BoundField s `ReadOnly` propiedad se estableció en `true` porque correspondiente `FullContactName` columna en el `SuppliersDataTable` tiene su `ReadOnly` propiedad establecida en `true`. Como se indicó en el paso 4, el `FullContactName` s `ReadOnly` propiedad se estableció en `true` porque el TableAdapter detectó que la columna es una columna calculada.
-
 
 [![La columna FullContactName no es modificable](working-with-computed-columns-cs/_static/image38.png)](working-with-computed-columns-cs/_static/image37.png)
 
 **Figura 13**: El `FullContactName` columna no es modificable ([haga clic aquí para ver imagen en tamaño completo](working-with-computed-columns-cs/_static/image39.png))
 
-
 Siga adelante y actualizar el valor de una o varias de las columnas que se puede editables y haga clic en actualizar. Tenga en cuenta cómo el `FullContactName` valor s se actualiza automáticamente para reflejar el cambio.
 
 > [!NOTE]
 > GridView actualmente usa BoundFields para los campos editables, lo que en la interfaz de edición de forma predeterminada. Puesto que el `CompanyName` campo es obligatorio, se debe convertir en TemplateField que incluye un control RequiredFieldValidator. Dejar como un ejercicio para el lector interesado. Consulte la [agregar controles de validación a las Interfaces de inserción y edición](../editing-inserting-and-deleting-data/adding-validation-controls-to-the-editing-and-inserting-interfaces-cs.md) tutorial para obtener instrucciones paso a paso sobre convertir BoundField en TemplateField y agregar controles de validación.
-
 
 ## <a name="summary"></a>Resumen
 

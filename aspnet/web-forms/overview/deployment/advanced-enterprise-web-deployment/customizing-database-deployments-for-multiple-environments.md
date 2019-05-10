@@ -8,12 +8,12 @@ ms.date: 05/04/2012
 ms.assetid: a172979a-1318-4318-a9c6-4f9560d26267
 msc.legacyurl: /web-forms/overview/deployment/advanced-enterprise-web-deployment/customizing-database-deployments-for-multiple-environments
 msc.type: authoredcontent
-ms.openlocfilehash: 865e901618b48bc4bfdc6d7a3ca4e8868d4cb46b
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: 8ae8cb1a322afb95c5d2e8d5e73c7825c7b2fe5a
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59412988"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65108304"
 ---
 # <a name="customizing-database-deployments-for-multiple-environments"></a>Personalizar las implementaciones de la base de datos para varios entornos
 
@@ -30,7 +30,6 @@ por [Jason Lee](https://github.com/jrjlee)
 > Al implementar un proyecto de base de datos en varios destinos, a menudo desea personalizar las propiedades de implementación de la base de datos para cada entorno de destino. Por ejemplo, en entornos de prueba normalmente vuelva a crear la base de datos en cada implementación, mientras que en los entornos de ensayo o producción sería mucho más probable que realice actualizaciones incrementales para conservar los datos.
 > 
 > En un proyecto de base de datos de Visual Studio 2010, la configuración de implementación está contenida dentro de un archivo de configuración (.sqldeployment) de la implementación. En este tema le mostrará cómo crear archivos de configuración de implementación específicos del entorno y especificar lo que desee utilizar como un parámetro VSDBCMD.
-
 
 En este tema forma parte de una serie de tutoriales que se basa en los requisitos de implementación empresarial de una compañía ficticia denominada Fabrikam, Inc. Esta serie de tutoriales usa una solución de ejemplo&#x2014;el [solución Contact Manager](../web-deployment-in-the-enterprise/the-contact-manager-solution.md)&#x2014;para representar una aplicación web con un nivel realista de complejidad, incluida una aplicación ASP.NET MVC 3, una comunicación de Windows Servicio Foundation (WCF) y un proyecto de base de datos.
 
@@ -76,11 +75,9 @@ Esta tabla muestra los valores típicos de implementación para distintos entorn
 | **Realizar copias de seguridad de base de datos antes de la implementación** | False | Quizás | True |
 | **Generar instrucciones DROP para objetos que están en la base de datos de destino pero que no están en el proyecto de base de datos** | False | True | True |
 | **No usar instrucciones ALTER ASSEMBLY para actualizar tipos CLR** | False | False | False |
-  
 
 > [!NOTE]
 > Para obtener más información sobre las propiedades de implementación de base de datos y consideraciones del entorno, consulte [An Overview of Database Project Settings](https://msdn.microsoft.com/library/aa833291(v=VS.100).aspx), [Cómo: Configurar las propiedades de los detalles de implementación](https://msdn.microsoft.com/library/dd172125.aspx), [compilar e implementar la base de datos en un entorno de desarrollo aislado](https://msdn.microsoft.com/library/dd193409.aspx), y [compilar e implementar bases de datos de ensayo o producción entorno](https://msdn.microsoft.com/library/dd193413.aspx).
-
 
 Para admitir la implementación de un proyecto de base de datos a varios destinos, debe crear un archivo de configuración de implementación para cada entorno de destino.
 
@@ -104,13 +101,10 @@ Al usar configuraciones de soluciones (por ejemplo, Debug y Release) dentro de V
 
 Para especificar un archivo de configuración de implementación en su VSDBCMD, use el **DeploymentConfigurationFile/p:** cambie y proporcionar la ruta de acceso completa al archivo. Esto reemplazará el archivo de configuración de implementación que identifica el manifiesto de implementación. Por ejemplo, podría utilizar este comando VSDBCMD para implementar la **ContactManager** base de datos en un entorno de prueba:
 
-
 [!code-console[Main](customizing-database-deployments-for-multiple-environments/samples/sample1.cmd)]
-
 
 > [!NOTE]
 > Tenga en cuenta que el proceso de compilación puede cambiar el nombre de su archivo .sqldeployment cuando copia el archivo en el directorio de salida.
-
 
 Si usa las variables de comando SQL en los scripts anteriores o posteriores a la implementación de SQL, puede usar un enfoque similar para asociar un archivo .sqlcmdvars específicos del entorno con la implementación. En este caso, usa el **SqlCommandVariablesFile/p:** conmutador para identificar el archivo .sqlcmdvars.
 
@@ -118,9 +112,7 @@ Si usa las variables de comando SQL en los scripts anteriores o posteriores a la
 
 Puede invocar un comando VSDBCMD desde un archivo de proyecto de MSBuild con un **Exec** tarea dentro de un destino de MSBuild. En su forma más sencilla, sería similar al siguiente:
 
-
 [!code-xml[Main](customizing-database-deployments-for-multiple-environments/samples/sample2.xml)]
-
 
 - En la práctica, para facilitar los archivos de proyecto leer y volver a usar, deseará crear propiedades para almacenar los distintos parámetros de línea de comandos. Esto facilita a los usuarios para proporcionar valores de propiedad en un archivo de proyecto específicos del entorno o para invalidar los valores predeterminados de la línea de comandos de MSBuild. Si utiliza el enfoque de archivo de proyecto de división descrito en [descripción del archivo de proyecto](../web-deployment-in-the-enterprise/understanding-the-project-file.md), debe dividir sus propiedades entre los dos archivos y las instrucciones de compilación según corresponda:
 - Configuración específica del entorno, como el nombre de archivo de configuración de implementación, la cadena de conexión de base de datos y el nombre de base de datos de destino, debe ir en el archivo de proyecto específicos del entorno.

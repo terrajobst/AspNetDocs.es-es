@@ -8,12 +8,12 @@ ms.date: 01/18/2008
 ms.assetid: ee4b924e-8002-4dc3-819f-695fca1ff867
 msc.legacyurl: /web-forms/overview/older-versions-security/membership/storing-additional-user-information-vb
 msc.type: authoredcontent
-ms.openlocfilehash: 7dad99f2ae7e71cb697426bc97414fd4e4873aa5
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: 8483f6673ff64020c5eb10bd72766c6df91e0438
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59400495"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65133057"
 ---
 # <a name="storing-additional-user-information-vb"></a>Almacenar información de usuario adicional (VB)
 
@@ -22,7 +22,6 @@ por [Scott Mitchell](https://twitter.com/ScottOnWriting)
 [Descargar código](http://download.microsoft.com/download/3/f/5/3f5a8605-c526-4b34-b3fd-a34167117633/ASPNET_Security_Tutorial_08_VB.zip) o [descargar PDF](http://download.microsoft.com/download/3/f/5/3f5a8605-c526-4b34-b3fd-a34167117633/aspnet_tutorial08_ExtraUserInfo_vb.pdf)
 
 > En este tutorial se responderán a esta pregunta mediante la creación de una aplicación muy rudimentarios del libro de visitas. De esta manera, se consultará diferentes opciones para el modelado de información de usuario en una base de datos y, a continuación, vea cómo asociar estos datos con las cuentas de usuario creadas por el marco de pertenencia.
-
 
 ## <a name="introduction"></a>Introducción
 
@@ -44,19 +43,15 @@ Para capturar los comentarios del libro de visitas, necesitamos crear una tabla 
 
 Para agregar esta tabla a nuestra base de datos, vaya al explorador de base de datos en Visual Studio y explorar en profundidad el `SecurityTutorials` base de datos. Haga doble clic en la carpeta tablas y elija Agregar nueva tabla. Se abrirá una interfaz que nos permite definir las columnas de la nueva tabla.
 
-
 [![Agregar una nueva tabla a la base de datos SecurityTutorials](storing-additional-user-information-vb/_static/image2.png)](storing-additional-user-information-vb/_static/image1.png)
 
 **Figura 1**: Agregar una nueva tabla a la `SecurityTutorials` base de datos ([haga clic aquí para ver imagen en tamaño completo](storing-additional-user-information-vb/_static/image3.png))
 
-
 A continuación, defina el `GuestbookComments`de columnas. Empiece por agregar una columna denominada `CommentId` de tipo `uniqueidentifier`. Esta columna se identifican de forma única cada comentario en el libro de visitas, por lo tanto no permitir `NULL` s y marcarla como clave principal de la tabla. En lugar de proporcionar un valor para el `CommentId` campo en cada `INSERT`, podemos indicar que un nuevo `uniqueidentifier` valor se debe generar automáticamente para este campo en `INSERT` estableciendo el valor predeterminado de la columna en `NEWID()`. Después de agregar este primer campo, marcándolo como la clave principal y la configuración de su valor predeterminado, la pantalla debe ser similar a la pantalla se muestra en la figura 2.
-
 
 [![Agregar una columna principal denominada CommentId](storing-additional-user-information-vb/_static/image5.png)](storing-additional-user-information-vb/_static/image4.png)
 
 **Figura 2**: Agregar un nombre de columna principal `CommentId` ([haga clic aquí para ver imagen en tamaño completo](storing-additional-user-information-vb/_static/image6.png))
-
 
 A continuación, agregue una columna denominada `Subject` de tipo `nvarchar(50)` y una columna denominada `Body` typu `nvarchar(MAX)`, no permitir `NULL` s en ambas columnas. A continuación, agregue una columna denominada `CommentDate` de tipo `datetime`. No permitir `NULL` s y establezca el `CommentDate` valor predeterminado de la columna a `getdate()`.
 
@@ -65,36 +60,29 @@ Todo lo que queda es agregar una columna que se asocia una cuenta de usuario a c
 > [!NOTE]
 > Como se explicó en la [ *crear el esquema de pertenencia en SQL Server* ](creating-the-membership-schema-in-sql-server-vb.md) tutorial, el marco de pertenencia está diseñado para permitir varias aplicaciones web con distintas cuentas de usuario compartir el mismo almacén de usuario. Para ello mediante la partición de las cuentas de usuario en aplicaciones diferentes. Y mientras se garantiza que cada nombre de usuario sea único dentro de una aplicación, se puede usar el mismo nombre de usuario en aplicaciones diferentes con el mismo almacén de usuario. Hay un compuesto `UNIQUE` restricción en el `aspnet_Users` de tabla en la `UserName` y `ApplicationId` campos, pero no uno en solamente el `UserName` campo. Por lo tanto, es posible que aspnet\_tabla de usuarios que tienen registros de dos (o más) con el mismo `UserName` valor. Sin embargo, hay un `UNIQUE` restricción en el `aspnet_Users` la tabla `UserId` campo (ya que es la clave principal). Un `UNIQUE` restricción es importante porque sin él, no podemos establecer una restricción foreign key entre el `GuestbookComments` y `aspnet_Users` tablas.
 
-
 Después de agregar el `UserId` columna, guarde la tabla haciendo clic en el icono Guardar en la barra de herramientas. Nombre de la nueva tabla `GuestbookComments`.
 
 Tenemos un último problema que ocuparse de con el `GuestbookComments` tabla: es necesario crear un [restricción foreign key](https://msdn.microsoft.com/library/ms175464.aspx) entre el `GuestbookComments.UserId` columna y la `aspnet_Users.UserId` columna. Para ello, haga clic en el icono de relación en la barra de herramientas para iniciar el cuadro de diálogo de relaciones de clave externa. (Como alternativa, puede iniciar este cuadro de diálogo, en el menú Diseñador de tablas y elija las relaciones.)
 
 Haga clic en el botón Agregar en la esquina inferior izquierda del cuadro de diálogo de relaciones de clave externa. Esto agregará una nueva restricción foreign key, aunque todavía es necesario definir las tablas que participan en la relación.
 
-
 [![Utilice el cuadro de diálogo de relaciones de clave externa para administrar las restricciones de clave externa de una tabla](storing-additional-user-information-vb/_static/image8.png)](storing-additional-user-information-vb/_static/image7.png)
 
 **Figura 3**: Utilice el cuadro de diálogo de las relaciones de clave externa para administrar las restricciones de clave externa de una tabla ([haga clic aquí para ver imagen en tamaño completo](storing-additional-user-information-vb/_static/image9.png))
 
-
 A continuación, haga clic en el icono de botón de puntos suspensivos en la fila "Especificaciones de tabla y las columnas" a la derecha. Esto iniciará el cuadro de diálogo tablas y columnas, desde el que podemos especificar la tabla de clave principal y la columna y la columna de clave externa desde la `GuestbookComments` tabla. En particular, seleccione `aspnet_Users` y `UserId` como la tabla de clave principal y la columna, y `UserId` desde el `GuestbookComments` tabla como columna de clave externa (consulte la figura 4). Después de definir las tablas de clave principales y externas y columnas, haga clic en Aceptar para volver al cuadro de diálogo de relaciones de clave externa.
-
 
 [![Establecer Foreign Key restricción entre el aspnet_Users y GuesbookComments tablas](storing-additional-user-information-vb/_static/image11.png)](storing-additional-user-information-vb/_static/image10.png)
 
 **Figura 4**: Establecer un Foreign Key restricción entre el `aspnet_Users` y `GuesbookComments` tablas ([haga clic aquí para ver imagen en tamaño completo](storing-additional-user-information-vb/_static/image12.png))
 
-
 En este momento se ha establecido la restricción foreign key. La presencia de esta restricción garantiza [integridad relacional](http://en.wikipedia.org/wiki/Referential_integrity) entre las dos tablas, por lo que garantiza que nunca habrá una entrada del libro de visitas que hace referencia a una cuenta de usuario inexistente. De forma predeterminada, una restricción foreign key no permitirá un registro principal para que se puede eliminar si existen registros secundarios correspondientes. Es decir, si un usuario realiza uno o más comentarios del libro de visitas y, a continuación, se intenta eliminar la cuenta de usuario, se producirá un error en la eliminación a menos que sus comentarios del libro de visitas se eliminan primero.
 
 Restricciones Foreign key pueden configurarse para eliminar automáticamente los registros secundarios asociados cuando se elimina un registro primario. En otras palabras, se puede configurar esta restricción de clave externa para que las entradas de libro de visitas de un usuario se eliminan automáticamente cuando se elimina su cuenta de usuario. Para ello, expanda la sección "INSERT y UPDATE especificación" y establezca la propiedad de "Eliminar la regla" en cascada.
 
-
 [![Configurar la restricción Foreign Key para eliminaciones en cascada](storing-additional-user-information-vb/_static/image14.png)](storing-additional-user-information-vb/_static/image13.png)
 
 **Figura 5**: Configurar la restricción de clave externa para eliminaciones en cascada ([haga clic aquí para ver imagen en tamaño completo](storing-additional-user-information-vb/_static/image15.png))
-
 
 Para guardar la restricción foreign key, haga clic en el botón Cerrar para salir de las relaciones de clave externa. A continuación, haga clic en el icono Guardar en la barra de herramientas para guardar la tabla y esta relación.
 
@@ -114,11 +102,9 @@ Ahora necesitamos asociar tres columnas con cada cuenta de usuario para almacena
 
 Se creará una nueva tabla denominada `UserProfiles` para guardar la ciudad natal, la página principal y la firma para cada usuario. Haga doble clic en la carpeta de tablas en la ventana Explorador de base de datos y elija crear una nueva tabla. Nombre de la primera columna `UserId` y establezca su tipo en `uniqueidentifier`. No permitir `NULL` valores y marcar la columna como una clave principal. A continuación, agregue las columnas denominadas: `HomeTown` de tipo `nvarchar(50)`; `HomepageUrl` typu `nvarchar(100)`; y la firma del tipo `nvarchar(500)`. Cada una de estas tres columnas puede aceptar un `NULL` valor.
 
-
 [![Crear la tabla UserProfiles](storing-additional-user-information-vb/_static/image17.png)](storing-additional-user-information-vb/_static/image16.png)
 
 **Figura 6**: Crear el `UserProfiles` tabla ([haga clic aquí para ver imagen en tamaño completo](storing-additional-user-information-vb/_static/image18.png))
-
 
 Guarde la tabla y asígnele el nombre `UserProfiles`. Por último, establecer una restricción foreign key entre el `UserProfiles` la tabla `UserId` campo y el `aspnet_Users.UserId` campo. Igual que hicimos con la restricción de clave externa entre la `GuestbookComments` y `aspnet_Users` tablas, tienen esta restricción en cascada eliminaciones. Puesto que la `UserId` campo `UserProfiles` es el principal clave, esto garantiza que habrá no más de un registro en el `UserProfiles` tabla para cada cuenta de usuario. Este tipo de relación se conoce como uno a uno.
 
@@ -132,37 +118,29 @@ Puesto que esta serie de tutoriales se centra en los roles, las cuentas de usuar
 
 Abra el `AdditionalUserInfo.aspx` página en el `Membership` carpeta y agregue un control DetailsView en la página, establecer su propiedad ID en `UserProfile` y borrarlos su `Width` y `Height` propiedades. Expanda la etiqueta inteligente de DetailsView y elegir enlazarla a un nuevo control de origen de datos. Esto iniciará el Asistente para configuración de origen de datos (consulte la figura 7). El primer paso en el que se le pedirá que especifique el tipo de origen de datos. Puesto que vamos a conectar directamente a la `SecurityTutorials` base de datos, elija el icono de la base de datos, especificando el `ID` como `UserProfileDataSource`.
 
-
 [![Agregar un nuevo Control SqlDataSource denominado UserProfileDataSource](storing-additional-user-information-vb/_static/image20.png)](storing-additional-user-information-vb/_static/image19.png)
 
 **Figura 7**: Agregar un nuevo Control SqlDataSource denominado `UserProfileDataSource` ([haga clic aquí para ver imagen en tamaño completo](storing-additional-user-information-vb/_static/image21.png))
 
-
 La pantalla siguiente le pide la base de datos. Ya hemos definido una cadena de conexión en `Web.config` para el `SecurityTutorials` base de datos. Este nombre de la cadena de conexión: `SecurityTutorialsConnectionString` : debe estar en la lista desplegable. Seleccione esta opción y haga clic en siguiente.
-
 
 [![Elija SecurityTutorialsConnectionString en la lista desplegable](storing-additional-user-information-vb/_static/image23.png)](storing-additional-user-information-vb/_static/image22.png)
 
 **Figura 8**: Elija `SecurityTutorialsConnectionString` en la lista desplegable ([haga clic aquí para ver imagen en tamaño completo](storing-additional-user-information-vb/_static/image24.png))
 
-
 La pantalla posterior nos pide para especificar la tabla y columnas de la consulta. Elija la `UserProfiles` de tabla en la lista desplegable y compruebe todas las columnas.
-
 
 [![Traer hacer una copia de todas las columnas de la tabla UserProfiles](storing-additional-user-information-vb/_static/image26.png)](storing-additional-user-information-vb/_static/image25.png)
 
 **Figura 9**: Poner todo en espera de las columnas de la `UserProfiles` tabla ([haga clic aquí para ver imagen en tamaño completo](storing-additional-user-information-vb/_static/image27.png))
 
-
 La consulta actual en la figura 9 devuelve *todas* de los registros de `UserProfiles`, pero sólo estamos interesados en el registro del usuario ha iniciado sesión actualmente. Para agregar un `WHERE` cláusula, haga clic en el `WHERE` botón para que aparezca el complemento `WHERE` cuadro de diálogo de cláusula (consulte la figura 10). Aquí puede seleccionar la columna para filtrar según el operador y el origen del parámetro de filtro. Seleccione `UserId` como la columna y "=" como el operador.
 
 Lamentablemente, no hay ningún origen de parámetros integrado para devolver el usuario ha iniciado sesión actualmente `UserId` valor. Deberá tomar este valor mediante programación. Por lo tanto, establecer la lista desplegable de origen en "None", haga clic en el botón para agregar el parámetro y, a continuación, haga clic en Aceptar.
 
-
 [![Agregar un parámetro de filtro en la columna UserId](storing-additional-user-information-vb/_static/image29.png)](storing-additional-user-information-vb/_static/image28.png)
 
 **Figura 10**: Agregar un parámetro de filtro en el `UserId` columna ([haga clic aquí para ver imagen en tamaño completo](storing-additional-user-information-vb/_static/image30.png))
-
 
 Después de hacer clic en Aceptar se le devolverá a la pantalla que se muestra en la figura 9. Esta vez, sin embargo, la consulta SQL en la parte inferior de la pantalla debe incluir un `WHERE` cláusula. Haga clic en siguiente para pasar a la pantalla de "Consulta de prueba". Aquí puede ejecutar la consulta y ver los resultados. Haga clic en Finalizar para completar al asistente.
 
@@ -181,36 +159,28 @@ El código anterior se inicia mediante la obtención de una referencia para el u
 > [!NOTE]
 > El `Membership.GetUser()` método devuelve información sobre el usuario ha iniciado sesión actualmente. Si un usuario anónimo visita la página, devolverá un valor de `Nothing`. En tal caso, esto dará lugar a un `NullReferenceException` en la siguiente línea de código al intentar leer el `ProviderUserKey` propiedad. Por supuesto, no es necesario preocuparse por `Membership.GetUser()` devolver nada en el `AdditionalUserInfo.aspx` página dado que hemos configurado autorización de URL en un tutorial anterior para que solo los usuarios autenticados pueden tener acceso a los recursos ASP.NET en esta carpeta. Si necesita tener acceso a información sobre el usuario ha iniciado sesión actualmente en una página donde se permite el acceso anónimo, no olvide comprobar que el `MembershipUser` objeto devuelto desde el `GetUser()` método no es nada antes de hacer referencia a sus propiedades.
 
-
 Si visita el `AdditionalUserInfo.aspx` página a través de un explorador verán una página en blanco porque todavía tenemos que agregar ninguna fila para el `UserProfiles` tabla. En el paso 6 veremos cómo personalizar el control CreateUserWizard para agregar automáticamente una nueva fila a la `UserProfiles` cuando se crea una nueva cuenta de usuario de la tabla. Por ahora, sin embargo, se deberá crear manualmente un registro en la tabla.
 
 Vaya al explorador de base de datos en Visual Studio y expanda la carpeta tablas. Haga doble clic en el `aspnet_Users` de tabla y elegir "Mostrar datos de tabla" para ver los registros de la tabla; lo mismo el `UserProfiles` tabla. Figura 11 muestra estos resultados cuando se organizan en mosaico vertical. En mi base de datos actualmente hay `aspnet_Users` registros por Bruce, Fred y Tito, pero no hay registros en el `UserProfiles` tabla.
-
 
 [![Se muestran el contenido de la aspnet_Users y UserProfiles tablas](storing-additional-user-information-vb/_static/image32.png)](storing-additional-user-information-vb/_static/image31.png)
 
 **Figura 11**: El contenido de la `aspnet_Users` y `UserProfiles` se mostrarán las tablas ([haga clic aquí para ver imagen en tamaño completo](storing-additional-user-information-vb/_static/image33.png))
 
-
 Agregue un nuevo registro a la `UserProfiles` tabla escribiendo manualmente en los valores para el `HomeTown`, `HomepageUrl`, y `Signature` campos. La manera más fácil de obtener válido `UserId` valor en el nuevo `UserProfiles` registro consiste en Seleccionar el `UserId` arrastrándolo desde una cuenta de usuario en particular en el `aspnet_Users` de tabla y copiar y péguelo en el `UserId` campo `UserProfiles`. Figura 12 se muestra el `UserProfiles` después de que se ha agregado un nuevo registro de Bruce de tabla.
-
 
 [![Se agregó un registro a UserProfiles para Bruce](storing-additional-user-information-vb/_static/image35.png)](storing-additional-user-information-vb/_static/image34.png)
 
 **Figura 12**: Se agregó un registro a `UserProfiles` de Bruce ([haga clic aquí para ver imagen en tamaño completo](storing-additional-user-information-vb/_static/image36.png))
 
-
 Vuelva a la `AdditionalUserInfo.aspx page`, ha iniciado sesión como Bruce. Como se muestra en la figura 13, se muestran los valores de Bruce.
-
 
 [![El usuario visita actualmente es que se muestra su configuración](storing-additional-user-information-vb/_static/image38.png)](storing-additional-user-information-vb/_static/image37.png)
 
 **Figura 13**: El usuario visita actualmente es que se muestra su configuración ([haga clic aquí para ver imagen en tamaño completo](storing-additional-user-information-vb/_static/image39.png))
 
-
 > [!NOTE]
 > Ir adelante y manualmente agregar registros en el `UserProfiles` tabla para cada usuario de pertenencia. En el paso 6 veremos cómo personalizar el control CreateUserWizard para agregar automáticamente una nueva fila a la `UserProfiles` cuando se crea una nueva cuenta de usuario de la tabla.
-
 
 ## <a name="step-3-allowing-the-user-to-edit-his-home-town-homepage-and-signature"></a>Paso 3: Lo que permite al usuario editar Home Town, su página principal y la firma
 
@@ -222,11 +192,9 @@ Lo primero que debemos hacer es agregar un `UpdateCommand` de SqlDataSource, esp
 
 A continuación, haga clic en el botón "Actualizar parámetros", que creará un parámetro en el control SqlDataSource `UpdateParameters` colección para cada uno de los parámetros en el `UPDATE` instrucción. Deje el código fuente para todos los parámetros establecidos en ninguno y haga clic en el botón Aceptar para completar el cuadro de diálogo.
 
-
 [![Especifique el SqlDataSource UpdateCommand y UpdateParameters](storing-additional-user-information-vb/_static/image41.png)](storing-additional-user-information-vb/_static/image40.png)
 
 **Figura 14**: Especifique el SqlDataSource `UpdateCommand` y `UpdateParameters` ([haga clic aquí para ver imagen en tamaño completo](storing-additional-user-information-vb/_static/image42.png))
-
 
 Debido a las adiciones, hemos realizado en el control SqlDataSource, DetailsView control ahora puede admitir la edición. Desde las etiquetas inteligentes de DetailsView, active la casilla "Habilitar edición". Esto agrega un CommandField para el control `Fields` colección con su `ShowEditButton` propiedad establecida en True. Esto representa un botón de edición cuando DetailsView se muestra en modo de solo lectura y actualización y los botones Cancelar cuando se muestra en el modo de edición. En lugar de requerir al usuario que haga clic en Editar, sin embargo, podemos tenemos la representación DetailsView en un estado "siempre editable" estableciendo el control DetailsView [ `DefaultMode` propiedad](https://msdn.microsoft.com/library/system.web.ui.webcontrols.detailsview.defaultmode.aspx) a `Edit`.
 
@@ -238,11 +206,9 @@ Tenga en cuenta la adición de la CommandField y `DefaultMode` propiedad.
 
 Siga adelante y probar esta página a través de un explorador. Cuando se visita con un usuario que tiene un registro correspondiente en `UserProfiles`, la configuración del usuario se muestra en una interfaz editable.
 
-
 [![DetailsView representa una interfaz Editable](storing-additional-user-information-vb/_static/image44.png)](storing-additional-user-information-vb/_static/image43.png)
 
 **Figura 15**: DetailsView representa una interfaz Editable ([haga clic aquí para ver imagen en tamaño completo](storing-additional-user-information-vb/_static/image45.png))
-
 
 Intente cambiar los valores y haga clic en el botón Actualizar. Parece como si no ocurre nada. Hay una devolución de datos y los valores se guardan en la base de datos, pero no hay ningún indicador visual que se produjeron al guardar.
 
@@ -256,15 +222,12 @@ Es necesario mostrar el `SettingsUpdatedMessage` etiquetar cada vez que se actua
 
 Vuelva a la `AdditionalUserInfo.aspx` página a través de un explorador y actualizar los datos. Esta vez, se muestra un mensaje de estado útil.
 
-
 [![Un mensaje breve es aparece cuando la configuración está actualizada](storing-additional-user-information-vb/_static/image47.png)](storing-additional-user-information-vb/_static/image46.png)
 
 **Figura 16**: Se muestra un mensaje breve cuando se actualiza la configuración ([haga clic aquí para ver imagen en tamaño completo](storing-additional-user-information-vb/_static/image48.png))
 
-
 > [!NOTE]
 > El control DetailsView de edición del interfaz deja mucho que desear. Usa los cuadros de texto de tamaño estándar, pero el campo de firma probablemente debe ser un cuadro de texto multilínea. Un control RegularExpressionValidator debe usarse para asegurarse de que la dirección URL de página principal, si se especifica, se inicia con "http://" o "https://". Además, desde DetailsView control tiene su `DefaultMode` propiedad establecida en `Edit`, el botón Cancelar no hace nada. Debe bien quitarse o, al hacer clic, redirigir al usuario a otra página (como `~/Default.aspx`). Dejar estas mejoras como un ejercicio para el lector.
-
 
 ### <a name="adding-a-link-to-theadditionaluserinfoaspxpage-in-the-master-page"></a>Agregar un vínculo a la`AdditionalUserInfo.aspx`página en la página maestra
 
@@ -293,7 +256,6 @@ Con la interfaz de usuario completa, la siguiente tarea consiste en Insertar un 
 > [!NOTE]
 > Las clases de ADO.NET usa acceso mediante programación a datos desde una base de datos de Microsoft SQL Server se encuentran en el `System.Data.SqlClient` espacio de nombres. Es posible que deba importar este espacio de nombres en la clase de código subyacente de la página (es decir, `Imports System.Data.SqlClient`).
 
-
 Crear un controlador de eventos para el `PostCommentButton`del `Click` eventos y agregue el código siguiente:
 
 [!code-vb[Main](storing-additional-user-information-vb/samples/sample9.vb)]
@@ -308,15 +270,12 @@ Tras hacer clic en el `PostCommentButton` hay botón no aparece ningún indicado
 
 Figura 17 se muestra el contenido de la `GuestbookComments` después de que se han dejado dos comentarios de la tabla.
 
-
 [![Puede ver los comentarios del libro de visitas de la tabla GuestbookComments](storing-additional-user-information-vb/_static/image50.png)](storing-additional-user-information-vb/_static/image49.png)
 
 **Figura 17**: Puede ver los comentarios del libro de visitas en el `GuestbookComments` tabla ([haga clic aquí para ver imagen en tamaño completo](storing-additional-user-information-vb/_static/image51.png))
 
-
 > [!NOTE]
 > Si un usuario intenta insertar un comentario del libro de visitas que contiene potencialmente peligroso marcado, como HTML: ASP.NET producirá una `HttpRequestValidationException`. Para obtener más información sobre esta excepción, ¿por qué se produce, y cómo permitir a los usuarios enviar valores potencialmente peligrosos, consulte el [notas del producto de validación de solicitud](../../../../whitepapers/request-validation.md).
-
 
 ## <a name="step-5-listing-the-existing-guestbook-comments"></a>Paso 5: Enumerar los comentarios del libro de visitas existentes
 
@@ -324,7 +283,6 @@ Además de dejar comentarios, un usuario que visita la `Guestbook.aspx` página 
 
 > [!NOTE]
 > El control ListView es nuevo en la versión 3.5 de ASP.NET. Está diseñado para mostrar una lista de elementos en un diseño muy flexible y personalizable, pero seguir ofreciendo integrados edición, inserción, eliminación, paginación y ordenación funcionalidad, como GridView. Si usa ASP.NET 2.0, deberá usar el control DataList o Repeater en su lugar. Para obtener más información sobre el uso de la ListView, consulte [Scott Guthrie](https://weblogs.asp.net/scottgu/)de entrada de blog, [el Control asp: ListView](https://weblogs.asp.net/scottgu/archive/2007/08/10/the-asp-listview-control-part-1-building-a-product-listing-page-with-clean-css-ui.aspx)y mi artículo, [mostrar datos con el ListView Control](http://aspnet.4guysfromrolla.com/articles/122607-1.aspx).
-
 
 Abra la etiqueta inteligente del ListView y, en la lista desplegable Elegir origen de datos, enlazar el control a un origen de datos. Como hemos visto en el paso 2, se iniciará al Asistente para configuración de orígenes de datos. Seleccione el icono de la base de datos, asigne el nombre resultante SqlDataSource `CommentsDataSource`y haga clic en Aceptar. A continuación, seleccione el `SecurityTutorialsConnectionString` en la lista desplegable de la cadena de conexión y haga clic en siguiente.
 
@@ -334,11 +292,9 @@ Se abrirá la pantalla "Definir instrucciones o procedimientos almacenados perso
 
 Todo lo que queda es especificar las columnas que se va a devolver. Desde el `GuestbookComments` seleccione la tabla el `Subject`, `Body`, y `CommentDate` columnas; la devolución el `HomeTown`, `HomepageUrl`, y `Signature` las columnas de la `UserProfiles` tabla; y devolver `UserName` desde `aspnet_Users`. Además, agregue "`ORDER BY CommentDate DESC`" al final de la `SELECT` de consulta para que los mensajes más recientes se devuelvan en primer lugar. Después de realizar estas selecciones, la interfaz de generador de consultas debe ser similar a la pantalla en la figura 18.
 
-
 [![La consulta construidos une el GuestbookComments, UserProfiles y aspnet_Users tablas](storing-additional-user-information-vb/_static/image53.png)](storing-additional-user-information-vb/_static/image52.png)
 
 **Figura 18**: La consulta construye `JOIN` s el `GuestbookComments`, `UserProfiles`, y `aspnet_Users` tablas ([haga clic aquí para ver imagen en tamaño completo](storing-additional-user-information-vb/_static/image54.png))
-
 
 Haga clic en Aceptar para cerrar la ventana del generador de consultas y volver a la pantalla "Definir instrucciones o procedimientos almacenados personalizados". Haga clic en siguiente para pasar a la pantalla de "Consulta de prueba", donde puede ver los resultados de consulta, haga clic en el botón consulta de prueba. Cuando esté listo, haga clic en Finalizar para completar al Asistente para configurar orígenes de datos.
 
@@ -354,11 +310,9 @@ Mi `ItemTemplate` muestra el asunto del comentario de cada libro de visitas en u
 
 Dedique un momento para ver la página mediante un explorador. Debería ver los comentarios que ha agregado para el libro de visitas en el paso 5 aparecerá aquí.
 
-
 [![GuesBook.aspx ahora muestra los comentarios del libro de visitas](storing-additional-user-information-vb/_static/image56.png)](storing-additional-user-information-vb/_static/image55.png)
 
 **Figura 19**: `Guestbook.aspx` Ahora muestra los comentarios del libro de visitas ([haga clic aquí para ver imagen en tamaño completo](storing-additional-user-information-vb/_static/image57.png))
-
 
 Intente agregar un nuevo comentario en el libro de visitas. Al hacer clic en el `PostCommentButton` botón de la página realiza la devolución y el comentario se agrega a la base de datos, pero no se actualiza el control ListView para mostrar el nuevo comentario. Esto se puede solucionar, ya sea por:
 
@@ -369,7 +323,6 @@ El sitio Web del tutorial descargable de este tutorial ilustra ambas técnicas. 
 
 > [!NOTE]
 > Actualmente la `AdditionalUserInfo.aspx` página permite al usuario ver y editar su configuración home town, página principal y la firma. Podría ser conveniente actualizar `AdditionalUserInfo.aspx` para mostrar que ha iniciado en los comentarios del libro de visitas del usuario. Es decir, además de examinar y modificar sus datos, un usuario puede visitar el `AdditionalUserInfo.aspx` página para ver qué libro de visitas comentarios que se realiza en el pasado. Dejar como un ejercicio para el lector interesado.
-
 
 ## <a name="step-6-customizing-the-createuserwizard-control-to-include-an-interface-for-the-home-town-homepage-and-signature"></a>Paso 6: Personalizar el Control CreateUserWizard para incluir una interfaz para el Home Town, la página principal y la firma
 
@@ -401,11 +354,9 @@ A continuación, se recupera la cadena de conexión de `Web.config` y `INSERT` s
 
 Visite el `EnhancedCreateUserWizard.aspx` página a través de un explorador y cree una nueva cuenta de usuario. Una vez hecho esto, vuelva a Visual Studio y examine el contenido de la `aspnet_Users` y `UserProfiles` tablas (como hicimos en la figura 12). Debería ver la nueva cuenta de usuario en `aspnet_Users` y su correspondiente `UserProfiles` fila (con `NULL` valores para `HomeTown`, `HomepageUrl`, y `Signature`).
 
-
 [![Se han agregado una nueva cuenta de usuario y el registro UserProfiles](storing-additional-user-information-vb/_static/image59.png)](storing-additional-user-information-vb/_static/image58.png)
 
 **Figura 20**: Una cuenta de usuario y `UserProfiles` se han agregado registros ([haga clic aquí para ver imagen en tamaño completo](storing-additional-user-information-vb/_static/image60.png))
-
 
 Después de que el visitante ha proporcionado su información de cuenta nueva y hace clic en el botón "Create User", se crea la cuenta de usuario y agrega una fila a la `UserProfiles` tabla. A continuación, muestra el control CreateUserWizard su `CompleteWizardStep`, que muestra un mensaje de confirmación y un botón Continuar. Al hacer clic en el botón Continuar produce un postback, pero se realiza ninguna acción, dejando el usuario atascado en el `EnhancedCreateUserWizard.aspx` página.
 
@@ -437,19 +388,15 @@ Al agregar un personalizado `WizardStep` al control CreateUserWizard para recopi
 
 La figura 21 muestra el flujo de trabajo cuando el agregado `WizardStep` precede a la `CreateUserWizardStep`. Puesto que se ha recopilado la información adicional del usuario en el momento en el `CreatedUser` desencadena el evento, lo único que debemos hacer es actualizar el `CreatedUser` controlador de eventos para recuperar estas entradas y úselos para el `INSERT` los valores de parámetro de la instrucción (en lugar de `DBNull.Value`).
 
-
 [![El flujo de trabajo CreateUserWizard cuando un WizardStep adicional precede el CreateUserWizardStep](storing-additional-user-information-vb/_static/image62.png)](storing-additional-user-information-vb/_static/image61.png)
 
 **Figura 21**: El control CreateUserWizard flujo de trabajo cuando un adicionales `WizardStep` Precedes el `CreateUserWizardStep` ([haga clic aquí para ver imagen en tamaño completo](storing-additional-user-information-vb/_static/image63.png))
 
-
 Si personalizado `WizardStep` se coloca *después* el `CreateUserWizardStep`, sin embargo, el proceso de cuenta de usuario de creación se produce antes de que el usuario haya tenido la oportunidad de entrar en su ciudad natal, la página principal o la firma. En tal caso, esta información adicional debe insertarse en la base de datos una vez creada la cuenta de usuario, como se muestra en la figura 22.
-
 
 [![El flujo de trabajo CreateUserWizard cuando trata de un WizardStep adicional tras el CreateUserWizardStep](storing-additional-user-information-vb/_static/image65.png)](storing-additional-user-information-vb/_static/image64.png)
 
 **Figura 22**: El control CreateUserWizard flujo de trabajo cuando un adicionales `WizardStep` viene después la `CreateUserWizardStep` ([haga clic aquí para ver imagen en tamaño completo](storing-additional-user-information-vb/_static/image66.png))
-
 
 Espera a que se va a insertar un registro en el flujo de trabajo que se muestra en la figura 22 el `UserProfiles` tabla hasta que finalice el paso 2. Si el visitante de cierre su explorador después del paso 1, sin embargo, se habrá alcanzado un estado donde se creó una cuenta de usuario, pero se ha agregado ningún registro para `UserProfiles`. Una solución consiste en tener un registro con `NULL` o predeterminado de los valores insertados en `UserProfiles` en el `CreatedUser` controlador de eventos (que se desencadena después del paso 1) y actualice esta registrar después de que se complete el paso 2. Esto garantiza que un `UserProfiles` se agregará el registro para la cuenta de usuario incluso si el usuario sale de la mitad del proceso de registro a través de.
 
@@ -457,11 +404,9 @@ En este tutorial vamos a crear un nuevo `WizardStep` que tiene lugar tras el `Cr
 
 En la etiqueta inteligente del control CreateUserWizard, seleccione el "Agregar o quitar `WizardStep` s", que abre el `WizardStep` cuadro de diálogo Editor de la colección. Agregue un nuevo `WizardStep`, estableciendo su `ID` a `UserSettings`, sus `Title` a la configuración"de" y su `StepType` a `Step`. A continuación, colóquela para que se trata de una vez el `CreateUserWizardStep` ("Sign Up for Your nueva cuenta") y antes de la `CompleteWizardStep` ("completo"), tal como se muestra en la figura 23.
 
-
 [![Agregar un nuevo WizardStep al Control CreateUserWizard](storing-additional-user-information-vb/_static/image68.png)](storing-additional-user-information-vb/_static/image67.png)
 
 **Figura 23**: Agregar un nuevo `WizardStep` al CreateUserWizard Control ([haga clic aquí para ver imagen en tamaño completo](storing-additional-user-information-vb/_static/image69.png))
-
 
 Haga clic en Aceptar para cerrar el `WizardStep` cuadro de diálogo Editor de la colección. El nuevo `WizardStep` se pone en evidencia con marcado declarativo del control CreateUserWizard actualizado:
 
@@ -471,7 +416,6 @@ Tenga en cuenta el nuevo `<asp:WizardStep>` elemento. Es necesario agregar la in
 
 > [!NOTE]
 > Seleccione un paso a través de la lista desplegable de la etiqueta inteligente actualiza el control CreateUserWizard [ `ActiveStepIndex` propiedad](https://msdn.microsoft.com/library/system.web.ui.webcontrols.createuserwizard.activestepindex.aspx), que especifica el índice del paso inicial. Por lo tanto, si usa esta lista desplegable para editar el paso "Mi configuración" en el diseñador, asegúrese de volver a establecer en "Sign Up for Your nueva cuenta de" para que este paso se muestra cuando los usuarios visitan primero la `EnhancedCreateUserWizard.aspx` página.
-
 
 Crear una interfaz de usuario en el paso "Mi configuración" que contiene tres controles TextBox denominados `HomeTown`, `HomepageUrl`, y `Signature`. Después de crear esta interfaz, el marcado declarativo del control CreateUserWizard debe ser similar al siguiente:
 
@@ -493,7 +437,6 @@ Con este controlador de eventos en su lugar, visite la `EnhancedCreateUserWizard
 
 > [!NOTE]
 > Actualmente, nuestro sitio Web tiene dos páginas desde el que un visitante puede crear una nueva cuenta: `CreatingUserAccounts.aspx` y `EnhancedCreateUserWizard.aspx`. Punto de mapa del sitio del sitio Web y la página de inicio de sesión para el `CreatingUserAccounts.aspx` página, pero la `CreatingUserAccounts.aspx` página no solicita al usuario su información home town, página principal y la firma y no agrega una fila correspondiente a `UserProfiles`. Por lo tanto, actualice el `CreatingUserAccounts.aspx` página por lo que ofrece esta funcionalidad o actualizar la página del mapa del sitio y de inicio de sesión para hacer referencia a `EnhancedCreateUserWizard.aspx` en lugar de `CreatingUserAccounts.aspx`. Si elige esta última opción, asegúrese de actualizar el `Membership` la carpeta `Web.config` archivo con el fin de permitir el acceso a los usuarios anónimos el `EnhancedCreateUserWizard.aspx` página.
-
 
 ## <a name="summary"></a>Resumen
 

@@ -8,12 +8,12 @@ ms.date: 08/03/2007
 ms.assetid: cd330dd9-6254-4305-9351-dd727384c83b
 msc.legacyurl: /web-forms/overview/data-access/advanced-data-access-scenarios/configuring-the-data-access-layer-s-connection-and-command-level-settings-cs
 msc.type: authoredcontent
-ms.openlocfilehash: d6a787206862b88f915859d4a8fc4dd3c3166293
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: 21b98ef4126c16054829d7183f59207de3e945f3
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59389601"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65133353"
 ---
 # <a name="configuring-the-data-access-layers-connection--and-command-level-settings-c"></a>Configurar las opciones de nivel comando y de conexión de la capa de acceso a datos (C#)
 
@@ -22,7 +22,6 @@ por [Scott Mitchell](https://twitter.com/ScottOnWriting)
 [Descargar código](http://download.microsoft.com/download/3/9/f/39f92b37-e92e-4ab3-909e-b4ef23d01aa3/ASPNET_Data_Tutorial_72_CS.zip) o [descargar PDF](configuring-the-data-access-layer-s-connection-and-command-level-settings-cs/_static/datatutorial72cs1.pdf)
 
 > Los TableAdapters dentro de un conjunto de datos con tipo automáticamente se encargan de conectarse a la base de datos, emisión de comandos y rellenar un DataTable con los resultados. Sin embargo, cuando deseemos a cargo de estos detalles nosotros mismos y, en este tutorial, obtenga información sobre cómo acceder a la configuración de nivel de conexión y comando de base de datos en el TableAdapter, hay ocasiones.
-
 
 ## <a name="introduction"></a>Introducción
 
@@ -50,24 +49,19 @@ Excepto para el [ajuste modificaciones de base de datos dentro de una transacci�
 
 Cada clase de TableAdapter tiene un `Connection` propiedad que especifica la información de conexión de base de datos. Este tipo de datos de la propiedad s y `ConnectionString` valor viene determinado por las selecciones realizadas en el Asistente para configuración de TableAdapter. Recuerde que cuando se agrega primero un TableAdapter a un DataSet con tipo este asistente nos pide la base de datos de origen (consulte la figura 1). La lista desplegable en este primer paso incluye esas bases de datos especificadas en el archivo de configuración, así como otras bases de datos en las conexiones de datos de s Explorador de servidores. Si la base de datos que desea usar no existe en la lista desplegable, se puede especificar una nueva conexión de base de datos haciendo clic en el botón nueva conexión y proporcionar la información de conexión necesaria.
 
-
 [![El primer paso del Asistente para la configuración de TableAdapter](configuring-the-data-access-layer-s-connection-and-command-level-settings-cs/_static/image2.png)](configuring-the-data-access-layer-s-connection-and-command-level-settings-cs/_static/image1.png)
 
 **Figura 1**: El primer paso del Asistente para la configuración de TableAdapter ([haga clic aquí para ver imagen en tamaño completo](configuring-the-data-access-layer-s-connection-and-command-level-settings-cs/_static/image3.png))
-
 
 Let s dedique un momento para inspeccionar el código para los TableAdapters `Connection` propiedad. Como se indicó en el [crear una capa de acceso a datos](../introduction/creating-a-data-access-layer-cs.md) tutorial, podemos ver el código del TableAdapter generadas automáticamente, vaya a la ventana de vista de clases, cómo llegar a la clase adecuada y, a continuación, haga doble clic en el nombre del miembro.
 
 Vaya a la ventana de vista de clases, vaya al menú Ver y elegir la vista de clases (o escriba Ctrl + Mayús + C). Desde la mitad superior de la ventana de vista de clases, profundizar hasta el `NorthwindTableAdapters` espacio de nombres y seleccione el `ProductsTableAdapter` clase. Esto mostrará la `ProductsTableAdapter` miembros s en la parte inferior la mitad de la vista de clases, tal como se muestra en la figura 2. Haga doble clic en el `Connection` propiedad para ver su código.
 
-
 ![Haga doble clic en la propiedad de conexión en la vista de clases para ver el código generado automáticamente](configuring-the-data-access-layer-s-connection-and-command-level-settings-cs/_static/image4.png)
 
 **Figura 2**: Haga doble clic en la propiedad de conexión en la vista de clases para ver el código generado automáticamente
 
-
 Los TableAdapter s `Connection` propiedad y otro código relacionado con la conexión se indica a continuación:
-
 
 [!code-csharp[Main](configuring-the-data-access-layer-s-connection-and-command-level-settings-cs/samples/sample1.cs)]
 
@@ -84,17 +78,13 @@ Permiten s ampliar el `ProductsTableAdapter` en el `Northwind` conjunto de datos
 > [!NOTE]
 > Un *cadena de conexión* es una cadena que especifica la información de conexión de base de datos, como el proveedor debe usar la ubicación de la base de datos, las credenciales de autenticación y otra configuración relacionada con la base de datos. Para obtener una lista de patrones de cadena de conexión utilizado por una variedad de almacenes de datos y proveedores, consulte [ConnectionStrings.com](http://www.connectionstrings.com/).
 
-
 Como se describe en el [crear una capa de acceso a datos](../introduction/creating-a-data-access-layer-cs.md) tutorial, se pueden extender las clases de conjunto de datos con tipo s generados automáticamente mediante el uso de clases parciales. En primer lugar, cree una nueva subcarpeta en el proyecto denominado `ConnectionAndCommandSettings` debajo el `~/App_Code/DAL` carpeta.
-
 
 ![Agregar una subcarpeta denominada ConnectionAndCommandSettings](configuring-the-data-access-layer-s-connection-and-command-level-settings-cs/_static/image5.png)
 
 **Figura 3**: Agregar una subcarpeta denominada `ConnectionAndCommandSettings`
 
-
 Agregue un nuevo archivo de clase denominado `ProductsTableAdapter.ConnectionAndCommandSettings.cs` y escriba el código siguiente:
-
 
 [!code-csharp[Main](configuring-the-data-access-layer-s-connection-and-command-level-settings-cs/samples/sample2.cs)]
 
@@ -108,11 +98,9 @@ Esta clase parcial expone sólo una propiedad del objeto de conexión subyacente
 
 Abra el `Northwind` conjunto de datos, haga clic en el `ProductsTableAdapter` en el diseñador y vaya a la ventana Propiedades. Allí verá el `ConnectionModifier` establecido en su valor predeterminado, `Assembly`. Para realizar la `Connection` disponible fuera del ensamblado del conjunto de datos con tipo s, cambio de propiedad el `ConnectionModifier` propiedad `Public`.
 
-
 [![El nivel de accesibilidad de s de propiedad de conexión puede configurarse a través de la propiedad ConnectionModifier](configuring-the-data-access-layer-s-connection-and-command-level-settings-cs/_static/image7.png)](configuring-the-data-access-layer-s-connection-and-command-level-settings-cs/_static/image6.png)
 
 **Figura 4**: El `Connection` propiedad s accesibilidad nivel pueden configurarse a través de la `ConnectionModifier` propiedad ([haga clic aquí para ver imagen en tamaño completo](configuring-the-data-access-layer-s-connection-and-command-level-settings-cs/_static/image8.png))
-
 
 Guarde el conjunto de datos y, a continuación, vuelva a la `ProductsBLL` clase. Como antes, vaya a uno de los métodos existentes y escriba en `Adapter` y a continuación, presione la tecla de punto para que aparezca en IntelliSense. La lista debe incluir un `Connection` propiedad, lo que significa que ahora puede mediante programación leer o asignar cualquier configuración de nivel de conexión de la capa BLL.
 
@@ -132,7 +120,6 @@ Además de la consulta principal, lo TableAdapter puede incluir un número varia
 
 Let s dedique un momento a examinar el código generado por el `ProductsTableAdapter` en el `Northwind` conjunto de datos para estas dos propiedades y sus variables miembro auxiliares y métodos auxiliares:
 
-
 [!code-csharp[Main](configuring-the-data-access-layer-s-connection-and-command-level-settings-cs/samples/sample3.cs)]
 
 El código para el `Adapter` y `CommandCollection` propiedades de imita mejor el `Connection` propiedad. Hay variables de miembro que contienen los objetos utilizados por las propiedades. Las propiedades `get` descriptores de acceso de inicio y comprueba si la variable de miembro correspondiente es `null`. Si es así, se llama un método de inicialización que crea una instancia de la variable de miembro y asigna el núcleo de las propiedades relacionadas con el comando.
@@ -147,14 +134,12 @@ Por ejemplo, imagine que había algunas consultas de TableAdapter que tardó un 
 
 Para permitir la `CommandTimeout` propiedad va a ajustar el BLL, agregue el siguiente `public` método a la `ProductsDataTable` mediante el archivo de clase parcial creado en el paso 2 (`ProductsTableAdapter.ConnectionAndCommandSettings.cs`):
 
-
 [!code-csharp[Main](configuring-the-data-access-layer-s-connection-and-command-level-settings-cs/samples/sample4.cs)]
 
 Este método podría invocarse desde el nivel de lógica empresarial o capa de presentación para establecer el tiempo de espera de comando para todos los problemas de comandos por dicha instancia de TableAdapter.
 
 > [!NOTE]
 > El `Adapter` y `CommandCollection` propiedades se marcan como `private`, lo que significa que solo sea accesible desde el código dentro del TableAdapter. A diferencia de la `Connection` propiedad, estos modificadores de acceso no son configurables. Por lo tanto, si tiene que exponga las propiedades de nivel de comandos para otras capas de la arquitectura debe usar el enfoque de la clase parcial descrito anteriormente para proporcionar un `public` método o propiedad que se lee o escribe en el `private` objetos de comando.
-
 
 ## <a name="summary"></a>Resumen
 

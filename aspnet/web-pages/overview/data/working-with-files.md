@@ -8,12 +8,12 @@ ms.date: 02/20/2014
 ms.assetid: eee916e4-ba4c-439a-a24e-68df7d45a569
 msc.legacyurl: /web-pages/overview/data/working-with-files
 msc.type: authoredcontent
-ms.openlocfilehash: 4a62cce3af57b507882744f948ce208becdb03ac
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: 3ff852232212ddda4930597731911be60c092667
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59382308"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65108943"
 ---
 # <a name="working-with-files-in-an-aspnet-web-pages-razor-site"></a>Trabajar con archivos en un sitio Web de ASP.NET Pages (Razor)
 
@@ -48,7 +48,6 @@ por [Tom FitzMacken](https://github.com/tfitzmac)
 >   
 > 
 > Este tutorial también funciona con WebMatrix 3.
-
 
 <a id="Creating_a_Text_File"></a>
 ## <a name="creating-a-text-file-and-writing-data-to-it"></a>Creación de un archivo de texto y escribir datos en él
@@ -145,7 +144,6 @@ Este procedimiento muestra cómo leer y mostrar los datos que creó en el ejempl
 > 
 > Puede usar Microsoft Excel para guardar los datos contenidos en una hoja de cálculo como un archivo delimitado por comas (*.csv* archivo). Al hacerlo, se guarda el archivo de texto sin formato, no en el formato de Excel. Cada fila de la hoja de cálculo está separado por un salto de línea del archivo de texto, y cada elemento de datos está separado por una coma. Puede usar el código que se muestra en el ejemplo anterior para leer un archivo delimitado por comas de Excel cambiando el nombre del archivo de datos en el código.
 
-
 <a id="Deleting_Files"></a>
 ## <a name="deleting-files"></a>Eliminación de archivos
 
@@ -154,7 +152,6 @@ Para eliminar archivos desde su sitio Web, puede usar el `File.Delete` método. 
 > [!NOTE] 
 > 
 > **Importante** en un sitio Web de producción, normalmente restringe quién se puede realizar cambios en los datos. Para obtener información acerca de cómo configurar la pertenencia y formas de autorizar a los usuarios realizar tareas en el sitio, consulte [agregar seguridad y la pertenencia a un sitio de ASP.NET Web Pages](https://go.microsoft.com/fwlink/?LinkId=202904).
-
 
 1. En el sitio Web, cree una subcarpeta denominada *imágenes*.
 2. Copia uno o más *.jpg* archivos en el *imágenes* carpeta.
@@ -255,7 +252,6 @@ En el ejemplo anterior, permiten a los usuarios cargar un archivo. Pero puede us
 
 <a id="Additional_Resources"></a>
 ## <a name="additional-resources"></a>Recursos adicionales
-
 
 [Trabajar con imágenes en un sitio de ASP.NET Web Pages](https://go.microsoft.com/fwlink/?LinkId=202897)
 

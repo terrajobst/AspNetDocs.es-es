@@ -8,12 +8,12 @@ ms.date: 05/04/2012
 ms.assetid: 37947d79-ab1e-4ba9-9017-52e7a2757414
 msc.legacyurl: /web-forms/overview/deployment/web-deployment-in-the-enterprise/configuring-parameters-for-web-package-deployment
 msc.type: authoredcontent
-ms.openlocfilehash: f738d1c0b3cd99bb6df5f8b24dca907fa0b31f4d
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: f04ace98d81a33053b10cab7e40dbd75a6c0992c
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59413105"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65108723"
 ---
 # <a name="configuring-parameters-for-web-package-deployment"></a>Configurar los parámetros para la implementación de paquetes web
 
@@ -23,7 +23,6 @@ por [Jason Lee](https://github.com/jrjlee)
 
 > Este tema describe cómo establecer los valores de parámetro, como nombres de aplicaciones web de Internet Information Services (IIS), las cadenas de conexión y puntos de conexión de servicio, al implementar un paquete web en un servidor web IIS remoto.
 
-
 Cuando crea un proyecto de aplicación web, la compilación y el proceso de empaquetado genera tres archivos de clave:
 
 - Un *.zip [nombre de proyecto]* archivo. Se trata de un paquete de implementación web para el proyecto de aplicación web. Este paquete contiene todos los ensamblados, archivos, scripts de base de datos y los recursos necesarios para volver a crear la aplicación web en un servidor web IIS remoto.
@@ -32,7 +31,6 @@ Cuando crea un proyecto de aplicación web, la compilación y el proceso de empa
 
 > [!NOTE]
 > Para obtener más información sobre el proceso de empaquetado y la compilación, consulte [compilar y empaquetar proyectos de aplicación Web](building-and-packaging-web-application-projects.md).
-
 
 El *SetParameters.xml* archivo se genera dinámicamente desde el archivo de proyecto de aplicación web y los archivos de configuración dentro de su proyecto. Cuando se compila y empaqueta el proyecto, la canalización de publicación de Web (WPP) detectará automáticamente muchas de las variables que están probables que cambien entre entornos de implementación, como el destino de la aplicación web de IIS y las cadenas de conexión de base de datos. Estos valores se parametrizada en el paquete de implementación web automáticamente y se agregan a la *SetParameters.xml* archivo. Por ejemplo, si agrega una cadena de conexión para el *web.config* archivo en el proyecto de aplicación web, el proceso de compilación lo detectará este cambio y agregará una entrada para el *SetParameters.xml* archivo en consecuencia.
 
@@ -48,9 +46,7 @@ Al compilar y empaquetar una aplicación web, el WPP parametrizar automáticamen
 
 Por ejemplo, si desea compilar y empaquetar la [Contact Manager](the-contact-manager-solution.md) solución de ejemplo sin tocar el proceso de parametrización de cualquier manera, el WPP esto generaría *ContactManager.Mvc.SetParameters.xml* archivo:
 
-
 [!code-xml[Main](configuring-parameters-for-web-package-deployment/samples/sample1.xml)]
-
 
 En este caso:
 
@@ -73,15 +69,11 @@ Estas propiedades se parametrizan de la manera más fácil consiste en Agregar u
 
 Si abre este archivo, verá que contiene un único **parámetro** entrada. La entrada usa una consulta XML Path Language (XPath) para localizar y parametrizar la URL del extremo del servicio ContactService Windows Communication Foundation (WCF) en el *web.config* archivo.
 
-
 [!code-xml[Main](configuring-parameters-for-web-package-deployment/samples/sample2.xml)]
-
 
 Además de parametrizar la URL del extremo en el paquete de implementación, el WPP también agrega una entrada correspondiente a la *SetParameters.xml* archivo que se genera junto con el paquete de implementación.
 
-
 [!code-xml[Main](configuring-parameters-for-web-package-deployment/samples/sample3.xml)]
-
 
 Si instala manualmente el paquete de implementación, el Administrador de IIS le solicitará la dirección del punto de conexión de servicio junto con las propiedades que se parametriza automáticamente. Si instala el paquete de implementación mediante la ejecución de la *. deploy.cmd* archivo, puede editar el *SetParameters.xml* archivo para proporcionar un valor para la dirección del punto de conexión de servicio junto con los valores de la propiedades que se parametriza automáticamente.
 
@@ -96,22 +88,16 @@ El [solución de ejemplo de Contact Manager](the-contact-manager-solution.md) il
 > [!NOTE]
 > Información general más amplia del modelo de archivo de proyecto en la solución de ejemplo y una introducción a los archivos de proyecto personalizadas en general, consulte [descripción del archivo de proyecto](understanding-the-project-file.md) y [descripción del proceso de compilación](understanding-the-build-process.md).
 
-
 En primer lugar, los valores de parámetro de interés se definen como propiedades en el archivo de proyecto específicos del entorno (por ejemplo, *Env-Dev.proj*).
 
-
 [!code-xml[Main](configuring-parameters-for-web-package-deployment/samples/sample4.xml)]
-
 
 > [!NOTE]
 > Para obtener instrucciones sobre cómo personalizar los archivos de proyecto específicos del entorno para sus propios entornos de servidor, consulte [configurar propiedades de implementación de un entorno de destino](../configuring-server-environments-for-web-deployment/configuring-deployment-properties-for-a-target-environment.md).
 
-
 A continuación, el *Publish.proj* archivo importa estas propiedades. Porque cada *SetParameters.xml* archivo está asociado con un *. deploy.cmd* archivo y se desea en última instancia, el archivo de proyecto para invocar cada *. deploy.cmd* archivo del proyecto archivo crea un MSBuild *elemento* para cada *. deploy.cmd* de archivo y define las propiedades de interés como *metadatos del elemento*.
 
-
 [!code-xml[Main](configuring-parameters-for-web-package-deployment/samples/sample5.xml)]
-
 
 En este caso:
 
@@ -122,9 +108,7 @@ En este caso:
 
 Por último, en el *Publish.proj* archivo, el **PublishWebPackages** usa como destino el **XmlPoke** tareas para modificar estos valores en el *SetParameters.xml* archivo.
 
-
 [!code-xml[Main](configuring-parameters-for-web-package-deployment/samples/sample6.xml)]
-
 
 Observará que cada **XmlPoke** tarea especifica cuatro valores de atributo:
 

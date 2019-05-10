@@ -8,17 +8,16 @@ ms.date: 10/05/2011
 ms.assetid: 5e542987-2f95-4254-a87f-5c27dc0a66aa
 msc.legacyurl: /web-forms/overview/older-versions-security/roles
 msc.type: chapter
-ms.openlocfilehash: 5d03432a19366c255a52622ad64805b3a633c4dc
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: 4f7536b7c552b598a2b01097806c354d05713e14
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59397518"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65106849"
 ---
 # <a name="aspnet-35---roles"></a>ASP.NET 3.5 - Roles
 
 > Esta serie de tutoriales describe cómo crear y eliminar roles, cómo asignar a usuarios a roles y cómo autorizar por rol.
-
 
 - [Crear y administrar roles (C#)](creating-and-managing-roles-cs.md)
 - [Asignar roles a los usuarios (C#)](assigning-roles-to-users-cs.md)

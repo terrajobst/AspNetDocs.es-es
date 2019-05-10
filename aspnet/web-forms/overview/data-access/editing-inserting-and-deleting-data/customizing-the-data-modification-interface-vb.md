@@ -8,12 +8,12 @@ ms.date: 07/17/2006
 ms.assetid: 4830d984-bd2c-4a08-bfe5-2385599f1f7d
 msc.legacyurl: /web-forms/overview/data-access/editing-inserting-and-deleting-data/customizing-the-data-modification-interface-vb
 msc.type: authoredcontent
-ms.openlocfilehash: 2d337aa2e0658692e1af213085b262daaed05a18
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: dbfafff1ed8f0467b0e4812add91d211b8a9b0ce
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59421919"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65108690"
 ---
 # <a name="customizing-the-data-modification-interface-vb"></a>Personalizar la interfaz de modificación de datos (VB)
 
@@ -23,18 +23,15 @@ por [Scott Mitchell](https://twitter.com/ScottOnWriting)
 
 > En este tutorial, echaremos un vistazo a cómo personalizar la interfaz de un control GridView editable reemplazando el cuadro de texto estándar y controles CheckBox con controles Web de entrada alternativos.
 
-
 ## <a name="introduction"></a>Introducción
 
 El BoundFields y CheckBoxFields utilizado por los controles GridView y DetailsView simplifican el proceso de modificación de datos debido a su capacidad para representar las interfaces de solo lectura, puede editables e insertables. Estas interfaces se pueden representar sin la necesidad de agregar cualquier código o marcado declarativo adicional. Sin embargo, las BoundField del CampoCasillaVerificación interfaces y carecen de la capacidad de personalización a menudo es necesario en escenarios del mundo real. Para personalizar la interfaz editable o insertable en GridView o DetailsView necesitamos usar TemplateField.
 
 En el [tutorial anterior](adding-validation-controls-to-the-editing-and-inserting-interfaces-vb.md) vimos cómo personalizar las interfaces de modificación de datos mediante la adición de controles Web de validación. En este tutorial, buscaremos en cómo personalizar los controles de Web de recopilación de datos reales, reemplazando el BoundField y cuadro de texto estándar del CampoCasillaVerificación y controles CheckBox con controles Web de entrada alternativos. En concreto, vamos a crear un control GridView editable que permite que un producto nombre, categoría, proveedor y estado no incluida en actualizarse. Cuando se edita una fila determinada, los campos de categoría y el proveedor se representarán como listas desplegables, que contiene el conjunto de categorías disponibles y proveedores para elegir. Además, vamos a reemplazar predeterminado del CampoCasillaVerificación CheckBox con un control RadioButtonList que ofrece dos opciones: "Activo" y "Suspendido".
 
-
 [![Interfaz de edición de GridView incluye listas desplegables y botones de opción](customizing-the-data-modification-interface-vb/_static/image2.png)](customizing-the-data-modification-interface-vb/_static/image1.png)
 
 **Figura 1**: La GridView edición interfaz incluye DropDownLists y botones de opción ([haga clic aquí para ver imagen en tamaño completo](customizing-the-data-modification-interface-vb/_static/image3.png))
-
 
 ## <a name="step-1-creating-the-appropriateupdateproductoverload"></a>Paso 1: Crear adecuado`UpdateProduct`sobrecargar
 
@@ -48,23 +45,19 @@ Para mayor brevedad, para esta sobrecarga en particular he omitido la comprobaci
 
 El código siguiente muestra la nueva `UpdateProduct` sobrecarga en el `ProductsBLL` clase:
 
-
 [!code-vb[Main](customizing-the-data-modification-interface-vb/samples/sample1.vb)]
 
 ## <a name="step-2-crafting-the-editable-gridview"></a>Paso 2: Diseñar el control GridView Editable
 
 Con el `UpdateProduct` agrega sobrecarga, ya estamos listos para crear nuestro control GridView editable. Abra el `CustomizedUI.aspx` página en el `EditInsertDelete` carpeta y agregue un control GridView al diseñador. A continuación, cree un nuevo origen ObjectDataSource de etiqueta inteligente de GridView. Configurar el origen ObjectDataSource para recuperar la información de productos a través de la `ProductBLL` la clase `GetProducts()` método y actualizar los datos de producto mediante el `UpdateProduct` sobrecarga que acabamos de crear. En las pestañas INSERT y DELETE, seleccionar (ninguno) en las listas de la lista desplegable.
 
-
 [![Configurar el origen ObjectDataSource para utilizar la sobrecarga de UpdateProduct acaba de crear](customizing-the-data-modification-interface-vb/_static/image5.png)](customizing-the-data-modification-interface-vb/_static/image4.png)
 
 **Figura 2**: Configurar el origen ObjectDataSource que se usarán el `UpdateProduct` sobrecargar acaba de crear ([haga clic aquí para ver imagen en tamaño completo](customizing-the-data-modification-interface-vb/_static/image6.png))
 
-
 Como hemos visto a lo largo de los tutoriales de modificación de datos, la sintaxis declarativa para el origen ObjectDataSource creado por Visual Studio asigna el `OldValuesParameterFormatString` propiedad `original_{0}`. Esto, por supuesto, no funcionará con la capa de lógica empresarial desde nuestros métodos no espera que el original `ProductID` valor pasarse. Por lo tanto, como hemos hecho en los tutoriales anteriores, dedique un momento para quitar esta asignación de propiedad de la sintaxis declarativa o, en su lugar, establezca el valor de esta propiedad `{0}`.
 
 Después de este cambio, el marcado declarativo de ObjectDataSource debe ser similar al siguiente:
-
 
 [!code-aspx[Main](customizing-the-data-modification-interface-vb/samples/sample2.aspx)]
 
@@ -79,25 +72,20 @@ Mientras se configura el origen ObjectDataSource para actualizar solo un subconj
 
 Después de estos cambios, el diseñador tendrá un aspecto similar a la figura 3, con sintaxis declarativa de GridView que se muestra a continuación.
 
-
 [![Quitar los campos innecesarios del control GridView](customizing-the-data-modification-interface-vb/_static/image8.png)](customizing-the-data-modification-interface-vb/_static/image7.png)
 
 **Figura 3**: Quitar los campos innecesarios del control GridView ([haga clic aquí para ver imagen en tamaño completo](customizing-the-data-modification-interface-vb/_static/image9.png))
-
 
 [!code-aspx[Main](customizing-the-data-modification-interface-vb/samples/sample3.aspx)]
 
 En este momento el comportamiento de solo lectura de GridView es completando. Cuando se visualizan los datos, cada producto se representa como una fila en el control GridView que muestra el nombre del producto, categoría, proveedor y no incluye el estado.
 
-
 [![Interfaz de solo lectura de GridView completada](customizing-the-data-modification-interface-vb/_static/image11.png)](customizing-the-data-modification-interface-vb/_static/image10.png)
 
 **Figura 4**: Interfaz de solo lectura de GridView es Complete ([haga clic aquí para ver imagen en tamaño completo](customizing-the-data-modification-interface-vb/_static/image12.png))
 
-
 > [!NOTE]
 > Como se describe en [una visión general de insertar, actualizar y eliminar datos tutorial](an-overview-of-inserting-updating-and-deleting-data-cs.md), es sumamente importante que el control GridView s estado de vista habilitado (comportamiento predeterminado). Si establece la s GridView `EnableViewState` propiedad `false`, corre el riesgo de tener usuarios simultáneos que se eliminen o modifiquen de forma no intencionada de registros. Consulte [advertencia: Simultaneidad emitir con ASP.NET 2.0 GridView y DetailsView/FormViews que compatibilidad con la edición o eliminación y cuyo estado de vista está deshabilitado](http://scottonwriting.net/sowblog/posts/10054.aspx) para obtener más información.
-
 
 ## <a name="step-3-using-a-dropdownlist-for-the-category-and-supplier-editing-interfaces"></a>Paso 3: Usando DropDownList para la categoría y la edición de las Interfaces de proveedor
 
@@ -116,61 +104,48 @@ Para proporcionar este comportamiento, necesitamos convertir el `SupplierName` y
 
 Convierta el `SupplierName` y `CategoryName` BoundFields en TemplateFields por: al hacer clic en el vínculo Editar columnas de etiqueta inteligente de GridView; seleccione el BoundField en la lista en la parte inferior izquierda; y haga clic en el "convertir este campo en un Vínculo TemplateField". El proceso de conversión creará TemplateField con ambos un `ItemTemplate` y un `EditItemTemplate`, tal y como se muestra en la sintaxis declarativa siguiente:
 
-
 [!code-aspx[Main](customizing-the-data-modification-interface-vb/samples/sample4.aspx)]
 
 Puesto que el BoundField se marcó como de solo lectura, tanto el `ItemTemplate` y `EditItemTemplate` contienen una etiqueta de Web control cuya `Text` propiedad está enlazada al campo de datos aplicable (`CategoryName`, en la sintaxis anterior). Tenemos que modificar el `EditItemTemplate`, reemplazando el control Web de etiqueta con un control DropDownList.
 
 Como hemos visto en los tutoriales anteriores, se puede editar la plantilla a través del diseñador o directamente desde la sintaxis declarativa. Para editar a través del diseñador, haga clic en el vínculo Editar plantillas de etiqueta inteligente de GridView y elegir trabajar con el campo de categoría `EditItemTemplate`. Quitar el control Web Label y reemplazarlo con un control DropDownList, establecer la propiedad de Id. de DropDownList en `Categories`.
 
-
 [![Quite el cuadro de texto y agregue un DropDownList a EditItemTemplate](customizing-the-data-modification-interface-vb/_static/image14.png)](customizing-the-data-modification-interface-vb/_static/image13.png)
 
 **Figura 5**: Quite el cuadro de texto y agregue un DropDownList para la `EditItemTemplate` ([haga clic aquí para ver imagen en tamaño completo](customizing-the-data-modification-interface-vb/_static/image15.png))
 
-
 A continuación, se debe rellenar la DropDownList con las categorías disponibles. Haga clic en el vínculo Elegir origen de datos de etiqueta inteligente de DropDownList y optar por crear un nuevo origen ObjectDataSource denominado `CategoriesDataSource`.
-
 
 [![Crear un nuevo Control ObjectDataSource denominado CategoriesDataSource](customizing-the-data-modification-interface-vb/_static/image17.png)](customizing-the-data-modification-interface-vb/_static/image16.png)
 
 **Figura 6**: Crear un nuevo Control ObjectDataSource denominado `CategoriesDataSource` ([haga clic aquí para ver imagen en tamaño completo](customizing-the-data-modification-interface-vb/_static/image18.png))
 
-
 Para que este origen ObjectDataSource devuelven todas las categorías, enlazarlo a la `CategoriesBLL` la clase `GetCategories()` método.
-
 
 [![Enlazar el origen ObjectDataSource GetCategories() método del CategoriesBLL](customizing-the-data-modification-interface-vb/_static/image20.png)](customizing-the-data-modification-interface-vb/_static/image19.png)
 
 **Figura 7**: Enlazar el origen ObjectDataSource a los `CategoriesBLL`del `GetCategories()` método ([haga clic aquí para ver imagen en tamaño completo](customizing-the-data-modification-interface-vb/_static/image21.png))
 
-
 Por último, configure la configuración de la DropDownList que la `CategoryName` campo se muestra en cada DropDownList `ListItem` con el `CategoryID` utilizado como el valor del campo.
-
 
 [![Tiene muestra el campo de nombre de categoría y el Id. de categoría que se utiliza como el valor](customizing-the-data-modification-interface-vb/_static/image23.png)](customizing-the-data-modification-interface-vb/_static/image22.png)
 
 **Figura 8**: Tiene la `CategoryName` muestra el campo y el `CategoryID` utiliza como el valor ([haga clic aquí para ver imagen en tamaño completo](customizing-the-data-modification-interface-vb/_static/image24.png))
 
-
 Después de realizar estos cambios el marcado declarativo para la `EditItemTemplate` en el `CategoryName` TemplateField incluirá DropDownList y un origen ObjectDataSource:
-
 
 [!code-aspx[Main](customizing-the-data-modification-interface-vb/samples/sample5.aspx)]
 
 > [!NOTE]
 > DropDownList en el `EditItemTemplate` debe tener el estado de vista habilitado. Pronto agregaremos sintaxis de enlace de datos a la sintaxis declarativa de DropDownList y comandos de enlace de datos como `Eval()` y `Bind()` solo puede aparecer en los controles cuyo estado de vista está habilitado.
 
-
 Repita estos pasos para agregar un DropDownList denominado `Suppliers` a la `SupplierName` del TemplateField `EditItemTemplate`. Esto implica agregar DropDownList para la `EditItemTemplate` y la creación de ObjectDataSource otro. El `Suppliers` ObjectDataSource de DropDownList, sin embargo, debe configurarse para invocar el `SuppliersBLL` la clase `GetSuppliers()` método. Además, configurar el `Suppliers` DropDownList para mostrar el `CompanyName` campo y use la `SupplierID` campo como el valor de su `ListItem` s.
 
 Después de agregar las listas desplegables para los dos `EditItemTemplate` s, cargue la página en un explorador y haga clic en el botón Editar para el producto de Cajun Seasoning del Chef Antón. Como se muestra en la figura 9, las columnas de categoría y el proveedor del producto se representan como listas desplegables que contiene las categorías disponibles y los proveedores para elegir. Sin embargo, tenga en cuenta que el *primera* elementos en ambas listas desplegables seleccionados de manera predeterminada (bebidas para la categoría) y líquidos exóticos como el proveedor, aunque Cajun Seasoning de Chef Antón es un sazonadoras proporcionado por la nueva Orleans Cajun Terrenales.
 
-
 [![Se selecciona el primer elemento en la lista desplegable se muestran de forma predeterminada](customizing-the-data-modification-interface-vb/_static/image26.png)](customizing-the-data-modification-interface-vb/_static/image25.png)
 
 **Figura 9**: Se selecciona el primer elemento en la lista desplegable se muestran de forma predeterminada ([haga clic aquí para ver imagen en tamaño completo](customizing-the-data-modification-interface-vb/_static/image27.png))
-
 
 Además, si hace clic en la actualización, se dará cuenta de que el producto `CategoryID` y `SupplierID` valores se establecen en `NULL`. Ambas opciones no deseadas de los comportamientos se deben a que las listas desplegables en el `EditItemTemplate` s no están enlazados a los campos de datos de los datos subyacentes del producto.
 
@@ -180,19 +155,15 @@ Para disponer de categoría del producto editado y el proveedor establece listas
 
 Como alternativa, puede establecer databindings de DropDownList editar la plantilla a través del diseñador y haciendo clic en el vínculo Editar DataBindings de etiqueta inteligente de DropDownList. A continuación, indicar que la `SelectedValue` propiedad debe enlazarse a la `CategoryID` campo utilizando el enlace de datos bidireccional (consulte la figura 10). Repita el proceso declarativo o diseñador para enlazar el `SupplierID` campo de datos a la `Suppliers` DropDownList.
 
-
 [![Enlazar el CategoryID para la propiedad SelectedValue de DropDownList mediante enlace de datos bidireccional](customizing-the-data-modification-interface-vb/_static/image29.png)](customizing-the-data-modification-interface-vb/_static/image28.png)
 
 **Figura 10**: Enlazar el `CategoryID` a los controles de DropDownList `SelectedValue` enlace de datos bidireccional utilizando de propiedad ([haga clic aquí para ver imagen en tamaño completo](customizing-the-data-modification-interface-vb/_static/image30.png))
 
-
 Una vez que se han aplicado los enlaces para el `SelectedValue` propiedades de los dos DropDownLists, las columnas de categoría y el proveedor del producto editado será valores actuales del producto. Al hacer clic en la actualización, el `CategoryID` y `SupplierID` valores de elemento de lista desplegable seleccionado se pasará a la `UpdateProduct` método. Figura 11 muestra el tutorial después de han agregado las instrucciones de enlace de datos; Tenga en cuenta cómo los elementos de lista desplegable seleccionado para Cajun Seasoning de Chef Antón están correctamente sazonadoras y Nueva Orleans Cajun terrenales.
-
 
 [![El producto Editar categoría actual y los valores del proveedor se seleccionan de forma predeterminada](customizing-the-data-modification-interface-vb/_static/image32.png)](customizing-the-data-modification-interface-vb/_static/image31.png)
 
 **Figura 11**: El producto Editar categoría actual y los valores del proveedor se seleccionan de forma predeterminada ([haga clic aquí para ver imagen en tamaño completo](customizing-the-data-modification-interface-vb/_static/image33.png))
-
 
 ## <a name="handlingnullvalues"></a>Control`NULL`valores
 
@@ -205,7 +176,6 @@ Con el fin de admitir `NULL` `CategoryID` y `SupplierID` valores, tenemos que ag
 
 Empiece por establecer 'dos DropDownLists `AppendDataBoundItems` propiedad `True`. A continuación, agregue el `NULL` `ListItem` agregando el siguiente `<asp:ListItem>` elemento para cada DropDownList para que busca el marcado declarativo, como:
 
-
 [!code-aspx[Main](customizing-the-data-modification-interface-vb/samples/sample6.aspx)]
 
 He elegido usar "(None)" como el valor de texto para este `ListItem`, pero puede cambiarlo para que también sea una cadena en blanco si lo desea.
@@ -213,16 +183,13 @@ He elegido usar "(None)" como el valor de texto para este `ListItem`, pero puede
 > [!NOTE]
 > Como hemos visto en el *filtrado de maestro y detalles con un DropDownList* tutorial, `ListItem` s se pueden agregar a un DropDownList a través del diseñador, haga clic en la DropDownList `Items` propiedad en la ventana Propiedades (que se mostrará el `ListItem` Editor de la colección). Sin embargo, no olvide agregar el `NULL` `ListItem` para este tutorial a través de la sintaxis declarativa. Si usas el `ListItem` Editor de colecciones, la sintaxis declarativa generada omitirá el `Value` valor por completo cuando asigna una cadena en blanco, creando el marcado declarativo, como: `<asp:ListItem>(None)</asp:ListItem>`. Aunque esto puede parecer inofensivo, el valor que falta hace que la DropDownList usar el `Text` valor de propiedad en su lugar. Que significa que si esto `NULL` `ListItem` está seleccionada, el valor "(None)" se volverá a intentar que se asignará a la `CategoryID`, lo que producirá una excepción. Si se establece explícitamente `Value=""`, un `NULL` valor se asignará a `CategoryID` cuando el `NULL` `ListItem` está seleccionada.
 
-
 Repita estos pasos para proveedores DropDownList.
 
 Con esto adicionales `ListItem`, ahora puede asignar la interfaz de edición `NULL` valores a un producto `CategoryID` y `SupplierID` campos, tal como se muestra en la figura 12.
 
-
 [![Elija (ninguno) para asignar un valor NULL para la categoría o el proveedor de un producto](customizing-the-data-modification-interface-vb/_static/image35.png)](customizing-the-data-modification-interface-vb/_static/image34.png)
 
 **Figura 12**: Elija (ninguno) para asignar un `NULL` valor de categoría o el proveedor de un producto ([haga clic aquí para ver imagen en tamaño completo](customizing-the-data-modification-interface-vb/_static/image36.png))
-
 
 ## <a name="step-4-using-radiobuttons-for-the-discontinued-status"></a>Paso 4: Uso de botones de opción para el estado no incluido
 
@@ -232,11 +199,9 @@ Convierta el `Discontinued` CampoCasillaVerificación en TemplateField, lo cual 
 
 Reemplace la casilla de verificación en dos la `ItemTemplate` y `EditItemTemplate` con un control RadioButtonList, establecer ambas RadioButtonList `ID` propiedades a `DiscontinuedChoice`. A continuación, indicar que la RadioButtonList debe contener dos botones de radio, uno con la etiqueta "activo" en cada uno con un valor de "False" y otro con la etiqueta "Suspendido" con un valor "True". Para lograr esto puede escribir el `<asp:ListItem>` elementos directamente a través de la sintaxis declarativa o use el `ListItem` Editor de la colección desde el diseñador. Figura 13 se muestra el `ListItem` Editor de la colección después de las dos opciones de botón de radio se han especificado.
 
-
 [![Agregar opciones activas y discontinuas a RadioButtonList](customizing-the-data-modification-interface-vb/_static/image38.png)](customizing-the-data-modification-interface-vb/_static/image37.png)
 
 **Figura 13**: Agregar activo y no incluye opciones para RadioButtonList ([haga clic aquí para ver imagen en tamaño completo](customizing-the-data-modification-interface-vb/_static/image39.png))
-
 
 Desde RadioButtonList en el `ItemTemplate` no debe ser editable, establecer su `Enabled` propiedad `False`, dejando el `Enabled` propiedad a `True` (valor predeterminado) para RadioButtonList en el `EditItemTemplate`. Esto hará que los botones de radio en la fila no editado como de solo lectura, pero permitirá al usuario cambiar los valores de botón de opción para la fila editada.
 
@@ -244,20 +209,16 @@ Necesitamos asignar los controles RadioButtonList `SelectedValue` propiedades pa
 
 Después de agregar los dos RadioButtonList y configurarlos, los `Discontinued` marcado declarativo del TemplateField debería ser similar a:
 
-
 [!code-aspx[Main](customizing-the-data-modification-interface-vb/samples/sample7.aspx)]
 
 Con estos cambios, la `Discontinued` columna se ha transformado en una lista de casillas de verificación para obtener una lista de pares de botón de radio (vea la figura 14). Al editar un producto, se selecciona el botón de radio correspondiente y se puede actualizar el estado del producto no incluida seleccionando el botón y hacer clic en actualizar.
-
 
 [![Las casillas de verificación no incluidas han sido reemplazados por pares de botón de Radio](customizing-the-data-modification-interface-vb/_static/image41.png)](customizing-the-data-modification-interface-vb/_static/image40.png)
 
 **Figura 14**: El no incluye las casillas de verificación se reemplazaron por pares de botón de Radio ([haga clic aquí para ver imagen en tamaño completo](customizing-the-data-modification-interface-vb/_static/image42.png))
 
-
 > [!NOTE]
 > Puesto que la `Discontinued` columna en el `Products` base de datos no puede tener `NULL` valores, no necesitamos que preocuparse acerca de cómo capturar `NULL` información en la interfaz. If, sin embargo, `Discontinued` podría contener la columna `NULL` radio de los valores que queremos agregar un tercer botón a la lista con sus `Value` establecido en una cadena vacía (`Value=""`), al igual que con la categoría y proveedor listas desplegables.
-
 
 ## <a name="summary"></a>Resumen
 

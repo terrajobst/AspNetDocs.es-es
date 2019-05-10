@@ -8,12 +8,12 @@ ms.date: 06/02/2008
 ms.assetid: a973ed3e-400c-4925-ace2-0b086b479301
 msc.legacyurl: /web-forms/overview/ajax-control-toolkit/confirmbutton/using-a-confirmbutton-in-a-repeater-cs
 msc.type: authoredcontent
-ms.openlocfilehash: 1ab979f220c06d22f51931c7c00fc4d273731f85
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: 783562bb1a8790e1254dab5bff92da480a6fd56d
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59413950"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65109151"
 ---
 # <a name="using-a-confirmbutton-in-a-repeater-c"></a>Usar un ConfirmButton en un control Repeater (C#)
 
@@ -22,7 +22,6 @@ por [Christian Wenz](https://github.com/wenz)
 [Descargar código](http://download.microsoft.com/download/8/6/d/86dea6c6-bb92-4fa6-aa14-f8c0f82100f5/ConfirmButton1.cs.zip) o [descargar PDF](http://download.microsoft.com/download/b/6/a/b6ae89ee-df69-4c87-9bfb-ad1eb2b23373/confirmbutton1CS.pdf)
 
 > El extensor ConfirmButton de AJAX Control Toolkit crea un Sí o ningún elemento emergente cuando el usuario hace clic en un botón (incluido el control LinkButton). Solo si se hace clic en Sí, se ejecuta la acción del botón, en caso contrario, se ha cancelado. Esto también es posible en un control repeater.
-
 
 ## <a name="overview"></a>Información general
 
@@ -45,7 +44,6 @@ A continuación, se requiere un origen de datos. Por simplicidad, se recuperan s
 A continuación, se puede usar este origen de datos dentro de un control repeater. Como es habitual, el `DataBinder.Eval()` método recupera datos del origen de datos. El `ConfirmButtonExtender` control debe colocarse dentro de la `<ItemTemplate>` sección del repetidor para que aparezca para cada entrada en el origen de datos.
 
 [!code-aspx[Main](using-a-confirmbutton-in-a-repeater-cs/samples/sample3.aspx)]
-
 
 [![El botón Confirmar aparece junto a cada entrada del origen de datos](using-a-confirmbutton-in-a-repeater-cs/_static/image2.png)](using-a-confirmbutton-in-a-repeater-cs/_static/image1.png)
 

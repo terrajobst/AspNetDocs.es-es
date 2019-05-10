@@ -8,12 +8,12 @@ ms.date: 05/04/2012
 ms.assetid: b5b86e03-b8ed-46e6-90fa-e1da88ef34e9
 msc.legacyurl: /web-forms/overview/deployment/configuring-server-environments-for-web-deployment/configuring-deployment-properties-for-a-target-environment
 msc.type: authoredcontent
-ms.openlocfilehash: 74fc0f4cb7d3ed7d1ef091cdb8fa829091af5a7a
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: 9742be7d718384c1b108d5f2c0c43e8e8d4fe8a9
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59388691"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65108668"
 ---
 # <a name="configuring-deployment-properties-for-a-target-environment"></a>Configurar las propiedades de implementación de un entorno de destino
 
@@ -22,7 +22,6 @@ por [Jason Lee](https://github.com/jrjlee)
 [Descargar PDF](https://msdnshared.blob.core.windows.net/media/MSDNBlogsFS/prod.evol.blogs.msdn.com/CommunityServer.Blogs.Components.WeblogFiles/00/00/00/63/56/8130.DeployingWebAppsInEnterpriseScenarios.pdf)
 
 > Este tema describe cómo configurar las propiedades específicas del entorno para implementar la solución Contact Manager de ejemplo en un entorno de destino específico.
-
 
 En este tema forma parte de una serie de tutoriales que se basa en los requisitos de implementación empresarial de una compañía ficticia denominada Fabrikam, Inc. Esta serie de tutoriales usa una solución de ejemplo&#x2014;el [Contact Manager](../web-deployment-in-the-enterprise/the-contact-manager-solution.md) solución&#x2014;para representar una aplicación web con un nivel realista de complejidad, incluida una aplicación ASP.NET MVC 3, una comunicación de Windows Servicio Foundation (WCF) y un proyecto de base de datos.
 
@@ -64,7 +63,6 @@ Para implementar la solución Contact Manager en su propio entorno de destino, p
 
 Esta tabla describen el propósito de cada propiedad en el archivo de proyecto específicos del entorno de ejemplo, *Env Dev.proj*y se proporcionan algunas directrices sobre los valores que debe proporcionar.
 
-
 |                                                        Nombre de la propiedad                                                         |                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        Detalles                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         |
 |------------------------------------------------------------------------------------------------------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 |              <strong>MSDeployComputerName</strong> el nombre del destino web server o el servicio de punto de conexión.               |                                                                                                                                                                                                                                              Si va a implementar el servicio del agente remoto en el servidor web de destino, puede especificar el nombre del equipo de destino (por ejemplo, <strong>TESTWEB1</strong> o <strong>TESTWEB1.fabrikam.net</strong>), o puede especificar el servidor remoto punto de conexión del agente (por ejemplo, `http://TESTWEB1/MSDEPLOYAGENTSERVICE`). La implementación funciona del mismo modo en cada caso. Si va a implementar en el controlador de implementación Web en el servidor web de destino, debe especificar el punto de conexión de servicio e incluyen el nombre del sitio Web IIS como un parámetro de cadena de consulta (por ejemplo, `https://STAGEWEB1:8172/MSDeploy.axd?site=DemoSite`).                                                                                                                                                                                                                                              |
@@ -87,9 +85,7 @@ En este ejemplo:
 - Está indicando a Web Deploy utilice autenticación NTLM. Web Deploy ejecutará con las credenciales que usó para invocar Microsoft Build Engine (MSBuild).
 - Usa la autenticación integrada para implementar la **ContactManager** TESTDB1 de base de datos. La base de datos se implementarán mediante las credenciales que usó para invocar MSBuild.
 
-
 [!code-xml[Main](configuring-deployment-properties-for-a-target-environment/samples/sample1.xml)]
-
 
 ### <a name="example-2x2014deployment-to-the-web-deploy-handler-endpoint"></a>Ejemplo 2&#x2014;punto de conexión del controlador de implementación de implementación en la Web
 
@@ -100,9 +96,7 @@ En este ejemplo:
 - Está especificando que Web Deploy debe suplantar la cuenta FABRIKAM\stagingdeployer en el equipo remoto.
 - Utiliza la autenticación de SQL Server para implementar el **ContactManager** STAGEDB1 base de datos.
 
-
 [!code-xml[Main](configuring-deployment-properties-for-a-target-environment/samples/sample2.xml)]
-
 
 ## <a name="conclusion"></a>Conclusión
 

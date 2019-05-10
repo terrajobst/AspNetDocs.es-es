@@ -8,15 +8,14 @@ ms.date: 05/18/2012
 ms.assetid: 79eca52c-e7ad-44ab-a3e4-d8093e9da5a7
 msc.legacyurl: /web-pages/pluralsight
 msc.type: content
-ms.openlocfilehash: 78e4d3aedd183e8ec91a8c833e4b60894ae214ec
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: 5485b68f8ed87952a6d09e1880e6d8ce39eea73a
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59401197"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65108564"
 ---
 # <a name="webmatrix-and-web-pages-video-training-from-pluralsight"></a>Vídeo de aprendizaje de WebMatrix y Web Pages de Pluralsight
-
 
 > [!NOTE] 
 > WebMatrix no se recomienda como un entorno de desarrollo integrado para ASP.NET Web Pages. Use [Visual Studio](xref:aspnet/web-pages/overview/getting-started/program-asp-net-web-pages-in-visual-studio) o [código de Visual Studio](https://code.visualstudio.com/).
@@ -32,11 +31,9 @@ ms.locfileid: "59401197"
 - [Control de código fuente](https://pluralsight.com/training/Player?author=matt-milner&name=webmatrix-introduction-m9&mode=live&clip=0&course=webmatrix-introduction)
 - [Sitios Web móviles](https://pluralsight.com/training/Player?author=matt-milner&name=webmatrix-introduction-m10&mode=live&clip=0&course=webmatrix-introduction)
 
-
 "Este curso registrado por Matt Milner para Pluralsight es una excelente manera de obtener todos los detalles que necesita para crear aplicaciones dinámicas controladas por datos con la tecnología ASP.NET Web Pages, sino también la nueva sintaxis Razor eficaces. Big gracias a Pluralsight para este origen disponible. El Reproductor de vídeo, el contenido y el flujo está realmente bien hecho. Lo animo a que revise ahora!"
 
 Scott Hanselman, jefe de programas de entidad de seguridad de plataforma Web y las herramientas de Azure, Microsoft
-
 
 ![pluralsight-logo-playbutton](pluralsight/_static/image1.png)
 

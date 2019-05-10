@@ -8,12 +8,12 @@ ms.date: 1/04/2019
 ms.assetid: 64a491a8-0ed6-4c2f-9c1c-412962eb6006
 msc.legacyurl: /web-forms/overview/getting-started/getting-started-with-aspnet-45-web-forms/display_data_items_and_details
 msc.type: authoredcontent
-ms.openlocfilehash: 54896da5565c9383f13fc352da26bbdc3cb63a76
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: 130c9ffd29df612dac5bb954830a2eb9b738aaf0
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59405370"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65109621"
 ---
 # <a name="display-data-items-and-details"></a>Mostrar los elementos de datos y detalles
 
@@ -97,7 +97,6 @@ Este código muestra la `GetProducts` método que el **ListView** del control `I
 
 Cuando se pasa una categoría válida como una cadena de consulta a la página, los resultados de la consulta se limitan a esos productos en la base de datos que coinciden con la `categoryId` valor. Por ejemplo, si la *ProductsList.aspx* dirección URL de página es esto:
 
-
 [!code-console[Main](display_data_items_and_details/samples/sample4.cmd)]
 
 La página muestra solo los productos donde la `categoryId` es igual a `1`.
@@ -164,7 +163,6 @@ Ahora puede ejecutar la aplicación para ver un producto individual que se muest
     ![Mostrar datos de elementos y detalles - productos](display_data_items_and_details/_static/image4.png)
     
 4. Cierre el explorador.
-
 
 ## <a name="additional-resources"></a>Recursos adicionales
 

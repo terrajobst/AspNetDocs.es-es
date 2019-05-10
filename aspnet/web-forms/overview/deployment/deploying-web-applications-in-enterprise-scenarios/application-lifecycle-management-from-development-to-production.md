@@ -8,12 +8,12 @@ ms.date: 05/04/2012
 ms.assetid: f97a1145-6470-4bca-8f15-ccfb25fb903c
 msc.legacyurl: /web-forms/overview/deployment/deploying-web-applications-in-enterprise-scenarios/application-lifecycle-management-from-development-to-production
 msc.type: authoredcontent
-ms.openlocfilehash: 3b7f154936222c85bd7897ea10cbb5ae9d1aa670
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: 230cf4393db0ee19cfc42ed54359d61e7926a49d
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59408945"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65109284"
 ---
 # <a name="application-lifecycle-management-from-development-to-production"></a>Administración del ciclo de vida de las aplicaciones: De desarrollo a producción
 
@@ -27,7 +27,6 @@ por [Jason Lee](https://github.com/jrjlee)
 > 
 > > [!NOTE]
 > > Por simplicidad, este tema no habla de actualización de bases de datos como parte del proceso de implementación. Sin embargo, realizar actualizaciones incrementales en las características de las bases de datos es un requisito para muchos escenarios de implementación empresarial, y puede encontrar instrucciones sobre cómo lograr esto más adelante en esta serie de tutoriales. Para obtener más información, consulte [implementar proyectos de base de datos](../web-deployment-in-the-enterprise/deploying-database-projects.md).
-
 
 ## <a name="overview"></a>Información general
 
@@ -94,7 +93,6 @@ Para ejecutar la implementación, un usuario ejecuta el *Publish.proj* de archiv
 > El funcionamiento de estos archivos de proyecto personalizadas es independiente del mecanismo de que usar para invocar MSBuild. Por ejemplo, puede usar la línea de comandos de MSBuild directamente, como se describe en [descripción del archivo de proyecto](../web-deployment-in-the-enterprise/understanding-the-project-file.md). Puede ejecutar los archivos de proyecto desde un archivo de comandos, como se describe en [crear y ejecutar un archivo de comandos de implementación](../web-deployment-in-the-enterprise/creating-and-running-a-deployment-command-file.md). Como alternativa, puede ejecutar los archivos de proyecto desde una definición de compilación en TFS, como se describe en [crear una definición de compilación que admite la implementación](../configuring-team-foundation-server-for-web-deployment/creating-a-build-definition-that-supports-deployment.md).  
 > En cada caso, el resultado final es el mismo&#x2014;MSBuild ejecuta el archivo de proyecto combinadas y la solución se implementa en el entorno de destino. Esto le brinda un gran flexibilidad en cómo desencadena el proceso de publicación.
 
-
 Una vez que ha creado los archivos de proyecto personalizados, Matt agregarlos a una carpeta de soluciones y comprueba en el control de código fuente.
 
 ### <a name="create-build-definitions"></a>Crear definiciones de compilación
@@ -125,15 +123,12 @@ El resultado final es que si la solución se compila correctamente y pasa las pr
 
 El **DeployToTest** suministros de definición de compilación de estos argumentos a MSBuild:
 
-
 [!code-console[Main](application-lifecycle-management-from-development-to-production/samples/sample1.cmd)]
-
 
 El **DeployOnBuild = true** y **DeployTarget = paquete** propiedades se utilizan cuando Team Build compila los proyectos dentro de la solución. Cuando el proyecto es un proyecto de aplicación web, estas propiedades indicar a MSBuild para crear un paquete de implementación web para el proyecto. El **TargetEnvPropsFile** propiedad indica la *Publish.proj* dónde encontrar el archivo de proyecto específicos del entorno para importar de archivo.
 
 > [!NOTE]
 > Para obtener un tutorial detallado sobre cómo crear una definición de compilación como esta, consulte [crear una definición de compilación que admite la implementación](../configuring-team-foundation-server-for-web-deployment/creating-a-build-definition-that-supports-deployment.md).
-
 
 El *Publish.proj* archivo contiene los destinos que compila cada proyecto de la solución. Sin embargo, también incluye la lógica condicional que omite estos compilación destinos si está ejecutando el archivo en Team Build. Esto le permite aprovechar la funcionalidad de compilación adicionales Team Build ofrece, como la capacidad de ejecutar pruebas unitarias. Si la compilación de soluciones o la unidad de pruebas producen un error, el *Publish.proj* archivo no se ejecutará y no se implementará la aplicación.
 
@@ -164,9 +159,7 @@ Este es el proceso de alto nivel para una implementación en el entorno de ensay
 
 El **DeployToStaging** suministros de definición de compilación de estos argumentos a MSBuild:
 
-
 [!code-console[Main](application-lifecycle-management-from-development-to-production/samples/sample2.cmd)]
-
 
 El **TargetEnvPropsFile** propiedad indica la *Publish.proj* dónde encontrar el archivo de proyecto específicos del entorno para importar de archivo. El **OutputRoot** propiedad invalida el valor integrado e indica la ubicación de la carpeta de compilación que contiene los recursos que desea implementar. Cuando Rob pone en cola la compilación, usa el **parámetros** tab para proporcionar un valor actualizado de la **OutputRoot** propiedad.
 
@@ -175,24 +168,19 @@ El **TargetEnvPropsFile** propiedad indica la *Publish.proj* dónde encontrar el
 > [!NOTE]
 > Para obtener más información sobre cómo crear una definición de compilación como esta, consulte [implementar una compilación específica](../configuring-team-foundation-server-for-web-deployment/deploying-a-specific-build.md).
 
-
 El **DeployToStaging-WhatIf** definición de compilación contiene la misma lógica de implementación como el **DeployToStaging** definición de compilación. Sin embargo, incluye el argumento adicional **WhatIf = true**:
 
-
 [!code-console[Main](application-lifecycle-management-from-development-to-production/samples/sample3.cmd)]
-
 
 Dentro de la *Publish.proj* archivo, el **WhatIf** propiedad indica que se deben publicar todos los recursos de implementación en modo "what if". En otras palabras, los archivos de registro se generan como si hubiera continué la implementación, pero nada cambia realmente en el entorno de destino. Esto le permite evaluar el impacto de una implementación propuesto&#x2014;en particular, lo que se agregarán, lo que se actualizará y lo que se eliminará&#x2014;antes de realizar los cambios.
 
 > [!NOTE]
 > Para obtener más información sobre cómo configurar las implementaciones de "what if", consulte [realizando una implementación "What If"](../advanced-enterprise-web-deployment/performing-a-what-if-deployment.md).
 
-
 Cuando se haya implementado la aplicación en el servidor web principal en el entorno de ensayo, el WFF sincronizará automáticamente la aplicación en todos los servidores de la granja de servidores.
 
 > [!NOTE]
 > Para obtener más información sobre cómo configurar el WFF para sincronizar los servidores web, consulte [crear una granja de servidores con el marco de granja de servidores Web](../configuring-server-environments-for-web-deployment/creating-a-server-farm-with-the-web-farm-framework.md).
-
 
 ## <a name="deployment-to-production"></a>Implementación en producción
 

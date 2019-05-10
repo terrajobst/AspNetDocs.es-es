@@ -8,12 +8,12 @@ ms.date: 05/04/2012
 ms.assetid: 5a8e49b7-5317-4125-b107-7e2466b47bb3
 msc.legacyurl: /web-forms/overview/deployment/configuring-server-environments-for-web-deployment/scenario-configuring-a-staging-environment-for-web-deployment
 msc.type: authoredcontent
-ms.openlocfilehash: 7e66c6cd8c7296b889dfe6cc1ebd1eb62cda10ea
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: eaa61ca850817f8dd98955b59e94be93389bf256
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59384337"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65106844"
 ---
 # <a name="scenario-configuring-a-staging-environment-for-web-deployment"></a>Escenario: Configurar un entorno de ensayo para la implementación web
 
@@ -22,7 +22,6 @@ por [Jason Lee](https://github.com/jrjlee)
 [Descargar PDF](https://msdnshared.blob.core.windows.net/media/MSDNBlogsFS/prod.evol.blogs.msdn.com/CommunityServer.Blogs.Components.WeblogFiles/00/00/00/63/56/8130.DeployingWebAppsInEnterpriseScenarios.pdf)
 
 > En este tema se describe un escenario de implementación web típica para un entorno de ensayo y se explica las tareas que necesita para completar con el fin de configurar un entorno similar.
-
 
 Muchas organizaciones utilizan entornos de ensayo para obtener una vista previa de las actualizaciones de aplicaciones web o sitios Web. Esto proporciona a las personas dentro de la organización una oportunidad para explorar y revise las nuevas funcionalidades o contenido antes de que el sitio "lanza" o en otras palabras, se implementa en un entorno de producción. El entorno de ensayo está diseñado para replicar el entorno de producción lo más fielmente posible, con el fin de proporcionar una vista previa realista. Normalmente, este tipo de entorno de ensayo tiene estas características:
 
@@ -33,7 +32,6 @@ Muchas organizaciones utilizan entornos de ensayo para obtener una vista previa 
 
 > [!NOTE]
 > Escalar horizontalmente una implementación de la base de datos en varios servidores está fuera del ámbito de este tutorial. Para obtener más información sobre este tema, consulte [libros en pantalla de SQL Server](https://technet.microsoft.com/library/ms130214.aspx).
-
 
 Por ejemplo, en nuestro [escenario del tutorial](../deploying-web-applications-in-enterprise-scenarios/enterprise-web-deployment-scenario-overview.md), Team Foundation Server (TFS) administra la solución Contact Manager. El administrador TFS, Rob Walters, ha creado una definición de compilación que permite a los desarrolladores desencadenar una implementación en el entorno de ensayo según sea necesario.
 

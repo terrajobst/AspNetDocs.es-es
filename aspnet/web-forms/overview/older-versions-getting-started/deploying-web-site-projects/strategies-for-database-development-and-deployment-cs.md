@@ -8,12 +8,12 @@ ms.date: 04/23/2009
 ms.assetid: 3e8b0627-3eb7-488e-807e-067cba7cec05
 msc.legacyurl: /web-forms/overview/older-versions-getting-started/deploying-web-site-projects/strategies-for-database-development-and-deployment-cs
 msc.type: authoredcontent
-ms.openlocfilehash: 3951ab4562e2c172f418c74136d511f0f9f50454
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: 7efdb13ae67c8485fc35bf759901fec85c31669c
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59415848"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65109271"
 ---
 # <a name="strategies-for-database-development-and-deployment-c"></a>Estrategias del desarrollo e implementación de bases de datos (C#)
 
@@ -22,7 +22,6 @@ por [Scott Mitchell](https://twitter.com/ScottOnWriting)
 [Descargar PDF](http://download.microsoft.com/download/C/3/9/C391A649-B357-4A7B-BAA4-48C96871FEA6/aspnet_tutorial10_DBDevel_cs.pdf)
 
 > Al implementar una aplicación controlada por datos por primera vez ciegamente puede copiar la base de datos en el entorno de desarrollo al entorno de producción. Pero realizar un blind copia en implementaciones posteriores sobrescribirán los datos introducidos en la base de datos de producción. En su lugar, la implementación de una base de datos implica aplicar los cambios realizados en la base de datos de desarrollo desde la última implementación en la base de datos de producción. En este tutorial se examina estos desafíos y ofrece varias estrategias para ayudar a que relata y aplicar los cambios realizados en la base de datos desde la última implementación.
-
 
 ## <a name="introduction"></a>Introducción
 
@@ -54,13 +53,11 @@ Es la manera más sencilla para mantener un registro de cambios al modelo de dat
 
 <a id="0.4_table01"></a>
 
-
 | **Fecha de cambio** | **Cambiar detalles** |
 | --- | --- |
 | 2009-02-03: | Columna agregada `DepartmentID` (`int`, no es NULL) para el `Employees` tabla. Agrega una restricción foreign key de `Departments.DepartmentID` a `Employees.DepartmentID`. |
 | 2009-02-05: | Columna quitada `TotalWeight` desde el `Orders` tabla. Asociados de datos ya está capturados en `OrderDetails` registros. |
 | 2009-02-12: | Crea el `ProductCategories` tabla. Hay tres columnas: `ProductCategoryID` (`int`, `IDENTITY`, `NOT NULL`), `CategoryName` (`nvarchar(50)`, `NOT NULL`), y `Active` (`bit`, `NOT NULL`). Agrega una restricción primary key a `ProductCategoryID`y un valor predeterminado de 1 a `Active`. |
-
 
 Existen varios inconvenientes de este enfoque. Para empezar, no hay ninguna esperanza para la automatización. En cualquier momento estos cambios deben aplicarse a una base de datos -, como cuando se implementa la aplicación: un desarrollador deberá implementar manualmente cada uno de ellos cambia, una vez. Además, si necesita reconstruir una versión concreta de la base de datos desde la línea de base mediante el registro de cambios, si lo hace por lo que tardará más tiempo a medida que crece el tamaño del registro. Otro inconveniente de este método es que la claridad y el nivel de detalle de cada entrada de registro de cambios se deja a la persona que registrar el cambio. En un equipo con varios desarrolladores algunos pueden realizar entradas más detalladas, más legibles o más precisas que otras. Además, son posibles errores tipográficos y otros errores de entrada de datos relacionados con humanos.
 
@@ -70,7 +67,6 @@ Mantener el registro de cambios de prose es, ciertamente, no muy sofisticados y 
 
 > [!NOTE]
 > Mientras que la información en el registro de cambios es, técnicamente, solo es necesario hasta que el tiempo de implementación, recomienda mantener un historial de cambios. Pero en vez de mantener una sola, crece constantemente el archivo de registro de cambios, considere la posibilidad de tener un archivo de registro de cambio diferente para cada versión de la base de datos. Normalmente, le interesará a la versión de la base de datos cada vez que se implementa. Al mantener un registro de los registros de cambio puede, a partir de la línea base, volver a cualquier versión de la base de datos mediante la ejecución de las secuencias de comandos de cambio de registro a partir de la versión 1 y continuando hasta llegar a la versión debe volver a crear.
-
 
 ## <a name="recording-the-sql-change-statements"></a>Grabación de las instrucciones de cambio SQL
 
@@ -95,18 +91,14 @@ Hay una variedad de herramientas de comparación de base de datos de terceros of
 > [!NOTE]
 > En el momento de redactar este artículo la versión actual de SQL Compare era la versión 7.1, con la edición Standard valoración 395 dólares. Puede seguir descargando una evaluación gratuita de 14 días.
 
-
 Cuando se inicia SQL Compare abre el cuadro de diálogo de proyectos de comparación, que muestra los proyectos de SQL Compare guardados. Cree un nuevo proyecto. Esto inicia el Asistente de configuración del proyecto, que solicita información acerca de las bases de datos para comparar (consulte la figura 1). Escriba la información de las bases de datos de entorno de desarrollo y producción.
-
 
 [![Comparar el desarrollo y las bases de datos de producción](strategies-for-database-development-and-deployment-cs/_static/image2.jpg)](strategies-for-database-development-and-deployment-cs/_static/image1.jpg)
 
 **Figura 1**: Comparar el desarrollo y las bases de datos de producción ([haga clic aquí para ver imagen en tamaño completo](strategies-for-database-development-and-deployment-cs/_static/image3.jpg))
 
-
 > [!NOTE]
 > Si la base de datos del entorno de desarrollo es un archivo de base de datos de SQL Express Edition en el `App_Data` carpeta del sitio Web deberá registrar la base de datos en el servidor de base de datos de SQL Server Express para poder seleccionarlo en el cuadro de diálogo se muestra en la figura 1. La manera más fácil de hacerlo es abrir SQL Server Management Studio (SSMS), conectar con el servidor de base de datos de SQL Server Express y adjuntar la base de datos. Si no tiene SSMS instalado en el equipo puede descargar e instalar la versión gratuita [ *versión de SQL Server 2008 Management Studio Basic*](https://www.microsoft.com/downloads/details.aspx?FamilyId=7522A683-4CB2-454E-B908-E805E9BD4E28&amp;displaylang=en).
-
 
 Además de seleccionar las bases de datos para comparar, también puede especificar una variedad de opciones de comparación de la ficha Opciones. Una opción es posible que desee activar es la "Omitir restricción e índice nombres". Recuerde que en el tutorial anterior se ha agregado que la aplicación de servicios de objetos de base de datos para las bases de datos de desarrollo y producción. Si ha usado el `aspnet_regsql.exe` herramienta para crear estos objetos en la base de datos de producción, a continuación, encontrará que la clave principal y los nombres de restricción unique difieren entre las bases de datos de desarrollo y producción. Por lo tanto, SQL Compare marcará todas las tablas de servicios de aplicación como distintos. O bien puede dejar los "Omitir restricción e índice nombres" desactivada y sincronizar los nombres de restricción, o indicar SQL Compare para omitir estas diferencias.
 
@@ -115,11 +107,9 @@ Después de seleccionar las bases de datos para comparar (y revisar las opciones
 > [!NOTE]
 > Se realizaron los cambios realizados en este tutorial del modelo de datos para ilustrar el uso de una herramienta de comparación de la base de datos. No encontrará estos cambios en la base de datos en tutoriales futuros.
 
-
 [![Comparación SQL enumera las diferencias entre el desarrollo y las bases de datos de producción](strategies-for-database-development-and-deployment-cs/_static/image5.jpg)](strategies-for-database-development-and-deployment-cs/_static/image4.jpg)
 
 **Figura 2**: Comparación SQL enumera las diferencias entre el desarrollo y las bases de datos de producción ([haga clic aquí para ver imagen en tamaño completo](strategies-for-database-development-and-deployment-cs/_static/image6.jpg))
-
 
 SQL Compare desglosan todos los objetos de base de datos en grupos, mostrar rápidamente los objetos que existen en ambas bases de datos, pero son diferente, que los objetos existen en una base de datos, pero no el otro y qué objetos son idénticos. Como puede ver, hay dos objetos que existen en ambas bases de datos, pero son diferentes: el `Authors` tabla, que tenía que agregar una columna, y el `Books` tabla, lo que ha tenido quitado. Hay un objeto que solo existe en la base de datos de desarrollo, es decir, el recién creado `Ratings` tabla. Y hay 117 objetos que son idénticos en ambas bases de datos.
 
@@ -127,17 +117,14 @@ Seleccionar un objeto de base de datos muestra la ventana de diferencias de SQL,
 
 Después de revisar las diferencias y seleccionar los objetos que desea sincronizar, el siguiente paso es generar los comandos SQL necesarios para actualizar el esquema s de base de datos de producción para que coincida con la base de datos de desarrollo. Esto se logra mediante el Asistente para la sincronización. El Asistente para sincronización Confirma qué objetos se deben para sincronizar y resume la acción previsto (consulte la figura 3). Puede sincronizar las bases de datos inmediatamente o generar un script con los comandos SQL que se pueden ejecutar en su tiempo libre.
 
-
 [![Utilice al Asistente para la sincronización para sincronizar los esquemas de bases de datos](strategies-for-database-development-and-deployment-cs/_static/image8.jpg)](strategies-for-database-development-and-deployment-cs/_static/image7.jpg)
 
 **Figura 3**: Utilice el Asistente para la sincronización para sincronizar los esquemas de bases de datos ([haga clic aquí para ver imagen en tamaño completo](strategies-for-database-development-and-deployment-cs/_static/image9.jpg))
-
 
 Herramientas de comparación de la base de datos, como s SQL Compare Asegúrese de aplicar los cambios al esquema de base de datos de desarrollo para la base de datos de producción tan sencillo como señalar y haga clic en Red Gate Software.
 
 > [!NOTE]
 > Comparación de SQL compara y sincroniza dos bases de datos *esquemas*. Lamentablemente, no comparar y sincronizar los datos dentro de las tablas de dos bases de datos. Red Gate Software ofrece un producto denominado [ *SQL Compare datos* ](http://www.red-gate.com/products/SQL_Data_Compare/) que compara y sincroniza los datos entre dos bases de datos, pero es un producto independiente de SQL Compare y cuesta otro 395 dólares.
-
 
 ## <a name="taking-the-application-offline-during-deployment"></a>Poner la aplicación sin conexión durante la implementación
 

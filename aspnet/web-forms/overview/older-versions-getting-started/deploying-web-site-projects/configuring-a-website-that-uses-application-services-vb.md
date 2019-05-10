@@ -8,12 +8,12 @@ ms.date: 04/23/2009
 ms.assetid: 9c31a42f-d8bb-4c0f-9ccc-597d4f70ac42
 msc.legacyurl: /web-forms/overview/older-versions-getting-started/deploying-web-site-projects/configuring-a-website-that-uses-application-services-vb
 msc.type: authoredcontent
-ms.openlocfilehash: b8ec246c2f35f3d7fa5bcf67aa6f157195028176
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: 43c6dbdc2155f50e2302b7c8929f378065e2f509
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59379526"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65106920"
 ---
 # <a name="configuring-a-website-that-uses-application-services-vb"></a>Configurar un sitio web que usa servicios de aplicaciones (VB)
 
@@ -22,7 +22,6 @@ por [Scott Mitchell](https://twitter.com/ScottOnWriting)
 [Descargar código](http://download.microsoft.com/download/E/6/F/E6FE3A1F-EE3A-4119-989A-33D1A9F6F6DD/ASPNET_Hosting_Tutorial_09_VB.zip) o [descargar PDF](http://download.microsoft.com/download/C/3/9/C391A649-B357-4A7B-BAA4-48C96871FEA6/aspnet_tutorial09_AppServicesConfig_vb.pdf)
 
 > Versión ASP.NET 2.0 incorporó una serie de servicios de aplicación, que forman parte de .NET Framework y actuar como un conjunto de servicios de bloques de creación que puede usar para agregarle funciones enriquecidas para la aplicación web. Este tutorial explora cómo configurar un sitio Web en el entorno de producción para usar servicios de aplicaciones y trata los problemas comunes con la administración de cuentas de usuario y funciones en el entorno de producción.
-
 
 ## <a name="introduction"></a>Introducción
 
@@ -34,7 +33,6 @@ Versión ASP.NET 2.0 incorporó una serie de *servicios de aplicación*, que for
 - **Mapa del sitio** : una API para definir una estructura lógica del sitio s en forma de una jerarquía, lo que, a continuación, se puede mostrar a través de los controles de navegación, como menús y las rutas de navegación.
 - **Personalización** : una API para el mantenimiento de las preferencias de personalización, se utiliza frecuentemente con [ *WebParts*](https://msdn.microsoft.com/library/e0s9t4ck.aspx).
 - **Seguimiento de estado** : una API para la supervisión de rendimiento, seguridad, errores y otras métricas de mantenimiento del sistema para una aplicación web en ejecución.
-  
 
 Las API de servicios de aplicación no están asociadas a una implementación específica. En su lugar, indicar a los servicios de aplicación para usar un determinado *proveedor*, y dicho proveedor implementa el servicio mediante una tecnología determinada. Los proveedores más populares para aplicaciones web basadas en Internet hospedadas en una empresa de hospedaje web son los proveedores que utilizan una implementación de la base de datos de SQL Server. Por ejemplo, el `SqlMembershipProvider` es un proveedor para la API de pertenencia que almacena información de la cuenta de usuario en una base de datos de Microsoft SQL Server.
 
@@ -42,7 +40,6 @@ Mediante los servicios de aplicación y los proveedores de SQL Server agrega alg
 
 > [!NOTE]
 > Los servicios de aplicaciones API se han diseñado mediante el [ *modelo de proveedor*](http://aspnet.4guysfromrolla.com/articles/101905-1.aspx), un patrón de diseño que permite a los detalles de implementación debe proporcionarse en tiempo de ejecución de una API s. .NET Framework se distribuye con un número de proveedores de servicios de aplicación que se pueden usar, como la `SqlMembershipProvider` y `SqlRoleProvider`, que son proveedores de pertenencia y de implementación de base de datos de las API de Roles que usan un servidor SQL Server. También puede crear y complemento un proveedor personalizado. De hecho, la aplicación de web reseñas de libros ya contiene un proveedor personalizado para la API de mapa del sitio (`ReviewSiteMapProvider`), que construye el mapa del sitio de los datos en el `Genres` y `Books` tablas en la base de datos.
-
 
 Este tutorial comienza con un vistazo a cómo ampliar la aplicación web de reseñas de libros para usar las API de Roles y pertenencia. A continuación, le guía a través de la implementación de una aplicación web que usa servicios de aplicaciones con una implementación de la base de datos de SQL Server y concluye con la solución de problemas comunes con la administración de cuentas de usuario y funciones en el entorno de producción.
 
@@ -53,7 +50,6 @@ En los últimos tutoriales de que la aplicación web revisa el libro se ha actua
 > [!NOTE]
 > Se ve crea tres cuentas de usuario en la aplicación web de reseñas de libros: Scott, Jisun y Alice. Tres todos los usuarios tienen la misma contraseña: **contraseña!** Scott y Jisun están en el rol de administrador, no es de Alice. Las páginas de administración que no son s sitio siguen siendo accesibles a los usuarios anónimos. Es decir, no es necesario iniciar sesión en el sitio, a menos que desee administrar, en cuyo caso debe iniciar sesión como un usuario en el rol de administrador.
 
-
 La página principal de reseñas de libros aplicación s se ha actualizado para incluir una interfaz de usuario diferente para los usuarios autenticados y anónimos. Si un usuario anónimo visita el sitio ve un vínculo de inicio de sesión en la esquina superior derecha. Un usuario autenticado ve el mensaje, "Bienvenido de nuevo, *username*!" y un vínculo para cerrar sesión. Allí s también una página de inicio de sesión (`~/Login.aspx`), que contiene un control Web de inicio de sesión que proporciona la interfaz de usuario y la lógica para autenticar un visitante. Solo los administradores pueden crear nuevas cuentas. (Hay páginas para crear y administrar cuentas de usuario en el `~/Admin` carpeta.)
 
 ### <a name="configuring-the-membership-and-roles-apis"></a>Configuración de las API de Roles y pertenencia
@@ -62,7 +58,6 @@ La aplicación web de reseñas de libros usa las API de Roles y pertenencia para
 
 > [!NOTE]
 > En este tutorial no pretende ser un examen detallado en la configuración de una aplicación web para admitir la pertenencia y funciones de API. Para una mirada exhaustiva a estas API y los pasos que debe seguir para configurar un sitio Web para poder utilizarlos, lea mi [ *tutoriales de seguridad del sitio Web*](../../older-versions-security/introduction/security-basics-and-asp-net-support-cs.md).
-
 
 Para usar los servicios de aplicación con una base de datos de SQL Server debe agregar primero los objetos de base de datos utilizados por estos proveedores para la base de datos donde desea que la cuenta de usuario y la información de rol almacenada. Estos objetos de base de datos necesarios incluyen una serie de tablas, vistas y procedimientos almacenados. A menos que se especifique lo contrario, el `SqlMembershipProvider` y `SqlRoleProvider` clases de proveedor utilizan una base de datos de SQL Server Express Edition denominada `ASPNETDB` ubicado en la aplicación s `App_Data` carpeta; si no existe una base de datos, se crea automáticamente con los objetos de base de datos necesarios por estos proveedores en tiempo de ejecución.
 
@@ -73,7 +68,6 @@ Si agrega los objetos de base de datos a una base de datos distinto de la aplica
 [!code-xml[Main](configuring-a-website-that-uses-application-services-vb/samples/sample1.xml)]
 
 El `Web.config` archivo s `<authentication>` elemento también se ha configurado para admitir la autenticación basada en formularios.
-  
 
 [!code-xml[Main](configuring-a-website-that-uses-application-services-vb/samples/sample2.xml)]
 
@@ -100,43 +94,34 @@ El *implementar una base de datos* tutorial le ha mostrado cómo copiar las tabl
 > [!NOTE]
 > El `aspnet_regsql.exe` herramienta crea los objetos de base de datos en una base de datos especificado. No migra los datos en los objetos de base de datos de la base de datos de desarrollo para la base de datos de producción. Si desea copiar la información de cuenta y el rol de usuario de la base de datos de desarrollo en la base de datos de producción, use las técnicas descritas en la *implementar una base de datos* tutorial.
 
-
 Permiten s veamos cómo agregar los objetos de base de datos a la base de datos de producción mediante el `aspnet_regsql.exe` herramienta. Iniciar, abrir el Explorador de Windows y navegue hasta el directorio de la versión 2.0 de .NET Framework en el equipo, %WINDIR%\ Microsoft.NET\Framework\v2.0.50727. Debería encontrar la `aspnet_regsql.exe` herramienta. Esta herramienta puede usarse desde la línea de comandos, pero también incluye una interfaz gráfica de usuario; Haga doble clic en el `aspnet_regsql.exe` archivo para iniciar el componente de gráficos.
 
 La herramienta se inicia al mostrar una pantalla de presentación que explica su propósito. Haga clic en siguiente para pasar a la pantalla "Seleccionar una opción de configuración", que se muestra en la figura 1. Desde aquí puede agregar objetos de base de datos de los servicios de aplicación o quitarlos de una base de datos. Puesto que deseamos agregar estos objetos a la base de datos de producción, seleccione la opción "Configurar SQL Server para servicios de aplicación" y haga clic en siguiente.
 
-
 [![Elija configurar SQL Server para servicios de aplicación](configuring-a-website-that-uses-application-services-vb/_static/image2.jpg)](configuring-a-website-that-uses-application-services-vb/_static/image1.jpg)
 
 **Figura 1**: Optar por configurar SQL Server para servicios de aplicación ([haga clic aquí para ver imagen en tamaño completo](configuring-a-website-that-uses-application-services-vb/_static/image3.jpg))
-
 
 En "Seleccionar el servidor y base de datos" pantalla pide información para conectarse a la base de datos. Escriba el nombre de la base de datos proporcionado por su empresa de hospedaje web, las credenciales de seguridad y el servidor de base de datos y haga clic en siguiente.
 
 > [!NOTE]
 > Después de escribir el servidor de base de datos y las credenciales puede obtener un error al expandir la lista desplegable de bases de datos. El `aspnet_regsql.exe` herramienta consultas el `sysdatabases` tabla del sistema para recuperar una lista de bases de datos en el servidor, pero algunos web que hospeda los servidores de base de datos de bloqueo de las empresas para que esta información no está disponible públicamente. Si recibe este error puede escribir el nombre de base de datos directamente en la lista desplegable.
 
-
 [![Proporcionar a la herramienta con la información de conexión de base de datos s](configuring-a-website-that-uses-application-services-vb/_static/image5.jpg)](configuring-a-website-that-uses-application-services-vb/_static/image4.jpg)
 
 **Figura 2**: Proporcione la información de conexión de herramienta con la base de datos s ([haga clic aquí para ver imagen en tamaño completo](configuring-a-website-that-uses-application-services-vb/_static/image6.jpg))
 
-
 La pantalla posterior resume las acciones que se va a tener lugar, es decir que los objetos de base de datos de servicios de aplicación se van a agregar a la base de datos especificado. Haga clic en siguiente para completar esta acción. Transcurridos unos instantes, se muestra la última pantalla, teniendo en cuenta que se han agregado los objetos de base de datos (consulte la figura 3).
-
 
 [![¡Success! Los objetos de base de datos de servicios de aplicación se agregaron a la base de datos de producción](configuring-a-website-that-uses-application-services-vb/_static/image8.jpg)](configuring-a-website-that-uses-application-services-vb/_static/image7.jpg)
 
 **Figura 3**: Correcto La aplicación Servicios de base de datos de objetos se agregaron a la base de datos de producción ([haga clic aquí para ver imagen en tamaño completo](configuring-a-website-that-uses-application-services-vb/_static/image9.jpg))
 
-
 Para comprobar que los objetos de base de datos de servicios de aplicación se agregaron correctamente a la base de datos de producción, abra SQL Server Management Studio y conéctese a la base de datos de producción. Como se muestra en la figura 4, ahora debería ver las tablas de base de datos de servicios de aplicación en la base de datos `aspnet_Applications`, `aspnet_Membership`, `aspnet_Users`, y así sucesivamente.
-
 
 [![Confirme que los objetos de base de datos se agregaron a la base de datos de producción](configuring-a-website-that-uses-application-services-vb/_static/image11.jpg)](configuring-a-website-that-uses-application-services-vb/_static/image10.jpg)
 
 **Figura 4**: Confirme que los objetos de base de datos se agregaron a la base de datos de producción ([haga clic aquí para ver imagen en tamaño completo](configuring-a-website-that-uses-application-services-vb/_static/image12.jpg))
-
 
 Sólo deberá usar el `aspnet_regsql.exe` herramienta al implementar la aplicación web por primera vez o por primera vez después de haber iniciado mediante los servicios de aplicación. Una vez que estos objetos de base de datos están en la base de datos de producción que no tendrán que volver a added o modified.
 
@@ -152,7 +137,6 @@ Además el `ApplicationId` columna, el `aspnet_Applications` tabla también incl
 
 > [!NOTE]
 > Si se encuentra en esta situación - con cuentas de usuario que se copian en producción con una que no coinciden `ApplicationId` valor - podría escribir una consulta para actualizar estos incorrecto `ApplicationId` valores para el `ApplicationId` utilizado en producción. Una vez actualizado, los usuarios cuyas cuentas se crearon en el entorno de desarrollo ahora podrán iniciar sesión en la aplicación web en producción.
-
 
 La buena noticia es que hay un paso simple que puede seguir para garantizar que los dos entornos usan el mismo `ApplicationId` : establece explícitamente el `applicationName` atributo `Web.config` para todos los proveedores de servicios de aplicación. Establezca explícitamente la `applicationName` atributo para "BookReviews" en el `<membership>` y `<roleManager>` elementos como este fragmento de código `Web.config` muestra.
 
@@ -171,11 +155,9 @@ Recuerde que un tutorial anterior actualiza la aplicación web de reseñas de li
 > [!NOTE]
 > Para obtener más información sobre el uso de la pertenencia y funciones de API junto con los controles Web relacionados con el inicio de sesión de ASP.NET, no olvide leer mi [ *tutoriales de seguridad del sitio Web*](../../older-versions-security/introduction/security-basics-and-asp-net-support-cs.md). Para obtener más información sobre la personalización del control CreateUserWizard, consulte el [ *crear cuentas de usuario* ](../../older-versions-security/membership/creating-user-accounts-vb.md) y [ *almacenar información de usuario adicional* ](../../older-versions-security/membership/storing-additional-user-information-vb.md) tutoriales o desproteger [ *Erich Peterson* ](http://www.erichpeterson.com/) artículo, [ *personalizar el CreateUserWizard Control* ](http://aspnet.4guysfromrolla.com/articles/070506-1.aspx).
 
-
 [![Los administradores pueden crear nuevas cuentas de usuario](configuring-a-website-that-uses-application-services-vb/_static/image14.jpg)](configuring-a-website-that-uses-application-services-vb/_static/image13.jpg)
 
 **Figura 5**: Los administradores pueden crear nuevas cuentas de usuario ([haga clic aquí para ver imagen en tamaño completo](configuring-a-website-that-uses-application-services-vb/_static/image15.jpg))
-
 
 Si necesita la funcionalidad completa de la desprotección WSAT [ *gradual su propio sitio Web de herramienta de administración*](http://aspnet.4guysfromrolla.com/articles/052307-1.aspx), en que el autor Dan Clem le guía a través del proceso de creación de una herramienta similar a WSAT personalizada. Dan comparte su código de origen s aplicación (en C#) y proporciona instrucciones paso a paso para agregarlo a su sitio Web hospedado.
 

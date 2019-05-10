@@ -8,17 +8,16 @@ ms.date: 11/04/2011
 ms.assetid: e0af2f02-b132-4ad4-b881-f6b5ab86b1ae
 msc.legacyurl: /web-forms/videos/data-access/adonet-data-services
 msc.type: chapter
-ms.openlocfilehash: 6b989e384612f2d663afd431e8daa3afd17f6e6b
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: 77ef8f8ce0f9b42e28878d0d56c00eab9e245bf4
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59399786"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65106776"
 ---
 # <a name="adonet-data-services"></a>Data Services de ADO.NET
 
 > Estos vídeos enseñan cómo crear una capa de acceso a datos mediante un conjunto de datos con tipo para una aplicación ASP.NET simple.
-
 
 - [Niveles de acceso a datos en aplicaciones de ASP.NET](data-access-layers-in-aspnet-applications.md)
 - [Enlazar manualmente un conjunto de datos a un control Datagrid](how-to-manually-bind-a-dataset-to-a-datagrid.md)

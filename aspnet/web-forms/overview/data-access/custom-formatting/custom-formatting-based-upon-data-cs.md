@@ -8,12 +8,12 @@ ms.date: 03/31/2010
 ms.assetid: 871a4574-f89c-4214-b786-79253ed3653b
 msc.legacyurl: /web-forms/overview/data-access/custom-formatting/custom-formatting-based-upon-data-cs
 msc.type: authoredcontent
-ms.openlocfilehash: bd5433b724dcafe8e816254523cb4b38c3be1104
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: 96003d3e93fc92aaaf39f39f1bb6512d687dc451
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59403173"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65108272"
 ---
 # <a name="custom-formatting-based-upon-data-c"></a>Formato personalizado basado en datos (C#)
 
@@ -22,7 +22,6 @@ por [Scott Mitchell](https://twitter.com/ScottOnWriting)
 [Descargue la aplicación de ejemplo](http://download.microsoft.com/download/9/6/9/969e5c94-dfb6-4e47-9570-d6d9e704c3c1/ASPNET_Data_Tutorial_11_CS.exe) o [descargar PDF](custom-formatting-based-upon-data-cs/_static/datatutorial11cs1.pdf)
 
 > Ajuste del formato de la GridView, DetailsView o FormView basado en los datos enlazados a él puede realizarse de varias maneras. En este tutorial, buscaremos cómo lograr el formato mediante el uso de los controladores de eventos DataBound y RowDataBound enlazado a datos.
-
 
 ## <a name="introduction"></a>Introducción
 
@@ -48,37 +47,29 @@ Abra el `CustomColors.aspx` página en el `CustomFormatting` carpeta, arrastre u
 
 Una vez que se ha enlazado al origen ObjectDataSource a DetailsView, dedique un momento para modificar la lista de campos. He optado por eliminar la `ProductID`, `SupplierID`, `CategoryID`, `UnitsInStock`, `UnitsOnOrder`, `ReorderLevel`, y `Discontinued` BoundFields y cambia el nombre y volver a formatear el BoundFields restantes. También se ha retirado la `Width` y `Height` configuración. Puesto que DetailsView muestra sólo un único registro, es necesario habilitar la paginación con el fin de permitir que el usuario final ver todos los productos. Hacerlo activando la casilla Habilitar paginación en la etiqueta inteligente de DetailsView.
 
-
 [![Compruebe la casilla de verificación Habilitar paginación en la etiqueta inteligente de DetailsView](custom-formatting-based-upon-data-cs/_static/image2.png)](custom-formatting-based-upon-data-cs/_static/image1.png)
 
 **Figura 1**: Active la casilla de la paginación de habilitar en la etiqueta inteligente de DetailsView ([haga clic aquí para ver imagen en tamaño completo](custom-formatting-based-upon-data-cs/_static/image3.png))
 
-
 Después de estos cambios, el marcado DetailsView será:
-
 
 [!code-aspx[Main](custom-formatting-based-upon-data-cs/samples/sample1.aspx)]
 
 Dedique un momento para probar esta página en el explorador.
 
-
 [![El Control DetailsView muestra uno de los productos a la vez](custom-formatting-based-upon-data-cs/_static/image5.png)](custom-formatting-based-upon-data-cs/_static/image4.png)
 
 **Figura 2**: El producto DetailsView Control muestra una a la vez ([haga clic aquí para ver imagen en tamaño completo](custom-formatting-based-upon-data-cs/_static/image6.png))
-
 
 ## <a name="step-2-programmatically-determining-the-value-of-the-data-in-the-databound-event-handler"></a>Paso 2: Para determinar mediante programación el valor de los datos en el controlador de eventos de enlace de datos
 
 Con el fin de mostrar el precio de una fuente en negrita, cursiva aquellos productos cuyo `UnitPrice` supera el valor $75,00, necesitamos poder determinar mediante programación el `UnitPrice` valor. Para DetailsView, esto puede realizarse en el `DataBound` controlador de eventos. Para crear el evento de controlador haga clic en DetailsView en el diseñador y vaya a la ventana Propiedades. Presione F4 para activarla, si no está visible o vaya al menú Ver y seleccione la opción de menú de la ventana Propiedades. En la ventana Propiedades, haga clic en el icono de rayo para mostrar eventos de DetailsView. A continuación, o bien haga doble clic en el `DataBound` eventos o escriba el nombre, el controlador de eventos que desea crear.
 
-
 ![Crear un controlador de eventos para el evento enlazado a datos](custom-formatting-based-upon-data-cs/_static/image7.png)
 
 **Figura 3**: Crear un controlador de eventos para el `DataBound` eventos
 
-
 Si lo hace, creará automáticamente el controlador de eventos y le llevará a la parte del código donde se ha agregado. En este momento, verá:
-
 
 [!code-csharp[Main](custom-formatting-based-upon-data-cs/samples/sample2.cs)]
 
@@ -86,12 +77,10 @@ Los datos enlazados a DetailsView se pueden acceder mediante el `DataItem` propi
 
 El código siguiente muestra cómo determinar si el `UnitPrice` valor enlazado al control DetailsView es mayor que $75,00:
 
-
 [!code-csharp[Main](custom-formatting-based-upon-data-cs/samples/sample3.cs)]
 
 > [!NOTE]
 > Puesto que `UnitPrice` puede tener un `NULL` valor en la base de datos, se comprueba en primer lugar para asegurarse de que no estamos trabajando con un `NULL` valor antes de acceder a la `ProductsRow`del `UnitPrice` propiedad. Esta comprobación es importante porque si se intenta tener acceso a la `UnitPrice` propiedad cuando tiene un `NULL` valor la `ProductsRow` objeto producirá una [StrongTypingException excepción](https://msdn.microsoft.com/library/system.data.strongtypingexception.aspx).
-
 
 ## <a name="step-3-formatting-the-unitprice-value-in-the-detailsview"></a>Paso 3: Dar formato al valor UnitPrice en DetailsView
 
@@ -99,36 +88,29 @@ En este punto podemos determinar si la `UnitPrice` valor enlazado a DetailsView 
 
 Acceso mediante programación a una fila requiere que conozca el índice de la fila, que comienza en 0. El `UnitPrice` fila es la quinta en DetailsView, dándole un índice de 4 y hacer que sean accesibles mediante programación utilizando `ExpensiveProductsPriceInBoldItalic.Rows[4]`. En este momento tenemos podríamos contenido de la fila completa que se muestra en una fuente en negrita, cursiva mediante el código siguiente:
 
-
 [!code-csharp[Main](custom-formatting-based-upon-data-cs/samples/sample4.cs)]
 
 Sin embargo, esto hará que *ambos* la etiqueta (precio) y el valor de negrita y cursiva. Si queremos realizar solo el valor de negrita y cursiva que se deba aplicar este formato a la segunda celda de la fila, que puede realizarse mediante los siguientes:
-
 
 [!code-csharp[Main](custom-formatting-based-upon-data-cs/samples/sample5.cs)]
 
 Puesto que nuestros tutoriales hasta ahora han usado las hojas de estilo para mantener una separación limpia entre el marcado representado y la información relacionada con el estilo, en lugar de establecer las propiedades de estilo específica, como se indicó anteriormente vamos en su lugar, use una clase CSS. Abra el `Styles.css` hoja de estilos y agregue una nueva clase CSS denominada `ExpensivePriceEmphasis` con la siguiente definición:
 
-
 [!code-css[Main](custom-formatting-based-upon-data-cs/samples/sample6.css)]
 
 A continuación, en el `DataBound` controlador de eventos, establecer la celda `CssClass` propiedad `ExpensivePriceEmphasis`. El código siguiente muestra el `DataBound` controlador de eventos en su totalidad:
-
 
 [!code-csharp[Main](custom-formatting-based-upon-data-cs/samples/sample7.cs)]
 
 Cuando se visualizan Chai, lo cual cuesta menos de $75,00, el precio se muestra en una fuente normal (consulte la figura 4). Sin embargo, cuando se visualizan buey Mishi Kobe Niku, que tiene un precio de $97.00, el precio se muestra en una fuente en negrita, cursiva (consulte la figura 5).
 
-
 [![Precios de menos de $75,00 se muestran en una fuente Normal](custom-formatting-based-upon-data-cs/_static/image9.png)](custom-formatting-based-upon-data-cs/_static/image8.png)
 
 **Figura 4**: Precios de menos de $75,00 se muestran en una fuente Normal ([haga clic aquí para ver imagen en tamaño completo](custom-formatting-based-upon-data-cs/_static/image10.png))
 
-
 [![Se muestran los precios de los productos costoso en un negrita, cursiva fuente](custom-formatting-based-upon-data-cs/_static/image12.png)](custom-formatting-based-upon-data-cs/_static/image11.png)
 
 **Figura 5**: Se muestran los precios de los productos costoso en un negrita, cursiva fuente ([haga clic aquí para ver imagen en tamaño completo](custom-formatting-based-upon-data-cs/_static/image13.png))
-
 
 ## <a name="using-the-formview-controlsdataboundevent-handler"></a>Usar el Control FormView`DataBound`controlador de eventos
 
@@ -144,7 +126,6 @@ Agregar un FormView para el `CustomColors.aspx` página situada bajo la DetailsV
 
 Después de estas modificaciones marcado de su FormView debe ser similar al siguiente:
 
-
 [!code-aspx[Main](custom-formatting-based-upon-data-cs/samples/sample8.aspx)]
 
 Tenga en cuenta que el `ItemTemplate` contiene:
@@ -157,14 +138,11 @@ Tenga en cuenta que el `ItemTemplate` contiene:
 
 Con el marcado de FormView completando, el siguiente paso es determinar mediante programación si la `UnitsInStock` valor es menor o igual a 10. Esto se realiza en la misma manera con FormView, como era con DetailsView. Empiece por crear un controlador de eventos para el FormView `DataBound` eventos.
 
-
 ![Crear el controlador de eventos de enlace de datos](custom-formatting-based-upon-data-cs/_static/image14.png)
 
 **Figura 6**: Crear el `DataBound` controlador de eventos
 
-
 Controlador de eventos puede convertir de FormView `DataItem` propiedad a un `ProductsRow` de instancia y determinar si el `UnitsInPrice` valor es tal que necesitamos para que aparezca en una fuente de color rojo.
-
 
 [!code-csharp[Main](custom-formatting-based-upon-data-cs/samples/sample9.cs)]
 
@@ -172,35 +150,28 @@ Controlador de eventos puede convertir de FormView `DataItem` propiedad a un `Pr
 
 El último paso consiste en dar formato a la mostrada `UnitsInStock` valor en una fuente de color rojo si el valor es 10 o menos. Para lograr esto es necesario tener acceso mediante programación el `UnitsInStockLabel` en controlar la `ItemTemplate` y establezca sus propiedades de estilo para que su texto se muestre en rojo. Para obtener acceso a un control Web en una plantilla, use el `FindControl("controlID")` método similar al siguiente:
 
-
 [!code-csharp[Main](custom-formatting-based-upon-data-cs/samples/sample10.cs)]
 
 En nuestro ejemplo queremos tener acceso a una etiqueta de control cuya `ID` valor es `UnitsInStockLabel`, por lo que deberíamos utilizar:
 
-
 [!code-csharp[Main](custom-formatting-based-upon-data-cs/samples/sample11.cs)]
 
 Una vez que tenemos una referencia al control Web mediante programación, podemos modificar sus propiedades relacionadas con el estilo según sea necesario. Como con el ejemplo anterior, he creado una clase CSS en `Styles.css` denominado `LowUnitsInStockEmphasis`. Para aplicar este estilo al control Web Label, establezca su `CssClass` propiedad según corresponda.
-
 
 [!code-csharp[Main](custom-formatting-based-upon-data-cs/samples/sample12.cs)]
 
 > [!NOTE]
 > La sintaxis para dar formato a una plantilla de acceso mediante programación el control Web mediante `FindControl("controlID")` y, a continuación, establecer sus propiedades relacionadas con el estilo también se puede usar cuando se usa [TemplateFields](https://msdn.microsoft.com/library/system.web.ui.webcontrols.templatefield(VS.80).aspx) del DetailsView o GridView controles. Examinaremos TemplateFields en nuestro tutorial siguiente.
 
-
 Las figuras 7 muestra FormView al ver un producto cuyo `UnitsInStock` valor es mayor que 10, mientras que el producto en la figura 8 tiene un valor menor que 10.
-
 
 [![Para los productos con unas lo suficientemente grandes Units In Stock, se aplica sin formato personalizado](custom-formatting-based-upon-data-cs/_static/image16.png)](custom-formatting-based-upon-data-cs/_static/image15.png)
 
 **Figura 7**: Para los productos con unas lo suficientemente grandes Units In Stock, sin formato personalizado se aplica ([haga clic aquí para ver imagen en tamaño completo](custom-formatting-based-upon-data-cs/_static/image17.png))
 
-
 [![Las unidades en existencias número se muestra en rojo para los productos con los valores de 10 o menos](custom-formatting-based-upon-data-cs/_static/image19.png)](custom-formatting-based-upon-data-cs/_static/image18.png)
 
 **Figura 8**: Las unidades en existencias número se muestra en rojo para los productos con los valores de 10 o menos ([haga clic aquí para ver imagen en tamaño completo](custom-formatting-based-upon-data-cs/_static/image20.png))
-
 
 ## <a name="formatting-with-the-gridviewsrowdataboundevent"></a>Formato con la GridView`RowDataBound`eventos
 
@@ -237,16 +208,13 @@ Para personalizar el formato de los registros individuales de GridView, a contin
 
 Agregue un control GridView debajo de FormView del ejemplo anterior y establezca su `ID` propiedad `HighlightCheapProducts`. Puesto que ya tenemos un origen ObjectDataSource que devuelve todos los productos en la página, enlazar el control GridView a la. Por último, edite BoundFields de GridView para incluir solo los nombres de los productos, categorías y los precios. Después de estas modificaciones marcado de GridView aspecto:
 
-
 [!code-aspx[Main](custom-formatting-based-upon-data-cs/samples/sample13.aspx)]
 
 Figura 9 muestra nuestro progreso en este punto, cuando se ve mediante un explorador.
 
-
 [![El control GridView muestra el nombre, categoría y el precio de cada producto](custom-formatting-based-upon-data-cs/_static/image22.png)](custom-formatting-based-upon-data-cs/_static/image21.png)
 
 **Figura 9**: El control GridView muestra el nombre, categoría y precio de cada producto ([haga clic aquí para ver imagen en tamaño completo](custom-formatting-based-upon-data-cs/_static/image23.png))
-
 
 ## <a name="step-8-programmatically-determining-the-value-of-the-data-in-the-rowdatabound-event-handler"></a>Paso 8: Para determinar mediante programación el valor de los datos en el controlador de evento RowDataBound
 
@@ -254,19 +222,15 @@ Cuando el `ProductsDataTable` está enlazado a la GridView su `ProductsRow` inst
 
 Este controlador de eventos se puede crear con la misma serie de pasos como FormView y DetailsView.
 
-
 ![Crear un controlador de eventos para el evento RowDataBound de prvku GridView.](custom-formatting-based-upon-data-cs/_static/image24.png)
 
 **Figura 10**: Crear un controlador de eventos para el control de GridView `RowDataBound` eventos
 
-
 Crear el controlador de eventos de esta forma hará que el código siguiente se agregan automáticamente a la parte del código de la página ASP.NET:
-
 
 [!code-csharp[Main](custom-formatting-based-upon-data-cs/samples/sample14.cs)]
 
 Cuando el `RowDataBound` desencadena el evento, el controlador de eventos se pasa como su segundo parámetro un objeto de tipo `GridViewRowEventArgs`, que tiene una propiedad denominada `Row`. Esta propiedad devuelve una referencia a la `GridViewRow` que era simplemente enlazado a datos. Para tener acceso a la `ProductsRow` instancia enlazada a la `GridViewRow` usamos el `DataItem` propiedad así:
-
 
 [!code-csharp[Main](custom-formatting-based-upon-data-cs/samples/sample15.cs)]
 
@@ -281,7 +245,6 @@ Cuando se trabaja con el `RowDataBound` es importante tener en cuenta que el con
 
 Puesto que la `EmptyDataRow`, `Header`, `Footer`, y `Pager` filas no están asociadas con un `DataSource` registros, siempre tendrán un `null` valor para sus `DataItem` propiedad. Por esta razón, antes de intentar trabajar con el actual `GridViewRow`del `DataItem` propiedad, primero debemos asegurarnos de que estamos trabajando con un `DataRow`. Esto puede realizarse mediante la comprobación de la `GridViewRow`del `RowType` propiedad así:
 
-
 [!code-csharp[Main](custom-formatting-based-upon-data-cs/samples/sample16.cs)]
 
 ## <a name="step-9-highlighting-the-row-yellow-when-the-unitprice-value-is-less-than-1000"></a>Paso 9: Resaltado de la fila amarillo cuando el valor UnitPrice es inferior a 10,00 USD
@@ -290,19 +253,15 @@ El último paso es resaltar mediante programación toda la `GridViewRow` si la `
 
 En lugar de `GridViewID.Rows[index]`, podemos hacer referencia a la actual `GridViewRow` de instancia en el `RowDataBound` controlador de eventos mediante `e.Row`. Es decir, la fecha en orden para resaltar actual `GridViewRow` instancia desde el `RowDataBound` se utilizaría el controlador de eventos:
 
-
 [!code-csharp[Main](custom-formatting-based-upon-data-cs/samples/sample17.cs)]
 
 En lugar de establecer el `GridViewRow`del `BackColor` propiedad directamente, sigamos con el uso de las clases CSS. He creado una clase CSS denominada `AffordablePriceEmphasis` que establece el color de fondo en amarillo. Completado `RowDataBound` sigue el controlador de eventos:
 
-
 [!code-csharp[Main](custom-formatting-based-upon-data-cs/samples/sample18.cs)]
-
 
 [![Los productos más asequible son resaltado amarillo](custom-formatting-based-upon-data-cs/_static/image26.png)](custom-formatting-based-upon-data-cs/_static/image25.png)
 
 **Figura 11**: Los productos más asequible son resaltado amarillo ([haga clic aquí para ver imagen en tamaño completo](custom-formatting-based-upon-data-cs/_static/image27.png))
-
 
 ## <a name="summary"></a>Resumen
 

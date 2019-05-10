@@ -8,12 +8,12 @@ ms.date: 03/06/2007
 ms.assetid: 49545652-98af-46ba-9dbc-9ab529805d9b
 msc.legacyurl: /web-forms/overview/data-access/enhancing-the-gridview/inserting-a-new-record-from-the-gridview-s-footer-cs
 msc.type: authoredcontent
-ms.openlocfilehash: 44155c66fe18e8b4beefae5109c0e53dcf227f6a
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: 58d62c52ea78d8b53d7dc654d06a1cbd6a4bb844
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59386923"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65109519"
 ---
 # <a name="inserting-a-new-record-from-the-gridviews-footer-c"></a>Insertar un nuevo registro desde el pie de página de GridView (C#)
 
@@ -23,41 +23,33 @@ por [Scott Mitchell](https://twitter.com/ScottOnWriting)
 
 > Mientras el control GridView no proporciona compatibilidad integrada para insertar un nuevo registro de datos, en este tutorial se muestra cómo aumentar el control GridView para incluir una interfaz de inserción.
 
-
 ## <a name="introduction"></a>Introducción
 
 Como se describe en el [una visión general de insertar, actualizar y eliminar datos](../editing-inserting-and-deleting-data/an-overview-of-inserting-updating-and-deleting-data-cs.md) tutorial, los controles GridView, DetailsView y FormView Web incluyen capacidades de modificación de datos integrados. Cuando se usa con controles de origen de datos declarativo, el estos tres controles Web pueden configurarse de forma rápida y sencilla para modificar datos y en escenarios sin necesidad de escribir una sola línea de código. Desafortunadamente, los controles DetailsView y FormView ofrecen integrados Insertar, editar y eliminar capacidades. GridView sólo ofrece la edición y eliminación de soporte técnico. Sin embargo, con un poco codo grasa, podemos aumentar el control GridView para incluir una interfaz de inserción.
 
 Agregar funciones de inserción en el control GridView, somos responsables de decidir cómo los registros nuevos se agregará, creación de la interfaz de inserción y escribir el código para insertar el nuevo registro. En este tutorial que se examinará la adición de la interfaz de inserción al pie de página de GridView s filas (consulte la figura 1). La celda de pie de página para cada columna incluye el elemento de interfaz de usuario de recopilación de datos correspondiente (un cuadro de texto para el nombre del producto s, DropDownList para el proveedor y así sucesivamente). También necesitamos una columna para agregar botón que, al hacer clic en, se producen un postback e insertar un nuevo registro en el `Products` utilizando los valores proporcionados en la fila de pie de tabla.
 
-
 [![La fila de pie de página proporciona una interfaz para agregar nuevos productos](inserting-a-new-record-from-the-gridview-s-footer-cs/_static/image1.gif)](inserting-a-new-record-from-the-gridview-s-footer-cs/_static/image1.png)
 
 **Figura 1**: La fila de pie de página proporciona una interfaz para agregar nuevos productos ([haga clic aquí para ver imagen en tamaño completo](inserting-a-new-record-from-the-gridview-s-footer-cs/_static/image2.png))
-
 
 ## <a name="step-1-displaying-product-information-in-a-gridview"></a>Paso 1: Muestra información del producto en un control GridView
 
 Antes de que se refieren a nosotros mismos con la creación de la interfaz de inserción en el pie de página de GridView s, permiten centrarnos primero de s acerca de cómo agregar un control GridView a la página que se enumera los productos en la base de datos. Comience abriendo la `InsertThroughFooter.aspx` página en el `EnhancedGridView` carpeta y arrastre un control GridView del cuadro de herramientas hasta el diseñador, configurando la s GridView `ID` propiedad `Products`. A continuación, use la etiqueta inteligente de GridView s para enlazarla a un nuevo origen ObjectDataSource denominado `ProductsDataSource`.
 
-
 [![Crear un nuevo origen ObjectDataSource denominado ProductsDataSource](inserting-a-new-record-from-the-gridview-s-footer-cs/_static/image2.gif)](inserting-a-new-record-from-the-gridview-s-footer-cs/_static/image3.png)
 
 **Figura 2**: Crear un nuevo origen ObjectDataSource denominado `ProductsDataSource` ([haga clic aquí para ver imagen en tamaño completo](inserting-a-new-record-from-the-gridview-s-footer-cs/_static/image4.png))
 
-
 Configurar el origen ObjectDataSource para usar el `ProductsBLL` clase s `GetProducts()` método para recuperar información del producto. Para este tutorial, permiten s centrarse estrictamente agregar funciones de inserción y no preocuparse acerca de la edición y eliminación. Por lo tanto, asegúrese de que se establece la lista desplegable en la pestaña Insertar en `AddProduct()` y que las listas desplegables en las fichas de UPDATE y DELETE se establecen en (ninguno).
-
 
 [![El método AddProduct se asignan al método Insert() ObjectDataSource s](inserting-a-new-record-from-the-gridview-s-footer-cs/_static/image3.gif)](inserting-a-new-record-from-the-gridview-s-footer-cs/_static/image5.png)
 
 **Figura 3**: Mapa del `AddProduct` método al origen ObjectDataSource s `Insert()` método ([haga clic aquí para ver imagen en tamaño completo](inserting-a-new-record-from-the-gridview-s-footer-cs/_static/image6.png))
 
-
 [![Establece la actualización y eliminación pestañas listas desplegables en (None)](inserting-a-new-record-from-the-gridview-s-footer-cs/_static/image4.gif)](inserting-a-new-record-from-the-gridview-s-footer-cs/_static/image7.png)
 
 **Figura 4**: Establezca la actualización y listas desplegables de las pestañas eliminar (ninguno) ([haga clic aquí para ver imagen en tamaño completo](inserting-a-new-record-from-the-gridview-s-footer-cs/_static/image8.png))
-
 
 Después de completar al Asistente para configurar origen de datos de origen ObjectDataSource s, Visual Studio agregará automáticamente los campos en el control GridView para cada uno de los campos de datos correspondiente. Por ahora, deje todos los campos agregados por Visual Studio. Más adelante en este tutorial, se deberá volver y quitar algunos de los campos cuyos valores don t deben especificarse cuando se agrega un nuevo registro.
 
@@ -65,41 +57,32 @@ Dado que hay cerca de 80 productos en la base de datos, un usuario tendrá que d
 
 En este momento, el marcado declarativo de s GridView y ObjectDataSource debe ser similar al siguiente:
 
-
 [!code-aspx[Main](inserting-a-new-record-from-the-gridview-s-footer-cs/samples/sample1.aspx)]
-
 
 [![Se muestran todos los campos de datos de producto en un control GridView paginado](inserting-a-new-record-from-the-gridview-s-footer-cs/_static/image5.gif)](inserting-a-new-record-from-the-gridview-s-footer-cs/_static/image9.png)
 
 **Figura 5**: Se muestran todos los campos de datos de producto en un control GridView paginado ([haga clic aquí para ver imagen en tamaño completo](inserting-a-new-record-from-the-gridview-s-footer-cs/_static/image10.png))
 
-
 ## <a name="step-2-adding-a-footer-row"></a>Paso 2: Agregar una fila de pie de página
 
 Junto con su encabezado y las filas de datos, el control GridView incluye una fila de pie de página. Las filas de encabezado y pie de página se muestran según los valores de las operaciones de asignación GridView [ `ShowHeader` ](https://msdn.microsoft.com/en-gb/library/system.web.ui.webcontrols.gridview.showheader.aspx) y [ `ShowFooter` ](https://msdn.microsoft.com/en-gb/library/system.web.ui.webcontrols.gridview.showfooter.aspx) propiedades. Para mostrar la fila de pie de página, basta con establecer la `ShowFooter` propiedad `true`. Como se muestra en la figura 6, establecer el `ShowFooter` propiedad `true` agrega una fila de pie de página a la cuadrícula.
-
 
 [![Para mostrar la fila de pie de página, establezca ShowFooter en True](inserting-a-new-record-from-the-gridview-s-footer-cs/_static/image6.gif)](inserting-a-new-record-from-the-gridview-s-footer-cs/_static/image11.png)
 
 **Figura 6**: Para mostrar la fila de pie de página, establezca `ShowFooter` a `True` ([haga clic aquí para ver imagen en tamaño completo](inserting-a-new-record-from-the-gridview-s-footer-cs/_static/image12.png))
 
-
 Tenga en cuenta que la fila de pie de página tiene un color de fondo de color rojo oscuro. Esto ocurre con el tema DataWebControls se crean y se aplican a todas las páginas en el [mostrar datos con el origen ObjectDataSource](../basic-reporting/displaying-data-with-the-objectdatasource-cs.md) tutorial. En concreto, el `GridView.skin` archivo configura el `FooterStyle` propiedad tal que usa el `FooterStyle` clase CSS. El `FooterStyle` clase se define en `Styles.css` como sigue:
-
 
 [!code-css[Main](inserting-a-new-record-from-the-gridview-s-footer-cs/samples/sample2.css)]
 
 > [!NOTE]
 > Se ve al explorar el uso de la fila de pie de página de GridView s en tutoriales anteriores. Si es necesario, vuelva a consultar el [mostrar información de resumen en el pie de página de GridView](../custom-formatting/displaying-summary-information-in-the-gridview-s-footer-cs.md) tutorial para ponerse al día.
 
-
 Después de establecer el `ShowFooter` propiedad `true`, dedique un momento para ver la salida en un explorador. Actualmente la t de fila de pie de página contiene cualquier texto o controles Web. En el paso 3 se modificará el pie de página para cada campo de GridView para que incluya la interfaz adecuada de inserción.
-
 
 [![La fila de pie de página vacía es muestran encima de la paginación controles de interfaz](inserting-a-new-record-from-the-gridview-s-footer-cs/_static/image7.gif)](inserting-a-new-record-from-the-gridview-s-footer-cs/_static/image13.png)
 
 **Figura 7**: La fila de pie de página vacía es muestran encima de la paginación controles de interfaz ([haga clic aquí para ver imagen en tamaño completo](inserting-a-new-record-from-the-gridview-s-footer-cs/_static/image14.png))
-
 
 ## <a name="step-3-customizing-the-footer-row"></a>Paso 3: Personalización de la fila de pie de página
 
@@ -107,14 +90,11 @@ En el [uso de TemplateFields en el GridView Control](../custom-formatting/using-
 
 Junto con el `ItemTemplate` y `EditItemTemplate`, TemplateField también incluye un `FooterTemplate` que especifica el contenido de la fila de pie de página. Por lo tanto, podemos agregar los controles Web necesarios para cada campo s insertar interfaz en el `FooterTemplate`. Para empezar, convertir todos los campos en el control GridView en TemplateFields. Esto puede hacerse el vínculo Editar columnas en el control GridView s etiquetas inteligentes, al seleccionar cada campo en la esquina inferior izquierda y haga clic en la función Convert este campo en un vínculo TemplateField.
 
-
 ![Convierte cada campo en TemplateField](inserting-a-new-record-from-the-gridview-s-footer-cs/_static/image8.gif)
 
 **Figura 8**: Convierte cada campo en TemplateField
 
-
 Al hacer clic en la función Convert este campo en TemplateField convierte el tipo de campo actual en un TemplateField equivalente. Por ejemplo, se reemplaza cada BoundField por TemplateField con un `ItemTemplate` que contiene una etiqueta que muestra el campo de datos correspondiente y un `EditItemTemplate` que muestra el campo de datos en un cuadro de texto. El `ProductName` BoundField se ha convertido en el siguiente marcado TemplateField:
-
 
 [!code-aspx[Main](inserting-a-new-record-from-the-gridview-s-footer-cs/samples/sample3.aspx)]
 
@@ -122,18 +102,15 @@ Del mismo modo, el `Discontinued` CampoCasillaVerificación se ha convertido en 
 
 Desde el control GridView se está trabajando edición de soporte técnico de t, no dude en quitar el `EditItemTemplate` desde cada TemplateField, dejando sólo los `ItemTemplate`. Una vez hecho esto, el marcado declarativo de GridView s debe ser similar al siguiente:
 
-
 [!code-aspx[Main](inserting-a-new-record-from-the-gridview-s-footer-cs/samples/sample4.aspx)]
 
 Ahora que cada campo del control GridView se ha convertido en TemplateField, podemos escribir la interfaz adecuada de inserción en cada campo s `FooterTemplate`. Algunos de los campos no tendrá una interfaz de inserción (`ProductID`, por ejemplo); otros usuarios varían en los controles Web que se usa para recopilar la información del producto s nuevo.
 
 Para crear la interfaz de edición, elija el vínculo Editar plantillas de la etiqueta inteligente de s GridView. A continuación, en la lista desplegable, seleccione el campo apropiado s `FooterTemplate` y arrastre el control adecuado desde el cuadro de herramientas hasta el diseñador.
 
-
 [![Agregar la interfaz de inserción adecuada a cada FooterTemplate s de campo](inserting-a-new-record-from-the-gridview-s-footer-cs/_static/image9.gif)](inserting-a-new-record-from-the-gridview-s-footer-cs/_static/image15.png)
 
 **Figura 9**: Agregar la interfaz adecuada de inserción para cada campo s `FooterTemplate` ([haga clic aquí para ver imagen en tamaño completo](inserting-a-new-record-from-the-gridview-s-footer-cs/_static/image16.png))
-
 
 La lista con viñetas siguiente enumera los campos de GridView, especificar la interfaz de inserción para agregar:
 
@@ -160,16 +137,13 @@ No dude en mejorar la apariencia de los distintos campos de GridView. Por ejempl
 
 Después de crear el montón de la inserción de las interfaces en el `FooterTemplate` s, quitando el `SupplierID`, y `CategoryID` TemplateFields y mejorar la estética de la cuadrícula a través de formato y la alineación del TemplateFields, la s GridView declarativa marcado debe tener un aspecto similar al siguiente:
 
-
 [!code-aspx[Main](inserting-a-new-record-from-the-gridview-s-footer-cs/samples/sample5.aspx)]
 
 Cuando se ve mediante un explorador, la fila de pie de página de GridView s ahora incluye completado insertar interfaz (consulte la figura 10). En este momento, la inserción t de interfaz son un medio para que el usuario indicar que s escribió los datos para el nuevo producto y desea insertar un nuevo registro en la base de datos. Además, se ve aún para abordar cómo los datos introducidos en el pie de página se traducirán en un nuevo registro en el `Products` base de datos. En el paso 4, veremos cómo incluir un botón Add a la interfaz de inserción y cómo ejecutar código en el postback cuando lo s que se hizo clic. Paso 5 muestra cómo insertar un nuevo registro con los datos en el pie de página.
 
-
 [![El pie de página de GridView proporciona una interfaz para agregar un nuevo registro](inserting-a-new-record-from-the-gridview-s-footer-cs/_static/image10.gif)](inserting-a-new-record-from-the-gridview-s-footer-cs/_static/image17.png)
 
 **Figura 10**: El pie de página de GridView proporciona una interfaz para agregar un nuevo registro ([haga clic aquí para ver imagen en tamaño completo](inserting-a-new-record-from-the-gridview-s-footer-cs/_static/image18.png))
-
 
 ## <a name="step-4-including-an-add-button-in-the-inserting-interface"></a>Paso 4: Incluir un botón Add en la interfaz de inserción
 
@@ -177,23 +151,18 @@ Es necesario incluir un botón Add en algún lugar en la interfaz de inserción 
 
 En el diseñador, haga clic en el vínculo Editar plantillas en la etiqueta inteligente de GridView s y, a continuación, elija el `ProductID` campo s `FooterTemplate` en la lista desplegable. Agregar un control de botón Web (o un LinkButton o ImageButton, si lo prefiere) a la plantilla, estableciendo su ID `AddProduct`, sus `CommandName` para Insert y su `Text` propiedad para agregar, como se muestra en la figura 11.
 
-
 [![Coloque el botón Agregar en ProductID TemplateField s FooterTemplate](inserting-a-new-record-from-the-gridview-s-footer-cs/_static/image11.gif)](inserting-a-new-record-from-the-gridview-s-footer-cs/_static/image19.png)
 
 **Figura 11**: Coloque el botón Agregar en el `ProductID` TemplateField s `FooterTemplate` ([haga clic aquí para ver imagen en tamaño completo](inserting-a-new-record-from-the-gridview-s-footer-cs/_static/image20.png))
 
-
 Una vez que ha había incluido el botón Agregar, pruebe la página en un explorador. Tenga en cuenta que al hacer clic en el botón Agregar con datos no válidos en la interfaz de inserción, la devolución de datos se resumen de circuito y el control ValidationSummary indica que los datos no válidos (consulte la figura 12). Con los datos apropiados especificados, al hacer clic en el botón Agregar, se produce un postback. No hay ningún registro se agrega a la base de datos, sin embargo. Deberá escribir un fragmento de código para llevar a cabo la inserción.
-
 
 [![La s Agregar botón Postback es de circuito corto si no hay datos no válidos en la interfaz de inserción](inserting-a-new-record-from-the-gridview-s-footer-cs/_static/image12.gif)](inserting-a-new-record-from-the-gridview-s-footer-cs/_static/image21.png)
 
 **Figura 12**: La s de botón Agregar Postback es corto de circuito si no hay datos no válidos en la interfaz de inserción ([haga clic aquí para ver imagen en tamaño completo](inserting-a-new-record-from-the-gridview-s-footer-cs/_static/image22.png))
 
-
 > [!NOTE]
 > Los controles de validación en la interfaz de inserción no se han asignado a un grupo de validación. Esto funciona bien siempre y cuando la interfaz de inserción es el único conjunto de controles de validación en la página. Si, sin embargo, hay otros controles de validación en la página (por ejemplo, los controles de validación en la interfaz de edición de cuadrícula s), los controles de validación en la inserción de la interfaz y agregar botón s `ValidationGroup` propiedades se deben asignar el mismo valor de fin asociar estos controles a un grupo de validación determinado. Consulte [Disecar los controles de validación en ASP.NET 2.0](http://aspnet.4guysfromrolla.com/articles/112305-1.aspx) para obtener más información acerca de las particiones de los botones en una página y controles de validación en los grupos de validación.
-
 
 ## <a name="step-5-inserting-a-new-record-into-theproductstable"></a>Paso 5: Insertar un nuevo registro en el`Products`tabla
 
@@ -203,20 +172,16 @@ Esta lógica de inserción se debe ejecutar después de que se ha hecho clic el 
 
 Por lo tanto, para responder al usuario hacer clic en el botón Agregar, es necesario crear un controlador de eventos para el s GridView `RowCommand` eventos. Puesto que este evento se desencadena cada vez que *cualquier* se hace clic en Button, LinkButton o ImageButton en GridView, lo esencial que nos continuar solo con la lógica de inserción si s el `CommandName` propiedad pasa a las asignaciones de controlador de eventos para el `CommandName` valor del botón Agregar (Insertar). Además, debemos también solo continuamos si informan de los controles de validación de datos válidos. Para dar cabida a esto, cree un controlador de eventos para el `RowCommand` evento con el código siguiente:
 
-
 [!code-csharp[Main](inserting-a-new-record-from-the-gridview-s-footer-cs/samples/sample6.cs)]
 
 > [!NOTE]
 > Quizás se pregunte por qué el controlador de eventos molesta comprobando el `Page.IsValid` propiedad. ¿Después de todo, no se pueden suprimir la devolución de datos si se proporcionan los datos no válidos en la interfaz de inserción? Esta suposición es correcta, siempre que el usuario no ha deshabilitado JavaScript o ha tomado medidas para evitar la lógica de validación del lado cliente. En resumen, uno nunca debería basarse estrictamente en la validación del lado cliente; siempre debe realizarse una comprobación del lado servidor para validez antes de trabajar con los datos.
 
-
 En el paso 1 se creó el `ProductsDataSource` ObjectDataSource tal que su `Insert()` método se asigna a la `ProductsBLL` clase s `AddProduct` método. Para insertar el nuevo registro en el `Products` tabla, que podemos llamar simplemente la s ObjectDataSource `Insert()` método:
-
 
 [!code-csharp[Main](inserting-a-new-record-from-the-gridview-s-footer-cs/samples/sample7.cs)]
 
 Ahora que la `Insert()` ha invocado al método, lo único que queda es copiar los valores de la interfaz de inserción a los parámetros pasados a la `ProductsBLL` clase s `AddProduct` método. Como vimos en el [examinando los eventos asociados con la inserción, actualización y eliminación](../editing-inserting-and-deleting-data/examining-the-events-associated-with-inserting-updating-and-deleting-cs.md) tutorial, esto puede realizarse a través de las operaciones de asignación ObjectDataSource `Inserting` eventos. En el `Inserting` eventos que necesitamos hacer referencia mediante programación a los controles de la `Products` pie de página de GridView s de fila y asignar los valores para el `e.InputParameters` colección. Si el usuario la omita un valor como dejando la `ReorderLevel` en blanco del cuadro de texto se debe especificar que el valor insertado en la base de datos debe ser `NULL`. Puesto que la `AddProducts` método acepta los tipos que aceptan valores NULL para los campos que aceptan valores NULL de la base de datos, basta con usar un tipo que acepta valores NULL y establezca su valor en `null` en el caso de que se omita la entrada del usuario.
-
 
 [!code-csharp[Main](inserting-a-new-record-from-the-gridview-s-footer-cs/samples/sample8.cs)]
 
@@ -228,11 +193,9 @@ Actualmente, al hacer clic en el botón Agregar agrega un nuevo registro a la ta
 
 GridView usada en este tutorial no aplica ningún criterio de ordenación para los productos enumerados, ni tampoco permite al usuario final ordenar los datos. Por lo tanto, los registros se ordenan tal como están en la base de datos por su campo de clave principal. Puesto que cada nuevo registro tiene un `ProductID` valor mayor que la última de ellas, cada vez que se agrega un nuevo producto se ha agregado al final de la cuadrícula. Por lo tanto, es posible que desee enviar automáticamente al usuario a la última página del control GridView después de agregar un nuevo registro. Esto puede realizarse agregando la siguiente línea de código después de llamar a `ProductsDataSource.Insert()` en el `RowCommand` controlador de eventos para indicar que el usuario debe enviarse a la última página después de enlazar los datos en GridView:
 
-
 [!code-csharp[Main](inserting-a-new-record-from-the-gridview-s-footer-cs/samples/sample9.cs)]
 
 `SendUserToLastPage` es una variable booleana de nivel de página que inicialmente está asignada el valor `false`. En la s GridView `DataBound` controlador de eventos, si `SendUserToLastPage` es false, el `PageIndex` propiedad se actualiza para enviar al usuario a la última página.
-
 
 [!code-csharp[Main](inserting-a-new-record-from-the-gridview-s-footer-cs/samples/sample10.cs)]
 

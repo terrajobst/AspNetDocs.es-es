@@ -8,12 +8,12 @@ ms.date: 05/04/2012
 ms.assetid: 2488a91e-b0a8-465a-b874-3233f724b56b
 msc.legacyurl: /web-forms/overview/deployment/configuring-team-foundation-server-for-web-deployment/configuring-permissions-for-team-build-deployment
 msc.type: authoredcontent
-ms.openlocfilehash: 62e5c5622743447e1119141469c894dc905e6b43
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: 5699f72af6b8d7f18d1a2c631dfdedd63c66e1e6
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59381060"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65133853"
 ---
 # <a name="configuring-permissions-for-team-build-deployment"></a>Configurar permisos para la implementación de compilaciones de equipo
 
@@ -22,7 +22,6 @@ por [Jason Lee](https://github.com/jrjlee)
 [Descargar PDF](https://msdnshared.blob.core.windows.net/media/MSDNBlogsFS/prod.evol.blogs.msdn.com/CommunityServer.Blogs.Components.WeblogFiles/00/00/00/63/56/8130.DeployingWebAppsInEnterpriseScenarios.pdf)
 
 > Este tema describe cómo configurar permisos para habilitar el servidor de compilación implementar contenido en servidores web y servidores de base de datos como parte de un proceso de compilación automatizado.
-
 
 En este tema forma parte de una serie de tutoriales que se basa en los requisitos de implementación empresarial de una compañía ficticia denominada Fabrikam, Inc. Esta serie de tutoriales usa una solución de ejemplo&#x2014;el [solución Contact Manager](../web-deployment-in-the-enterprise/the-contact-manager-solution.md)&#x2014;para representar una aplicación web con un nivel realista de complejidad, incluida una aplicación ASP.NET MVC 3, una comunicación de Windows Servicio Foundation (WCF) y un proyecto de base de datos.
 
@@ -36,7 +35,6 @@ Las tareas de implementación que requieren autenticación de Windows y que tien
 
 > [!NOTE]
 > La cuenta de servicio de red utiliza la cuenta de equipo para autenticarse en otros equipos. Cuentas de equipo que adoptan la forma * [nombre de dominio]\[nombre de la máquina] ***$**&#x2014;por ejemplo, **FABRIKAM\TFSBUILD$**. Por lo tanto, si el servicio de compilación se ejecuta con la identidad de servicio de red, debe conceder los permisos necesarios para la identidad de la cuenta de equipo para el servidor de compilación.
-
 
 ## <a name="configuring-web-server-permissions"></a>Configurar permisos de servidor Web
 

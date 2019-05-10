@@ -8,12 +8,12 @@ ms.date: 09/08/2014
 ms.assetid: 4f4bf092-c400-471f-a876-78fda0417890
 msc.legacyurl: /web-forms/overview/getting-started/getting-started-with-aspnet-45-web-forms/url-routing
 msc.type: authoredcontent
-ms.openlocfilehash: 992cea256302231ee7031a21c798117b73eaa01c
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: f8a374be79a41b34dc8f17fa8d44c6e0680984d7
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59384329"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65108626"
 ---
 # <a name="url-routing"></a>Enrutamiento de direcciones URL
 
@@ -22,7 +22,6 @@ por [Erik Reitan](https://github.com/Erikre)
 [Descargar el proyecto de ejemplo de Wingtip Toys (C#)](http://go.microsoft.com/fwlink/?LinkID=389434&clcid=0x409) o [descargar eBook (PDF)](http://download.microsoft.com/download/0/F/B/0FBFAA46-2BFD-478F-8E56-7BF3C672DF9D/Getting%20Started%20with%20ASP.NET%204.5%20Web%20Forms%20and%20Visual%20Studio%202013.pdf)
 
 > Esta serie de tutoriales aprenderá los conceptos básicos de la creación de una aplicación de formularios Web Forms ASP.NET con ASP.NET 4.5 y Microsoft Visual Studio Express 2013 para Web. Un Visual Studio 2013 [proyecto con código fuente de C#](https://go.microsoft.com/fwlink/?LinkID=389434&clcid=0x409) está disponible para acompañar esta serie de tutoriales.
-
 
 En este tutorial, modificará la aplicación de ejemplo Wingtip Toys para admitir el enrutamiento de direcciones URL. Enrutamiento permite que la aplicación web utilizar direcciones URL que descriptivo, más fácil de recordar sean mejor admitidas por los motores de búsqueda. Este tutorial se basa en el tutorial anterior, "Pertenencia y administración" y forma parte de la serie de tutoriales de Wingtip Toys.
 
@@ -82,7 +81,6 @@ El segundo parámetro de la ruta incluye un valor dinámico especificado por lla
 > **Opcional**
 > 
 > Le resultará más fácil de administrar el código al mover el `RegisterCustomRoutes` método en una clase independiente. En el *lógica* carpeta, cree otro `RouteActions` clase. Mover el anterior `RegisterCustomRoutes` método desde el *Global.asax.cs* archivo en el nuevo `RoutesActions` clase. Use la `RoleActions` clase y el `createAdmin` método como un ejemplo de cómo llamar a la `RegisterCustomRoutes` método desde el *Global.asax.cs* archivo.
-
 
 Es posible que también haya observado el `RegisterRoutes` llamada de método con el `RouteConfig` objeto situado al principio de la `Application_Start` controlador de eventos. Esta llamada se realiza para implementar el enrutamiento predeterminado. Se ha incluido como código de forma predeterminada al crear la aplicación mediante la plantilla de formularios Web Forms de Visual Studio.
 

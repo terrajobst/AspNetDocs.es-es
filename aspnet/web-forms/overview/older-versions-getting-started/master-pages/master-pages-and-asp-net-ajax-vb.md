@@ -8,12 +8,12 @@ ms.date: 07/11/2008
 ms.assetid: 0ee9318c-29bb-4d58-b1dc-94e575b8ae10
 msc.legacyurl: /web-forms/overview/older-versions-getting-started/master-pages/master-pages-and-asp-net-ajax-vb
 msc.type: authoredcontent
-ms.openlocfilehash: 5a968bbbe5bdb6f8daad2c11c18c2b704c3bed8b
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: 81d1cfbbb8157b97ca25d56e97209f8e6cbb4183
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59385506"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65134046"
 ---
 # <a name="master-pages-and-aspnet-ajax-vb"></a>Páginas maestras y ASP.NET AJAX (VB)
 
@@ -22,7 +22,6 @@ por [Scott Mitchell](https://twitter.com/ScottOnWriting)
 [Descargar código](http://download.microsoft.com/download/1/8/4/184e24fa-fcc8-47fa-ac99-4b6a52d41e97/ASPNET_MasterPages_Tutorial_08_VB.zip) o [descargar PDF](http://download.microsoft.com/download/e/b/4/eb4abb10-c416-4ba4-9899-32577715b1bd/ASPNET_MasterPages_Tutorial_08_VB.pdf)
 
 > Describe las opciones para el uso de AJAX de ASP.NET y páginas maestras. Examina el uso de la clase ScriptManagerProxy; Describe cómo se cargan los distintos archivos JS dependiendo de si se utiliza el control ScriptManager en el maestro de página o página de contenido.
-
 
 ## <a name="introduction"></a>Introducción
 
@@ -35,11 +34,9 @@ Si el servidor maestro de sitio usa páginas (como debería), no necesariamente 
 > [!NOTE]
 > En este tutorial no explorar diseñar o creación de aplicaciones web habilitadas para AJAX con el marco de AJAX de ASP.NET. Para obtener más información sobre el uso de AJAX, consulte los vídeos de ASP.NET AJAX y tutoriales, así como los recursos enumerados en la sección Lecturas adicionales al final de este tutorial.
 
-
 ## <a name="examining-the-markup-emitted-by-the-scriptmanager-control"></a>Examinar el marcado emitido por el Control ScriptManager
 
 El control ScriptManager emite el marcado que indica al explorador para descargar los archivos de JavaScript que utilizan la biblioteca de cliente AJAX de ASP.NET. También se agrega un poco de JavaScript alineado a la página que se inicializa esta biblioteca. El marcado siguiente muestra el contenido que se agrega a la salida representada de una página que incluye un control ScriptManager:
-
 
 [!code-html[Main](master-pages-and-asp-net-ajax-vb/samples/sample1.html)]
 
@@ -49,7 +46,6 @@ Las referencias de script externo y emitidos por el control ScriptManager del sc
 
 > [!NOTE]
 > Si tiene previsto incluir una funcionalidad de AJAX dentro de la interfaz de usuario de la página maestra, no tiene ninguna opción en la materia: debe incluir el control ScriptManager en la página maestra.
-
 
 Una desventaja de agregar el control ScriptManager en la página principal es que el script anterior se genera en *cada* página, independientemente de si sea necesario. Claramente, esto conduce al ancho de banda desaprovechado para las páginas que no use las características del marco de AJAX de ASP.NET aún tiene el control ScriptManager incluido (a través de la página maestra). Pero, ¿cuánto se desperdicia el ancho de banda?
 
@@ -61,7 +57,6 @@ En el mejor caso, a continuación, cuando se almacenan en caché los archivos de
 > [!NOTE]
 > Si todavía se siente cómodo colocar el control ScriptManager en la página maestra, tenga en cuenta el formulario Web Forms (el `<form runat="server">` marcado en la página maestra). Todas las páginas ASP.NET que usa el modelo de postback deben incluir exactamente un formulario Web Forms. Agregar un formulario Web Forms, agrega contenido adicional: un número de campos de formulario oculto, el `<form>` etiqueta, y, si es necesario, una función JavaScript para iniciar un postback de secuencia de comandos. Este marcado no es necesario para las páginas que no devuelve datos. Quitando el formulario Web Forms de la página maestra y agregarlo manualmente a cada página de contenido que necesita uno, se podría eliminar este marcado extraño. Sin embargo, las ventajas de tener el formulario Web Forms en la página maestra superan los inconvenientes de tener que agregan innecesariamente a determinadas páginas de contenido.
 
-
 ## <a name="step-1-adding-a-scriptmanager-control-to-the-master-page"></a>Paso 1: Agregar un Control ScriptManager en la página maestra
 
 Todas las páginas web que usa el marco de AJAX de ASP.NET debe contener exactamente un control ScriptManager. Debido a este requisito, normalmente tiene sentido colocar un solo control de ScriptManager en la página maestra para que todas las páginas de contenido tienen el control ScriptManager que se incluyen automáticamente. Además, el control ScriptManager debe preceder a cualquiera de los controles de servidor ASP.NET AJAX, como los controles UpdatePanel y UpdateProgress. Por lo tanto, es mejor colocar el control ScriptManager antes que los controles ContentPlaceHolder dentro del formulario Web.
@@ -70,11 +65,9 @@ Abra el `Site.master` página principal y agregue un control ScriptManager en la
 
 Después de agregar el control ScriptManager en la página, cambiar su `ID` desde `ScriptManager1` a `MyManager`.
 
-
 [![Agregar el control ScriptManager en la página maestra](master-pages-and-asp-net-ajax-vb/_static/image2.png)](master-pages-and-asp-net-ajax-vb/_static/image1.png)
 
 **Figura 01**: Agregar el control ScriptManager en la página maestra ([haga clic aquí para ver imagen en tamaño completo](master-pages-and-asp-net-ajax-vb/_static/image3.png))
-
 
 ## <a name="step-2-using-the-aspnet-ajax-framework-from-a-content-page"></a>Paso 2: Mediante el marco de AJAX de ASP.NET desde una página de contenido
 
@@ -82,16 +75,13 @@ Con el control ScriptManager agregado a la página maestra ahora podemos agregar
 
 Empiece por crear una nueva página en el directorio raíz denominado `ShowRandomProduct.aspx`. No se olvide de enlazar esta nueva página a la `Site.master` página maestra.
 
-
 [![Agregue una nueva página de ASP.NET al sitio Web](master-pages-and-asp-net-ajax-vb/_static/image5.png)](master-pages-and-asp-net-ajax-vb/_static/image4.png)
 
 **Figura 02**: Agregue una nueva página de ASP.NET al sitio Web ([haga clic aquí para ver imagen en tamaño completo](master-pages-and-asp-net-ajax-vb/_static/image6.png))
 
-
 Recuerde que en la especificación del título, etiquetas Meta y otros encabezados HTML en el tutorial de la página principal [SKM1] hemos creado una clase de página base personalizada denominada `BasePage` que generó el título de la página si no se estableció explícitamente. Vaya a la `ShowRandomProduct.aspx` código subyacente de la página de clase y hacer que se derivan de `BasePage` (en lugar de desde `System.Web.UI.Page`).
 
 Por último, actualice el `Web.sitemap` archivo para incluir una entrada en esta lección. Agregue el siguiente marcado debajo de la `<siteMapNode>` del patrón de la lección de interacción de página de contenido:
-
 
 [!code-xml[Main](master-pages-and-asp-net-ajax-vb/samples/sample2.xml)]
 
@@ -103,37 +93,29 @@ Vuelva a `ShowRandomProduct.aspx`. En el diseñador, arrastre un control UpdateP
 
 Nuestra primera tarea consiste en Mostrar información acerca de un producto seleccionado aleatoriamente dentro de UpdatePanel. Iniciar, arrastre un control DetailsView en UpdatePanel. Establecer el control DetailsView `ID` propiedad `ProductInfo` y borre su `Height` y `Width` propiedades. Expanda la etiqueta inteligente de DetailsView y, en la lista desplegable Elegir origen de datos, decide enlazar DetailsView a un nuevo control SqlDataSource denominado `RandomProductDataSource`.
 
-
 [![Enlazar DetailsView a un nuevo Control SqlDataSource](master-pages-and-asp-net-ajax-vb/_static/image8.png)](master-pages-and-asp-net-ajax-vb/_static/image7.png)
 
 **Figura 03**: Enlazar DetailsView a un nuevo SqlDataSource Control ([haga clic aquí para ver imagen en tamaño completo](master-pages-and-asp-net-ajax-vb/_static/image9.png))
 
-
 Configurar el control SqlDataSource para conectarse a la base de datos Northwind mediante el `NorthwindConnectionString` (que se creó en la interacción con la página maestra desde el tutorial de la página de contenido [SKM2]). Cuando elige la configuración de la instrucción select especificar una instrucción SQL personalizada y, a continuación, escriba la siguiente consulta:
-
 
 [!code-sql[Main](master-pages-and-asp-net-ajax-vb/samples/sample3.sql)]
 
 El `TOP 1` palabra clave en el `SELECT` cláusula devuelve solo el primer registro devuelto por la consulta. El `NEWID()` función genera un nuevo valor de identificador único global (GUID) y se pueden usar en un `ORDER BY` cláusula para devolver registros de la tabla en orden aleatorio.
 
-
 [![Configurar SqlDataSource para devolver un único registro seleccionado al azar](master-pages-and-asp-net-ajax-vb/_static/image11.png)](master-pages-and-asp-net-ajax-vb/_static/image10.png)
 
 **Figura 04**: Configurar SqlDataSource para devolver un único registro seleccionado aleatoriamente ([haga clic aquí para ver imagen en tamaño completo](master-pages-and-asp-net-ajax-vb/_static/image12.png))
 
-
 Después de completar al asistente, Visual Studio crea un BoundField para las dos columnas devuelto por la consulta anterior. En este punto marcado declarativo de la página debe ser similar al siguiente:
-
 
 [!code-aspx[Main](master-pages-and-asp-net-ajax-vb/samples/sample4.aspx)]
 
 La figura 5 muestra el `ShowRandomProduct.aspx` página cuando se ve mediante un explorador. Haga clic en el botón de actualización de su explorador para volver a cargar la página. debería ver el `ProductName` y `UnitPrice` valores para un nuevo registro seleccionado aleatoriamente.
 
-
 [![Se muestra el nombre y el precio de un producto aleatorio](master-pages-and-asp-net-ajax-vb/_static/image14.png)](master-pages-and-asp-net-ajax-vb/_static/image13.png)
 
 **Figura 05**: Se muestra el nombre y el precio de un producto aleatorio ([haga clic aquí para ver imagen en tamaño completo](master-pages-and-asp-net-ajax-vb/_static/image15.png))
-
 
 ### <a name="automatically-displaying-a-new-product-every-15-seconds"></a>Mostrar automáticamente un nuevo producto cada 15 segundos
 
@@ -141,11 +123,9 @@ El marco de ASP.NET AJAX incluye un control Timer que realiza una devolución de
 
 Para ello, arrastre un control Timer desde el cuadro de herramientas y colóquelo en el control UpdatePanel. Cambiar el temporizador `ID` desde `Timer1` a `ProductTimer` y su `Interval` propiedad de 60000 a 15000. El `Interval` propiedad indica el número de milisegundos entre las devoluciones de datos; si se establece en 15000 hace que el temporizador desencadenar un postback de página parcial cada 15 segundos. En este punto marcado declarativo del temporizador debe ser similar al siguiente:
 
-
 [!code-aspx[Main](master-pages-and-asp-net-ajax-vb/samples/sample5.aspx)]
 
 Crear un controlador de eventos del temporizador `Tick` eventos. En este controlador de eventos es necesario volver a enlazar los datos a DetailsView mediante una llamada a la DetailsView `DataBind` método. Si lo hace, indica a DetailsView para volver a recuperar los datos de su control de origen de datos, que se seleccione y mostrará un nuevo aleatoriamente seleccionado registro (al igual que al volver a cargar la página, haga clic en el botón Actualizar del explorador).
-
 
 [!code-vb[Main](master-pages-and-asp-net-ajax-vb/samples/sample6.vb)]
 
@@ -153,21 +133,17 @@ Así de simple. Volver a visitar la página a través de un explorador. Inicialm
 
 Para ver mejor lo que sucede aquí, vamos a agregar un control de etiqueta para el control UpdatePanel que muestra la hora a la que se actualizó por última vez la presentación. Agregue un control Web Label dentro del UpdatePanel, establezca su `ID` a `LastUpdateTime`y desactive su `Text` propiedad. A continuación, cree un controlador de eventos para el UpdatePanel `Load` eventos y mostrar la hora actual en la etiqueta. (El UpdatePanel `Load` evento se desencadena en cada postback de página completa o parcial.)
 
-
 [!code-vb[Main](master-pages-and-asp-net-ajax-vb/samples/sample7.vb)]
 
 Con este cambio completo, la página incluye el tiempo que se cargó el producto que se muestra actualmente. Figura 6 muestra la página cuando se visita por primera vez. Figura 7 muestra la página de 15 segundos más tarde después de que el control Timer ha "activada" y el control UpdatePanel se actualizó para mostrar información sobre un producto nuevo.
-
 
 [![Se muestra un producto seleccionado aleatoriamente al cargar la página](master-pages-and-asp-net-ajax-vb/_static/image17.png)](master-pages-and-asp-net-ajax-vb/_static/image16.png)
 
 **Figura 06**: Se muestra un producto seleccionado aleatoriamente al cargar la página ([haga clic aquí para ver imagen en tamaño completo](master-pages-and-asp-net-ajax-vb/_static/image18.png))
 
-
 [![Cada 15 segundos, se muestra un nuevo aleatoriamente Selected Product](master-pages-and-asp-net-ajax-vb/_static/image20.png)](master-pages-and-asp-net-ajax-vb/_static/image19.png)
 
 **Figura 07**: Cada 15 segundos, se muestra un nuevo aleatoriamente Selected Product ([haga clic aquí para ver imagen en tamaño completo](master-pages-and-asp-net-ajax-vb/_static/image21.png))
-
 
 ## <a name="step-3-using-the-scriptmanagerproxy-control"></a>Paso 3: Uso del Control ScriptManagerProxy
 
@@ -177,7 +153,6 @@ Para agregar las personalizaciones de ScriptManager en la página por página us
 
 > [!NOTE]
 > Una página ASP.NET sólo puede tener no más de un control ScriptManager presente. Por lo tanto, no se puede agregar un control ScriptManager a una página de contenido si el control ScriptManager ya está definido en la página maestra. El único propósito de la ScriptManagerProxy es proporcionar una manera para que los desarrolladores definir el control ScriptManager en la página maestra, pero todavía tiene la capacidad de agregar personalizaciones de ScriptManager en la página por página.
-
 
 Para ver el control ScriptManagerProxy en acción, vamos a aumentar el UpdatePanel en `ShowRandomProduct.aspx` para incluir un botón que usa el script de cliente para pausar o reanudar el control Timer. El control Timer tiene tres métodos del lado cliente que podemos usar para lograr esta funcionalidad deseada:
 
@@ -189,32 +164,25 @@ Vamos a crear un archivo JavaScript con una variable denominada `timerEnabled` y
 
 Empiece por crear una nueva carpeta en el sitio Web denominado `Scripts`. A continuación, agregue un nuevo archivo en la carpeta de secuencias de comandos denominada `TimerScript.js` del tipo de archivo de JScript.
 
-
 [![Agregue un nuevo archivo JavaScript a la carpeta de Scripts](master-pages-and-asp-net-ajax-vb/_static/image23.png)](master-pages-and-asp-net-ajax-vb/_static/image22.png)
 
 **Figura 08**: Agregue un nuevo archivo de JavaScript a la `Scripts` carpeta ([haga clic aquí para ver imagen en tamaño completo](master-pages-and-asp-net-ajax-vb/_static/image24.png))
-
 
 [![Se agregó un nuevo archivo JavaScript en el sitio Web](master-pages-and-asp-net-ajax-vb/_static/image26.png)](master-pages-and-asp-net-ajax-vb/_static/image25.png)
 
 **Figura 09**: Se agregó un nuevo archivo JavaScript en el sitio Web ([haga clic aquí para ver imagen en tamaño completo](master-pages-and-asp-net-ajax-vb/_static/image27.png))
 
-
 A continuación, agregue el script siguiente para el `TimerScript.js` archivo:
-
 
 [!code-csharp[Main](master-pages-and-asp-net-ajax-vb/samples/sample8.cs)]
 
 Ahora debemos registrar este archivo JavaScript personalizado en `ShowRandomProduct.aspx`. Vuelva a `ShowRandomProduct.aspx` y agregue un control ScriptManagerProxy a la página; establecer su `ID` a `MyManagerProxy`. Para registrar un código de JavaScript personalizado archivo seleccionar el control ScriptManagerProxy en el diseñador y, a continuación, vaya a la ventana Propiedades. Una de las propiedades se titula secuencias de comandos. Selección de esta propiedad muestra el Editor de la colección ScriptReference que se muestra en la figura 10. Haga clic en el botón Agregar para incluir una referencia de script nuevo y, a continuación, escriba la ruta de acceso al archivo de script en la propiedad de ruta de acceso: `~/Scripts/TimerScript.js`.
 
-
 [![Agregue una referencia de Script al Control ScriptManagerProxy](master-pages-and-asp-net-ajax-vb/_static/image29.png)](master-pages-and-asp-net-ajax-vb/_static/image28.png)
 
 **Figura 10**: Agregue una referencia de Script al ScriptManagerProxy Control ([haga clic aquí para ver imagen en tamaño completo](master-pages-and-asp-net-ajax-vb/_static/image30.png))
 
-
 Después de agregar la referencia de script, el control ScriptManagerProxy's declarativo marcado se actualiza para incluir un `<Scripts>` colección con una sola `ScriptReference` entrada, como el siguiente fragmento de marcado se muestra:
-
 
 [!code-aspx[Main](master-pages-and-asp-net-ajax-vb/samples/sample9.aspx)]
 
@@ -222,23 +190,19 @@ El `ScriptReference` entrada indica la ScriptManagerProxy debe incluir una refer
 
 Ahora podemos llamar a la `ToggleTimer` función definida en `TimerScript.js` desde el script de cliente en el `ShowRandomProduct.aspx` página. Agregue el siguiente código HTML en el control UpdatePanel:
 
-
 [!code-aspx[Main](master-pages-and-asp-net-ajax-vb/samples/sample10.aspx)]
 
 Esto muestra un botón con el texto "Pausar". Cada vez que se hace clic, la función de JavaScript `ToggleTimer` se llama pasando una referencia al botón y el `id` valor del control Timer (`ProductTimer`). Tenga en cuenta la sintaxis para obtener el `id` valor del control Timer. `<%=ProductTimer.ClientID%>` emite el valor de la `ProductTimer` del control Timer `ClientID` propiedad. En la nomenclatura de Id. de Control en el tutorial de las páginas de contenido [SKM3] se describen las diferencias entre el lado del servidor `ID` valor y el lado de cliente resultante `id` valor y cómo `ClientID` devuelve el cliente `id`.
 
 Figura 11 muestra esta página cuando visita primero a través de un explorador. El temporizador se está ejecutando actualmente y actualiza la información de producto mostrado cada 15 segundos. Figura 12 se muestra la pantalla después de que se ha hecho clic el botón de pausa. Al hacer clic en el botón Pausar detiene el temporizador y actualiza el texto del botón para "Reanudar". La información del producto se actualice (y continuar actualizar cada 15 segundos) una vez que el usuario hace clic en Reanudar.
 
-
 [![Haga clic en el botón de pausa para detener el Control Timer](master-pages-and-asp-net-ajax-vb/_static/image32.png)](master-pages-and-asp-net-ajax-vb/_static/image31.png)
 
 **Figura 11**: Haga clic en el botón de pausa para detener el Control Timer ([haga clic aquí para ver imagen en tamaño completo](master-pages-and-asp-net-ajax-vb/_static/image33.png))
 
-
 [![Haga clic en el botón de reanudación para reiniciar el temporizador](master-pages-and-asp-net-ajax-vb/_static/image35.png)](master-pages-and-asp-net-ajax-vb/_static/image34.png)
 
 **Figura 12**: Haga clic en el botón de reanudación para reiniciar el temporizador ([haga clic aquí para ver imagen en tamaño completo](master-pages-and-asp-net-ajax-vb/_static/image36.png))
-
 
 ## <a name="summary"></a>Resumen
 

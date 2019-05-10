@@ -8,17 +8,16 @@ ms.date: 05/16/2012
 ms.assetid: b71d1611-5f26-40dd-8315-b65b9d69b198
 msc.legacyurl: /web-forms/overview/deployment/configuring-team-foundation-server-for-web-deployment
 msc.type: chapter
-ms.openlocfilehash: 3226039ad399fb43c82c98331be41450f6f679bd
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: 7f0f1498ad8fa51983eef335c08754a17956058d
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59405214"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65109242"
 ---
 # <a name="aspnet-4---enterprise-deployment-series-3-configuring-tfs"></a>ASP.NET 4 - Implementación de empresa, serie 3: configuración de TFS
 
 > Este tutorial le mostrará cómo configurar Team Foundation Server (TFS) 2010 para crear soluciones e implementar contenido web en distintos entornos de destino.
-
 
 - [Configurar Team Foundation Server para la implementación web](configuring-team-foundation-server-for-web-deployment.md)
 - [Crear un proyecto de equipo en TFS](creating-a-team-project-in-tfs.md)
