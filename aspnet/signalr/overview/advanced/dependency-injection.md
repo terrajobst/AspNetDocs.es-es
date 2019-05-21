@@ -12,7 +12,7 @@ ms.openlocfilehash: 52978b10b6c131ac8eff4535216cc60b43fdf3de
 ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/06/2019
+ms.lasthandoff: 05/21/2019
 ms.locfileid: "65120103"
 ---
 # <a name="dependency-injection-in-signalr"></a>Inserción de dependencias en SignalR

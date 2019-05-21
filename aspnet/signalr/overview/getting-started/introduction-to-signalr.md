@@ -12,7 +12,7 @@ ms.openlocfilehash: 3598ac3d16a2065d1fb76d1637f0ae84797f630c
 ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/06/2019
+ms.lasthandoff: 05/21/2019
 ms.locfileid: "65120099"
 ---
 # <a name="introduction-to-signalr"></a>Introducción a SignalR
