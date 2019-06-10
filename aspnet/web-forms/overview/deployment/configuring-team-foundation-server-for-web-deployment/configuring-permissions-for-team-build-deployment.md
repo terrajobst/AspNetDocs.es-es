@@ -34,7 +34,7 @@ Cuando se instala el servicio de compilación 2010 Team Foundation Server (TFS),
 Las tareas de implementación que requieren autenticación de Windows y que tiene previsto automatizar con Team Build, ejecutarán con la identidad de servicio de compilación. Por lo tanto, deberá conceder los permisos necesarios en los servidores web y los servidores de base de datos de la identidad de servicio de compilación.
 
 > [!NOTE]
-> La cuenta de servicio de red utiliza la cuenta de equipo para autenticarse en otros equipos. Cuentas de equipo que adoptan la forma * [nombre de dominio]\[nombre de la máquina] ***$**&#x2014;por ejemplo, **FABRIKAM\TFSBUILD$**. Por lo tanto, si el servicio de compilación se ejecuta con la identidad de servicio de red, debe conceder los permisos necesarios para la identidad de la cuenta de equipo para el servidor de compilación.
+> La cuenta de servicio de red utiliza la cuenta de equipo para autenticarse en otros equipos. Cuentas de equipo que adoptan la forma *[nombre de dominio]\[nombre de la máquina]* **$** &#x2014;por ejemplo, **FABRIKAM\TFSBUILD$** . Por lo tanto, si el servicio de compilación se ejecuta con la identidad de servicio de red, debe conceder los permisos necesarios para la identidad de la cuenta de equipo para el servidor de compilación.
 
 ## <a name="configuring-web-server-permissions"></a>Configurar permisos de servidor Web
 
