@@ -164,7 +164,7 @@ En primer lugar, observe que la etiqueta de apertura incluye un **salidas** atri
 
 [!code-xml[Main](understanding-the-build-process/samples/sample10.xml)]
 
-Este es un ejemplo de *procesamiento por lotes de destino*. En los archivos de proyecto de MSBuild, el procesamiento por lotes es una técnica para recorrer en iteración colecciones. El valor de la **salidas** atributo, **"% (DbPublishPackages.Identity)"**, hace referencia a la **identidad** propiedad de metadatos de la **DbPublishPackages**  lista de elementos. Esta notación, **Outputs=%***(ItemList.ItemMetadataName)*, se traduce como:
+Este es un ejemplo de *procesamiento por lotes de destino*. En los archivos de proyecto de MSBuild, el procesamiento por lotes es una técnica para recorrer en iteración colecciones. El valor de la **salidas** atributo, **"% (DbPublishPackages.Identity)"** , hace referencia a la **identidad** propiedad de metadatos de la **DbPublishPackages**  lista de elementos. Esta notación, **Outputs=%** *(ItemList.ItemMetadataName)* , se traduce como:
 
 - Dividir los elementos de **DbPublishPackages** en lotes de elementos que contienen los mismos **identidad** valor de metadatos.
 - Ejecutar el destino de una vez por lote.
@@ -178,7 +178,7 @@ Puede ver una notación similar en el  **\_Cmd** propiedad, que se basa en un co
 
 [!code-xml[Main](understanding-the-build-process/samples/sample11.xml)]
 
-En este caso, **%(DbPublishPackages.DatabaseConnectionString)**, **%(DbPublishPackages.TargetDatabase)**, y **%(DbPublishPackages.FullPath)** todas hacen referencia a los valores de metadatos de la **DbPublishPackages** colección de elementos. El  **\_Cmd** propiedad la usa el **Exec** tarea, que invoca el comando.
+En este caso, **%(DbPublishPackages.DatabaseConnectionString)** , **%(DbPublishPackages.TargetDatabase)** , y **%(DbPublishPackages.FullPath)** todas hacen referencia a los valores de metadatos de la **DbPublishPackages** colección de elementos. El **\_Cmd** propiedad la usa el **Exec** tarea, que invoca el comando.
 
 [!code-xml[Main](understanding-the-build-process/samples/sample12.xml)]
 

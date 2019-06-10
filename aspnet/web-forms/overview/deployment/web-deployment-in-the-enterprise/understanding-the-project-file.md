@@ -83,7 +83,7 @@ Normalmente necesita un archivo de proyecto proporcionar una gran cantidad de di
 
 [!code-xml[Main](understanding-the-project-file/samples/sample2.xml)]
 
-Para recuperar un valor de propiedad, use el formato **$(***PropertyName***) ***.* Por ejemplo, para recuperar el valor de la **ServerName** propiedad, escribiría:
+Para recuperar un valor de propiedad, use el formato * *$(***PropertyName***)***.* Por ejemplo, para recuperar el valor de la **ServerName** propiedad, escribiría:
 
 [!code-powershell[Main](understanding-the-project-file/samples/sample3.ps1)]
 
@@ -161,8 +161,8 @@ Destinos y tareas pueden incluir **condición** atributos. Por lo tanto, puede e
 
 Por lo general, al crear tareas útiles y destinos, necesita hacer referencia a las propiedades y elementos que ha definido en otro lugar del archivo de proyecto:
 
-- Para usar un valor de propiedad, escriba **$(***PropertyName***)**, donde *PropertyName* es el nombre de la **propiedad** elemento o el nombre de la parámetro.
-- Para usar un elemento, escriba **@(***ItemName***)**, donde *ItemName* es el nombre de la **elemento** elemento.
+- Para usar un valor de propiedad, escriba **$(***PropertyName***)** , donde *PropertyName* es el nombre de la **propiedad** elemento o el nombre de la parámetro.
+- Para usar un elemento, escriba **@(***ItemName***)** , donde *ItemName* es el nombre de la **elemento** elemento.
 
 > [!NOTE]
 > Recuerde que si crea varios elementos con el mismo nombre, va a compilar una lista. En cambio, si crea varias propiedades con el mismo nombre, el último valor de propiedad que proporcione sobrescribirá todas las propiedades anteriores con el mismo nombre&#x2014;una propiedad sólo puede contener un valor único.

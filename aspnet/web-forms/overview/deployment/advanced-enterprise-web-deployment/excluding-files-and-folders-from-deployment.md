@@ -88,7 +88,7 @@ El procedimiento siguiente muestra cómo agregar un *. wpp.targets* archivo a un
 1. Abra la solución en Visual Studio 2010.
 2. En el **el Explorador de soluciones** ventana, haga clic en el nodo del proyecto de aplicación web (por ejemplo, **ContactManager.Mvc**), seleccione **agregar**y, a continuación, haga clic en **Nuevo elemento**.
 3. En el **Agregar nuevo elemento** cuadro de diálogo, seleccione el **archivo XML** plantilla.
-4. En el **nombre** , escriba *[nombre de proyecto] ***.wpp.targets** (por ejemplo, **ContactManager.Mvc.wpp.targets**) y, a continuación, haga clic en **agregar**.
+4. En el **nombre** , escriba *[nombre de proyecto]* **.wpp.targets** (por ejemplo, **ContactManager.Mvc.wpp.targets**) y, a continuación, haga clic en **agregar**.
 
     ![](excluding-files-and-folders-from-deployment/_static/image3.png)
 
