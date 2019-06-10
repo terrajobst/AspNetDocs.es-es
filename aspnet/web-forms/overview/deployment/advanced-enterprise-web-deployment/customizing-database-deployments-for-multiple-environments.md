@@ -88,7 +88,7 @@ Para admitir la implementación de un proyecto de base de datos a varios destino
 
     ![](customizing-database-deployments-for-multiple-environments/_static/image1.png)
 3. En el **nuevo archivo de configuración de implementación** diálogo cuadro, asigne al archivo un nombre descriptivo (por ejemplo, **TestEnvironment.sqldeployment**) y, a continuación, haga clic en **guardar**.
-4. En el *[nombreDeArchivo]***.sqldeployment** página, establezca las propiedades de implementación para que coincida con los requisitos de su entorno de destino y, a continuación, guarde el archivo.
+4. En el *[nombreDeArchivo]* **.sqldeployment** página, establezca las propiedades de implementación para que coincida con los requisitos de su entorno de destino y, a continuación, guarde el archivo.
 
     ![](customizing-database-deployments-for-multiple-environments/_static/image2.png)
 5. Tenga en cuenta que el nuevo archivo se agrega a la carpeta Propiedades del proyecto de base de datos.
