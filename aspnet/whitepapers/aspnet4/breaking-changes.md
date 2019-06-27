@@ -8,12 +8,12 @@ ms.date: 02/10/2010
 ms.assetid: d601c540-f86b-4feb-890c-20c806b3da6c
 msc.legacyurl: /whitepapers/aspnet4/breaking-changes
 msc.type: content
-ms.openlocfilehash: 65b13065ae5324ce64ec1b87b2127e5277542fb8
-ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
+ms.openlocfilehash: 8ccad3b40a723c92a3164de082e1f94577141008
+ms.sourcegitcommit: dd0dc556a3d99a31d8fdbc763e9a2e53f3441b70
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/06/2019
-ms.locfileid: "65125669"
+ms.lasthandoff: 06/27/2019
+ms.locfileid: "67411205"
 ---
 # <a name="aspnet-4-breaking-changes"></a>Cambios importantes de ASP.NET 4
 
@@ -362,7 +362,7 @@ Cuando se revierte al modelo CAS heredado, se habilitan los siguientes comportam
 - Se permiten varios conjuntos de permisos diferentes en un único dominio de aplicación.
 - Las aserciones de permiso explícito no son necesarias para los ensamblados en la GAC que se invocan cuando solo ASP.NET u otro código de .NET Framework está en la pila.
 
-No se puede revertir un escenario en .NET Framework 4: aplicaciones de confianza parcial no Web ya no pueden llamar a determinadas API en System.Web.dll y System.Web.Extensions.dll. En versiones anteriores de .NET Framework, era posible para las aplicaciones de Web que no son de confianza parcial que se deben conceder explícitamente <strong>AspNetHostingPermission</strong> permisos. Estas aplicaciones, a continuación, podrían usar <strong>System.Web.HttpUtility</strong>, los tipos en el <strong>System.Web.ClientServices.\< /strong > * espacios de nombres y tipos relacionados con pertenencia a roles y perfiles. Ya no se admite llamar a estos tipos de aplicaciones Web que no son de confianza parcial en .NET Framework 4.
+No se puede revertir un escenario en .NET Framework 4: aplicaciones de confianza parcial no Web ya no pueden llamar a determinadas API en System.Web.dll y System.Web.Extensions.dll. En versiones anteriores de .NET Framework, era posible para las aplicaciones de Web que no son de confianza parcial que se deben conceder explícitamente **AspNetHostingPermission** permisos. Estas aplicaciones, a continuación, podrían usar **System.Web.HttpUtility**, los tipos en el **System.Web.ClientServices.\***  espacios de nombres y tipos relacionados con pertenencia a roles y perfiles. Ya no se admite llamar a estos tipos de aplicaciones Web que no son de confianza parcial en .NET Framework 4.
 
 > [!NOTE]
 > El **HtmlEncode** y **HtmlDecode** funcionalidad de la **System.Web.HttpUtility** clase se ha movido a la nueva versión de .NET Framework 4  **System.Net.WebUtility** clase. Si esta fue la única funcionalidad ASP.NET que se estaba usando, modifique el código de la aplicación para usar la nueva **WebUtility** clase en su lugar.

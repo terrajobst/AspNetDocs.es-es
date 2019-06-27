@@ -8,12 +8,12 @@ ms.date: 06/09/2009
 ms.assetid: cb061642-faf3-41b2-9372-69e13444d458
 msc.legacyurl: /web-forms/overview/older-versions-getting-started/deploying-web-site-projects/displaying-a-custom-error-page-cs
 msc.type: authoredcontent
-ms.openlocfilehash: f56241a6a3d1d54f917d366b08edb4a1a43bbce8
-ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
+ms.openlocfilehash: 2b84b4e0f57bdddb83fc79494b66be76edcad664
+ms.sourcegitcommit: dd0dc556a3d99a31d8fdbc763e9a2e53f3441b70
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/06/2019
-ms.locfileid: "65134446"
+ms.lasthandoff: 06/27/2019
+ms.locfileid: "67411159"
 ---
 # <a name="displaying-a-custom-error-page-c"></a>Mostrar una página de error personalizado (C#)
 
@@ -137,8 +137,10 @@ Con este cambio en su lugar, cada vez que un usuario que visita de forma remota 
 > [!NOTE]
 > Desproteger [404 páginas de Error, una vez más](http://www.smashingmagazine.com/2009/01/29/404-error-pages-one-more-time/) para obtener instrucciones sobre cómo crear eficaces páginas de error 404.
 
-[![](displaying-a-custom-error-page-cs/_static/image19.png)](displaying-a-custom-error-page-cs/_static/image18.png)**Figura 7**: La página de Error 404 personalizado muestra un mensaje más orientado a `Oops.aspx`  
- ([Haga clic aquí para ver imagen en tamaño completo](displaying-a-custom-error-page-cs/_static/image20.png)) 
+[![](displaying-a-custom-error-page-cs/_static/image19.png)](displaying-a-custom-error-page-cs/_static/image18.png)
+
+**Figura 7**: La página de Error 404 personalizado muestra un mensaje más orientado a `Oops.aspx`  
+([Haga clic aquí para ver imagen en tamaño completo](displaying-a-custom-error-page-cs/_static/image20.png)) 
 
 Dado que sabe que la `404.aspx` página solo se alcanza cuando el usuario realiza una solicitud para una página que no se encontró, puede mejorar esta página de error personalizada para incluir la funcionalidad para ayudar al usuario a abordar este tipo de error específico. Por ejemplo, podría crear una tabla de base de datos que se asigna conocida direcciones URL incorrectas a direcciones URL buena y, a continuación, tiene la `404.aspx` página de error personalizada que ejecute una consulta en que la tabla y sugerir las páginas que el usuario intenta alcanzar.
 

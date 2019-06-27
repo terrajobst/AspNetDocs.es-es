@@ -8,12 +8,12 @@ ms.date: 02/17/2014
 ms.assetid: 46bff772-01e0-40f0-9ae6-9e18c5442ee6
 msc.legacyurl: /web-pages/overview/ui-layouts-and-themes/creating-and-using-a-helper-in-an-aspnet-web-pages-site
 msc.type: authoredcontent
-ms.openlocfilehash: 1f5109324ff3ce919e88fe976587a179eeaa5a5d
-ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
+ms.openlocfilehash: 380663951094c9fc7d5f0601e30995fa073a204b
+ms.sourcegitcommit: dd0dc556a3d99a31d8fdbc763e9a2e53f3441b70
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/06/2019
-ms.locfileid: "65116029"
+ms.lasthandoff: 06/27/2019
+ms.locfileid: "67410964"
 ---
 # <a name="creating-and-using-a-helper-in-an-aspnet-web-pages-razor-site"></a>Crear y usar una aplicación auxiliar en un sitio ASP.NET Web Pages (Razor)
 
@@ -71,7 +71,7 @@ Este procedimiento muestra cómo crear la aplicación auxiliar que crea la nota,
     Para llamar a la aplicación auxiliar que creó, use `@` seguido por el nombre de archivo donde es la aplicación auxiliar, un punto y, a continuación, el nombre de la aplicación auxiliar. (Si tiene varias carpetas en el *aplicación\_código* carpeta, puede usar la sintaxis `@FolderName.FileName.HelperName` para llamar a esta persona en cualquier anidado nivel de carpeta). El texto que agregue comillas entre paréntesis es el texto que se mostrará la aplicación auxiliar como parte de la nota en la página web.
 3. Guarde la página y ejecútelo en un explorador. La aplicación auxiliar genera directamente el elemento tenga en cuenta que se llamó a la aplicación auxiliar: entre los dos párrafos.
 
-    ![Captura de pantalla que muestra la página en el explorador y cómo la aplicación auxiliar genera marcado que coloca un cuadro alrededor del texto especificado.](creating-and-using-a-helper-in-an-aspnet-web-pages-site/_static/image1.jpg)
+    ![Captura de pantalla que muestra la página en el explorador y cómo la aplicación auxiliar genera marcado que coloca un cuadro alrededor del texto especificado.](creating-and-using-a-helper-in-an-aspnet-web-pages-site/_static/image1.png)
 
 ## <a name="additional-resources"></a>Recursos adicionales
 

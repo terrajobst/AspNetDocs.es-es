@@ -1,6 +1,6 @@
 ---
 uid: mvc/overview/deployment/index
-title: Implementación de ASP.NET MVC 5.0 - ASP.NET 4.x
+title: Implementación ASP.NET MVC 5.0 | ASP.NET 4.x
 author: rick-anderson
 description: Cómo implementar proyectos de ASP.NET MVC 5.0 en un servidor.
 ms.author: riande
@@ -9,12 +9,12 @@ ms.custom: seoapril2019
 ms.assetid: 31922c31-59df-4399-99d2-e935a476f16a
 msc.legacyurl: /mvc/overview/deployment
 msc.type: chapter
-ms.openlocfilehash: f4fb7ccaf9e6fbecf414d1bdfe7b4cae3218de4b
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: 014ba84a6968212c688f56e2951c0cb0304b8881
+ms.sourcegitcommit: dd0dc556a3d99a31d8fdbc763e9a2e53f3441b70
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59389926"
+ms.lasthandoff: 06/27/2019
+ms.locfileid: "67410852"
 ---
 # <a name="aspnet-mvc-deployment"></a>Implementación de ASP.NET MVC
 

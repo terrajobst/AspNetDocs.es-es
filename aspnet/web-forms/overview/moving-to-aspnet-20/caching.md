@@ -8,12 +8,12 @@ ms.date: 02/20/2005
 ms.assetid: 2bb109d2-e299-46ea-9054-fa0263b59165
 msc.legacyurl: /web-forms/overview/moving-to-aspnet-20/caching
 msc.type: authoredcontent
-ms.openlocfilehash: 39f4eb7b0859cf52fe3ed2531e9c349b465b9327
-ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
+ms.openlocfilehash: 4f0b021ca6ca151544dd9fb0587ed9e0cf14ff65
+ms.sourcegitcommit: dd0dc556a3d99a31d8fdbc763e9a2e53f3441b70
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/06/2019
-ms.locfileid: "65116862"
+ms.lasthandoff: 06/27/2019
+ms.locfileid: "67411236"
 ---
 # <a name="caching"></a>Almacenamiento en memoria caché
 
@@ -94,7 +94,7 @@ Cuando este comando ejecuta los siguientes cambios se realizan en la base de dat
 | AspNet\_SqlCacheUnRegisterTableStoredProcedure | Anula el registro de una tabla para la dependencia de caché SQL mediante la eliminación de la entrada en la tabla de notificación y elimina el desencadenador. |
 | AspNet\_SqlCacheUpdateChangeIdStoredProcedure | Actualiza la tabla de notificación al incrementar el changeId para la tabla modificada. ASP.NET usa este valor para determinar si los datos han cambiado. Como se indica a continuación, este procedimiento almacenado se ejecuta el desencadenador que se crea cuando se habilita en la tabla. |
 
-- Llama un desencadenador de SQL Server ***tabla\_nombre *\_AspNet\_SqlCacheNotification\_desencadenador** se crea para la tabla. Este desencadenador ejecuta AspNet\_SqlCacheUpdateChangeIdStoredProcedure cuando se realiza una INSERCIÓN, actualización o eliminación en la tabla.
+- Llama un desencadenador de SQL Server  **_tabla\_nombre_\_AspNet\_SqlCacheNotification\_desencadenador** se crea para la tabla. Este desencadenador ejecuta AspNet\_SqlCacheUpdateChangeIdStoredProcedure cuando se realiza una INSERCIÓN, actualización o eliminación en la tabla.
 - Un rol de SQL Server denominada **aspnet\_ChangeNotification\_ReceiveNotificationsOnlyAccess** se agrega a la base de datos.
 
 El **aspnet\_ChangeNotification\_ReceiveNotificationsOnlyAccess** rol de SQL Server tiene permisos de ejecución para AspNet\_SqlCachePollingStoredProcedure. Para el modelo de sondeo para que funcione correctamente, debe agregar su cuenta de proceso para aspnet\_ChangeNotification\_ReceiveNotificationsOnlyAccess rol. Aspnet\_regsql.exe herramienta no hará esto por usted.

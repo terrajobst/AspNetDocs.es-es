@@ -8,12 +8,12 @@ ms.date: 01/06/2019
 ms.assetid: 52a4d5fe-aa31-4471-b3cb-a064f82cb791
 msc.legacyurl: /mvc/overview/getting-started/introduction/examining-the-edit-methods-and-edit-view
 msc.type: authoredcontent
-ms.openlocfilehash: c42ec77b5d5107f3ef70e13b779fc1bebef70a14
-ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
+ms.openlocfilehash: 264f2ec5c497682f5e3e202dd69a835ff228e75b
+ms.sourcegitcommit: dd0dc556a3d99a31d8fdbc763e9a2e53f3441b70
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/06/2019
-ms.locfileid: "65120702"
+ms.lasthandoff: 06/27/2019
+ms.locfileid: "67410869"
 ---
 # <a name="examining-the-edit-methods-and-edit-view"></a>Examinar los métodos y la vista Edit
 
@@ -21,7 +21,7 @@ by [Rick Anderson]((https://twitter.com/RickAndMSFT))
 
 [!INCLUDE [Tutorial Note](sample/code-location.md)]
 
-En esta sección, podrá examinar generado `Edit` vistas para el controlador movie y métodos de acción. Pero primero tendrá un breve desvío para hacer que la fecha de lanzamiento tenga mejor aspecto. Abra el *Models\Movie.cs* archivo y agregue las líneas resaltadas se muestra a continuación:
+En esta sección, podrá examinar generado `Edit` vistas para el controlador movie y métodos de acción. Pero primero echaremos un breve desvío para hacer que la fecha de lanzamiento tenga mejor aspecto. Abra el *Models\Movie.cs* archivo y agregue las líneas resaltadas se muestra a continuación:
 
 [!code-csharp[Main](examining-the-edit-methods-and-edit-view/samples/sample1.cs?highlight=2,12-14)]
 

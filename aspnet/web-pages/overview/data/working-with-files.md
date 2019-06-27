@@ -8,12 +8,12 @@ ms.date: 02/20/2014
 ms.assetid: eee916e4-ba4c-439a-a24e-68df7d45a569
 msc.legacyurl: /web-pages/overview/data/working-with-files
 msc.type: authoredcontent
-ms.openlocfilehash: 3ff852232212ddda4930597731911be60c092667
-ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
+ms.openlocfilehash: 684c47a8a8480dc040e5144144577c94c35d39e5
+ms.sourcegitcommit: dd0dc556a3d99a31d8fdbc763e9a2e53f3441b70
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/06/2019
-ms.locfileid: "65108943"
+ms.lasthandoff: 06/27/2019
+ms.locfileid: "67411189"
 ---
 # <a name="working-with-files-in-an-aspnet-web-pages-razor-site"></a>Trabajar con archivos en un sitio Web de ASP.NET Pages (Razor)
 
@@ -22,7 +22,7 @@ por [Tom FitzMacken](https://github.com/tfitzmac)
 > En este artículo se explica cómo leer, escribir, anexar, eliminar y cargar archivos en un sitio de ASP.NET Web Pages (Razor).
 > 
 > > [!NOTE]
-> > Si desea cargar imágenes y manipularlos (por ejemplo, voltear o cambiar su tamaño), consulte [trabajar con imágenes en un sitio de ASP.NET Web Pages](https://go.microsoft.com/fwlink/?LinkId=202897).
+> > Si desea cargar imágenes y manipularlos (por ejemplo, voltear o cambiar su tamaño), consulte [trabajar con imágenes en un sitio de ASP.NET Web Pages](/aspnet/web-pages/overview/ui-layouts-and-themes/9-working-with-images).
 > 
 > 
 > **Lo que aprenderá:** 
@@ -72,7 +72,7 @@ Si desea almacenar los datos en un archivo de texto, puede usar el `File.WriteAl
 
     A continuación, cree una variable (`dataFile`) que contiene la ubicación y el nombre del archivo para almacenar los datos. La ubicación de la configuración requiere algún tratamiento especial. En los sitios Web, es una práctica incorrecta para hacer referencia en el código a las rutas de acceso absolutas como *C:\Folder\File.txt* para los archivos en el servidor web. Si se mueve un sitio Web, una ruta de acceso absoluta será incorrecta. Además, para un sitio hospedado (en contraposición a su propio equipo) normalmente ni siquiera sabe lo que es la ruta de acceso correcta al escribir el código.
 
-    Pero a veces (por ejemplo, ahora, para escribir en un archivo) necesita una ruta de acceso completa. La solución consiste en usar el `MapPath` método de la `Server` objeto. Esto devuelve la ruta de acceso completa a su sitio Web. Para obtener la ruta de acceso para la raíz del sitio Web, es un usuario de la `~` operador (para represen el sitio de virtual raíz) para `MapPath`. (También puede pasar un nombre de la subcarpeta, como *~/App\_datos /*, para obtener la ruta de acceso para esa subcarpeta.) A continuación, puede concatenar información adicional en cualquier método la devuelve con el fin de crear una ruta de acceso completa. En este ejemplo, agregue un nombre de archivo. (Puede leer más acerca de cómo trabajar con rutas de acceso de archivos y carpetas en [Introducción a ASP.NET Web Pages de programación mediante la sintaxis Razor](https://go.microsoft.com/fwlink/?LinkId=195205#ID_WorkingWithFileAndFolderPaths).)
+    Pero a veces (por ejemplo, ahora, para escribir en un archivo) necesita una ruta de acceso completa. La solución consiste en usar el `MapPath` método de la `Server` objeto. Esto devuelve la ruta de acceso completa a su sitio Web. Para obtener la ruta de acceso para la raíz del sitio Web, es un usuario de la `~` operador (para represen el sitio de virtual raíz) para `MapPath`. (También puede pasar un nombre de la subcarpeta, como *~/App\_datos /* , para obtener la ruta de acceso para esa subcarpeta.) A continuación, puede concatenar información adicional en cualquier método la devuelve con el fin de crear una ruta de acceso completa. En este ejemplo, agregue un nombre de archivo. (Puede leer más acerca de cómo trabajar con rutas de acceso de archivos y carpetas en [Introducción a ASP.NET Web Pages de programación mediante la sintaxis Razor](https://go.microsoft.com/fwlink/?LinkId=195205#ID_WorkingWithFileAndFolderPaths).)
 
     El archivo se guarda en el *aplicación\_datos* carpeta. Esta carpeta es una carpeta especial en ASP.NET que se usa para almacenar archivos de datos, como se describe en [Introducción al trabajo con una base de datos en sitios de ASP.NET Web Pages](https://go.microsoft.com/fwlink/?LinkId=195209).
 
@@ -142,12 +142,12 @@ Este procedimiento muestra cómo leer y mostrar los datos que creó en el ejempl
 > 
 > **Mostrar datos desde un archivo delimitado por comas de Microsoft Excel**
 > 
-> Puede usar Microsoft Excel para guardar los datos contenidos en una hoja de cálculo como un archivo delimitado por comas (*.csv* archivo). Al hacerlo, se guarda el archivo de texto sin formato, no en el formato de Excel. Cada fila de la hoja de cálculo está separado por un salto de línea del archivo de texto, y cada elemento de datos está separado por una coma. Puede usar el código que se muestra en el ejemplo anterior para leer un archivo delimitado por comas de Excel cambiando el nombre del archivo de datos en el código.
+> Puede usar Microsoft Excel para guardar los datos contenidos en una hoja de cálculo como un archivo delimitado por comas ( *.csv* archivo). Al hacerlo, se guarda el archivo de texto sin formato, no en el formato de Excel. Cada fila de la hoja de cálculo está separado por un salto de línea del archivo de texto, y cada elemento de datos está separado por una coma. Puede usar el código que se muestra en el ejemplo anterior para leer un archivo delimitado por comas de Excel cambiando el nombre del archivo de datos en el código.
 
 <a id="Deleting_Files"></a>
 ## <a name="deleting-files"></a>Eliminación de archivos
 
-Para eliminar archivos desde su sitio Web, puede usar el `File.Delete` método. Este procedimiento muestra cómo permitir que los usuarios eliminar una imagen (*.jpg* archivo) desde un *imágenes* carpeta si conoce el nombre del archivo.
+Para eliminar archivos desde su sitio Web, puede usar el `File.Delete` método. Este procedimiento muestra cómo permitir que los usuarios eliminar una imagen ( *.jpg* archivo) desde un *imágenes* carpeta si conoce el nombre del archivo.
 
 > [!NOTE] 
 > 

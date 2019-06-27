@@ -8,12 +8,12 @@ ms.date: 03/10/2014
 ms.assetid: d7bd001b-6db2-4422-9b78-f3d08b743b00
 msc.legacyurl: /web-pages/overview/ui-layouts-and-themes/3-creating-a-consistent-look
 msc.type: authoredcontent
-ms.openlocfilehash: 7d580b3812c4a09d6bc8d34c46dc82339ba40ee8
-ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
+ms.openlocfilehash: 3f63ce68ae4c13970ac0df196167ace0b22b592c
+ms.sourcegitcommit: dd0dc556a3d99a31d8fdbc763e9a2e53f3441b70
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/06/2019
-ms.locfileid: "65133374"
+ms.lasthandoff: 06/27/2019
+ms.locfileid: "67411252"
 ---
 # <a name="creating-a-consistent-layout-in-aspnet-web-pages-razor-sites"></a>Crear un diseño coherente en los sitios de ASP.NET Web Pages (Razor)
 
@@ -53,7 +53,7 @@ El diagrama siguiente muestra cómo contenido bloquea el trabajo. Cuando un expl
 
 En este procedimiento, creará una página que hace referencia a dos bloques de contenido (un encabezado y un pie de página) que se encuentran en archivos independientes. Puede usar estos mismos bloques de contenido en cualquier página del sitio. Cuando haya terminado, aparecerá una página similar al siguiente:
 
-![Captura de pantalla que muestra una página en el explorador que resulta de la ejecución de una página que incluye llamadas al método RenderPage.](3-creating-a-consistent-look/_static/image2.jpg)
+![Captura de pantalla que muestra una página en el explorador que resulta de la ejecución de una página que incluye llamadas al método RenderPage.](3-creating-a-consistent-look/_static/image2.png)
 
 1. En la carpeta raíz de su sitio Web, cree un archivo denominado *Index.cshtml*.
 2. Reemplace el marcado existente por lo siguiente:
@@ -118,7 +118,7 @@ El procedimiento siguiente muestra cómo crear un diseño de páginas de conteni
     Se trata de una página que va a usar una página de diseño. El bloque de código en la parte superior de la página indica qué página de diseño se utiliza para dar formato a este contenido.
 7. Ejecute *Content1.cshtml* en un explorador. La página representada utiliza el formato y la hoja de estilos definidos en  *\_Layout1.cshtml* y el texto (contenido) definido en *Content1.cshtml*.
 
-    ![[image]](3-creating-a-consistent-look/_static/image4.jpg)
+    ![[image]](3-creating-a-consistent-look/_static/image4.png)
 
     Puede repetir el paso 6 para crear páginas de contenido adicionales que, a continuación, se pueden compartir la misma página de diseño.
 
@@ -148,7 +148,7 @@ Este procedimiento muestra cómo crear una página de contenido que tiene varias
     Esta página de contenido contiene un bloque de código en la parte superior de la página. Cada sección con nombre se encuentra en un bloque de sección. El resto de la página contiene la sección de contenido predeterminado (sin nombre).
 4. Ejecute *Content2.cshtml* en un explorador.
 
-    ![Captura de pantalla que muestra una página en el explorador que resulta de la ejecución de una página que incluye llamadas al método RenderSection.](3-creating-a-consistent-look/_static/image6.jpg)
+    ![Captura de pantalla que muestra una página en el explorador que resulta de la ejecución de una página que incluye llamadas al método RenderSection.](3-creating-a-consistent-look/_static/image6.png)
 
 ## <a name="making-content-sections-optional"></a>Hacer que las secciones de contenido opcional
 
@@ -165,7 +165,7 @@ Sin embargo, puede invalidar este comportamiento para una sección con nombre me
     [!code-cshtml[Main](3-creating-a-consistent-look/samples/sample12.cshtml)]
 2. Guarde la página y, a continuación, ejecútelo en un explorador. Se muestra un mensaje de error, porque la página de contenido no proporciona el contenido de una sección definida en la página de diseño, es decir, la sección de encabezado.
 
-    ![Captura de pantalla que muestra el error que se produce si se ejecuta una página que llama al método RenderSection, pero no se proporciona la sección correspondiente.](3-creating-a-consistent-look/_static/image7.jpg)
+    ![Captura de pantalla que muestra el error que se produce si se ejecuta una página que llama al método RenderSection, pero no se proporciona la sección correspondiente.](3-creating-a-consistent-look/_static/image7.png)
 3. En el *Shared* carpeta, abra el  *\_Layout2.cshtml* página y reemplace esta línea:
 
     [!code-javascript[Main](3-creating-a-consistent-look/samples/sample13.js)]
@@ -210,10 +210,10 @@ El siguiente procedimiento muestra cómo pasar datos de una página de contenido
     [!code-html[Main](3-creating-a-consistent-look/samples/sample18.html)]
 4. Ejecute el *Content3.cshtml* página en un explorador. Se abrirá la página con la lista visible en el lado izquierdo de la página y un **Ocultar lista** situado en la parte inferior.
 
-    ![Captura de pantalla que muestra la página que incluye la lista y un botón que dice "Ocultar List".](3-creating-a-consistent-look/_static/image10.jpg)
+    ![Captura de pantalla que muestra la página que incluye la lista y un botón que dice "Ocultar List".](3-creating-a-consistent-look/_static/image10.png)
 5. Haga clic en **Ocultar lista**. La lista desaparece y el botón cambia a **Mostrar lista**.
 
-    ![Captura de pantalla que muestra la página que no incluye la lista y un botón que dice 'Mostrar lista'.](3-creating-a-consistent-look/_static/image11.jpg)
+    ![Captura de pantalla que muestra la página que no incluye la lista y un botón que dice 'Mostrar lista'.](3-creating-a-consistent-look/_static/image11.png)
 6. Haga clic en el **Mostrar lista** botón y la lista se muestra de nuevo.
 
 ## <a name="additional-resources"></a>Recursos adicionales
