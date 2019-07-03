@@ -3,17 +3,17 @@ uid: ajax/cdn/jquery-validate/cdnjqueryvalidate1190
 title: Validación 1.19.0 jQuery | Microsoft Docs
 author: guardrex
 description: ''
-ms.author: chrissfanos
+ms.author: csfanos
 ms.date: 01/10/2019
 msc.type: content
-ms.openlocfilehash: 7fbf197965f7ab3a0e87b4eb2af3195f30c6ae6e
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: b5f38285128bd2119fb88b94ffa84cb6e1af3401
+ms.sourcegitcommit: 6a564984ad448db34cdfab5458af755d6b65e69c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59397791"
+ms.lasthandoff: 07/03/2019
+ms.locfileid: "67538782"
 ---
-# <a name="jquery-validation-1190"></a>1.19.0 de validación de jQuery
+# <a name="jquery-validation-1190"></a>1\.19.0 de validación de jQuery
 
 Los siguientes archivos se hospedan en la red CDN:
 
