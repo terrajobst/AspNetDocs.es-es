@@ -9,12 +9,12 @@ ms.custom: seoapril2019
 ms.assetid: 8cbd9d7f-7027-4390-b098-cb81a63ecd6f
 msc.legacyurl: /web-api/samples-list
 msc.type: content
-ms.openlocfilehash: 673ed803f65ece1f3cd7181a48f6c9debf88bf9e
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: 24368fc80e7fc3c840f1f1f9accf13fa15a06c1b
+ms.sourcegitcommit: 503f3a3c74124edaa82cd50c387ad9f0c276b559
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59390173"
+ms.lasthandoff: 07/08/2019
+ms.locfileid: "67649145"
 ---
 # <a name="web-api-samples-list"></a>Lista de ejemplos de Web API
 
