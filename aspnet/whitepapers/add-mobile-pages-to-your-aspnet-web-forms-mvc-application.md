@@ -234,7 +234,7 @@ Si desea que la dirección URL /Mobile para llegar a la acción Index en HomeCon
 
 Esto significa que la página principal de móvil ahora se ubicarán en /Mobile en lugar de/Mobile/Home, porque "Hogar" es ahora el implícitamente nombre de controlador de forma predeterminada para las páginas móviles.
 
-A continuación, tenga en cuenta que al agregar un segundo HomeController a su aplicación (es decir, la móviles, además de escritorio uno existente), habrá divide la página principal de escritorio normal. Se producirá un error con el error "*se encontraron varios tipos que coinciden con el controlador denominado 'Inicio'*". Para resolver este problema, actualice la configuración de enrutamiento de nivel superior (de Global.asax.cs) para especificar que el HomeController escritorio debería tener prioridad cuando hay ambigüedad:
+A continuación, tenga en cuenta que al agregar un segundo HomeController a su aplicación (es decir, la móviles, además de escritorio uno existente), habrá divide la página principal de escritorio normal. Se producirá un error con el error "*se encontraron varios tipos que coinciden con el controlador denominado 'Inicio'* ". Para resolver este problema, actualice la configuración de enrutamiento de nivel superior (de Global.asax.cs) para especificar que el HomeController escritorio debería tener prioridad cuando hay ambigüedad:
 
 [!code-csharp[Main](add-mobile-pages-to-your-aspnet-web-forms-mvc-application/samples/sample9.cs)]
 
