@@ -63,17 +63,17 @@ La API permite operaciones CRUD en la base de datos. A continuación resume la A
 
 | Authors |  |
 | --- | -- |
-| OBTENER api/authors | Obtener a todos los autores. |
-| GET api/authors / {id} | Obtener a un autor por Id. |
-| Autores/api/POST | Crear a un nuevo autor. |
+| GET api/authors | Obtener a todos los autores. |
+| GET api/authors/{id} | Obtener a un autor por Id. |
+| POST /api/authors | Crear a un nuevo autor. |
 | PUT /api/authors/{id} | Actualizar a un autor existente. |
 | DELETE /api/authors/{id} | Eliminar a un autor. |
 
 | Libros |  |
 | --- | -- |
-| OBTENER /api/books | Obtener todos los libros. |
+| GET /api/books | Obtener todos los libros. |
 | GET /api/books/{id} | Obtenga un libro por identificador. |
-| PUBLICAR libros / api / | Cree un nuevo libro. |
+| POST /api/books | Cree un nuevo libro. |
 | PUT /api/books/{id} | Actualizar un libro existente. |
 | DELETE /api/books/{id} | Eliminar un libro. |
 
