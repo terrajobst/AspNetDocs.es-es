@@ -7,12 +7,12 @@ ms.author: riande
 title: Documentación de ASP.NET
 ms.date: 08/24/2018
 description: Aprenda a desarrollar aplicaciones de ASP.NET y aplicaciones web de ASP.NET. Consulte la documentación y obtenga código de ejemplo, tutoriales y mucho más.
-ms.openlocfilehash: c907f2ba66ba6ff197ced0c67243a963ffab17e3
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: 4bfa5b2a161cdf67f3d2df0057bd68958d8a5769
+ms.sourcegitcommit: f774732a3960fca079438a88a5472c37cf7be08a
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59384726"
+ms.lasthandoff: 08/06/2019
+ms.locfileid: "68810737"
 ---
 <!-- markdownlint-disable MD033 -->
 <div id="main" class="v2">
@@ -27,7 +27,7 @@ ms.locfileid: "59384726"
                         <ul id="core_overview" class="cardsC">
                             <li>
                                 <div class="container intro">
-                                    <p>ASP.NET Core es un marco multiplataforma y de código abierto nuevo para compilar modernas aplicaciones web basadas en la nube en Windows, Mac o Linux.</p>
+                                    <p>ASP.NET Core es un marco multiplataforma y de código abierto destinado a la compilación de modernas aplicaciones web basadas en la nube en Windows, Mac o Linux.</p>
                                     <p><a href="https://docs.microsoft.com/aspnet/core/choose-aspnet-framework" data-raw-source="[Learn the benefits of both ASP.NET Core and ASP.NET](https://docs.microsoft.com/aspnet/core/choose-aspnet-framework)">Obtenga información sobre las ventajas de ASP.NET Core y ASP.NET</a> y elija el que sea adecuado para usted.</p>
                                 </div>
                             </li>
@@ -148,7 +148,6 @@ ms.locfileid: "59384726"
                             <li class="fullSpan">
                                 <div class="container footer">
                                     <p><a href="https://github.com/aspnet/Docs/blob/master/CONTRIBUTING.md">Contribuir a los ejemplos y documentación de ASP.NET Core</a></p>
-                                    <p><a href="https://docs.microsoft.com/dotnet/articles/project-json">Búsqueda de la versión de Visual Studio 2015/project.json de la documentación</a></p>
                                 </div>
                             </li>
                         </ul>
@@ -440,7 +439,7 @@ ms.locfileid: "59384726"
                         </ul>
                     </li>
                     <li>
-                        <a href="#aspnet_framework">Marcos de trabajo</a>
+                        <a href="#aspnet_framework">Marcos</a>
                         <ul id="aspnet_framework" class="cardsC">
                             <li>
                                 <div class="container intro">
