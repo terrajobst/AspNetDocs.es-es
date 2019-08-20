@@ -1,7 +1,7 @@
 ---
 uid: mvc/overview/getting-started/getting-started-with-ef-using-mvc/advanced-entity-framework-scenarios-for-an-mvc-web-application
-title: 'Tutorial: Obtenga información sobre escenarios avanzados de EF para una aplicación Web de MVC 5'
-description: Incluye en este tutorial se presentan varios temas que son útiles para tener en cuenta cuando va más allá de los aspectos básicos del desarrollo de aplicaciones web ASP.NET que usan Entity Framework Code First.
+title: 'Tutorial: Más información sobre los escenarios de EF avanzados para una aplicación web MVC 5'
+description: En este tutorial se presentan varios temas que es útil tener en cuenta cuando va más allá de los aspectos básicos del desarrollo de aplicaciones Web ASP.NET que usan Code First de Entity Framework.
 author: tdykstra
 ms.author: riande
 ms.date: 01/22/2019
@@ -10,17 +10,17 @@ ms.assetid: f35a9b0c-49ef-4cde-b06d-19d1543feb0b
 msc.legacyurl: /mvc/overview/getting-started/getting-started-with-ef-using-mvc/advanced-entity-framework-scenarios-for-an-mvc-web-application
 msc.type: authoredcontent
 ms.openlocfilehash: d7cc83a5b78a60f575f5c3065079679189296a0c
-ms.sourcegitcommit: 289e051cc8a90e8f7127e239fda73047bde4de12
+ms.sourcegitcommit: f774732a3960fca079438a88a5472c37cf7be08a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/25/2019
+ms.lasthandoff: 08/19/2019
 ms.locfileid: "58425280"
 ---
-# <a name="tutorial-learn-about-advanced-ef-scenarios-for-an-mvc-5-web-app"></a>Tutorial: Obtenga información sobre escenarios avanzados de EF para una aplicación Web de MVC 5
+# <a name="tutorial-learn-about-advanced-ef-scenarios-for-an-mvc-5-web-app"></a>Tutorial: Más información sobre los escenarios de EF avanzados para una aplicación web MVC 5
 
-En el tutorial anterior implementa la herencia de tabla por jerarquía. Incluye en este tutorial se presentan varios temas que son útiles para tener en cuenta cuando va más allá de los aspectos básicos del desarrollo de aplicaciones web ASP.NET que usan Entity Framework Code First. Las secciones primera tienen instrucciones paso a paso que le guiarán por el código y con Visual Studio para completar las tareas en las secciones siguientes se presentan varios temas con la introducción breve seguido de vínculos a recursos para obtener más información.
+En el tutorial anterior, ha implementado la herencia de tabla por jerarquía. En este tutorial se presentan varios temas que es útil tener en cuenta cuando va más allá de los aspectos básicos del desarrollo de aplicaciones Web ASP.NET que usan Code First de Entity Framework. Las primeras secciones tienen instrucciones paso a paso que le guiarán a través del código y el uso de Visual Studio para completar las tareas. en las secciones siguientes se presentan varios temas con breves introducciones seguidos de vínculos a recursos para obtener más información.
 
-Para la mayoría de estos temas, trabajará con las páginas que ya ha creado. Para usar SQL sin procesar para realizar actualizaciones masivas creará una nueva página que actualiza el número de créditos de todos los cursos de la base de datos:
+Para la mayoría de estos temas, trabajará con las páginas que ya ha creado. Para usar SQL sin procesar para realizar actualizaciones masivas, creará una nueva página que actualiza el número de créditos de todos los cursos en la base de datos:
 
 ![Update_Course_Credits_initial_page](advanced-entity-framework-scenarios-for-an-mvc-web-application/_static/image1.png)
 
@@ -28,17 +28,17 @@ En este tutorial ha:
 
 > [!div class="checklist"]
 > * Realiza consultas SQL sin formato
-> * Realizar consultas de no seguimiento
-> * Examinar el código SQL las consultas enviadas a la base de datos
+> * Realizar consultas sin seguimiento
+> * Examinar consultas SQL enviadas a la base de datos
 
-También obtendrá información sobre:
+También aprenderá lo siguiente:
 
 > [!div class="checklist"]
-> * Creación de una capa de abstracción
+> * Crear una capa de abstracción
 > * Clases de proxy
 > * Detección de cambios automática
 > * Validación automática
-> * Entity Framework Power Tools
+> * Herramientas avanzadas de Entity Framework
 > * Código fuente de Entity Framework
 
 ## <a name="prerequisite"></a>Requisito previo
@@ -47,55 +47,55 @@ También obtendrá información sobre:
 
 ## <a name="perform-raw-sql-queries"></a>Realiza consultas SQL sin formato
 
-La API de Entity Framework Code First incluye métodos que permiten pasar comandos SQL directamente a la base de datos. Tiene las siguientes opciones:
+La API de Entity Framework Code First incluye métodos que le permiten pasar comandos SQL directamente a la base de datos. Tiene las siguientes opciones:
 
-- Use la [DbSet.SqlQuery](https://msdn.microsoft.com/library/system.data.entity.dbset.sqlquery.aspx) método para las consultas que devuelven tipos de entidad. Los objetos devueltos deben ser del tipo esperado por la `DbSet` objeto y se realiza el seguimiento automático del contexto de base de datos a menos que desactive el seguimiento. (Consulte la sección siguiente la [AsNoTracking](https://msdn.microsoft.com/library/system.data.entity.dbextensions.asnotracking.aspx) método.)
-- Use la [Database.SqlQuery](https://msdn.microsoft.com/library/system.data.entity.database.sqlquery.aspx) método para las consultas que devuelven tipos que no son entidades. No se realiza un seguimiento de los datos devueltos por el contexto de la base de datos, incluso si usa este método para recuperar tipos de entidad.
-- Use la [Database.ExecuteSqlCommand](https://msdn.microsoft.com/library/gg679456.aspx) para comandos sin consulta.
+- Use el método [DbSet. SqlQuery](https://msdn.microsoft.com/library/system.data.entity.dbset.sqlquery.aspx) para las consultas que devuelven tipos de entidad. Los objetos devueltos deben ser del tipo esperado por `DbSet` el objeto y el contexto de la base de datos realiza un seguimiento de ellos automáticamente a menos que se desactive el seguimiento. (Vea la siguiente sección sobre el método [AsNoTracking](https://msdn.microsoft.com/library/system.data.entity.dbextensions.asnotracking.aspx) ).
+- Use el método [Database. SqlQuery](https://msdn.microsoft.com/library/system.data.entity.database.sqlquery.aspx) para las consultas que devuelven tipos que no son entidades. No se realiza un seguimiento de los datos devueltos por el contexto de la base de datos, incluso si usa este método para recuperar tipos de entidad.
+- Use la [base de datos. ExecuteSqlCommand](https://msdn.microsoft.com/library/gg679456.aspx) para los comandos que no son de consulta.
 
-Una de las ventajas del uso de Entity Framework es que evita enlazar el código demasiado estrechamente a un método concreto de almacenamiento de datos. Lo consigue mediante la generación de consultas SQL y comandos, lo que también le evita tener que escribirlos usted mismo. Pero hay situaciones excepcionales cuando se necesita ejecutar consultas específicas de SQL que ha creado manualmente, y estos métodos permiten controlar dichas excepciones.
+Una de las ventajas del uso de Entity Framework es que evita enlazar el código demasiado estrechamente a un método concreto de almacenamiento de datos. Lo consigue mediante la generación de consultas SQL y comandos, lo que también le evita tener que escribirlos usted mismo. Pero hay escenarios excepcionales en los que es necesario ejecutar consultas SQL específicas que se han creado manualmente, y estos métodos permiten controlar dichas excepciones.
 
 Como siempre es true cuando ejecuta comandos SQL en una aplicación web, debe tomar precauciones para proteger su sitio contra los ataques por inyección de código SQL. Una manera de hacerlo es mediante consultas parametrizadas para asegurarse de que las cadenas enviadas por una página web no se pueden interpretar como comandos SQL. En este tutorial usará las consultas con parámetros al integrar la entrada de usuario en una consulta.
 
-### <a name="calling-a-query-that-returns-entities"></a>Llamar a una consulta que devuelve las entidades
+### <a name="calling-a-query-that-returns-entities"></a>Llamar a una consulta que devuelve entidades
 
-El [DbSet&lt;TEntity&gt; ](https://msdn.microsoft.com/library/gg696460.aspx) clase proporciona un método que puede usar para ejecutar una consulta que devuelve una entidad del tipo `TEntity`. Para ver cómo funciona, cambiará el código en el `Details` método de la `Department` controlador.
+La [clase&lt;DbSet de&gt; la carpa](https://msdn.microsoft.com/library/gg696460.aspx) proporciona un método que puede usar para ejecutar una consulta que devuelve una entidad de tipo `TEntity`. Para ver cómo funciona esto, cambiará el código en el `Details` método `Department` del controlador.
 
-En *DepartmentController.cs*, en el `Details` método, reemplace el `db.Departments.FindAsync` llamada al método con un `db.Departments.SqlQuery` llamada al método, como se muestra en el siguiente código resaltado:
+En *DepartmentController.CS*, en el `Details` método, reemplace la `db.Departments.FindAsync` llamada al método con `db.Departments.SqlQuery` una llamada al método, como se muestra en el siguiente código resaltado:
 
 [!code-csharp[Main](advanced-entity-framework-scenarios-for-an-mvc-web-application/samples/sample1.cs?highlight=8-14)]
 
-Para comprobar que el nuevo código funciona correctamente, seleccione la pestaña **Departments** y, después, **Details** para uno de los departamentos. Asegúrese de que todos los datos de muestra según lo previsto.
+Para comprobar que el nuevo código funciona correctamente, seleccione la pestaña **Departments** y, después, **Details** para uno de los departamentos. Asegúrese de que todos los datos se muestran como se esperaba.
 
 ### <a name="calling-a-query-that-returns-other-types-of-objects"></a>Llamar a una consulta que devuelve otros tipos de objetos
 
-Anteriormente creó una cuadrícula de estadísticas de alumno de la página About que mostraba el número de alumnos para cada fecha de inscripción. El código que hace esto en *HomeController.cs* usa LINQ:
+Anteriormente creó una cuadrícula de estadísticas de alumno de la página About que mostraba el número de alumnos para cada fecha de inscripción. El código que lo hace en *HomeController.CS* usa LINQ:
 
 [!code-csharp[Main](advanced-entity-framework-scenarios-for-an-mvc-web-application/samples/sample2.cs)]
 
-Suponga que desea escribir el código que recupera estos datos directamente en SQL, en lugar de mediante LINQ. Para ello, necesita ejecutar una consulta que devuelve un valor distinto de objetos entidad, lo que significa deba usar el [Database.SqlQuery](https://msdn.microsoft.com/library/system.data.entity.database.sqlquery(v=VS.103).aspx) método.
+Supongamos que desea escribir el código que recupera estos datos directamente en SQL en lugar de usar LINQ. Para ello, debe ejecutar una consulta que devuelva un valor que no sea objetos entidad, lo que significa que debe usar el método [Database. SqlQuery](https://msdn.microsoft.com/library/system.data.entity.database.sqlquery(v=VS.103).aspx) .
 
-En *HomeController.cs*, reemplace la instrucción LINQ en el `About` método con una instrucción SQL, como se muestra en el siguiente código resaltado:
+En *HomeController.CS*, reemplace la instrucción LINQ en el `About` método por una instrucción SQL, como se muestra en el siguiente código resaltado:
 
 [!code-csharp[Main](advanced-entity-framework-scenarios-for-an-mvc-web-application/samples/sample3.cs?highlight=3-18)]
 
-Ejecute la página About. Compruebe que muestra los mismos datos que lo hacía antes.
+Ejecute la página about. Compruebe que muestra los mismos datos que antes.
 
 ### <a name="calling-an-update-query"></a>Llamar a una consulta Update
 
-Supongamos que los administradores de Contoso University quieren realizar cambios masivos en la base de datos, como cambiar el número de créditos para cada curso. Si la universidad tiene un gran número de cursos, sería poco eficaz recuperarlos todos como entidades y cambiarlos de forma individual. En esta sección implementará una página web que permite al usuario especificar un factor por el que se va a cambiar el número de créditos para todos los cursos y podrá realizar el cambio mediante la ejecución de una instancia de SQL `UPDATE` instrucción. 
+Supongamos que los administradores de Contoso University quieren realizar cambios masivos en la base de datos, como cambiar el número de créditos para cada curso. Si la universidad tiene un gran número de cursos, sería poco eficaz recuperarlos todos como entidades y cambiarlos de forma individual. En esta sección, implementará una página web que permite al usuario especificar un factor por el que se va a cambiar el número de créditos para todos los cursos y realizará el cambio mediante la ejecución de `UPDATE` una instrucción SQL. 
 
-En *CourseController.cs*, agregar `UpdateCourseCredits` métodos para `HttpGet` y `HttpPost`:
+En *CourseController.CS*, agregue `UpdateCourseCredits` métodos para `HttpGet` y `HttpPost`:
 
 [!code-csharp[Main](advanced-entity-framework-scenarios-for-an-mvc-web-application/samples/sample4.cs)]
 
-Cuando el controlador procesa una `HttpGet` solicitud, se devuelve nada en el `ViewBag.RowsAffected` variable y la vista muestra un cuadro de texto vacío y un botón de envío.
+Cuando el controlador procesa una `HttpGet` solicitud, no se devuelve nada en `ViewBag.RowsAffected` la variable y la vista muestra un cuadro de texto vacío y un botón de envío.
 
-Cuando el **actualización** se hace clic en el botón, el `HttpPost` método se llama a, y `multiplier` tiene el valor especificado en el cuadro de texto. El código, a continuación, ejecuta la instrucción SQL que actualiza los cursos y devuelve el número de filas afectadas a la vista en el `ViewBag.RowsAffected` variable. Cuando la vista obtiene un valor de esa variable, se muestra el número de filas actualizadas en lugar del cuadro de texto y botón de envío.
+Cuando se hace clic en el botón **Actualizar** , `HttpPost` se llama al método y `multiplier` se especifica el valor en el cuadro de texto. A continuación, el código ejecuta el SQL que actualiza los cursos y devuelve el número de filas afectadas a la vista `ViewBag.RowsAffected` en la variable. Cuando la vista obtiene un valor en esa variable, muestra el número de filas actualizadas en lugar del cuadro de texto y el botón de envío.
 
-En *CourseController.cs*, haga clic en uno de los `UpdateCourseCredits` métodos y, a continuación, haga clic en **agregar vista**. El **agregar vista** aparece el cuadro de diálogo. Deje los valores predeterminados y seleccione **agregar**.
+En *CourseController.CS*, haga clic con el botón secundario `UpdateCourseCredits` en uno de los métodos y, a continuación, haga clic en **Agregar vista**. Aparece el cuadro de diálogo **Agregar vista** . Deje los valores predeterminados y seleccione **Agregar**.
 
-En *Views\Course\UpdateCourseCredits.cshtml*, reemplace el código de plantilla con el código siguiente:
+En *Views\Course\UpdateCourseCredits.cshtml*, reemplace el código de plantilla por el código siguiente:
 
 [!code-cshtml[Main](advanced-entity-framework-scenarios-for-an-mvc-web-application/samples/sample5.cshtml)]
 
@@ -103,100 +103,100 @@ Ejecute el método `UpdateCourseCredits` seleccionando la pestaña **Courses**, 
 
 ![Update_Course_Credits_initial_page_with_2_entered](advanced-entity-framework-scenarios-for-an-mvc-web-application/_static/image1.png)
 
-Haga clic en **Actualizar**. Ver el número de filas afectadas.
+Haga clic en **Actualizar**. Verá el número de filas afectadas.
 
 Haga clic en **Volver a la lista** para ver la lista de cursos con el número de créditos revisado.
 
-Para obtener más información sobre consultas SQL sin formato, vea [consultas SQL sin procesar](https://msdn.microsoft.com/data/jj592907) en MSDN.
+Para obtener más información acerca de las consultas SQL sin formato, vea [consultas SQL sin formato](https://msdn.microsoft.com/data/jj592907) en MSDN.
 
 ## <a name="no-tracking-queries"></a>Consultas de no seguimiento
 
 Cuando un contexto de base de datos recupera las filas de tabla y crea objetos de entidad que las representa, de forma predeterminada realiza el seguimiento de si las entidades en memoria están sincronizadas con el contenido de la base de datos. Los datos en memoria actúan como una caché y se usan cuando se actualiza una entidad. Este almacenamiento en caché suele ser necesario en una aplicación web porque las instancias de contexto normalmente son de corta duración (para cada solicitud se crea una y se elimina) y el contexto que lee una entidad normalmente se elimina antes de volver a usar esa entidad.
 
-Puede deshabilitar el seguimiento de los objetos de entidad en la memoria utilizando la [AsNoTracking](https://msdn.microsoft.com/library/gg679352(v=vs.103).aspx) método. Los siguientes son escenarios típicos en los que es posible que quiera hacer esto:
+Puede deshabilitar el seguimiento de objetos entidad en la memoria mediante el método [AsNoTracking](https://msdn.microsoft.com/library/gg679352(v=vs.103).aspx) . Los siguientes son escenarios típicos en los que es posible que quiera hacer esto:
 
-- Una consulta recupera un gran volumen de datos que pueden mejorar considerablemente el rendimiento al desactivar el seguimiento.
-- Desea adjuntar una entidad para actualizarla, pero que recuperó anteriormente la misma entidad para un propósito diferente. Como el contexto de base de datos ya está realizando el seguimiento de la entidad, no se puede adjuntar la entidad que se quiere cambiar. Una forma de controlar esta situación es usar el `AsNoTracking` opción con la consulta anterior.
+- Una consulta recupera un gran volumen de datos que la desactivación del seguimiento puede mejorar notablemente el rendimiento.
+- Quiere adjuntar una entidad para actualizarla, pero antes recuperó la misma entidad para un propósito diferente. Como el contexto de base de datos ya está realizando el seguimiento de la entidad, no se puede adjuntar la entidad que se quiere cambiar. Una manera de controlar esta situación es usar la `AsNoTracking` opción con la consulta anterior.
 
-Para obtener un ejemplo que muestra cómo usar el [AsNoTracking](https://msdn.microsoft.com/library/gg679352(v=vs.103).aspx) método, consulte [la versión anterior de este tutorial](../../older-versions/getting-started-with-ef-5-using-mvc-4/advanced-entity-framework-scenarios-for-an-mvc-web-application.md). Esta versión del tutorial no establezca la marca de modificado en una entidad de enlazador de modelo creado en el método de edición, por lo que no necesita `AsNoTracking`.
+Para obtener un ejemplo en el que se muestra cómo usar el método [AsNoTracking](https://msdn.microsoft.com/library/gg679352(v=vs.103).aspx) , vea [la versión anterior de este tutorial](../../older-versions/getting-started-with-ef-5-using-mvc-4/advanced-entity-framework-scenarios-for-an-mvc-web-application.md). En esta versión del tutorial no se establece la marca Modified en una entidad creada por el enlazador de modelos en el método Edit, por `AsNoTracking`lo que no es necesario.
 
-## <a name="examine-sql-sent-to-database"></a>Examinar el código SQL enviado a la base de datos
+## <a name="examine-sql-sent-to-database"></a>Examinar SQL enviado a la base de datos
 
-A veces resulta útil poder ver las consultas SQL reales que se envían a la base de datos. En un tutorial anterior hemos visto cómo hacerlo en el código de interceptor. Ahora verá algunas maneras de hacerlo sin tener que escribir código de interceptor. Para probar esto, examinará una consulta simple y, a continuación, ver lo que ocurre al mismo a medida que agrega opciones tal diligente cargar, filtrado y ordenación.
+A veces resulta útil poder ver las consultas SQL reales que se envían a la base de datos. En un tutorial anterior vio cómo hacerlo en el código del interceptor; Ahora verá algunas maneras de hacerlo sin escribir código de interceptor. Para probarlo, verá una consulta simple y, a continuación, examinará lo que le sucede a medida que agrega opciones como la carga diligente, el filtrado y la ordenación.
 
-En *controladores/CourseController*, reemplace el `Index` método con el código siguiente para detener temporalmente la carga diligente:
+En *Controllers/CourseController*, reemplace `Index` el método por el código siguiente para detener temporalmente la carga diligente:
 
 [!code-csharp[Main](advanced-entity-framework-scenarios-for-an-mvc-web-application/samples/sample6.cs)]
 
-Ahora establezca un punto de interrupción en el `return` instrucción (F9 con el cursor en esa línea). Presione **F5** para ejecutar el proyecto en modo de depuración y seleccione la página de índice del curso. Cuando el código alcanza el punto de interrupción, examinar el `sql` variable. Vea la consulta que se envía a SQL Server. Es una sencilla `Select` instrucción.
+Ahora, establezca un punto de `return` interrupción en la instrucción (F9 con el cursor en esa línea). Presione **F5** para ejecutar el proyecto en modo de depuración y seleccione la página índice del curso. Cuando el código alcance el punto de interrupción, `sql` examine la variable. Verá la consulta que se envía a SQL Server. Se trata de una `Select` instrucción sencilla.
 
 [!code-json[Main](advanced-entity-framework-scenarios-for-an-mvc-web-application/samples/sample7.json)]
 
-Haga clic en el icono de lupa para ver la consulta en el **visualizador de texto**.
+Haga clic en la lupa para ver la consulta en el **visualizador de texto**.
 
 ![](advanced-entity-framework-scenarios-for-an-mvc-web-application/_static/image10.png)
 
-Ahora agregará una lista desplegable a la página de índice de cursos para que los usuarios pueden filtrar para un departamento determinado. Los cursos se ordena por título, y especificará la carga diligente para la `Department` propiedad de navegación.
+Ahora agregará una lista desplegable a la página de índice de cursos para que los usuarios puedan filtrar por un departamento determinado. Ordenará los cursos por título y especificará la carga diligente para la `Department` propiedad de navegación.
 
-En *CourseController.cs*, reemplace el `Index` método con el código siguiente:
+En *CourseController.CS*, reemplace el `Index` método por el código siguiente:
 
 [!code-csharp[Main](advanced-entity-framework-scenarios-for-an-mvc-web-application/samples/sample8.cs)]
 
-Restaurar el punto de interrupción en el `return` instrucción.
+Restaure el punto de `return` interrupción en la instrucción.
 
-El método recibe el valor seleccionado de la lista desplegable en el `SelectedDepartment` parámetro. Si se selecciona nada, este parámetro será nulo.
+El método recibe el valor seleccionado de la lista desplegable en el `SelectedDepartment` parámetro. Si no se selecciona nada, este parámetro será null.
 
-Un `SelectList` colección que contiene todos los departamentos se pasa a la vista de la lista desplegable. Los parámetros pasados a la `SelectList` constructor especifica el nombre del campo de valor, el nombre del campo de texto y el elemento seleccionado.
+Una `SelectList` colección que contiene todos los departamentos se pasa a la vista de la lista desplegable. Los parámetros que se pasan `SelectList` al constructor especifican el nombre del campo de valor, el nombre del campo de texto y el elemento seleccionado.
 
-Para el `Get` método de la `Course` repositorio, el código especifica una expresión de filtro, un criterio de ordenación y la carga diligente para la `Department` propiedad de navegación. Devuelve la expresión de filtro siempre `true` si se selecciona nada en la lista desplegable (es decir, `SelectedDepartment` es null).
+En el caso del `Course` `Department` método del repositorio, el código especifica una expresión de filtro, un criterio de ordenación y la carga diligente para la propiedad de navegación. `Get` La expresión de filtro siempre `true` devuelve si no hay nada seleccionado en la lista desplegable (es decir `SelectedDepartment` , es null).
 
-En *Views\Course\Index.cshtml*, inmediatamente antes de la apertura `table` etiqueta, agregue el código siguiente para crear la lista desplegable y un botón de envío:
+En *Views\Course\Index.cshtml*, inmediatamente antes de la `table` etiqueta de apertura, agregue el código siguiente para crear la lista desplegable y un botón de envío:
 
 [!code-cshtml[Main](advanced-entity-framework-scenarios-for-an-mvc-web-application/samples/sample9.cshtml)]
 
-Con el punto de interrupción establecido, ejecute la página de índice del curso. Continuar a través de las veces que el código alcanza un punto de interrupción, por lo que se muestra la página en el explorador. Seleccionar un departamento de la lista desplegable y haga clic en **filtro**.
+Con el punto de interrupción todavía establecido, ejecute la página de índice del curso. Continúe a la primera vez que el código llegue a un punto de interrupción, de modo que la página se muestre en el explorador. Seleccione un departamento en la lista desplegable y haga clic en **filtro**.
 
-Esta vez será el primer punto de interrupción de la lista desplegable de la consulta de los departamentos de TI. Omitir ese paso y ver el `query` variable la próxima vez que el código alcanza el punto de interrupción con el fin de ver qué la `Course` ahora el aspecto de la consulta. Verá algo parecido a lo siguiente:
+Esta vez, el primer punto de interrupción será para la consulta de departamentos de la lista desplegable. Omitir y ver la `query` variable la próxima vez que el código alcance el punto de interrupción para ver el `Course` aspecto de la consulta. Verá algo parecido a lo siguiente:
 
 [!code-sql[Main](advanced-entity-framework-scenarios-for-an-mvc-web-application/samples/sample10.sql)]
 
-Puede ver que la consulta es ahora un `JOIN` consulta que carga `Department` datos junto con el `Course` datos y que incluye un `WHERE` cláusula.
+Puede ver que la `JOIN` consulta es ahora una consulta que carga `Department` datos junto con los `Course` datos y que incluye una `WHERE` cláusula.
 
-Quitar el `var sql = courses.ToString()` línea.
+Quite la `var sql = courses.ToString()` línea.
 
 ## <a name="create-an-abstraction-layer"></a>Crea una capa de abstracción
 
-Muchos desarrolladores escriben código para implementar el repositorio y una unidad de patrones de trabajo como un contenedor en torno al código que funciona con Entity Framework. Estos patrones están previstos para crear una capa de abstracción entre la capa de acceso de datos y la capa de lógica de negocios de una aplicación. Implementar estos patrones puede ayudar a aislar la aplicación de cambios en el almacén de datos y puede facilitar la realización de pruebas unitarias automatizadas o el desarrollo controlado por pruebas (TDD). Sin embargo, escribir código adicional para implementar estos patrones no siempre es la mejor opción para las aplicaciones que usan EF, por varias razones:
+Muchos desarrolladores escriben código para implementar el repositorio y una unidad de patrones de trabajo como un contenedor en torno al código que funciona con Entity Framework. Estos patrones están previstos para crear una capa de abstracción entre la capa de acceso de datos y la capa de lógica de negocios de una aplicación. Implementar estos patrones puede ayudar a aislar la aplicación de cambios en el almacén de datos y puede facilitar la realización de pruebas unitarias automatizadas o el desarrollo controlado por pruebas (TDD). Sin embargo, escribir código adicional para implementar estos patrones no es siempre la mejor opción para las aplicaciones que usan EF, por varias razones:
 
 - La propia clase de contexto de EF aísla el código del código específico del almacén de datos.
 - La clase de contexto de EF puede actuar como una clase de unidad de trabajo para las actualizaciones de base de datos que hace con EF.
-- Las características introducidas en Entity Framework 6 hacer más fácil de implementar TDD sin escribir código de repositorio.
+- Las características introducidas en Entity Framework 6 facilitan la implementación de TDD sin escribir código de repositorio.
 
-Para obtener más información sobre cómo implementar el repositorio y unidad de patrones de trabajo, consulte [la versión de Entity Framework 5 de esta serie de tutoriales](../../older-versions/getting-started-with-ef-5-using-mvc-4/implementing-the-repository-and-unit-of-work-patterns-in-an-asp-net-mvc-application.md). Para obtener información sobre cómo implementar TDD en Entity Framework 6, consulte los siguientes recursos:
+Para obtener más información sobre cómo implementar los patrones de repositorio y unidad de trabajo, consulte [la versión Entity Framework 5 de esta serie de tutoriales](../../older-versions/getting-started-with-ef-5-using-mvc-4/implementing-the-repository-and-unit-of-work-patterns-in-an-asp-net-mvc-application.md). Para obtener información sobre las formas de implementar TDD en Entity Framework 6, consulte los siguientes recursos:
 
-- [Cómo EF6 permite DbSets de simulación con más facilidad](http://thedatafarm.com/data-access/how-ef6-enables-mocking-dbsets-more-easily/)
-- [Las pruebas con un marco de simulación](https://msdn.microsoft.com/data/dn314429)
-- [Las pruebas con sus propio dobles de pruebas](https://msdn.microsoft.com/data/dn314431)
+- [Cómo EF6 permite simular DbSets con más facilidad](http://thedatafarm.com/data-access/how-ef6-enables-mocking-dbsets-more-easily/)
+- [Probar con un marco ficticio](https://msdn.microsoft.com/data/dn314429)
+- [Pruebas con sus propias dobles de pruebas](https://msdn.microsoft.com/data/dn314431)
 
 <a id="proxies"></a>
 
 ## <a name="proxy-classes"></a>Clases de proxy
 
-Cuando Entity Framework crea instancias de entidad (por ejemplo, cuando se ejecuta una consulta), a menudo crea como instancias de un tipo derivado generada dinámicamente que actúa como un proxy para la entidad. Por ejemplo, vea las siguientes dos imágenes de depurador. En la primera imagen, verá que el `student` variable es el esperado `Student` escriba inmediatamente después de crear una instancia de la entidad. En la segunda imagen, una vez que se ha usado EF para leer una entidad student de la base de datos, vea la clase de proxy.
+Cuando el Entity Framework crea instancias de entidad (por ejemplo, al ejecutar una consulta), suele crearlas como instancias de un tipo derivado generado dinámicamente que actúa como un proxy para la entidad. Por ejemplo, vea las dos imágenes del depurador siguientes. En la primera imagen, verá que la `student` variable es el tipo esperado `Student` inmediatamente después de crear una instancia de la entidad. En la segunda imagen, después de que se haya usado EF para leer una entidad Student de la base de datos, verá la clase de proxy.
 
 ![Antes de la clase de proxy](advanced-entity-framework-scenarios-for-an-mvc-web-application/_static/image12.png)
 
-![Después de la clase de proxy](advanced-entity-framework-scenarios-for-an-mvc-web-application/_static/image13.png)
+![Después de la clase proxy](advanced-entity-framework-scenarios-for-an-mvc-web-application/_static/image13.png)
 
-Esta clase de proxy reemplaza algunas propiedades de la entidad que se va a insertar enlaces para realizar automáticamente acciones cuando se tiene acceso a la propiedad virtuales. Este mecanismo es usar para una función es la carga diferida.
+Esta clase de proxy invalida algunas propiedades virtuales de la entidad para insertar enlaces para realizar acciones automáticamente cuando se tiene acceso a la propiedad. Una función para la que se utiliza este mecanismo es la carga diferida.
 
-La mayoría de los casos no es necesario tener en cuenta este uso de los servidores proxy, pero hay excepciones:
+La mayoría de las veces no es necesario tener en cuenta este uso de servidores proxy, pero hay excepciones:
 
-- En algunos escenarios puede impedir que Entity Framework creen instancias de proxy. Por ejemplo, cuando se está serializando entidades generalmente desea las clases POCO, no las clases de proxy. Es una forma de evitar problemas de serialización serializar objetos de transferencia de datos (dto) en lugar de objetos de entidad, como se muestra en el [usar Web API con Entity Framework](../../../../web-api/overview/data/using-web-api-with-entity-framework/part-1.md) tutorial. Otra manera es [deshabilitar la creación de proxy](https://msdn.microsoft.com/data/jj592886.aspx).
-- Al crear instancias de una clase de entidad usando el `new` , no obtiene una instancia del proxy. Esto significa que no obtendrá una funcionalidad, como el seguimiento de cambios automático y la carga diferida. Esto normalmente no importa; por lo general no se necesita la carga diferida, porque va a crear una nueva entidad que no se encuentra en la base de datos y, por lo general no es necesario si va a marcar explícitamente la entidad como de seguimiento de cambios `Added`. Sin embargo, si necesita la carga diferida y necesita seguimiento de cambios, puede crear nuevas instancias de entidad con servidores proxy mediante la [crear](https://msdn.microsoft.com/library/gg679504.aspx) método de la `DbSet` clase.
-- Es posible que desee obtener un tipo de entidad real de un tipo de proxy. Puede usar el [GetObjectType](https://msdn.microsoft.com/library/system.data.objects.objectcontext.getobjecttype.aspx) método de la `ObjectContext` clase para obtener el tipo de entidad real de una instancia del tipo de proxy.
+- En algunos escenarios podría querer evitar que el Entity Framework Cree instancias de proxy. Por ejemplo, al serializar entidades, normalmente desea las clases POCO, no las clases de proxy. Una manera de evitar problemas de serialización es serializar los objetos de transferencia de datos (DTO) en lugar de los objetos entidad, como se muestra en el tutorial uso de la [API Web con Entity Framework](../../../../web-api/overview/data/using-web-api-with-entity-framework/part-1.md) . Otra manera es deshabilitar la [creación del proxy](https://msdn.microsoft.com/data/jj592886.aspx).
+- Cuando se crean instancias de una clase de entidad `new` mediante el operador, no se obtiene una instancia de proxy. Esto significa que no obtendrá funcionalidad como la carga diferida y el seguimiento automático de cambios. Normalmente está bien. por lo general, no se necesita la carga diferida, ya que se está creando una nueva entidad que no está en la base de datos y, por lo general, no `Added`se necesita seguimiento de cambios si se marca explícitamente la entidad como. Sin embargo, si necesita una carga diferida y necesita seguimiento de cambios, puede crear nuevas instancias de entidad con servidores proxy mediante el método [Create](https://msdn.microsoft.com/library/gg679504.aspx) de `DbSet` la clase.
+- Es posible que desee obtener un tipo de entidad real a partir de un tipo de proxy. Puede usar el método [GetObjectType](https://msdn.microsoft.com/library/system.data.objects.objectcontext.getobjecttype.aspx) de la `ObjectContext` clase para obtener el tipo de entidad real de una instancia de tipo de proxy.
 
-Para obtener más información, consulte [trabajar con servidores proxy](https://msdn.microsoft.com/data/JJ592886.aspx) en MSDN.
+Para obtener más información, vea [trabajar con servidores proxy](https://msdn.microsoft.com/data/JJ592886.aspx) en MSDN.
 
 ## <a name="automatic-change-detection"></a>Detección de cambios automática
 
@@ -212,71 +212,71 @@ Entity Framework determina cómo ha cambiado una entidad (y, por tanto, las actu
 - `DbContext.Entry`
 - `DbChangeTracker.Entries`
 
-Si realiza un seguimiento de un gran número de entidades y llama a uno de estos métodos muchas veces en un bucle, podría obtener mejoras de rendimiento significativas si desactiva la detección de cambios automático mediante temporalmente el [AutoDetectChangesEnabled](https://msdn.microsoft.com/library/system.data.entity.infrastructure.dbcontextconfiguration.autodetectchangesenabled.aspx) propiedad. Para obtener más información, consulte [detectar cambios automáticamente](https://msdn.microsoft.com/data/jj556205) en MSDN.
+Si está realizando el seguimiento de un gran número de entidades y llama a uno de estos métodos muchas veces en un bucle, podría obtener mejoras de rendimiento significativas desactivando temporalmente la detección de cambios automática mediante la propiedad [AutoDetectChangesEnabled](https://msdn.microsoft.com/library/system.data.entity.infrastructure.dbcontextconfiguration.autodetectchangesenabled.aspx) . Para obtener más información, vea [detección automática de cambios](https://msdn.microsoft.com/data/jj556205) en MSDN.
 
 ## <a name="automatic-validation"></a>Validación automática
 
-Cuando se llama a la `SaveChanges` método, de forma predeterminada, Entity Framework valida los datos de todas las propiedades de todas las entidades modificadas antes de actualizar la base de datos. Si ha actualizado un gran número de entidades y ya ha validado los datos, este trabajo no es necesario y lo puede hacer el proceso de guardar los cambios tardan menos temporalmente si se desactiva la validación. Puede hacerlo mediante el [ValidateOnSaveEnabled](https://msdn.microsoft.com/library/system.data.entity.infrastructure.dbcontextconfiguration.validateonsaveenabled.aspx) propiedad. Para obtener más información, consulte [validación](https://msdn.microsoft.com/data/gg193959) en MSDN.
+Cuando se llama al `SaveChanges` método, de forma predeterminada, el Entity Framework valida los datos de todas las propiedades de todas las entidades modificadas antes de actualizar la base de datos. Si ha actualizado un gran número de entidades y ya ha validado los datos, este trabajo no es necesario y puede hacer que el proceso de guardar los cambios tarde menos tiempo en desactivar la validación de forma temporal. Puede hacerlo mediante la propiedad [ValidateOnSaveEnabled](https://msdn.microsoft.com/library/system.data.entity.infrastructure.dbcontextconfiguration.validateonsaveenabled.aspx) . Para obtener más información, vea [validación](https://msdn.microsoft.com/data/gg193959) en MSDN.
 
-## <a name="entity-framework-power-tools"></a>Entity Framework Power Tools
+## <a name="entity-framework-power-tools"></a>Herramientas avanzadas de Entity Framework
 
-[Entity Framework Power Tools](https://marketplace.visualstudio.com/items?itemName=ErikEJ.EntityFramework6PowerToolsCommunityEdition) es un complemento de Visual Studio que se usó para crear los diagramas de modelo de datos se muestra en estos tutoriales. Las herramientas también pueden realizar otra función, como generar clases de entidad en función de las tablas de base de datos existente para que pueda usar la base de datos con Code First. Después de instalar las herramientas, aparecerán algunas opciones adicionales en los menús contextuales. Por ejemplo, cuando hace doble clic en la clase de contexto en **el Explorador de soluciones**, verá y **Entity Framework** opción. Esto le permite generar un diagrama. Cuando se usa Code First no se puede cambiar el modelo de datos en el diagrama, pero puede mover las cosas que resulte más fácil de entender.
+[Entity Framework Power Tools](https://marketplace.visualstudio.com/items?itemName=ErikEJ.EntityFramework6PowerToolsCommunityEdition) es un complemento de Visual Studio que se usó para crear los diagramas de modelo de datos que se muestran en estos tutoriales. Las herramientas también pueden realizar otras funciones, como generar clases de entidad basadas en las tablas de una base de datos existente para que pueda usar la base de datos con Code First. Después de instalar las herramientas, aparecen algunas opciones adicionales en los menús contextuales. Por ejemplo, al hacer clic con el botón secundario en la clase de contexto en **Explorador de soluciones**, verá y **Entity Framework** opción. Esto le ofrece la posibilidad de generar un diagrama. Cuando se usa Code First no se puede cambiar el modelo de datos en el diagrama, pero se pueden mover elementos para que sea más fácil de entender.
 
 ![Diagrama EF](advanced-entity-framework-scenarios-for-an-mvc-web-application/_static/image15.png)
 
 ## <a name="entity-framework-source-code"></a>Código fuente de Entity Framework
 
-El código fuente de Entity Framework 6 está disponible en [GitHub](https://github.com/aspnet/EntityFramework6). Puede registrar errores y puede aportar sus propias mejoras al código fuente EF.
+El código fuente de Entity Framework 6 está disponible en [GitHub](https://github.com/aspnet/EntityFramework6). Puede archivar errores y puede aportar sus propias mejoras al código fuente de EF.
 
 Aunque el código fuente está abierto, Entity Framework es totalmente compatible como producto de Microsoft. El equipo de Microsoft Entity Framework mantiene el control sobre qué contribuciones se aceptan y comprueba todos los cambios de código para garantizar la calidad de cada versión.
 
 ## <a name="acknowledgments"></a>Agradecimientos
 
-- Tom Dykstra escribió la versión original de este tutorial, es coautor de la actualización a EF 5 y ha escrito la actualización de EF 6. Tom es programadora senior en el equipo de contenido de las herramientas y plataforma Web de Microsoft.
-- [Rick Anderson](https://blogs.msdn.com/b/rickandy/) (twitter [ @RickAndMSFT ](http://twitter.com/RickAndMSFT)) realizó gran parte del trabajo actualizando el tutorial de EF 5 y MVC 4 y coautor de la actualización de EF 6. Rick es programadora senior de Microsoft, centrándose en Azure y MVC.
-- [Rowan Miller](http://www.romiller.com) y otros miembros del equipo de Entity Framework participaron con revisiones de código y ayudaron a depurar muchos problemas con las migraciones que surgieron mientras se estaba actualizando el tutorial de EF 5 y 6 de EF.
+- Tom Dykstra escribió la versión original de este tutorial, creó conjuntamente la actualización EF 5 y escribió la actualización EF 6. Tom es redactor de programación Senior en el equipo de contenido de herramientas y plataforma web de Microsoft.
+- [Rick Anderson](https://blogs.msdn.com/b/rickandy/) (Twitter [@RickAndMSFT](http://twitter.com/RickAndMSFT)) ha realizado la mayor parte del trabajo al actualizar el tutorial de EF 5 y MVC 4 y coautor de la actualización de EF 6. Rick es un redactor de programación Senior para Microsoft que se centra en Azure y MVC.
+- [Rowan Miller](http://www.romiller.com) y otros miembros del equipo de Entity Framework asistieron a las revisiones de código y ayudó a depurar muchos problemas con las migraciones que surgieron mientras actualizamos el tutorial para EF 5 y EF 6.
 
-## <a name="troubleshoot-common-errors"></a>Solucionar problemas de errores comunes
+## <a name="troubleshoot-common-errors"></a>Solución de errores comunes
 
-### <a name="cannot-createshadow-copy"></a>No se puede crear/shadow el copia
+### <a name="cannot-createshadow-copy"></a>No se puede crear o copiar instantáneas
 
 Mensaje de error:
 
-> No se puede crear/shadow el copia '&lt;filename&gt;' cuando ese archivo ya existe.
+> No se puede crear ni instantánea&lt;'&gt;nombredearchivo ' cuando el archivo ya existe.
 
-Soluciones
+Solución
 
 Espere unos segundos y actualice la página.
 
-### <a name="update-database-not-recognized"></a>Actualizar base de datos que no se reconoce
+### <a name="update-database-not-recognized"></a>Update: no se reconoce la base de datos
 
-Mensaje de error (desde el `Update-Database` comando en la PMC):
+Mensaje de error (desde `Update-Database` el comando en la PMC):
 
-> El término 'Update-Database' no se reconoce como nombre de un cmdlet, función, archivo de script o programa ejecutable. Compruebe la ortografía del nombre, o si incluyó una ruta de acceso, compruebe que la ruta de acceso es correcta e inténtelo de nuevo.
+> El término ' Update-Database ' no se reconoce como nombre de un cmdlet, función, archivo de script o programa ejecutable. Compruebe la ortografía del nombre, o bien, si se incluyó una ruta de acceso, compruebe que la ruta de acceso es correcta y vuelva a intentarlo.
 
-Soluciones
+Solución
 
 Salga de Visual Studio. Vuelva a abrir el proyecto e inténtelo de nuevo.
 
 ### <a name="validation-failed"></a>Error de validación
 
-Mensaje de error (desde el `Update-Database` comando en la PMC):
+Mensaje de error (desde `Update-Database` el comando en la PMC):
 
-> Error de validación de una o más entidades. Vea la propiedad 'EntityValidationErrors' para obtener más detalles.
+> Error de validación de una o más entidades. Vea la propiedad ' EntityValidationErrors ' para obtener más detalles.
 
-Soluciones
+Solución
 
-Una causa de este problema es errores de validación cuando el `Seed` ejecuciones del método. Consulte [Seeding y bases de datos de depuración de Entity Framework (EF)](https://blogs.msdn.com/b/rickandy/archive/2013/02/12/seeding-and-debugging-entity-framework-ef-dbs.aspx) para sugerencias sobre cómo depurar el `Seed` método.
+Una causa de este problema son los errores de validación `Seed` cuando se ejecuta el método. Vea [bases de los Entity Framework de propagación y depuración (EF)](https://blogs.msdn.com/b/rickandy/archive/2013/02/12/seeding-and-debugging-entity-framework-ef-dbs.aspx) para obtener sugerencias `Seed` sobre cómo depurar el método.
 
-### <a name="http-50019-error"></a>HTTP 500.19 error
+### <a name="http-50019-error"></a>Error HTTP 500,19
 
 Mensaje de error:
 
-> HTTP Error 500.19 - Error interno del servidor la página solicitada no es accesible porque los datos de configuración de la página no están válidos.
+> Error HTTP 500,19-error interno del servidor no se puede tener acceso a la página solicitada porque los datos de configuración relacionados para la página no son válidos.
 
-Soluciones
+Solución
 
-Una manera que puede obtener este error es de varias copias de la solución, cada uno de ellos con el mismo número de puerto. Normalmente puede resolver este problema al salir de todas las instancias de Visual Studio y luego reiniciar el proyecto que está trabajando. Si esto no funciona, pruebe a cambiar el número de puerto. Haga clic con el botón derecho en el archivo de proyecto y, a continuación, haga clic en Propiedades. Seleccione el **Web** pestaña y, a continuación, cambie el número de puerto en el **dirección Url del proyecto** cuadro de texto.
+Una manera de obtener este error es que se pueden obtener varias copias de la solución, cada una de ellas con el mismo número de puerto. Normalmente puede resolver este problema saliendo de todas las instancias de Visual Studio y, a continuación, reinicie el proyecto en el que está trabajando. Si eso no funciona, pruebe a cambiar el número de puerto. Haga clic con el botón derecho en el archivo de proyecto y después haga clic en propiedades. Seleccione la pestaña **Web** y, a continuación, cambie el número de puerto en el cuadro de texto **dirección URL del proyecto** .
 
 ### <a name="error-locating-sql-server-instance"></a>Error al buscar la instancia de SQL Server
 
@@ -284,21 +284,21 @@ Mensaje de error:
 
 > Error relacionado con la red o específico de la instancia mientras se establecía una conexión con el servidor SQL Server. No se encontró el servidor o éste no estaba accesible. Compruebe que el nombre de la instancia es correcto y que SQL Server está configurado para admitir conexiones remotas. (proveedor: Interfaces de red SQL, error: 26: error al buscar el servidor o la instancia especificados)
 
-Soluciones
+Solución
 
 Compruebe la cadena de conexión. Si ha eliminado manualmente la base de datos, cambie el nombre de la base de datos en la cadena de construcción.
 
 ## <a name="get-the-code"></a>Obtención del código
 
-[Descargue el proyecto completado](https://webpifeed.blob.core.windows.net/webpifeed/Partners/ASP.NET%20MVC%20Application%20Using%20Entity%20Framework%20Code%20First.zip)
+[Descargar proyecto completado](https://webpifeed.blob.core.windows.net/webpifeed/Partners/ASP.NET%20MVC%20Application%20Using%20Entity%20Framework%20Code%20First.zip)
 
 ## <a name="additional-resources"></a>Recursos adicionales
 
- Para obtener más información sobre cómo trabajar con datos mediante Entity Framework, vea el [página de documentación de EF en MSDN](https://msdn.microsoft.com/data/ee712907) y [acceso a datos de ASP.NET - recursos recomendados](../../../../whitepapers/aspnet-data-access-content-map.md).
+ Para obtener más información sobre cómo trabajar con datos mediante el Entity Framework, consulte la [Página de documentación de EF en MSDN](https://msdn.microsoft.com/data/ee712907) y [ASP.net Data Access-Recommended](../../../../whitepapers/aspnet-data-access-content-map.md)Resources.
 
-Para obtener más información sobre cómo implementar la aplicación web después de que ha creado, consulte [implementación Web de ASP.NET - recursos recomendados](../../../../whitepapers/aspnet-web-deployment-content-map.md) en MSDN Library.
+Para obtener más información sobre cómo implementar la aplicación web después de haberla creado, vea [ASP.net web Deployment-Recommended](../../../../whitepapers/aspnet-web-deployment-content-map.md) Resources en MSDN Library.
 
-Para obtener información sobre otros temas relacionados con MVC, como la autenticación y autorización, consulte el [MVC de ASP.NET - recursos recomendados](../recommended-resources-for-mvc.md).
+Para obtener información sobre otros temas relacionados con MVC, como la autenticación y la autorización, vea los [recursos de ASP.NET MVC recomendados](../recommended-resources-for-mvc.md).
 
 ## <a name="next-steps"></a>Pasos siguientes
 
@@ -306,19 +306,19 @@ En este tutorial ha:
 
 > [!div class="checklist"]
 > * Realizado consultas SQL sin formato
-> * Realizar consultas de no seguimiento
-> * Examinado consultas SQL que se envían a la base de datos
+> * Se realizaron consultas sin seguimiento
+> * Consultas SQL examinadas enviadas a la base de datos
 
-También ha aprendido acerca de:
+También ha aprendido lo siguiente:
 
 > [!div class="checklist"]
-> * Creación de una capa de abstracción
+> * Crear una capa de abstracción
 > * Clases de proxy
 > * Detección de cambios automática
 > * Validación automática
-> * Entity Framework Power Tools
+> * Herramientas avanzadas de Entity Framework
 > * Código fuente de Entity Framework
 
-Con esto finaliza esta serie de tutoriales sobre el uso de Entity Framework en una aplicación ASP.NET MVC. Si desea obtener información sobre EF Database First, vea la serie de tutoriales primera base de datos.
+Con esto se completa esta serie de tutoriales sobre el uso de la Entity Framework en una aplicación ASP.NET MVC. Si desea obtener más información sobre EF Database First, consulte la serie del primer tutorial de la base de BD.
 > [!div class="nextstepaction"]
-> [Entity Framework primero la base de datos](../database-first-development/setting-up-database.md)
+> [Entity Framework Database First](../database-first-development/setting-up-database.md)
