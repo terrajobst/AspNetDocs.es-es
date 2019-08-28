@@ -407,7 +407,7 @@ Ejecuta *SQLstatement* (con parámetros opcionales) y devuelve un valor único.
 [!code-csharp[Main](asp-net-web-pages-api-reference/samples/sample59.cs)]
 
 <a id="Helpers"></a>
-## <a name="helpers"></a>Aplicaciones auxiliares
+## <a name="helpers"></a>Asistentes
 
 ### `Analytics.GetGoogleHtml(webPropertyId)`
 
