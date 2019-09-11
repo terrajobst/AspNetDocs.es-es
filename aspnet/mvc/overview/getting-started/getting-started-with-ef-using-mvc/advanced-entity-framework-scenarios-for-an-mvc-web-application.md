@@ -10,10 +10,10 @@ ms.assetid: f35a9b0c-49ef-4cde-b06d-19d1543feb0b
 msc.legacyurl: /mvc/overview/getting-started/getting-started-with-ef-using-mvc/advanced-entity-framework-scenarios-for-an-mvc-web-application
 msc.type: authoredcontent
 ms.openlocfilehash: d7cc83a5b78a60f575f5c3065079679189296a0c
-ms.sourcegitcommit: f774732a3960fca079438a88a5472c37cf7be08a
+ms.sourcegitcommit: fe5c7512383a9b0a05d321ff10d3cca1611556f0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/19/2019
+ms.lasthandoff: 09/11/2019
 ms.locfileid: "58425280"
 ---
 # <a name="tutorial-learn-about-advanced-ef-scenarios-for-an-mvc-5-web-app"></a>Tutorial: Más información sobre los escenarios de EF avanzados para una aplicación web MVC 5
@@ -192,7 +192,7 @@ Esta clase de proxy invalida algunas propiedades virtuales de la entidad para in
 
 La mayoría de las veces no es necesario tener en cuenta este uso de servidores proxy, pero hay excepciones:
 
-- En algunos escenarios podría querer evitar que el Entity Framework Cree instancias de proxy. Por ejemplo, al serializar entidades, normalmente desea las clases POCO, no las clases de proxy. Una manera de evitar problemas de serialización es serializar los objetos de transferencia de datos (DTO) en lugar de los objetos entidad, como se muestra en el tutorial uso de la [API Web con Entity Framework](../../../../web-api/overview/data/using-web-api-with-entity-framework/part-1.md) . Otra manera es deshabilitar la [creación del proxy](https://msdn.microsoft.com/data/jj592886.aspx).
+- En algunos escenarios podría querer evitar que el Entity Framework Cree instancias de proxy. Por ejemplo, al serializar entidades, normalmente desea las clases POCO, no las clases de proxy. Una manera de evitar problemas de serialización es serializar los objetos de transferencia de datos (DTO) en lugar de los objetos entidad, como se muestra en el tutorial uso de la [API Web con Entity Framework](../../../../web-api/overview/data/using-web-api-with-entity-framework/part-1.md) . Otra manera es [deshabilitar la creación del proxy](https://msdn.microsoft.com/data/jj592886.aspx).
 - Cuando se crean instancias de una clase de entidad `new` mediante el operador, no se obtiene una instancia de proxy. Esto significa que no obtendrá funcionalidad como la carga diferida y el seguimiento automático de cambios. Normalmente está bien. por lo general, no se necesita la carga diferida, ya que se está creando una nueva entidad que no está en la base de datos y, por lo general, no `Added`se necesita seguimiento de cambios si se marca explícitamente la entidad como. Sin embargo, si necesita una carga diferida y necesita seguimiento de cambios, puede crear nuevas instancias de entidad con servidores proxy mediante el método [Create](https://msdn.microsoft.com/library/gg679504.aspx) de `DbSet` la clase.
 - Es posible que desee obtener un tipo de entidad real a partir de un tipo de proxy. Puede usar el método [GetObjectType](https://msdn.microsoft.com/library/system.data.objects.objectcontext.getobjecttype.aspx) de la `ObjectContext` clase para obtener el tipo de entidad real de una instancia de tipo de proxy.
 
@@ -294,9 +294,9 @@ Compruebe la cadena de conexión. Si ha eliminado manualmente la base de datos, 
 
 ## <a name="additional-resources"></a>Recursos adicionales
 
- Para obtener más información sobre cómo trabajar con datos mediante el Entity Framework, consulte la [Página de documentación de EF en MSDN](https://msdn.microsoft.com/data/ee712907) y [ASP.net Data Access-Recommended](../../../../whitepapers/aspnet-data-access-content-map.md)Resources.
+ Para obtener más información sobre cómo trabajar con datos mediante el Entity Framework, consulte la [Página de documentación de EF en MSDN](https://msdn.microsoft.com/data/ee712907) y [ASP.net Data Access-Recommended Resources](../../../../whitepapers/aspnet-data-access-content-map.md).
 
-Para obtener más información sobre cómo implementar la aplicación web después de haberla creado, vea [ASP.net web Deployment-Recommended](../../../../whitepapers/aspnet-web-deployment-content-map.md) Resources en MSDN Library.
+Para obtener más información sobre cómo implementar la aplicación web después de haberla creado, vea [ASP.net web Deployment-Recommended Resources](../../../../whitepapers/aspnet-web-deployment-content-map.md) en MSDN Library.
 
 Para obtener información sobre otros temas relacionados con MVC, como la autenticación y la autorización, vea los [recursos de ASP.NET MVC recomendados](../recommended-resources-for-mvc.md).
 
