@@ -9,14 +9,16 @@ ms.custom: seoapril2019
 ms.assetid: 2fc4797c-38ef-4cc7-926c-ca431c4739e8
 msc.legacyurl: /web-api/overview/getting-started-with-aspnet-web-api/action-results
 msc.type: authoredcontent
-ms.openlocfilehash: 1eaaf8e87168096683212fa66d3ddf415ad6b22b
-ms.sourcegitcommit: b95316530fa51087d6c400ff91814fe37e73f7e8
+ms.openlocfilehash: f00ac0db453053e53d6d6942dd1557b409f4167b
+ms.sourcegitcommit: 4b324a11131e38f920126066b94ff478aa9927f8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/23/2019
-ms.locfileid: "70000718"
+ms.lasthandoff: 09/13/2019
+ms.locfileid: "70985840"
 ---
 # <a name="action-results-in-web-api-2"></a>Resultados de la acción en Web API 2
+
+[!INCLUDE[](~/includes/coreWebAPI.md)]
 
 En este tema se describe cómo ASP.NET Web API convierte el valor devuelto de una acción del controlador en un mensaje de respuesta HTTP.
 
@@ -102,7 +104,7 @@ En el ejemplo siguiente, si la solicitud no coincide con un ID. de producto exis
 
 ## <a name="other-return-types"></a>Otros tipos de valor devueltos
 
-Para todos los demás tipos de valor devueltos, la API Web utiliza un formateador de [medios](../formats-and-model-binding/media-formatters.md) para serializar el valor devuelto. La API Web escribe el valor serializado en el cuerpo de la respuesta. El código de estado de la respuesta es 200 (correcto).
+Para todos los demás tipos de valor devueltos, la API Web utiliza un [formateador de medios](../formats-and-model-binding/media-formatters.md) para serializar el valor devuelto. La API Web escribe el valor serializado en el cuerpo de la respuesta. El código de estado de la respuesta es 200 (correcto).
 
 [!code-csharp[Main](action-results/samples/sample11.cs)]
 
