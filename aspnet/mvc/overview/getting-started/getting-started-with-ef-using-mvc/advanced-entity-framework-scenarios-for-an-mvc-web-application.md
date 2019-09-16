@@ -10,10 +10,10 @@ ms.assetid: f35a9b0c-49ef-4cde-b06d-19d1543feb0b
 msc.legacyurl: /mvc/overview/getting-started/getting-started-with-ef-using-mvc/advanced-entity-framework-scenarios-for-an-mvc-web-application
 msc.type: authoredcontent
 ms.openlocfilehash: d7cc83a5b78a60f575f5c3065079679189296a0c
-ms.sourcegitcommit: fe5c7512383a9b0a05d321ff10d3cca1611556f0
+ms.sourcegitcommit: 4b324a11131e38f920126066b94ff478aa9927f8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/11/2019
+ms.lasthandoff: 09/16/2019
 ms.locfileid: "58425280"
 ---
 # <a name="tutorial-learn-about-advanced-ef-scenarios-for-an-mvc-5-web-app"></a>Tutorial: Más información sobre los escenarios de EF avanzados para una aplicación web MVC 5
