@@ -1,283 +1,283 @@
 ---
 uid: identity/overview/features-api/two-factor-authentication-using-sms-and-email-with-aspnet-identity
-title: Autenticación en dos fases mediante SMS y correo electrónico con ASP.NET Identity - ASP.NET 4.x
+title: Autenticación en dos fases mediante SMS y correo electrónico con ASP.NET Identity ASP.NET 4. x
 author: HaoK
-description: Este tutorial le mostrará cómo configurar la autenticación en dos fases (2FA) mediante SMS y correo electrónico. En este artículo se escribió por Rick Anderson ( @RickAndMSFT ), por...
+description: En este tutorial se muestra cómo configurar la autenticación en dos fases (2FA) mediante SMS y el correo electrónico. Este artículo lo ha escrito Rick Anderson (@RickAndMSFT), PR...
 ms.author: riande
 ms.date: 09/15/2015
 ms.assetid: 053e23c4-13c9-40fa-87cb-3e9b0823b31e
 ms.custom: seoapril2019
 msc.legacyurl: /identity/overview/features-api/two-factor-authentication-using-sms-and-email-with-aspnet-identity
 msc.type: authoredcontent
-ms.openlocfilehash: 4ca9c141b0b48acf2c775a083398d3fb66b51cc2
-ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
+ms.openlocfilehash: 5f5218ca6c65ed3a2cd39d4e100349efa35d14cd
+ms.sourcegitcommit: 6f0e10e4ca61a1e5534b09c655fd35cdc6886c8a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/06/2019
-ms.locfileid: "65121422"
+ms.lasthandoff: 11/15/2019
+ms.locfileid: "74115090"
 ---
 # <a name="two-factorauthentication-using-sms-and-email-with-aspnet-identity"></a>Autenticación en dos fases mediante SMS y correo electrónico con ASP.NET Identity
 
 por [Hao Kung](https://github.com/HaoK), [Pranav Rastogi](https://github.com/rustd), [Rick Anderson]((https://twitter.com/RickAndMSFT)), [Suhas Joshi](https://github.com/suhasj)
 
-> Este tutorial le mostrará cómo configurar la autenticación en dos fases (2FA) mediante SMS y correo electrónico.
+> En este tutorial se muestra cómo configurar la autenticación en dos fases (2FA) mediante SMS y el correo electrónico.
 > 
-> En este artículo se escribió por Rick Anderson ([@RickAndMSFT](https://twitter.com/#!/RickAndMSFT)), Pranav Rastogi ([@rustd](https://twitter.com/rustd)), Hao Kung y Suhas Joshi. El ejemplo de NuGet se ha escrito principalmente por Hao Kung.
+> Este artículo lo ha escrito Rick Anderson ([@RickAndMSFT](https://twitter.com/#!/RickAndMSFT)), Pranav Rastogi ([@rustd](https://twitter.com/rustd)), Hao Kung y Suhas Joshi. El ejemplo de NuGet se escribió principalmente en Hao Kung.
 
-En este tema se trata los siguientes:
+En este tema se trata lo siguiente:
 
-- [Compilando el ejemplo de identidad](#build)
-- [Configuración de SMS para la autenticación en dos fases](#SMS)
+- [Compilación del ejemplo de identidad](#build)
+- [Configurar SMS para la autenticación en dos fases](#SMS)
 - [Habilitar la autenticación en dos fases](#enable2)
-- [Cómo registrar un proveedor de autenticación de dos fases](#reg)
-- [Combinar las cuentas de inicio de sesión social y local](#combine)
-- [Bloqueo de cuenta frente a ataques de fuerza bruta](#lock)
+- [Registro de un proveedor de autenticación en dos fases](#reg)
+- [Combinación de cuentas de inicio de sesión sociales y locales](#combine)
+- [Bloqueo de cuentas contra ataques por fuerza bruta](#lock)
 
 <a id="build"></a>
 
-## <a name="building-the-identity-sample"></a>Compilando el ejemplo de identidad
+## <a name="building-the-identity-sample"></a>Compilación del ejemplo de identidad
 
-En esta sección, usará NuGet para descargar un ejemplo que vamos a trabajar con. Comience por instalar y ejecutar [Visual Studio Express 2013 para Web](https://go.microsoft.com/fwlink/?LinkId=299058) o [Visual Studio 2013](https://go.microsoft.com/fwlink/?LinkId=306566). Instalar Visual Studio [2013 Update 2](https://go.microsoft.com/fwlink/?LinkId=390521) o superior.
+En esta sección, usará NuGet para descargar un ejemplo con el que trabajaremos. Empiece por instalar y ejecutar [Visual Studio Express 2013 para web](https://go.microsoft.com/fwlink/?LinkId=299058) o [Visual Studio 2013](https://go.microsoft.com/fwlink/?LinkId=306566). Instale Visual Studio [2013 Update 2](https://go.microsoft.com/fwlink/?LinkId=390521) o una versión posterior.
 
 > [!NOTE]
-> Advertencia: Debe instalar Visual Studio [2013 Update 2](https://go.microsoft.com/fwlink/?LinkId=390521) para completar este tutorial.
+> ADVERTENCIA: debe instalar Visual Studio [2013 Update 2](https://go.microsoft.com/fwlink/?LinkId=390521) para completar este tutorial.
 
-1. Cree un nuevo ***vacía*** proyecto Web de ASP.NET.
-2. En la consola de administrador de paquetes, escriba lo siguiente los siguientes comandos:  
+1. Cree un nuevo proyecto Web de ASP.NET ***vacío*** .
+2. En la consola del administrador de paquetes, escriba los siguientes comandos:  
   
     `Install-Package SendGrid`  
     `Install-Package -Prerelease Microsoft.AspNet.Identity.Samples`  
   
-   En este tutorial, vamos a usar [SendGrid](http://sendgrid.com/) para enviar correo electrónico y [Twilio](https://www.twilio.com/) o [ASPSMS](https://www.aspsms.com/asp.net/identity/testcredits/) de texto sms. El `Identity.Samples` paquete instala el código que se trabajará con.
-3. Establecer el [proyecto para usar SSL](../../../mvc/overview/security/create-an-aspnet-mvc-5-app-with-facebook-and-google-oauth2-and-openid-sign-on.md).
-4. *Opcional*: Siga las instrucciones de mi [tutorial de confirmación de correo electrónico](account-confirmation-and-password-recovery-with-aspnet-identity.md) para enlazar SendGrid y, a continuación, ejecute la aplicación y registrar una cuenta de correo electrónico.
-5. *Opcional:* Eliminar el código de confirmación del vínculo de correo electrónico de demostración de la muestra (el `ViewBag.Link` código en el controlador de cuentas. Consulte la `DisplayEmail` y `ForgotPasswordConfirmation` los métodos de acción y las vistas de razor).
-6. *Opcional:* Quitar el `ViewBag.Status` código desde los controladores de administración y la cuenta y de la *Views\Account\VerifyCode.cshtml* y *Views\Manage\VerifyPhoneNumber.cshtml* las vistas de razor. Como alternativa, puede mantener el `ViewBag.Status` display para probar cómo funciona esta aplicación localmente sin tener que enlaza y enviar correo electrónico y mensajes SMS.
+   En este tutorial, usaremos [SendGrid](http://sendgrid.com/) para enviar correo electrónico y [Twilio](https://www.twilio.com/) o [ASPSMS](https://www.aspsms.com/asp.net/identity/testcredits/) para el texto de SMS. El paquete `Identity.Samples` instala el código con el que se va a trabajar.
+3. Establezca el [proyecto para usar SSL](../../../mvc/overview/security/create-an-aspnet-mvc-5-app-with-facebook-and-google-oauth2-and-openid-sign-on.md).
+4. *Opcional*: siga las instrucciones del [tutorial de confirmación de correo electrónico](account-confirmation-and-password-recovery-with-aspnet-identity.md) para enlazar SendGrid y, a continuación, ejecute la aplicación y registre una cuenta de correo electrónico.
+5. *Opcional:* Quite el código de confirmación de vínculo de correo electrónico de demostración del ejemplo (el código `ViewBag.Link` del controlador de la cuenta. Vea los métodos de acción `DisplayEmail` y `ForgotPasswordConfirmation` y las vistas de Razor).
+6. *Opcional:* Quite el código `ViewBag.Status` de los controladores de administración y de cuenta, y de las vistas de Razor *Views\Account\VerifyCode.cshtml* y *Views\Manage\VerifyPhoneNumber.cshtml* . Como alternativa, puede mantener el `ViewBag.Status` Mostrar para probar cómo funciona esta aplicación localmente sin tener que enlazar y enviar mensajes de correo electrónico y SMS.
 
 > [!NOTE]
-> Advertencia: Si cambia la configuración de seguridad en este ejemplo, las aplicaciones de producción debe someterse a una auditoría de seguridad que se llama explícitamente a los cambios realizados.
+> ADVERTENCIA: Si cambia cualquiera de las opciones de configuración de seguridad de este ejemplo, las aplicaciones de producción deberán someterse a una auditoría de seguridad que llame explícitamente a los cambios realizados.
 
 <a id="SMS"></a>
 
-## <a name="set-up-sms-for-two-factor-authentication"></a>Configuración de SMS para la autenticación en dos fases
+## <a name="set-up-sms-for-two-factor-authentication"></a>Configurar SMS para la autenticación en dos fases
 
-Este tutorial proporciona instrucciones para el uso de Twilio o ASPSMS, pero puede usar cualquier otro proveedor SMS.
+En este tutorial se proporcionan instrucciones sobre el uso de Twilio o ASPSMS, pero puede usar cualquier otro proveedor de SMS.
 
 1. **Creación de una cuenta de usuario con un proveedor de SMS**  
   
-   Crear un [Twilio](https://www.twilio.com/try-twilio) o un [ASPSMS](https://www.aspsms.com/asp.net/identity/testcredits/) cuenta.
-2. **Instalar paquetes adicionales o agregar referencias de servicio**  
+   Cree una cuenta de [Twilio](https://www.twilio.com/try-twilio) o de [ASPSMS](https://www.aspsms.com/asp.net/identity/testcredits/) .
+2. **Instalación de paquetes adicionales o adición de referencias de servicio**  
   
-   Twilio:  
-   En la consola de administrador de paquetes, escriba el siguiente comando:  
+   Twilio  
+   En la consola del administrador de paquetes, escriba el siguiente comando:  
     `Install-Package Twilio`  
   
    ASPSMS:  
-   Se debe agregar la referencia de servicio siguientes:  
+   Debe agregarse la siguiente referencia de servicio:  
   
     ![](two-factor-authentication-using-sms-and-email-with-aspnet-identity/_static/image1.png)  
   
    Dirección:  
     `https://webservice.aspsms.com/aspsmsx2.asmx?WSDL`  
   
-   Espacio de nombres:   
+   Espacio de nombres:  
     `ASPSMSX2`
-3. **Averiguar las credenciales de usuario del proveedor de SMS**  
+3. **Averiguación de las credenciales de usuario del proveedor de SMS**  
   
-   Twilio:  
-   Desde el **panel** pestaña de la cuenta de Twilio, copia el **SID de cuenta** y **Auth token**.  
-  
-   ASPSMS:  
-   En la configuración de su cuenta, vaya a **Userkey** y cópielo junto con su autodefinido **contraseña**.  
-  
-   Más adelante, almacenaremos estos valores en las variables `SMSAccountIdentification` y `SMSAccountPassword` .
-4. **Especifica el Id. de remitente / originador**  
-  
-   Twilio:  
-   Desde el **números** pestaña, copie el número de teléfono de Twilio.  
+   Twilio  
+   En la pestaña **Panel** de la cuenta de Twilio, copie el SID de la **cuenta** y el **token de autenticación**.  
   
    ASPSMS:  
-   Dentro de la **desbloquear originadores** menú, desbloquear uno o varios de los originadores o elija un originador alfanumérico (no admite todas las redes).  
+   En la configuración de la cuenta, vaya a **Userkey** y cópiela junto con la **contraseña**autodefinida.  
   
-   Más adelante, almacenaremos este valor en la variable `SMSAccountFrom` .
-5. **Transferir las credenciales del proveedor SMS en la aplicación**  
+   Posteriormente, almacenaremos estos valores en las variables `SMSAccountIdentification` y `SMSAccountPassword`.
+4. **Especificar SenderID/originador**  
   
-   Disponer de las credenciales y el número de teléfono del remitente a la aplicación:
+   Twilio  
+   En la pestaña **números** , copie el número de teléfono de Twilio.  
+  
+   ASPSMS:  
+   En el menú **desbloquear orígenes** , desbloquee uno o más originadores o elija un originador alfanumérico (no admitido por todas las redes).  
+  
+   Más adelante se almacenará este valor en la variable `SMSAccountFrom`.
+5. **Transferencia de credenciales de proveedor de SMS a la aplicación**  
+  
+   Haga que las credenciales y el número de teléfono del remitente estén disponibles para la aplicación:
 
     [!code-csharp[Main](two-factor-authentication-using-sms-and-email-with-aspnet-identity/samples/sample1.cs)]
 
     > [!WARNING]
-    > Seguridad: nunca almacene de datos confidenciales en el código fuente. La cuenta y las credenciales se agregan al código anterior para simplificar el ejemplo. Consulte de Jon Atten [ASP.NET MVC: Mantener privados configuración fuera del Control de código fuente](http://typecastexception.com/post/2014/04/06/ASPNET-MVC-Keep-Private-Settings-Out-of-Source-Control.aspx).
-6. **Implementación de transferencia de datos al proveedor SMS**  
+    > Seguridad: nunca almacene datos confidenciales en el código fuente. La cuenta y las credenciales se agregan al código anterior para mantener el ejemplo simple. Consulte ASP.NET MVC de Jon ATTEN [: mantener la configuración privada fuera del control de código fuente](http://typecastexception.com/post/2014/04/06/ASPNET-MVC-Keep-Private-Settings-Out-of-Source-Control.aspx).
+6. **Implementación de la transferencia de datos al proveedor de SMS**  
   
-   Configurar la `SmsService` clase en el *aplicación\_Start\IdentityConfig.cs* archivo.  
+   Configure la clase `SmsService` en el archivo *App\_Start\IdentityConfig.CS* .  
   
-   En función del proveedor SMS usado activar cualquiera el **Twilio** o **ASPSMS** sección: 
+   En función del proveedor de SMS utilizado, active la sección **Twilio** o **ASPSMS** : 
 
     [!code-csharp[Main](two-factor-authentication-using-sms-and-email-with-aspnet-identity/samples/sample2.cs)]
 7. Ejecute la aplicación e inicie sesión con la cuenta que registró anteriormente.
-8. Haga clic en el identificador de usuario, que activa el `Index` los métodos de acción `Manage` controlador.  
+8. Haga clic en el identificador de usuario, que activa el método de acción `Index` en el controlador de `Manage`.  
   
     ![](two-factor-authentication-using-sms-and-email-with-aspnet-identity/_static/image2.png)
 9. Haga clic en Agregar.  
   
     ![](two-factor-authentication-using-sms-and-email-with-aspnet-identity/_static/image3.png)
-10. En unos pocos segundos obtendrá un mensaje de texto con el código de verificación. Escríbala y presione **enviar**.  
+10. En unos segundos, recibirá un mensaje de texto con el código de verificación. Escríbalo y presione **submit (enviar**).  
   
     ![](two-factor-authentication-using-sms-and-email-with-aspnet-identity/_static/image4.png)
-11. La vista de administración se muestra que el número de teléfono se ha agregado.  
+11. La vista administrar muestra el número de teléfono que se ha agregado.  
   
     ![](two-factor-authentication-using-sms-and-email-with-aspnet-identity/_static/image5.png)
 
-### <a name="examine-the-code"></a>Examine el código
+### <a name="examine-the-code"></a>Examinar el código
 
 [!code-csharp[Main](two-factor-authentication-using-sms-and-email-with-aspnet-identity/samples/sample3.cs?highlight=2)]
 
-El `Index` los métodos de acción `Manage` controlador establece el mensaje de estado en función de la acción anterior y se proporcionan vínculos para cambiar la contraseña local o agregar una cuenta local. El `Index` método también muestra el estado o su 2FA número, inicios de sesión externos, 2FA habilitado por teléfono y recuerde método 2FA para este explorador (se explica más adelante). Al hacer clic en el identificador de usuario (correo electrónico) en la barra de título no pasa un mensaje. Al hacer clic en el **número de teléfono: quitar** enlace pasadas `Message=RemovePhoneSuccess` como una cadena de consulta.  
+El método de acción `Index` del controlador de `Manage` establece el mensaje de estado en función de la acción anterior y proporciona vínculos para cambiar la contraseña local o agregar una cuenta local. El método `Index` también muestra el estado o el número de teléfono 2FA, inicios de sesión externos, 2FA habilitados y recordar el método 2FA para este explorador (se explica más adelante). Al hacer clic en su ID. de usuario (correo electrónico) en la barra de título no se pasa un mensaje. Al hacer clic en el **número de teléfono: Remove** link pasa `Message=RemovePhoneSuccess` como una cadena de consulta.  
   
 `https://localhost:44300/Manage?Message=RemovePhoneSuccess`
 
 [![](two-factor-authentication-using-sms-and-email-with-aspnet-identity/_static/image6.png)]
 
-El `AddPhoneNumber` método de acción muestra un cuadro de diálogo para especificar un número de teléfono que pueda recibir mensajes SMS.
+El método de acción `AddPhoneNumber` muestra un cuadro de diálogo para escribir un número de teléfono que pueda recibir mensajes SMS.
 
 [!code-csharp[Main](two-factor-authentication-using-sms-and-email-with-aspnet-identity/samples/sample4.cs)]
 
 ![](two-factor-authentication-using-sms-and-email-with-aspnet-identity/_static/image7.png)
 
-Al hacer clic en el **enviar código de verificación** botón devuelve el número de teléfono a la operación HTTP POST `AddPhoneNumber` método de acción.
+Al hacer clic en el botón **Enviar código de verificación** , se envía el número de teléfono al método de acción HTTP post `AddPhoneNumber`.
 
 [!code-csharp[Main](two-factor-authentication-using-sms-and-email-with-aspnet-identity/samples/sample5.cs?highlight=12)]
 
-El `GenerateChangePhoneNumberTokenAsync` método genera el token de seguridad que se establecerá en el mensaje SMS. Si se ha configurado el servicio SMS, el token se envía como la cadena &quot;es el código de seguridad &lt;token&gt;&quot;. El `SmsService.SendAsync` se llama al método en forma asincrónica y, después, la aplicación se redirige a la `VerifyPhoneNumber` método de acción (que muestra el siguiente cuadro de diálogo), donde puede escribir el código de verificación.
+El método `GenerateChangePhoneNumberTokenAsync` genera el token de seguridad que se establecerá en el mensaje SMS. Si se ha configurado el servicio de SMS, el token se envía como la cadena &quot;el código de seguridad está &lt;token&gt;&quot;. El método de `SmsService.SendAsync` a se llama de forma asincrónica y, a continuación, la aplicación se redirige al método de acción `VerifyPhoneNumber` (que muestra el siguiente cuadro de diálogo), donde puede especificar el código de verificación.
 
 ![](two-factor-authentication-using-sms-and-email-with-aspnet-identity/_static/image8.png)
 
-Una vez que escriba el código y haga clic en enviar, se registra el código en la operación HTTP POST `VerifyPhoneNumber` método de acción.
+Una vez que escriba el código y haga clic en Submit (enviar), el código se expone en el método de acción HTTP POST `VerifyPhoneNumber`.
 
 [!code-csharp[Main](two-factor-authentication-using-sms-and-email-with-aspnet-identity/samples/sample6.cs)]
 
-El `ChangePhoneNumberAsync` método comprueba el código de seguridad registrado. Si el código es correcto, el número de teléfono se agrega a la `PhoneNumber` campo de la `AspNetUsers` tabla. Si esa llamada se realiza correctamente, el `SignInAsync` se llama al método:
+El método `ChangePhoneNumberAsync` comprueba el código de seguridad expuesto. Si el código es correcto, el número de teléfono se agrega al campo `PhoneNumber` de la tabla `AspNetUsers`. Si la llamada se realiza correctamente, se llama al método `SignInAsync`:
 
 [!code-csharp[Main](two-factor-authentication-using-sms-and-email-with-aspnet-identity/samples/sample7.cs)]
 
-El `isPersistent` parámetro establece si la sesión de autenticación se conserva entre varias solicitudes.
+El parámetro `isPersistent` establece si la sesión de autenticación se conserva en varias solicitudes.
 
-Cuando se cambia su perfil de seguridad, se genera un nuevo sello de seguridad y se almacenan en el `SecurityStamp` campo de la *AspNetUsers* tabla. Tenga en cuenta que el `SecurityStamp` campo es diferente de la cookie de seguridad. La cookie de seguridad no se almacena en el `AspNetUsers` tabla (o en cualquier parte de la base de datos de identidad). El token de cookie de seguridad es autofirmado mediante [DPAPI](https://msdn.microsoft.com/library/system.security.cryptography.protecteddata.aspx) y se crea con el `UserId, SecurityStamp` e información de tiempo de expiración.
+Al cambiar el perfil de seguridad, se genera una nueva marca de seguridad y se almacena en el `SecurityStamp` campo de la tabla *AspNetUsers* . Tenga en cuenta que el campo `SecurityStamp` es diferente de la cookie de seguridad. La cookie de seguridad no se almacena en la tabla `AspNetUsers` (ni en ninguna otra parte de la base de de identidad). El token de la cookie de seguridad se firma automáticamente mediante [DPAPI](https://msdn.microsoft.com/library/system.security.cryptography.protecteddata.aspx) y se crea con la información de tiempo de expiración y `UserId, SecurityStamp`.
 
-El middleware de cookies, comprueba la cookie en cada solicitud. El `SecurityStampValidator` método en el `Startup` clase llega a la base de datos y comprueba el sello de seguridad periódicamente, como se especifica en el `validateInterval`. Esto solo se produce cada 30 minutos (en nuestro ejemplo) a menos que cambie su perfil de seguridad. Se eligió el intervalo de 30 minutos para reducir los viajes a la base de datos.
+El middleware de cookies comprueba la cookie en cada solicitud. El método `SecurityStampValidator` de la clase `Startup` alcanza la base de registros y comprueba la marca de seguridad periódicamente, según se especifique con el `validateInterval`. Esto solo sucede cada 30 minutos (en nuestro ejemplo), a menos que cambie el perfil de seguridad. Se eligió el intervalo de 30 minutos para minimizar los viajes a la base de datos.
 
-El `SignInAsync` método debe llamarse cuando se realiza cualquier cambio en el perfil de seguridad. Cuando se cambia el perfil de seguridad, la base de datos es actualizaciones el `SecurityStamp` campo y sin llamar a la `SignInAsync` está registrada en el método *sólo* llega hasta la próxima vez que la canalización de OWIN a la base de datos (el `validateInterval`). Puede probar esto cambiando la `SignInAsync` método para devolver de inmediato y la configuración de la cookie `validateInterval` propiedad de 30 minutos a 5 segundos:
+Se debe llamar al método `SignInAsync` cuando se realiza algún cambio en el perfil de seguridad. Cuando cambia el perfil de seguridad, la base de datos se actualiza en el campo `SecurityStamp` y, sin llamar al método `SignInAsync`, permanecerá conectado *solo* hasta la próxima vez que la canalización OWIN llegue a la base de datos (el `validateInterval`). Puede probar esto cambiando el método `SignInAsync` para que se devuelva inmediatamente y estableciendo la propiedad cookie `validateInterval` de 30 minutos a 5 segundos:
 
 [!code-csharp[Main](two-factor-authentication-using-sms-and-email-with-aspnet-identity/samples/sample8.cs?highlight=3)]
 
 [!code-csharp[Main](two-factor-authentication-using-sms-and-email-with-aspnet-identity/samples/sample9.cs?highlight=20-21)]
 
-Con los cambios de código anterior, puede cambiar su perfil de seguridad (por ejemplo, cambiando el estado de **dos factores habilitados**) y le cerrará en 5 segundos cuando la `SecurityStampValidator.OnValidateIdentity` método produce un error. Quitar la línea de retorno en la `SignInAsync` método, cambiar otro perfil de seguridad y no se ha iniciado. El `SignInAsync` método genera una nueva cookie de seguridad.
+Con los cambios de código anteriores, puede cambiar el perfil de seguridad (por ejemplo, cambiando el estado de **dos factores habilitados**) y se cerrará la sesión en 5 segundos cuando se produzca un error en el método `SecurityStampValidator.OnValidateIdentity`. Quite la línea de retorno en el método `SignInAsync`, realice otro cambio en el perfil de seguridad y no se cerrará la sesión. El método `SignInAsync` genera una nueva cookie de seguridad.
 
 <a id="enable2"></a>
 
 ## <a name="enable-two-factor-authentication"></a>Habilitar la autenticación en dos fases
 
-En la aplicación de ejemplo, deberá usar la interfaz de usuario para habilitar la autenticación en dos fases (2FA). Para habilitar 2FA, haga clic en el identificador de usuario (alias de correo electrónico) en la barra de navegación.![](two-factor-authentication-using-sms-and-email-with-aspnet-identity/_static/image9.png)  
-Haga clic en Habilitar 2FA.![](two-factor-authentication-using-sms-and-email-with-aspnet-identity/_static/image10.png) Cerrar sesión y, a continuación, volver a iniciar sesión. Si ha activado el correo electrónico (consulte mi [tutorial anterior](account-confirmation-and-password-recovery-with-aspnet-identity.md)), puede seleccionar el SMS o correo electrónico para 2FA.![](two-factor-authentication-using-sms-and-email-with-aspnet-identity/_static/image11.png) Se muestra la página de códigos de comprobación donde puede escribir el código (de SMS o correo electrónico).![](two-factor-authentication-using-sms-and-email-with-aspnet-identity/_static/image12.png) Al hacer clic en el **recordar este explorador** casilla eximirán de la necesidad de utilizar 2FA para iniciar sesión con ese equipo y el explorador. Habilitar 2FA y haga clic en el **recordar este explorador** le proporcionará 2FA fuerte protección contra usuarios malintencionados que intenta acceder a su cuenta, siempre que no tienen acceso a su equipo. Puede hacerlo en cualquier equipo privado que se usan con frecuencia. Estableciendo **recordar este explorador**, obtendrá la seguridad añadida de 2FA desde equipos corrientemente no usamos y obtener la comodidad de no tener que pasar por 2FA en sus propios equipos. 
+En la aplicación de ejemplo, debe usar la interfaz de usuario para habilitar la autenticación en dos fases (2FA). Para habilitar 2FA, haga clic en su ID. de usuario (alias de correo electrónico) en la barra de navegación.![](two-factor-authentication-using-sms-and-email-with-aspnet-identity/_static/image9.png)  
+Haga clic en habilitar 2FA.![](two-factor-authentication-using-sms-and-email-with-aspnet-identity/_static/image10.png) Cierre la sesión y vuelva a iniciarla. Si ha habilitado el correo electrónico (vea mi [tutorial anterior](account-confirmation-and-password-recovery-with-aspnet-identity.md)), puede seleccionar el SMS o el correo electrónico de 2FA.![](two-factor-authentication-using-sms-and-email-with-aspnet-identity/_static/image11.png) Se muestra la página comprobar código donde puede escribir el código (desde SMS o correo electrónico).![](two-factor-authentication-using-sms-and-email-with-aspnet-identity/_static/image12.png) Al hacer clic en la casilla **recordar este explorador** , no es necesario usar 2FA para iniciar sesión con ese equipo y explorador. Al habilitar 2FA y hacer clic en el **recordatorio, este explorador** le proporcionará protección de 2FA segura a los usuarios malintencionados que intentan acceder a su cuenta, siempre y cuando no tengan acceso a su equipo. Puede hacerlo en cualquier equipo privado que use con regularidad. Al establecer la opción **recordar este explorador**, obtendrá la seguridad agregada de 2FA de los equipos que no usa con regularidad y que le ayuda a no tener que ir a través de 2FA en sus propios equipos. 
 
 <a id="reg"></a>
-## <a name="how-to-register-a-two-factor-authentication-provider"></a>Cómo registrar un proveedor de autenticación de dos fases
+## <a name="how-to-register-a-two-factor-authentication-provider"></a>Registro de un proveedor de autenticación en dos fases
 
-Cuando se crea un nuevo proyecto MVC, el *IdentityConfig.cs* archivo contiene el código siguiente para registrar un proveedor de autenticación de dos factores:
+Al crear un nuevo proyecto de MVC, el archivo *IdentityConfig.CS* contiene el código siguiente para registrar un proveedor de autenticación en dos fases:
 
 [!code-csharp[Main](two-factor-authentication-using-sms-and-email-with-aspnet-identity/samples/sample10.cs?highlight=22-35)]
 
 ## <a name="add-a-phone-number-for-2fa"></a>Agregar un número de teléfono para 2FA
 
-El `AddPhoneNumber` método de acción en el `Manage` controlador genera un token de seguridad y envíos para el teléfono número que se han proporcionado.
+El método de acción `AddPhoneNumber` del controlador de `Manage` genera un token de seguridad y lo envía al número de teléfono que ha proporcionado.
 
 [!code-csharp[Main](two-factor-authentication-using-sms-and-email-with-aspnet-identity/samples/sample11.cs)]
 
-Después de enviar el token, redirige a la `VerifyPhoneNumber` método de acción, donde puede escribir el código para el registro de SMS para 2FA. No se utiliza SMS 2FA hasta que haya comprobado el número de teléfono.
+Después de enviar el token, se redirige al método de acción `VerifyPhoneNumber`, donde puede especificar el código para registrar SMS para 2FA. SMS 2FA no se usa hasta que se ha comprobado el número de teléfono.
 
-## <a name="enabling-2fa"></a>Habilitar 2FA
+## <a name="enabling-2fa"></a>Habilitación de 2FA
 
-El `EnableTFA` 2FA permite que el método de acción:
+El método de acción `EnableTFA` habilita 2FA:
 
 [!code-csharp[Main](two-factor-authentication-using-sms-and-email-with-aspnet-identity/samples/sample12.cs)]
 
-Tenga en cuenta el `SignInAsync` debe llamarse porque enable 2FA es un cambio en el perfil de seguridad. Cuando se habilita 2FA, el usuario deberá usar 2FA para iniciar sesión, utilizando los enfoques 2FA registraron (SMS y correo electrónico en el ejemplo).
+Tenga en cuenta que se debe llamar al `SignInAsync` porque enable 2FA es un cambio en el perfil de seguridad. Cuando 2FA está habilitado, el usuario tendrá que usar 2FA para iniciar sesión, mediante los enfoques de 2FA que han registrado (SMS y correo electrónico en el ejemplo).
 
-Puede agregar más proveedores 2FA, como los generadores de código QR o puede escribir la propia (consulte [usando Google Authenticator con ASP.NET Identity](http://www.beabigrockstar.com/blog/using-google-authenticator-asp-net-identity/)).
+Puede agregar más proveedores de 2FA, como generadores de código QR, o puede escribir su propio (consulte [uso de Google Authenticator con ASP.net Identity](https://www.jerriepelser.com//blog/using-google-authenticator-asp-net-identity/)).
 
 > [!NOTE]
-> Los códigos 2FA se generan mediante [algoritmo de la contraseña de un solo uso basado en tiempo](http://en.wikipedia.org/wiki/Time-based_One-time_Password_Algorithm) y códigos son válidos durante seis minutos. Si tiene más de seis minutos para escribir el código, obtendrá un mensaje de error de código no válido.
+> Los códigos 2FA se generan mediante el [algoritmo de contraseña de un solo](http://en.wikipedia.org/wiki/Time-based_One-time_Password_Algorithm) uso y los códigos son válidos durante seis minutos. Si tarda más de seis minutos en escribir el código, obtendrá un mensaje de error de código no válido.
 
 <a id="combine"></a>
 
-## <a name="combine-social-and-local-login-accounts"></a>Combinar las cuentas de inicio de sesión social y local
+## <a name="combine-social-and-local-login-accounts"></a>Combinación de cuentas de inicio de sesión sociales y locales
 
-Puede combinar las cuentas locales y redes sociales, haga clic en el vínculo de correo electrónico. En la siguiente secuencia &quot; RickAndMSFT@gmail.com &quot; en primer lugar se crea como un inicio de sesión local, pero puede crear la cuenta como un inicio de sesión social primero y luego agregar un inicio de sesión local.
+Para combinar cuentas locales y sociales, haga clic en el vínculo de correo electrónico. En la secuencia siguiente &quot;RickAndMSFT@gmail.com&quot; se crea primero como un inicio de sesión local, pero puede crear primero la cuenta como un registro de redes sociales y luego agregar un inicio de sesión local.
 
 ![](two-factor-authentication-using-sms-and-email-with-aspnet-identity/_static/image13.png)
 
-Haga clic en el **administrar** vínculo. Tenga en cuenta la externa 0 (inicios de sesión sociales) asociado con esta cuenta.
+Haga clic en el vínculo **administrar** . Observe los 0 externos (inicios de sesión sociales) asociados a esta cuenta.
 
 ![](two-factor-authentication-using-sms-and-email-with-aspnet-identity/_static/image14.png)
 
-Haga clic en el vínculo a otro registro en el servicio y acepte las solicitudes de aplicación. Se han combinado las dos cuentas, podrá iniciar sesión con las cuentas. Es posible que desee que los usuarios agreguen cuentas locales en caso de su registro en el servicio de autenticación social esté inactivo o que es más probable hayan perdido el acceso a su cuenta de redes sociales.
+Haga clic en el vínculo a otro servicio de inicio de sesión y acepte las solicitudes de la aplicación. Las dos cuentas se han combinado, podrá iniciar sesión con cualquier cuenta. Es posible que desee que los usuarios agreguen cuentas locales en caso de que su registro social en el servicio de autenticación esté inactivo, o más probabilidades de que hayan perdido el acceso a su cuenta social.
 
-En la siguiente imagen, Tom es un inicio de sesión social (que puede ver desde el **inicios de sesión externos: 1** se muestra en la página).
+En la imagen siguiente, Tom es un inicio de sesión social (que puede ver en los **inicios de sesión externos: 1** que se muestra en la página).
 
 ![](two-factor-authentication-using-sms-and-email-with-aspnet-identity/_static/image15.png)
 
-Al hacer clic en **elige una contraseña** le permite agregar un registro local en asociada con la misma cuenta.
+Al hacer clic en **seleccionar una contraseña** , puede Agregar un inicio de sesión local asociado a la misma cuenta.
 
 ![](two-factor-authentication-using-sms-and-email-with-aspnet-identity/_static/image16.png)
 
 <a id="lock"></a>
 
-## <a name="account-lockout-from-brute-force-attacks"></a>Bloqueo de cuenta frente a ataques de fuerza bruta
+## <a name="account-lockout-from-brute-force-attacks"></a>Bloqueo de cuentas contra ataques por fuerza bruta
 
-Puede proteger las cuentas en su aplicación frente a ataques de diccionario habilitando el bloqueo de usuario. El siguiente código en el `ApplicationUserManager Create` método configura de bloqueo:
+Puede proteger las cuentas de la aplicación de ataques de diccionario habilitando el bloqueo de usuario. El siguiente código del método `ApplicationUserManager Create` configura el bloqueo:
 
 [!code-csharp[Main](two-factor-authentication-using-sms-and-email-with-aspnet-identity/samples/sample13.cs)]
 
-El código anterior permite el bloqueo de solo autenticación en dos fases. Aunque puede permitir bloqueo de inicios de sesión cambiando `shouldLockout` en true en el `Login` método del controlador de cuenta, se recomienda no habilite de bloqueo para inicios de sesión porque hace susceptible a la cuenta [DOS](http://en.wikipedia.org/wiki/Denial-of-service_attack) inicio de sesión los ataques. En el código de ejemplo, el bloqueo está deshabilitado para la cuenta de administrador creada en el `ApplicationDbInitializer Seed` método:
+El código anterior solo habilita el bloqueo para la autenticación en dos fases. Aunque puede habilitar el bloqueo para los inicios de sesión cambiando `shouldLockout` a true en el método de `Login` del controlador de cuenta, se recomienda no habilitar el bloqueo para los inicios de sesión, ya que hace que la cuenta sea susceptible a ataques de inicio de sesión de [dos](http://en.wikipedia.org/wiki/Denial-of-service_attack) . En el código de ejemplo, el bloqueo está deshabilitado para la cuenta de administrador creada en el método `ApplicationDbInitializer Seed`:
 
 [!code-csharp[Main](two-factor-authentication-using-sms-and-email-with-aspnet-identity/samples/sample14.cs?highlight=19)]
 
-## <a name="requiring-a-user-to-have-a-validated-email-account"></a>Solicitar al usuario que tiene una cuenta de correo electrónico validada
+## <a name="requiring-a-user-to-have-a-validated-email-account"></a>Requerir a un usuario que tenga una cuenta de correo electrónico validada
 
-El código siguiente requiere que un usuario tenga una cuenta de correo electrónico validada antes de poder iniciar:
+El código siguiente requiere que un usuario tenga una cuenta de correo electrónico validada para poder iniciar sesión:
 
 [!code-csharp[Main](two-factor-authentication-using-sms-and-email-with-aspnet-identity/samples/sample15.cs?highlight=8-17)]
 
-## <a name="how-signinmanager-checks-for-2fa-requirement"></a>Cómo SignInManager busca requisito 2FA
+## <a name="how-signinmanager-checks-for-2fa-requirement"></a>Cómo comprueba SignInManager el requisito de 2FA
 
-Registro local en tanto el inicio de sesión social Compruebe si está habilitado 2FA. Si está habilitado 2FA, el `SignInManager` devuelve el método de inicio de sesión `SignInStatus.RequiresVerification`, y el usuario será redirigido a la `SendCode` método de acción, donde tendrán que escribir el código para completar el registro de la secuencia. Si el usuario tiene RememberMe se establece en la cookie a los usuarios locales, el `SignInManager` devolverá `SignInStatus.Success` y no tendrá que pasar por 2FA.
+Tanto el inicio de sesión local como el inicio de sesión social en se comprueban para ver si 2FA está habilitado. Si 2FA está habilitado, el método de inicio de sesión `SignInManager` devuelve `SignInStatus.RequiresVerification`y el usuario se redirigirá al método de acción `SendCode`, donde tendrá que escribir el código para completar el registro en secuencia. Si el usuario tiene RememberMe establecido en la cookie local de los usuarios, el `SignInManager` devolverá `SignInStatus.Success` y no tendrá que ir a través de 2FA.
 
 [!code-csharp[Main](two-factor-authentication-using-sms-and-email-with-aspnet-identity/samples/sample16.cs?highlight=20-22)]
 
 [!code-csharp[Main](two-factor-authentication-using-sms-and-email-with-aspnet-identity/samples/sample17.cs?highlight=10-11,17-18)]
 
-El código siguiente muestra el `SendCode` método de acción. Un [SelectListItem](https://msdn.microsoft.com/library/system.web.mvc.selectlistitem.aspx) se crea con todos los métodos de 2FA habilitados para el usuario. El [SelectListItem](https://msdn.microsoft.com/library/system.web.mvc.selectlistitem.aspx) se pasa a la [DropDownListFor](https://msdn.microsoft.com/library/system.web.ui.webcontrols.dropdownlist.aspx) auxiliares, lo que permite al usuario seleccionar el enfoque 2FA (normalmente, el correo electrónico y SMS).
+En el código siguiente se muestra el método de acción `SendCode`. Se crea un [SelectListItem](https://msdn.microsoft.com/library/system.web.mvc.selectlistitem.aspx) con todos los métodos de 2FA habilitados para el usuario. [SelectListItem](https://msdn.microsoft.com/library/system.web.mvc.selectlistitem.aspx) se pasa a la aplicación auxiliar [DropDownListFor](https://msdn.microsoft.com/library/system.web.ui.webcontrols.dropdownlist.aspx) , que permite al usuario seleccionar el enfoque 2FA (normalmente, correo electrónico y SMS).
 
 [!code-csharp[Main](two-factor-authentication-using-sms-and-email-with-aspnet-identity/samples/sample18.cs)]
 
-Una vez que el usuario envía el enfoque 2FA, el `HTTP POST SendCode` se denomina método de acción, el `SignInManager` envía el código 2FA y el usuario se redirige a la `VerifyCode` donde puede escribir el código para completar el inicio de sesión en el método de acción.
+Una vez que el usuario envía el enfoque 2FA, se llama al método de acción `HTTP POST SendCode`, el `SignInManager` envía el código 2FA y se redirige al usuario al método de acción `VerifyCode` en el que puede escribir el código para completar el inicio de sesión.
 
 [!code-csharp[Main](two-factor-authentication-using-sms-and-email-with-aspnet-identity/samples/sample19.cs?highlight=3,13-14,18)]
 
 ## <a name="2fa-lockout"></a>Bloqueo de 2FA
 
-Aunque puede establecer el bloqueo de cuenta en errores de intento de contraseña de inicio de sesión, ese enfoque hace que el inicio de sesión pueda sufrir [DOS](http://en.wikipedia.org/wiki/Denial-of-service_attack) bloqueos. Se recomienda que usar el bloqueo de cuenta solo con 2FA. Cuando el `ApplicationUserManager` está creado, el código de ejemplo establece bloqueo 2FA y `MaxFailedAccessAttemptsBeforeLockout` a cinco. Una vez que un usuario inicia sesión (a través de una cuenta local o cuenta de redes sociales), se almacena cada intento incorrecto en 2FA y, si se alcanza el número máximo de intentos, el usuario se bloquea durante cinco minutos (puede establecer la hora con bloqueo `DefaultAccountLockoutTimeSpan`).
+Aunque puede establecer el bloqueo de cuentas en errores de intento de contraseña de inicio de sesión, este enfoque hace que el inicio de sesión sea susceptible a bloqueos de [dos](http://en.wikipedia.org/wiki/Denial-of-service_attack) . Se recomienda usar el bloqueo de cuentas solo con 2FA. Cuando se crea el `ApplicationUserManager`, el código de ejemplo establece el bloqueo de 2FA y `MaxFailedAccessAttemptsBeforeLockout` en cinco. Una vez que un usuario inicia sesión (a través de una cuenta local o de una cuenta de redes sociales), se almacenan todos los intentos fallidos de 2FA y, si se alcanza el número máximo de intentos, el usuario se bloquea durante cinco minutos (puede establecer el tiempo de bloqueo con `DefaultAccountLockoutTimeSpan`).
 
 <a id="addRes"></a>
 
 ## <a name="additional-resources"></a>Recursos adicionales
 
-- [Recursos recomendados de ASP.NET Identity](../getting-started/aspnet-identity-recommended-resources.md) por lo que vincula la lista completa de blogs, vídeos, tutoriales y great de identidad.
-- [Aplicación de MVC 5 con Facebook, Twitter, LinkedIn y Google OAuth2 Sign-on](../../../mvc/overview/security/create-an-aspnet-mvc-5-app-with-facebook-and-google-oauth2-and-openid-sign-on.md) también muestra cómo agregar información de perfil a la tabla de usuarios.
-- [ASP.NET MVC e identidad 2.0: Comprender los aspectos básicos](http://typecastexception.com/post/2014/04/20/ASPNET-MVC-and-Identity-20-Understanding-the-Basics.aspx) por John Atten.
-- [Confirmación de la cuenta y contraseña de recuperación con ASP.NET Identity](account-confirmation-and-password-recovery-with-aspnet-identity.md)
+- [ASP.net Identity recursos recomendados](../getting-started/aspnet-identity-recommended-resources.md) Lista completa de blogs, vídeos, tutoriales y excelentes vínculos de identidad.
+- La [aplicación MVC 5 con el inicio de sesión de Facebook, Twitter, LinkedIn y Google OAuth2](../../../mvc/overview/security/create-an-aspnet-mvc-5-app-with-facebook-and-google-oauth2-and-openid-sign-on.md) también muestra cómo agregar información de perfil a la tabla de usuarios.
+- [ASP.NET MVC e Identity 2,0: Descripción de los conceptos básicos](http://typecastexception.com/post/2014/04/20/ASPNET-MVC-and-Identity-20-Understanding-the-Basics.aspx) de John ATTEN.
+- [Confirmación de la cuenta y recuperación de la contraseña con ASP.NET Identity](account-confirmation-and-password-recovery-with-aspnet-identity.md)
 - [Introducción a ASP.NET Identity](../getting-started/introduction-to-aspnet-identity.md)
-- [Anuncio de RTM de ASP.NET Identity 2.0.0](https://blogs.msdn.com/b/webdev/archive/2014/03/20/test-announcing-rtm-of-asp-net-identity-2-0-0.aspx) de Pranav Rastogi.
-- [Identidad de ASP.NET 2.0: Configuración de validación de la cuenta y la autorización de dos fases](http://typecastexception.com/post/2014/04/20/ASPNET-Identity-20-Setting-Up-Account-Validation-and-Two-Factor-Authorization.aspx) por John Atten.
+- [Presentación de RTM de ASP.net Identity 2.0.0](https://blogs.msdn.com/b/webdev/archive/2014/03/20/test-announcing-rtm-of-asp-net-identity-2-0-0.aspx) por Pranav Rastogi.
+- [ASP.NET Identity 2,0: configurar la validación de la cuenta y la autorización en dos fases](http://typecastexception.com/post/2014/04/20/ASPNET-Identity-20-Setting-Up-Account-Validation-and-Two-Factor-Authorization.aspx) por John ATTEN.
