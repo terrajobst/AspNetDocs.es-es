@@ -15,15 +15,15 @@ ms.contentlocale: es-ES
 ms.lasthandoff: 11/02/2019
 ms.locfileid: "73445517"
 ---
-# <a name="working-with-forms-part-2"></a><span data-ttu-id="49b2c-103">Trabajar con formularios (parte 2)</span><span class="sxs-lookup"><span data-stu-id="49b2c-103">Working with Forms (Part 2)</span></span>
+# <a name="working-with-forms-part-2"></a><span data-ttu-id="a985e-103">Trabajar con formularios (parte 2)</span><span class="sxs-lookup"><span data-stu-id="a985e-103">Working with Forms (Part 2)</span></span>
 
-<span data-ttu-id="49b2c-104">por [Joe Stagner](https://github.com/JoeStagner)</span><span class="sxs-lookup"><span data-stu-id="49b2c-104">by [Joe Stagner](https://github.com/JoeStagner)</span></span>
+<span data-ttu-id="a985e-104">por [Joe Stagner](https://github.com/JoeStagner)</span><span class="sxs-lookup"><span data-stu-id="a985e-104">by [Joe Stagner](https://github.com/JoeStagner)</span></span>
 
-<span data-ttu-id="49b2c-105">Vídeo gran al tutorial trabajar con formularios (parte 2)</span><span class="sxs-lookup"><span data-stu-id="49b2c-105">Video accompaniment to the Working with Forms tutorial (Part 2)</span></span>
+<span data-ttu-id="a985e-105">Vídeo gran al tutorial trabajar con formularios (parte 2)</span><span class="sxs-lookup"><span data-stu-id="a985e-105">Video accompaniment to the Working with Forms tutorial (Part 2)</span></span>
 
-<span data-ttu-id="49b2c-106">[&#9654;Ver vídeo (16 minutos)](https://channel9.msdn.com/Blogs/ASP-NET-Site-Videos/working-with-forms-(part-2))</span><span class="sxs-lookup"><span data-stu-id="49b2c-106">[&#9654; Watch video (16 minutes)](https://channel9.msdn.com/Blogs/ASP-NET-Site-Videos/working-with-forms-(part-2))</span></span>
+<span data-ttu-id="a985e-106">[&#9654;Ver vídeo (16 minutos)](https://channel9.msdn.com/Blogs/ASP-NET-Site-Videos/working-with-forms-(part-2))</span><span class="sxs-lookup"><span data-stu-id="a985e-106">[&#9654; Watch video (16 minutes)](https://channel9.msdn.com/Blogs/ASP-NET-Site-Videos/working-with-forms-(part-2))</span></span>
 
 > [!div class="step-by-step"]
-> <span data-ttu-id="49b2c-107">[Anterior](working-with-forms-part-1.md)
-> [Siguiente](working-with-data-part-1.md)</span><span class="sxs-lookup"><span data-stu-id="49b2c-107">[Previous](working-with-forms-part-1.md)
+> <span data-ttu-id="a985e-107">[Anterior](working-with-forms-part-1.md)
+> [Siguiente](working-with-data-part-1.md)</span><span class="sxs-lookup"><span data-stu-id="a985e-107">[Previous](working-with-forms-part-1.md)
 [Next](working-with-data-part-1.md)</span></span>
