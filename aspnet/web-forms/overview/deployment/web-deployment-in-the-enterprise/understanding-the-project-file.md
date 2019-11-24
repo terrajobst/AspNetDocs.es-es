@@ -117,7 +117,7 @@ Al especificar varios elementos de **elemento** con el mismo nombre, se crea una
 
 [!code-xml[Main](understanding-the-project-file/samples/sample7.xml)]
 
-De esta manera, el archivo de proyecto indica a MSBuild que construya listas de archivos que deben procesarse de la misma manera&#x2014;que la lista de **referencias** incluye ensamblados que deben estar en su lugar para una compilación correcta, la lista de **compilación** incluye código los archivos que se deben compilar y la lista de **contenido** incluyen recursos que se deben copiar sin modificar. Veremos cómo el proceso de compilación hace referencia a estos elementos y los usa más adelante en este tema.
+De esta manera, el archivo de proyecto indica a MSBuild que construya listas de archivos que deben procesarse de la misma&#x2014;manera que la lista de **referencia** incluye los ensamblados que deben estar en su lugar para una compilación correcta, la lista de **compilación** incluye los archivos de código que se deben compilar y la lista de **contenido** incluye los recursos que se deben copiar sin modificar. Veremos cómo el proceso de compilación hace referencia a estos elementos y los usa más adelante en este tema.
 
 Los elementos de elemento también pueden incluir elementos secundarios de [ItemMetadata](https://msdn.microsoft.com/library/ms164284.aspx) . Estos son pares clave-valor definidos por el usuario y básicamente representan propiedades que son específicas de ese elemento. Por ejemplo, muchos de los elementos de elemento de **compilación** del archivo de proyecto incluyen elementos secundarios **DependentUpon** .
 

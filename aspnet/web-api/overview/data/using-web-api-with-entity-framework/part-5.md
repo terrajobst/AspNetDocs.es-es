@@ -21,7 +21,7 @@ por [Mike Wasson](https://github.com/MikeWasson)
 
 [Descargar proyecto completado](https://github.com/MikeWasson/BookService)
 
-En este momento, nuestra API Web expone las entidades de base de datos al cliente. El cliente recibe los datos que se asignan directamente a las tablas de base de datos. Sin embargo, no siempre es una buena idea. A veces, desea cambiar la forma de los datos que envía al cliente. Por ejemplo, puedes:
+En este momento, nuestra API Web expone las entidades de base de datos al cliente. El cliente recibe los datos que se asignan directamente a las tablas de base de datos. Sin embargo, no siempre es una buena idea. A veces, desea cambiar la forma de los datos que envía al cliente. Por ejemplo, es posible que quiera:
 
 - Quitar referencias circulares (vea la sección anterior).
 - Oculte determinadas propiedades que los clientes no deben ver.

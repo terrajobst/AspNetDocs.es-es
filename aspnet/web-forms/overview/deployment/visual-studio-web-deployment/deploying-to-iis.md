@@ -1,6 +1,6 @@
 ---
 uid: web-forms/overview/deployment/visual-studio-web-deployment/deploying-to-iis
-title: 'Implementación web de ASP.NET con Visual Studio: Implementando en test | Microsoft Docs'
+title: 'ASP.NET Web Deployment Using Visual Studio: Deploying to test | Microsoft Docs'
 author: tdykstra
 description: En esta serie de tutoriales se muestra cómo implementar (publicar) una aplicación Web de ASP.NET en Azure App Service Web Apps o en un proveedor de hospedaje de terceros, por usa...
 ms.author: riande
@@ -15,7 +15,7 @@ ms.contentlocale: es-ES
 ms.lasthandoff: 09/13/2019
 ms.locfileid: "70985856"
 ---
-# <a name="aspnet-web-deployment-using-visual-studio-deploying-to-test"></a>Implementación web de ASP.NET con Visual Studio: Implementación de prueba
+# <a name="aspnet-web-deployment-using-visual-studio-deploying-to-test"></a>ASP.NET Web Deployment Using Visual Studio: Deploying to test
 
 por [Tom Dykstra](https://github.com/tdykstra)
 
@@ -43,7 +43,7 @@ La opción 2 es la manera más confiable de probar. Si usa la opción 2, no es n
 
 Para obtener más información sobre el uso de servidores Web en Visual Studio, vea [servidores Web en Visual Studio para proyectos Web de ASP.net](https://msdn.microsoft.com/library/58wxa9w5.aspx).
 
-Avisos Si recibe un mensaje de error o algo no funciona a medida que avanza por el tutorial, asegúrese de consultar la [Página de solución de problemas](troubleshooting.md).
+Aviso: Si recibe un mensaje de error o algo no funciona a medida que avanza en el tutorial, asegúrese de consultar la [Página de solución de problemas](troubleshooting.md).
 
 ## <a name="download-the-contoso-university-starter-project"></a>Descargar el proyecto de inicio de Contoso University
 
@@ -67,7 +67,7 @@ Para implementar en IIS en el equipo de desarrollo, confirme que IIS y Web Deplo
 
      Verá mensajes que indican que se instalará IIS 7. El vínculo funciona para IIS 8 en Windows 8. pero para Windows 8 y versiones posteriores, siga los pasos siguientes para asegurarse de que ASP.NET 4,7 está instalado:
 
-   * Abra **Panel** > de control**programas** > **programas y características** > **activar o desactivar las características de Windows**.
+   * Abra **el panel de Control** > **programas** > **programas y características** > **activar o desactivar las características de Windows**.
 
    * Expanda **Internet Information Services**, **World Wide Web Servicios**y **características de desarrollo de aplicaciones**.
    
@@ -95,7 +95,7 @@ Después de instalar IIS, ejecute el **Administrador de IIS** para asegurarse de
 
 4. Si solo ve dos grupos de aplicaciones y ambos están establecidos en .NET Framework 2,0, instale ASP.NET 4 en IIS.
 
-   Para Windows 8 o versiones posteriores, consulte las instrucciones de la sección anterior para asegurarse de que ASP.NET 4,7 está instalado o consulte [instalación de ASP.NET 4,5 en Windows 8 y Windows Server 2012](https://support.microsoft.com/kb/2736284). Para Windows 7, abra una ventana del símbolo del sistema; para ello, haga clic con el botón secundario en **símbolo del sistema** en el menú **Inicio** de Windows y seleccione **Ejecutar como administrador**. Ejecute [ASPNET\_regiis. exe](https://msdn.microsoft.com/library/k6h9cz8h.aspx) para instalar ASP.net 4 en IIS mediante los siguientes comandos. (En los sistemas de 32 bits, reemplace "Framework64" por "Framework").
+   Para Windows 8 o versiones posteriores, consulte las instrucciones de la sección anterior para asegurarse de que ASP.NET 4,7 está instalado o consulte [instalación de ASP.NET 4,5 en Windows 8 y Windows Server 2012](https://support.microsoft.com/kb/2736284). Para Windows 7, abra una ventana del símbolo del sistema; para ello, haga clic con el botón secundario en **símbolo del sistema** en el menú **Inicio** de Windows y seleccione **Ejecutar como administrador**. Ejecute [aspnet\_regiis. exe](https://msdn.microsoft.com/library/k6h9cz8h.aspx) para instalar ASP.net 4 en IIS mediante los siguientes comandos. (En los sistemas de 32 bits, reemplace "Framework64" por "Framework").
 
    [!code-console[Main](deploying-to-iis/samples/sample1.cmd)]
 
@@ -119,7 +119,7 @@ Ahora está listo para publicar una aplicación web en IIS. Sin embargo, en prim
 
 LocalDB no está diseñado para funcionar en IIS, por lo que el entorno de prueba debe tener SQL Server Express instalado. Si utiliza Visual Studio 2010 SQL Server Express, ya está instalado de forma predeterminada. Si utiliza Visual Studio 2012 o una versión posterior, instale SQL Server Express.
 
-Para instalar SQL Server Express, descárguelo e instálelo desde [el centro de descarga: Microsoft SQL Server 2017 Express Edition](https://www.microsoft.com/sql-server/sql-server-editions-express). 
+Para instalar SQL Server Express, descárguelo e instálelo desde el [centro de descarga: Microsoft SQL Server 2017 Express Edition](https://www.microsoft.com/sql-server/sql-server-editions-express). 
 
 En la primera página del centro de instalación de SQL Server, seleccione **nuevo SQL Server instalación independiente o agregue características a una instalación existente** , y siga las instrucciones que acepten las opciones predeterminadas. En el Asistente para la instalación, acepte la configuración predeterminada. Para obtener más información acerca de las opciones de instalación, consulte [instalar SQL Server desde el Asistente para la instalación (programa de instalación)](https://msdn.microsoft.com/library/ms143219.aspx).
 
@@ -144,7 +144,7 @@ En el cuadro de diálogo **crear nueva SQL Server base de datos** , escriba ".\S
 
 ![Crear ASPNET-ContosoUniversity](deploying-to-iis/_static/image9.png)
 
-Siga el mismo procedimiento para crear una nueva base de datos de `ContosoUniversity`SQL Server Express School denominada.
+Siga el mismo procedimiento para crear una nueva base de datos de SQL Server Express School denominada `ContosoUniversity`.
 
 **Explorador de servidores** muestra las dos bases de datos nuevas.
 
@@ -164,7 +164,7 @@ En Visual Studio, abra la solución contoso University. Haga clic con el botón 
 > Este script está diseñado para funcionar con SQL Server Express 2012 o posterior y con la configuración de IIS en Windows 10, Windows 8 o Windows 7, ya que se especifican en este tutorial. Si usa una versión diferente de SQL Server o Windows, o si configura IIS en el equipo de forma diferente, es posible que se necesiten cambios en este script. Para obtener más información sobre los scripts de SQL Server, vea [libros en pantalla de SQL Server](https://go.microsoft.com/fwlink/?LinkId=132511).
 
 > [!NOTE] 
-> **Nota de seguridad** Este script concede `db_owner` permisos al usuario que tiene acceso a la base de datos en tiempo de ejecución, que es lo que tendrá en el entorno de producción. En algunos escenarios, es posible que desee especificar un usuario que tenga permisos de actualización de esquemas de base de datos completos solo para la implementación y especificar en tiempo de ejecución un usuario diferente que tenga permisos únicamente para leer y escribir datos. Para obtener más información, vea [revisar los cambios automáticos de Web. config para migraciones de Code First](#reviewingmigrations) más adelante en este tutorial.
+> **Nota de seguridad** Este script proporciona `db_owner` permisos al usuario que tiene acceso a la base de datos en tiempo de ejecución, que es lo que tendrá en el entorno de producción. En algunos escenarios, es posible que desee especificar un usuario que tenga permisos de actualización de esquemas de base de datos completos solo para la implementación y especificar en tiempo de ejecución un usuario diferente que tenga permisos únicamente para leer y escribir datos. Para obtener más información, vea [revisar los cambios automáticos de Web. config para migraciones de Code First](#reviewingmigrations) más adelante en este tutorial.
 
 <a id="publish"></a>
 
@@ -205,7 +205,7 @@ Antes de publicar, asegúrese de que está ejecutando Visual Studio en modo de a
 
 2. Seleccione **nuevo perfil**. Aparece el cuadro de diálogo **seleccionar un destino de publicación** .
 
-3. Seleccione **IIS, FTP, etc**. Seleccione **Crear perfil**. Aparece el Asistente para **publicación** .
+3. Seleccione **IIS, FTP, etc**. Seleccione **crear perfil**. Aparece el Asistente para **publicación** .
 
    ![Pestaña perfil del Asistente para publicación Web](deploying-to-iis/_static/image26.png)
 
@@ -215,7 +215,7 @@ Antes de publicar, asegúrese de que está ejecutando Visual Studio en modo de a
 
 6. En **nombre del sitio**, escriba *sitio web predeterminado/ContosoUniversity*.
 
-7. En **dirección URL**de destino *http://localhost/ContosoUniversity* , escriba.
+7. En **dirección URL de destino**, escriba *http://localhost/ContosoUniversity* .
 
    La configuración de la **dirección URL de destino** no es obligatoria. Cuando Visual Studio finaliza la implementación de la aplicación, abre automáticamente el explorador predeterminado en esta dirección URL. Si no desea que el explorador se abra automáticamente después de la implementación, deje este cuadro en blanco.
 
@@ -229,9 +229,9 @@ Antes de publicar, asegúrese de que está ejecutando Visual Studio en modo de a
 
 10. El cuadro desplegable **configuración** especifica la configuración de compilación que se va a implementar. Déjelo establecido en el valor predeterminado de **Release**. No va a implementar compilaciones de depuración en este tutorial.
 
-11. Expanda **Opciones de publicación de archivo**. Seleccione **excluir archivos en la\_carpeta de datos de la aplicación**.
+11. Expanda **Opciones de publicación de archivo**. Seleccione **excluir archivos en la carpeta de datos de la\_de la aplicación**.
 
-    En el entorno de prueba, la aplicación tiene acceso a las bases de datos creadas en la instancia de SQL Server Express local, no a los archivos. MDF de la carpeta de datos de la *aplicación\_* .
+    En el entorno de prueba, la aplicación tiene acceso a las bases de datos creadas en la instancia de SQL Server Express local, no a los archivos. MDF de la carpeta *App\_Data* .
 
 12. Deje desactivadas las casillas de verificación **precompilar durante la publicación** y **quitar archivos adicionales en el destino** .
 
@@ -246,7 +246,7 @@ Antes de publicar, asegúrese de que está ejecutando Visual Studio en modo de a
     > 
     > Por ejemplo, si tiene una aplicación web en una subcarpeta del servidor al implementar un proyecto en la carpeta raíz, se eliminará la subcarpeta. Es posible que tenga un proyecto para el sitio principal en contoso.com y otro proyecto para un blog en contoso.com/blog. La aplicación de blog está en una subcarpeta. Si selecciona **quitar archivos adicionales en el destino** al implementar el sitio principal, se eliminará la aplicación de blog.
     > 
-    > En otro ejemplo, la carpeta\_de datos de la aplicación podría eliminarse de forma inesperada. Algunas bases de datos, como SQL Server Compact almacenan archivos de base de\_datos en la carpeta de datos de la aplicación. Después de la implementación inicial, no desea seguir copiando los archivos de base de datos en las implementaciones posteriores, por lo que selecciona **excluir datos\_** de la aplicación en la pestaña empaquetar/publicar web. Una vez que haya **quitado los archivos adicionales en el destino** seleccionados, los archivos de base de datos\_y la carpeta de datos de la aplicación se eliminarán la próxima vez que publique.
+    > Otro ejemplo: la aplicación\_carpeta de datos se puede eliminar de forma inesperada. Algunas bases de datos, como SQL Server Compact almacenan archivos de base de datos en la carpeta app\_Data. Después de la implementación inicial, no desea seguir copiando los archivos de base de datos en las implementaciones posteriores, por lo que selecciona **excluir datos de\_de aplicaciones** en la pestaña empaquetar/publicar web. Después de hacerlo, si ha **quitado archivos adicionales en el destino** seleccionado, los archivos de base de datos y la aplicación\_carpeta de datos se eliminarán la próxima vez que publique.
 
 ### <a name="configure-deployment-for-the-membership-database"></a>Configurar la implementación para la base de datos de pertenencia
 
@@ -258,7 +258,7 @@ Los pasos siguientes se aplican a la base de datos **DefaultConnection** en la s
 
    El proceso de implementación coloca esta cadena de conexión en el archivo Web. config implementado porque está seleccionada **la opción usar esta cadena de conexión en tiempo de ejecución** .
 
-    También puede obtener la cadena de conexión de **Explorador de servidores**. En **Explorador de servidores**, expanda **conexiones de datos** y seleccione la  **&lt;&gt;** base de datos MachineName \SQLEXPRESS.Aspnet-ContosoUniversity y, a continuación, en la ventana **propiedades** , copie la **cadena de conexión.** valor. Esa cadena de conexión tendrá una configuración adicional que se puede eliminar: `Pooling=False`.
+    También puede obtener la cadena de conexión de **Explorador de servidores**. En **Explorador de servidores**, expanda **conexiones de datos** y seleccione la **&lt;MachineName&gt;** base de datos \SQLEXPRESS.Aspnet-ContosoUniversity y, a continuación, en la ventana **propiedades** , copie el valor de la **cadena de conexión** . Esa cadena de conexión tendrá una configuración adicional que se puede eliminar: `Pooling=False`.
 
 2. Seleccione **Actualizar base de datos**.
 
@@ -276,9 +276,9 @@ Los pasos siguientes se aplican a la base de datos **DefaultConnection** en la s
 
 ### <a name="configure-deployment-for-the-application-database"></a>Configurar la implementación para la base de datos de aplicación
 
-Cuando Visual Studio detecta una clase Entity Framework `DbContext` , crea una entrada en la sección **bases** de datos que tiene una casilla **Ejecutar migraciones de Code First** en lugar de una **actualización de base de datos** . En este tutorial, usará esa casilla para especificar Migraciones de Code First implementación.
+Cuando Visual Studio detecta una Entity Framework `DbContext` clase, crea una entrada en la sección **bases** de datos que tiene una casilla **Ejecutar migraciones de Code First** en lugar de una **base de datos de actualización** . En este tutorial, usará esa casilla para especificar Migraciones de Code First implementación.
 
-En algunos escenarios, es posible que esté usando `DbContext` una base de datos pero desee usar el proveedor dbDacFx en lugar de las migraciones para implementar la base de datos. En ese caso, vea [cómo implementar una base de datos de Code First sin migraciones](https://msdn.microsoft.com/library/ee942158.aspx#deploy_code_first_without_migrations) . en las p + f de ASP.net web Deployment en MSDN.
+En algunos escenarios, es posible que esté usando una base de datos de `DbContext` pero desea usar el proveedor dbDacFx en lugar de las migraciones para implementar la base de datos. En ese caso, vea [cómo implementar una base de datos de Code First sin migraciones](https://msdn.microsoft.com/library/ee942158.aspx#deploy_code_first_without_migrations) . en las p + f de ASP.net web Deployment en MSDN.
 
 Los pasos siguientes se aplican a la base de datos **SchoolContext** en la sección **Databases** del cuadro de diálogo.
 
@@ -292,7 +292,7 @@ Los pasos siguientes se aplican a la base de datos **SchoolContext** en la secci
 
 2. Seleccione **ejecutar migraciones de Code First (se ejecuta al iniciar la aplicación)** .
 
-   Esta opción hace que el proceso de implementación configure el archivo Web. config implementado `MigrateDatabaseToLatestVersion` para especificar el inicializador. Este inicializador actualiza automáticamente la base de datos a la versión más reciente cuando la aplicación obtiene acceso a la base de datos por primera vez después de la implementación.
+   Esta opción hace que el proceso de implementación configure el archivo Web. config implementado para especificar el inicializador de `MigrateDatabaseToLatestVersion`. Este inicializador actualiza automáticamente la base de datos a la versión más reciente cuando la aplicación obtiene acceso a la base de datos por primera vez después de la implementación.
 
 ### <a name="configure-publish-profile-transforms"></a>Configurar transformaciones de Perfil de publicación
 
@@ -344,7 +344,7 @@ Los pasos siguientes se aplican a la base de datos **SchoolContext** en la secci
 
 Observe que el indicador de entorno muestra "(test)" en lugar de "(dev)," que muestra que la transformación de *Web. config* para el indicador de entorno se realizó correctamente.
 
-Ejecute la página **instructores** para comprobar que Code First ha inicializado la base de datos con datos del instructor. Al seleccionar esta página, la carga puede tardar unos minutos, ya que Code First crea la base de datos y, `Seed` a continuación, ejecuta el método. (No lo hacía cuando estaba en la Página principal porque la aplicación no ha intentado tener acceso a la base de datos todavía).
+Ejecute la página **instructores** para comprobar que Code First ha inicializado la base de datos con datos del instructor. Al seleccionar esta página, la carga puede tardar unos minutos, ya que Code First crea la base de datos y, a continuación, ejecuta el método `Seed`. (No lo hacía cuando estaba en la Página principal porque la aplicación no ha intentado tener acceso a la base de datos todavía).
 
 Seleccione la pestaña **estudiantes** para comprobar que la base de datos implementada no tiene estudiantes.
 
@@ -364,11 +364,11 @@ Abra el archivo *Web. config* en la aplicación implementada en *C:\inetpub\wwwr
 
 El proceso de implementación también ha creado una nueva cadena de conexión para que Migraciones de Code First usar exclusivamente para actualizar el esquema de la base de datos:
 
-![Cadena de conexión de Database_Publish](deploying-to-iis/_static/image22.png)
+![Database_Publish cadena de conexión](deploying-to-iis/_static/image22.png)
 
-Esta cadena de conexión adicional le permite especificar una cuenta de usuario para las actualizaciones del esquema de la base de datos y una cuenta de usuario diferente para el acceso a los datos de la aplicación. Por ejemplo, puede asignar el rol **propietario\_** de la base de los migraciones de Code First y **dB\_DataReader** con los roles de autor de la **BD\_** a la aplicación. Se trata de un patrón común de defensa en profundidad que evita que un código potencialmente malintencionado en la aplicación cambie el esquema de la base de datos. (Por ejemplo, esto puede ocurrir en un ataque de inyección de SQL correcto). Estos tutoriales no usan este patrón. Para implementar este patrón en el escenario, siga estos pasos:
+Esta cadena de conexión adicional le permite especificar una cuenta de usuario para las actualizaciones del esquema de la base de datos y una cuenta de usuario diferente para el acceso a los datos de la aplicación. Por ejemplo, puede asignar el rol de propietario de la **base de\_** a migraciones de Code First y **dB\_DataReader** con roles de autor de base de trabajo **\_** a la aplicación. Se trata de un patrón común de defensa en profundidad que evita que un código potencialmente malintencionado en la aplicación cambie el esquema de la base de datos. (Por ejemplo, esto puede ocurrir en un ataque de inyección de SQL correcto). Estos tutoriales no usan este patrón. Para implementar este patrón en el escenario, siga estos pasos:
 
-1. En el Asistente para **publicación web** , en la pestaña **configuración** , escriba la cadena de conexión que especifica un usuario con permisos de actualización de esquemas de base de datos completa. Desactive la casilla **usar esta cadena de conexión en tiempo de ejecución** . En el archivo Web. config implementado, se convierte `DatabasePublish` en la cadena de conexión.
+1. En el Asistente para **publicación web** , en la pestaña **configuración** , escriba la cadena de conexión que especifica un usuario con permisos de actualización de esquemas de base de datos completa. Desactive la casilla **usar esta cadena de conexión en tiempo de ejecución** . En el archivo Web. config implementado, se convierte en el `DatabasePublish` cadena de conexión.
 
 2. Cree una transformación de archivo Web. config para la cadena de conexión que desea que la aplicación use en tiempo de ejecución.
 
