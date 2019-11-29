@@ -1,68 +1,68 @@
 ---
 uid: web-forms/overview/deployment/visual-studio-web-deployment/project-properties
-title: 'Implementación Web de ASP.NET con Visual Studio: Las propiedades del proyecto | Microsoft Docs'
+title: 'Implementación web de ASP.NET con Visual Studio: propiedades del proyecto | Microsoft Docs'
 author: tdykstra
-description: Esta serie de tutoriales muestra cómo implementar (publicar) una ASP.NET web application a Azure App Service Web Apps o a un proveedor de hospedaje de terceros, usa...
+description: En esta serie de tutoriales se muestra cómo implementar (publicar) una aplicación Web de ASP.NET en Azure App Service Web Apps o en un proveedor de hospedaje de terceros, por usa...
 ms.author: riande
 ms.date: 02/15/2013
 ms.assetid: ec1cec4c-a75f-47af-a2ba-b1e2f971d24b
 msc.legacyurl: /web-forms/overview/deployment/visual-studio-web-deployment/project-properties
 msc.type: authoredcontent
-ms.openlocfilehash: e17155317e484c8efdf87a1598fb2795b1619587
-ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
+ms.openlocfilehash: b2811791a897c9166f6222c23dddc6921e5267ab
+ms.sourcegitcommit: 22fbd8863672c4ad6693b8388ad5c8e753fb41a2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/06/2019
-ms.locfileid: "65109632"
+ms.lasthandoff: 11/28/2019
+ms.locfileid: "74614953"
 ---
-# <a name="aspnet-web-deployment-using-visual-studio-project-properties"></a>Implementación Web de ASP.NET con Visual Studio: Propiedades del proyecto
+# <a name="aspnet-web-deployment-using-visual-studio-project-properties"></a>Implementación web de ASP.NET con Visual Studio: propiedades del proyecto
 
 por [Tom Dykstra](https://github.com/tdykstra)
 
-[Descargar el proyecto de inicio](http://go.microsoft.com/fwlink/p/?LinkId=282627)
+[Descargar el proyecto de inicio](https://go.microsoft.com/fwlink/p/?LinkId=282627)
 
-> Esta serie de tutoriales muestra cómo implementar (publicar) una ASP.NET web application a Azure App Service Web Apps o a un proveedor de hospedaje de terceros, mediante el uso de Visual Studio 2012 o Visual Studio 2010. Para obtener información acerca de la serie, vea [el primer tutorial de la serie](introduction.md).
+> En esta serie de tutoriales se muestra cómo implementar (publicar) una aplicación Web de ASP.NET en Azure App Service Web Apps o en un proveedor de hospedaje de terceros mediante Visual Studio 2012 o Visual Studio 2010. Para obtener información sobre la serie, vea [el primer tutorial de la serie](introduction.md).
 
-## <a name="overview"></a>Información general
+## <a name="overview"></a>Información general del
 
-Algunas opciones de implementación se configuran en las propiedades del proyecto que se almacenan en el archivo de proyecto (el *.csproj* o *.vbproj* archivo). En la mayoría de los casos, los valores predeterminados de estas opciones son los que desea, pero puede usar el **las propiedades del proyecto** la interfaz de usuario integradas en Visual Studio para trabajar con esta configuración si tiene que cambiarlos. En este tutorial revise la configuración de implementación en **las propiedades del proyecto**. También creará un archivo de marcador de posición que hace que una carpeta vacía para implementarse.
+Algunas opciones de implementación se configuran en las propiedades del proyecto que se almacenan en el archivo del proyecto (el archivo *. csproj* o *. vbproj* ). En la mayoría de los casos, los valores predeterminados de esta configuración son los deseados, pero puede usar la interfaz de usuario de **propiedades del proyecto** integrada en Visual Studio para trabajar con esta configuración si tiene que cambiarlas. En este tutorial, revisará la configuración de implementación en **las propiedades del proyecto**. También creará un archivo de marcador de posición que provoque la implementación de una carpeta vacía.
 
-## <a name="configure-deployment-settings-in-the-project-properties-window"></a>Configurar opciones de implementación en la ventana Propiedades del proyecto
+## <a name="configure-deployment-settings-in-the-project-properties-window"></a>Configurar las opciones de implementación en la ventana Propiedades del proyecto
 
-Mayoría de las opciones que afectan a lo que sucede durante la implementación se incluye en el perfil de publicación, como verá en los tutoriales siguientes. Algunas opciones de configuración que debe ser consciente de que se encuentran en el **Empaquetar/publicar** pestañas de la **las propiedades del proyecto** ventana. Estas opciones se especifican para cada configuración de compilación, es decir, puede tener diferentes valores para una versión de lanzamiento que tiene para una compilación de depuración.
+La mayoría de las opciones de configuración que afectan a lo que ocurre durante la implementación se incluyen en el perfil de publicación, como verá en los siguientes tutoriales. Algunos valores de configuración que debe tener en cuenta se encuentran en las pestañas **empaquetar/publicar** de la ventana **propiedades del proyecto** . Esta configuración se especifica para cada configuración de compilación, es decir, puede tener valores diferentes para una compilación de versión que para una compilación de depuración.
 
-En **el Explorador de soluciones**, haga clic en el **ContosoUniversity** proyecto, seleccione **propiedades**y, a continuación, seleccione el **Empaquetar/Publicar Web**ficha.
+En **Explorador de soluciones**, haga clic con el botón derecho en el proyecto **ContosoUniversity** , seleccione **propiedades**y, a continuación, seleccione la pestaña **empaquetar/publicar web** .
 
 ![Pestaña Empaquetar/publicar web](project-properties/_static/image1.png)
 
-Cuando se muestre la ventana, el valor predeterminado es que muestra los valores para cualquier configuración de compilación está activo actualmente para la solución. Si el **configuración** cuadro no indica **activo (versión)**, seleccione **versión** con el fin de mostrar la configuración para la configuración de compilación de versión. Las compilaciones de versión va a implementar en entornos de la prueba y producción.
+Cuando se muestra la ventana, se muestra de forma predeterminada la configuración de la configuración de compilación actualmente activa para la solución. Si el cuadro de **configuración** no indica **activo (versión)** , seleccione **liberar** para mostrar la configuración de la versión de lanzamiento. Implementará las compilaciones de versión en los entornos de prueba y producción.
 
-![Seleccionar configuración de compilación de versión](project-properties/_static/image2.png)
+![Seleccionar la configuración de compilación de versión](project-properties/_static/image2.png)
 
-Con **activo (versión)** o **versión** seleccionado, verá que los valores que están vigentes cuando se implementa mediante la configuración de compilación de versión:
+Con **Active (release)** o **Release** seleccionado, verá los valores que son efectivos al implementar mediante la configuración de la versión de lanzamiento:
 
-- En el **elementos para implementar** cuadro, **sólo los archivos necesarios para ejecutar la aplicación** está seleccionada. Otras opciones son **todos los archivos de este proyecto** o **todos los archivos de esta carpeta de proyecto**. Al dejar la selección predeterminada sin cambios Evite implementar archivos de código fuente, por ejemplo. Esta configuración es la razón de por qué las carpetas que contienen los archivos binarios de SQL Server Compact tenían que se incluirán en el proyecto. Para obtener más información sobre esta configuración, consulte **¿por qué no todos los archivos en mi carpeta de proyecto se implementa?** en [p+f sobre la implementación de ASP.NET Web Application Project](https://msdn.microsoft.com/library/ee942158.aspx).
-- **Símbolos de depuración generado de exclusión** está seleccionada. Que no depurando cuando se usa esta configuración de compilación.
-- **Incluir todas las bases de datos configuradas en la pestaña Empaquetar/publicar SQL** está seleccionada. Especifica si Visual Studio implementará las bases de datos, así como archivos. Aunque la casilla de verificación de etiqueta únicas menciones el **Empaquetar/publicar SQL** ficha, si desactiva esta casilla de verificación podría también deshabilitar la implementación de la base de datos que está configurado en el perfil de publicación. Va a realizar más adelante, por lo que la casilla de verificación debe mantenerse seleccionada. El **Empaquetar/publicar SQL** pestaña sirve para una base de datos heredado, el método que no va a usar en estos tutoriales de publicación.
-- El **configuración del paquete de implementación Web** sección no es aplicable porque usa un solo clic publicar en estos tutoriales.
+- En el cuadro **elementos para implementar** , solo se seleccionan **los archivos necesarios para ejecutar la aplicación** . Otras opciones son **todos los archivos de este proyecto** o **todos los archivos de esta carpeta de proyecto**. Al mantener la selección predeterminada sin cambios, evita implementar archivos de código fuente, por ejemplo. Esta es la razón por la que se deben incluir en el proyecto las carpetas que contienen los SQL Server Compact archivos binarios. Para obtener más información acerca de esta configuración, consulte **¿por qué no se implementan todos los archivos de la carpeta del proyecto?** en [preguntas más frecuentes sobre la implementación de proyectos de aplicación Web de ASP.net](https://msdn.microsoft.com/library/ee942158.aspx).
+- Se selecciona **excluir símbolos de depuración generados** . No se realizará la depuración cuando use esta configuración de compilación.
+- Se selecciona **incluir todas las bases de datos configuradas en la pestaña empaquetar/publicar SQL** . Especifica si Visual Studio implementará las bases de datos y los archivos. Aunque la etiqueta de casilla solo menciona la pestaña **empaquetar/publicar SQL** , al desactivar esta casilla también se deshabilitaría la implementación de la base de datos que está configurada en el perfil de publicación. Lo hará más adelante, por lo que la casilla debe permanecer seleccionada. La pestaña **empaquetar/publicar SQL** se usa para un método de publicación de base de datos heredado que no va a usar en estos tutoriales.
+- La sección de **configuración del paquete de implementación web** no es aplicable porque usa la publicación con un solo clic en estos tutoriales.
 
-Cambiar el **configuración** cuadro desplegable de depuración para ver la configuración predeterminada para las compilaciones de depuración. Los valores son iguales, salvo **excluir símbolos de depuración generados** está desactivada de manera que pueda depurar al implementar una compilación de depuración.
+Cambie el cuadro desplegable **configuración** para depurar y ver la configuración predeterminada para las compilaciones de depuración. Los valores son los mismos, excepto en que se **excluyen los símbolos de depuración generados** para que pueda depurar al implementar una compilación de depuración.
 
-## <a name="make-sure-that-the-elmah-folder-gets-deployed"></a>Asegúrese de que la carpeta Elmah obtiene implementada
+## <a name="make-sure-that-the-elmah-folder-gets-deployed"></a>Asegúrese de que se implementa la carpeta Elmah
 
-Como se vio en el tutorial anterior, el [paquete Elmah NuGet](http://www.hanselman.com/blog/NuGetPackageOfTheWeek7ELMAHErrorLoggingModulesAndHandlersWithSQLServerCompact.aspx) proporciona la funcionalidad de registro e informes de errores. En la aplicación Contoso University Elmah se ha configurado para almacenar los detalles del error en una carpeta denominada *Elmah*:
+Como vimos en el tutorial anterior, el [paquete NuGet de Elmah](http://www.hanselman.com/blog/NuGetPackageOfTheWeek7ELMAHErrorLoggingModulesAndHandlersWithSQLServerCompact.aspx) proporciona funcionalidad para el registro de errores y los informes. En la aplicación de Contoso University, se ha configurado Elmah para almacenar los detalles del error en una carpeta denominada *Elmah*:
 
-![Carpeta ELMAH](project-properties/_static/image3.png)
+![Carpeta Elmah](project-properties/_static/image3.png)
 
-Excluir determinados archivos o carpetas de implementación es un requisito común; otro ejemplo sería una carpeta que los usuarios pueden cargar archivos a. No desea que los archivos de registro o cargar archivos que se crearon en el entorno de desarrollo para su implementación en producción. Y si va a implementar una actualización en producción, que no desea que el proceso de implementación para eliminar los archivos que existen en producción. (Dependiendo de cómo establecer una opción de implementación, si existe un archivo en el sitio de destino, pero no en el sitio de origen cuando se implementa, Web Deploy lo elimina del destino.)
+Excluir archivos o carpetas específicos de la implementación es un requisito común; otro ejemplo sería una carpeta a la que los usuarios pueden cargar archivos. No quiere que los archivos de registro o los archivos cargados que se crearon en el entorno de desarrollo se implementen en producción. Y si está implementando una actualización en producción, no desea que el proceso de implementación elimine los archivos que existen en producción. (En función de cómo establezca una opción de implementación, si existe un archivo en el sitio de destino pero no en el sitio de origen al implementar, Web Deploy lo elimina del destino).
 
-Como se vio anteriormente en este tutorial, el **elementos para implementar** opción el **Empaquetar/Publicar Web** ficha se establece en **sólo los archivos necesarios para ejecutar esta aplicación**. Como resultado, los archivos de registro creados por Elmah en el desarrollo no se implementará, que es lo que desea que ocurra. (Para implementarse, tendría que se incluirán en el proyecto y sus **acción de compilación** propiedad tendría que establecerse en **contenido**. Para obtener más información, consulte **¿por qué no todos los archivos en mi carpeta de proyecto se implementa?** en [p+f sobre la implementación de ASP.NET Web Application Project](https://msdn.microsoft.com/library/ee942158.aspx)). Sin embargo, Web Deploy no creará una carpeta en el sitio de destino a menos que haya al menos un archivo para copiar en él. Por lo tanto, agregará un *.txt* archivo en la carpeta para que actúe como un marcador de posición para que se va a copiar la carpeta.
+Como vimos anteriormente en este tutorial, la opción **elementos para implementar** de la pestaña **empaquetar/publicar web** está establecida en **solo los archivos necesarios para ejecutar esta aplicación**. Como resultado, no se implementarán los archivos de registro creados por Elmah en desarrollo, que es lo que desea que suceda. (Para su implementación, deben incluirse en el proyecto y la propiedad acción de **compilación** debe establecerse en **contenido**. Para obtener más información, consulte **¿por qué no se implementan todos los archivos de la carpeta del proyecto?** en las [preguntas más frecuentes sobre la implementación de proyectos de aplicación Web de ASP.net](https://msdn.microsoft.com/library/ee942158.aspx)). Sin embargo, Web Deploy no creará una carpeta en el sitio de destino a menos que haya al menos un archivo para copiarlo. Por lo tanto, agregará un archivo *. txt* a la carpeta para que actúe como un marcador de posición para que se copie la carpeta.
 
-En **el Explorador de soluciones**, haga clic en el *Elmah* carpeta, seleccione **Agregar nuevo elemento**y cree un archivo de texto denominado *marcador.txt*. Poner el texto siguiente en él: "Esto es un archivo de marcador de posición para asegurarse de que se implementa la carpeta". y guarde el archivo. Eso es todo lo que debe hacer para asegurarse de que Visual Studio implementa este archivo y la carpeta se encuentra, porque el **acción de compilación** propiedad de *.txt* archivos se establece en **contenido**de forma predeterminada.
+En **Explorador de soluciones**, haga clic con el botón derecho en la carpeta *Elmah* , seleccione **Agregar nuevo elemento**y cree un archivo de texto denominado *placeholder. txt*. Escriba el texto siguiente: "este es un archivo de marcador de posición para asegurarse de que se implementa la carpeta". y guarde el archivo. Eso es todo lo que tiene que hacer para asegurarse de que Visual Studio implementa este archivo y la carpeta en la que se encuentra, ya que la propiedad **acción de compilación** de los archivos *. txt* se establece en **contenido** de forma predeterminada.
 
 ## <a name="summary"></a>Resumen
 
-Ahora ha completado todas las tareas de configuración de implementación. En el siguiente tutorial, deberá implementar el sitio de Contoso University en el entorno de prueba y probarla.
+Ya ha completado todas las tareas de configuración de la implementación. En el siguiente tutorial, implementará el sitio de Contoso University en el entorno de prueba y lo probará.
 
 > [!div class="step-by-step"]
 > [Anterior](web-config-transformations.md)

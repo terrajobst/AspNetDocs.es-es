@@ -2,58 +2,58 @@
 uid: web-forms/overview/ajax-control-toolkit/animation/animation-depending-on-a-condition-vb
 title: Animación según una condición (VB) | Microsoft Docs
 author: wenz
-description: El control de animación en ASP.NET AJAX Control Toolkit no es simplemente un control, pero un marco completo para agregar animaciones a un control. Si una animación es...
+description: El control de animación de ASP.NET AJAX control Toolkit no es solo un control, sino un marco de trabajo completo para agregar animaciones a un control. Si una animación es...
 ms.author: riande
 ms.date: 06/02/2008
 ms.assetid: 1b87d8d6-b3f7-4126-b51c-d41442fbf947
 msc.legacyurl: /web-forms/overview/ajax-control-toolkit/animation/animation-depending-on-a-condition-vb
 msc.type: authoredcontent
-ms.openlocfilehash: cfac2d5ac7ea652648db3c11a8357d95c8f78ffe
-ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
+ms.openlocfilehash: 583ebdbf109beb74b9a425020477183067bbb79a
+ms.sourcegitcommit: 22fbd8863672c4ad6693b8388ad5c8e753fb41a2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/06/2019
-ms.locfileid: "65132247"
+ms.lasthandoff: 11/28/2019
+ms.locfileid: "74607008"
 ---
 # <a name="animation-depending-on-a-condition-vb"></a>Animación según una condición (VB)
 
 por [Christian Wenz](https://github.com/wenz)
 
-[Descargar código](http://download.microsoft.com/download/f/9/a/f9a26acd-8df4-4484-8a18-199e4598f411/Animation4.vb.zip) o [descargar PDF](http://download.microsoft.com/download/6/7/1/6718d452-ff89-4d3f-a90e-c74ec2d636a3/animation4VB.pdf)
+[Descargar código](https://download.microsoft.com/download/f/9/a/f9a26acd-8df4-4484-8a18-199e4598f411/Animation4.vb.zip) o [Descargar PDF](https://download.microsoft.com/download/6/7/1/6718d452-ff89-4d3f-a90e-c74ec2d636a3/animation4VB.pdf)
 
-> El control de animación en ASP.NET AJAX Control Toolkit no es simplemente un control, pero un marco completo para agregar animaciones a un control. Si se ejecuta una animación o no puede también dependen de una condición en forma de código JavaScript.
+> El control de animación de ASP.NET AJAX control Toolkit no es solo un control, sino un marco de trabajo completo para agregar animaciones a un control. El hecho de que una animación se ejecute o no también puede depender de una condición en forma de código JavaScript.
 
-## <a name="overview"></a>Información general
+## <a name="overview"></a>Información general del
 
-El control de animación en ASP.NET AJAX Control Toolkit no es simplemente un control, pero un marco completo para agregar animaciones a un control. Si se ejecuta una animación o no puede también dependen de una condición en forma de código JavaScript.
+El control de animación de ASP.NET AJAX control Toolkit no es solo un control, sino un marco de trabajo completo para agregar animaciones a un control. El hecho de que una animación se ejecute o no también puede depender de una condición en forma de código JavaScript.
 
 ## <a name="steps"></a>Pasos
 
-En primer lugar, incluya el `ScriptManager` en la página; a continuación, ASP.NET AJAX se carga la biblioteca, lo que permite usar el Kit de herramientas de Control:
+En primer lugar, incluya el `ScriptManager` en la página; después, se carga la biblioteca de ASP.NET AJAX, lo que permite usar el kit de herramientas de control:
 
 [!code-aspx[Main](animation-depending-on-a-condition-vb/samples/sample1.aspx)]
 
-La animación se aplicará a un panel de texto que tiene este aspecto:
+La animación se aplicará a un panel de texto que tiene el siguiente aspecto:
 
 [!code-aspx[Main](animation-depending-on-a-condition-vb/samples/sample2.aspx)]
 
-En la clase CSS asociada para el panel, definir un color de fondo agradable y también establecer un ancho fijo para el panel:
+En la clase CSS asociada del panel, defina un color de fondo agradable y establezca también un ancho fijo para el panel:
 
 [!code-css[Main](animation-depending-on-a-condition-vb/samples/sample3.css)]
 
-A continuación, agregue el `AnimationExtender` a la página, que proporciona un `ID`, el `TargetControlID` atributo y el obligatoria `runat="server":`
+A continuación, agregue el `AnimationExtender` a la página, proporcionando un `ID`, el atributo `TargetControlID` y el obligatorio `runat="server":`
 
 [!code-aspx[Main](animation-depending-on-a-condition-vb/samples/sample4.aspx)]
 
-Dentro de la `<Animations>` nodo, use `<OnLoad>` para ejecutar las animaciones de una vez que la página se ha cargado completamente. En lugar de una de las animaciones regulares, el `<Condition>` elemento entra en juego. El código JavaScript proporcionado como el valor de la `ConditionScript` atributo se ejecuta en tiempo de ejecución. Si se evalúa como true, la animación se ejecuta, en caso contrario, no. El siguiente marcado proporciona dos animaciones, cada uno de ellos que se está ejecutando en el 50% de los casos al azar. Puesto que sólo puede haber una animación en `<OnLoad>`, los dos `<Condition>` las animaciones se unen entre sí mediante el `<Sequence>` elemento:
+Dentro del nodo de `<Animations>`, utilice `<OnLoad>` para ejecutar las animaciones una vez que la página se haya cargado por completo. En lugar de una de las animaciones normales, el elemento `<Condition>` entra en juego. El código JavaScript proporcionado como el valor del atributo `ConditionScript` se ejecuta en tiempo de ejecución. Si se evalúa como true, se ejecuta la animación; de lo contrario, no. El marcado siguiente proporciona dos animaciones, cada una de las cuales se ejecuta en el 50% de los casos de forma aleatoria. Dado que solo puede haber una animación dentro de `<OnLoad>`, las dos animaciones `<Condition>` se unen juntas mediante el elemento `<Sequence>`:
 
 [!code-aspx[Main](animation-depending-on-a-condition-vb/samples/sample5.aspx)]
 
-Tenga en cuenta que el signo menor que (`<`) en el `ConditionScript` atributo debe ser de escape (de). Cuando ejecute este script, no hay ejecuciones de animación, o uno de los dos, o ambas lo hacen.
+Tenga en cuenta que el signo menor que (`<`) en el atributo `ConditionScript` debe ser un carácter de escape (). Al ejecutar este script, no se ejecuta ninguna animación, o bien uno de los dos, o ambos.
 
-[![El panel es difuminación sin cambiar el tamaño, por lo que no las segundas ejecuciones de animación, la primera de ellas](animation-depending-on-a-condition-vb/_static/image2.png)](animation-depending-on-a-condition-vb/_static/image1.png)
+[![el panel se atenúa sin cambiar de tamaño, por lo que la segunda animación se ejecuta, la primera no](animation-depending-on-a-condition-vb/_static/image2.png)](animation-depending-on-a-condition-vb/_static/image1.png)
 
-El panel es difuminación sin cambiar el tamaño, por lo que no las segundas ejecuciones de animación, la primera de ellas ([haga clic aquí para ver imagen en tamaño completo](animation-depending-on-a-condition-vb/_static/image3.png))
+El panel se atenúa sin cambiar el tamaño, por lo que la segunda animación se ejecuta, pero la primera no ([hacer clic para ver la imagen de tamaño completo](animation-depending-on-a-condition-vb/_static/image3.png))
 
 > [!div class="step-by-step"]
 > [Anterior](executing-several-animations-after-each-other-vb.md)

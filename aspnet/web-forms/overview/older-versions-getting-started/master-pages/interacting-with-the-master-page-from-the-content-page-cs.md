@@ -2,239 +2,239 @@
 uid: web-forms/overview/older-versions-getting-started/master-pages/interacting-with-the-master-page-from-the-content-page-cs
 title: Interactuar con la página maestra desde la página de contenido (C#) | Microsoft Docs
 author: rick-anderson
-description: Examina cómo llamar a métodos, establecer propiedades, etc. de la página maestra desde el código en la página de contenido.
+description: Examina cómo llamar a métodos, establecer propiedades, etc. de la página maestra desde el código de la página de contenido.
 ms.author: riande
 ms.date: 07/11/2008
 ms.assetid: 32d54638-71b2-491d-81f4-f7417a13a62f
 msc.legacyurl: /web-forms/overview/older-versions-getting-started/master-pages/interacting-with-the-master-page-from-the-content-page-cs
 msc.type: authoredcontent
-ms.openlocfilehash: 52f3563a59647c3bc48c5c4d7e40ce8941d18268
-ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
+ms.openlocfilehash: 5ef030d3bed117e98fdd090f7c63643354b47f76
+ms.sourcegitcommit: 22fbd8863672c4ad6693b8388ad5c8e753fb41a2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/06/2019
-ms.locfileid: "65132301"
+ms.lasthandoff: 11/28/2019
+ms.locfileid: "74583876"
 ---
 # <a name="interacting-with-the-master-page-from-the-content-page-c"></a>Interactuar con la página maestra desde la página de contenido (C#)
 
 por [Scott Mitchell](https://twitter.com/ScottOnWriting)
 
-[Descargar código](http://download.microsoft.com/download/1/8/4/184e24fa-fcc8-47fa-ac99-4b6a52d41e97/ASPNET_MasterPages_Tutorial_06_CS.zip) o [descargar PDF](http://download.microsoft.com/download/e/b/4/eb4abb10-c416-4ba4-9899-32577715b1bd/ASPNET_MasterPages_Tutorial_06_CS.pdf)
+[Descargar código](https://download.microsoft.com/download/1/8/4/184e24fa-fcc8-47fa-ac99-4b6a52d41e97/ASPNET_MasterPages_Tutorial_06_CS.zip) o [Descargar PDF](https://download.microsoft.com/download/e/b/4/eb4abb10-c416-4ba4-9899-32577715b1bd/ASPNET_MasterPages_Tutorial_06_CS.pdf)
 
-> Examina cómo llamar a métodos, establecer propiedades, etc. de la página maestra desde el código en la página de contenido.
+> Examina cómo llamar a métodos, establecer propiedades, etc. de la página maestra desde el código de la página de contenido.
 
 ## <a name="introduction"></a>Introducción
 
-En el transcurso de los cinco últimos tutoriales hemos examinado cómo crear una página maestra, definir las áreas de contenido, enlazar las páginas de ASP.NET a una página maestra y definir el contenido específico de la página. Cuando un visitante solicita una página de contenido determinada, el contenido y el marcado de las páginas maestras se fusionan en tiempo de ejecución, lo que resulta en la representación de una jerarquía de controles unificada. Por lo tanto, ya hemos visto una manera en que pueden interactuar a la página principal y uno de sus páginas de contenido: la página de contenido se detalla el marcado para transfuse en controles ContentPlaceHolder de la página maestra.
+En el transcurso de los cinco últimos tutoriales, hemos examinado cómo crear una página maestra, cómo definir regiones de contenido, cómo enlazar páginas de ASP.NET a una página maestra y cómo definir contenido específico de la página. Cuando un visitante solicita una página de contenido determinada, el marcado de contenido y páginas maestras se fusiona en tiempo de ejecución, lo que da lugar a la representación de una jerarquía de control unificada. Por lo tanto, ya hemos encontrado una manera en la que la página maestra y una de sus páginas de contenido pueden interactuar: la página de contenido escribe el marcado en transfuse en los controles ContentPlaceHolder de la página maestra.
 
-Lo que aún es necesario examinar es cómo pueden interactuar mediante programación la página maestra y la página de contenido. Además de definir el marcado para controles ContentPlaceHolder de la página principal, una página de contenido también puede asignar valores a propiedades públicas de sus páginas principales e invocar sus métodos públicos. De forma similar, una página maestra puede interactuar con las páginas de contenido. Aunque es menos frecuente que la interacción entre sus marcas declarativas interacción mediante programación entre una página maestra y contenida, hay muchos escenarios donde es necesario dicha interacción mediante programación.
+Lo que hemos examinado todavía es cómo la página maestra y la página de contenido pueden interactuar mediante programación. Además de definir el marcado para los controles de ContentPlaceHolder de la página maestra, una página de contenido también puede asignar valores a las propiedades públicas de su página maestra e invocar sus métodos públicos. Del mismo modo, una página maestra puede interactuar con sus páginas de contenido. Aunque la interacción mediante programación entre una página maestra y una página de contenido es menos común que la interacción entre sus marcas declarativas, existen muchos escenarios en los que se necesita dicha interacción mediante programación.
 
-En este tutorial se examina cómo una página de contenido mediante programación puede interactuar con su página maestra; en el siguiente tutorial veremos cómo la página principal de forma similar puede interactuar con las páginas de contenido.
+En este tutorial se examina el modo en que una página de contenido puede interactuar mediante programación con su página maestra. en el siguiente tutorial, veremos cómo la página maestra puede interactuar de forma similar con sus páginas de contenido.
 
-## <a name="examples-of-programmatic-interaction-between-a-content-page-and-its-master-page"></a>Ejemplos de programación interacción entre una página de contenido y su página principal
+## <a name="examples-of-programmatic-interaction-between-a-content-page-and-its-master-page"></a>Ejemplos de interacción mediante programación entre una página de contenido y su página maestra
 
-Cuando una región determinada de una página debe configurarse en la página por página, usamos un control ContentPlaceHolder. Pero, ¿necesitan situaciones donde la mayoría de páginas necesario para emitir un resultado determinado, pero un pequeño número de páginas personalizarlo para mostrar algo más? Un ejemplo de esto, lo que hemos visto en el [ *varios ContentPlaceHolders y contenido predeterminado* ](multiple-contentplaceholders-and-default-content-cs.md) implica el tutorial, mostrar la interfaz de inicio de sesión en cada página. Aunque la mayoría de las páginas debe incluir una interfaz de inicio de sesión, se debe suprimir una serie de páginas, como: la página de inicio de sesión principal (`Login.aspx`); la página Crear una cuenta; y otras páginas que solo se puede acceder a los usuarios autenticados. El [ *varios ContentPlaceHolders y contenido predeterminado* ](multiple-contentplaceholders-and-default-content-cs.md) tutorial le ha mostrado cómo definir el contenido predeterminado para un ContentPlaceHolder en la página maestra y, a continuación, cómo invalidarlo en las páginas donde el no se quería contenido predeterminado.
+Cuando una región determinada de una página debe configurarse página por página, usamos un control ContentPlaceHolder. Pero, ¿qué ocurre con las situaciones en las que la mayoría de las páginas necesitan emitir una salida determinada, pero un número pequeño de páginas debe personalizarla para mostrar algo más? Un ejemplo de este tipo, que examinamos en el tutorial de [*varios ContentPlaceHolders y contenido predeterminado*](multiple-contentplaceholders-and-default-content-cs.md) , implica la visualización de una interfaz de inicio de sesión en cada página. Aunque la mayoría de las páginas deben incluir una interfaz de inicio de sesión, se debe suprimir para unas cuantas páginas, como: la página de inicio de sesión principal (`Login.aspx`); la página crear cuenta; y otras páginas a las que solo pueden acceder los usuarios autenticados. En el tutorial de [*varios ContentPlaceHolders y contenido predeterminado*](multiple-contentplaceholders-and-default-content-cs.md) se ha mostrado cómo definir el contenido predeterminado para un ContentPlaceHolder en la página maestra y, a continuación, cómo invalidarlo en las páginas en las que no se deseaba el contenido predeterminado.
 
-Otra opción es crear una propiedad pública o un método en la página maestra que indica si se debe mostrar u ocultar la interfaz de inicio de sesión. Por ejemplo, la página maestra puede incluir una propiedad pública denominada `ShowLoginUI` cuyo valor se usa para establecer el `Visible` propiedad del control de inicio de sesión en la página maestra. Las páginas de contenido donde se debe suprimir la interfaz de usuario de inicio de sesión, a continuación, pueden establecer mediante programación el `ShowLoginUI` propiedad `false`.
+Otra opción consiste en crear una propiedad o un método públicos dentro de la página maestra que indique si se va a mostrar u ocultar la interfaz de inicio de sesión. Por ejemplo, la página maestra podría incluir una propiedad pública denominada `ShowLoginUI` cuyo valor se usó para establecer la propiedad `Visible` del control de inicio de sesión en la página maestra. Las páginas de contenido en las que se debería suprimir la interfaz de usuario de inicio de sesión podrían establecer mediante programación la propiedad `ShowLoginUI` en `false`.
 
-Quizás el ejemplo más común de contenido y la interacción de la página principal se produce cuando los datos se muestran en la página maestra debe actualizarse una vez que haya llegado alguna acción en la página de contenido. Considere la posibilidad de una página maestra que incluye un control GridView que muestra los cinco más recientemente agregado registros de una tabla de base de datos determinada y que uno de sus páginas de contenido incluye una interfaz para agregar nuevos registros a la misma tabla.
+Quizás el ejemplo más común de interacción de contenido y página maestra se produce cuando es necesario actualizar los datos mostrados en la página maestra después de que haya transcurrido alguna acción en la página de contenido. Considere una página maestra que incluye un control GridView que muestra los cinco registros agregados más recientemente de una tabla de base de datos determinada, y que una de sus páginas de contenido incluye una interfaz para agregar nuevos registros a la misma tabla.
 
-Cuando un usuario visita la página para agregar un nuevo registro, ve que las cinco agregan recientemente registros mostrados en la página maestra. Después de rellenar los valores de columnas del nuevo registro, envía el formulario. Suponiendo que el control GridView en la página principal tiene su `EnableViewState` propiedad establecida en true (valor predeterminado), su contenido se vuelve a cargar del estado de vista y, por lo tanto, se muestran los mismos cinco registros, aunque un registro más reciente se acaba de agregar a la base de datos. Esto puede confundir al usuario.
-
-> [!NOTE]
-> Incluso si se deshabilita el estado de vista de GridView para que vuelve a enlazar al origen de datos subyacente en cada devolución de datos, lo todavía no mostrará el registro recién agregado porque los datos se enlazan a la GridView anteriormente en el ciclo de vida de la página que cuando se agrega el nuevo registro a la datab instancia de ase.
-
-Para solucionar este problema para que el registro recién agregada se muestra en la página principal de GridView en el que necesitamos indicar a la GridView para volver a enlazar al origen de datos de postback *después* se ha agregado el nuevo registro a la base de datos. Esto requiere la interacción entre el contenido y páginas maestras porque la interfaz para agregar que el nuevo registro (y sus controladores de eventos) se encuentran en la página de contenido, pero el control GridView que debe actualizarse en la página maestra.
-
-Dado que actualizar la presentación de la página maestra desde un controlador de eventos en la página de contenido es una de las necesidades más comunes para el contenido y la interacción de la página maestra, vamos a examinar en este tema con más detalle. La descarga de este tutorial incluye una base de datos de Microsoft SQL Server 2005 Express Edition con nombre `NORTHWIND.MDF` en el sitio de Web `App_Data` carpeta. La base de datos Northwind almacena información de ventas de una compañía ficticia, Northwind Traders, empleados y producto.
-
-Paso 1 recorre mostrar las cinco más recientemente habían agregado productos en un control GridView en la página maestra. Paso 2 crea una página de contenido para agregar nuevos productos. Paso 3 se examina cómo crear propiedades y métodos públicos en la página maestra y paso 4 se muestra cómo interactuar mediante programación con estas propiedades y métodos de la página de contenido.
+Cuando un usuario visita la página para agregar un nuevo registro, ve los cinco registros agregados más recientemente que se muestran en la página maestra. Después de rellenar los valores de las columnas del nuevo registro, envía el formulario. Suponiendo que el control GridView de la página maestra tiene su propiedad `EnableViewState` establecida en true (el valor predeterminado), su contenido se recarga desde el estado de vista y, por consiguiente, se muestran los cinco mismos registros aunque un registro más reciente se agregara a la base de datos. Esto puede confundir al usuario.
 
 > [!NOTE]
-> En este tutorial no profundizar en los detalles del trabajo con datos en ASP.NET. Los pasos de configuración de la página principal para mostrar los datos y la página de contenido para insertar datos son completos e implementaciones fáciles y aún. Para una visión más profunda de mostrar y la inserción de datos y cómo usar los controles SqlDataSource y GridView, consulte los recursos en la sección Lecturas adicionales al final de este tutorial.
+> Aunque deshabilite el estado de vista de GridView para que se vuelva a enlazar a su origen de datos subyacente en cada postback, todavía no se mostrará el registro que se acaba de agregar porque los datos están enlazados a GridView anteriormente en el ciclo de vida de la página que cuando el nuevo registro se agrega a Datab ase.
 
-## <a name="step-1-displaying-the-five-most-recently-added-products-in-the-master-page"></a>Paso 1: Mostrar las cinco productos agregadas recientemente, en la página maestra
+Para solucionar este error de modo que el registro agregado se muestre en el control GridView de la página maestra en el postback, es necesario indicar a GridView que vuelva a enlazar a su origen de datos *una vez* agregado el nuevo registro a la base de datos. Esto requiere interacción entre el contenido y las páginas maestras porque la interfaz para agregar el nuevo registro (y sus controladores de eventos) está en la página de contenido, pero el control GridView que debe actualizarse está en la página maestra.
 
-Abra el `Site.master` página principal y agregue una etiqueta y un control GridView a la `leftContent` `<div>`. Limpiar la etiqueta `Text` establecer la propiedad, su `EnableViewState` propiedad en false y su `ID` propiedad `GridMessage`; establecer la GridView `ID` propiedad `RecentProducts`. A continuación, desde el diseñador, expanda la etiqueta inteligente de GridView y elija enlazarlo a un origen de datos. Esto inicia al Asistente para configuración de origen de datos. Dado que la base de datos Northwind en el `App_Data` carpeta es una base de datos de Microsoft SQL Server, optar por crear un SqlDataSource seleccionando (consulte la figura 1); nombre SqlDataSource `RecentProductsDataSource`.
+Dado que la actualización de la presentación de la página maestra desde un controlador de eventos en la página de contenido es una de las necesidades más comunes de contenido y de interacción con las páginas maestras, vamos a explorar este tema con más detalle. La descarga de este tutorial incluye una base de datos Microsoft SQL Server 2005 Express Edition denominada `NORTHWIND.MDF` en la carpeta `App_Data` del sitio Web. La base de datos Northwind almacena información de productos, empleados y ventas para una compañía ficticia, Northwind Traders.
 
-[![Enlazar el control GridView a un Control SqlDataSource denominado RecentProductsDataSource](interacting-with-the-master-page-from-the-content-page-cs/_static/image2.png)](interacting-with-the-master-page-from-the-content-page-cs/_static/image1.png)
+En el paso 1 se explica cómo mostrar los cinco últimos productos agregados en GridView en la página maestra. En el paso 2 se crea una página de contenido para agregar nuevos productos. En el paso 3, veremos cómo crear propiedades y métodos públicos en la página maestra y el paso 4 muestra cómo interactuar mediante programación con estas propiedades y métodos desde la página de contenido.
 
-**Figura 01**: Enlazar el control GridView a un Control SqlDataSource denominado `RecentProductsDataSource` ([haga clic aquí para ver imagen en tamaño completo](interacting-with-the-master-page-from-the-content-page-cs/_static/image3.png))
+> [!NOTE]
+> En este tutorial no se profundiza en los detalles del trabajo con datos en ASP.NET. Los pasos para configurar la página maestra para Mostrar datos y la página de contenido para insertar datos están completos, pero Breezy. Para obtener información más detallada sobre cómo mostrar e insertar datos y usar los controles SqlDataSource y GridView, consulte los recursos en la sección lecturas adicionales al final de este tutorial.
 
-El siguiente paso nos pide para especificar qué base de datos al que conectarse. Elija la `NORTHWIND.MDF` base de datos de archivo en la lista desplegable y haga clic en siguiente. Dado que esta es la primera vez que hemos usado esta base de datos, el asistente ofrecerá almacenar la cadena de conexión en `Web.config`. Tiene almacenar la cadena de conexión con el nombre `NorthwindConnectionString`.
+## <a name="step-1-displaying-the-five-most-recently-added-products-in-the-master-page"></a>Paso 1: mostrar los cinco productos agregados más recientemente en la página maestra
 
-[![Conectarse a la base de datos Northwind](interacting-with-the-master-page-from-the-content-page-cs/_static/image5.png)](interacting-with-the-master-page-from-the-content-page-cs/_static/image4.png)
+Abra la página maestra de `Site.master` y agregue una etiqueta y un control GridView al `<div>``leftContent`. Borre la propiedad `Text` de la etiqueta, establezca su propiedad `EnableViewState` en false y su propiedad `ID` en `GridMessage`; Establezca la propiedad `ID` de GridView en `RecentProducts`. A continuación, desde el diseñador, expanda la etiqueta inteligente de GridView y elija enlazarla a un nuevo origen de datos. Se inicia el Asistente para la configuración de orígenes de datos. Dado que la base de datos Northwind de la carpeta `App_Data` es una Microsoft SQL Server base de datos, elija crear una SqlDataSource seleccionando (vea la figura 1). Asigne al `RecentProductsDataSource`SqlDataSource el nombre.
 
-**Figura 02**: Conectarse a la base de datos Northwind ([haga clic aquí para ver imagen en tamaño completo](interacting-with-the-master-page-from-the-content-page-cs/_static/image6.png))
+[![enlazar GridView a un control SqlDataSource denominado RecentProductsDataSource](interacting-with-the-master-page-from-the-content-page-cs/_static/image2.png)](interacting-with-the-master-page-from-the-content-page-cs/_static/image1.png)
 
-El Asistente para configurar orígenes de datos proporciona dos significa que se puede especificar la consulta utilizada para recuperar los datos:
+**Figura 01**: enlace de GridView a un control SqlDataSource denominado `RecentProductsDataSource` ([haga clic para ver la imagen de tamaño completo](interacting-with-the-master-page-from-the-content-page-cs/_static/image3.png))
 
-- Mediante la especificación de una instrucción SQL personalizada o un procedimiento almacenado, o
-- Al seleccionar una tabla o vista y, a continuación, especificar las columnas que se va a devolver
+El siguiente paso nos pide que especifique la base de datos a la que se va a conectar. Elija el archivo de base de datos de `NORTHWIND.MDF` en la lista desplegable y haga clic en siguiente. Dado que esta es la primera vez que se usa esta base de datos, el asistente le ofrecerá la forma de almacenar la cadena de conexión en `Web.config`. Haga que almacene la cadena de conexión con el nombre `NorthwindConnectionString`.
 
-Puesto que deseamos devolver que solo los cinco agregan recientemente a productos, necesitamos especificar una instrucción SQL personalizada. Use la siguiente consulta de selección:
+[![conectarse a la base de datos Northwind](interacting-with-the-master-page-from-the-content-page-cs/_static/image5.png)](interacting-with-the-master-page-from-the-content-page-cs/_static/image4.png)
+
+**Figura 02**: conexión a la base de datos Northwind ([haga clic para ver la imagen de tamaño completo](interacting-with-the-master-page-from-the-content-page-cs/_static/image6.png))
+
+El Asistente para configurar orígenes de datos proporciona dos medios por los que se puede especificar la consulta que se usa para recuperar datos:
+
+- Mediante la especificación de una instrucción SQL personalizada o un procedimiento almacenado, o bien
+- Al seleccionar una tabla o vista y, a continuación, especificar las columnas que se van a devolver
+
+Dado que queremos que solo se devuelvan los cinco últimos productos agregados, es necesario especificar una instrucción SQL personalizada. Use la siguiente consulta SELECT:
 
 [!code-sql[Main](interacting-with-the-master-page-from-the-content-page-cs/samples/sample1.sql)]
 
-El `TOP 5` palabra clave devuelve solo los primeros cinco registros de la consulta. El `Products` clave principal de la tabla, `ProductID`, es un `IDENTITY` columna, lo que nos garantiza que cada nuevo producto que se agregan a la tabla tendrá un valor mayor que la entrada anterior. Por lo tanto, ordenar los resultados por `ProductID` en orden descendente devuelve los productos a partir de la última creadas nuevamente.
+La palabra clave `TOP 5` solo devuelve los cinco primeros registros de la consulta. La clave principal de la tabla `Products`, `ProductID`, es una columna de `IDENTITY`, que garantiza que cada nuevo producto agregado a la tabla tendrá un valor mayor que el de la entrada anterior. Por lo tanto, la ordenación de los resultados por `ProductID` en orden descendente devuelve los productos a partir de los creados más recientemente.
 
-[![Devolver los cinco productos agregados recientemente](interacting-with-the-master-page-from-the-content-page-cs/_static/image8.png)](interacting-with-the-master-page-from-the-content-page-cs/_static/image7.png)
+[![devuelven los cinco últimos productos agregados](interacting-with-the-master-page-from-the-content-page-cs/_static/image8.png)](interacting-with-the-master-page-from-the-content-page-cs/_static/image7.png)
 
-**Figura 03**: Devolver los cinco más recientemente agregado productos ([haga clic aquí para ver imagen en tamaño completo](interacting-with-the-master-page-from-the-content-page-cs/_static/image9.png))
+**Figura 03**: devolver los cinco últimos productos agregados ([haga clic para ver la imagen de tamaño completo](interacting-with-the-master-page-from-the-content-page-cs/_static/image9.png))
 
-Después de completar el asistente, Visual Studio genera dos BoundFields del control GridView mostrar el `ProductName` y `UnitPrice` campos devueltos desde la base de datos. En este punto marcado declarativo de la página maestra debe incluir marcado similar al siguiente:
+Después de completar el asistente, Visual Studio genera dos BoundFields para que GridView muestre los campos `ProductName` y `UnitPrice` devueltos por la base de datos. En este momento, el marcado declarativo de la página maestra debe incluir un marcado similar al siguiente:
 
 [!code-aspx[Main](interacting-with-the-master-page-from-the-content-page-cs/samples/sample2.aspx)]
 
-Como puede ver, contiene el marcado: el control Web Label (`GridMessage`); el control GridView `RecentProducts`, con dos BoundFields; y un control SqlDataSource que devuelve las cinco agregan recientemente productos.
+Como puede ver, el marcado contiene: el control Web Label (`GridMessage`); GridView `RecentProducts`, con dos BoundFields; y un control SqlDataSource que devuelve los cinco productos agregados más recientemente.
 
-Con esto GridView que creó y su control SqlDataSource configurado, visite el sitio Web a través de un explorador. Como se muestra en la figura 4, verá una cuadrícula en la esquina inferior izquierda que se enumera los cinco más recientemente agregado productos.
+Con este GridView creado y su control SqlDataSource configurado, visite el sitio web a través de un explorador. Como se muestra en la figura 4, verá una cuadrícula en la esquina inferior izquierda que muestra los cinco productos agregados más recientemente.
 
-[![El control GridView muestra los cinco productos agregados recientemente](interacting-with-the-master-page-from-the-content-page-cs/_static/image11.png)](interacting-with-the-master-page-from-the-content-page-cs/_static/image10.png)
+[![GridView muestra los cinco últimos productos agregados](interacting-with-the-master-page-from-the-content-page-cs/_static/image11.png)](interacting-with-the-master-page-from-the-content-page-cs/_static/image10.png)
 
-**Figura 04**: El control GridView muestra los cinco más recientemente agregado productos ([haga clic aquí para ver imagen en tamaño completo](interacting-with-the-master-page-from-the-content-page-cs/_static/image12.png))
+**Figura 04**: GridView muestra los cinco últimos productos agregados ([haga clic para ver la imagen de tamaño completo](interacting-with-the-master-page-from-the-content-page-cs/_static/image12.png))
 
 > [!NOTE]
-> No dude en limpiar la apariencia del control GridView. Algunas sugerencias incluyen el formateo muestran `UnitPrice` valor como una moneda y el uso de fuentes y colores de fondo para mejorar la apariencia de la cuadrícula.
+> No dude en limpiar la apariencia de GridView. Algunas sugerencias incluyen dar formato al valor de `UnitPrice` mostrado como moneda y usar colores de fondo y fuentes para mejorar la apariencia de la cuadrícula.
 
-## <a name="step-2-creating-a-content-page-to-add-new-products"></a>Paso 2: Creación de una página de contenido para agregar nuevos productos
+## <a name="step-2-creating-a-content-page-to-add-new-products"></a>Paso 2: creación de una página de contenido para agregar nuevos productos
 
-La siguiente tarea consiste en crear una página de contenido desde el que un usuario puede agregar un nuevo producto a la `Products` tabla. Agregue una nueva página de contenido para el `Admin` carpeta denominada `AddProduct.aspx`y asegúrese que se va a enlazar la `Site.master` página maestra. Figura 5 muestra el Explorador de soluciones después de esta página se ha agregado al sitio Web.
+La siguiente tarea consiste en crear una página de contenido desde la que un usuario puede Agregar un nuevo producto a la tabla `Products`. Agregue una nueva página de contenido a la carpeta `Admin` denominada `AddProduct.aspx`, asegurándose de enlazarla a la página maestra `Site.master`. En la figura 5 se muestra el Explorador de soluciones después de que esta página se haya agregado al sitio Web.
 
-[![Agregue una nueva página de ASP.NET a la carpeta Admin](interacting-with-the-master-page-from-the-content-page-cs/_static/image14.png)](interacting-with-the-master-page-from-the-content-page-cs/_static/image13.png)
+[![agregar una nueva página ASP.NET a la carpeta admin](interacting-with-the-master-page-from-the-content-page-cs/_static/image14.png)](interacting-with-the-master-page-from-the-content-page-cs/_static/image13.png)
 
-**Figura 05**: Agregue una nueva página de ASP.NET para la `Admin` carpeta ([haga clic aquí para ver imagen en tamaño completo](interacting-with-the-master-page-from-the-content-page-cs/_static/image15.png))
+**Figura 05**: agregar una nueva página ASP.net a la carpeta `Admin` ([haga clic para ver la imagen de tamaño completo](interacting-with-the-master-page-from-the-content-page-cs/_static/image15.png))
 
-Recuerde que en el [ *especificar el título, etiquetas Meta y otros encabezados HTML en la página maestra* ](specifying-the-title-meta-tags-and-other-html-headers-in-the-master-page-cs.md) tutorial hemos creado una clase de página base personalizada denominada `BasePage` que generó el título de la página si fuese no se establece explícitamente. Vaya a la `AddProduct.aspx` código subyacente de la página de clase y hacer que se derivan de `BasePage` (en lugar de desde `System.Web.UI.Page`).
+Recuerde que en el tutorial para [*especificar el título, las etiquetas meta y otros encabezados HTML en la página maestra*](specifying-the-title-meta-tags-and-other-html-headers-in-the-master-page-cs.md) se ha creado una clase de página base personalizada denominada `BasePage` que ha generado el título de la página si no se ha establecido explícitamente. Vaya a la clase de código subyacente de la página de `AddProduct.aspx` y haga que se derive de `BasePage` (en lugar de `System.Web.UI.Page`).
 
-Por último, actualice el `Web.sitemap` archivo para incluir una entrada en esta lección. Agregue el siguiente marcado debajo de la `<siteMapNode>` de la lección de problemas de nomenclatura de Id. de Control:
+Por último, actualice el archivo de `Web.sitemap` para incluir una entrada para esta lección. Agregue el siguiente marcado debajo del `<siteMapNode>` para la lección problemas de nomenclatura de ID. de control:
 
 [!code-xml[Main](interacting-with-the-master-page-from-the-content-page-cs/samples/sample3.xml)]
 
-Como se muestra en la figura 6, la adición de este `<siteMapNode>` elemento se refleja en la lista de las lecciones.
+Como se muestra en la figura 6, la adición de este elemento `<siteMapNode>` se refleja en la lista lecciones.
 
-Vuelva a `AddProduct.aspx`. En el control de contenido para el `MainContent` ContentPlaceHolder, agregue un control DetailsView y asígnele el nombre `NewProduct`. Enlazar un control SqlDataSource nuevo denominado DetailsView `NewProductDataSource`. Al igual que con SqlDataSource en el paso 1, configurar al Asistente para que utilice la base de datos Northwind y optar por especificar una instrucción SQL personalizada. Como DetailsView se usará para agregar elementos a la base de datos, se debe especificar tanto un `SELECT` instrucción y un `INSERT` instrucción. Use el siguiente `SELECT` consulta:
+Vuelva a `AddProduct.aspx`. En el control de contenido del `MainContent` ContentPlaceHolder, agregue un control DetailsView y asígnele el nombre `NewProduct`. Enlace DetailsView a un nuevo control SqlDataSource denominado `NewProductDataSource`. Al igual que con SqlDataSource en el paso 1, configure el Asistente para que use la base de datos Northwind y elija especificar una instrucción SQL personalizada. Dado que DetailsView se usará para agregar elementos a la base de datos, es necesario especificar una instrucción `SELECT` y una instrucción `INSERT`. Use la siguiente consulta de `SELECT`:
 
 [!code-sql[Main](interacting-with-the-master-page-from-the-content-page-cs/samples/sample4.sql)]
 
-A continuación, en la pestaña Insertar, agregue las siguientes `INSERT` instrucción:
+A continuación, en la pestaña insertar, agregue la siguiente instrucción `INSERT`:
 
 [!code-sql[Main](interacting-with-the-master-page-from-the-content-page-cs/samples/sample5.sql)]
 
-Después de completar al asistente vaya a la etiqueta inteligente de DetailsView y Active la casilla "Habilitar inserción". Esto agrega un CommandField a DetailsView con su `ShowInsertButton` propiedad establecida en true. Porque se usará este DetailsView únicamente para insertar datos, establezca el DetailsView `DefaultMode` propiedad `Insert`.
+Después de completar el asistente, vaya a la etiqueta inteligente de DetailsView y active la casilla "habilitar inserción". Esto agrega un CommandField a DetailsView con su propiedad `ShowInsertButton` establecida en true. Dado que este DetailsView se usará únicamente para insertar datos, establezca la propiedad `DefaultMode` de DetailsView en `Insert`.
 
-Así de simple. Vamos a probar esta página. Visite `AddProduct.aspx` a través de un explorador, escriba el nombre y precio (consulte la figura 6).
+Así de simple. Vamos a probar esta página. Visite `AddProduct.aspx` a través de un explorador, escriba un nombre y un precio (consulte la figura 6).
 
-[![Agregar un nuevo producto a la base de datos](interacting-with-the-master-page-from-the-content-page-cs/_static/image17.png)](interacting-with-the-master-page-from-the-content-page-cs/_static/image16.png)
+[![agregar un nuevo producto a la base de datos](interacting-with-the-master-page-from-the-content-page-cs/_static/image17.png)](interacting-with-the-master-page-from-the-content-page-cs/_static/image16.png)
 
-**Figura 06**: Agregar un nuevo producto a la base de datos ([haga clic aquí para ver imagen en tamaño completo](interacting-with-the-master-page-from-the-content-page-cs/_static/image18.png))
+**Figura 06**: agregar un nuevo producto a la base de datos ([haga clic para ver la imagen de tamaño completo](interacting-with-the-master-page-from-the-content-page-cs/_static/image18.png))
 
-Después de escribir el nombre y el precio del producto de nuevo, haga clic en el botón Insertar. Esto hace que el formulario de devolución de datos. En la del devolución de datos, el control SqlDataSource `INSERT` se ejecuta la instrucción; sus dos parámetros se rellenan con los valores introducidos por el usuario en dos controles de cuadro de texto de DetailsView. Lamentablemente, no hay ningún indicador visual que se ha producido una inserción. Sería bueno tener un mensaje de muestra, que confirma que se ha agregado un nuevo registro. Dejar como un ejercicio para el lector. Además, después de agregar un nuevo registro de DetailsView GridView en la página principal sigue mostrando los mismos cinco registros que antes; no incluye el registro recién agregado. Examinaremos cómo solucionar este problema en los próximos pasos.
+Después de escribir el nombre y el precio del nuevo producto, haga clic en el botón Insertar. Esto hace que el formulario se postback. En el postback, se ejecuta la instrucción `INSERT` del control SqlDataSource; sus dos parámetros se rellenan con los valores especificados por el usuario en los dos controles TextBox de DetailsView. Desafortunadamente, no hay ningún comentario visual de que se haya producido una inserción. Estaría bien mostrar un mensaje, lo que confirma que se ha agregado un nuevo registro. Dejo esto como un ejercicio para el lector. Además, después de agregar un nuevo registro desde DetailsView, el control GridView en la página maestra sigue mostrando los mismos cinco registros que antes. no incluye el registro recién agregado. Examinaremos cómo solucionarlo en los próximos pasos.
 
 > [!NOTE]
-> Además de agregar algún tipo de comentarios visuales que se ha realizado correctamente la inserción, me gustaría incentivarlo actualizar también la interfaz de inserción de DetailsView para incluir la validación. Actualmente, no hay ninguna validación. Si un usuario escribe un valor no válido para el `UnitPrice` campo, como "demasiado costoso," se producirá una excepción en el postback cuando el sistema intenta convertir esa cadena en un decimal. Para obtener más información sobre la personalización de la inserción de la interfaz, consulte el [ *personalizar la interfaz de modificación de datos* tutorial](../../data-access/editing-inserting-and-deleting-data/customizing-the-data-modification-interface-cs.md) desde mi [trabajar con la serie de tutoriales de datos](../../data-access/index.md).
+> Además de agregar alguna forma de comentarios visuales que la inserción ha realizado correctamente, recomiendo que también actualice la interfaz de inserción de DetailsView para incluir la validación. Actualmente, no hay ninguna validación. Si un usuario escribe un valor no válido para el campo `UnitPrice`, como "demasiado caro", se iniciará una excepción en el PostBack cuando el sistema intente convertir esa cadena en un decimal. Para obtener más información sobre la personalización de la interfaz de inserción, consulte el [tutorial *Personalización de la interfaz de modificación de datos* ](../../data-access/editing-inserting-and-deleting-data/customizing-the-data-modification-interface-cs.md) de mi [trabajo con la serie de tutoriales de datos](../../data-access/index.md).
 
-## <a name="step-3-creating-public-properties-and-methods-in-the-master-page"></a>Paso 3: Creación de propiedades y métodos públicos en la página maestra
+## <a name="step-3-creating-public-properties-and-methods-in-the-master-page"></a>Paso 3: crear propiedades y métodos públicos en la página maestra
 
-En el paso 1 se ha agregado un control etiqueta Web denominado `GridMessage` por encima del control GridView en la página maestra. Esta etiqueta está pensada para mostrar opcionalmente un mensaje. Por ejemplo, después de agregar un nuevo registro a la `Products` tabla, deseamos mostrar un mensaje que dice: "*ProductName* se ha agregado a la base de datos." En lugar de codificar el texto de esta etiqueta en la página maestra, podríamos llevar el mensaje se puede personalizar la página de contenido.
+En el paso 1 se ha agregado un control Web Label denominado `GridMessage` sobre GridView en la página maestra. Esta etiqueta está pensada para mostrar opcionalmente un mensaje. Por ejemplo, después de agregar un nuevo registro a la tabla `Products`, es posible que desee mostrar un mensaje que indique: "*ProductName* se ha agregado a la base de datos". En lugar de codificar de forma rígida el texto de esta etiqueta en la página maestra, es posible que desee que la página de contenido pueda personalizar el mensaje.
 
-Dado que el control de etiqueta se implementa como una variable de miembro protegido dentro de la página maestra no son accesibles directamente desde las páginas de contenido. Para trabajar con la etiqueta dentro de una página maestra desde la página de contenido (o, de hecho, cualquier control Web en la página maestra) se necesita crear una propiedad pública en la página maestra que expone el control Web o actúa como un proxy mediante el cual puede ser uno de sus propiedades  obtener acceso a. Agregue la siguiente sintaxis para la clase de código subyacente de la página maestra para exponer la etiqueta `Text` propiedad:
+Dado que el control etiqueta se implementa como una variable miembro protegida dentro de la página maestra, no se puede tener acceso a ella directamente desde las páginas de contenido. Para trabajar con la etiqueta dentro de una página maestra desde la página de contenido (o, en ese caso, cualquier control Web en la página maestra), es necesario crear una propiedad pública en la página maestra que exponga el control Web o que sirva como proxy por el que se puede  acceso. Agregue la siguiente sintaxis a la clase de código subyacente de la página maestra para exponer la propiedad `Text` de la etiqueta:
 
 [!code-csharp[Main](interacting-with-the-master-page-from-the-content-page-cs/samples/sample6.cs)]
 
-Cuando se agrega un nuevo registro a la `Products` tabla desde una página de contenido la `RecentProducts` GridView en la página maestra debe volver a enlazarse a su origen de datos subyacente. Para volver a enlazar la llamada de GridView su `DataBind` método. Dado que el control GridView en la página principal no es accesible mediante programación a las páginas de contenido, se debe crear un método público en la página maestra, cuando se llama, vuelve a enlazar los datos en GridView. Agregue el método siguiente a la clase de código subyacente de la página maestra:
+Cuando se agrega un nuevo registro a la tabla de `Products` de una página de contenido, el `RecentProducts` GridView en la página maestra debe volver a enlazarse a su origen de datos subyacente. Para volver a enlazar el control GridView, llame a su método `DataBind`. Dado que el control GridView de la página maestra no es accesible mediante programación para las páginas de contenido, es necesario crear un método público en la página maestra que, cuando se llama, vuelve a enlazar los datos a GridView. Agregue el método siguiente a la clase de código subyacente de la página maestra:
 
 [!code-csharp[Main](interacting-with-the-master-page-from-the-content-page-cs/samples/sample7.cs)]
 
-Con el `GridMessageText` propiedad y `RefreshRecentProductsGrid` método en su lugar, cualquier página de contenido puede mediante programación establecer o leer el valor de la `GridMessage` la etiqueta `Text` propiedad o volver a enlazar los datos a la `RecentProducts` GridView. Paso 4, examina cómo acceder a los métodos y propiedades públicas de la página maestra desde una página de contenido.
+Con la propiedad `GridMessageText` y `RefreshRecentProductsGrid` método en su lugar, cualquier página de contenido puede establecer o leer mediante programación el valor de la propiedad `Text` de la etiqueta `GridMessage` o volver a enlazar los datos al `RecentProducts` GridView. En el paso 4 se examina el modo de obtener acceso a las propiedades y los métodos públicos de la página maestra desde una página de contenido.
 
 > [!NOTE]
-> No se olvide de marcar las propiedades y los métodos como la página maestra `public`. Si se no explícitamente denotan estas propiedades y métodos como `public`, no será accesibles desde la página de contenido.
+> No olvide marcar las propiedades y los métodos de la página maestra como `public`. Si no denota explícitamente estas propiedades y métodos como `public`, no se podrá acceder a ellos desde la página de contenido.
 
-## <a name="step-4-calling-the-master-pages-public-members-from-a-content-page"></a>Paso 4: Llamar a los miembros públicos de la página maestra desde una página de contenido
+## <a name="step-4-calling-the-master-pages-public-members-from-a-content-page"></a>Paso 4: llamar a los miembros públicos de la página maestra desde una página de contenido
 
-Ahora que la página maestra tiene los métodos y propiedades públicas es necesarias, ya estamos listos para invocar estas propiedades y métodos de la `AddProduct.aspx` página de contenido. En concreto, es necesario establecer la página maestra `GridMessageText` propiedad y llame a su `RefreshRecentProductsGrid` método después de que se ha agregado el nuevo producto a la base de datos. Todos los controles de Web de datos ASP.NET activan eventos inmediatamente antes y después de completar varias tareas, lo que facilitan a los desarrolladores de páginas realizar alguna acción mediante programación antes o después de la tarea. Por ejemplo, cuando el usuario final hace clic en el botón de inserción de DetailsView, en postback DetailsView provoca su `ItemInserting` eventos antes de comenzar el flujo de trabajo de inserción. A continuación, inserta el registro en la base de datos. A continuación, genera DetailsView su `ItemInserted` eventos. Por lo tanto, para poder trabajar con la página principal después de que se ha agregado el nuevo producto, crear un controlador de eventos para el DetailsView `ItemInserted` eventos.
+Ahora que la página maestra tiene las propiedades y los métodos públicos necesarios, estamos preparados para invocar estas propiedades y métodos desde la página de contenido de `AddProduct.aspx`. En concreto, es necesario establecer la propiedad `GridMessageText` de la página maestra y llamar a su método `RefreshRecentProductsGrid` una vez que el nuevo producto se ha agregado a la base de datos. Todos los controles Web de datos de ASP.NET activan los eventos inmediatamente antes y después de completar varias tareas, lo que facilita que los desarrolladores de páginas tomen algunas acciones de programación antes o después de la tarea. Por ejemplo, cuando el usuario final hace clic en el botón Insertar de DetailsView, en el postback, DetailsView genera su evento `ItemInserting` antes de comenzar el flujo de trabajo de inserción. A continuación, inserta el registro en la base de datos. A continuación, DetailsView genera su evento `ItemInserted`. Por lo tanto, para trabajar con la página maestra después de agregar el nuevo producto, cree un controlador de eventos para el evento `ItemInserted` de DetailsView.
 
-Hay dos maneras en que una página de contenido mediante programación puede comunicarse con su página principal:
+Una página de contenido puede interactuar mediante programación con su página maestra de dos maneras:
 
-- Mediante el `Page.Master` propiedad, que devuelve una referencia fuertemente tipado a la página maestra, o
-- Especificar ruta de tipo o el archivo de página maestra de la página a través de un `@MasterType` directiva; Esto agrega automáticamente una propiedad fuertemente tipados a la página llamada `Master`.
+- Usar la propiedad `Page.Master`, que devuelve una referencia con tipo flexible a la página maestra, o bien
+- Especifique el tipo o la ruta de acceso de archivo de la página maestra de la página a través de una directiva de `@MasterType`; Esto agrega automáticamente una propiedad fuertemente tipada a la página denominada `Master`.
 
 Vamos a examinar ambos enfoques.
 
-### <a name="using-the-loosely-typedpagemasterproperty"></a>Usar débilmente tipadas`Page.Master`propiedad
+### <a name="using-the-loosely-typedpagemasterproperty"></a>Usar la propiedad`Page.Master`de tipo flexible
 
-Todas las páginas web ASP.NET debe derivar de la `Page` (clase), que se encuentra en la `System.Web.UI` espacio de nombres. El `Page` clase incluye un [ `Master` propiedad](https://msdn.microsoft.com/library/system.web.ui.page.master.aspx) que devuelve una referencia a la página principal de la página. Si la página no tiene una página maestra `Master` devuelve `null`.
+Todas las páginas web de ASP.NET deben derivarse de la clase `Page`, que se encuentra en el espacio de nombres `System.Web.UI`. La clase `Page` incluye una [propiedad`Master`](https://msdn.microsoft.com/library/system.web.ui.page.master.aspx) que devuelve una referencia a la página maestra de la página. Si la página no tiene una página maestra `Master` devuelve `null`.
 
-El `Master` propiedad devuelve un objeto de tipo [ `MasterPage` ](https://msdn.microsoft.com/library/system.web.ui.masterpage.aspx) (también se encuentra en la `System.Web.UI` espacio de nombres) que es el tipo base del que derivan todas las páginas maestras. Por lo tanto, para usar propiedades o métodos públicos definidos en la página principal del sitio Web nos debemos convertir la `MasterPage` objeto devuelto desde el `Master` propiedad al tipo adecuado. Dado que hemos llamado a nuestro archivo de página maestra `Site.master`, la clase de código subyacente se denominaba `Site`. Por lo tanto, el siguiente código convierte el `Page.Master` propiedad a una instancia de la clase de sitio.
+La propiedad `Master` devuelve un objeto de tipo [`MasterPage`](https://msdn.microsoft.com/library/system.web.ui.masterpage.aspx) (también ubicado en el espacio de nombres `System.Web.UI`) que es el tipo base del que se derivan todas las páginas maestras. Por lo tanto, para usar las propiedades o los métodos públicos definidos en la página maestra del sitio web, debemos convertir el objeto de `MasterPage` devuelto desde la propiedad `Master` al tipo adecuado. Como hemos denominado el archivo de la página maestra `Site.master`, la clase de código subyacente se denominaba `Site`. Por lo tanto, el código siguiente convierte la propiedad `Page.Master` en una instancia de la clase site.
 
 [!code-csharp[Main](interacting-with-the-master-page-from-the-content-page-cs/samples/sample8.cs)]
 
-Ahora que hemos convertido débilmente tipadas `Page.Master` propiedad a la `Site` tipo podemos hacer referencia a las propiedades y métodos específicos de sitio. Como se muestra en la figura 7, la propiedad pública `GridMessageText` aparece en la lista desplegable de IntelliSense.
+Ahora que hemos convertido la propiedad de `Page.Master` con tipo flexible en el tipo de `Site`, podemos hacer referencia a las propiedades y los métodos específicos del sitio. Como se muestra en la figura 7, la propiedad pública `GridMessageText` aparece en la lista desplegable de IntelliSense.
 
-[![IntelliSense muestra los métodos y propiedades públicas de nuestra página maestra](interacting-with-the-master-page-from-the-content-page-cs/_static/image20.png)](interacting-with-the-master-page-from-the-content-page-cs/_static/image19.png)
+[![IntelliSense muestra las propiedades y los métodos públicos de la página maestra](interacting-with-the-master-page-from-the-content-page-cs/_static/image20.png)](interacting-with-the-master-page-from-the-content-page-cs/_static/image19.png)
 
-**Figura 07**: IntelliSense muestra los métodos y propiedades públicas de nuestra página maestra ([haga clic aquí para ver imagen en tamaño completo](interacting-with-the-master-page-from-the-content-page-cs/_static/image21.png))
+**Figura 07**: IntelliSense muestra las propiedades y los métodos públicos de la página maestra ([haga clic para ver la imagen de tamaño completo](interacting-with-the-master-page-from-the-content-page-cs/_static/image21.png))
 
 > [!NOTE]
-> Si el nombre de su archivo de página maestra `MasterPage.master` , a continuación, el nombre de clase de código subyacente de la página maestra es `MasterPage`. Esto puede dar lugar a código ambigua cuando se realiza la conversión de tipo `System.Web.UI.MasterPage` a su `MasterPage` clase. En resumen, debe usar el nombre completo del tipo que se va a convertir, que puede ser un poco complicado cuando se usa el modelo de proyecto de sitio Web. Mi sugerencia sería asegurarse de que al crear la página maestra asígnele el nombre algo distinto `MasterPage.master` o, mejor aún, cree una referencia fuertemente tipada a la página maestra.
+> Si ha llamado al archivo de la página maestra `MasterPage.master` el nombre de la clase de código subyacente de la página maestra es `MasterPage`. Esto puede conducir a código ambiguo al convertir desde el tipo `System.Web.UI.MasterPage` a la clase `MasterPage`. En Resumen, debe calificar totalmente el tipo al que está convirtiendo, que puede ser un poco complicado al usar el modelo de proyecto de sitio Web. Mi sugerencia sería asegurarse de que cuando cree la página maestra le asigne un nombre que no sea `MasterPage.master` o, incluso mejor, cree una referencia fuertemente tipada a la página maestra.
 
-### <a name="creating-a-strongly-typed-reference-with-themastertypedirective"></a>Creación de una referencia fuertemente tipado con el`@MasterType`directiva
+### <a name="creating-a-strongly-typed-reference-with-themastertypedirective"></a>Crear una referencia fuertemente tipada con la Directiva`@MasterType`
 
-Si lo examina detenidamente puede ver que la clase de código subyacente de una página ASP.NET es una clase parcial (tenga en cuenta el `partial` palabra clave en la definición de clase). Las clases parciales se presentaron en C# y Visual Basic con.NET Framework 2.0 y, en resumen, permiten para que los miembros de una clase se define en varios archivos. El archivo de clase de código subyacente - `AddProduct.aspx.cs`, por ejemplo, contiene el código que, el desarrollador de páginas, creamos. Además de nuestro código, el motor ASP.NET crea automáticamente un archivo de clase independiente con propiedades y controladores de eventos traducen el marcado declarativo en la jerarquía de clases de la página.
+Si observa atentamente, puede ver que la clase de código subyacente de una página de ASP.NET es una clase parcial (observe la palabra clave `partial` en la definición de clase). Las clases parciales se introdujeron C# en y Visual Basic with.NET Framework 2,0 y, en pocas palabras, permiten que los miembros de una clase se definan en varios archivos. El archivo de clase de código subyacente `AddProduct.aspx.cs`, por ejemplo, contiene el código que el desarrollador de páginas crea. Además de nuestro código, el motor ASP.NET crea automáticamente un archivo de clase independiente con propiedades y controladores de eventos en que traducen el marcado declarativo en la jerarquía de clases de la página.
 
-La generación automática de código que se produce cada vez que se visite una página ASP.NET prepara el terreno para algunas posibilidades bastante interesantes y útiles. En el caso de las páginas maestras, si se indican al motor ASP.NET nuestra página de contenido está usando la página principal que genera fuertemente tipadas `Master` propiedad para nosotros.
+La generación de código automática que se produce siempre que se visita una página de ASP.NET prepara la forma de algunas posibilidades bastante interesantes y útiles. En el caso de las páginas maestras, si se indica al motor de ASP.NET qué página maestra está usando la página de contenido, se genera una propiedad fuertemente tipada `Master` para nosotros.
 
-Use la [ `@MasterType` directiva](https://msdn.microsoft.com/library/ms228274.aspx) para informar al motor de ASP.NET de tipo de página principal de la página de contenido. El `@MasterType` directiva puede aceptar el nombre de tipo de la página maestra o su ruta de acceso de archivo. Para especificar que el `AddProduct.aspx` página usa `Site.master` como su página principal, agregue la siguiente directiva a la parte superior de `AddProduct.aspx`:
+Use la [directiva`@MasterType`](https://msdn.microsoft.com/library/ms228274.aspx) para informar al motor de ASP.net del tipo de página maestra de la página de contenido. La Directiva de `@MasterType` puede aceptar el nombre de tipo de la página maestra o su ruta de acceso de archivo. Para especificar que la página `AddProduct.aspx` usa `Site.master` como su página maestra, agregue la siguiente directiva a la parte superior de `AddProduct.aspx`:
 
 [!code-aspx[Main](interacting-with-the-master-page-from-the-content-page-cs/samples/sample9.aspx)]
 
-Esta directiva indica al motor ASP.NET para agregar una referencia fuertemente tipada a la página principal a través de una propiedad denominada `Master`. Con el `@MasterType` la directiva en su lugar, podemos llamar a la `Site.master` dominar la página Propiedades y métodos públicos directamente a través del `Master` propiedad sin todas las conversiones.
+Esta directiva indica al motor de ASP.NET que agregue una referencia fuertemente tipada a la página maestra a través de una propiedad denominada `Master`. Con la Directiva de `@MasterType` en su lugar, podemos llamar a los métodos y propiedades públicos de la página maestra de `Site.master` directamente a través de la propiedad `Master` sin ninguna conversión.
 
 > [!NOTE]
-> Si se omite el `@MasterType` directiva, la sintaxis `Page.Master` y `Master` devolver lo mismo: un objeto fuertemente tipado a página principal de la página. Si incluye el `@MasterType` , a continuación, la directiva `Master` devuelve una referencia fuertemente tipada a la página principal especificada. `Page.Master`, sin embargo, sigue devolviendo una referencia fuertemente tipado. Para una visión más completa de por qué este es el caso y cómo el `Master` se construye la propiedad cuando la `@MasterType` se incluye la directiva, consulte [K. Scott Allen](http://odetocode.com/blogs/scott/default.aspx)de entrada de blog [ `@MasterType` en ASP.NET 2.0](http://odetocode.com/Blogs/scott/archive/2005/07/16/1944.aspx).
+> Si omite la Directiva de `@MasterType`, la sintaxis `Page.Master` y `Master` devuelven lo mismo: un objeto débilmente tipado en la página maestra de la página. Si incluye la Directiva `@MasterType`, `Master` devuelve una referencia fuertemente tipada a la página maestra especificada. sin embargo, `Page.Master`todavía devuelve una referencia débilmente tipada. Para obtener una visión más detallada de por qué es el caso y cómo se construye la propiedad `Master` cuando se incluye la Directiva de `@MasterType`, consulte la entrada del blog de [K. Scott Allen](http://odetocode.com/blogs/scott/default.aspx) [`@MasterType` en ASP.net 2,0](http://odetocode.com/Blogs/scott/archive/2005/07/16/1944.aspx).
 
-### <a name="updating-the-master-page-after-adding-a-new-product"></a>Actualización de la página principal después de agregar un nuevo producto
+### <a name="updating-the-master-page-after-adding-a-new-product"></a>Actualización de la página maestra después de agregar un nuevo producto
 
-Ahora que sabemos cómo invocar los métodos desde una página de contenido y las propiedades públicas de una página maestra, estamos listos actualizar la `AddProduct.aspx` página para que se actualice la página principal después de agregar un nuevo producto. Al principio del paso 4, hemos creado un controlador de eventos para el control DetailsView `ItemInserting` evento, que se ejecuta inmediatamente después de que se ha agregado el nuevo producto a la base de datos. Agregue el siguiente código a ese controlador de eventos:
+Ahora que sabemos cómo invocar las propiedades y los métodos públicos de una página maestra desde una página de contenido, estamos listos para actualizar la página de `AddProduct.aspx` de modo que la página maestra se actualice después de agregar un nuevo producto. Al principio del paso 4 se crea un controlador de eventos para el evento `ItemInserting` del control DetailsView, que se ejecuta inmediatamente después de que el nuevo producto se haya agregado a la base de datos. Agregue el código siguiente a ese controlador de eventos:
 
 [!code-csharp[Main](interacting-with-the-master-page-from-the-content-page-cs/samples/sample10.cs)]
 
-El código anterior usa ambos el débilmente tipadas `Page.Master` propiedad y fuertemente tipadas `Master` propiedad. Tenga en cuenta que el `GridMessageText` propiedad está establecida en "*ProductName* agregado a la cuadrícula..." Los valores del producto recién agregados son accesibles a través de la `e.Values` colección; como puede ver, el recién agregadas por `ProductName` valor se tiene acceso a través de `e.Values["ProductName"]`.
+En el código anterior se usa la propiedad `Page.Master` fuertemente tipada y la propiedad `Master` fuertemente tipada. Tenga en cuenta que la propiedad `GridMessageText` está establecida en "*ProductName* Added to Grid..." Se puede acceder a los valores del producto recién agregados a través de la colección de `e.Values`; como puede ver, se tiene acceso al valor `ProductName` agregado a través de `e.Values["ProductName"]`.
 
-La figura 8 muestra el `AddProduct.aspx` página inmediatamente después de un nuevo producto - de Scott Soda - se ha agregado a la base de datos. Tenga en cuenta que el nombre de producto recién agregado se indica en la etiqueta de la página maestra y que el control GridView se ha actualizado para incluir el producto y su precio.
+En la figura 8 se muestra la página de `AddProduct.aspx` inmediatamente después de que se ha agregado a la base de datos un nuevo producto: soda de Scott. Tenga en cuenta que el nombre de producto recién agregado se indica en la etiqueta de la página maestra y que GridView se ha actualizado para incluir el producto y su precio.
 
-[![Etiqueta y GridView muestra el producto recién agregada de la página maestra](interacting-with-the-master-page-from-the-content-page-cs/_static/image23.png)](interacting-with-the-master-page-from-the-content-page-cs/_static/image22.png)
+[![la etiqueta de la página maestra y GridView mostrar el producto recién agregado](interacting-with-the-master-page-from-the-content-page-cs/_static/image23.png)](interacting-with-the-master-page-from-the-content-page-cs/_static/image22.png)
 
-**Figura 08**: La página maestra etiqueta y GridView muestran el producto Just-Added ([haga clic aquí para ver imagen en tamaño completo](interacting-with-the-master-page-from-the-content-page-cs/_static/image24.png))
+**Figura 08**: la etiqueta de la página maestra y el control GridView muestran el producto recién agregado ([haga clic para ver la imagen de tamaño completo](interacting-with-the-master-page-from-the-content-page-cs/_static/image24.png))
 
 ## <a name="summary"></a>Resumen
 
-Lo ideal es que, una página maestra y las páginas de contenido son completamente independientes entre sí y no requieren ningún nivel de interacción. Aunque las páginas maestras y las páginas de contenido deben diseñarse con ese objetivo en mente, hay una serie de escenarios comunes en el que una página de contenido debe interactuar con su página principal. Uno de los motivos más comunes se centra en la actualización de una parte determinada de la presentación de página maestra en función de alguna acción que se ha producido en la página de contenido.
+Idealmente, una página maestra y sus páginas de contenido son completamente independientes entre sí y no requieren ningún nivel de interacción. Mientras que las páginas maestras y las páginas de contenido deben diseñarse teniendo en cuenta ese objetivo, hay una serie de escenarios comunes en los que una página de contenido debe interactuar con su página maestra. Uno de los motivos más comunes se centra en la actualización de una parte determinada de la presentación de la página maestra en función de alguna acción que haya transcurrido en la página de contenido.
 
-La buena noticia es que es relativamente sencillo tener una página de contenido interactuar mediante programación con su página principal. Comience creando métodos o propiedades públicos en la página maestra que encapsulan la funcionalidad que debe invocarse mediante una página de contenido. A continuación, en la página de contenido, tener acceso a propiedades y métodos de la página maestra mediante débilmente tipadas `Page.Master` propiedad o use el `@MasterType` directiva para crear una referencia fuertemente tipada a la página maestra.
+La buena noticia es que es relativamente sencillo hacer que una página de contenido interactúe mediante programación con su página maestra. Empiece por crear propiedades o métodos públicos en la página maestra que encapsulan la funcionalidad que debe invocarse en una página de contenido. A continuación, en la página contenido, acceda a las propiedades y los métodos de la página maestra a través de la propiedad `Page.Master` fuertemente tipada o utilice la Directiva `@MasterType` para crear una referencia fuertemente tipada a la página maestra.
 
-En el siguiente tutorial se examina cómo hacer que la página maestra interactuar mediante programación con uno de sus páginas de contenido.
+En el tutorial siguiente, se examina cómo hacer que la página maestra interactúe mediante programación con una de sus páginas de contenido.
 
-Feliz programación.
+¡ Feliz programación!
 
 ### <a name="further-reading"></a>Información adicional
 
-Para obtener más información sobre los temas tratados en este tutorial, consulte los siguientes recursos:
+Para obtener más información sobre los temas descritos en este tutorial, consulte los siguientes recursos:
 
-- [Acceder y actualizar datos en ASP.NET](http://aspnet.4guysfromrolla.com/articles/011106-1.aspx)
-- [Páginas maestras de ASP.NET: Sugerencias, trucos y capturas](http://www.odetocode.com/articles/450.aspx)
-- [`@MasterType` en ASP.NET 2.0](http://odetocode.com/Blogs/scott/archive/2005/07/16/1944.aspx)
-- [Pasar información entre el contenido y páginas maestras](http://aspnet.4guysfromrolla.com/articles/013107-1.aspx)
-- [Trabajar con datos en los tutoriales ASP.NET](../../data-access/index.md)
+- [Obtener acceso a los datos y actualizarlos en ASP.NET](http://aspnet.4guysfromrolla.com/articles/011106-1.aspx)
+- [Páginas maestras de ASP.NET: sugerencias, trucos y capturas](http://www.odetocode.com/articles/450.aspx)
+- [`@MasterType` en ASP.NET 2,0](http://odetocode.com/Blogs/scott/archive/2005/07/16/1944.aspx)
+- [Pasar información entre el contenido y las páginas maestras](http://aspnet.4guysfromrolla.com/articles/013107-1.aspx)
+- [Trabajar con datos en tutoriales de ASP.NET](../../data-access/index.md)
 
 ### <a name="about-the-author"></a>Acerca del autor
 
-[Scott Mitchell](http://www.4guysfromrolla.com/ScottMitchell.shtml), autor de varios libros sobre ASP/ASP.NET y fundador de 4GuysFromRolla.com, ha estado trabajando con tecnologías Web de Microsoft desde 1998. Scott trabaja como consultor independiente, instructor y escritor. Su último libro es [ *Sams Teach usted mismo ASP.NET 3.5 en 24 horas*](https://www.amazon.com/exec/obidos/ASIN/0672329972/4guysfromrollaco). Puede ponerse en contacto Scott [ mitchell@4GuysFromRolla.com ](mailto:mitchell@4GuysFromRolla.com) o a través de su blog en [ http://ScottOnWriting.NET ](http://scottonwriting.net/).
+[Scott Mitchell](http://www.4guysfromrolla.com/ScottMitchell.shtml), autor de varios libros de ASP/ASP. net y fundador de 4GuysFromRolla.com, ha estado trabajando con las tecnologías Web de Microsoft desde 1998. Scott funciona como consultor, profesor y redactor independiente. Su último libro se [*enseña a ASP.NET 3,5 en 24 horas*](https://www.amazon.com/exec/obidos/ASIN/0672329972/4guysfromrollaco). Se puede acceder a Scott en [mitchell@4GuysFromRolla.com](mailto:mitchell@4GuysFromRolla.com) o a través de su blog en [http://ScottOnWriting.NET](http://scottonwriting.net/).
 
-### <a name="special-thanks-to"></a>Agradecimientos especiales a
+### <a name="special-thanks-to"></a>Agradecimiento especial a
 
-Esta serie de tutoriales ha sido revisada por muchos revisores útiles. Revisor de clientes potencial para este tutorial era Zack Jones. ¿Está interesado en leer mi próximos artículos de MSDN? Si es así, envíeme una línea en [mitchell@4GuysFromRolla.com](mailto:mitchell@4GuysFromRolla.com)
+Muchos revisores útiles revisaron esta serie de tutoriales. El revisor del cliente potencial de este tutorial fue Zack Jones. ¿Está interesado en revisar los próximos artículos de MSDN? Si es así, coloque una línea en [mitchell@4GuysFromRolla.com](mailto:mitchell@4GuysFromRolla.com)
 
 > [!div class="step-by-step"]
 > [Anterior](control-id-naming-in-content-pages-cs.md)

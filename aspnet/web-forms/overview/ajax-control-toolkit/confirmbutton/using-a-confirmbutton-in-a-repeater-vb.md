@@ -1,53 +1,53 @@
 ---
 uid: web-forms/overview/ajax-control-toolkit/confirmbutton/using-a-confirmbutton-in-a-repeater-vb
-title: Usar un ConfirmButton en un control Repeater (VB) | Microsoft Docs
+title: Usar un ConfirmButton en un repetidor (VB) | Microsoft Docs
 author: wenz
-description: El extensor ConfirmButton de AJAX Control Toolkit crea un Sí o ningún elemento emergente cuando el usuario hace clic en un botón (incluido el control LinkButton). Solo si sí es...
+description: El extensor ConfirmButton en el kit de herramientas de control de AJAX crea una ventana emergente sí/no cuando el usuario hace clic en un botón (incluido el control LinkButton). Solo si sí es...
 ms.author: riande
 ms.date: 06/02/2008
 ms.assetid: 18c31709-3f9d-4d93-8b01-f1356bf610b4
 msc.legacyurl: /web-forms/overview/ajax-control-toolkit/confirmbutton/using-a-confirmbutton-in-a-repeater-vb
 msc.type: authoredcontent
-ms.openlocfilehash: 026426d4dec61433bfa9edc66f934fa3ef6146c3
-ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
+ms.openlocfilehash: 001233d866d8a731d93d6900f714cd2060f3d08c
+ms.sourcegitcommit: 22fbd8863672c4ad6693b8388ad5c8e753fb41a2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/06/2019
-ms.locfileid: "65108829"
+ms.lasthandoff: 11/28/2019
+ms.locfileid: "74599340"
 ---
 # <a name="using-a-confirmbutton-in-a-repeater-vb"></a>Usar un ConfirmButton en un control Repeater (VB)
 
 por [Christian Wenz](https://github.com/wenz)
 
-[Descargar código](http://download.microsoft.com/download/8/6/d/86dea6c6-bb92-4fa6-aa14-f8c0f82100f5/ConfirmButton1.vb.zip) o [descargar PDF](http://download.microsoft.com/download/b/6/a/b6ae89ee-df69-4c87-9bfb-ad1eb2b23373/confirmbutton1VB.pdf)
+[Descargar código](https://download.microsoft.com/download/8/6/d/86dea6c6-bb92-4fa6-aa14-f8c0f82100f5/ConfirmButton1.vb.zip) o [Descargar PDF](https://download.microsoft.com/download/b/6/a/b6ae89ee-df69-4c87-9bfb-ad1eb2b23373/confirmbutton1VB.pdf)
 
-> El extensor ConfirmButton de AJAX Control Toolkit crea un Sí o ningún elemento emergente cuando el usuario hace clic en un botón (incluido el control LinkButton). Solo si se hace clic en Sí, se ejecuta la acción del botón, en caso contrario, se ha cancelado. Esto también es posible en un control repeater.
+> El extensor ConfirmButton en el kit de herramientas de control de AJAX crea una ventana emergente sí/no cuando el usuario hace clic en un botón (incluido el control LinkButton). Solo si se hace clic en sí, se ejecuta la acción del botón; de lo contrario, se cancela. Esto también es posible en un repetidor.
 
-## <a name="overview"></a>Información general
+## <a name="overview"></a>Información general del
 
-El extensor ConfirmButton de AJAX Control Toolkit crea un Sí o ningún elemento emergente cuando el usuario hace clic en un botón (incluido el control LinkButton). Solo si se hace clic en Sí, se ejecuta la acción del botón, en caso contrario, se ha cancelado. Esto también es posible en un control repeater.
+El extensor ConfirmButton en el kit de herramientas de control de AJAX crea una ventana emergente sí/no cuando el usuario hace clic en un botón (incluido el control LinkButton). Solo si se hace clic en sí, se ejecuta la acción del botón; de lo contrario, se cancela. Esto también es posible en un repetidor.
 
 ## <a name="steps"></a>Pasos
 
-En primer lugar, es necesario un origen de datos. Este ejemplo utiliza la base de datos AdventureWorks y Microsoft SQL Server 2005 Express Edition. La base de datos es una parte opcional de una instalación de Visual Studio (incluida la edición express) y también está disponible como una descarga independiente en [ https://go.microsoft.com/fwlink/?LinkId=64064 ](https://go.microsoft.com/fwlink/?LinkId=64064). La base de datos de AdventureWorks es parte de los ejemplos de SQL Server 2005 y las bases de datos de ejemplo (descargue en [ https://www.microsoft.com/downloads/details.aspx?FamilyID=e719ecf7-9f46-4312-af89-6ad8702e4e6e&amp; DisplayLang = en](https://www.microsoft.com/downloads/details.aspx?FamilyID=e719ecf7-9f46-4312-af89-6ad8702e4e6e&amp;DisplayLang=en)). La manera más fácil de configurar la base de datos es usar Microsoft SQL Server Management Studio Express ([https://www.microsoft.com/downloads/details.aspx?FamilyID=c243a5ae-4bd1-4e3d-94b8-5a0f62bf7796&amp; DisplayLang = en](https://www.microsoft.com/downloads/details.aspx?FamilyID=c243a5ae-4bd1-4e3d-94b8-5a0f62bf7796&amp;DisplayLang=en)) y adjuntar el `AdventureWorks.mdf` el archivo de base de datos.
+En primer lugar, se necesita un origen de datos. Este ejemplo utiliza la base de datos AdventureWorks y el Microsoft SQL Server 2005 Express Edition. La base de datos es una parte opcional de una instalación de Visual Studio (incluida Express Edition) y también está disponible como descarga independiente en [https://go.microsoft.com/fwlink/?LinkId=64064](https://go.microsoft.com/fwlink/?LinkId=64064). La base de datos AdventureWorks forma parte de los ejemplos de SQL Server 2005 y de las bases de datos de ejemplo (descarga en [https://www.microsoft.com/downloads/details.aspx?FamilyID=e719ecf7-9f46-4312-af89-6ad8702e4e6e&amp;D isplaylang = en](https://www.microsoft.com/downloads/details.aspx?FamilyID=e719ecf7-9f46-4312-af89-6ad8702e4e6e&amp;DisplayLang=en)). La forma más sencilla de configurar la base de datos es usar el Microsoft SQL Server Management Studio Express ([https://www.microsoft.com/downloads/details.aspx?FamilyID=c243a5ae-4bd1-4e3d-94b8-5a0f62bf7796&amp;D isplaylang = en](https://www.microsoft.com/downloads/details.aspx?FamilyID=c243a5ae-4bd1-4e3d-94b8-5a0f62bf7796&amp;DisplayLang=en)) y adjuntar el archivo de base de datos `AdventureWorks.mdf`.
 
-Para este ejemplo, se supone que se llama a la instancia de SQL Server 2005 Express Edition `SQLEXPRESS` y reside en el mismo equipo que el servidor web; también trata la configuración predeterminada. Si el programa de instalación diferente, deberá adaptar la información de conexión para la base de datos.
+En este ejemplo, se supone que la instancia del SQL Server 2005 Express Edition se denomina `SQLEXPRESS` y reside en el mismo equipo que el servidor Web. Esta es también la configuración predeterminada. Si el programa de instalación es diferente, tendrá que adaptar la información de conexión de la base de datos.
 
-Para activar la funcionalidad de AJAX de ASP.NET y el Kit de herramientas de Control, el `ScriptManager` control debe colocarse en cualquier lugar en la página (pero dentro del `<form>` elemento):
+Para activar la funcionalidad de ASP.NET AJAX y control Toolkit, el control `ScriptManager` debe colocarse en cualquier parte de la página (pero dentro del elemento `<form>`):
 
 [!code-aspx[Main](using-a-confirmbutton-in-a-repeater-vb/samples/sample1.aspx)]
 
-A continuación, se requiere un origen de datos. Por simplicidad, se recuperan solo las primeras cinco entradas de tabla de proveedores de AdventureWorks. Tenga en cuenta que al usar el Asistente de Visual Studio para crear el origen de datos, el nombre de tabla (`Vendors`) es actualmente no incluyen el prefijo correctamente con `Purchasing`. El siguiente marcado es la correcta:
+A continuación, se necesita un origen de datos. Por motivos de simplicidad, solo se recuperan las cinco primeras entradas de la tabla de proveedores de AdventureWorks. Tenga en cuenta que cuando se usa el Asistente de Visual Studio para crear el origen de datos, el nombre de la tabla (`Vendors`) no tiene correctamente el prefijo `Purchasing`. El siguiente marcado es el correcto:
 
 [!code-aspx[Main](using-a-confirmbutton-in-a-repeater-vb/samples/sample2.aspx)]
 
-A continuación, se puede usar este origen de datos dentro de un control repeater. Como es habitual, el `DataBinder.Eval()` método recupera datos del origen de datos. El `ConfirmButtonExtender` control debe colocarse dentro de la `<ItemTemplate>` sección del repetidor para que aparezca para cada entrada en el origen de datos.
+Este origen de datos se puede usar en un repetidor. Como de costumbre, el método `DataBinder.Eval()` recupera datos del origen de datos. Después, el control `ConfirmButtonExtender` debe colocarse dentro de la sección `<ItemTemplate>` del repetidor para que aparezca para cada entrada del origen de datos.
 
 [!code-aspx[Main](using-a-confirmbutton-in-a-repeater-vb/samples/sample3.aspx)]
 
-[![El botón Confirmar aparece junto a cada entrada del origen de datos](using-a-confirmbutton-in-a-repeater-vb/_static/image2.png)](using-a-confirmbutton-in-a-repeater-vb/_static/image1.png)
+[![aparece el botón confirmar junto a cada entrada del origen de datos](using-a-confirmbutton-in-a-repeater-vb/_static/image2.png)](using-a-confirmbutton-in-a-repeater-vb/_static/image1.png)
 
-El botón Confirmar aparece junto a cada entrada del origen de datos ([haga clic aquí para ver imagen en tamaño completo](using-a-confirmbutton-in-a-repeater-vb/_static/image3.png))
+El botón confirmar aparece junto a cada entrada del origen de datos ([haga clic para ver la imagen de tamaño completo](using-a-confirmbutton-in-a-repeater-vb/_static/image3.png))
 
 > [!div class="step-by-step"]
 > [Anterior](using-a-confirmbutton-in-a-repeater-cs.md)

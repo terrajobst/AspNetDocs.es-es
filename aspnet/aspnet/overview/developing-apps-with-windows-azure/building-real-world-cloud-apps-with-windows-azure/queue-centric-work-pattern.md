@@ -1,147 +1,147 @@
 ---
 uid: aspnet/overview/developing-apps-with-windows-azure/building-real-world-cloud-apps-with-windows-azure/queue-centric-work-pattern
-title: Patrón centrado en colas de trabajo (crear aplicaciones de nube reales con Azure) | Microsoft Docs
+title: Patrón de trabajo centrado en colas (creación de aplicaciones en la nube reales con Azure) | Microsoft Docs
 author: MikeWasson
-description: Building Real World Cloud Apps with e-book de Azure se basa en una presentación desarrollada por Scott Guthrie. Explican el 13 de patrones y prácticas que puede...
+description: La creación de aplicaciones reales en la nube con el libro electrónico de Azure se basa en una presentación desarrollada por Scott Guthrie. Se explican 13 patrones y prácticas que pueden...
 ms.author: riande
 ms.date: 06/12/2014
 ms.assetid: cc1ad51b-40c3-4c68-8620-9aaa0fd1f6cf
 msc.legacyurl: /aspnet/overview/developing-apps-with-windows-azure/building-real-world-cloud-apps-with-windows-azure/queue-centric-work-pattern
 msc.type: authoredcontent
-ms.openlocfilehash: 9081691207a1a8ccd58e1a93a0be06af15c0b2d0
-ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
+ms.openlocfilehash: c73b070f11366e781bcea70ffc84fd49a47d469a
+ms.sourcegitcommit: 22fbd8863672c4ad6693b8388ad5c8e753fb41a2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/06/2019
-ms.locfileid: "65118713"
+ms.lasthandoff: 11/28/2019
+ms.locfileid: "74582764"
 ---
-# <a name="queue-centric-work-pattern-building-real-world-cloud-apps-with-azure"></a>Patrón centrado en colas de trabajo (crear aplicaciones de nube reales con Azure)
+# <a name="queue-centric-work-pattern-building-real-world-cloud-apps-with-azure"></a>Patrón de trabajo centrado en colas (creación de aplicaciones en la nube reales con Azure)
 
-by [Mike Wasson](https://github.com/MikeWasson), [Rick Anderson]((https://twitter.com/RickAndMSFT)), [Tom Dykstra](https://github.com/tdykstra)
+por [Mike Wasson](https://github.com/MikeWasson), [Rick Anderson]((https://twitter.com/RickAndMSFT)), [Tom Dykstra](https://github.com/tdykstra)
 
-[Descargar proyecto corregirlo](http://code.msdn.microsoft.com/Fix-It-app-for-Building-cdd80df4) o [descargar libro electrónico](http://blogs.msdn.com/b/microsoft_press/archive/2014/07/23/free-ebook-building-cloud-apps-with-microsoft-azure.aspx)
+[Descargar el proyecto de corrección de ti](https://code.msdn.microsoft.com/Fix-It-app-for-Building-cdd80df4) o [descargar el libro electrónico](https://blogs.msdn.com/b/microsoft_press/archive/2014/07/23/free-ebook-building-cloud-apps-with-microsoft-azure.aspx)
 
-> El **Building Real World Cloud Apps with Azure** eBook se basa en una presentación desarrollada por Scott Guthrie. Se explican el 13 patrones y prácticas que pueden ayudarle a tener éxito el desarrollo de aplicaciones web para la nube. Para obtener información sobre el libro electrónico, consulte [el primer capítulo](introduction.md).
+> La **creación de aplicaciones reales en la nube con** el libro electrónico de Azure se basa en una presentación desarrollada por Scott Guthrie. Se explican 13 patrones y prácticas que pueden ayudarle a desarrollar correctamente aplicaciones web para la nube. Para obtener información sobre el libro electrónico, consulte [el primer capítulo](introduction.md).
 
-Anteriormente, vimos que varios servicios de uso pueden producir un SLA "compuesto", donde es el SLA efectivo de la aplicación la *producto* de los SLA individuales. Por ejemplo, la aplicación Fix It usa sitios Web, almacenamiento y base de datos SQL. Si se produce un error en cualquiera de estos servicios, la aplicación devolverá un error al usuario.
+Anteriormente, vimos que el uso de varios servicios puede dar lugar a un acuerdo de nivel de servicio "compuesto", donde el acuerdo de nivel de servicio efectivo de la aplicación es el *producto* de los contratos de nivel de servicio individuales. Por ejemplo, la aplicación Fix it usa sitios web, almacenamiento y SQL Database. Si se produce un error en alguno de estos servicios, la aplicación devolverá un error al usuario.
 
-Almacenamiento en caché es una buena forma de controlar los errores transitorios para contenido de sólo lectura. Pero ¿qué ocurre si la aplicación necesita para realizar el trabajo? Por ejemplo, cuando el usuario envía una nueva Fix It tarea, la aplicación no puede simplemente poner la tarea en la memoria caché. La aplicación debe escribir la tarea Fix It en un almacén de datos persistente, por lo que puede procesarse.
+El almacenamiento en caché es una buena manera de controlar los errores transitorios para el contenido de solo lectura. Pero, ¿qué ocurre si la aplicación necesita trabajar? Por ejemplo, cuando el usuario envía una nueva tarea corregir ti, la aplicación no puede simplemente colocar la tarea en la memoria caché. La aplicación debe escribir la tarea corregir ti en un almacén de datos persistente, por lo que se puede procesar.
 
-Que es donde entra en juego el patrón de trabajo centrado en colas. Este patrón permite un acoplamiento flexible entre un nivel web y un servicio back-end.
+Aquí es donde entra el patrón de trabajo centrado en la cola. Este patrón permite el acoplamiento flexible entre un nivel Web y un servicio back-end.
 
-Así es cómo funciona el patrón. Cuando la aplicación recibe una solicitud, se coloca un elemento de trabajo en una cola y la respuesta se devuelve inmediatamente. A continuación, un proceso independiente de back-end extrae los elementos de trabajo de la cola y realiza el trabajo.
+Este es el funcionamiento del patrón. Cuando la aplicación recibe una solicitud, coloca un elemento de trabajo en una cola y devuelve inmediatamente la respuesta. Después, un proceso de back-end independiente extrae los elementos de trabajo de la cola y realiza el trabajo.
 
-El patrón de trabajo centrado en la cola es útil para:
+El patrón de trabajo centrado en colas es útil para:
 
-- Trabajo que es mucho tiempo (latencia alta).
-- Trabajo que requiere un servicio externo que no siempre esté disponible.
-- El trabajo que se consume muchos recursos (CPU alta).
-- Trabajo que se beneficiaría de la tasa de redistribuir (sujeto a ráfagas repentinas de carga).
+- Trabajo que tarda mucho tiempo (latencia alta).
+- Trabajo que requiere un servicio externo que podría no estar siempre disponible.
+- Trabajo que consume muchos recursos (CPU alta).
+- Trabajo que se beneficiaría de la nivelación de tarifas (sujeto a ráfagas de carga repentinas).
 
-## <a name="reduced-latency"></a>Reducir la latencia
+## <a name="reduced-latency"></a>Latencia reducida
 
-Las colas son útiles en cualquier momento que se están realizando trabajos que requieren mucho tiempo. Si una tarea tarda unos segundos o más, en lugar de bloquear al usuario final, coloca el elemento de trabajo en una cola. Indicar al usuario "Estamos trabajando en él" y, a continuación, usar un agente de escucha de cola para procesar la tarea en segundo plano.
+Las colas son útiles cada vez que se realiza un trabajo lento. Si una tarea tarda unos segundos o más, en lugar de bloquear el usuario final, coloque el elemento de trabajo en una cola. Indique al usuario "Estamos trabajando en él" y, a continuación, use un agente de escucha de la cola para procesar la tarea en segundo plano.
 
-Por ejemplo, si compra algo en un minorista en línea, el sitio web confirma su pedido inmediatamente. Pero eso no significa que las cosas ya está en un camión entregando. Coloca una tarea en una cola, y en segundo plano se lleva a cabo la comprobación de crédito, preparación de los elementos para su envío y así sucesivamente.
+Por ejemplo, al comprar algo en un distribuidor en línea, el sitio web confirma el pedido inmediatamente. Pero eso no significa que sus cosas ya estén en un camión entregado. Colocan una tarea en una cola y, en segundo plano, realizan la comprobación de crédito, preparan los elementos para su envío, etc.
 
-Para escenarios con una latencia corto, el tiempo total de extremo a otro puede ser mayor de uso de una cola, en comparación con realizando la tarea de forma sincrónica. Pero incluso entonces, las ventajas pueden superar ese desventaja.
+En el caso de escenarios con una latencia breve, el tiempo total de un extremo a otro podría ser más largo mediante una cola, en comparación con realizar la tarea de forma sincrónica. Pero incluso después, las otras ventajas pueden superar este inconveniente.
 
 ## <a name="increased-reliability"></a>Mayor confiabilidad
 
-En la versión de corregir lo que nos hemos visto hasta ahora, el front-end web está estrechamente con el back-end de la base de datos SQL. Si el servicio de base de datos SQL no está disponible, el usuario recibe un error. Si los reintentos no funcionan (es decir, el error es más de transitorio), lo único que puede hacer es mostrar un error y pedir al usuario que vuelva a intentarlo.
+En la versión de corrección que hemos visto hasta ahora, el front-end web está estrechamente acoplado con el SQL Database back-end. Si el servicio SQL Database no está disponible, el usuario recibe un error. Si los reintentos no funcionan (es decir, el error es más que transitorio), lo único que puede hacer es mostrar un error y pedir al usuario que vuelva a intentarlo más tarde.
 
-![Diagrama que muestra servidor web cliente con errores cuando se produce un error en la base de datos SQL back-end](queue-centric-work-pattern/_static/image1.png)
+![Diagrama que muestra un error de front-end web cuando se produce un error de SQL Database back-end](queue-centric-work-pattern/_static/image1.png)
 
-Uso de colas, cuando un usuario envía una tarea Fix It, la aplicación escribe un mensaje a la cola. La carga del mensaje es un [JSON](http://json.org/) representación de la tarea. Tan pronto como el mensaje se escribe en la cola, la aplicación devuelve y muestra inmediatamente un mensaje de confirmación al usuario.
+Mediante el uso de colas, cuando un usuario envía una tarea corregir ti, la aplicación escribe un mensaje en la cola. La carga del mensaje es una representación [JSON](http://json.org/) de la tarea. En cuanto se escribe el mensaje en la cola, la aplicación vuelve y muestra inmediatamente un mensaje de operación correcta para el usuario.
 
-Si cualquiera de los servicios de back-end, por ejemplo, la base de datos SQL o el agente de escucha de cola--queden sin conexión, los usuarios todavía pueden enviar nuevas tareas de Fix It. Los mensajes solo se pondrán en cola hasta que están disponibles los servicios de back-end nuevo. En ese momento, los servicios back-end se ponga al día en el trabajo pendiente.
+Si alguno de los servicios back-end, como la base de datos SQL o el agente de escucha de la cola, se desconectan, los usuarios pueden seguir enviando nuevas tareas de corrección de ti. Los mensajes solo se pondrán en cola hasta que los servicios back-end vuelvan a estar disponibles. En ese momento, los servicios back-end se detectarán en el trabajo pendiente.
 
-![Diagrama que muestra web front-end continúe funcionando cuando se produce un error de base de datos de SQL](queue-centric-work-pattern/_static/image2.png)
+![Diagrama que muestra que el front-end web sigue funcionando cuando hay un error de SQL Database](queue-centric-work-pattern/_static/image2.png)
 
-Además, ahora puede agregar más lógica de back-end sin preocuparse por la resistencia de front-end. Por ejemplo, es posible que desee enviar un correo electrónico o mensaje SMS al propietario cada vez que se asigna un nuevo Fix It. Si el correo electrónico o un servicio de SMS deja de estar disponible, puede todo lo demás procesar y, a continuación, se coloca un mensaje en una cola independiente para enviar mensajes de correo electrónico o SMS.
+Además, ahora puede agregar más lógica de back-end sin preocuparse por la resistencia del front-end. Por ejemplo, puede que desee enviar un mensaje de correo electrónico o SMS al propietario cada vez que se asigne una nueva corrección. Si el servicio de correo electrónico o SMS deja de estar disponible, puede procesar todo lo demás y, a continuación, colocar un mensaje en una cola independiente para enviar mensajes de correo electrónico o SMS.
 
-Anteriormente, nuestro SLA efectivo era Web Apps &times; almacenamiento &times; SQL Database = 99,7%. (Consulte [diseño para sobrevivir a errores](design-to-survive-failures.md).)
+Anteriormente, nuestro acuerdo de nivel de servicio efectivo era Web Apps &times; de almacenamiento &times; SQL Database = 99,7%. (Consulte [diseño para sobrevivir a errores](design-to-survive-failures.md)).
 
-Cuando se cambia la aplicación use una cola, el front-end web depende solo Web Apps y Storage, para un SLA del 99,8% compuesto. (Tenga en cuenta que las colas son parte del servicio de almacenamiento de Azure, por lo que se incluyen en el mismo SLA como almacenamiento de blobs).
+Cuando cambiamos la aplicación para usar una cola, el front-end web depende solo de Web Apps y almacenamiento, para un acuerdo de nivel de servicio compuesto del 99,8%. (Tenga en cuenta que las colas forman parte del servicio Azure Storage, por lo que se incluyen en el mismo SLA que el almacenamiento de blobs).
 
-Si necesita incluso mejor que 99,8%, puede crear dos colas en dos regiones diferentes. Designar uno como principal y el otro como secundario. En la aplicación, conmutación por error a la cola secundaria si la cola principal no está disponible. La posibilidad de que ambos estén disponibles al mismo tiempo es muy pequeña.
+Si necesita incluso mejor que el 99,8%, puede crear dos colas en dos regiones diferentes. Designe uno como el principal y el otro como secundario. En la aplicación, conmute por error a la cola secundaria si la cola principal no está disponible. La posibilidad de que ambos no estén disponibles al mismo tiempo es muy pequeño.
 
-## <a name="rate-leveling-and-independent-scaling"></a>Redistribución de tarifa y escalado independiente
+## <a name="rate-leveling-and-independent-scaling"></a>Nivelación de tarifas y escalado independiente
 
-Las colas también son útiles para algo llamado *valorar la redistribución* o *nivelación de carga*.
+Las colas también son útiles para algo denominado *nivelación de velocidad* o *nivelación de carga*.
 
-Las aplicaciones Web a menudo son susceptibles a ráfagas repentinas de tráfico. Aunque puede usar el escalado automático para agregar automáticamente los servidores web para administrar el tráfico web mayor, es posible que el escalado automático no pueda reaccionar rápidamente a los picos abrupta de carga. Si los servidores web pueden descargar parte del trabajo que tienen que hacer mediante la escritura de un mensaje a una cola, puede administrar más tráfico. Un servicio back-end, a continuación, puede leer los mensajes de la cola y procesarlos. La profundidad de la cola se aumentar o reducir la medida que varía la carga entrante.
+Las aplicaciones web a menudo son susceptibles a ráfagas repentinas de tráfico. Aunque puede usar el escalado automático para agregar automáticamente servidores web para controlar el mayor tráfico web, el escalado automático podría no ser capaz de reaccionar lo suficientemente rápido para controlar picos bruscos en la carga. Si los servidores Web pueden descargar parte del trabajo que tienen que hacer escribiendo un mensaje en una cola, pueden administrar más tráfico. Después, un servicio back-end puede leer mensajes de la cola y procesarlos. La profundidad de la cola aumentará o disminuirá a medida que varíe la carga entrante.
 
-Con la mayor parte de su descarga desde un servicio back-end de trabajo que requieren mucho tiempo, el nivel web más fácilmente puede responder a picos repentinos de tráfico. Y ahorrar dinero, porque cualquier cantidad de tráfico determinado puede controlarse mediante menos servidores web.
+Con gran parte del trabajo que tarda mucho tiempo en cargarse en un servicio back-end, el nivel Web puede responder más fácilmente a los picos repentinos del tráfico. Y ahorra dinero porque cualquier cantidad de tráfico determinada puede controlarse con menos servidores Web.
 
-Puede escalar el nivel web y el servicio de back-end de forma independiente. Por ejemplo, puede necesitar tres servidores web, pero solo mensajes de cola de procesamiento de servidor. O bien, si ejecuta una tarea de proceso intensivo en segundo plano, podría necesitar más servidores de back-end.
+Puede escalar el nivel Web y el servicio back-end de forma independiente. Por ejemplo, puede que necesite tres servidores Web, pero solo un servidor de procesamiento de mensajes en cola. O bien, si está ejecutando una tarea de proceso intensivo en segundo plano, es posible que necesite más servidores back-end.
 
 ![](queue-centric-work-pattern/_static/image3.png)
 
-El escalado automático funciona con servicios back-end, así como con el nivel de web. Puede escalar o reducir verticalmente el número de máquinas virtuales que se están procesando las tareas en la cola, en función del uso de CPU de las máquinas virtuales de back-end. O bien, puede que el escalado automático en función de cuántos elementos se encuentran en una cola. Por ejemplo, puede indicar el escalado automático para intentar mantener no más de 10 elementos en la cola. Si la cola tiene más de 10 elementos, el escalado automático agregará las máquinas virtuales. Cuando, a continuación, escalado automático anulará las máquinas virtuales adicionales.
+El escalado automático funciona con los servicios back-end, así como con el nivel Web. Puede escalar o reducir verticalmente el número de máquinas virtuales que están procesando las tareas de la cola, en función del uso de CPU de las máquinas virtuales de back-end. O bien, se puede escalar automáticamente en función del número de elementos que hay en una cola. Por ejemplo, puede indicar a escalado automático que intente no mantener más de 10 elementos en la cola. Si la cola tiene más de 10 elementos, el escalado automático agregará máquinas virtuales. Cuando se pone al día, el escalado automático anulará las máquinas virtuales adicionales.
 
-## <a name="adding-queues-to-the-fix-it-application"></a>Agregarlo pone en cola para la corrección de aplicación
+## <a name="adding-queues-to-the-fix-it-application"></a>Agregar colas a la aplicación Fix it
 
-Para implementar el patrón de cola, es necesario realizar dos cambios en la aplicación Fix It.
+Para implementar el patrón de cola, es necesario realizar dos cambios en la aplicación Fix it.
 
-- Cuando un usuario envía una nueva Fix It tarea, coloque la tarea en la cola, en lugar de escribirlos en la base de datos.
-- Crear un servicio back-end que procesa los mensajes en la cola.
+- Cuando un usuario envía una nueva tarea corregir ti, coloca la tarea en la cola, en lugar de escribirla en la base de datos.
+- Cree un servicio back-end que procese los mensajes de la cola.
 
-La cola, vamos a usar el [servicio Azure Queue Storage](https://www.windowsazure.com/develop/net/how-to-guides/queue-service/). Otra opción consiste en usar [Azure Service Bus](https://docs.microsoft.com/azure/service-bus/).
+Para la cola, usaremos el [servicio Azure Queue Storage](https://www.windowsazure.com/develop/net/how-to-guides/queue-service/). Otra opción es usar [Azure Service Bus](https://docs.microsoft.com/azure/service-bus/).
 
-Para decidir qué servicio de cola que se usará, tenga en cuenta cómo la aplicación necesita para enviar y recibir los mensajes en la cola:
+Para decidir qué servicio de cola usar, tenga en cuenta cómo la aplicación debe enviar y recibir los mensajes en la cola:
 
-- Si tienes cooperativos productores y consumidores en competencia, considere el uso de servicio de Azure Queue Storage. "Productores de cooperación" significa que varios procesos son agregar mensajes a una cola. "Consumidores en competencia" significa que extraen mensajes de la cola procese varios procesos, pero solo se puede procesar cualquier mensaje determinado por un "consumidor". Si necesita más rendimiento del que se puede obtener con una sola cola, use colas adicionales o cuentas de almacenamiento adicional.
-- Si necesita un [modelo de publicación/suscripción](http://en.wikipedia.org/wiki/Publish/subscribe), considere el uso de colas de Azure Service Bus.
+- Si tiene productores cooperativos y consumidores de la competencia, considere la posibilidad de usar el servicio Azure Queue Storage. "Productores cooperativos" significa que varios procesos están agregando mensajes a una cola. "Consumidores de la competencia" significa que varios procesos extraen los mensajes de la cola para procesarlos, pero cualquier mensaje determinado solo puede ser procesado por un "consumidor". Si necesita más rendimiento de lo que puede obtener con una sola cola, use colas adicionales o cuentas de almacenamiento adicionales.
+- Si necesita un [modelo de publicación/suscripción](http://en.wikipedia.org/wiki/Publish/subscribe), considere la posibilidad de usar colas de Azure Service Bus.
 
-La aplicación Fix It se ajusta a los productores de cooperación y el modelo competencia de consumidores.
+La aplicación Fix it se adapta al modelo de productores cooperativos y consumidores de la competencia.
 
-Otra consideración es la disponibilidad de las aplicaciones. El servicio de Queue Storage es parte del mismo servicio que vamos a usar para almacenamiento de blobs, por lo que usarlo no tiene ningún efecto sobre nuestro SLA. Azure Service Bus es un servicio independiente con su propio SLA. Si se utilizan colas de Service Bus, se tendría que incluir en un porcentaje SLA adicional, y nuestro SLA compuesto sería menor. Cuando se elige un servicio de cola, asegúrese de que comprender el impacto de su elección en la disponibilidad de la aplicación. Para obtener más información, consulte el [recursos](#resources) sección.
+Otra consideración es la disponibilidad de las aplicaciones. El servicio de Queue Storage forma parte del mismo servicio que estamos usando para el almacenamiento de blobs, por lo que su uso no tiene ningún efecto en nuestro contrato de nivel de servicio. Azure Service Bus es un servicio independiente con su propio SLA. Si usamos Service Bus colas, tendríamos que tener en cuenta un porcentaje adicional de SLA y nuestro contrato de nivel de servicio compuesto sería inferior. Cuando elija un servicio de cola, asegúrese de que comprende el impacto de su elección en la disponibilidad de la aplicación. Para obtener más información, vea la sección [recursos](#resources) .
 
-## <a name="creating-queue-messages"></a>Creación de cola de mensajes
+## <a name="creating-queue-messages"></a>Crear mensajes de cola
 
-Para colocar una tarea Fix It en la cola, el front-end web lleva a cabo los pasos siguientes:
+Para colocar una tarea corregir ti en la cola, el front-end web realiza los siguientes pasos:
 
-1. Crear un [CloudQueueClient](https://msdn.microsoft.com/library/microsoft.windowsazure.storage.queue.cloudqueueclient.aspx) instancia. El `CloudQueueClient` instancia se usa para ejecutar solicitudes en el servicio cola.
-2. Crear la cola, si aún no existe.
-3. Serializar la tarea Fix It.
-4. Llame a [CloudQueue.AddMessageAsync](https://msdn.microsoft.com/library/microsoft.windowsazure.storage.queue.cloudqueue.addmessageasync.aspx) para colocar el mensaje en la cola.
+1. Cree una instancia de [CloudQueueClient](https://msdn.microsoft.com/library/microsoft.windowsazure.storage.queue.cloudqueueclient.aspx) . La instancia de `CloudQueueClient` se utiliza para ejecutar solicitudes en el servicio cola.
+2. Cree la cola, si aún no existe.
+3. Serialice la tarea corregir ti.
+4. Llame a [CloudQueue. AddMessageAsync](https://msdn.microsoft.com/library/microsoft.windowsazure.storage.queue.cloudqueue.addmessageasync.aspx) para colocar el mensaje en la cola.
 
-Se llevará a cabo este trabajo en el constructor y `SendMessageAsync` un nuevo método `FixItQueueManager` clase.
+Haremos este trabajo en el constructor y `SendMessageAsync` método de una nueva clase de `FixItQueueManager`.
 
 [!code-csharp[Main](queue-centric-work-pattern/samples/sample1.cs?highlight=11-12,16,18-25)]
 
-Aquí usamos el [Json.NET](https://github.com/JamesNK/Newtonsoft.Json) library para serializar la corrección en formato JSON. Puede usar cualquier enfoque de serialización que prefiera. JSON tiene la ventaja de ser legible, al tiempo que es menos detallado que XML.
+Aquí vamos a usar la biblioteca [JSON.net](https://github.com/JamesNK/Newtonsoft.Json) para serializar el FixIt en formato JSON. Puede usar cualquier enfoque de serialización que prefiera. JSON tiene la ventaja de ser legible y es menos detallado que XML.
 
-Código de calidad de producción sería agregar lógica de control de errores, pause Si dejó de estar disponible la base de datos, controlar la recuperación de forma más limpia, crear la cola en el inicio de la aplicación y administrar "[dudosos" mensajes](https://msdn.microsoft.com/library/ms789028(v=vs.110).aspx). (Un mensaje dudoso es un mensaje que no se puede procesar por algún motivo. No desea que los mensajes dudosos se colocan en la cola, donde el rol de trabajo continuamente intentará procesarlos, producirá un error, vuelva a intentarlo, producirá un error y así sucesivamente.)
+El código de calidad de producción agregaría lógica de control de errores, pausaría si la base de datos deja de estar disponible, controlaría la recuperación de forma más limpia, crearía la cola al iniciarse la aplicación y administraría[mensajes "dudosos"](https://msdn.microsoft.com/library/ms789028(v=vs.110).aspx). (Un mensaje dudoso es un mensaje que no se puede procesar por alguna razón. No quiere que los mensajes dudosos se colocan en la cola, en los que el rol de trabajo intentará procesarlos continuamente, producirá un error, lo intentará de nuevo, se producirá un error, etc.).
 
-En la aplicación de MVC front-end, deberá actualizar el código que crea una nueva tarea. En lugar de colocar la tarea en el repositorio, llame a la `SendMessageAsync` método mostrado anteriormente.
+En la aplicación de MVC de front-end, es necesario actualizar el código que crea una nueva tarea. En lugar de colocar la tarea en el repositorio, llame al método `SendMessageAsync` mostrado anteriormente.
 
 [!code-csharp[Main](queue-centric-work-pattern/samples/sample2.cs?highlight=10)]
 
-## <a name="processing-queue-messages"></a>Procesamiento de mensajes en cola
+## <a name="processing-queue-messages"></a>Procesar mensajes de cola
 
-Para procesar mensajes de la cola, vamos a crear un servicio back-end. El servicio de back-end se ejecutará un bucle infinito que lleva a cabo los pasos siguientes:
+Para procesar los mensajes en la cola, vamos a crear un servicio back-end. El servicio back-end ejecutará un bucle infinito que lleve a cabo los pasos siguientes:
 
 1. Obtiene el siguiente mensaje de la cola.
-2. Deserializar el mensaje a una tarea Fix It.
-3. Escribir la tarea Fix It en la base de datos.
+2. Deserializa el mensaje en una tarea corregir ti.
+3. Escriba la tarea corregir ti en la base de datos.
 
-Para hospedar el servicio back-end, vamos a crear un servicio en la nube de Azure que contiene un *rol de trabajo*. Un rol de trabajo consta de uno o más máquinas virtuales que pueden realizar el procesamiento de back-end. El código que se ejecuta en estas máquinas virtuales extraerán mensajes de la cola en cuanto estén disponibles. Para cada mensaje, se podrá deserializar la carga de JSON y escribir una instancia de la entidad de corregir su tarea a la base de datos con el mismo repositorio que se ha usado anteriormente en el nivel web.
+Para hospedar el servicio back-end, crearemos un servicio en la nube de Azure que contenga un *rol de trabajo*. Un rol de trabajo consta de una o más máquinas virtuales que pueden realizar el procesamiento de back-end. El código que se ejecuta en estas máquinas virtuales extraerá los mensajes de la cola a medida que estén disponibles. Para cada mensaje, deserializará la carga de JSON y escribirá una instancia de la entidad de tarea Fix it en la base de datos, usando el mismo repositorio que se usó anteriormente en el nivel Web.
 
-Los pasos siguientes muestran cómo agregar un trabajo de proyecto de rol a una solución que tiene un proyecto web estándar. Estos pasos ya se han realizado en el proyecto Fix It que puede descargar.
+En los pasos siguientes se muestra cómo agregar un proyecto de rol de trabajo a una solución que tiene un proyecto web estándar. Estos pasos ya se han realizado en el proyecto de corrección de ti que puede descargar.
 
-En primer lugar, agregue un proyecto de servicio en la nube a la solución de Visual Studio. Haga clic en la solución y seleccione **agregar**, a continuación, **nuevo proyecto**. En el panel izquierdo, expanda **Visual C#** y seleccione **en la nube**.
+En primer lugar, agregue un proyecto de servicio en la nube a la solución de Visual Studio. Haga clic con el botón derecho en la solución y seleccione **Agregar**y **nuevo proyecto**. En el panel izquierdo, expanda **Visual C#**  y seleccione **Cloud**.
 
 [![](queue-centric-work-pattern/_static/image5.png)](queue-centric-work-pattern/_static/image4.png)
 
-En el **nuevo servicio en la nube de Azure** cuadro de diálogo, expanda el **Visual C#** nodo en el panel izquierdo. Seleccione **rol de trabajo** y haga clic en el icono de flecha derecha.
+En el cuadro de diálogo **nuevo servicio** en la nube de Azure, expanda el nodo **Visual C#**  en el panel izquierdo. Seleccione **rol de trabajo** y haga clic en el icono de flecha derecha.
 
 ![](queue-centric-work-pattern/_static/image6.png)
 
-(Tenga en cuenta que también puede agregar un *rol web*. Podríamos ejecutamos el Fix It front-end en el mismo servicio en la nube en lugar de ejecutarlo en un sitio Web de Azure. Que tiene algunas ventajas en lo facilita coordinar las conexiones entre el front-end y back-end. Sin embargo, para simplificar esta demostración, estamos teniendo el front-end en una aplicación Web de Azure App Service y ejecuta solo el back-end en un servicio en la nube.)
+(Tenga en cuenta que también puede Agregar un *rol Web*. Podríamos ejecutar el front-end de corrección en el mismo servicio en la nube en lugar de ejecutarlo en un sitio web de Azure. Esto tiene algunas ventajas en el hecho de que las conexiones entre el front-end y el back-end sean más fáciles de coordinar. Sin embargo, para simplificar esta demostración, se mantiene el front-end en una Azure App Service aplicación web y solo se ejecuta el back-end en un servicio en la nube).
 
-Se asigna un nombre predeterminado para el rol de trabajo. Para cambiar el nombre, mantenga el mouse sobre el rol de trabajo en el panel derecho y luego haga clic en el icono de lápiz.
+Se asigna un nombre predeterminado al rol de trabajo. Para cambiar el nombre, mantenga el mouse sobre el rol de trabajo en el panel de la derecha y, a continuación, haga clic en el icono de lápiz.
 
 ![](queue-centric-work-pattern/_static/image7.png)
 
@@ -152,43 +152,43 @@ Haga clic en **Aceptar** para completar el cuadro de diálogo. Esto agrega dos p
 
 ![](queue-centric-work-pattern/_static/image8.png)
 
-Para obtener más información, consulte [crear un proyecto de Azure con Visual Studio.](https://msdn.microsoft.com/library/windowsazure/ee405487.aspx)
+Para obtener más información, vea [creación de un proyecto de Azure con Visual Studio.](https://msdn.microsoft.com/library/windowsazure/ee405487.aspx)
 
-En el rol de trabajo, se sondean los mensajes de mediante una llamada a la `ProcessMessageAsync` método de la `FixItQueueManager` clase que vimos anteriormente.
+Dentro del rol de trabajo, sondeamos los mensajes mediante una llamada al método `ProcessMessageAsync` de la clase `FixItQueueManager` que vimos anteriormente.
 
 [!code-csharp[Main](queue-centric-work-pattern/samples/sample3.cs?highlight=25)]
 
-El `ProcessMessagesAsync` método comprueba si hay un mensaje en espera. Si hay alguno, deserializa el mensaje en un `FixItTask` entidad y guarda la entidad en la base de datos. Repite hasta que la cola está vacía.
+El método `ProcessMessagesAsync` comprueba si hay un mensaje en espera. Si hay alguno, deserializa el mensaje en una entidad `FixItTask` y guarda la entidad en la base de datos. Se repite hasta que la cola esté vacía.
 
 [!code-csharp[Main](queue-centric-work-pattern/samples/sample4.cs)]
 
-Sondeo de cola de mensajes incurre en una transacción pequeña carga, por lo que cuando no hay ningún mensaje que esperan ser procesados, el rol de trabajo `RunAsync` método espera un segundo antes de sondear de nuevo mediante una llamada a `Task.Delay(1000)`.
+El sondeo de mensajes de la cola incurre en un gasto de transacciones pequeño, por lo que cuando no hay ningún mensaje en espera para su procesamiento, el método `RunAsync` del rol de trabajo espera un segundo antes de sondear de nuevo llamando a `Task.Delay(1000)`.
 
-En un proyecto web, agregar código asincrónico automáticamente mejoran el rendimiento porque IIS administra un grupo de subprocesos limitado. No es el caso de un proyecto de rol de trabajo. Para mejorar la escalabilidad de la función de trabajo, puede escribir código multiproceso o usar código asincrónico para implementar [programación paralela](https://msdn.microsoft.com/library/ff963553.aspx). El ejemplo no implementa la programación en paralelo, pero muestra cómo convertir el código asincrónico, por lo que puede implementar la programación en paralelo.
+En un proyecto Web, la adición de código asincrónico puede mejorar automáticamente el rendimiento, ya que IIS administra un grupo de subprocesos limitado. Este no es el caso de un proyecto de rol de trabajo. Para mejorar la escalabilidad del rol de trabajo, puede escribir código multiproceso o usar código asincrónico para implementar la programación en [paralelo](https://msdn.microsoft.com/library/ff963553.aspx). En el ejemplo no se implementa la programación en paralelo, sino que se muestra cómo hacer que el código sea asincrónico para poder implementar la programación en paralelo.
 
 ## <a name="summary"></a>Resumen
 
-En este capítulo, ha visto cómo mejorar la escalabilidad, confiabilidad y la capacidad de respuesta de la aplicación al implementar el patrón de trabajo centrado en colas.
+En este capítulo, ha visto cómo mejorar la capacidad de respuesta de las aplicaciones, la confiabilidad y la escalabilidad implementando el patrón de trabajo centrado en cola.
 
-Esta es la última de los 13 patrones que se tratan en este libro electrónico, pero por supuesto, hay muchos otros patrones y prácticas que pueden ayudarle a creación aplicaciones de la correcta en la nube. El [capítulo final](more-patterns-and-guidance.md) proporciona vínculos a recursos de temas que aún no se han tratado en estos 13 patrones.
+Este es el último de los 13 patrones descritos en este libro electrónico, pero hay muchos otros patrones y prácticas que pueden ayudarle a crear aplicaciones en la nube que se ejecutan correctamente. En el [capítulo final](more-patterns-and-guidance.md) se proporcionan vínculos a recursos de temas que no se han tratado en estos 13 patrones.
 
 <a id="resources"></a>
 ## <a name="resources"></a>Recursos
 
-Para obtener más información acerca de las colas, consulte los siguientes recursos.
+Para obtener más información acerca de las colas, vea los siguientes recursos.
 
 Documentación:
 
-- [Las colas parte 1 de Microsoft Azure Storage: Introducción a](http://justazure.com/microsoft-azure-storage-queues-part-1-getting-started/). Artículo de Schacherl romano.
-- [Ejecutar tareas en segundo plano](https://msdn.microsoft.com/library/ff803365.aspx), capítulo 5 de [mover aplicaciones a la nube, 3ª edición](https://msdn.microsoft.com/library/ff728592.aspx) desde Microsoft Patterns and Practices. (En concreto, la sección ["Uso de colas de Azure Storage"](https://msdn.microsoft.com/library/ff803365.aspx#sec7).)
-- [Procedimientos recomendados para maximizar la escalabilidad y rentabilidad de las soluciones de mensajería basadas en cola en Azure](https://msdn.microsoft.com/library/windowsazure/hh697709.aspx). Notas del producto por Valery Mizonov.
-- [Comparación de las colas de Azure y colas de Service Bus](https://msdn.microsoft.com/magazine/jj159884.aspx). Artículo de MSDN Magazine, proporciona información adicional que puede ayudarle a elegir qué servicio de cola que se usará. El artículo menciona que Service Bus depende ACS para la autenticación, lo que significa que las colas de SB no estarán disponibles cuando ACS no está disponible. Sin embargo, puesto que se escribió el artículo, SB se cambió para que pueda usar [tokens de SAS](https://msdn.microsoft.com/library/windowsazure/dn170477.aspx) como una alternativa a ACS.
-- [Microsoft Patterns and Practices - Guía de Azure](https://msdn.microsoft.com/library/dn568099.aspx). Consulte el manual de mensajería asincrónica, patrón Pipes and Filters, patrón Compensating Transaction, el patrón de consumidores en competencia, el patrón CQRS.
-- [CQRS Journey](https://msdn.microsoft.com/library/jj554200). Libro electrónico sobre CQRS Microsoft Patterns and Practices.
+- [Microsoft Azure Storage colas parte 1: Introducción](https://www.red-gate.com/simple-talk/cloud/platform-as-a-service/microsoft-azure-storage-queues-part-1-getting-started/). Artículo por Roman Schacherl.
+- [Ejecutar tareas en segundo plano](https://msdn.microsoft.com/library/ff803365.aspx), capítulo 5 de [mover aplicaciones a la nube, tercera edición](https://msdn.microsoft.com/library/ff728592.aspx) de patrones y prácticas de Microsoft. (En concreto, la sección ["uso de colas de Azure Storage"](https://msdn.microsoft.com/library/ff803365.aspx#sec7)).
+- [Prácticas recomendadas para maximizar la escalabilidad y la rentabilidad de las soluciones de mensajería basadas en colas en Azure](https://msdn.microsoft.com/library/windowsazure/hh697709.aspx). Notas del producto de Valery Mizonov.
+- [Comparación de las colas de Azure y las colas de Service Bus](https://msdn.microsoft.com/magazine/jj159884.aspx). En el artículo de MSDN Magazine, se proporciona información adicional que puede ayudarle a elegir el servicio de cola que se va a usar. En el artículo se menciona que Service Bus depende de ACS para la autenticación, lo que significa que las colas de SB no estarán disponibles cuando ACS no esté disponible. Sin embargo, desde que se escribió el artículo, se modificó SB para que pueda usar [tokens de SAS](https://msdn.microsoft.com/library/windowsazure/dn170477.aspx) como alternativa a ACS.
+- [Patrones y prácticas de Microsoft: Guía de Azure](https://msdn.microsoft.com/library/dn568099.aspx). Consulte patrón de mensajería asincrónica, patrón de canalizaciones y filtros, patrón de transacción de compensación, patrón de consumidores en competencia, patrón CQRS.
+- [Viaje CQRS](https://msdn.microsoft.com/library/jj554200). Libro electrónico sobre CQRS por patrones y prácticas de Microsoft.
 
 Vídeo:
 
-- [FailSafe: Creación de servicios de nube escalables, resistentes](https://channel9.msdn.com/Series/FailSafe). Serie de vídeos de nueve partes, Ulrich Homann, Marc Mercuri y Mark Simms. Presenta conceptos y principios de la arquitectura de una manera muy accesible e interesante, con casos procedentes de la experiencia del equipo de asesoramiento al cliente (CAT) de Microsoft con clientes reales. Para obtener una introducción al servicio de almacenamiento de Azure y colas, consulte episodio 5 comenzando en 35:13.
+- [Failsafe: creación de Cloud Services escalables y resistentes](https://channel9.msdn.com/Series/FailSafe). Series de vídeos de nueve partes de Ulrich Homann, Marc Mercuri y Mark SIMM. Presenta conceptos de alto nivel y principios arquitectónicos de una manera muy accesible e interesante, con historias tomadas de la experiencia del equipo de asesoramiento al cliente (CAT) de Microsoft con clientes reales. Para ver una introducción al servicio Azure Storage y las colas, consulte el episodio 5 a partir de 35:13.
 
 > [!div class="step-by-step"]
 > [Anterior](distributed-caching.md)

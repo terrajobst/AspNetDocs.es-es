@@ -1,19 +1,19 @@
 ---
 uid: web-forms/overview/deployment/configuring-server-environments-for-web-deployment/configuring-a-web-server-for-web-deploy-publishing-remote-agent
-title: Configurar un servidor Web para Web (agente remoto) de la publicación de la implementación | Microsoft Docs
+title: Configuración de un servidor web para la publicación de Web Deploy (agente remoto) | Microsoft Docs
 author: jrjlee
-description: Este tema describe cómo configurar un servidor web de Internet Information Services (IIS) para admitir la publicación en web y la implementación mediante la implementación Web de IIS...
+description: En este tema se describe cómo configurar un servidor Web de Internet Information Services (IIS) para admitir la publicación e implementación web mediante la implementación web de IIS...
 ms.author: riande
 ms.date: 05/04/2012
 ms.assetid: 239c7aa8-d09a-4d02-9c0e-6bd52be5f0d5
 msc.legacyurl: /web-forms/overview/deployment/configuring-server-environments-for-web-deployment/configuring-a-web-server-for-web-deploy-publishing-remote-agent
 msc.type: authoredcontent
-ms.openlocfilehash: b3293a9b6a35a162d4e27f061dfd3bfd28e0eda5
-ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
+ms.openlocfilehash: ce0d246afdfb65c2ea15a287064511e7d1d58622
+ms.sourcegitcommit: 22fbd8863672c4ad6693b8388ad5c8e753fb41a2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/06/2019
-ms.locfileid: "65126001"
+ms.lasthandoff: 11/28/2019
+ms.locfileid: "74589050"
 ---
 # <a name="configuring-a-web-server-for-web-deploy-publishing-remote-agent"></a>Configurar un servidor web para la publicación de la implementación web (agente remoto)
 
@@ -21,210 +21,210 @@ por [Jason Lee](https://github.com/jrjlee)
 
 [Descargar PDF](https://msdnshared.blob.core.windows.net/media/MSDNBlogsFS/prod.evol.blogs.msdn.com/CommunityServer.Blogs.Components.WeblogFiles/00/00/00/63/56/8130.DeployingWebAppsInEnterpriseScenarios.pdf)
 
-> Este tema describe cómo configurar un servidor web de Internet Information Services (IIS) para admitir la publicación en web y la implementación mediante el servicio de agente remoto de la herramienta de implementación Web de IIS (Web Deploy).
+> En este tema se describe cómo configurar un servidor Web de Internet Information Services (IIS) para admitir la publicación e implementación web mediante el servicio agente remoto de la herramienta de implementación web de IIS (Web Deploy).
 > 
-> Cuando se trabaja con Web Deploy 2.0 o versiones posteriores, hay tres enfoques principales que puede usar para obtener sus aplicaciones o sitios en un servidor web. Puede realizar lo siguiente:
+> Cuando trabaja con Web Deploy 2,0 o posterior, hay tres enfoques principales que puede usar para obtener sus aplicaciones o sitios en un servidor Web. Puede:
 > 
-> - Use la *Web implementar el servicio del agente remoto*. Este enfoque requiere menos configuración del servidor web, pero deberá proporcionar las credenciales de administrador del servidor local con el fin de implementar cualquier cosa en el servidor.
-> - Use la *controlador de implementación Web*. Este enfoque es mucho más complejo y requiere más esfuerzo inicial para configurar el servidor web. Sin embargo, cuando se usa este enfoque, puede configurar IIS para permitir que los usuarios sin privilegios de administrador realizar la implementación. El controlador de implementación Web solo está disponible en IIS 7 o posterior.
-> - Use *implementación sin conexión*. Este enfoque requiere una configuración mínima del servidor web, pero un administrador del servidor manualmente debe copiar el paquete web en el servidor e importarlo a través del Administrador de IIS.
+> - Use el *servicio agente remoto de web deploy*. Este enfoque requiere menos configuración del servidor Web, pero debe proporcionar las credenciales de un administrador del servidor local para poder implementar cualquier cosa en el servidor.
+> - Use el *controlador de web deploy*. Este enfoque es mucho más complejo y requiere más esfuerzo inicial para configurar el servidor Web. Sin embargo, si usa este enfoque, puede configurar IIS para permitir que los usuarios que no son administradores realicen la implementación. El controlador de Web Deploy solo está disponible en la versión 7 o posterior de IIS.
+> - Use la *implementación sin conexión*. Este enfoque requiere la menor configuración del servidor Web, pero un administrador del servidor debe copiar manualmente el paquete Web en el servidor e importarlo a través del administrador de IIS.
 > 
-> Para obtener más información sobre las características clave, ventajas y desventajas de estos enfoques, vea [elegir el enfoque de derecha a la implementación Web](choosing-the-right-approach-to-web-deployment.md).
+> Para obtener más información sobre las características clave, las ventajas y las desventajas de estos enfoques, consulte [elección del enfoque adecuado para la implementación web](choosing-the-right-approach-to-web-deployment.md).
 
-## <a name="is-the-web-deploy-remote-agent-the-right-approach-for-you"></a>¿Es la Web implementar a agente remoto el enfoque adecuado para usted?
+## <a name="is-the-web-deploy-remote-agent-the-right-approach-for-you"></a>¿El Web Deploy agente remoto es el enfoque adecuado para usted?
 
-Sí, si el usuario que se va a implementar el contenido puede proporcionar las credenciales de administrador en el servidor de destino. Este enfoque suele ser deseable en estos tipos de escenarios:
+Sí, si el usuario que va a implementar el contenido puede proporcionar las credenciales de un administrador en el servidor de destino. Este enfoque suele ser conveniente en estos tipos de escenarios:
 
-- Entornos de desarrollo o prueba, donde el desarrollador tiene control total sobre el servidor web de destino y el servidor de base de datos.
-- Organizaciones más pequeñas en la que un único usuario o un grupo pequeño de usuarios tiene control sobre el ciclo de vida de toda la aplicación.
+- Entornos de desarrollo o pruebas, donde el desarrollador tiene control total sobre el servidor Web de destino y el servidor de base de datos.
+- Organizaciones más pequeñas en las que un solo usuario o un pequeño grupo de usuarios tienen control sobre todo el ciclo de vida de la aplicación.
 
-En una gran cantidad de organizaciones más grandes y especialmente para los entornos de ensayo o producción, a menudo no es realista para proporcionar a los usuarios derechos de administrador en los servidores web. En el caso de los servidores de web hospedada, esto es especialmente probable que sea el caso. Además, si tiene previsto automatizar la implementación de un servidor de compilación, no desear usar las credenciales de administrador para el proceso de implementación. En estos casos, configuración de los servidores web para admitir la implementación mediante la [controlador de implementación Web](configuring-a-web-server-for-web-deploy-publishing-web-deploy-handler.md) puede proporcionar una opción más satisfactoria.
+En muchas organizaciones más grandes y, en particular, en entornos de ensayo o de producción, a menudo no es realista ofrecer derechos de administrador a los usuarios en servidores Web. En el caso de los servidores web hospedados, es especialmente improbable que sea el caso. Además, si tiene previsto automatizar la implementación desde un servidor de compilación, es posible que no desee usar credenciales de administrador para el proceso de implementación. En estos casos, la configuración de los servidores web para admitir la implementación mediante el [controlador de web deploy](configuring-a-web-server-for-web-deploy-publishing-web-deploy-handler.md) puede proporcionar una opción más satisfactoria.
 
-## <a name="task-overview"></a>Información general de tarea
+## <a name="task-overview"></a>Información general sobre tareas
 
-Este tema describe cómo configurar un servidor web de Internet Information Services (IIS) 7.5 para aceptar e implementar paquetes de web desde un equipo remoto mediante el enfoque de implementación Web de agente remoto. Deberá:
+En este tema se describe cómo configurar un servidor Web de Internet Information Services (IIS) 7,5 para aceptar e implementar paquetes web desde un equipo remoto mediante el enfoque del agente remoto Web Deploy. Necesitará:
 
-- Instalar IIS 7.5 y la configuración recomendada de IIS 7.
-- Instalar Web Deploy 2.1 o posterior.
-- Crear un sitio Web de IIS para hospedar el contenido distribuido.
-- Asegúrese de que se está ejecutando el servicio del agente de implementación Web.
+- Instale IIS 7,5 y la configuración recomendada de IIS 7.
+- Instale Web Deploy 2,1 o posterior.
+- Cree un sitio web de IIS para hospedar el contenido implementado.
+- Asegúrese de que el servicio de Deployment Agent Web se está ejecutando.
 
-Para hospedar la solución de ejemplo en concreto, también deberá:
+Para hospedar la solución de ejemplo específicamente, también necesitará:
 
-- Instale .NET Framework 4.0.
-- Instalar ASP.NET MVC 3.
+- Instale el .NET Framework 4,0.
+- Instale ASP.NET MVC 3.
 
-En este tema le mostrará cómo realizar cada uno de estos procedimientos. Las tareas y los tutoriales en este tema se suponen que está empezando con una compilación limpia del servidor que ejecuta Windows Server 2008 R2. Antes de continuar, asegúrese de que:
+En este tema se muestra cómo realizar cada uno de estos procedimientos. En las tareas y los tutoriales de este tema se da por supuesto que se está iniciando una compilación de servidor limpio que ejecuta Windows Server 2008 R2. Antes de continuar, asegúrese de que:
 
 - Se instalan Windows Server 2008 R2 Service Pack 1 y todas las actualizaciones disponibles.
-- El servidor está unido al dominio.
+- El servidor está unido a un dominio.
 - El servidor tiene una dirección IP estática.
 
 > [!NOTE]
-> Para obtener más información sobre la unión a los equipos a un dominio, consulte [unir equipos al dominio e iniciar sesión](https://technet.microsoft.com/library/cc725618(v=WS.10).aspx). Para obtener más información sobre cómo configurar direcciones IP estáticas, consulte [configurar una dirección IP estática](https://technet.microsoft.com/library/cc754203(v=ws.10).aspx). El servicio del agente remoto es compatible con IIS 6 y versiones posteriores y no requiere que esté unido a un dominio. Sin embargo, los pasos descritos en este tutorial se desarrollaron y probaron en IIS 7.5 y procedimientos para otras versiones pueden variar.
+> Para obtener más información acerca de cómo unir equipos a un dominio, consulte [unir equipos al dominio e inicio de sesión](https://technet.microsoft.com/library/cc725618(v=WS.10).aspx). Para obtener más información sobre la configuración de direcciones IP estáticas, consulte [configurar una dirección IP estática](https://technet.microsoft.com/library/cc754203(v=ws.10).aspx). El servicio de agente remoto es compatible con IIS 6 en adelante y no requiere que esté unido a un dominio. Sin embargo, los pasos de este tutorial se desarrollaron y probaron en IIS 7,5 y los procedimientos para otras versiones pueden variar.
 
 ## <a name="install-products-and-components"></a>Instalar productos y componentes
 
-En esta sección le ayudará a instalar los componentes y los productos necesarios en el servidor web. Antes de comenzar, es una buena práctica ejecutar Windows Update para asegurarse de que el servidor está totalmente al día.
+Esta sección le guiará a través de la instalación de los productos y componentes necesarios en el servidor Web. Antes de empezar, se recomienda ejecutar Windows Update para asegurarse de que el servidor está totalmente actualizado.
 
-En este caso, deberá instalar estas cosas:
+En este caso, debe instalar estos elementos:
 
-- **Configuración recomendada de IIS 7**. Esto permite la **servidor Web (IIS)** rol en el servidor web e instala el conjunto de módulos de IIS y los componentes que necesita para hospedar una aplicación ASP.NET.
-- **.NET Framework 4.0**. Esto es necesario para ejecutar aplicaciones creadas en esta versión de .NET Framework.
-- **Herramienta de implementación 2.1 o posterior Web**. Web Deploy (y su archivo ejecutable subyacente, MSDeploy.exe) se instala en el servidor. Como parte de este proceso, se instala y se inicia el servicio del agente de implementación Web. Este servicio le permite implementar paquetes web desde un equipo remoto.
-- **ASP.NET MVC 3**. Esto instala a los ensamblados que necesarios para ejecutar aplicaciones de MVC 3.
+- **Configuración recomendada de IIS 7**. Esto habilita el rol de **servidor Web (IIS)** en el servidor web e instala el conjunto de módulos y componentes de IIS necesarios para hospedar una aplicación ASP.net.
+- **.NET Framework 4,0**. Esto es necesario para ejecutar aplicaciones que se compilaron en esta versión del .NET Framework.
+- **Herramienta de implementación Web 2,1 o posterior**. Esto instala Web Deploy (y su archivo ejecutable subyacente, MSDeploy. exe) en el servidor. Como parte de este proceso, instala e inicia el servicio de Deployment Agent Web. Este servicio le permite implementar paquetes web desde un equipo remoto.
+- **ASP.NET MVC 3**. Esto instala los ensamblados que necesita para ejecutar aplicaciones MVC 3.
 
 > [!NOTE]
-> Este tutorial describe el uso del instalador de plataforma Web para instalar y configurar los componentes necesarios. Aunque no tiene que usar al instalador de plataforma Web, simplifica el proceso de instalación al detectar las dependencias automáticamente y lo que garantiza que siempre obtendrá las versiones más recientes del producto. Para obtener más información, consulte [Microsoft Web Platform Installer 3.0](https://go.microsoft.com/?linkid=9805118).
+> En este tutorial se describe el uso del instalador de plataforma web para instalar y configurar los componentes necesarios. Aunque no tiene que usar el instalador de plataforma web, simplifica el proceso de instalación mediante la detección automática de las dependencias y la garantía de que siempre obtiene las versiones más recientes del producto. Para obtener más información, consulte [Instalador de plataforma web de Microsoft 3,0](https://go.microsoft.com/?linkid=9805118).
 
-**Para instalar los componentes y productos necesarios**
+**Para instalar los productos y componentes necesarios**
 
-1. Descargue e instale el [instalador de plataforma Web](https://go.microsoft.com/?linkid=9805118).
-2. Cuando se complete la instalación, se iniciará automáticamente el instalador de plataforma Web.
-
-    > [!NOTE]
-    > Ahora puede iniciar el instalador de plataforma Web en cualquier momento desde el **iniciar** menú. Para ello, en el **iniciar** menú, haga clic en **todos los programas**y, a continuación, haga clic en **Microsoft Web Platform Installer**.
-3. En la parte superior de la **instalador de plataforma Web 3.0** ventana, haga clic en **productos**.
-4. En el lado izquierdo de la ventana, en el panel de navegación, haga clic en **marcos**.
-5. En el **Microsoft .NET Framework 4** fila, si ya no está instalada .NET Framework, haga clic en **agregar**.
+1. Descargue e instale el [instalador de plataforma web](https://go.microsoft.com/?linkid=9805118).
+2. Una vez completada la instalación, el instalador de plataforma web se iniciará automáticamente.
 
     > [!NOTE]
-    > Es posible que ya ha instalado .NET Framework 4.0 a través de Windows Update. Si ya está instalado un producto o componente, el instalador de plataforma Web indicará esto reemplazando el **agregar** botón con el texto **instalado**.
+    > Ahora puede iniciar el instalador de plataforma web en cualquier momento desde el menú **Inicio** . Para ello, en el menú **Inicio** , haga clic en **todos los programas**y, a continuación, haga clic en **instalador de plataforma web de Microsoft**.
+3. En la parte superior de la ventana **instalador de plataforma Web 3,0** , haga clic en **productos**.
+4. En el lado izquierdo de la ventana, en el panel de navegación, haga clic en **marcos de trabajo**.
+5. En la fila **Microsoft .NET Framework 4** , si el .NET Framework no está ya instalado, haga clic en **Agregar**.
+
+    > [!NOTE]
+    > Es posible que ya haya instalado el .NET Framework 4,0 a través de Windows Update. Si ya hay instalado un producto o componente, el instalador de plataforma web lo indicará reemplazando el botón **Agregar** con el texto **instalado**.
 
     ![](configuring-a-web-server-for-web-deploy-publishing-remote-agent/_static/image1.png)
-6. En el **ASP.NET MVC 3 (Visual Studio 2010)** la fila, haga clic en **agregar**.
-7. En el panel de navegación, haga clic en **Server**.
-8. En el **configuración recomendada de IIS 7** la fila, haga clic en **agregar**.
-9. En el **2.1 de herramienta de implementación Web** la fila, haga clic en **agregar**.
-10. Haga clic en **Instalar**. El instalador de plataforma Web mostrará una lista de productos &#x2014; junto con las dependencias asociadas &#x2014; esté instalado y se le pedirá que acepte los términos de licencia.
+6. En la fila **ASP.NET MVC 3 (Visual Studio 2010)** , haga clic en **Agregar**.
+7. En el panel de navegación, haga clic en **servidor**.
+8. En la fila **configuración recomendada de IIS 7** , haga clic en **Agregar**.
+9. En la fila **herramienta de implementación Web 2,1** , haga clic en **Agregar**.
+10. Haga clic en **Instalar**. El instalador de plataforma web mostrará una lista de productos&#x2014;junto con las dependencias asociadas&#x2014;que se van a instalar y le pedirá que acepte los términos de licencia.
 
     ![](configuring-a-web-server-for-web-deploy-publishing-remote-agent/_static/image2.png)
-11. Revise los términos de licencia y, si acepta los términos, haga clic en **acepto**.
-12. Una vez completada la instalación, haga clic en **finalizar**y, a continuación, cierre el **instalador de plataforma Web 3.0** ventana.
+11. Revise los términos de licencia y, si da su consentimiento a los términos **, haga clic en Acepto.**
+12. Una vez completada la instalación, haga clic en **Finalizar**y, a continuación, cierre la ventana **instalador de plataforma web 3,0** .
 
-Si instaló .NET Framework 4.0 antes de instalar IIS, deberá ejecutar el [herramienta de registro de IIS de ASP.NET](https://msdn.microsoft.com/library/k6h9cz8h(v=VS.100).aspx) (aspnet\_regiis.exe) para registrar la versión más reciente de ASP.NET con IIS. Si no lo hace, encontrará que IIS pueda servir contenido estático (como archivos HTML) sin problemas, pero devolverá **404.0 de Error HTTP: no se encuentra** al intentar examinar el contenido de ASP.NET. Puede usar este procedimiento para asegurarse de que se ha registrado ASP.NET 4.0.
+Si instaló el .NET Framework 4,0 antes de instalar IIS, deberá ejecutar la herramienta de registro de [IIS de ASP.net](https://msdn.microsoft.com/library/k6h9cz8h(v=VS.100).aspx) (ASPNET\_regiis. exe) para registrar la versión más reciente de ASP.net con IIS. Si no lo hace, descubrirá que IIS servirá contenido estático (como archivos HTML) sin problemas, pero devolverá el **error HTTP 404,0 – no encontrado** al intentar examinar el contenido de ASP.net. Puede usar este procedimiento para asegurarse de que ASP.NET 4,0 está registrado.
 
-**Para registrar ASP.NET 4.0 con IIS**
+**Para registrar ASP.NET 4,0 con IIS**
 
-1. Haga clic en **iniciar**y, a continuación, escriba **símbolo**.
-2. En los resultados de búsqueda, haga clic en **símbolo**y, a continuación, haga clic en **ejecutar como administrador**.
-3. En la ventana de símbolo del sistema, navegue hasta la **%WINDIR%\Microsoft.NET\Framework\v4.0.30319** directory.
-4. Escriba el siguiente comando y, a continuación, presione ENTRAR:
+1. Haga clic en **Inicio**y, a continuación, escriba **símbolo del sistema**.
+2. En los resultados de la búsqueda, haga clic con el botón secundario en **símbolo del sistema**y, a continuación, haga clic en **Ejecutar como administrador**.
+3. En la ventana del símbolo del sistema, navegue hasta el directorio **%WINDIR%\Microsoft.NET\Framework\v4.0.30319**
+4. Escriba este comando y, a continuación, presione ENTRAR:
 
     [!code-console[Main](configuring-a-web-server-for-web-deploy-publishing-remote-agent/samples/sample1.cmd)]
-5. Si va a hospedar aplicaciones de web de 64 bits en cualquier momento, también debe registrar la versión de 64 bits de ASP.NET con IIS. Para ello, en la ventana de símbolo del sistema, navegue hasta la **%WINDIR%\Microsoft.NET\Framework64\v4.0.30319** directory.
-6. Escriba el siguiente comando y, a continuación, presione ENTRAR:
+5. Si planea hospedar aplicaciones Web de 64 bits en cualquier momento, debe registrar también la versión de 64 bits de ASP.NET con IIS. Para ello, en la ventana del símbolo del sistema, navegue hasta el directorio **%WINDIR%\Microsoft.NET\Framework64\v4.0.30319**
+6. Escriba este comando y, a continuación, presione ENTRAR:
 
     [!code-console[Main](configuring-a-web-server-for-web-deploy-publishing-remote-agent/samples/sample2.cmd)]
 
-Como una buena práctica, usar Windows Update nuevo en este momento para descargar e instalar las actualizaciones disponibles para los nuevos productos y componentes que ha instalado.
+Como práctica recomendada, vuelva a usar Windows Update en este momento para descargar e instalar las actualizaciones disponibles para los nuevos productos y componentes que ha instalado.
 
-## <a name="configure-the-iis-website"></a>Configurar el sitio Web de IIS
+## <a name="configure-the-iis-website"></a>Configurar el sitio web de IIS
 
-Antes de poder implementar el contenido web a su servidor, deberá crear y configurar un sitio Web de IIS para hospedar el contenido. Web Deploy solo puede implementar paquetes web en un sitio Web IIS existente; no puede crear el sitio Web por usted. En un nivel alto, necesita completar estas tareas:
+Para poder implementar contenido web en el servidor, debe crear y configurar un sitio web de IIS para hospedar el contenido. Web Deploy solo puede implementar paquetes Web en un sitio web de IIS existente; no puede crear el sitio Web. En un nivel alto, deberá completar estas tareas:
 
 - Cree una carpeta en el sistema de archivos para hospedar el contenido.
-- Crear un sitio Web de IIS para servir el contenido y asociarla a la carpeta local.
-- Conceder permisos de lectura para la identidad del grupo de aplicaciones en la carpeta local.
+- Cree un sitio web de IIS para servir el contenido y asócielo a la carpeta local.
+- Conceda permisos de lectura a la identidad del grupo de aplicaciones en la carpeta local.
 
-Aunque no hay nada que le impida implementar contenido en el sitio Web predeterminado en IIS, no se recomienda este enfoque para algo distinto de los escenarios de prueba o demostración. Para simular un entorno de producción, debe crear un nuevo sitio Web IIS con una configuración que es específicas de los requisitos de la aplicación.
+Aunque no hay nada que le impida implementar contenido en el sitio web predeterminado en IIS, este enfoque no se recomienda para otros escenarios de prueba o demostración. Para simular un entorno de producción, debe crear un nuevo sitio web de IIS con la configuración específica de los requisitos de la aplicación.
 
-**Para crear y configurar un sitio Web de IIS**
+**Para crear y configurar un sitio web de IIS**
 
 1. En el sistema de archivos local, cree una carpeta para almacenar el contenido (por ejemplo, **C:\DemoSite**).
-2. En el **iniciar** menú, elija **herramientas administrativas**y, a continuación, haga clic en **Internet Information Services (IIS) Manager**.
-3. En el Administrador de IIS, en el **conexiones** panel, expanda el nodo del servidor (por ejemplo, **TESTWEB1**).
+2. En el menú **Inicio** , seleccione **herramientas administrativas**y, a continuación, haga clic en Administrador de **Internet Information Services (IIS)** .
+3. En el administrador de IIS, en el panel **conexiones** , expanda el nodo del servidor (por ejemplo, **TESTWEB1**).
 
     ![](configuring-a-web-server-for-web-deploy-publishing-remote-agent/_static/image3.png)
-4. Haga clic en el **sitios** nodo y, a continuación, haga clic en **agregar sitio Web**.
-5. En el **nombre del sitio** , escriba un nombre para el sitio Web de IIS (por ejemplo, **DemoSite**).
-6. En el **ruta de acceso física** cuadro, escriba (o vaya a) la ruta de acceso a la carpeta local (por ejemplo, **C:\DemoSite**).
-7. En el **puerto** , escriba el número de puerto en el que desea hospedar el sitio Web (por ejemplo, **85**).
+4. Haga clic con el botón secundario en el nodo **sitios** y, a continuación, haga clic en **Agregar sitio web**.
+5. En el cuadro **nombre del sitio** , escriba un nombre para el sitio web de IIS (por ejemplo, **DemoSite**).
+6. En el cuadro **ruta de acceso física** , escriba (o busque) la ruta de acceso a la carpeta local (por ejemplo, **C:\DemoSite**).
+7. En el cuadro **Puerto** , escriba el número de puerto en el que desea hospedar el sitio web (por ejemplo, **85**).
 
     > [!NOTE]
-    > Los números de puerto estándar son 80 para HTTP y 443 para HTTPS. Sin embargo, si hospeda este sitio Web en el puerto 80, deberá detener el sitio Web predeterminado antes de que puede tener acceso a su sitio.
-8. Deje el **nombre de Host** cuadro en blanco, a menos que desee configurar un registro del sistema de nombres de dominio (DNS) para el sitio Web y, a continuación, haga clic en **Aceptar**.
+    > Los números de puerto estándar son 80 para HTTP y 443 para HTTPS. Sin embargo, si hospeda este sitio web en el puerto 80, deberá detener el sitio web predeterminado para poder acceder a su sitio.
+8. Deje en blanco el cuadro **nombre de host** , a menos que desee configurar un registro del sistema de nombres de dominio (DNS) para el sitio web y, a continuación, haga clic en **Aceptar**.
 
     ![](configuring-a-web-server-for-web-deploy-publishing-remote-agent/_static/image4.png)
 
     > [!NOTE]
-    > En un entorno de producción, es probable que quiera hospedar su sitio Web en el puerto 80 y configurar un encabezado de host, junto con los registros DNS coincidentes. Para obtener más información sobre cómo configurar los encabezados de host en IIS 7, consulte [configurar un encabezado de Host para un sitio Web (IIS 7)](https://technet.microsoft.com/library/cc753195(WS.10).aspx). Para obtener más información sobre el rol de servidor DNS en Windows Server 2008 R2, consulte [Introducción al servidor DNS](https://technet.microsoft.com/en-gb/library/cc770392.aspx) y [servidor DNS](https://technet.microsoft.com/windowsserver/dd448607).
-9. En el **acciones** panel, en **editar sitio**, haga clic en **enlaces**.
-10. En el **enlaces de sitios** cuadro de diálogo, haga clic en **agregar**.
+    > En un entorno de producción, probablemente querrá hospedar el sitio web en el puerto 80 y configurar un encabezado de host, junto con los registros DNS coincidentes. Para obtener más información sobre cómo configurar los encabezados de host en IIS 7, vea [configurar un encabezado de host para un sitio web (IIS 7)](https://technet.microsoft.com/library/cc753195(WS.10).aspx). Para obtener más información sobre el rol de servidor DNS en Windows Server 2008 R2, consulte [Introducción](https://technet.microsoft.com/library/cc770392.aspx) al servidor DNS y [servidor DNS](https://technet.microsoft.com/windowsserver/dd448607).
+9. En el panel **acciones** , en **Editar sitio**, haga clic en **enlaces**.
+10. En el cuadro de diálogo **enlaces de sitios** , haga clic en **Agregar**.
 
     ![](configuring-a-web-server-for-web-deploy-publishing-remote-agent/_static/image5.png)
-11. En el **Agregar enlace de sitio** cuadro de diálogo, establezca el **dirección IP** y **puerto** para que coincida con la configuración de sitio existente.
-12. En el **nombre de Host** , escriba el nombre del servidor web (por ejemplo, **TESTWEB1**) y, a continuación, haga clic en **Aceptar**.
+11. En el cuadro de diálogo **Agregar enlace de sitio** , establezca la **dirección IP** y el **Puerto** para que coincidan con la configuración de sitio existente.
+12. En el cuadro **nombre de host** , escriba el nombre del servidor Web (por ejemplo, **TESTWEB1**) y, a continuación, haga clic en **Aceptar**.
 
     ![](configuring-a-web-server-for-web-deploy-publishing-remote-agent/_static/image6.png)
 
     > [!NOTE]
-    > El primer enlace del sitio le permite tener acceso al sitio localmente mediante la dirección IP y puerto o `http://localhost:85`. El segundo enlace del sitio le permite tener acceso al sitio desde otros equipos en el dominio con el nombre del equipo (por ejemplo, http://testweb1:85).
-13. En el **enlaces de sitios** cuadro de diálogo, haga clic en **cerrar**.
-14. En el **conexiones** panel, haga clic en **grupos de aplicaciones**.
-15. En el **grupos de aplicaciones** panel, haga clic en el nombre de su grupo de aplicaciones y, a continuación, haga clic en **configuración básica**. De forma predeterminada, el nombre de su grupo de aplicaciones coincidirá con el nombre de su sitio Web (por ejemplo, **DemoSite**).
-16. En el **versión de .NET Framework** lista, seleccione **.NET Framework v4.0.30319**y, a continuación, haga clic en **Aceptar**.
+    > El primer enlace de sitio le permite tener acceso al sitio localmente mediante la dirección IP y el puerto o el `http://localhost:85`. El segundo enlace de sitio le permite tener acceso al sitio desde otros equipos del dominio mediante el nombre de equipo (por ejemplo, http://testweb1:85).
+13. En el cuadro de diálogo **enlaces de sitios** , haga clic en **cerrar**.
+14. En el panel **conexiones** , haga clic en **grupos de aplicaciones**.
+15. En el panel **grupos de aplicaciones** , haga clic con el botón secundario en el nombre del grupo de aplicaciones y, a continuación, haga clic en **configuración básica**. De forma predeterminada, el nombre del grupo de aplicaciones coincidirá con el nombre del sitio web (por ejemplo, **DemoSite**).
+16. En la lista **.NET Framework versión** , seleccione **.NET Framework v 4.0.30319**y, a continuación, haga clic en **Aceptar**.
 
     ![](configuring-a-web-server-for-web-deploy-publishing-remote-agent/_static/image7.png)
 
     > [!NOTE]
-    > La solución de ejemplo requiere .NET Framework 4.0. Esto no es un requisito para Web Deploy en general.
+    > La solución de ejemplo requiere .NET Framework 4,0. Esto no es un requisito para Web Deploy en general.
 
-En el orden de su sitio Web servir el contenido, la identidad del grupo de aplicaciones debe tener permisos de lectura en la carpeta local que almacena el contenido. En IIS 7.5, grupos de aplicaciones se ejecutan con una identidad del grupo de aplicación único de forma predeterminada (a diferencia de las versiones anteriores de IIS, donde los grupos de aplicaciones normalmente se ejecutaría con la cuenta de servicio de red). La identidad del grupo de aplicaciones no es una cuenta de usuario real y no se muestra en las listas de usuarios o grupos &#x2014; en su lugar, se crea dinámicamente cuando se inicia el grupo de aplicaciones. Se agrega cada identidad de grupo de aplicaciones local **IIS\_IUSRS** grupo de seguridad como un elemento oculto.
+Para que el sitio web atienda el contenido, la identidad del grupo de aplicaciones debe tener permisos de lectura en la carpeta local que almacena el contenido. En IIS 7,5, los grupos de aplicaciones se ejecutan con una identidad de grupo de aplicaciones única de forma predeterminada (a diferencia de las versiones anteriores de IIS, donde los grupos de aplicaciones normalmente se ejecutaban con la cuenta de servicio de red). La identidad del grupo de aplicaciones no es una cuenta de usuario real y no aparece en ninguna lista de usuarios o&#x2014;grupos, sino que se crea dinámicamente cuando se inicia el grupo de aplicaciones. Cada identidad del grupo de aplicaciones se agrega al grupo de seguridad local de **IIS\_IUSRS** como un elemento oculto.
 
-Para conceder permisos a una identidad de grupo de aplicaciones en un archivo o carpeta, que tiene dos opciones:
+Para conceder permisos a una identidad del grupo de aplicaciones en un archivo o carpeta, tiene dos opciones:
 
-- Asignar permisos a la identidad del grupo de aplicación directamente, con el formato <strong>IIS AppPool\</strong ><em>[nombre de grupo de aplicaciones]</em>(por ejemplo, <strong>IIS AppPool\DemoSite</strong>).
-- Asignar permisos a la **IIS\_IUSRS** grupo.
+- Asigne permisos directamente a la identidad del grupo de aplicaciones, con el formato <strong>IIS AppPool\</strong ><em>[nombre del grupo de aplicaciones]</em>(por ejemplo, <strong>IIS AppPool\DemoSite</strong>).
+- Asigne permisos al grupo **IUSRS de IIS\_** .
 
-Es el enfoque más común asignar permisos a la variable local **IIS\_IUSRS** grupo porque este enfoque le permite cambiar los grupos de aplicaciones sin volver a configurar los permisos de sistema de archivos. El siguiente procedimiento usa este enfoque basado en grupo.
+El enfoque más común consiste en asignar permisos al grupo local de **IIS\_IUSRS** , ya que este enfoque permite cambiar los grupos de aplicaciones sin tener que volver a configurar los permisos del sistema de archivos. En el procedimiento siguiente se usa este enfoque basado en grupos.
 
 > [!NOTE]
-> Para obtener más información sobre las identidades del grupo de aplicaciones en IIS 7.5, vea [identidades del grupo de aplicación](https://go.microsoft.com/?linkid=9805123).
+> Para obtener más información sobre las identidades del grupo de aplicaciones en IIS 7,5, vea [identidades del grupo de aplicaciones](https://go.microsoft.com/?linkid=9805123).
 
-**Para configurar los permisos de carpeta para un sitio Web IIS**
+**Para configurar permisos de carpeta para un sitio web de IIS**
 
-1. En el Explorador de Windows, vaya a la ubicación de la carpeta local.
-2. Haga clic en la carpeta y, a continuación, haga clic en **propiedades**.
-3. En el **seguridad** , haga clic **editar**y, a continuación, haga clic en **agregar**.
-4. Haga clic en **ubicaciones**. En el **ubicaciones** cuadro de diálogo, seleccione el servidor local y, a continuación, haga clic en **Aceptar**.
+1. En el explorador de Windows, vaya a la ubicación de la carpeta local.
+2. Haga clic con el botón secundario en la carpeta y, a continuación, haga clic en **propiedades**.
+3. En la pestaña **seguridad** , haga clic en **Editar**y, a continuación, haga clic en **Agregar**.
+4. Haga clic en **ubicaciones**. En el cuadro de diálogo **ubicaciones** , seleccione el servidor local y, a continuación, haga clic en **Aceptar**.
 
     ![](configuring-a-web-server-for-web-deploy-publishing-remote-agent/_static/image8.png)
-5. En el **Seleccionar usuarios o grupos** cuadro de diálogo, escriba **IIS\_IUSRS**, haga clic en **comprobar nombres**y, a continuación, haga clic en **Aceptar**.
-6. En el <strong>permisos para</strong><em>[nombre de la carpeta]</em>cuadro de diálogo, tenga en cuenta que el nuevo grupo se ha asignado la <strong>lectura &amp; ejecutar</strong>, <strong>enumerar carpeta contenido</strong>, y <strong>lectura</strong> permisos de forma predeterminada. Déjelo sin cambios y haga clic en <strong>Aceptar</strong>.
-7. Haga clic en <strong>Aceptar</strong> para cerrar el <em>[nombre de la carpeta]</em><strong>propiedades</strong> cuadro de diálogo.
+5. En el cuadro de diálogo **Seleccionar usuarios o grupos** , escriba **IIS\_IUSRS**, haga clic en **Comprobar nombres**y, a continuación, haga clic en **Aceptar**.
+6. En el cuadro de diálogo <strong>permisos de</strong><em>[nombre de carpeta]</em>, observe que el nuevo grupo tiene asignados los permisos <strong>leer &amp; ejecutar</strong>, <strong>Mostrar el contenido</strong>de la carpeta y <strong>leer</strong> de forma predeterminada. Déjelo sin cambios y haga clic en <strong>Aceptar</strong>.
+7. Haga clic en <strong>Aceptar</strong> para cerrar el cuadro de diálogo<strong>propiedades</strong> de <em>[nombre de carpeta]</em>.
 
-Como una tarea final antes de intentar implementar los paquetes de web en el servidor, debe asegurarse de que se está ejecutando el servicio del agente de implementación Web. Al implementar un paquete desde un equipo remoto, el servicio del agente de implementación Web es responsable de extraer e instalar el contenido del paquete. El servicio se inicia de forma predeterminada al instalar la herramienta de implementación Web y se ejecuta bajo la identidad de servicio de red.
+Como tarea final antes de intentar implementar paquetes Web en el servidor, debe asegurarse de que el servicio de Deployment Agent Web se está ejecutando. Cuando se implementa un paquete desde un equipo remoto, el servicio Web Deployment Agent es responsable de extraer e instalar el contenido del paquete. El servicio se inicia de forma predeterminada al instalar la herramienta de implementación web y se ejecuta bajo la identidad del servicio de red.
 
-Puede comprobar si se está ejecutando un servicio de varias maneras diferentes, con varias utilidades de línea de comandos o los cmdlets de Windows PowerShell. Este procedimiento describe un enfoque sencillo basado en la interfaz de usuario.
+Puede comprobar si un servicio se está ejecutando de varias maneras diferentes, mediante el uso de varias utilidades de línea de comandos o cmdlets de Windows PowerShell. Este procedimiento describe un enfoque sencillo basado en la interfaz de usuario.
 
-**Para comprobar que se está ejecutando el servicio del agente de implementación Web**
+**Para comprobar que el servicio Web Deployment Agent se está ejecutando**
 
-1. En el **iniciar** menú, elija **herramientas administrativas**y, a continuación, haga clic en **servicios**.
-2. Busque el **servicio del agente de implementación Web** de fila y compruebe que la **estado** está establecido en **iniciado**.
+1. En el menú **Inicio** , seleccione **herramientas administrativas**y, a continuación, haga clic en **servicios**.
+2. Busque la fila **servicio de Deployment Agent web** y compruebe que el **Estado** es **iniciado**.
 
     ![](configuring-a-web-server-for-web-deploy-publishing-remote-agent/_static/image9.png)
-3. Si el servicio no se ha iniciado, haga clic en **iniciar**.
+3. Si el servicio aún no está iniciado, haga clic en **iniciar**.
 
 ## <a name="configure-firewall-exceptions"></a>Configurar excepciones de Firewall
 
-De forma predeterminada, el servicio del agente remoto escucha en el puerto TCP 80 en esta dirección URL:
+De forma predeterminada, el servicio del agente remoto escucha en el puerto TCP 80, en esta dirección URL:
 
 <http://servername.com/MSDEPLOYAGENTSERVICE>
 
-En la mayoría de los casos, no tendrá que configurar las reglas de firewall adicional para el servicio de agente remoto porque los servidores web normalmente escuchan las solicitudes HTTP en el puerto 80. Si personalizó la instalación para que escuche en un puerto no estándar, deberá configurar excepciones de firewall según sea necesario.
+En la mayoría de los casos, no tendrá que configurar ninguna regla de Firewall adicional para el servicio del agente remoto, ya que los servidores web normalmente escuchan solicitudes HTTP en el puerto 80. Si ha personalizado la instalación para que escuche en un puerto no estándar, deberá configurar las excepciones de firewall según sea necesario.
 
 ## <a name="conclusion"></a>Conclusión
 
-En este momento, el servidor web está listo para aceptar e instalar paquetes web desde un equipo remoto. Antes de intentar implementar una aplicación web en el servidor, es posible que desee comprobar estos puntos clave:
+En este momento, el servidor web está listo para aceptar e instalar paquetes web desde un equipo remoto. Antes de intentar implementar una aplicación web en el servidor, puede que desee comprobar estos puntos clave:
 
-- ¿Se han registrado ASP.NET 4.0 con IIS?
-- ¿La identidad del grupo de aplicaciones tiene acceso de lectura a la carpeta de origen para el sitio Web?
-- ¿Se está ejecutando el servicio del agente de implementación Web?
+- ¿Ha registrado ASP.NET 4,0 con IIS?
+- ¿La identidad del grupo de aplicaciones tiene acceso de lectura a la carpeta de origen para el sitio web?
+- ¿Se está ejecutando el servicio Web Deployment Agent?
 
 ## <a name="further-reading"></a>Información adicional
 
-Para obtener instrucciones sobre cómo configurar los archivos de proyecto personalizados de Microsoft Build Engine (MSBuild) para implementar paquetes de web en el servicio del agente remoto, consulte [configurar propiedades de implementación de un entorno de destino](configuring-deployment-properties-for-a-target-environment.md).
+Para obtener instrucciones sobre cómo configurar archivos de proyecto de Microsoft Build Engine personalizado (MSBuild) para implementar paquetes Web en el servicio de agente remoto, consulte [configuración de las propiedades de implementación para un entorno de destino](configuring-deployment-properties-for-a-target-environment.md).
 
 > [!div class="step-by-step"]
 > [Anterior](scenario-configuring-a-production-environment-for-web-deployment.md)

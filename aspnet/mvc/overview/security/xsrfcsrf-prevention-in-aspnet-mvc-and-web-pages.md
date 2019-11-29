@@ -8,12 +8,12 @@ ms.date: 03/14/2013
 ms.assetid: aadc5fa4-8215-4fc7-afd5-bcd2ef879728
 msc.legacyurl: /mvc/overview/security/xsrfcsrf-prevention-in-aspnet-mvc-and-web-pages
 msc.type: authoredcontent
-ms.openlocfilehash: 6fcfcda5b95e5844f7d357ac0cbb6d1fd2e215ac
-ms.sourcegitcommit: 84b1681d4e6253e30468c8df8a09fe03beea9309
+ms.openlocfilehash: fb7e76101cbe6a874ddf5b3429ca2dc6d474334b
+ms.sourcegitcommit: 22fbd8863672c4ad6693b8388ad5c8e753fb41a2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/02/2019
-ms.locfileid: "73445776"
+ms.lasthandoff: 11/28/2019
+ms.locfileid: "74595758"
 ---
 # <a name="xsrfcsrf-prevention-in-aspnet-mvc-and-web-pages"></a>Prevención de XSRF/CSRF en ASP.NET MVC y Web Pages
 
@@ -128,7 +128,7 @@ La autenticación basada en notificaciones, por otro lado, no requiere necesaria
 
 Muchas de las implementaciones que usan la autenticación basada en notificaciones usan [Azure Access Control Service](https://msdn.microsoft.com/library/windowsazure/gg429786.aspx) (ACS) en concreto. ACS permite al desarrollador configurar proveedores de *identidades* individuales (por ejemplo, ADFS, el proveedor de cuentas Microsoft, los proveedores de OpenID como Yahoo!, etc.) y los proveedores de identidades devuelven los *identificadores de nombre*. Estos identificadores de nombre pueden contener información de identificación personal (PII) como una dirección de correo electrónico, o bien se anónimos como un identificador personal privado (PPID). Sin tener en consideración, la tupla (proveedor de identidades, identificador de nombre) actúa suficientemente como un token de seguimiento adecuado para un usuario determinado mientras está explorando el sitio, por lo que el tiempo de ejecución de la pila Web ASP.NET puede usar la tupla en lugar del nombre de usuario al generar y validando los tokens de campo anti-XSRF. Los URI específicos para el proveedor de identidades y el identificador de nombre son:
 
-- `http://schemas.microsoft.com/accesscontrolservice/2010/07/claims/identityprovider`
+- `https://schemas.microsoft.com/accesscontrolservice/2010/07/claims/identityprovider`
 - `http://schemas.xmlsoap.org/ws/2005/05/identity/claims/nameidentifier`
 
 (consulte esta [Página de documento de ACS](https://msdn.microsoft.com/library/windowsazure/gg185971.aspx) para obtener más información).

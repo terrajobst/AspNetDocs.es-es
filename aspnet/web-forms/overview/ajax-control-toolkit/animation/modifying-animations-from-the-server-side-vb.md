@@ -1,61 +1,61 @@
 ---
 uid: web-forms/overview/ajax-control-toolkit/animation/modifying-animations-from-the-server-side-vb
-title: Modificar las animaciones desde el lado del servidor (VB) | Microsoft Docs
+title: Modificar animaciones desde el lado servidor (VB) | Microsoft Docs
 author: wenz
-description: El control de animación en ASP.NET AJAX Control Toolkit no es simplemente un control, pero un marco completo para agregar animaciones a un control. Las animaciones pueden también...
+description: El control de animación de ASP.NET AJAX control Toolkit no es solo un control, sino un marco de trabajo completo para agregar animaciones a un control. Las animaciones también pueden...
 ms.author: riande
 ms.date: 06/02/2008
 ms.assetid: addcf4aa-340a-460b-9c64-506424a1f725
 msc.legacyurl: /web-forms/overview/ajax-control-toolkit/animation/modifying-animations-from-the-server-side-vb
 msc.type: authoredcontent
-ms.openlocfilehash: 5ba5a32b53fc304ec3a3f1af5c6533a6a0622ac0
-ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
+ms.openlocfilehash: ebc311d1a931ad611d9556799c94440d41a9cf49
+ms.sourcegitcommit: 22fbd8863672c4ad6693b8388ad5c8e753fb41a2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/06/2019
-ms.locfileid: "65127350"
+ms.lasthandoff: 11/28/2019
+ms.locfileid: "74575232"
 ---
-# <a name="modifying-animations-from-the-server-side-vb"></a>Modificar las animaciones desde el lado del servidor (VB)
+# <a name="modifying-animations-from-the-server-side-vb"></a>Modificar animaciones desde el lado servidor (VB)
 
 por [Christian Wenz](https://github.com/wenz)
 
-[Descargar código](http://download.microsoft.com/download/f/9/a/f9a26acd-8df4-4484-8a18-199e4598f411/Animation9.vb.zip) o [descargar PDF](http://download.microsoft.com/download/6/7/1/6718d452-ff89-4d3f-a90e-c74ec2d636a3/animation9VB.pdf)
+[Descargar código](https://download.microsoft.com/download/f/9/a/f9a26acd-8df4-4484-8a18-199e4598f411/Animation9.vb.zip) o [Descargar PDF](https://download.microsoft.com/download/6/7/1/6718d452-ff89-4d3f-a90e-c74ec2d636a3/animation9VB.pdf)
 
-> El control de animación en ASP.NET AJAX Control Toolkit no es simplemente un control, pero un marco completo para agregar animaciones a un control. También se pueden cambiar las animaciones en el lado servidor
+> El control de animación de ASP.NET AJAX control Toolkit no es solo un control, sino un marco de trabajo completo para agregar animaciones a un control. También se pueden cambiar las animaciones en el lado servidor.
 
-## <a name="overview"></a>Información general
+## <a name="overview"></a>Información general del
 
-El control de animación en ASP.NET AJAX Control Toolkit no es simplemente un control, pero un marco completo para agregar animaciones a un control. También se pueden cambiar las animaciones en el lado servidor
+El control de animación de ASP.NET AJAX control Toolkit no es solo un control, sino un marco de trabajo completo para agregar animaciones a un control. También se pueden cambiar las animaciones en el lado servidor.
 
 ## <a name="steps"></a>Pasos
 
-En primer lugar, incluya el `ScriptManager` en la página; a continuación, ASP.NET AJAX se carga la biblioteca, lo que permite usar el Kit de herramientas de Control:
+En primer lugar, incluya el `ScriptManager` en la página; después, se carga la biblioteca de ASP.NET AJAX, lo que permite usar el kit de herramientas de control:
 
 [!code-aspx[Main](modifying-animations-from-the-server-side-vb/samples/sample1.aspx)]
 
-La animación se aplicará a un panel de texto que tiene este aspecto:
+La animación se aplicará a un panel de texto que tiene el siguiente aspecto:
 
 [!code-aspx[Main](modifying-animations-from-the-server-side-vb/samples/sample2.aspx)]
 
-En la clase CSS asociada para el panel, definir un color de fondo agradable y también establecer un ancho fijo para el panel:
+En la clase CSS asociada del panel, defina un color de fondo agradable y establezca también un ancho fijo para el panel:
 
 [!code-css[Main](modifying-animations-from-the-server-side-vb/samples/sample3.css)]
 
-El resto del código se ejecuta en el lado del servidor y no usa marcado; en su lugar, utiliza código para crear el `AnimationExtender` control:
+El resto del código se ejecuta en el lado servidor y no utiliza marcado; en su lugar, usa código para crear el control de `AnimationExtender`:
 
 [!code-aspx[Main](modifying-animations-from-the-server-side-vb/samples/sample4.aspx)]
 
-Sin embargo, el Kit de herramientas de Control actualmente no proporciona un acceso de API para crear las animaciones individuales. Sin embargo, es posible establecer el `AnimationExtender`propiedad Animations en una cadena que contiene el marcado XML que se usa al asignar las animaciones mediante declaración. Con el fin de crear el XML que no debe contener el `<Animations>` elemento podría usar XML de .NET Framework admite o, como se muestra en el código siguiente, basta con que proporcione la cadena:
+Sin embargo, el kit de herramientas de control no proporciona actualmente un acceso de API para crear las animaciones individuales. No obstante, es posible establecer la propiedad animaciones del `AnimationExtender`en una cadena que contenga el marcado XML utilizado al asignar las animaciones mediante declaración. Con el fin de crear el XML que no debe contener el elemento `<Animations>` podría usar la compatibilidad con XML del .NET Framework o, como en el código siguiente, simplemente proporcione la cadena:
 
 [!code-vb[Main](modifying-animations-from-the-server-side-vb/samples/sample5.vb)]
 
-Por último, agregue el `AnimationExtender` en el control a la página actual, el `<form runat="server">` elemento, asegurándose de que la animación se incluye y se ejecuta:
+Por último, agregue el control `AnimationExtender` a la página actual, dentro del elemento `<form runat="server">`, asegurándose de que la animación esté incluida y se ejecute:
 
 [!code-vb[Main](modifying-animations-from-the-server-side-vb/samples/sample6.vb)]
 
-[![La animación se crea con C# / VB código de servidor](modifying-animations-from-the-server-side-vb/_static/image2.png)](modifying-animations-from-the-server-side-vb/_static/image1.png)
+[![la animación se crea mediante código/VB del C#lado servidor](modifying-animations-from-the-server-side-vb/_static/image2.png)](modifying-animations-from-the-server-side-vb/_static/image1.png)
 
-La animación se crea con C# / VB código de servidor ([haga clic aquí para ver imagen en tamaño completo](modifying-animations-from-the-server-side-vb/_static/image3.png))
+La animación se crea mediante el código/VB C#del lado servidor ([haga clic para ver la imagen de tamaño completo](modifying-animations-from-the-server-side-vb/_static/image3.png))
 
 > [!div class="step-by-step"]
 > [Anterior](triggering-an-animation-in-another-control-vb.md)

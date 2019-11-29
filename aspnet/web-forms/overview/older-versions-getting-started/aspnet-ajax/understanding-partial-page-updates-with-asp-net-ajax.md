@@ -2,304 +2,304 @@
 uid: web-forms/overview/older-versions-getting-started/aspnet-ajax/understanding-partial-page-updates-with-asp-net-ajax
 title: Descripción de las actualizaciones parciales de página con ASP.NET AJAX | Microsoft Docs
 author: scottcate
-description: Quizás la característica más visible de ASP.NET AJAX Extensions es la capacidad para realizar las actualizaciones de una página parcial o incremental sin tener que realizar una devolución completa a t...
+description: Quizás la característica más visible de las extensiones de ASP.NET AJAX es la capacidad de realizar una actualización de página parcial o incremental sin realizar un postback completo a t...
 ms.author: riande
 ms.date: 03/28/2008
 ms.assetid: 54d9df99-1161-4899-b4e8-2679c85915e7
 msc.legacyurl: /web-forms/overview/older-versions-getting-started/aspnet-ajax/understanding-partial-page-updates-with-asp-net-ajax
 msc.type: authoredcontent
-ms.openlocfilehash: aa842aeb228abc763540d8ca8dafdfdca0b8b395
-ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
+ms.openlocfilehash: 4b87cb8f58dbd7f27b16bcb0d488ff361770d4fe
+ms.sourcegitcommit: 22fbd8863672c4ad6693b8388ad5c8e753fb41a2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/06/2019
-ms.locfileid: "65109013"
+ms.lasthandoff: 11/28/2019
+ms.locfileid: "74622950"
 ---
 # <a name="understanding-partial-page-updates-with-aspnet-ajax"></a>Descripción de las actualizaciones de página parcial con ASP.NET AJAX
 
 por [Scott Cate](https://github.com/scottcate)
 
-[Descargar PDF](http://download.microsoft.com/download/C/1/9/C19A3451-1D14-477C-B703-54EF22E197EE/AJAX_tutorial01_Partial_Page_Updates_cs.pdf)
+[Descargar PDF](https://download.microsoft.com/download/C/1/9/C19A3451-1D14-477C-B703-54EF22E197EE/AJAX_tutorial01_Partial_Page_Updates_cs.pdf)
 
-> Quizás la característica más visible de ASP.NET AJAX Extensions es la capacidad para realizar las actualizaciones de una página parcial o incremental sin tener que realizar una devolución completa al servidor, sin cambios en el código y los cambios de marcado mínimo. Las ventajas son inmensas: no se ha modificado el estado de los archivos multimedia (por ejemplo, Adobe Flash o de Windows Media), se reducen los costos de ancho de banda y el cliente no experimenta el parpadeo normalmente asociado a un postback.
+> Quizás la característica más visible de las extensiones de AJAX de ASP.NET es la posibilidad de realizar una actualización de página parcial o incremental sin realizar un postback completo en el servidor, sin cambios de código y cambios de marcado mínimos. Las ventajas son extensas: el estado de los elementos multimedia (como Adobe Flash o Windows Media) no cambia, se reducen los costos de ancho de banda y el cliente no experimenta el parpadeo normalmente asociado a un postback.
 
 ## <a name="introduction"></a>Introducción
 
-La tecnología de Microsoft ASP.NET ofrece un modelo de programación orientada a objetos y controlado por eventos y une con las ventajas del código compilado. Sin embargo, su modelo de procesamiento en el servidor tiene varias desventajas inherentes a la tecnología:
+La tecnología ASP.NET de Microsoft aporta un modelo de programación orientado a objetos y basado en eventos y lo agrupa con las ventajas del código compilado. Sin embargo, su modelo de procesamiento del lado servidor tiene varias desventajas inherentes a la tecnología:
 
-- Las actualizaciones de página requieren una vuelta al servidor, lo que requiere una actualización de la página.
-- Ida y vuelta no conserva los efectos generados por Javascript u otra tecnología de cliente (por ejemplo, Adobe Flash)
-- Durante la devolución de datos, los exploradores que no sean de Microsoft Internet Explorer no admiten restaurar automáticamente la posición de desplazamiento. Y, incluso en Internet Explorer, todavía hay un parpadeo mientras se actualiza la página.
-- Las devoluciones de datos pueden implicar una gran cantidad de ancho de banda como la \_ \_puede alcanzar el campo de formulario VIEWSTATE, especialmente cuando se trabaja con controles, como el control GridView o Repeater.
-- No hay ningún modelo unificado para tener acceso a servicios Web a través de JavaScript o de otra tecnología del lado cliente.
+- Las actualizaciones de página requieren un recorrido de ida y vuelta al servidor, lo que requiere una actualización de página.
+- Los recorridos de ida y vuelta no conservan los efectos generados por JavaScript u otra tecnología del lado cliente (como Adobe Flash)
+- Durante el postback, los exploradores distintos de Microsoft Internet Explorer no admiten la restauración automática de la posición de desplazamiento. E incluso en Internet Explorer, sigue habiendo un parpadeo a medida que se actualiza la página.
+- Los postbacks pueden implicar una gran cantidad de ancho de banda, ya que el \_\_campo de formulario VIEWSTATE puede crecer, especialmente cuando se trabaja con controles como el control GridView o los repetidores.
+- No hay ningún modelo unificado para obtener acceso a los servicios web a través de JavaScript u otra tecnología del lado cliente.
 
-Escriba las extensiones de AJAX de ASP.NET de Microsoft. AJAX, que es el acrónimo **A** sincrónica **J** avaScript **A** nd **X** ML, es un marco integrado para proporcionar una página incremental las actualizaciones a través de JavaScript de multiplataforma, formado por código de servidor que incluye el marco de AJAX de Microsoft y un componente de script denominado la secuencia de comandos de Microsoft AJAX Library. Las extensiones de ASP.NET AJAX también proporcionan compatibilidad multiplataforma para tener acceso a servicios Web de ASP.NET a través de JavaScript.
+Escriba extensiones de ASP.NET AJAX de Microsoft. AJAX, que representa **una** **J** AvaScript sincrónica **a** ND **X** ml, es un marco de trabajo integrado para proporcionar actualizaciones de páginas incrementales a través de JavaScript multiplataforma, compuesto por código del lado servidor que incluye el marco de Microsoft Ajax, y un componente de script denominado Microsoft Ajax script Library. Las extensiones de AJAX de ASP.NET también proporcionan compatibilidad multiplataforma para acceder a los servicios Web de ASP.NET a través de JavaScript.
 
-Este artículo examina la funcionalidad de las actualizaciones parciales de página de ASP.NET AJAX Extensions, que incluye el componente de ScriptManager, el control UpdatePanel y el control UpdateProgress y tiene en cuenta los escenarios en que se debe o no debe ser la designación.
+En estas notas del producto se examina la funcionalidad de las actualizaciones parciales de páginas de ASP.NET AJAX Extensions, que incluye el componente ScriptManager, el control UpdatePanel y el control UpdateProgress, y tiene en cuenta los escenarios en los que deben o no deben ser utiliza.
 
-Estas notas del producto se basan en la versión Beta 2 de Visual Studio 2008 y .NET Framework 3.5, que integra las extensiones de AJAX de ASP.NET en la biblioteca de clases Base (que era anteriormente un componente complementario disponible para ASP.NET 2.0). Estas notas del producto también se da por supuesto que usa Visual Studio 2008 y no Visual Web Developer Express Edition; Algunas plantillas de proyecto que se hace referencia no pueden estar disponibles para los usuarios de Visual Web Developer Express.
+Estas notas del producto se basan en la versión beta 2 de Visual Studio 2008 y el .NET Framework 3,5, que integra las extensiones de AJAX de ASP.NET en la biblioteca de clases base (donde anteriormente era un componente de complemento disponible para ASP.NET 2,0). En estas notas del producto también se supone que usa Visual Studio 2008 y no Visual Web Developer Express Edition; es posible que algunas plantillas de proyecto a las que se hace referencia no estén disponibles para los usuarios de Visual Web Developer Express.
 
-## <a name="partial-page-updates"></a>Actualizaciones parciales de página
+## <a name="partial-page-updates"></a>Actualizaciones parciales de páginas
 
-Quizás la característica más visible de ASP.NET AJAX Extensions es la capacidad para realizar las actualizaciones de una página parcial o incremental sin tener que realizar una devolución completa al servidor, sin cambios en el código y los cambios de marcado mínimo. Las ventajas son inmensas: no se ha modificado el estado de los archivos multimedia (por ejemplo, Adobe Flash o de Windows Media), se reducen los costos de ancho de banda y el cliente no experimenta el parpadeo normalmente asociado a un postback.
+Quizás la característica más visible de las extensiones de AJAX de ASP.NET es la posibilidad de realizar una actualización de página parcial o incremental sin realizar un postback completo en el servidor, sin cambios de código y cambios de marcado mínimos. Las ventajas son extensas: el estado de los elementos multimedia (como Adobe Flash o Windows Media) no cambia, se reducen los costos de ancho de banda y el cliente no experimenta el parpadeo normalmente asociado a un postback.
 
-La capacidad de integrar la representación de página parcial está integrada en ASP.NET con cambios mínimos en el proyecto.
+La capacidad de integrar la representación parcial de páginas se integra en ASP.NET con unos cambios mínimos en el proyecto.
 
-## <a name="walkthrough-integrating-partial-rendering-into-an-existing-project"></a>Tutorial: Integración de la representación parcial en un proyecto existente
+## <a name="walkthrough-integrating-partial-rendering-into-an-existing-project"></a>Tutorial: integrar la representación parcial en un proyecto existente
 
-1. En Microsoft Visual Studio 2008, cree un nuevo proyecto de sitio Web de ASP.NET, vaya a <em>archivo</em>  <em>- &gt; New</em>  <em>- &gt; el sitio Web</em> y seleccione el sitio Web de ASP.NET en el cuadro de diálogo. Puede asignarle el nombre que prefiera y puede instalar en el sistema de archivos o en Internet Information Services (IIS).
-2. Aparecerá la página en blanco de forma predeterminada con marcado básicos de ASP.NET (un formulario de servidor y un `@Page` directiva). Quitar una etiqueta denominada `Label1` y un botón denominado `Button1` hasta la página dentro del elemento de formulario. Puede establecer sus propiedades de texto que prefiera.
-3. En la vista Diseño, haga doble clic en `Button1` para generar un controlador de eventos de código subyacente. Dentro de este controlador de eventos, establecer `Label1.Text` al hacer clic en el botón! .
+1. En Microsoft Visual Studio 2008, cree un nuevo proyecto de sitio web de ASP.NET. para ello, vaya a <em>archivo</em> <em>-&gt; nuevo</em> <em>-&gt; sitio web</em> y seleccione ASP.net sitio web en el cuadro de diálogo. Puede asignarle el nombre que desee, y puede instalarlo en el sistema de archivos o en Internet Information Services (IIS).
+2. Se le presentará la página predeterminada en blanco con el marcado ASP.NET básico (un formulario del lado servidor y una directiva `@Page`). Quite una etiqueta llamada `Label1` y un botón denominado `Button1` en la página dentro del elemento de formulario. Puede establecer sus propiedades de texto en el valor que desee.
+3. En Vista de diseño, haga doble clic en `Button1` para generar un controlador de eventos de código subyacente. Dentro de este controlador de eventos, establezca `Label1.Text` en el botón. .
 
-**Listado 1: Marcado de default.aspx antes de habilita la representación parcial**
+**Lista 1: marcado para default. aspx antes de habilitar la representación parcial**
 
 [!code-aspx[Main](understanding-partial-page-updates-with-asp-net-ajax/samples/sample1.aspx)]
 
-**Listado 2: Código subyacente (recortada) en default.aspx.cs**
+**Lista 2: Codebehind (recortado) en default.aspx.cs**
 
 [!code-csharp[Main](understanding-partial-page-updates-with-asp-net-ajax/samples/sample2.cs)]
 
-1. Presione F5 para iniciar el sitio web. Visual Studio le solicitará que agregue un archivo web.config para habilitar la depuración; hacerlo. Al hacer clic en el botón, tenga en cuenta que actualice la página para cambiar el texto en la etiqueta, y hay un breve parpadeo como la página se vuelve a dibujar.
-2. Después de cerrar la ventana del explorador, vuelva a Visual Studio y, a la página de marcado. Desplácese hacia abajo en el cuadro de herramientas de Visual Studio y busque la pestaña Extensiones de AJAX. (Si no tiene esta pestaña porque está usando una versión anterior de las extensiones AJAX o Atlas, consulte el tutorial para registrar los elementos de cuadro de herramientas de extensiones de AJAX más adelante en estas notas del producto o instale la versión actual con el instalador de Windows que se puede descargar desde el sitio de Web).
+1. Presione F5 para iniciar el sitio Web. Visual Studio le pedirá que agregue un archivo Web. config para habilitar la depuración. lo haga. Al hacer clic en el botón, tenga en cuenta que la página se actualiza para cambiar el texto de la etiqueta, y hay un breve parpadeo a medida que se vuelve a dibujar la página.
+2. Después de cerrar la ventana del explorador, vuelva a Visual Studio y a la página de marcado. Desplácese hacia abajo en el cuadro de herramientas de Visual Studio y busque la pestaña extensiones AJAX. (Si no dispone de esta pestaña porque está usando una versión anterior de las extensiones AJAX o Atlas, consulte el tutorial para registrar los elementos del cuadro de herramientas de extensiones AJAX más adelante en esta nota del producto o instale la versión actual con el Windows Installer descargable. en el sitio web).
 
 [![](understanding-partial-page-updates-with-asp-net-ajax/_static/image2.png)](understanding-partial-page-updates-with-asp-net-ajax/_static/image1.png)
 
-([Haga clic aquí para ver imagen en tamaño completo](understanding-partial-page-updates-with-asp-net-ajax/_static/image3.png))
+([Haga clic para ver la imagen de tamaño completo](understanding-partial-page-updates-with-asp-net-ajax/_static/image3.png))
 
-1. <em>Problema conocido:</em>si instala Visual Studio 2008 en un equipo que ya tiene Visual Studio 2005 instalado con ASP.NET 2.0 AJAX Extensions, Visual Studio 2008 se importarán los elementos de cuadro de herramientas de AJAX Extensions. Puede determinar si este es el caso examinando la información sobre herramientas de los componentes; dicen versión 3.5.0.0. Si dicen que la versión 2.0.0.0, a continuación, ha importado los elementos del cuadro de herramientas anterior y deberá importarlos manualmente mediante el cuadro de diálogo Elegir elementos del cuadro de herramientas en Visual Studio. Podrá agregar controles de la versión 2 a través del diseñador.
+1. <em>Problema conocido:</em> Si instala Visual Studio 2008 en un equipo que ya tiene instalado Visual Studio 2005 con las extensiones de AJAX de ASP.NET 2,0, Visual Studio 2008 importará los elementos del cuadro de herramientas de extensiones AJAX. Puede determinar si este es el caso examinando la información sobre herramientas de los componentes; deben indicar la versión 3.5.0.0. Si dicen la versión 2.0.0.0, ha importado los elementos de cuadro de herramientas antiguos y tendrá que importarlos manualmente mediante el cuadro de diálogo Elegir elementos del cuadro de herramientas de Visual Studio. No podrá agregar controles de la versión 2 a través del diseñador.
 
-2. Antes de la `<asp:Label>` etiqueta comienza, crear una línea de espacio en blanco y haga doble clic en el control UpdatePanel en el cuadro de herramientas. Tenga en cuenta que un nuevo `@Register` directiva se incluye en la parte superior de la página, que indica que los controles dentro del espacio de nombres System.Web.UI deben importarse con el `asp:` prefijo.
-3. Arrastre el cierre `</asp:UpdatePanel>` etiqueta más allá del final del elemento Button, por lo que el elemento está bien formado con los controles de etiqueta y botón ajustados.
-4. Después de la apertura `<asp:UpdatePanel>` de etiquetas, comience a una nueva etiqueta de apertura. Tenga en cuenta que IntelliSense le indicará con dos opciones. En este caso, cree un `<ContentTemplate>` etiqueta. Asegúrese de ajustar esta etiqueta en torno a la etiqueta y un botón para que el marcado es correcto.
+2. Antes de que comience la etiqueta de `<asp:Label>`, cree una línea de espacio en blanco y haga doble clic en el control UpdatePanel en el cuadro de herramientas. Tenga en cuenta que una nueva Directiva de `@Register` se incluye en la parte superior de la página, lo que indica que los controles del espacio de nombres System. Web. UI se deben importar utilizando el prefijo `asp:`.
+3. Arrastre la etiqueta de cierre `</asp:UpdatePanel>` más allá del final del elemento de botón, de modo que el elemento tenga el formato correcto con los controles de etiqueta y de botón ajustados.
+4. Después de la etiqueta de apertura `<asp:UpdatePanel>`, empiece a abrir una nueva etiqueta. Tenga en cuenta que IntelliSense le pide dos opciones. En este caso, cree una etiqueta de `<ContentTemplate>`. Asegúrese de ajustar esta etiqueta alrededor de la etiqueta y el botón para que el marcado tenga el formato correcto.
 
 [![](understanding-partial-page-updates-with-asp-net-ajax/_static/image5.png)](understanding-partial-page-updates-with-asp-net-ajax/_static/image4.png)
 
-([Haga clic aquí para ver imagen en tamaño completo](understanding-partial-page-updates-with-asp-net-ajax/_static/image6.png))
+([Haga clic para ver la imagen de tamaño completo](understanding-partial-page-updates-with-asp-net-ajax/_static/image6.png))
 
-1. En cualquier lugar dentro de la `<form>` elemento, incluir un control ScriptManager haciendo doble clic en el `ScriptManager` elemento en el cuadro de herramientas.
-2. Editar el `<asp:ScriptManager>` etiquetar para que incluya el atributo `EnablePartialRendering= true`.
+1. En cualquier lugar dentro del elemento `<form>`, incluya un control ScriptManager haciendo doble clic en el elemento `ScriptManager` del cuadro de herramientas.
+2. Edite la etiqueta de `<asp:ScriptManager>` para que incluya el atributo `EnablePartialRendering= true`.
 
-**Listado 3: Marcado de default.aspx con la representación parcial habilitada**
+**Lista 3: marcado para default. aspx con representación parcial habilitada**
 
 [!code-aspx[Main](understanding-partial-page-updates-with-asp-net-ajax/samples/sample3.aspx)]
 
-1. Abra el archivo web.config. Tenga en cuenta que Visual Studio ha agregado automáticamente una referencia de compilación a System.Web.Extensions.dll.
+1. Abra el archivo Web. config. Tenga en cuenta que Visual Studio ha agregado automáticamente una referencia de compilación a System. Web. Extensions. dll.
 
-1. Novedades en Visual Studio 2008: El archivo web.config que se incluye con el sitio Web ASP.NET las plantillas de proyecto automáticamente incluye todas las referencias necesarias a las extensiones de AJAX de ASP.NET e incluye comentarios las secciones de información de configuración que puede ser sin comentada para habilitar adicionales funcionalidad. Visual Studio 2005 tenía plantillas similares al instalar ASP.NET 2.0 AJAX Extensions. Sin embargo, en Visual Studio 2008, las extensiones de AJAX son participar de forma predeterminada (es decir, se hace referencia de forma predeterminada, pero se pueden quitar como referencias).
+1. Novedades de Visual Studio 2008: el archivo Web. config que se incluye en las plantillas de proyecto de sitio web de ASP.NET incluye automáticamente todas las referencias necesarias a las extensiones de ASP.NET AJAX e incluye secciones comentadas de información de configuración que se pueden Sin comentarios para habilitar funcionalidad adicional. Visual Studio 2005 tenía plantillas similares al instalar las extensiones de AJAX de ASP.NET 2,0. Sin embargo, en Visual Studio 2008, las extensiones de AJAX están desactivadas de forma predeterminada (es decir, se les hace referencia de forma predeterminada, pero se pueden quitar como referencias).
 
 [![](understanding-partial-page-updates-with-asp-net-ajax/_static/image8.png)](understanding-partial-page-updates-with-asp-net-ajax/_static/image7.png)
 
-([Haga clic aquí para ver imagen en tamaño completo](understanding-partial-page-updates-with-asp-net-ajax/_static/image9.png))
+([Haga clic para ver la imagen de tamaño completo](understanding-partial-page-updates-with-asp-net-ajax/_static/image9.png))
 
-1. Presione F5 para iniciar el sitio Web. Tenga en cuenta cómo eran necesarios para admitir la representación parcial no hay cambios de código fuente - solo de marcado se ha cambiado.
+1. Presione F5 para iniciar el sitio Web. Tenga en cuenta que no se requirieron cambios en el código fuente para admitir el marcado de solo representación parcial.
 
-Al iniciar el sitio Web, debería ver que la representación parcial está ahora habilitada, porque al hacer clic en el botón existe no estará parpadeo ni se producirá ningún cambio en la posición de desplazamiento de página (en este ejemplo no muestra que). Si tuviera que ver en el origen de la página representado tras hacer clic en el botón, se confirmará que en realidad no se ha producido una devolución de datos: el texto de la etiqueta original sigue siendo parte del marcado de origen y la etiqueta ha cambiado a través de JavaScript.
+Al iniciar el sitio web, debería ver que la representación parcial ahora está habilitada, porque al hacer clic en el botón no habrá ningún parpadeo, ni se producirá ningún cambio en la posición de desplazamiento de la página (en este ejemplo no se muestra eso). Si fuera a la vista del origen representado de la página después de hacer clic en el botón, se confirmará que, de hecho, no se ha producido una devolución: el texto de la etiqueta original sigue siendo parte del marcado de origen y la etiqueta ha cambiado a través de JavaScript.
 
-Visual Studio 2008 no parecen venir con una plantilla predefinida para un sitio web de ASP.NET con AJAX habilitado. Sin embargo, dicha plantilla no estaba disponible en Visual Studio 2005 si se instalaron los Visual Studio 2005 y ASP.NET 2.0 AJAX Extensions. Por lo tanto, configurar un sitio web y a partir de la plantilla sitio de Web habilitado para AJAX probablemente será aún más fáciles, como la plantilla debe incluir un archivo web.config configura totalmente (compatibles con todas las extensiones de AJAX de ASP.NET, incluido el acceso de los servicios Web y la serialización de JSON - JavaScript Object Notation) e incluye un UpdatePanel y ContentTemplate dentro de la página principal de formularios Web Forms de forma predeterminada. Habilitación de la representación parcial con esta página predeterminada es tan sencillo como volver a visitar paso 10 de este tutorial y colocando controles en la página.
+Visual Studio 2008 no parece tener una plantilla predefinida para un sitio web habilitado para ASP.NET AJAX. Sin embargo, esta plantilla estaba disponible en Visual Studio 2005 si se instalaron las extensiones de AJAX de Visual Studio 2005 y ASP.NET 2,0. Por lo tanto, es probable que la configuración de un sitio web y a partir de la plantilla de sitio web habilitada para AJAX sea aún más fácil, ya que la plantilla debe incluir un archivo Web. config totalmente configurado (compatible con todas las extensiones de ASP.NET AJAX, incluido el acceso a servicios web). y la serialización de JSON: notación de objetos JavaScript) e incluye de forma predeterminada un UpdatePanel y ContentTemplate en la Página principal de formularios Web Forms. Habilitar la representación parcial con esta página predeterminada es tan sencillo como volver a visitar el paso 10 de este tutorial y colocar los controles en la página.
 
-## <a name="the-scriptmanager-control"></a>El Control ScriptManager
+## <a name="the-scriptmanager-control"></a>El control ScriptManager
 
-## <a name="scriptmanager-control-reference"></a>Referencia de Control de ScriptManager
+## <a name="scriptmanager-control-reference"></a>Referencia de control ScriptManager
 
-Propiedades de marcado habilitados:
+Propiedades habilitadas para marcado:
 
-| **Nombre de la propiedad** | **Type** | **Descripción** |
+| **Nombre de la propiedad** | **ype** | **Descripción** |
 | --- | --- | --- |
-| AllowCustomErrors-Redirect | Bool | Especifica si se debe usar la sección de errores personalizados del archivo web.config para controlar los errores. |
-| AsyncPostBackError-Message | String | Obtiene o establece el mensaje de error enviado al cliente si se produce un error. |
-| AsyncPostBack-Timeout | Int32 | Obtiene o establece la cantidad predeterminada de una hora en que un cliente debe esperar que finalice la solicitud asincrónica. |
-| EnableScript-Globalization | Bool | Obtiene o establece si se habilita la globalización de la secuencia de comandos. |
-| EnableScript-Localization | Bool | Obtiene o establece si se habilita la localización del script. |
-| ScriptLoadTimeout | Int32 | Determina el número de segundos que se permiten para cargar los scripts en el cliente |
-| ScriptMode | Enum (Auto, Debug, Release, heredar) | Obtiene o establece si se debe representar las versiones de las secuencias de comandos |
-| ScriptPath | String | Obtiene o establece la ruta de acceso a la ubicación de archivos de script que se envía al cliente. |
+| AllowCustomErrors: redireccionamiento | Bool | Especifica si se va a utilizar la sección de errores personalizados del archivo Web. config para controlar los errores. |
+| AsyncPostBackError: mensaje | String | Obtiene o establece el mensaje de error enviado al cliente si se produce un error. |
+| AsyncPostBack: tiempo de espera | Int32 | Obtiene o establece la cantidad de tiempo predeterminada que un cliente debe esperar para que se complete la solicitud asincrónica. |
+| EnableScript-globalización | Bool | Obtiene o establece si la globalización de script está habilitada. |
+| EnableScript-localización | Bool | Obtiene o establece si la localización del script está habilitada. |
+| ScriptLoadTimeout | Int32 | Determina el número de segundos permitidos para cargar scripts en el cliente. |
+| ScriptMode | Enum (auto, Debug, release, inherit) | Obtiene o establece si se van a representar las versiones de lanzamiento de los scripts. |
+| ScriptPath | String | Obtiene o establece la ruta de acceso raíz a la ubicación de los archivos de script que se van a enviar al cliente. |
 
-Propiedades de sólo código:
+Propiedades de solo código:
 
-| **Nombre de la propiedad** | **Type** | **Descripción** |
+| **Nombre de la propiedad** | **ype** | **Descripción** |
 | --- | --- | --- |
-| AuthenticationService | AuthenticationService-Manager | Obtiene información detallada sobre el proxy de servicio de autenticación de ASP.NET que se enviará al cliente. |
-| IsDebuggingEnabled | Bool | Obtiene si scripts y está habilitada la depuración de código. |
-| IsInAsyncPostback | Bool | Obtiene si la página está actualmente en una solicitud de devolución asincrónica. |
-| ProfileService | ProfileService-Manager | Obtiene información detallada sobre el proxy de servicio de generación de perfiles de ASP.NET que se enviará al cliente. |
-| Scripts | Colección&lt;referencia de Script&gt; | Obtiene una colección de referencias de script que se enviará al cliente. |
-| Servicios | Colección&lt;referencia de servicio&gt; | Obtiene una colección de referencias de proxy de servicio Web que se enviará al cliente. |
-| SupportsPartialRendering | Bool | Obtiene si el cliente actual admite la representación parcial. Si esta propiedad devuelve **false**, entonces todas las solicitudes de página, se producirá devoluciones de datos estándares. |
+| AuthenticationService | AuthenticationService-administrador | Obtiene detalles sobre el proxy del servicio de autenticación de ASP.NET que se enviará al cliente. |
+| IsDebuggingEnabled | Bool | Obtiene si está habilitada la depuración de scripts y código. |
+| IsInAsyncPostback | Bool | Obtiene si la página se encuentra actualmente en una solicitud de devolución de datos asincrónica. |
+| ProfileService ( | ProfileService-Manager | Obtiene detalles sobre el proxy del servicio de generación de perfiles de ASP.NET que se enviará al cliente. |
+| Scripts | Script de&lt;de recopilación: referencia&gt; | Obtiene una colección de referencias de script que se enviarán al cliente. |
+| Servicios | Servicio de colección&lt;-referencia&gt; | Obtiene una colección de referencias de proxy de servicio Web que se enviarán al cliente. |
+| SupportsPartialRendering | Bool | Obtiene si el cliente actual admite la representación parcial. Si esta propiedad devuelve **false**, todas las solicitudes de página serán postbacks estándar. |
 
 Métodos de código público:
 
-| **Nombre del método** | **Type** | **Descripción** |
+| **Nombre del método** | **ype** | **Descripción** |
 | --- | --- | --- |
-| SetFocus(string) | Void | Establece el foco del cliente a un control determinado cuando se haya completado la solicitud. |
+| SetFocus (cadena) | Void | Establece el foco del cliente en un control determinado cuando se ha completado la solicitud. |
 
 Descendientes de marcado:
 
-| **Tag** | **Descripción** |
+| **Etiqueta** | **Descripción** |
 | --- | --- |
 | &lt;AuthenticationService&gt; | Proporciona detalles sobre el proxy al servicio de autenticación de ASP.NET. |
-| &lt;ProfileService&gt; | Proporciona detalles sobre el proxy para el servicio de generación de perfiles de ASP.NET. |
-| &lt;Scripts&gt; | Proporciona las referencias de script adicionales. |
-| &lt;asp:ScriptReference&gt; | Denota una referencia de script específicos. |
-| &lt;Servicio&gt; | Proporciona las referencias de servicio Web adicionales que tendrán las clases de proxy generadas. |
-| &lt;asp:ServiceReference&gt; | Denota una referencia de servicio Web específica. |
+| &lt;ProfileService&gt; | Proporciona detalles sobre el proxy para el servicio de generación de perfiles ASP.NET. |
+| &lt;Scripts&gt; | Proporciona referencias de script adicionales. |
+| &lt;ASP: ScriptReference&gt; | Denota una referencia de script específica. |
+| &lt;Servicio&gt; | Proporciona referencias de servicio web adicionales que tendrán las clases de proxy generadas. |
+| &lt;ASP: ServiceReference&gt; | Denota una referencia de servicio Web específica. |
 
-El control ScriptManager es el núcleo esencial para las extensiones de AJAX de ASP.NET. Proporciona acceso a la biblioteca de scripts (incluido el sistema de tipos extenso del script de cliente), admite la representación parcial y proporciona una amplia compatibilidad para servicios adicionales de ASP.NET (por ejemplo, autenticación y generación de perfiles, sino también otros servicios Web). El control ScriptManager también proporciona compatibilidad con la globalización y localización los scripts de cliente.
+El control ScriptManager es el núcleo fundamental para las extensiones de ASP.NET AJAX. Proporciona acceso a la biblioteca de scripts (incluido el amplio sistema de tipos de scripts del lado cliente), admite la representación parcial y proporciona una amplia compatibilidad para servicios adicionales de ASP.NET (como la autenticación y la generación de perfiles, pero también otros servicios web). El control ScriptManager también proporciona compatibilidad con la globalización y la localización para los scripts de cliente.
 
-## <a name="providing-alternative-and-supplemental-scripts"></a>Proporciona secuencias de comandos adicionales y alternativos
+## <a name="providing-alternative-and-supplemental-scripts"></a>Proporcionar scripts alternativos y adicionales
 
-Aunque Microsoft ASP.NET 2.0 AJAX Extensions incluyen el código de secuencia de comandos completa en ambas versiones de depuración y versión ediciones como recursos incrustados en los ensamblados de referencia, los desarrolladores son gratuitos redirigir el ScriptManager a archivos de script personalizado, así como para registrar scripts necesarios adicionales.
+Aunque las extensiones de AJAX Microsoft ASP.NET 2,0 incluyen el código de script completo en las ediciones Debug y Release como recursos insertados en los ensamblados a los que se hace referencia, los desarrolladores pueden redirigir el ScriptManager a archivos de script personalizados, así como registrar scripts adicionales necesarios.
 
-Para reemplazar el enlace predeterminado para las secuencias de comandos incluyen normalmente (por ejemplo, aquellos que son compatibles con el espacio de nombres Sys.WebForms y el sistema de escritura personalizado), puede registrarse para obtener el `ResolveScriptReference` eventos de la clase ScriptManager. Cuando se llama a este método, el controlador de eventos tiene la oportunidad de cambiar la ruta de acceso al archivo de script en cuestión. el director de scripts, a continuación, enviará una copia diferente o personalizada de las secuencias de comandos al cliente.
+Para reemplazar el enlace predeterminado para los scripts incluidos normalmente (como los que admiten el espacio de nombres sys. WebForms y el sistema de escritura personalizado), puede registrarse para el evento `ResolveScriptReference` de la clase ScriptManager. Cuando se llama a este método, el controlador de eventos tiene la oportunidad de cambiar la ruta de acceso al archivo de script en cuestión. a continuación, el administrador de scripts enviará una copia diferente o personalizada de los scripts al cliente.
 
-Además, las referencias de script (representado por la `ScriptReference` clase) se pueden incluir, mediante programación o a través de marcado. Para ello, modifique mediante programación el `ScriptManager.Scripts` colección, o incluir `<asp:ScriptReference>` etiquetas en la `<Scripts>` etiqueta, que es un elemento secundario de primer nivel del control ScriptManager.
+Además, las referencias de script (representadas por la clase `ScriptReference`) se pueden incluir mediante programación o mediante el marcado. Para ello, puede modificar mediante programación la `ScriptManager.Scripts` colección o incluir etiquetas de `<asp:ScriptReference>` bajo la etiqueta `<Scripts>`, que es un elemento secundario de primer nivel del control ScriptManager.
 
-## <a name="custom-error-handling-for-updatepanels"></a>Control UpdatePanel de errores personalizado
+## <a name="custom-error-handling-for-updatepanels"></a>Control de errores personalizado para UpdatePanel
 
-Aunque las actualizaciones se controlan mediante desencadenadores especificados por controles UpdatePanel, la compatibilidad con control de errores y mensajes de error personalizados se controla mediante la instancia del control de ScriptManager de la página. Esto se hace mediante la exposición de un evento, `AsyncPostBackError`, la página que puede, a continuación, proporcionar lógica personalizada de control de excepciones.
+Aunque las actualizaciones se controlan mediante desencadenadores especificados por controles UpdatePanel, la compatibilidad con el control de errores y los mensajes de error personalizados se controla mediante la instancia del control ScriptManager de una página. Para ello, se expone un evento, `AsyncPostBackError`, a la página que puede proporcionar una lógica de control de excepciones personalizada.
 
-Al consumir el evento AsyncPostBackError, puede especificar el `AsyncPostBackErrorMessage` propiedad, que, a continuación, hace que un cuadro de alerta que se genera tras la finalización de la devolución de llamada.
+Al consumir el evento AsyncPostBackError, puede especificar la propiedad `AsyncPostBackErrorMessage`, que hace que se genere un cuadro de alerta tras la finalización de la devolución de llamada.
 
-Personalización del lado cliente también es posible en lugar de usar el cuadro de alerta de forma predeterminada; Por ejemplo, es posible que desea mostrar una personalizada `<div>` elemento en lugar de con el cuadro de diálogo modal del explorador predeterminado. En este caso, puede controlar el error en el script de cliente:
+También es posible la personalización del cliente en lugar de utilizar el cuadro de alerta predeterminado. por ejemplo, puede que desee mostrar un elemento de `<div>` personalizado en lugar del cuadro de diálogo modal del explorador predeterminado. En este caso, puede controlar el error en el script de cliente:
 
-**Listado 5: Script de cliente para mostrar los errores personalizados**
+**Lista 5: script del lado cliente para mostrar los errores personalizados**
 
 [!code-html[Main](understanding-partial-page-updates-with-asp-net-ajax/samples/sample4.html)]
 
-Es bastante simple, el script anterior registra una devolución de llamada con el tiempo de ejecución de AJAX del lado cliente para cuando se haya completado la solicitud asincrónica. A continuación, se comprueba si se ha notificado un error y si es así, procesa los detalles del mismo, por último, que indica al tiempo de ejecución que se ha controlado el error en el script personalizado.
+Simplemente, el script anterior registra una devolución de llamada con el tiempo de ejecución de AJAX del cliente para cuando se ha completado la solicitud asincrónica. A continuación, comprueba si se ha producido un error y, en ese caso, procesa los detalles del mismo y, por último, indica al tiempo de ejecución que el error se ha controlado en el script personalizado.
 
-## <a name="globalization-and-localization-support"></a>La globalización y la compatibilidad de localización
+## <a name="globalization-and-localization-support"></a>Compatibilidad con la globalización y la localización
 
-El control ScriptManager ofrece una amplia compatibilidad para la localización de cadenas de script y componentes de la interfaz de usuario; Sin embargo, ese tema está fuera del ámbito de este artículo. Para obtener más información, consulte las notas del producto, la compatibilidad de globalización en ASP.NET AJAX Extensions.
+El control ScriptManager proporciona una amplia compatibilidad para la localización de cadenas de scripts y componentes de interfaz de usuario. sin embargo, ese tema está fuera del ámbito de esta nota del producto. Para obtener más información, vea las notas del producto sobre la compatibilidad de globalización en extensiones de AJAX de ASP.NET.
 
-## <a name="the-updatepanel-control"></a>El Control UpdatePanel
+## <a name="the-updatepanel-control"></a>Control UpdatePanel
 
-## <a name="updatepanel-control-reference"></a>Referencia de Control UpdatePanel
+## <a name="updatepanel-control-reference"></a>Referencia de control UpdatePanel
 
-Propiedades de marcado habilitados:
+Propiedades habilitadas para marcado:
 
-| **Nombre de la propiedad** | **Type** | **Descripción** |
+| **Nombre de la propiedad** | **ype** | **Descripción** |
 | --- | --- | --- |
-| ChildrenAsTriggers | bool | Especifica si los controles secundarios invocan automáticamente la actualización en el postback. |
-| RenderMode | enum (bloque, en línea) | Especifica que la forma en que el contenido se presentarán visualmente. |
-| UpdateMode | enum (siempre, condicional) | Especifica si el control UpdatePanel se actualiza siempre durante una presentación parcial o si sólo se actualiza cuando se alcanza un desencadenador. |
+| ChildrenAsTriggers | bool | Especifica si los controles secundarios invocan automáticamente la actualización en el PostBack. |
+| Representación | enum (bloque, alineado) | Especifica la manera en que se presentará visualmente el contenido. |
+| UpdateMode | enum (siempre, condicional) | Especifica si UpdatePanel siempre se actualiza durante una representación parcial o si solo se actualiza cuando se alcanza un desencadenador. |
 
-Propiedades de sólo código:
+Propiedades de solo código:
 
-| **Nombre de la propiedad** | **Type** | **Descripción** |
+| **Nombre de la propiedad** | **ype** | **Descripción** |
 | --- | --- | --- |
-| IsInPartialRendering | bool | Obtiene si el control UpdatePanel es compatible con la representación parcial de la solicitud actual. |
+| IsInPartialRendering | bool | Obtiene si UpdatePanel admite la representación parcial de la solicitud actual. |
 | ContentTemplate | ITemplate | Obtiene la plantilla de marcado para la solicitud de actualización. |
 | ContentTemplateContainer | Control | Obtiene la plantilla de programación para la solicitud de actualización. |
-| Desencadenadores | UpdatePanel - TriggerCollection | Obtiene la lista de los desencadenadores asociados con el control UpdatePanel actual. |
+| Desencadenadores | UpdatePanel-TriggerCollection | Obtiene la lista de desencadenadores asociados al objeto UpdatePanel actual. |
 
 Métodos de código público:
 
-| **Nombre del método** | **Type** | **Descripción** |
+| **Nombre del método** | **ype** | **Descripción** |
 | --- | --- | --- |
-| Update() | Void | Actualiza un UpdatePanel especificado mediante programación. Permite que una solicitud de servidor desencadenar una representación parcial de un UpdatePanel en caso contrario,-no desencadenado. |
+| Update () | Void | Actualiza el UpdatePanel especificado mediante programación. Permite que una solicitud de servidor desencadene una representación parcial de un UpdatePanel sin desencadenar. |
 
 Descendientes de marcado:
 
-| **Tag** | **Descripción** |
+| **Etiqueta** | **Descripción** |
 | --- | --- |
-| &lt;ContentTemplate&gt; | Especifica el marcado que se usará para representar el resultado de la representación parcial. Elemento secundario de &lt;asp: UpdatePanel&gt;. |
-| &lt;Desencadenadores&gt; | Especifica una colección de *n* controles asociados con este UpdatePanel de la actualización. Elemento secundario de &lt;asp: UpdatePanel&gt;. |
-| &lt;asp:AsyncPostBackTrigger&gt; | Especifica un desencadenador que invoca una representación de página parcial para el control UpdatePanel determinado. Esto puede o no puede ser un control como un descendiente de UpdatePanel en cuestión. Granulares para el nombre del evento. Elemento secundario de &lt;desencadenadores&gt;. |
-| &lt;asp:PostBackTrigger&gt; | Especifica un control que hace que toda la página Actualizar. Esto puede o no puede ser un control como un descendiente de UpdatePanel en cuestión. Granulares para el objeto. Elemento secundario de &lt;desencadenadores&gt;. |
+| &lt;ContentTemplate&gt; | Especifica el marcado que se va a utilizar para representar el resultado de la representación parcial. Elemento secundario de &lt;ASP:&gt;UpdatePanel. |
+| &lt;Desencadenadores&gt; | Especifica una colección de *n* controles asociados con la actualización de este UpdatePanel. Elemento secundario de &lt;ASP:&gt;UpdatePanel. |
+| &lt;ASP: AsyncPostBackTrigger&gt; | Especifica un desencadenador que invoca una representación de página parcial para el UpdatePanel determinado. Puede ser o no un control como descendiente del UpdatePanel en cuestión. Granular en el nombre del evento. Secundario de &lt;desencadenadores&gt;. |
+| &lt;ASP: PostBackTrigger&gt; | Especifica un control que hace que se actualice toda la página. Puede ser o no un control como descendiente del UpdatePanel en cuestión. Granular en el objeto. Secundario de &lt;desencadenadores&gt;. |
 
-El `UpdatePanel` es el control que delimita el contenido del servidor que se formen parte de la funcionalidad de representación parcial de las extensiones de AJAX. No hay ningún límite al número de controles UpdatePanel que puede estar en una página y se pueden anidar. Cada UpdatePanel está aislado, por lo que cada uno puede trabajar de forma independiente (puede tener dos UpdatePanels ejecutando al mismo tiempo, representar diferentes partes de la página, independientemente de la devolución de datos de la página).
+El control `UpdatePanel` es el control que delimita el contenido del lado servidor que participará en la funcionalidad de representación parcial de las extensiones AJAX. No hay ningún límite en cuanto al número de controles UpdatePanel que pueden estar en una página y se pueden anidar. Cada UpdatePanel está aislado, por lo que cada uno puede funcionar de forma independiente (puede tener dos UpdatePanel en ejecución al mismo tiempo, lo que representa diferentes partes de la página, independientemente del postback de la página).
 
-UpdatePanel controlan principalmente ofertas con desencadenadores de control: de forma predeterminada, cualquier control dentro de un UpdatePanel `ContentTemplate` que crea una devolución de datos se registra como un desencadenador para el control UpdatePanel. Esto significa que UpdatePanel puede trabajar con los controles enlazados a datos de forma predeterminada (como GridView), con controles de usuario, y se pueden programar en script.
+El control UpdatePanel se centra principalmente en los desencadenadores de control; de forma predeterminada, cualquier control contenido en el `ContentTemplate` de UpdatePanel que crea un postback se registra como desencadenador de UpdatePanel. Esto significa que UpdatePanel puede trabajar con los controles enlazados a datos predeterminados (como GridView), con controles de usuario, y que se pueden programar en un script.
 
-De forma predeterminada, cuando se desencadena una representación de página parcial, se actualizarán todos los controles UpdatePanel en la página, si los controles UpdatePanel definen desencadenadores para dicha acción. Por ejemplo, si un UpdatePanel define un control de botón y se hace clic en ese control de botón, se actualizarán todos los controles UpdatePanel en la página de forma predeterminada. Esto es porque, de forma predeterminada, el `UpdateMode` propiedad de UpdatePanel se establece en `Always`. Como alternativa, puede establecer la propiedad UpdateMode en `Conditional`, lo que significa que el control UpdatePanel sólo se actualizará si se alcanza un desencadenador específico.
+De forma predeterminada, cuando se desencadena una representación de página parcial, se actualizan todos los controles UpdatePanel de la página, tanto si los controles UpdatePanel definen los desencadenadores para dicha acción como si no. Por ejemplo, si un UpdatePanel define un control de botón y se hace clic en ese control de botón, todos los controles UpdatePanel de esa página se actualizarán de forma predeterminada. Esto se debe a que, de forma predeterminada, la propiedad `UpdateMode` de UpdatePanel está establecida en `Always`. Como alternativa, puede establecer la propiedad UpdateMode en `Conditional`, lo que significa que el UpdatePanel solo se actualizará si se alcanza un desencadenador específico.
 
-## <a name="custom-control-notes"></a>Notas de Control personalizado
+## <a name="custom-control-notes"></a>Notas de control personalizadas
 
-Un UpdatePanel se puede agregar a cualquier control de usuario o un control personalizado; Sin embargo, la página en el que se incluyen estos controles también debe incluir un control ScriptManager con la propiedad EnablePartialRendering establecida en **true**.
+Se puede Agregar un UpdatePanel a cualquier control de usuario o control personalizado; sin embargo, la página en la que se incluyen estos controles también debe incluir un control ScriptManager con la propiedad EnablePartialRendering establecida en **true**.
 
-Una manera en que podría tener esto en cuenta al usar controles Web personalizados consiste en invalidar protegido `CreateChildControls()` método de la `CompositeControl` clase. Al hacerlo, puede insertar un UpdatePanel entre los elementos secundarios del control y el mundo exterior, si determina que la página admite la representación parcial; en caso contrario, simplemente puede agregar los controles secundarios en un contenedor `Control` instancia.
+Una manera en la que se puede tener en cuenta cuando se usan controles Web personalizados es invalidar el método de `CreateChildControls()` protegido de la clase `CompositeControl`. Al hacerlo, puede insertar un UpdatePanel entre los elementos secundarios del control y el mundo exterior si determina que la página admite la representación parcial. de lo contrario, puede simplemente disponer los controles secundarios en un contenedor `Control` instancia.
 
-## <a name="updatepanel-considerations"></a>Consideraciones de UpdatePanel
+## <a name="updatepanel-considerations"></a>Consideraciones sobre UpdatePanel
 
-UpdatePanel funciona como un elemento de una caja negra, ajuste las devoluciones de ASP.NET dentro del contexto de un JavaScript XMLHttpRequest. Sin embargo, existen consideraciones de rendimiento significativas a tener en cuenta, tanto en términos de comportamiento y la velocidad. Para entender cómo funciona el control UpdatePanel, por lo que pueda decidir mejor cuando su uso es adecuado, debe examinar el intercambio de AJAX. El ejemplo siguiente usa un sitio existente y, Mozilla Firefox con la extensión Firebug (Firebug captura datos XMLHttpRequest).
+El UpdatePanel funciona como algo de un cuadro negro, ajustando los postASP.NET en el contexto de un XMLHttpRequest de JavaScript. Sin embargo, hay importantes consideraciones de rendimiento que deben tenerse en cuenta, tanto en términos de comportamiento como de velocidad. Para entender cómo funciona el UpdatePanel, de modo que pueda decidir mejor Cuándo es adecuado su uso, debe examinar el intercambio de AJAX. En el ejemplo siguiente se usa un sitio existente y, Mozilla Firefox con la extensión Firebug (Firebug captura datos de XMLHttpRequest).
 
-Considere la posibilidad de un formulario que, entre otras cosas, tiene un cuadro de texto del código postal que se supone que debe para rellenar un campo de ciudad y estado en un formulario o control. Este formulario finalmente recopila información de suscripción, incluido el nombre, dirección e información de contacto de un usuario. Hay muchas consideraciones de diseño para tener en cuenta, según los requisitos de un proyecto específico.
+Considere un formulario que, entre otras cosas, tiene un cuadro de texto código postal que se supone rellenar un campo de ciudad y estado en un formulario o control. En última instancia, este formulario recopila información de pertenencia, incluido el nombre, la dirección y la información de contacto de un usuario. Hay muchas consideraciones de diseño que se deben tener en cuenta, en función de los requisitos de un proyecto específico.
 
 [![](understanding-partial-page-updates-with-asp-net-ajax/_static/image11.png)](understanding-partial-page-updates-with-asp-net-ajax/_static/image10.png)
 
-([Haga clic aquí para ver imagen en tamaño completo](understanding-partial-page-updates-with-asp-net-ajax/_static/image12.png))
+([Haga clic para ver la imagen de tamaño completo](understanding-partial-page-updates-with-asp-net-ajax/_static/image12.png))
 
 [![](understanding-partial-page-updates-with-asp-net-ajax/_static/image14.png)](understanding-partial-page-updates-with-asp-net-ajax/_static/image13.png)
 
-([Haga clic aquí para ver imagen en tamaño completo](understanding-partial-page-updates-with-asp-net-ajax/_static/image15.png))
+([Haga clic para ver la imagen de tamaño completo](understanding-partial-page-updates-with-asp-net-ajax/_static/image15.png))
 
-En la iteración original de esta aplicación, se creó un control que incorpora la totalidad de los datos de registro de usuario, incluidos el código postal, ciudad y estado. Todo el control se ajusta dentro de un UpdatePanel y coloca en un formulario Web. Cuando se escribe el código postal del usuario, el control UpdatePanel detecta el evento (el evento TextChanged correspondiente en el back-end, mediante la especificación de los desencadenadores o mediante el uso de la propiedad ChildrenAsTriggers establecida en true). AJAX registra todos los campos dentro del UpdatePanel, según lo capturado por FireBug (consulte el diagrama de la derecha).
+En la iteración original de esta aplicación, se compiló un control que incorporaba la totalidad de los datos de registro del usuario, incluido el código postal, la ciudad y el estado. Se ajustó todo el control dentro de un UpdatePanel y se colocó en un formulario Web. Cuando el usuario escribe el código postal, el UpdatePanel detecta el evento (el evento de TextChanged correspondiente en el back-end, bien especificando desencadenadores o usando la propiedad ChildrenAsTriggers establecida en true). AJAX envía todos los campos en el UpdatePanel, tal y como se captura en FireBug (vea el diagrama a la derecha).
 
-Como indica la captura de pantalla, los valores de todos los controles UpdatePanel se entregan (en este caso, están vacías), así como el campo de ViewState. Todo este trabajo en 9kb de datos se envía, cuando en realidad sólo cinco bytes de datos eran necesarios para realizar esta solicitud particular. La respuesta es incluso más recargada: en total, 57kb se envía al cliente, simplemente para actualizar un campo de texto y un campo de lista desplegable.
+Como indica la captura de pantalla, se entregan los valores de cada control dentro de UpdatePanel (en este caso, todos están vacíos), así como el campo ViewState. Se envían todos los datos que se han indicado, a través de 9Kb, cuando en realidad solo se necesitan cinco bytes de datos para realizar esta solicitud concreta. La respuesta es aún más redimensionada: en total, 57kb se envía al cliente, simplemente para actualizar un campo de texto y un campo desplegable.
 
-También puede ser de interés para ver cómo se actualiza la presentación AJAX de ASP.NET. La parte de la respuesta de solicitud de actualización de UpdatePanel se muestra en la pantalla de la consola Firebug a la izquierda; es una formula especialmente delimitada por barras verticales cadena que está organizada por el script de cliente y, a continuación, vuelve a ensamblar en la página. En concreto, ASP.NET AJAX establece el *innerHTML* propiedad del elemento HTML en el cliente que representa el UpdatePanel. Como el explorador vuelve a genera el DOM, hay un ligero retraso, según la cantidad de información que debe procesarse.
+También puede interesarle ver cómo ASP.NET AJAX actualiza la presentación. La parte de respuesta de la solicitud de actualización de UpdatePanel se muestra en la pantalla de la consola de Firebug a la izquierda. es una cadena delimitada por canalización especialmente formulada que se divide por el script de cliente y, a continuación, se reensambla en la página. En concreto, ASP.NET AJAX establece la propiedad *innerHTML* del elemento HTML en el cliente que representa el UpdatePanel. Cuando el explorador vuelve a generar el DOM, se produce un pequeño retraso, en función de la cantidad de información que es necesario procesar.
 
-La regeneración del DOM desencadena una serie de problemas adicionales:
+La regeneración del DOM desencadena varios problemas adicionales:
 
 [![](understanding-partial-page-updates-with-asp-net-ajax/_static/image17.png)](understanding-partial-page-updates-with-asp-net-ajax/_static/image16.png)
 
-([Haga clic aquí para ver imagen en tamaño completo](understanding-partial-page-updates-with-asp-net-ajax/_static/image18.png))
+([Haga clic para ver la imagen de tamaño completo](understanding-partial-page-updates-with-asp-net-ajax/_static/image18.png))
 
-- Si el elemento HTML con está dentro del UpdatePanel, perderá el foco. Por lo tanto, para los usuarios que se presiona la tecla Tab para salir del cuadro de texto del código postal, su siguiente destino habría sido el cuadro de texto de la ciudad. Sin embargo, una vez que UpdatePanel actualiza la presentación, el formulario ya no habría tenía el foco y presiona Tab habría iniciado resaltar los elementos del enfoque (por ejemplo, vínculos).
-- Si cualquier tipo de script de cliente personalizado está en uso que tiene acceso a elementos de DOM, las referencias se conservan por funciones puede quedar inactivo después de una devolución parcial.
+- Si el elemento HTML enfocado está dentro de UpdatePanel, perderá el foco. Por lo tanto, para los usuarios que presionaron la tecla TAB para salir del cuadro de texto código postal, su siguiente destino habría sido el cuadro de texto City. Sin embargo, una vez que el UpdatePanel ha actualizado la pantalla, el formulario ya no habría tenido el foco y presionar la tecla TAB habría empezado a resaltar los elementos de foco (como los vínculos).
+- Si se usa cualquier tipo de script de cliente personalizado que tiene acceso a los elementos DOM, las referencias que las funciones conservan pueden quedar inactivas después de un postback parcial.
 
-UpdatePanel no pretenden ser soluciones catch-all. En su lugar, proporcionan una solución rápida para determinadas situaciones, incluidas la creación de prototipos, pequeño controlar las actualizaciones y proporcionar una interfaz conocida a los desarrolladores de ASP.NET que podrían estar familiarizado con el modelo de objetos de .NET pero menos, de manera con DOM. Hay una serie de alternativas que pueden provocar un rendimiento mejor, según el escenario de aplicación:
+Los UpdatePanel no están diseñados para ser soluciones de detección. En su lugar, proporcionan una solución rápida para ciertas situaciones, como la creación de prototipos, las actualizaciones de control pequeño, y proporcionan una interfaz conocida para los desarrolladores de ASP.NET que pueden estar familiarizados con el modelo de objetos de .NET pero menos, con el DOM. Hay una serie de alternativas que pueden dar lugar a un mejor rendimiento, dependiendo del escenario de la aplicación:
 
-- Considere la posibilidad de usar los PageMethods y JSON (JavaScript Object Notation) permite al desarrollador invocar métodos estáticos en una página como si se invocó una llamada de servicio web. Dado que los métodos son estáticos, no es necesario; no hay ningún estado el llamador de la secuencia de comandos proporciona los parámetros y el resultado se devuelve de forma asincrónica.
-- Considere el uso de un servicio Web y JSON si un control único debe usarse en varios lugares a través de una aplicación. Este nuevo requiere muy poco trabajo especial y funciona de forma asincrónica.
+- Considere la posibilidad de usar PageMethods y JSON (notación de objetos JavaScript) permite al desarrollador invocar métodos estáticos en una página como si se invocara una llamada de servicio Web. Dado que los métodos son estáticos, no es necesario ningún Estado. el autor de la llamada de script proporciona los parámetros y el resultado se devuelve de forma asincrónica.
+- Considere la posibilidad de usar un servicio Web y JSON si se debe usar un único control en varios lugares de una aplicación. De nuevo, esto requiere muy poco trabajo especial y funciona de forma asincrónica.
 
-Incorporación de funcionalidad a través de servicios Web o los métodos de página tiene inconvenientes también. En primer lugar y ante todo, los desarrolladores de ASP.NET generalmente se tienden a crear componentes pequeños de funcionalidad en controles de usuario (archivos .ascx). Los métodos de página no se puede hospedar en estos archivos; deben hospedarse dentro de la clase de página .aspx real. De forma similar, los servicios Web, se deben hospedar dentro de la clase asmx. Dependiendo de la aplicación, esta arquitectura puede infringir el principio de responsabilidad única, en que la funcionalidad para un único componente se extiende ahora por dos o más componentes físicos que pueden tener valores equivalentes cohesivas poca o ninguna.
+La incorporación de funcionalidad a través de los servicios web o los métodos de página también tiene desventajas. En primer lugar, los desarrolladores de ASP.NET suelen crear componentes pequeños de funcionalidad en los controles de usuario (archivos. ascx). Los métodos de página no se pueden hospedar en estos archivos; deben estar hospedados en la clase de página real. aspx. Los servicios Web, de forma similar, deben estar hospedados en la clase. asmx. En función de la aplicación, esta arquitectura puede infringir el principio de responsabilidad única, ya que la funcionalidad de un componente único ahora está distribuida en dos o más componentes físicos que pueden tener pocos o ningún equivalente cohesivo.
 
-Por último, si una aplicación requiere que se usan los UpdatePanels, deben ayudar las directrices siguientes con la solución de problemas y mantenimiento.
+Por último, si una aplicación requiere que se usen UpdatePanel, las siguientes directrices deberían ayudarle con la solución de problemas y el mantenimiento.
 
-- **Anidar UpdatePanels poco como sea posibles, no solo dentro de unidades, sino también a través de unidades de código.** Por ejemplo, tener un UpdatePanel en una página que contiene un Control, mientras que ese Control también contiene un UpdatePanel, que contiene otro Control que contiene un control UpdatePanel, es anidamiento entre unidades. Esto ayuda a aclarar qué elementos debe estar actualizando y evita que actualizaciones inesperadas al elemento secundario UpdatePanels.
-- **Mantener la *ChildrenAsTriggers* propiedad establecida en false y establece explícitamente la activación de eventos.** Uso de la `<Triggers>` colección es una manera mucho más clara para controlar los eventos y puede evitar un comportamiento inesperado, ayudando a las tareas de mantenimiento y forzar que un desarrollador a participar en un evento.
-- **Utilice la unidad más pequeña posible para lograr la funcionalidad.** Como se indicó en la descripción del servicio código postal, ajuste que solo el mínimo reduce el tiempo para el servidor de procesamiento total y la superficie del intercambio cliente / servidor, mejora del rendimiento.
+- **Anide UpdatePanel lo máximo posible, no solo dentro de las unidades, sino también entre unidades de código.** Por ejemplo, tener un UpdatePanel en una página que contiene un control, mientras que ese control también contiene un UpdatePanel, que contiene otro control que contiene un UpdatePanel, es el anidamiento de unidades cruzadas. Esto ayuda a mantener claros los elementos que deben actualizarse y evita las actualizaciones inesperadas en los UpdatePanel secundarios.
+- **Mantenga la propiedad *ChildrenAsTriggers* establecida en false y establezca explícitamente los eventos desencadenadores.** El uso de la colección de `<Triggers>` es una manera mucho más clara de controlar los eventos y puede impedir un comportamiento inesperado, ayudando con las tareas de mantenimiento y forzando a un desarrollador a participar en un evento.
+- **Use la unidad más pequeña posible para lograr la funcionalidad.** Como se indicó en la explicación del servicio de código postal, el ajuste exclusivo del mínimo de tiempo para el servidor, el procesamiento total y la superficie del intercambio cliente-servidor, lo que mejora el rendimiento.
 
-## <a name="the-updateprogress-control"></a>El Control UpdateProgress
+## <a name="the-updateprogress-control"></a>El control UpdateProgress
 
-## <a name="updateprogress-control-reference"></a>Referencia de Control UpdateProgress
+## <a name="updateprogress-control-reference"></a>Referencia del control UpdateProgress
 
-Propiedades de marcado habilitados:
+Propiedades habilitadas para marcado:
 
-| **Nombre de la propiedad** | **Type** | **Descripción** |
+| **Nombre de la propiedad** | **ype** | **Descripción** |
 | --- | --- | --- |
-| AssociatedUpdate-PanelID | String | Especifica el identificador de UpdatePanel que deben notificar este UpdateProgress en. |
-| DisplayAfter | Valor int. | Especifica el tiempo de espera en milisegundos antes de este control se muestra después de que comience la solicitud asincrónica. |
-| DynamicLayout | bool | Especifica si el progreso se representa de forma dinámica. |
+| AssociatedUpdate-PanelID | String | Especifica el identificador del UpdatePanel en el que debería informar este UpdateProgress. |
+| DisplayAfter | Valor int. | Especifica el tiempo de espera en milisegundos antes de que se muestre este control después de que comience la solicitud asincrónica. |
+| DynamicLayout | bool | Especifica si el progreso se representa dinámicamente. |
 
 Descendientes de marcado:
 
-| **Tag** | **Descripción** |
+| **Etiqueta** | **Descripción** |
 | --- | --- |
-| &lt;ProgressTemplate&gt; | Contiene la plantilla de control establecido para el contenido que se mostrará con este control. |
+| &lt;ProgressTemplate&gt; | Contiene el conjunto de plantillas de control para el contenido que se mostrará con este control. |
 
-El control UpdateProgress ofrece una medida de comentarios para mantener el interés de los usuarios mientras se realiza el trabajo necesario para el transporte en el servidor. Esto puede ayudar a los usuarios saber que se esté haciendo algo, aunque puede que no sea evidente, sobre todo porque la mayoría de los usuarios se usa para la página actualización y ver la barra de estado resaltar.
+El control UpdateProgress proporciona una medida de los comentarios para mantener el interés de los usuarios mientras realiza el trabajo necesario para transportarlo al servidor. Esto puede ayudar a los usuarios a saber que está haciendo algo aunque es posible que no sea aparente, en especial porque la mayoría de los usuarios se utilizan para actualizar la página y ver el resaltado de la barra de estado.
 
-Como una nota, controles UpdateProgress pueden aparecer en cualquier lugar en una jerarquía de página. Sin embargo, en los casos en que se inicia una devolución parcial desde un elemento secundario de UpdatePanel (donde un UpdatePanel se anida dentro de otro UpdatePanel), las devoluciones de datos que el elemento secundario UpdatePanel provocará que se muestren plantillas de UpdateProgress para el elemento secundario de desencadenador UpdatePanel, así como el elemento primario de UpdatePanel. Sin embargo, si el desencadenador es un elemento secundario directo del elemento primario UpdatePanel, a continuación, se mostrará solo las plantillas de UpdateProgress asociadas al elemento primario.
+Como nota, los controles UpdateProgress pueden aparecer en cualquier parte de una jerarquía de páginas. Sin embargo, en los casos en que se inicia un postback parcial desde un UpdatePanel secundario (donde UpdatePanel está anidado dentro de otro UpdatePanel), los postbacks que desencadenan el UpdatePanel secundario provocarán que se muestren las plantillas UpdateProgress para el elemento secundario. UpdatePanel y el UpdatePanel primario. Sin embargo, si el desencadenador es un elemento secundario directo del UpdatePanel primario, solo se mostrarán las plantillas UpdateProgress asociadas con el elemento primario.
 
 ## <a name="summary"></a>Resumen
 
-Las extensiones de Microsoft ASP.NET AJAX son sofisticados productos diseñados para ayudar a mejorar la accesibilidad de contenido web y para proporcionar una experiencia del usuario a sus aplicaciones web. Como parte de las extensiones de AJAX de ASP.NET, los controles de representación parcial de la página, incluidos los controles de ScriptManager, UpdatePanel y UpdateProgress son algunos de los componentes del Kit de herramientas más visibles.
+Las extensiones de AJAX Microsoft ASP.NET son productos sofisticados diseñados para ayudar a que el contenido web sea más accesible y ofrecer una experiencia de usuario más enriquecida a las aplicaciones Web. Como parte de las extensiones de AJAX de ASP.NET, los controles de representación de página parcial, incluidos los controles ScriptManager, UpdatePanel y UpdateProgress, son algunos de los componentes más visibles del kit de herramientas.
 
-El componente de ScriptManager integra el aprovisionamiento de JavaScript de cliente para las extensiones, así como permite a los distintos componentes de servidor y cliente para que funcione con inversión mínima en desarrollo.
+El componente ScriptManager integra el aprovisionamiento de JavaScript de cliente para las extensiones, y permite que los distintos componentes del lado servidor y cliente funcionen conjuntamente con una inversión de desarrollo mínima.
 
-El control UpdatePanel es el cuadro de magic aparente: marcado dentro del UpdatePanel puede tener código subyacente del lado servidor y no desencadenan una actualización de la página. Controles UpdatePanel se pueden anidar y pueden depender de los controles de otros UpdatePanel. De forma predeterminada, UpdatePanels controlar los postbacks invocados por sus controles descendientes, aunque esta funcionalidad se puede llevar a cabo una optimizar, ya sea de forma declarativa o mediante programación.
+El control UpdatePanel es el marcado de cuadro mágico aparente en el UpdatePanel puede tener el código subyacente del lado servidor y no desencadenar una actualización de página. Los controles UpdatePanel se pueden anidar y pueden depender de controles de otros UpdatePanel. De forma predeterminada, UpdatePanel controla cualquier postback invocado por sus controles descendientes, aunque esta funcionalidad se puede optimizar con precisión, ya sea mediante declaración o mediante programación.
 
-Cuando se usa el control UpdatePanel, los desarrolladores deben tener en cuenta el impacto de rendimiento que potencialmente podría surgir. Las alternativas posibles incluyen servicios web y los métodos de página, aunque se debe considerar el diseño de la aplicación.
+Cuando se usa el control UpdatePanel, los desarrolladores deben tener en cuenta el impacto en el rendimiento que podría surgir. Entre las alternativas posibles se incluyen los servicios web y los métodos de página, aunque se debe tener en cuenta el diseño de la aplicación.
 
-El control permite al usuario saber que los que no se omite, y que está ocurriendo la solicitud en segundo plano mientras la página en caso contrario, no es de UpdateProgress hacer nada para responder a la entrada del usuario. También incluye la posibilidad de anular los resultados de representación parcial.
+El control UpdateProgress permite al usuario saber que no se pasa por alto y que la solicitud en segundo plano está en curso mientras que la página no está haciendo nada para responder a la entrada del usuario. También incluye la capacidad de anular los resultados de la representación parcial.
 
-Juntas, estas herramientas ayudan a crear una experiencia de usuario enriquecida y perfecta realizando trabajo servidor menos evidente para el usuario e interrumpir el flujo de trabajo menos.
+Juntas, estas herramientas ayudan a crear una experiencia de usuario enriquecida y sin problemas al hacer que el servidor funcione menos aparente para el usuario y interrumpa el flujo de trabajo menos.
 
-## <a name="bio"></a>Bio
+## <a name="bio"></a>Disponibilidad
 
-Scott Cate ha estado trabajando con tecnologías Web de Microsoft desde 1997 y es el presidente de myKB.com ([www.myKB.com](http://www.myKB.com)) donde se especializa en la escritura de ASP.NET en función de las aplicaciones que se centra en soluciones de Software de Base de conocimiento. Se puede establecer contacto con Scott por correo electrónico en [ scott.cate@myKB.com ](mailto:scott.cate@myKB.com) o su blog en [ScottCate.com](http://ScottCate.com)
+Scott Cate ha estado trabajando con las tecnologías Web de Microsoft desde 1997 y es el Presidente de myKB.com ([www.myKB.com](http://www.myKB.com)), donde se especializa en escribir aplicaciones basadas en ASP.net centradas en las soluciones de software de la base de conocimiento. Puede ponerse en contacto con Scott por correo electrónico en [scott.cate@myKB.com](mailto:scott.cate@myKB.com) o su blog en [ScottCate.com](http://ScottCate.com)
 
 > [!div class="step-by-step"]
 > [Siguiente](understanding-asp-net-ajax-updatepanel-triggers.md)

@@ -2,512 +2,512 @@
 uid: web-forms/overview/getting-started/getting-started-with-aspnet-45-web-forms/checkout-and-payment-with-paypal
 title: Retirada y pago con PayPal | Microsoft Docs
 author: Erikre
-description: Esta serie de tutoriales aprenderá los conceptos básicos de la creación de una aplicación de formularios Web Forms ASP.NET con ASP.NET 4.5 y Microsoft Visual Studio Express 2013 para se...
+description: Esta serie de tutoriales le enseñará los aspectos básicos de la creación de una aplicación de formularios Web Forms ASP.NET con ASP.NET 4,5 y Microsoft Visual Studio Express 2013 para nosotros...
 ms.author: riande
 ms.date: 09/08/2014
 ms.assetid: 664ec95e-b0c9-4f43-a39f-798d0f2a7e08
 msc.legacyurl: /web-forms/overview/getting-started/getting-started-with-aspnet-45-web-forms/checkout-and-payment-with-paypal
 msc.type: authoredcontent
-ms.openlocfilehash: 0fc4e85a86289667566a76537dd1573f4d9b2bf0
-ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
+ms.openlocfilehash: 62d00a86c6c5845fb894896df65002c7086d039f
+ms.sourcegitcommit: 22fbd8863672c4ad6693b8388ad5c8e753fb41a2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/06/2019
-ms.locfileid: "65131727"
+ms.lasthandoff: 11/28/2019
+ms.locfileid: "74615146"
 ---
 # <a name="checkout-and-payment-with-paypal"></a>Finalización de la compra y pago con PayPal
 
 por [Erik Reitan](https://github.com/Erikre)
 
-[Descargar el proyecto de ejemplo de Wingtip Toys (C#)](http://go.microsoft.com/fwlink/?LinkID=389434&clcid=0x409) o [descargar eBook (PDF)](http://download.microsoft.com/download/0/F/B/0FBFAA46-2BFD-478F-8E56-7BF3C672DF9D/Getting%20Started%20with%20ASP.NET%204.5%20Web%20Forms%20and%20Visual%20Studio%202013.pdf)
+[Descargar el proyecto de ejemplo deC#Wingtip Toys ()](https://go.microsoft.com/fwlink/?LinkID=389434&clcid=0x409) o [descargar el libro electrónico (pdf)](https://download.microsoft.com/download/0/F/B/0FBFAA46-2BFD-478F-8E56-7BF3C672DF9D/Getting%20Started%20with%20ASP.NET%204.5%20Web%20Forms%20and%20Visual%20Studio%202013.pdf)
 
-> Esta serie de tutoriales aprenderá los conceptos básicos de la creación de una aplicación de formularios Web Forms ASP.NET con ASP.NET 4.5 y Microsoft Visual Studio Express 2013 para Web. Un Visual Studio 2013 [proyecto con código fuente de C#](https://go.microsoft.com/fwlink/?LinkID=389434&clcid=0x409) está disponible para acompañar esta serie de tutoriales.
+> Esta serie de tutoriales le enseñará los aspectos básicos de la creación de una aplicación de formularios Web Forms ASP.NET con ASP.NET 4,5 y Microsoft Visual Studio Express 2013 para Web. Hay disponible un [proyecto C# de Visual Studio 2013 con código fuente](https://go.microsoft.com/fwlink/?LinkID=389434&clcid=0x409) para acompañar esta serie de tutoriales.
 
-Este tutorial describe cómo modificar la aplicación de ejemplo Wingtip Toys para incluir la autorización del usuario, registro y el pago con PayPal. Solo los usuarios que iniciaron sesión tendrá autorización para adquirir productos. Funcionalidad de registro de usuario integradas de la plantilla de proyecto de ASP.NET 4.5 Web Forms ya incluye gran parte de lo que necesita. Agregará funcionalidad de finalización de Express de PayPal. En este tutorial se usa el programador de PayPal probar el entorno, por lo que no se transferirá ningún fondos reales. Al final del tutorial, probará la aplicación mediante la selección de productos que se va a agregar al carro de la compra, al hacer clic en el botón checkout y transferencia de datos en el sitio web de PayPal pruebas. En el sitio web de la prueba PayPal se confirme su información de pago y envío y, a continuación, volver a la aplicación de ejemplo Wingtip Toys local para confirmar y completar la compra.
+En este tutorial se describe cómo modificar la aplicación de ejemplo Wingtip Toys para incluir la autorización de usuario, el registro y el pago mediante PayPal. Solo los usuarios que han iniciado sesión tendrán autorización para comprar productos. La funcionalidad de registro de usuario integrada de la plantilla de proyecto de ASP.NET 4,5 Web Forms ya incluye gran parte de lo que necesita. Agregará la funcionalidad de retirada de PayPal Express. En este tutorial utilizará el entorno de pruebas para desarrolladores de PayPal, por lo que no se transferirán fondos reales. Al final del tutorial, probará la aplicación seleccionando productos para agregar al carro de la compra, haciendo clic en el botón desproteger y transfiriendo datos al sitio web de pruebas de PayPal. En el sitio web de pruebas de PayPal, confirmará su información de envío y pago y, a continuación, volverá a la aplicación de ejemplo Wingtip Toys local para confirmar y completar la compra.
 
-Hay varios procesadores de pago de terceros con experiencia que se especializan en la compra en línea que abordan la escalabilidad y seguridad. Los desarrolladores de ASP.NET deben considerar las ventajas de utilizar una solución de pago de terceros antes de implementar una cesta y solución de compra.
+Hay varios procesadores de pago de terceros experimentados que se especializan en la compra en línea que abordan la escalabilidad y la seguridad. Los desarrolladores de ASP.NET deben tener en cuenta las ventajas de usar una solución de pago de terceros antes de implementar una solución de compras y compra.
 
 > [!NOTE] 
 > 
-> La aplicación de ejemplo Wingtip Toys se diseñó para que se muestran los conceptos específicos de ASP.NET y las características disponibles para los desarrolladores web ASP.NET. Esta aplicación de ejemplo no se optimizó para todas las circunstancias posibles con respecto a la escalabilidad y seguridad.
+> La aplicación de ejemplo Wingtip Toys se ha diseñado para mostrar los conceptos y características específicos de ASP.NET disponibles para los desarrolladores web de ASP.NET. Esta aplicación de ejemplo no se optimizó en todas las circunstancias posibles con respecto a la escalabilidad y la seguridad.
 
 ## <a name="what-youll-learn"></a>Lo que aprenderá:
 
 - Cómo restringir el acceso a páginas específicas de una carpeta.
-- Cómo crear un carro de compra conocido de un carro de compra anónimo.
+- Cómo crear un carro de la compra conocido desde un carro de la compra anónimo.
 - Cómo habilitar SSL para el proyecto.
-- Cómo agregar un proveedor de OAuth para el proyecto.
-- Cómo usar PayPal para comprar productos usando el entorno de pruebas de PayPal.
-- Cómo mostrar detalles de PayPal en un **DetailsView** control.
-- Cómo actualizar la base de datos de la aplicación Wingtip Toys con información obtenida de PayPal.
+- Cómo agregar un proveedor de OAuth al proyecto.
+- Cómo usar PayPal para comprar productos mediante el entorno de pruebas de PayPal.
+- Cómo mostrar los detalles de PayPal en un control **DetailsView** .
+- Cómo actualizar la base de datos de la aplicación Wingtip Toys con los detalles obtenidos de PayPal.
 
-## <a name="adding-order-tracking"></a>Agregar seguimiento de pedidos
+## <a name="adding-order-tracking"></a>Adición del seguimiento de pedidos
 
-En este tutorial, creará dos nuevas clases para realizar un seguimiento de los datos del pedido que ha creado un usuario. Las clases realizará el seguimiento de datos con respecto a la información de envío, total de compra y la confirmación de pago.
+En este tutorial, creará dos clases nuevas para realizar el seguimiento de los datos desde el orden en que se ha creado un usuario. Las clases realizarán un seguimiento de los datos relacionados con la información de envío, el total de compras y la confirmación del pago.
 
-### <a name="add-the-order-and-orderdetail-model-classes"></a>Agregar el orden y las clases de modelo OrderDetail
+### <a name="add-the-order-and-orderdetail-model-classes"></a>Adición de las clases de modelo order y OrderDetail
 
-Anteriormente en esta serie de tutoriales, se ha definido el esquema para las categorías, productos, y elementos del carro de la compra mediante la creación de la `Category`, `Product`, y `CartItem` clases en el *modelos* carpeta. Ahora agregará dos nuevas clases para definir el esquema para el pedido de producto y los detalles del pedido.
+Anteriormente en esta serie de tutoriales, definió el esquema para las categorías, los productos y los elementos del carro de la compra mediante la creación de las clases `Category`, `Product`y `CartItem` en la carpeta *modelos* . Ahora, agregará dos clases nuevas para definir el esquema del pedido de producto y los detalles del pedido.
 
-1. En el **modelos** carpeta, agregue una nueva clase denominada *Order.cs*.   
+1. En la carpeta **Models** , agregue una nueva clase denominada *Order.CS*.   
    El nuevo archivo de clase se muestra en el editor.
 2. Reemplace el código predeterminado con lo siguiente:   
 
     [!code-csharp[Main](checkout-and-payment-with-paypal/samples/sample1.cs)]
-3. Agregar un *OrderDetail.cs* clase a la *modelos* carpeta.
-4. Reemplace el código predeterminado con el código siguiente:   
+3. Agregue una clase *OrderDetail.CS* a la carpeta *Models* .
+4. Reemplace el código predeterminado por el código siguiente:   
 
     [!code-csharp[Main](checkout-and-payment-with-paypal/samples/sample2.cs)]
 
-El `Order` y `OrderDetail` clases contienen el esquema para definir la información de orden utilizada para adquirir y envío.
+Las clases `Order` y `OrderDetail` contienen el esquema para definir la información de pedidos que se usa para la compra y el envío.
 
-Además, deberá actualizar la clase de contexto de base de datos que administra las clases de entidad y que proporciona acceso a datos en la base de datos. Para ello, agregará el orden recién creado y `OrderDetail` las clases de modelo `ProductContext` clase.
+Además, deberá actualizar la clase de contexto de base de datos que administra las clases de entidad y que proporciona acceso a los datos a la base de datos. Para ello, agregue las clases de modelo de orden y `OrderDetail` recién creadas a `ProductContext` clase.
 
-1. En **el Explorador de soluciones**, busque y abra el *ProductContext.cs* archivo.
-2. Agregue el código resaltado a la *ProductContext.cs* archivo tal como se muestra a continuación:   
+1. En **Explorador de soluciones**, busque y abra el archivo *ProductContext.CS* .
+2. Agregue el código resaltado al archivo *ProductContext.CS* como se muestra a continuación:   
 
     [!code-csharp[Main](checkout-and-payment-with-paypal/samples/sample3.cs?highlight=14-15)]
 
-Como se mencionó anteriormente en esta serie de tutoriales, el código en el *ProductContext.cs* archivo agrega el `System.Data.Entity` espacio de nombres para que tengan acceso a toda la funcionalidad núcleo de Entity Framework. Esta funcionalidad incluye la capacidad de consultar, insertar, actualizar y eliminar datos trabajando con objetos fuertemente tipados. El código anterior en el `ProductContext` clase agrega acceso de Entity Framework recién agregada `Order` y `OrderDetail` clases.
+Como se mencionó anteriormente en esta serie de tutoriales, el código del archivo *ProductContext.CS* agrega el espacio de nombres `System.Data.Entity` de forma que tenga acceso a toda la funcionalidad básica de la Entity Framework. Esta funcionalidad incluye la capacidad de consultar, insertar, actualizar y eliminar datos trabajando con objetos fuertemente tipados. El código anterior de la clase `ProductContext` agrega Entity Framework acceso a las clases `Order` y `OrderDetail` que se acaban de agregar.
 
 ## <a name="adding-checkout-access"></a>Agregar acceso de desprotección
 
-La aplicación de ejemplo Wingtip Toys permite a los usuarios anónimos revisar y agregar productos a un carro de la compra. Sin embargo, cuando los usuarios anónimos eligen los productos que se agregan a la cesta de compra, debe iniciar sesión en el sitio. Una vez que ha iniciado sesión, puede tener acceso a las páginas restringidas de la aplicación Web que controlan la desprotección y el proceso de compra. Estas páginas restringidas se encuentran en el *desprotección* carpeta de la aplicación.
+La aplicación de ejemplo Wingtip Toys permite a los usuarios anónimos revisar y agregar productos a un carro de la compra. Sin embargo, cuando los usuarios anónimos eligen comprar los productos que han agregado al carro de la compra, deben iniciar sesión en el sitio. Una vez que hayan iniciado sesión, podrán tener acceso a las páginas restringidas de la aplicación web que controlan el proceso de desprotección y compra. Estas páginas restringidas están contenidas en la carpeta de *desprotección* de la aplicación.
 
-### <a name="add-a-checkout-folder-and-pages"></a>Agregue una carpeta de desprotección y páginas
+### <a name="add-a-checkout-folder-and-pages"></a>Agregar una carpeta de desprotección y páginas
 
-Ahora creará el *desprotección* carpeta y las páginas que los clientes verán durante el proceso de pago. Estas páginas se actualizará más adelante en este tutorial.
+Ahora creará la carpeta de *desprotección* y las páginas que verá el cliente durante el proceso de desprotección. Estas páginas se actualizarán más adelante en este tutorial.
 
-1. Haga clic en el nombre del proyecto (**Wingtip Toys**) en **el Explorador de soluciones** y seleccione **agregar una nueva carpeta**. 
+1. Haga clic con el botón derecho en el nombre del proyecto (**Wingtip Toys**) en **Explorador de soluciones** y seleccione **Agregar una nueva carpeta**. 
 
-    ![Retirada y pago con PayPal - nueva carpeta](checkout-and-payment-with-paypal/_static/image1.png)
-2. Nombre de la nueva carpeta *desprotección*.
-3. Haga clic en el *desprotección* carpeta y, a continuación, seleccione **agregar**-&gt;**nuevo elemento**. 
+    ![Retirada y pago con PayPal-nueva carpeta](checkout-and-payment-with-paypal/_static/image1.png)
+2. Asigne a la nueva carpeta el nombre *Checkout*.
+3. Haga clic con el botón secundario en la carpeta de *retirada* y seleccione **Agregar**-&gt;**nuevo elemento**. 
 
-    ![Desprotección y el pago con PayPal: nuevo elemento](checkout-and-payment-with-paypal/_static/image2.png)
+    ![Retirada y pago con PayPal-nuevo elemento](checkout-and-payment-with-paypal/_static/image2.png)
 4. Se abrirá el cuadro de diálogo **Agregar nuevo elemento**.
-5. Seleccione el **Visual C#**  - &gt; **Web** grupo de plantillas de la izquierda. A continuación, en el panel central, seleccione **formulario Web Forms con página maestra**y asígnele el nombre *CheckoutStart.aspx*. 
+5. Seleccione el grupo plantillas **Web** de **Visual C#**  -&gt; a la izquierda. A continuación, en el panel central, seleccione **Web Forms con la página maestra**y asígnele el nombre *CheckoutStart. aspx*. 
 
-    ![Retirada y pago con PayPal - Agregar nuevo elemento de cuadro de diálogo](checkout-and-payment-with-paypal/_static/image3.png)
-6. Como antes, seleccione el *Site.Master* archivo como la página maestra.
-7. Agregue las siguientes páginas adicionales para el *desprotección* carpeta siguiendo los mismos pasos anteriores:   
+    ![Cuadro de diálogo de comprobación y pago con PayPal: agregar nuevo elemento](checkout-and-payment-with-paypal/_static/image3.png)
+6. Como antes, seleccione el archivo *site. Master* como la página maestra.
+7. Agregue las siguientes páginas adicionales a la carpeta de *desprotección* siguiendo los mismos pasos anteriores:   
 
-    - CheckoutReview.aspx
-    - CheckoutComplete.aspx
-    - CheckoutCancel.aspx
-    - CheckoutError.aspx
+    - CheckoutReview. aspx
+    - CheckoutComplete. aspx
+    - CheckoutCancel. aspx
+    - CheckoutError. aspx
 
-### <a name="add-a-webconfig-file"></a>Agregue un archivo Web.config
+### <a name="add-a-webconfig-file"></a>Agregar un archivo Web. config
 
-Al agregar una nueva *Web.config* del archivo a la *desprotección* carpeta, podrá restringir el acceso a todas las páginas contenidas en la carpeta.
+Al agregar un nuevo archivo *Web. config* a la carpeta de *desprotección* , podrá restringir el acceso a todas las páginas contenidas en la carpeta.
 
-1. Haga clic en el *desprotección* carpeta y seleccione **agregar**  - &gt; **nuevo elemento**.  
+1. Haga clic con el botón derecho en la carpeta de *retirada* y seleccione **Agregar** -&gt; **nuevo elemento**.  
    Se abrirá el cuadro de diálogo **Agregar nuevo elemento**.
-2. Seleccione el **Visual C#**  - &gt; **Web** grupo de plantillas de la izquierda. A continuación, en el panel central, seleccione **archivo de configuración Web**, acepte el nombre predeterminado de *Web.config*y, a continuación, seleccione **agregar**.
-3. Reemplace el contenido XML del *Web.config* archivo por lo siguiente:  
+2. Seleccione el grupo plantillas **Web** de **Visual C#**  -&gt; a la izquierda. A continuación, en el panel central, seleccione **archivo de configuración Web**, acepte el nombre predeterminado de *Web. config*y, a continuación, seleccione **Agregar**.
+3. Reemplace el contenido XML existente en el archivo *Web. config* por lo siguiente:  
 
     [!code-xml[Main](checkout-and-payment-with-paypal/samples/sample4.xml)]
-4. Guardar el *Web.config* archivo.
+4. Guarde el archivo *Web. config* .
 
-El *Web.config* archivo Especifica que todos los usuarios desconocidos de la aplicación Web deben ser deniega el acceso a las páginas contenidas en el *desprotección* carpeta. Sin embargo, si el usuario ha registrado una cuenta y haya iniciado sesión, que será un usuario conocido y tendrá acceso a las páginas de la *desprotección* carpeta.
+El archivo *Web. config* especifica que a todos los usuarios desconocidos de la aplicación web se les debe denegar el acceso a las páginas contenidas en la carpeta de *desprotección* . Sin embargo, si el usuario ha registrado una cuenta y ha iniciado sesión, será un usuario conocido y tendrá acceso a las páginas de la carpeta de *desprotección* .
 
-Es importante tener en cuenta que la configuración de ASP.NET sigue una jerarquía, donde cada *Web.config* archivo aplica valores de configuración a la carpeta que se encuentra y a todos los directorios secundarios debajo de él.
+Es importante tener en cuenta que la configuración de ASP.NET sigue una jerarquía, donde cada archivo *Web. config* aplica los valores de configuración a la carpeta en la que se encuentra y a todos los directorios secundarios que hay debajo de él.
 
 <a id="SSLWebForms"></a>
 ## <a name="enable-ssl-for-the-project"></a>Habilitar SSL para el proyecto
 
- Capa de Sockets seguros (SSL) es un protocolo definido para permitir que los servidores Web y los clientes Web comunicarse de forma más segura mediante el uso de cifrado. Cuando no se usa SSL, los datos enviados entre el cliente y el servidor está abiertos a cualquier persona con acceso físico a la red de rastreo de paquetes. Además, varios esquemas de autenticación habituales no son seguras a través de HTTP sin formato. En concreto, la autenticación básica y autenticación mediante formularios envían credenciales no cifradas. Para que sea seguro, estos esquemas de autenticación deben usar SSL. 
+ Capa de sockets seguros (SSL) es un protocolo definido para permitir que los servidores web y los clientes Web se comuniquen de forma más segura mediante el uso del cifrado. Cuando no se usa SSL, los datos enviados entre el cliente y el servidor están abiertos al examen de paquetes por cualquier usuario con acceso físico a la red. Además, varios esquemas de autenticación comunes no son seguros en HTTP simple. En concreto, la autenticación básica y la autenticación de formularios envían credenciales no cifradas. Para que sea seguro, estos esquemas de autenticación deben usar SSL. 
 
-1. En **el Explorador de soluciones**, haga clic en el **WingtipToys** del proyecto, a continuación, presione **F4** para mostrar el **propiedades** ventana.
-2. Cambio **SSL habilitado** a `true`.
-3. Copia el **dirección URL de SSL** para que pueda usar más adelante.   
- La dirección URL de SSL será `https://localhost:44300/` a menos que haya creado previamente los sitios Web SSL (como se muestra a continuación).   
+1. En **Explorador de soluciones**, haga clic en el proyecto **WingtipToys** y, a continuación, presione **F4** para mostrar la ventana **propiedades** .
+2. Cambie **SSL habilitado** a `true`.
+3. Copie la **dirección URL de SSL** para poder usarla más adelante.   
+ La dirección URL de SSL se `https://localhost:44300/` a menos que haya creado previamente sitios Web SSL (como se muestra a continuación).   
     ![Propiedades del proyecto](checkout-and-payment-with-paypal/_static/image4.png)
-4. En **el Explorador de soluciones**, haga clic en el **WingtipToys** del proyecto y haga clic en **propiedades**.
-5. En el panel izquierdo, haga clic en **Web**.
-6. Cambiar el **dirección Url del proyecto** para usar el **dirección URL de SSL** que guardó anteriormente.   
-    ![Propiedades del proyecto Web](checkout-and-payment-with-paypal/_static/image5.png)
-7. Guarde la página presionando **CTRL+S**.
-8. Presione **Ctrl+F5** para ejecutar la aplicación. Visual Studio mostrará una opción para que pueda evitar advertencias de SSL.
-9. Haga clic en **Sí** para confiar en el certificado SSL de IIS Express y continuar.   
-    ![Detalles del certificado SSL de IIS Express](checkout-and-payment-with-paypal/_static/image6.png)  
+4. En **Explorador de soluciones**, haga clic con el botón derecho en el proyecto **WingtipToys** y haga clic en **propiedades**.
+5. En la pestaña de la izquierda, haga clic en **Web**.
+6. Cambie la **dirección URL del proyecto** para que use la **dirección URL de SSL** que guardó anteriormente.   
+    ![propiedades web del proyecto](checkout-and-payment-with-paypal/_static/image5.png)
+7. Presione **Ctrl + S**para guardar la página.
+8. Presione **Ctrl+F5** para ejecutar la aplicación. Visual Studio mostrará una opción para que pueda evitar las advertencias de SSL.
+9. Haga clic en **sí** para confiar en el IIS Express certificado SSL y continuar.   
+    ![detalles del certificado IIS Express SSL](checkout-and-payment-with-paypal/_static/image6.png)  
  Se muestra una advertencia de seguridad.
-10. Haga clic en **Sí** para instalar el certificado en el host local.   
-    ![Cuadro de diálogo de advertencia de seguridad](checkout-and-payment-with-paypal/_static/image7.png)  
+10. Haga clic en **sí** para instalar el certificado en el host local.   
+    ![cuadro de diálogo Advertencia de seguridad](checkout-and-payment-with-paypal/_static/image7.png)  
  Se mostrará la ventana del explorador.
 
-Ahora puede probar fácilmente la aplicación Web localmente mediante SSL.
+Ahora puede probar fácilmente su aplicación Web de forma local mediante SSL.
 
 <a id="OAuthWebForms"></a>
-## <a name="add-an-oauth-20-provider"></a>Agregar un proveedor de OAuth 2.0
+## <a name="add-an-oauth-20-provider"></a>Agregar un proveedor de OAuth 2,0
 
-ASP.NET Web Forms proporciona opciones mejoradas para la pertenencia y autenticación. Estas mejoras incluyen OAuth. OAuth es un protocolo abierto que ofrece autorización segura en un método estándar sencillo de aplicaciones web, móviles y de escritorio. La plantilla de formularios Web Forms de ASP.NET utiliza OAuth para exponer Facebook, Twitter, Google y Microsoft como proveedores de autenticación. Aunque este tutorial solo utiliza Google como proveedor de autenticación, puede modificar fácilmente el código para usar cualquiera de los proveedores. Los pasos para implementar otros proveedores son muy similares a los pasos que verá en este tutorial.
+Los formularios Web Forms de ASP.NET proporcionan opciones mejoradas para la pertenencia y la autenticación. Estas mejoras incluyen OAuth. OAuth es un protocolo abierto que permite la autorización segura en un método sencillo y estándar de aplicaciones Web, móviles y de escritorio. La plantilla de formularios Web Forms de ASP.NET usa OAuth para exponer Facebook, Twitter, Google y Microsoft como proveedores de autenticación. Aunque este tutorial solo utiliza Google como proveedor de autenticación, puede modificar fácilmente el código para usar cualquiera de los proveedores. Los pasos para implementar otros proveedores son muy similares a los que verá en este tutorial.
 
-Además de la autenticación, el tutorial utilizará también funciones para implementar la autorización. Solo los usuarios que agregue a la `canEdit` rol podrá cambiar los datos (crear, editar o eliminar contactos).
+Además de la autenticación, el tutorial también usará roles para implementar la autorización. Solo los usuarios que agregue al rol `canEdit` podrán cambiar los datos (crear, editar o eliminar contactos).
 
 > [!NOTE] 
 > 
-> Las aplicaciones de Windows Live aceptan sólo una dirección URL en directo para un sitio Web en funcionamiento, por lo que no puede usar una dirección URL del sitio Web local para probar los inicios de sesión.
+> Las aplicaciones de Windows Live solo aceptan una dirección URL activa para un sitio web de trabajo, por lo que no puede usar una dirección URL de sitio Web local para probar los inicios de sesión.
 
-Los pasos siguientes, podrá agregar un proveedor de autenticación de Google.
+Los pasos siguientes le permitirán agregar un proveedor de autenticación de Google.
 
-1. Abra el *aplicación\_Start\Startup.Auth.cs* archivo.
-2. Quite los caracteres de comentario de la `app.UseGoogleAuthentication()` método para que el método aparece como sigue: 
+1. Abra el archivo Start\Startup.Auth.cs de la *aplicación\_* .
+2. Quite los caracteres de comentario del método `app.UseGoogleAuthentication()` para que el método aparezca de la manera siguiente: 
 
     [!code-csharp[Main](checkout-and-payment-with-paypal/samples/sample5.cs)]
-3. Navegue hasta la [Google Developers Console](https://console.developers.google.com/). También necesitará iniciar sesión con su cuenta de correo electrónico del desarrollador de Google (gmail.com). Si no tiene una cuenta de Google, seleccione el **crear una cuenta** vínculo.   
-   A continuación, verá el **Google Developers Console**.   
-    ![Consola de desarrolladores de Google](checkout-and-payment-with-paypal/_static/image8.png)
-4. Haga clic en el **crear proyecto** botón y escriba un nombre de proyecto y el identificador (que puede usar los valores predeterminados). A continuación, haga clic en el **casilla de verificación de acuerdo** y **crear** botón.  
+3. Vaya a la [consola de desarrolladores de Google](https://console.developers.google.com/). También tendrá que iniciar sesión con su cuenta de correo electrónico de Google Developer (gmail.com). Si no tiene una cuenta de Google, seleccione el vínculo **crear una cuenta** .   
+   A continuación, verá la **consola de desarrolladores de Google**.   
+    ![consola de desarrolladores de Google](checkout-and-payment-with-paypal/_static/image8.png)
+4. Haga clic en el botón **crear proyecto** y escriba un nombre y un identificador de proyecto (puede usar los valores predeterminados). A continuación, haga clic en la **casilla contrato** y en el botón **crear** .  
 
     ![Google: nuevo proyecto](checkout-and-payment-with-paypal/_static/image9.png)
 
-   En unos segundos se creará el nuevo proyecto y el explorador mostrará la nueva página de proyectos.
-5. En el panel izquierdo, haga clic en **API &amp; auth**y, a continuación, haga clic en **credenciales**.
-6. Haga clic en el **crear nuevo Id. de cliente** en **OAuth**.   
-   El **crear Id. de cliente** se mostrará el cuadro de diálogo.   
-    ![Google - crear Id. de cliente](checkout-and-payment-with-paypal/_static/image10.png)
-7. En el **crear Id. de cliente** cuadro de diálogo, mantenga el valor predeterminado **aplicación Web** para el tipo de aplicación.
-8. Establecer el **orígenes de JavaScript autorizados** a la dirección URL de SSL que usó anteriormente en este tutorial (`https://localhost:44300/` a menos que haya creado a otros proyectos SSL).   
-   Esta dirección URL es el origen de la aplicación. Para este ejemplo, debe proporcionar solo la dirección URL de prueba de localhost. Sin embargo, puede especificar varias direcciones URL para tener en cuenta para localhost y producción.
-9. Establecer el **URI de redireccionamiento autorizado** al siguiente: 
+   En unos segundos, se creará el nuevo proyecto y el explorador mostrará la página proyectos nuevos.
+5. En la pestaña de la izquierda, haga clic en **api &amp; auth**y, a continuación, haga clic en **credenciales**.
+6. Haga clic en **crear nuevo ID** . de cliente en **OAuth**.   
+   Se mostrará el cuadro de diálogo **crear ID** . de cliente.   
+    ![Google: crear el ID. de cliente](checkout-and-payment-with-paypal/_static/image10.png)
+7. En el cuadro de diálogo **crear ID** . de cliente, mantenga la **aplicación web** predeterminada para el tipo de aplicación.
+8. Establezca los **orígenes de JavaScript autorizados** en la dirección URL de SSL que usó anteriormente en este tutorial (`https://localhost:44300/` a menos que haya creado otros proyectos SSL).   
+   Esta dirección URL es el origen de la aplicación. En este ejemplo, solo escribirá la dirección URL de prueba de localhost. Sin embargo, puede especificar varias direcciones URL para tener en cuenta el localhost y la producción.
+9. Establezca el **URI de redirección autorizado** en lo siguiente: 
 
     [!code-html[Main](checkout-and-payment-with-paypal/samples/sample6.html)]
 
-   Este valor es el URI que utiliza ASP.NET OAuth para comunicarse con el servidor de OAuth de google. Recuerde que la dirección URL de SSL que usó anteriormente ( `https://localhost:44300/` a menos que haya creado a otros proyectos SSL).
-10. Haga clic en el **crear Id. de cliente** botón.
-11. En el menú izquierdo de la consola de desarrolladores de Google, haga clic en el **pantalla de consentimiento** elemento de menú, a continuación, establezca el nombre de producto y la dirección de correo electrónico. Cuando haya completado el formulario, haga clic en **guardar**.
-12. Haga clic en el **API** elemento de menú, desplácese hacia abajo y haga clic en el **desactivar** situado junto a **Google + API**.   
-    Acepta esta opción permitirá a la API de Google +.
-13. También debe actualizar el **Microsoft.Owin** versión 3.0.0 del paquete NuGet.   
-    Desde el **herramientas** menú, seleccione **Administrador de paquetes de NuGet** y, a continuación, seleccione **administrar paquetes de NuGet para la solución**.  
-    Desde el **administrar paquetes de NuGet** ventana, buscar y actualizar la **Microsoft.Owin** paquete a la versión 3.0.0.
-14. En Visual Studio, actualice el `UseGoogleAuthentication` método de la *Startup.Auth.cs* página copiando y pegando el **Id. de cliente** y **secreto de cliente** al método. El **Id. de cliente** y **secreto de cliente** son ejemplos de valores que se muestran a continuación y no funcionará. 
+   Este valor es el URI que ASP.NET a los usuarios de OAuth para comunicarse con el servidor de OAuth de Google. Recuerde la dirección URL de SSL que usó anteriormente (`https://localhost:44300/` a menos que haya creado otros proyectos SSL).
+10. Haga clic en el botón **crear ID** . de cliente.
+11. En el menú de la izquierda de la consola de desarrolladores de Google, haga clic en el elemento de menú de la **pantalla de consentimiento** y establezca la dirección de correo electrónico y el nombre del producto. Cuando haya completado el formulario, haga clic en **Guardar**.
+12. Haga clic en el elemento de menú **API** , desplácese hacia abajo y haga clic en el botón **desactivado** situado junto a **Google + API**.   
+    Al aceptar esta opción se habilitará la API de Google +.
+13. También debe actualizar el paquete NuGet **Microsoft. Owin** a la versión 3.0.0.   
+    En el menú **herramientas** , seleccione **Administrador de paquetes Nuget** y, a continuación, seleccione **administrar paquetes Nuget para la solución**.  
+    En la ventana **administrar paquetes NuGet** , busque y actualice el paquete **Microsoft. Owin** a la versión 3.0.0.
+14. En Visual Studio, actualice el método `UseGoogleAuthentication` de la página *Startup.auth.CS* copiando y pegando el **identificador de cliente** y el **secreto de cliente** en el método. Los valores de ID. de **cliente** y **secreto de cliente** que se muestran a continuación son ejemplos y no funcionarán. 
 
     [!code-csharp[Main](checkout-and-payment-with-paypal/samples/sample7.cs?highlight=64-65)]
-15. Presione **CTRL+F5** para compilar y ejecutar la aplicación. Haga clic en el **iniciarla** vínculo.
-16. En **utilice otro servicio para iniciar sesión**, haga clic en **Google**.  
-    ![Inicia sesión](checkout-and-payment-with-paypal/_static/image11.png)
-17. Si tiene que escribir sus credenciales, se le redirigirá al sitio de google donde especificará sus credenciales.  
-    ![Google: inicio de sesión](checkout-and-payment-with-paypal/_static/image12.png)
-18. Después de escribir sus credenciales, se le pedirá para conceder permisos a la aplicación web que acaba de crear.  
-    ![Cuenta de servicio de proyecto predeterminada](checkout-and-payment-with-paypal/_static/image13.png)
-19. Haga clic en **acepte**. Se le redirigirá ahora a la **registrar** página de la **WingtipToys** aplicación donde puede registrar su cuenta de Google.  
-    ![Registrar con su cuenta de Google](checkout-and-payment-with-paypal/_static/image14.png)
-20. Tiene la opción de cambiar el nombre de registro de correo electrónico local utilizado para la cuenta de Gmail, pero generalmente deseará mantener el alias de correo electrónico predeterminada (es decir, lo que se usó para la autenticación). Haga clic en **iniciarla** como se indicó anteriormente.
+15. Presione **Ctrl + F5** para compilar y ejecutar la aplicación. Haga clic en el vínculo **iniciar sesión** .
+16. En **usar otro servicio para iniciar sesión**, haga clic en **Google**.  
+    ![iniciar sesión](checkout-and-payment-with-paypal/_static/image11.png)
+17. Si tiene que escribir sus credenciales, se le redirigirá al sitio de Google, donde podrá escribir sus credenciales.  
+    ![Google: Inicio de sesión](checkout-and-payment-with-paypal/_static/image12.png)
+18. Después de escribir sus credenciales, se le pedirá que conceda permisos a la aplicación web que acaba de crear.  
+    ![Cuenta de servicio predeterminada del proyecto](checkout-and-payment-with-paypal/_static/image13.png)
+19. Haga clic en **Aceptar**. Ahora se le redirigirá a la página de **registro** de la aplicación **WingtipToys** donde puede registrar su cuenta de Google.  
+    ![registrarse con su cuenta de Google](checkout-and-payment-with-paypal/_static/image14.png)
+20. Tiene la opción de cambiar el nombre de registro de correo electrónico local que se usa para su cuenta de gmail, pero normalmente desea mantener el alias de correo electrónico predeterminado (es decir, el que usó para la autenticación). Haga clic en **iniciar sesión** como se mostró anteriormente.
 
 ### <a name="modifying-login-functionality"></a>Modificar la funcionalidad de inicio de sesión
 
-Como se mencionó anteriormente en esta serie de tutoriales, gran parte de la funcionalidad de registro de usuario se ha incluido en la plantilla de formularios Web Forms de ASP.NET de forma predeterminada. Ahora, modificará el valor predeterminado *Login.aspx* y *Register.aspx* páginas para llamar a la `MigrateCart` método. El `MigrateCart` método asocia un usuario recién registrado en un carro de compra anónimo. Al asociar el usuario y carro de la compra, la aplicación de ejemplo Wingtip Toys será capaz de mantener el carro de la compra del usuario entre las visitas.
+Como se mencionó anteriormente en esta serie de tutoriales, gran parte de la funcionalidad de registro del usuario se ha incluido en la plantilla de formularios Web Forms de ASP.NET de forma predeterminada. Ahora modificará las páginas default *login. aspx* y *Register. aspx* para llamar al método `MigrateCart`. El método `MigrateCart` asocia un usuario que acaba de iniciar sesión con un carro de la compra anónimo. Al asociar el carro de la compra y el usuario, la aplicación de ejemplo Wingtip Toys podrá mantener el carro de la compra del usuario entre visitas.
 
-1. En **el Explorador de soluciones**, busque y abra el *cuenta* carpeta.
-2. Modificar la página de código subyacente denominada *Login.aspx.cs* para incluir el código resaltado en amarillo, para que aparezca como sigue:   
+1. En **Explorador de soluciones**, busque y abra la carpeta de la *cuenta* .
+2. Modifique la página de código subyacente denominada *login.aspx.CS* para incluir el código resaltado en amarillo, de modo que aparezca de la manera siguiente:   
 
     [!code-csharp[Main](checkout-and-payment-with-paypal/samples/sample8.cs?highlight=41-43)]
-3. Guardar el *Login.aspx.cs* archivo.
+3. Guarde el archivo *login.aspx.CS* .
 
-Por ahora, puede omitir la advertencia de que no hay ninguna definición para el `MigrateCart` método. Va a agregar, un poco más adelante en este tutorial.
+Por ahora, puede omitir la advertencia de que no hay ninguna definición para el método `MigrateCart`. Lo agregará un poco más adelante en este tutorial.
 
-El *Login.aspx.cs* archivo de código subyacente admite un método de inicio de sesión. Mediante la inspección de la página Login.aspx, verá que esta página incluye un botón "Iniciar sesión" que, cuando haga clic en los desencadenadores del `LogIn` controlador en el código subyacente.
+El archivo de código subyacente *login.aspx.CS* admite un método de inicio de sesión. Al inspeccionar la página login. aspx, verá que esta página incluye un botón "iniciar sesión" que, cuando se hace clic, se desencadena el controlador de `LogIn` en el código subyacente.
 
-Cuando el `Login` método en el *Login.aspx.cs* se denomina una nueva instancia de la cesta denominado `usersShoppingCart` se crea. El identificador del carro de la compra (GUID) se recupera y se establece en el `cartId` variable. A continuación, la `MigrateCart` método se llama, pasando tanto el `cartId` y el nombre del usuario ha iniciado la sesión a este método. Cuando se migra el carro de la compra, el GUID utilizado para identificar el carro de la compra anónimo se reemplaza por el nombre de usuario.
+Cuando se llama al método `Login` en *login.aspx.CS* , se crea una nueva instancia del carro de la compra denominado `usersShoppingCart`. Se recupera el identificador del carro de la compra (un GUID) y se establece en la variable `cartId`. A continuación, se llama al método `MigrateCart`, pasando tanto el `cartId` como el nombre del usuario que ha iniciado sesión a este método. Cuando se migra el carro de la compra, el GUID que se usa para identificar el carro de la compra anónima se reemplaza por el nombre de usuario.
 
-Además de modificar el *Login.aspx.cs* archivo de código subyacente para migrar el carro de la compra cuando el usuario inicia sesión, también debe modificar el *archivo de código subyacente Register.aspx.cs* para migrar el carro de la compra Cuando el usuario crea una nueva cuenta y se inicia sesión.
+Además de modificar el archivo de código subyacente de *login.aspx.CS* para migrar el carro de la compra cuando el usuario inicia sesión, también debe modificar el *archivo de código subyacente Register.aspx.CS* para migrar el carro de la compra cuando el usuario crea una cuenta nueva e inicia sesión.
 
-1. En el *cuenta* carpeta, abra el archivo de código subyacente denominado *Register.aspx.cs*.
-2. Modifique el archivo de código subyacente incluyendo el código en amarillo, para que aparezca como sigue:   
+1. En la carpeta de la *cuenta* , abra el archivo de código subyacente llamado *Register.aspx.CS*.
+2. Modifique el archivo de código subyacente incluyendo el código en amarillo, para que aparezca de la manera siguiente:   
 
     [!code-csharp[Main](checkout-and-payment-with-paypal/samples/sample9.cs?highlight=28-32)]
-3. Guardar el *Register.aspx.cs* archivo. Una vez más, pasar por alto la advertencia sobre el `MigrateCart` método.
+3. Guarde el archivo *Register.aspx.CS* . Una vez más, omita la advertencia sobre el método `MigrateCart`.
 
-Tenga en cuenta que el código usado en el `CreateUser_Click` controlador de eventos es muy similar al código que usó en el `LogIn` método. Cuando el usuario se registra o se inicia sesión en el sitio, una llamada a la `MigrateCart` método se realizará.
+Observe que el código que utilizó en el controlador de eventos `CreateUser_Click` es muy similar al código que usó en el método `LogIn`. Cuando el usuario se registra o inicia sesión en el sitio, se realizará una llamada al método `MigrateCart`.
 
-## <a name="migrating-the-shopping-cart"></a>Migrar el carro de la compra
+## <a name="migrating-the-shopping-cart"></a>Migración del carro de la compra
 
-Ahora que tiene el proceso de inicio de sesión y registro actualizado, puede agregar el código para migrar el uso de carro de la compra el `MigrateCart` método.
+Ahora que ha actualizado el registro y el proceso de registro, puede Agregar el código para migrar el carro de la compra con el método `MigrateCart`.
 
-1. En **el Explorador de soluciones**, busque el *lógica* carpeta y abra el *ShoppingCartActions.cs* archivo de clase.
-2. Agregue el código resaltado en amarillo en el código existente en el *ShoppingCartActions.cs* archivo, por lo que el código en el *ShoppingCartActions.cs* archivo aparece como sigue:   
+1. En **Explorador de soluciones**, busque la carpeta *Logic* y abra el archivo de clase *ShoppingCartActions.CS* .
+2. Agregue el código resaltado en amarillo al código existente en el archivo *ShoppingCartActions.CS* , de modo que el código del archivo *ShoppingCartActions.CS* aparezca de la manera siguiente:   
 
     [!code-csharp[Main](checkout-and-payment-with-paypal/samples/sample10.cs?highlight=215-224)]
 
-El `MigrateCart` método usa el cartId existente para buscar el carro de la compra del usuario. A continuación, el código recorre en bucle todos los elementos del carro de la compra y reemplaza el `CartId` propiedad (según lo especificado por el `CartItem` esquema) con el nombre de usuario que inició sesión.
+El método `MigrateCart` usa el cartId existente para buscar el carro de la compra del usuario. A continuación, el código recorre en bucle todos los elementos del carro de la compra y reemplaza la propiedad `CartId` (tal y como se especifica en el esquema de `CartItem`) con el nombre de usuario que ha iniciado sesión.
 
 ### <a name="updating-the-database-connection"></a>Actualización de la conexión de base de datos
 
-Si está siguiendo este tutorial utilizando la **creados previamente** Wingtip Toys aplicación de ejemplo, debe volver a crear la base de datos de pertenencia predeterminado. Al modificar la cadena de conexión de forma predeterminada, la base de datos de pertenencia se creará la próxima vez que se ejecuta la aplicación.
+Si sigue este tutorial con la aplicación de ejemplo de Wingtip Toys **pregenerada** , debe volver a crear la base de datos de pertenencia predeterminada. Al modificar la cadena de conexión predeterminada, la base de datos de pertenencia se creará la próxima vez que se ejecute la aplicación.
 
-1. Abra el *Web.config* archivo en la raíz del proyecto.
-2. Actualice la cadena de conexión predeterminado para que aparezca como sigue:   
+1. Abra el archivo *Web. config* en la raíz del proyecto.
+2. Actualice la cadena de conexión predeterminada para que aparezca de la manera siguiente:   
 
     [!code-xml[Main](checkout-and-payment-with-paypal/samples/sample11.xml)]
 
 <a id="PayPalWebForms"></a>
-## <a name="integrating-paypal"></a>La integración de PayPal
+## <a name="integrating-paypal"></a>Integración de PayPal
 
-PayPal es una plataforma de facturación basada en web que acepte pagos por los comercios en línea. A continuación, en este tutorial se explica cómo integrar la funcionalidad de PayPal Express desprotección en la aplicación. Desprotección Express permite a los clientes usar PayPal para pagar los elementos que se hayan agregado a su carro de la compra.
+PayPal es una plataforma de facturación basada en Web que acepta pagos por comerciantes en línea. En este tutorial se explica cómo integrar la funcionalidad de protección rápida de PayPal en la aplicación. La desprotección rápida permite a los clientes usar PayPal para pagar los artículos que han agregado a su carro de la compra.
 
 ### <a name="create-paypal-test-accounts"></a>Crear cuentas de prueba de PayPal
 
-Para usar el entorno de pruebas de PayPal, debe crear y comprobar una cuenta de prueba para desarrolladores. Usará la cuenta de prueba para desarrolladores para crear un comprador de cuenta de prueba y una cuenta de prueba de vendedor. Las credenciales de cuenta de prueba para desarrolladores también permitirá la aplicación de ejemplo Wingtip Toys tener acceso al entorno de prueba de PayPal.
+Para usar el entorno de pruebas de PayPal, debe crear y comprobar una cuenta de prueba para desarrolladores. Usará la cuenta de prueba de desarrollador para crear una cuenta de prueba de comprador y una cuenta de prueba de vendedor. Las credenciales de la cuenta de prueba del desarrollador también permitirán a la aplicación de ejemplo Wingtip Toys tener acceso al entorno de pruebas de PayPal.
 
-1. En un explorador, vaya a los desarrolladores de PayPal probar sitio:   
+1. En un explorador, vaya al sitio de pruebas para desarrolladores de PayPal:   
     [https://developer.paypal.com](https://developer.paypal.com/)
-2. Si no tienes una cuenta de desarrollador de PayPal, cree una nueva cuenta haciendo **Sign Up**y siga los pasos de registro. Si tiene una cuenta de desarrollador de PayPal, inicie sesión haciendo **en el registro**. Necesitará la cuenta de desarrollador de PayPal para probar la aplicación de ejemplo Wingtip Toys más adelante en este tutorial.
-3. Si solo se ha registrado para la cuenta de desarrollador de PayPal, deberá comprobar su cuenta de desarrollador de PayPal con PayPal. Puede comprobar su cuenta siguiendo los pasos que PayPal enviada a su cuenta de correo electrónico. Una vez que haya comprobado la cuenta de desarrollador de PayPal, inicie sesión en el sitio de pruebas de los desarrolladores PayPal.
-4. Después de que ha iniciado la sesión el sitio para desarrolladores de PayPal con su cuenta de desarrollador de PayPal, deberá crear una cuenta de prueba de comprador de PayPal si no lo hace ya tiene uno. Para crear una cuenta de prueba de comprador en el sitio de PayPal, haga clic en el **aplicaciones** pestaña y, a continuación, haga clic en **cuentas de espacio aislado**.   
- El **cuentas de prueba de espacio aislado** se muestra la página.   
+2. Si no tiene una cuenta de desarrollador de PayPal, cree una nueva cuenta; para ello, haga clic en **registrarse**y siga los pasos de suscripción. Si tiene una cuenta de desarrollador de PayPal existente, inicie sesión haciendo clic en **iniciar sesión**. Necesitará su cuenta de desarrollador de PayPal para probar la aplicación de ejemplo Wingtip Toys más adelante en este tutorial.
+3. Si acaba de suscribirse a su cuenta de desarrollador de PayPal, es posible que deba comprobar su cuenta de desarrollador de PayPal con PayPal. Puede comprobar su cuenta siguiendo los pasos que PayPal envía a su cuenta de correo electrónico. Una vez que haya comprobado su cuenta de desarrollador de PayPal, vuelva a iniciar sesión en el sitio de pruebas de desarrollo de PayPal.
+4. Una vez que haya iniciado sesión en el sitio para desarrolladores de PayPal con su cuenta de desarrollador de PayPal, deberá crear una cuenta de prueba de PayPal Buyer si aún no tiene una. Para crear una cuenta de prueba de comprador, en el sitio de PayPal haga clic en la pestaña **aplicaciones** y, a continuación, haga clic en **cuentas de espacio aislado**.   
+ Se muestra la página **cuentas de prueba de espacio aislado** .   
 
     > [!NOTE] 
     > 
-    > El sitio para desarrolladores de PayPal ya proporciona una cuenta de comerciante de prueba.
+    > El sitio para desarrolladores de PayPal ya proporciona una cuenta de prueba de comerciante.
 
-    ![Pago con PayPal - cuentas de prueba de espacio aislado y envío](checkout-and-payment-with-paypal/_static/image15.png)
-5. En la página de cuentas de prueba de recinto de seguridad, haga clic en **crear cuenta**.
-6. En el **crear cuenta de prueba** página Elegir un comprador de correo electrónico de la cuenta de prueba y la contraseña de su elección.   
+    ![Retirada y pago con cuentas de prueba de espacio aislado de PayPal](checkout-and-payment-with-paypal/_static/image15.png)
+5. En la página cuentas de prueba de espacio aislado, haga clic en **crear cuenta**.
+6. En la página **crear cuenta de prueba** , elija el correo electrónico y la contraseña de la cuenta de prueba de comprador que prefiera.   
 
     > [!NOTE] 
     > 
-    > Necesitará las direcciones de correo electrónico de comprador y la contraseña para probar la aplicación de ejemplo Wingtip Toys al final de este tutorial.
+    > Necesitará las direcciones de correo electrónico y la contraseña del comprador para probar la aplicación de ejemplo Wingtip Toys al final de este tutorial.
 
-    ![Pago con PayPal - cuentas de prueba de espacio aislado y envío](checkout-and-payment-with-paypal/_static/image16.png)
-7. Crear la cuenta de prueba de comprador haciendo clic en el **crear cuenta** botón.  
- El **cuentas de prueba de espacio aislado** se muestra la página. 
+    ![Retirada y pago con cuentas de prueba de espacio aislado de PayPal](checkout-and-payment-with-paypal/_static/image16.png)
+7. Para crear la cuenta de prueba de comprador, haga clic en el botón **crear cuenta** .  
+ Se muestra la página **cuentas de prueba de espacio aislado** . 
 
-    ![Retirada y pago con PayPal - cuentas de PayPal](checkout-and-payment-with-paypal/_static/image17.png)
-8. En el **cuentas de prueba de espacio aislado** página, haga clic en el **facilitador** cuentas de correo electrónico.  
-    **Perfil** y **notificación** opciones que aparecen.
-9. Seleccione el **perfil** opción y, después, haga clic en **las credenciales de la API** para ver sus credenciales de la API para la cuenta de comerciante de prueba.
-10. Copiar las credenciales de la API de prueba en el Bloc de notas.
+    ![Retirada y pago con PayPal: cuentas de PayPal](checkout-and-payment-with-paypal/_static/image17.png)
+8. En la página **cuentas de prueba de espacio aislado** , haga clic en la cuenta de correo electrónico del **facilitador** .  
+    Aparecen las opciones de **perfil** y **notificación** .
+9. Seleccione la opción **perfil** y, a continuación, haga clic en **credenciales de API** para ver las credenciales de API de la cuenta de prueba de comerciante.
+10. Copie las credenciales de la API de prueba en el Bloc de notas.
 
-Necesitará las credenciales de la API clásica de prueba mostradas (Username, Password y firma) para realizar llamadas de API de la aplicación de ejemplo Wingtip Toys en el entorno de pruebas de PayPal. Agregará las credenciales en el paso siguiente.
+Necesitará las credenciales de la API de prueba clásica mostradas (nombre de usuario, contraseña y firma) para realizar llamadas API desde la aplicación de ejemplo Wingtip Toys al entorno de pruebas de PayPal. Agregará las credenciales en el paso siguiente.
 
-### <a name="add-paypal-class-and-api-credentials"></a>Agregar clase de PayPal y las credenciales de la API
+### <a name="add-paypal-class-and-api-credentials"></a>Agregar credenciales de clase y API de PayPal
 
-Colocará la mayoría del código de PayPal en una sola clase. Esta clase contiene los métodos usados para comunicarse con PayPal. Además, agregará sus credenciales de PayPal a esta clase.
+La mayoría del código de PayPal se colocará en una sola clase. Esta clase contiene los métodos utilizados para comunicarse con PayPal. Además, agregará las credenciales de PayPal a esta clase.
 
-1. En la aplicación de ejemplo Wingtip Toys dentro de Visual Studio, haga clic en el **lógica** carpeta y, a continuación, seleccione **agregar**  - &gt; **nuevo elemento**.   
+1. En la aplicación de ejemplo Wingtip Toys de Visual Studio, haga clic con el botón derecho en la carpeta **lógica** y seleccione **Agregar** -&gt; **nuevo elemento**.   
    Se abrirá el cuadro de diálogo **Agregar nuevo elemento**.
-2. En **Visual C#** desde el **instalado** panel de la izquierda, seleccione **código**.
-3. En el panel central, seleccione **clase**. Esta nueva clase el nombre **PayPalFunctions.cs**.
+2. En **Visual C#**  , en el panel **instalado** de la izquierda, seleccione **código**.
+3. En el panel central, seleccione **clase**. Asigne a esta nueva clase el nombre **PayPalFunctions.CS**.
 4. Haga clic en **Agregar**.  
    El nuevo archivo de clase se muestra en el editor.
-5. Reemplace el código predeterminado con el código siguiente:  
+5. Reemplace el código predeterminado por el código siguiente:  
 
     [!code-csharp[Main](checkout-and-payment-with-paypal/samples/sample12.cs)]
-6. Agregue las credenciales de la API de comerciante (Username, Password y firma) que se ha mostrado anteriormente en este tutorial para que puedan realizar llamadas de función en el entorno de prueba de PayPal.  
+6. Agregue las credenciales de la API de comerciante (nombre de usuario, contraseña y firma) que mostró anteriormente en este tutorial para poder realizar llamadas de función al entorno de pruebas de PayPal.  
 
     [!code-csharp[Main](checkout-and-payment-with-paypal/samples/sample13.cs)]
 
 > [!NOTE] 
 > 
-> En esta aplicación de ejemplo simplemente va a agregar las credenciales a un archivo de C# (. cs). Sin embargo, en una solución implementada, debe considerar sus credenciales en un archivo de configuración de cifrado.
+> En esta aplicación de ejemplo, simplemente se agregan credenciales a un C# archivo (. CS). Sin embargo, en una solución implementada, considere la posibilidad de cifrar las credenciales en un archivo de configuración.
 
-La clase NVPAPICaller contiene la mayor parte de la funcionalidad de PayPal. El código de la clase proporciona los métodos necesarios para realizar una prueba de compra desde el entorno de pruebas de PayPal. Las tres funciones de PayPal siguientes se utilizan para realizar compras:
+La clase NVPAPICaller contiene la mayoría de la funcionalidad de PayPal. El código de la clase proporciona los métodos necesarios para realizar una compra de prueba desde el entorno de pruebas de PayPal. Las tres funciones de PayPal siguientes se usan para realizar compras:
 
-- `SetExpressCheckout` Función
-- `GetExpressCheckoutDetails` Función
-- `DoExpressCheckoutPayment` Función
+- `SetExpressCheckout` función)
+- `GetExpressCheckoutDetails` función)
+- `DoExpressCheckoutPayment` función)
 
-El `ShortcutExpressCheckout` método recopila los detalles de producto y la información de compra de prueba de la cesta y llama a la `SetExpressCheckout` función PayPal. El `GetCheckoutDetails` método confirma los detalles de la compra y llama a la `GetExpressCheckoutDetails` PayPal función antes de realizar la compra de prueba. El `DoCheckoutPayment` método completa la compra de prueba desde el entorno de pruebas mediante una llamada a la `DoExpressCheckoutPayment` función PayPal. El código restante es compatible con los métodos de PayPal y proceso, como la codificación de cadenas, descodificación de cadenas, matrices de procesamiento y determinar las credenciales.
+El método `ShortcutExpressCheckout` recopila la información de compra de la prueba y los detalles del producto desde el carro de la compra y llama a la función `SetExpressCheckout` PayPal. El método `GetCheckoutDetails` confirma los detalles de compra y llama a la función `GetExpressCheckoutDetails` PayPal antes de realizar la compra de la prueba. El método `DoCheckoutPayment` completa la compra de prueba desde el entorno de pruebas mediante una llamada a la función `DoExpressCheckoutPayment` PayPal. El código restante es compatible con los métodos y procesos de PayPal, como la codificación de cadenas, la descodificación de cadenas, el procesamiento de matrices y la determinación de credenciales.
 
 > [!NOTE] 
 > 
-> PayPal permite incluir detalles de la compra opcional según [especificación de API de PayPal](https://cms.paypal.com/us/cgi-bin/?cmd=_render-content&amp;content_ID=developer/e_howto_api_nvp_r_SetExpressCheckout). Al extender el código de la aplicación de ejemplo Wingtip Toys, puede incluir detalles de localización, descripciones de productos, impuestos, un número de servicio al cliente, así como muchos otros campos opcionales.
+> PayPal le permite incluir detalles de compra opcionales basados en [la especificación de la API de PayPal](https://cms.paypal.com/us/cgi-bin/?cmd=_render-content&amp;content_ID=developer/e_howto_api_nvp_r_SetExpressCheckout). Al extender el código en la aplicación de ejemplo Wingtip Toys, puede incluir detalles de localización, descripciones de productos, impuestos, un número de servicio de cliente, así como muchos otros campos opcionales.
 
-Tenga en cuenta que las direcciones URL de retorno y cancelación que se especifican en el **ShortcutExpressCheckout** método usa un número de puerto.
+Tenga en cuenta que las direcciones URL de retorno y de cancelación que se especifican en el método **ShortcutExpressCheckout** utilizan un número de puerto.
 
 [!code-html[Main](checkout-and-payment-with-paypal/samples/sample14.html)]
 
-Cuando Visual Web Developer ejecuta un proyecto web mediante SSL, normalmente se usa el puerto 44300 para el servidor web. Como se indicó anteriormente, el número de puerto es 44300. Al ejecutar la aplicación, podría ver un número de puerto diferente. Sus necesidades de número de puerto debe establecerse correctamente en el código para que pueda correcta ejecutan la aplicación de ejemplo Wingtip Toys al final de este tutorial. La siguiente sección de este tutorial explica cómo recuperar el número de puerto del host local y actualice la clase de PayPal.
+Cuando Visual Web Developer ejecuta un proyecto web mediante SSL, normalmente se usa el puerto 44300 para el servidor Web. Como se indicó anteriormente, el número de puerto es 44300. Al ejecutar la aplicación, podría ver un número de puerto diferente. El número de puerto debe estar establecido correctamente en el código para que pueda ejecutar correctamente la aplicación de ejemplo Wingtip Toys al final de este tutorial. En la siguiente sección de este tutorial se explica cómo recuperar el número de puerto del host local y cómo actualizar la clase PayPal.
 
-### <a name="update-the-localhost-port-number-in-the-paypal-class"></a>Actualizar el número de puerto de host local en la clase de PayPal
+### <a name="update-the-localhost-port-number-in-the-paypal-class"></a>Actualización del número de Puerto LocalHost en la clase PayPal
 
-La aplicación de ejemplo Wingtip Toys compras de productos, vaya a la página de prueba de PayPal y volver a la instancia local de la aplicación de ejemplo Wingtip Toys. Para disponer de PayPal volver a la dirección URL correcta, deberá especificar el número de puerto de la ejecución localmente la aplicación en el código de PayPal mencionado anteriormente de ejemplo.
+La aplicación de ejemplo Wingtip Toys compra productos navegando al sitio de pruebas de PayPal y volviendo a la instancia local de la aplicación de ejemplo Wingtip Toys. Para que PayPal vuelva a la dirección URL correcta, debe especificar el número de puerto de la aplicación de ejemplo que se ejecuta localmente en el código de PayPal mencionado anteriormente.
 
-1. Haga clic en el nombre del proyecto (**WingtipToys**) en **el Explorador de soluciones** y seleccione **propiedades**.
-2. En la columna izquierda, seleccione el **Web** ficha.
-3. Recuperar el número de puerto desde el **dirección Url del proyecto** cuadro.
-4. Si es necesario, actualice el `returnURL` y `cancelURL` en la clase de PayPal (`NVPAPICaller`) en el *PayPalFunctions.cs* archivo que se usará el número de puerto de la aplicación web:   
+1. Haga clic con el botón secundario en el nombre del proyecto (**WingtipToys**) en **Explorador de soluciones** y seleccione **propiedades**.
+2. En la columna izquierda, seleccione la pestaña **Web** .
+3. Recupere el número de puerto en el cuadro **dirección URL del proyecto** .
+4. Si es necesario, actualice el `returnURL` y `cancelURL` de la clase PayPal (`NVPAPICaller`) en el archivo *PayPalFunctions.CS* para usar el número de puerto de la aplicación web:   
 
     [!code-html[Main](checkout-and-payment-with-paypal/samples/sample15.html?highlight=1-2)]
 
-Ahora el código que agregó hará coincidir el puerto esperado para la aplicación Web local. PayPal podrá volver a la dirección URL correcta en el equipo local.
+Ahora, el código que agregó coincidirá con el puerto esperado para la aplicación Web local. PayPal podrá volver a la dirección URL correcta en el equipo local.
 
-### <a name="add-the-paypal-checkout-button"></a>Agregar el botón Checkout PayPal
+### <a name="add-the-paypal-checkout-button"></a>Agregar el botón de retirada de PayPal
 
-Ahora que las funciones principales de PayPal se agregaron a la aplicación de ejemplo, puede empezar a agregar el marcado y el código necesario para llamar a estas funciones. En primer lugar, debe agregar el botón checkout que verá el usuario en la página del carro de la compra.
+Ahora que las funciones principales de PayPal se han agregado a la aplicación de ejemplo, puede empezar a agregar el marcado y el código necesarios para llamar a estas funciones. En primer lugar, debe agregar el botón de desprotección que el usuario verá en la página carro de la compra.
 
-1. Abra el *ShoppingCart.aspx* archivo.
+1. Abra el archivo *ShoppingCart. aspx* .
 2. Desplácese hasta la parte inferior del archivo y busque el `<!--Checkout Placeholder -->` comentario.
-3. Reemplace el comentario con un `ImageButton` controlar de manera que la marca de seguridad se sustituye por las siguientes:  
+3. Reemplace el comentario por un control `ImageButton` para que la marca se reemplace como se indica a continuación:  
 
     [!code-aspx[Main](checkout-and-payment-with-paypal/samples/sample16.aspx)]
-4. En el *ShoppingCart.aspx.cs* archivo, después el `UpdateBtn_Click` controlador de eventos cerca del final del archivo, agregue el `CheckOutBtn_Click` controlador de eventos:  
+4. En el archivo *ShoppingCart.aspx.CS* , después del controlador de eventos `UpdateBtn_Click` cerca del final del archivo, agregue el controlador de eventos `CheckOutBtn_Click`:  
 
     [!code-csharp[Main](checkout-and-payment-with-paypal/samples/sample17.cs)]
-5. También en el *ShoppingCart.aspx.cs* , agregue una referencia a la `CheckoutBtn`, de modo que el nuevo botón de imagen se hace referencia como sigue:  
+5. También en el archivo *ShoppingCart.aspx.CS* , agregue una referencia al `CheckoutBtn`, de modo que se haga referencia al botón nueva imagen como se indica a continuación:  
 
     [!code-csharp[Main](checkout-and-payment-with-paypal/samples/sample18.cs?highlight=18)]
-6. Guarde los cambios en ambos el *ShoppingCart.aspx* archivo y la *ShoppingCart.aspx.cs* archivo.
-7. En el menú, seleccione **depurar**-&gt;**WingtipToys compilar**.  
-   Se volverá a generar el proyecto con la recién agregada **ImageButton** control.
+6. Guarde los cambios en el archivo *ShoppingCart. aspx* y en el archivo *ShoppingCart.aspx.CS* .
+7. En el menú, seleccione **Depurar**-&gt;**compilación WingtipToys**.  
+   El proyecto se volverá a generar con el control **ImageButton** recién agregado.
 
-### <a name="send-purchase-details-to-paypal"></a>Enviar detalles de la compra a PayPal
+### <a name="send-purchase-details-to-paypal"></a>Enviar detalles de compra a PayPal
 
-Cuando el usuario hace clic en el **desprotección** botón en la página del carro de la compra (*ShoppingCart.aspx*), comenzará el proceso de compra. El código siguiente llama a la primera función de PayPal necesitada para comprar productos.
+Cuando el usuario haga clic en el botón **Desproteger** de la página del carro de la compra (*ShoppingCart. aspx*), comenzará el proceso de compra. El código siguiente llama a la primera función PayPal necesaria para comprar productos.
 
-1. Desde el *desprotección* carpeta, abra el archivo de código subyacente denominado *CheckoutStart.aspx.cs*.   
+1. En la carpeta de *desprotección* , abra el archivo de código subyacente llamado *CheckoutStart.aspx.CS*.   
    Asegúrese de abrir el archivo de código subyacente.
 2. Reemplace el código existente por el siguiente:   
 
     [!code-csharp[Main](checkout-and-payment-with-paypal/samples/sample19.cs)]
 
-Cuando el usuario de la aplicación hace clic en el **desprotección** botón en la página del carro de la compra, el explorador se le remitirá a la *CheckoutStart.aspx* página. Cuando el *CheckoutStart.aspx* , se carga la página el `ShortcutExpressCheckout` se llama al método. En este momento, el usuario se transfiere al sitio web de prueba PayPal. En el sitio de PayPal, el usuario escribe sus credenciales de PayPal, revisa los detalles de la compra, acepta el contrato de PayPal y devuelve a la aplicación de ejemplo Wingtip Toys donde el `ShortcutExpressCheckout` método se completa. Cuando el `ShortcutExpressCheckout` método se haya completado, se le redirigirá al usuario la *CheckoutReview.aspx* página especificada en el `ShortcutExpressCheckout` método. Esto permite al usuario revisar los detalles del pedido desde dentro de la aplicación de ejemplo Wingtip Toys.
+Cuando el usuario de la aplicación hace clic en el botón **Desproteger** en la página del carro de la compra, el explorador navega a la página *CheckoutStart. aspx* . Cuando se carga la página *CheckoutStart. aspx* , se llama al método `ShortcutExpressCheckout`. En este momento, el usuario se transfiere al sitio web de pruebas de PayPal. En el sitio de PayPal, el usuario escribe sus credenciales de PayPal, revisa los detalles de la compra, acepta el contrato de PayPal y vuelve a la aplicación de ejemplo Wingtip Toys en la que se completa el método de `ShortcutExpressCheckout`. Una vez completado el método `ShortcutExpressCheckout`, redirigirá al usuario a la página *CheckoutReview. aspx* especificada en el método `ShortcutExpressCheckout`. Esto permite al usuario revisar los detalles del pedido desde la aplicación de ejemplo Wingtip Toys.
 
-### <a name="review-order-details"></a>Revisar los detalles de pedido
+### <a name="review-order-details"></a>Revisar los detalles del pedido
 
-Después de volver de PayPal, el *CheckoutReview.aspx* página de la aplicación de ejemplo Wingtip Toys muestra los detalles del pedido. Esta página permite al usuario revisar los detalles del pedido antes de adquirir los productos. El *CheckoutReview.aspx* página se debe crear como sigue:
+Después de volver de PayPal, la página *CheckoutReview. aspx* de la aplicación de ejemplo Wingtip Toys muestra los detalles del pedido. Esta página permite al usuario revisar los detalles del pedido antes de adquirir los productos. La página *CheckoutReview. aspx* debe crearse como se indica a continuación:
 
-1. En el *desprotección* carpeta, abra la página denominada *CheckoutReview.aspx*.
+1. En la carpeta de *desprotección* , abra la página denominada *CheckoutReview. aspx*.
 2. Reemplace el marcado existente por lo siguiente:   
 
     [!code-aspx[Main](checkout-and-payment-with-paypal/samples/sample20.aspx)]
-3. Abra la página de código subyacente denominada *CheckoutReview.aspx.cs* y reemplace el código existente con lo siguiente:   
+3. Abra la página de código subyacente denominada *CheckoutReview.aspx.CS* y reemplace el código existente por lo siguiente:   
 
     [!code-csharp[Main](checkout-and-payment-with-paypal/samples/sample21.cs)]
 
-El **DetailsView** control se usa para mostrar los detalles del pedido que se han devuelto de PayPal. Además, el código anterior guarda los detalles del pedido a la base de datos de Wingtip Toys como un `OrderDetail` objeto. Cuando el usuario hace clic en el **completar pedido** botón, se les redirigirá a la *CheckoutComplete.aspx* página.
+El control **DetailsView** se usa para mostrar los detalles del pedido que se han devuelto desde PayPal. Además, el código anterior guarda los detalles del pedido en la base de datos de Wingtip Toys como un objeto `OrderDetail`. Cuando el usuario hace clic en el botón **completar pedido** , se le redirige a la página *CheckoutComplete. aspx* .
 
 > [!NOTE] 
 > 
-> **Sugerencia**
+> **Tip**
 > 
-> En el marcado de la *CheckoutReview.aspx* página, observe que la `<ItemStyle>` etiqueta a la que se usa para cambiar el estilo de los elementos dentro de la **DetailsView** control cerca de la parte inferior de la página. Mediante la visualización de la página en **vista de diseño** (seleccionando **diseño** en la esquina inferior izquierda de Visual Studio), a continuación, seleccione el **DetailsView** control y seleccionando el  **Etiqueta inteligente** (el icono de flecha en la parte superior derecha del control), podrá ver el **DetailsView tareas**.
+> En el marcado de la página *CheckoutReview. aspx* , observe que la etiqueta `<ItemStyle>` se usa para cambiar el estilo de los elementos dentro del control **DetailsView** cerca de la parte inferior de la página. Al ver la página en la **vista Diseño** (seleccionando **diseño** en la esquina inferior izquierda de Visual Studio), seleccionando el control **DetailsView** y seleccionando la **etiqueta inteligente** (el icono de flecha en la parte superior derecha del control), podrá ver las tareas de **DetailsView**.
 > 
-> ![Desprotección y el pago con PayPal: editar campos](checkout-and-payment-with-paypal/_static/image18.png)
+> ![Retirada y pago con PayPal: editar campos](checkout-and-payment-with-paypal/_static/image18.png)
 > 
-> Seleccionando **editar campos**, **campos** aparecerá el cuadro de diálogo. En este cuadro de diálogo puede controlar fácilmente las propiedades visuales, tales como **ItemStyle**, de la **DetailsView** control.
+> Al seleccionar **Editar campos**, aparecerá el cuadro de diálogo **campos** . En este cuadro de diálogo puede controlar fácilmente las propiedades visuales, como **ItemStyle**, del control **DetailsView** .
 > 
-> ![Pago con PayPal - cuadro de diálogo campos y envío](checkout-and-payment-with-paypal/_static/image19.png)
+> ![Cuadro de diálogo desproteger y pago con PayPal-campos](checkout-and-payment-with-paypal/_static/image19.png)
 
-### <a name="complete-purchase"></a>Completar la compra
+### <a name="complete-purchase"></a>Completar compra
 
-*CheckoutComplete.aspx* página realiza la compra de PayPal. Como se mencionó anteriormente, el usuario debe hacer clic en el **completar pedido** botón antes de la aplicación se le remitirá a la *CheckoutComplete.aspx* página.
+La página *CheckoutComplete. aspx* realiza la compra de PayPal. Como se mencionó anteriormente, el usuario debe hacer clic en el botón **completar pedido** antes de que la aplicación vaya a la página *CheckoutComplete. aspx* .
 
-1. En el *desprotección* carpeta, abra la página denominada *CheckoutComplete.aspx*.
+1. En la carpeta de *desprotección* , abra la página denominada *CheckoutComplete. aspx*.
 2. Reemplace el marcado existente por lo siguiente:   
 
     [!code-aspx[Main](checkout-and-payment-with-paypal/samples/sample22.aspx)]
-3. Abra la página de código subyacente denominada *CheckoutComplete.aspx.cs* y reemplace el código existente con lo siguiente:   
+3. Abra la página de código subyacente denominada *CheckoutComplete.aspx.CS* y reemplace el código existente por lo siguiente:   
 
     [!code-csharp[Main](checkout-and-payment-with-paypal/samples/sample23.cs)]
 
-Cuando el *CheckoutComplete.aspx* se carga la página, el `DoCheckoutPayment` se llama al método. Como se mencionó anteriormente, el `DoCheckoutPayment` método completa la compra desde el entorno de pruebas de PayPal. Una vez completada la compra del pedido, PayPal el *CheckoutComplete.aspx* página muestra una transacción de pago `ID` al comprador.
+Cuando se carga la página *CheckoutComplete. aspx* , se llama al método `DoCheckoutPayment`. Como se mencionó anteriormente, el método de `DoCheckoutPayment` completa la compra del entorno de pruebas de PayPal. Una vez que PayPal haya completado la compra del pedido, la página *CheckoutComplete. aspx* mostrará una transacción de pago `ID` al comprador.
 
-### <a name="handle-cancel-purchase"></a>Controlar Cancelar compra
+### <a name="handle-cancel-purchase"></a>Controlar cancelar compra
 
-Si el usuario decide cancelar la compra, se dirigirá a la *CheckoutCancel.aspx* donde verá que se ha cancelado su orden de página.
+Si el usuario decide cancelar la compra, se le dirigirá a la página *CheckoutCancel. aspx* , donde verá que se ha cancelado su pedido.
 
-1. Abra la página llamada *CheckoutCancel.aspx* en el *desprotección* carpeta.
+1. Abra la página denominada *CheckoutCancel. aspx* en la carpeta de *desprotección* .
 2. Reemplace el marcado existente por lo siguiente:   
 
     [!code-aspx[Main](checkout-and-payment-with-paypal/samples/sample24.aspx)]
 
-### <a name="handle-purchase-errors"></a>Controlar los errores de compra
+### <a name="handle-purchase-errors"></a>Control de errores de compra
 
-Errores durante el proceso de compra se controlarán mediante la *CheckoutError.aspx* página. El código subyacente de la *CheckoutStart.aspx* página, el *CheckoutReview.aspx* página y el *CheckoutComplete.aspx* cada página le redireccionará a la  *CheckoutError.aspx* página si se produce un error.
+Los errores que se produzcan durante el proceso de compra se controlarán mediante la página *CheckoutError. aspx* . El código subyacente de la página *CheckoutStart. aspx* , la página *CheckoutReview. aspx* y la página *CheckoutComplete. aspx* redirigirá a la página *CheckoutError. aspx* si se produce un error.
 
-1. Abra la página llamada *CheckoutError.aspx* en el *desprotección* carpeta.
+1. Abra la página denominada *CheckoutError. aspx* en la carpeta de *desprotección* .
 2. Reemplace el marcado existente por lo siguiente:   
 
     [!code-aspx[Main](checkout-and-payment-with-paypal/samples/sample25.aspx)]
 
-El *CheckoutError.aspx* página se muestra con los detalles del error cuando se produce un error durante el proceso de pago.
+La página *CheckoutError. aspx* se muestra con los detalles del error cuando se produce un error durante el proceso de desprotección.
 
 ## <a name="running-the-application"></a>Ejecutar la aplicación
 
-Ejecute la aplicación para ver cómo comprar productos. Tenga en cuenta que va a ejecutar en el PayPal entorno de pruebas. No se está intercambiando dinero real.
+Ejecute la aplicación para ver cómo comprar productos. Tenga en cuenta que se ejecutará en el entorno de pruebas de PayPal. No se intercambia dinero real.
 
 1. Asegúrese de que todos los archivos se guardan en Visual Studio.
-2. Abra un explorador Web y vaya a [ https://developer.paypal.com ](https://developer.paypal.com/).
+2. Abra un explorador Web y vaya a [https://developer.paypal.com](https://developer.paypal.com/).
 3. Inicie sesión con su cuenta de desarrollador de PayPal que creó anteriormente en este tutorial.  
-   Espacio aislado de desarrollador de PayPal, deberá haber iniciado sesión en [ https://developer.paypal.com ](https://developer.paypal.com/) para probar la desprotección de express. Esto solo se aplica a sandbox de PayPal las pruebas, no al entorno de producción de PayPal.
+   Para el espacio aislado para desarrolladores de PayPal, debe iniciar sesión en [https://developer.paypal.com](https://developer.paypal.com/) para probar la protección rápida. Esto solo se aplica a las pruebas de espacio aislado de PayPal, no al entorno activo de PayPal.
 4. En Visual Studio, presione **F5** para ejecutar la aplicación de ejemplo Wingtip Toys.  
-   Una vez que vuelve a generar la base de datos, el explorador se abrirá y mostrará el *Default.aspx* página.
-5. Agregar tres productos distintos al carro de la compra seleccionando la categoría de producto, por ejemplo, "Automóviles" y, a continuación, haga clic en **agregar al carro** junto a cada producto.  
-   Carro de la compra mostrará el producto que ha seleccionado.
-6. Haga clic en el **PayPal** botón Desproteger. 
+   Después de volver a generar la base de datos, el explorador se abrirá y mostrará la página *default. aspx* .
+5. Agregue tres productos diferentes al carro de la compra; para ello, seleccione la categoría de producto, como "automóviles" y, a continuación, haga clic en **Agregar al carro** junto a cada producto.  
+   El carro de la compra mostrará el producto que ha seleccionado.
+6. Haga clic en el botón **PayPal** para desprotegerlo. 
 
-    ![Carro de la desprotección y el pago con PayPal.](checkout-and-payment-with-paypal/_static/image20.png)
+    ![Retirada y pago con PayPal-Cart](checkout-and-payment-with-paypal/_static/image20.png)
 
-   Extrayendo del repositorio es necesario que tenga una cuenta de usuario para la aplicación de ejemplo Wingtip Toys.
-7. Haga clic en el **Google** vínculo a la derecha de la página para iniciar sesión con una cuenta de correo electrónico de gmail.com existente.  
-   Si no tiene una cuenta de gmail.com, puede crear uno para realizar pruebas en [www.gmail.com](https://www.gmail.com/). También puede usar una cuenta local estándar, haga clic en "Register". 
+   La desprotección requerirá que tenga una cuenta de usuario para la aplicación de ejemplo Wingtip Toys.
+7. Haga clic en el vínculo de **Google** de la derecha de la página para iniciar sesión con una cuenta de correo electrónico de gmail.com existente.  
+   Si no tiene una cuenta de gmail.com, puede crear una con fines de prueba en [www.gmail.com](https://www.gmail.com/). También puede usar una cuenta local estándar haciendo clic en "registrar". 
 
-    ![Inicie sesión desprotección y el pago con PayPal.](checkout-and-payment-with-paypal/_static/image21.png)
-8. Inicie sesión con su cuenta de gmail y la contraseña. 
+    ![Retirada y pago con PayPal: Inicio de sesión](checkout-and-payment-with-paypal/_static/image21.png)
+8. Inicie sesión con su cuenta y contraseña de gmail. 
 
-    ![Retirada y pago con PayPal - inicio de sesión de Gmail](checkout-and-payment-with-paypal/_static/image22.png)
-9. Haga clic en el **iniciarla** botón registrar su cuenta de gmail con su nombre de usuario de aplicación de ejemplo Wingtip Toys. 
+    ![Retirada y pago con PayPal: Inicio de sesión de gmail](checkout-and-payment-with-paypal/_static/image22.png)
+9. Haga clic en el botón **iniciar sesión** para registrar su cuenta de gmail con el nombre de usuario de la aplicación de ejemplo Wingtip Toys. 
 
-    ![Retirada y pago con PayPal - registro de cuenta](checkout-and-payment-with-paypal/_static/image23.png)
-10. En el sitio de prueba de PayPal, agregue su **comprador** enviar por correo electrónico a la dirección y la contraseña que creó anteriormente en este tutorial, a continuación, haga clic en el **sesión** botón. 
+    ![Retirada y pago con PayPal: registrar cuenta](checkout-and-payment-with-paypal/_static/image23.png)
+10. En el sitio de prueba de PayPal, agregue la dirección de correo electrónico y la contraseña del **comprador** que creó anteriormente en este tutorial y, después, haga clic en el botón **iniciar sesión** . 
 
-    ![Retirada y pago con PayPal - inicio de sesión PayPal](checkout-and-payment-with-paypal/_static/image24.png)
-11. Aceptar la directiva de PayPal y haga clic en el **Acepto y continuar** botón.  
-    Tenga en cuenta que esta página solo muestra la primera vez que use esta cuenta PayPal. Nuevamente, observe que se trata de una cuenta de prueba, no se intercambia dinero real. 
+    ![Retirada y pago con PayPal-inicio de sesión de PayPal](checkout-and-payment-with-paypal/_static/image24.png)
+11. Acepte la Directiva PayPal y haga clic en el botón **Aceptar y continuar** .  
+    Tenga en cuenta que esta página solo se muestra la primera vez que usa esta cuenta de PayPal. De nuevo, tenga en cuenta que se trata de una cuenta de prueba, no se intercambia dinero real. 
 
-    ![Retirada y pago con PayPal - directiva de PayPal](checkout-and-payment-with-paypal/_static/image25.png)
-12. Revise la información de pedido en la comprobación de página de revisión del entorno y haga clic en de PayPal **continuar**. 
+    ![Retirada y pago con PayPal: Directiva PayPal](checkout-and-payment-with-paypal/_static/image25.png)
+12. Revise la información del pedido en la página de revisión del entorno de pruebas de PayPal y haga clic en **continuar**. 
 
-    ![Pago con PayPal - revise la información y envío](checkout-and-payment-with-paypal/_static/image26.png)
-13. En el *CheckoutReview.aspx* página, compruebe la cantidad del pedido y ver la dirección de envío generado. A continuación, haga clic en el **completar pedido** botón. 
+    ![Retirada y pago con PayPal: revisar información](checkout-and-payment-with-paypal/_static/image26.png)
+13. En la página *CheckoutReview. aspx* , compruebe el importe del pedido y vea la dirección de envío generada. A continuación, haga clic en el botón **completar pedido** . 
 
-    ![Pago con PayPal: revisión de pedidos y envío](checkout-and-payment-with-paypal/_static/image27.png)
-14. El **CheckoutComplete.aspx** página se muestra con un identificador de transacción de pago. 
+    ![Retirada y pago con PayPal: revisión de pedidos](checkout-and-payment-with-paypal/_static/image27.png)
+14. La página **CheckoutComplete. aspx** se muestra con un ID. de transacción de pago. 
 
-    ![Retirada y pago con PayPal - desprotección completa](checkout-and-payment-with-paypal/_static/image28.png)
+    ![Retirada y pago con PayPal-desprotección completada](checkout-and-payment-with-paypal/_static/image28.png)
 
 <a id="ReviewDBWebForms"></a>
-## <a name="reviewing-the-database"></a>Revisión de la base de datos
+## <a name="reviewing-the-database"></a>Revisar la base de datos
 
-Al revisar los datos actualizados en la base de datos de aplicación de ejemplo Wingtip Toys después de ejecutar la aplicación, puede ver que la aplicación registrada correctamente la compra de los productos.
+Al revisar los datos actualizados en la base de datos de la aplicación de ejemplo Wingtip Toys después de ejecutar la aplicación, puede ver que la aplicación registró correctamente la compra de los productos.
 
-Puede inspeccionar los datos contenidos en el *Wingtiptoys.mdf* archivo de base de datos mediante el uso de la **Database Explorer** ventana (**Explorador de servidores** ventana de Visual Studio) al igual que anteriormente en esta serie de tutoriales.
+Puede inspeccionar los datos contenidos en el archivo de base de datos *wingtiptoys. MDF* mediante la ventana de **Explorador de bases de datos** (**Explorador de servidores** ventana de Visual Studio) como hizo anteriormente en esta serie de tutoriales.
 
-1. Si todavía está abierto, cierre la ventana del explorador.
-2. En Visual Studio, seleccione el **mostrar todos los archivos** situado en la parte superior de **el Explorador de soluciones** para que pueda expandir la **aplicación\_datos** carpeta.
-3. Expanda el **aplicación\_datos** carpeta.  
- Es posible que deba seleccionar el **mostrar todos los archivos** icono de la carpeta.
-4. Haga clic en el *Wingtiptoys.mdf* el archivo de base de datos y seleccione **abierto**.  
-    **Explorador de servidores** se muestra.
-5. Expanda el **tablas** carpeta.
-6. Haga clic en el **pedidos**de tabla y seleccione **mostrar datos de tabla**.  
- El **pedidos** se muestra la tabla.
-7. Revise el **PaymentTransactionID** columna para confirmar transacciones correctas. 
+1. Cierre la ventana del explorador si aún está abierta.
+2. En Visual Studio, seleccione el icono **Mostrar todos los archivos** situado en la parte superior de **Explorador de soluciones** para que pueda expandir la carpeta **App\_Data** .
+3. Expanda la carpeta **App\_Data** .  
+ Es posible que tenga que seleccionar el icono **Mostrar todos los archivos** de la carpeta.
+4. Haga clic con el botón secundario en el archivo de base de datos *wingtiptoys. MDF* y seleccione **abrir**.  
+    Se muestra **Explorador de servidores** .
+5. Expanda la carpeta **tablas** .
+6. Haga clic con el botón secundario en la tabla **Orders**y seleccione **Mostrar datos de tabla**.  
+ Se muestra la tabla **pedidos** .
+7. Revise la columna **PaymentTransactionID** para confirmar las transacciones correctas. 
 
-    ![Pago con PayPal - base de datos de revisión y envío](checkout-and-payment-with-paypal/_static/image29.png)
-8. Cerrar la **pedidos** ventana de la tabla.
-9. En el Explorador de servidores, haga clic en el **OrderDetails** de tabla y seleccione **mostrar datos de tabla**.
-10. Revise el `OrderId` y `Username` valores en el **OrderDetails** tabla. Tenga en cuenta que estos valores coinciden con la `OrderId` y `Username` valores incluidos en el **pedidos** tabla.
-11. Cerrar la **OrderDetails** ventana de la tabla.
-12. Haga clic en el archivo de base de datos de Wingtip Toys (*Wingtiptoys.mdf*) y seleccione **cerrar conexión**.
-13. Si no ve el **el Explorador de soluciones** ventana, haga clic en **el Explorador de soluciones** en la parte inferior de la **Explorador de servidores** ventana para mostrar el **el Explorador de soluciones**  nuevo.
+    ![Retirada y pago con PayPal: revisar base de datos](checkout-and-payment-with-paypal/_static/image29.png)
+8. Cierre la ventana de la tabla **Orders** .
+9. En el Explorador de servidores, haga clic con el botón secundario en la tabla **OrderDetails** y seleccione **Mostrar datos de tabla**.
+10. Revise los valores `OrderId` y `Username` de la tabla **OrderDetails** . Tenga en cuenta que estos valores coinciden con los valores `OrderId` y `Username` incluidos en la tabla **Orders** .
+11. Cierre la ventana de la tabla **OrderDetails** .
+12. Haga clic con el botón secundario en el archivo de base de datos de Wingtip Toys (*wingtiptoys. MDF*) y seleccione **cerrar conexión**.
+13. Si no ve la ventana **Explorador de soluciones** , haga clic en **Explorador de soluciones** en la parte inferior de la ventana de **Explorador de servidores** para volver a mostrar el **Explorador de soluciones** .
 
 ## <a name="summary"></a>Resumen
 
-En este tutorial, ha agregado order y esquemas de detalle de pedido para realizar un seguimiento de la compra de productos. También se integra la funcionalidad de PayPal en la aplicación de ejemplo Wingtip Toys.
+En este tutorial, ha agregado esquemas de pedidos y detalles de pedidos para realizar un seguimiento de la compra de productos. También ha integrado la funcionalidad de PayPal en la aplicación de ejemplo Wingtip Toys.
 
 ## <a name="additional-resources"></a>Recursos adicionales
 
 [Información general sobre la configuración de ASP.NET](https://msdn.microsoft.com/library/ms178683(v=vs.100).aspx)  
-[Implementar una aplicación de formularios Web ASP.NET segura con pertenencia, OAuth y SQL Database en Azure App Service](https://azure.microsoft.com/documentation/articles/web-sites-dotnet-deploy-aspnet-webforms-app-membership-oauth-sql-database/)  
-[Microsoft Azure - evaluación gratuita](https://azure.microsoft.com/pricing/free-trial/)
+[Implementar una aplicación de formularios Web Forms de ASP.NET segura con pertenencia, OAuth y SQL Database para Azure App Service](https://azure.microsoft.com/documentation/articles/web-sites-dotnet-deploy-aspnet-webforms-app-membership-oauth-sql-database/)  
+[Evaluación gratuita de Microsoft Azure](https://azure.microsoft.com/pricing/free-trial/)
 
 ## <a name="disclaimer"></a>Declinación de responsabilidades
 
-Este tutorial contiene código de ejemplo. Este código de ejemplo se proporciona "tal cual" sin garantía de ningún tipo. En consecuencia, Microsoft no garantiza la precisión, integridad o la calidad del código de ejemplo. Usted acepta usar el código de ejemplo en su propia responsabilidad. En ningún caso Microsoft será responsable para usted de ninguna manera cualquier código de ejemplo, contenido, incluyendo pero sin limitarse a algún error u omisión en cualquier código de ejemplo, contenido, o cualquier pérdida o daño de ningún tipo que se incurre por el uso del código de ejemplo. Por el presente documento se le notificará y quedará acepta indemnizar, guardar y almacenar frente y contra la pérdida de todo, notificaciones de pérdida, lesiones o daños de cualquier las ocasionados por incluidas, sin limitación, tipo o derivados de material que se registra, Microsoft transmitir, usar o se basan en incluir, pero no se limita a los puntos de vista expresados en él.
+Este tutorial contiene código de ejemplo. Este código de ejemplo se proporciona "tal cual" sin garantía de ningún tipo. En consecuencia, Microsoft no garantiza la precisión, la integridad o la calidad del código de ejemplo. Acepta usar el código de ejemplo bajo su responsabilidad. En ningún caso, Microsoft será responsable de ningún modo por cualquier código de ejemplo, contenido, incluidos, entre otros, errores u omisiones en cualquier código de ejemplo, contenido, o cualquier pérdida o daño de cualquier tipo que se incurra como resultado del uso de cualquier código de ejemplo. Se le notificará y, por el presente acuerdo, se compromete a indemnizar, a mantener a Microsoft en contra de cualquier pérdida, reclamaciones de pérdida, lesiones o daños de cualquier naturaleza, incluidas, sin limitación, las supuestos que ocasionaron o que proceden del material que publica, transmitir, usar o confiar en incluir, entre otras, las vistas expresadas en él.
 
 > [!div class="step-by-step"]
 > [Anterior](shopping-cart.md)

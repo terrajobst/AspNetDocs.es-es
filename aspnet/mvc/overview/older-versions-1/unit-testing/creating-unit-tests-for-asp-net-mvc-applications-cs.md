@@ -1,115 +1,115 @@
 ---
 uid: mvc/overview/older-versions-1/unit-testing/creating-unit-tests-for-asp-net-mvc-applications-cs
-title: Crear pruebas unitarias para aplicaciones de ASP.NET MVC (C#) | Microsoft Docs
+title: Crear pruebas unitarias para aplicaciones ASP.NET MVCC#() | Microsoft Docs
 author: StephenWalther
-description: Obtenga información sobre cómo crear pruebas unitarias para las acciones de controlador. En este tutorial, Stephen Walther muestra cómo probar si una acción de controlador devuelve un ParteI...
+description: Obtenga información sobre cómo crear pruebas unitarias para las acciones de controlador. En este tutorial, Stephen Walther muestra cómo probar si una acción del controlador devuelve una parte...
 ms.author: riande
 ms.date: 08/19/2008
 ms.assetid: d3a270b9-d7b1-47f2-8775-fc3beb518b5c
 msc.legacyurl: /mvc/overview/older-versions-1/unit-testing/creating-unit-tests-for-asp-net-mvc-applications-cs
 msc.type: authoredcontent
-ms.openlocfilehash: 633e28a100937c5d40d62fe5cc151e613171cc8f
-ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
+ms.openlocfilehash: 35fd0d85c63e5bd196394ce11b851c822a6405d9
+ms.sourcegitcommit: 22fbd8863672c4ad6693b8388ad5c8e753fb41a2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/06/2019
-ms.locfileid: "65126880"
+ms.lasthandoff: 11/28/2019
+ms.locfileid: "74595300"
 ---
 # <a name="creating-unit-tests-for-aspnet-mvc-applications-c"></a>Crear pruebas unitarias para aplicaciones de ASP.NET MVC (C#)
 
-by [Stephen Walther](https://github.com/StephenWalther)
+por [Stephen Walther](https://github.com/StephenWalther)
 
-[Descargar PDF](http://download.microsoft.com/download/8/4/8/84843d8d-1575-426c-bcb5-9d0c42e51416/ASPNET_MVC_Tutorial_07_CS.pdf)
+[Descargar PDF](https://download.microsoft.com/download/8/4/8/84843d8d-1575-426c-bcb5-9d0c42e51416/ASPNET_MVC_Tutorial_07_CS.pdf)
 
-> Obtenga información sobre cómo crear pruebas unitarias para las acciones de controlador. En este tutorial, Stephen Walther muestra cómo probar si una acción de controlador devuelve una vista determinada, devuelve un conjunto de datos determinado o devuelve un tipo diferente del resultado de la acción.
+> Obtenga información sobre cómo crear pruebas unitarias para las acciones de controlador. En este tutorial, Stephen Walther muestra cómo probar si una acción de controlador devuelve una vista determinada, devuelve un conjunto de datos determinado o devuelve un tipo diferente de resultado de acción.
 
-El objetivo de este tutorial es demostrar cómo puede escribir pruebas unitarias para los controladores en su ASP.NET MVC aplicaciones. Se describe cómo crear tres tipos diferentes de las pruebas unitarias. Obtenga información sobre cómo probar la vista devuelta por una acción de controlador, los datos de vista devuelta por una acción de controlador de pruebas y cómo probar si una acción de controlador le redirige a una segunda acción de controlador.
+El objetivo de este tutorial es mostrar cómo se pueden escribir pruebas unitarias para los controladores en las aplicaciones ASP.NET MVC. Se explica cómo crear tres tipos diferentes de pruebas unitarias. Aprenderá a probar la vista devuelta por una acción del controlador, a probar los datos de la vista devueltos por una acción del controlador y a probar si una acción del controlador redirige o no a una segunda acción del controlador.
 
-## <a name="creating-the-controller-under-test"></a>Crear el controlador sometida a prueba
+## <a name="creating-the-controller-under-test"></a>Creando el controlador sometido a prueba
 
-Comencemos por crear el controlador que se va a probar. El controlador, denominado el `ProductController`, se encuentra en el listado 1.
+Comencemos por crear el controlador que se va a probar. El controlador, denominado el `ProductController`, se incluye en la lista 1.
 
-**Listado 1: `ProductController.cs`**
+**Lista 1: `ProductController.cs`**
 
 [!code-csharp[Main](creating-unit-tests-for-asp-net-mvc-applications-cs/samples/sample1.cs)]
 
-El `ProductController` contiene dos métodos de acción denominados `Index()` y `Details()`. Ambos métodos de acción devuelven una vista. Tenga en cuenta que el `Details()` acción acepta un parámetro denominado identificador.
+El `ProductController` contiene dos métodos de acción denominados `Index()` y `Details()`. Ambos métodos de acción devuelven una vista. Tenga en cuenta que la acción `Details()` acepta un parámetro denominado ID.
 
 ## <a name="testing-the-view-returned-by-a-controller"></a>Probar la vista devuelta por un controlador
 
-Imagine que va a probar si el `ProductController` devuelve la vista derecha. Queremos asegurarse de que, cuando el `ProductController.Details()` se invoca la acción, se devuelve la vista de detalles. La clase de prueba en el listado 2 contiene una prueba unitaria para probar la vista devuelta por la `ProductController.Details()` acción.
+Imagine que queremos probar si el `ProductController` devuelve o no la vista correcta. Queremos asegurarnos de que, cuando se invoca la acción `ProductController.Details()`, se devuelve la vista de detalles. La clase de prueba de la lista 2 contiene una prueba unitaria para probar la vista devuelta por la acción `ProductController.Details()`.
 
-**Listado 2: `ProductControllerTest.cs`**
+**Lista 2: `ProductControllerTest.cs`**
 
 [!code-csharp[Main](creating-unit-tests-for-asp-net-mvc-applications-cs/samples/sample2.cs)]
 
-La clase en el listado 2 incluye un método de prueba denominado `TestDetailsView()`. Este método contiene tres líneas de código. La primera línea de código crea una nueva instancia de la `ProductController` clase. La segunda línea de código invoca el controlador `Details()` método de acción. Por último, la última línea de comprobaciones de código o no la vista devuelta por la `Details()` acción es la vista de detalles.
+La clase de la lista 2 incluye un método de prueba denominado `TestDetailsView()`. Este método contiene tres líneas de código. La primera línea de código crea una nueva instancia de la clase `ProductController`. La segunda línea de código invoca el método de acción `Details()` del controlador. Por último, la última línea de código comprueba si la vista devuelta por la `Details()` acción es la vista de detalles.
 
-El `ViewResult.ViewName` propiedad representa el nombre de la vista devuelta por un controlador. Una advertencia de gran tamaño sobre las pruebas de esta propiedad. Hay dos maneras de que un controlador puede devolver una vista. Un controlador de forma explícita puede devolver una vista similar al siguiente:
+La propiedad `ViewResult.ViewName` representa el nombre de la vista devuelta por un controlador. Una advertencia importante sobre la prueba de esta propiedad. Un controlador puede devolver una vista de dos maneras. Un controlador puede devolver explícitamente una vista similar a la siguiente:
 
 [!code-csharp[Main](creating-unit-tests-for-asp-net-mvc-applications-cs/samples/sample3.cs)]
 
-Como alternativa, el nombre de la vista puede deducirse a partir del nombre de la acción de controlador similar al siguiente:
+Como alternativa, el nombre de la vista se puede inferir a partir del nombre de la acción del controlador como se muestra a continuación:
 
 [!code-csharp[Main](creating-unit-tests-for-asp-net-mvc-applications-cs/samples/sample4.cs)]
 
-Esta acción de controlador también devuelve una vista denominada `Details`. Sin embargo, el nombre de la vista se deriva el nombre de acción. Si desea probar el nombre de vista, explícitamente debe devolver el nombre de vista de la acción del controlador.
+Esta acción del controlador también devuelve una vista denominada `Details`. Sin embargo, el nombre de la vista se deduce del nombre de la acción. Si desea probar el nombre de la vista, debe devolver explícitamente el nombre de la vista desde la acción del controlador.
 
-Puede ejecutar la prueba unitaria en el listado 2 escribiendo la combinación de teclado **Ctrl-R, A** o haciendo clic en el **ejecutar todas las pruebas de la solución** (consulte la figura 1). Si se supera la prueba, verá la ventana de resultados de pruebas en la figura 2.
+Puede ejecutar la prueba unitaria en la lista 2 escribiendo la combinación **de teclas Ctrl-R,** o haciendo clic en el botón **ejecutar todas las pruebas de la solución** (consulte la figura 1). Si la prueba se supera, verá la Resultados de pruebas ventana en la figura 2.
 
-[![Ejecutar todas las pruebas de solución](creating-unit-tests-for-asp-net-mvc-applications-cs/_static/image2.png)](creating-unit-tests-for-asp-net-mvc-applications-cs/_static/image1.png)
+[![ejecutar todas las pruebas de la solución](creating-unit-tests-for-asp-net-mvc-applications-cs/_static/image2.png)](creating-unit-tests-for-asp-net-mvc-applications-cs/_static/image1.png)
 
-**Figura 01**: Ejecutar todas las pruebas de solución ([haga clic aquí para ver imagen en tamaño completo](creating-unit-tests-for-asp-net-mvc-applications-cs/_static/image3.png))
+**Figura 01**: ejecución de todas las pruebas de la solución ([haga clic para ver la imagen de tamaño completo](creating-unit-tests-for-asp-net-mvc-applications-cs/_static/image3.png))
 
-[![¡Success!](creating-unit-tests-for-asp-net-mvc-applications-cs/_static/image5.png)](creating-unit-tests-for-asp-net-mvc-applications-cs/_static/image4.png)
+[![correcto.](creating-unit-tests-for-asp-net-mvc-applications-cs/_static/image5.png)](creating-unit-tests-for-asp-net-mvc-applications-cs/_static/image4.png)
 
-**Figura 02**: Correcto ([Haga clic aquí para ver imagen en tamaño completo](creating-unit-tests-for-asp-net-mvc-applications-cs/_static/image6.png))
+**Figura 02**: correcto. ([Haga clic para ver la imagen de tamaño completo](creating-unit-tests-for-asp-net-mvc-applications-cs/_static/image6.png))
 
-## <a name="testing-the-view-data-returned-by-a-controller"></a>Comprobación de los datos de vista devuelta por un controlador
+## <a name="testing-the-view-data-returned-by-a-controller"></a>Probar los datos de vista devueltos por un controlador
 
-Un controlador MVC pasa datos a una vista mediante el uso de algo llamado *`View Data`*. Por ejemplo, imagine que desea mostrar los detalles de un determinado producto al invocar el `ProductController Details()` acción. En ese caso, puede crear una instancia de un `Product` clase (definido en el modelo) y pasar la instancia a la `Details` aprovechando las ventajas de la vista `View Data`.
+Un controlador de MVC pasa datos a una vista mediante algo llamado *`View Data`* . Por ejemplo, Imagine que desea mostrar los detalles de un producto determinado al invocar la acción `ProductController Details()`. En ese caso, puede crear una instancia de una `Product` clase (definida en el modelo) y pasar la instancia a la vista de `Details` aprovechando las ventajas de `View Data`.
 
-Modificado `ProductController` en el listado 3 incluye actualizada `Details()` acción que devuelva un producto.
+Los `ProductController` modificados de la lista 3 incluyen una acción de `Details()` actualizada que devuelve un producto.
 
-**Listado 3: `ProductController.cs`**
+**Lista 3: `ProductController.cs`**
 
 [!code-csharp[Main](creating-unit-tests-for-asp-net-mvc-applications-cs/samples/sample5.cs)]
 
-En primer lugar, el `Details()` acción crea una nueva instancia de la `Product` clase que representa un equipo portátil. A continuación, la instancia de la `Product` clase se pasa como segundo parámetro para el `View()` método.
+En primer lugar, la acción de `Details()` crea una instancia nueva de la clase `Product` que representa un equipo portátil. A continuación, la instancia de la clase `Product` se pasa como segundo parámetro al método `View()`.
 
-Puede escribir pruebas unitarias comprobar si los datos esperados están contenida en la vista datos. La prueba unitaria en el listado 4 pruebas si un producto que representa un equipo portátil se devuelve al llamar a la `ProductController Details()` método de acción.
+Puede escribir pruebas unitarias para comprobar si los datos esperados se encuentran en los datos de la vista. La prueba unitaria de la lista 4 comprueba si se devuelve o no un producto que representa un equipo portátil cuando se llama al método de acción `ProductController Details()`.
 
-**Listado 4: `ProductControllerTest.cs`**
+**Lista 4: `ProductControllerTest.cs`**
 
 [!code-csharp[Main](creating-unit-tests-for-asp-net-mvc-applications-cs/samples/sample6.cs)]
 
-En el listado 4 el `TestDetailsView()` método prueba los datos de vista devuelto al invocar el `Details()` método. El `ViewData` se expone como una propiedad en el `ViewResult` devuelto al invocar el `Details()` método. El `ViewData.Model` propiedad contiene el producto pasado a la vista. La prueba simplemente comprueba que el producto contenido en los datos de vista tiene el nombre de equipo portátil.
+En la lista 4, el método `TestDetailsView()` prueba los datos de vista devueltos invocando el método `Details()`. El `ViewData` se expone como una propiedad en el `ViewResult` devuelto al invocar el método `Details()`. La propiedad `ViewData.Model` contiene el producto que se pasa a la vista. La prueba simplemente comprueba que el producto contenido en los datos de la vista tiene el nombre Laptop.
 
-## <a name="testing-the-action-result-returned-by-a-controller"></a>Probar el resultado de acción devuelta por un controlador
+## <a name="testing-the-action-result-returned-by-a-controller"></a>Probar el resultado de la acción devuelto por un controlador
 
-Una acción de controlador más compleja podría devolver distintos tipos de resultados de acción según los valores de los parámetros pasados a la acción del controlador. Una acción de controlador puede devolver una variedad de tipos de resultados de acción, incluso un `ViewResult`, `RedirectToRouteResult`, o `JsonResult`.
+Una acción de controlador más compleja podría devolver distintos tipos de resultados de acción en función de los valores de los parámetros pasados a la acción del controlador. Una acción del controlador puede devolver una variedad de tipos de resultados de acción, incluidos un `ViewResult`, `RedirectToRouteResult`o `JsonResult`.
 
-Por ejemplo, la modificación `Details()` acción en el listado 5 devuelve el `Details` ver al pasar un Id. de producto válida para la acción. Si se pasa un producto no válido: Id. de un identificador con un valor menor que 1, entonces se le redirigirá a la `Index()` acción.
+Por ejemplo, la acción de `Details()` modificada de la lista 5 devuelve la vista de `Details` cuando se pasa un ID. de producto válido a la acción. Si pasa un ID. de producto no válido (un identificador con un valor inferior a 1), se le redirigirá a la acción `Index()`.
 
-**Listado 5: `ProductController.cs`**
+**Lista 5: `ProductController.cs`**
 
 [!code-csharp[Main](creating-unit-tests-for-asp-net-mvc-applications-cs/samples/sample7.cs)]
 
-Puede probar el comportamiento de la `Details()` acción con la prueba unitaria en el listado 6. La prueba unitaria en el listado 6 comprueba que se le redirigirá a la `Index` ver cuando se pasa un identificador con el valor -1 a la `Details()` método.
+Puede probar el comportamiento de la acción `Details()` con la prueba unitaria en la lista 6. La prueba unitaria de la lista 6 comprueba que se le redirige a la `Index` vista cuando se pasa un identificador con el valor-1 al método `Details()`.
 
-**Listado 6: `ProductControllerTest.cs`**
+**Lista 6: `ProductControllerTest.cs`**
 
 [!code-csharp[Main](creating-unit-tests-for-asp-net-mvc-applications-cs/samples/sample8.cs)]
 
-Cuando se llama a la `RedirectToAction()` la acción del controlador de método en una acción de controlador, devuelve un `RedirectToRouteResult`. Las comprobaciones de prueba si el `RedirectToRouteResult` redirigirá al usuario a una acción de controlador denominada `Index`.
+Cuando se llama al método `RedirectToAction()` en una acción del controlador, la acción del controlador devuelve un `RedirectToRouteResult`. La prueba comprueba si el `RedirectToRouteResult` redirigirá al usuario a una acción de controlador llamada `Index`.
 
 ## <a name="summary"></a>Resumen
 
-En este tutorial, aprendió a crear pruebas unitarias de acciones de controlador MVC. En primer lugar, ha aprendido cómo comprobar si la vista derecha devuelto por una acción de controlador. Ha aprendido a usar el `ViewResult.ViewName` propiedad para comprobar el nombre de una vista.
+En este tutorial, aprendió a crear pruebas unitarias para las acciones de controlador de MVC. En primer lugar, aprendió a comprobar si la vista correcta es devuelta por una acción del controlador. Aprendió a utilizar la propiedad `ViewResult.ViewName` para comprobar el nombre de una vista.
 
-A continuación, hemos visto cómo puede probar el contenido de `View Data`. Ha aprendido cómo comprobar si se devolvió el producto adecuado en `View Data` después de llamar a una acción de controlador.
+A continuación, hemos examinado cómo puede probar el contenido de `View Data`. Aprendió a comprobar si el producto correcto se devolvió en `View Data` después de llamar a una acción de controlador.
 
-Finalmente, explicamos cómo puede probar si se devuelven tipos diferentes de los resultados de acción de una acción de controlador. Ha aprendido cómo comprobar si un controlador devuelve un `ViewResult` o `RedirectToRouteResult`.
+Por último, se explica cómo puede probar si se devuelven diferentes tipos de resultados de acciones desde una acción de controlador. Aprendió a probar si un controlador devuelve un `ViewResult` o un `RedirectToRouteResult`.
 
 > [!div class="step-by-step"]
 > [Siguiente](creating-unit-tests-for-asp-net-mvc-applications-vb.md)

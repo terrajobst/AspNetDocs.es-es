@@ -8,12 +8,12 @@ ms.date: 01/16/2019
 ms.assetid: 8bf2c4fb-4ee5-4841-bfc2-03462c1f7a7a
 msc.legacyurl: /web-forms/overview/deployment/visual-studio-web-deployment/deploying-to-iis
 msc.type: authoredcontent
-ms.openlocfilehash: c45003325832258466a787bc589bf40e844248a2
-ms.sourcegitcommit: 4b324a11131e38f920126066b94ff478aa9927f8
+ms.openlocfilehash: 738318cce442fdc5d58dd1e4c992d4941be2487e
+ms.sourcegitcommit: 22fbd8863672c4ad6693b8388ad5c8e753fb41a2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/13/2019
-ms.locfileid: "70985856"
+ms.lasthandoff: 11/28/2019
+ms.locfileid: "74591250"
 ---
 # <a name="aspnet-web-deployment-using-visual-studio-deploying-to-test"></a>ASP.NET Web Deployment Using Visual Studio: Deploying to test
 
@@ -23,7 +23,7 @@ En esta serie de tutoriales se muestra cómo implementar (publicar) una aplicaci
 
 Para obtener una versión actual de la implementación en Azure, consulte [creación de una aplicación Web de ASP.net Core en Azure](/azure/app-service/app-service-web-get-started-dotnet).
 
-## <a name="overview"></a>Información general
+## <a name="overview"></a>Información general del
 
 En este tutorial, implementará una aplicación Web de ASP.NET en Internet Information Server (IIS) en el equipo local.
 
@@ -49,7 +49,7 @@ Aviso: Si recibe un mensaje de error o algo no funciona a medida que avanza en e
 
 Descargue e instale el proyecto y la solución de inicio de Visual Studio para contoso University. Esta solución contiene el tutorial completado. 
 
-[Descargar el proyecto de inicio](http://go.microsoft.com/fwlink/p/?LinkId=282627)
+[Descargar el proyecto de inicio](https://go.microsoft.com/fwlink/p/?LinkId=282627)
 
 ## <a name="install-iis"></a>Instalar IIS
 
@@ -109,7 +109,7 @@ Después de instalar IIS, ejecute el **Administrador de IIS** para asegurarse de
 
 7. En el cuadro de diálogo **modificar grupo de aplicaciones** , cambie la **versión de .net CLR** a **.net CLR v 4.0.30319**. Seleccione **Aceptar**.
 
-   ![Selecting_.NET_4_for_DefaultAppPool](deploying-to-iis/_static/image6a.png)
+   ![Selecting_. NET_4_for_DefaultAppPool](deploying-to-iis/_static/image6a.png)
 
 Ahora está listo para publicar una aplicación web en IIS. Sin embargo, en primer lugar, cree bases de datos para pruebas.
 
@@ -174,11 +174,11 @@ Puede configurar el perfil de publicación para ejecutar el script Grant en la b
 
 1. En Visual Studio, abra el archivo *Grant. SQL* que creó anteriormente.
 
-2. Seleccione **Conectar**. 
+2. Seleccione **conectar**. 
 
     ![Botón conectar](deploying-to-iis/_static/image11.png)
 
-3. En el cuadro de diálogo **conectar con el servidor** , escriba *.\SQLExpress* como el **nombre del servidor**. Seleccione **Conectar**.
+3. En el cuadro de diálogo **conectar con el servidor** , escriba *.\SQLExpress* como el **nombre del servidor**. Seleccione **conectar**.
 
 4. En la lista desplegable base de datos, seleccione **ContosoUniversity**. Seleccione **Ejecutar**. 
 

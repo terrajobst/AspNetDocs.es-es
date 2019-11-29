@@ -1,244 +1,244 @@
 ---
 uid: signalr/overview/getting-started/tutorial-high-frequency-realtime-with-signalr
-title: 'Tutorial: Creación de aplicaciones de alta frecuencia en tiempo real con SignalR 2 | Microsoft Docs'
+title: 'Tutorial: creación de una aplicación en tiempo real de alta frecuencia con Signalr 2 | Microsoft Docs'
 author: bradygaster
-description: Este tutorial muestra cómo crear una aplicación web que usa SignalR de ASP.NET para proporcionar funcionalidad de mensajería de alta frecuencia.
+description: En este tutorial se muestra cómo crear una aplicación web que usa ASP.NET Signalr para proporcionar la funcionalidad de mensajería de alta frecuencia.
 ms.author: bradyg
 ms.date: 01/22/2019
 ms.assetid: 9f969dda-78ea-4329-b1e3-e51c02210a2b
 msc.legacyurl: /signalr/overview/getting-started/tutorial-high-frequency-realtime-with-signalr
 msc.type: authoredcontent
 ms.topic: tutorial
-ms.openlocfilehash: 44aaa2b0c059de310e963f642fa56c2f00a7e443
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: 2503e90735d6cfa445ee08c9e43f8443aa106096
+ms.sourcegitcommit: 22fbd8863672c4ad6693b8388ad5c8e753fb41a2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57025002"
+ms.lasthandoff: 11/28/2019
+ms.locfileid: "74600452"
 ---
-# <a name="tutorial-create-high-frequency-real-time-app-with-signalr-2"></a>Tutorial: Creación de aplicaciones de alta frecuencia en tiempo real con SignalR 2
+# <a name="tutorial-create-high-frequency-real-time-app-with-signalr-2"></a>Tutorial: creación de una aplicación en tiempo real de alta frecuencia con Signalr 2
 
-Este tutorial muestra cómo crear una aplicación web que usa ASP.NET SignalR 2 para proporcionar funcionalidad de mensajería de alta frecuencia. En este caso, "mensajería de alta frecuencia" significa que el servidor envía actualizaciones a una tarifa fija. Enviar hasta 10 mensajes por segundo.
+En este tutorial se muestra cómo crear una aplicación web que usa ASP.NET Signalr 2 para proporcionar la funcionalidad de mensajería de alta frecuencia. En este caso, "mensajería de frecuencia alta" significa que el servidor envía actualizaciones a una velocidad fija. Puede enviar hasta 10 mensajes por segundo.
 
-La aplicación que crea muestra una forma que los usuarios pueden arrastrar. El servidor actualiza la posición de la forma en todos los exploradores conectados para que coincida con la posición de la forma arrastrada mediante actualizaciones periódicas.
+La aplicación que cree muestra una forma que los usuarios pueden arrastrar. El servidor actualiza la posición de la forma en todos los exploradores conectados para que coincida con la posición de la forma arrastrada mediante actualizaciones con tiempo.
 
-Los conceptos presentados en este tutorial tienen aplicaciones de juegos en tiempo real y otras aplicaciones de la simulación.
+Los conceptos presentados en este tutorial tienen aplicaciones en juegos en tiempo real y otras aplicaciones de simulación.
 
 En este tutorial ha:
 
 > [!div class="checklist"]
 > * Configurar el proyecto
-> * Crear la aplicación básica
-> * Cuando se inicia la aplicación se asignan al concentrador
+> * Crear la aplicación base
+> * Asignar al centro cuando se inicia la aplicación
 > * Agregar el cliente
 > * Ejecutar la aplicación
 > * Agregar el bucle de cliente
-> * Agregar bucle de servidor
-> * Agregar una animación fluida
+> * Agregar el bucle de servidor
+> * Agregar animaciones suaves
 
 [!INCLUDE [Consider ASP.NET Core SignalR](~/includes/signalr/signalr-version-disambiguation.md)]
 
 ## <a name="prerequisites"></a>Requisitos previos
 
-* [Visual Studio 2017](https://visualstudio.microsoft.com/downloads/) con el **ASP.NET y desarrollo web** carga de trabajo.
+* [Visual Studio 2017](https://visualstudio.microsoft.com/downloads/) con la carga de trabajo de **desarrollo web y ASP.net** .
 
 ## <a name="set-up-the-project"></a>Configurar el proyecto
 
 En esta sección, creará el proyecto en Visual Studio 2017.
 
-En esta sección se muestra cómo usar Visual Studio 2017 para crear una aplicación Web de ASP.NET vacía y agregar las bibliotecas de SignalR y jQuery.UI.
+En esta sección se muestra cómo usar Visual Studio 2017 para crear una aplicación Web de ASP.NET vacía y agregar las bibliotecas Signalr y jQuery. UI.
 
 1. En Visual Studio, cree una aplicación Web ASP.NET.
 
-    ![Creación de web](tutorial-high-frequency-realtime-with-signalr/_static/image1.png)
+    ![Crear Web](tutorial-high-frequency-realtime-with-signalr/_static/image1.png)
 
-1. En el **nueva aplicación Web de ASP.NET - MoveShapeDemo** ventana, deje **vacía** seleccionado y seleccione **Aceptar**.
+1. En la ventana **New ASP.NET Web Application-MoveShapeDemo** , deje **vacío** seleccionado y haga clic en **Aceptar**.
 
-1. En **el Explorador de soluciones**, haga clic en el proyecto y seleccione **agregar** > **nuevo elemento**.
+1. En **Explorador de soluciones**, haga clic con el botón derecho en el proyecto y seleccione **Agregar** > **nuevo elemento**.
 
-1. En **Agregar nuevo elemento - MoveShapeDemo**, seleccione **instalado** > **Visual C#**   >  **Web**  >  **SignalR** y, a continuación, seleccione **clase de concentrador de SignalR (v2)**.
+1. En **Agregar nuevo elemento-MoveShapeDemo**, seleccione **instalado** > **Visual C#**  > **Web** > **signalr** y, a continuación, seleccione **clase de concentrador de signalr (V2)** .
 
-1. Nombre de la clase *MoveShapeHub* y agréguelo al proyecto.
+1. Asigne a la clase el nombre *MoveShapeHub* y agréguelo al proyecto.
 
-    Este paso se crea el *MoveShapeHub.cs* archivo de clase. Al mismo tiempo, agrega un conjunto de archivos de script y las referencias de ensamblado que admiten SignalR al proyecto.
+    En este paso se crea el archivo de clase *MoveShapeHub.CS* . Simultáneamente, agrega un conjunto de archivos de script y referencias de ensamblado que admiten Signalr en el proyecto.
 
-1. Seleccione **herramientas** > **Administrador de paquetes de NuGet** > **Package Manager Console**.
+1. Seleccione **herramientas** > **Administrador de paquetes NuGet** > **consola del administrador de paquetes**.
 
-1. En **Package Manager Console**, ejecute este comando:
+1. En la **consola del administrador de paquetes**, ejecute este comando:
 
     ```console
     Install-Package jQuery.UI.Combined
     ```
 
-    El comando instala la biblioteca de interfaz de usuario de jQuery. Usa para animar la forma.
+    El comando instala la biblioteca de jQuery UI. Se usa para animar la forma.
 
-1. En **el Explorador de soluciones**, expanda el nodo secuencias de comandos.
+1. En **Explorador de soluciones**, expanda el nodo scripts.
 
-    ![Referencias a bibliotecas de script](tutorial-high-frequency-realtime-with-signalr/_static/image2.png)
+    ![Referencias de la biblioteca de scripts](tutorial-high-frequency-realtime-with-signalr/_static/image2.png)
 
-    Bibliotecas de scripts de jQuery, jQueryUI y SignalR están visibles en el proyecto.
+    Las bibliotecas de scripts para jQuery, jQueryUI y Signalr están visibles en el proyecto.
 
-## <a name="create-the-base-application"></a>Crear la aplicación básica
+## <a name="create-the-base-application"></a>Crear la aplicación base
 
-En esta sección, creará una aplicación de explorador. La aplicación envía la ubicación de la forma en el servidor durante cada evento de mover el mouse. El servidor transmite esta información para todos los clientes conectados en tiempo real. Aprenderá más acerca de esta aplicación en secciones posteriores.
+En esta sección, creará una aplicación de explorador. La aplicación envía la ubicación de la forma al servidor durante cada evento de movimiento del mouse. El servidor difunde esta información a todos los demás clientes conectados en tiempo real. Puede obtener más información sobre esta aplicación en secciones posteriores.
 
-1. Abra el *MoveShapeHub.cs* archivo.
+1. Abra el archivo *MoveShapeHub.CS* .
 
-1. Reemplace el código en el *MoveShapeHub.cs* archivo con este código:
+1. Reemplace el código del archivo *MoveShapeHub.CS* por este código:
 
     [!code-csharp[Main](tutorial-high-frequency-realtime-with-signalr/samples/sample1.cs)]
 
 1. Guarde el archivo.
 
-La `MoveShapeHub` clase es una implementación de un concentrador SignalR. Como en el [Introducción a SignalR](tutorial-getting-started-with-signalr.md) tutorial, el concentrador tiene un método que llaman directamente los clientes. En este caso, el cliente envía un objeto con la nueva X y las coordenadas de la forma en el servidor. Esas coordenadas obtengan difunden a todos los demás clientes conectados. SignalR serializa automáticamente este objeto mediante JSON.
+La clase `MoveShapeHub` es una implementación de un concentrador Signalr. Como en el tutorial [Introducción con signalr](tutorial-getting-started-with-signalr.md) , el concentrador tiene un método al que los clientes llaman directamente. En este caso, el cliente envía un objeto con las nuevas coordenadas X e y de la forma al servidor. Esas coordenadas se difunden a todos los demás clientes conectados. Signalr serializa automáticamente este objeto mediante JSON.
 
-Los envíos de la aplicación la `ShapeModel` objeto al cliente. Tiene miembros para almacenar la posición de la forma. La versión del objeto en el servidor también tiene un miembro para realizar un seguimiento de los datos del cliente que se va a almacenar. Este objeto impide que el servidor envíe datos de un cliente a sí mismo. Este miembro se usa el `JsonIgnore` atributo para mantener la aplicación de serializar los datos y se envían al cliente.
+La aplicación envía el objeto de `ShapeModel` al cliente. Tiene miembros para almacenar la posición de la forma. La versión del objeto en el servidor también tiene un miembro para realizar el seguimiento de los datos del cliente que se están almacenando. Este objeto evita que el servidor envíe de nuevo los datos de un cliente a sí mismo. Este miembro usa el atributo `JsonIgnore` para impedir que la aplicación serialice los datos y los envíe de vuelta al cliente.
 
-## <a name="map-to-the-hub-when-app-starts"></a>Cuando se inicia la aplicación se asignan al concentrador
+## <a name="map-to-the-hub-when-app-starts"></a>Asignar al centro cuando se inicia la aplicación
 
-A continuación, configurar la asignación al concentrador cuando se inicia la aplicación. En SignalR 2, la adición de una clase de inicio OWIN crea la asignación.
+A continuación, configure la asignación al concentrador cuando se inicie la aplicación. En Signalr 2, la adición de una clase de inicio OWIN crea la asignación.
 
-1. En **el Explorador de soluciones**, haga clic en el proyecto y seleccione **agregar** > **nuevo elemento**.
+1. En **Explorador de soluciones**, haga clic con el botón derecho en el proyecto y seleccione **Agregar** > **nuevo elemento**.
 
-1. En **Agregar nuevo elemento - MoveShapeDemo** seleccione **instalado** > **Visual C#**   >  **Web** y, a continuación, Seleccione **clase de inicio OWIN**.
+1. En **Agregar nuevo elemento-MoveShapeDemo** , seleccione **instalado** > **Visual C#**  > **Web** y, a continuación, seleccione **clase de inicio OWIN**.
 
-1. Nombre de la clase *inicio* y seleccione **Aceptar**.
+1. Asigne a la clase el nombre *Startup* y seleccione **Aceptar**.
 
-1. Reemplace el código predeterminado en el *Startup.cs* archivo con este código:
+1. Reemplace el código predeterminado del archivo *Startup.CS* por este código:
 
     [!code-csharp[Main](tutorial-high-frequency-realtime-with-signalr/samples/sample2.cs)]
 
-La clase de inicio OWIN llama `MapSignalR` cuando se ejecuta la aplicación la `Configuration` método. La aplicación agrega la clase de inicio del OWIN proceso utilizando el `OwinStartup` atributo de ensamblado.
+La clase de inicio OWIN llama a `MapSignalR` cuando la aplicación ejecuta el método `Configuration`. La aplicación agrega la clase al proceso de inicio de OWIN mediante el `OwinStartup` atributo de ensamblado.
 
 ## <a name="add-the-client"></a>Agregar el cliente
 
 Agregue la página HTML para el cliente.
 
-1. En **el Explorador de soluciones**, haga clic en el proyecto y seleccione **agregar** > **página HTML**.
+1. En **Explorador de soluciones**, haga clic con el botón derecho en el proyecto y seleccione **Agregar** > **página HTML**.
 
-1. Nombre de la página **predeterminado** y seleccione **Aceptar**.
+1. Asigne un nombre **predeterminado** a la página y seleccione **Aceptar**.
 
-1. En **el Explorador de soluciones**, haga clic en *Default.html* y seleccione **establecer como página de inicio**.
+1. En **Explorador de soluciones**, haga clic con el botón secundario en *default. html* y seleccione **establecer como página de inicio**.
 
-1. Reemplace el código predeterminado en el *Default.html* archivo con este código:
+1. Reemplace el código predeterminado en el archivo *default. html* por este código:
 
     [!code-html[Main](tutorial-high-frequency-realtime-with-signalr/samples/sample3.html?highlight=14-16)]
 
-1. En **el Explorador de soluciones**, expanda **Scripts**.
+1. En **Explorador de soluciones**, expanda **scripts**.
 
-    Bibliotecas de scripts de jQuery y SignalR están visibles en el proyecto.
+    Las bibliotecas de scripts para jQuery y Signalr están visibles en el proyecto.
 
     > [!IMPORTANT]
-    > El Administrador de paquetes instala una versión posterior de los scripts de SignalR.
+    > El administrador de paquetes instala una versión posterior de los scripts de Signalr.
 
-1. Actualizar las referencias de script en el bloque de código para que coincida con las versiones de los archivos de script en el proyecto.
+1. Actualice las referencias de script en el bloque de código para que correspondan a las versiones de los archivos de script del proyecto.
 
-Este código HTML y JavaScript crea una red `div` llamado `shape`. Se habilita el comportamiento de arrastrar la forma mediante la biblioteca de jQuery y se usa el `drag` eventos a la posición de la forma de envío al servidor.
+Este código HTML y JavaScript crea un `div` rojo denominado `shape`. Habilita el comportamiento de arrastre de la forma mediante la biblioteca de jQuery y usa el evento `drag` para enviar la posición de la forma al servidor.
 
 ## <a name="run-the-app"></a>Ejecutar la aplicación
 
-Puede ejecutar la aplicación a se'e funciona. Cuando arrastre la forma en torno a una ventana del explorador, la forma se desplaza demasiado en los otros exploradores.
+Puede ejecutar la aplicación para se'e que funcione. Al arrastrar la forma alrededor de una ventana del explorador, la forma también se mueve en los otros exploradores.
 
-1. En la barra de herramientas activar **depuración de scripts** y, a continuación, seleccione el botón Reproducir para ejecutar la aplicación en modo de depuración.
+1. En la barra de herramientas, active la **depuración de script** y, a continuación, seleccione el botón reproducir para ejecutar la aplicación en modo de depuración.
 
-    ![Captura de pantalla del usuario activar el modo de depuración y seleccione Reproducir.](tutorial-high-frequency-realtime-with-signalr/_static/image3.png)
+    ![Captura de pantalla del usuario que activa el modo de depuración y selecciona reproducir.](tutorial-high-frequency-realtime-with-signalr/_static/image3.png)
 
-    Se abre una ventana del explorador con la forma de color rojo en la esquina superior derecha.
+    Se abre una ventana del explorador con la forma roja en la esquina superior derecha.
 
 1. Copie la dirección URL de la página.
 
-1. Abra un explorador y pegue la dirección URL en la barra de direcciones.
+1. Abra otro explorador y pegue la dirección URL en la barra de direcciones.
 
-1. Arrastre la forma de una de las ventanas del explorador. Sigue la forma en la ventana del explorador.
+1. Arrastre la forma en una de las ventanas del explorador. A continuación se muestra la forma en la otra ventana del explorador.
 
-Mientras que la aplicación de las funciones con este método, no es un modelo de programación recomendado. No hay ningún límite superior para el número de mensajes que se envían. Como resultado, los clientes y el servidor obtengan experimentando con mensajes y degrada el rendimiento. Además, la aplicación muestra una animación separada en el cliente. Esta animación irregular se produce debido a la forma se mueve al instante por cada método. Es mejor si la forma se moverá instantáneamente a cada nueva ubicación. A continuación, aprenderá a corregir esos problemas.
+Mientras que la aplicación funciona con este método, no es un modelo de programación recomendado. No hay ningún límite superior para el número de mensajes que se envían. Como resultado, los clientes y el servidor se sobrecargan con los mensajes y la degradación del rendimiento. Además, la aplicación muestra una animación separada en el cliente. Esta animación irregular se produce porque la forma se mueve al instante por cada método. Es mejor si la forma se mueve sin problemas a cada nueva ubicación. A continuación, aprenderá a corregir esos problemas.
 
 ## <a name="add-the-client-loop"></a>Agregar el bucle de cliente
 
-Envío de la ubicación de la forma en cada evento de mover el mouse, crea un volumen de tráfico de red innecesario. La aplicación debe limitar los mensajes desde el cliente.
+El envío de la ubicación de la forma en cada evento de movimiento del mouse crea una cantidad innecesaria de tráfico de red. La aplicación debe limitar los mensajes del cliente.
 
-Utilice el código javascript `setInterval` función para establecer un bucle que envía información de posición de nuevo al servidor con una tarifa fija. Este bucle es una representación básica de un "bucle de juego". Es una función varias veces a que controla toda la funcionalidad de un juego.
+Utilice la función `setInterval` de JavaScript para configurar un bucle que envíe la nueva información de posición al servidor a una velocidad fija. Este bucle es una representación básica de un "bucle de juego". Se trata de una función llamada repetidamente que impulsa toda la funcionalidad de un juego.
 
-1. Reemplace el código de cliente en el *Default.html* archivo con este código:
+1. Reemplace el código de cliente en el archivo *default. html* por este código:
 
     [!code-html[Main](tutorial-high-frequency-realtime-with-signalr/samples/sample4.html?highlight=14-16)]
 
     > [!IMPORTANT]
-    > Tiene que reemplazar las referencias de script nuevo. Deben coincidir con las versiones de las secuencias de comandos en el proyecto.
+    > Tendrá que reemplazar las referencias de script de nuevo. Deben coincidir con las versiones de los scripts del proyecto.
 
-    Este nuevo código agrega el `updateServerModel` función. Se llama a una frecuencia fija. La función envía los datos de la posición en el servidor cada vez que el `moved` marca indica que hay nuevos datos de posición para enviar.
+    Este nuevo código agrega la función `updateServerModel`. Se llama en una frecuencia fija. La función envía los datos de la posición al servidor cada vez que la marca `moved` indica que hay nuevos datos de posición que se van a enviar.
 
-1. Seleccione el botón Reproducir para iniciar la aplicación
+1. Seleccione el botón reproducir para iniciar la aplicación
 
 1. Copie la dirección URL de la página.
 
-1. Abra un explorador y pegue la dirección URL en la barra de direcciones.
+1. Abra otro explorador y pegue la dirección URL en la barra de direcciones.
 
-1. Arrastre la forma de una de las ventanas del explorador. Sigue la forma en la ventana del explorador.
+1. Arrastre la forma en una de las ventanas del explorador. A continuación se muestra la forma en la otra ventana del explorador.
 
-Puesto que la aplicación limita al número de mensajes que se envían al servidor, la animación no aparece nítida como hizo al principio.
+Dado que la aplicación limita el número de mensajes que se envían al servidor, la animación no aparecerá como Smooth en primer lugar.
 
-## <a name="add-the-server-loop"></a>Agregar bucle de servidor
+## <a name="add-the-server-loop"></a>Agregar el bucle de servidor
 
-En la aplicación actual, los mensajes enviados desde el servidor al cliente salen tan a menudo cuando se reciben. Este tráfico de red presenta un problema similar, como veremos en el cliente.
+En la aplicación actual, los mensajes enviados desde el servidor al cliente salen con tanta frecuencia como se reciben. Este tráfico de red presenta un problema similar al que vemos en el cliente.
 
-La aplicación puede enviar mensajes con más frecuencia son necesarios. La conexión puede inundarse como resultado. En esta sección se describe cómo actualizar el servidor para agregar un temporizador que limita la velocidad de los mensajes salientes.
+La aplicación puede enviar mensajes con más frecuencia de lo que son necesarios. La conexión se puede saturar como resultado. En esta sección se describe cómo actualizar el servidor para agregar un temporizador que limite la velocidad de los mensajes salientes.
 
-1. Reemplace el contenido de `MoveShapeHub.cs` con este código:
+1. Reemplace el contenido de `MoveShapeHub.cs` por este código:
 
     [!code-csharp[Main](tutorial-high-frequency-realtime-with-signalr/samples/sample5.cs)]
 
-1. Seleccione el botón Reproducir para iniciar la aplicación.
+1. Seleccione el botón reproducir para iniciar la aplicación.
 
 1. Copie la dirección URL de la página.
 
-1. Abra un explorador y pegue la dirección URL en la barra de direcciones.
+1. Abra otro explorador y pegue la dirección URL en la barra de direcciones.
 
-1. Arrastre la forma de una de las ventanas del explorador.
+1. Arrastre la forma en una de las ventanas del explorador.
 
-Este código expande el cliente para agregar la `Broadcaster` clase. La nueva clase limita los mensajes salientes con el `Timer` clase a partir de .NET framework.
+Este código expande el cliente para agregar la clase `Broadcaster`. La nueva clase limita los mensajes salientes mediante la `Timer` clase de .NET Framework.
 
-Es bueno saber que el propio centro es transitorio. Se crea cada vez que sea necesario. Por lo que la aplicación crea el `Broadcaster` como un singleton. Usa la inicialización diferida para aplazar la `Broadcaster`de creación hasta que sea necesario. Que garantiza que la aplicación crea la primera instancia de concentrador por completo antes de iniciar el temporizador.
+Es conveniente saber que el propio concentrador es transitorio. Se crea cada vez que se necesita. Por lo tanto, la aplicación crea el `Broadcaster` como un singleton. Utiliza la inicialización diferida para aplazar la creación del `Broadcaster`hasta que sea necesario. Esto garantiza que la aplicación crea la primera instancia de concentrador completamente antes de iniciar el temporizador.
 
-La llamada a los clientes `UpdateShape` función, a continuación, se mueve fuera del centro `UpdateModel` método. Ya no se llama inmediatamente siempre que la aplicación recibe los mensajes entrantes. En su lugar, la aplicación envía los mensajes a los clientes a una velocidad de 25 llamadas por segundo. El proceso es administrado por el `_broadcastLoop` temporizador desde el `Broadcaster` clase.
+La llamada a la función de `UpdateShape` de los clientes se mueve fuera del método de `UpdateModel` del centro. Ya no se llama inmediatamente cuando la aplicación recibe los mensajes entrantes. En su lugar, la aplicación envía los mensajes a los clientes a una velocidad de 25 llamadas por segundo. El proceso se administra mediante el temporizador de `_broadcastLoop` desde dentro de la clase `Broadcaster`.
 
-Por último, en lugar de llamar al método de cliente desde el centro directamente, la `Broadcaster` clase necesita para obtener una referencia a opera actualmente `_hubContext` concentrador. Obtiene la referencia con la `GlobalHost`.
+Por último, en lugar de llamar directamente al método de cliente desde el concentrador, la clase `Broadcaster` debe obtener una referencia al concentrador de `_hubContext` operativo actualmente. Obtiene la referencia con el `GlobalHost`.
 
-## <a name="add-smooth-animation"></a>Agregar una animación fluida
+## <a name="add-smooth-animation"></a>Agregar animaciones suaves
 
-La aplicación es casi hemos terminada, pero podemos hacer una sola mejora más. La aplicación mueve la forma en el cliente en respuesta a los mensajes del servidor. En lugar de establecer la posición de la forma a la nueva ubicación proporcionada por el servidor, utilice la biblioteca de JQuery UI `animate` función. La forma se puede mover sin problemas entre su posición actual y el nuevo.
+La aplicación está casi finalizada, pero podríamos mejorarla. La aplicación mueve la forma en el cliente en respuesta a los mensajes del servidor. En lugar de establecer la posición de la forma en la nueva ubicación proporcionada por el servidor, use la función `animate` de la biblioteca de interfaz de usuario de JQuery. Puede mover la forma suavemente entre su posición actual y la nueva.
 
-1. Actualizar el cliente `updateShape` método en el *Default.html* archivo para examinar como el código resaltado:
+1. Actualice el método de `updateShape` del cliente en el archivo *default. html* para que tenga un aspecto similar al código resaltado:
 
     [!code-html[Main](tutorial-high-frequency-realtime-with-signalr/samples/sample6.html?highlight=33-40)]
 
-1. Seleccione el botón Reproducir para iniciar la aplicación.
+1. Seleccione el botón reproducir para iniciar la aplicación.
 
 1. Copie la dirección URL de la página.
 
-1. Abra un explorador y pegue la dirección URL en la barra de direcciones.
+1. Abra otro explorador y pegue la dirección URL en la barra de direcciones.
 
-1. Arrastre la forma de una de las ventanas del explorador.
+1. Arrastre la forma en una de las ventanas del explorador.
 
-El movimiento de la forma en la ventana aparece menos irregular. La aplicación interpola su movimiento a través del tiempo, en lugar de que se va a establecer una vez por cada mensaje entrante.
+El movimiento de la forma en la otra ventana aparece menos entrecortado. La aplicación interpola su movimiento a lo largo del tiempo, en lugar de establecerse una vez por cada mensaje entrante.
 
-Este código mueve la forma de la ubicación anterior a la nueva. El servidor proporciona la posición de la forma en el transcurso del intervalo de animación. En este caso, es 100 milisegundos. La aplicación borra cualquier animación anterior que se ejecutan en la forma antes de que comience la nueva animación.
+Este código mueve la forma de la ubicación anterior al nuevo. El servidor proporciona la posición de la forma en el curso del intervalo de animación. En este caso, eso es 100 milisegundos. La aplicación borra cualquier animación anterior que se ejecute en la forma antes de que se inicie la nueva animación.
 
 ## <a name="get-the-code"></a>Obtención del código
 
-[Descargue el proyecto completado](http://code.msdn.microsoft.com/SignalR-20-MoveShape-Demo-6285b83a)
+[Descargar proyecto completado](https://code.msdn.microsoft.com/SignalR-20-MoveShape-Demo-6285b83a)
 
 ## <a name="additional-resources"></a>Recursos adicionales
 
-Es útil para el desarrollo de juegos en línea y otras simulaciones, al igual que el paradigma de comunicación que acaba de aprender sobre [el juego ShootR creado con SignalR](https://shootr.azurewebsites.net/).
+El paradigma de comunicación que acaba de aprender es útil para desarrollar juegos en línea y otras simulaciones, como [el juego del captador creado con signalr](https://shootr.azurewebsites.net/).
 
-Para obtener más información acerca de SignalR, consulte los siguientes recursos:
+Para obtener más información acerca de Signalr, consulte los siguientes recursos:
 
-* [SignalR Project](http://signalr.net)
+* [Proyecto signalr](http://signalr.net)
 
-* [SignalR GitHub y ejemplos](https://github.com/SignalR/SignalR)
+* [GitHub y ejemplos de signalr](https://github.com/SignalR/SignalR)
 
-* [SignalR Wiki](https://github.com/SignalR/SignalR/wiki)
+* [Wiki de signalr](https://github.com/SignalR/SignalR/wiki)
 
 ## <a name="next-steps"></a>Pasos siguientes
 
@@ -246,14 +246,14 @@ En este tutorial ha:
 
 > [!div class="checklist"]
 > * Configurar el proyecto
-> * Crea la aplicación básica
-> * Asignado al concentrador cuando se inicia la aplicación
-> * Agregó el cliente
-> * Se ejecutó la aplicación
-> * Agrega el bucle de cliente
-> * Agrega el bucle de servidor
-> * Se ha agregado una animación fluida
+> * Creación de la aplicación base
+> * Asignado al centro cuando se inicia la aplicación
+> * Agregado el cliente
+> * Ejecución de la aplicación
+> * Agregado el bucle de cliente
+> * Se agregó el bucle de servidor
+> * Animación suave agregada
 
-Avance al siguiente artículo para obtener información sobre cómo crear una aplicación web que usa ASP.NET SignalR 2 para proporcionar funcionalidad de difusión de servidor.
+Avance al siguiente artículo para aprender a crear una aplicación web que usa ASP.NET Signalr 2 para proporcionar la funcionalidad de difusión de servidor.
 > [!div class="nextstepaction"]
-> [SignalR 2 y difusión de servidor](tutorial-server-broadcast-with-signalr.md)
+> [Signalr 2 y difusión de servidor](tutorial-server-broadcast-with-signalr.md)

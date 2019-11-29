@@ -1,66 +1,66 @@
 ---
 uid: web-forms/overview/data-access/advanced-data-access-scenarios/creating-new-stored-procedures-for-the-typed-dataset-s-tableadapters-vb
-title: Crear procedimientos almacenados para los TableAdapters del conjunto de datos con tipo (VB) | Microsoft Docs
+title: Crear nuevos procedimientos almacenados para los TableAdapters del conjunto de de tipos (VB) | Microsoft Docs
 author: rick-anderson
-description: En los tutoriales anteriores hemos creado instrucciones SQL en nuestro código y pasa las instrucciones a la base de datos que se ejecutará. Un enfoque alternativo es usar s...
+description: En los tutoriales anteriores se han creado instrucciones SQL en el código y se han pasado las instrucciones a la base de datos que se va a ejecutar. Un enfoque alternativo es usar...
 ms.author: riande
 ms.date: 07/18/2007
 ms.assetid: a5a4a9ba-d18d-489a-a6b0-a3c26d6b0274
 msc.legacyurl: /web-forms/overview/data-access/advanced-data-access-scenarios/creating-new-stored-procedures-for-the-typed-dataset-s-tableadapters-vb
 msc.type: authoredcontent
-ms.openlocfilehash: 19e9800eb3862ad1f78a6cd2616b28deee997876
-ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
+ms.openlocfilehash: a7cc890038e5bb4eb61c7c3b808154c196ab2423
+ms.sourcegitcommit: 22fbd8863672c4ad6693b8388ad5c8e753fb41a2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/06/2019
-ms.locfileid: "65132420"
+ms.lasthandoff: 11/28/2019
+ms.locfileid: "74605604"
 ---
 # <a name="creating-new-stored-procedures-for-the-typed-datasets-tableadapters-vb"></a>Crear procedimientos almacenados para los TableAdapters del conjunto de datos con tipo (VB)
 
 por [Scott Mitchell](https://twitter.com/ScottOnWriting)
 
-[Descargar código](http://download.microsoft.com/download/3/9/f/39f92b37-e92e-4ab3-909e-b4ef23d01aa3/ASPNET_Data_Tutorial_67_VB.zip) o [descargar PDF](creating-new-stored-procedures-for-the-typed-dataset-s-tableadapters-vb/_static/datatutorial67vb1.pdf)
+[Descargar código](https://download.microsoft.com/download/3/9/f/39f92b37-e92e-4ab3-909e-b4ef23d01aa3/ASPNET_Data_Tutorial_67_VB.zip) o [Descargar PDF](creating-new-stored-procedures-for-the-typed-dataset-s-tableadapters-vb/_static/datatutorial67vb1.pdf)
 
-> En los tutoriales anteriores hemos creado instrucciones SQL en nuestro código y pasa las instrucciones a la base de datos que se ejecutará. Un enfoque alternativo es usar los procedimientos almacenados, donde las instrucciones SQL están predefinidas en la base de datos. En este tutorial se aprenderá cómo hacer que el Asistente de TableAdapter para generar nuevos procedimientos almacenados para nosotros.
+> En los tutoriales anteriores se han creado instrucciones SQL en el código y se han pasado las instrucciones a la base de datos que se va a ejecutar. Un enfoque alternativo es usar procedimientos almacenados, donde las instrucciones SQL están predefinidas en la base de datos. En este tutorial se explica cómo hacer que el Asistente de TableAdapter genere nuevos procedimientos almacenados para nosotros.
 
 ## <a name="introduction"></a>Introducción
 
-La capa de acceso a datos (DAL) para estos tutoriales usan conjuntos de datos con tipo. Como se describe en el [crear una capa de acceso a datos](../introduction/creating-a-data-access-layer-vb.md) tutorial, los conjuntos de datos con tipo constan de tablas de datos fuertemente tipados y los TableAdapters. DataTables representan las entidades lógicas definidas en el sistema mientras la interfaz de los TableAdapters con la base de datos subyacente para realizar el trabajo de acceso de datos. Esto incluye rellenar las tablas de datos con datos, ejecutar consultas que devuelven datos escalares, insertar, actualizar y eliminación de registros de la base de datos.
+La capa de acceso a datos (DAL) para estos tutoriales utiliza conjuntos de datos con tipo. Como se describe en el tutorial [creación de una capa de acceso a datos](../introduction/creating-a-data-access-layer-vb.md) , los conjuntos de datos con tipo constan de objetos DataTable y TableAdapter fuertemente tipados. Los objetos DataTable representan las entidades lógicas del sistema, mientras que la interfaz TableAdapters con la base de datos subyacente para realizar el trabajo de acceso a los datos. Esto incluye rellenar las tablas de datos con datos, ejecutar consultas que devuelven datos escalares e insertar, actualizar y eliminar registros de la base de datos.
 
-Los comandos SQL ejecutados por los TableAdapters pueden ser cualquier instrucciones SQL ad hoc, como `SELECT columnList FROM TableName`, o los procedimientos almacenados. Los TableAdapters en nuestra arquitectura usar instrucciones SQL ad hoc. Muchos desarrolladores y administradores de base de datos, sin embargo, prefieren los procedimientos almacenados a través de las instrucciones SQL ad hoc por motivos de seguridad, mantenimiento y actualización del mismo. Ardently que otros prefieren las instrucciones SQL ad hoc para su flexibilidad. En mi propio trabajo me dé prioridad a los procedimientos almacenados a través de instrucciones SQL ad-hoc, pero eligió usar instrucciones SQL ad hoc para simplificar los tutoriales anteriores.
+Los comandos SQL que ejecutan TableAdapter pueden ser instrucciones SQL ad hoc, como `SELECT columnList FROM TableName`o procedimientos almacenados. Los TableAdapters de nuestra arquitectura usan instrucciones SQL ad hoc. Sin embargo, muchos desarrolladores y administradores de bases de datos prefieren procedimientos almacenados en las instrucciones SQL ad hoc por motivos de seguridad, mantenimiento y capacidad de actualización. Otros ardently prefieren instrucciones SQL ad hoc para su flexibilidad. En mi propio trabajo, se favorecen los procedimientos almacenados en las instrucciones SQL ad hoc, pero se decide usar instrucciones SQL ad-hoc para simplificar los tutoriales anteriores.
 
-Al definir un TableAdapter o agregar nuevos métodos, el Asistente para la s de TableAdapter hace igual de fácil crear nuevos procedimientos almacenados o utilizar procedimientos almacenados existentes como lo hace para usar instrucciones SQL ad hoc. En este tutorial, examinaremos cómo hacer que el Asistente para la s de TableAdapter generación automática de procedimientos almacenados. En el siguiente tutorial veremos cómo configurar los métodos de TableAdapter s para utilizar procedimientos almacenados existentes o crear manualmente.
-
-> [!NOTE]
-> Consulte la entrada de blog de Rob Howard [Don t Use procedimientos almacenados aún?](http://grokable.com/2003/11/dont-use-stored-procedures-yet-must-be-suffering-from-nihs-not-invented-here-syndrome/) y [Frans Bouma](https://weblogs.asp.net/fbouma/) entrada de blog de s [procedimientos almacenados son malas, Kay M?](https://weblogs.asp.net/fbouma/archive/2003/11/18/38178.aspx) para un debate sobre las ventajas y desventajas de animada procedimientos almacenados y SQL ad hoc.
-
-## <a name="stored-procedure-basics"></a>Conceptos básicos de procedimiento almacenado
-
-Las funciones son una construcción común a todos los lenguajes de programación. Una función es una colección de instrucciones que se ejecutan cuando se llama a la función. Funciones pueden aceptar parámetros de entrada y, opcionalmente, pueden devolver un valor. *[Procedimientos almacenados](http://en.wikipedia.org/wiki/Stored_procedure)*  son construcciones de base de datos que comparten muchas similitudes con las funciones en lenguajes de programación. Un procedimiento almacenado se compone de un conjunto de instrucciones de Transact-SQL que se ejecutan cuando se llama al procedimiento almacenado. Un procedimiento almacenado puede aceptar cero a muchos parámetros de entrada y puede devolver valores escalares, los parámetros de salida, o, más comúnmente, conjuntos de resultados de `SELECT` las consultas.
+Al definir un TableAdapter o agregar nuevos métodos, el Asistente para TableAdapter hace que sea tan fácil crear nuevos procedimientos almacenados o usar procedimientos almacenados existentes, ya que se usan instrucciones SQL ad hoc. En este tutorial, examinaremos cómo hacer que el Asistente de TableAdapter s genere automáticamente los procedimientos almacenados. En el siguiente tutorial, veremos cómo configurar los métodos de TableAdapter s para usar procedimientos almacenados existentes o creados manualmente.
 
 > [!NOTE]
-> Los procedimientos almacenados a menudo se conocen como procedimientos almacenados o SPs.
+> Vea la entrada de blog de Rob Howard ¿no [usar todavía los procedimientos almacenados?](http://grokable.com/2003/11/dont-use-stored-procedures-yet-must-be-suffering-from-nihs-not-invented-here-syndrome/) y los procedimientos almacenados de la entrada de blog de [Frans Bouma](https://weblogs.asp.net/fbouma/) s [son incorrectos, ¿M Kay?](https://weblogs.asp.net/fbouma/archive/2003/11/18/38178.aspx) para un debate animado sobre las ventajas y desventajas de los procedimientos almacenados y SQL ad hoc.
 
-Los procedimientos almacenados se crean mediante el [ `CREATE PROCEDURE` ](https://msdn.microsoft.com/library/aa258259(SQL.80).aspx) instrucción T-SQL. Por ejemplo, el siguiente script T-SQL crea un procedimiento almacenado denominado `GetProductsByCategoryID` que toma un solo parámetro denominado `@CategoryID` y devuelve el `ProductID`, `ProductName`, `UnitPrice`, y `Discontinued` campos de esas columnas en el `Products` tabla que tiene la correspondiente `CategoryID` valor:
+## <a name="stored-procedure-basics"></a>Conceptos básicos de los procedimientos almacenados
+
+Las funciones son una construcción común a todos los lenguajes de programación. Una función es una colección de instrucciones que se ejecutan cuando se llama a la función. Las funciones pueden aceptar parámetros de entrada y, opcionalmente, pueden devolver un valor. *[Los procedimientos almacenados](http://en.wikipedia.org/wiki/Stored_procedure)* son construcciones de bases de datos que comparten muchas similitudes con las funciones de los lenguajes de programación. Un procedimiento almacenado se compone de un conjunto de instrucciones T-SQL que se ejecutan cuando se llama al procedimiento almacenado. Un procedimiento almacenado puede aceptar cero y muchos parámetros de entrada y puede devolver valores escalares, parámetros de salida o, normalmente, conjuntos de resultados de `SELECT` consultas.
+
+> [!NOTE]
+> A menudo, los procedimientos almacenados se conocen como procedimientos almacenados o SP.
+
+Los procedimientos almacenados se crean mediante el [`CREATE PROCEDURE`](https://msdn.microsoft.com/library/aa258259(SQL.80).aspx) instrucción t-SQL. Por ejemplo, el siguiente script T-SQL crea un procedimiento almacenado denominado `GetProductsByCategoryID` que toma un único parámetro denominado `@CategoryID` y devuelve los campos `ProductID`, `ProductName`, `UnitPrice`y `Discontinued` de las columnas de la tabla `Products` que tienen un valor `CategoryID` coincidente:
 
 [!code-sql[Main](creating-new-stored-procedures-for-the-typed-dataset-s-tableadapters-vb/samples/sample1.sql)]
 
-Una vez creado este procedimiento almacenado, se puede llamar mediante la sintaxis siguiente:
+Una vez creado este procedimiento almacenado, se puede llamar con la siguiente sintaxis:
 
 [!code-sql[Main](creating-new-stored-procedures-for-the-typed-dataset-s-tableadapters-vb/samples/sample2.sql)]
 
 > [!NOTE]
-> En el siguiente tutorial, examinaremos la creación de procedimientos almacenados mediante el IDE de Visual Studio. Para este tutorial, sin embargo, vamos a dejar que el Asistente de TableAdapter a generar automáticamente los procedimientos almacenados para nosotros.
+> En el tutorial siguiente, examinaremos la creación de procedimientos almacenados a través del IDE de Visual Studio. En este tutorial, sin embargo, vamos a permitir que el Asistente para TableAdapter genere automáticamente los procedimientos almacenados para nosotros.
 
-Además de simplemente devolver datos, procedimientos almacenados a menudo se utilizan para ejecutar varios comandos de base de datos dentro del ámbito de una sola transacción. Un procedimiento almacenado denominado `DeleteCategory`, por ejemplo, puede que tarde en un `@CategoryID` parámetro y llevar a cabo dos `DELETE` instrucciones: primero, uno para eliminar los productos relacionados y un segundo al eliminar la categoría especificada. Son varias instrucciones dentro de un procedimiento almacenado *no* ajustado automáticamente dentro de una transacción. Comandos de T-SQL adicionales deben emitirse para garantizar el procedimiento almacenado s que varios comandos se tratan como una operación atómica. Veremos cómo ajustar comandos un procedimiento almacenado dentro del ámbito de una transacción en el tutorial posterior.
+Además de devolver simplemente los datos, los procedimientos almacenados suelen usarse para realizar varios comandos de base de datos dentro del ámbito de una única transacción. Por ejemplo, un procedimiento almacenado denominado `DeleteCategory`podría tomar un parámetro `@CategoryID` y realizar dos instrucciones `DELETE`: primero, una para eliminar los productos relacionados y otra que elimina la categoría especificada. Varias instrucciones dentro de un procedimiento almacenado *no* se ajustan automáticamente dentro de una transacción. Es necesario emitir comandos T-SQL adicionales para asegurarse de que el procedimiento almacenado s varios comandos se tratan como una operación atómica. Veremos cómo ajustar los comandos de un procedimiento almacenado en el ámbito de una transacción en el tutorial siguiente.
 
-Al utilizar procedimientos almacenados dentro de una arquitectura, los métodos de capa de acceso a datos s invocan un procedimiento almacenado específico en lugar de emitir una instrucción de SQL ad hoc. Este modo centraliza la ubicación de las instrucciones SQL ejecutadas (en la base de datos) en lugar de tener que definidos dentro de la arquitectura de s de la aplicación. Esta centralización podría decirse que hace que sea más fácil de buscar, analizar y optimizar las consultas y proporciona una imagen mucho más clara sobre dónde y cómo se está usando la base de datos.
+Cuando se usan procedimientos almacenados en una arquitectura, los métodos de capa de acceso a datos llaman a un procedimiento almacenado determinado en lugar de emitir una instrucción SQL ad hoc. Esto centraliza la ubicación de las instrucciones SQL ejecutadas (en la base de datos) en lugar de definirlas en la arquitectura de la aplicación. Esta centralización podría facilitar la búsqueda, el análisis y la optimización de las consultas y proporciona una imagen mucho más clara sobre dónde y cómo se utiliza la base de datos.
 
-Para obtener más información sobre los aspectos básicos del procedimiento almacenado, consulte los recursos en la sección Lecturas adicionales al final de este tutorial.
+Para obtener más información sobre los conceptos básicos de los procedimientos almacenados, consulte los recursos en la sección de lecturas adicionales al final de este tutorial.
 
-## <a name="step-1-creating-the-advanced-data-access-layer-scenarios-web-pages"></a>Paso 1: Creación de las páginas Web de escenarios de capa de datos avanzados acceso
+## <a name="step-1-creating-the-advanced-data-access-layer-scenarios-web-pages"></a>Paso 1: creación de las páginas web de escenarios avanzados de nivel de acceso a datos
 
-Antes de comenzar nuestro debate sobre la creación de un DAL mediante procedimientos almacenados, permiten s primero dedique un momento para crear las páginas ASP.NET en nuestro proyecto de sitio Web que necesitamos para éste y el siguientes varios tutoriales. Empiece por agregar una nueva carpeta denominada `AdvancedDAL`. A continuación, agregue las siguientes páginas ASP.NET a la carpeta y asegúrese de asociar cada página con el `Site.master` página maestra:
+Antes de comenzar nuestro debate sobre la creación de una capa DAL con procedimientos almacenados, vamos a crear las páginas de ASP.NET en nuestro proyecto de sitio web que necesitaremos para esto y los siguientes tutoriales. Comience agregando una nueva carpeta denominada `AdvancedDAL`. A continuación, agregue las siguientes páginas de ASP.NET a esa carpeta, asegurándose de asociar cada página a la página maestra de `Site.master`:
 
 - `Default.aspx`
 - `NewSprocs.aspx`
@@ -71,262 +71,262 @@ Antes de comenzar nuestro debate sobre la creación de un DAL mediante procedimi
 - `EncryptingConfigSections.aspx`
 - `ManagedFunctionsAndSprocs.aspx`
 
-![Agregar las páginas ASP.NET para los tutoriales de escenarios de capa de acceso avanzada de datos](creating-new-stored-procedures-for-the-typed-dataset-s-tableadapters-vb/_static/image1.png)
+![Agregue las páginas ASP.NET para los tutoriales avanzados de escenarios de nivel de acceso a datos](creating-new-stored-procedures-for-the-typed-dataset-s-tableadapters-vb/_static/image1.png)
 
-**Figura 1**: Agregar las páginas ASP.NET para los tutoriales de escenarios de capa de acceso avanzada de datos
+**Figura 1**: incorporación de las páginas de ASP.net para los tutoriales avanzados de escenarios de nivel de acceso a datos
 
-Al igual que en las demás carpetas `Default.aspx` en el `AdvancedDAL` carpeta mostrará una lista de los tutoriales en su sección. Recuerde que el `SectionLevelTutorialListing.ascx` Control de usuario proporciona esta funcionalidad. Por lo tanto, agrega este Control de usuario a `Default.aspx` arrastrándolo desde el Explorador de soluciones en la página de vista de diseño de s.
+Al igual que en las otras carpetas, `Default.aspx` en la carpeta `AdvancedDAL` mostrará los tutoriales en su sección. Recuerde que el control de usuario `SectionLevelTutorialListing.ascx` proporciona esta funcionalidad. Por lo tanto, agregue este control de usuario a `Default.aspx` arrastrándolo desde el Explorador de soluciones hasta la página s Vista de diseño.
 
-[![Agregar el Control de usuario SectionLevelTutorialListing.ascx a Default.aspx](creating-new-stored-procedures-for-the-typed-dataset-s-tableadapters-vb/_static/image3.png)](creating-new-stored-procedures-for-the-typed-dataset-s-tableadapters-vb/_static/image2.png)
+[![agregar el control de usuario SectionLevelTutorialListing. ascx a default. aspx](creating-new-stored-procedures-for-the-typed-dataset-s-tableadapters-vb/_static/image3.png)](creating-new-stored-procedures-for-the-typed-dataset-s-tableadapters-vb/_static/image2.png)
 
-**Figura 2**: Agregar el `SectionLevelTutorialListing.ascx` Control de usuario `Default.aspx` ([haga clic aquí para ver imagen en tamaño completo](creating-new-stored-procedures-for-the-typed-dataset-s-tableadapters-vb/_static/image4.png))
+**Figura 2**: agregar el control de usuario `SectionLevelTutorialListing.ascx` a `Default.aspx` ([haga clic para ver la imagen de tamaño completo](creating-new-stored-procedures-for-the-typed-dataset-s-tableadapters-vb/_static/image4.png))
 
-Por último, agregue estas páginas como entradas para el `Web.sitemap` archivo. En concreto, agregue el siguiente marcado después de trabajar con datos por lotes `<siteMapNode>`:
+Por último, agregue estas páginas como entradas al archivo `Web.sitemap`. En concreto, agregue el siguiente marcado después de trabajar con los datos por lotes `<siteMapNode>`:
 
 [!code-xml[Main](creating-new-stored-procedures-for-the-typed-dataset-s-tableadapters-vb/samples/sample3.xml)]
 
-Después de actualizar `Web.sitemap`, dedique un momento para ver el sitio Web de tutoriales a través de un explorador. El menú de la izquierda ahora incluye elementos para los tutoriales de escenarios avanzados de DAL.
+Después de actualizar `Web.sitemap`, dedique un momento a ver el sitio web de tutoriales a través de un explorador. El menú de la izquierda incluye ahora los elementos para los tutoriales avanzados de escenarios de DAL.
 
-![El mapa del sitio incluye ahora entradas para los tutoriales de escenarios avanzados de DAL](creating-new-stored-procedures-for-the-typed-dataset-s-tableadapters-vb/_static/image5.png)
+![El mapa del sitio ahora incluye entradas para los tutoriales avanzados de escenarios de DAL](creating-new-stored-procedures-for-the-typed-dataset-s-tableadapters-vb/_static/image5.png)
 
-**Figura 3**: El mapa del sitio incluye ahora entradas para los tutoriales de escenarios avanzados de DAL
+**Figura 3**: ahora, el mapa del sitio incluye entradas para los tutoriales avanzados de escenarios de dal
 
-## <a name="step-2-configuring-a-tableadapter-to-create-new-stored-procedures"></a>Paso 2: Configuración de un TableAdapter para crear nuevos procedimientos almacenados
+## <a name="step-2-configuring-a-tableadapter-to-create-new-stored-procedures"></a>Paso 2: configurar un TableAdapter para crear nuevos procedimientos almacenados
 
-Para demostrar la creación de una capa de acceso a datos que utilice procedimientos almacenados en lugar de instrucciones SQL ad hoc, s permiten crear un conjunto de datos de tipo nuevo en el `~/App_Code/DAL` carpeta denominada `NorthwindWithSprocs.xsd`. Puesto que nos hemos avanzado a través de este proceso en detalle en los tutoriales anteriores, se continuará rápidamente a través de los pasos siguientes. Si se bloquea o se necesitan más instrucciones paso a paso para crear y configurar un conjunto de datos con tipo, hacer referencia a la [crear una capa de acceso a datos](../introduction/creating-a-data-access-layer-vb.md) tutorial.
+Para mostrar la creación de una capa de acceso a datos que use procedimientos almacenados en lugar de instrucciones SQL ad hoc, cree un nuevo conjunto de datos con tipo en la carpeta `~/App_Code/DAL` denominada `NorthwindWithSprocs.xsd`. Como hemos realizado paso a paso este proceso en detalle en los tutoriales anteriores, continuaremos rápidamente a través de los pasos que se describen aquí. Si se bloquea o necesita instrucciones paso a paso para crear y configurar un conjunto de datos con tipo, consulte el tutorial [creación de una capa de acceso a datos](../introduction/creating-a-data-access-layer-vb.md) .
 
-Agregar un nuevo conjunto de datos al proyecto con el botón secundario en el `DAL` carpeta, elija Agregar nuevo elemento y seleccionar la plantilla de conjunto de datos como se muestra en la figura 4.
+Agregue un nuevo conjunto de elementos al proyecto; para ello, haga clic con el botón derecho en la carpeta `DAL`, elija Agregar nuevo elemento y seleccione la plantilla de conjunto de elementos como se muestra en la figura 4.
 
-[![Agregar un nuevo conjunto de datos con tipo al proyecto denominado NorthwindWithSprocs.xsd](creating-new-stored-procedures-for-the-typed-dataset-s-tableadapters-vb/_static/image7.png)](creating-new-stored-procedures-for-the-typed-dataset-s-tableadapters-vb/_static/image6.png)
+[![agregar un nuevo conjunto de tipos al proyecto denominado NorthwindWithSprocs. xsd](creating-new-stored-procedures-for-the-typed-dataset-s-tableadapters-vb/_static/image7.png)](creating-new-stored-procedures-for-the-typed-dataset-s-tableadapters-vb/_static/image6.png)
 
-**Figura 4**: Agregar un nuevo conjunto de datos con tipo para el proyecto denominado `NorthwindWithSprocs.xsd` ([haga clic aquí para ver imagen en tamaño completo](creating-new-stored-procedures-for-the-typed-dataset-s-tableadapters-vb/_static/image8.png))
+**Ilustración 4**: agregar un nuevo conjunto de información con tipo al proyecto denominado `NorthwindWithSprocs.xsd` ([haga clic para ver la imagen de tamaño completo](creating-new-stored-procedures-for-the-typed-dataset-s-tableadapters-vb/_static/image8.png))
 
-Esto se crear el nuevo conjunto de datos con tipo, abra su diseñador, crear un nuevo TableAdapter e inicie al Asistente para configuración de TableAdapter. Asistente para configuración de TableAdapter s primero nos pide que seleccione la base de datos para trabajar con. La cadena de conexión a la base de datos de Northwind debe aparecer en la lista desplegable. Seleccione esta opción y haga clic en siguiente.
+Se creará el nuevo conjunto de los tipos, se abrirá su diseñador, se creará un nuevo TableAdapter y se iniciará el Asistente para configuración de TableAdapter. El primer paso del Asistente para la configuración de TableAdapter nos pide que seleccione la base de datos con la que trabajar. La cadena de conexión a la base de datos Northwind debe aparecer en la lista desplegable. Seleccione esta casilla y haga clic en siguiente.
 
-Podemos elegir cómo TableAdapter debe tener acceso a la base de datos desde esta pantalla siguiente. En los tutoriales anteriores, hemos seleccionado la primera opción, usar instrucciones SQL. Para este tutorial, seleccione la segunda opción, crear nuevos procedimientos almacenados y haga clic en siguiente.
+En la siguiente pantalla podemos elegir cómo el TableAdapter debe tener acceso a la base de datos. En los tutoriales anteriores, seleccionamos la primera opción, usar instrucciones SQL. En este tutorial, seleccione la segunda opción, crear nuevos procedimientos almacenados y haga clic en siguiente.
 
-[![Indicar el TableAdapter para crear nuevos procedimientos almacenados](creating-new-stored-procedures-for-the-typed-dataset-s-tableadapters-vb/_static/image10.png)](creating-new-stored-procedures-for-the-typed-dataset-s-tableadapters-vb/_static/image9.png)
+[![indicar al TableAdapter que cree nuevos procedimientos almacenados](creating-new-stored-procedures-for-the-typed-dataset-s-tableadapters-vb/_static/image10.png)](creating-new-stored-procedures-for-the-typed-dataset-s-tableadapters-vb/_static/image9.png)
 
-**Figura 5**: Indicar el TableAdapter para crear nuevos procedimientos almacenados ([haga clic aquí para ver imagen en tamaño completo](creating-new-stored-procedures-for-the-typed-dataset-s-tableadapters-vb/_static/image11.png))
+**Figura 5**: indicar al TableAdapter que cree nuevos procedimientos almacenados ([haga clic para ver la imagen de tamaño completo](creating-new-stored-procedures-for-the-typed-dataset-s-tableadapters-vb/_static/image11.png))
 
-Al igual que con el uso de instrucciones SQL ad hoc, en el siguiente paso se nos pide que proporcione la `SELECT` instrucción para la consulta principal de TableAdapter s. Pero en lugar de usar el `SELECT` instrucción insertada aquí para realizar una consulta ad hoc directamente, el Asistente para la s de TableAdapter creará un procedimiento almacenado que contiene este `SELECT` consulta.
+Al igual que con las instrucciones SQL ad hoc, en el paso siguiente se le pedirá que proporcione la instrucción `SELECT` para la consulta principal de TableAdapter s. Pero en lugar de usar la instrucción `SELECT` especificada aquí para realizar una consulta ad hoc directamente, el Asistente para TableAdapter creará un procedimiento almacenado que contendrá esta `SELECT` consulta.
 
-Use el siguiente `SELECT` consulta para este TableAdapter:
+Use la siguiente consulta de `SELECT` para este TableAdapter:
 
 [!code-sql[Main](creating-new-stored-procedures-for-the-typed-dataset-s-tableadapters-vb/samples/sample4.sql)]
 
-[![Escriba la consulta SELECT](creating-new-stored-procedures-for-the-typed-dataset-s-tableadapters-vb/_static/image13.png)](creating-new-stored-procedures-for-the-typed-dataset-s-tableadapters-vb/_static/image12.png)
+[![especificar la consulta SELECT](creating-new-stored-procedures-for-the-typed-dataset-s-tableadapters-vb/_static/image13.png)](creating-new-stored-procedures-for-the-typed-dataset-s-tableadapters-vb/_static/image12.png)
 
-**Figura 6**: Escriba el `SELECT` consulta ([haga clic aquí para ver imagen en tamaño completo](creating-new-stored-procedures-for-the-typed-dataset-s-tableadapters-vb/_static/image14.png))
-
-> [!NOTE]
-> La consulta anterior difiere ligeramente de la consulta principal de la `ProductsTableAdapter` en el `Northwind` DataSet con tipo. Recuerde que el `ProductsTableAdapter` en el `Northwind` DataSet con tipo incluye dos subconsultas correlativas para devolver el nombre de categoría y el nombre de la empresa para cada categoría de producto s y el proveedor. En la próxima [actualizar TableAdapter para usar combinaciones](updating-the-tableadapter-to-use-joins-vb.md) datos relacionados con el tutorial veremos agregue lo siguiente a este TableAdapter.
-
-Dedique un momento para hacer clic en el botón Opciones avanzadas. Desde aquí podemos especificar si el asistente también debe generar insert, update y delete instrucciones para el TableAdapter, si se debe usar la simultaneidad optimista, y si se debe actualizar la tabla de datos después de inserciones y actualizaciones. La opción Generar Insert, Update y Delete de instrucciones está activada de forma predeterminada. Deje activada. Para este tutorial, deje desactivada la usar opciones de simultaneidad optimista.
-
-Cuando se tiene los procedimientos almacenados creados automáticamente por el Asistente de TableAdapter, parece que la actualización de la opción de tabla de datos se omite. Independientemente de si se activa esta casilla, el resultante insert y update procedimientos almacenados recuperan el registro recién insertado o actualizado just, como veremos en el paso 3.
-
-![Deje activada la opción de las instrucciones de generar Insert, Update y Delete](creating-new-stored-procedures-for-the-typed-dataset-s-tableadapters-vb/_static/image15.png)
-
-**Figura 7**: Deje activada la opción de las instrucciones de generar Insert, Update y Delete
+**Figura 6**: escriba la `SELECT` consulta ([haga clic para ver la imagen de tamaño completo](creating-new-stored-procedures-for-the-typed-dataset-s-tableadapters-vb/_static/image14.png))
 
 > [!NOTE]
-> Si está activada la opción de usar simultaneidad optimista, el asistente agregará condiciones adicionales a la `WHERE` cláusula que impiden la actualización si se produjeron cambios en otros campos de datos. Vuelva a consultar el [implementar simultaneidad optimista](../editing-inserting-and-deleting-data/implementing-optimistic-concurrency-vb.md) tutorial para obtener más información sobre el uso de la característica de control de simultaneidad optimista integradas de s TableAdapter.
+> La consulta anterior difiere ligeramente de la consulta principal del `ProductsTableAdapter` en el `Northwind` DataSet con tipo. Recuerde que el `ProductsTableAdapter` en el `Northwind` conjunto de datos con tipo incluye dos subconsultas correlacionadas para devolver el nombre de la categoría y el nombre de la compañía de cada categoría de producto y proveedor. En la próxima [actualización del tutorial de TableAdapter para usar combinaciones](updating-the-tableadapter-to-use-joins-vb.md) , veremos agregar estos datos relacionados a este TableAdapter.
 
-Después de escribir el `SELECT` consultar y confirmar que esté marcada la opción de instrucciones generar Insert, Update y Delete, haga clic en siguiente. Esta pantalla siguiente, que se muestra en la figura 8, le pide los nombres de los procedimientos almacenados que se creará el Asistente para seleccionar, insertar, actualizar y eliminar datos. Cambiar estos almacenan los nombres de procedimientos para `Products_Select`, `Products_Insert`, `Products_Update`, y `Products_Delete`.
+Dedique un momento a hacer clic en el botón Opciones avanzadas. Aquí podemos especificar si el asistente debe generar también instrucciones INSERT, Update y DELETE para el TableAdapter, si se va a usar la simultaneidad optimista y si la tabla de datos debe actualizarse después de las inserciones y las actualizaciones. La opción generar instrucciones INSERT, Update y DELETE está activada de forma predeterminada. Déjela activada. En este tutorial, deje desactivadas las opciones usar simultaneidad optimista.
 
-[![Cambiar el nombre de los procedimientos almacenados](creating-new-stored-procedures-for-the-typed-dataset-s-tableadapters-vb/_static/image17.png)](creating-new-stored-procedures-for-the-typed-dataset-s-tableadapters-vb/_static/image16.png)
+Cuando el Asistente para TableAdapter crea automáticamente los procedimientos almacenados, parece que se omite la opción actualizar la tabla de datos. Independientemente de si esta casilla está activada, los procedimientos almacenados de inserción y actualización resultantes recuperan el registro recién insertado o el que se acaba de actualizar, como veremos en el paso 3.
 
-**Figura 8**: Cambiar el nombre de los procedimientos almacenados ([haga clic aquí para ver imagen en tamaño completo](creating-new-stored-procedures-for-the-typed-dataset-s-tableadapters-vb/_static/image18.png))
+![Deje activada la opción generar instrucciones INSERT, Update y DELETE](creating-new-stored-procedures-for-the-typed-dataset-s-tableadapters-vb/_static/image15.png)
 
-Para ver la utilizará el Asistente de TableAdapter para crear los cuatro procedimientos almacenados de Transact-SQL, haga clic en el botón de vista previa de Script SQL. En el cuadro de diálogo Vista previa de Script de SQL puede guardar el script en un archivo o copiarlo al Portapapeles.
-
-![Obtener una vista previa del Script SQL usado para generar los procedimientos almacenados](creating-new-stored-procedures-for-the-typed-dataset-s-tableadapters-vb/_static/image19.png)
-
-**Figura 9**: Obtener una vista previa del Script SQL usado para generar los procedimientos almacenados
-
-Después de asignar nombres a los procedimientos almacenados, haga clic junto a los métodos correspondientes del nombre de la s de TableAdapter. Al igual que cuando usa instrucciones SQL ad hoc, podemos crear métodos para rellenar una DataTable existente o devuelven una nueva. También podemos especificar si el objeto TableAdapter debe incluir el patrón directos de la base de datos de inserción, actualización y eliminación de registros. Deje todas las tres casillas de verificación activadas, pero cambie el nombre de la devolución a un método de DataTable `GetProducts` (como se muestra en la figura 10).
-
-[![Nombre de los métodos Fill y GetProducts](creating-new-stored-procedures-for-the-typed-dataset-s-tableadapters-vb/_static/image21.png)](creating-new-stored-procedures-for-the-typed-dataset-s-tableadapters-vb/_static/image20.png)
-
-**Figura 10**: Nombre de los métodos `Fill` y `GetProducts` ([haga clic aquí para ver imagen en tamaño completo](creating-new-stored-procedures-for-the-typed-dataset-s-tableadapters-vb/_static/image22.png))
-
-Haga clic en siguiente para ver un resumen de los pasos que se llevará a cabo el asistente. Complete el asistente, haga clic en el botón Finalizar. Una vez completado el asistente, se le devolverá al conjunto de datos s diseñador, que ahora debe incluir el `ProductsDataTable`.
-
-[![El Diseñador de DataSet s muestra la ProductsDataTable recién agregada](creating-new-stored-procedures-for-the-typed-dataset-s-tableadapters-vb/_static/image24.png)](creating-new-stored-procedures-for-the-typed-dataset-s-tableadapters-vb/_static/image23.png)
-
-**Figura 11**: El Diseñador de DataSet s muestra recién agregados `ProductsDataTable` ([haga clic aquí para ver imagen en tamaño completo](creating-new-stored-procedures-for-the-typed-dataset-s-tableadapters-vb/_static/image25.png))
-
-## <a name="step-3-examining-the-newly-created-stored-procedures"></a>Paso 3: Examen de los procedimientos almacenados recién creados
-
-El Asistente de TableAdapter utilizado automáticamente en el paso 2 crea los procedimientos almacenados para seleccionar, insertar, actualizar y eliminar datos. Estos procedimientos almacenados se pueden ver o modificar a través de Visual Studio en el Explorador de servidores y profundizar en la carpeta de base de datos s procedimientos almacenados. Como se muestra en la figura 12, la base de datos Northwind contiene cuatro nuevos procedimientos almacenados: `Products_Delete`, `Products_Insert`, `Products_Select`, y `Products_Update`.
-
-![Los cuatro procedimientos almacenados que creó en el paso 2 se pueden encontrar en la carpeta de base de datos s procedimientos almacenados](creating-new-stored-procedures-for-the-typed-dataset-s-tableadapters-vb/_static/image26.png)
-
-**Figura 12**: Los cuatro procedimientos almacenados que creó en el paso 2 se pueden encontrar en la carpeta de base de datos s procedimientos almacenados
+**Figura 7**: dejar activada la opción generar instrucciones INSERT, Update y DELETE
 
 > [!NOTE]
-> Si no ve el Explorador de servidores, vaya al menú Ver y elija la opción del explorador de servidores. Si no ve los procedimientos almacenados relacionados con productos agregados desde el paso 2, pruebe con el botón secundario en la carpeta procedimientos almacenados y elija actualiza.
+> Si la opción usar simultaneidad optimista está activada, el asistente agregará condiciones adicionales a la cláusula `WHERE` que impiden que los datos se actualicen si se produjeron cambios en otros campos. Consulte el tutorial [implementación de simultaneidad optimista](../editing-inserting-and-deleting-data/implementing-optimistic-concurrency-vb.md) para obtener más información sobre el uso de la característica de control de simultaneidad optimista integrada de TableAdapter s.
 
-Para ver o modificar un procedimiento almacenado, haga doble clic en su nombre en el Explorador de servidores o, alternativamente, haga doble clic en el procedimiento almacenado y elija Abrir. Figura 13 se muestra el `Products_Delete` procedimiento almacenado, cuando se abre.
+Después de escribir la consulta de `SELECT` y confirmar que la opción generar instrucciones INSERT, Update y DELETE está activada, haga clic en siguiente. En la siguiente pantalla, que se muestra en la figura 8, se solicitan los nombres de los procedimientos almacenados que el asistente creará para seleccionar, insertar, actualizar y eliminar datos. Cambie estos nombres de procedimientos almacenados a `Products_Select`, `Products_Insert`, `Products_Update`y `Products_Delete`.
 
-[![Procedimientos almacenados se pueden abrir y modificar desde dentro de Visual Studio](creating-new-stored-procedures-for-the-typed-dataset-s-tableadapters-vb/_static/image28.png)](creating-new-stored-procedures-for-the-typed-dataset-s-tableadapters-vb/_static/image27.png)
+[![cambiar el nombre de los procedimientos almacenados](creating-new-stored-procedures-for-the-typed-dataset-s-tableadapters-vb/_static/image17.png)](creating-new-stored-procedures-for-the-typed-dataset-s-tableadapters-vb/_static/image16.png)
 
-**Figura 13**: Almacena los procedimientos se pueden abrir y modificar desde dentro de Visual Studio ([haga clic aquí para ver imagen en tamaño completo](creating-new-stored-procedures-for-the-typed-dataset-s-tableadapters-vb/_static/image29.png))
+**Figura 8**: cambiar el nombre de los procedimientos almacenados ([haga clic para ver la imagen de tamaño completo](creating-new-stored-procedures-for-the-typed-dataset-s-tableadapters-vb/_static/image18.png))
 
-El contenido de ambas la `Products_Delete` y `Products_Select` procedimientos almacenados son bastante sencillos. El `Products_Insert` y `Products_Update` los procedimientos almacenados, por otro lado, garantizan una inspección más de cerca mientras ambos llevan a cabo una `SELECT` instrucción después de su `INSERT` y `UPDATE` instrucciones. Por ejemplo, el siguiente código SQL constituye la `Products_Insert` procedimiento almacenado:
+Para ver el T-SQL que utilizará el Asistente para TableAdapter para crear los cuatro procedimientos almacenados, haga clic en el botón vista previa de script SQL. En el cuadro de diálogo vista previa de script SQL, puede guardar el script en un archivo o copiarlo en el portapapeles.
+
+![Obtener una vista previa del script SQL usado para generar los procedimientos almacenados](creating-new-stored-procedures-for-the-typed-dataset-s-tableadapters-vb/_static/image19.png)
+
+**Figura 9**: vista previa del script SQL usado para generar los procedimientos almacenados
+
+Después de nombrar los procedimientos almacenados, haga clic en siguiente para asignar un nombre a los métodos correspondientes de TableAdapter s. Al igual que cuando se usan instrucciones SQL ad hoc, se pueden crear métodos que rellenen un objeto DataTable existente o devuelvan uno nuevo. También podemos especificar si el TableAdapter debe incluir el patrón DB-Direct para insertar, actualizar y eliminar registros. Deje activadas las tres casillas, pero cambie el nombre del método de devolución de DataTable a `GetProducts` (como se muestra en la figura 10).
+
+[![nombre de los métodos Fill y GetProducts](creating-new-stored-procedures-for-the-typed-dataset-s-tableadapters-vb/_static/image21.png)](creating-new-stored-procedures-for-the-typed-dataset-s-tableadapters-vb/_static/image20.png)
+
+**Figura 10**: asigne un nombre a los métodos `Fill` y `GetProducts` ([haga clic para ver la imagen de tamaño completo](creating-new-stored-procedures-for-the-typed-dataset-s-tableadapters-vb/_static/image22.png))
+
+Haga clic en siguiente para ver un resumen de los pasos que realizará el asistente. Para completar el asistente, haga clic en el botón Finalizar. Una vez finalizado el asistente, se le devolverá al diseñador de DataSet s, que ahora debería incluir el `ProductsDataTable`.
+
+[![el diseñador de DataSet s muestra el ProductsDataTable recién agregado](creating-new-stored-procedures-for-the-typed-dataset-s-tableadapters-vb/_static/image24.png)](creating-new-stored-procedures-for-the-typed-dataset-s-tableadapters-vb/_static/image23.png)
+
+**Figura 11**: el diseñador de DataSet s muestra el `ProductsDataTable` recién agregado ([haga clic para ver la imagen de tamaño completo](creating-new-stored-procedures-for-the-typed-dataset-s-tableadapters-vb/_static/image25.png))
+
+## <a name="step-3-examining-the-newly-created-stored-procedures"></a>Paso 3: examinar los procedimientos almacenados recién creados
+
+El Asistente para TableAdapter usado en el paso 2 creó automáticamente los procedimientos almacenados para seleccionar, insertar, actualizar y eliminar datos. Estos procedimientos almacenados se pueden ver o modificar mediante Visual Studio; para ello, vaya a la Explorador de servidores y explore en profundidad la carpeta de procedimientos almacenados de la base de datos. Como se muestra en la figura 12, la base de datos Northwind contiene cuatro procedimientos almacenados nuevos: `Products_Delete`, `Products_Insert`, `Products_Select`y `Products_Update`.
+
+![Los cuatro procedimientos almacenados creados en el paso 2 se pueden encontrar en la carpeta de procedimientos almacenados de la base de datos.](creating-new-stored-procedures-for-the-typed-dataset-s-tableadapters-vb/_static/image26.png)
+
+**Figura 12**: los cuatro procedimientos almacenados creados en el paso 2 se pueden encontrar en la carpeta de procedimientos almacenados de la base de datos.
+
+> [!NOTE]
+> Si no ve el Explorador de servidores, vaya al menú Ver y elija la opción Explorador de servidores. Si no ve los procedimientos almacenados relacionados con el producto agregados en el paso 2, intente hacer clic con el botón derecho en la carpeta procedimientos almacenados y elija actualizar.
+
+Para ver o modificar un procedimiento almacenado, haga doble clic en su nombre en la Explorador de servidores o bien, también puede hacer clic con el botón secundario en el procedimiento almacenado y elegir abrir. En la figura 13 se muestra el `Products_Delete` procedimiento almacenado, cuando se abre.
+
+[![procedimientos almacenados se pueden abrir y modificar desde Visual Studio](creating-new-stored-procedures-for-the-typed-dataset-s-tableadapters-vb/_static/image28.png)](creating-new-stored-procedures-for-the-typed-dataset-s-tableadapters-vb/_static/image27.png)
+
+**Figura 13**: los procedimientos almacenados se pueden abrir y modificar desde Visual Studio ([haga clic para ver la imagen de tamaño completo](creating-new-stored-procedures-for-the-typed-dataset-s-tableadapters-vb/_static/image29.png))
+
+El contenido de los procedimientos almacenados `Products_Delete` y `Products_Select` es bastante sencillo. Por otro lado, los procedimientos almacenados `Products_Insert` y `Products_Update` garantizan una inspección más detallada, ya que ambos realizan una instrucción `SELECT` después de sus instrucciones `INSERT` y `UPDATE`. Por ejemplo, el siguiente código SQL constituye el `Products_Insert` procedimiento almacenado:
 
 [!code-sql[Main](creating-new-stored-procedures-for-the-typed-dataset-s-tableadapters-vb/samples/sample5.sql)]
 
-El procedimiento almacenado acepta como parámetros de entrada la `Products` columnas devueltas por la `SELECT` consulta especificada en el Asistente para la s de TableAdapter y estos valores se usan en un `INSERT` instrucción. Siguiendo el `INSERT` instrucción, una `SELECT` consulta se usa para devolver el `Products` valores de columna (incluido el `ProductID`) del registro recién agregado. Esta capacidad de actualización es útil al agregar un nuevo registro con el patrón de actualización por lotes tal y como automáticamente actualizaciones recién agregada `ProductRow` instancias `ProductID` propiedades con los valores de incremento automático asignados por la base de datos.
+El procedimiento almacenado acepta como parámetros de entrada las `Products` columnas devueltas por la consulta `SELECT` especificada en el Asistente de TableAdapter s y estos valores se utilizan en una instrucción `INSERT`. Después de la instrucción `INSERT`, se usa una consulta `SELECT` para devolver los valores de columna `Products` (incluido el `ProductID`) del registro que se acaba de agregar. Esta capacidad de actualización es útil al agregar un nuevo registro mediante el patrón de actualización por lotes, ya que actualiza automáticamente las instancias de `ProductRow` recién agregadas `ProductID` las propiedades con los valores de incremento automático asignados por la base de datos.
 
-El código siguiente muestra esta característica. Contiene un `ProductsTableAdapter` y `ProductsDataTable` creado para el `NorthwindWithSprocs` DataSet con tipo. Un nuevo producto se agrega a la base de datos mediante la creación de un `ProductsRow` instancia, proporcionando sus valores y llamar a TableAdapters `Update` método, pasando el `ProductsDataTable`. Internamente, los TableAdapter s `Update` método enumera la `ProductsRow` las instancias de la DataTable pasada (en este ejemplo hay solo uno: uno que acabamos de agregar) y realiza adecuado Insertar, actualizar o eliminar el comando. En este caso, el `Products_Insert` se ejecuta el procedimiento almacenado, que agrega un nuevo registro a la `Products` de tabla y devuelve los detalles del registro recién agregado. El `ProductsRow` instancia s `ProductID` , a continuación, se actualiza el valor. Después de la `Update` método ha finalizado, se puede acceder al registro recién agregado s `ProductID` valor a través de la `ProductsRow` s `ProductID` propiedad.
+En el código siguiente se muestra esta característica. Contiene un `ProductsTableAdapter` y `ProductsDataTable` creados para el `NorthwindWithSprocs` DataSet con tipo. Para agregar un nuevo producto a la base de datos, se crea una instancia de `ProductsRow`, se proporcionan sus valores y se llama al método `Update` de TableAdapter, pasando el `ProductsDataTable`. Internamente, el método TableAdapter s `Update` enumera las instancias de `ProductsRow` en la DataTable pasada (en este ejemplo solo hay una-la que acabamos de agregar) y realiza el comando de inserción, actualización o eliminación adecuado. En este caso, se ejecuta el `Products_Insert` procedimiento almacenado, que agrega un nuevo registro a la tabla `Products` y devuelve los detalles del registro que se acaba de agregar. A continuación, se actualiza el valor `ProductID` de la instancia de `ProductsRow`. Una vez completado el método de `Update`, podemos tener acceso al valor de `ProductID` de registros recién agregado a través de la propiedad `ProductsRow` s `ProductID`.
 
 [!code-vb[Main](creating-new-stored-procedures-for-the-typed-dataset-s-tableadapters-vb/samples/sample6.vb)]
 
-El `Products_Update` procedimiento almacenado de forma similar incluye un `SELECT` instrucción después de su `UPDATE` instrucción.
+El procedimiento almacenado `Products_Update` incluye similar una instrucción `SELECT` después de la instrucción `UPDATE`.
 
 [!code-sql[Main](creating-new-stored-procedures-for-the-typed-dataset-s-tableadapters-vb/samples/sample7.sql)]
 
-Tenga en cuenta que este procedimiento almacenado incluye dos parámetros de entrada para `ProductID`: `@Original_ProductID` y `@ProductID`. Esta funcionalidad permite escenarios donde es posible que se puede cambiar la clave principal. Por ejemplo, en una base de datos de empleados, cada registro de empleado podría usar la seguridad empleado s social como su clave principal. Para cambiar una existente empleado s número del seguro social, deben proporcionar tanto el nuevo valor de la seguridad social y la original. Para el `Products` tabla, esta funcionalidad no es necesaria porque el `ProductID` columna es una `IDENTITY` columna y nunca deben cambiarse. De hecho, el `UPDATE` instrucción en el `Products_Update` t de procedimiento almacenado incluyen el `ProductID` columna en su lista de columnas. Por lo tanto, mientras `@Original_ProductID` se utiliza en el `UPDATE` instrucción s `WHERE` cláusula, es superflua para el `Products` de tabla y se reemplazarán por los `@ProductID` parámetro. Cuando se modifica un parámetros de procedimiento almacenado s es importante que también se actualizan los métodos TableAdapter que utilice el procedimiento almacenado.
+Tenga en cuenta que este procedimiento almacenado incluye dos parámetros de entrada para `ProductID`: `@Original_ProductID` y `@ProductID`. Esta funcionalidad permite escenarios en los que se puede cambiar la clave principal. Por ejemplo, en una base de datos de empleados, cada registro de empleado podría usar el número de la seguridad social del empleado como su clave principal. Para cambiar el número de la seguridad social de un empleado existente, se debe proporcionar tanto el nuevo número de la seguridad social como el original. En el caso de la tabla `Products`, esta funcionalidad no es necesaria porque la `ProductID` columna es una columna `IDENTITY` y nunca debe cambiarse. De hecho, la instrucción `UPDATE` del procedimiento almacenado `Products_Update` no incluye la columna `ProductID` en su lista de columnas. Por lo tanto, mientras `@Original_ProductID` se usa en la cláusula `UPDATE` instrucción s `WHERE`, es superflua para la tabla de `Products` y podría reemplazarse por el parámetro `@ProductID`. Al modificar los parámetros de un procedimiento almacenado, es importante que también se actualicen los métodos de TableAdapter que usan ese procedimiento almacenado.
 
-## <a name="step-4-modifying-a-stored-procedure-s-parameters-and-updating-the-tableadapter"></a>Paso 4: Modificación de los parámetros de un procedimiento almacenado s y actualización de TableAdapter
+## <a name="step-4-modifying-a-stored-procedure-s-parameters-and-updating-the-tableadapter"></a>Paso 4: modificar los parámetros de un procedimiento almacenado y actualizar el TableAdapter
 
-Puesto que la `@Original_ProductID` parámetro es superfluo, permiten s. quítela de la `Products_Update` procedimiento almacenado por completo. Abra el `Products_Update` procedimiento almacenado, eliminar el `@Original_ProductID` parámetro y, en el `WHERE` cláusula de la `UPDATE` instrucción, cambiar el nombre de parámetro usado de `@Original_ProductID` a `@ProductID`. Después de realizar estos cambios, el T-SQL dentro del procedimiento almacenado debe ser similar al siguiente:
+Dado que el parámetro `@Original_ProductID` es superfluo, deje que lo quite del `Products_Update` procedimiento almacenado de forma conjunta. Abra el `Products_Update` procedimiento almacenado, elimine el parámetro `@Original_ProductID` y, en la cláusula `WHERE` de la instrucción `UPDATE`, cambie el nombre del parámetro usado de `@Original_ProductID` a `@ProductID`. Después de realizar estos cambios, el T-SQL dentro del procedimiento almacenado debe ser similar al siguiente:
 
 [!code-sql[Main](creating-new-stored-procedures-for-the-typed-dataset-s-tableadapters-vb/samples/sample8.sql)]
 
-Para guardar estos cambios en la base de datos, haga clic en el icono Guardar en la barra de herramientas o presione CTRL+s. En este momento, el `Products_Update` procedimiento almacenado no espera una `@Original_ProductID` parámetro de entrada, pero el TableAdapter está configurado para pasar un parámetro de este tipo. Puede ver los parámetros de TableAdapter se enviará a la `Products_Update` procedimiento almacenado mediante la selección de TableAdapter en el Diseñador de DataSet, vaya a la ventana Propiedades y haciendo clic en el botón de puntos suspensivos en el `UpdateCommand` s `Parameters` colección. Se abrirá el cuadro de diálogo Editor de la colección de parámetros que se muestra en la figura 14.
+Para guardar estos cambios en la base de datos, haga clic en el icono guardar en la barra de herramientas o presione Ctrl + S. En este momento, el `Products_Update` procedimiento almacenado no espera un parámetro de entrada `@Original_ProductID`, pero el TableAdapter está configurado para pasar este tipo de parámetro. Puede ver los parámetros que el TableAdapter enviará al `Products_Update` procedimiento almacenado seleccionando el TableAdapter en el diseñador de DataSet, vaya al ventana Propiedades y haciendo clic en los puntos suspensivos de la colección `UpdateCommand` s `Parameters`. Se abrirá el cuadro de diálogo Editor de la colección de parámetros que se muestra en la figura 14.
 
-![Las listas de Editor de la colección de parámetros los parámetros utilizados se pasa a la Products_Update procedimiento almacenado](creating-new-stored-procedures-for-the-typed-dataset-s-tableadapters-vb/_static/image30.png)
+![El editor de la colección de parámetros muestra los parámetros que se han pasado al procedimiento almacenado Products_Update](creating-new-stored-procedures-for-the-typed-dataset-s-tableadapters-vb/_static/image30.png)
 
-**Figura 14**: Las listas de Editor de la colección de parámetros los parámetros utilizados se pasa a la `Products_Update` procedimiento almacenado
+**Figura 14**: el editor de la colección de parámetros muestra los parámetros que se han pasado al procedimiento almacenado `Products_Update`
 
-Puede quitar este parámetro desde aquí simplemente seleccionando la `@Original_ProductID` parámetro en la lista de miembros y haga clic en el botón Quitar.
+Puede quitar este parámetro aquí simplemente seleccionando el parámetro `@Original_ProductID` de la lista de miembros y haciendo clic en el botón Quitar.
 
-Como alternativa, puede actualizar los parámetros utilizados para todos los métodos, con el botón secundario en TableAdapter en el diseñador y elija Configurar. Se abrirá el Asistente para configuración de TableAdapter, enumerar los procedimientos almacenados utilizados para seleccionar, insertar, actualizar y eliminar, junto con los parámetros de los procedimientos almacenados esperan recibir. Si hace clic en la lista desplegable de actualización puede ver el `Products_Update` procedimientos almacenados espera parámetros de entrada, que ahora ya no incluye `@Original_ProductID` (consulte la figura 15). Simplemente haga clic en Finalizar para actualizar automáticamente la colección de parámetros utilizada por el TableAdapter.
+Como alternativa, puede actualizar los parámetros que se usan para todos los métodos; para ello, haga clic con el botón secundario en el TableAdapter en el diseñador y elija configurar. Se abrirá el Asistente para configuración de TableAdapter, donde se enumeran los procedimientos almacenados que se usan para seleccionar, insertar, actualizar y eliminar, junto con los parámetros que los procedimientos almacenados esperan recibir. Si hace clic en la lista desplegable actualizar, puede ver los parámetros de entrada `Products_Update` procedimientos almacenados esperados, que ahora ya no incluyen `@Original_ProductID` (consulte la figura 15). Simplemente haga clic en finalizar para actualizar automáticamente la colección de parámetros utilizada por el TableAdapter.
 
-[![Como alternativa, puede usar al Asistente para configuración de TableAdapter s para sus colecciones de parámetros de métodos de actualización](creating-new-stored-procedures-for-the-typed-dataset-s-tableadapters-vb/_static/image32.png)](creating-new-stored-procedures-for-the-typed-dataset-s-tableadapters-vb/_static/image31.png)
+[![puede usar el Asistente para la configuración de TableAdapter s para actualizar sus colecciones de parámetros de métodos.](creating-new-stored-procedures-for-the-typed-dataset-s-tableadapters-vb/_static/image32.png)](creating-new-stored-procedures-for-the-typed-dataset-s-tableadapters-vb/_static/image31.png)
 
-**Figura 15**: Como alternativa, puede usar el Asistente para configuración para actualizar sus colecciones de parámetros de métodos de TableAdapter s ([haga clic aquí para ver imagen en tamaño completo](creating-new-stored-procedures-for-the-typed-dataset-s-tableadapters-vb/_static/image33.png))
+**Figura 15**: también puede usar el Asistente para la configuración de TableAdapter s para actualizar sus colecciones de parámetros de métodos ([haga clic para ver la imagen de tamaño completo](creating-new-stored-procedures-for-the-typed-dataset-s-tableadapters-vb/_static/image33.png))
 
-## <a name="step-5-adding-additional-tableadapter-methods"></a>Paso 5: Agregar métodos adicionales de TableAdapter
+## <a name="step-5-adding-additional-tableadapter-methods"></a>Paso 5: agregar métodos TableAdapter adicionales
 
-Como paso 2 se muestra, al crear un nuevo TableAdapter es fácil tener los procedimientos almacenados correspondientes que se genera automáticamente. Lo mismo sirve al agregar métodos adicionales a un TableAdapter. Para ilustrar esto, el s permiten agregar un `GetProductByProductID(productID)` método a la `ProductsTableAdapter` creado en el paso 2. Este método llevará como entrada un `ProductID` de valor y devolver detalles sobre el producto especificado.
+Como se muestra en el paso 2, cuando se crea un nuevo TableAdapter es fácil tener los procedimientos almacenados correspondientes generados automáticamente. Lo mismo sucede al agregar métodos adicionales a un TableAdapter. Para ilustrar esto, vamos a agregar un método de `GetProductByProductID(productID)` al `ProductsTableAdapter` creado en el paso 2. Este método tomará como entrada un valor `ProductID` y devolverá detalles sobre el producto especificado.
 
-Comience con el botón secundario en TableAdapter y elegir Agregar consulta en el menú contextual.
+Para empezar, haga clic con el botón derecho en el TableAdapter y elija Agregar consulta en el menú contextual.
 
-![Agregar una nueva consulta al TableAdapter](creating-new-stored-procedures-for-the-typed-dataset-s-tableadapters-vb/_static/image34.png)
+![Agregar una nueva consulta a TableAdapter](creating-new-stored-procedures-for-the-typed-dataset-s-tableadapters-vb/_static/image34.png)
 
-**Figura 16**: Agregar una nueva consulta al TableAdapter
+**Figura 16**: agregar una nueva consulta a TableAdapter
 
-Esta acción iniciará al Asistente de configuración de la consulta de TableAdapter, que le pide primero cómo debe tener acceso a la base de datos del TableAdapter. Para que un nuevo procedimiento almacenado que creó, elija el crear una nueva opción de procedimiento almacenado y haga clic en siguiente.
+Esto iniciará el Asistente para la configuración de consultas de TableAdapter, que primero solicita el modo en que el TableAdapter debe tener acceso a la base de datos. Para crear un nuevo procedimiento almacenado, elija la opción crear un nuevo procedimiento almacenado y haga clic en siguiente.
 
-[![Elija crear un nuevo procedimiento almacenado, opción](creating-new-stored-procedures-for-the-typed-dataset-s-tableadapters-vb/_static/image36.png)](creating-new-stored-procedures-for-the-typed-dataset-s-tableadapters-vb/_static/image35.png)
+[![elegir la opción crear un nuevo procedimiento almacenado](creating-new-stored-procedures-for-the-typed-dataset-s-tableadapters-vb/_static/image36.png)](creating-new-stored-procedures-for-the-typed-dataset-s-tableadapters-vb/_static/image35.png)
 
-**Figura 17**: Elija crear un nueva opción de procedimiento almacenado ([haga clic aquí para ver imagen en tamaño completo](creating-new-stored-procedures-for-the-typed-dataset-s-tableadapters-vb/_static/image37.png))
+**Figura 17**: elija la opción crear un nuevo procedimiento almacenado ([haga clic para ver la imagen de tamaño completo](creating-new-stored-procedures-for-the-typed-dataset-s-tableadapters-vb/_static/image37.png))
 
-La siguiente pantalla nos pide identificar el tipo de consulta que se ejecutará, independientemente de que se devuelva un conjunto de filas o un valor escalar único o realizar una `UPDATE`, `INSERT`, o `DELETE` instrucción. Puesto que el `GetProductByProductID(productID)` método se devuelva una fila, deje el LECT que devuelve la opción de la fila seleccionada y presione siguiente.
+En la pantalla siguiente se le pide que identifique el tipo de consulta que se va a ejecutar, si devolverá un conjunto de filas o un valor escalar único, o realizará una `UPDATE`, `INSERT`o `DELETE` instrucción. Dado que el método `GetProductByProductID(productID)` devolverá una fila, deje seleccionada la opción seleccionar la fila que devuelve el valor y presione siguiente.
 
-[![Elija la selección que devuelve la fila, opción](creating-new-stored-procedures-for-the-typed-dataset-s-tableadapters-vb/_static/image39.png)](creating-new-stored-procedures-for-the-typed-dataset-s-tableadapters-vb/_static/image38.png)
+[![elegir la opción seleccionar qué filas devuelve](creating-new-stored-procedures-for-the-typed-dataset-s-tableadapters-vb/_static/image39.png)](creating-new-stored-procedures-for-the-typed-dataset-s-tableadapters-vb/_static/image38.png)
 
-**Figura 18**: Elija la selección que devuelve la opción de fila ([haga clic aquí para ver imagen en tamaño completo](creating-new-stored-procedures-for-the-typed-dataset-s-tableadapters-vb/_static/image40.png))
+**Figura 18**: elija la opción seleccionar la fila que devuelve ([haga clic para ver la imagen de tamaño completo](creating-new-stored-procedures-for-the-typed-dataset-s-tableadapters-vb/_static/image40.png))
 
-La siguiente pantalla muestra la consulta principal s del TableAdapter, que solo muestra el nombre del procedimiento almacenado (`dbo.Products_Select`). Reemplácelo por el nombre del procedimiento almacenado siguiente `SELECT` instrucción, que devuelve todos los campos de producto para un producto determinado:
+En la pantalla siguiente se muestra la consulta principal de TableAdapter s, que solo muestra el nombre del procedimiento almacenado (`dbo.Products_Select`). Reemplace el nombre del procedimiento almacenado por la siguiente instrucción de `SELECT`, que devuelve todos los campos de producto de un producto específico:
 
 [!code-sql[Main](creating-new-stored-procedures-for-the-typed-dataset-s-tableadapters-vb/samples/sample9.sql)]
 
-[![Reemplace el nombre del procedimiento almacenado con una consulta SELECT](creating-new-stored-procedures-for-the-typed-dataset-s-tableadapters-vb/_static/image42.png)](creating-new-stored-procedures-for-the-typed-dataset-s-tableadapters-vb/_static/image41.png)
+[![reemplazar el nombre del procedimiento almacenado por una consulta SELECT](creating-new-stored-procedures-for-the-typed-dataset-s-tableadapters-vb/_static/image42.png)](creating-new-stored-procedures-for-the-typed-dataset-s-tableadapters-vb/_static/image41.png)
 
-**Figura 19**: Reemplace el nombre del procedimiento almacenado con un `SELECT` consulta ([haga clic aquí para ver imagen en tamaño completo](creating-new-stored-procedures-for-the-typed-dataset-s-tableadapters-vb/_static/image43.png))
+**Figura 19**: Reemplace el nombre del procedimiento almacenado por un `SELECT` consulta ([haga clic para ver la imagen de tamaño completo](creating-new-stored-procedures-for-the-typed-dataset-s-tableadapters-vb/_static/image43.png))
 
-La pantalla posteriores pide que asigne un nombre de procedimiento almacenado que se va a crear. Escriba el nombre `Products_SelectByProductID` y haga clic en siguiente.
+En la pantalla siguiente se le pide el nombre del procedimiento almacenado que se va a crear. Escriba el nombre `Products_SelectByProductID` y haga clic en siguiente.
 
-[![Nombre de la nueva Products_SelectByProductID de procedimiento almacenado](creating-new-stored-procedures-for-the-typed-dataset-s-tableadapters-vb/_static/image45.png)](creating-new-stored-procedures-for-the-typed-dataset-s-tableadapters-vb/_static/image44.png)
+[![nombre al nuevo procedimiento almacenado Products_SelectByProductID](creating-new-stored-procedures-for-the-typed-dataset-s-tableadapters-vb/_static/image45.png)](creating-new-stored-procedures-for-the-typed-dataset-s-tableadapters-vb/_static/image44.png)
 
-**Figura 20**: Nombre del nuevo procedimiento almacenado `Products_SelectByProductID` ([haga clic aquí para ver imagen en tamaño completo](creating-new-stored-procedures-for-the-typed-dataset-s-tableadapters-vb/_static/image46.png))
+**Figura 20**: asigne un nombre al nuevo procedimiento almacenado `Products_SelectByProductID` ([haga clic para ver la imagen de tamaño completo](creating-new-stored-procedures-for-the-typed-dataset-s-tableadapters-vb/_static/image46.png))
 
-El último paso del asistente nos permite cambiar el método de nombres generan, así como indican si se debe usar el relleno de un patrón de DataTable, devolver un DataTable de patrón, o ambos. Para este método, deje ambas opciones activadas, pero cambie el nombre de los métodos para `FillByProductID` y `GetProductByProductID`. Haga clic en siguiente para ver un resumen de los pasos, el asistente realizará y, a continuación, haga clic en Finalizar para completar al asistente.
+El paso final del asistente nos permite cambiar los nombres de método generados, así como indicar si se debe usar el patrón rellenar un DataTable, devolver un modelo DataTable o ambos. Para este método, deje ambas opciones seleccionadas, pero cambie el nombre de los métodos a `FillByProductID` y `GetProductByProductID`. Haga clic en siguiente para ver un resumen de los pasos que el asistente realizará y, a continuación, haga clic en finalizar para completar el asistente.
 
-[![Cambiar el nombre de los métodos de TableAdapter s FillByProductID y GetProductByProductID](creating-new-stored-procedures-for-the-typed-dataset-s-tableadapters-vb/_static/image48.png)](creating-new-stored-procedures-for-the-typed-dataset-s-tableadapters-vb/_static/image47.png)
+[![cambiar el nombre de los métodos de TableAdapter s a FillByProductID y GetProductByProductID](creating-new-stored-procedures-for-the-typed-dataset-s-tableadapters-vb/_static/image48.png)](creating-new-stored-procedures-for-the-typed-dataset-s-tableadapters-vb/_static/image47.png)
 
-**Figura 21**: Cambiar el nombre de los métodos de TableAdapter s a `FillByProductID` y `GetProductByProductID` ([haga clic aquí para ver imagen en tamaño completo](creating-new-stored-procedures-for-the-typed-dataset-s-tableadapters-vb/_static/image49.png))
+**Figura 21**: cambiar el nombre de los métodos de TableAdapter s a `FillByProductID` y `GetProductByProductID` ([haga clic para ver la imagen de tamaño completo](creating-new-stored-procedures-for-the-typed-dataset-s-tableadapters-vb/_static/image49.png))
 
-Después de completar el asistente, lo TableAdapter dispone de un método nuevo, `GetProductByProductID(productID)` que, cuando se invoca, se ejecutará el `Products_SelectByProductID` el procedimiento almacenado que se acaba de crear. Dedique unos minutos a ver este nuevo procedimiento almacenado desde el Explorador de servidores, obtención de detalles de la carpeta procedimientos almacenados y abra `Products_SelectByProductID` (si no lo ve, haga doble clic en la carpeta procedimientos almacenados y elija actualizar).
+Después de completar el asistente, el TableAdapter tiene un nuevo método disponible, `GetProductByProductID(productID)` que, cuando se invoca, ejecutará el `Products_SelectByProductID` procedimiento almacenado que se acaba de crear. Dedique un momento a ver este nuevo procedimiento almacenado desde el Explorador de servidores mediante la obtención de detalles en la carpeta procedimientos almacenados y la apertura de `Products_SelectByProductID` (si no lo ve, haga clic con el botón secundario en la carpeta procedimientos almacenados y elija actualizar).
 
-Tenga en cuenta que el `SelectByProductID` procedimiento almacenado toma `@ProductID` como un parámetro de entrada y se ejecuta el `SELECT` instrucción que se escriben en el asistente.
+Tenga en cuenta que el procedimiento almacenado `SelectByProductID` toma `@ProductID` como parámetro de entrada y ejecuta la instrucción `SELECT` que se especifica en el asistente.
 
 [!code-sql[Main](creating-new-stored-procedures-for-the-typed-dataset-s-tableadapters-vb/samples/sample10.sql)]
 
-## <a name="step-6-creating-a-business-logic-layer-class"></a>Paso 6: Creación de una clase de capa de lógica empresarial
+## <a name="step-6-creating-a-business-logic-layer-class"></a>Paso 6: crear una clase de capa de lógica de negocios
 
-A lo largo de la serie de tutoriales se han luchado por mantener una arquitectura por capas en el que la capa de presentación había realizado todas sus llamadas a la capa de lógica empresarial (BLL). Con el fin de cumplir esta decisión de diseño, necesitamos crear una clase BLL para el nuevo conjunto de datos con tipo antes de poder acceder a datos de productos desde la capa de presentación.
+A lo largo de la serie de tutoriales hemos esforzado para mantener una arquitectura en capas en la que el nivel de presentación realizaba todas sus llamadas a la capa de lógica de negocios (BLL). Para adherirse a esta decisión de diseño, primero es necesario crear una clase BLL para el nuevo conjunto de datos con tipo antes de poder tener acceso a los datos del producto desde el nivel de presentación.
 
-Crear un nuevo archivo de clase denominado `ProductsBLLWithSprocs.vb` en el `~/App_Code/BLL` carpeta y agregarle el código siguiente:
+Cree un nuevo archivo de clase denominado `ProductsBLLWithSprocs.vb` en la carpeta `~/App_Code/BLL` y agréguele el código siguiente:
 
 [!code-vb[Main](creating-new-stored-procedures-for-the-typed-dataset-s-tableadapters-vb/samples/sample11.vb)]
 
-Esta clase imita el `ProductsBLL` semántica de los tutoriales anteriores, pero usa la clase el `ProductsTableAdapter` y `ProductsDataTable` objetos desde el `NorthwindWithSprocs` conjunto de datos. Por ejemplo, en lugar de tener un `Imports NorthwindTableAdapters` instrucción al principio del archivo de clase como `ProductsBLL` hace, el `ProductsBLLWithSprocs` clase utiliza `Imports NorthwindWithSprocsTableAdapters`. Del mismo modo, el `ProductsDataTable` y `ProductsRow` van precedidos de los objetos utilizados en esta clase la `NorthwindWithSprocs` espacio de nombres. El `ProductsBLLWithSprocs` clase proporciona acceso a datos de dos métodos, `GetProducts` y `GetProductByProductID`, y métodos para agregar, actualizar y eliminar una instancia única de producto.
+Esta clase imita la semántica de la clase `ProductsBLL` de los tutoriales anteriores, pero usa los objetos `ProductsTableAdapter` y `ProductsDataTable` del conjunto de `NorthwindWithSprocs`. Por ejemplo, en lugar de tener una instrucción `Imports NorthwindTableAdapters` al principio del archivo de clase como hace `ProductsBLL`, la clase `ProductsBLLWithSprocs` utiliza `Imports NorthwindWithSprocsTableAdapters`. Del mismo modo, los objetos `ProductsDataTable` y `ProductsRow` utilizados en esta clase tienen el prefijo del espacio de nombres `NorthwindWithSprocs`. La clase `ProductsBLLWithSprocs` proporciona dos métodos de acceso a datos, `GetProducts` y `GetProductByProductID`, y métodos para agregar, actualizar y eliminar una única instancia del producto.
 
-## <a name="step-7-working-with-thenorthwindwithsprocsdataset-from-the-presentation-layer"></a>Paso 7: Trabajar con el`NorthwindWithSprocs`conjunto de datos de la capa de presentación
+## <a name="step-7-working-with-thenorthwindwithsprocsdataset-from-the-presentation-layer"></a>Paso 7: trabajar con el conjunto de`NorthwindWithSprocs`desde el nivel de presentación
 
-En este punto hemos creado un DAL que utilice procedimientos almacenados para tener acceso y modificar la base de datos subyacente. También hemos creado un BLL rudimentaria con métodos para recuperar todos los productos o un producto determinado junto con los métodos para agregar, actualizar y eliminar productos. Para redondear este tutorial, s permiten crear una página ASP.NET que usa la s BLL `ProductsBLLWithSprocs` clase para mostrar, actualizar y eliminar registros.
+En este punto, hemos creado un DAL que usa procedimientos almacenados para obtener acceso y modificar los datos de la base de datos subyacente. También hemos creado una capa BLL rudimentaria con métodos para recuperar todos los productos o un producto determinado junto con métodos para agregar, actualizar y eliminar productos. Para redondear este tutorial, cree una página ASP.NET que use la clase BLL s `ProductsBLLWithSprocs` para mostrar, actualizar y eliminar registros.
 
-Abra el `NewSprocs.aspx` página en el `AdvancedDAL` carpeta y arrastre un control GridView del cuadro de herramientas hasta el diseñador, asígnele el nombre `Products`. Desde el control GridView elegir enlazarla a un nuevo origen ObjectDataSource denominada etiqueta inteligente de s `ProductsDataSource`. Configurar el origen ObjectDataSource para usar el `ProductsBLLWithSprocs` clase, como se muestra en la figura 22.
+Abra la página `NewSprocs.aspx` en la carpeta `AdvancedDAL` y arrastre un control GridView desde el cuadro de herramientas hasta el diseñador, asignándole un nombre `Products`. En la etiqueta inteligente de GridView s, elija enlazarlo a un nuevo ObjectDataSource denominado `ProductsDataSource`. Configure ObjectDataSource para usar la clase `ProductsBLLWithSprocs`, como se muestra en la figura 22.
 
-[![Configurar el origen ObjectDataSource para usar la clase ProductsBLLWithSprocs](creating-new-stored-procedures-for-the-typed-dataset-s-tableadapters-vb/_static/image51.png)](creating-new-stored-procedures-for-the-typed-dataset-s-tableadapters-vb/_static/image50.png)
+[![configurar ObjectDataSource para usar la clase ProductsBLLWithSprocs](creating-new-stored-procedures-for-the-typed-dataset-s-tableadapters-vb/_static/image51.png)](creating-new-stored-procedures-for-the-typed-dataset-s-tableadapters-vb/_static/image50.png)
 
-**Figura 22**: Configurar el origen ObjectDataSource que se usarán el `ProductsBLLWithSprocs` clase ([haga clic aquí para ver imagen en tamaño completo](creating-new-stored-procedures-for-the-typed-dataset-s-tableadapters-vb/_static/image52.png))
+**Figura 22**: configuración de ObjectDataSource para usar la clase `ProductsBLLWithSprocs` ([haga clic para ver la imagen de tamaño completo](creating-new-stored-procedures-for-the-typed-dataset-s-tableadapters-vb/_static/image52.png))
 
-La lista desplegable en la ficha Seleccionar tiene dos opciones, `GetProducts` y `GetProductByProductID`. Puesto que deseamos mostrar todos los productos en el control GridView, elija el `GetProducts` método. Las listas desplegables en las pestañas UPDATE, INSERT y DELETE tienen solo un método. Asegúrese de que cada una de estas listas desplegables tiene su correspondiente método seleccionado y, a continuación, haga clic en Finalizar.
+La lista desplegable de la pestaña seleccionar tiene dos opciones, `GetProducts` y `GetProductByProductID`. Como queremos mostrar todos los productos en GridView, elija el método `GetProducts`. Las listas desplegables de las pestañas actualizar, insertar y eliminar tienen solo un método. Asegúrese de que cada una de estas listas desplegables tiene seleccionado el método adecuado y, a continuación, haga clic en finalizar.
 
-Cuando haya finalizado el ObjectDataSource wizard, Visual Studio agregará BoundFields y un CampoCasillaVerificación en GridView para los campos de datos del producto. Activar el control GridView s integradas características de modificación y eliminación seleccionando las opciones Habilitar eliminación presentes en la etiqueta inteligente y Habilitar edición.
+Una vez completado el Asistente para ObjectDataSource, Visual Studio agregará BoundFields y CheckBoxField a GridView para los campos de datos del producto. Active las características de edición y eliminación integradas de GridView mediante la comprobación de las opciones habilitar edición y habilitar eliminación presentes en la etiqueta inteligente.
 
-[![La página contiene un control GridView con la edición y eliminación habilitada la compatibilidad con](creating-new-stored-procedures-for-the-typed-dataset-s-tableadapters-vb/_static/image54.png)](creating-new-stored-procedures-for-the-typed-dataset-s-tableadapters-vb/_static/image53.png)
+[![la página contiene un control GridView con compatibilidad de edición y eliminación habilitada](creating-new-stored-procedures-for-the-typed-dataset-s-tableadapters-vb/_static/image54.png)](creating-new-stored-procedures-for-the-typed-dataset-s-tableadapters-vb/_static/image53.png)
 
-**Figura 23**: La página contiene un control GridView con la edición y eliminación de habilitada la compatibilidad con ([haga clic aquí para ver imagen en tamaño completo](creating-new-stored-procedures-for-the-typed-dataset-s-tableadapters-vb/_static/image55.png))
+**Figura 23**: la página contiene un control GridView con compatibilidad de edición y eliminación habilitada ([haga clic para ver la imagen de tamaño completo](creating-new-stored-procedures-for-the-typed-dataset-s-tableadapters-vb/_static/image55.png))
 
-Como se ve descritos en los tutoriales anteriores, al finalizar el Asistente para la s de ObjectDataSource, conjuntos de Visual Studio la `OldValuesParameterFormatString` propiedad original\_{0}. Esto se debe revertirse a su valor predeterminado de {0} en orden para que funcione correctamente las características de modificación de datos según los parámetros esperados por los métodos de nuestro BLL. Por lo tanto, asegúrese de establecer el `OldValuesParameterFormatString` propiedad {0} o quite la propiedad completamente de la sintaxis declarativa.
+Como se explicó en los tutoriales anteriores, al finalizar el Asistente de ObjectDataSource s, Visual Studio establece la propiedad `OldValuesParameterFormatString` en el {0}de\_original. Se debe revertir a su valor predeterminado de {0} para que las características de modificación de datos funcionen correctamente con los parámetros esperados por los métodos de la capa BLL. Por lo tanto, asegúrese de establecer la propiedad `OldValuesParameterFormatString` en {0} o quite la propiedad de la sintaxis declarativa.
 
-Después de completar el Asistente para configurar origen de datos, activar la edición y eliminación de soporte técnico en el control GridView y devolver la s ObjectDataSource `OldValuesParameterFormatString` propiedad a su valor predeterminado, el marcado declarativo de la página s debe ser similar al siguiente:
+Después de completar el Asistente para configurar orígenes de datos, activar la compatibilidad de edición y eliminación en GridView y devolver la propiedad ObjectDataSource s `OldValuesParameterFormatString` a su valor predeterminado, el marcado declarativo de la página debe ser similar al siguiente:
 
 [!code-aspx[Main](creating-new-stored-procedures-for-the-typed-dataset-s-tableadapters-vb/samples/sample12.aspx)]
 
-En este punto, podríamos limpiarla GridView personalizando la interfaz de edición para incluir la validación, tener el `CategoryID` y `SupplierID` columnas se representan como listas desplegables y así sucesivamente. También podríamos agregar una confirmación del cliente en el botón Eliminar, y le recomiendo que dedique un momento para implementar estas mejoras. Dado que estos temas se han tratado en tutoriales anteriores, sin embargo, no trataremos ellos nuevo aquí.
+En este momento, podríamos preparar GridView personalizando la interfaz de edición para incluir la validación, con lo que las columnas `CategoryID` y `SupplierID` se representan como DropDownLists, y así sucesivamente. También se puede Agregar una confirmación del lado cliente al botón eliminar y se recomienda dedicar tiempo a implementar estas mejoras. Dado que estos temas se han tratado en los tutoriales anteriores, sin embargo, no se incluirán de nuevo aquí.
 
-Independientemente de si el control GridView mejorar o no, pruebe las características principales de página s en un explorador. Como se muestra en la figura 24, la página muestra los productos en un control GridView que proporciona la edición y eliminación de funciones por fila.
+Independientemente de si mejora GridView o no, pruebe las características principales de la página en un explorador. Como se muestra en la Figura 24, la página muestra los productos en un control GridView que proporciona capacidades de edición y eliminación por fila.
 
-[![Los productos se pueden ver, editar y eliminar de GridView](creating-new-stored-procedures-for-the-typed-dataset-s-tableadapters-vb/_static/image57.png)](creating-new-stored-procedures-for-the-typed-dataset-s-tableadapters-vb/_static/image56.png)
+[![los productos se pueden ver, editar y eliminar de GridView](creating-new-stored-procedures-for-the-typed-dataset-s-tableadapters-vb/_static/image57.png)](creating-new-stored-procedures-for-the-typed-dataset-s-tableadapters-vb/_static/image56.png)
 
-**Figura 24**: Los productos pueden verse, editados y Deleted desde el control GridView ([haga clic aquí para ver imagen en tamaño completo](creating-new-stored-procedures-for-the-typed-dataset-s-tableadapters-vb/_static/image58.png))
+**Figura 24**: los productos se pueden ver, editar y eliminar de GridView ([haga clic para ver la imagen a tamaño completo](creating-new-stored-procedures-for-the-typed-dataset-s-tableadapters-vb/_static/image58.png))
 
 ## <a name="summary"></a>Resumen
 
-Los TableAdapters del conjunto de datos con tipo puede tener acceso a datos desde la base de datos mediante instrucciones SQL ad hoc o a través de procedimientos almacenados. Cuando se trabaja con procedimientos almacenados, pueden usar ambos procedimientos almacenados existentes o puede indicará el Asistente de TableAdapter para crear nuevos procedimientos según un `SELECT` consulta. En este tutorial, exploramos cómo hacer que los procedimientos almacenados que se crean automáticamente para nosotros.
+Los TableAdapters de un conjunto de datos con tipo pueden tener acceso a los datos de la base de datos mediante instrucciones SQL ad hoc o mediante procedimientos almacenados. Al trabajar con procedimientos almacenados, se pueden usar los procedimientos almacenados existentes o se puede indicar al Asistente para TableAdapter que cree nuevos procedimientos almacenados basados en una consulta de `SELECT`. En este tutorial se ha explorado cómo se crean automáticamente los procedimientos almacenados para nosotros.
 
-Al disponer de los procedimientos almacenados generados automáticamente, le ayuda a ahorrar tiempo, hay algunos casos donde el procedimiento almacenado creado por el Asistente t alinear con lo que habría creado en nuestro propio. Un ejemplo es el `Products_Update` procedimiento almacenado, lo que esperaba ambos `@Original_ProductID` y `@ProductID` parámetros de entrada, aunque el `@Original_ProductID` parámetro era superfluo.
+Aunque los procedimientos almacenados generados automáticamente ayudan a ahorrar tiempo, hay algunos casos en los que el procedimiento almacenado creado por el asistente no se alinea con lo que se habría creado en nuestro propio. Un ejemplo es el `Products_Update` procedimiento almacenado, que esperaba `@Original_ProductID` y `@ProductID` parámetros de entrada, aunque el parámetro `@Original_ProductID` era superfluo.
 
-En muchos escenarios, es posible que ya se han creado los procedimientos almacenados o quizás deseamos compilarlos manualmente con el fin de tener un mayor grado de control sobre los comandos de s de procedimiento almacenado. En cualquier caso, querríamos indicar el TableAdapter para usar procedimientos almacenados existentes para sus métodos. Veremos cómo realizar esta tarea en el siguiente tutorial.
+En muchos escenarios, es posible que los procedimientos almacenados ya se hayan creado, o bien, es posible que desee compilarlos manualmente para tener un mayor control sobre los comandos del procedimiento almacenado. En cualquier caso, queremos indicar al TableAdapter que use los procedimientos almacenados existentes para sus métodos. Veremos cómo hacerlo en el siguiente tutorial.
 
-Feliz programación.
+¡ Feliz programación!
 
 ## <a name="further-reading"></a>Información adicional
 
-Para obtener más información sobre los temas tratados en este tutorial, consulte los siguientes recursos:
+Para obtener más información sobre los temas descritos en este tutorial, consulte los siguientes recursos:
 
 - [Crear y mantener procedimientos almacenados](https://msdn.microsoft.com/library/aa214299(SQL.80).aspx)
-- [Recuperación de datos escalares de un procedimiento almacenado](http://aspnet.4guysfromrolla.com/articles/062905-1.aspx)
-- [Conceptos básicos de procedimiento almacenado de SQL Server](http://www.awprofessional.com/articles/article.asp?p=25288&amp;rl=1)
-- [Procedimientos almacenados: Información general](http://www.sqlteam.com/item.asp?ItemID=563)
+- [Recuperar datos escalares de un procedimiento almacenado](http://aspnet.4guysfromrolla.com/articles/062905-1.aspx)
+- [Conceptos básicos de SQL Server procedimiento almacenado](http://www.awprofessional.com/articles/article.asp?p=25288&amp;rl=1)
+- [Procedimientos almacenados: información general](http://www.sqlteam.com/item.asp?ItemID=563)
 - [Escribir un procedimiento almacenado](http://www.4guysfromrolla.com/webtech/111499-1.shtml)
 
 ## <a name="about-the-author"></a>Acerca del autor
 
-[Scott Mitchell](http://www.4guysfromrolla.com/ScottMitchell.shtml), autor de siete libros sobre ASP/ASP.NET y fundador de [4GuysFromRolla.com](http://www.4guysfromrolla.com), trabaja con tecnologías Web de Microsoft desde 1998. Scott trabaja como consultor independiente, instructor y escritor. Su último libro es [*SAM enseñar a usted mismo ASP.NET 2.0 en 24 horas*](https://www.amazon.com/exec/obidos/ASIN/0672327384/4guysfromrollaco). Puede ponerse en [ mitchell@4GuysFromRolla.com.](mailto:mitchell@4GuysFromRolla.com) o a través de su blog, que puede encontrarse en [ http://ScottOnWriting.NET ](http://ScottOnWriting.NET).
+[Scott Mitchell](http://www.4guysfromrolla.com/ScottMitchell.shtml), autor de siete libros de ASP/ASP. net y fundador de [4GuysFromRolla.com](http://www.4guysfromrolla.com), ha estado trabajando con las tecnologías Web de Microsoft desde 1998. Scott funciona como consultor, profesor y redactor independiente. Su último libro se [*enseña a ASP.NET 2,0 en 24 horas*](https://www.amazon.com/exec/obidos/ASIN/0672327384/4guysfromrollaco). Puede ponerse en contacto con usted en [mitchell@4GuysFromRolla.com.](mailto:mitchell@4GuysFromRolla.com) o a través de su blog, que encontrará en [http://ScottOnWriting.NET](http://ScottOnWriting.NET).
 
-## <a name="special-thanks-to"></a>Agradecimientos especiales a
+## <a name="special-thanks-to"></a>Agradecimiento especial a
 
-Esta serie de tutoriales ha sido revisada por muchos revisores útiles. Revisor de clientes potencial para este tutorial era Geisenow Hilton. ¿Está interesado en leer mi próximos artículos de MSDN? Si es así, envíeme una línea en [ mitchell@4GuysFromRolla.com.](mailto:mitchell@4GuysFromRolla.com)
+Muchos revisores útiles revisaron esta serie de tutoriales. El revisor responsable de este tutorial fue Hilton Geisenow. ¿Está interesado en revisar los próximos artículos de MSDN? En caso afirmativo, suéltelo en [mitchell@4GuysFromRolla.com.](mailto:mitchell@4GuysFromRolla.com)
 
 > [!div class="step-by-step"]
 > [Anterior](creating-stored-procedures-and-user-defined-functions-with-managed-code-cs.md)

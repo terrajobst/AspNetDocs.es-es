@@ -2,28 +2,28 @@
 uid: web-forms/overview/getting-started/getting-started-with-aspnet-45-web-forms/create_the_data_access_layer
 title: Crear la capa de acceso a datos | Microsoft Docs
 author: Erikre
-description: Esta serie de tutoriales aprenderá los conceptos básicos de la creación de una aplicación de formularios Web Forms ASP.NET con ASP.NET 4.5 y Microsoft Visual Studio Express 2013 para se...
+description: Esta serie de tutoriales le enseñará los aspectos básicos de la creación de una aplicación de formularios Web Forms ASP.NET con ASP.NET 4,5 y Microsoft Visual Studio Express 2013 para nosotros...
 ms.author: riande
 ms.date: 09/08/2014
 ms.assetid: 0bbf7a6e-d7eb-4091-91e4-fff892777f32
 msc.legacyurl: /web-forms/overview/getting-started/getting-started-with-aspnet-45-web-forms/create_the_data_access_layer
 msc.type: authoredcontent
-ms.openlocfilehash: 61a9dae22efed9cb7e8957a8c131396cbdeea3c9
-ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
+ms.openlocfilehash: 0fcf050474a57be9ed53ec0783a6d6b7dde2bf4c
+ms.sourcegitcommit: 22fbd8863672c4ad6693b8388ad5c8e753fb41a2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/06/2019
-ms.locfileid: "65131354"
+ms.lasthandoff: 11/28/2019
+ms.locfileid: "74575749"
 ---
 # <a name="create-the-data-access-layer"></a>Crear la capa de acceso a datos
 
 por [Erik Reitan](https://github.com/Erikre)
 
-[Descargar el proyecto de ejemplo de Wingtip Toys (C#)](http://go.microsoft.com/fwlink/?LinkID=389434&clcid=0x409) o [descargar eBook (PDF)](http://download.microsoft.com/download/0/F/B/0FBFAA46-2BFD-478F-8E56-7BF3C672DF9D/Getting%20Started%20with%20ASP.NET%204.5%20Web%20Forms%20and%20Visual%20Studio%202013.pdf)
+[Descargar el proyecto de ejemplo deC#Wingtip Toys ()](https://go.microsoft.com/fwlink/?LinkID=389434&clcid=0x409) o [descargar el libro electrónico (pdf)](https://download.microsoft.com/download/0/F/B/0FBFAA46-2BFD-478F-8E56-7BF3C672DF9D/Getting%20Started%20with%20ASP.NET%204.5%20Web%20Forms%20and%20Visual%20Studio%202013.pdf)
 
-> Esta serie de tutoriales aprenderá los conceptos básicos de la creación de una aplicación de formularios Web Forms ASP.NET con ASP.NET 4.5 y Microsoft Visual Studio Express 2013 para Web. Un Visual Studio 2013 [proyecto con código fuente de C#](https://go.microsoft.com/fwlink/?LinkID=389434&clcid=0x409) está disponible para acompañar esta serie de tutoriales.
+> Esta serie de tutoriales le enseñará los aspectos básicos de la creación de una aplicación de formularios Web Forms ASP.NET con ASP.NET 4,5 y Microsoft Visual Studio Express 2013 para Web. Hay disponible un [proyecto C# de Visual Studio 2013 con código fuente](https://go.microsoft.com/fwlink/?LinkID=389434&clcid=0x409) para acompañar esta serie de tutoriales.
 
-Este tutorial describe cómo crear, acceder y revisar los datos de una base de datos con formularios Web Forms ASP.NET y Entity Framework Code First. Este tutorial se basa en el tutorial anterior, "Crear el proyecto" y forma parte de la serie de tutoriales de Wingtip Toys Store. Cuando haya completado este tutorial, habrá creado un grupo de clases de acceso a datos que se encuentran en el *modelos* carpeta del proyecto.
+En este tutorial se describe cómo crear, obtener acceso y revisar datos de una base de datos de mediante los formularios Web Forms de ASP.NET y Entity Framework Code First. Este tutorial se basa en el tutorial anterior "creación del proyecto" y forma parte de la serie de tutoriales de Wingtip Toy Store. Cuando haya completado este tutorial, habrá creado un grupo de clases de acceso a datos que se encuentran en la carpeta *modelos* del proyecto.
 
 ## <a name="what-youll-learn"></a>Lo que aprenderá:
 
@@ -37,149 +37,149 @@ Este tutorial describe cómo crear, acceder y revisar los datos de una base de d
 - LocalDB
 - Anotaciones de datos
 
-## <a name="creating-the-data-models"></a>Creación de los modelos de datos
+## <a name="creating-the-data-models"></a>Crear los modelos de datos
 
-[Entity Framework](https://msdn.microsoft.com/data/aa937723) es un marco de asignación relacional de objetos (ORM). Permite trabajar con datos relacionales como objetos, lo que elimina gran parte del código de acceso a datos que normalmente tendría que escribir. Con Entity Framework, puede emitir consultas mediante [LINQ](https://msdn.microsoft.com/library/bb397926.aspx), a continuación, recuperar y manipular los datos como objetos fuertemente tipados. LINQ proporciona patrones para consultar y actualizar datos. Con Entity Framework le permite centrarse en crear el resto de la aplicación, en lugar de centrarse en los datos de Fundamentos de acceso. Más adelante en esta serie de tutoriales, le mostraremos cómo usar los datos para rellenar las consultas de navegación y producto.
+[Entity Framework](https://msdn.microsoft.com/data/aa937723) es un marco de trabajo de asignación relacional de objetos (ORM). Le permite trabajar con datos relacionales como objetos, lo que elimina la mayor parte del código de acceso a datos que normalmente necesita escribir. Con Entity Framework, puede emitir consultas mediante [LINQ](https://msdn.microsoft.com/library/bb397926.aspx)y, a continuación, recuperar y manipular los datos como objetos fuertemente tipados. LINQ proporciona patrones para consultar y actualizar los datos. El uso de Entity Framework permite centrarse en la creación del resto de la aplicación, en lugar de centrarse en los aspectos básicos del acceso a datos. Más adelante en esta serie de tutoriales, le mostraremos cómo usar los datos para rellenar las consultas de navegación y de producto.
 
-Entity Framework admite un paradigma de desarrollo llama *Code First*. Code First le permite definir los modelos de datos mediante las clases. Una clase es una construcción que le permite crear sus propios tipos personalizados agrupando las variables de otros tipos, métodos y eventos. Puede asignar clases a una base de datos existente o usarlas para generar una base de datos. En este tutorial, creará los modelos de datos mediante la escritura de las clases de modelo de datos. A continuación, deberá dejar que Entity Framework crea la base de datos sobre la marcha a partir de estas nuevas clases.
+Entity Framework admite un paradigma de desarrollo denominado *code First*. Code First permite definir modelos de datos mediante clases. Una clase es una construcción que permite crear sus propios tipos personalizados mediante la agrupación de variables de otros tipos, métodos y eventos. Puede asignar clases a una base de datos existente o usarlas para generar una base de datos. En este tutorial, creará los modelos de datos escribiendo clases de modelo de datos. A continuación, permitirá que Entity Framework crear la base de datos sobre la marcha desde estas nuevas clases.
 
-Se iniciará mediante la creación de las clases de entidad que definen los modelos de datos para la aplicación de formularios Web Forms. A continuación, creará una clase de contexto que administra las clases de entidad y proporciona acceso a datos en la base de datos. También creará una clase de inicializador que va a utilizar para rellenar la base de datos.
+Comenzará creando las clases de entidad que definen los modelos de datos de la aplicación de formularios Web Forms. A continuación, creará una clase de contexto que administra las clases de entidad y proporciona acceso de datos a la base de datos. También creará una clase de inicializador que usará para rellenar la base de datos.
 
-### <a name="entity-framework-and-references"></a>Referencias y entity Framework
+### <a name="entity-framework-and-references"></a>Entity Framework y referencias
 
-De forma predeterminada, Entity Framework se incluye cuando se crea un nuevo **aplicación Web ASP.NET** utilizando el **formularios Web Forms** plantilla. Entity Framework se pueda instalar, desinstalar y actualizado como un paquete de NuGet.
+De forma predeterminada, Entity Framework se incluye al crear una nueva **aplicación Web de ASP.net** mediante la plantilla de **formularios Web Forms** . Entity Framework se puede instalar, desinstalar y actualizar como un paquete NuGet.
 
-Este paquete de NuGet incluye lo siguiente **en tiempo de ejecución** ensamblados dentro del proyecto:
+Este paquete de NuGet incluye los siguientes ensamblados en **tiempo de ejecución** dentro del proyecto:
 
-- EntityFramework.dll: todo el código de tiempo de ejecución común utilizado por Entity Framework
-- EntityFramework.SqlServer.dll: el proveedor de Microsoft SQL Server para Entity Framework
+- EntityFramework. dll: todo el código en tiempo de ejecución común usado por Entity Framework
+- EntityFramework. SqlServer. dll: el proveedor de Microsoft SQL Server para Entity Framework
 
 ### <a name="entity-classes"></a>Clases de entidad
 
-Las clases que cree para definir el esquema de los datos se denominan clases de entidad. Si está familiarizado con el diseño de la base de datos, considere las clases de entidad como definiciones de tabla de una base de datos. Cada propiedad de la clase especifica una columna en la tabla de la base de datos. Estas clases proporcionan una interfaz sencilla y relacional de objetos entre código orientado a objetos y la estructura de tabla relacional de la base de datos.
+Las clases que se crean para definir el esquema de los datos se denominan clases de entidad. Si no está familiarizado con el diseño de bases de datos, piense en las clases de entidad como definiciones de tabla de una base de datos. Cada propiedad de la clase especifica una columna en la tabla de la base de datos. Estas clases proporcionan una interfaz ligera y relacional de objetos entre el código orientado a objetos y la estructura de la tabla relacional de la base de datos.
 
-En este tutorial, empezará mediante la adición de clases de entidad simple que representan los esquemas de productos y categorías. La clase products contendrá definiciones para cada producto. El nombre de cada uno de los miembros de la clase product será `ProductID`, `ProductName`, `Description`, `ImagePath`, `UnitPrice`, `CategoryID`, y `Category`. La clase de categoría contiene definiciones para cada categoría de un producto puede pertenecer a, como coche, barco o plano. El nombre de cada uno de los miembros de la clase de categoría será `CategoryID`, `CategoryName`, `Description`, y `Products`. Cada producto pertenece a una de las categorías. Estas clases de entidad se agregará el proyecto existente *modelos* carpeta.
+En este tutorial, empezará por agregar clases de entidad simples que representan los esquemas de productos y categorías. La clase Products contendrá definiciones para cada producto. El nombre de cada uno de los miembros de la clase Product será `ProductID`, `ProductName`, `Description`, `ImagePath`, `UnitPrice`, `CategoryID`y `Category`. La clase de categoría contendrá definiciones para cada categoría a la que puede pertenecer un producto, como automóvil, barco o plano. El nombre de cada uno de los miembros de la clase Category será `CategoryID`, `CategoryName`, `Description`y `Products`. Cada producto pertenecerá a una de las categorías. Estas clases de entidad se agregarán a la carpeta *modelos* existentes del proyecto.
 
-1. En **el Explorador de soluciones**, haga clic en el *modelos* carpeta y, a continuación, seleccione **agregar**  - &gt; **nuevo elemento**. 
+1. En **Explorador de soluciones**, haga clic con el botón secundario en la carpeta *modelos* y seleccione **Agregar** -&gt; **nuevo elemento**. 
 
-    ![Crear nuevo menú de elemento de la capa de acceso a datos:](create_the_data_access_layer/_static/image1.png)
+    ![Crear el menú capa de acceso a datos-nuevo elemento](create_the_data_access_layer/_static/image1.png)
 
    Se abrirá el cuadro de diálogo **Agregar nuevo elemento**.
-2. En **Visual C#** desde el **instalado** panel de la izquierda, seleccione **código**. 
+2. En **Visual C#**  , en el panel **instalado** de la izquierda, seleccione **código**. 
 
-    ![Crear nuevo menú de elemento de la capa de acceso a datos:](create_the_data_access_layer/_static/image2.png)
-3. Seleccione **clase** desde el panel central y el nombre de esta nueva clase *Product.cs*.
+    ![Crear el menú capa de acceso a datos-nuevo elemento](create_the_data_access_layer/_static/image2.png)
+3. Seleccione **clase** en el panel central y asigne a esta nueva clase el nombre *product.CS*.
 4. Haga clic en **Agregar**.  
    El nuevo archivo de clase se muestra en el editor.
-5. Reemplace el código predeterminado con el código siguiente:   
+5. Reemplace el código predeterminado por el código siguiente:   
 
     [!code-csharp[Main](create_the_data_access_layer/samples/sample1.cs)]
-6. Cree otra clase repitiendo los pasos 1 a 4, sin embargo, la nueva clase el nombre *Category.cs* y reemplace el código predeterminado con el código siguiente:  
+6. Cree otra clase repitiendo los pasos 1 a 4; no obstante, asigne a la nueva clase el nombre *Category.CS* y reemplace el código predeterminado por el código siguiente:  
 
     [!code-csharp[Main](create_the_data_access_layer/samples/sample2.cs)]
 
-Como se mencionó anteriormente, el `Category` clase representa el tipo de producto que la aplicación está diseñada para vender (como <a id="a"> </a> &quot;automóviles&quot;, &quot;barcos&quot;, &quot;Cohetes&quot;, y así sucesivamente) y el `Product` clase representa los productos individuales (toys) en la base de datos. Cada instancia de un `Product` objeto corresponderá a una fila dentro de una tabla de base de datos relacional, y cada propiedad de la clase de producto se asignará a una columna en la tabla de base de datos relacional. Más adelante en este tutorial, revisará los datos de productos incluidos en la base de datos.
+Como se mencionó anteriormente, la clase `Category` representa el tipo de producto que la aplicación está diseñada para vender (como <a id="a"></a>&quot;automóviles&quot;, &quot;barcos&quot;, &quot;cohetes&quot;, etc.) y la clase `Product` representa los productos individuales (juguetes) en la base de datos. Cada instancia de un objeto de `Product` se corresponderá con una fila de una tabla de base de datos relacional, y cada propiedad de la clase Product se asignará a una columna de la tabla de base de datos relacional. Más adelante en este tutorial, revisará los datos del producto incluidos en la base de datos.
 
 ### <a name="data-annotations"></a>Anotaciones de datos
 
-Es podrán que haya observado que determinados miembros de las clases tienen los atributos que especifican los detalles sobre el miembro, como `[ScaffoldColumn(false)]`. Estos son *anotaciones de datos*. Los atributos de anotación de datos pueden describir cómo validar la entrada de usuario para ese miembro, para especificar un formato y especificar cómo se se modela cuando se crea la base de datos.
+Es posible que haya observado que determinados miembros de las clases tienen atributos que especifican detalles sobre el miembro, como `[ScaffoldColumn(false)]`. Se trata de *anotaciones de datos*. Los atributos de anotación de datos pueden describir cómo validar los datos proporcionados por el usuario para ese miembro, especificar su formato y especificar cómo se modelan cuando se crea la base de datos.
 
-### <a name="context-class"></a>Context (Clase)
+### <a name="context-class"></a>Context (clase)
 
-Para empezar a usar las clases de acceso a datos, debe definir una clase de contexto. Como se mencionó anteriormente, la clase de contexto administra las clases de entidad (como el `Product` clase y el `Category` clase) y proporciona acceso a datos en la base de datos.
+Para empezar a usar las clases para el acceso a datos, debe definir una clase de contexto. Como se mencionó anteriormente, la clase de contexto administra las clases de entidad (como la clase `Product` y la clase `Category`) y proporciona acceso a los datos a la base de datos.
 
-Este procedimiento agrega una nueva clase de contexto C# para el *modelos* carpeta.
+Este procedimiento agrega una nueva C# clase de contexto a la carpeta *Models* .
 
-1. Haga clic en el *modelos* carpeta y, a continuación, seleccione **agregar**  - &gt; **nuevo elemento**.   
+1. Haga clic con el botón secundario en la carpeta *modelos* y seleccione **Agregar** -&gt; **nuevo elemento**.   
    Se abrirá el cuadro de diálogo **Agregar nuevo elemento**.
-2. Seleccione **clase** desde el panel central, asígnele el nombre *ProductContext.cs* y haga clic en **agregar**.
-3. Reemplace el código predeterminado contenido en la clase con el código siguiente:   
+2. Seleccione **clase** en el panel central, asígnele el nombre *ProductContext.CS* y haga clic en **Agregar**.
+3. Reemplace el código predeterminado contenido en la clase por el código siguiente:   
 
     [!code-csharp[Main](create_the_data_access_layer/samples/sample3.cs)]
 
-Este código agrega el `System.Data.Entity` espacio de nombres para que tengan acceso a toda la funcionalidad núcleo de Entity Framework, que incluye la capacidad para consultar, insertar, actualizar y eliminar datos trabajando con objetos fuertemente tipados.
+Este código agrega el espacio de nombres `System.Data.Entity` de forma que tenga acceso a toda la funcionalidad básica de Entity Framework, que incluye la capacidad de consultar, insertar, actualizar y eliminar datos trabajando con objetos fuertemente tipados.
 
-El `ProductContext` clase representa el contexto de base de datos de producto de Entity Framework, que se encarga de capturar, almacenar y actualizar `Product` instancias en la base de datos de clase. El `ProductContext` clase se deriva de la `DbContext` proporcionado por Entity Framework de clase base.
+La clase `ProductContext` representa Entity Framework contexto de la base de datos del producto, que controla la captura, el almacenamiento y la actualización de instancias de clase `Product` en la base de datos. La clase `ProductContext` deriva de la clase base `DbContext` proporcionada por Entity Framework.
 
-### <a name="initializer-class"></a>Clase de inicializador
+### <a name="initializer-class"></a>Initializer (clase)
 
-Deberá ejecutar alguna lógica personalizada para inicializar el tiempo de la base de datos la primera que se usa el contexto. Esto permitirá que los datos de inicialización que se agregarán a la base de datos para que inmediatamente puede mostrar categorías y productos.
+Tendrá que ejecutar una lógica personalizada para inicializar la base de datos la primera vez que se use el contexto. Esto permitirá que los datos de inicialización se agreguen a la base de datos para que pueda mostrar inmediatamente productos y categorías.
 
-Este procedimiento agrega una nueva clase inicializador C# para el *modelos* carpeta.
+Este procedimiento agrega una nueva C# clase de inicializador a la carpeta *Models* .
 
-1. Crear otro `Class` en el *modelos* carpeta y asígnele el nombre *ProductDatabaseInitializer.cs*.
-2. Reemplace el código predeterminado contenido en la clase con el código siguiente:   
+1. Cree otro `Class` en la carpeta *Models* y asígnele el nombre *ProductDatabaseInitializer.CS*.
+2. Reemplace el código predeterminado contenido en la clase por el código siguiente:   
 
     [!code-csharp[Main](create_the_data_access_layer/samples/sample4.cs)]
 
-Como puede ver en el código anterior, cuando la base de datos se crea e inicializa, el `Seed` propiedad se invalida y establecer. Cuando el `Seed` propiedad está establecida, los valores de las categorías y productos se usan para rellenar la base de datos. Si se intenta actualizar los datos de inicialización modificando el código anterior una vez creada la base de datos, no verá las actualizaciones al ejecutar la aplicación Web. La razón es que el código anterior usa una implementación de la `DropCreateDatabaseIfModelChanges` clase para que reconozca si ha cambiado el modelo (esquema) antes de restablecer los datos de inicialización. Si se realiza ningún cambio a la `Category` y `Product` no se reinicializarán las clases de entidad, la base de datos con los datos de inicialización.
+Como puede ver en el código anterior, cuando se crea e inicializa la base de datos, la propiedad `Seed` se invalida y se establece. Cuando se establece la propiedad `Seed`, los valores de las categorías y los productos se utilizan para rellenar la base de datos. Si intenta actualizar los datos de inicialización modificando el código anterior una vez creada la base de datos, no verá ninguna actualización al ejecutar la aplicación Web. La razón es que el código anterior usa una implementación de la clase `DropCreateDatabaseIfModelChanges` para reconocer si el modelo (esquema) ha cambiado antes de restablecer los datos de inicialización. Si no se realiza ningún cambio en las clases de entidad `Category` y `Product`, la base de datos no se reinicializará con los datos de inicialización.
 
 > [!NOTE] 
 > 
-> Si desea que la base de datos se vuelven a crear cada vez ejecutó la aplicación, podría utilizar el `DropCreateDatabaseAlways` clase en lugar de la `DropCreateDatabaseIfModelChanges` clase. Sin embargo, para esta serie de tutoriales, use la `DropCreateDatabaseIfModelChanges` clase.
+> Si desea que la base de datos se vuelva a crear cada vez que ejecutó la aplicación, podría usar la clase `DropCreateDatabaseAlways` en lugar de la clase `DropCreateDatabaseIfModelChanges`. Sin embargo, para esta serie de tutoriales, utilice la clase `DropCreateDatabaseIfModelChanges`.
 
-En este momento en este tutorial, tendrá un *modelos* carpeta con cuatro nuevas clases y una clase predefinida:
+En este punto de este tutorial, tendrá una carpeta *Models* con cuatro clases nuevas y una clase predeterminada:
 
-![Crear carpeta modelos de la capa de acceso a datos:](create_the_data_access_layer/_static/image3.png)
+![Crear la carpeta de modelos capa de acceso a datos](create_the_data_access_layer/_static/image3.png)
 
-### <a name="configuring-the-application-to-use-the-data-model"></a>Configurar la aplicación para usar el modelo de datos
+### <a name="configuring-the-application-to-use-the-data-model"></a>Configurar la aplicación para que use el modelo de datos
 
-Ahora que ha creado las clases que representan los datos, debe configurar la aplicación para usar las clases. En el *Global.asax* archivo, agrega código que inicializa el modelo. En el *Web.config* archivo agregar la información que indica que la aplicación lo que la base de datos usará para almacenar los datos que se representan mediante las nuevas clases de datos. El *Global.asax* archivo puede usarse para controlar eventos de aplicación o los métodos. El *Web.config* archivo le permite controlar la configuración de la aplicación web ASP.NET.
+Ahora que ha creado las clases que representan los datos, debe configurar la aplicación para utilizar las clases. En el archivo *global. asax* , se agrega código que inicializa el modelo. En el archivo *Web. config* , agregue información que indique a la aplicación qué base de datos usará para almacenar los datos representados por las nuevas clases de datos. El archivo *global. asax* se puede usar para controlar eventos o métodos de la aplicación. El archivo *Web. config* permite controlar la configuración de la aplicación Web ASP.net.
 
-#### <a name="updating-the-globalasax-file"></a>Actualizando el archivo Global.asax
+#### <a name="updating-the-globalasax-file"></a>Actualizar el archivo global. asax
 
-Para inicializar los modelos de datos cuando se inicia la aplicación, actualizará la `Application_Start` controlador en el *Global.asax.cs* archivo.
+Para inicializar los modelos de datos cuando se inicia la aplicación, actualizará el controlador de `Application_Start` en el archivo *global.asax.CS* .
 
 > [!NOTE] 
 > 
-> En el Explorador de soluciones, seleccione el *Global.asax* archivo o la *Global.asax.cs* archivo para editar el *Global.asax.cs* archivo.
+> En Explorador de soluciones, puede seleccionar el archivo *global. asax* o el archivo *global.asax.CS* para editar el archivo *global.asax.CS* .
 
-1. Agregue el siguiente código resaltado en amarillo en la `Application_Start` método en el *Global.asax.cs* archivo.   
+1. Agregue el siguiente código resaltado en amarillo al método `Application_Start` del archivo *global.asax.CS* .   
 
     [!code-csharp[Main](create_the_data_access_layer/samples/sample5.cs?highlight=9-10,22-23)]
 
 > [!NOTE] 
 > 
-> El explorador debe admitir HTML5 para ver el código resaltado en amarillo cuando vea esta serie de tutoriales en un explorador.
+> El explorador debe ser compatible con HTML5 para ver el código resaltado en amarillo al ver esta serie de tutoriales en un explorador.
 
-Como se muestra en el código anterior, cuando se inicia la aplicación, la aplicación especifica el inicializador que se ejecutará durante la primera vez que los datos se tiene acceso. Los dos espacios de nombres adicionales son necesarios para tener acceso a la `Database` objeto y el `ProductDatabaseInitializer` objeto.
+Como se muestra en el código anterior, cuando se inicia la aplicación, la aplicación especifica el inicializador que se ejecutará durante la primera vez que se tenga acceso a los datos. Los dos espacios de nombres adicionales son necesarios para tener acceso al objeto `Database` y al objeto `ProductDatabaseInitializer`.
 
- Modificar el archivo Web.Config 
+ Modificar el archivo Web. config 
 
-Aunque Entity Framework Code First generará una base de datos de en una ubicación predeterminada cuando la base de datos se rellena con datos de inicialización, agregar su propia información de conexión a la aplicación le ofrece control de la ubicación de la base de datos. Especifique esta conexión de base de datos usando una cadena de conexión en la aplicación *Web.config* archivo en la raíz del proyecto. Al agregar una nueva cadena de conexión, puede dirigir la ubicación de la base de datos (*wingtiptoys.mdf*) que se crea en el directorio de datos de la aplicación (*aplicación\_datos*), en lugar de su valor predeterminado ubicación. Realizar este cambio, podrá encontrar e inspeccione el archivo de base de datos más adelante en este tutorial.
+Aunque Entity Framework Code First generará una base de datos automáticamente en una ubicación predeterminada cuando la base de datos se rellena con datos de inicialización, al agregar su propia información de conexión a la aplicación, podrá controlar la ubicación de la base de datos. Esta conexión de base de datos se especifica mediante una cadena de conexión en el archivo *Web. config* de la aplicación en la raíz del proyecto. Al agregar una nueva cadena de conexión, puede dirigir la ubicación de la base de datos (*wingtiptoys. MDF*) que se va a compilar en el directorio de datos de la aplicación (*datos de\_* de la aplicación), en lugar de su ubicación predeterminada. La realización de este cambio le permitirá buscar e inspeccionar el archivo de base de datos más adelante en este tutorial.
 
-1. En **el Explorador de soluciones**, busque y abra el *Web.config* archivo.
-2. Agregue la cadena de conexión que se resaltan en amarillo en la `<connectionStrings>` sección de la *Web.config* archivo como sigue:  
+1. En **Explorador de soluciones**, busque y abra el archivo *Web. config* .
+2. Agregue la cadena de conexión resaltada en amarillo a la sección `<connectionStrings>` del archivo *Web. config* como se indica a continuación:  
 
     [!code-xml[Main](create_the_data_access_layer/samples/sample6.xml?highlight=4-7)]
 
-Cuando se ejecuta la aplicación por primera vez, creará la base de datos en la ubicación especificada por la cadena de conexión. Pero antes de ejecutar la aplicación, vamos a compilarla primero.
+Cuando la aplicación se ejecuta por primera vez, generará la base de datos en la ubicación especificada por la cadena de conexión. Pero antes de ejecutar la aplicación, vamos a compilarla primero.
 
 ## <a name="building-the-application"></a>Compilar la aplicación
 
-Para asegurarse de que todas las clases y los cambios en la aplicación Web funcionen, debe compilar la aplicación.
+Para asegurarse de que todas las clases y cambios realizados en la aplicación web funcionan, debe compilar la aplicación.
 
-1. Desde el **depurar** menú, seleccione **WingtipToys compilar**.  
- El **salida** se muestra la ventana y, si todo ha ido bien, verá un *se realizó correctamente* mensaje.  
+1. En el menú **depurar** , seleccione **compilar WingtipToys**.  
+ Se muestra la ventana **salida** y, si todo ha ido bien, verá un mensaje *correcto* .  
 
-    ![Crear la capa de acceso a datos - Windows de salida](create_the_data_access_layer/_static/image4.png)
+    ![Crear la capa de acceso a datos: ventanas de salida](create_the_data_access_layer/_static/image4.png)
 
-Si experimenta un error, vuelva a comprobar los pasos anteriores. La información de la **salida** ventana le indicará qué archivo tiene un problema y donde se requiere un cambio en el archivo. Esta información le permitirá determinar qué parte de los pasos anteriores deben revisarse y se ha corregido en el proyecto.
+Si se encuentra con un error, vuelva a comprobar los pasos anteriores. La información de la ventana **salida** indicará qué archivo tiene un problema y dónde se requiere un cambio en el archivo. Esta información le permitirá determinar qué parte de los pasos anteriores debe revisarse y corregirse en el proyecto.
 
 ## <a name="summary"></a>Resumen
 
-En este tutorial de la serie se ha creado el modelo de datos, así como, agregué el código que se usará para inicializar y propagar la base de datos. También ha configurado la aplicación para usar los modelos de datos cuando se ejecuta la aplicación.
+En este tutorial de la serie que ha creado el modelo de datos, así como, ha agregado el código que se utilizará para inicializar y propagar la base de datos. También ha configurado la aplicación para usar los modelos de datos cuando se ejecuta la aplicación.
 
-En el siguiente tutorial, deberá actualizar la interfaz de usuario, Agregar navegación y recuperar datos de la base de datos. Esto dará como resultado de la base de datos que se crean automáticamente en función de las clases de entidad que creó en este tutorial.
+En el siguiente tutorial, actualizará la interfaz de usuario, agregará navegación y recuperará datos de la base de datos. Esto hará que la base de datos se cree automáticamente en función de las clases de entidad creadas en este tutorial.
 
 ## <a name="additional-resources"></a>Recursos adicionales
 
-[Introducción a Entity Framework](https://msdn.microsoft.com/library/bb399567.aspx)   
-[Guía para principiantes para ADO.NET Entity Framework](https://msdn.microsoft.com/data/ee712907)   
-[Desarrollo de primera con Entity Framework de código](http://www.msteched.com/2010/Europe/DEV212) (vídeo)   
-[API Fluent de Code First de relaciones](https://msdn.microsoft.com/data/hh134698)   
-[Anotaciones de datos de Code First](https://msdn.microsoft.com/data/gg193958)  
-[Mejoras de productividad para Entity Framework](https://blogs.msdn.com/b/efdesign/archive/2010/06/21/productivity-improvements-for-the-entity-framework.aspx?wa=wsignin1.0)
+[Información general de Entity Framework](https://msdn.microsoft.com/library/bb399567.aspx)   
+[Guía para principiantes sobre el Entity Framework de ADO.NET](https://msdn.microsoft.com/data/ee712907)   
+[Desarrollo de Code First con Entity Framework](http://www.msteched.com/2010/Europe/DEV212) (vídeo)   
+[API fluida de relaciones Code First](https://msdn.microsoft.com/data/hh134698)   
+[Code First de las anotaciones de datos](https://msdn.microsoft.com/data/gg193958)  
+[Mejoras de productividad para el Entity Framework](https://blogs.msdn.com/b/efdesign/archive/2010/06/21/productivity-improvements-for-the-entity-framework.aspx?wa=wsignin1.0)
 
 > [!div class="step-by-step"]
 > [Anterior](create-the-project.md)

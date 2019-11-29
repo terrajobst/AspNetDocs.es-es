@@ -1,59 +1,59 @@
 ---
 uid: web-forms/overview/ajax-control-toolkit/hovermenu/using-hovermenu-with-a-repeater-control-cs
-title: Usar HoverMenu con un Control Repeater (C#) | Microsoft Docs
+title: Usar HoverMenu con un control Repeater (C#) | Microsoft Docs
 author: wenz
-description: 'El control HoverMenu en AJAX Control Toolkit proporciona un efecto emergente simple: Cuando el puntero del mouse se sitúa sobre un elemento, aparece un mensaje emergente en un específicamente...'
+description: 'El control HoverMenu en el kit de herramientas de control de AJAX proporciona un efecto emergente sencillo: cuando el puntero del mouse se desplaza sobre un elemento, aparece una ventana emergente en un especificador...'
 ms.author: riande
 ms.date: 06/02/2008
 ms.assetid: e7700e7b-edc3-4183-a713-70e507cc7490
 msc.legacyurl: /web-forms/overview/ajax-control-toolkit/hovermenu/using-hovermenu-with-a-repeater-control-cs
 msc.type: authoredcontent
-ms.openlocfilehash: 01f8d71ef07bd48c16c2e9eb1bb12cd051f7a9e4
-ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
+ms.openlocfilehash: 3e38b91d837c65191d4b3797fa31ef6112a1f070
+ms.sourcegitcommit: 22fbd8863672c4ad6693b8388ad5c8e753fb41a2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/06/2019
-ms.locfileid: "65127035"
+ms.lasthandoff: 11/28/2019
+ms.locfileid: "74606725"
 ---
 # <a name="using-hovermenu-with-a-repeater-control-c"></a>Usar HoverMenu con un control Repeater (C#)
 
 por [Christian Wenz](https://github.com/wenz)
 
-[Descargar código](http://download.microsoft.com/download/b/0/6/b06fe835-5b8f-4c00-aef8-062c19d75b95/HoverMenu1.cs.zip) o [descargar PDF](http://download.microsoft.com/download/b/6/a/b6ae89ee-df69-4c87-9bfb-ad1eb2b23373/hovermenu1CS.pdf)
+[Descargar código](https://download.microsoft.com/download/b/0/6/b06fe835-5b8f-4c00-aef8-062c19d75b95/HoverMenu1.cs.zip) o [Descargar PDF](https://download.microsoft.com/download/b/6/a/b6ae89ee-df69-4c87-9bfb-ad1eb2b23373/hovermenu1CS.pdf)
 
-> El control HoverMenu en AJAX Control Toolkit proporciona un efecto emergente simple: Cuando el puntero del mouse se sitúa sobre un elemento, aparece un mensaje emergente en una posición especificada. También es posible usar este control dentro de un control repeater.
+> El control HoverMenu en el kit de herramientas de control de AJAX proporciona un efecto emergente sencillo: cuando el puntero del mouse se desplaza sobre un elemento, aparece un control popup en una posición especificada. También es posible usar este control dentro de un repetidor.
 
-## <a name="overview"></a>Información general
+## <a name="overview"></a>Información general del
 
-El `HoverMenu` control de AJAX Control Toolkit proporciona un efecto emergente simple: Cuando el puntero del mouse se sitúa sobre un elemento, aparece un mensaje emergente en una posición especificada. También es posible usar este control dentro de un control repeater.
+El control `HoverMenu` en el kit de herramientas de control de AJAX proporciona un efecto emergente sencillo: cuando el puntero del mouse se desplaza sobre un elemento, aparece una ventana emergente en la posición especificada. También es posible usar este control dentro de un repetidor.
 
 ## <a name="steps"></a>Pasos
 
-En primer lugar, es necesario un origen de datos. Este ejemplo utiliza la base de datos AdventureWorks y Microsoft SQL Server 2005 Express Edition. La base de datos es una parte opcional de una instalación de Visual Studio (incluida la edición express) y también está disponible como una descarga independiente en [ https://go.microsoft.com/fwlink/?LinkId=64064 ](https://go.microsoft.com/fwlink/?LinkId=64064). La base de datos de AdventureWorks es parte de los ejemplos de SQL Server 2005 y las bases de datos de ejemplo (descargue en [ https://www.microsoft.com/downloads/details.aspx?FamilyID=e719ecf7-9f46-4312-af89-6ad8702e4e6e&amp; DisplayLang = en](https://www.microsoft.com/downloads/details.aspx?FamilyID=e719ecf7-9f46-4312-af89-6ad8702e4e6e&amp;DisplayLang=en)). La manera más fácil de configurar la base de datos es usar Microsoft SQL Server Management Studio Express ([https://www.microsoft.com/downloads/details.aspx?FamilyID=c243a5ae-4bd1-4e3d-94b8-5a0f62bf7796&amp; DisplayLang = en](https://www.microsoft.com/downloads/details.aspx?FamilyID=c243a5ae-4bd1-4e3d-94b8-5a0f62bf7796&amp;DisplayLang=en)) y adjuntar el `AdventureWorks.mdf` el archivo de base de datos.
+En primer lugar, se necesita un origen de datos. Este ejemplo utiliza la base de datos AdventureWorks y el Microsoft SQL Server 2005 Express Edition. La base de datos es una parte opcional de una instalación de Visual Studio (incluida Express Edition) y también está disponible como descarga independiente en [https://go.microsoft.com/fwlink/?LinkId=64064](https://go.microsoft.com/fwlink/?LinkId=64064). La base de datos AdventureWorks forma parte de los ejemplos de SQL Server 2005 y de las bases de datos de ejemplo (descarga en [https://www.microsoft.com/downloads/details.aspx?FamilyID=e719ecf7-9f46-4312-af89-6ad8702e4e6e&amp;D isplaylang = en](https://www.microsoft.com/downloads/details.aspx?FamilyID=e719ecf7-9f46-4312-af89-6ad8702e4e6e&amp;DisplayLang=en)). La forma más sencilla de configurar la base de datos es usar el Microsoft SQL Server Management Studio Express ([https://www.microsoft.com/downloads/details.aspx?FamilyID=c243a5ae-4bd1-4e3d-94b8-5a0f62bf7796&amp;D isplaylang = en](https://www.microsoft.com/downloads/details.aspx?FamilyID=c243a5ae-4bd1-4e3d-94b8-5a0f62bf7796&amp;DisplayLang=en)) y adjuntar el archivo de base de datos `AdventureWorks.mdf`.
 
-Para este ejemplo, se supone que se llama a la instancia de SQL Server 2005 Express Edition `SQLEXPRESS` y reside en el mismo equipo que el servidor web; también trata la configuración predeterminada. Si el programa de instalación diferente, deberá adaptar la información de conexión para la base de datos.
+En este ejemplo, se supone que la instancia del SQL Server 2005 Express Edition se denomina `SQLEXPRESS` y reside en el mismo equipo que el servidor Web. Esta es también la configuración predeterminada. Si el programa de instalación es diferente, tendrá que adaptar la información de conexión de la base de datos.
 
-Para activar la funcionalidad de AJAX de ASP.NET y el Kit de herramientas de Control, el `ScriptManager` control debe colocarse en cualquier lugar en la página (pero dentro del `<form>` elemento):
+Para activar la funcionalidad de ASP.NET AJAX y control Toolkit, el control `ScriptManager` debe colocarse en cualquier parte de la página (pero dentro del elemento `<form>`):
 
 [!code-aspx[Main](using-hovermenu-with-a-repeater-control-cs/samples/sample1.aspx)]
 
-A continuación, agregue un origen de datos a la página. Para poder usar una cantidad limitada de datos, se selecciona solo las cinco primeras entradas en la tabla de proveedor de la base de datos AdventureWorks. Si usas el Asistente de Visual Studio para crear el origen de datos, recuerde que un error en la versión actual no prefijo de nombre de la tabla (`Vendor`) con `Purchasing`. El marcado siguiente muestra la sintaxis correcta:
+A continuación, agregue un origen de datos a la página. Para usar una cantidad limitada de datos, solo se seleccionan las cinco primeras entradas de la tabla Vendor de la base de datos AdventureWorks. Si usa el Asistente de Visual Studio para crear el origen de datos, tenga en cuenta que un error en la versión actual no antepone el nombre de tabla (`Vendor`) con `Purchasing`. En el marcado siguiente se muestra la sintaxis correcta:
 
 [!code-aspx[Main](using-hovermenu-with-a-repeater-control-cs/samples/sample2.aspx)]
 
-A continuación, agregue un panel que actúa como el elemento emergente modal:
+A continuación, agregue un panel que actúe como elemento emergente modal:
 
 [!code-aspx[Main](using-hovermenu-with-a-repeater-control-cs/samples/sample3.aspx)]
 
-Ahora, el `HoverMenuExtender` entra en juego. Para que todos los elementos del origen de datos obtiene su propia ventana emergente, se debe poner el extensor del control Repeater del `<ItemTemplate>` sección. Aquí está el marcado:
+Ahora, el `HoverMenuExtender` entra en juego. Para que todos los elementos del origen de datos obtengan su propio elemento emergente, el objeto extender debe colocarse en la sección `<ItemTemplate>` del repetidor. Aquí está el marcado:
 
 [!code-aspx[Main](using-hovermenu-with-a-repeater-control-cs/samples/sample4.aspx)]
 
-Ahora, todos los elementos del origen de datos muestran un menú emergente a la derecha (`PopupPosition` atributo) después de un retraso de 50 milisegundos (`PopDelay` atributo).
+Ahora todos los elementos del origen de datos muestran un elemento emergente a la derecha (`PopupPosition` atributo) después de un retraso de 50 milisegundos (`PopDelay` atributo).
 
-[![El menú de desplazamiento que aparece junto a cada elemento del control de repetidor](using-hovermenu-with-a-repeater-control-cs/_static/image2.png)](using-hovermenu-with-a-repeater-control-cs/_static/image1.png)
+[![aparece el menú contextual junto a cada elemento del repetidor](using-hovermenu-with-a-repeater-control-cs/_static/image2.png)](using-hovermenu-with-a-repeater-control-cs/_static/image1.png)
 
-El menú de desplazamiento que aparece junto a cada elemento en el control repeater ([haga clic aquí para ver imagen en tamaño completo](using-hovermenu-with-a-repeater-control-cs/_static/image3.png))
+El menú desplazable aparece junto a cada elemento del repetidor ([haga clic para ver la imagen de tamaño completo](using-hovermenu-with-a-repeater-control-cs/_static/image3.png))
 
 > [!div class="step-by-step"]
 > [Siguiente](using-hovermenu-with-a-repeater-control-vb.md)

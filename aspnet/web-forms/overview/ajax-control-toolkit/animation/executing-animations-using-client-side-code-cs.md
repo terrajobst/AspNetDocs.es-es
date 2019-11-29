@@ -1,69 +1,69 @@
 ---
 uid: web-forms/overview/ajax-control-toolkit/animation/executing-animations-using-client-side-code-cs
-title: Ejecutar animaciones con código del lado cliente (C#) | Microsoft Docs
+title: Ejecutar animaciones mediante el código del lado cliente (C#) | Microsoft Docs
 author: wenz
-description: El control de animación en ASP.NET AJAX Control Toolkit no es simplemente un control, pero un marco completo para agregar animaciones a un control. La ejecución de la animación...
+description: El control de animación de ASP.NET AJAX control Toolkit no es solo un control, sino un marco de trabajo completo para agregar animaciones a un control. La ejecución de la animación...
 ms.author: riande
 ms.date: 06/02/2008
 ms.assetid: 0270e0df-6fde-4a8f-a2cb-2cacc55143f2
 msc.legacyurl: /web-forms/overview/ajax-control-toolkit/animation/executing-animations-using-client-side-code-cs
 msc.type: authoredcontent
-ms.openlocfilehash: 23727e8f34afdd073b21aa1e7381237c48e699c4
-ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
+ms.openlocfilehash: b6ba1553b9c8c51d5d6ae1679e53f9cc1d17b769
+ms.sourcegitcommit: 22fbd8863672c4ad6693b8388ad5c8e753fb41a2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/06/2019
-ms.locfileid: "65132715"
+ms.lasthandoff: 11/28/2019
+ms.locfileid: "74599655"
 ---
 # <a name="executing-animations-using-client-side-code-c"></a>Ejecutar animaciones con código de cliente (C#)
 
 por [Christian Wenz](https://github.com/wenz)
 
-[Descargar código](http://download.microsoft.com/download/f/9/a/f9a26acd-8df4-4484-8a18-199e4598f411/Animation10.cs.zip) o [descargar PDF](http://download.microsoft.com/download/6/7/1/6718d452-ff89-4d3f-a90e-c74ec2d636a3/animation10CS.pdf)
+[Descargar código](https://download.microsoft.com/download/f/9/a/f9a26acd-8df4-4484-8a18-199e4598f411/Animation10.cs.zip) o [Descargar PDF](https://download.microsoft.com/download/6/7/1/6718d452-ff89-4d3f-a90e-c74ec2d636a3/animation10CS.pdf)
 
-> El control de animación en ASP.NET AJAX Control Toolkit no es simplemente un control, pero un marco completo para agregar animaciones a un control. También se puede desencadenar la ejecución de la animación con código personalizado de JavaScript del lado cliente.
+> El control de animación de ASP.NET AJAX control Toolkit no es solo un control, sino un marco de trabajo completo para agregar animaciones a un control. También se puede desencadenar la ejecución de la animación mediante el código JavaScript del lado cliente personalizado.
 
-## <a name="overview"></a>Información general
+## <a name="overview"></a>Información general del
 
-El control de animación en ASP.NET AJAX Control Toolkit no es simplemente un control, pero un marco completo para agregar animaciones a un control. También se puede desencadenar la ejecución de la animación con código personalizado de JavaScript del lado cliente.
+El control de animación de ASP.NET AJAX control Toolkit no es solo un control, sino un marco de trabajo completo para agregar animaciones a un control. También se puede desencadenar la ejecución de la animación mediante el código JavaScript del lado cliente personalizado.
 
 ## <a name="steps"></a>Pasos
 
-En primer lugar, incluya el `ScriptManager` en la página; a continuación, ASP.NET AJAX se carga la biblioteca, lo que permite usar el Kit de herramientas de Control:
+En primer lugar, incluya el `ScriptManager` en la página; después, se carga la biblioteca de ASP.NET AJAX, lo que permite usar el kit de herramientas de control:
 
 [!code-aspx[Main](executing-animations-using-client-side-code-cs/samples/sample1.aspx)]
 
-La animación se aplicará a un panel de texto que tiene este aspecto:
+La animación se aplicará a un panel de texto que tiene el siguiente aspecto:
 
 [!code-aspx[Main](executing-animations-using-client-side-code-cs/samples/sample2.aspx)]
 
-En la clase CSS asociada para el panel, definir un color de fondo agradable y también establecer un ancho fijo para el panel:
+En la clase CSS asociada del panel, defina un color de fondo agradable y establezca también un ancho fijo para el panel:
 
 [!code-css[Main](executing-animations-using-client-side-code-cs/samples/sample3.css)]
 
-A continuación, agregue el `AnimationExtender` a la página, que proporciona un `ID`, el `TargetControlID` atributo y el obligatoria `runat="server"`:
+A continuación, agregue el `AnimationExtender` a la página, proporcionando un `ID`, el atributo `TargetControlID` y el `runat="server"`obligatorio:
 
 [!code-aspx[Main](executing-animations-using-client-side-code-cs/samples/sample4.aspx)]
 
-Dentro de la `<Animations>` nodo, use `<OnClick>` ejecutar las animaciones, una vez que el usuario hace clic en el panel. Agregue dos animaciones que se ejecutará en paralelo:
+Dentro del nodo de `<Animations>`, utilice `<OnClick>` para ejecutar las animaciones una vez que el usuario haga clic en el panel. Agregue dos animaciones para que se ejecuten en paralelo:
 
 [!code-xml[Main](executing-animations-using-client-side-code-cs/samples/sample5.xml)]
 
-Modo de demostración, esta animación (y cualquier otra animación creados mediante el Kit de herramientas de Control) se ejecutan utilizando el código de JavaScript, una vez que se ejecuta la página. En primer lugar se necesita acceso a la `AnimationExtender` control. La biblioteca AJAX de ASP.NET proporciona la `$find()` función para esta tarea:
+Para la demostración, esta animación (y cualquier otra animación creada con el kit de herramientas de control) se ejecuta mediante código JavaScript, una vez que se ejecuta la página. En primer lugar, es necesario tener acceso al control `AnimationExtender`. La biblioteca de ASP.NET AJAX proporciona la función `$find()` para esta tarea:
 
 [!code-csharp[Main](executing-animations-using-client-side-code-cs/samples/sample6.cs)]
 
-El `AnimationExtender` control expone una API enriquecida, incluidos los métodos con nombres idénticos a los controladores de eventos que se utiliza en el marcado XML: `OnClick()`, `OnLoad()`, y así sucesivamente. Por ejemplo, una llamada de la `OnClick()` método ejecuta la animación en el `<OnClick>` elemento de la `AnimationExtender` control:
+El control `AnimationExtender` expone una API enriquecida, que incluye métodos con nombres idénticos a los controladores de eventos utilizados en el marcado XML: `OnClick()`, `OnLoad()`, etc. Por ejemplo, una llamada al método `OnClick()` ejecuta la animación dentro del elemento `<OnClick>` del control `AnimationExtender`:
 
 [!code-javascript[Main](executing-animations-using-client-side-code-cs/samples/sample7.js)]
 
-Este es el código completo de JavaScript del lado cliente que emula el clic en el panel una vez que la página se ha cargado completamente tenga en cuenta que el `pageLoad()` se utiliza el nombre de función que se llama por AJAX de ASP.NET una vez la página e incluyen han sido las bibliotecas de JavaScript puede cargar.
+Este es el código JavaScript completo del lado cliente que emula el clic en el panel una vez que la página se ha cargado completamente. tenga en cuenta que se usa el nombre de la función `pageLoad()`, al que se llama mediante ASP.NET AJAX una vez que se han cargado la página y todas las bibliotecas de JavaScript incluidas.
 
 [!code-html[Main](executing-animations-using-client-side-code-cs/samples/sample8.html)]
 
-[![La animación se ejecuta inmediatamente, sin un clic del mouse](executing-animations-using-client-side-code-cs/_static/image2.png)](executing-animations-using-client-side-code-cs/_static/image1.png)
+[![la animación se ejecuta inmediatamente, sin un clic del mouse](executing-animations-using-client-side-code-cs/_static/image2.png)](executing-animations-using-client-side-code-cs/_static/image1.png)
 
-La animación se ejecuta inmediatamente, sin un clic del mouse ([haga clic aquí para ver imagen en tamaño completo](executing-animations-using-client-side-code-cs/_static/image3.png))
+La animación se ejecuta inmediatamente, sin un clic del mouse ([haga clic para ver la imagen de tamaño completo](executing-animations-using-client-side-code-cs/_static/image3.png))
 
 > [!div class="step-by-step"]
 > [Anterior](modifying-animations-from-the-server-side-cs.md)

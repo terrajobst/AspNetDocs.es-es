@@ -1,113 +1,113 @@
 ---
 uid: aspnet/overview/developing-apps-with-windows-azure/building-real-world-cloud-apps-with-windows-azure/data-partitioning-strategies
-title: (Crear aplicaciones de nube reales con Azure) de las estrategias de partición de datos | Microsoft Docs
+title: Estrategias de particionamiento de datos (creación de aplicaciones en la nube reales con Azure) | Microsoft Docs
 author: MikeWasson
-description: Building Real World Cloud Apps with e-book de Azure se basa en una presentación desarrollada por Scott Guthrie. Explican el 13 de patrones y prácticas que puede...
+description: La creación de aplicaciones reales en la nube con el libro electrónico de Azure se basa en una presentación desarrollada por Scott Guthrie. Se explican 13 patrones y prácticas que pueden...
 ms.author: riande
 ms.date: 06/12/2014
 ms.assetid: 513837a7-cfea-4568-a4e9-1f5901245d24
 msc.legacyurl: /aspnet/overview/developing-apps-with-windows-azure/building-real-world-cloud-apps-with-windows-azure/data-partitioning-strategies
 msc.type: authoredcontent
-ms.openlocfilehash: 3aecd64bc59ffa961aa97dd30b037f9aeb2acdd8
-ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
+ms.openlocfilehash: 2f79b1f459aff3e81dab7ea7eb4ebf3f71084463
+ms.sourcegitcommit: 22fbd8863672c4ad6693b8388ad5c8e753fb41a2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/06/2019
-ms.locfileid: "65118896"
+ms.lasthandoff: 11/28/2019
+ms.locfileid: "74585819"
 ---
-# <a name="data-partitioning-strategies-building-real-world-cloud-apps-with-azure"></a>(Crear aplicaciones de nube reales con Azure) de las estrategias de partición de datos
+# <a name="data-partitioning-strategies-building-real-world-cloud-apps-with-azure"></a>Estrategias de particionamiento de datos (creación de aplicaciones en la nube reales con Azure)
 
-by [Mike Wasson](https://github.com/MikeWasson), [Rick Anderson]((https://twitter.com/RickAndMSFT)), [Tom Dykstra](https://github.com/tdykstra)
+por [Mike Wasson](https://github.com/MikeWasson), [Rick Anderson]((https://twitter.com/RickAndMSFT)), [Tom Dykstra](https://github.com/tdykstra)
 
-[Descargar proyecto corregirlo](http://code.msdn.microsoft.com/Fix-It-app-for-Building-cdd80df4) o [descargar libro electrónico](http://blogs.msdn.com/b/microsoft_press/archive/2014/07/23/free-ebook-building-cloud-apps-with-microsoft-azure.aspx)
+[Descargar el proyecto de corrección de ti](https://code.msdn.microsoft.com/Fix-It-app-for-Building-cdd80df4) o [descargar el libro electrónico](https://blogs.msdn.com/b/microsoft_press/archive/2014/07/23/free-ebook-building-cloud-apps-with-microsoft-azure.aspx)
 
-> El **Building Real World Cloud Apps with Azure** eBook se basa en una presentación desarrollada por Scott Guthrie. Se explican el 13 patrones y prácticas que pueden ayudarle a tener éxito el desarrollo de aplicaciones web para la nube. Para obtener información acerca de la serie, vea [el primer capítulo](introduction.md).
+> La **creación de aplicaciones reales en la nube con** el libro electrónico de Azure se basa en una presentación desarrollada por Scott Guthrie. Se explican 13 patrones y prácticas que pueden ayudarle a desarrollar correctamente aplicaciones web para la nube. Para obtener información sobre la serie, vea [el primer capítulo](introduction.md).
 
-Anteriormente hemos visto lo fácil que es escalar el nivel web de una aplicación en la nube, mediante la adición y eliminación de servidores web. Pero si todo está alcanzando el mismo almacén de datos, el cuello de botella de la aplicación se mueve desde el front-end al back-end, y es el más difícil de escalar la capa de datos. En este capítulo, veremos cómo puede hacer la capa de datos escalable mediante la partición de datos en varias bases de datos relacionales, o mediante la combinación de almacenamiento de base de datos relacional con otras opciones de almacenamiento de datos.
+Anteriormente vimos lo fácil que es escalar el nivel Web de una aplicación en la nube, agregando y quitando servidores Web. Pero si se encuentran en el mismo almacén de datos, el cuello de botella de la aplicación se mueve del front-end al back-end y el nivel de datos es el más difícil de escalar. En este capítulo, veremos cómo puede hacer que la capa de datos sea escalable mediante la creación de particiones de datos en varias bases de datos relacionales o mediante la combinación de almacenamiento de bases de datos relacionales con otras opciones de almacenamiento de datos.
 
-La configuración de un esquema de partición es mejor done anticipado por la misma razón que se ha mencionado anteriormente: resulta muy difícil de cambiar su estrategia de almacenamiento de datos después de una aplicación en producción. Si piensa en disco duro por adelantado enfoques diferentes, puede evitar un "momento Twitter" cuando la aplicación se bloquea o deja de funcionar durante mucho tiempo mientras reorganizar los datos y código de acceso a datos de la aplicación.
+La configuración de un esquema de particiones se realiza mejor por adelantado por el mismo motivo mencionado anteriormente: es muy difícil cambiar la estrategia de almacenamiento de datos después de que una aplicación esté en producción. Si piensa más bien en los distintos enfoques, puede evitar tener un "momento de Twitter" cuando la aplicación se bloquea o deja de funcionar durante mucho tiempo mientras reorganiza los datos de la aplicación y el código de acceso a datos.
 
-## <a name="the-three-vs-of-data-storage"></a>Lo tres Vs del almacenamiento de datos
+## <a name="the-three-vs-of-data-storage"></a>Los tres frente al almacenamiento de datos
 
-Con el fin de determinar si necesita una estrategia de partición y lo que debe ser, tenga en cuenta tres preguntas acerca de los datos:
+Con el fin de determinar si necesita una estrategia de particionamiento y qué debe ser, tenga en cuenta tres preguntas sobre los datos:
 
-- ¿En última instancia, almacenar el volumen: la cantidad de datos que podrá? ¿Algunos gigabytes? ¿Unos cientos de gigabytes? ¿Terabytes? ¿Petabytes?
-- Velocidad: ¿qué es la tasa de crecen de los datos? ¿Es una aplicación interna que no está generando una gran cantidad de datos? ¿Una aplicación externa que los clientes va a cargar las imágenes y vídeos en?
-- ¿Variedad, el tipo de datos tendrá que almacenar? ¿Relacionales, imágenes, pares clave-valor, gráficos sociales?
+- Volumen: ¿Cuántos datos se almacenan en última instancia? ¿Hay un par de gigabytes? ¿Hay un par de cientos de gigabytes? Terabytes? Petabytes?
+- Velocidad: ¿Cuál es la velocidad a la que crecen los datos? ¿Es una aplicación interna que no está generando muchos datos? ¿Una aplicación externa en la que los clientes van a cargar imágenes y vídeos?
+- Variedad: ¿Qué tipo de datos se almacenan? ¿Es relacional, imágenes, pares de clave-valor, gráficos sociales?
 
-Si piensa que vas a tiene una gran cantidad de volumen, velocidad o variedad, deberá considerar cuidadosamente qué tipo de esquema de partición mejor permitirá a la aplicación escalar de manera eficiente y eficaz a medida que crece, y para asegurarse de no se ejecuta en los cuellos de botella.
+Si cree que va a tener una gran cantidad de volumen, velocidad o variedad, tendrá que considerar detenidamente qué tipo de esquema de partición permitirá a la aplicación escalar de forma eficiente y eficaz a medida que crezca y para asegurarse de que no se encuentre en ningún cuello de botella.
 
 Básicamente, hay tres enfoques para la creación de particiones:
 
-- Creación de particiones verticales
-- Creación de particiones horizontales
-- Particionamiento híbrido
+- Particionamiento vertical
+- Particionamiento horizontal
+- Creación de particiones híbridas
 
-## <a name="vertical-partitioning"></a>Creación de particiones verticales
+## <a name="vertical-partitioning"></a>Particionamiento vertical
 
-Separando en porciones de vertical es similar a una tabla de la división por columnas: un conjunto de columnas entra en un almacén de datos y otro conjunto de columnas entra en un almacén de datos diferente.
+La parte vertical es como la división de una tabla por columnas: un conjunto de columnas entra en un almacén de datos y otro conjunto de columnas entra en un almacén de datos diferente.
 
-Por ejemplo, suponga que mi aplicación almacena datos sobre las personas, incluidas las imágenes:
+Por ejemplo, supongamos que mi aplicación almacena datos sobre personas, incluidas las imágenes:
 
 ![Tabla de datos](data-partitioning-strategies/_static/image1.png)
 
-Al representar estos datos como una tabla y examine los diferentes tipos de datos, puede ver que las tres columnas de la izquierda tienen datos de cadena que se pueden almacenar eficazmente mediante una base de datos relacional, mientras que las dos columnas de la derecha son básicamente las matrices de bytes c ome desde archivos de imagen. Es posible a los datos de archivo de imagen de almacenamiento en una base de datos relacional, y muchas personas hacerlo porque no quieren guardar los datos en el sistema de archivos. Que no tengan un sistema de archivos capaz de almacenar los volúmenes de datos necesarios o es posible que no desean administrar una copia independiente de seguridad y restauración del sistema. Este enfoque funciona bien para las bases de datos de forma local y para pequeñas cantidades de datos en las bases de datos en la nube. En el entorno local, podría ser más fácil simplemente dejar que el DBA se encargue de todo el contenido.
+Cuando represente estos datos como una tabla y examine los distintos tipos de datos, puede ver que las tres columnas de la izquierda tienen datos de cadena que se pueden almacenar de manera eficaz mediante una base de datos relacional, mientras que las dos columnas de la derecha son básicamente matrices de bytes que c ome de archivos de imagen. Es posible almacenar los datos de los archivos de imagen en una base de datos relacional y muchas personas lo hacen porque no quieren guardar los datos en el sistema de archivos. Es posible que no tengan un sistema de archivos capaz de almacenar los volúmenes de datos necesarios o que no quieran administrar un sistema de copia de seguridad y restauración independiente. Este enfoque funciona bien para las bases de datos locales y para pequeñas cantidades de datos en las bases de datos en la nube. En el entorno local, podría ser más fácil permitir que el DBA se encargue de todo.
 
-Pero en una base de datos en la nube, es relativamente costoso almacenamiento y un gran volumen de las imágenes podría hacer que el tamaño de la base de datos crezca más allá de los límites en el que puede funcionar eficazmente. Puede solucionar estos problemas mediante la partición de los datos verticalmente, lo que significa que elija el almacén de datos más adecuado para cada columna en la tabla de datos. Lo que podría funcionar mejor para este ejemplo consiste en colocar los datos de cadena en una base de datos relacional y las imágenes en Blob storage.
+Pero en una base de datos en la nube, el almacenamiento es relativamente costoso y un gran volumen de imágenes podría aumentar el tamaño de la base de datos más allá de los límites en los que puede funcionar de manera eficaz. Puede resolver estos problemas mediante la partición vertical de los datos, lo que significa que debe elegir el almacén de datos más adecuado para cada columna de la tabla de datos. Lo que podría funcionar mejor en este ejemplo es colocar los datos de la cadena en una base de datos relacional y las imágenes en el almacenamiento de blobs.
 
-![Tabla de datos con particiones verticales](data-partitioning-strategies/_static/image2.png)
+![Tabla de datos particionada verticalmente](data-partitioning-strategies/_static/image2.png)
 
-Almacenar las imágenes en Blob storage en lugar de una base de datos es más práctico en la nube que en un entorno local porque no tiene que preocuparse por servidores de archivos de configuración o administración de copia de seguridad y restauración de los datos almacenados fuera de la base de datos relacional: todas que se controla por usted automáticamente por el servicio de almacenamiento de blobs.
+Almacenar imágenes en el almacenamiento de blobs en lugar de una base de datos es más práctico en la nube que en un entorno local, ya que no tiene que preocuparse por la configuración de servidores de archivos o la administración de copias de seguridad y restauración de datos almacenados fuera de la base de datos relacional: todo Esto lo controla automáticamente el servicio de almacenamiento de blobs.
 
-Este es el enfoque de partición se implementa en la aplicación Fix It y veremos el código para que, en el [capítulo del almacenamiento de blobs](unstructured-blob-storage.md). Sin este esquema de partición y suponiendo un tamaño de imagen promedio de 3 megabytes, la aplicación Fix It solo sería capaz de almacenar aproximadamente 40 000 tareas antes de alcanzar el tamaño de la base de datos máximo de 150 gigabytes. Después de quitar las imágenes, la base de datos puede almacenar 10 veces más tantas tareas; puede ir mucho más tiempo antes de tener que pensar acerca de cómo implementar un esquema de partición horizontal. Y, a medida que se escala la aplicación, los gastos crecen más lentamente porque se pasará la mayor parte de las necesidades de almacenamiento al almacenamiento de blobs muy económico.
+Este es el enfoque de creación de particiones que hemos implementado en la aplicación de corrección de ti y veremos el código que se encuentra en el [capítulo almacenamiento de blobs](unstructured-blob-storage.md). Sin este esquema de partición y suponiendo que el tamaño medio de la imagen sea de 3 megabytes, la aplicación Fix it solo podría almacenar aproximadamente 40.000 tareas antes de alcanzar el tamaño máximo de la base de datos de 150 gigabytes. Después de quitar las imágenes, la base de datos puede almacenar 10 veces tantas tareas; puede pasar mucho más tiempo antes de tener que pensar en implementar un esquema de particionamiento horizontal. Y a medida que se escala la aplicación, sus gastos crecen más lentamente, ya que la mayor parte de sus necesidades de almacenamiento están en un almacenamiento de blobs muy económico.
 
-## <a name="horizontal-partitioning-sharding"></a>Horizontal (particionamiento) de la creación de particiones
+## <a name="horizontal-partitioning-sharding"></a>Particionamiento horizontal (particionamiento)
 
-Separando en porciones de horizontal es como una tabla de la división por filas: un conjunto de filas entra en un almacén de datos y otro conjunto de filas entra en un almacén de datos diferente.
+La parte horizontal es como la división de una tabla por filas: un conjunto de filas entra en un almacén de datos y otro conjunto de filas entra en un almacén de datos diferente.
 
-Con el mismo conjunto de datos, otra opción sería almacenar distintos intervalos de nombres de los clientes en diferentes bases de datos.
+Dado el mismo conjunto de datos, otra opción sería almacenar diferentes intervalos de nombres de clientes en distintas bases de datos.
 
 ![Tabla de datos particionada horizontalmente](data-partitioning-strategies/_static/image3.png)
 
-Desea tener gran cuidado respecto de su esquema de particionamiento para asegurarse de que los datos se distribuyen uniformemente para evitar las zonas activas. Este sencillo ejemplo utilizando la primera letra del apellido no cumple este requisito, ya que muchas personas tienen los apellidos que comienzan con determinadas letras comunes. Antes de lo esperado, ya que obtención grandes algunas bases de datos mientras se mantendría pequeño la mayor parte se alcanzan las limitaciones de tamaño de tabla.
+Desea tener mucho cuidado en el esquema de particionamiento para asegurarse de que los datos se distribuyen uniformemente con el fin de evitar las zonas activas. Este sencillo ejemplo en el que se usa la primera letra del apellido no cumple con este requisito, ya que muchas personas tienen los apellidos que comienzan con determinadas letras comunes. Las limitaciones de tamaño de tabla se alcanzaban antes de lo que cabría esperar, ya que algunas bases de datos se obtendrían muy grandes, mientras que la mayoría permanecería reducida.
 
-Un inconveniente de particionamiento horizontal es que puede ser difícil de hacer consultas en todos los datos. En este ejemplo, una consulta tendría que dibujar de hasta 26 diferentes bases de datos para obtener todos los datos almacenados por la aplicación.
+Una parte inferior de la creación de particiones horizontales es que podría ser difícil realizar consultas en todos los datos. En este ejemplo, una consulta tendría que dibujar de hasta 26 bases de datos diferentes para obtener todos los datos almacenados por la aplicación.
 
-## <a name="hybrid-partitioning"></a>Particionamiento híbrido
+## <a name="hybrid-partitioning"></a>Creación de particiones híbridas
 
-Puede combinar las particiones verticales y horizontales. Por ejemplo, podría almacenar las imágenes en Blob storage y particionar horizontalmente los datos de cadena en los datos de ejemplo.
+Puede combinar el particionamiento vertical y horizontal. Por ejemplo, en los datos de ejemplo puede almacenar las imágenes en el almacenamiento de blobs y particionar horizontalmente los datos de la cadena.
 
-![Híbrido de la tabla de datos con particiones](data-partitioning-strategies/_static/image4.png)
+![Tabla de datos con particiones híbridas](data-partitioning-strategies/_static/image4.png)
 
-## <a name="partitioning-a-production-application"></a>Creación de particiones de una aplicación de producción
+## <a name="partitioning-a-production-application"></a>Crear particiones en una aplicación de producción
 
-Conceptualmente es fácil ver cómo funcionaría un esquema de partición, pero cualquier esquema de partición aumenta la complejidad del código e introduce una complicación muchos nuevos que se debe tratar con. Si va a mover las imágenes al almacenamiento de blobs, ¿qué hacer cuando el servicio de almacenamiento está funcionando? ¿Cómo controlar la seguridad de blob? ¿Qué ocurre si la base de datos y blob storage dejan de estar sincronizado? Si le particionamiento, ¿cómo manejará consultar en todas las bases de datos?
+Conceptualmente, es fácil ver cómo funcionaría un esquema de partición, pero cualquier esquema de partición aumenta la complejidad del código y presenta muchas nuevas complicaciones que hay que solucionar. Si va a mover imágenes al almacenamiento de blobs, ¿qué se puede hacer cuando el servicio de almacenamiento está inactivo? ¿Cómo se controla la seguridad de blobs? ¿Qué ocurre si la base de datos y el almacenamiento de blobs no están sincronizados? Si va a realizar el particionamiento, ¿cómo va a controlar las consultas en todas las bases de datos?
 
-Las complicaciones son fáciles de administrar, siempre y cuando está planeando para ellos antes de ir a producción. Muchas personas que no hizo que desea que tenían más adelante. Por término medio nuestro equipo de equipo de asesoramiento al cliente (CAT) obtiene asustadas llamadas telefónicas sobre una vez al mes de los clientes cuyas aplicaciones están tardando de forma muy grande y no hacen esta planificación. Y dicen que algo como: "Help! Colocar todo en un único almacén de datos, y en 45 días, voy a quedarse sin espacio en él!" Y si tiene una gran cantidad de lógica de negocios integrada en el acceso a su almacén de datos y tiene clientes que usan la aplicación, no hay ningún tiempo buena deje de funcionar durante un día durante la migración. Terminamos repasar herculean esfuerzos para ayudar a la partición de cliente sus datos sobre la marcha sin perder tiempo. Es muy emocionante y muy miedo y no algo desea estar implicada en si se puede evitar! Pensando en esto por adelantado y la integración en la aplicación hará que su vida mucho más fácil si la aplicación crece más adelante.
+Las complicaciones se pueden administrar siempre y cuando se planeen antes de pasar a producción. Muchas personas que no lo han hecho quieren que lo tuvieran más adelante. En promedio, nuestro equipo de equipo de asesoramiento al cliente (CAT) recibe llamadas telefónicas de una vez al mes desde los clientes cuyas aplicaciones están desconectadas de un modo muy grande y no lo hacen. Y dicen algo parecido a: "Help! Me pongo todo en un único almacén de datos y, en 45 días, voy a quedarse sin espacio en él. Además, si tiene una gran cantidad de lógica de negocios integrada en el modo de acceder a su almacén de datos y tiene clientes que usan la aplicación, no hay mucho tiempo para dejar de funcionar durante un día mientras realiza la migración. Acabamos trabajando en herculean para ayudar al cliente a particionar sus datos sobre la marcha sin tiempo de inactividad. Es muy emocionante y muy terrible, y no algo que quiere que participe en caso de que pueda evitarlo. Al pensar en esto por adelantado y integrarlo en la aplicación, su vida será mucho más fácil si la aplicación crece más adelante.
 
 ## <a name="summary"></a>Resumen
 
-Un esquema de partición efectiva puede permitir que la aplicación en la nube escalar a petabytes de datos en la nube sin cuellos de botella. Y no tiene que pagar por adelantado para grandes máquinas o una amplia infraestructura lo haría si estuviera ejecutando la aplicación en un centro de datos local. En la nube, puede incrementalmente puede agregar capacidad a medida que lo necesite y solo está pagando para lo que está utilizando cuando se use.
+Un esquema de particionamiento eficaz puede permitir que la aplicación en la nube se escale a petabytes de datos en la nube sin cuellos de botella. Y no tiene que pagar por adelantado para máquinas masivas o una infraestructura amplia como podría si estuviera ejecutando la aplicación en un centro de datos local. En la nube puede Agregar incrementalmente la capacidad a medida que la necesite, y solo pagará por todo lo que esté usando cuando la use.
 
-En el [siguiente capítulo](unstructured-blob-storage.md) veremos cómo la aplicación Fix It implementa las particiones verticales almacenando las imágenes en Blob storage.
+En el [siguiente capítulo](unstructured-blob-storage.md) veremos cómo la aplicación de corrección de ti implementa las particiones verticales mediante el almacenamiento de imágenes en BLOB Storage.
 
 ## <a name="resources"></a>Recursos
 
-Para obtener más información acerca de estrategias de partición, vea los siguientes recursos.
+Para obtener más información sobre las estrategias de particionamiento, vea los siguientes recursos.
 
 Documentación:
 
-- [Procedimientos recomendados para el diseño de servicios a gran escala en Microsoft Azure Cloud Services](https://msdn.microsoft.com/library/windowsazure/jj717232.aspx). Notas del producto, Mark Simms y Michael Thomassy.
-- [Microsoft Patterns and Practices: patrones de diseño en la nube](https://msdn.microsoft.com/library/dn568099.aspx). Consulte las instrucciones de creación de particiones de datos, el patrón de particionamiento.
+- [Prácticas recomendadas para el diseño de servicios a gran escala en Windows Azure Cloud Services](https://msdn.microsoft.com/library/windowsazure/jj717232.aspx). En las notas del producto, Mark SIMM y Michael Thomassy.
+- [Patrones y prácticas de Microsoft: patrones de diseño en la nube](https://msdn.microsoft.com/library/dn568099.aspx). Vea Guía de creación de particiones de datos, patrón de particionamiento.
 
 Vídeos:
 
-- [FailSafe: Creación de servicios de nube escalables, resistentes](https://channel9.msdn.com/Series/FailSafe). Serie de nueve partes, Ulrich Homann, Marc Mercuri y Mark Simms. Presenta conceptos y principios de la arquitectura de una manera muy accesible e interesante, con casos procedentes de la experiencia del equipo de asesoramiento al cliente (CAT) de Microsoft con clientes reales. Vea la explicación de creación de particiones en el episodio 7.
-- [Creación grande: Lecciones aprendidas de los clientes de Windows Azure: parte I](https://channel9.msdn.com/Events/Build/2012/3-029). Mark Simms se describen los esquemas de partición, estrategias de particionamiento, cómo implementar el particionamiento y federaciones de base de datos de SQL, empezando en 19:49. Similar a la serie Failsafe pero entran en obtener más información sobre procedimientos.
+- [Failsafe: creación de Cloud Services escalables y resistentes](https://channel9.msdn.com/Series/FailSafe). Series de nueve partes de Ulrich Homann, Marc Mercuri y Mark SIMM. Presenta conceptos de alto nivel y principios arquitectónicos de una manera muy accesible e interesante, con historias tomadas de la experiencia del equipo de asesoramiento al cliente (CAT) de Microsoft con clientes reales. Consulte la explicación de la creación de particiones en el episodio 7.
+- [Building Big: lecciones aprendidas de clientes de Windows Azure, parte I](https://channel9.msdn.com/Events/Build/2012/3-029). Mark SIMM describe los esquemas de partición, las estrategias de particionamiento, cómo implementar el particionamiento y SQL Database federaciones, a partir de 19:49. Similar a la serie failsafe, pero profundiza en más detalles.
 
-Código de ejemplo:
+Ejemplo de código:
 
-- [En la nube Fundamentos de servicio en Windows Azure](https://code.msdn.microsoft.com/Cloud-Service-Fundamentals-4ca72649). Aplicación de ejemplo que incluye una base de datos particionada. Para obtener una descripción del esquema de particionamiento implementado, vea [DAL: particionamiento de RDBMS](https://blogs.msdn.com/b/windowsazure/archive/2013/09/05/dal-sharding-of-rdbms.aspx) en el blog de Windows Azure.
+- [Aspectos básicos del servicio en la nube en Windows Azure](https://code.msdn.microsoft.com/Cloud-Service-Fundamentals-4ca72649). Aplicación de ejemplo que incluye una base de datos particionada. Para obtener una descripción del esquema de particionamiento implementado, vea [dal: particionamiento de RDBMS](https://blogs.msdn.com/b/windowsazure/archive/2013/09/05/dal-sharding-of-rdbms.aspx) en el blog de Windows Azure.
 
 > [!div class="step-by-step"]
 > [Anterior](data-storage-options.md)

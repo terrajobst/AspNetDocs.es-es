@@ -1,229 +1,229 @@
 ---
 uid: web-forms/overview/data-access/basic-reporting/displaying-data-with-the-objectdatasource-vb
-title: Visualización de datos con ObjectDataSource (VB) | Microsoft Docs
+title: Mostrar datos con ObjectDataSource (VB) | Microsoft Docs
 author: rick-anderson
-description: Este tutorial trata el control ObjectDataSource mediante este control que se puede enlazar los datos recuperados de BLL creada en el tutorial anterior sin havi...
+description: En este tutorial se examina el control ObjectDataSource mediante este control, puede enlazar los datos recuperados de la capa BLL creada en el tutorial anterior sin HAVI...
 ms.author: riande
 ms.date: 03/31/2010
 ms.assetid: d62c3a63-0940-4019-874e-4a4047df0c1c
 msc.legacyurl: /web-forms/overview/data-access/basic-reporting/displaying-data-with-the-objectdatasource-vb
 msc.type: authoredcontent
-ms.openlocfilehash: 0f3d5b207144c5fb0e3f0b959bff9a28b69cc35e
-ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
+ms.openlocfilehash: 754188352cbfb08e610027f5b7890a32bd88ae26
+ms.sourcegitcommit: 22fbd8863672c4ad6693b8388ad5c8e753fb41a2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/06/2019
-ms.locfileid: "65109602"
+ms.lasthandoff: 11/28/2019
+ms.locfileid: "74609564"
 ---
 # <a name="displaying-data-with-the-objectdatasource-vb"></a>Visualizar datos con ObjectDataSource (VB)
 
 por [Scott Mitchell](https://twitter.com/ScottOnWriting)
 
-[Descargue la aplicación de ejemplo](http://download.microsoft.com/download/5/d/7/5d7571fc-d0b7-4798-ad4a-c976c02363ce/ASPNET_Data_Tutorial_4_VB.exe) o [descargar PDF](displaying-data-with-the-objectdatasource-vb/_static/datatutorial04vb1.pdf)
+[Descarga](https://download.microsoft.com/download/5/d/7/5d7571fc-d0b7-4798-ad4a-c976c02363ce/ASPNET_Data_Tutorial_4_VB.exe) de la aplicación de ejemplo o [descarga de PDF](displaying-data-with-the-objectdatasource-vb/_static/datatutorial04vb1.pdf)
 
-> Este tutorial trata el control ObjectDataSource mediante este control que se puede enlazar los datos recuperados de BLL creado en el tutorial anterior sin tener que escribir una línea de código.
+> En este tutorial se examina el control ObjectDataSource mediante este control, puede enlazar los datos recuperados de la capa BLL creada en el tutorial anterior sin tener que escribir una línea de código.
 
 ## <a name="introduction"></a>Introducción
 
-Con nuestra aplicación arquitectura y el sitio Web de diseño de página completa, ya estamos listos para empezar a explorar cómo realizar una serie de tareas comunes y reporting-relacionadas con los datos. En los tutoriales anteriores, hemos visto cómo enlazar mediante programación los datos de DAL y BLL en un control Web en una página ASP.NET de datos. Esta sintaxis de asignación del control Web de datos `DataSource` propiedad a los datos para mostrar y, a continuación, una llamada del control `DataBind()` método era el patrón utilizado en aplicaciones ASP.NET 1.x y puede seguir utilizándose en sus 2.0 aplicaciones. Sin embargo, los nuevos controles de origen de datos de ASP.NET 2.0 ofrecen una manera declarativa para trabajar con datos. Uso de estos controles pueden enlazar los datos recuperados de BLL creado en el tutorial anterior sin tener que escribir una línea de código!
+Una vez que el diseño de la página del sitio web y la arquitectura de la aplicación, estamos listos para empezar a explorar cómo realizar una serie de tareas comunes relacionadas con los datos y los informes. En los tutoriales anteriores, hemos visto cómo enlazar datos de la capa DAL y BLL a un control Web de datos en una página ASP.NET. Esta sintaxis asigna la propiedad `DataSource` del control Web de datos a los datos que se van a mostrar y, a continuación, llamar al método de `DataBind()` del control era el patrón utilizado en las aplicaciones de ASP.NET 1. x y puede seguir utilizándose en las aplicaciones 2,0. Sin embargo, los nuevos controles de origen de datos de ASP.NET 2.0 ofrecen una manera declarativa de trabajar con datos. Con estos controles, puede enlazar los datos recuperados de la capa BLL creada en el tutorial anterior sin tener que escribir una línea de código.
 
-ASP.NET 2.0 incluye cinco controles de origen de datos integrados [SqlDataSource](https://msdn.microsoft.com/library/dz12d98w%28vs.80%29.aspx), [AccessDataSource](https://msdn.microsoft.com/library/8e5545e1.aspx), [ObjectDataSource](https://msdn.microsoft.com/library/9a4kyhcx.aspx), [XmlDataSource](https://msdn.microsoft.com/library/e8d8587a%28en-US,VS.80%29.aspx), y [SiteMapDataSource](https://msdn.microsoft.com/library/5ex9t96x%28en-US,VS.80%29.aspx) aunque puede crear sus propios [controles de origen de datos personalizados](https://msdn.microsoft.com/library/default.asp?url=/library/dnvs05/html/DataSourceCon1.asp), si es necesario. Puesto que hemos desarrollado una arquitectura para nuestra aplicación del tutorial, vamos a usar ObjectDataSource con nuestras clases BLL.
+ASP.NET 2,0 se distribuye con cinco controles de origen de datos integrados [SqlDataSource](https://msdn.microsoft.com/library/dz12d98w%28vs.80%29.aspx), [AccessDataSource](https://msdn.microsoft.com/library/8e5545e1.aspx), [ObjectDataSource](https://msdn.microsoft.com/library/9a4kyhcx.aspx), [XmlDataSource](https://msdn.microsoft.com/library/e8d8587a%28en-US,VS.80%29.aspx)y [SiteMapDataSource](https://msdn.microsoft.com/library/5ex9t96x%28en-US,VS.80%29.aspx) , aunque puede crear sus propios [controles de origen de datos personalizados](https://msdn.microsoft.com/library/default.asp?url=/library/dnvs05/html/DataSourceCon1.asp), si es necesario. Como hemos desarrollado una arquitectura para nuestra aplicación de tutorial, usaremos ObjectDataSource en nuestras clases de BLL.
 
-![ASP.NET 2.0 incluye cinco controles de origen de datos integrados](displaying-data-with-the-objectdatasource-vb/_static/image1.png)
+![ASP.NET 2,0 incluye cinco controles de origen de datos integrados](displaying-data-with-the-objectdatasource-vb/_static/image1.png)
 
-**Figura 1**: ASP.NET 2.0 incluye cinco controles de origen de datos integrados
+**Figura 1**: ASP.net 2,0 incluye cinco controles de origen de datos integrados
 
-ObjectDataSource actúa como un proxy para trabajar con algún otro objeto. Para configurar el origen ObjectDataSource especificamos este objeto y cómo se asignan sus métodos de ObjectDataSource subyacentes `Select`, `Insert`, `Update`, y `Delete` métodos. Una vez que se ha especificado este objeto subyacente y sus métodos asignan a de ObjectDataSource, a continuación, podemos enlazar ObjectDataSource a un control Web de datos. ASP.NET incluye datos de muchos controles Web, como el control GridView, DetailsView, RadioButtonList y DropDownList, entre otros. Durante el ciclo de vida de la página, el control Web de datos que deba tener acceso a los datos que está enlazado, que llevará a cabo mediante la invocación de su ObjectDataSource `Select` método; si el control Web de datos permiten insertar, actualizar, o eliminar, se pueden realizar llamadas a su Del origen ObjectDataSource `Insert`, `Update`, o `Delete` métodos. Estas llamadas, a continuación, se enrutan mediante el origen ObjectDataSource a los métodos del objeto subyacente adecuada como se muestra en el diagrama siguiente.
+ObjectDataSource actúa como proxy para trabajar con otro objeto. Para configurar el ObjectDataSource, se especifica este objeto subyacente y cómo se asignan sus métodos a los métodos `Select`, `Insert`, `Update`y `Delete` de ObjectDataSource. Una vez que se ha especificado este objeto subyacente y sus métodos se han asignado a la base de datos ObjectDataSource, podemos enlazar el origen ObjectDataSource a un control Web de datos. ASP.NET se incluye con muchos controles Web de datos, incluidos GridView, DetailsView, RadioButtonList y DropDownList, entre otros. Durante el ciclo de vida de la página, es posible que el control Web de datos necesite tener acceso a los datos a los que está enlazado, lo que realizará invocando el método `Select` de ObjectDataSource; Si el control Web de datos permite insertar, actualizar o eliminar, se pueden realizar llamadas a los métodos `Insert`, `Update`o `Delete` de ObjectDataSource. A continuación, el ObjectDataSource enruta estas llamadas a los métodos del objeto subyacente adecuados tal y como se muestra en el diagrama siguiente.
 
-[![ObjectDataSource actúa como un Proxy](displaying-data-with-the-objectdatasource-vb/_static/image3.png)](displaying-data-with-the-objectdatasource-vb/_static/image2.png)
+[![ObjectDataSource actúa como proxy](displaying-data-with-the-objectdatasource-vb/_static/image3.png)](displaying-data-with-the-objectdatasource-vb/_static/image2.png)
 
-**Figura 2**: El origen ObjectDataSource actúa como Proxy ([haga clic aquí para ver imagen en tamaño completo](displaying-data-with-the-objectdatasource-vb/_static/image4.png))
+**Figura 2**: ObjectDataSource actúa como proxy ([haga clic para ver la imagen de tamaño completo](displaying-data-with-the-objectdatasource-vb/_static/image4.png))
 
-Aunque el origen ObjectDataSource se puede usar para invocar métodos para insertar, actualizar o eliminar datos, centrémonos en la devolución de datos; próximos tutoriales se exploran el utilizando el origen ObjectDataSource y los controles Web que modifican los datos de datos.
+Aunque ObjectDataSource puede usarse para invocar métodos para insertar, actualizar o eliminar datos, vamos a centrarse en la devolución de datos. en los próximos tutoriales se explorará el uso de los controles Web de datos e ObjectDataSource que modifican los datos.
 
-## <a name="step-1-adding-and-configuring-the-objectdatasource-control"></a>Paso 1: Agregar y configurar el Control ObjectDataSource
+## <a name="step-1-adding-and-configuring-the-objectdatasource-control"></a>Paso 1: agregar y configurar el control ObjectDataSource
 
-Comience abriendo la `SimpleDisplay.aspx` página en el `BasicReporting` carpeta, cambie a la vista de diseño y, a continuación, arrastre un control ObjectDataSource desde el cuadro de herramientas hasta la superficie de diseño de la página. ObjectDataSource aparece como un cuadro gris en la superficie de diseño porque no genera ningún marcado; simplemente tiene acceso a datos mediante la invocación de un método de un objeto especificado. Los datos devueltos por un origen ObjectDataSource se pueden mostrar mediante un control Web, como el control GridView, DetailsView, FormView y así sucesivamente de datos.
+Para empezar, abra la página `SimpleDisplay.aspx` de la carpeta `BasicReporting`, cambie a Vista de diseño y, a continuación, arrastre un control ObjectDataSource desde el cuadro de herramientas hasta la superficie de diseño de la página. ObjectDataSource aparece como un cuadro gris en la superficie de diseño porque no produce ningún marcado. simplemente tiene acceso a los datos invocando un método desde un objeto especificado. Los datos devueltos por un ObjectDataSource se pueden mostrar mediante un control Web de datos, como GridView, DetailsView, FormView, etc.
 
 > [!NOTE]
-> También primero de puede que agregar los datos de control Web a la página y, a continuación, en su etiqueta inteligente, elija el &lt;nuevo origen de datos&gt; opción en la lista desplegable.
+> Como alternativa, primero puede Agregar el control Web de datos a la página y, a continuación, desde su etiqueta inteligente, elegir la opción &lt;nuevo origen de datos&gt; en la lista desplegable.
 
-Para especificar el objeto subyacente de ObjectDataSource y cómo se asignan de ObjectDataSource métodos del objeto, haga clic en el vínculo Configurar origen de datos de etiqueta inteligente de ObjectDataSource.
+Para especificar el objeto subyacente de ObjectDataSource y cómo se asignan los métodos de ese objeto a la base de datos de origen, haga clic en el vínculo configurar origen de datos de la etiqueta inteligente de ObjectDataSource.
 
-[![Haga clic en el vínculo a origen de datos de la etiqueta inteligente de configuración](displaying-data-with-the-objectdatasource-vb/_static/image6.png)](displaying-data-with-the-objectdatasource-vb/_static/image5.png)
+[![haga clic en el vínculo configurar origen de datos de la etiqueta inteligente](displaying-data-with-the-objectdatasource-vb/_static/image6.png)](displaying-data-with-the-objectdatasource-vb/_static/image5.png)
 
-**Figura 3**: Haga clic en el vínculo Configurar de un origen de datos de la etiqueta inteligente ([haga clic aquí para ver imagen en tamaño completo](displaying-data-with-the-objectdatasource-vb/_static/image7.png))
+**Figura 3**: haga clic en el vínculo configurar origen de datos de la etiqueta inteligente ([haga clic para ver la imagen de tamaño completo](displaying-data-with-the-objectdatasource-vb/_static/image7.png))
 
-Se abrirá el Asistente para configurar orígenes de datos. En primer lugar, debemos especificamos el objeto que es trabajar con el origen ObjectDataSource. Si se activa la casilla "Mostrar sólo los componentes de datos", la lista desplegable de esta pantalla muestra solo los objetos que se han visto decorados con el `DataObject` atributo. Actualmente, nuestra lista incluye los TableAdapters en el conjunto de datos con tipo y las clases BLL, que hemos creado en el tutorial anterior. Si ha olvidado agregar los `DataObject` atributo a las clases de la capa de lógica empresarial no aparecen en esta lista. En ese caso, desactive la casilla "Mostrar sólo los componentes de datos" para ver todos los objetos, que deben incluir las clases BLL (junto con las otras clases en el conjunto de datos con tipo DataTables, filas de datos y así sucesivamente).
+Se abrirá el Asistente para configurar el origen de datos. En primer lugar, debemos especificar el objeto con el que se va a trabajar ObjectDataSource. Si la casilla "Mostrar solo los componentes de datos" está activada, en la lista desplegable de esta pantalla solo se muestran los objetos que se han decorado con el `DataObject` atributo. Actualmente, nuestra lista incluye los TableAdapters en el conjunto de DataSet con tipo y las clases de BLL que creamos en el tutorial anterior. Si olvidó agregar el atributo `DataObject` a las clases de la capa de lógica de negocios, no los verá en esta lista. En ese caso, desactive la casilla "Mostrar solo los componentes de datos" para ver todos los objetos, que deben incluir las clases BLL (junto con las demás clases del conjunto de datos con tipo que las tablas DataTable, DataRows, etc.).
 
-En la primera pantalla, elija el `ProductsBLL` clase en la lista desplegable y haga clic en siguiente.
+En la primera pantalla, elija la clase de `ProductsBLL` de la lista desplegable y haga clic en siguiente.
 
-[![Especifique el objeto que se usarán con el Control ObjectDataSource](displaying-data-with-the-objectdatasource-vb/_static/image9.png)](displaying-data-with-the-objectdatasource-vb/_static/image8.png)
+[![especificar el objeto que se va a utilizar con el control ObjectDataSource](displaying-data-with-the-objectdatasource-vb/_static/image9.png)](displaying-data-with-the-objectdatasource-vb/_static/image8.png)
 
-**Figura 4**: Especifique el objeto que se usarán con el ObjectDataSource Control ([haga clic aquí para ver imagen en tamaño completo](displaying-data-with-the-objectdatasource-vb/_static/image10.png))
+**Figura 4**: especificar el objeto que se va a usar con el control ObjectDataSource ([haga clic para ver la imagen de tamaño completo](displaying-data-with-the-objectdatasource-vb/_static/image10.png))
 
-La siguiente pantalla del asistente le pedirá que seleccione qué método debería invocar el origen ObjectDataSource. La lista desplegable enumera los métodos que devuelven datos en el objeto seleccionado en la pantalla anterior. Aquí vemos `GetProductByProductID`, `GetProducts`, `GetProductsByCategoryID`, y `GetProductsBySupplierID`. Seleccione el `GetProducts` método desde la lista desplegable y haga clic en Finalizar (si ha agregado el `DataObjectMethodAttribute` a la `ProductBLL`de métodos, como se muestra en el tutorial anterior, esta opción se seleccionará de forma predeterminada).
+La siguiente pantalla del asistente le pedirá que seleccione el método que ObjectDataSource debe invocar. La lista desplegable muestra los métodos que devuelven datos en el objeto seleccionado en la pantalla anterior. Aquí vemos `GetProductByProductID`, `GetProducts`, `GetProductsByCategoryID`y `GetProductsBySupplierID`. Seleccione el método de `GetProducts` en la lista desplegable y haga clic en finalizar (si agregó el `DataObjectMethodAttribute` a los métodos de la `ProductBLL`como se muestra en el tutorial anterior, esta opción estará seleccionada de forma predeterminada).
 
-[![Elija el método de devolución de datos de la ficha Seleccionar](displaying-data-with-the-objectdatasource-vb/_static/image12.png)](displaying-data-with-the-objectdatasource-vb/_static/image11.png)
+[![elegir el método para devolver datos desde la pestaña seleccionar](displaying-data-with-the-objectdatasource-vb/_static/image12.png)](displaying-data-with-the-objectdatasource-vb/_static/image11.png)
 
-**Figura 5**: Elija el método para devolver datos desde la pestaña seleccione ([haga clic aquí para ver imagen en tamaño completo](displaying-data-with-the-objectdatasource-vb/_static/image13.png))
+**Figura 5**: elegir el método para devolver datos desde la pestaña seleccionar ([haga clic para ver la imagen a tamaño completo](displaying-data-with-the-objectdatasource-vb/_static/image13.png))
 
-## <a name="configure-the-objectdatasource-manually"></a>Configurar manualmente el origen ObjectDataSource
+## <a name="configure-the-objectdatasource-manually"></a>Configuración manual de ObjectDataSource
 
-Asistente para configurar origen de datos de ObjectDataSource ofrece una forma rápida para especificar el objeto que usa y asociar se invocan los métodos del objeto. Sin embargo, puede configurar el origen ObjectDataSource a través de sus propiedades, mediante la ventana Propiedades o directamente en el marcado declarativo. Basta con establecer la `TypeName` propiedad al tipo del objeto subyacente que se usará y el `SelectMethod` para el método que se invoca cuando se recuperan datos.
+El Asistente para configurar el origen de datos de ObjectDataSource ofrece una forma rápida de especificar el objeto que utiliza y de asociar los métodos del objeto que se invocan. Sin embargo, puede configurar ObjectDataSource a través de sus propiedades, ya sea a través de la ventana Propiedades o directamente en el marcado declarativo. Basta con establecer la propiedad `TypeName` en el tipo del objeto subyacente que se va a utilizar y el `SelectMethod` en el método que se va a invocar al recuperar los datos.
 
 [!code-aspx[Main](displaying-data-with-the-objectdatasource-vb/samples/sample1.aspx)]
 
-Incluso si prefiere que el Asistente para configurar origen de datos puede haber ocasiones en que necesite configurar manualmente el origen ObjectDataSource, como el asistente muestra sólo clases creadas por el desarrollador. Si desea enlazar al origen ObjectDataSource a una clase en .NET Framework, como el [clase de pertenencia](https://msdn.microsoft.com/library/system.web.security.membership.aspx)para tener acceso a información de la cuenta de usuario, o la [clase Directory](https://msdn.microsoft.com/library/system.io.directory.aspx) para trabajar con información del sistema de archivos deberá establecer manualmente las propiedades de ObjectDataSource.
+Incluso si prefiere el Asistente para configurar orígenes de datos, puede haber ocasiones en las que necesite configurar manualmente ObjectDataSource, ya que el asistente solo muestra las clases creadas por el desarrollador. Si desea enlazar el origen ObjectDataSource a una clase en el .NET Framework como la [clase de pertenencia](https://msdn.microsoft.com/library/system.web.security.membership.aspx), para tener acceso a la información de la cuenta de usuario o la [clase de directorio](https://msdn.microsoft.com/library/system.io.directory.aspx) para trabajar con la información del sistema de archivos, debe establecer manualmente las propiedades de ObjectDataSource.
 
-## <a name="step-2-adding-a-data-web-control-and-binding-it-to-the-objectdatasource"></a>Paso 2: Agregar un Control Web de datos y se enlaza a ObjectDataSource
+## <a name="step-2-adding-a-data-web-control-and-binding-it-to-the-objectdatasource"></a>Paso 2: agregar un control Web de datos y enlazarlo a ObjectDataSource
 
-Una vez que se ha agregado a la página y configurado el origen ObjectDataSource, estamos listos para agregar controles Web de datos a la página para mostrar los datos devueltos por el ObjectDataSource `Select` método. Cualquier control Web de datos se pueden enlazar a un origen ObjectDataSource; Echemos un vistazo a mostrar datos de ObjectDataSource en GridView, DetailsView y FormView.
+Una vez que ObjectDataSource se ha agregado a la página y configurado, estamos listos para agregar controles Web de datos a la página para mostrar los datos devueltos por el método `Select` de ObjectDataSource. Cualquier control Web de datos se puede enlazar a un ObjectDataSource; Echemos un vistazo a la visualización de los datos de ObjectDataSource en GridView, DetailsView y FormView.
 
 ## <a name="binding-a-gridview-to-the-objectdatasource"></a>Enlazar un control GridView a ObjectDataSource
 
-Agregar un control GridView en el cuadro de herramientas a `SimpleDisplay.aspx`de superficie de diseño. En las etiquetas inteligentes de GridView, elija el control ObjectDataSource, que hemos agregado en el paso 1. Esto creará automáticamente un BoundField en GridView para cada propiedad devuelta por los datos desde el ObjectDataSource `Select` método (es decir, las propiedades definidas por la DataTable de productos).
+Agregue un control GridView desde el cuadro de herramientas a la superficie de diseño de `SimpleDisplay.aspx`. En la etiqueta inteligente de GridView, elija el control ObjectDataSource que hemos agregado en el paso 1. Esto creará automáticamente una BoundField en GridView para cada propiedad devuelta por los datos del método `Select` de ObjectDataSource (es decir, las propiedades definidas por la DataTable Products).
 
-[![Se ha agregado un control GridView a la página y enlazar a ObjectDataSource](displaying-data-with-the-objectdatasource-vb/_static/image15.png)](displaying-data-with-the-objectdatasource-vb/_static/image14.png)
+[![se ha agregado un control GridView a la página y está enlazado a ObjectDataSource](displaying-data-with-the-objectdatasource-vb/_static/image15.png)](displaying-data-with-the-objectdatasource-vb/_static/image14.png)
 
-**Figura 6**: Se ha agregado un control GridView a la página y se enlaza a ObjectDataSource ([haga clic aquí para ver imagen en tamaño completo](displaying-data-with-the-objectdatasource-vb/_static/image16.png))
+**Figura 6**: se ha agregado un control GridView a la página y está enlazado a ObjectDataSource ([haga clic para ver la imagen de tamaño completo](displaying-data-with-the-objectdatasource-vb/_static/image16.png))
 
-A continuación, puede personalizar, reorganizar o quitar BoundFields de GridView haciendo clic en la opción de editar las columnas de la etiqueta inteligente.
+Después, puede personalizar, reorganizar o quitar el BoundFields de GridView haciendo clic en la opción Editar columnas de la etiqueta inteligente.
 
-[![Administración BoundFields de GridView mediante el cuadro de diálogo Editar columnas](displaying-data-with-the-objectdatasource-vb/_static/image18.png)](displaying-data-with-the-objectdatasource-vb/_static/image17.png)
+[![administrar los BoundFields de GridView mediante el cuadro de diálogo Editar columnas](displaying-data-with-the-objectdatasource-vb/_static/image18.png)](displaying-data-with-the-objectdatasource-vb/_static/image17.png)
 
-**Figura 7**: Administración BoundFields a través de las columnas de cuadro de GridView de diálogo Editar ([haga clic aquí para ver imagen en tamaño completo](displaying-data-with-the-objectdatasource-vb/_static/image19.png))
+**Figura 7**: administración de BoundFields de GridView mediante el cuadro de diálogo Editar columnas ([haga clic para ver la imagen a tamaño completo](displaying-data-with-the-objectdatasource-vb/_static/image19.png))
 
-Dedique unos minutos a modificar BoundFields de GridView, quitando el `ProductID`, `SupplierID`, `CategoryID`, `QuantityPerUnit`, `UnitsInStock`, `UnitsOnOrder`, y `ReorderLevel` BoundFields. Simplemente seleccione la BoundField en la lista en la parte inferior izquierda y haga clic en el botón Eliminar (la X roja) para quitarlos. A continuación, reorganice el BoundFields para que el `CategoryName` y `SupplierName` BoundFields preceder el `UnitPrice` BoundField seleccionando estos BoundFields y haga clic en la flecha arriba. Establecer el `HeaderText` las propiedades de los restantes BoundFields a `Products`, `Category`, `Supplier`, y `Price`, respectivamente. A continuación, tiene la `Price` BoundField con formato como una moneda estableciendo el BoundField `HtmlEncode` propiedad en False y su `DataFormatString` propiedad `{0:c}`. Por último, Alinear horizontalmente el `Price` a la derecha y el `Discontinued` casilla de verificación en el centro a través de la `ItemStyle` / `HorizontalAlign` propiedad.
+Dedique un momento a modificar el BoundFields de GridView, quitando los `ProductID`, `SupplierID`, `CategoryID`, `QuantityPerUnit`, `UnitsInStock`, `UnitsOnOrder`y `ReorderLevel` BoundFields. Simplemente seleccione BoundField en la lista de la parte inferior izquierda y haga clic en el botón Eliminar (la X roja) para quitarlos. A continuación, reorganice el BoundFields para que el `CategoryName` y `SupplierName` BoundFields precedan a la `UnitPrice` BoundField; para ello, seleccione estos BoundFields y haga clic en la flecha arriba. Establezca las propiedades `HeaderText` del BoundFields restante en `Products`, `Category`, `Supplier`y `Price`, respectivamente. A continuación, haga que el `Price` BoundField tenga el formato de moneda estableciendo la propiedad `HtmlEncode` de BoundField en false y su propiedad `DataFormatString` en `{0:c}`. Por último, Alinee horizontalmente el `Price` a la derecha y la casilla `Discontinued` en el centro a través de la `ItemStyle`/propiedad `HorizontalAlign`.
 
 [!code-aspx[Main](displaying-data-with-the-objectdatasource-vb/samples/sample2.aspx)]
 
-[![Se han personalizado BoundFields prvku GridView.](displaying-data-with-the-objectdatasource-vb/_static/image21.png)](displaying-data-with-the-objectdatasource-vb/_static/image20.png)
+[![se han personalizado los BoundFields de GridView](displaying-data-with-the-objectdatasource-vb/_static/image21.png)](displaying-data-with-the-objectdatasource-vb/_static/image20.png)
 
-**Figura 8**: Se ha personalizado la GridView BoundFields ([haga clic aquí para ver imagen en tamaño completo](displaying-data-with-the-objectdatasource-vb/_static/image22.png))
+**Figura 8**: los BoundFields de GridView se han personalizado ([haga clic para ver la imagen de tamaño completo](displaying-data-with-the-objectdatasource-vb/_static/image22.png))
 
-## <a name="using-themes-for-a-consistent-look"></a>Uso de los temas para una apariencia coherente
+## <a name="using-themes-for-a-consistent-look"></a>Usar temas para una apariencia coherente
 
-Estos tutoriales se esfuerzan por quitar cualquier configuración de estilo de nivel de control, en lugar de utilizar las hojas de estilos en cascada definido en un archivo externo siempre que sea posible. El `Styles.css` contiene el archivo `DataWebControlStyle`, `HeaderStyle`, `RowStyle`, y `AlternatingRowStyle` clases CSS que se deben utilizar para dictar la apariencia de los datos Web controles que se usan en estos tutoriales. Para ello, podríamos establecemos la GridView `CssClass` propiedad `DataWebControlStyle`y su `HeaderStyle`, `RowStyle`, y `AlternatingRowStyle` propiedades `CssClass` propiedades según corresponda.
+Estos tutoriales esfuerzan por quitar cualquier configuración de estilo de nivel de control, en lugar de usar hojas de estilos en cascada definidas en un archivo externo siempre que sea posible. El archivo de `Styles.css` contiene `DataWebControlStyle`, `HeaderStyle`, `RowStyle`y `AlternatingRowStyle` clases CSS que se deben usar para dictar la apariencia de los controles Web de datos utilizados en estos tutoriales. Para ello, podríamos establecer la propiedad `CssClass` de GridView en `DataWebControlStyle`, y sus propiedades `HeaderStyle`, `RowStyle`y `AlternatingRowStyle` ' `CssClass` propiedades en consecuencia.
 
-Si se establecen estas `CssClass` control agregado a nuestros tutoriales de Web de propiedades en el control Web sería necesario que recuerde establecer explícitamente estos valores de propiedad para cada uno de los datos. Es un enfoque más manejable definir las propiedades de CSS de forma predeterminada para el control GridView, DetailsView y FormView controla el uso de un tema. Un tema es una colección de valores de las propiedades de nivel de control, imágenes y las clases CSS que se pueden aplicar a las páginas a través de un sitio para aplicar una apariencia común.
+Si establecemos estas propiedades de `CssClass` en el control Web, es necesario recordar explícitamente establecer estos valores de propiedad para cada uno de los controles Web de datos agregados a nuestros tutoriales. Un enfoque más fácil de administrar consiste en definir las propiedades predeterminadas relacionadas con CSS para los controles GridView, DetailsView y FormView mediante un tema. Un tema es una colección de valores de propiedades de nivel de control, imágenes y clases CSS que se pueden aplicar a las páginas de un sitio para aplicar una apariencia común.
 
-Nuestro tema no incluye las imágenes o archivos CSS (no se cerrará la hoja de estilos `Styles.css` como-, definido en la carpeta raíz de la aplicación web), pero incluirá dos máscaras. Una máscara es un archivo que define las propiedades predeterminadas de un control Web. En concreto, tendremos un archivo de máscaras para los controles GridView y DetailsView, que indica el valor predeterminado `CssClass`-propiedades relacionadas.
+Nuestro tema no incluirá imágenes ni archivos CSS (dejaremos la hoja de estilos `Styles.css` tal cual, definida en la carpeta raíz de la aplicación web), pero incluirá dos máscaras. Una máscara es un archivo que define las propiedades predeterminadas de un control Web. En concreto, tendremos un archivo de máscara para los controles GridView y DetailsView, que indica las propiedades predeterminadas relacionadas con el `CssClass`.
 
-Empiece agregando un nuevo archivo de máscara al proyecto denominado `GridView.skin` con el botón secundario en el nombre del proyecto en el Explorador de soluciones y eligiendo Agregar nuevo elemento.
+Para empezar, agregue un nuevo archivo de máscara al proyecto denominado `GridView.skin`; para ello, haga clic con el botón derecho en el nombre del proyecto en el Explorador de soluciones y elija Agregar nuevo elemento.
 
-[![Agregue un archivo de máscara denominado GridView.skin](displaying-data-with-the-objectdatasource-vb/_static/image24.png)](displaying-data-with-the-objectdatasource-vb/_static/image23.png)
+[![agregar un archivo de máscara denominado GridView. Skin](displaying-data-with-the-objectdatasource-vb/_static/image24.png)](displaying-data-with-the-objectdatasource-vb/_static/image23.png)
 
-**Figura 9**: Agregar un archivo de máscara denominado `GridView.skin` ([haga clic aquí para ver imagen en tamaño completo](displaying-data-with-the-objectdatasource-vb/_static/image25.png))
+**Ilustración 9**: agregar un archivo de máscara denominado `GridView.skin` ([haga clic para ver la imagen de tamaño completo](displaying-data-with-the-objectdatasource-vb/_static/image25.png))
 
-Archivos de máscara deben ubicarse en un tema, que se encuentran en el `App_Themes` carpeta. Dado que aún no contamos con dicha carpeta, Visual Studio ofrecerá Póngase a crearla para que podamos al agregar la máscara de nuestra primera. Haga clic en Sí para crear el `App_Theme` carpeta y coloque el nuevo `GridView.skin` archivo no existe.
+Los archivos de máscara deben colocarse en un tema, que se encuentra en la carpeta `App_Themes`. Como todavía no tenemos una carpeta de este tipo, Visual Studio le ofrecerá la posibilidad de crear una para nosotros al agregar nuestra primera máscara. Haga clic en sí para crear la carpeta `App_Theme` y colocar el nuevo archivo de `GridView.skin`.
 
-[![Deje que Visual Studio cree la carpeta App_Theme](displaying-data-with-the-objectdatasource-vb/_static/image27.png)](displaying-data-with-the-objectdatasource-vb/_static/image26.png)
+[![permitir que Visual Studio cree la carpeta App_Theme](displaying-data-with-the-objectdatasource-vb/_static/image27.png)](displaying-data-with-the-objectdatasource-vb/_static/image26.png)
 
-**Figura 10**: Deje que Visual Studio cree el `App_Theme` carpeta ([haga clic aquí para ver imagen en tamaño completo](displaying-data-with-the-objectdatasource-vb/_static/image28.png))
+**Figura 10**: dejar que Visual Studio cree la carpeta `App_Theme` ([haga clic para ver la imagen de tamaño completo](displaying-data-with-the-objectdatasource-vb/_static/image28.png))
 
-Esto creará un nuevo tema en el `App_Themes` carpeta denominada GridView con el archivo de máscara `GridView.skin`.
+Se creará un nuevo tema en la carpeta `App_Themes` denominada GridView con el archivo de máscara `GridView.skin`.
 
-![El tema de GridView tiene se han agregado a la carpeta App_Theme](displaying-data-with-the-objectdatasource-vb/_static/image29.png)
+![El tema de GridView se ha agregado a la carpeta App_Theme](displaying-data-with-the-objectdatasource-vb/_static/image29.png)
 
-**Figura 11**: El tema de GridView se ha agregado a la `App_Theme` carpeta
+**Figura 11**: el tema de GridView se ha agregado a la carpeta `App_Theme`
 
-Cambie el nombre del tema de GridView DataWebControls (haga doble clic en la carpeta de control GridView en la `App_Theme` carpeta y seleccione Cambiar nombre). A continuación, escriba el siguiente marcado en el `GridView.skin` archivo:
+Cambie el nombre del tema de GridView a DataWebControls (haga clic con el botón derecho en la carpeta GridView en la carpeta `App_Theme` y elija cambiar nombre). A continuación, escriba el siguiente marcado en el archivo de `GridView.skin`:
 
 [!code-aspx[Main](displaying-data-with-the-objectdatasource-vb/samples/sample3.aspx)]
 
-Esto define las propiedades predeterminadas para el `CssClass`-relacionadas con las propiedades para cualquier control GridView en cualquier página que utiliza el tema DataWebControls. Vamos a agregar otra máscara para DetailsView, datos de un control Web que vamos a usar en breve. Agregar un nuevo aspecto para el tema DataWebControls denominado `DetailsView.skin` y agregue el siguiente marcado:
+Esto define las propiedades predeterminadas de las propiedades relacionadas con el `CssClass`para cualquier GridView en cualquier página que use el tema DataWebControls. Vamos a agregar otra máscara para DetailsView, un control Web de datos que usaremos en breve. Agregue una nueva máscara al tema DataWebControls denominado `DetailsView.skin` y agregue el siguiente marcado:
 
 [!code-aspx[Main](displaying-data-with-the-objectdatasource-vb/samples/sample4.aspx)]
 
-Con nuestro tema definido, el último paso es aplicar el tema a nuestra página ASP.NET. Puede aplicar un tema en cada página por página o para todas las páginas de un sitio Web. Vamos a usar este tema para todas las páginas en el sitio Web. Para ello, agregue el siguiente marcado para `Web.config`del `<system.web>` sección:
+Con nuestro tema definido, el último paso es aplicar el tema a nuestra página de ASP.NET. Un tema se puede aplicar página por página o para todas las páginas de un sitio Web. Vamos a usar este tema para todas las páginas del sitio Web. Para ello, agregue el marcado siguiente a la sección `<system.web>` de `Web.config`:
 
 [!code-xml[Main](displaying-data-with-the-objectdatasource-vb/samples/sample5.xml)]
 
-Así de simple. El `styleSheetTheme` configuración indica que las propiedades especificadas en el tema deben *no* invalidar las propiedades especificadas en el nivel de control. Para especificar que los valores de tema deben predominan sobre configuración del control, utilice el `theme` atributo en lugar de `styleSheetTheme`; Desafortunadamente, valores de tema no aparecen en la vista de diseño de Visual Studio. Consulte [ASP.NET Themes and Skins Overview](https://msdn.microsoft.com/library/ykzx33wh.aspx) y [servidor estilos utilizando temas](https://quickstarts.asp.net/quickstartv20/aspnet/doc/themes/stylesheettheme.aspx) para obtener más información sobre los temas y máscaras; vea [How To: Aplicar temas de ASP.NET](https://msdn.microsoft.com/library/0yy5hxdk%28VS.80%29.aspx) para obtener más información sobre cómo configurar una página para que utilice un tema.
+Así de simple. El valor `styleSheetTheme` indica que las propiedades especificadas en el tema *no* deben reemplazar las propiedades especificadas en el nivel de control. Para especificar que la configuración del tema debe contraplazarse a la configuración del control, utilice el atributo `theme` en lugar de `styleSheetTheme`; Desafortunadamente, la configuración de tema no aparece en la Vista de diseño de Visual Studio. Consulte [información general sobre los temas y las máscaras de ASP.net](https://msdn.microsoft.com/library/ykzx33wh.aspx) y los [estilos del lado servidor mediante temas](https://quickstarts.asp.net/quickstartv20/aspnet/doc/themes/stylesheettheme.aspx) para obtener más información sobre temas y máscaras. consulte [Cómo: aplicar temas de ASP.net](https://msdn.microsoft.com/library/0yy5hxdk%28VS.80%29.aspx) para más información sobre la configuración de una página para usar un tema.
 
-[![El control GridView muestra el nombre, categoría, proveedor, precio y discontinuo información del producto](displaying-data-with-the-objectdatasource-vb/_static/image31.png)](displaying-data-with-the-objectdatasource-vb/_static/image30.png)
+[![GridView muestra el nombre del producto, la categoría, el proveedor, el precio y la información no incluida.](displaying-data-with-the-objectdatasource-vb/_static/image31.png)](displaying-data-with-the-objectdatasource-vb/_static/image30.png)
 
-**Figura 12**: El control GridView muestra el nombre, categoría, proveedor, precio y no incluye información del producto ([haga clic aquí para ver imagen en tamaño completo](displaying-data-with-the-objectdatasource-vb/_static/image32.png))
+**Figura 12**: el control GridView muestra el nombre del producto, la categoría, el proveedor, el precio y la información no incluida ([haga clic para ver la imagen de tamaño completo](displaying-data-with-the-objectdatasource-vb/_static/image32.png))
 
-## <a name="displaying-one-record-at-a-time-in-the-detailsview"></a>Mostrar un registro a la vez en DetailsView
+## <a name="displaying-one-record-at-a-time-in-the-detailsview"></a>Mostrar un registro cada vez en DetailsView
 
-El control GridView muestra una fila para cada registro devuelto por el control de origen de datos al que está enlazado. Veces, sin embargo, cuando nos conviene mostrar un único registro o sólo un registro a la vez. El [control DetailsView](https://msdn.microsoft.com/library/s3w1w7t4.aspx) ofrece esta funcionalidad, como un elemento HTML de representación `<table>` con dos columnas y una fila por cada columna o propiedad enlazado al control. DetailsView se puede considerar como un control GridView con un único registro gira 90 grados.
+GridView muestra una fila por cada registro devuelto por el control de origen de datos al que está enlazado. No obstante, hay ocasiones en las que es posible que deseemos mostrar un único registro o solo un registro cada vez. El [control DetailsView](https://msdn.microsoft.com/library/s3w1w7t4.aspx) ofrece esta funcionalidad, que se representa como un `<table>` HTML con dos columnas y una fila por cada columna o propiedad enlazada al control. Puede considerar DetailsView como GridView con un solo registro girado 90 grados.
 
-Empiece agregando un control DetailsView *anteriormente* GridView en `SimpleDisplay.aspx`. A continuación, enlazarlo al mismo control ObjectDataSource como GridView. Al igual que con el control GridView, BoundField se agregarán a DetailsView para cada propiedad en el objeto devuelto por el ObjectDataSource `Select` método. La única diferencia es que se distribuyen BoundFields de DetailsView horizontalmente en lugar de verticalmente.
+Empiece agregando un control DetailsView *sobre* GridView en `SimpleDisplay.aspx`. A continuación, enlácelo al mismo control ObjectDataSource que GridView. Al igual que con GridView, se agregará una BoundField a DetailsView para cada propiedad del objeto devuelto por el método `Select` de ObjectDataSource. La única diferencia es que los BoundFields de DetailsView se colocan horizontalmente en lugar de vertical.
 
-[![Agregar un DetailsView a la página y enlazarlo a ObjectDataSource](displaying-data-with-the-objectdatasource-vb/_static/image34.png)](displaying-data-with-the-objectdatasource-vb/_static/image33.png)
+[![agregar DetailsView a la página y enlazarlo a ObjectDataSource](displaying-data-with-the-objectdatasource-vb/_static/image34.png)](displaying-data-with-the-objectdatasource-vb/_static/image33.png)
 
-**Figura 13**: Agregar un DetailsView a la página y enlazarlo a ObjectDataSource ([haga clic aquí para ver imagen en tamaño completo](displaying-data-with-the-objectdatasource-vb/_static/image35.png))
+**Figura 13**: agregar un DetailsView a la página y enlazarlo a ObjectDataSource ([haga clic para ver la imagen de tamaño completo](displaying-data-with-the-objectdatasource-vb/_static/image35.png))
 
-Como GridView, BoundFields de DetailsView se puede modificar para ofrecer una visualización más personalizada de los datos devueltos por el origen ObjectDataSource. Figura 14 se muestra después de su BoundFields DetailsView y `CssClass` propiedades se han configurado para que su aspecto similar al ejemplo de GridView.
+Al igual que GridView, el BoundFields de DetailsView se puede ajustar para proporcionar una visualización más personalizada de los datos devueltos por ObjectDataSource. En la figura 14 se muestra DetailsView después de que se han configurado las propiedades BoundFields y `CssClass` para que su apariencia sea similar a la del ejemplo GridView.
 
-[![DetailsView muestra un único registro](displaying-data-with-the-objectdatasource-vb/_static/image37.png)](displaying-data-with-the-objectdatasource-vb/_static/image36.png)
+[![DetailsView muestra un solo registro](displaying-data-with-the-objectdatasource-vb/_static/image37.png)](displaying-data-with-the-objectdatasource-vb/_static/image36.png)
 
-**Figura 14**: DetailsView muestra un único registro ([haga clic aquí para ver imagen en tamaño completo](displaying-data-with-the-objectdatasource-vb/_static/image38.png))
+**Figura 14**: DetailsView muestra un solo registro ([haga clic para ver la imagen de tamaño completo](displaying-data-with-the-objectdatasource-vb/_static/image38.png))
 
-Tenga en cuenta que DetailsView muestra solo el primer registro devuelto por su origen de datos. Para permitir al usuario paso a paso a través de todos los registros, una vez, debemos habilitar la paginación para DetailsView. Para ello, vuelva a Visual Studio y Active la casilla Habilitar paginación en la etiqueta inteligente de DetailsView.
+Tenga en cuenta que DetailsView solo muestra el primer registro devuelto por su origen de datos. Para permitir que el usuario recorra todos los registros, de uno en uno, debemos habilitar la paginación para DetailsView. Para ello, vuelva a Visual Studio y active la casilla habilitar paginación en la etiqueta inteligente de DetailsView.
 
-[![Habilitar la paginación en el Control DetailsView](displaying-data-with-the-objectdatasource-vb/_static/image40.png)](displaying-data-with-the-objectdatasource-vb/_static/image39.png)
+[![habilitar la paginación en el control DetailsView](displaying-data-with-the-objectdatasource-vb/_static/image40.png)](displaying-data-with-the-objectdatasource-vb/_static/image39.png)
 
-**Figura 15**: Habilitar la paginación en el DetailsView Control ([haga clic aquí para ver imagen en tamaño completo](displaying-data-with-the-objectdatasource-vb/_static/image41.png))
+**Figura 15**: habilitar la paginación en el control DetailsView ([haga clic para ver la imagen de tamaño completo](displaying-data-with-the-objectdatasource-vb/_static/image41.png))
 
-[![Con la paginación está habilitada, DetailsView permite al usuario ver cualquiera de los productos](displaying-data-with-the-objectdatasource-vb/_static/image43.png)](displaying-data-with-the-objectdatasource-vb/_static/image42.png)
+[![con la paginación habilitada, DetailsView permite al usuario ver cualquiera de los productos.](displaying-data-with-the-objectdatasource-vb/_static/image43.png)](displaying-data-with-the-objectdatasource-vb/_static/image42.png)
 
-**Figura 16**: Con la paginación está habilitada, DetailsView permite al usuario ver cualquiera de los productos ([haga clic aquí para ver imagen en tamaño completo](displaying-data-with-the-objectdatasource-vb/_static/image44.png))
+**Figura 16**: con la paginación habilitada, DetailsView permite al usuario ver cualquiera de los productos ([haga clic para ver la imagen de tamaño completo](displaying-data-with-the-objectdatasource-vb/_static/image44.png))
 
-Hablaremos más acerca de la paginación en el futuro tutoriales.
+Hablaremos más sobre la paginación en futuros tutoriales.
 
-## <a name="a-more-flexible-layout-for-showing-one-record-at-a-time"></a>Un diseño más Flexible para mostrar un registro a la vez
+## <a name="a-more-flexible-layout-for-showing-one-record-at-a-time"></a>Un diseño más flexible para mostrar un registro cada vez
 
-DetailsView es bastante rígida en cómo se muestra cada registro devuelto desde el origen ObjectDataSource. Es posible que queramos una vista más flexible de los datos. Por ejemplo, en lugar de mostrar el nombre del producto, categoría, proveedor, precio y cada información no incluida en una fila independiente, podemos queremos mostrar el nombre del producto y de precios en un `<h4>` encabezado con la información de categoría y el proveedor que aparecen a continuación el nombre y el precio de un tamaño de fuente. Y nos podremos no importa mostrar los nombres de propiedad (producto, categoría etc.) junto a los valores.
+DetailsView es bastante rígido en cómo muestra cada registro devuelto desde ObjectDataSource. Es posible que desee una vista más flexible de los datos. Por ejemplo, en lugar de mostrar el nombre del producto, la categoría, el proveedor, el precio y la información no incluida en una fila independiente, es posible que desee mostrar el nombre y el precio del producto en un encabezado de `<h4>`, con la categoría y la información del proveedor que aparece por debajo del nombre y el precio en un tamaño de fuente menor. Y es posible que no le interese mostrar los nombres de propiedad (producto, categoría, etc.) junto a los valores.
 
-El [control FormView](https://msdn.microsoft.com/library/fyf1dk77.aspx) proporciona este nivel de personalización. En lugar de usar los campos (como GridView y DetailsView hacen), FormView utiliza plantillas, que permiten una combinación de controles Web, HTML estático, y [sintaxis de enlace de datos](http://www.15seconds.com/issue/040630.htm). Si está familiarizado con el control Repeater desde ASP.NET 1.x, se puede considerar FormView como el control Repeater para mostrar un único registro.
+El [control FormView](https://msdn.microsoft.com/library/fyf1dk77.aspx) proporciona este nivel de personalización. En lugar de usar campos (como GridView y DetailsView), FormView usa plantillas, que permiten una combinación de controles Web, HTML estático y [Sintaxis de enlace](http://www.15seconds.com/issue/040630.htm)de los enlaces. Si está familiarizado con el control Repeater de ASP.NET 1. x, puede pensar en FormView como el repetidor para mostrar un único registro.
 
-Agregar un control FormView para el `SimpleDisplay.aspx` superficie de diseño de la página. FormView muestra inicialmente como un bloque de color gris, que nos informa que necesitamos proporcionar, como mínimo, el control `ItemTemplate`.
+Agregue un control FormView a la superficie de diseño de la página `SimpleDisplay.aspx`. Inicialmente, FormView se muestra como un bloque gris que le informa de que necesitamos proporcionar, como mínimo, el `ItemTemplate`del control.
 
-[![FormView debe incluir una plantilla ItemTemplate](displaying-data-with-the-objectdatasource-vb/_static/image46.png)](displaying-data-with-the-objectdatasource-vb/_static/image45.png)
+[![FormView debe incluir ItemTemplate](displaying-data-with-the-objectdatasource-vb/_static/image46.png)](displaying-data-with-the-objectdatasource-vb/_static/image45.png)
 
-**Figura 17**: FormView debe incluir un `ItemTemplate` ([haga clic aquí para ver imagen en tamaño completo](displaying-data-with-the-objectdatasource-vb/_static/image47.png))
+**Figura 17**: el FormView debe incluir un `ItemTemplate` ([haga clic para ver la imagen de tamaño completo](displaying-data-with-the-objectdatasource-vb/_static/image47.png))
 
-Puede enlazar directamente a un control de origen de datos a través de la etiqueta inteligente de FormView, lo que creará una predeterminada FormView `ItemTemplate` automáticamente (junto con un `EditItemTemplate` y `InsertItemTemplate`, si el control ObjectDataSource `InsertMethod` y `UpdateMethod` se establecen las propiedades). Sin embargo, en este ejemplo vamos a enlazar los datos a FormView y especificar su `ItemTemplate` manualmente. Comenzar por la configuración de FormView `DataSourceID` propiedad a la `ID` del control ObjectDataSource, `ObjectDataSource1`. A continuación, cree el `ItemTemplate` para que se muestre el nombre del producto y el precio en un `<h4>` elemento y los nombres de categoría y el remitente por debajo de ese con un tamaño de fuente.
+Puede enlazar el FormView directamente a un control de origen de datos a través de la etiqueta inteligente de FormView, que creará una `ItemTemplate` predeterminada automáticamente (junto con una `EditItemTemplate` y `InsertItemTemplate`, si se establecen las propiedades `InsertMethod` y `UpdateMethod` del control ObjectDataSource). Sin embargo, para este ejemplo, vamos a enlazar los datos a FormView y especificar su `ItemTemplate` manualmente. Para empezar, establezca la propiedad `DataSourceID` de FormView en el `ID` del control ObjectDataSource `ObjectDataSource1`. A continuación, cree el `ItemTemplate` para que muestre el nombre y el precio del producto en un elemento `<h4>` y los nombres de categoría y de remitente debajo de este en un tamaño de fuente menor.
 
 [!code-aspx[Main](displaying-data-with-the-objectdatasource-vb/samples/sample6.aspx)]
 
-[![El primer producto (Chai) se muestra en un formato personalizado](displaying-data-with-the-objectdatasource-vb/_static/image49.png)](displaying-data-with-the-objectdatasource-vb/_static/image48.png)
+[![el primer producto (Chai) se muestra en un formato personalizado](displaying-data-with-the-objectdatasource-vb/_static/image49.png)](displaying-data-with-the-objectdatasource-vb/_static/image48.png)
 
-**Figura 18**: El primer producto (Chai) se muestra en un formato personalizado ([haga clic aquí para ver imagen en tamaño completo](displaying-data-with-the-objectdatasource-vb/_static/image50.png))
+**Figura 18**: el primer producto (Chai) se muestra en un formato personalizado ([haga clic para ver la imagen de tamaño completo](displaying-data-with-the-objectdatasource-vb/_static/image50.png))
 
-El `<%# Eval(propertyName) %>` es la sintaxis de enlace de datos. El `Eval` método devuelve el valor de la propiedad especificada para el objeto actual que se enlaza al control FormView. Consulte el artículo de Alex Homer [simplificado y extendidos sintaxis enlace de datos en ASP.NET 2.0](http://www.15seconds.com/issue/040630.htm) para obtener más información sobre las ventajas y desventajas del enlace de datos.
+La `<%# Eval(propertyName) %>` es la sintaxis de DataBinding. El método `Eval` devuelve el valor de la propiedad especificada para el objeto actual que se está enlazando al control FormView. Consulte la sintaxis de enlace de [datos simplificado y extendido](http://www.15seconds.com/issue/040630.htm) del artículo de Alex homero en ASP.net 2,0 para obtener más información sobre los pros y los contras de los enlaces de datos.
 
-Como DetailsView, FormView muestra solo el primer registro devuelto desde el origen ObjectDataSource. Puede habilitar la paginación en FormView para permitir que los visitantes de paso a través de los productos de uno a la vez.
+Como DetailsView, FormView solo muestra el primer registro devuelto desde ObjectDataSource. Puede habilitar la paginación en FormView para permitir que los visitantes desplazan los productos de uno en uno.
 
 ## <a name="summary"></a>Resumen
 
-Acceso y la visualización de datos de una capa de lógica empresarial pueden realizarse sin escribir una línea de código gracias al control ObjectDataSource de ASP.NET 2.0. ObjectDataSource invoca un método especificado de una clase y devuelve los resultados. Estos resultados se pueden mostrar en un control Web que está enlazado a ObjectDataSource de datos. En este tutorial analizamos enlazar los controles GridView, DetailsView y FormView a ObjectDataSource.
+El acceso y la visualización de los datos de una capa de lógica de negocios se pueden realizar sin escribir una línea de código gracias al control ObjectDataSource de ASP.NET 2.0. ObjectDataSource invoca un método especificado de una clase y devuelve los resultados. Estos resultados se pueden mostrar en un control Web de datos enlazado a ObjectDataSource. En este tutorial, hemos examinado el enlace de los controles GridView, DetailsView y FormView a ObjectDataSource.
 
-Hasta ahora solo hemos visto cómo usar ObjectDataSource para invocar un método sin parámetros, pero ¿qué pasa si queremos invocar un método que espera parámetros de entrada, como el `ProductBLL` la clase `GetProductsByCategoryID(categoryID)`? Para poder llamar a un método que espera uno o más parámetros nos debemos configurar ObjectDataSource para especificar los valores para estos parámetros. Veremos cómo hacerlo en nuestro [siguiente tutorial](declarative-parameters-vb.md).
+Hasta ahora solo hemos visto cómo usar ObjectDataSource para invocar un método sin parámetros, pero ¿qué ocurre si se desea invocar un método que espera parámetros de entrada, como el `GetProductsByCategoryID(categoryID)`de la clase `ProductBLL`? Para llamar a un método que espera uno o más parámetros, se debe configurar ObjectDataSource para especificar los valores de estos parámetros. Veremos cómo hacerlo en el [siguiente tutorial](declarative-parameters-vb.md).
 
-Feliz programación.
+¡ Feliz programación!
 
 ## <a name="further-reading"></a>Información adicional
 
-Para obtener más información sobre los temas tratados en este tutorial, consulte los siguientes recursos:
+Para obtener más información sobre los temas descritos en este tutorial, consulte los siguientes recursos:
 
 - [Crear sus propios controles de origen de datos](https://msdn.microsoft.com/library/ms364049.aspx)
-- [Ejemplos de GridView de ASP.NET 2.0](https://msdn.microsoft.com/library/aa479339.aspx)
-- [Simplificado y ampliado en ASP.NET 2.0 sintaxis de enlace de datos](http://www.15seconds.com/issue/040630.htm)
-- [Temas en ASP.NET 2.0](http://www.odetocode.com/Articles/423.aspx)
-- [Estilos de lado servidor mediante los temas](https://quickstarts.asp.net/quickstartv20/aspnet/doc/themes/stylesheettheme.aspx)
-- [Cómo: Aplicar temas de ASP.NET mediante programación](https://msdn.microsoft.com/library/tx35bd89.aspx)
+- [Ejemplos de GridView para ASP.NET 2,0](https://msdn.microsoft.com/library/aa479339.aspx)
+- [Sintaxis de enlace de datos simplificada y extendida en ASP.NET 2,0](http://www.15seconds.com/issue/040630.htm)
+- [Temas en ASP.NET 2,0](http://www.odetocode.com/Articles/423.aspx)
+- [Estilos en el lado servidor mediante temas](https://quickstarts.asp.net/quickstartv20/aspnet/doc/themes/stylesheettheme.aspx)
+- [Cómo: aplicar temas de ASP.NET mediante programación](https://msdn.microsoft.com/library/tx35bd89.aspx)
 
 ## <a name="about-the-author"></a>Acerca del autor
 
-[Scott Mitchell](http://www.4guysfromrolla.com/ScottMitchell.shtml), autor de siete libros sobre ASP/ASP.NET y fundador de [4GuysFromRolla.com](http://www.4guysfromrolla.com), trabaja con tecnologías Web de Microsoft desde 1998. Scott trabaja como consultor independiente, instructor y escritor. Su último libro es [*SAM enseñar a usted mismo ASP.NET 2.0 en 24 horas*](https://www.amazon.com/exec/obidos/ASIN/0672327384/4guysfromrollaco). Puede ponerse en [ mitchell@4GuysFromRolla.com.](mailto:mitchell@4GuysFromRolla.com) o a través de su blog, que puede encontrarse en [ http://ScottOnWriting.NET ](http://ScottOnWriting.NET).
+[Scott Mitchell](http://www.4guysfromrolla.com/ScottMitchell.shtml), autor de siete libros de ASP/ASP. net y fundador de [4GuysFromRolla.com](http://www.4guysfromrolla.com), ha estado trabajando con las tecnologías Web de Microsoft desde 1998. Scott funciona como consultor, profesor y redactor independiente. Su último libro se [*enseña a ASP.NET 2,0 en 24 horas*](https://www.amazon.com/exec/obidos/ASIN/0672327384/4guysfromrollaco). Puede ponerse en contacto con usted en [mitchell@4GuysFromRolla.com.](mailto:mitchell@4GuysFromRolla.com) o a través de su blog, que encontrará en [http://ScottOnWriting.NET](http://ScottOnWriting.NET).
 
-## <a name="special-thanks-to"></a>Agradecimientos especiales a
+## <a name="special-thanks-to"></a>Agradecimiento especial a
 
-Esta serie de tutoriales ha sido revisada por muchos revisores útiles. Revisor de clientes potencial para este tutorial era Hilton Giesenow. ¿Está interesado en leer mi próximos artículos de MSDN? Si es así, envíeme una línea en [ mitchell@4GuysFromRolla.com.](mailto:mitchell@4GuysFromRolla.com)
+Muchos revisores útiles revisaron esta serie de tutoriales. El revisor responsable de este tutorial fue Hilton Giesenow. ¿Está interesado en revisar los próximos artículos de MSDN? En caso afirmativo, suéltelo en [mitchell@4GuysFromRolla.com.](mailto:mitchell@4GuysFromRolla.com)
 
 > [!div class="step-by-step"]
 > [Anterior](programmatically-setting-the-objectdatasource-s-parameter-values-cs.md)

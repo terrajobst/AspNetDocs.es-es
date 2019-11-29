@@ -1,39 +1,39 @@
 ---
 uid: web-forms/overview/ajax-control-toolkit/collapsiblepanel/collapsing-and-expanding-a-panel-from-javascript-vb
-title: Contraer y expandir un Panel desde JavaScript (VB) | Microsoft Docs
+title: Contraer y expandir un panel desde JavaScript (VB) | Microsoft Docs
 author: wenz
-description: El control CollapsiblePanel en ASP.NET AJAX Control Toolkit extiende un panel y le proporciona la capacidad de su contenido de contraer y expandir esta un...
+description: El control CollapsiblePanel de ASP.NET AJAX control Toolkit amplía un panel y le proporciona la capacidad de contraer su contenido y expandirlo...
 ms.author: riande
 ms.date: 06/02/2008
 ms.assetid: 298789b4-2964-49f5-a0a8-d4dbeb9ff2c2
 msc.legacyurl: /web-forms/overview/ajax-control-toolkit/collapsiblepanel/collapsing-and-expanding-a-panel-from-javascript-vb
 msc.type: authoredcontent
-ms.openlocfilehash: f9e279e8700024f28cf589581f09a4bbd95118de
-ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
+ms.openlocfilehash: aa9779c65fb587193dbabde55cc6900283ce239d
+ms.sourcegitcommit: 22fbd8863672c4ad6693b8388ad5c8e753fb41a2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/06/2019
-ms.locfileid: "65133546"
+ms.lasthandoff: 11/28/2019
+ms.locfileid: "74599351"
 ---
 # <a name="collapsing-and-expanding-a-panel-from-javascript-vb"></a>Contraer y expandir un panel desde JavaScript (VB)
 
 por [Christian Wenz](https://github.com/wenz)
 
-[Descargar código](http://download.microsoft.com/download/8/a/a/8aab3c3e-de6f-463f-805c-5fda567eef6e/CollapsiblePanel1.vb.zip) o [descargar PDF](http://download.microsoft.com/download/b/6/a/b6ae89ee-df69-4c87-9bfb-ad1eb2b23373/collapsiblepanel1VB.pdf)
+[Descargar código](https://download.microsoft.com/download/8/a/a/8aab3c3e-de6f-463f-805c-5fda567eef6e/CollapsiblePanel1.vb.zip) o [Descargar PDF](https://download.microsoft.com/download/b/6/a/b6ae89ee-df69-4c87-9bfb-ad1eb2b23373/collapsiblepanel1VB.pdf)
 
-> El control CollapsiblePanel en ASP.NET AJAX Control Toolkit extiende un panel y lo proporciona la capacidad necesaria para contraer su contenido y volver a ampliar. Estas dos acciones también pueden activarse desde código JavaScript personalizado.
+> El control CollapsiblePanel en el kit de herramientas de control de AJAX de ASP.NET amplía un panel y le proporciona la capacidad de contraer su contenido y expandirlo de nuevo. Estas dos acciones también se pueden desencadenar desde el código JavaScript personalizado.
 
-## <a name="overview"></a>Información general
+## <a name="overview"></a>Información general del
 
-El control CollapsiblePanel en ASP.NET AJAX Control Toolkit extiende un panel y lo proporciona la capacidad necesaria para contraer su contenido y volver a ampliar. Estas dos acciones también pueden activarse desde código JavaScript personalizado.
+El control CollapsiblePanel en el kit de herramientas de control de AJAX de ASP.NET amplía un panel y le proporciona la capacidad de contraer su contenido y expandirlo de nuevo. Estas dos acciones también se pueden desencadenar desde el código JavaScript personalizado.
 
 ## <a name="steps"></a>Pasos
 
-En primer lugar, cree una nueva página ASP.NET e incluya el `ScriptManager` dentro de la `<form>` elemento. Esto carga la biblioteca de AJAX de ASP.NET que se requiere el Kit de herramientas de Control:
+En primer lugar, cree una nueva página de ASP.NET e incluya el `ScriptManager` en el elemento `<form>`. Esto carga la biblioteca de ASP.NET AJAX necesaria para el control Toolkit:
 
 [!code-aspx[Main](collapsing-and-expanding-a-panel-from-javascript-vb/samples/sample1.aspx)]
 
-A continuación, cree un panel con algún texto para que se puede ver el efecto de expandir y contraer:
+A continuación, cree un panel con texto para que se pueda visualizar el efecto de contraer o expandir:
 
 [!code-aspx[Main](collapsing-and-expanding-a-panel-from-javascript-vb/samples/sample2.aspx)]
 
@@ -41,31 +41,31 @@ Como puede ver, el panel hace referencia a una clase CSS que se muestra aquí (y
 
 [!code-css[Main](collapsing-and-expanding-a-panel-from-javascript-vb/samples/sample3.css)]
 
-El `CollapsiblePanelExtender` control requiere el `TargetControlID` atributo para que el Kit de herramientas sepa qué panel para contraer o expandir a petición:
+El control `CollapsiblePanelExtender` requiere el atributo `TargetControlID` para que el kit de herramientas sepa qué panel se va a contraer o expandir según lo solicitado:
 
 [!code-aspx[Main](collapsing-and-expanding-a-panel-from-javascript-vb/samples/sample4.aspx)]
 
-Lamentablemente, el extensor actualmente no expone una API específica para contraer o expandir el panel, pero basta con algunos métodos sin documentar. En primer lugar, agregue tres botones HTML a la página que, a continuación, se desencadenará el JavaScript del lado cliente para contraer o expandir el contenido del panel:
+Desafortunadamente, el extensor no expone actualmente una API específica para contraer o expandir el panel, pero sí algunos métodos no documentados. En primer lugar, agregue tres botones HTML a la página que desencadenarán el JavaScript del lado cliente para contraer o expandir el contenido del panel:
 
 [!code-aspx[Main](collapsing-and-expanding-a-panel-from-javascript-vb/samples/sample5.aspx)]
 
-En el código de JavaScript del lado cliente (Introducción a `<script type="text/javascript">`), el `$find()` método debe utilizarse para tener acceso a la `CollapsiblePanelExtender`. `$find("cpe")` devolverá una referencia a él. Desde aquí, los métodos específicos resolverá la tarea en cuestión.
+En el código de JavaScript del lado cliente (iniciado con `<script type="text/javascript">`), debe usarse el método `$find()` para tener acceso al `CollapsiblePanelExtender`. `$find("cpe")` devolverá una referencia a él. Desde allí, los métodos específicos resolverán la tarea a mano.
 
-El método de apertura (expandir) se denomina el panel `_doOpen()`; el código siguiente implementa el `doOpen()` función se llama cuando se hace clic en el primer botón:
+El método para abrir (expandir) el panel se denomina `_doOpen()`; el código siguiente implementa la función de `doOpen()` llamada cuando se hace clic en el primer botón:
 
 [!code-javascript[Main](collapsing-and-expanding-a-panel-from-javascript-vb/samples/sample6.js)]
 
-Para cerrar o contraer el panel, el `_doClose()` método se debe ejecutar. Así que cuando el usuario hace clic en el segundo botón, se llama el código JavaScript siguiente:
+Para cerrar o contraer el panel, es necesario ejecutar el método `_doClose()`. Por tanto, cuando el usuario hace clic en el segundo botón, se llama al siguiente código JavaScript:
 
 [!code-javascript[Main](collapsing-and-expanding-a-panel-from-javascript-vb/samples/sample7.js)]
 
-El tercer botón alterna el estado del panel: desde contraída en ampliado y viceversa. El `CollapsiblePanelExtender` expone el `toggle()` método que hace exactamente eso: invierte el estado del panel. Sin embargo hay también otro método (que se utiliza internamente el `toggle()` método): El `get_Collapsed()` método de la `CollapsiblePanelExtender()` nos indica si el panel se contrae o no. Dependiendo del valor devuelto de esta función, el panel es, a continuación, ya sea expandido (`_doOpen()` método) o se contrae (`_doClose()`) método:
+El tercer botón alterna el estado del panel: de contraído a expandido y viceversa. El `CollapsiblePanelExtender` expone el método de `toggle()` que hace exactamente esto: invierte el estado del panel. Sin embargo, también hay otro enfoque (que usa internamente el método `toggle()`): el método `get_Collapsed()` de la `CollapsiblePanelExtender()` nos indica si el panel está contraído o no. En función del valor devuelto de esta función, el panel se expande (método`_doOpen()`) o contraído (`_doClose()`):
 
 [!code-javascript[Main](collapsing-and-expanding-a-panel-from-javascript-vb/samples/sample8.js)]
 
-[![El tercer botón cambia el estado del panel: desde contraído expandida y back-](collapsing-and-expanding-a-panel-from-javascript-vb/_static/image2.png)](collapsing-and-expanding-a-panel-from-javascript-vb/_static/image1.png)
+[![el tercer botón cambia el estado del panel: de contraído a expandido y atrás](collapsing-and-expanding-a-panel-from-javascript-vb/_static/image2.png)](collapsing-and-expanding-a-panel-from-javascript-vb/_static/image1.png)
 
-El tercer botón cambia el estado del panel: desde contraído expandida y back-([haga clic aquí para ver imagen en tamaño completo](collapsing-and-expanding-a-panel-from-javascript-vb/_static/image3.png))
+El tercer botón cambia el estado del panel: de contraído a expandido y hacia atrás ([haga clic para ver la imagen de tamaño completo](collapsing-and-expanding-a-panel-from-javascript-vb/_static/image3.png))
 
 > [!div class="step-by-step"]
 > [Anterior](collapsing-and-expanding-a-panel-from-javascript-cs.md)

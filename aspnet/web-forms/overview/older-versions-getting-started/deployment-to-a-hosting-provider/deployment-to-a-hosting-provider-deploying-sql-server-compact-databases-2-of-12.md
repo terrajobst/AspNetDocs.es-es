@@ -1,242 +1,242 @@
 ---
 uid: web-forms/overview/older-versions-getting-started/deployment-to-a-hosting-provider/deployment-to-a-hosting-provider-deploying-sql-server-compact-databases-2-of-12
-title: 'Implementar una aplicación Web de ASP.NET con SQL Server Compact con Visual Studio o Visual Web Developer: Implementación de SQL Server Compact las bases de datos - 2 de 12 | Microsoft Docs'
+title: 'Implementación de una aplicación Web de ASP.NET con SQL Server Compact con Visual Studio o Visual Web Developer: implementación de bases de datos SQL Server Compacts: 2 de 12 | Microsoft Docs'
 author: tdykstra
-description: Esta serie de tutoriales muestra cómo implementar un ASP.NET (publicar) proyecto de aplicación web que incluya una base de datos de SQL Server Compact mediante Visual Stu...
+description: En esta serie de tutoriales se muestra cómo implementar (publicar) un proyecto de aplicación Web de ASP.NET que incluye una base de datos de SQL Server Compact mediante Visual Stu...
 ms.author: riande
 ms.date: 11/17/2011
 ms.assetid: c3c76516-4c48-4153-bd03-d70e3a3edbb0
 msc.legacyurl: /web-forms/overview/older-versions-getting-started/deployment-to-a-hosting-provider/deployment-to-a-hosting-provider-deploying-sql-server-compact-databases-2-of-12
 msc.type: authoredcontent
-ms.openlocfilehash: b265d210ff3b1eeb8697a973cc245f6c97b3eb07
-ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
+ms.openlocfilehash: 56ceabc79947967846d342354fd033510be5f05a
+ms.sourcegitcommit: 22fbd8863672c4ad6693b8388ad5c8e753fb41a2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/06/2019
-ms.locfileid: "65134175"
+ms.lasthandoff: 11/28/2019
+ms.locfileid: "74625545"
 ---
-# <a name="deploying-an-aspnet-web-application-with-sql-server-compact-using-visual-studio-or-visual-web-developer-deploying-sql-server-compact-databases---2-of-12"></a>Implementar una aplicación Web de ASP.NET con SQL Server Compact con Visual Studio o Visual Web Developer: Implementación de SQL Server Compact las bases de datos - 2 de 12
+# <a name="deploying-an-aspnet-web-application-with-sql-server-compact-using-visual-studio-or-visual-web-developer-deploying-sql-server-compact-databases---2-of-12"></a>Implementación de una aplicación Web de ASP.NET con SQL Server Compact con Visual Studio o Visual Web Developer: implementación de bases de datos SQL Server Compacts: 2 de 12
 
 por [Tom Dykstra](https://github.com/tdykstra)
 
-[Descargar el proyecto de inicio](http://code.msdn.microsoft.com/Deploying-an-ASPNET-Web-4e31366b)
+[Descargar el proyecto de inicio](https://code.msdn.microsoft.com/Deploying-an-ASPNET-Web-4e31366b)
 
-> Esta serie de tutoriales muestra cómo implementar un ASP.NET (publicar) proyecto de aplicación web que incluye una base de datos de SQL Server Compact mediante Visual Studio 2012 RC o Visual Studio Express 2012 RC para Web. También puede usar Visual Studio 2010 si instala la actualización de publicación en Web. Para obtener una introducción a la serie, consulte [el primer tutorial de la serie](deployment-to-a-hosting-provider-introduction-1-of-12.md).
+> En esta serie de tutoriales se muestra cómo implementar (publicar) un proyecto de aplicación Web ASP.NET que incluye una base de datos SQL Server Compact mediante Visual Studio 2012 RC o Visual Studio Express 2012 RC para Web. También puede usar Visual Studio 2010 si instala la actualización de publicación Web. Para obtener una introducción a la serie, vea [el primer tutorial de la serie](deployment-to-a-hosting-provider-introduction-1-of-12.md).
 > 
-> Para ver un tutorial que muestra las características de implementación introducidas después de la versión de Visual Studio 2012 RC, se muestra cómo implementar las ediciones de SQL Server que no sea de SQL Server Compact y se muestra cómo se implementa en Azure App Service Web Apps, consulte [implementación Web de ASP.NET con Visual Studio](../../deployment/visual-studio-web-deployment/introduction.md).
+> Para ver un tutorial que muestra las características de implementación que se introdujeron después de la versión RC de Visual Studio 2012, muestra cómo implementar SQL Server ediciones distintas de SQL Server Compact y muestra cómo realizar la implementación en Azure App Service Web Apps, vea [implementación web de ASP.net con Visual Studio](../../deployment/visual-studio-web-deployment/introduction.md).
 
-## <a name="overview"></a>Información general
+## <a name="overview"></a>Información general del
 
-Este tutorial muestra cómo configurar dos bases de datos de SQL Server Compact y el motor de base de datos para la implementación.
+En este tutorial se muestra cómo configurar dos bases de datos de SQL Server Compact y el motor de base de datos para la implementación.
 
-Obtener acceso a la base de datos, la aplicación Contoso University requiere el siguiente software debe implementarse con la aplicación porque no está incluido en .NET Framework:
+Para el acceso a bases de datos, la aplicación contoso University requiere el software siguiente que se debe implementar con la aplicación porque no se incluye en el .NET Framework:
 
-- [SQL Server Compact](https://www.microsoft.com/sqlserver/en/us/editions/compact.aspx) (motor de base de datos).
-- [ASP.NET Universal Providers](http://www.hanselman.com/blog/IntroducingSystemWebProvidersASPNETUniversalProvidersForSessionMembershipRolesAndUserProfileOnSQLCompactAndSQLAzure.aspx) (que permiten el sistema de pertenencia ASP.NET usar SQL Server Compact)
-- [Entity Framework 5.0](https://msdn.microsoft.com/library/gg696172(d=lightweight,v=vs.103).aspx)(Code First con las migraciones).
+- [SQL Server Compact](https://www.microsoft.com/sqlserver/en/us/editions/compact.aspx) (el motor de base de datos).
+- [Proveedores universales de ASP.net](http://www.hanselman.com/blog/IntroducingSystemWebProvidersASPNETUniversalProvidersForSessionMembershipRolesAndUserProfileOnSQLCompactAndSQLAzure.aspx) (que permiten que el sistema de pertenencia de ASP.NET use SQL Server Compact)
+- [Entity Framework 5,0](https://msdn.microsoft.com/library/gg696172(d=lightweight,v=vs.103).aspx)(Code First con migraciones).
 
-La estructura de base de datos y algunos (no todos) de los datos en dos de la aplicación también se deben implementar las bases de datos. Normalmente, al desarrollar una aplicación, escriba datos de prueba en una base de datos que no desea implementar en un sitio activo. Sin embargo, también puede escribir algunos datos de producción que desea implementar. En este tutorial configurará el proyecto de Contoso University para que se incluyen el software necesario y los datos correctos cuando se implementa.
+También se deben implementar la estructura de la base de datos y algunos (no todos) de los datos en las dos bases de datos de la aplicación. Normalmente, cuando se desarrolla una aplicación, los datos de prueba se escriben en una base de datos que no se desea implementar en un sitio activo. Sin embargo, también puede especificar algunos datos de producción que desee implementar. En este tutorial configurará el proyecto contoso University para que el software necesario y los datos correctos se incluyan al realizar la implementación.
 
-Aviso: Si recibe un mensaje de error o algo no funciona conforme avance en el tutorial, no olvide consultar la [página de solución](deployment-to-a-hosting-provider-creating-and-installing-deployment-packages-12-of-12.md).
+Aviso: Si recibe un mensaje de error o algo no funciona a medida que avanza en el tutorial, asegúrese de consultar la [Página de solución de problemas](deployment-to-a-hosting-provider-creating-and-installing-deployment-packages-12-of-12.md).
 
 ## <a name="sql-server-compact-versus-sql-server-express"></a>SQL Server Compact frente a SQL Server Express
 
-La aplicación de ejemplo usa SQL Server Compact 4.0. Este motor de base de datos es una opción relativamente nueva para los sitios Web; las versiones anteriores de SQL Server Compact no funcionan en un entorno de hospedaje web. SQL Server Compact ofrece algunas ventajas en comparación con el escenario más común de desarrollo con SQL Server Express y la implementación completa de SQL Server. Según el proveedor de hospedaje que elija, SQL Server Compact podría ser más económico implementar, ya que algunos proveedores cobran adicional para admitir una base de datos completa de SQL Server. No hay ningún cargo adicional para SQL Server Compact dado que puede implementar el propio motor de base de datos como parte de la aplicación web.
+La aplicación de ejemplo utiliza SQL Server Compact 4,0. Este motor de base de datos es una opción relativamente nueva para sitios web; las versiones anteriores de SQL Server Compact no funcionan en un entorno de hospedaje Web. SQL Server Compact ofrece algunas ventajas en comparación con el escenario más común de desarrollo con SQL Server Express e implementación en SQL Server completo. En función del proveedor de hospedaje que elija, SQL Server Compact podría ser más barato de implementar, porque algunos proveedores cobran extra para admitir una base de datos de SQL Server completa. No hay ningún cargo adicional por SQL Server Compact porque puede implementar el propio motor de base de datos como parte de la aplicación Web.
 
-Sin embargo, también debe tener en cuenta sus limitaciones. SQL Server Compact no admite procedimientos almacenados, desencadenadores, vistas o replicación. (Para obtener una lista completa de características de SQL Server que no son compatibles con SQL Server Compact, vea [diferencias entre SQL Server Compact y SQL Server](https://msdn.microsoft.com/library/bb896140.aspx).) Además, algunas de las herramientas que puede usar para manipular los esquemas y datos de SQL Server Express y las bases de datos de SQL Server no funcionan con SQL Server Compact. Por ejemplo, no se puede utilizar SQL Server Management Studio o SQL Server Data Tools en Visual Studio con las bases de datos de SQL Server Compact. Tiene otras opciones para trabajar con bases de datos de SQL Server Compact:
+Sin embargo, también debe tener en cuenta sus limitaciones. SQL Server Compact no admite procedimientos almacenados, desencadenadores, vistas o replicación. (Para obtener una lista completa de las características SQL Server que no son compatibles con SQL Server Compact, vea [diferencias entre SQL Server Compact y SQL Server](https://msdn.microsoft.com/library/bb896140.aspx)). Además, algunas de las herramientas que puede usar para manipular esquemas y datos en SQL Server Express y en las bases de datos de SQL Server no funcionan con SQL Server Compact. Por ejemplo, no puede usar SQL Server Management Studio o SQL Server Data Tools en Visual Studio con bases de datos de SQL Server Compact. Tiene otras opciones para trabajar con bases de datos de SQL Server Compact:
 
-- Puede usar el Explorador de servidores en Visual Studio, que ofrece una funcionalidad manipulación limitada de la base de datos de SQL Server Compact.
-- Puede usar la característica de manipulación de la base de datos de [WebMatrix](https://www.microsoft.com/web/webmatrix/), que tiene más características que el Explorador de servidores.
-- Puede usar terceros relativamente completa o abrir herramientas de código fuente, como el [SQL Server Compact Toolbox](https://github.com/ErikEJ/SqlCeToolbox) y [utilidad de script de esquema y datos de SQL Compact](https://github.com/ErikEJ/SqlCeToolbox).
-- Puede escribir y ejecutar sus propias secuencias de comandos DDL (lenguaje de definición de datos) para manipular el esquema de base de datos.
+- Puede usar Explorador de servidores en Visual Studio, que ofrece una funcionalidad limitada de manipulación de bases de datos para SQL Server Compact.
+- Puede usar la característica de manipulación de bases de datos de [WebMatrix](https://www.microsoft.com/web/webmatrix/), que tiene más características que explorador de servidores.
+- Puede usar herramientas de código abierto o de terceros con una gran cantidad de características, como el [cuadro de herramientas de SQL Server Compact](https://github.com/ErikEJ/SqlCeToolbox) y la [utilidad de script de esquema y datos de SQL Compact](https://github.com/ErikEJ/SqlCeToolbox).
+- Puede escribir y ejecutar sus propios scripts DDL (lenguaje de definición de datos) para manipular el esquema de la base de datos.
 
-Puede empezar con SQL Server Compact y, a continuación, actualizar más adelante a medida que evolucionan las necesidades. Otros tutoriales de esta serie muestran cómo migrar de SQL Server Compact a SQL Server Express y SQL Server. Sin embargo, si está creando una nueva aplicación y esperar a que se necesita SQL Server en un futuro próximo, es mejor empezar con SQL Server o SQL Server Express.
+Puede empezar por SQL Server Compact y, a continuación, actualizarse más tarde a medida que evolucionen sus necesidades. En los tutoriales posteriores de esta serie se muestra cómo migrar de SQL Server Compact a SQL Server Express y SQL Server. Sin embargo, si va a crear una nueva aplicación y espera necesitar SQL Server en un futuro próximo, probablemente sea mejor empezar con SQL Server o SQL Server Express.
 
-## <a name="configuring-the-sql-server-compact-database-engine-for-deployment"></a>Configurar el motor de base de datos compacta de SQL Server para la implementación
+## <a name="configuring-the-sql-server-compact-database-engine-for-deployment"></a>Configuración del Motor de base de datos de SQL Server Compact para la implementación
 
-El software necesario para el acceso a datos en la aplicación Contoso University se agregó mediante la instalación de los siguientes paquetes NuGet:
+El software necesario para el acceso a los datos en la aplicación contoso University se ha agregado mediante la instalación de los siguientes paquetes NuGet:
 
-- [SqlServerCompact](http://nuget.org/List/Packages/SqlServerCompact)
-- [System.Web.Providers](http://nuget.org/List/Packages/System.Web.Providers) (proveedores universales de ASP.NET)
+- [Sqlservercom](http://nuget.org/List/Packages/SqlServerCompact)
+- [System. Web. Providers](http://nuget.org/List/Packages/System.Web.Providers) (proveedores universales de ASP.net)
 - [EntityFramework](http://nuget.org/List/Packages/EntityFramework)
-- [EntityFramework.SqlServerCompact](http://nuget.org/List/Packages/EntityFramework.sqlservercompact)
+- [EntityFramework. Sqlservercom](http://nuget.org/List/Packages/EntityFramework.sqlservercompact)
 
-Los vínculos apuntan a las versiones actuales de estos paquetes, que podrían ser más recientes que está instalado en el proyecto de inicio que descargó para este tutorial. Para la implementación de un proveedor de hospedaje, asegúrese de que use Entity Framework 5.0 o posterior. Las versiones anteriores de migraciones de Code First requieren plena confianza y, en muchos proveedores de hospedaje se ejecutará la aplicación en Medium Trust. Para obtener más información sobre el nivel de confianza medio, consulte el [implementar en IIS como un entorno de prueba](deployment-to-a-hosting-provider-deploying-to-iis-as-a-test-environment-5-of-12.md) tutorial.
+Los vínculos apuntan a las versiones actuales de estos paquetes, que pueden ser más recientes que las instaladas en el proyecto de inicio que descargó para este tutorial. Para la implementación en un proveedor de hospedaje, asegúrese de que usa Entity Framework 5,0 o posterior. Las versiones anteriores de Migraciones de Code First requieren plena confianza y, en muchos proveedores de hospedaje, la aplicación se ejecutará en un nivel de confianza medio. Para obtener más información sobre la confianza media, vea el tutorial [implementar en IIS como entorno de prueba](deployment-to-a-hosting-provider-deploying-to-iis-as-a-test-environment-5-of-12.md) .
 
-Instalación del paquete NuGet generalmente se encarga de todo lo que necesita para implementar este software con la aplicación. En algunos casos, esto implica tareas como cambiar el archivo Web.config y agregar scripts de PowerShell que se ejecutan cada vez que compile la solución. **Si desea agregar compatibilidad para cualquiera de estas características (por ejemplo, SQL Server Compact y Entity Framework) sin usar NuGet, asegúrese de que sabe lo que hace instalación del paquete NuGet para que pueda realizar el mismo trabajo manualmente.**
+En general, la instalación de paquetes NuGet se encarga de todo lo que necesita para implementar este software con la aplicación. En algunos casos, esto implica tareas como cambiar el archivo Web. config y agregar scripts de PowerShell que se ejecutan cada vez que se compila la solución. **Si desea agregar compatibilidad con cualquiera de estas características (como SQL Server Compact y Entity Framework) sin usar NuGet, asegúrese de que sabe lo que hace la instalación del paquete de NuGet para que pueda hacer el mismo trabajo manualmente.**
 
-Hay una excepción donde NuGet no tener cuidado de todo lo que debe hacer para garantizar una implementación correcta. El paquete SqlServerCompact NuGet agrega un script posterior a la compilación al proyecto que copie los ensamblados nativos a *x86* y *amd64* subcarpetas bajo el proyecto *bin* carpeta, pero el script no incluye esas carpetas en el proyecto. Como resultado, Web Deploy no copiará ellos al sitio web de destino a menos que incluya manualmente en el proyecto. (Este comportamiento es consecuencia de la configuración de implementación predeterminado; otra opción, que no se usarán en estos tutoriales, consiste en cambiar la configuración que controla este comportamiento. La configuración que se puede cambiar es **sólo los archivos necesarios para ejecutar la aplicación** en **elementos para implementar** en el **Empaquetar/Publicar Web** pestaña de la **proyecto Propiedades** ventana. Si cambia esta configuración no se recomienda porque puede producir la implementación de muchos archivos más al entorno de producción que se necesitan allí. Para obtener más información acerca de las alternativas, consulte el [configurar las propiedades del proyecto](deployment-to-a-hosting-provider-configuring-project-properties-4-of-12.md) tutorial.)
+Existe una excepción en la que NuGet no se ocupa de todo lo que hay que hacer para garantizar una implementación correcta. El paquete NuGet Sqlservercom agrega un script posterior a la compilación al proyecto que copia los ensamblados nativos en las subcarpetas *x86* y *AMD64* en la carpeta *bin* del proyecto, pero el script no incluye esas carpetas en el proyecto. Como resultado, Web Deploy no los copiará en el sitio web de destino a menos que los incluya manualmente en el proyecto. (Este comportamiento es el resultado de la configuración de implementación predeterminada; otra opción, que no usará en estos tutoriales, es cambiar la configuración que controla este comportamiento. La configuración que se puede cambiar es **solo los archivos necesarios para ejecutar la aplicación** en **elementos que se van a implementar** en la pestaña **empaquetar/publicar web** de la ventana **propiedades del proyecto** . Normalmente no se recomienda cambiar esta configuración, ya que puede dar lugar a la implementación de muchos más archivos en el entorno de producción del que se necesitan allí. Para obtener más información sobre las alternativas, vea el tutorial [configuración de las propiedades del proyecto](deployment-to-a-hosting-provider-configuring-project-properties-4-of-12.md) ).
 
-Compile el proyecto y, a continuación, en **el Explorador de soluciones** haga clic en **mostrar todos los archivos** si aún no lo ha hecho. También podría tener que hacer clic en **actualizar**.
+Compile el proyecto y, a continuación, en **Explorador de soluciones** haga clic en **Mostrar todos los archivos** si aún no lo ha hecho. También puede que tenga que hacer clic en **Actualizar**.
 
 ![Solution_Explorer_Show_All_Files](deployment-to-a-hosting-provider-deploying-sql-server-compact-databases-2-of-12/_static/image1.png)
 
-Expanda el **bin** carpeta para ver el **amd64** y **x86** carpetas y, a continuación, seleccione las carpetas, con el botón secundario y seleccione **incluir en el proyecto**.
+Expanda la carpeta **bin** para ver las carpetas **AMD64** y **x86** y, a continuación, seleccione esas carpetas, haga clic con el botón derecho y seleccione **incluir en el proyecto**.
 
-![amd64_and_x86_in_Solution_Explorer.png](deployment-to-a-hosting-provider-deploying-sql-server-compact-databases-2-of-12/_static/image2.png)
+![amd64_and_x86_in_Solution_Explorer. png](deployment-to-a-hosting-provider-deploying-sql-server-compact-databases-2-of-12/_static/image2.png)
 
-Cambiarán los iconos de carpeta para mostrar que la carpeta se ha incluido en el proyecto.
+Los iconos de carpeta cambian para mostrar que la carpeta se ha incluido en el proyecto.
 
-![Solution_Explorer_amd64_included.png](deployment-to-a-hosting-provider-deploying-sql-server-compact-databases-2-of-12/_static/image3.png)
+![Solution_Explorer_amd64_included. png](deployment-to-a-hosting-provider-deploying-sql-server-compact-databases-2-of-12/_static/image3.png)
 
-## <a name="configuring-code-first-migrations-for-application-database-deployment"></a>Configuración de migraciones de Code First para la implementación de la base de datos de aplicación
+## <a name="configuring-code-first-migrations-for-application-database-deployment"></a>Configuración de Migraciones de Code First para la implementación de base de datos de aplicación
 
-Al implementar una base de datos de aplicación, normalmente no basta con implementar la base de datos de desarrollo con todos los datos en ella a producción, porque muchos de los datos en él es probablemente existe solo para fines de prueba. Por ejemplo, los nombres de estudiante de una base de datos de prueba son ficticios. Por otro lado, a menudo no se puede implementar la estructura de base de datos con ningún dato en él en absoluto. Algunos de los datos en la base de datos de prueba podrían ser datos reales y deben existir cuando los usuarios pueden comenzar a usar la aplicación. Por ejemplo, la base de datos podría tener una tabla que contiene los valores de calificación válido o nombres de departamento real.
+Cuando se implementa una base de datos de aplicación, normalmente no se implementa simplemente la base de datos de desarrollo con todos los datos que contiene en el entorno de producción, ya que la mayoría de los datos que contiene probablemente solo está presente para fines de prueba. Por ejemplo, los nombres de los estudiantes de una base de datos de prueba son ficticios. Por otro lado, a menudo no se puede implementar solo la estructura de la base de datos sin ningún dato en ella. Algunos de los datos de la base de datos de prueba podrían ser datos reales y deben estar allí cuando los usuarios empiecen a usar la aplicación. Por ejemplo, la base de datos podría tener una tabla que contenga valores de calificación válidos o nombres de Departamento reales.
 
-Para simular este escenario habitual, configurará un método de inicialización de las migraciones primer código que inserta en la base de datos solo los datos que se desean estar allí en producción. Este método de inicialización no inserta datos de prueba porque se ejecutarán en producción después de Code First crea la base de datos en producción.
+Para simular este escenario común, configurará un método de inicialización Migraciones de Code First que inserta en la base de datos solo los datos que desea que estén en producción. Este método de inicialización no insertará datos de prueba porque se ejecutará en producción después de Code First crea la base de datos en producción.
 
-En versiones anteriores de Code First antes de que se publicó las migraciones, era habitual para los métodos de inicialización insertar datos de prueba también, porque con cada cambio de modelo durante el desarrollo de la base de datos tenía que eliminar y volver a crear desde cero por completo. Con migraciones de Code First, datos de prueba se conservan después de realizar cambios de la base de datos, por lo que no es necesario incluir los datos de prueba en el método de inicialización. El proyecto descargado usa el método de migraciones anteriores, incluidos todos los datos en el método de inicialización de una clase de inicializador. En este tutorial podrá deshabilitar la clase de inicializador y habilitar las migraciones. A continuación, actualizará el método de inicialización de la clase de configuración de las migraciones para que inserte solo datos que se van a insertarse en producción.
+En versiones anteriores de Code First antes de que se lanzaran las migraciones, era habitual que los métodos de inicialización insertaran los datos de prueba, ya que con cada cambio de modelo durante el desarrollo, la base de datos debía eliminarse completamente y volver a crearse desde el principio. Con Migraciones de Code First, los datos de prueba se conservan después de los cambios en la base de datos, por lo que no es necesario incluir los datos de prueba en el método de inicialización. El proyecto que descargó usa el método previo a la migración para incluir todos los datos en el método de inicialización de una clase de inicializador. En este tutorial deshabilitará la clase de inicializador y habilitará las migraciones. A continuación, actualizará el método de inicialización en la clase de configuración de migraciones para que inserte solo los datos que desea insertar en producción.
 
-El siguiente diagrama muestra el esquema de la base de datos de aplicación:
+En el diagrama siguiente se muestra el esquema de la base de datos de la aplicación:
 
 [![School_database_diagram](deployment-to-a-hosting-provider-deploying-sql-server-compact-databases-2-of-12/_static/image5.png)](deployment-to-a-hosting-provider-deploying-sql-server-compact-databases-2-of-12/_static/image4.png)
 
-Estos tutoriales, supondremos que el `Student` y `Enrollment` tablas deben estar vacías cuando el sitio se implementó por primera vez. Las demás tablas contienen datos que tiene que cargarse previamente cuando la aplicación esté activa.
+Para estos tutoriales, supondrá que las tablas `Student` y `Enrollment` deben estar vacías cuando se implemente el sitio por primera vez. Las demás tablas contienen datos que deben cargarse previamente cuando la aplicación se activa.
 
-Puesto que va a usar migraciones de Code First, ya no tiene que usar el **DropCreateDatabaseIfModelChanges** inicializador Code First. El código para este inicializador está en el archivo SchoolInitializer.cs en el proyecto ContosoUniversity.DAL. Un valor en el **appSettings** Este inicializador para ejecutarse cada vez que la aplicación intenta obtener acceso a la base de datos por primera vez hace que el elemento del archivo Web.config:
+Puesto que va a usar Migraciones de Code First, ya no tiene que usar el inicializador de Code First **DropCreateDatabaseIfModelChanges** . El código de este inicializador se encuentra en el archivo SchoolInitializer.cs en el proyecto ContosoUniversity. DAL. Un valor en el elemento **appSettings** del archivo Web. config hace que este inicializador se ejecute cada vez que la aplicación intente obtener acceso a la base de datos por primera vez:
 
 [!code-xml[Main](deployment-to-a-hosting-provider-deploying-sql-server-compact-databases-2-of-12/samples/sample1.xml?highlight=3)]
 
-Abra el archivo Web.config de la aplicación y quite el elemento que especifica la clase de inicializador Code First desde el elemento appSettings. El elemento appSettings ahora este aspecto:
+Abra el archivo Web. config de la aplicación y quite el elemento que especifica la Code First clase de inicializador del elemento appSettings. El elemento appSettings tiene ahora el siguiente aspecto:
 
 [!code-xml[Main](deployment-to-a-hosting-provider-deploying-sql-server-compact-databases-2-of-12/samples/sample2.xml)]
 
 > [!NOTE]
-> Otra manera de especificar una clase de inicializador es hacerlo mediante una llamada a `Database.SetInitializer` en el `Application_Start` método en el *Global.asax* archivo. Si va a habilitar las migraciones en un proyecto que usa dicho método para especificar al inicializador, quitar esa línea de código.
+> Otra manera de especificar una clase de inicializador es hacerlo llamando a `Database.SetInitializer` en el método `Application_Start` en el archivo *global. asax* . Si va a habilitar las migraciones en un proyecto que usa ese método para especificar el inicializador, quite esa línea de código.
 
-A continuación, habilite migraciones de Code First.
+A continuación, habilite Migraciones de Code First.
 
-El primer paso es asegurarse de que el proyecto ContosoUniversity está establecido como proyecto de inicio. En **el Explorador de soluciones**, haga clic en el proyecto ContosoUniversity y seleccione **establecer como proyecto de inicio**. Migraciones de Code First buscará en el proyecto de inicio para buscar la cadena de conexión de base de datos.
+El primer paso es asegurarse de que el proyecto ContosoUniversity está establecido como proyecto de inicio. En **Explorador de soluciones**, haga clic con el botón derecho en el proyecto ContosoUniversity y seleccione **establecer como proyecto de inicio**. Migraciones de Code First buscará la cadena de conexión de base de datos en el proyecto de inicio.
 
-Desde el **herramientas** menú, haga clic en **Administrador de paquetes de NuGet** y, a continuación, **Package Manager Console**.
+En el menú **herramientas** , haga clic en **Administrador de paquetes NuGet** y luego en **consola del administrador de paquetes**.
 
 ![Selecting_Package_Manager_Console](deployment-to-a-hosting-provider-deploying-sql-server-compact-databases-2-of-12/_static/image6.png)
 
-En la parte superior de la **Package Manager Console** ventana Seleccione ContosoUniversity.DAL como proyecto predeterminado y, a continuación, at el `PM>` símbolo del sistema escriba "enable-migrations".
+En la parte superior de la ventana de la **consola del administrador de paquetes** , seleccione CONTOSOUNIVERSITY. Dal como el proyecto predeterminado y, a continuación, en el símbolo del sistema de `PM>`, escriba "Enable-Migrations".
 
-![enable-migrations_command](deployment-to-a-hosting-provider-deploying-sql-server-compact-databases-2-of-12/_static/image7.png)
+![habilitar-migrations_command](deployment-to-a-hosting-provider-deploying-sql-server-compact-databases-2-of-12/_static/image7.png)
 
-Este comando crea un *Configuration.cs* archivo en una nueva *migraciones* carpeta en el proyecto ContosoUniversity.DAL.
+Este comando crea un archivo *Configuration.CS* en una nueva carpeta *Migrations* en el proyecto ContosoUniversity. Dal.
 
 ![Migrations_folder_in_Solution_Explorer](deployment-to-a-hosting-provider-deploying-sql-server-compact-databases-2-of-12/_static/image8.png)
 
-Ha seleccionado el proyecto DAL porque se debe ejecutar el comando "enable-migrations" en el proyecto que contiene la clase de contexto de Code First. Cuando esa clase está en un proyecto de biblioteca de clases, migraciones de Code First busca la cadena de conexión de base de datos en el proyecto de inicio para la solución. En la solución ContosoUniversity, el proyecto web se ha establecido como proyecto de inicio. (Si no deseaba designar el proyecto que tiene la cadena de conexión como proyecto de inicio en Visual Studio, puede especificar el proyecto de inicio del comando de PowerShell. Para ver la sintaxis del comando para el comando enable-migrations, puede escribir el comando "get-help enable-migrations".)
+Ha seleccionado el proyecto DAL porque el comando "Enable-Migrations" debe ejecutarse en el proyecto que contiene la clase de contexto Code First. Cuando esa clase está en un proyecto de biblioteca de clases, Migraciones de Code First busca la cadena de conexión de base de datos en el proyecto de inicio de la solución. En la solución ContosoUniversity, el proyecto web se ha establecido como proyecto de inicio. (Si no quiere designar el proyecto que tiene la cadena de conexión como proyecto de inicio en Visual Studio, puede especificar el proyecto de inicio en el comando de PowerShell. Para ver la sintaxis de comando para el comando enable-Migrations, puede escribir el comando "Get-Help enable-Migrations").
 
-Abra el archivo Configuration.cs y reemplace los comentarios en el `Seed` método con el código siguiente:
+Abra el archivo Configuration.cs y reemplace los comentarios en el método `Seed` por el código siguiente:
 
 [!code-csharp[Main](deployment-to-a-hosting-provider-deploying-sql-server-compact-databases-2-of-12/samples/sample3.cs)]
 
-Las referencias a `List` tiene líneas onduladas rojas debajo de ellos porque no tiene un `using` instrucción aún para su espacio de nombres. Haga clic en uno de las instancias de `List` y haga clic en **resolver**y, a continuación, haga clic en **using System.Collections.Generic**.
+Las referencias a `List` tienen líneas onduladas rojas en ellas porque todavía no tiene una instrucción `using` para su espacio de nombres. Haga clic con el botón secundario en una de las instancias de `List`, haga clic en **resolver**y, a continuación, haga clic en **Using System. Collections. Generic**.
 
 ![Resolver con la instrucción using](deployment-to-a-hosting-provider-deploying-sql-server-compact-databases-2-of-12/_static/image9.png)
 
-Esta selección de menú agrega el código siguiente a la `using` las instrucciones en la parte superior del archivo.
+Esta selección de menú agrega el código siguiente a las instrucciones `using` que se encuentran cerca de la parte superior del archivo.
 
 [!code-csharp[Main](deployment-to-a-hosting-provider-deploying-sql-server-compact-databases-2-of-12/samples/sample4.cs)]
 
 > [!NOTE]
-> Agregar código para el `Seed` método es una de las muchas maneras que puede insertar datos fijas en la base de datos. Una alternativa consiste en Agregar código a la `Up` y `Down` métodos de cada clase de migración. El `Up` y `Down` métodos contienen código que implementa los cambios de la base de datos. Verá ejemplos de ellos en el [implementar una actualización de la base de datos](deployment-to-a-hosting-provider-deploying-a-database-update-9-of-12.md) tutorial.
+> Agregar código al método `Seed` es una de las muchas maneras en que puede insertar datos fijos en la base de datos. Una alternativa consiste en agregar código a los métodos `Up` y `Down` de cada clase de migración. Los métodos `Up` y `Down` contienen código que implementa cambios en la base de datos. Verá ejemplos de ellos en el tutorial [implementación de una actualización de base de datos](deployment-to-a-hosting-provider-deploying-a-database-update-9-of-12.md) .
 > 
-> También puede escribir código que se ejecuta instrucciones SQL mediante el uso de la `Sql` método. Por ejemplo, si fuese a agregar una columna de presupuesto a la tabla de departamento y quiere inicializar todos los presupuestos de departamento para los 1.000,00 dólares como parte de una migración, puede agregar la siguiente línea de código para el `Up` método para que la migración:
+> También puede escribir código que ejecute instrucciones SQL mediante el método `Sql`. Por ejemplo, si estuviera agregando una columna presupuesto a la tabla Department y quisiera inicializar todos los presupuestos de departamento a $1.000,00 como parte de una migración, podría agregar la siguiente línea de código al método `Up` para esa migración:
 > 
 > `Sql("UPDATE Department SET Budget = 1000");`
 > 
-> En este ejemplo se muestra para este tutorial se usa el `AddOrUpdate` método en el `Seed` método de las migraciones de Code First `Configuration` clase. El código llama a migraciones de First el `Seed` después de cada migración, este método y actualiza las filas que ya se han insertado o insertan si aún no existen. El `AddOrUpdate` método podría no ser la mejor opción para su escenario. Para obtener más información, consulte [tener cuidado con el método de EF 4.3 AddOrUpdate](http://thedatafarm.com/blog/data-access/take-care-with-ef-4-3-addorupdate-method/) en el blog de Julie.
+> En este ejemplo se muestra en este tutorial se usa el método `AddOrUpdate` en el método `Seed` de la clase Migraciones de Code First `Configuration`. Migraciones de Code First llama al método `Seed` después de cada migración y este método actualiza las filas que ya se han insertado o las inserta si aún no existen. Es posible que el método `AddOrUpdate` no sea la mejor opción para su escenario. Para obtener más información, consulte el blog sobre cómo encargarse [con el método EF 4,3 AddOrUpdate](http://thedatafarm.com/blog/data-access/take-care-with-ef-4-3-addorupdate-method/) en el blog de Julia Lerman.
 
 Presione CTRL-MAYÚS-B para compilar el proyecto.
 
-El siguiente paso es crear un `DbMigration` clase para la migración inicial. Desea que esta migración para crear una nueva base de datos, por lo que debe eliminar la base de datos que ya existe. Las bases de datos de SQL Server Compact se encuentran en *.sdf* archivos en el *aplicación\_datos* carpeta. En **el Explorador de soluciones**, expanda *aplicación\_datos* en el proyecto ContosoUniversity para ver las dos bases de datos de SQL Server Compact, que se representan mediante *.sdf*archivos.
+El siguiente paso consiste en crear una clase `DbMigration` para la migración inicial. Desea que esta migración cree una nueva base de datos, por lo que debe eliminar la base de datos que ya existe. SQL Server Compact bases de datos están contenidas en archivos *. sdf* en la carpeta *App\_Data* . En **Explorador de soluciones**, expanda *App\_Data* en el proyecto ContosoUniversity para ver las dos bases de datos SQL Server Compact, que se representan mediante archivos *. sdf* .
 
-Haga clic en el *School.sdf* de archivo y haga clic en **eliminar**.
+Haga clic con el botón derecho en el archivo *School. sdf* y haga clic en **eliminar**.
 
 ![sdf_files_in_Solution_Explorer](deployment-to-a-hosting-provider-deploying-sql-server-compact-databases-2-of-12/_static/image10.png)
 
-En el **Package Manager Console** ventana, escriba el comando "add-migration Initial" para crear la migración inicial y asígnele el nombre "Inicial".
+En la ventana de la **consola del administrador de paquetes** , escriba el comando "Add-Migration Initial" para crear la migración inicial y asígnele el nombre "Initial".
 
-![add-migration_command](deployment-to-a-hosting-provider-deploying-sql-server-compact-databases-2-of-12/_static/image11.png)
+![Agregar migration_command](deployment-to-a-hosting-provider-deploying-sql-server-compact-databases-2-of-12/_static/image11.png)
 
-Migraciones de Code First crea otro archivo de clase en el *migraciones* carpeta y esta clase contiene código que crea el esquema de base de datos.
+Migraciones de Code First crea otro archivo de clase en la carpeta *Migrations* y esta clase contiene código que crea el esquema de la base de datos.
 
-En el **Package Manager Console**, escriba el comando "update-database" para crear la base de datos y ejecutar el **inicialización** método.
+En la **consola del administrador de paquetes**, escriba el comando "Update-Database" para crear la base de datos y ejecutar el método de **inicialización** .
 
-![update-database_command](deployment-to-a-hosting-provider-deploying-sql-server-compact-databases-2-of-12/_static/image12.png)
+![actualizar database_command](deployment-to-a-hosting-provider-deploying-sql-server-compact-databases-2-of-12/_static/image12.png)
 
-(Si se produce un error que indica una tabla ya existe y no se puede crear, probablemente es porque se ejecutó la aplicación después de eliminar la base de datos y antes de ejecutar `update-database`. En ese caso, elimine la *School.sdf* archivo nuevo y vuelva a intentar la `update-database` comando.)
+(Si recibe un error que indica que una tabla ya existe y no se puede crear, es probable que haya ejecutado la aplicación después de eliminar la base de datos y antes de ejecutar `update-database`. En ese caso, vuelva a eliminar el archivo *School. sdf* y vuelva a intentar el comando `update-database`).
 
-Ejecute la aplicación. Ahora la página Students está vacía, pero la página de instructores contiene instructores. Esto es lo que obtendrá en producción después de implementar la aplicación.
+Ejecute la aplicación. Ahora la página Students está vacía pero la página Instructors contiene instructores. Esto es lo que obtendrá en producción después de implementar la aplicación.
 
 ![Empty_Students_page](deployment-to-a-hosting-provider-deploying-sql-server-compact-databases-2-of-12/_static/image13.png)
 
 ![Instructors_page_after_initial_migration](deployment-to-a-hosting-provider-deploying-sql-server-compact-databases-2-of-12/_static/image14.png)
 
-Ahora el proyecto está listo para implementar el *School* base de datos.
+El proyecto ya está listo para implementar la base de datos *School* .
 
-## <a name="creating-a-membership-database-for-deployment"></a>Creación de una base de datos de pertenencia para la implementación
+## <a name="creating-a-membership-database-for-deployment"></a>Crear una base de datos de pertenencia para la implementación
 
-La aplicación Contoso University usa la autenticación de formularios y el sistema de pertenencia a ASP.NET para autenticar y autorizar a los usuarios. Uno de sus páginas es accesible sólo a los administradores. Para ver esta página, ejecute la aplicación y seleccione **actualización créditos** desde el menú desplegable bajo **cursos**. La aplicación muestra el **en el registro** página, ya que sólo los administradores autorizados para usar el **actualización créditos** página.
+La aplicación contoso University usa el sistema de pertenencia de ASP.NET y la autenticación de formularios para autenticar y autorizar a los usuarios. Una de sus páginas solo es accesible para los administradores. Para ver esta página, ejecute la aplicación y seleccione **Actualizar créditos** en el menú desplegable en **cursos**. La aplicación muestra la página **de inicio de sesión** , ya que solo los administradores tienen autorización para usar la página **Actualizar créditos** .
 
 [![Log_in_page](deployment-to-a-hosting-provider-deploying-sql-server-compact-databases-2-of-12/_static/image16.png)](deployment-to-a-hosting-provider-deploying-sql-server-compact-databases-2-of-12/_static/image15.png)
 
-Inicie sesión como "admin" con la contraseña "Pa$ w0rd" (tenga en cuenta el número cero en lugar de la letra "o" en "w0rd"). Después de iniciar sesión, el **actualización créditos** se muestra la página.
+Inicie sesión como "admin" con la contraseña "Pas $ w0rd" (observe el número cero en lugar de la letra "o" en "w0rd"). Después de iniciar sesión, se muestra la página **Actualizar créditos** .
 
 [![Update_Credits_page](deployment-to-a-hosting-provider-deploying-sql-server-compact-databases-2-of-12/_static/image18.png)](deployment-to-a-hosting-provider-deploying-sql-server-compact-databases-2-of-12/_static/image17.png)
 
-Al implementar un sitio por primera vez, es habitual excluir la mayoría o todas las cuentas de usuario creadas para las pruebas. En este caso, implementará una cuenta de administrador y no hay cuentas de usuario. En lugar de eliminar manualmente las cuentas de prueba, creará una nueva base de datos de pertenencia que tiene solo la cuenta de usuario de un administrador que necesite en producción.
+Cuando se implementa un sitio por primera vez, es habitual excluir la mayoría de las cuentas de usuario que se crean para las pruebas. En este caso, implementará una cuenta de administrador y sin cuentas de usuario. En lugar de eliminar manualmente las cuentas de prueba, creará una nueva base de datos de pertenencia que solo tiene una cuenta de usuario de administrador que necesita en producción.
 
 > [!NOTE]
-> La base de datos de pertenencia almacena un hash de contraseñas de cuentas. Para implementar las cuentas de un equipo a otro, debe asegurarse de que las rutinas de hash no generan hash distintos del servidor de destino de como lo hacen en el equipo de origen. Generará el mismos hash cuando se usa ASP.NET Universal Providers, siempre y cuando no cambie el algoritmo predeterminado. El algoritmo predeterminado es HMACSHA256 y se especifica en el **validación** atributo de la **[machineKey](https://msdn.microsoft.com/library/w8h3skw9.aspx)** elemento en el archivo Web.config.
+> La base de datos de pertenencia almacena un hash de contraseñas de cuenta. Para implementar cuentas de un equipo en otro, debe asegurarse de que las rutinas hash no generen diferentes hash en el servidor de destino que en el equipo de origen. Generarán los mismos valores hash al usar el Proveedores universales de ASP.NET, siempre y cuando no cambie el algoritmo predeterminado. El algoritmo predeterminado es HMACSHA256 y se especifica en el atributo de **validación** del elemento **[machineKey](https://msdn.microsoft.com/library/w8h3skw9.aspx)** en el archivo Web. config.
 
-No se mantiene la base de datos de pertenencia mediante migraciones de Code First y no hay ningún inicializador automática que propaga la base de datos con las cuentas de prueba (como sucede con la base de datos School). Por lo tanto, para mantener los datos de prueba disponibles hará una copia de la base de datos de prueba antes de crear uno nuevo.
+Migraciones de Code First no mantiene la base de datos de pertenencia y no hay ningún inicializador automático que inicialice la base de datos con cuentas de prueba (como hay para la base de datos School). Por lo tanto, para mantener los datos de prueba disponibles, realizará una copia de la base de datos de prueba antes de crear una nueva.
 
-En **el Explorador de soluciones**, cambiar el nombre de la *aspnet.sdf* de archivos en el *aplicación\_datos* carpeta *aspnet Dev.sdf*. (No hacer una copia, simplemente cambie su nombre, creará una nueva base de datos en un momento.)
+En **Explorador de soluciones**, cambie el nombre del archivo *Aspnet. sdf* en la carpeta *App\_Data* a *ASPNET-dev. sdf*. (No haga una copia, simplemente cambie el nombre, ya que creará una nueva base de datos en un momento).
 
-En **el Explorador de soluciones**, asegúrese de que el proyecto web (ContosoUniversity, no ContosoUniversity.DAL) está seleccionado. A continuación, en el **proyecto** menú, seleccione **configuración de ASP.NET** para ejecutar el **Web Site Administration Tool**(WAT).
+En **Explorador de soluciones**, asegúrese de que el proyecto web (ContosoUniversity, no CONTOSOUNIVERSITY. Dal) está seleccionado. A continuación, en el menú **proyecto** , seleccione **configuración de ASP.net** para ejecutar la herramienta de **Administración de sitios web**(Wat).
 
-Seleccione el **seguridad** ficha.
+Seleccione la pestaña **Seguridad**.
 
 [![WAT_Security_tab](deployment-to-a-hosting-provider-deploying-sql-server-compact-databases-2-of-12/_static/image20.png)](deployment-to-a-hosting-provider-deploying-sql-server-compact-databases-2-of-12/_static/image19.png)
 
-Haga clic en **crear o administrar Roles** y agregue un **administrador** rol.
+Haga clic en **crear o administrar roles** y agregar un rol de **Administrador** .
 
 [![WAT_Create_New_Role](deployment-to-a-hosting-provider-deploying-sql-server-compact-databases-2-of-12/_static/image22.png)](deployment-to-a-hosting-provider-deploying-sql-server-compact-databases-2-of-12/_static/image21.png)
 
-Vuelva a la **seguridad** , haga clic **Create User**, y agregue el usuario "admin" como administrador. Antes de hacer clic el **Create User** situado en la **Create User** página, asegúrese de que selecciona el **administrador** casilla de verificación. La contraseña utilizada en este tutorial es "Pa$ w0rd", y puede escribir cualquier dirección de correo electrónico.
+Vuelva a la pestaña **seguridad** , haga clic en **crear usuario**y agregue el usuario "admin" como administrador. Antes de hacer clic en el botón **crear usuario** de la página **crear usuario** , asegúrese de activar la casilla de verificación **Administrador** . La contraseña que se usa en este tutorial es "Pas $ w0rd" y puede escribir cualquier dirección de correo electrónico.
 
 [![WAT_Create_User](deployment-to-a-hosting-provider-deploying-sql-server-compact-databases-2-of-12/_static/image24.png)](deployment-to-a-hosting-provider-deploying-sql-server-compact-databases-2-of-12/_static/image23.png)
 
-Cierre el explorador. En **el Explorador de soluciones**, haga clic en el botón Actualizar para ver el nuevo *aspnet.sdf* archivo.
+Cierre el explorador. En **Explorador de soluciones**, haga clic en el botón actualizar para ver el nuevo archivo *Aspnet. sdf* .
 
-![New_aspnet.sdf_in_Solution_Explorer](deployment-to-a-hosting-provider-deploying-sql-server-compact-databases-2-of-12/_static/image25.png)
+![New_aspnet. sdf_in_Solution_Explorer](deployment-to-a-hosting-provider-deploying-sql-server-compact-databases-2-of-12/_static/image25.png)
 
-Haga clic en **aspnet.sdf** y seleccione **incluir en el proyecto**.
+Haga clic con el botón derecho en **Aspnet. sdf** y seleccione **incluir en el proyecto**.
 
-## <a name="distinguishing-development-from-production-databases"></a>Distinguir el desarrollo de bases de datos de producción
+## <a name="distinguishing-development-from-production-databases"></a>Distinguir el desarrollo de las bases de datos de producción
 
-En esta sección, podrá cambiar el nombre de las bases de datos para que las versiones de desarrollo sean School Dev.sdf y aspnet Dev.sdf y las versiones de producción son School Prod.sdf y Prod.sdf de aspnet. Esto no es necesario, pero si lo hace por lo que le ayudará a impedir la obtención de las versiones de prueba y producción de las bases de datos debe confundir.
+En esta sección, cambiará el nombre de las bases de datos para que las versiones de desarrollo sean School-Dev. sdf y aspnet-Dev. sdf y las versiones de producción sean School-Prod. sdf y aspnet-Prod. SDF. Esto no es necesario, pero hacerlo le ayudará a evitar que se confundan las versiones de prueba y producción de las bases de datos.
 
-En **el Explorador de soluciones**, haga clic en **actualizar** y expanda la aplicación\_carpeta de datos para ver la base de datos School que creó anteriormente; haga clic en él y seleccione **incluir en el proyecto** .
+En **Explorador de soluciones**, haga clic en **Actualizar** y expanda la carpeta app\_Data para ver la base de datos School que creó anteriormente. Haga clic con el botón derecho en él y seleccione **incluir en el proyecto**.
 
-![Including_School.sdf_in_project](deployment-to-a-hosting-provider-deploying-sql-server-compact-databases-2-of-12/_static/image26.png)
+![Including_School. sdf_in_project](deployment-to-a-hosting-provider-deploying-sql-server-compact-databases-2-of-12/_static/image26.png)
 
-Cambiar el nombre de *aspnet.sdf* a *aspnet Prod.sdf*.
+Cambie el nombre de *Aspnet. sdf* a *ASPNET-Prod. sdf*.
 
-Cambiar el nombre de *School.sdf* a *School-Dev.sdf*.
+Cambie el nombre de *School. sdf* a *School-dev. sdf*.
 
-Al ejecutar la aplicación en Visual Studio que no desea utilizar el *-Prod* versiones de los archivos de base de datos, que desea usar *- Dev* versiones. Por lo tanto, tendrá que cambiar las cadenas de conexión en el archivo Web.config para que apunten a la *- Dev* versiones de las bases de datos. (No ha creado un archivo de la escuela Prod.sdf, pero eso está bien porque Code First creará esa base de datos en tiempo de producción la primera que se ejecuta una aplicación no existe).
+Cuando ejecute la aplicación en Visual Studio, no querrá usar *las versiones de los archivos* de la base de datos, ya que quiere usar las versiones *de-dev* . Por lo tanto, debe cambiar las cadenas de conexión en el archivo Web. config para que señalen a las versiones de *desarrollo* de las bases de datos. (No ha creado un archivo School-Prod. SDF, pero es correcto porque Code First creará la base de datos en producción la primera vez que ejecute la aplicación).
 
-Abra el archivo Web.config de la aplicación y busque las cadenas de conexión:
+Abra el archivo Web. config de la aplicación y busque las cadenas de conexión:
 
 [!code-xml[Main](deployment-to-a-hosting-provider-deploying-sql-server-compact-databases-2-of-12/samples/sample5.xml)]
 
-Cambie "aspnet.sdf" a "aspnet-Dev.sdf" y cambie "School.sdf" a "School-Dev.sdf":
+Cambie "Aspnet. sdf" a "aspnet-Dev. sdf" y cambie "School. sdf" por "School-Dev. sdf":
 
 [!code-xml[Main](deployment-to-a-hosting-provider-deploying-sql-server-compact-databases-2-of-12/samples/sample6.xml?highlight=4-5)]
 
-El motor de base de datos de SQL Server Compact y ambas bases de datos ya están listos para implementarse. En el siguiente tutorial configurará automático *Web.config* transformaciones de configuración que debe ser diferente en los entornos de desarrollo, prueba y producción de archivos. (Entre la configuración que se debe cambiar son las cadenas de conexión, pero va a configurar esos cambios más adelante al crear un perfil de publicación).
+El motor de base de datos de SQL Server Compact y las dos bases de datos ya están listas para su implementación. En el tutorial siguiente se configuran las transformaciones automáticas del archivo *Web. config* para los valores que deben ser diferentes en los entornos de desarrollo, prueba y producción. (Entre las opciones que se deben cambiar se encuentran las cadenas de conexión, pero se configurarán los cambios más adelante al crear un perfil de publicación).
 
 ## <a name="more-information"></a>Más información
 
-Para obtener más información sobre NuGet, consulte [administrar bibliotecas de proyectos con NuGet](https://msdn.microsoft.com/magazine/hh547106.aspx) y [documentación de NuGet](http://docs.nuget.org/docs/start-here/overview). Si no desea usar NuGet, deberá saber cómo se analizan para determinar lo que hace cuando se instala un paquete de NuGet. (Por ejemplo, puede configurar *Web.config* transformaciones, configurar scripts de PowerShell para ejecutar en tiempo de compilación, etcetera.) Para más información acerca del funcionamiento de NuGet, consulte especialmente [crear y publicar un paquete](http://docs.nuget.org/docs/creating-packages/creating-and-publishing-a-package) y [archivo de configuración y las transformaciones de código fuente](http://docs.nuget.org/docs/creating-packages/configuration-file-and-source-code-transformations).
+Para más información sobre NuGet, consulte [Administración de bibliotecas de proyectos con](https://msdn.microsoft.com/magazine/hh547106.aspx) la [documentación](http://docs.nuget.org/docs/start-here/overview)de Nuget y Nuget. Si no desea usar NuGet, deberá aprender a analizar un paquete de NuGet para determinar lo que hace cuando se instala. (Por ejemplo, puede configurar transformaciones de *Web. config* , configurar scripts de PowerShell para que se ejecuten en el momento de la compilación, etc.). Para obtener más información sobre cómo funciona NuGet, vea especialmente [crear y publicar un paquete y un](http://docs.nuget.org/docs/creating-packages/creating-and-publishing-a-package) [archivo de configuración y transformaciones de código fuente](http://docs.nuget.org/docs/creating-packages/configuration-file-and-source-code-transformations).
 
 > [!div class="step-by-step"]
 > [Anterior](deployment-to-a-hosting-provider-introduction-1-of-12.md)

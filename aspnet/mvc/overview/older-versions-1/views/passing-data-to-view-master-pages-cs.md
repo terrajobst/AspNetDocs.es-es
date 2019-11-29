@@ -1,111 +1,111 @@
 ---
 uid: mvc/overview/older-versions-1/views/passing-data-to-view-master-pages-cs
-title: Pasar datos a las páginas maestras de vista (C#) | Microsoft Docs
+title: Pasar datos a las páginas maestrasC#de vista () | Microsoft Docs
 author: microsoft
-description: El objetivo de este tutorial es explicar cómo puede pasar datos de un controlador a una página maestra de la vista. Se examinan dos estrategias para pasar datos a una vista m...
+description: El objetivo de este tutorial es explicar cómo puede pasar datos de un controlador a una página maestra de vista. Examinamos dos estrategias para pasar datos a una vista m...
 ms.author: riande
 ms.date: 10/16/2008
 ms.assetid: 5fee879b-8bde-42a9-a434-60ba6b1cf747
 msc.legacyurl: /mvc/overview/older-versions-1/views/passing-data-to-view-master-pages-cs
 msc.type: authoredcontent
-ms.openlocfilehash: 852492211ace3cd14593e4a61a8015d49d3a41db
-ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
+ms.openlocfilehash: 1492175812b0a092cd1594a770e348efe9b4122b
+ms.sourcegitcommit: 22fbd8863672c4ad6693b8388ad5c8e753fb41a2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/06/2019
-ms.locfileid: "65130170"
+ms.lasthandoff: 11/28/2019
+ms.locfileid: "74593802"
 ---
 # <a name="passing-data-to-view-master-pages-c"></a>Pasar datos a las páginas maestras de vista (C#)
 
 por [Microsoft](https://github.com/microsoft)
 
-[Descargar PDF](http://download.microsoft.com/download/e/f/3/ef3f2ff6-7424-48f7-bdaa-180ef64c3490/ASPNET_MVC_Tutorial_13_CS.pdf)
+[Descargar PDF](https://download.microsoft.com/download/e/f/3/ef3f2ff6-7424-48f7-bdaa-180ef64c3490/ASPNET_MVC_Tutorial_13_CS.pdf)
 
-> El objetivo de este tutorial es explicar cómo puede pasar datos de un controlador a una página maestra de la vista. Se examinan dos estrategias para pasar datos a una página maestra de la vista. En primer lugar, se describe una solución sencilla que da como resultado una aplicación que es difícil de mantener. A continuación, examinaremos una solución mucho mejor que requiere un poco más trabajo inicial, pero los resultados en una aplicación de mucho más fácil de mantener.
+> El objetivo de este tutorial es explicar cómo puede pasar datos de un controlador a una página maestra de vista. Examinamos dos estrategias para pasar datos a una página maestra de vista. En primer lugar, se describe una solución sencilla que da lugar a una aplicación difícil de mantener. A continuación, examinamos una solución mucho mejor que requiere un poco más de trabajo inicial, pero da como resultado una aplicación mucho más fácil de mantener.
 
 ## <a name="passing-data-to-view-master-pages"></a>Pasar datos a las páginas maestras de vista
 
-El objetivo de este tutorial es explicar cómo puede pasar datos de un controlador a una página maestra de la vista. Se examinan dos estrategias para pasar datos a una página maestra de la vista. En primer lugar, se describe una solución sencilla que da como resultado una aplicación que es difícil de mantener. A continuación, examinaremos una solución mucho mejor que requiere un poco más trabajo inicial, pero los resultados en una aplicación de mucho más fácil de mantener.
+El objetivo de este tutorial es explicar cómo puede pasar datos de un controlador a una página maestra de vista. Examinamos dos estrategias para pasar datos a una página maestra de vista. En primer lugar, se describe una solución sencilla que da lugar a una aplicación difícil de mantener. A continuación, examinamos una solución mucho mejor que requiere un poco más de trabajo inicial, pero da como resultado una aplicación mucho más fácil de mantener.
 
 ### <a name="the-problem"></a>El problema
 
-Imagine que está creando una aplicación de base de datos de películas y desea mostrar la lista de las categorías de películas en todas las páginas en la aplicación (consulte la figura 1). Además, imagine que la lista de las categorías de películas se almacena en una tabla de base de datos. En ese caso tendría sentido para recuperar las categorías de la base de datos y presentar la lista de categorías de película dentro de una página maestra de la vista.
+Imagine que está compilando una aplicación de base de datos de películas y desea mostrar la lista de categorías de películas en cada página de la aplicación (vea la ilustración 1). Imagine, además, que la lista de categorías de película se almacena en una tabla de base de datos. En ese caso, tendría sentido recuperar las categorías de la base de datos y representar la lista de categorías de películas en una página maestra de vista.
 
-[![Mostrar las categorías de películas en una página maestra de la vista](passing-data-to-view-master-pages-cs/_static/image2.png)](passing-data-to-view-master-pages-cs/_static/image1.png)
+[![mostrar las categorías de películas en una página de vista maestra](passing-data-to-view-master-pages-cs/_static/image2.png)](passing-data-to-view-master-pages-cs/_static/image1.png)
 
-**Figura 01**: Mostrar las categorías de películas en una página de vista maestra ([haga clic aquí para ver imagen en tamaño completo](passing-data-to-view-master-pages-cs/_static/image3.png))
+**Figura 01**: visualización de las categorías de película en una página maestra de vista ([haga clic para ver la imagen de tamaño completo](passing-data-to-view-master-pages-cs/_static/image3.png))
 
-Éste es el problema. ¿Cómo se recuperar la lista de categorías de la película en la página principal? Es tentador para llamar a métodos de las clases de modelo en la página maestra directamente. En otras palabras, es tentador para incluir el código para recuperar los datos de la derecha de la base de datos en la página maestra. Sin embargo, omitiendo los controladores MVC para tener acceso a la base de datos infringiría la separación clara de intereses es una de las principales ventajas de la creación de una aplicación MVC.
+Este es el problema. ¿Cómo se recupera la lista de categorías de películas en la página maestra? Es tentador llamar directamente a los métodos de las clases del modelo en la página maestra. En otras palabras, es tentador incluir el código para recuperar los datos de la base de datos directamente en la página maestra. Sin embargo, si se omiten los controladores MVC para tener acceso a la base de datos, se infringiría la separación limpia de preocupaciones que es una de las principales ventajas de la creación de una aplicación MVC.
 
-En una aplicación MVC, desea que todas las interacciones entre las vistas MVC y el modelo MVC que va a administrar los controladores MVC. Esta separación de preocupaciones da lugar a una aplicación más fácil de mantener, adaptable y fácil de probar.
+En una aplicación MVC, desea que todas las interacciones entre las vistas de MVC y el modelo MVC se controlen mediante los controladores MVC. Esta separación de intereses da lugar a una aplicación más fácil de mantener, adaptable y comprobable.
 
-En una aplicación MVC, todos los datos que se pasa a una vista, incluida una página maestra de la vista, deben pasarse a una vista por una acción de controlador. Además, se deben pasar los datos aprovechando las ventajas de los datos de vista. En el resto de este tutorial, examinar dos métodos para pasar datos de vista a una página maestra de la vista.
+En una aplicación MVC, todos los datos pasados a una vista, incluida una página maestra de vista, se deben pasar a una vista mediante una acción de controlador. Además, los datos se deben pasar aprovechando los datos de la vista. En el resto de este tutorial, se examinan dos métodos para pasar los datos de vista a una página maestra de vista.
 
-### <a name="the-simple-solution"></a>La solución más sencilla
+### <a name="the-simple-solution"></a>La solución simple
 
-Comencemos con la solución más sencilla para pasar datos de vista de un controlador a una página maestra de la vista. La solución más sencilla es pasar los datos de vista de la página maestra en cada acción del controlador.
+Comencemos con la solución más sencilla para pasar datos de vista de un controlador a una página maestra de vista. La solución más sencilla consiste en pasar los datos de la vista de la página maestra en cada una de las acciones de controlador.
 
-Tenga en cuenta el controlador en el listado 1. Expone dos acciones denominadas `Index()` y `Details()`. El `Index()` método de acción devuelve cada película en la tabla de base de datos de películas. El `Details()` método de acción devuelve cada película en una categoría determinada de película.
+Considere el controlador en la lista 1. Expone dos acciones denominadas `Index()` y `Details()`. El método de acción `Index()` devuelve todas las películas de la tabla de base de datos de películas. El método de acción `Details()` devuelve todas las películas de una categoría de película determinada.
 
-**Listado 1: `Controllers\HomeController.cs`**
+**Lista 1: `Controllers\HomeController.cs`**
 
 [!code-csharp[Main](passing-data-to-view-master-pages-cs/samples/sample1.cs)]
 
-Tenga en cuenta que el Index() y las acciones de Details() agregan dos elementos para ver los datos. La acción de Index() agrega dos claves: categorías y películas. La lista de categorías de película aparece en la página principal de vista representado por la clave de categorías. La clave de películas representa la lista de películas que se muestra en la página de vista de índice.
+Observe que las acciones index () y Details () agregan dos elementos para ver los datos. La acción index () agrega dos claves: categorías y películas. La clave Categories representa la lista de categorías de película que muestra la página maestra de vista. La clave de películas representa la lista de películas que se muestra en la página vista de índice.
 
-La acción Details() también agrega dos claves denominada categorías y películas. La clave de categorías, una vez más, representa la lista de las categorías de películas que se muestra en la página principal de la vista. La clave de películas representa la lista de películas en una categoría determinada que se muestra en la página de vista de detalles (consulte la figura 2).
+La acción Details () también agrega dos claves denominadas categorías y películas. La clave Categories, una vez más, representa la lista de categorías de película que muestra la página maestra de vista. La clave de películas representa la lista de películas de una categoría determinada que se muestra en la página vista de detalles (vea la figura 2).
 
-[![La vista de detalles](passing-data-to-view-master-pages-cs/_static/image5.png)](passing-data-to-view-master-pages-cs/_static/image4.png)
+[![la vista de detalles](passing-data-to-view-master-pages-cs/_static/image5.png)](passing-data-to-view-master-pages-cs/_static/image4.png)
 
-**Figura 02**: La vista de detalles ([haga clic aquí para ver imagen en tamaño completo](passing-data-to-view-master-pages-cs/_static/image6.png))
+**Figura 02**: vista de detalles ([haga clic para ver la imagen de tamaño completo](passing-data-to-view-master-pages-cs/_static/image6.png))
 
-La vista de índice se encuentra en el listado 2. Simplemente recorre en iteración la lista de películas representada por el elemento de películas en datos de la vista.
+La vista de índice se encuentra en la lista 2. Simplemente recorre en iteración la lista de películas representada por el elemento Movies en View Data.
 
-**Listado 2: `Views\Home\Index.aspx`**
+**Lista 2: `Views\Home\Index.aspx`**
 
 [!code-aspx[Main](passing-data-to-view-master-pages-cs/samples/sample2.aspx)]
 
-La vista de página principal se encuentra en el listado 3. La página principal de la vista recorre en iteración y representa todas las categorías de película representadas por el elemento de las categorías de datos de la vista.
+La página maestra de vista se incluye en la lista 3. La página ver maestro recorre en iteración y representa todas las categorías de películas representadas por el elemento categorías de ver datos.
 
-**Listado 3: `Views\Shared\Site.master`**
+**Lista 3: `Views\Shared\Site.master`**
 
 [!code-aspx[Main](passing-data-to-view-master-pages-cs/samples/sample3.aspx)]
 
-Todos los datos se pasa a la vista y la página principal de la vista de datos de la vista. Que es la forma correcta para pasar datos a la página maestra.
+Todos los datos se pasan a la vista y a la página maestra de vista a través de los datos de la vista. Esta es la manera correcta de pasar los datos a la página maestra.
 
-Por lo tanto, ¿qué es el problema con esta solución? El problema es que esta solución infringe el principio DRY (no repita usted mismo). Cada acción del controlador debe agregar la misma muy lista de las categorías de películas para ver los datos. Tener código duplicado en la aplicación hace que su aplicación mucho más difícil de mantener, adaptar y modificar.
+¿Cuál es el problema con esta solución? El problema es que esta solución infringe el principio seco (Una vez y solo una). Cada acción del controlador debe agregar la misma lista de categorías de películas para ver los datos. La existencia de código duplicado en la aplicación hace que la aplicación sea mucho más difícil de mantener, adaptar y modificar.
 
-### <a name="the-good-solution"></a>La mejor solución
+### <a name="the-good-solution"></a>La buena solución
 
-En esta sección, examinaremos una solución alternativa y mejor, para pasar datos de una acción de controlador a una página maestra de la vista. En lugar de agregar las categorías de película de la página maestra en cada acción de controlador, agregamos las categorías de películas para ver los datos de una sola vez. Todos los datos de vista utilizados por la página principal de la vista se agrega en un controlador de aplicaciones.
+En esta sección, examinaremos una solución alternativa y mejor para pasar datos de una acción de controlador a una página maestra de vista. En lugar de agregar las categorías de películas para la página maestra en cada una de las acciones de controlador, se agregan las categorías de películas a los datos de vista solo una vez. Todos los datos de la vista que usa la página maestra de vista se agregan a un controlador de aplicación.
 
-La clase ApplicationController está contenida en el listado 4.
+La clase ApplicationController está incluida en la lista 4.
 
-**Listado 4: `Controllers\ApplicationController.cs`**
+**Lista 4: `Controllers\ApplicationController.cs`**
 
 [!code-csharp[Main](passing-data-to-view-master-pages-cs/samples/sample4.cs)]
 
-Hay tres cosas que debe tener en cuenta sobre el controlador de la aplicación en el listado 4. En primer lugar, tenga en cuenta que la clase hereda de la clase System.Web.Mvc.Controller base. El controlador de la aplicación es una clase de controlador.
+Hay tres cosas que debe tener en cuenta sobre el controlador de aplicación en la lista 4. En primer lugar, observe que la clase se hereda de la clase base System. Web. Mvc. Controller. El controlador de aplicación es una clase de controlador.
 
-En segundo lugar, observe que la clase de controlador de la aplicación es una clase abstracta. Una clase abstracta es una clase que debe implementarse mediante una clase concreta. Dado que el controlador de la aplicación es una clase abstracta, no no se puede invocar cualquier método definido en la clase directamente. Si se intenta invocar directamente la clase de la aplicación obtendrá un mensaje de error no se encuentra el recurso.
+En segundo lugar, tenga en cuenta que la clase de controlador de aplicación es una clase abstracta. Una clase abstracta es una clase que debe ser implementada por una clase concreta. Dado que el controlador de aplicación es una clase abstracta, no se puede invocar directamente ningún método definido en la clase. Si intenta invocar la clase de aplicación directamente, aparecerá el mensaje de error no se encuentra el recurso.
 
-En tercer lugar, tenga en cuenta que el controlador de la aplicación contiene un constructor que agrega la lista de las categorías de películas para ver los datos. Cada clase de controlador que se hereda desde el controlador de la aplicación llama al constructor del controlador de la aplicación automáticamente. Siempre que llame a cualquier acción en cualquier controlador que hereda desde el controlador de la aplicación, las categorías de películas se incluye automáticamente en los datos de vista.
+En tercer lugar, observe que el controlador de la aplicación contiene un constructor que agrega la lista de categorías de películas para ver los datos. Cada clase de controlador que hereda del controlador de aplicación llama automáticamente al constructor del controlador de la aplicación. Siempre que llame a cualquier acción en cualquier controlador que herede del controlador de aplicación, las categorías de película se incluyen automáticamente en los datos de la vista.
 
-El controlador de películas en el listado 5 se hereda desde el controlador de la aplicación.
+El controlador de películas de la lista 5 hereda del controlador de aplicación.
 
-**Listado 5: `Controllers\MoviesController.cs`**
+**Lista 5: `Controllers\MoviesController.cs`**
 
 [!code-csharp[Main](passing-data-to-view-master-pages-cs/samples/sample5.cs)]
 
-El controlador de películas, igual que el controlador Home descrito en la sección anterior, expone dos métodos de acción denominados `Index()` y `Details()`. Tenga en cuenta que la lista de categorías de la película aparece en la página principal de la vista no es agregado a ver datos en el `Index()` o `Details()` método. Dado que el controlador Movies hereda desde el controlador de la aplicación, se agrega la lista de las categorías de películas para ver los datos automáticamente.
+El controlador Movies, al igual que el controlador Home que se describe en la sección anterior, expone dos métodos de acción denominados `Index()` y `Details()`. Tenga en cuenta que la lista de categorías de película que se muestra en la página ver maestro no se agrega para ver los datos en el método `Index()` o `Details()`. Dado que el controlador de películas hereda del controlador de aplicación, se agrega la lista de categorías de películas para ver los datos automáticamente.
 
-Tenga en cuenta que esta solución para agregar datos de vista de una página maestra de la vista no infringe el principio DRY (no repita usted mismo). El código para agregar la lista de las categorías de películas para ver los datos se encuentra en una única ubicación: el constructor para el controlador de la aplicación.
+Tenga en cuenta que esta solución para agregar datos de vista para una página maestra de vista no infringe el principio seco (Una vez y solo una). El código para agregar la lista de categorías de películas para ver los datos se encuentra en una sola ubicación: el constructor del controlador de aplicación.
 
 ### <a name="summary"></a>Resumen
 
-En este tutorial, hemos tratado dos enfoques para pasar datos de vista de un controlador a una página maestra de la vista. En primer lugar, hemos visto una sencilla, pero es difícil mantener el enfoque. En la primera sección, explicamos cómo puede agregar datos de vista de una página maestra de la vista en cada acción de cada controlador en la aplicación. Se concluye que esto era un enfoque incorrecto porque infringe el principio DRY (no repita usted mismo).
+En este tutorial, se han analizado dos enfoques para pasar datos de vista de un controlador a una página maestra de vista. En primer lugar, examinamos un enfoque sencillo, pero difícil de mantener. En la primera sección, se describe cómo se pueden agregar datos de vista para una página maestra de vista en cada acción de controlador de la aplicación. Hemos concluido que se trata de un enfoque incorrecto porque infringe el principio seco (Una vez y solo una).
 
-A continuación, hemos visto una mejor estrategia para agregar los datos requeridos por una página maestra de la vista para ver los datos. En lugar de agregar los datos de vista en cada acción de controlador, agregamos los datos de vista solo una vez dentro de un controlador de aplicaciones. De este modo, puede evitar código duplicado al pasar datos a una página maestra de la vista en una aplicación ASP.NET MVC.
+A continuación, examinamos una estrategia mucho mejor para agregar los datos que necesita una página maestra de vista para ver los datos. En lugar de agregar los datos de la vista en cada una de las acciones del controlador, se han agregado los datos de la vista solo una vez dentro de un controlador de aplicación. De este modo, puede evitar el código duplicado al pasar datos a una página maestra de vista en una aplicación ASP.NET MVC.
 
 > [!div class="step-by-step"]
 > [Anterior](creating-page-layouts-with-view-master-pages-cs.md)

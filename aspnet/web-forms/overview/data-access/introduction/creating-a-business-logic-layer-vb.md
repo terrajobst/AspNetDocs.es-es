@@ -1,88 +1,88 @@
 ---
 uid: web-forms/overview/data-access/introduction/creating-a-business-logic-layer-vb
-title: Crear una capa de lógica empresarial (VB) | Microsoft Docs
+title: Crear una capa de lógica de negocios (VB) | Microsoft Docs
 author: rick-anderson
-description: En este tutorial, veremos cómo centralizar las reglas de negocio en una capa de lógica empresarial (BLL) que actúa como intermediario para intercambiar datos entre t...
+description: En este tutorial, veremos cómo centralizar las reglas de negocios en una capa de lógica de negocios (BLL) que actúa como intermediario para el intercambio de datos entre t...
 ms.author: riande
 ms.date: 03/31/2010
 ms.assetid: 142e5181-29ce-4bb9-907b-2a0becf7928b
 msc.legacyurl: /web-forms/overview/data-access/introduction/creating-a-business-logic-layer-vb
 msc.type: authoredcontent
-ms.openlocfilehash: e11d9d758d6bae5b657a8be51e7ee223923abc84
-ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
+ms.openlocfilehash: 2ee4789ea9567b7bcd70eb63695e0b1d73076dc2
+ms.sourcegitcommit: 22fbd8863672c4ad6693b8388ad5c8e753fb41a2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/06/2019
-ms.locfileid: "65108258"
+ms.lasthandoff: 11/28/2019
+ms.locfileid: "74572644"
 ---
 # <a name="creating-a-business-logic-layer-vb"></a>Crear una capa de lógica empresarial (VB)
 
 por [Scott Mitchell](https://twitter.com/ScottOnWriting)
 
-[Descargue la aplicación de ejemplo](http://download.microsoft.com/download/5/d/7/5d7571fc-d0b7-4798-ad4a-c976c02363ce/ASPNET_Data_Tutorial_2_VB.exe) o [descargar PDF](creating-a-business-logic-layer-vb/_static/datatutorial02vb1.pdf)
+[Descarga](https://download.microsoft.com/download/5/d/7/5d7571fc-d0b7-4798-ad4a-c976c02363ce/ASPNET_Data_Tutorial_2_VB.exe) de la aplicación de ejemplo o [descarga de PDF](creating-a-business-logic-layer-vb/_static/datatutorial02vb1.pdf)
 
-> En este tutorial, veremos cómo centralizar las reglas de negocio en una capa de lógica empresarial (BLL) que actúa como intermediario para intercambiar datos entre la capa de presentación y la capa DAL.
+> En este tutorial, veremos cómo centralizar las reglas de negocios en una capa de lógica de negocios (BLL) que actúa como intermediario para el intercambio de datos entre el nivel de presentación y la capa DAL.
 
 ## <a name="introduction"></a>Introducción
 
-La capa de acceso a datos (DAL) creado en el [primer tutorial](creating-a-data-access-layer-vb.md) separa claramente los datos de acceso a la lógica de la lógica de presentación. Sin embargo, mientras que la capa DAL separa claramente los detalles de acceso a datos de la capa de presentación, no aplica reglas de negocio que se pueden aplicar. Por ejemplo, para nuestra aplicación nos conviene no permitir la `CategoryID` o `SupplierID` campos de la `Products` tabla que se puede modificar cuando la `Discontinued` campo se establece en 1, o que podemos desear aplicar reglas de antigüedad, lo que prohíbe situaciones en las que un empleado está administrado por alguien que ha sido contratado tras ellas. Otro escenario común es autorización quizás solo los usuarios de un rol determinado, pueden eliminar los productos o pueden cambiar el `UnitPrice` valor.
+La capa de acceso a datos (DAL) creada en el [primer tutorial](creating-a-data-access-layer-vb.md) separa sin problemas la lógica de acceso a datos de la lógica de presentación. Sin embargo, aunque la capa DAL separa sin problemas los detalles de acceso a los datos del nivel de presentación, no aplica las reglas de negocios que se puedan aplicar. Por ejemplo, para nuestra aplicación, es posible que deseemos no permitir que se modifiquen los campos `CategoryID` o `SupplierID` de la tabla de `Products` cuando el campo de `Discontinued` esté establecido en 1, o bien podríamos aplicar reglas de altaidad, lo que prohíbe situaciones en las que un empleado está administrado por alguien contratado tras ellos. Otro escenario común es la autorización. quizás solo los usuarios de un rol determinado pueden eliminar productos o cambiar el valor de `UnitPrice`.
 
-En este tutorial, veremos cómo centralizar estas reglas de negocios en una capa de lógica empresarial (BLL) que actúa como intermediario para intercambiar datos entre la capa de presentación y la capa DAL. En una aplicación real, la capa BLL debe implementarse como un proyecto de biblioteca de clases independiente; Sin embargo, para estos tutoriales implementaremos el nivel de lógica empresarial como una serie de clases en nuestra `App_Code` carpeta con el fin de simplificar la estructura del proyecto. Figura 1 ilustra las relaciones arquitectura entre la capa de presentación, BLL y DAL.
+En este tutorial, veremos cómo centralizar estas reglas de negocios en una capa de lógica de negocios (BLL) que actúa como intermediario para el intercambio de datos entre el nivel de presentación y la capa DAL. En una aplicación real, el BLL debe implementarse como un proyecto de biblioteca de clases independiente. sin embargo, para estos tutoriales, implementaremos BLL como una serie de clases en la carpeta `App_Code` para simplificar la estructura del proyecto. En la figura 1 se muestran las relaciones arquitectónicas entre el nivel de presentación, BLL y DAL.
 
-![La capa BLL separa la capa de presentación de la capa de acceso a datos e impone las reglas de negocios](creating-a-business-logic-layer-vb/_static/image1.png)
+![El BLL separa el nivel de presentación de la capa de acceso a datos e impone reglas de negocios.](creating-a-business-logic-layer-vb/_static/image1.png)
 
-**Figura 1**: La capa BLL separa la capa de presentación de la capa de acceso a datos e impone las reglas de negocios
+**Figura 1**: el BLL separa el nivel de presentación de la capa de acceso a datos e impone reglas de negocios
 
-En lugar de crear clases independientes para implementar nuestra [lógica de negocios](http://en.wikipedia.org/wiki/Business_logic), o bien, podríamos colocar esta lógica directamente en el conjunto de datos con tipo con clases parciales. Para obtener un ejemplo de creación y extensión de un conjunto de datos con tipo, consulte el primer tutorial.
+En lugar de crear clases independientes para implementar nuestra [lógica de negocios](http://en.wikipedia.org/wiki/Business_logic), podríamos colocar esta lógica directamente en el conjunto de DataSet con tipo con clases parciales. Para obtener un ejemplo de creación y extensión de un conjunto de datos con tipo, consulte el primer tutorial.
 
-## <a name="step-1-creating-the-bll-classes"></a>Paso 1: Creación de clases de BLL
+## <a name="step-1-creating-the-bll-classes"></a>Paso 1: creación de las clases de BLL
 
-Nuestro nivel de lógica empresarial se compone de cuatro clases, una para cada TableAdapter en la capa DAL; cada una de estas clases BLL tendrá métodos para recuperar, insertar, actualizar y eliminar del TableAdapter respectivo en la capa DAL, aplicando las reglas de negocios adecuados.
+Nuestro BLL se compone de cuatro clases, una para cada TableAdapter en la capa DAL; cada una de estas clases BLL tendrá métodos para recuperar, insertar, actualizar y eliminar desde el TableAdapter respectivo en la capa DAL, aplicando las reglas de negocios apropiadas.
 
-Para más claramente separadas las clases relacionadas con DAL y BLL, vamos a crear dos subcarpetas en la `App_Code` carpeta, `DAL` y `BLL`. Simplemente haga doble clic en el `App_Code` carpeta en el Explorador de soluciones y elija la nueva carpeta. Después de crear estas dos carpetas, mover el conjunto de datos con tipo creado en el primer tutorial en el `DAL` subcarpeta.
+Para separar más claramente las clases relacionadas con DAL y BLL, vamos a crear dos subcarpetas en la carpeta `App_Code`, `DAL` y `BLL`. Simplemente haga clic con el botón derecho en la carpeta `App_Code` del Explorador de soluciones y elija nueva carpeta. Después de crear estas dos carpetas, mueva el conjunto de tipos creado en el primer tutorial a la subcarpeta `DAL`.
 
-A continuación, cree los cuatro archivos de clase BLL en los `BLL` subcarpeta. Para ello, haga doble clic en el `BLL` subcarpeta, elija Agregar un nuevo elemento y elija la plantilla de clase. Nombre de las cuatro clases `ProductsBLL`, `CategoriesBLL`, `SuppliersBLL`, y `EmployeesBLL`.
+A continuación, cree los cuatro archivos de clase BLL en la subcarpeta `BLL`. Para ello, haga clic con el botón derecho en la subcarpeta `BLL`, elija Agregar un nuevo elemento y seleccione la plantilla clase. Asigne a las cuatro clases el nombre `ProductsBLL`, `CategoriesBLL`, `SuppliersBLL`y `EmployeesBLL`.
 
-![Agregar cuatro nuevas clases a la carpeta App_Code](creating-a-business-logic-layer-vb/_static/image2.png)
+![Agregue cuatro clases nuevas a la carpeta App_Code](creating-a-business-logic-layer-vb/_static/image2.png)
 
-**Figura 2**: Agregar cuatro nuevas clases a la `App_Code` carpeta
+**Figura 2**: agregar cuatro clases nuevas a la carpeta `App_Code`
 
-A continuación, vamos a agregar métodos a cada una de las clases que encapsulan sencillamente los métodos definidos para los TableAdapters desde el primer tutorial. Por ahora, estos métodos solo llamará directamente en la capa DAL; Volveremos más adelante para agregar cualquier lógica de negocios necesaria.
+A continuación, vamos a agregar métodos a cada una de las clases para ajustar simplemente los métodos definidos para los TableAdapters del primer tutorial. Por ahora, estos métodos solo llamarán directamente a la capa DAL; volveremos más adelante para agregar cualquier lógica de negocios necesaria.
 
 > [!NOTE]
-> Si usa Visual Studio Standard Edition o versiones posteriores (es decir, está *no* mediante Visual Web Developer), opcionalmente, puede diseñar sus clases visualmente con la [Diseñador de clases](https://msdn.microsoft.com/library/default.asp?url=/library/dv_vstechart/html/clssdsgnr.asp). Hacer referencia a la [Blog del Diseñador de clase](https://blogs.msdn.com/classdesigner/default.aspx) para obtener más información sobre esta nueva característica en Visual Studio.
+> Si usa Visual Studio Standard Edition o una versión posterior (es decir, *no* está usando Visual Web Developer), puede diseñar sus clases de forma visual mediante el [Diseñador de clases](https://msdn.microsoft.com/library/default.asp?url=/library/dv_vstechart/html/clssdsgnr.asp). Consulte el [blog de diseñador de clases](https://blogs.msdn.com/classdesigner/default.aspx) para obtener más información sobre esta nueva característica de Visual Studio.
 
-Para el `ProductsBLL` que necesitamos agregar un total de siete métodos de clase:
+En el caso de la clase `ProductsBLL` es necesario agregar un total de siete métodos:
 
-- `GetProducts()` Devuelve todos los productos
-- `GetProductByProductID(productID)` Devuelve el producto con el identificador de producto especificado
-- `GetProductsByCategoryID(categoryID)` Devuelve todos los productos de la categoría especificada
-- `GetProductsBySupplier(supplierID)` Devuelve todos los productos del proveedor especificado
-- `AddProduct(productName, supplierID, categoryID, quantityPerUnit, unitPrice, unitsInStock, unitsOnOrder, reorderLevel, discontinued)` Inserta un nuevo producto en la base de datos con los valores pasados de; Devuelve el `ProductID` valor del registro recién insertado
-- `UpdateProduct(productName, supplierID, categoryID, quantityPerUnit, unitPrice, unitsInStock, unitsOnOrder, reorderLevel, discontinued, productID)` actualiza un producto existente en la base de datos con los valores en el pasado; Devuelve `True` si se ha actualizado con precisión una fila, `False` en caso contrario
-- `DeleteProduct(productID)` Elimina el producto especificado de la base de datos
+- `GetProducts()` devuelve todos los productos
+- `GetProductByProductID(productID)` devuelve el producto con el ID. de producto especificado
+- `GetProductsByCategoryID(categoryID)` devuelve todos los productos de la categoría especificada
+- `GetProductsBySupplier(supplierID)` devuelve todos los productos del proveedor especificado
+- `AddProduct(productName, supplierID, categoryID, quantityPerUnit, unitPrice, unitsInStock, unitsOnOrder, reorderLevel, discontinued)` inserta un nuevo producto en la base de datos con los valores pasados; Devuelve el valor `ProductID` del registro recién insertado.
+- `UpdateProduct(productName, supplierID, categoryID, quantityPerUnit, unitPrice, unitsInStock, unitsOnOrder, reorderLevel, discontinued, productID)` actualiza un producto existente en la base de datos con los valores pasados; Devuelve `True` si se actualizó exactamente una fila; de lo contrario, `False`
+- `DeleteProduct(productID)` elimina el producto especificado de la base de datos
 
-ProductsBLL.vb
+ProductsBLL. VB
 
 [!code-vb[Main](creating-a-business-logic-layer-vb/samples/sample1.vb)]
 
-Los métodos que simplemente devuelven datos `GetProducts`, `GetProductByProductID`, `GetProductsByCategoryID`, y `GetProductBySuppliersID` son bastante sencillas, ya que simplemente llaman a hacia abajo en la capa DAL. Aunque en algunos escenarios puede ser reglas de negocio que deben implementarse en este nivel (por ejemplo, las reglas de autorización basada en el usuario ha iniciado sesión actualmente o el rol al que pertenece el usuario), simplemente dejaremos estos métodos como-es. Para estos métodos, a continuación, BLL sirve únicamente como un proxy a través del cual la capa de presentación, tiene acceso a los datos subyacentes de la capa de acceso a datos.
+Los métodos que simplemente devuelven datos `GetProducts`, `GetProductByProductID`, `GetProductsByCategoryID`y `GetProductBySuppliersID` son bastante sencillos, ya que simplemente llaman a la capa DAL. Aunque en algunos escenarios puede haber reglas de negocios que deban implementarse en este nivel (por ejemplo, reglas de autorización basadas en el usuario que ha iniciado sesión actualmente o en el rol al que pertenece el usuario), simplemente dejaremos estos métodos tal cual. Para estos métodos, el BLL sirve simplemente como proxy a través del cual el nivel de presentación tiene acceso a los datos subyacentes desde la capa de acceso a datos.
 
-El `AddProduct` y `UpdateProduct` métodos tanto toman como parámetros de los valores para los distintos campos de producto y agregar un nuevo producto o actualiza uno existente, respectivamente. Dado que muchas de las `Product` pueden aceptar las columnas de tabla `NULL` valores (`CategoryID`, `SupplierID`, y `UnitPrice`, por nombrar algunos), los parámetros de entrada `AddProduct` y `UpdateProduct` que se asignan a este uso de las columnas [tipos que aceptan valores NULL](https://msdn.microsoft.com/library/1t3y8s4s(v=vs.80).aspx). Tipos que aceptan valores NULL son nuevos en .NET 2.0 y proporcionan una técnica que indica si un tipo de valor se debe, en su lugar, ser `Nothing`. Hacer referencia a la [Paul Vick](http://www.panopticoncentral.net/)de entrada de blog [la verdad acerca de tipos que aceptan valores NULL y VB](http://www.panopticoncentral.net/archive/2004/06/04/1180.aspx) y la documentación técnica de la [Nullable](https://msdn.microsoft.com/library/b3h38hb0%28VS.80%29.aspx) estructura para obtener más información.
+Los métodos `AddProduct` y `UpdateProduct` toman como parámetros los valores de los distintos campos de producto y agregan un nuevo producto o actualizan uno existente, respectivamente. Dado que muchas de las columnas de `Product` tabla pueden aceptar `NULL` valores (`CategoryID`, `SupplierID`y `UnitPrice`, por nombrar algunos), los parámetros de entrada de `AddProduct` y `UpdateProduct` que se asignan a esas columnas utilizan [tipos que aceptan valores NULL](https://msdn.microsoft.com/library/1t3y8s4s(v=vs.80).aspx). Los tipos que aceptan valores NULL son nuevos en .NET 2,0 y proporcionan una técnica para indicar si un tipo de valor debe, en su lugar, ser `Nothing`. Consulte la entrada del blog de [Paul Vick](http://www.panopticoncentral.net/) [sobre los tipos que aceptan valores NULL y VB](http://www.panopticoncentral.net/archive/2004/06/04/1180.aspx) y la documentación técnica de la estructura que [acepta valores NULL](https://msdn.microsoft.com/library/b3h38hb0%28VS.80%29.aspx) para obtener más información.
 
-Los tres métodos devuelven un valor booleano que indica si una fila se ha insertado, actualizada o eliminado no puede dar lugar a la operación en una fila afectada. Por ejemplo, si el desarrollador de páginas llama `DeleteProduct` pasando un `ProductID` para un producto que no existe, el `DELETE` instrucción emitida a la base de datos tendrán ningún efecto y, por tanto, el `DeleteProduct` método devolverá `False`.
+Los tres métodos devuelven un valor booleano que indica si se insertó, actualizó o eliminó una fila, ya que es posible que la operación no dé como resultado una fila afectada. Por ejemplo, si el desarrollador de páginas llama `DeleteProduct` pasando un `ProductID` para un producto que no existe, la instrucción `DELETE` emitida a la base de datos no tendrá ningún efecto y, por tanto, el método `DeleteProduct` devolverá `False`.
 
-Tenga en cuenta que al agregar un nuevo producto o actualizar uno existente que tomamos los valores de campo nuevos o modificados del producto como una lista de valores escalares en lugar de aceptar un `ProductsRow` instancia. Se ha elegido este enfoque porque la `ProductsRow` clase se deriva de la versión de ADO.NET `DataRow` (clase), que no tiene un constructor sin parámetros predeterminado. Para crear un nuevo `ProductsRow` instancia, debemos crear primero un `ProductsDataTable` de instancia y, a continuación, invocar su `NewProductRow()` método (lo que hacemos en `AddProduct`). Este inconveniente rears la cabeza cuando nos concentramos en la inserción y actualización de productos a través de ObjectDataSource. En resumen, el origen ObjectDataSource intentará crear una instancia de los parámetros de entrada. Si el método BLL espera un `ProductsRow` instancia, el origen ObjectDataSource intentará crear uno, pero se producirá un error debido a la falta de un constructor sin parámetros predeterminado. Para obtener más información sobre este problema, consulte las siguientes dos entradas de foros de ASP.NET: [Actualización de ObjectDataSource con fuertemente tipado conjuntos de datos](https://forums.asp.net/1098630/ShowPost.aspx), y [problema con ObjectDataSource y conjunto de datos fuertemente tipados](https://forums.asp.net/1048212/ShowPost.aspx).
+Tenga en cuenta que al agregar un nuevo producto o actualizar uno existente, se toman los valores de campo del producto nuevo o modificado como una lista de escalares en lugar de aceptar una instancia de `ProductsRow`. Se eligió este método porque la clase `ProductsRow` deriva de la clase `DataRow` ADO.NET, que no tiene un constructor sin parámetros predeterminado. Para crear una nueva instancia de `ProductsRow`, primero debemos crear una instancia de `ProductsDataTable` y, después, invocar su método `NewProductRow()` (que hacemos en `AddProduct`). Este defecto reparte su cabeza cuando se selecciona la inserción y la actualización de productos mediante ObjectDataSource. En Resumen, ObjectDataSource intentará crear una instancia de los parámetros de entrada. Si el método BLL espera una instancia de `ProductsRow`, ObjectDataSource intentará crear una, pero se producirá un error debido a la falta de un constructor sin parámetros predeterminado. Para obtener más información sobre este problema, consulte los dos siguientes blogs de foros de ASP.NET: [actualización de ObjectDataSource con conjuntos de datos fuertemente tipados](https://forums.asp.net/1098630/ShowPost.aspx)y [problemas con ObjectDataSource y conjunto de datos fuertemente tipado](https://forums.asp.net/1048212/ShowPost.aspx).
 
-A continuación, en ambos `AddProduct` y `UpdateProduct`, el código crea un `ProductsRow` de instancia y la rellena con los valores pasados simplemente. Al asignar valores a los objetos DataColumn de una fila de datos pueden ocurrir varias comprobaciones de validación de nivel de campo. Por lo tanto, pasar manualmente los valores pasados en una fila de datos le ayuda a garantizar la validez de los datos pasados al método BLL. Por desgracia las clases de DataRow fuertemente tipado generadas por Visual Studio no utilizan tipos que aceptan valores NULL. En su lugar, para indicar que un objeto DataColumn determinado en un objeto DataRow debe corresponder a un `NULL` debemos usar el valor de la base de datos la `SetColumnNameNull()` método.
+Después, tanto en `AddProduct` como en `UpdateProduct`, el código crea una instancia de `ProductsRow` y la rellena con los valores que se acaban de pasar. Cuando se asignan valores a las columnas DataColumn de una DataRow, se pueden realizar varias comprobaciones de validación de nivel de campo. Por consiguiente, volver a colocar manualmente los valores pasados en una DataRow ayuda a garantizar la validez de los datos que se pasan al método BLL. Desafortunadamente, las clases DataRow fuertemente tipadas generadas por Visual Studio no usan tipos que aceptan valores NULL. En su lugar, para indicar que una DataColumn determinada en una DataRow debe corresponder a un valor de base de datos `NULL`, se debe usar el método `SetColumnNameNull()`.
 
-En `UpdateProduct` cargamos en primer lugar en el producto se actualiza con `GetProductByProductID(productID)`. Aunque esto puede parecer visitas innecesarias a la base de datos, este viaje adicional demostrará valga la pena en próximos tutoriales que exploran la simultaneidad optimista. Simultaneidad optimista es una técnica para asegurarse de que dos usuarios que trabajan simultáneamente en los mismos datos no sobrescriban accidentalmente los cambios del otro. Tomar todo el registro también resulta más fácil crear métodos de actualización en la capa BLL que modifique solo un subconjunto de columnas de DataRow. Cuando se explorará el `SuppliersBLL` veremos un ejemplo de clase.
+En `UpdateProduct` primero cargaremos en el producto para actualizar con `GetProductByProductID(productID)`. Aunque esto puede parecer un viaje innecesario a la base de datos, este viaje adicional le merecerá la pena en futuros tutoriales que exploren la simultaneidad optimista. La simultaneidad optimista es una técnica para garantizar que dos usuarios que trabajan simultáneamente en los mismos datos no sobrescriban accidentalmente los cambios de los demás. La captación del registro completo también facilita la creación de métodos de actualización en el BLL que solo modifican un subconjunto de las columnas de DataRow. Cuando Exploremos la clase `SuppliersBLL`, veremos un ejemplo de este tipo.
 
-Por último, tenga en cuenta que el `ProductsBLL` clase tiene el [atributo DataObject](https://msdn.microsoft.com/library/system.componentmodel.dataobjectattribute.aspx) aplicado a él (el `[System.ComponentModel.DataObject]` sintaxis justo antes de la instrucción de clase en la parte superior del archivo) y los métodos tienen [ Atributos DataObjectMethodAttribute](https://msdn.microsoft.com/library/system.componentmodel.dataobjectmethodattribute.aspx). El `DataObject` atributo marca la clase como un objeto adecuado para enlazarlo a un [control ObjectDataSource](https://msdn.microsoft.com/library/9a4kyhcx.aspx), mientras que el `DataObjectMethodAttribute` indica el propósito del método. Como veremos en el futuro tutoriales, ObjectDataSource de ASP.NET 2.0 facilita la forma declarativa tener acceso a datos desde una clase. Para ayudar a filtrar la lista de las clases posibles que enlazar en el Asistente de ObjectDataSource, de forma predeterminada solo esas clases marcadas como `DataObjects` se muestran en la lista desplegable del asistente. La `ProductsBLL` clase funcionará perfectamente sin estos atributos, pero agregarlos resulta más fácil trabajar con Asistente de ObjectDataSource.
+Por último, tenga en cuenta que la clase `ProductsBLL` tiene aplicado el [atributo DataObject](https://msdn.microsoft.com/library/system.componentmodel.dataobjectattribute.aspx) (la sintaxis de `[System.ComponentModel.DataObject]` justo delante de la instrucción Class cerca de la parte superior del archivo) y los métodos tienen [atributos DataObjectMethodAttribute](https://msdn.microsoft.com/library/system.componentmodel.dataobjectmethodattribute.aspx). El atributo `DataObject` marca la clase como un objeto adecuado para enlazar a un [control ObjectDataSource](https://msdn.microsoft.com/library/9a4kyhcx.aspx), mientras que la `DataObjectMethodAttribute` indica el propósito del método. Como veremos en futuros tutoriales, el ObjectDataSource de ASP.NET 2.0 facilita el acceso mediante declaración a los datos de una clase. Para ayudar a filtrar la lista de posibles clases a las que se va a enlazar en el Asistente de ObjectDataSource, de forma predeterminada solo las clases marcadas como `DataObjects` se muestran en la lista desplegable del asistente. La clase `ProductsBLL` funcionará igual que sin estos atributos, pero agregarlos facilita el trabajo en el Asistente de ObjectDataSource.
 
-## <a name="adding-the-other-classes"></a>Adición de las otras clases
+## <a name="adding-the-other-classes"></a>Agregar las otras clases
 
-Con el `ProductsBLL` clase completa, todavía tenemos que agregar las clases para trabajar con categorías, proveedores y empleados. Dedique unos minutos para crear las siguientes clases y métodos mediante los conceptos del ejemplo anterior:
+Una vez completada la clase `ProductsBLL`, todavía es necesario agregar las clases para trabajar con categorías, proveedores y empleados. Dedique un momento a crear las siguientes clases y métodos con los conceptos del ejemplo anterior:
 
 - **CategoriesBLL.cs**
 
@@ -100,96 +100,96 @@ Con el `ProductsBLL` clase completa, todavía tenemos que agregar las clases par
     - `GetEmployeeByEmployeeID(employeeID)`
     - `GetEmployeesByManager(managerID)`
 
-El método que vale la pena mencionar es el `SuppliersBLL` la clase `UpdateSupplierAddress` método. Este método proporciona una interfaz para actualizar solo la información de dirección del proveedor. Internamente, este método lee la `SupplierDataRow` objeto para el elemento especificado `supplierID` (mediante `GetSupplierBySupplierID`), establece sus propiedades relacionadas con la dirección y, a continuación, llama a hacia abajo en la `SupplierDataTable`del `Update` método. El `UpdateSupplierAddress` método se indica a continuación:
+El método que merece la pena mencionar es el método `UpdateSupplierAddress` de la clase `SuppliersBLL`. Este método proporciona una interfaz para actualizar solo la información de dirección del proveedor. Internamente, este método lee el objeto de `SupplierDataRow` para la `supplierID` especificada (mediante `GetSupplierBySupplierID`), establece sus propiedades relacionadas con la dirección y, a continuación, llama al método `Update` del `SupplierDataTable`. A continuación se muestra el método `UpdateSupplierAddress`:
 
 [!code-vb[Main](creating-a-business-logic-layer-vb/samples/sample2.vb)]
 
-Consulte la descarga de este artículo para mi implementación completa de las clases BLL.
+Consulte la descarga de este artículo para obtener la implementación completa de las clases de BLL.
 
-## <a name="step-2-accessing-the-typed-datasets-through-the-bll-classes"></a>Paso 2: Acceso a los conjuntos de datos con tipo a través de las clases BLL
+## <a name="step-2-accessing-the-typed-datasets-through-the-bll-classes"></a>Paso 2: obtener acceso a los conjuntos de tipos de DataSet con tipo a través de las clases de BLL
 
-En el primer tutorial hemos visto algunos ejemplos de trabajar directamente con el conjunto de datos con tipo mediante programación, pero con la adición de nuestras clases BLL, el nivel de presentación debe funcionar en el nivel de lógica empresarial en su lugar. En el `AllProducts.aspx` ejemplo desde el primer tutorial, el `ProductsTableAdapter` se usó para enlazar la lista de productos en un control GridView, tal como se muestra en el código siguiente:
+En el primer tutorial, vimos ejemplos de cómo trabajar directamente con el conjunto de elementos con tipo mediante programación, pero con la adición de las clases de BLL, el nivel de presentación debería funcionar en su lugar con la capa BLL. En el ejemplo `AllProducts.aspx` del primer tutorial, el `ProductsTableAdapter` se usó para enlazar la lista de productos a un control GridView, tal y como se muestra en el código siguiente:
 
 [!code-vb[Main](creating-a-business-logic-layer-vb/samples/sample3.vb)]
 
-Para usar la capa BLL nuevas clases, todo lo que debe cambiarse es simplemente reemplace la primera línea de código la `ProductsTableAdapter` objeto con un `ProductBLL` objeto:
+Para usar las nuevas clases de BLL, todo lo que se debe cambiar es la primera línea de código simplemente reemplace el objeto `ProductsTableAdapter` por un objeto `ProductBLL`:
 
 [!code-vb[Main](creating-a-business-logic-layer-vb/samples/sample4.vb)]
 
-Las clases de nivel de lógica empresarial también pueden obtenerse mediante declaración (como el conjunto de datos con tipo) mediante el uso de ObjectDataSource. Trataremos ObjectDataSource en detalle en los tutoriales siguientes.
+También se puede tener acceso a las clases BLL mediante declaración (como puede ser el conjunto de DataSet con tipo) mediante ObjectDataSource. En los siguientes tutoriales se explicará con más detalle ObjectDataSource.
 
-[![Se muestra la lista de productos en un control GridView](creating-a-business-logic-layer-vb/_static/image4.png)](creating-a-business-logic-layer-vb/_static/image3.png)
+[![la lista de productos se muestra en un control GridView](creating-a-business-logic-layer-vb/_static/image4.png)](creating-a-business-logic-layer-vb/_static/image3.png)
 
-**Figura 3**: Se muestra la lista de productos en un control GridView ([haga clic aquí para ver imagen en tamaño completo](creating-a-business-logic-layer-vb/_static/image5.png))
+**Figura 3**: la lista de productos se muestra en un control GridView ([haga clic para ver la imagen de tamaño completo](creating-a-business-logic-layer-vb/_static/image5.png))
 
-## <a name="step-3-adding-field-level-validation-to-the-datarow-classes"></a>Paso 3: Agregar validación de nivel de campo a las clases de DataRow
+## <a name="step-3-adding-field-level-validation-to-the-datarow-classes"></a>Paso 3: agregar la validación de nivel de campo a las clases DataRow
 
-Validación de nivel de campo son los cheques que pertenece a los valores de propiedad de los objetos de negocio al insertar o actualizar. Algunas reglas de validación de nivel de campo para los productos incluyen:
+La validación de nivel de campo es una comprobación que pertenece a los valores de propiedad de los objetos comerciales al insertar o actualizar. Algunas reglas de validación de nivel de campo para productos incluyen:
 
-- El `ProductName` campo debe ser la longitud máxima de 40 caracteres
-- El `QuantityPerUnit` campo debe ser la longitud máxima de 20 caracteres
-- El `ProductID`, `ProductName`, y `Discontinued` campos son obligatorios, pero todos los demás campos son opcionales
-- El `UnitPrice`, `UnitsInStock`, `UnitsOnOrder`, y `ReorderLevel` campos deben ser mayor o igual a cero.
+- El campo `ProductName` debe tener una longitud de 40 caracteres como máximo.
+- El campo `QuantityPerUnit` debe tener una longitud de 20 caracteres o menos.
+- Los campos `ProductID`, `ProductName`y `Discontinued` son obligatorios, pero todos los demás campos son opcionales.
+- Los campos `UnitPrice`, `UnitsInStock`, `UnitsOnOrder`y `ReorderLevel` deben ser mayores o iguales que cero
 
-Estas reglas pueden y deben expresarse en el nivel de base de datos. El límite de caracteres en el `ProductName` y `QuantityPerUnit` se capturan los campos por los tipos de datos de esas columnas en el `Products` tabla (`nvarchar(40)` y `nvarchar(20)`, respectivamente). Si los campos son obligatorios y opcionales se expresan por si la columna de tabla de base de datos permite `NULL` s. Cuatro [restricciones check](https://msdn.microsoft.com/library/ms188258.aspx) existe que asegurarse de que solo los valores iguales a cero o mayores que pueden realizar en el `UnitPrice`, `UnitsInStock`, `UnitsOnOrder`, o `ReorderLevel` columnas.
+Estas reglas se pueden expresar en el nivel de base de datos. Los tipos de datos de las columnas de la tabla `Products` (`nvarchar(40)` y `nvarchar(20)`, respectivamente) capturan el límite de caracteres de los campos `ProductName` y `QuantityPerUnit`. Si los campos son obligatorios y son opcionales, expresados por si la columna de la tabla de base de datos permite `NULL` s. Existen cuatro [restricciones check](https://msdn.microsoft.com/library/ms188258.aspx) que garantizan que solo los valores mayores o iguales que cero pueden convertirlos en las columnas `UnitPrice`, `UnitsInStock`, `UnitsOnOrder`o `ReorderLevel`.
 
-Además de aplicar estas reglas en la base de datos también se deben aplicar en el nivel de conjunto de datos. De hecho, la longitud de campo y si un valor es obligatorio u opcional ya se capturan para el conjunto de cada DataTable de DataColumn. Para ver la validación de nivel de campo existente proporciona automáticamente, vaya al diseñador de DataSet, seleccione un campo de una de las tablas de datos y, a continuación, vaya a la ventana Propiedades. Como se muestra en la figura 4, el `QuantityPerUnit` DataColumn en el `ProductsDataTable` tiene una longitud máxima de 20 caracteres y permitir `NULL` valores. Si se intenta establecer el `ProductsDataRow`del `QuantityPerUnit` propiedad con un valor de cadena de más de 20 caracteres un `ArgumentException` se iniciará.
+Además de aplicar estas reglas a la base de datos, también deben aplicarse en el nivel de conjunto de datos. De hecho, la longitud del campo y si un valor es obligatorio u opcional ya se han capturado para cada conjunto de columnas DataColumn de cada DataTable. Para ver la validación de nivel de campo existente proporcionada automáticamente, vaya al diseñador de DataSet, seleccione un campo de una de las tablas de campos y, a continuación, vaya al ventana Propiedades. Como se muestra en la figura 4, el `QuantityPerUnit` DataColumn del `ProductsDataTable` tiene una longitud máxima de 20 caracteres y permite valores `NULL`. Si se intenta establecer la propiedad `QuantityPerUnit` del `ProductsDataRow`en un valor de cadena de más de 20 caracteres, se producirá una `ArgumentException`.
 
-[![DataColumn proporciona validación básica de nivel de campo](creating-a-business-logic-layer-vb/_static/image7.png)](creating-a-business-logic-layer-vb/_static/image6.png)
+[![DataColumn proporciona una validación básica en el nivel de campo](creating-a-business-logic-layer-vb/_static/image7.png)](creating-a-business-logic-layer-vb/_static/image6.png)
 
-**Figura 4**: El objeto DataColumn proporciona nivel de campo validación básica ([haga clic aquí para ver imagen en tamaño completo](creating-a-business-logic-layer-vb/_static/image8.png))
+**Figura 4**: la columna DataColumn proporciona una validación de nivel de campo básica ([haga clic para ver la imagen de tamaño completo](creating-a-business-logic-layer-vb/_static/image8.png))
 
-Lamentablemente, no podemos especificamos las comprobaciones de límites, como el `UnitPrice` valor debe ser mayor o igual a cero, a través de la ventana Propiedades. Para proporcionar este tipo de validación de nivel de campo es necesario crear un controlador de eventos de la DataTable [ColumnChanging](https://msdn.microsoft.com/library/system.data.datatable.columnchanging%28VS.80%29.aspx) eventos. Como se mencionó en el [tutorial anterior](creating-a-data-access-layer-vb.md), los objetos DataRow, DataTable y DataSet creados por el conjunto de datos con tipo se pueden extender mediante el uso de clases parciales. Con esta técnica se puede crear un `ColumnChanging` controlador de eventos para el `ProductsDataTable` clase. Empiece por crear una clase en el `App_Code` carpeta denominada `ProductsDataTable.ColumnChanging.vb`.
+Desafortunadamente, no podemos especificar comprobaciones de límites, como el valor de `UnitPrice` debe ser mayor o igual que cero, a través de la ventana Propiedades. Con el fin de proporcionar este tipo de validación de nivel de campo, es necesario crear un controlador de eventos para el evento [ColumnChanging](https://msdn.microsoft.com/library/system.data.datatable.columnchanging%28VS.80%29.aspx) de DataTable. Como se mencionó en el [tutorial anterior](creating-a-data-access-layer-vb.md), los objetos DataSet, DataTable y DataRow creados por el DataSet con tipo se pueden extender mediante el uso de clases parciales. Con esta técnica se puede crear un controlador de eventos `ColumnChanging` para la clase `ProductsDataTable`. Empiece por crear una clase en la carpeta `App_Code` denominada `ProductsDataTable.ColumnChanging.vb`.
 
-[![Agregue una nueva clase a la carpeta App_Code](creating-a-business-logic-layer-vb/_static/image10.png)](creating-a-business-logic-layer-vb/_static/image9.png)
+[![agregar una nueva clase a la carpeta App_Code](creating-a-business-logic-layer-vb/_static/image10.png)](creating-a-business-logic-layer-vb/_static/image9.png)
 
-**Figura 5**: Agregue una nueva clase a la `App_Code` carpeta ([haga clic aquí para ver imagen en tamaño completo](creating-a-business-logic-layer-vb/_static/image11.png))
+**Figura 5**: agregar una nueva clase a la carpeta `App_Code` ([haga clic para ver la imagen de tamaño completo](creating-a-business-logic-layer-vb/_static/image11.png))
 
-A continuación, cree un controlador de eventos para el `ColumnChanging` eventos que se asegura de que el `UnitPrice`, `UnitsInStock`, `UnitsOnOrder`, y `ReorderLevel` valores de columna (si no `NULL`) son mayores o iguales a cero. Si cualquier columna de este tipo está fuera del intervalo, se produce un `ArgumentException`.
+A continuación, cree un controlador de eventos para el evento `ColumnChanging` que garantice que los valores de las columnas `UnitPrice`, `UnitsInStock`, `UnitsOnOrder`y `ReorderLevel` (si no `NULL`) son mayores o iguales que cero. Si alguna de estas columnas está fuera del intervalo, inicie una `ArgumentException`.
 
-ProductsDataTable.ColumnChanging.vb
+ProductsDataTable. ColumnChanging. VB
 
 [!code-vb[Main](creating-a-business-logic-layer-vb/samples/sample5.vb)]
 
-## <a name="step-4-adding-custom-business-rules-to-the-blls-classes"></a>Paso 4: Adición de reglas de negocios personalizada a las clases del nivel de lógica empresarial
+## <a name="step-4-adding-custom-business-rules-to-the-blls-classes"></a>Paso 4: agregar reglas de negocios personalizadas a las clases de BLL
 
-Además de la validación de nivel de campo, puede haber reglas de alto nivel de negocios personalizada que implican entidades diferentes o no se puede expresar conceptos en el nivel de columna única, como:
+Además de la validación de nivel de campo, puede haber reglas de negocios personalizadas de alto nivel que impliquen diferentes entidades o conceptos que no se pueden expresar en el nivel de una sola columna, como:
 
-- Si un producto no está disponible, su `UnitPrice` no se puede actualizar
-- País de un empleado de residencia debe coincidir con el país de su administrador de residencia
-- Un producto no puede interrumpirse si es el único producto proporcionado por el proveedor
+- Si un producto está descontinuado, no se puede actualizar su `UnitPrice`
+- El país de residencia de un empleado debe ser el mismo que el país de residencia de su jefe
+- No se puede suspender un producto si es el único producto proporcionado por el proveedor
 
-Las clases BLL deben contener comprobaciones para garantizar el cumplimiento de las reglas de negocios de la aplicación. Estas comprobaciones pueden agregarse directamente a los métodos a los que se aplican.
+Las clases BLL deben contener comprobaciones para garantizar el cumplimiento de las reglas de negocios de la aplicación. Estas comprobaciones se pueden agregar directamente a los métodos a los que se aplican.
 
-Imagine que nuestras reglas de negocio dictan que un producto no se pudo marcar discontinuo si era el único producto de un proveedor determinado. Es decir, si producto *X* era el único producto comprado a proveedor *Y*, no nos pudimos marcar *X* como discontinuo; si, sin embargo, proveedor *Y*nos suministrados con tres productos *A*, *B*, y *C*, a continuación, nos podríamos marcar cualquier y todos ellos como obsoletos. Una regla de negocio extraño, pero las reglas de negocios y sentido común no están alineadas siempre!
+Imagine que nuestras reglas de negocios indican que un producto no se pudo marcar como no incluida si era el único producto de un proveedor determinado. Es decir, si el producto *X* era el único producto adquirido del proveedor *y*, no pudimos marcar *X* como no incluida; sin embargo, si el proveedor *y* proporcionara los tres productos, *a*, *B*y *C*, podríamos marcar cualquiera de ellos como descontinuado. Una regla de negocios impar, pero las reglas de negocios y el sentido común no siempre están alineadas.
 
-Para aplicar esta regla de negocios en el `UpdateProducts` comenzamos comprobando si el método `Discontinued` se estableció en `True` y, si es así, se llamaría a `GetProductsBySupplierID` para determinar cuántos productos se adquiridas a través de proveedores de este producto. Si solo se adquiere un producto de este proveedor, generaremos una `ApplicationException`.
+Para aplicar esta regla de negocios en el método de `UpdateProducts`, empezamos comprobando si `Discontinued` se estableció en `True` y, en caso afirmativo, llamaremos `GetProductsBySupplierID` para determinar cuántos productos compramos en el proveedor de este producto. Si solo se adquiere un producto de este proveedor, se lanza un `ApplicationException`.
 
 [!code-vb[Main](creating-a-business-logic-layer-vb/samples/sample6.vb)]
 
-## <a name="responding-to-validation-errors-in-the-presentation-tier"></a>Responder a errores de validación en el nivel de presentación
+## <a name="responding-to-validation-errors-in-the-presentation-tier"></a>Responder a los errores de validación en el nivel de presentación
 
-Al llamar a la capa BLL desde el nivel de presentación se puede decidir si se intenta controlar las excepciones que puedan generarse o bien permitirles ascienden a ASP.NET (que se producirá la `HttpApplication`del `Error` eventos). Para controlar una excepción cuando se trabaja mediante programación con la capa BLL, podemos usar un [intente... Detectar](https://msdn.microsoft.com/library/fk6t46tz%28VS.80%29.aspx) bloque, como se muestra en el ejemplo siguiente:
+Cuando se llama a la capa BLL desde el nivel de presentación, se puede decidir si se va a intentar controlar cualquier excepción que se pueda producir o permitir que se propague hasta ASP.NET (lo que provocará el evento de `Error` del `HttpApplication`). Para controlar una excepción al trabajar con la capa BLL mediante programación, podemos usar una [instrucción try... Catch](https://msdn.microsoft.com/library/fk6t46tz%28VS.80%29.aspx) , como se muestra en el ejemplo siguiente:
 
 [!code-vb[Main](creating-a-business-logic-layer-vb/samples/sample7.vb)]
 
-Como veremos en tutoriales futuros, controlar las excepciones que surjan BLL al usar los datos de un control Web para insertar, actualizar, o eliminar los datos puede controlarse directamente en un controlador de eventos en lugar de tener que ajustar el código en `Try...Catch` bloques.
+Como veremos en futuros tutoriales, el control de las excepciones que se propagan desde la capa BLL cuando se usa un control Web de datos para insertar, actualizar o eliminar datos se puede controlar directamente en un controlador de eventos en lugar de tener que ajustar el código en los bloques de `Try...Catch`.
 
 ## <a name="summary"></a>Resumen
 
-Una aplicación con buena arquitectura se cimienta en distintas capas, cada una de las cuales encapsula una función concreta. En el primer tutorial de esta serie de artículos, creamos una capa de acceso a datos mediante conjuntos de datos con tipo; en este tutorial hemos creado una capa de lógica empresarial como una serie de clases en nuestra aplicación `App_Code` carpeta que llama a nuestro DAL. La capa BLL implementa la lógica de nivel de campo y el nivel de negocio para nuestra aplicación. Además de crear un nivel de lógica empresarial independiente, como hicimos en este tutorial, otra opción es ampliar los métodos de los TableAdapters mediante el uso de clases parciales. Sin embargo, esta técnica no nos permite invalidar los métodos existentes ni lo separar nuestro DAL y nuestro BLL lo más limpiamente el enfoque que hemos tomado en este artículo.
+Una aplicación bien diseñada se diseña en capas distintas, cada una de las cuales encapsula un rol determinado. En el primer tutorial de este artículo, se crea una capa de acceso a datos mediante conjuntos de datos con tipo. en este tutorial, creamos una capa de lógica de negocios como una serie de clases en la carpeta de `App_Code` de la aplicación que llama a la capa DAL. La capa BLL implementa la lógica de nivel de campo y de nivel empresarial para nuestra aplicación. Además de crear un BLL independiente, como hicimos en este tutorial, otra opción consiste en extender los métodos de los TableAdapters mediante el uso de clases parciales. Sin embargo, el uso de esta técnica no nos permite invalidar los métodos existentes ni separar la capa DAL y la capa BLL como el enfoque que hemos tomado en este artículo.
 
-Con la DAL y BLL completa, ya estamos listos para iniciar en la capa de presentación. En el [siguiente tutorial](master-pages-and-site-navigation-vb.md) echaremos un breve desvío de temas de acceso de datos y definir un diseño de página coherente para su uso a lo largo de los tutoriales.
+Una vez completada la capa DAL y BLL, estamos preparados para empezar en nuestro nivel de presentación. En el [siguiente tutorial](master-pages-and-site-navigation-vb.md) , se realizará un breve resumen de los temas de acceso a datos y se definirá un diseño de página coherente para su uso en los tutoriales.
 
-Feliz programación.
+¡ Feliz programación!
 
 ## <a name="about-the-author"></a>Acerca del autor
 
-[Scott Mitchell](http://www.4guysfromrolla.com/ScottMitchell.shtml), autor de siete libros sobre ASP/ASP.NET y fundador de [4GuysFromRolla.com](http://www.4guysfromrolla.com), trabaja con tecnologías Web de Microsoft desde 1998. Scott trabaja como consultor independiente, instructor y escritor. Su último libro es [*SAM enseñar a usted mismo ASP.NET 2.0 en 24 horas*](https://www.amazon.com/exec/obidos/ASIN/0672327384/4guysfromrollaco). Puede ponerse en [ mitchell@4GuysFromRolla.com.](mailto:mitchell@4GuysFromRolla.com) o a través de su blog, que puede encontrarse en [ http://ScottOnWriting.NET ](http://ScottOnWriting.NET).
+[Scott Mitchell](http://www.4guysfromrolla.com/ScottMitchell.shtml), autor de siete libros de ASP/ASP. net y fundador de [4GuysFromRolla.com](http://www.4guysfromrolla.com), ha estado trabajando con las tecnologías Web de Microsoft desde 1998. Scott funciona como consultor, profesor y redactor independiente. Su último libro se [*enseña a ASP.NET 2,0 en 24 horas*](https://www.amazon.com/exec/obidos/ASIN/0672327384/4guysfromrollaco). Puede ponerse en contacto con usted en [mitchell@4GuysFromRolla.com.](mailto:mitchell@4GuysFromRolla.com) o a través de su blog, que encontrará en [http://ScottOnWriting.NET](http://ScottOnWriting.NET).
 
-## <a name="special-thanks-to"></a>Agradecimientos especiales a
+## <a name="special-thanks-to"></a>Agradecimiento especial a
 
-Esta serie de tutoriales ha sido revisada por muchos revisores útiles. Los revisores para este tutorial fueron Liz Shulok, Dennis Patterson, Carlos Santos y Hilton Giesenow. ¿Está interesado en leer mi próximos artículos de MSDN? Si es así, envíeme una línea en [ mitchell@4GuysFromRolla.com.](mailto:mitchell@4GuysFromRolla.com)
+Muchos revisores útiles revisaron esta serie de tutoriales. Los revisores responsables de este tutorial eran Liz Shulok, Dennis Patterson, Carlos Santos y Hilton Giesenow. ¿Está interesado en revisar los próximos artículos de MSDN? En caso afirmativo, suéltelo en [mitchell@4GuysFromRolla.com.](mailto:mitchell@4GuysFromRolla.com)
 
 > [!div class="step-by-step"]
 > [Anterior](creating-a-data-access-layer-vb.md)

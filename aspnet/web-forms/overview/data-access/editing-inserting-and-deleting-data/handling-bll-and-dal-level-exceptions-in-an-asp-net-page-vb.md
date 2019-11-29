@@ -1,199 +1,199 @@
 ---
 uid: web-forms/overview/data-access/editing-inserting-and-deleting-data/handling-bll-and-dal-level-exceptions-in-an-asp-net-page-vb
-title: Control de excepciones de nivel BLL y DAL en una página ASP.NET (VB) | Microsoft Docs
+title: Controlar las excepciones de nivel BLL y DAL en una página ASP.NET (VB) | Microsoft Docs
 author: rick-anderson
-description: En este tutorial, veremos cómo mostrar un mensaje de error informativo y sencillo debe producir una excepción durante la operación de inserción, actualización o delete de...
+description: En este tutorial, veremos cómo mostrar un mensaje de error informativo y descriptivo en caso de que se produzca una excepción durante una operación de inserción, actualización o eliminación de...
 ms.author: riande
 ms.date: 07/17/2006
 ms.assetid: 129d4338-1315-4f40-89b5-2b84b807707d
 msc.legacyurl: /web-forms/overview/data-access/editing-inserting-and-deleting-data/handling-bll-and-dal-level-exceptions-in-an-asp-net-page-vb
 msc.type: authoredcontent
-ms.openlocfilehash: a5f798341fc56f1c164ee8cb6aa98620a7a45eb0
-ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
+ms.openlocfilehash: ee277596ade18d2603892d134b47c2c8697836bb
+ms.sourcegitcommit: 22fbd8863672c4ad6693b8388ad5c8e753fb41a2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/06/2019
-ms.locfileid: "65119562"
+ms.lasthandoff: 11/28/2019
+ms.locfileid: "74621048"
 ---
 # <a name="handling-bll--and-dal-level-exceptions-in-an-aspnet-page-vb"></a>Controlar las excepciones de nivel BLL y DAL en una página de ASP.NET (VB)
 
 por [Scott Mitchell](https://twitter.com/ScottOnWriting)
 
-[Descargue la aplicación de ejemplo](http://download.microsoft.com/download/9/c/1/9c1d03ee-29ba-4d58-aa1a-f201dcc822ea/ASPNET_Data_Tutorial_18_VB.exe) o [descargar PDF](handling-bll-and-dal-level-exceptions-in-an-asp-net-page-vb/_static/datatutorial18vb1.pdf)
+[Descarga](https://download.microsoft.com/download/9/c/1/9c1d03ee-29ba-4d58-aa1a-f201dcc822ea/ASPNET_Data_Tutorial_18_VB.exe) de la aplicación de ejemplo o [descarga de PDF](handling-bll-and-dal-level-exceptions-in-an-asp-net-page-vb/_static/datatutorial18vb1.pdf)
 
-> En este tutorial, veremos cómo mostrar un mensaje informativo y sencillo error se debe producir una excepción durante una inserción, la actualización o la operación de eliminación de un control Web de datos ASP.NET.
+> En este tutorial, veremos cómo mostrar un mensaje de error descriptivo e informativo en caso de que se produzca una excepción durante una operación de inserción, actualización o eliminación de un control Web de datos ASP.NET.
 
 ## <a name="introduction"></a>Introducción
 
-Trabajar con datos desde una aplicación web ASP.NET con una arquitectura en capas de aplicación implica los siguientes tres pasos generales:
+El trabajo con datos de una aplicación Web de ASP.NET mediante una arquitectura de aplicación en capas implica los tres pasos generales siguientes:
 
-1. Determinar qué método de la capa de lógica empresarial debe invocarse y valores de parámetro what para pasarla. Los valores de parámetro pueden ser codificado, asignado mediante programación o escrito por el usuario.
+1. Determine qué método de la capa de lógica de negocios se debe invocar y los valores de parámetro que se van a pasar. Los valores de parámetro pueden estar codificados de forma rígida, asignados mediante programación o entradas especificadas por el usuario.
 2. Invoque al método.
-3. Procesar los resultados. Al llamar a un método BLL que devuelve datos, esto puede implicar el enlace de datos a un control Web de datos. Para los métodos BLL que modifican datos, esto puede incluir realizar alguna acción según un valor devuelto o controlar correctamente cualquier excepción que se produjeron en el paso 2.
+3. Procesar los resultados. Cuando se llama a un método BLL que devuelve datos, esto puede implicar enlazar los datos a un control Web de datos. En el caso de los métodos BLL que modifican datos, esto puede incluir la realización de alguna acción basada en un valor devuelto o el control correcto de cualquier excepción que surgiera en el paso 2.
 
-Como hemos visto en el [tutorial anterior](examining-the-events-associated-with-inserting-updating-and-deleting-vb.md), ObjectDataSource y los controles Web de datos proporcionan puntos de extensibilidad para los pasos 1 y 3. El control GridView, por ejemplo, se activa su `RowUpdating` eventos antes de asignar sus valores de campo a su ObjectDataSource `UpdateParameters` colección; su `RowUpdated` evento se desencadena después de que el origen ObjectDataSource ha finalizado la operación.
+Como vimos en el [tutorial anterior](examining-the-events-associated-with-inserting-updating-and-deleting-vb.md), tanto ObjectDataSource como los controles Web de datos proporcionan puntos de extensibilidad para los pasos 1 y 3. Por ejemplo, GridView desencadena su evento `RowUpdating` antes de asignar sus valores de campo a la colección `UpdateParameters` de ObjectDataSource; su evento `RowUpdated` se genera después de que ObjectDataSource haya completado la operación.
 
-Ya hemos examinado los eventos que se activan durante el paso 1 y han visto cómo se puede usar para personalizar los parámetros de entrada o cancelar la operación. En este tutorial, centraremos nuestra atención a los eventos que activan una vez completada la operación. Con estos controladores de eventos posteriores al nivel que se puede, entre otras cosas, determinar si se produjo una excepción durante la operación y lo maneje debidamente, mostrar un mensaje de error informativo y sencillo en la pantalla, en lugar de con el estándar de ASP.NET predeterminado página de excepciones.
+Ya hemos examinado los eventos que se activan durante el paso 1 y han visto cómo se pueden usar para personalizar los parámetros de entrada o cancelar la operación. En este tutorial, haremos la atención a los eventos que se activan una vez completada la operación. Con estos controladores de eventos de nivel posterior podemos, entre otras cosas, determinar si se produjo una excepción durante la operación y controlarla correctamente, mostrando un mensaje de error descriptivo e informativo en la pantalla en lugar de establecer el valor predeterminado en el ASP.NET estándar Página de excepción.
 
-Para ilustrar cómo trabajar con estos eventos posteriores al niveles, vamos a crear una página que enumera los productos en un control GridView editable. Al actualizar un producto, si es una excepción provoca nuestro ASP.NET página mostrará un mensaje breve por encima del control GridView que explica que se ha producido un problema. Comencemos.
+Para ilustrar el trabajo con estos eventos de nivel posterior, vamos a crear una página que muestra los productos en un control GridView modificable. Al actualizar un producto, si se genera una excepción, la página ASP.NET mostrará un mensaje breve sobre el control GridView que explica que se ha producido un problema. Comencemos.
 
-## <a name="step-1-creating-an-editable-gridview-of-products"></a>Paso 1: Creación de un control GridView Editable de productos
+## <a name="step-1-creating-an-editable-gridview-of-products"></a>Paso 1: crear un GridView modificable de productos
 
-En el tutorial anterior, creamos un control GridView editable con solo dos campos, `ProductName` y `UnitPrice`. Esto requiere la creación de una sobrecarga adicional para la `ProductsBLL` la clase `UpdateProduct` método, que solo acepta tres parámetros de entrada (nombre del producto, precio unitario e Id.) en oposición como un parámetro para cada campo de producto. Para este tutorial, vamos a práctica esta técnica de nuevo, crear un control GridView editable que muestra el nombre del producto, cantidad por unidad, el precio por unidad y las unidades en existencias, pero solo permite el nombre, precio unitario y las unidades en existencias para editarse.
+En el tutorial anterior, creamos un control GridView modificable con solo dos campos, `ProductName` y `UnitPrice`. Esto requiere crear una sobrecarga adicional para el método `UpdateProduct` de la clase `ProductsBLL`, uno que solo aceptó tres parámetros de entrada (el nombre del producto, el precio por unidad y el ID.) en lugar de un parámetro para cada campo de producto. En este tutorial, vamos a practicar de nuevo esta técnica, creando un GridView modificable que muestra el nombre del producto, la cantidad por unidad, el precio por unidad y las unidades en existencias, pero solo permite editar el nombre, el precio por unidad y las unidades en existencias.
 
-Para dar cabida a este escenario se necesitará otra sobrecarga de la `UpdateProduct` método, que acepta cuatro parámetros: el nombre del producto, precio unitario, las unidades en existencias y el identificador. Agregue el método siguiente a la `ProductsBLL` clase:
+Para dar cabida a este escenario, se necesitará otra sobrecarga del método `UpdateProduct`, uno que acepte cuatro parámetros: el nombre del producto, el precio unitario, las unidades en existencias y el identificador. Agregue el método siguiente a la clase `ProductsBLL`:
 
 [!code-vb[Main](handling-bll-and-dal-level-exceptions-in-an-asp-net-page-vb/samples/sample1.vb)]
 
-Con este método completa, ya estamos listos para crear la página ASP.NET que permite la edición de estos cuatro campos de producto en particular. Abra el `ErrorHandling.aspx` página en el `EditInsertDelete` carpeta y agregue un control GridView a la página a través del diseñador. Enlazar el control GridView a un nuevo origen ObjectDataSource, asignación el `Select()` método a la `ProductsBLL` la clase `GetProducts()` método y el `Update()` método a la `UpdateProduct` sobrecarga que acaba de crear.
+Con este método completo, estamos listos para crear la página ASP.NET que permite editar estos cuatro campos de producto concretos. Abra la página `ErrorHandling.aspx` en la carpeta `EditInsertDelete` y agregue un control GridView a la página a través del diseñador. Enlace GridView a un nuevo ObjectDataSource, asignando el método `Select()` al método `GetProducts()` de la clase `ProductsBLL` y el método `Update()` a la sobrecarga `UpdateProduct` que acaba de crear.
 
-[![Utilice la sobrecarga del método UpdateProduct que acepta cuatro parámetros de entrada](handling-bll-and-dal-level-exceptions-in-an-asp-net-page-vb/_static/image2.png)](handling-bll-and-dal-level-exceptions-in-an-asp-net-page-vb/_static/image1.png)
+[![usar la sobrecarga del método UpdateProduct que acepta cuatro parámetros de entrada](handling-bll-and-dal-level-exceptions-in-an-asp-net-page-vb/_static/image2.png)](handling-bll-and-dal-level-exceptions-in-an-asp-net-page-vb/_static/image1.png)
 
-**Figura 1**: Use la `UpdateProduct` método de sobrecarga que acepta cuatro parámetros de entrada ([haga clic aquí para ver imagen en tamaño completo](handling-bll-and-dal-level-exceptions-in-an-asp-net-page-vb/_static/image3.png))
+**Figura 1**: usar la sobrecarga del método `UpdateProduct` que acepta cuatro parámetros de entrada ([haga clic para ver la imagen de tamaño completo](handling-bll-and-dal-level-exceptions-in-an-asp-net-page-vb/_static/image3.png))
 
-Esto creará un origen ObjectDataSource con una `UpdateParameters` colección con cuatro parámetros y un control GridView con un campo para cada uno de los campos de producto. Marcado declarativo de ObjectDataSource se asigna el `OldValuesParameterFormatString` el valor de propiedad `original_{0}`, lo que provocará una excepción dado que nuestra clase BLL no espera un parámetro de entrada denominado `original_productID` pasarse. No olvide quitar por completo esta configuración de la sintaxis declarativa (o se establece en el valor predeterminado, `{0}`).
+Se creará un ObjectDataSource con una colección de `UpdateParameters` con cuatro parámetros y un control GridView con un campo para cada uno de los campos product. El marcado declarativo de ObjectDataSource asigna a la propiedad `OldValuesParameterFormatString` el valor `original_{0}`, lo que producirá una excepción, ya que la clase BLL no espera que se pase un parámetro de entrada denominado `original_productID`. No olvide quitar esta configuración por completo de la sintaxis declarativa (o establecerla en el valor predeterminado, `{0}`).
 
-A continuación, reducir el control GridView para incluir solo el `ProductName`, `QuantityPerUnit`, `UnitPrice`, y `UnitsInStock` BoundFields. También puede aplicar cualquier formato de nivel de campo que considere necesario (por ejemplo, cambiar el `HeaderText` propiedades).
+A continuación, reduzca el GridView para incluir solo los `ProductName`, `QuantityPerUnit`, `UnitPrice`y `UnitsInStock` BoundFields. También puede aplicar cualquier formato de nivel de campo que considere necesario (como cambiar las propiedades de `HeaderText`).
 
-En el tutorial anterior hemos visto cómo dar formato a la `UnitPrice` BoundField como una moneda en modo de solo lectura y en modo de edición. Vamos a hacer el mismo aquí. Recuerde que esta configuración requerida del BoundField `DataFormatString` propiedad `{0:c}`, sus `HtmlEncode` propiedad a `false`y su `ApplyFormatInEditMode` a `true`, como se muestra en la figura 2.
+En el tutorial anterior, hemos visto cómo dar formato al `UnitPrice` BoundField como moneda en modo de solo lectura y en modo de edición. Vamos a hacer lo mismo aquí. Recuerde que esto requiere establecer la propiedad `DataFormatString` de BoundField en `{0:c}`, su propiedad `HtmlEncode` en `false`y su `ApplyFormatInEditMode` en `true`, como se muestra en la figura 2.
 
-[![Configurar el UnitPrice BoundField a mostrar como moneda](handling-bll-and-dal-level-exceptions-in-an-asp-net-page-vb/_static/image5.png)](handling-bll-and-dal-level-exceptions-in-an-asp-net-page-vb/_static/image4.png)
+[![configurar el modo UnitPrice BoundField para que se muestre como moneda](handling-bll-and-dal-level-exceptions-in-an-asp-net-page-vb/_static/image5.png)](handling-bll-and-dal-level-exceptions-in-an-asp-net-page-vb/_static/image4.png)
 
-**Figura 2**: Configurar la `UnitPrice` BoundField para mostrar como una moneda ([haga clic aquí para ver imagen en tamaño completo](handling-bll-and-dal-level-exceptions-in-an-asp-net-page-vb/_static/image6.png))
+**Figura 2**: configuración de la `UnitPrice` BoundField para que se muestre como moneda ([haga clic para ver la imagen de tamaño completo](handling-bll-and-dal-level-exceptions-in-an-asp-net-page-vb/_static/image6.png))
 
-Aplicar formato a la `UnitPrice` como una moneda en la interfaz de edición requiere la creación de un controlador de eventos para el control de GridView `RowUpdating` eventos que analiza la cadena con formato de moneda en un `decimal` valor. Recuerde que el `RowUpdating` controlador de eventos desde el último tutorial también se comprueba para asegurarse de que el usuario proporcionado un `UnitPrice` valor. Sin embargo, para este tutorial vamos a permitir que el usuario omitir el precio.
+Dar formato al `UnitPrice` como moneda en la interfaz de edición requiere la creación de un controlador de eventos para el evento `RowUpdating` de GridView que analiza la cadena con formato de moneda en un valor `decimal`. Recuerde que el controlador de eventos `RowUpdating` del último tutorial también se ha comprobado para asegurarse de que el usuario proporcionó un valor `UnitPrice`. Sin embargo, para este tutorial, vamos a permitir que el usuario omita el precio.
 
 [!code-vb[Main](handling-bll-and-dal-level-exceptions-in-an-asp-net-page-vb/samples/sample2.vb)]
 
-Nuestro GridView incluye un `QuantityPerUnit` BoundField, pero este BoundField debe ser solo para fines de presentación y no debe ser editable por el usuario. Para ello, basta con establecer 'BoundFields `ReadOnly` propiedad `true`.
+El control GridView incluye un `QuantityPerUnit` BoundField, pero este BoundField debe ser solo para fines de presentación y no debe ser editable por el usuario. Para organizar esto, basta con establecer la propiedad BoundFields ' `ReadOnly` en `true`.
 
-[![Hacer el QuantityPerUnit BoundField de sólo lectura](handling-bll-and-dal-level-exceptions-in-an-asp-net-page-vb/_static/image8.png)](handling-bll-and-dal-level-exceptions-in-an-asp-net-page-vb/_static/image7.png)
+[![hacer que el QuantityPerUnit no sea de solo lectura](handling-bll-and-dal-level-exceptions-in-an-asp-net-page-vb/_static/image8.png)](handling-bll-and-dal-level-exceptions-in-an-asp-net-page-vb/_static/image7.png)
 
-**Figura 3**: Realizar el `QuantityPerUnit` BoundField de solo lectura ([haga clic aquí para ver imagen en tamaño completo](handling-bll-and-dal-level-exceptions-in-an-asp-net-page-vb/_static/image9.png))
+**Figura 3**: convertir el `QuantityPerUnit` BoundField en modo de solo lectura ([haga clic para ver la imagen de tamaño completo](handling-bll-and-dal-level-exceptions-in-an-asp-net-page-vb/_static/image9.png))
 
-Por último, active la casilla Habilitar edición de etiquetas inteligentes de GridView. Después de completar estos pasos el `ErrorHandling.aspx` Diseñador de la página debe ser similar a la figura 4.
+Por último, active la casilla habilitar edición de la etiqueta inteligente de GridView. Después de completar estos pasos, el diseñador de la página `ErrorHandling.aspx` debe tener un aspecto similar al de la figura 4.
 
-[![Quite todos menos necesario BoundFields y comprobación de activación de la casilla de verificación de edición](handling-bll-and-dal-level-exceptions-in-an-asp-net-page-vb/_static/image11.png)](handling-bll-and-dal-level-exceptions-in-an-asp-net-page-vb/_static/image10.png)
+[![quitar todos los BoundFields necesarios y activar la casilla habilitar edición](handling-bll-and-dal-level-exceptions-in-an-asp-net-page-vb/_static/image11.png)](handling-bll-and-dal-level-exceptions-in-an-asp-net-page-vb/_static/image10.png)
 
-**Figura 4**: Quitar todos excepto los necesarios BoundFields y Active la casilla Habilitar de edición ([haga clic aquí para ver imagen en tamaño completo](handling-bll-and-dal-level-exceptions-in-an-asp-net-page-vb/_static/image12.png))
+**Figura 4**: Quite todas las BoundFields, excepto las necesarias, y active la casilla habilitar edición ([haga clic para ver la imagen a tamaño completo](handling-bll-and-dal-level-exceptions-in-an-asp-net-page-vb/_static/image12.png))
 
-En este momento tenemos una lista de todos los productos `ProductName`, `QuantityPerUnit`, `UnitPrice`, y `UnitsInStock` campos; sin embargo, solo el `ProductName`, `UnitPrice`, y `UnitsInStock` se pueden editar los campos.
+En este momento, tenemos una lista de todos los campos de `ProductName`, `QuantityPerUnit`, `UnitPrice`y `UnitsInStock` de los productos. sin embargo, solo se pueden editar los campos `ProductName`, `UnitPrice`y `UnitsInStock`.
 
-[![Los usuarios ahora pueden editar fácilmente los nombres de los productos, precios y unidades en existencias campos](handling-bll-and-dal-level-exceptions-in-an-asp-net-page-vb/_static/image14.png)](handling-bll-and-dal-level-exceptions-in-an-asp-net-page-vb/_static/image13.png)
+[Los usuarios de ![ahora pueden editar fácilmente los nombres, precios y unidades de los productos en los campos de acciones.](handling-bll-and-dal-level-exceptions-in-an-asp-net-page-vb/_static/image14.png)](handling-bll-and-dal-level-exceptions-in-an-asp-net-page-vb/_static/image13.png)
 
-**Figura 5**: Los nombres a los usuarios puede ahora fácilmente editar los productos, precios y campos de unidades en existencias ([haga clic aquí para ver imagen en tamaño completo](handling-bll-and-dal-level-exceptions-in-an-asp-net-page-vb/_static/image15.png))
+**Figura 5**: ahora, los usuarios pueden editar fácilmente los nombres, precios y unidades de los productos en los campos de existencias ([haga clic para ver la imagen de tamaño completo](handling-bll-and-dal-level-exceptions-in-an-asp-net-page-vb/_static/image15.png))
 
-## <a name="step-2-gracefully-handling-dal-level-exceptions"></a>Paso 2: Controlar correctamente las excepciones de nivel de DAL
+## <a name="step-2-gracefully-handling-dal-level-exceptions"></a>Paso 2: controlar correctamente las excepciones de nivel DAL
 
-Aunque nuestro control GridView editable maravillosamente funciona cuando los usuarios escriben los valores válidos para el nombre del producto editado, precio y las unidades en existencias, escriba los valores no válidos produce una excepción. Por ejemplo, si se omite el `ProductName` valor hace que un [NoNullAllowedException](https://msdn.microsoft.com/library/default.asp?url=/library/cpref/html/frlrfsystemdatanonullallowedexceptionclasstopic.asp) que se produzca desde el `ProductName` propiedad en el `ProductsRow` clase tiene su `AllowDBNull` propiedad establecida en `false`; si el base de datos no está activo, un `SqlException` producirá el TableAdapter al intentar conectarse a la base de datos. Sin realizar ninguna acción, estas excepciones se propagan desde la capa de acceso a datos a la capa de lógica empresarial, a continuación, en la página ASP.NET y, finalmente, al tiempo de ejecución ASP.NET.
+Aunque el GridView editable funciona bien cuando los usuarios escriben valores válidos para el nombre, el precio y las unidades de los productos editados en existencias, la entrada de valores no válidos produce una excepción. Por ejemplo, si se omite el valor de `ProductName`, se produce una [NoNullAllowedException](https://msdn.microsoft.com/library/default.asp?url=/library/cpref/html/frlrfsystemdatanonullallowedexceptionclasstopic.asp) , ya que la propiedad `ProductName` de la clase `ProductsRow` tiene su propiedad `AllowDBNull` establecida en `false`; Si la base de datos está inactiva, el TableAdapter producirá una `SqlException` al intentar conectarse a la base de datos. Sin realizar ninguna acción, estas excepciones se propagan desde la capa de acceso a datos hasta la capa de lógica de negocios, luego hasta la página ASP.NET y, finalmente, hasta el tiempo de ejecución de ASP.NET.
 
-Dependiendo de cómo se configura la aplicación web y el hecho de que está visitando la aplicación desde `localhost`, una excepción no controlada puede dar lugar a una página de error de servidor genérico, un informe de error detallados o una página web fácil de usar. Consulte [Web el control de los errores de aplicación en ASP.NET](http://www.15seconds.com/issue/030102.htm) y [elemento customErrors](https://msdn.microsoft.com/library/h0hfz6fc(VS.80).aspx) para obtener más información sobre cómo el tiempo de ejecución ASP.NET responde a una excepción no detectada.
+En función de cómo esté configurada la aplicación web y de si está visitando o no la aplicación desde `localhost`, una excepción no controlada puede dar lugar a una página de error de servidor genérico, un informe de error detallado o una página web fácil de ver. Vea [control de errores de aplicaciones web en ASP.net](http://www.15seconds.com/issue/030102.htm) y el [elemento customErrors](https://msdn.microsoft.com/library/h0hfz6fc(VS.80).aspx) para obtener más información sobre cómo responde el tiempo de ejecución de ASP.net a una excepción no detectada.
 
-Figura 6 se muestra la pantalla al intentar actualizar un producto sin especificar el `ProductName` valor. Éste es el predeterminado que se muestra el informe de error detallados cuando llegan a través de `localhost`.
+La figura 6 muestra la pantalla que se encuentra al intentar actualizar un producto sin especificar el valor de `ProductName`. Este es el informe de errores detallado predeterminado que se muestra al llegar `localhost`.
 
-[![Si se omite el nombre mostrará excepción los detalles de producto](handling-bll-and-dal-level-exceptions-in-an-asp-net-page-vb/_static/image17.png)](handling-bll-and-dal-level-exceptions-in-an-asp-net-page-vb/_static/image16.png)
+[![si se omite el nombre del producto, se mostrarán los detalles de la excepción](handling-bll-and-dal-level-exceptions-in-an-asp-net-page-vb/_static/image17.png)](handling-bll-and-dal-level-exceptions-in-an-asp-net-page-vb/_static/image16.png)
 
-**Figura 6**: Si se omite nombre le mostrar detalles del producto de la excepción ([haga clic aquí para ver imagen en tamaño completo](handling-bll-and-dal-level-exceptions-in-an-asp-net-page-vb/_static/image18.png))
+**Figura 6**: si se omite el nombre del producto, se mostrarán los detalles de la excepción ([haga clic para ver la imagen de tamaño completo](handling-bll-and-dal-level-exceptions-in-an-asp-net-page-vb/_static/image18.png))
 
-Aunque estos detalles de la excepción son útiles cuando se prueba una aplicación, presentar un usuario final con dicha pantalla en caso de una excepción es ideal. Un usuario final es probable que no sabe qué es un `NoNullAllowedException` es o por qué se produjo. Un mejor enfoque es presentar al usuario un mensaje de más fácil de usar que explique que hubo problemas al intentar actualizar el producto.
+Aunque estos detalles de la excepción son útiles cuando se prueba una aplicación, la presentación de un usuario final con una pantalla de este tipo en el caso de una excepción es menor que la ideal. Es probable que un usuario final no sepa qué es un `NoNullAllowedException` o por qué se produjo. Un mejor enfoque consiste en presentar al usuario un mensaje más descriptivo que explique que hubo problemas al intentar actualizar el producto.
 
-Si se produce una excepción al realizar la operación, los eventos posteriores al niveles de ObjectDataSource y el control de datos Web proporcionan un medio para detectarlo y cancelar la excepción que se propague hasta el tiempo de ejecución ASP.NET. En nuestro ejemplo, vamos a crear un controlador de eventos para el control de GridView `RowUpdated` eventos que determina si se ha desencadenado una excepción y, si es así, muestra los detalles de excepción en un control Web de la etiqueta.
+Si se produce una excepción al realizar la operación, los eventos de nivel posterior tanto en ObjectDataSource como en el control Web de datos proporcionan un medio para detectarlo y cancelar la excepción de la propagación hasta el tiempo de ejecución de ASP.NET. En nuestro ejemplo, vamos a crear un controlador de eventos para el evento `RowUpdated` de GridView que determina si se ha desencadenado una excepción y, en caso afirmativo, muestra los detalles de la excepción en un control Web de etiqueta.
 
-Empiece por agregar una etiqueta a la página ASP.NET, establecer su `ID` propiedad `ExceptionDetails` y borrarlos su `Text` propiedad. Para dibujar los ojos del usuario a este mensaje, establecer su `CssClass` propiedad `Warning`, que es una clase CSS que se ha agregado a la `Styles.css` archivo en el tutorial anterior. Recuerde que esta clase CSS que hace que el texto de la etiqueta que se mostrará en una fuente roja, cursiva, negrita, extra grande.
+Comience agregando una etiqueta a la página ASP.NET, estableciendo su propiedad `ID` en `ExceptionDetails` y borrando su propiedad `Text`. Para dibujar el ojo del usuario en este mensaje, establezca su propiedad `CssClass` en `Warning`, que es una clase CSS que se ha agregado al archivo `Styles.css` en el tutorial anterior. Recuerde que esta clase CSS hace que el texto de la etiqueta se muestre en una fuente roja, cursiva, negrita, extra grande.
 
-[![Agregar un Control Web Label a la página](handling-bll-and-dal-level-exceptions-in-an-asp-net-page-vb/_static/image20.png)](handling-bll-and-dal-level-exceptions-in-an-asp-net-page-vb/_static/image19.png)
+[![agregar un control Web de etiqueta a la página](handling-bll-and-dal-level-exceptions-in-an-asp-net-page-vb/_static/image20.png)](handling-bll-and-dal-level-exceptions-in-an-asp-net-page-vb/_static/image19.png)
 
-**Figura 7**: Agregar un Control Web Label a la página ([haga clic aquí para ver imagen en tamaño completo](handling-bll-and-dal-level-exceptions-in-an-asp-net-page-vb/_static/image21.png))
+**Figura 7**: agregar un control Web de etiqueta a la página ([haga clic para ver la imagen de tamaño completo](handling-bll-and-dal-level-exceptions-in-an-asp-net-page-vb/_static/image21.png))
 
-Puesto que deseamos que este control sea visible solo inmediatamente después se ha producido una excepción, establezca su `Visible` propiedad en false en el `Page_Load` controlador de eventos:
+Como queremos que este control Web de etiqueta solo esté visible inmediatamente después de que se produzca una excepción, establezca su propiedad `Visible` en false en el controlador de eventos `Page_Load`:
 
 [!code-vb[Main](handling-bll-and-dal-level-exceptions-in-an-asp-net-page-vb/samples/sample3.vb)]
 
-Con este código, en la primera visita de página y los postbacks subsiguientes del `ExceptionDetails` control tendrá su `Visible` propiedad establecida en `false`. En caso de una excepción de nivel DAL o BLL, que nos podemos detectar en el control de GridView `RowUpdated` controlador de eventos, estableceremos la `ExceptionDetails` del control `Visible` propiedad en true. Puesto que los controladores de eventos de control Web que se producen después de la `Page_Load` controlador de eventos del ciclo de vida de la página, se mostrará la etiqueta. Sin embargo, en la siguiente devolución, el `Page_Load` se restablecerá el controlador de eventos el `Visible` propiedad nuevo a `false`, ocultarla a vista de nuevo.
+Con este código, en la primera página visita y postbacks posteriores, el control `ExceptionDetails` tendrá su propiedad `Visible` establecida en `false`. En el caso de una excepción de nivel DAL o BLL, que se puede detectar en el controlador de eventos de `RowUpdated` de GridView, se establecerá la propiedad `Visible` del control `ExceptionDetails` en true. Dado que los controladores de eventos de control Web se producen después de la `Page_Load` controlador de eventos en el ciclo de vida de la página, se muestra la etiqueta. Sin embargo, en el siguiente postback, el controlador de eventos `Page_Load` revertirá la propiedad `Visible` a `false`y la ocultará de nuevo.
 
 > [!NOTE]
-> Como alternativa, podríamos quitamos la necesidad de configuración de la `ExceptionDetails` del control `Visible` propiedad en `Page_Load` asignando su `Visible` propiedad `false` en la sintaxis declarativa y deshabilitar su estado de vista (estableciendo su `EnableViewState` propiedad `false`). En un futuro tutorial, vamos a usar este enfoque alternativo.
+> Como alternativa, podríamos quitar la necesidad de establecer la propiedad `Visible` del control `ExceptionDetails` en `Page_Load` asignando su propiedad `Visible` `false` en la sintaxis declarativa y deshabilitando su estado de vista (estableciendo su propiedad `EnableViewState` en `false`). Usaremos este enfoque alternativo en un tutorial futuro.
 
-Agregado el control de etiqueta, el siguiente paso es crear el controlador de eventos para el control de GridView `RowUpdated` eventos. Seleccione el control GridView en el diseñador, vaya a la ventana Propiedades y haga clic en el icono de rayo, muestran los eventos de GridView. Ya debe haber una entrada no existe para el control de GridView `RowUpdating` eventos, como hemos creado un controlador de eventos para este evento anteriormente en este tutorial. Crear un controlador de eventos para el `RowUpdated` también el evento.
+Con el control etiqueta agregado, el siguiente paso es crear el controlador de eventos para el evento `RowUpdated` de GridView. Seleccione GridView en el diseñador, vaya al ventana Propiedades y haga clic en el icono de rayo, donde se muestran los eventos de GridView. Ya debe haber una entrada para el evento `RowUpdating` de GridView, ya que hemos creado un controlador de eventos para este evento anteriormente en este tutorial. Cree también un controlador de eventos para el evento `RowUpdated`.
 
-![Crear un controlador de eventos para RowUpdated (evento de GridView)](handling-bll-and-dal-level-exceptions-in-an-asp-net-page-vb/_static/image22.png)
+![Crear un controlador de eventos para el evento RowUpdated de GridView](handling-bll-and-dal-level-exceptions-in-an-asp-net-page-vb/_static/image22.png)
 
-**Figura 8**: Crear un controlador de eventos para el control de GridView `RowUpdated` eventos
+**Figura 8**: creación de un controlador de eventos para el evento `RowUpdated` de GridView
 
 > [!NOTE]
-> También puede crear el controlador de eventos a través de las listas desplegables en la parte superior del archivo de clase de código subyacente. Seleccione el control GridView en la lista desplegable de la izquierda y la `RowUpdated` eventos de uno en la derecha.
+> También puede crear el controlador de eventos a través de las listas desplegables en la parte superior del archivo de clase de código subyacente. Seleccione GridView en la lista desplegable de la izquierda y el evento `RowUpdated` de la derecha.
 
-Creación de este controlador de eventos se agrega el código siguiente a la clase de código subyacente de la página ASP.NET:
+Al crear este controlador de eventos, se agregará el código siguiente a la clase de código subyacente de la página ASP.NET:
 
 [!code-vb[Main](handling-bll-and-dal-level-exceptions-in-an-asp-net-page-vb/samples/sample4.vb)]
 
-Segundo parámetro de entrada de este controlador de eventos es un objeto de tipo [GridViewUpdatedEventArgs](https://msdn.microsoft.com/library/system.web.ui.webcontrols.gridviewupdatedeventargs.aspx), que tiene tres propiedades de interés para el control de excepciones:
+Este segundo parámetro de entrada del controlador de eventos es un objeto de tipo [GridViewUpdatedEventArgs](https://msdn.microsoft.com/library/system.web.ui.webcontrols.gridviewupdatedeventargs.aspx), que tiene tres propiedades de interés para controlar las excepciones:
 
-- `Exception` una referencia a la excepción; Si no se ha producido ninguna excepción, esta propiedad tendrá un valor de `null`
-- `ExceptionHandled` un valor booleano que indica si se controló la excepción en el `RowUpdated` controlador de eventos; si `false` (valor predeterminado), la excepción se vuelve a producir, filtre hasta el tiempo de ejecución ASP.NET
-- `KeepInEditMode` Si establece en `true` la fila GridView editada permanece en modo de edición; si `false` (valor predeterminado), la fila GridView vuelve a su modo de solo lectura
+- `Exception` una referencia a la excepción producida; Si no se ha producido ninguna excepción, esta propiedad tendrá un valor de `null`
+- `ExceptionHandled` un valor booleano que indica si la excepción se ha controlado o no en el controlador de eventos `RowUpdated`; Si `false` (valor predeterminado), se vuelve a producir la excepción, percolating hasta el tiempo de ejecución de ASP.NET
+- `KeepInEditMode` si se establece en `true` la fila de GridView modificada permanece en modo de edición; Si `false` (valor predeterminado), la fila de GridView vuelve a su modo de solo lectura.
 
-A continuación, nuestro código, debe comprobar para ver si `Exception` no `null`, lo que significa que se generó una excepción al realizar la operación. Si esto es así, nos gustaría:
+Nuestro código, a continuación, debe comprobar si `Exception` no está `null`, lo que significa que se produjo una excepción al realizar la operación. Si este es el caso, queremos:
 
-- Mostrar un mensaje descriptivo en el `ExceptionDetails` etiqueta
+- Mostrar un mensaje descriptivo en la etiqueta de `ExceptionDetails`
 - Indicar que se ha controlado la excepción
-- Mantener las filas del control GridView en modo de edición
+- Mantener la fila de GridView en modo de edición
 
-Este código lleva a cabo estos objetivos:
+En el código siguiente se logran estos objetivos:
 
 [!code-vb[Main](handling-bll-and-dal-level-exceptions-in-an-asp-net-page-vb/samples/sample5.vb)]
 
-Este controlador de eventos comienza comprobando si `e.Exception` es `null`. Si no lo es, el `ExceptionDetails` la etiqueta `Visible` propiedad está establecida en `true` y su `Text` propiedad a "Se produjo un problema al actualizar el producto." Los detalles de la excepción que se ha producido residen en el `e.Exception` del objeto `InnerException` propiedad. Se examina la excepción interna y, si es de un tipo determinado, se anexa un mensaje adicional y útil a la `ExceptionDetails` la etiqueta `Text` propiedad. Por último, el `ExceptionHandled` y `KeepInEditMode` propiedades se establecen en `true`.
+Este controlador de eventos comienza comprobando si `e.Exception` se `null`. Si no es así, la propiedad `Visible` de la etiqueta de `ExceptionDetails` se establece en `true` y su propiedad `Text` en "se produjo un problema al actualizar el producto". Los detalles de la excepción real que se produjo residen en la propiedad `InnerException` del objeto `e.Exception`. Se examina esta excepción interna y, si es de un tipo determinado, se anexa un mensaje adicional útil a la propiedad `Text` de la etiqueta de `ExceptionDetails`. Por último, las propiedades `ExceptionHandled` y `KeepInEditMode` se establecen en `true`.
 
-Figura 9 se muestra una captura de pantalla de esta página cuando se omite el nombre del producto; Figura 10 se muestran los resultados al especificar un valor ilegal `UnitPrice` valor (de -50).
+En la ilustración 9 se muestra una captura de pantalla de esta página cuando se omite el nombre del producto; En la figura 10 se muestran los resultados al especificar un valor de `UnitPrice` no válido (-50).
 
-[![El ProductName BoundField debe contener un valor](handling-bll-and-dal-level-exceptions-in-an-asp-net-page-vb/_static/image24.png)](handling-bll-and-dal-level-exceptions-in-an-asp-net-page-vb/_static/image23.png)
+[![ProductName BoundField debe contener un valor](handling-bll-and-dal-level-exceptions-in-an-asp-net-page-vb/_static/image24.png)](handling-bll-and-dal-level-exceptions-in-an-asp-net-page-vb/_static/image23.png)
 
-**Figura 9**: El `ProductName` BoundField debe contener un valor ([haga clic aquí para ver imagen en tamaño completo](handling-bll-and-dal-level-exceptions-in-an-asp-net-page-vb/_static/image25.png))
+**Figura 9**: el `ProductName` BoundField debe contener un valor ([haga clic para ver la imagen de tamaño completo](handling-bll-and-dal-level-exceptions-in-an-asp-net-page-vb/_static/image25.png))
 
-[![Los valores de UnitPrice negativos no son permitidos](handling-bll-and-dal-level-exceptions-in-an-asp-net-page-vb/_static/image27.png)](handling-bll-and-dal-level-exceptions-in-an-asp-net-page-vb/_static/image26.png)
+[No se permiten ![valores de UnitPrice negativos](handling-bll-and-dal-level-exceptions-in-an-asp-net-page-vb/_static/image27.png)](handling-bll-and-dal-level-exceptions-in-an-asp-net-page-vb/_static/image26.png)
 
-**Figura 10**: Negativo `UnitPrice` los valores no son permitido ([haga clic aquí para ver imagen en tamaño completo](handling-bll-and-dal-level-exceptions-in-an-asp-net-page-vb/_static/image28.png))
+**Figura 10**: no se permiten valores de `UnitPrice` negativos ([haga clic para ver la imagen de tamaño completo](handling-bll-and-dal-level-exceptions-in-an-asp-net-page-vb/_static/image28.png))
 
-Estableciendo el `e.ExceptionHandled` propiedad `true`, el `RowUpdated` controlador de eventos ha indicado que ha controlado la excepción. Por lo tanto, no propaga la excepción hasta el tiempo de ejecución ASP.NET.
+Al establecer la propiedad `e.ExceptionHandled` en `true`, el controlador de eventos `RowUpdated` ha indicado que ha controlado la excepción. Por lo tanto, la excepción no se propagará hasta el tiempo de ejecución de ASP.NET.
 
 > [!NOTE]
-> Las figuras 9 y 10 muestran una forma correcta para controlar las excepciones generadas debido a la entrada del usuario no válido. Lo ideal es que, sin embargo, este tipo de entrada no válido no superará nunca alcance la capa de lógica empresarial en primer lugar, como la página ASP.NET debe asegurarse de que las entradas del usuario son válidas antes de invocar el `ProductsBLL` la clase `UpdateProduct` método. En nuestro siguiente tutorial que veremos cómo agregar controles de validación a las interfaces de edición e inserción para asegurarse de que los datos enviados a la capa de lógica empresarial se ajusta a las reglas de negocios. Los controles de validación no solo impiden que la invocación de la `UpdateProduct` método hasta que los datos proporcionados por el usuario es válidos, pero también proporcionan una experiencia de usuario más informativa para identificar problemas de entrada de datos.
+> Las figuras 9 y 10 muestran una forma estable de controlar las excepciones que se producen debido a una entrada de usuario no válida. Idealmente, sin embargo, una entrada no válida nunca alcanzará la capa de lógica de negocios en primer lugar, ya que la página ASP.NET debe asegurarse de que las entradas del usuario son válidas antes de invocar el método `UpdateProduct` de la clase `ProductsBLL`. En el tutorial siguiente, veremos cómo agregar controles de validación a las interfaces de edición e inserción para asegurarse de que los datos enviados a la capa de lógica de negocios se ajustan a las reglas de negocios. Los controles de validación no solo impiden la invocación del método `UpdateProduct` hasta que los datos proporcionados por el usuario son válidos, pero también proporcionan una experiencia de usuario más informativa para identificar problemas de entrada de datos.
 
-## <a name="step-3-gracefully-handling-bll-level-exceptions"></a>Paso 3: Controlar correctamente las excepciones de nivel BLL
+## <a name="step-3-gracefully-handling-bll-level-exceptions"></a>Paso 3: controlar correctamente las excepciones de nivel BLL
 
-Al insertar, actualizar o eliminar datos, la capa de acceso a datos puede producir una excepción en caso de un error relacionado con datos. La base de datos puede estar sin conexión, es posible que una columna de tabla de base de datos necesarios no haya tenido un valor especificado o han infringido una restricción de nivel de tabla. Además de las excepciones estrictamente relacionado con los datos, la capa de lógica empresarial puede usar excepciones para indicar cuándo se han infringido las reglas de negocios. En el [crear una capa de lógica empresarial](../introduction/creating-a-business-logic-layer-vb.md) tutorial, por ejemplo, hemos agregado una comprobación de reglas de negocio a la versión original `UpdateProduct` sobrecargar. En concreto, si el usuario ha marcado un producto como discontinuo, hemos necesitado que el producto no sea el único proporcionado por su proveedor. Si esta condición se ha infringido, un `ApplicationException` se ha producido.
+Al insertar, actualizar o eliminar datos, la capa de acceso a datos puede producir una excepción en caso de que se produzca un error relacionado con datos. Es posible que la base de datos esté sin conexión, que no se haya especificado un valor en una columna de tabla de base de datos necesaria o que se haya infringido una restricción de nivel de tabla. Además de las excepciones relacionadas estrictamente con datos, el nivel de lógica de negocios puede utilizar excepciones para indicar cuándo se han infringido las reglas de negocios. En el tutorial [creación de una capa de lógica de negocios](../introduction/creating-a-business-logic-layer-vb.md) , por ejemplo, se ha agregado una comprobación de regla de negocios a la sobrecarga de `UpdateProduct` original. En concreto, si el usuario estaba marcando un producto como discontinuo, es necesario que el producto no sea el único proporcionado por su proveedor. Si se infringió esta condición, se produjo una `ApplicationException`.
 
-Para el `UpdateProduct` sobrecarga creado en este tutorial, vamos a agregar una regla de negocios que prohíbe el `UnitPrice` arrastrándolo desde la que se establece en un valor nuevo que es más de dos veces el original `UnitPrice` valor. Para ello, ajuste el `UpdateProduct` sobrecarga para que se realiza esta comprobación y se produce un `ApplicationException` si se infringe la regla. El método actualizado se indica a continuación:
+Para la `UpdateProduct` sobrecarga creada en este tutorial, vamos a agregar una regla de negocios que prohibe que el campo `UnitPrice` se establezca en un valor nuevo que sea más del doble del valor de la `UnitPrice` original. Para ello, ajuste la sobrecarga de `UpdateProduct` de modo que realice esta comprobación y produzca una `ApplicationException` si se infringe la regla. El método actualizado es el siguiente:
 
 [!code-vb[Main](handling-bll-and-dal-level-exceptions-in-an-asp-net-page-vb/samples/sample6.vb)]
 
-Con este cambio, cualquier actualización de precios que es más de dos veces el precio existente producirá un `ApplicationException` que se produzca. Al igual que la excepción generada desde la capa DAL, este se genera el BLL `ApplicationException` puede detectar y tratar en la GridView `RowUpdated` controlador de eventos. De hecho, el `RowUpdated` código del controlador de eventos, que escribe, correctamente detectará esta excepción y mostrar el `ApplicationException`del `Message` valor de propiedad. Figura 11 muestra una captura de pantalla cuando un usuario intenta actualizar el precio de Chai a 50,00 dólares, que es más del doble su precio actual de US $19,95.
+Con este cambio, cualquier actualización de precio que sea más del doble del precio existente hará que se produzca una `ApplicationException`. Al igual que ocurre con la excepción que se genera desde la capa DAL, esta `ApplicationException` de BLL-elevada se puede detectar y controlar en el controlador de eventos `RowUpdated` de GridView. De hecho, el código del controlador de eventos `RowUpdated`, tal como se escribe, detectará correctamente esta excepción y mostrará el valor de la propiedad `Message` del `ApplicationException`. En la figura 11 se muestra una captura de pantalla cuando un usuario intenta actualizar el precio de Chai a $50,00, que es más que el doble del precio actual de $19,95.
 
-[![Las reglas de negocios no permitir bonificaciones que más del doble de precio de un producto](handling-bll-and-dal-level-exceptions-in-an-asp-net-page-vb/_static/image30.png)](handling-bll-and-dal-level-exceptions-in-an-asp-net-page-vb/_static/image29.png)
+[![las reglas de negocios no permiten un aumento del precio más del doble del precio de un producto](handling-bll-and-dal-level-exceptions-in-an-asp-net-page-vb/_static/image30.png)](handling-bll-and-dal-level-exceptions-in-an-asp-net-page-vb/_static/image29.png)
 
-**Figura 11**: Las reglas de negocios bonificaciones de no permitir que más del doble de precio de un producto ([haga clic aquí para ver imagen en tamaño completo](handling-bll-and-dal-level-exceptions-in-an-asp-net-page-vb/_static/image31.png))
+**Figura 11**: el precio de las reglas de negocio no permite aumentar el precio de un producto más del doble ([haga clic para ver la imagen de tamaño completo](handling-bll-and-dal-level-exceptions-in-an-asp-net-page-vb/_static/image31.png))
 
 > [!NOTE]
-> Lo ideal es que se podrían refactorizar nuestras reglas de lógica de negocio fuera de la `UpdateProduct` sobrecargas del método y en un método común. Esto queda como ejercicio para el lector.
+> Idealmente, nuestras reglas de lógica de negocios se refactorizarán de las sobrecargas del método `UpdateProduct` y en un método común. Esto se deja como un ejercicio para el lector.
 
 ## <a name="summary"></a>Resumen
 
-Durante la inserción, actualización y eliminación de las operaciones, el control de datos Web y el origen ObjectDataSource implicados activan eventos previos y posteriores al niveles que la operación real del delimitador. Como hemos visto en este tutorial y la anterior, cuando se trabaja con un control GridView editable de GridView `RowUpdating` desencadena el evento, seguido de ObjectDataSource `Updating` eventos, momento en que se realiza el comando update de ObjectDataSource objeto subyacente. Una vez completada la operación, de ObjectDataSource `Updated` desencadena el evento, seguido de GridView `RowUpdated` eventos.
+Durante las operaciones de inserción, actualización y eliminación, tanto el control Web de datos como ObjectDataSource implicaban desencadenar eventos previos y posteriores que devuelven la operación real. Como vimos en este tutorial y en el anterior, al trabajar con un objeto GridView editable, el evento `RowUpdating` de GridView se activa, seguido del evento `Updating` de ObjectDataSource, en el que el comando de actualización se realiza en el objeto subyacente de ObjectDataSource. Una vez finalizada la operación, se desencadena el evento `Updated` de ObjectDataSource, seguido del evento `RowUpdated` de GridView.
 
-Podemos crear controladores de eventos para los eventos de niveles previamente con el fin de personalizar los parámetros de entrada o para los eventos posteriores al niveles para inspeccionar y responder a los resultados de la operación. Controladores de eventos posteriores al nivel se usan normalmente para detectar si se produjo una excepción durante la operación. En caso de una excepción, estos controladores de eventos posteriores a la de nivel, opcionalmente, pueden controlar la excepción por sí solos. En este tutorial hemos visto cómo controlar la excepción mediante un mensaje de error descriptivo.
+Podemos crear controladores de eventos para los eventos de nivel anterior con el fin de personalizar los parámetros de entrada o de los eventos de nivel posterior para poder inspeccionar y responder a los resultados de la operación. Los controladores de eventos de nivel posterior suelen usarse para detectar si se produjo una excepción durante la operación. En el caso de una excepción, estos controladores de eventos de nivel posterior pueden controlar opcionalmente la excepción por su cuenta. En este tutorial, hemos visto cómo controlar este tipo de excepción al mostrar un mensaje de error descriptivo.
 
-En el siguiente tutorial veremos cómo reducir la probabilidad de que las excepciones derivadas de los problemas de formato de datos (por ejemplo, escriba un valor negativo `UnitPrice`). En concreto, echemos un vistazo cómo agregar controles de validación a las interfaces de edición e inserción.
+En el siguiente tutorial, veremos cómo reducir la probabilidad de que surjan problemas de formato de datos (por ejemplo, al escribir una `UnitPrice`negativa). En concreto, veremos cómo agregar controles de validación a las interfaces de edición e inserción.
 
-Feliz programación.
+¡ Feliz programación!
 
 ## <a name="about-the-author"></a>Acerca del autor
 
-[Scott Mitchell](http://www.4guysfromrolla.com/ScottMitchell.shtml), autor de siete libros sobre ASP/ASP.NET y fundador de [4GuysFromRolla.com](http://www.4guysfromrolla.com), trabaja con tecnologías Web de Microsoft desde 1998. Scott trabaja como consultor independiente, instructor y escritor. Su último libro es [*SAM enseñar a usted mismo ASP.NET 2.0 en 24 horas*](https://www.amazon.com/exec/obidos/ASIN/0672327384/4guysfromrollaco). Puede ponerse en [ mitchell@4GuysFromRolla.com.](mailto:mitchell@4GuysFromRolla.com) o a través de su blog, que puede encontrarse en [ http://ScottOnWriting.NET ](http://ScottOnWriting.NET).
+[Scott Mitchell](http://www.4guysfromrolla.com/ScottMitchell.shtml), autor de siete libros de ASP/ASP. net y fundador de [4GuysFromRolla.com](http://www.4guysfromrolla.com), ha estado trabajando con las tecnologías Web de Microsoft desde 1998. Scott funciona como consultor, profesor y redactor independiente. Su último libro se [*enseña a ASP.NET 2,0 en 24 horas*](https://www.amazon.com/exec/obidos/ASIN/0672327384/4guysfromrollaco). Puede ponerse en contacto con usted en [mitchell@4GuysFromRolla.com.](mailto:mitchell@4GuysFromRolla.com) o a través de su blog, que encontrará en [http://ScottOnWriting.NET](http://ScottOnWriting.NET).
 
-## <a name="special-thanks-to"></a>Agradecimientos especiales a
+## <a name="special-thanks-to"></a>Agradecimiento especial a
 
-Esta serie de tutoriales ha sido revisada por muchos revisores útiles. Revisor de clientes potencial para este tutorial era Liz Shulok. ¿Está interesado en leer mi próximos artículos de MSDN? Si es así, envíeme una línea en [ mitchell@4GuysFromRolla.com.](mailto:mitchell@4GuysFromRolla.com)
+Muchos revisores útiles revisaron esta serie de tutoriales. El revisor del cliente potencial de este tutorial fue Liz Shulok. ¿Está interesado en revisar los próximos artículos de MSDN? En caso afirmativo, suéltelo en [mitchell@4GuysFromRolla.com.](mailto:mitchell@4GuysFromRolla.com)
 
 > [!div class="step-by-step"]
 > [Anterior](examining-the-events-associated-with-inserting-updating-and-deleting-vb.md)

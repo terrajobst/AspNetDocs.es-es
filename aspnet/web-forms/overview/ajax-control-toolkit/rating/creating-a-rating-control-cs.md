@@ -1,72 +1,72 @@
 ---
 uid: web-forms/overview/ajax-control-toolkit/rating/creating-a-rating-control-cs
-title: Creación de un Control de clasificación (C#) | Microsoft Docs
+title: Crear un control de clasificaciónC#() | Microsoft Docs
 author: wenz
-description: Muchos sitios Web, de comercio electrónico para sitios de la Comunidad, ofrecen a los usuarios para los artículos de la velocidad o elementos. Esto normalmente requiere algún esfuerzo de codificación, pero tenemos el...
+description: Muchos sitios web, desde comercio electrónico hasta sitios de la comunidad, ofrecen a sus usuarios tarifas o artículos. Esto normalmente requiere cierto esfuerzo de codificación, pero tenemos...
 ms.author: riande
 ms.date: 06/02/2008
 ms.assetid: 969fb28f-2bff-4fc4-b24a-27f5e2534a37
 msc.legacyurl: /web-forms/overview/ajax-control-toolkit/rating/creating-a-rating-control-cs
 msc.type: authoredcontent
-ms.openlocfilehash: 1fde131086d4fb29c499f7f7c6281153c2766166
-ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
+ms.openlocfilehash: c0bf793406e378321f54f0460031c526a0b41a02
+ms.sourcegitcommit: 22fbd8863672c4ad6693b8388ad5c8e753fb41a2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/06/2019
-ms.locfileid: "65125059"
+ms.lasthandoff: 11/28/2019
+ms.locfileid: "74611572"
 ---
 # <a name="creating-a-rating-control-c"></a>Crear un control de clasificación (C#)
 
 por [Christian Wenz](https://github.com/wenz)
 
-[Descargar código](http://download.microsoft.com/download/9/3/f/93f8daea-bebd-4821-833b-95205389c7d0/rating0.cs.zip) o [descargar PDF](http://download.microsoft.com/download/2/d/c/2dc10e34-6983-41d4-9c08-f78f5387d32b/rating0CS.pdf)
+[Descargar código](https://download.microsoft.com/download/9/3/f/93f8daea-bebd-4821-833b-95205389c7d0/rating0.cs.zip) o [Descargar PDF](https://download.microsoft.com/download/2/d/c/2dc10e34-6983-41d4-9c08-f78f5387d32b/rating0CS.pdf)
 
-> Muchos sitios Web, de comercio electrónico para sitios de la Comunidad, ofrecen a los usuarios para los artículos de la velocidad o elementos. Esto normalmente requiere algún esfuerzo de codificación, pero tenemos el Kit de herramientas de Control a nuestra disposición.
+> Muchos sitios web, desde comercio electrónico hasta sitios de la comunidad, ofrecen a sus usuarios tarifas o artículos. Esto normalmente requiere cierto esfuerzo de codificación, pero tenemos el kit de herramientas de control para nuestra eliminación.
 
-## <a name="overview"></a>Información general
+## <a name="overview"></a>Información general del
 
-Muchos sitios Web, de comercio electrónico para sitios de la Comunidad, ofrecen a los usuarios para los artículos de la velocidad o elementos. Esto normalmente requiere algún esfuerzo de codificación, pero tenemos el Kit de herramientas de Control a nuestra disposición.
+Muchos sitios web, desde comercio electrónico hasta sitios de la comunidad, ofrecen a sus usuarios tarifas o artículos. Esto normalmente requiere cierto esfuerzo de codificación, pero tenemos el kit de herramientas de control para nuestra eliminación.
 
 ## <a name="steps"></a>Pasos
 
-En primer lugar, se necesitan (al menos) dos tipos de imágenes: uno para una forma rellena el elemento clasificación y uno para un elemento vacío de clasificación. Un elemento de clasificación suele ser una estrella o una cara sonriente. En este escenario, encontrará tres archivos, smiley.png y empty.png y sonriente done.png como parte de las descargas de código fuente para este tutorial.
+En primer lugar, necesita (al menos) dos tipos de imágenes: una para un elemento de calificación rellenado y otra para un elemento de clasificación vacío. Un elemento de clasificación suele ser una estrella o un smiley. En este escenario, encontrará tres archivos: Smiley. png y Empty. png y Smiley-done. png como parte de las descargas de código fuente de este tutorial.
 
-A continuación, cree un nuevo archivo ASP.NET y empezar a agregar un `ScriptManager` control:
+A continuación, cree un nuevo archivo ASP.NET y empiece por agregarle un `ScriptManager` control:
 
 [!code-aspx[Main](creating-a-rating-control-cs/samples/sample1.aspx)]
 
-A continuación, agregue el `Rating` control de ASP.NET AJAX Control Toolkit. Los siguientes atributos deben establecerse en este ejemplo:
+A continuación, agregue el control `Rating` de ASP.NET AJAX control Toolkit. Se deben establecer los siguientes atributos para este ejemplo:
 
-- `CurrentRating` la clasificación inicial que se usará
-- `MaxRating` el valor máximo de clasificación
-- `EmptyStarCssClass` la clase CSS que se usará cuando un elemento de clasificación (star) está vacía
-- `FilledStarCssClass` la clase CSS que se utilizará al rellena un elemento de clasificación (star)
-- `StarCssClass` la clase CSS que se usará para un estado visible
-- `WaitingStarCssClass` la clase CSS para usar mientras una clasificación por estrellas se envía al servidor
+- `CurrentRating` la clasificación inicial que se va a usar
+- `MaxRating` la clasificación máxima
+- `EmptyStarCssClass` la clase CSS que se va a usar cuando un elemento de clasificación (Star) esté vacío
+- `FilledStarCssClass` la clase CSS que se va a usar cuando se rellena un elemento de clasificación (Star)
+- `StarCssClass` la clase CSS que se va a usar para una estadística visible
+- `WaitingStarCssClass` la clase CSS que se va a usar mientras se envía una clasificación por estrellas al servidor
 
-Y aquí está el marcado que crea un control de clasificación con cinco elementos (emoticones) de los cuales ninguno se rellena inicialmente:
+Y este es el marcado que crea un control de clasificación con cinco elementos (sonrisais) de los que no se rellena inicialmente ninguno:
 
 [!code-aspx[Main](creating-a-rating-control-cs/samples/sample2.aspx)]
 
-Las tres clases CSS que se hace referencia ahora deben mostrar los archivos de imagen apropiada, que es fácil de hacer uso de CSS:
+Las tres clases CSS a las que se hace referencia ahora deben mostrar los archivos de imagen adecuados, lo que es fácil de usar con CSS:
 
 [!code-css[Main](creating-a-rating-control-cs/samples/sample3.css)]
 
-Asegúrese de que proporcione el ancho y alto de las tres imágenes, en caso contrario, la visualización puede parecer un poco qué seguridad.
+Asegúrese de proporcionar el ancho y el alto de las tres imágenes; de lo contrario, la pantalla puede parecer un poco desordenado.
 
-Por último, el resultado de la clasificación debe ser muestra al usuario (o, al menos se guardan en una base de datos). Por lo tanto, agregue una etiqueta para la salida de un mensaje de texto y un botón de envío para devolver el formato de clasificación en el servidor:
+Por último, el resultado de la clasificación debe mostrarse al usuario (o, al menos, guardarse en una base de datos). Por tanto, agregue una etiqueta para la salida de un mensaje de texto y un botón de envío para devolver el formulario de clasificación al servidor:
 
 [!code-aspx[Main](creating-a-rating-control-cs/samples/sample4.aspx)]
 
-En el código del lado servidor, obtener acceso al control de clasificación a través de su `ID` y, a continuación, obtener acceso a su `CurrentRating` propiedad que es el número de elementos de clasificación seleccionado, en nuestro ejemplo, un valor entre 0 y 5.
+En el código del lado servidor, acceda al control clasificación a través de su `ID` y, a continuación, acceda a su propiedad `CurrentRating`, que es el número de los elementos de clasificación seleccionados, en el ejemplo un valor entre 0 y 5.
 
 [!code-aspx[Main](creating-a-rating-control-cs/samples/sample5.aspx)]
 
-Guarde la página y cargarlos en el explorador. Cuando mantiene el mouse sobre los elementos de clasificación (inicialmente vacía), se produce un efecto de JavaScript: Los cambios de clasificación. Al hacer clic en el conjunto de estrellas, se conserva la clasificación actual. Por último, cuando se envía el formulario, el código del lado servidor da como resultado la clasificación seleccionada.
+Guarde la página y cargarla en el explorador. Al mantener el mouse sobre los elementos de clasificación (inicialmente vacíos), se produce un efecto de JavaScript: la clasificación cambia. Al hacer clic en el conjunto de estrellas, se conserva la clasificación actual. Por último, al enviar el formulario, el código del lado servidor genera la clasificación seleccionada.
 
-[![Creación de un sistema de clasificación con un código mínimo](creating-a-rating-control-cs/_static/image2.png)](creating-a-rating-control-cs/_static/image1.png)
+[![crear un sistema de clasificación con código mínimo](creating-a-rating-control-cs/_static/image2.png)](creating-a-rating-control-cs/_static/image1.png)
 
-Creación de un sistema de clasificación con un código mínimo ([haga clic aquí para ver imagen en tamaño completo](creating-a-rating-control-cs/_static/image3.png))
+Creación de un sistema de clasificación con código mínimo ([haga clic para ver la imagen de tamaño completo](creating-a-rating-control-cs/_static/image3.png))
 
 > [!div class="step-by-step"]
 > [Siguiente](creating-a-rating-control-vb.md)

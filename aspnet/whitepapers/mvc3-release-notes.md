@@ -8,12 +8,12 @@ ms.date: 10/06/2010
 ms.assetid: f44c166e-7e91-48a0-a6f8-d9285f3594e5
 msc.legacyurl: /whitepapers/mvc3-release-notes
 msc.type: content
-ms.openlocfilehash: 46d051a5eba6501cf36910b7674ce6400597de8a
-ms.sourcegitcommit: 295cf898a4c87e264b0c35c7254b0fa4169f2278
+ms.openlocfilehash: 504202068f5db4f8614bba02e8066ffecfd15b48
+ms.sourcegitcommit: 22fbd8863672c4ad6693b8388ad5c8e753fb41a2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/13/2019
-ms.locfileid: "74057018"
+ms.lasthandoff: 11/28/2019
+ms.locfileid: "74619237"
 ---
 # <a name="aspnet-mvc-3"></a>ASP.NET MVC 3
 
@@ -91,7 +91,7 @@ ms.locfileid: "74057018"
 - [Ausencia](#0.1__Toc274034231)
 
 <a id="overview"></a>
-## <a name="overview"></a>Información general
+## <a name="overview"></a>Información general del
 
 En este documento se describe la versión de ASP.NET MVC 3 RTM para Visual Studio 2010. ASP.NET MVC es un marco para desarrollar aplicaciones web que usa el patrón Model-View-Controller (MVC). El instalador de ASP.NET MVC 3 incluye los siguientes componentes:
 
@@ -102,12 +102,12 @@ En este documento se describe la versión de ASP.NET MVC 3 RTM para Visual Studi
 - Administrador de paquetes de Microsoft para .NET (NuGet)
 - Una actualización de Visual Studio 2010 que habilita la compatibilidad con sintaxis Razor. (Para obtener más información, vea el artículo de KnowledgeBase 2483190).
 
-Puede encontrar el conjunto completo de notas de la versión de cada versión preliminar de ASP.NET MVC 3 en el sitio web de ASP.NET en la siguiente dirección URL:
+Las notas de todas las versiones preliminares de ASP.NET MVC 3 se encuentran en el sitio web de ASP.NET en la siguiente dirección URL:
 
 https://www.asp.net/learn/whitepapers/mvc3-release-notes
 
 <a id="installation-notes"></a>
-## <a name="installation-notes"></a>Notas de instalación
+## <a name="installation-notes"></a>Notas de la instalación
 
 Para instalar ASP.NET MVC 3 RTM con el instalador de plataforma web (Web PI), visite la página siguiente:
 
@@ -130,7 +130,7 @@ Los componentes de tiempo de ejecución de ASP.NET MVC 3 requieren el software s
 - Visual Studio 2010 o Visual Web Developer 2010 Express.
 
 <a id="documentation"></a>
-## <a name="documentation"></a>Documentación
+## <a name="documentation"></a>Documentation
 
 La documentación de ASP.NET MVC está disponible en el sitio web de MSDN en la dirección URL siguiente:
 
@@ -141,11 +141,11 @@ Los tutoriales y otra información sobre ASP.NET MVC están disponibles en la p�
 [https://www.asp.net/mvc/](../mvc/index.md)
 
 <a id="support"></a>
-## <a name="support"></a>Compatibilidad
+## <a name="support"></a>Compatibilidad con
 
-Se trata de una versión totalmente compatible. Puede encontrar información sobre cómo obtener soporte técnico en el [sitio web de soporte técnico de Microsoft](https://support.microsoft.com/).
+Se trata de una versión con soporte técnico completo. Puede encontrar información sobre cómo obtener soporte técnico en el [sitio web de soporte técnico de Microsoft](https://support.microsoft.com/).
 
-También puede publicar preguntas sobre esta versión en el foro de MVC de ASP.NET, donde los miembros de la comunidad de ASP.NET suelen ser capaces de proporcionar soporte técnico informal:
+También se pueden plantear preguntas sobre esta versión en el foro de ASP.NET MVC, donde los miembros de la comunidad de ASP.NET normalmente pueden ofrecer soporte técnico informal:
 
 [https://forums.asp.net/1146.aspx](https://forums.asp.net/1146.aspx)
 
@@ -157,7 +157,7 @@ ASP.NET MVC 3 se puede instalar en paralelo con ASP.NET MVC 2 en el mismo equipo
 Para actualizar manualmente una aplicación existente de ASP.NET MVC 2 a la versión 3, haga lo siguiente:
 
 1. Cree un nuevo proyecto de ASP.NET MVC 3 vacío en el equipo. Este proyecto contendrá algunos archivos que son necesarios para la actualización.
-2. Copie los siguientes archivos del proyecto ASP.NET MVC 3 en la ubicación correspondiente del proyecto ASP.NET MVC 2. Tendrá que actualizar las referencias a la biblioteca de jQuery para tener en cuenta el nuevo nombre de archivo (jQuery-1.5.1. js): 
+2. Copie los siguientes archivos del proyecto de ASP.NET MVC 3 a la ubicación correspondiente del proyecto de ASP.NET MVC 2. Necesitará actualizar todas las referencias a la biblioteca jQuery para reflejar el nuevo nombre de archivo (jQuery-1.5.1.js): 
 
     - /Views/Web.config
     - /packages.config
@@ -165,18 +165,18 @@ Para actualizar manualmente una aplicación existente de ASP.NET MVC 2 a la vers
     - \*/content/themes/.\*
 3. Copie la carpeta *Packages* de la raíz de la solución de proyecto ASP.NET MVC 3 vacía en la raíz de la solución, que se encuentra en el directorio donde se encuentra el archivo. sln de la solución.
 4. Si el proyecto de ASP.NET MVC 2 contiene áreas, copie el archivo/Views/Web.config en la carpeta *views* de cada área.
-5. En los dos archivos Web. config del proyecto ASP.NET MVC 2, busque y reemplace la versión de ASP.NET MVC de forma global. Busque lo siguiente: 
+5. En ambos archivos Web.config del proyecto de ASP.NET MVC 2, busque y reemplace globalmente la versión de ASP.NET MVC. Busque lo siguiente: 
 
     [!code-console[Main](mvc3-release-notes/samples/sample1.cmd)]
 
-    Reemplácelo por lo siguiente:
+    Reemplácelo con lo siguiente:
 
     [!code-console[Main](mvc3-release-notes/samples/sample2.cmd)]
 6. En Explorador de soluciones, elimine la referencia a *System. Web. Mvc* (que apunta a la dll de la versión 2) y, a continuación, agregue una referencia a *System. Web. Mvc* (v 3.0.0.0).
-7. Agregue una referencia a System. Web. Webpages. dll y System. Web. helpers. dll. Estos ensamblados se encuentran en las siguientes carpetas: 
+7. Agregue una referencia a System. Web. Webpages. dll y System. Web. helpers. dll. Estos ensamblados se encuentran en las carpetas siguientes: 
 
-    - % ProgramFiles% \ Microsoft ASP. NET\ASP.NET MVC 3 \ ensamblados
-    - % ProgramFiles% \ Pages\v1.0\Assemblies Web de Microsoft ASP. NET\ASP.NET
+    - %ProgramFiles%\ Microsoft ASP.NET\ASP.NET MVC 3\Assemblies
+    - %ProgramFiles%\ Microsoft ASP.NET\ASP.NET Web Pages\v1.0\Assemblies
 8. En Explorador de soluciones, haga clic con el botón derecho en el nombre del proyecto y seleccione descargar el proyecto. A continuación, vuelva a hacer clic con el botón derecho en el nombre del proyecto y seleccione Editar *projectname*. csproj.
 9. Busque el elemento *ProjectTypeGuids* y reemplace {F85E285D-A4E0-4152-9332-AB1D724D3325} por {E53F8FEA-EAE0-44A6-8774-FFD645390401}.
 10. Guarde los cambios, haga clic con el botón derecho en el proyecto y, a continuación, seleccione volver a cargar el proyecto.
@@ -190,34 +190,34 @@ Para actualizar manualmente una aplicación existente de ASP.NET MVC 2 a la vers
 <a id="tu-changes"></a>
 ## <a name="changes-in-aspnet-mvc-3-tools-update"></a>Cambios en ASP.NET MVC 3 Tools Update
 
-En esta sección se describen los cambios realizados en la versión de actualización de ASP.NET MVC 3 Tools desde la versión de ASP.NET MVC 3 RTM.
+En esta sección se describen los cambios realizados en la versión ASP.NET MVC 3 Tools Update con respecto a la versión ASP.NET MVC 3 RTM.
 
 <a id="tu-AddControllerDialog"></a>
-### <a name="add-controller-dialog-box-can-now-scaffold-controllers-with-views-and-data-access-code"></a>El cuadro de diálogo "agregar controlador" ahora puede aplicar scaffolding a los controladores con vistas y código de acceso a datos
+### <a name="add-controller-dialog-box-can-now-scaffold-controllers-with-views-and-data-access-code"></a>El cuadro de diálogo "Agregar controlador" ahora puede aplicar la técnica scaffolding a controladores con vistas y código de acceso de datos
 
-La técnica scaffolding es una forma de generar rápidamente un controlador y vistas para la aplicación. Una vez generado el código, puede modificarlo para cumplir los requisitos del proyecto.
+La técnica scaffolding es una manera de generar rápidamente un controlador y vistas para una aplicación. Una vez generado el código, puede modificarlo para cumplir los requisitos del proyecto.
 
-Para iniciar el cuadro de diálogo *Agregar controlador* en ASP.NET MVC 3, haga clic con el botón secundario en la carpeta *controllers* en *Explorador de soluciones*, haga clic en *Agregar*y, a continuación, haga clic en *controlador*. El cuadro de diálogo se ha mejorado para ofrecer opciones de scaffolding adicionales.
+Para iniciar el cuadro de diálogo *Agregar controlador* en ASP.NET MVC 3, haga clic con el botón secundario en la carpeta *controllers* en *Explorador de soluciones*, haga clic en *Agregar*y, a continuación, haga clic en *controlador*. El cuadro de diálogo se ha mejorado y ahora ofrece opciones de scaffolding adicionales.
 
 ![](mvc3-release-notes/_static/image1.png)
 
-Hay tres plantillas de scaffolding disponibles de forma predeterminada.
+Hay tres plantillas para scaffold disponibles de forma predeterminada.
 
-#### <a name="empty-controller"></a>Controlador vacío
+#### <a name="empty-controller"></a>Vaciar controlador
 
-Esta plantilla genera un archivo de controlador vacío. Esta plantilla es equivalente a no activar *Agregar acciones para los escenarios de creación, edición, detalles y eliminación* en versiones anteriores de ASP.NET MVC. Si elige esta opción, no hay más opciones disponibles.
+Esta plantilla genera un archivo de controlador vacío. Esta plantilla es equivalente a no activar *Agregar acciones para los escenarios de creación, edición, detalles y eliminación* en versiones anteriores de ASP.NET MVC. Si la elige, no hay más opciones disponibles.
 
-#### <a name="controller-with-empty-readwrite-actions"></a>Controlador con acciones de lectura/escritura vacías
+#### <a name="controller-with-empty-readwrite-actions"></a>Controlador con acciones de lectura y escritura
 
-Esta plantilla genera un archivo de controlador que tiene todos los métodos de acción necesarios, pero no código de implementación en los métodos. Esta plantilla es equivalente a activar *Agregar acciones para los escenarios de creación, edición, detalles y eliminación* en versiones anteriores de ASP.NET MVC. Si elige esta opción, no hay más opciones disponibles.
+Esta plantilla genera un archivo de controlador que tiene todos los métodos de acción necesarios pero ningún código de implementación en los métodos. Esta plantilla es equivalente a activar *Agregar acciones para los escenarios de creación, edición, detalles y eliminación* en versiones anteriores de ASP.NET MVC. Si la elige, no hay más opciones disponibles.
 
-#### <a name="controller-with-readwrite-actions-and-views-using-entity-framework"></a>Controlador con acciones de lectura/escritura y vistas, mediante Entity Framework
+#### <a name="controller-with-readwrite-actions-and-views-using-entity-framework"></a>Controlador con acciones de lectura y escritura y vistas, que usa Entity Framework
 
-Esta plantilla permite crear rápidamente una interfaz de usuario de entrada de datos de trabajo. Genera código que controla una serie de requisitos y escenarios comunes, como los siguientes:
+Esta plantilla le permite crear rápidamente una interfaz de usuario para entrada de datos que funcione. Genera código que administra diversos requisitos y escenarios comunes, como los siguientes:
 
-- *Acceso a datos*. El código generado Lee y escribe entidades en una base de datos. Funciona con el enfoque de Code First de Entity Framework Si elige una clase de contexto de datos existente o si permite que la plantilla genere una nueva clase *DbContext* . También funciona con el enfoque Entity Framework Database First o Model First si elige una clase *ObjectContext* existente.
-- *Validación*. El código generado usa características de metadatos y de enlace de modelos de ASP.NET MVC para que los envíos de formularios se validen de acuerdo con las reglas declaradas en la clase de modelo. Esto incluye las reglas de validación integradas, como los atributos *obligatorios* y *StringLength* , y las reglas de validación personalizadas.
-- *Relaciones uno a varios*. Si define relaciones de clave externa de uno a varios entre las clases del modelo, el código generado producirá listas desplegables para seleccionar entidades relacionadas. Por ejemplo, puede definir las siguientes clases de modelo siguiendo Entity Framework convenciones de Code First: 
+- *Acceso a datos*. El código generado lee y escribe entidades en una base de datos. Funciona con el enfoque de Code First de Entity Framework Si elige una clase de contexto de datos existente o si permite que la plantilla genere una nueva clase *DbContext* . También funciona con el enfoque Entity Framework Database First o Model First si elige una clase *ObjectContext* existente.
+- *Validación*. El código generado usa características de enlace de modelos y metadatos de ASP.NET MVC, por lo que los envíos de formularios se validan de acuerdo con las reglas declaradas en la clase de modelo. Esto incluye las reglas de validación integradas, como los atributos *obligatorios* y *StringLength* , y las reglas de validación personalizadas.
+- *Relaciones uno a varios*. Si define relaciones uno a varios de clave externa entre las clases de modelo, el código generado producirá listas desplegables para seleccionar entidades relacionadas. Por ejemplo, puede definir las siguientes clases de modelo siguiendo Entity Framework convenciones de Code First: 
 
     [!code-csharp[Main](mvc3-release-notes/samples/sample5.cs)]
 
@@ -298,7 +298,7 @@ Dado que jQuery incluye el número de versión en el nombre de archivo, la actua
 - En algunos casos, es posible que se produzca un error en la instalación con el mensaje "error de instalación con código de error (0x80070643)". Para obtener información sobre cómo solucionar este problema, vea el [artículo de Knowledge base 2531566](https://support.microsoft.com/kb/2531566).
 - El scaffolding para agregar un controlador no es una de las entidades scaffolding que aprovechan la compatibilidad con la herencia de entidades en Entity Framework. Por ejemplo, dada una clase de *persona* base heredada por una clase *Student* , el scaffolding de la clase *Student* dará como resultado código generado que no se compila.
 - La creación de un nuevo proyecto de ASP.NET MVC 3 dentro de una carpeta de soluciones produce un error *NullReferenceException* . La solución consiste en crear el proyecto ASP.NET MVC 3 en la raíz de la solución y, a continuación, moverla a la carpeta de la solución.
-- IntelliSense para sintaxis Razor no funciona cuando se instala ReSharper. Si ha instalado ReSharper y desea aprovechar las ventajas de la compatibilidad con IntelliSense de Razor en ASP.NET MVC 3, consulte la entrada [IntelliSense de Razor y ReSharper](http://blogs.jetbrains.com/dotnet/2010/11/razor-intellisense-and-resharper/) en el blog de Hadi Hariri, en el que se explican las formas de usarlas juntas hoy en día.
+- IntelliSense para sintaxis Razor no funciona cuando se instala ReSharper. Si ha instalado ReSharper y desea aprovechar las ventajas de la compatibilidad con IntelliSense de Razor en ASP.NET MVC 3, consulte la entrada [IntelliSense de Razor y ReSharper](https://blogs.jetbrains.com/dotnet/2010/11/razor-intellisense-and-resharper/) en el blog de Hadi Hariri, en el que se explican las formas de usarlas juntas hoy en día.
 - Durante la instalación, el cuadro de diálogo aceptación del CLUF muestra los términos de la licencia en una ventana menor de lo previsto.
 - Al editar una vista de Razor (. cshtml o. *archivo vbhtml* ), vistas. ASP.NET MVC 3 no incluye ningún fragmento de código para las vistas de Razor. aspxselecting un fragmento de código para ASP.NET MVC mostrará fragmentos de código para
 - Si instala ASP.NET MVC 3 para Visual Web Developer Express en un equipo donde no está instalado Visual Studio y, posteriormente, instala Visual Studio, debe reinstalar ASP.NET MVC 3. Visual Studio y Visual Web Developer Express comparten componentes que se actualizan mediante el instalador de ASP.NET MVC 3. El mismo problema se aplica si instala ASP.NET MVC 3 para Visual Studio en un equipo que no tiene Visual Web Developer Express y, posteriormente, instala Visual Web Developer Express.
@@ -347,7 +347,7 @@ Cambiar el nombre de un archivo de Razor mediante Explorador de soluciones mient
 - El instalador de ASP.NET MVC 3 solo puede instalar una versión inicial del administrador de paquetes NuGet. Después de haber instalado la versión inicial, NuGet se puede instalar y actualizar con el administrador de extensiones de Visual Studio. Si ya tiene NuGet instalado, vaya a la galería de extensiones de Visual Studio para actualizar a la versión más reciente de NuGet.
 - La creación de un nuevo proyecto de ASP.NET MVC 3 dentro de una carpeta de soluciones produce un error *NullReferenceException* . La solución consiste en crear el proyecto ASP.NET MVC 3 en la raíz de la solución y, a continuación, moverla a la carpeta de la solución.
 - El instalador puede tardar mucho más que las versiones anteriores de ASP.NET MVC para completarse. Esto se debe a que actualiza los componentes de Visual Studio 2010.
-- IntelliSense para sintaxis Razor no funciona cuando se instala ReSharper. Si ha instalado ReSharper y desea aprovechar las ventajas de la compatibilidad con IntelliSense de Razor en ASP.NET MVC 3, consulte la entrada [IntelliSense de Razor y ReSharper](http://blogs.jetbrains.com/dotnet/2010/11/razor-intellisense-and-resharper/) en el blog de Hadi Hariri, en el que se explican las formas de usarlas juntas hoy en día.
+- IntelliSense para sintaxis Razor no funciona cuando se instala ReSharper. Si ha instalado ReSharper y desea aprovechar las ventajas de la compatibilidad con IntelliSense de Razor en ASP.NET MVC 3, consulte la entrada [IntelliSense de Razor y ReSharper](https://blogs.jetbrains.com/dotnet/2010/11/razor-intellisense-and-resharper/) en el blog de Hadi Hariri, en el que se explican las formas de usarlas juntas hoy en día.
 - Las vistas CCSHTML y VBHTML creadas con la versión beta de ASP.NET MVC 3 no tienen su acción de compilación establecida correctamente, con lo que se omiten estos tipos de vista cuando se publica el proyecto. El valor de acción de compilación para estos archivos se debe establecer en "Content". ASP.NET MVC 3 RTM corrige este problema para los nuevos archivos, pero no corrige la configuración de los archivos existentes para un proyecto creado con versiones preliminares.
 - ![](mvc3-release-notes/_static/image3.png)
 - Durante la instalación, el cuadro de diálogo aceptación del CLUF muestra los términos de la licencia en una ventana menor de lo previsto.
@@ -470,7 +470,7 @@ En versiones anteriores, los valores explícitos que se pasaron al método *Rend
 - El instalador de ASP.NET MVC 3 solo puede instalar una versión inicial del administrador de paquetes NuGet. Después de haber instalado la versión inicial, NuGet se puede instalar y actualizar con el administrador de extensiones de Visual Studio. Si ya tiene NuGet instalado, vaya a la galería de extensiones de Visual Studio para actualizar a la versión más reciente de NuGet.
 - La creación de un nuevo proyecto de ASP.NET MVC 3 dentro de una carpeta de soluciones produce un error *NullReferenceException* . La solución consiste en crear el proyecto ASP.NET MVC 3 en la raíz de la solución y, a continuación, moverla a la carpeta de la solución.
 - El instalador puede tardar mucho más que las versiones anteriores de ASP.NET MVC para completarse. Esto se debe a que actualiza los componentes de Visual Studio 2010.
-- IntelliSense para sintaxis Razor no funciona cuando se instala ReSharper. Si ha instalado ReSharper y desea aprovechar las ventajas de la compatibilidad con IntelliSense de Razor en ASP.NET MVC 3 RC2, consulte la entrada [IntelliSense de Razor y ReSharper](http://blogs.jetbrains.com/dotnet/2010/11/razor-intellisense-and-resharper/) en el blog de Hadi Hariri, en el que se explican las formas de usarlas en la actualidad.
+- IntelliSense para sintaxis Razor no funciona cuando se instala ReSharper. Si ha instalado ReSharper y desea aprovechar las ventajas de la compatibilidad con IntelliSense de Razor en ASP.NET MVC 3 RC2, consulte la entrada [IntelliSense de Razor y ReSharper](https://blogs.jetbrains.com/dotnet/2010/11/razor-intellisense-and-resharper/) en el blog de Hadi Hariri, en el que se explican las formas de usarlas en la actualidad.
 - Las vistas CSHTML y VBHTML creadas con la versión beta de ASP.NET MVC 3 no tienen su acción de compilación establecida correctamente, con lo que se omiten estos tipos de vista cuando se publica el proyecto. El valor de *acción de compilación* para estos archivos se debe establecer en Content ". ASP.NET MVC 3 RC2 corrige este problema para los nuevos archivos, pero no corrige la configuración de los archivos existentes para un proyecto creado con la versión beta.![](mvc3-release-notes/_static/image4.png)
 - Durante la instalación, el cuadro de diálogo aceptación del CLUF muestra los términos de la licencia en una ventana menor de lo previsto.
 - Al editar una vista de Razor (archivo. cshtml), el elemento de menú ir a controlador de Visual Studio no estará disponible y no habrá fragmentos de código.
@@ -507,7 +507,7 @@ En esta versión se incluye compatibilidad para modificar la lista de plantillas
 
 Las plantillas predeterminadas son las siguientes:
 
-Vacía. Contiene un conjunto mínimo de archivos para un proyecto de ASP.NET MVC, incluida la estructura de directorios predeterminada para los proyectos de ASP.NET MVC, un archivo site. CSS que contiene los estilos predeterminados de ASP.NET MVC y un directorio de scripts que contiene los archivos de JavaScript predeterminados.
+Vacío. Contiene un conjunto mínimo de archivos para un proyecto de ASP.NET MVC, incluida la estructura de directorios predeterminada para los proyectos de ASP.NET MVC, un archivo site. CSS que contiene los estilos predeterminados de ASP.NET MVC y un directorio de scripts que contiene los archivos de JavaScript predeterminados.
 
 Aplicación de Internet. Contiene la funcionalidad de ejemplo que muestra cómo usar el proveedor de pertenencia con ASP.NET MVC.
 
@@ -613,7 +613,7 @@ Como alternativa, para desactivar la validación de solicitudes para cada propie
 - El instalador puede tardar mucho más que las versiones anteriores de ASP.NET MVC para completarse porque actualiza los componentes de Visual Studio 2010.
 - La opción Agregar scaffolding de vista al seleccionar astrongly vista con tipo scaffolding propiedades de solo escritura. Estos deben omitirse siempre mediante scaffolding. El cuadro de diálogo Agregar vista también scaffolding propiedades de solo lectura al generar una vista "Editar" o "crear". Las propiedades de solo lectura solo deben ser scaffolding para las vistas de presentación y de lista.
 - La depuración no funciona cuando se instala ASP.NET MVC 3 junto con la versión de CTP asincrónica. ASP.NET MVC 3 no se puede instalar en paralelo con la versión de CTP asincrónica. Desinstale la versión de CTP de Async para reparar la depuración. Para obtener más información, lea [esta entrada de blog](http://drew-prog.blogspot.com/2010/11/how-to-uninstall-microsoft-aspnet-mvc-3.html) sobre cómo desinstalar todos los componentes de ASP.NET MVC 3 rc.
-- Razor IntelliSense no funciona cuando se instala ReSharper. Si tiene ReSharper instalado y desea aprovechar las ventajas de la compatibilidad con IntelliSense de Razor en ASP.NET MVC 3 RC, lea [esta entrada de blog](http://blogs.jetbrains.com/dotnet/2010/11/razor-intellisense-and-resharper/) de JetBrains, en la que se explican las formas de usarlas juntas hoy en día.
+- Razor IntelliSense no funciona cuando se instala ReSharper. Si tiene ReSharper instalado y desea aprovechar las ventajas de la compatibilidad con IntelliSense de Razor en ASP.NET MVC 3 RC, lea [esta entrada de blog](https://blogs.jetbrains.com/dotnet/2010/11/razor-intellisense-and-resharper/) de JetBrains, en la que se explican las formas de usarlas juntas hoy en día.
 - Las vistas CSHTML y VBHTML creadas con beta de ASP.NET MVC 3 no tienen su acción de compilación correcta, lo que omite su publicación. La *acción de compilación* de estos archivos debe establecerse en "Content". ASP.NET MVC 3 RC corrige este problema para los nuevos archivos, pero no corrige la configuración de los archivos existentes para un proyecto creado con la versión beta.
 - El instalador puede tardar mucho más que las versiones anteriores de ASP.NET MVC para completarse porque actualiza los componentes de Visual Studio 2010.
 - La opción Agregar scaffolding de vista al seleccionar una vista "Editar" de la vista fuertemente tipada propiedades de solo lectura. Del mismo modo, las propiedades de solo escritura tienen scaffolding para las vistas "Mostrar".
@@ -648,7 +648,7 @@ En esta versión no se incluye compatibilidad para modificar la lista de plantil
 
 Las plantillas predeterminadas son las siguientes:
 
-Vacía. Contiene un conjunto mínimo de archivos para un proyecto de ASP.NET MVC, incluida la estructura de directorios predeterminada para los proyectos de ASP.NET MVC, un pequeño archivo site. CSS que contiene los estilos predeterminados de ASP.NET MVC y un directorio de scripts que contiene los archivos de JavaScript predeterminados.
+Vacío. Contiene un conjunto mínimo de archivos para un proyecto de ASP.NET MVC, incluida la estructura de directorios predeterminada para los proyectos de ASP.NET MVC, un pequeño archivo site. CSS que contiene los estilos predeterminados de ASP.NET MVC y un directorio de scripts que contiene los archivos de JavaScript predeterminados.
 
 Aplicación de Internet. Contiene la funcionalidad de ejemplo que muestra cómo usar el proveedor de pertenencia dentro de ASP.NET MVC.
 
@@ -861,6 +861,6 @@ Hay un problema conocido que hace que la autenticación de formularios redirija 
 
 ## <a id="0.1__Toc274034231"></a>Ausencia
 
-© 2011 Microsoft Corporation. All rights reserved. Este documento se proporciona "tal cual". La información y las vistas expresadas en este documento, incluidas las direcciones URL y otras referencias a sitios web de Internet, pueden cambiar sin previo aviso. Usted asume el riesgo de utilizarla.
+© 2011 Microsoft Corporation. Reservados todos los derechos. Este documento se proporciona "tal cual". La información y las opiniones expresadas en este documento, incluidas las direcciones URL y otras referencias a sitios web de Internet, pueden cambiar sin previo aviso. Al utilizarlas, acepta el riesgo que ello conlleva.
 
 Este documento no le proporciona ningún derecho legal sobre ninguna propiedad intelectual de ningún producto de Microsoft. Puede copiar y usar este documento para su uso interno de referencia.

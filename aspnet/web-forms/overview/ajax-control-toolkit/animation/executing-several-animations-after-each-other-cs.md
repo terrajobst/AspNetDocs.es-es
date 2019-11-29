@@ -2,60 +2,60 @@
 uid: web-forms/overview/ajax-control-toolkit/animation/executing-several-animations-after-each-other-cs
 title: Ejecutar varias animaciones una tras otra (C#) | Microsoft Docs
 author: wenz
-description: El control de animación en ASP.NET AJAX Control Toolkit no es simplemente un control, pero un marco completo para agregar animaciones a un control. Lo que permite para ejecutar severa...
+description: El control de animación de ASP.NET AJAX control Toolkit no es solo un control, sino un marco de trabajo completo para agregar animaciones a un control. Permite ejecutar Servera...
 ms.author: riande
 ms.date: 06/02/2008
 ms.assetid: 7dc02b18-2b5d-4844-b7c5-cbd818477163
 msc.legacyurl: /web-forms/overview/ajax-control-toolkit/animation/executing-several-animations-after-each-other-cs
 msc.type: authoredcontent
-ms.openlocfilehash: a5b11b14458fdf06fb4ee18ae94c4846307e2115
-ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
+ms.openlocfilehash: e378ac038796dbd44e89d099532b9e186dcf673f
+ms.sourcegitcommit: 22fbd8863672c4ad6693b8388ad5c8e753fb41a2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/06/2019
-ms.locfileid: "65108849"
+ms.lasthandoff: 11/28/2019
+ms.locfileid: "74575446"
 ---
 # <a name="executing-several-animations-after-each-other-c"></a>Ejecutar varias animaciones una tras otra (C#)
 
 por [Christian Wenz](https://github.com/wenz)
 
-[Descargar código](http://download.microsoft.com/download/f/9/a/f9a26acd-8df4-4484-8a18-199e4598f411/Animation3.cs.zip) o [descargar PDF](http://download.microsoft.com/download/6/7/1/6718d452-ff89-4d3f-a90e-c74ec2d636a3/animation3CS.pdf)
+[Descargar código](https://download.microsoft.com/download/f/9/a/f9a26acd-8df4-4484-8a18-199e4598f411/Animation3.cs.zip) o [Descargar PDF](https://download.microsoft.com/download/6/7/1/6718d452-ff89-4d3f-a90e-c74ec2d636a3/animation3CS.pdf)
 
-> El control de animación en ASP.NET AJAX Control Toolkit no es simplemente un control, pero un marco completo para agregar animaciones a un control. Permite ejecutar varias animaciones una tras otra.
+> El control de animación de ASP.NET AJAX control Toolkit no es solo un control, sino un marco de trabajo completo para agregar animaciones a un control. Permite ejecutar varias animaciones una tras otra.
 
-El control de animación en ASP.NET AJAX Control Toolkit no es simplemente un control, pero un marco completo para agregar animaciones a un control. Permite ejecutar varias animaciones una tras otra.
+El control de animación de ASP.NET AJAX control Toolkit no es solo un control, sino un marco de trabajo completo para agregar animaciones a un control. Permite ejecutar varias animaciones una tras otra.
 
 ## <a name="steps"></a>Pasos
 
-En primer lugar, incluya el `ScriptManager` en la página; a continuación, ASP.NET AJAX se carga la biblioteca, lo que permite usar el Kit de herramientas de Control:
+En primer lugar, incluya el `ScriptManager` en la página; después, se carga la biblioteca de ASP.NET AJAX, lo que permite usar el kit de herramientas de control:
 
 [!code-aspx[Main](executing-several-animations-after-each-other-cs/samples/sample1.aspx)]
 
-La animación se aplicará a un panel de texto que tiene este aspecto:
+La animación se aplicará a un panel de texto que tiene el siguiente aspecto:
 
 [!code-aspx[Main](executing-several-animations-after-each-other-cs/samples/sample2.aspx)]
 
-En la clase CSS asociada para el panel, definir un color de fondo agradable y también establecer un ancho fijo para el panel:
+En la clase CSS asociada del panel, defina un color de fondo agradable y establezca también un ancho fijo para el panel:
 
 [!code-css[Main](executing-several-animations-after-each-other-cs/samples/sample3.css)]
 
-A continuación, agregue el `AnimationExtender` a la página, que proporciona un `ID`, el `TargetControlID` atributo y el obligatoria `runat="server":`
+A continuación, agregue el `AnimationExtender` a la página, proporcionando un `ID`, el atributo `TargetControlID` y el obligatorio `runat="server":`
 
 [!code-aspx[Main](executing-several-animations-after-each-other-cs/samples/sample4.aspx)]
 
-Dentro de la `<Animations>` nodo, use `<OnLoad>` para ejecutar las animaciones de una vez que la página se ha cargado completamente. Por lo general, `<OnLoad>` solo acepta una animación. El marco de animación le permite unir varias animaciones en uno solo mediante la `<Sequence>` elemento. Todas las animaciones en `<Sequence>` son ejecutada uno tras otro. Aquí está el un marcado posible para el `AnimationExtender` control realizar primero la más amplia de panel y, a continuación, reduce su alto:
+Dentro del nodo de `<Animations>`, utilice `<OnLoad>` para ejecutar las animaciones una vez que la página se haya cargado por completo. Por lo general, `<OnLoad>` solo acepta una animación. El marco de animación permite combinar varias animaciones en una mediante el elemento `<Sequence>`. Todas las animaciones dentro de `<Sequence>` se ejecutan una tras otra. A continuación se muestra un posible marcado para el control de `AnimationExtender`, lo que primero es hacer que el panel sea más ancho y, a continuación, reducir su altura:
 
 [!code-aspx[Main](executing-several-animations-after-each-other-cs/samples/sample5.aspx)]
 
-Al ejecutar este script, el panel de primera obtiene más anchos y, a continuación, más pequeños.
+Al ejecutar este script, el panel se amplía primero y, a continuación, se reduce.
 
-[![En primer lugar el ancho aumenta](executing-several-animations-after-each-other-cs/_static/image2.png)](executing-several-animations-after-each-other-cs/_static/image1.png)
+[![primero se aumenta el ancho](executing-several-animations-after-each-other-cs/_static/image2.png)](executing-several-animations-after-each-other-cs/_static/image1.png)
 
-En primer lugar se aumenta el ancho ([haga clic aquí para ver imagen en tamaño completo](executing-several-animations-after-each-other-cs/_static/image3.png))
+En primer lugar, el ancho aumenta ([haga clic para ver la imagen de tamaño completo](executing-several-animations-after-each-other-cs/_static/image3.png))
 
-[![A continuación, se reduce la altura](executing-several-animations-after-each-other-cs/_static/image5.png)](executing-several-animations-after-each-other-cs/_static/image4.png)
+[![se reduce el alto](executing-several-animations-after-each-other-cs/_static/image5.png)](executing-several-animations-after-each-other-cs/_static/image4.png)
 
-A continuación, se reduce el alto ([haga clic aquí para ver imagen en tamaño completo](executing-several-animations-after-each-other-cs/_static/image6.png))
+A continuación, se reduce el alto ([haga clic para ver la imagen de tamaño completo](executing-several-animations-after-each-other-cs/_static/image6.png))
 
 > [!div class="step-by-step"]
 > [Anterior](executing-several-animations-at-the-same-time-cs.md)

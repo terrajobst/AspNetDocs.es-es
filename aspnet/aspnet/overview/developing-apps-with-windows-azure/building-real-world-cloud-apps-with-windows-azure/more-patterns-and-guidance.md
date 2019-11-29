@@ -1,106 +1,106 @@
 ---
 uid: aspnet/overview/developing-apps-with-windows-azure/building-real-world-cloud-apps-with-windows-azure/more-patterns-and-guidance
-title: Más patrones y directrices (crear aplicaciones de nube reales con Azure) | Microsoft Docs
+title: Más patrones e instrucciones (creación de aplicaciones en la nube reales con Azure) | Microsoft Docs
 author: MikeWasson
-description: Building Real World Cloud Apps with e-book de Azure se basa en una presentación desarrollada por Scott Guthrie. Explican el 13 de patrones y prácticas que puede...
+description: La creación de aplicaciones reales en la nube con el libro electrónico de Azure se basa en una presentación desarrollada por Scott Guthrie. Se explican 13 patrones y prácticas que pueden...
 ms.author: riande
 ms.date: 06/12/2014
 ms.assetid: 7e97cfc3-d830-4002-8ff7-5790d1ff49e6
 msc.legacyurl: /aspnet/overview/developing-apps-with-windows-azure/building-real-world-cloud-apps-with-windows-azure/more-patterns-and-guidance
 msc.type: authoredcontent
-ms.openlocfilehash: 42066d4154758fce7ebd1529edf41ba49df07d93
-ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
+ms.openlocfilehash: afade34477d1136883e7543d09e73dfbe435690e
+ms.sourcegitcommit: 22fbd8863672c4ad6693b8388ad5c8e753fb41a2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/06/2019
-ms.locfileid: "65118708"
+ms.lasthandoff: 11/28/2019
+ms.locfileid: "74585361"
 ---
-# <a name="more-patterns-and-guidance-building-real-world-cloud-apps-with-azure"></a>Más patrones y directrices (crear aplicaciones de nube reales con Azure)
+# <a name="more-patterns-and-guidance-building-real-world-cloud-apps-with-azure"></a>Más patrones e instrucciones (creación de aplicaciones en la nube reales con Azure)
 
-by [Mike Wasson](https://github.com/MikeWasson), [Rick Anderson]((https://twitter.com/RickAndMSFT)), [Tom Dykstra](https://github.com/tdykstra)
+por [Mike Wasson](https://github.com/MikeWasson), [Rick Anderson]((https://twitter.com/RickAndMSFT)), [Tom Dykstra](https://github.com/tdykstra)
 
-[Descargar proyecto corregirlo](http://code.msdn.microsoft.com/Fix-It-app-for-Building-cdd80df4) o [descargar libro electrónico](http://blogs.msdn.com/b/microsoft_press/archive/2014/07/23/free-ebook-building-cloud-apps-with-microsoft-azure.aspx)
+[Descargar el proyecto de corrección de ti](https://code.msdn.microsoft.com/Fix-It-app-for-Building-cdd80df4) o [descargar el libro electrónico](https://blogs.msdn.com/b/microsoft_press/archive/2014/07/23/free-ebook-building-cloud-apps-with-microsoft-azure.aspx)
 
-> El **Building Real World Cloud Apps with Azure** eBook se basa en una presentación desarrollada por Scott Guthrie. Se explican el 13 patrones y prácticas que pueden ayudarle a tener éxito el desarrollo de aplicaciones web para la nube. Para obtener información sobre el libro electrónico, consulte [el primer capítulo](introduction.md).
+> La **creación de aplicaciones reales en la nube con** el libro electrónico de Azure se basa en una presentación desarrollada por Scott Guthrie. Se explican 13 patrones y prácticas que pueden ayudarle a desarrollar correctamente aplicaciones web para la nube. Para obtener información sobre el libro electrónico, consulte [el primer capítulo](introduction.md).
 
-Ha ahora vistos 13 patrones que proporcionan instrucciones sobre cómo tener éxito en la informática en nube. Estos son solo algunos de los patrones que se aplican a aplicaciones en la nube. Estas son algunas más temas sobre informática de nube y recursos para ayudar a con ellos:
+Ahora ha visto 13 patrones que proporcionan instrucciones sobre cómo hacerlo correctamente en la informática en la nube. Estos son solo algunos de los patrones que se aplican a las aplicaciones en la nube. Estos son algunos temas más sobre informática en la nube y recursos para ayudarle con ellos:
 
 - Migrar aplicaciones locales existentes a la nube. 
 
-    - [Mover aplicaciones a la nube](https://msdn.microsoft.com/library/ff728592.aspx). Libro electrónico de Microsoft Patterns and Practices. También está disponible como un [impresos bolsillo](https://www.amazon.com/dp/1621140202).
-    - [Migración de ASP.NET y Microsoft IIS.NET](https://go.microsoft.com/fwlink/?LinkId=400656). Caso práctico de Robert McMurray.
-    - [Mover 4th &amp; alcalde en sitios Web Azure](http://www.jeff.wilcox.name/2013/04/4thandmayor-azure-websites/). Entrada de blog por Jeff Wilcox que relata su experiencia al mover una aplicación web de Amazon Web Services a las aplicaciones Web en Azure App Service.
-    - [Traslado de aplicaciones a Azure: ¿Qué cambios?](https://azure.microsoft.com/documentation/videos/web-sites-internals-and-the-file-system/) Breve vídeo de Stefan Schackow, explica el acceso al sistema de archivos en aplicaciones Web en Azure App Service.
-    - [Nube híbrida de Azure](https://www.amazon.com/dp/B00EOP4UQW). Libro de copia impresa o e-book de Danny Garber, Malik Cristóbal y Adam Fazio.
+    - [Mover aplicaciones a la nube](https://msdn.microsoft.com/library/ff728592.aspx). Libro electrónico de Microsoft Patterns and Practices. También está disponible como un [bolsillo de copia rígida](https://www.amazon.com/dp/1621140202).
+    - [Migración de ASP.net y IIS.net de Microsoft](https://go.microsoft.com/fwlink/?LinkId=400656). Caso práctico de Robert McMurray.
+    - [Mover 4th &amp; mayor a sitios web de Azure](http://www.jeff.wilcox.name/2013/04/4thandmayor-azure-websites/). Publicación de blog de Jeff Wilcox crónicamente su experiencia en el movimiento de una aplicación web desde Amazon Web Services a Web Apps en Azure App Service.
+    - [Mover aplicaciones a Azure: ¿Qué cambios hay?](https://azure.microsoft.com/documentation/videos/web-sites-internals-and-the-file-system/) Short video de Stefan Schackow, se explica el acceso al sistema de archivos en Web Apps en Azure App Service.
+    - [Nube híbrida de Azure](https://www.amazon.com/dp/B00EOP4UQW). Libro impreso o libro electrónico de Danny Garber, Cristóbal Malik y Adam Fazio.
 - Problemas de seguridad, autenticación y autorización exclusivos de las aplicaciones en la nube
 
     - [Guía de seguridad de Azure](https://azure.microsoft.com/blog/2014/02/10/best-practices-windows-azure-websites-waws/)
-    - [Microsoft Patterns and Practices - Guía de Azure](https://msdn.microsoft.com/library/dn568099.aspx). Patrón de Gatekeeper vea, modelo de identidad federada.
-    - [Seguridad de red de Azure](https://download.microsoft.com/download/4/3/9/43902EC9-410E-4875-8800-0788BE146A3D/Windows%20Azure%20Network%20Security%20Whitepaper%20-%20FINAL.docx). Notas del producto por Ashin Palekar.
+    - [Patrones y prácticas de Microsoft: Guía de Azure](https://msdn.microsoft.com/library/dn568099.aspx). Consulte patrón de equipo selector, patrón de identidad federada.
+    - [Seguridad de red de Azure](https://download.microsoft.com/download/4/3/9/43902EC9-410E-4875-8800-0788BE146A3D/Windows%20Azure%20Network%20Security%20Whitepaper%20-%20FINAL.docx). Notas del producto de Ashin aparte.
 
-Vea también los patrones de procesamiento de la nube adicionales y orientaciones para [Microsoft Patterns and Practices - Guía de Azure](https://msdn.microsoft.com/library/dn568099.aspx).
+Vea también patrones e instrucciones de informática en la nube adicionales en [patrones y prácticas de Microsoft: instrucciones de Azure](https://msdn.microsoft.com/library/dn568099.aspx).
 
 <a id="resources"></a>
 ## <a name="resources"></a>Recursos
 
-Cada uno de los capítulos de este libro proporciona vínculos a recursos para obtener más información sobre ese tema específico. En la lista siguiente proporciona vínculos a información general de los procedimientos recomendados y patrones recomendados para el desarrollo correcta en la nube con Azure.
+En cada uno de los capítulos de este libro electrónico se proporcionan vínculos a recursos para obtener más información sobre ese tema específico. En la lista siguiente se proporcionan vínculos a información general de los procedimientos recomendados y patrones recomendados para el desarrollo en la nube con Azure.
 
-Documentación
+Documentation
 
-- [Procedimientos recomendados para el diseño de servicios a gran escala en Azure Cloud Services](https://msdn.microsoft.com/library/windowsazure/jj717232.aspx). Notas del producto, Mark Simms y Michael Thomassy.
-- [Failsafe: Guía para arquitecturas de nube resistentes](https://msdn.microsoft.com/library/windowsazure/jj853352.aspx). Notas del producto, Marc Mercuri, Ulrich Homann y Andrew Townhill. Versión de la serie de vídeos a prueba de errores de página Web.
-- [Guía de Azure](https://azure.microsoft.com/develop/net/guidance/) relacionados con la página del Portal de documentación oficial para desarrollar aplicaciones para Azure.
+- [Prácticas recomendadas para el diseño de servicios a gran escala en Azure Cloud Services](https://msdn.microsoft.com/library/windowsazure/jj717232.aspx). En las notas del producto, Mark SIMM y Michael Thomassy.
+- [Failsafe: Guía para arquitecturas de nube resistentes](https://msdn.microsoft.com/library/windowsazure/jj853352.aspx). Notas del producto de Marc Mercuri, Ulrich Homann y Andrew Townhill. Versión de la Página Web de la serie de vídeos FailSafe.
+- [Guía de Azure](https://azure.microsoft.com/develop/net/guidance/) Página del portal de documentación oficial relacionada con el desarrollo de aplicaciones para Azure.
 
 Vídeos
 
-- [Creación de aplicaciones de nube reales con Azure: parte 1](https://channel9.msdn.com/Events/TechEd/Australia/2013/AZR324) y [parte 2](https://channel9.msdn.com/Events/TechEd/Australia/2013/AZR325). Vídeo de la presentación por Scott Guthrie que se basa este libro electrónico. Presentado en Tech Ed Australia en septiembre de 2013. Una versión anterior de la misma presentación se entregó al Norwegian Developers Conference (NDC) en junio de 2013: [Parte 1 de NDC](http://vimeo.com/68215538), [2ª parte NDC](http://vimeo.com/68215602).
-- [FailSafe: Creación de servicios de nube escalables, resistentes](https://channel9.msdn.com/Series/FailSafe). Serie de vídeos de nueve partes, Ulrich Homann, Marc Mercuri y Mark Simms. Presenta una vista de nivel 400 de cómo diseñar aplicaciones en la nube. Esta serie se centra en la teoría y las razones que justifican patrones recomendados; Para obtener más información sobre procedimientos, consulte la serie Building grande por Mark Simms.
-- [Creación grande: Lecciones aprendidas de clientes de Azure-parte 1](https://channel9.msdn.com/Events/Build/2012/3-029) y [2ª](https://channel9.msdn.com/Events/Build/2012/3-030). Serie de vídeos de dos partes, Simon Davies y Mark Simms, similar a la serie FailSafe pero más orientado hacia la implementación práctica.
+- [Creación de aplicaciones reales en la nube con Azure, parte 1](https://channel9.msdn.com/Events/TechEd/Australia/2013/AZR324) y [parte 2](https://channel9.msdn.com/Events/TechEd/Australia/2013/AZR325). Vídeo de la presentación de Scott Guthrie en la que se basa este libro electrónico. Presente en Tech Ed Australia en septiembre de 2013. Se ha entregado una versión anterior de la misma presentación en noruego Developers Conference (NDC) en junio de 2013: [NDC parte 1](http://vimeo.com/68215538), [NDC parte 2](http://vimeo.com/68215602).
+- [Failsafe: creación de Cloud Services escalables y resistentes](https://channel9.msdn.com/Series/FailSafe). Series de vídeos de nueve partes de Ulrich Homann, Marc Mercuri y Mark SIMM. Presenta una vista de nivel 400 de cómo diseñar aplicaciones en la nube. Esta serie se centra en la teoría y los motivos de los patrones recomendados; para obtener más información sobre cómo hacerlo, consulte la creación de grandes series mediante Mark SIMM.
+- [Building Big: lecciones aprendidas de clientes de Azure, parte 1](https://channel9.msdn.com/Events/Build/2012/3-029) y [parte 2](https://channel9.msdn.com/Events/Build/2012/3-030). Series de vídeos de dos partes de Simon Davies y Mark SIMM, similar a la serie FailSafe, pero orientadas más hacia la implementación práctica.
 
 Ejemplo de código
 
-- [La aplicación Fix It que acompaña a este libro electrónico](https://code.msdn.microsoft.com/Fix-It-app-for-Building-cdd80df4?cdn_id=2013-12-03-002).
-- [En la nube Fundamentos de servicio en Azure en C# para Visual Studio 2012](https://aka.ms/csf). Proyecto que se pueden descargar en el sitio de Microsoft Code Gallery, incluye el código y documentación desarrollado por el Microsoft Customer Advisory Team (CAT). Muestra muchos de los procedimientos recomendados que sostiene en la serie de vídeos a prueba de errores y creación grande y las notas a prueba de errores. La página Galería de código también incluye vínculos a la amplia documentación de los autores del proyecto: consulte especialmente la [colección wiki de Fundamentos de servicio de nube](https://social.technet.microsoft.com/wiki/contents/articles/17987.cloud-service-fundamentals.aspx) vínculo en el cuadro azul situado en la parte superior de la descripción del proyecto. Este proyecto y la documentación correspondiente todavía activamente están desarrollando, facilitando la mejor elección para obtener información sobre muchos temas similares pero anteriores notas del producto.
+- [La aplicación Fix it que acompaña a este libro electrónico](https://code.msdn.microsoft.com/Fix-It-app-for-Building-cdd80df4?cdn_id=2013-12-03-002).
+- [Aspectos básicos del servicio en la nube C# en Azure en para Visual Studio 2012](https://aka.ms/csf). Proyecto descargable en el sitio de la galería de código de Microsoft, que incluye código y documentación desarrollados por el equipo de asesoramiento al cliente (CAT) de Microsoft. Muestra muchas de las prácticas recomendadas que se recomiendan en la serie de vídeos inseguros y la creación de grandes series de vídeos y las notas del producto de FailSafe. La página de la galería de código también incluye vínculos a la documentación ampliada por los autores del proyecto; vea especialmente el vínculo de la [colección wiki de aspectos básicos del servicio](https://social.technet.microsoft.com/wiki/contents/articles/17987.cloud-service-fundamentals.aspx) en la nube en el cuadro azul situado cerca de la parte superior de la descripción del proyecto. Este proyecto y la documentación del mismo se desarrollan activamente, lo que lo convierte en una mejor opción para la información sobre muchos temas que notas del producto similares pero anteriores.
 
-Copia impresa de los libros en pantalla
+Libros de copias impresas
 
-- [La Biblia de informática en nube](https://www.amazon.com/dp/0470903562). Por Barrie Sosinsky.
-- [¡Liberarla! Diseñar e implementar Software para entornos de producción](https://www.amazon.com/Release-It-Production-Ready-Pragmatic-Programmers/dp/0978739213). By Michael T. Nygard.
-- [Patrones de arquitectura en la nube: Con Microsoft Azure](http://shop.oreilly.com/product/0636920023777.do). Por más salvaje de factura.
-- [Windows Azure Platform](https://www.amazon.com/dp/1430235632). De Tejaswi Redkar.
-- [Windows Azure, modelos de programación para nuevas empresas](https://www.amazon.com/dp/1849685606). By Riccardo Becker.
-- [Guía de desarrollo de Azure de Microsoft Windows](https://www.amazon.com/dp/1849682224). Por Neil Mackenzie.
+- [Informática en la nube envenenada](https://www.amazon.com/dp/0470903562). Por Barrie Sosinsky.
+- La [versión de lanzamiento diseña e implementa software listo para la producción](https://www.amazon.com/Release-It-Production-Ready-Pragmatic-Programmers/dp/0978739213). Por Michael T. Nygard.
+- [Patrones de arquitectura en la nube: uso de Microsoft Azure](http://shop.oreilly.com/product/0636920023777.do). Por Bill Wilder.
+- [Plataforma de Windows Azure](https://www.amazon.com/dp/1430235632). Por Tejaswi Redkar.
+- [Patrones de programación de Windows Azure para inicios](https://www.amazon.com/dp/1849685606). Por Riccardo Muti Becker.
+- [Guía de desarrollo de Microsoft Windows Azure](https://www.amazon.com/dp/1849682224). De Neil Mackenzie.
 
-Por último, al empezar a crear aplicaciones del mundo real y ejecutarlos en Azure, tarde o temprano probablemente necesitará obtener ayuda de expertos. Puede hacer preguntas en los sitios de la Comunidad como [foros de Azure o StackOverflow](https://azure.microsoft.com/support/forums/), o puede ponerse en contacto con Microsoft directamente para soporte técnico de Azure. Microsoft ofrece varios niveles de soporte técnico de Azure: un resumen y una comparación de las opciones, consulte [soporte técnico de Azure](https://azure.microsoft.com/support/plans/).
+Por último, cuando empiece a crear aplicaciones reales y a ejecutarlas en Azure, es probable que necesite ayuda de expertos. Puede formular preguntas en sitios de la comunidad, como [foros de Azure o stackoverflow](https://azure.microsoft.com/support/forums/), o puede ponerse en contacto directamente con Microsoft para obtener soporte técnico de Azure. Microsoft ofrece varios niveles de soporte técnico de Azure: para obtener un resumen y una comparación de las opciones, consulte [soporte técnico de Azure](https://azure.microsoft.com/support/plans/).
 
 <a id="acknowledgments"></a>
 ## <a name="acknowledgments"></a>Agradecimientos
 
-Este contenido escrito por Mike Wasson, Tom Dykstra y Rick Anderson. La mayoría del contenido original proviene de [Scott Guthrie](https://weblogs.asp.net/scottgu/), y a su vez dibujó en material de Mark Simms y el Microsoft Customer Advisory Team (CAT).
+Este contenido fue escrito por Tom Dykstra, Rick Anderson y Mike Wasson. La mayor parte del contenido original procede de [Scott Guthrie](https://weblogs.asp.net/scottgu/)y, a su vez, se ha dibujado sobre el material de Mark SIMM y el equipo de asesoramiento al cliente (CAT) de Microsoft.
 
-Muchos otros compañeros en Microsoft revisan y borradores y código comentada:
+Muchos otros compañeros de Microsoft revisaron y comentaron los borradores y el código:
 
-- TIM Ammann - revisado el capítulo de automatización.
-- Christopher Bennage - revisado y probado el código Fix It.
-- Ryan Berry - revisado el capítulo de CI/CD.
-- Vittorio Bertocci - revisado el capítulo de inicio de sesión único.
-- Chris Clayton - ayudado a resolver problemas técnicos en los scripts de PowerShell.
-- Conor Cunningham - revisado el capítulo de opciones de almacenamiento de datos.
-- Carlos Farre - revisado y probado el código Fix It para problemas de seguridad.
-- Larry Franks - revisar la telemetría y supervisión del capítulo.
-- Jonathan Gao - revisado Hadoop y MapReduce secciones del capítulo de opciones de almacenamiento de datos.
-- Sidney Higa - revisado todos los capítulos.
-- Gordon Hogenson - revisado el capítulo de control de código fuente.
-- Tamra Myers - opciones de almacenamiento de datos revisada, blobs y colas capítulos.
-- Pranav Rastogi - revisado el capítulo de inicio de sesión único.
-- June Blender Rogers - Agregar control de errores y ayuda a los scripts de automatización de PowerShell.
-- Mani Subramanian - había revisado todos los capítulos y llevó la revisión de código y el proceso de pruebas para el código Fix It.
-- Shaun Tinline-Jones - revisado el capítulo de la partición de datos.
-- Selcin Tukarslan - revisados capítulos que abarcan SQL Database y SQL Server.
-- Edward Wu - proporciona código de ejemplo para el capítulo de inicio de sesión único.
-- Guang Yang - escribió los scripts de automatización de PowerShell.
+- Tim Ammann: revisó el capítulo de Automation.
+- Christopher Bennage: revisar y probar el código de corrección.
+- Ryan Berry: revisar el capítulo de CD/CI.
+- Vittorio BERTOCCI: Revise el capítulo de SSO.
+- Chris Ceballos: ayudó a resolver problemas técnicos en los scripts de PowerShell.
+- Conor Cunningham: Revise el capítulo opciones de almacenamiento de datos.
+- Carlos Farre: revisar y probar el código de corrección de problemas de seguridad.
+- Larry Franks: revisó el capítulo sobre telemetría y supervisión.
+- Jonathan Gao: revisó las secciones de Hadoop y MapReduce del capítulo opciones de almacenamiento de datos.
+- Sidney Higa: revisar todos los capítulos.
+- Gordon Hogenson: revisó el capítulo de control de código fuente.
+- Tamra Myers: capítulos sobre opciones de almacenamiento de datos, blobs y colas.
+- Pranav Rastogi: Revise el capítulo de SSO.
+- Junio de Blendr González: se ha agregado el control de errores y la ayuda a los scripts de automatización de PowerShell.
+- Mani Subramanian: revisar todos los capítulos y lideró el proceso de revisión y pruebas del código para el código de corrección de ti.
+- Shaun Tinline-Jones: revisar el capítulo de particionamiento de datos.
+- Selcin Tukarslan: capítulos revisados que cubren SQL Database y SQL Server.
+- Edward Wu: código de ejemplo proporcionado para el capítulo SSO.
+- Guang Yang: escribió los scripts de automatización de PowerShell.
 
-Los miembros de la [Guía de desarrollador de Microsoft Advisory Council](https://aka.ms/DGAC) (DGAC) también revisado y borradores comentada:
+Los miembros del [Consejo Asesor de instrucciones para desarrolladores de Microsoft](https://aka.ms/DGAC) (DGAC) también revisan y comentan los borradores:
 
 - Jean-Luc Boucho
 - Catalin Gheorghiu
@@ -111,18 +111,18 @@ Los miembros de la [Guía de desarrollador de Microsoft Advisory Council](https:
 - Sunil Sabat
 - [Aleksey Sinyagin](http://www.linkedin.com/in/sinyagin)
 - Bill Wagner
-- Michael Wood
+- Michael madera
 
-Otros miembros de la DGAC revisan y comentado en el esquema preliminar:
+Otros miembros de DGAC revisaron y comentaron en el esquema preliminar:
 
 - Damir Arh
 - Edward Bakker
 - Srdjan Bozovic
-- Ming Man Chan
+- Cam
 - Gianni Rosa Gallina
 - Paulo Morgado
 - Jason Oliveira
-- Alberto Poblacion
+- Alberto poblacion
 - Ryan Riley
 - Perez Jones Tsisah
 - Roger Whitehead

@@ -1,55 +1,55 @@
 ---
 uid: web-forms/overview/ajax-control-toolkit/modalpopup/using-modalpopup-with-a-repeater-control-vb
-title: Usar ModalPopup con un Control Repeater (VB) | Microsoft Docs
+title: Usar ModalPopup con un control Repeater (VB) | Microsoft Docs
 author: wenz
-description: El control ModalPopup de AJAX Control Toolkit ofrece una manera sencilla de crear un elemento emergente modal mediante medios de lado cliente. También es posible usar este contr...
+description: El control ModalPopup en el kit de herramientas de control de AJAX ofrece una manera sencilla de crear un elemento emergente modal mediante medios del lado cliente. También es posible usar esta contr...
 ms.author: riande
 ms.date: 06/02/2008
 ms.assetid: 0c8e74f1-b3ba-4ca9-a1c5-f5c4831a359a
 msc.legacyurl: /web-forms/overview/ajax-control-toolkit/modalpopup/using-modalpopup-with-a-repeater-control-vb
 msc.type: authoredcontent
-ms.openlocfilehash: 4da3a08feae4c5fd43e9176f34e929b450c76674
-ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
+ms.openlocfilehash: 0966770f0218ca91ba7d25e7bf703bf7b005738e
+ms.sourcegitcommit: 22fbd8863672c4ad6693b8388ad5c8e753fb41a2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/06/2019
-ms.locfileid: "65132616"
+ms.lasthandoff: 11/28/2019
+ms.locfileid: "74606558"
 ---
 # <a name="using-modalpopup-with-a-repeater-control-vb"></a>Usar ModalPopup con un control Repeater (VB)
 
 por [Christian Wenz](https://github.com/wenz)
 
-[Descargar código](http://download.microsoft.com/download/2/4/0/24052038-f942-4336-905b-b60ae56f0dd5/ModalPopup2.vb.zip) o [descargar PDF](http://download.microsoft.com/download/b/6/a/b6ae89ee-df69-4c87-9bfb-ad1eb2b23373/modalpopup2VB.pdf)
+[Descargar código](https://download.microsoft.com/download/2/4/0/24052038-f942-4336-905b-b60ae56f0dd5/ModalPopup2.vb.zip) o [Descargar PDF](https://download.microsoft.com/download/b/6/a/b6ae89ee-df69-4c87-9bfb-ad1eb2b23373/modalpopup2VB.pdf)
 
-> El control ModalPopup de AJAX Control Toolkit ofrece una manera sencilla de crear un elemento emergente modal mediante medios de lado cliente. También es posible usar este control dentro de un control repeater.
+> El control ModalPopup en el kit de herramientas de control de AJAX ofrece una manera sencilla de crear un elemento emergente modal mediante medios del lado cliente. También es posible usar este control dentro de un repetidor.
 
-## <a name="overview"></a>Información general
+## <a name="overview"></a>Información general del
 
-El control ModalPopup de AJAX Control Toolkit ofrece una manera sencilla de crear un elemento emergente modal mediante medios de lado cliente. También es posible usar este control dentro de un control repeater.
+El control ModalPopup en el kit de herramientas de control de AJAX ofrece una manera sencilla de crear un elemento emergente modal mediante medios del lado cliente. También es posible usar este control dentro de un repetidor.
 
 ## <a name="steps"></a>Pasos
 
-En primer lugar, es necesario un origen de datos. Este ejemplo utiliza la base de datos AdventureWorks y Microsoft SQL Server 2005 Express Edition. La base de datos es una parte opcional de una instalación de Visual Studio (incluida la edición express) y también está disponible como una descarga independiente en [ https://go.microsoft.com/fwlink/?LinkId=64064 ](https://go.microsoft.com/fwlink/?LinkId=64064). La base de datos de AdventureWorks es parte de los ejemplos de SQL Server 2005 y las bases de datos de ejemplo (descargue en [ https://www.microsoft.com/downloads/details.aspx?FamilyID=e719ecf7-9f46-4312-af89-6ad8702e4e6e&amp; DisplayLang = en](https://www.microsoft.com/downloads/details.aspx?FamilyID=e719ecf7-9f46-4312-af89-6ad8702e4e6e&amp;DisplayLang=en)). La manera más fácil de configurar la base de datos es usar Microsoft SQL Server Management Studio Express ([https://www.microsoft.com/downloads/details.aspx?FamilyID=c243a5ae-4bd1-4e3d-94b8-5a0f62bf7796&amp; DisplayLang = en](https://www.microsoft.com/downloads/details.aspx?FamilyID=c243a5ae-4bd1-4e3d-94b8-5a0f62bf7796&amp;DisplayLang=en)) y adjuntar el `AdventureWorks.mdf` el archivo de base de datos. Para este ejemplo, se supone que se llama a la instancia de SQL Server 2005 Express Edition `SQLEXPRESS` y reside en el mismo equipo que el servidor web; también trata la configuración predeterminada. Si el programa de instalación diferente, deberá adaptar la información de conexión para la base de datos. Para activar la funcionalidad de AJAX de ASP.NET y el Kit de herramientas de Control, el `ScriptManager` control debe colocarse en cualquier lugar en la página (pero dentro del `<form>` elemento):
+En primer lugar, se necesita un origen de datos. Este ejemplo utiliza la base de datos AdventureWorks y el Microsoft SQL Server 2005 Express Edition. La base de datos es una parte opcional de una instalación de Visual Studio (incluida Express Edition) y también está disponible como descarga independiente en [https://go.microsoft.com/fwlink/?LinkId=64064](https://go.microsoft.com/fwlink/?LinkId=64064). La base de datos AdventureWorks forma parte de los ejemplos de SQL Server 2005 y de las bases de datos de ejemplo (descarga en [https://www.microsoft.com/downloads/details.aspx?FamilyID=e719ecf7-9f46-4312-af89-6ad8702e4e6e&amp;D isplaylang = en](https://www.microsoft.com/downloads/details.aspx?FamilyID=e719ecf7-9f46-4312-af89-6ad8702e4e6e&amp;DisplayLang=en)). La forma más sencilla de configurar la base de datos es usar el Microsoft SQL Server Management Studio Express ([https://www.microsoft.com/downloads/details.aspx?FamilyID=c243a5ae-4bd1-4e3d-94b8-5a0f62bf7796&amp;D isplaylang = en](https://www.microsoft.com/downloads/details.aspx?FamilyID=c243a5ae-4bd1-4e3d-94b8-5a0f62bf7796&amp;DisplayLang=en)) y adjuntar el archivo de base de datos `AdventureWorks.mdf`. En este ejemplo, se supone que la instancia del SQL Server 2005 Express Edition se denomina `SQLEXPRESS` y reside en el mismo equipo que el servidor Web. Esta es también la configuración predeterminada. Si el programa de instalación es diferente, tendrá que adaptar la información de conexión de la base de datos. Para activar la funcionalidad de ASP.NET AJAX y control Toolkit, el control `ScriptManager` debe colocarse en cualquier parte de la página (pero dentro del elemento `<form>`):
 
 [!code-aspx[Main](using-modalpopup-with-a-repeater-control-vb/samples/sample1.aspx)]
 
-A continuación, agregue un origen de datos a la página. Para poder usar una cantidad limitada de datos, se selecciona solo las cinco primeras entradas en la tabla de proveedor de la base de datos AdventureWorks. Si usas el Asistente de Visual Studio para crear el origen de datos, recuerde que un error en la versión actual no prefijo de nombre de la tabla (`Vendor`) con `Purchasing`. El marcado siguiente muestra la sintaxis correcta:
+A continuación, agregue un origen de datos a la página. Para usar una cantidad limitada de datos, solo se seleccionan las cinco primeras entradas de la tabla Vendor de la base de datos AdventureWorks. Si usa el Asistente de Visual Studio para crear el origen de datos, tenga en cuenta que un error en la versión actual no antepone el nombre de tabla (`Vendor`) con `Purchasing`. En el marcado siguiente se muestra la sintaxis correcta:
 
 [!code-aspx[Main](using-modalpopup-with-a-repeater-control-vb/samples/sample2.aspx)]
 
-A continuación, agregue un panel que actúa como el elemento emergente modal. Contiene un `Button` control para cerrar la ventana emergente nuevo:
+A continuación, agregue un panel que actúe como elemento emergente modal. Contiene un control `Button` para cerrar de nuevo el elemento emergente:
 
 [!code-aspx[Main](using-modalpopup-with-a-repeater-control-vb/samples/sample3.aspx)]
 
-Con el fin de que el elemento emergente funcione del control Repeater, el `ModalPopupExtender` control debe colocarse dentro de la `<ItemTemplate>` sección del repetidor. Por lo que el panel está fuera del control repeater, pero el extensor está dentro. Aquí está el marcado para el control repeater:
+Para que el elemento emergente funcione dentro del repetidor, el control `ModalPopupExtender` debe colocarse dentro de la sección `<ItemTemplate>` del Repeater. Por lo tanto, el panel está fuera del repetidor, pero el extensor está dentro. Este es el marcado del Repeater:
 
 [!code-aspx[Main](using-modalpopup-with-a-repeater-control-vb/samples/sample4.aspx)]
 
-A continuación, se muestra cada elemento del origen de datos con un botón junto a él que desencadena el elemento emergente modal.
+Después, cada elemento del origen de datos se muestra con un botón junto al mismo que desencadena el elemento emergente modal.
 
-[![El elemento emergente modal puede activarse para cada entrada del origen de datos](using-modalpopup-with-a-repeater-control-vb/_static/image2.png)](using-modalpopup-with-a-repeater-control-vb/_static/image1.png)
+[![se puede desencadenar el elemento emergente modal para cada entrada de origen de datos](using-modalpopup-with-a-repeater-control-vb/_static/image2.png)](using-modalpopup-with-a-repeater-control-vb/_static/image1.png)
 
-El elemento emergente modal puede activarse para cada entrada del origen de datos ([haga clic aquí para ver imagen en tamaño completo](using-modalpopup-with-a-repeater-control-vb/_static/image3.png))
+La ventana emergente modal se puede desencadenar para cada entrada de origen de datos ([haga clic para ver la imagen de tamaño completo](using-modalpopup-with-a-repeater-control-vb/_static/image3.png))
 
 > [!div class="step-by-step"]
 > [Anterior](launching-a-modal-popup-window-from-server-code-vb.md)
