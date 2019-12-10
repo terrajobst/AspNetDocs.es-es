@@ -3768,6 +3768,8 @@
   items:
     - name: Notas del producto
       href: whitepapers/overview.md
+    - name: SameSite en ASP.NET
+      href: SameSite/system-web-samesite.md
     - name: Información general sobre la implementación web de ASP.NET 4 y Visual Studio 2010
       href: whitepapers/aspnet4/index.md
       items:
