@@ -5,12 +5,12 @@ description: Aprenda a usar las cookies de SameSite en ASP.NET
 ms.author: riande
 ms.date: 12/03/2019
 uid: samesite/system-web-samesite
-ms.openlocfilehash: 40e5c13b6834912c13b41cbfad7da8cd84ca6c8b
-ms.sourcegitcommit: 969e7db924ebad3cc0f0cb0d65d148e8b9221b9a
+ms.openlocfilehash: 47a3d7576edb0e818c39b32fbbcb98475248e18e
+ms.sourcegitcommit: 7b1e1784213dd4c301635f9e181764f3e2f94162
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/06/2019
-ms.locfileid: "74902013"
+ms.lasthandoff: 12/10/2019
+ms.locfileid: "74993070"
 ---
 # <a name="work-with-samesite-cookies-in-aspnet"></a>Trabajar con cookies de SameSite en ASP.NET
 
@@ -35,10 +35,7 @@ Vea [HttpCookie. SameSite (propiedad)](/dotnet/api/system.web.httpcookie.samesit
 
 La compatibilidad con SameSite se implementó por primera vez en .NET 4.7.2 con el [estándar de borrador 2016](https://tools.ietf.org/html/draft-west-first-party-cookies-07#section-4.1).
 
-Las actualizaciones del 19 de noviembre de 2019 de Windows actualizaron .NET 4.7.2 + del estándar 2016 al estándar 2019. Hay actualizaciones adicionales disponibles para otras versiones de Windows. Para obtener más información, consulte los siguientes KB:
-
-* [Artículo de KB 4531182](https://support.microsoft.com/help/4531182/kb4531182)
-* [Artículo de KB 4524421](https://support.microsoft.com/help/4524421/kb4524421)
+Las actualizaciones del 19 de noviembre de 2019 de Windows actualizaron .NET 4.7.2 + del estándar 2016 al estándar 2019. Hay actualizaciones adicionales disponibles para otras versiones de Windows. Para obtener más información, vea <xref:samesite/kbs-samesite>.
 
  El borrador 2019 de la especificación SameSite:
 
@@ -80,8 +77,8 @@ Chrome 78 + ofrece resultados engañosos porque tiene una mitigación temporal e
 
 Google no hace que las versiones anteriores de Chrome estén disponibles. Siga las instrucciones de [Descargar cromo](https://www.chromium.org/getting-involved/download-chromium) para probar versiones anteriores de Chrome. **No** Descargue Chrome desde los vínculos que se proporcionan al buscar versiones anteriores de Chrome.
 
-* [Cromo 76 Win64](https://commondatastorage.googleapis.com/chromium-browser-snapshots/index.html?prefix=Win_x64/664998/)
-* [Cromo 74 Win64](https://commondatastorage.googleapis.com/chromium-browser-snapshots/index.html?prefix=Win_x64/638880/)
+* [Chromium 76 Win64](https://commondatastorage.googleapis.com/chromium-browser-snapshots/index.html?prefix=Win_x64/664998/)
+* [Chromium 74 Win64](https://commondatastorage.googleapis.com/chromium-browser-snapshots/index.html?prefix=Win_x64/638880/)
 
 ### <a name="test-with-safari"></a>Prueba con Safari
 
@@ -101,7 +98,7 @@ Las marcas SameSite se establecen en la página `edge://flags/#same-site-by-defa
 
 ### <a name="test-with-electron"></a>Prueba con electrones
 
-Las versiones de electrones incluyen versiones anteriores de cromo. Por ejemplo, la versión de electrones utilizada por los equipos es cromo 66, que exhibe el comportamiento anterior. Debe realizar sus propias pruebas de compatibilidad con la versión de electrones que usa el producto. Consulte [compatibilidad con exploradores anteriores](#sob) en la sección siguiente.
+Las versiones de Electron incluyen versiones anteriores de Chromium. Por ejemplo, la versión de electrones utilizada por los equipos es cromo 66, que exhibe el comportamiento anterior. Debe realizar sus propias pruebas de compatibilidad con la versión de electrones que usa el producto. Consulte [compatibilidad con exploradores anteriores](#sob) en la sección siguiente.
 
 ## <a name="additional-resources"></a>Recursos adicionales
 

@@ -5,12 +5,12 @@ description: Trabajo con cookies de SameSite y la interfaz web abierta para .NET
 ms.author: riande
 ms.date: 12/6/2019
 uid: owin-samesite
-ms.openlocfilehash: fc64315e8c3614e460c9a8d551bcb0848b3fe8f9
-ms.sourcegitcommit: 516a168548252ff0eaae2c02ec4bd9ffcfa8375e
+ms.openlocfilehash: ac5ae24eeb9e8e1cc6296667a4bebef72c3eb62c
+ms.sourcegitcommit: 7b1e1784213dd4c301635f9e181764f3e2f94162
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/09/2019
-ms.locfileid: "74951885"
+ms.lasthandoff: 12/10/2019
+ms.locfileid: "74993080"
 ---
 # <a name="samesite-cookies-and-the-open-web-interface-for-net-owin"></a>Cookies de SameSite y la interfaz web abierta para .NET (OWIN)
 
@@ -39,7 +39,7 @@ Para obtener la versión ASP.NET 4. x de este artículo, consulte <xref:samesite
 
 `SystemWebCookieManager` depende de las API de `System.Web` de .NET 4.7.2 para habilitar la compatibilidad con `SameSite` y las revisiones para cambiar el comportamiento.
 
-Los motivos para usar `SystemWebCookieManager` se describen en los [problemas de integración de cookies de respuesta de OWIN y System. Web](https://github.com/aspnet/AspNetKatana/wiki/System.Web-response-cookie-integration-issues). se recomienda `SystemWebCookieManager` cuando se ejecuta en `System.Web`. 
+Los motivos para usar `SystemWebCookieManager` se describen en los [problemas de integración de cookies de respuesta de OWIN y System. Web](https://github.com/aspnet/AspNetKatana/wiki/System.Web-response-cookie-integration-issues). se recomienda `SystemWebCookieManager` cuando se ejecuta en `System.Web`.
 
 El código siguiente establece `SameSite` en `Lax`:
 
@@ -74,9 +74,7 @@ El borrador 2019 de la especificación de `SameSite`:
 * Especifica que las cookies se tratan como `SameSite=Lax` de forma predeterminada.
 * Especifica las cookies que validan explícitamente `SameSite=None` para habilitar la entrega entre sitios debe marcarse como `Secure`. `None` es una nueva entrada para rechazarla.
 * Está programado para que [Chrome](https://chromestatus.com/feature/5088147346030592) lo habilite de forma predeterminada en [febrero de 2020](https://blog.chromium.org/2019/10/developers-get-ready-for-new.html). Los exploradores empezaron a pasar a este estándar en 2019.
-* Es compatible con las revisiones emitidas tal y como se describe en los siguientes KB:
-  * [Artículo de KB 4531182](https://support.microsoft.com/help/4531182/kb4531182)
-  * [Artículo de KB 4524421](https://support.microsoft.com/help/4524421/kb4524421)
+* Es compatible con las revisiones emitidas tal y como se describe en los artículos de Knowledge base. Para obtener más información, vea <xref:samesite/kbs-samesite>.
 
 <a name="sob"></a>
 
