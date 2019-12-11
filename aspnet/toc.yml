@@ -3753,6 +3753,8 @@
       href: aspnet/overview/owin-and-katana/an-overview-of-project-katana.md
     - name: Introducción a OWIN y Katana
       href: aspnet/overview/owin-and-katana/getting-started-with-owin-and-katana.md
+    - name: OWIN SameSite
+      uid: owin-samesite
     - name: Ejemplos de Katana
       href: aspnet/overview/owin-and-katana/katana-samples.md
     - name: Detección de la clase de inicio OWIN
