@@ -8,12 +8,12 @@ ms.date: 11/17/2011
 ms.assetid: 2b0df3d9-450b-4ea6-b315-4c9650722cad
 msc.legacyurl: /web-forms/overview/older-versions-getting-started/deployment-to-a-hosting-provider/deployment-to-a-hosting-provider-web-config-file-transformations-3-of-12
 msc.type: authoredcontent
-ms.openlocfilehash: fe71e6cfb0f4c5f1d99b326e9d90edb6c8c5feee
-ms.sourcegitcommit: 22fbd8863672c4ad6693b8388ad5c8e753fb41a2
+ms.openlocfilehash: 9e7902bcf8a16c154aee1a982824bfaedeea7d9d
+ms.sourcegitcommit: 7b1e1784213dd4c301635f9e181764f3e2f94162
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/28/2019
-ms.locfileid: "74600535"
+ms.lasthandoff: 01/22/2020
+ms.locfileid: "76309241"
 ---
 # <a name="deploying-an-aspnet-web-application-with-sql-server-compact-using-visual-studio-or-visual-web-developer-webconfig-file-transformations---3-of-12"></a>Implementación de una aplicación Web de ASP.NET con SQL Server Compact con Visual Studio o Visual Web Developer: transformaciones del archivo Web. config-3 de 12
 
@@ -43,7 +43,7 @@ En el escenario que se trata en este tutorial, sabrá todo lo que se debe hacer 
 
 En **Explorador de soluciones**, expanda *Web. config* para ver los archivos de transformación *Web. Debug. config* y *Web. Release. config* que se crean de forma predeterminada para las dos configuraciones de compilación predeterminadas.
 
-![Web. config_transform_files](deployment-to-a-hosting-provider-web-config-file-transformations-3-of-12/_static/image1.png)
+![Web.config_transform_files](deployment-to-a-hosting-provider-web-config-file-transformations-3-of-12/_static/image1.png)
 
 Puede crear archivos de transformación para configuraciones de compilación personalizadas haciendo clic con el botón secundario en el archivo Web. config y eligiendo **Agregar transformaciones de configuración** en el menú contextual, pero para este tutorial no es necesario hacerlo.
 
