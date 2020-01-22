@@ -1,6 +1,6 @@
 ---
 uid: mvc/overview/getting-started/introduction/examining-the-edit-methods-and-edit-view
-title: Examinar los métodos de edición y vista de edición | Microsoft Docs
+title: Examinando los métodos de edición y la vista de edición | Microsoft Docs
 author: Rick-Anderson
 description: ''
 ms.author: riande
@@ -8,72 +8,72 @@ ms.date: 01/06/2019
 ms.assetid: 52a4d5fe-aa31-4471-b3cb-a064f82cb791
 msc.legacyurl: /mvc/overview/getting-started/introduction/examining-the-edit-methods-and-edit-view
 msc.type: authoredcontent
-ms.openlocfilehash: 264f2ec5c497682f5e3e202dd69a835ff228e75b
-ms.sourcegitcommit: dd0dc556a3d99a31d8fdbc763e9a2e53f3441b70
+ms.openlocfilehash: 946c88d2b337e3bf634f815c7f1ce045f29d9d84
+ms.sourcegitcommit: 88fc80e3f65aebdf61ec9414810ddbc31c543f04
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/27/2019
-ms.locfileid: "67410869"
+ms.lasthandoff: 01/22/2020
+ms.locfileid: "76518754"
 ---
 # <a name="examining-the-edit-methods-and-edit-view"></a>Examinar los métodos y la vista Edit
 
-by [Rick Anderson]((https://twitter.com/RickAndMSFT))
+por [Rick Anderson]((https://twitter.com/RickAndMSFT))
 
-[!INCLUDE [Tutorial Note](sample/code-location.md)]
+[!INCLUDE [Tutorial Note](index.md)]
 
-En esta sección, podrá examinar generado `Edit` vistas para el controlador movie y métodos de acción. Pero primero echaremos un breve desvío para hacer que la fecha de lanzamiento tenga mejor aspecto. Abra el *Models\Movie.cs* archivo y agregue las líneas resaltadas se muestra a continuación:
+En esta sección, examinará los métodos de acción y las vistas generados `Edit` para el controlador de película. Pero primero vamos a tomar una breve versión para que la fecha de lanzamiento tenga un aspecto mejor. Abra el archivo *Models\Movie.CS* y agregue las líneas resaltadas que se muestran a continuación:
 
 [!code-csharp[Main](examining-the-edit-methods-and-edit-view/samples/sample1.cs?highlight=2,12-14)]
 
-También puede realizar la referencia cultural de la fecha específica similar al siguiente:
+También puede hacer que la referencia cultural de fecha sea específica de la siguiente manera:
 
 [!code-csharp[Main](examining-the-edit-methods-and-edit-view/samples/sample2.cs?highlight=3)]
 
-En el próximo tutorial hablaremos de [DataAnnotations](https://msdn.microsoft.com/library/system.componentmodel.dataannotations.aspx). El atributo [Display](https://msdn.microsoft.com/library/system.componentmodel.dataannotations.displayattribute.aspx) especifica qué se muestra como nombre de un campo (en este caso, "Release Date" en lugar de "ReleaseDate"). El [DataType](https://msdn.microsoft.com/library/system.componentmodel.dataannotations.datatypeattribute.aspx) atributo especifica el tipo de datos, en este caso es una fecha, por lo que no se muestra la información de hora almacenada en el campo. El [DisplayFormat](https://msdn.microsoft.com/library/system.componentmodel.dataannotations.displayformatattribute.aspx) atributo es necesario para un error en el Explorador de Chrome que representa formatos de fecha incorrectamente.
+En el próximo tutorial hablaremos de [DataAnnotations](https://msdn.microsoft.com/library/system.componentmodel.dataannotations.aspx). El atributo [Display](https://msdn.microsoft.com/library/system.componentmodel.dataannotations.displayattribute.aspx) especifica qué se muestra como nombre de un campo (en este caso, "Release Date" en lugar de "ReleaseDate"). El atributo [DataType](https://msdn.microsoft.com/library/system.componentmodel.dataannotations.datatypeattribute.aspx) especifica el tipo de los datos, en este caso es una fecha, por lo que no se muestra la información de hora almacenada en el campo. El atributo [DisplayFormat](https://msdn.microsoft.com/library/system.componentmodel.dataannotations.displayformatattribute.aspx) es necesario para un error en el explorador Chrome que presenta los formatos de fecha incorrectamente.
 
-Ejecute la aplicación y vaya a la `Movies` controlador. Mantenga el puntero del mouse sobre un **editar** vínculo para ver la dirección URL que está vinculado.
+Ejecute la aplicación y vaya al controlador de `Movies`. Mantenga el puntero del mouse sobre un vínculo de **edición** para ver la dirección URL a la que está vinculado.
 
 ![EditLink_sm](examining-the-edit-methods-and-edit-view/_static/image1.png)
 
-El **editar** vínculo generado por el `Html.ActionLink` método en el *Views\Movies\Index.cshtml* vista:
+El método `Html.ActionLink` generó el vínculo de **edición** en la vista *Views\Movies\Index.cshtml* :
 
 [!code-cshtml[Main](examining-the-edit-methods-and-edit-view/samples/sample3.cshtml)]
 
 ![Html.ActionLink](examining-the-edit-methods-and-edit-view/_static/image2.png)
 
-El `Html` objeto es una aplicación auxiliar que se expone mediante una propiedad en el [System.Web.Mvc.WebViewPage](https://msdn.microsoft.com/library/gg402107(VS.98).aspx) clase base. El `ActionLink` método de la aplicación auxiliar facilita la tarea generar dinámicamente hipervínculos HTML que se vinculan a los métodos de acción en los controladores. El primer argumento para el `ActionLink` método es para representar el texto del vínculo (por ejemplo, `<a>Edit Me</a>`). El segundo argumento es el nombre del método de acción para invocar (en este caso, el `Edit` acción). El argumento final es un [objeto anónimo](https://weblogs.asp.net/scottgu/archive/2007/05/15/new-orcas-language-feature-anonymous-types.aspx) que genera los datos de ruta (en este caso, el identificador de 4).
+El objeto `Html` es una aplicación auxiliar que se expone mediante una propiedad en la clase base [System. Web. Mvc. WebViewPage](https://msdn.microsoft.com/library/gg402107(VS.98).aspx) . El método `ActionLink` del ayudante facilita la generación dinámica de hipervínculos HTML que se vinculan a los métodos de acción en los controladores. El primer argumento del método `ActionLink` es el texto del vínculo que se va a representar (por ejemplo, `<a>Edit Me</a>`). El segundo argumento es el nombre del método de acción que se va a invocar (en este caso, la acción `Edit`). El último argumento es un [objeto anónimo](https://weblogs.asp.net/scottgu/archive/2007/05/15/new-orcas-language-feature-anonymous-types.aspx) que genera los datos de la ruta (en este caso, el identificador 4).
 
-El vínculo generado se muestra en la imagen anterior es `http://localhost:1234/Movies/Edit/4`. La ruta predeterminada (establecida en *aplicación\_start\routeconfig*) toma el patrón de URL `{controller}/{action}/{id}`. Por lo tanto, se traduce ASP.NET `http://localhost:1234/Movies/Edit/4` en una solicitud para el `Edit` método de acción de la `Movies` controlador con el parámetro `ID` igual a 4. Examine el código siguiente desde el *aplicación\_start\routeconfig* archivo. El [MapRoute](../../older-versions-1/controllers-and-routing/asp-net-mvc-routing-overview-cs.md) método se utiliza para enrutar las solicitudes HTTP para el método de acción y controlador correcto y proporcione el parámetro de Id. opcional. El [MapRoute](../../older-versions-1/controllers-and-routing/asp-net-mvc-routing-overview-cs.md) también se usa el método por el [HtmlHelpers](https://msdn.microsoft.com/library/system.web.mvc.htmlhelper(v=vs.108).aspx) como `ActionLink` para generar direcciones URL que proporciona el controlador, el método de acción y los datos de ruta.
+El vínculo generado que se muestra en la imagen anterior es `http://localhost:1234/Movies/Edit/4`. La ruta predeterminada (establecida en *App\_Start\RouteConfig.CS*) toma el patrón de dirección URL `{controller}/{action}/{id}`. Por lo tanto, ASP.NET traduce `http://localhost:1234/Movies/Edit/4` en una solicitud al método de acción `Edit` del controlador de `Movies` con el parámetro `ID` igual a 4. Examine el siguiente código del archivo *App\_Start\RouteConfig.CS* . El método [MapRoute](../../older-versions-1/controllers-and-routing/asp-net-mvc-routing-overview-cs.md) se usa para enrutar las solicitudes HTTP al controlador y el método de acción correctos y proporcionar el parámetro de identificador opcional. El método [MapRoute](../../older-versions-1/controllers-and-routing/asp-net-mvc-routing-overview-cs.md) también lo usa el [HtmlHelpers](https://msdn.microsoft.com/library/system.web.mvc.htmlhelper(v=vs.108).aspx) como `ActionLink` para generar direcciones URL según el controlador, el método de acción y los datos de ruta.
 
 [!code-csharp[Main](examining-the-edit-methods-and-edit-view/samples/sample4.cs?highlight=7)]
 
-También puede pasar parámetros de método de acción con una cadena de consulta. Por ejemplo, la dirección URL `http://localhost:1234/Movies/Edit?ID=3` también pasa el parámetro `ID` de 3 a la `Edit` método de acción de la `Movies` controlador.
+También puede pasar parámetros de método de acción mediante una cadena de consulta. Por ejemplo, la dirección URL `http://localhost:1234/Movies/Edit?ID=3` también pasa el parámetro `ID` de 3 al método de acción `Edit` del controlador de `Movies`.
 
 ![EditQueryString](examining-the-edit-methods-and-edit-view/_static/image3.png)
 
-Abra el `Movies` controlador. Los dos `Edit` a continuación se muestran los métodos de acción.
+Abra el controlador de `Movies`. A continuación se muestran los dos métodos de acción `Edit`.
 
 [!code-csharp[Main](examining-the-edit-methods-and-edit-view/samples/sample5.cs?highlight=19-21)]
 
-Observe que el segundo método de acción `Edit` va precedido del atributo `HttpPost`. Este atributo especifica que la sobrecarga de la `Edit` se puede invocar el método solo para las solicitudes POST. Puede aplicar el `HttpGet` editar de atributo al primer método, pero que no es necesario porque es el valor predeterminado. (Nos referiremos a métodos de acción que se asignan implícitamente el `HttpGet` atributo como `HttpGet` métodos.) El [enlazar](https://msdn.microsoft.com/library/system.web.mvc.bindattribute(v=vs.108).aspx) atributo es otro mecanismo de seguridad importantes que impide que los piratas informáticos datos al modelo de publicación excesiva. Solo debe incluir propiedades en el atributo de enlace que desea cambiar. Puede leer acerca de la publicación excesiva y el atributo bind en mi [publicación excesiva nota de seguridad](https://go.microsoft.com/fwlink/?LinkId=317598). En el modelo simple que se usa en este tutorial, realizaremos el enlace todos los datos en el modelo. El [ValidateAntiForgeryToken](https://msdn.microsoft.com/library/system.web.mvc.validateantiforgerytokenattribute(v=vs.108).aspx) atributo se utiliza para impedir la falsificación de una solicitud y se empareja con `@Html.AntiForgeryToken()` en el archivo de vista de edición (*Views\Movies\Edit.cshtml*), a continuación se muestra una parte:
+Observe que el segundo método de acción `Edit` va precedido del atributo `HttpPost`. Este atributo especifica que solo se puede invocar la sobrecarga del método `Edit` para las solicitudes POST. Podría aplicar el atributo `HttpGet` al primer método de edición, pero no es necesario porque es el valor predeterminado. (Haremos referencia a los métodos de acción a los que se asignan implícitamente el `HttpGet` atributo como `HttpGet` métodos). El atributo de [enlace](https://msdn.microsoft.com/library/system.web.mvc.bindattribute(v=vs.108).aspx) es otro mecanismo de seguridad importante que evita que los hackers envíen datos por encima del modelo. Solo debe incluir propiedades en el atributo de enlace que desee cambiar. Puede leer acerca de la publicación en la publicación y el atributo de enlace en la nota de seguridad que se está [sobreexpuesto](https://go.microsoft.com/fwlink/?LinkId=317598). En el modelo simple que se usa en este tutorial, se enlazarán todos los datos del modelo. El atributo [ValidateAntiForgeryToken](https://msdn.microsoft.com/library/system.web.mvc.validateantiforgerytokenattribute(v=vs.108).aspx) se usa para impedir la falsificación de una solicitud y se empareja con `@Html.AntiForgeryToken()` en el archivo de vista de edición (*Views\Movies\Edit.cshtml*); a continuación, se muestra una parte:
 
 [!code-cshtml[Main](examining-the-edit-methods-and-edit-view/samples/sample6.cshtml?highlight=9)]
 
-`@Html.AntiForgeryToken()` genera un token antifalsificación de formulario oculto que debe coincidir en el `Edit` método de la `Movies` controlador. Puede leer más acerca de sitios falsificación (también conocida como XSRF o CSRF) en mi tutorial de solicitud [prevención de XSRF/CSRF en MVC](../../security/xsrfcsrf-prevention-in-aspnet-mvc-and-web-pages.md).
+`@Html.AntiForgeryToken()` genera un token antifalsificación de formulario oculto que debe coincidir en el método de `Edit` del controlador de `Movies`. Puede leer más sobre la falsificación de solicitudes entre sitios (también conocido como XSRF o CSRF) en mi tutorial [prevención de XSRF/CSRF en MVC](../../security/xsrfcsrf-prevention-in-aspnet-mvc-and-web-pages.md).
 
-El `HttpGet` `Edit` método toma el parámetro de Id. de película, busca la película con Entity Framework `Find` método y devuelve la película seleccionada a la vista de edición. Si no se encuentra una película, [HttpNotFound](https://msdn.microsoft.com/library/gg453938(VS.98).aspx) se devuelve. Cuando el sistema de scaffolding creó la vista de edición, examinó la clase `Movie` y creó código para representar los elementos `<label>` y `<input>` para cada propiedad de la clase. El ejemplo siguiente muestra la vista de edición que fue generada por el sistema de scaffolding de visual studio:
+El método de `Edit` de `HttpGet` toma el parámetro de ID. de película, busca la película con el método Entity Framework `Find` y devuelve la película seleccionada a la vista de edición. Si no se encuentra una película, se devuelve [HttpNotFound](https://msdn.microsoft.com/library/gg453938(VS.98).aspx) . Cuando el sistema de scaffolding creó la vista de edición, examinó la clase `Movie` y creó código para representar los elementos `<label>` y `<input>` para cada propiedad de la clase. En el ejemplo siguiente se muestra la vista de edición generada por el sistema de scaffolding de Visual Studio:
 
 [!code-cshtml[Main](examining-the-edit-methods-and-edit-view/samples/sample7.cshtml)]
 
-Observe cómo la plantilla de vista tiene un `@model MvcMovie.Models.Movie` instrucción en la parte superior del archivo: Especifica que la vista espera que el modelo para la plantilla de vista del tipo `Movie`.
+Observe cómo la plantilla de vista tiene una instrucción `@model MvcMovie.Models.Movie` en la parte superior del archivo; esto especifica que la vista espera que el modelo de la plantilla de vista sea de tipo `Movie`.
 
-El código con scaffolding usa varios *métodos auxiliares* para simplificar el marcado HTML. El [ `Html.LabelFor` ](https://msdn.microsoft.com/library/gg401864(VS.98).aspx) auxiliar muestra el nombre del campo (&quot;título&quot;, &quot;ReleaseDate&quot;, &quot;género&quot;, o &quot;precio &quot;). El [ `Html.EditorFor` ](https://msdn.microsoft.com/library/system.web.mvc.html.editorextensions.editorfor(VS.98).aspx) aplicación auxiliar representa un elemento HTML `<input>` elemento. El [ `Html.ValidationMessageFor` ](https://msdn.microsoft.com/library/system.web.mvc.html.validationextensions.validationmessagefor(VS.98).aspx) auxiliar muestra los mensajes de validación asociados a esa propiedad.
+El código con scaffolding usa varios *métodos auxiliares* para optimizar el marcado HTML. En la aplicación auxiliar de [`Html.LabelFor`](https://msdn.microsoft.com/library/gg401864(VS.98).aspx) se muestra el nombre del campo (título de la&quot;&quot;, &quot;ReleaseDate&quot;, &quot;género&quot;o &quot;precio&quot;). La aplicación auxiliar de [`Html.EditorFor`](https://msdn.microsoft.com/library/system.web.mvc.html.editorextensions.editorfor(VS.98).aspx) representa un elemento de `<input>` HTML. En la aplicación auxiliar de [`Html.ValidationMessageFor`](https://msdn.microsoft.com/library/system.web.mvc.html.validationextensions.validationmessagefor(VS.98).aspx) se muestran los mensajes de validación asociados a esa propiedad.
 
-Ejecute la aplicación y vaya a la */Movies* dirección URL. Haga clic en un vínculo **Edit** (Editar). En el explorador, vea el código fuente de la página. A continuación se muestra el código HTML para el elemento de formulario.
+Ejecute la aplicación y vaya a la dirección URL de */Movies* . Haga clic en un vínculo **Edit** (Editar). En el explorador, vea el código fuente de la página. A continuación se muestra el código HTML del elemento Form.
 
 [!code-cshtml[Main](examining-the-edit-methods-and-edit-view/samples/sample8.cshtml?highlight=1-2)]
 
-El `<input>` elementos se encuentran en un elemento HTML `<form>` elemento cuyo `action` atributo se establece para publicar en el */Movies/Edit* dirección URL. Los datos del formulario se publicarán en el servidor cuando el **guardar** se hace clic en el botón. La segunda línea muestra el texto oculto [XSRF](../../security/xsrfcsrf-prevention-in-aspnet-mvc-and-web-pages.md) token generado por el `@Html.AntiForgeryToken()` llamar.
+Los elementos `<input>` están en un elemento de `<form>` HTML cuyo atributo `action` está establecido en post en la dirección URL de */Movies/Edit* . Los datos del formulario se publicarán en el servidor cuando se haga clic en el botón **Guardar** . La segunda línea muestra el token [XSRF](../../security/xsrfcsrf-prevention-in-aspnet-mvc-and-web-pages.md) oculto generado por la llamada `@Html.AntiForgeryToken()`.
 
 ## <a name="processing-the-post-request"></a>Procesamiento de la solicitud POST
 
@@ -81,48 +81,48 @@ En la siguiente lista se muestra la versión `HttpPost` del método de acción `
 
 [!code-csharp[Main](examining-the-edit-methods-and-edit-view/samples/sample9.cs)]
 
-El [ValidateAntiForgeryToken](https://msdn.microsoft.com/library/system.web.mvc.validateantiforgerytokenattribute(v=vs.108).aspx) atributo valida el [XSRF](../../security/xsrfcsrf-prevention-in-aspnet-mvc-and-web-pages.md) token generado por el `@Html.AntiForgeryToken()` llama en la vista.
+El atributo [ValidateAntiForgeryToken](https://msdn.microsoft.com/library/system.web.mvc.validateantiforgerytokenattribute(v=vs.108).aspx) valida el token [XSRF](../../security/xsrfcsrf-prevention-in-aspnet-mvc-and-web-pages.md) generado por la llamada `@Html.AntiForgeryToken()` en la vista.
 
-El [enlazador de modelos ASP.NET MVC](https://msdn.microsoft.com/library/dd410405.aspx) toma los valores de formulario publicados y crea un `Movie` objeto que se pasa como el `movie` parámetro. El `ModelState.IsValid` comprueba que los datos presentados en el formulario pueden usarse para modificar (editar o actualizar) un `Movie` objeto. Si los datos son válidos, los datos de la película se guardan en el `Movies` colección de la `db`(`MovieDBContext` instancia). Los nuevos datos de la película se guardan en la base de datos mediante una llamada a la `SaveChanges` método `MovieDBContext`. Después de guardar los datos, el código redirige al usuario al método de acción `Index` de la clase `MoviesController`, que muestra la colección de películas, incluidos los cambios que se acaban de hacer.
+El [enlazador de modelos MVC de ASP.net](https://msdn.microsoft.com/library/dd410405.aspx) toma los valores del formulario expuesto y crea un objeto `Movie` que se pasa como parámetro `movie`. En el `ModelState.IsValid` se comprueba que los datos enviados en el formulario se pueden usar para modificar (editar o actualizar) un objeto `Movie`. Si los datos son válidos, los datos de la película se guardan en la `Movies` colección del `db`(instancia de`MovieDBContext`). Los nuevos datos de la película se guardan en la base de datos llamando al método `SaveChanges` de `MovieDBContext`. Después de guardar los datos, el código redirige al usuario al método de acción `Index` de la clase `MoviesController`, que muestra la colección de películas, incluidos los cambios que se acaban de hacer.
 
-Tan pronto como la validación del lado cliente determina que el valor de un campo no es válido, se muestra un mensaje de error. Si JavaScript está deshabilitado, se deshabilita la validación del lado cliente. Sin embargo, el servidor detecta los valores expuestos no son válidos y los valores de formulario se volverán a mostrar con mensajes de error.
+En cuanto la validación del lado cliente determina que el valor de un campo no es válido, se muestra un mensaje de error. Si JavaScript está deshabilitado, la validación del lado cliente está deshabilitada. Sin embargo, el servidor detecta que los valores expuestos no son válidos y los valores del formulario se vuelven a mostrar con mensajes de error.
 
-Validación se examina con más detalle más adelante en el tutorial.
+La validación se examina con más detalle más adelante en el tutorial.
 
-El `Html.ValidationMessageFor` aplicaciones auxiliares en el *Edit.cshtml* vista plantilla tenga cuidado de mostrar mensajes de error adecuado.
+Las aplicaciones auxiliares de `Html.ValidationMessageFor` de la plantilla de vista *Edit. cshtml* se encargan de mostrar los mensajes de error correspondientes.
 
 ![abcNotValid](examining-the-edit-methods-and-edit-view/_static/image4.png)
 
-Todas las `HttpGet` métodos siguen un patrón similar. Obtienen un objeto de película (o una lista de objetos, en el caso de `Index`) y pasar el modelo a la vista. El `Create` método pasa un objeto de película vacío a la vista de creación. Todos los métodos que crean, editan, eliminan o modifican los datos lo hacen en la sobrecarga `HttpPost` del método. Modificación de datos en un método HTTP GET es un riesgo de seguridad, como se describe en la entrada de blog post [ASP.NET MVC sugerencia #46: no use eliminar vínculos porque crean vulnerabilidades de seguridad](http://stephenwalther.com/blog/archive/2009/01/21/asp.net-mvc-tip-46-ndash-donrsquot-use-delete-links-because.aspx). Modificación de datos en un método GET también infringe procedimientos recomendados de HTTP y la arquitectura [REST](http://en.wikipedia.org/wiki/Representational_State_Transfer) de patrón, que especifica que las solicitudes GET no deben cambiar el estado de la aplicación. En otras palabras, realizar una operación GET debería ser una operación segura sin efectos secundarios, que no modifica los datos persistentes.
+Todos los métodos de `HttpGet` siguen un patrón similar. Obtienen un objeto de película (o una lista de objetos, en el caso de `Index`) y pasan el modelo a la vista. El método `Create` pasa un objeto Movie vacío a la vista Create. Todos los métodos que crean, editan, eliminan o modifican los datos lo hacen en la sobrecarga `HttpPost` del método. La modificación de los datos en un método HTTP GET es un riesgo para la seguridad, como se describe en la entrada de blog de [ASP.NET MVC Tip #46 – no usar los vínculos de eliminación porque crean carencias de seguridad](http://stephenwalther.com/blog/archive/2009/01/21/asp.net-mvc-tip-46-ndash-donrsquot-use-delete-links-because.aspx). La modificación de los datos en un método GET también infringe los procedimientos recomendados de HTTP y el patrón [Rest](http://en.wikipedia.org/wiki/Representational_State_Transfer) de la arquitectura, que especifica que las solicitudes GET no deben cambiar el estado de la aplicación. En otras palabras, realizar una operación GET debería ser una operación segura sin efectos secundarios, que no modifica los datos persistentes.
 
-## <a name="jquery-validation-for-non-english-locales"></a>validación de jQuery para configuraciones regionales no inglesas
+## <a name="jquery-validation-for-non-english-locales"></a>validación de jQuery para configuraciones regionales que no estén en inglés
 
-Si usas un equipo de inglés de Estados Unidos, puede omitir esta sección y vaya al siguiente tutorial. Puede descargar la versión Globalize de este tutorial [aquí](https://archive.msdn.microsoft.com/Project/Download/FileDownload.aspx?ProjectName=aspnetmvcsamples&amp;DownloadId=16475). Para un excelente tutorial de dos partes en la internacionalización, consulte [ASP.NET MVC 5 internacionalización de Nadeem](http://afana.me/post/aspnet-mvc-internationalization.aspx).
+Si usa un equipo Inglés de EE. UU., puede omitir esta sección y pasar al siguiente tutorial. Puede descargar la versión de globalización de este tutorial [aquí](https://archive.msdn.microsoft.com/Project/Download/FileDownload.aspx?ProjectName=aspnetmvcsamples&amp;DownloadId=16475). Para obtener un tutorial de dos partes excelente sobre internacionalización, consulte [internacionalización de MVC 5 de Nadeem de ASP.net](http://afana.me/post/aspnet-mvc-internationalization.aspx).
 
 > [!NOTE]
-> Para admitir la validación de jQuery para configuraciones regionales distintas del inglés que usan una coma (&quot;,&quot;) para un separador decimal y formatos de fecha distintos del inglés de EE. UU., se debe incluir *globalize.js* y específica de su  *Cultures/globalize.Cultures.js* archivo (desde [ https://github.com/jquery/globalize ](https://github.com/jquery/globalize) ) y JavaScript para usar `Globalize.parseFloat`. Puede obtener la validación de jQuery no inglesas de NuGet. (No instale Globalize si usa una configuración regional en inglés).
+> para admitir la validación de jQuery para configuraciones regionales distintas del inglés que usan una coma (&quot;,&quot;) para un separador decimal y formatos de fecha que no son de Inglés de EE. UU., debe incluir *Globalization. js* y el `Globalize.parseFloat`[https://github.com/jquery/globalize](https://github.com/jquery/globalize) archivo *culturas. culturas. js* . Puede obtener la validación no en Inglés de jQuery desde NuGet. (No instale el globalizado si usa una configuración regional en inglés).
 
-1. Desde el **herramientas** menú haga clic en **Administrador de paquetes de NuGet**y, a continuación, haga clic en **administrar paquetes de NuGet para la solución**.
+1. En el menú **herramientas** , haga clic en **Administrador de paquetes Nuget**y, a continuación, haga clic en **administrar paquetes NuGet para la solución**.
 
     ![](examining-the-edit-methods-and-edit-view/_static/image5.png)
-2. En el panel izquierdo, seleccione <strong>examinar *.</strong>* (Consulte la imagen siguiente).
-3. En el cuadro de entrada, escriba * Globalize **.
+2. En el panel izquierdo, seleccione <strong>examinar *.</strong>*  (Consulte la imagen siguiente).
+3. En el cuadro de entrada, escriba * Globalization * *.
 
-    ![](examining-the-edit-methods-and-edit-view/_static/image6.png) Elija `jQuery.Validation.Globalize`, elija `MvcMovie` y haga clic en **instalar**. El *Scripts\jquery.globalize\globalize.js* archivo se agregará al proyecto. El *Scripts\jquery.globalize\cultures\* carpeta contiene muchos archivos de JavaScript de la referencia cultural. Tenga en cuenta que puede tardar cinco minutos en instalar este paquete.
+    ![](examining-the-edit-methods-and-edit-view/_static/image6.png) elija `jQuery.Validation.Globalize`, elija `MvcMovie` y haga clic en **instalar**. El archivo *Scripts\jquery.globalize\globalize.js* se agregará al proyecto. La carpeta * Scripts\jquery.globalize\cultures\* contendrá muchos archivos JavaScript de referencia cultural. Tenga en cuenta que este paquete puede tardar cinco minutos en instalarse.
 
-   El código siguiente muestra las modificaciones en el archivo Views\Movies\Edit.cshtml:
+   En el código siguiente se muestran las modificaciones en el archivo Views\Movies\Edit.cshtml:
 
 [!code-cshtml[Main](examining-the-edit-methods-and-edit-view/samples/sample10.cshtml)]
 
-Para evitar repetir este código en cada vista de edición, puede mover el archivo de diseño. Para optimizar la descarga del script, consulte mi tutorial [unión y Minificación](../../performance/bundling-and-minification.md).
+Para evitar repetir este código en cada vista de edición, puede moverlo al archivo de diseño. Para optimizar la descarga del script, vea mi tutorial [de Unión y minificación](../../performance/bundling-and-minification.md).
 
-Para obtener más información, consulte [internacionalización de ASP.NET MVC 3](http://afana.me/post/aspnet-mvc-internationalization.aspx) y [ASP.NET MVC 3 internacionalización - Part 2 (NerdDinner)](http://afana.me/post/aspnet-mvc-internationalization-part-2.aspx).
+Para obtener más información, consulte [ASP.NET MVC 3 internacionalización](http://afana.me/post/aspnet-mvc-internationalization.aspx) y [ASP.NET MVC 3 Internacionalization, parte 2 (NerdDinner)](http://afana.me/post/aspnet-mvc-internationalization-part-2.aspx).
 
-Como solución temporal, si no se puede obtener la validación de trabajar en la configuración regional, puede forzar el equipo para utilizar el inglés de Estados Unidos o puede deshabilitar JavaScript en el explorador. Para forzar que el equipo para utilizar el inglés de Estados Unidos, puede agregar el elemento de globalización en la raíz de los proyectos *web.config* archivo. El código siguiente muestra el elemento de globalización con la referencia cultural establecida en inglés de Estados Unidos.
+Como solución temporal, si no consigue que la validación funcione en su configuración regional, puede forzar que el equipo use el Inglés de EE. UU. o puede deshabilitar JavaScript en el explorador. Para obligar al equipo a utilizar el Inglés de EE. UU., puede Agregar el elemento de globalización al archivo *Web. config* raíz de los proyectos. En el código siguiente se muestra el elemento Globalization con la referencia cultural establecida en Estados Unidos English.
 
 [!code-xml[Main](examining-the-edit-methods-and-edit-view/samples/sample11.xml)]
 
-<a id="gettingstarted"></a><a id="jQueryAjaxJSON"></a> En el tutorial siguiente, implementaremos la funcionalidad de búsqueda.
+<a id="gettingstarted"></a><a id="jQueryAjaxJSON"></a>En el siguiente tutorial, se implementará la funcionalidad de búsqueda.
 
 > [!div class="step-by-step"]
 > [Anterior](accessing-your-models-data-from-a-controller.md)

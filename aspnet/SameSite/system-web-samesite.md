@@ -3,14 +3,14 @@ title: Trabajar con cookies de SameSite en ASP.NET
 author: rick-anderson
 description: Aprenda a usar las cookies de SameSite en ASP.NET
 ms.author: riande
-ms.date: 12/03/2019
+ms.date: 1/22/2019
 uid: samesite/system-web-samesite
-ms.openlocfilehash: 47a3d7576edb0e818c39b32fbbcb98475248e18e
-ms.sourcegitcommit: 7b1e1784213dd4c301635f9e181764f3e2f94162
+ms.openlocfilehash: d2160bd9aeb93398b49b3a0e5e7a8a4404a5bc63
+ms.sourcegitcommit: 88fc80e3f65aebdf61ec9414810ddbc31c543f04
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/10/2019
-ms.locfileid: "74993070"
+ms.lasthandoff: 01/22/2020
+ms.locfileid: "76519198"
 ---
 # <a name="work-with-samesite-cookies-in-aspnet"></a>Trabajar con cookies de SameSite en ASP.NET
 
@@ -25,7 +25,7 @@ SameSite es un borrador de [IETF](https://ietf.org/about/) diseñado para propor
 
 El parámetro `None` causa problemas de compatibilidad con los clientes que implementaron el [estándar de borrador anterior 2016](https://tools.ietf.org/html/draft-west-first-party-cookies-07) (por ejemplo, iOS 12). Consulte [compatibilidad con exploradores anteriores](#sob) en este documento.
 
-Cada componente de ASP.NET Core que emite cookies debe decidir si SameSite es adecuado.
+Cada componente de ASP.NET que emite cookies debe decidir si SameSite es adecuado.
 
 ## <a name="api-usage-with-samesite"></a>Uso de la API con SameSite
 
@@ -44,6 +44,10 @@ Las actualizaciones del 19 de noviembre de 2019 de Windows actualizaron .NET 4.7
 * Especifica las cookies que validan explícitamente `SameSite=None` para habilitar la entrega entre sitios debe marcarse como `Secure`. `None` es una nueva entrada para rechazarla.
 * Es compatible con las revisiones emitidas tal y como se describe en la lista anterior de KB.
 * Está programado para que [Chrome](https://chromestatus.com/feature/5088147346030592) lo habilite de forma predeterminada en [febrero de 2020](https://blog.chromium.org/2019/10/developers-get-ready-for-new.html). Los exploradores empezaron a pasar a este estándar en 2019.
+
+### <a name="azure-app-servicesamesite-cookie-handling"></a>Azure App Service: control de cookies de SameSite
+
+Consulte [Azure App Service: control de cookies de SameSite y .NET Framework revisión de 4.7.2](https://azure.microsoft.com/updates/app-service-samesite-cookie-update/) para obtener más información.
 
 <a name="sob"></a>
 

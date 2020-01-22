@@ -8,12 +8,12 @@ ms.date: 06/10/2014
 ms.assetid: 0fab5e35-8c1f-43d4-8635-b8aba8766a71
 msc.legacyurl: /signalr/overview/getting-started/introduction-to-signalr
 msc.type: authoredcontent
-ms.openlocfilehash: 11b494b4839c646b018098c76a8a9ae0a2169757
-ms.sourcegitcommit: 22fbd8863672c4ad6693b8388ad5c8e753fb41a2
+ms.openlocfilehash: 8dbc31a5c8d59fa55dc5b513c1a51d24d18a685f
+ms.sourcegitcommit: 88fc80e3f65aebdf61ec9414810ddbc31c543f04
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/28/2019
-ms.locfileid: "74600487"
+ms.lasthandoff: 01/22/2020
+ms.locfileid: "76519406"
 ---
 # <a name="introduction-to-signalr"></a>Introducción a SignalR
 
@@ -39,11 +39,19 @@ Signalr proporciona una API sencilla para crear llamadas a procedimiento remoto 
 
 ![Invocar métodos con Signalr](introduction-to-signalr/_static/image1.png)
 
-Signalr controla la administración de conexiones automáticamente y le permite difundir mensajes a todos los clientes conectados simultáneamente, como un salón de chat. También puede enviar mensajes a clientes específicos. La conexión entre el cliente y el servidor es persistente, a diferencia de una conexión HTTP clásica, que se restablece para cada comunicación.
+SignalR controla automáticamente la administración de conexiones y permite difundir mensajes a todos los clientes conectados de forma simultánea, como un salón de chat. También se pueden enviar mensajes a clientes concretos. La conexión entre el cliente y el servidor es persistente, a diferencia de una conexión HTTP clásica, que se vuelve a establecer para cada comunicación.
 
 Signalr admite la funcionalidad de "instalación de servidor", en la que el código de servidor puede llamar al código de cliente en el explorador mediante llamadas a procedimiento remoto (RPC), en lugar del modelo de solicitud-respuesta común en la web en la actualidad.
 
-Las aplicaciones de signalr pueden escalarse horizontalmente a miles de clientes mediante Service Bus, SQL Server o [Redis](http://redis.io).
+Las aplicaciones de signalr pueden escalarse horizontalmente a miles de clientes mediante proveedores de escalado horizontal integrados y de terceros.
+
+Los proveedores integrados incluyen:
+* [Bus de servicio](https://www.nuget.org/packages/Microsoft.AspNet.SignalR.ServiceBus3)
+* [SQL Server](https://www.nuget.org/packages/Microsoft.AspNet.SignalR.SqlServer)
+* [Redis](https://www.nuget.org/packages/Microsoft.AspNet.SignalR.Redis)
+
+Los proveedores de terceros incluyen:
+* [NCache](https://www.alachisoft.com/ncache/asp-net-core-signalr.html).
 
 Signalr es de código abierto, accesible a través de [GitHub](https://github.com/signalr).
 
@@ -136,7 +144,7 @@ Una conexión representa un extremo simple para el envío de mensajes de un solo
 
 Un concentrador es una canalización de alto nivel que se basa en la API de conexión que permite que el cliente y el servidor llamen a métodos entre sí directamente. Signalr controla la distribución a través de los límites de la máquina como si se requiera, lo que permite a los clientes llamar a métodos en el servidor con la misma facilidad que los métodos locales y viceversa. El uso del modelo de comunicación de hubs le resultará familiar a los desarrolladores que hayan usado API de invocación remota como .NET Remoting. El uso de un concentrador también le permite pasar parámetros fuertemente tipados a métodos, habilitando el enlace de modelos.
 
-### <a name="architecture-diagram"></a>Diagrama de arquitectura
+### <a name="architecture-diagram"></a>Diagrama de la arquitectura
 
 En el diagrama siguiente se muestra la relación entre los concentradores, las conexiones persistentes y las tecnologías subyacentes que se usan para los transportes.
 

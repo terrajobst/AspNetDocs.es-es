@@ -8,12 +8,12 @@ ms.date: 06/12/2014
 ms.assetid: 513837a7-cfea-4568-a4e9-1f5901245d24
 msc.legacyurl: /aspnet/overview/developing-apps-with-windows-azure/building-real-world-cloud-apps-with-windows-azure/data-partitioning-strategies
 msc.type: authoredcontent
-ms.openlocfilehash: 2f79b1f459aff3e81dab7ea7eb4ebf3f71084463
-ms.sourcegitcommit: 22fbd8863672c4ad6693b8388ad5c8e753fb41a2
+ms.openlocfilehash: b8c901ec30b6d37237f80100a2978350ac389b7a
+ms.sourcegitcommit: 88fc80e3f65aebdf61ec9414810ddbc31c543f04
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/28/2019
-ms.locfileid: "74585819"
+ms.lasthandoff: 01/22/2020
+ms.locfileid: "76519172"
 ---
 # <a name="data-partitioning-strategies-building-real-world-cloud-apps-with-azure"></a>Estrategias de particionamiento de datos (creación de aplicaciones en la nube reales con Azure)
 
@@ -39,11 +39,11 @@ Si cree que va a tener una gran cantidad de volumen, velocidad o variedad, tendr
 
 Básicamente, hay tres enfoques para la creación de particiones:
 
-- Particionamiento vertical
+- Particiones verticales
 - Particionamiento horizontal
 - Creación de particiones híbridas
 
-## <a name="vertical-partitioning"></a>Particionamiento vertical
+## <a name="vertical-partitioning"></a>Particiones verticales
 
 La parte vertical es como la división de una tabla por columnas: un conjunto de columnas entra en un almacén de datos y otro conjunto de columnas entra en un almacén de datos diferente.
 
@@ -51,7 +51,7 @@ Por ejemplo, supongamos que mi aplicación almacena datos sobre personas, inclui
 
 ![Tabla de datos](data-partitioning-strategies/_static/image1.png)
 
-Cuando represente estos datos como una tabla y examine los distintos tipos de datos, puede ver que las tres columnas de la izquierda tienen datos de cadena que se pueden almacenar de manera eficaz mediante una base de datos relacional, mientras que las dos columnas de la derecha son básicamente matrices de bytes que c ome de archivos de imagen. Es posible almacenar los datos de los archivos de imagen en una base de datos relacional y muchas personas lo hacen porque no quieren guardar los datos en el sistema de archivos. Es posible que no tengan un sistema de archivos capaz de almacenar los volúmenes de datos necesarios o que no quieran administrar un sistema de copia de seguridad y restauración independiente. Este enfoque funciona bien para las bases de datos locales y para pequeñas cantidades de datos en las bases de datos en la nube. En el entorno local, podría ser más fácil permitir que el DBA se encargue de todo.
+Cuando represente estos datos como una tabla y examine los distintos tipos de datos, puede ver que las tres columnas de la izquierda tienen datos de cadena que se pueden almacenar de manera eficaz mediante una base de datos relacional, mientras que las dos columnas de la derecha son básicamente matrices de bytes que c ome de archivos de imagen. Es posible almacenar datos de archivos de imagen en una base de datos relacional, y una gran cantidad de personas lo hacen porque no quieren guardar los datos en el sistema de archivos. Es posible que no tengan un sistema de archivos capaz de almacenar los volúmenes de datos necesarios o que no quieran administrar un sistema de copia de seguridad y restauración independiente. Este enfoque funciona bien para las bases de datos locales y para pequeñas cantidades de datos en las bases de datos en la nube. En el entorno local, podría ser más fácil permitir que el DBA se encargue de todo.
 
 Pero en una base de datos en la nube, el almacenamiento es relativamente costoso y un gran volumen de imágenes podría aumentar el tamaño de la base de datos más allá de los límites en los que puede funcionar de manera eficaz. Puede resolver estos problemas mediante la partición vertical de los datos, lo que significa que debe elegir el almacén de datos más adecuado para cada columna de la tabla de datos. Lo que podría funcionar mejor en este ejemplo es colocar los datos de la cadena en una base de datos relacional y las imágenes en el almacenamiento de blobs.
 
@@ -61,7 +61,7 @@ Almacenar imágenes en el almacenamiento de blobs en lugar de una base de datos 
 
 Este es el enfoque de creación de particiones que hemos implementado en la aplicación de corrección de ti y veremos el código que se encuentra en el [capítulo almacenamiento de blobs](unstructured-blob-storage.md). Sin este esquema de partición y suponiendo que el tamaño medio de la imagen sea de 3 megabytes, la aplicación Fix it solo podría almacenar aproximadamente 40.000 tareas antes de alcanzar el tamaño máximo de la base de datos de 150 gigabytes. Después de quitar las imágenes, la base de datos puede almacenar 10 veces tantas tareas; puede pasar mucho más tiempo antes de tener que pensar en implementar un esquema de particionamiento horizontal. Y a medida que se escala la aplicación, sus gastos crecen más lentamente, ya que la mayor parte de sus necesidades de almacenamiento están en un almacenamiento de blobs muy económico.
 
-## <a name="horizontal-partitioning-sharding"></a>Particionamiento horizontal (particionamiento)
+## <a name="horizontal-partitioning-sharding"></a>Creación de particiones horizontales (particionamiento)
 
 La parte horizontal es como la división de una tabla por filas: un conjunto de filas entra en un almacén de datos y otro conjunto de filas entra en un almacén de datos diferente.
 
@@ -87,7 +87,7 @@ Las complicaciones se pueden administrar siempre y cuando se planeen antes de pa
 
 ## <a name="summary"></a>Resumen
 
-Un esquema de particionamiento eficaz puede permitir que la aplicación en la nube se escale a petabytes de datos en la nube sin cuellos de botella. Y no tiene que pagar por adelantado para máquinas masivas o una infraestructura amplia como podría si estuviera ejecutando la aplicación en un centro de datos local. En la nube puede Agregar incrementalmente la capacidad a medida que la necesite, y solo pagará por todo lo que esté usando cuando la use.
+Un esquema de particionamiento eficaz puede permitir que la aplicación en la nube se escale a petabytes de datos en la nube sin cuellos de botella. Y no tiene que pagar por adelantado para máquinas masivas o una infraestructura amplia como podría si estuviera ejecutando la aplicación en un centro de datos local. En la nube, puede Agregar incrementalmente la capacidad a medida que la necesite, y solo pagará por todo lo que esté usando cuando la use.
 
 En el [siguiente capítulo](unstructured-blob-storage.md) veremos cómo la aplicación de corrección de ti implementa las particiones verticales mediante el almacenamiento de imágenes en BLOB Storage.
 

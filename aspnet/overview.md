@@ -8,12 +8,12 @@ ms.author: riande
 ms.date: 08/10/2019
 msc.legacyurl: ''
 msc.type: content
-ms.openlocfilehash: 9a6d08849f09c9d7a779df64f70e8770d2af3c87
-ms.sourcegitcommit: b67ffd5b2c5cff01ec4c8eb12a21f693f2e11887
+ms.openlocfilehash: aa4f627bca99f0a7ffbbb53ea45ebdcf0850fd89
+ms.sourcegitcommit: 88fc80e3f65aebdf61ec9414810ddbc31c543f04
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/23/2019
-ms.locfileid: "69995283"
+ms.lasthandoff: 01/22/2020
+ms.locfileid: "76519367"
 ---
 # <a name="aspnet-overview"></a>Información general de ASP.NET
 
@@ -21,33 +21,33 @@ ASP.NET es un marco web gratuito para crear excelentes sitios web y aplicaciones
 
 [ASP.net Core](https://docs.microsoft.com/aspnet/core/) es una alternativa a ASP.net.  Vea las [instrucciones sobre cómo elegir entre ASP.net y ASP.net Core](https://docs.microsoft.com/aspnet/core/choose-aspnet-framework).
 
-## <a name="get-started"></a>Introducción
+## <a name="get-started"></a>Primeros pasos
 
-Instale [Visual Studio 2017](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=button+cta&utm_content=download+vs2017) Community Edition, un IDE gratuito para ASP.net en Windows.
+Instale [Visual Studio 2019](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=button+cta&utm_content=download+vs2019) Community Edition, un IDE gratuito para ASP.net en Windows.
 
 ## <a name="websites-and-web-applications"></a>Websites y aplicaciones Web
 
- ASP.NET ofrece tres marcos de trabajo para la creación de aplicaciones web: Formularios Web Forms, ASP.NET MVC y ASP.NET Web Pages. Los tres marcos son estables y están maduros, y puede crear excelentes aplicaciones web con cualquiera de ellos. Independientemente del marco que elija, obtendrá todas las ventajas y características de ASP.NET Everywhere.
+ ASP.NET ofrece tres marcos para crear aplicaciones web: formularios Web Forms, ASP.NET MVC y ASP.NET Web Pages. Los tres marcos son estables y están maduros, y puede crear excelentes aplicaciones web con cualquiera de ellos. Independientemente del marco que elija, obtendrá todas las ventajas y características de ASP.NET Everywhere.
 
 Cada marco de trabajo tiene como destino un estilo de desarrollo diferente. El que elija depende de una combinación de los recursos de programación (conocimiento, conocimientos y experiencia de desarrollo), el tipo de aplicación que está creando y el enfoque de desarrollo con el que está familiarizado.
 
 A continuación se muestra información general de cada una de las plataformas y algunas ideas sobre cómo elegir entre ellas. Si prefiere un vídeo de introducción, consulte [creación de sitios web con ASP.net](https://channel9.msdn.com/Blogs/ASP-NET-Site-Videos/Making-Websites-with-ASPNET) y [¿Qué son las herramientas web?](https://channel9.msdn.com/Blogs/ASP-NET-Site-Videos/what-is-web-tools)
 
-|   | Si tiene experiencia en | Estilo de desarrollo | Especialidad |
+|   | Si tiene experiencia en | Estilo de desarrollo | Conocimientos |
 |-----------|----------------------|-----------------------------------------------------|----------------|
-| Formularios Web Forms | Windows Forms, WPF, .NET | Desarrollo rápido con una rica biblioteca de controles que encapsulan el marcado HTML | RAD avanzado de nivel medio |
+| formularios Web Forms | Windows Forms, WPF, .NET | Desarrollo rápido con una rica biblioteca de controles que encapsulan el marcado HTML | RAD avanzado de nivel medio |
 | MVC       | Ruby on Rails, .NET  | Control total sobre el marcado HTML, el código y el marcado separados y las pruebas fáciles de escribir. La mejor opción para aplicaciones móviles y de una sola página (SPA). | Nivel intermedio, avanzado |
 | Páginas web  | ASP clásico, PHP     | Marcado HTML y el código juntos en el mismo archivo | Nuevo nivel intermedio |
 
-### <a name="web-forms"></a>Formularios Web Forms
+### <a name="web-forms"></a>formularios Web Forms
 
-Con los formularios Web Forms ASP.NET, puede crear sitios web dinámicos con un modelo familiar basado en eventos de arrastrar y colocar. Una superficie de diseño y cientos de controles y componentes le permiten crear rápidamente eficaces y potentes sitios controlados por la interfaz de usuario con acceso a datos.
+Con los formularios Web Forms ASP.NET, puede crear sitios web dinámicos con un modelo familiar basado en eventos de arrastrar y colocar. Una superficie diseño y cientos de controles y componentes le permiten crear rápidamente sitios potentes y sofisticados sitios controlados por IU con datos.
 
 [Más información sobre formularios Web Forms](web-forms/index.md)
 
 ### <a name="mvc"></a>MVC
 
-ASP.NET MVC ofrece un método eficaz basado en patrones para crear sitios web dinámicos que permite una separación limpia de preocupaciones y que proporciona control total sobre el marcado para un desarrollo más agradable y ágil. ASP.NET MVC incluye muchas características que permiten un desarrollo rápido y fácil de usar para crear aplicaciones sofisticadas que usan los estándares web más recientes.
+ASP.NET MVC ofrece una eficaz forma de compilar sitios web dinámicos basada en modelos, lo que permite una separación clara de intereses y aporta control total sobre el marcado para lograr un desarrollo ameno y rápido. ASP.NET MVC incluye muchas características que permiten el desarrollo para TDD rápido para crear aplicaciones sofisticadas que usan los estándares web más recientes.
 
 [Más información sobre MVC](mvc/index.md)
 
@@ -65,7 +65,7 @@ Además, los tres marcos no son totalmente independientes y elegir uno no impide
 
 ## <a name="web-apis"></a>API web
 
-ASP.NET Web API es un marco que facilita la creación de servicios HTTP que llegan a una amplia gama de clientes, incluidos exploradores y dispositivos móviles. ASP.NET Web API es una plataforma ideal para compilar aplicaciones de RESTful en .NET Framework.
+ASP.NET Web API es un marco que facilita la creación de servicios HTTP disponibles para una amplia variedad de clientes, entre los que se incluyen exploradores y dispositivos móviles. ASP.NET Web API es la plataforma perfecta para crear aplicaciones RESTful en .NET Framework.
 
 [Más información acerca de Web API](web-api/index.md)
 
@@ -83,11 +83,11 @@ ASP.NET Signalr es una nueva biblioteca para desarrolladores de ASP.NET que faci
 
 ASP.NET puede potenciar las aplicaciones móviles nativas con un back-end de API Web, así como los sitios web móviles con marcos de diseño con capacidad de respuesta como Twitter bootstrap. Si va a compilar una aplicación móvil nativa, es fácil crear una API Web basada en JSON para controlar el acceso a los datos, la autenticación y las notificaciones de envío de la aplicación. Si va a crear un sitio móvil con capacidad de respuesta, puede usar cualquier marco CSS o sistema de cuadrícula abierto que prefiera, o bien seleccionar un sistema móvil eficaz como jQuery Mobile o Sencha y excelentes aplicaciones móviles con PhoneGap.
 
-[Más información sobre el desarrollo de aplicaciones móviles y sitios](mobile/index.md)
+[Más información sobre el desarrollo de aplicaciones móviles y sitios](mobile/overview.md)
 
 <!-- Put first under mobile TOC:  Watch video (11 minutes) https://channel9.msdn.com/Blogs/ASP-NET-Site-Videos/aspnet-and-mobile -->
 
-## <a name="single-page-applications"></a>Aplicaciones de una sola página
+## <a name="single-page-applications"></a>Aplicación de página única
 
 ASP.NET aplicación de una sola página (SPA) le ayuda a crear aplicaciones que incluyen interacciones del lado cliente significativas con HTML 5, CSS 3 y JavaScript. Visual Studio incluye una plantilla para compilar aplicaciones de una sola página mediante Knockout. js y ASP.NET Web API. Además de la plantilla integrada SPA, también se pueden descargar plantillas de SPA creadas por la comunidad.
 

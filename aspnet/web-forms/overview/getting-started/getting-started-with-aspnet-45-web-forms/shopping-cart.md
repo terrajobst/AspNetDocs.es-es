@@ -8,12 +8,12 @@ ms.date: 09/08/2014
 ms.assetid: 6898c601-6c31-432f-8388-e6843f8a17cb
 msc.legacyurl: /web-forms/overview/getting-started/getting-started-with-aspnet-45-web-forms/shopping-cart
 msc.type: authoredcontent
-ms.openlocfilehash: 46264a0ab2244cff24761ce94b41722e61e3f426
-ms.sourcegitcommit: 22fbd8863672c4ad6693b8388ad5c8e753fb41a2
+ms.openlocfilehash: d3b619ebd9448d30857ffbaf17fd245b1d54a662
+ms.sourcegitcommit: 88fc80e3f65aebdf61ec9414810ddbc31c543f04
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/28/2019
-ms.locfileid: "74614922"
+ms.lasthandoff: 01/22/2020
+ms.locfileid: "76519302"
 ---
 # <a name="shopping-cart"></a>Carro de la compra
 
@@ -25,7 +25,7 @@ por [Erik Reitan](https://github.com/Erikre)
 
 En este tutorial se describe la lógica de negocios necesaria para agregar un carro de la compra a la aplicación de formularios Web Forms ASP.NET de Wingtip Toys. Este tutorial se basa en el tutorial anterior "Mostrar elementos de datos y detalles" y forma parte de la serie de tutoriales de Wingtip Toy Store. Cuando haya completado este tutorial, los usuarios de la aplicación de ejemplo podrán agregar, quitar y modificar los productos de su carro de la compra.
 
-## <a name="what-youll-learn"></a>Lo que aprenderá:
+## <a name="what-youll-learn"></a>Temas que se abordarán:
 
 1. Cómo crear un carro de la compra para la aplicación Web.
 2. Cómo permitir que los usuarios agreguen elementos al carro de la compra.
@@ -62,7 +62,7 @@ Anteriormente en esta serie de tutoriales, definió el esquema para los datos de
 3. Asigne a esta nueva clase el nombre *CartItem.CS*.
 4. Haga clic en **Agregar**.  
    El nuevo archivo de clase se muestra en el editor.
-5. Reemplace el código predeterminado por el código siguiente:   
+5. Reemplace el código predeterminado por el siguiente:   
 
     [!code-csharp[Main](shopping-cart/samples/sample1.cs)]
 
@@ -109,7 +109,7 @@ La clase `ShoppingCart` se agregará a una carpeta independiente en la aplicaci�
 1. En **Explorador de soluciones**, haga clic con el botón derecho en el proyecto **WingtipToys**y seleccione **Agregar**-&gt;**nueva carpeta**. Asigne un nombre a la nueva *lógica*de carpeta.
 2. Haga clic con el botón secundario en la carpeta *lógica* y, a continuación, seleccione **Agregar** -&gt; **nuevo elemento**.
 3. Agregue un nuevo archivo de clase denominado *ShoppingCartActions.CS*.
-4. Reemplace el código predeterminado por el código siguiente:   
+4. Reemplace el código predeterminado por el siguiente:   
 
     [!code-csharp[Main](shopping-cart/samples/sample3.cs)]
 
@@ -229,7 +229,7 @@ Cuando se carga la página *ShoppingCart. aspx* , carga el objeto de carro de la
 Ejecute la aplicación ahora para ver cómo no solo puede Agregar un producto al carro de la compra, pero puede ver el total del carro de la compra.
 
 1. Presione **F5** para ejecutar la aplicación.  
- El explorador se abrirá y mostrará la página *default. aspx* .
+ El explorador se abrirá y mostrará la página *Default.aspx* .
 2. Seleccione **automóviles** en el menú de navegación categoría.
 3. Haga clic en el vínculo **Agregar al carro** junto al primer producto.   
  La página *ShoppingCart. aspx* se muestra con el total del pedido. 
@@ -312,9 +312,11 @@ En este tutorial, ha creado un carro de la compra para la aplicación de ejemplo
 
 El carro de la compra permite agregar, eliminar y actualizar los artículos que el usuario ha seleccionado para su compra. Además de implementar la funcionalidad de carro de la compra, ha aprendido cómo mostrar los elementos del carro de la compra en un control **GridView** y calcular el total del pedido.
 
+Para entender cómo funciona la funcionalidad descrita en una aplicación empresarial real, puede ver el ejemplo de la cesta de la compra de comercio electrónico de código abierto basado en [nopCommerce](https://github.com/nopSolutions/nopCommerce) -ASP.net. Originalmente, se basaba en formularios Web Forms y en los años que pasaba a MVC y ahora se ASP.NET Core.
+
 ## <a name="addition-information"></a>Información adicional
 
-[Introducción al estado de sesión de ASP.NET](https://msdn.microsoft.com/library/ms178581.aspx)
+[Información general sobre el estado de sesión de ASP.NET](https://msdn.microsoft.com/library/ms178581.aspx)
 
 > [!div class="step-by-step"]
 > [Anterior](display_data_items_and_details.md)

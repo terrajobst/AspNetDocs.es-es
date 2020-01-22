@@ -1,6 +1,6 @@
 ---
 uid: mvc/overview/getting-started/introduction/adding-a-new-field
-title: Agregar un nuevo campo | Microsoft Docs
+title: Agregando un nuevo campo | Microsoft Docs
 author: Rick-Anderson
 description: ''
 ms.author: riande
@@ -8,168 +8,168 @@ ms.date: 10/17/2013
 ms.assetid: 4085de68-d243-4378-8a64-86236ea8d2da
 msc.legacyurl: /mvc/overview/getting-started/introduction/adding-a-new-field
 msc.type: authoredcontent
-ms.openlocfilehash: 55e635c967e07e193dda0358b020638af46c688e
-ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
+ms.openlocfilehash: d79655bfadff83095bf4cb84445f5efaf44d6a89
+ms.sourcegitcommit: 88fc80e3f65aebdf61ec9414810ddbc31c543f04
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/06/2019
-ms.locfileid: "65120836"
+ms.lasthandoff: 01/22/2020
+ms.locfileid: "76519081"
 ---
 # <a name="adding-a-new-field"></a>Adición de un nuevo campo
 
-by [Rick Anderson]((https://twitter.com/RickAndMSFT))
+por [Rick Anderson]((https://twitter.com/RickAndMSFT))
 
-[!INCLUDE [Tutorial Note](sample/code-location.md)]
+[!INCLUDE [Tutorial Note](index.md)]
 
-En esta sección usará migraciones de Entity Framework Code First para migrar algunos cambios a las clases del modelo, por lo que el cambio se aplica a la base de datos.
+En esta sección, usará Migraciones de Entity Framework Code First para migrar algunos cambios a las clases del modelo para que el cambio se aplique en la base de datos.
 
-De forma predeterminada, al usar Entity Framework Code First para crear automáticamente una base de datos, como hizo anteriormente en este tutorial, Code First agrega una tabla para ayudar a saber si el esquema de la base de datos está sincronizado con las clases del modelo se generó a partir de la base de datos. Si no están sincronizados, Entity Framework produce un error. Esto facilita realizar un seguimiento de los problemas en tiempo de desarrollo en caso contrario, podría encontrar solamente (por errores poco conocidos) en tiempo de ejecución.
+De forma predeterminada, cuando se utiliza Entity Framework Code First para crear automáticamente una base de datos, como hizo anteriormente en este tutorial, Code First agrega una tabla a la base de datos para realizar un seguimiento de si el esquema de la base de datos está sincronizado con las clases de modelo desde las que se generó. Si no están sincronizados, el Entity Framework produce un error. Esto facilita el seguimiento de los problemas en el tiempo de desarrollo que, de otra forma, podría encontrar (mediante errores ocultos) en tiempo de ejecución.
 
-## <a name="setting-up-code-first-migrations-for-model-changes"></a>Configuración de migraciones de Code First para cambios en el modelo
+## <a name="setting-up-code-first-migrations-for-model-changes"></a>Configuración de Migraciones de Code First para los cambios de modelo
 
-Vaya al explorador de soluciones. Haga clic con el botón derecho en el *Movies.mdf* de archivo y seleccione **eliminar** para quitar la base de datos de películas. Si no ve el *Movies.mdf* de archivos, haga clic en el **mostrar todos los archivos** icono se muestra a continuación, en el contorno rojo.
+Vaya a Explorador de soluciones. Haga clic con el botón derecho en el archivo *movies. MDF* y seleccione **eliminar** para quitar la base de datos de películas. Si no ve el archivo *movies. MDF* , haga clic en el icono **Mostrar todos los archivos** que se muestra a continuación en el contorno rojo.
 
 ![](adding-a-new-field/_static/image1.png)
 
 Compile la aplicación para asegurarse de que no hay ningún error.
 
-Desde el **herramientas** menú, haga clic en **Administrador de paquetes de NuGet** y, a continuación, **Package Manager Console**.
+En el menú **Tools** (Herramientas), haga clic en **Administrador de paquetes NuGet** y luego en **Consola del Administrador de paquetes**.
 
-![Agregar módulo Man](adding-a-new-field/_static/image2.png)
+![Agregar el paquete Man](adding-a-new-field/_static/image2.png)
 
-En el **Package Manager Console** ventana en la `PM>` símbolo del sistema escriba
+En la ventana de la **consola del administrador de paquetes** , en el símbolo del sistema `PM>` escriba
 
-Enable-Migrations -ContextTypeName MvcMovie.Models.MovieDBContext
+Enable-Migrations-ContextTypeName MvcMovie. Models. MovieDBContext
 
 ![](adding-a-new-field/_static/image3.png)
 
-El **Enable-Migrations** comando (mostrado arriba) crea un *Configuration.cs* archivo en una nueva *migraciones* carpeta.
+El comando **enable-Migrations** (mostrado anteriormente) crea un archivo *Configuration.CS* en una nueva carpeta *Migrations* .
 
 ![](adding-a-new-field/_static/image4.png)
 
-Visual Studio abre el *Configuration.cs* archivo. Reemplace el `Seed` método en el *Configuration.cs* archivo con el código siguiente:
+Visual Studio abre el archivo *Configuration.CS* . Reemplace el método `Seed` del archivo *Configuration.CS* por el código siguiente:
 
 [!code-csharp[Main](adding-a-new-field/samples/sample1.cs)]
 
-Mantenga el mouse sobre la línea ondulada roja bajo `Movie` y haga clic en `Show Potential Fixes` y, a continuación, haga clic en **mediante** **MvcMovie.Models;**
+Mantenga el mouse sobre la línea ondulada roja en `Movie`, haga clic en `Show Potential Fixes` y, a continuación, haga clic en **usar** **MvcMovie. Models;**
 
 ![](adding-a-new-field/_static/image5.png)
 
-Si lo hace, agrega la siguiente instrucción using:
+Al hacerlo, se agrega la siguiente instrucción using:
 
 [!code-csharp[Main](adding-a-new-field/samples/sample2.cs)]
 
 > [!NOTE]
 > 
-> El código llama a las migraciones de primera la `Seed` método después de cada migración (es decir, una llamada a **Actualizar base de datos** en la consola de administrador de paquetes), y este método actualiza las filas que ya se han insertado o insertan si se aún no existen.
+> Migraciones de Code First llama al método `Seed` después de cada migración (es decir, al llamar a **Update-Database** en la consola del administrador de paquetes) y este método actualiza las filas que ya se han insertado o las inserta si aún no existen.
 > 
-> El [AddOrUpdate](https://msdn.microsoft.com/library/system.data.entity.migrations.idbsetextensions.addorupdate(v=vs.103).aspx) método en el código siguiente realiza una operación "upsert":
+> El método [AddOrUpdate](https://msdn.microsoft.com/library/system.data.entity.migrations.idbsetextensions.addorupdate(v=vs.103).aspx) del código siguiente realiza una operación "Upsert":
 > 
 > [!code-csharp[Main](adding-a-new-field/samples/sample3.cs)]
 > 
-> Dado que el [inicialización](https://msdn.microsoft.com/library/hh829453(v=vs.103).aspx) método se ejecuta con cada migración, simplemente no se puede insertar datos, porque las filas que se está intentando agregar ya estarán allí después de la primera migración que crea la base de datos. El "[upsert](http://en.wikipedia.org/wiki/Upsert)" operación evita los errores que sucedería si se intenta insertar una fila que ya existe, pero reemplaza cualquier cambio en los datos que ha realizado durante las pruebas de la aplicación. Con datos de prueba en algunas tablas puede no ser conveniente que esto ocurra: en algunos casos cuando cambien los datos durante las pruebas que desee los cambios tras las actualizaciones de la base de datos. En ese caso en el que desea realizar una operación de inserción condicional: insertar una fila solo si ya no existe.   
+> Dado que el método de [inicialización](https://msdn.microsoft.com/library/hh829453(v=vs.103).aspx) se ejecuta con cada migración, no se pueden insertar datos, ya que las filas que está intentando agregar ya estarán allí después de la primera migración que crea la base de datos. La operación "[Upsert](http://en.wikipedia.org/wiki/Upsert)" evita errores que podrían producirse si se intenta insertar una fila que ya existe, pero reemplaza cualquier cambio en los datos que haya realizado al probar la aplicación. En el caso de los datos de prueba de algunas tablas, es posible que no desee que suceda: en algunos casos, cuando cambie los datos mientras realiza las pruebas desea que los cambios permanezcan después de las actualizaciones de la base de datos. En ese caso, desea realizar una operación de inserción condicional: Inserte una fila solo si aún no existe.   
 > 
-> El primer parámetro pasado a la [AddOrUpdate](https://msdn.microsoft.com/library/system.data.entity.migrations.idbsetextensions.addorupdate(v=vs.103).aspx) método especifica la propiedad que se utilizará para comprobar si ya existe una fila. Para los datos de película de prueba que se va a proporcionar, el `Title` propiedad puede usarse para este propósito, puesto que cada título de la lista es único:
+> El primer parámetro que se pasa al método [AddOrUpdate](https://msdn.microsoft.com/library/system.data.entity.migrations.idbsetextensions.addorupdate(v=vs.103).aspx) especifica la propiedad que se va a usar para comprobar si ya existe una fila. En el caso de los datos de película de prueba que se proporcionan, se puede usar la propiedad `Title` para este propósito, ya que cada título de la lista es único:
 > 
 > [!code-csharp[Main](adding-a-new-field/samples/sample4.cs)]
 > 
-> Este código supone que los títulos son únicos. Si agrega manualmente un título duplicado, obtendrá la siguiente excepción la próxima vez que realice una migración.   
+> Este código supone que los títulos son únicos. Si agrega manualmente un título duplicado, recibirá la siguiente excepción la próxima vez que realice una migración.   
 > 
 > *La secuencia contiene más de un elemento*  
 > 
-> Para obtener más información sobre la [AddOrUpdate](https://msdn.microsoft.com/library/system.data.entity.migrations.idbsetextensions.addorupdate(v=vs.103).aspx) método, consulte [tener cuidado con el método de EF 4.3 AddOrUpdate](http://thedatafarm.com/blog/data-access/take-care-with-ef-4-3-addorupdate-method/)...
+> Para obtener más información acerca del método [AddOrUpdate](https://msdn.microsoft.com/library/system.data.entity.migrations.idbsetextensions.addorupdate(v=vs.103).aspx) , consulte el método de encargarse [con EF 4,3 AddOrUpdate](http://thedatafarm.com/blog/data-access/take-care-with-ef-4-3-addorupdate-method/).
 
-**Presione CTRL-MAYÚS-B para compilar el proyecto.** (Los pasos siguientes se producirá un error si no se crea en este momento.)
+**Presione Ctrl-Mayús-B para compilar el proyecto.** (Se producirá un error en los pasos siguientes si no se compila en este momento).
 
-El siguiente paso es crear un `DbMigration` clase para la migración inicial. Esta migración crea una nueva base de datos, por eso se eliminó el *movie.mdf* archivo en el paso anterior.
+El siguiente paso consiste en crear una clase `DbMigration` para la migración inicial. Esta migración crea una nueva base de datos, por eso se ha eliminado el archivo *Movie. MDF* en un paso anterior.
 
-En el **Package Manager Console** ventana, escriba el comando `add-migration Initial` para crear la migración inicial. El nombre "Inicial" es arbitrario y se usa un nombre al archivo de migración creado.
+En la ventana de la **consola del administrador de paquetes** , escriba el comando `add-migration Initial` para crear la migración inicial. El nombre "Initial" es arbitrario y se utiliza para asignar un nombre al archivo de migración creado.
 
 ![](adding-a-new-field/_static/image6.png)
 
-Migraciones de Code First crea otro archivo de clase en el *migraciones* carpeta (con el nombre *{fecha}\_Initial.cs* ), y esta clase contiene código que crea el esquema de base de datos. Previamente se ha corregido el nombre de archivo de migración con una marca de tiempo para ayudar a con la ordenación. Examine el *{fecha}\_Initial.cs* archivo, contiene las instrucciones para crear el `Movies` tabla para la base de datos de la película. Al actualizar la base de datos en las instrucciones que aparecen a continuación, esto *{fecha}\_Initial.cs* archivo ejecutará y crear el esquema de base de datos. El **inicialización** método se ejecutará para rellenar la base de datos con datos de prueba.
+Migraciones de Code First crea otro archivo de clase en la carpeta *Migrations* (con el nombre *{fecha}\_Initial.CS* ) y esta clase contiene código que crea el esquema de la base de datos. El nombre de archivo de la migración se ha fijado previamente con una marca de tiempo para ayudar con la ordenación. Examine el archivo *{fecha}\_Initial.CS* , que contiene las instrucciones para crear la tabla de `Movies` de la base de la película. Al actualizar la base de datos en las instrucciones siguientes, se ejecutará este archivo *{fecha}\_Initial.CS* y se creará el esquema de la base de datos. A continuación, el método de **inicialización** se ejecutará para rellenar la base de datos con datos de prueba.
 
-En el **Package Manager Console**, escriba el comando `update-database` para crear la base de datos y ejecutar el `Seed` método.
+En la **consola del administrador de paquetes**, escriba el comando `update-database` para crear la base de datos y ejecutar el método `Seed`.
 
 ![](adding-a-new-field/_static/image7.png)
 
-Si se produce un error que indica una tabla ya existe y no se puede crear, probablemente es porque se ejecutó la aplicación después de eliminar la base de datos y antes de ejecutar `update-database`. En ese caso, elimine la *Movies.mdf* archivo nuevo y vuelva a intentar la `update-database` comando. Si sigue apareciendo un error, elimine la carpeta de migraciones y contenido, comience con las instrucciones que aparecen en la parte superior de esta página (que es eliminar el *Movies.mdf* de archivos, a continuación, continúe con Enable-Migrations). Si sigue apareciendo un error, abra el Explorador de objetos de SQL Server y quitar la base de datos de la lista.
+Si recibe un error que indica que una tabla ya existe y no se puede crear, es probable que haya ejecutado la aplicación después de eliminar la base de datos y antes de ejecutar `update-database`. En ese caso, elimine el archivo *movies. MDF* de nuevo y vuelva a intentar el comando `update-database`. Si sigue apareciendo un error, elimine la carpeta migraciones y el contenido y, a continuación, comience con las instrucciones que se indican en la parte superior de esta página (es decir, elimine el archivo *movies. MDF* y continúe con habilitar-migraciones). Si sigue apareciendo un error, abra Explorador de objetos de SQL Server y quite la base de datos de la lista.
 
-Ejecute la aplicación y vaya a la */Movies* dirección URL. Se muestran los datos de inicialización.
+Ejecute la aplicación y vaya a la dirección URL de */Movies* . Se muestran los datos de inicialización.
 
 ![](adding-a-new-field/_static/image8.png)
 
 ## <a name="adding-a-rating-property-to-the-movie-model"></a>Adición de una propiedad de clasificación al modelo Movie
 
-Empiece agregando un nuevo `Rating` propiedad existente `Movie` clase. Abra el *Models\Movie.cs* y agréguele el `Rating` propiedad como esta:
+Comience agregando una nueva propiedad `Rating` a la clase `Movie` existente. Abra el archivo *Models\Movie.CS* y agregue la propiedad `Rating` como esta:
 
 [!code-csharp[Main](adding-a-new-field/samples/sample5.cs)]
 
-La completa `Movie` clase ahora parece similar al código siguiente:
+La clase `Movie` completa ahora es similar al código siguiente:
 
 [!code-csharp[Main](adding-a-new-field/samples/sample6.cs?highlight=12)]
 
 Compile la aplicación (Ctrl + Mayús + B).
 
-Dado que ha agregado un nuevo campo a la `Movie` (clase), también debe actualizar el enlace *lista de permitidos* por lo que se incluirá esta nueva propiedad. Actualización de la `bind` atributo `Create` y `Edit` métodos de acción para incluir el `Rating` propiedad:
+Dado que ha agregado un nuevo campo a la `Movie` (clase), también debe actualizar el enlace *lista de permitidos* por lo que se incluirá esta nueva propiedad. Actualice el atributo `bind` de `Create` y `Edit` métodos de acción para incluir la propiedad `Rating`:
 
 [!code-csharp[Main](adding-a-new-field/samples/sample7.cs?highlight=1)]
 
 También debe actualizar las plantillas de vista para mostrar, crear y editar la nueva propiedad `Rating` en la vista del explorador.
 
-Abra el *\Views\Movies\Index.cshtml* archivo y agregue un `<th>Rating</th>` justo después de encabezado de columna la **precio** columna. A continuación, agregue un `<td>` columna cerca del final de la plantilla para representar el `@item.Rating` valor. A continuación es lo que la actualización *Index.cshtml* plantilla de vista es similar:
+Abra el archivo *\Views\Movies\Index.cshtml* y agregue un encabezado de columna `<th>Rating</th>` justo después de la columna **Price** . A continuación, agregue una `<td>` columna cerca del final de la plantilla para representar el valor `@item.Rating`. A continuación se muestra el aspecto de la plantilla de vista *index. cshtml* actualizada:
 
 [!code-cshtml[Main](adding-a-new-field/samples/sample8.cshtml?highlight=31-33,52-54)]
 
-A continuación, abra el *\Views\Movies\Create.cshtml* y agréguele el `Rating` campo con el siguiente marcado resaltado. Esto representa un cuadro de texto para que pueda especificar una clasificación cuando se crea una nueva película.
+A continuación, abra el archivo *\Views\Movies\Create.cshtml* y agregue el campo `Rating` con el siguiente marcado resaltado. Esto representa un cuadro de texto para que pueda especificar una clasificación cuando se crea una nueva película.
 
 [!code-cshtml[Main](adding-a-new-field/samples/sample9.cshtml?highlight=9-15)]
 
-Se ha actualizado el código de aplicación para admitir los nuevos `Rating` propiedad.
+Ahora ha actualizado el código de aplicación para admitir la nueva propiedad `Rating`.
 
-Ejecute la aplicación y vaya a la */Movies* dirección URL. Al hacerlo, sin embargo, verá uno de los errores siguientes:
+Ejecute la aplicación y vaya a la dirección URL de */Movies* . Sin embargo, cuando lo haga, verá uno de los siguientes errores:
 
 ![](adding-a-new-field/_static/image9.png)  
   
-El modelo que respalda el contexto 'MovieDBContext' ha cambiado desde que se creó la base de datos. Considere la posibilidad de usar migraciones de Code First para actualizar la base de datos (https://go.microsoft.com/fwlink/?LinkId=238269).
+El modelo de respaldo del contexto ' MovieDBContext ' ha cambiado desde que se creó la base de datos. Considere la posibilidad de usar Migraciones de Code First para actualizar la base de datos (https://go.microsoft.com/fwlink/?LinkId=238269).
 
 ![](adding-a-new-field/_static/image10.png)
 
-Si ve este error porque la actualización `Movie` ahora es diferente del esquema de clase de modelo en la aplicación la `Movie` tabla de la base de datos existente. (No hay ninguna columna `Rating` en la tabla de la base de datos).
+Está viendo este error porque la clase del modelo de `Movie` actualizada en la aplicación es ahora diferente del esquema de la tabla de `Movie` de la base de datos existente. (No hay ninguna columna `Rating` en la tabla de la base de datos).
 
 Este error se puede resolver de varias maneras:
 
-1. Haga que Entity Framework quite de forma automática la base de datos y la vuelva a crear basándose en el nuevo esquema de la clase del modelo. Este enfoque resulta muy conveniente al principio del ciclo de desarrollo cuando se está realizando el desarrollo activo en una base de datos de prueba; permite desarrollar rápidamente el esquema del modelo y la base de datos juntos. La desventaja, sin embargo, es la que se pierden los datos existentes en la base de datos, por lo que se *no* va a utilizar este enfoque en una base de datos de producción. Usar un inicializador para inicializar automáticamente una base de datos con datos de prueba suele ser una manera productiva de desarrollar una aplicación. Para obtener más información sobre los inicializadores de base de datos de Entity Framework, vea [tutorial de ASP.NET MVC/Entity Framework](../getting-started-with-ef-using-mvc/creating-an-entity-framework-data-model-for-an-asp-net-mvc-application.md).
+1. Haga que Entity Framework quite de forma automática la base de datos y la vuelva a crear basándose en el nuevo esquema de la clase del modelo. Este enfoque resulta muy conveniente al principio del ciclo de desarrollo cuando se está realizando el desarrollo activo en una base de datos de prueba; permite desarrollar rápidamente el esquema del modelo y la base de datos juntos. Sin embargo, el inconveniente es que se pierden los datos existentes en la base de datos, por lo que *no* se desea usar este enfoque en una base de datos de producción. Usar un inicializador para inicializar automáticamente una base de datos con datos de prueba suele ser una manera productiva de desarrollar una aplicación. Para obtener más información sobre Entity Framework inicializadores de base de datos, vea el [tutorial de ASP.NET MVC/Entity Framework](../getting-started-with-ef-using-mvc/creating-an-entity-framework-data-model-for-an-asp-net-mvc-application.md).
 2. Modifique explícitamente el esquema de la base de datos existente para que coincida con las clases del modelo. La ventaja de este enfoque es que se conservan los datos. Puede realizar este cambio de forma manual o mediante la creación de un script de cambio de base de datos.
 3. Use Migraciones de Code First para actualizar el esquema de la base de datos.
 
 Para este tutorial se usa Migraciones de Code First.
 
-Actualice el método de inicialización para que proporcione un valor para la nueva columna. Abrir archivo migrations\configuration. cs y agregue un campo de clasificación para cada objeto de película.
+Actualice el método de inicialización para que proporcione un valor para la nueva columna. Abra el archivo Migrations\Configuration.cs y agregue un campo rating a cada objeto Movie.
 
 [!code-csharp[Main](adding-a-new-field/samples/sample10.cs?highlight=6)]
 
-Compile la solución y, a continuación, abra el **Package Manager Console** ventana y escriba el siguiente comando:
+Compile la solución y, a continuación, abra la ventana de la **consola del administrador de paquetes** y escriba el siguiente comando:
 
 `add-migration Rating`
 
-El `add-migration` comando indica el marco de trabajo de migración para examinar el modelo de película actual con el esquema actual de la base de datos de la película y crear el código necesario para migrar la base de datos al nuevo modelo. El nombre *clasificación* es arbitrario y se utiliza un nombre al archivo de migración. Resulta útil usar un nombre descriptivo para el paso de migración.
+El comando `add-migration` indica al marco de migración que examine el modelo de película actual con el esquema de la base de la película actual y cree el código necesario para migrar la base de BD al nuevo modelo. La *clasificación* del nombre es arbitraria y se usa para asignar un nombre al archivo de migración. Resulta útil usar un nombre descriptivo para el paso de migración.
 
-Cuando finalice este comando, Visual Studio abre el archivo de clase que define la nueva `DbMigration` clase derivada y en el `Up` método puede ver el código que crea la nueva columna.
+Cuando finaliza este comando, Visual Studio abre el archivo de clase que define el nuevo `DbMigration` clase derivada y, en el método `Up`, puede ver el código que crea la nueva columna.
 
 [!code-csharp[Main](adding-a-new-field/samples/sample11.cs)]
 
-Compile la solución y, a continuación, escriba el `update-database` comando en el **Package Manager Console** ventana.
+Compile la solución y, a continuación, escriba el comando `update-database` en la ventana de la **consola del administrador de paquetes** .
 
-La siguiente imagen muestra la salida en el **Package Manager Console** ventana (la anteposición de la marca de fecha *clasificación* será diferente.)
+La siguiente imagen muestra la salida en la ventana de la **consola del administrador de paquetes** (la *clasificación* de fecha pendiente de la marca de fecha será diferente).
 
 ![](adding-a-new-field/_static/image11.png)
 
-Vuelva a ejecutar la aplicación y vaya a la URL /Movies. Puede ver el nuevo campo de clasificación.
+Vuelva a ejecutar la aplicación y vaya a la dirección URL de/movies. Puede ver el nuevo campo de clasificación.
 
 ![](adding-a-new-field/_static/image12.png)
 
-Haga clic en el **crear nuevo** el vínculo para agregar una nueva película. Tenga en cuenta que puede agregar una clasificación.
+Haga clic en el vínculo **crear nuevo** para agregar una nueva película. Tenga en cuenta que puede Agregar una clasificación.
 
 ![7_CreateRioII](adding-a-new-field/_static/image13.png)
 
@@ -177,13 +177,13 @@ Haga clic en **Crear**. La nueva película, incluida la clasificación, se muest
 
 ![7_ourNewMovie_SM](adding-a-new-field/_static/image14.png)
 
-Ahora que el proyecto usa las migraciones, no tendrá que quitar la base de datos al agregar un campo nuevo o actualizar en caso contrario, el esquema. En la sección siguiente, se podrá realizar más cambios de esquema y usar las migraciones para actualizar la base de datos.
+Ahora que el proyecto está usando migraciones, no tendrá que quitar la base de datos al agregar un nuevo campo o actualizar el esquema. En la siguiente sección, realizaremos más cambios en el esquema y usaremos migraciones para actualizar la base de datos.
 
-También debe agregar el `Rating` campo a las plantillas de vista de edición, detalles y eliminación.
+También debe agregar el campo `Rating` a las plantillas de vista Edit, details y DELETE.
 
-Puede escribir el comando "update-database" en el **Package Manager Console** vuelva a la ventana y ningún código de migración ejecutaría, porque el esquema coincide con el modelo. Sin embargo, ejecuta "update-database" ejecutará el `Seed` método nuevo, y si cambia cualquiera de los datos de inicialización, se perderán los cambios porque el `Seed` datos del método realiza una operación Upsert. Puede leer más sobre la `Seed` método de Tom Dykstra popular [tutorial de ASP.NET MVC/Entity Framework](../getting-started-with-ef-using-mvc/creating-an-entity-framework-data-model-for-an-asp-net-mvc-application.md).
+Podría escribir de nuevo el comando "Update-Database" en la ventana de la **consola del administrador de paquetes** y no se ejecutaría ningún código de migración, porque el esquema coincide con el modelo. Sin embargo, la ejecución de "Update-Database" volverá a ejecutar el método `Seed` y, si ha cambiado alguno de los datos de inicialización, se perderán los cambios porque el método de `Seed` upserts datos. Puede leer más sobre el método `Seed` en el [tutorial popular ASP.NET MVC/Entity Framework](../getting-started-with-ef-using-mvc/creating-an-entity-framework-data-model-for-an-asp-net-mvc-application.md)de Tom Dykstra.
 
-En esta sección, ha visto cómo puede modificar los objetos de modelo y mantener sincronizados con los cambios de la base de datos. También ha aprendido cómo rellenar una base de datos recién creada con datos de ejemplo para que pueda probar escenarios. Esto era simplemente una breve introducción a Code First, consulte [creación de un modelo de datos de Entity Framework para una aplicación ASP.NET MVC](../getting-started-with-ef-using-mvc/creating-an-entity-framework-data-model-for-an-asp-net-mvc-application.md) para ver un tutorial más completo sobre el tema. A continuación, echemos un vistazo a cómo puede agregar lógica de validación más completa para las clases del modelo y habilitar algunas reglas de negocios que se aplicará.
+En esta sección vio cómo puede modificar objetos de modelo y mantener la base de datos sincronizada con los cambios. También aprendió una manera de rellenar una base de datos recién creada con datos de ejemplo para que pueda probar escenarios. Esta es solo una introducción rápida a Code First, vea [creación de un modelo de datos Entity Framework para una aplicación ASP.NET MVC](../getting-started-with-ef-using-mvc/creating-an-entity-framework-data-model-for-an-asp-net-mvc-application.md) para obtener un tutorial más completo sobre el tema. A continuación, echemos un vistazo a cómo puede Agregar una lógica de validación más enriquecida a las clases de modelo y permitir que se apliquen algunas reglas de negocios.
 
 > [!div class="step-by-step"]
 > [Anterior](adding-search.md)
