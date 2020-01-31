@@ -5,31 +5,62 @@ description: Aprenda a usar las cookies de SameSite en ASP.NET
 ms.author: riande
 ms.date: 1/22/2019
 uid: samesite/system-web-samesite
-ms.openlocfilehash: d2160bd9aeb93398b49b3a0e5e7a8a4404a5bc63
-ms.sourcegitcommit: 88fc80e3f65aebdf61ec9414810ddbc31c543f04
+ms.openlocfilehash: c81ca38648609aa5347d2a8cc11889fc85d81711
+ms.sourcegitcommit: 4d439e01c82c7c95b19216fedaf5b1a11a1deb06
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/22/2020
-ms.locfileid: "76519198"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76826619"
 ---
 # <a name="work-with-samesite-cookies-in-aspnet"></a>Trabajar con cookies de SameSite en ASP.NET
 
 Por [Rick Anderson](https://twitter.com/RickAndMSFT)
 
-SameSite es un borrador de [IETF](https://ietf.org/about/) diseñado para proporcionar protección contra los ataques de falsificación de solicitud entre sitios (CSRF). El [borrador de SameSite 2019](https://tools.ietf.org/html/draft-west-cookie-incrementalism-00):
+SameSite es un estándar de borrador de [IETF](https://ietf.org/about/) diseñado para proporcionar protección contra los ataques de falsificación de solicitud entre sitios (CSRF). Originalmente elaborado en [2016](https://tools.ietf.org/html/draft-west-first-party-cookies-07), el borrador estándar se actualizó en [2019](https://tools.ietf.org/html/draft-west-cookie-incrementalism-00). El estándar actualizado no es compatible con versiones anteriores del estándar anterior, y las diferencias más destacables son las siguientes:
 
-* Trata las cookies como `SameSite=Lax` de forma predeterminada.
-* Indica que las cookies que imponen explícitamente `SameSite=None` para habilitar la entrega entre sitios se deben marcar como `Secure`.
+* Las cookies sin encabezado SameSite se tratan de forma predeterminada como `SameSite=Lax`.
+* `SameSite=None` debe usarse para permitir el uso de cookies entre sitios.
+* Las cookies que validan `SameSite=None` también se deben marcar como `Secure`.
+* El valor SameSite = None no lo permite el [estándar 2016](https://tools.ietf.org/html/draft-west-first-party-cookies-07) y hace que algunas implementaciones traten estas cookies como SameSite = STRICT. Consulte [compatibilidad con exploradores anteriores](#sob) en este documento.
 
-`Lax` funciona para la mayoría de las cookies de aplicación. Algunas formas de autenticación como [OpenID Connect](https://openid.net/connect/) (OIDC) y [WS-Federation](https://auth0.com/docs/protocols/ws-fed) tienen como valor predeterminado el envío de redirecciones basadas en post. Las redirecciones basadas en POST desencadenan las protecciones del explorador de SameSite, por lo que SameSite está deshabilitado para estos componentes. La mayoría de los inicios de sesión de [OAuth](https://oauth.net/) no se ven afectados debido a las diferencias en el modo en que fluye la solicitud.
+La configuración de `SameSite=Lax` funciona en la mayoría de las cookies de aplicación. Algunas formas de autenticación como [OpenID Connect](https://openid.net/connect/) (OIDC) y [WS-Federation](https://auth0.com/docs/protocols/ws-fed) tienen como valor predeterminado el envío de redirecciones basadas en post. Las redirecciones basadas en POST desencadenan las protecciones del explorador de SameSite, por lo que SameSite está deshabilitado para estos componentes. La mayoría de los inicios de sesión de [OAuth](https://oauth.net/) no se ven afectados debido a las diferencias en el modo en que fluye la solicitud.
 
-El parámetro `None` causa problemas de compatibilidad con los clientes que implementaron el [estándar de borrador anterior 2016](https://tools.ietf.org/html/draft-west-first-party-cookies-07) (por ejemplo, iOS 12). Consulte [compatibilidad con exploradores anteriores](#sob) en este documento.
+Las aplicaciones que usan `iframe` pueden experimentar problemas con cookies de `SameSite=Lax` o `SameSite=Strict` porque los iframe se tratan como escenarios entre sitios.
 
 Cada componente de ASP.NET que emite cookies debe decidir si SameSite es adecuado.
 
-## <a name="api-usage-with-samesite"></a>Uso de la API con SameSite
+Vea [problemas conocidos](#known) de problemas con las aplicaciones después de instalar las actualizaciones de SameSite .net de 2019.
 
-Vea [HttpCookie. SameSite (propiedad)](/dotnet/api/system.web.httpcookie.samesite#System_Web_HttpCookie_SameSite)
+## <a name="using-samesite-in-aspnet-472-and-48"></a>Uso de SameSite en ASP.NET 4.7.2 y 4,8
+
+.Net 4.7.2 y 4,8 admiten el [borrador estándar 2019](https://tools.ietf.org/html/draft-west-cookie-incrementalism-00) de SameSite desde la publicación de actualizaciones en diciembre de 2019. Los desarrolladores pueden controlar mediante programación el valor del encabezado SameSite mediante la [propiedad HttpCookie. SameSite](/dotnet/api/system.web.httpcookie.samesite#System_Web_HttpCookie_SameSite). Al establecer la propiedad `SameSite` en `Strict`, `Lax`o `None`, los valores se escriben en la red con la cookie. Si se establece en `(SameSiteMode)(-1)`, indica que no debe incluirse ningún encabezado SameSite en la red con la cookie. La [propiedad HttpCookie. Secure](/dotnet/api/system.web.httpcookie.secure)o ' requireSSL ' en los archivos de configuración se pueden usar para marcar la cookie como `Secure` o no.
+
+Las nuevas instancias de `HttpCookie` tendrán como valor predeterminado `SameSite=(SameSiteMode)(-1)` y `Secure=false`. Estos valores predeterminados se pueden invalidar en la sección configuración de `system.web/httpCookies`, donde la cadena `"Unspecified"` es una sintaxis sencilla de solo configuración para `(SameSiteMode)(-1)`:
+
+```xml
+<configuration>
+ <system.web>
+  <httpCookies sameSite="[Strict|Lax|None|Unspecified]" requireSSL="[true|false]" />
+ <system.web>
+<configuration>
+```
+
+ASP.Net también emite cuatro cookies específicas propias para estas características: autenticación anónima, autenticación de formularios, estado de sesión y administración de roles. Las instancias de estas cookies obtenidas en tiempo de ejecución se pueden manipular mediante las propiedades `SameSite` y `Secure` como cualquier otra instancia de HttpCookie. Sin embargo, debido a la aparición de revisiones del estándar SameSite, las opciones de configuración de estas cuatro cookies de características son incoherentes. A continuación se muestran las secciones de configuración y los atributos pertinentes, con valores predeterminados. Si no hay ningún atributo relacionado con `SameSite` o `Secure` para una característica, la característica revertirá a los valores predeterminados configurados en la sección `system.web/httpCookies` descrita anteriormente.
+
+```xml
+<configuration>
+ <system.web>
+  <anonymousIdentification cookieRequireSSL="false" /> <!-- No config attribute for SameSite -->
+  <authentication>
+   <forms cookieSameSite="Lax" requireSSL="false" />
+  </authentication>
+  <sessionState cookieSameSite="Lax" /> <!-- No config attribute for Secure -->
+  <roleManager cookieRequiresSSL="false" /> <!-- No config attribute for SameSite -->
+ <system.web>
+<configuration>
+```  
+
+**Nota**: ' sin especificar ' solo está disponible para `system.web/httpCookies@sameSite` en este momento. Esperamos agregar una sintaxis similar a los atributos de cookieSameSite mostrados anteriormente en futuras actualizaciones. La configuración de `(SameSiteMode)(-1)` en el código sigue funcionando en las instancias de estas cookies. *
 
 ## <a name="history-and-changes"></a>Historial y cambios
 
@@ -41,13 +72,25 @@ Las actualizaciones del 19 de noviembre de 2019 de Windows actualizaron .NET 4.7
 
 * **No** es compatible con las versiones anteriores del borrador 2016. Para obtener más información, consulte [compatibilidad con exploradores anteriores](#sob) en este documento.
 * Especifica que las cookies se tratan como `SameSite=Lax` de forma predeterminada.
-* Especifica las cookies que validan explícitamente `SameSite=None` para habilitar la entrega entre sitios debe marcarse como `Secure`. `None` es una nueva entrada para rechazarla.
+* Especifica las cookies que validan explícitamente `SameSite=None` para habilitar la entrega entre sitios también se debe marcar como `Secure`.
 * Es compatible con las revisiones emitidas tal y como se describe en la lista anterior de KB.
 * Está programado para que [Chrome](https://chromestatus.com/feature/5088147346030592) lo habilite de forma predeterminada en [febrero de 2020](https://blog.chromium.org/2019/10/developers-get-ready-for-new.html). Los exploradores empezaron a pasar a este estándar en 2019.
 
+<a name="known"><a/>
+
+## <a name="known-issues"></a>Problemas conocidos
+
+Dado que las especificaciones de borrador 2016 y 2019 no son compatibles, la actualización de .NET Framework de la versión de noviembre del 2019 presenta algunos cambios que pueden ser problemáticos.
+
+* Las cookies de estado de sesión y autenticación de formularios ahora se escriben en la red como `Lax` en lugar de sin especificar.
+  * Aunque la mayoría de las aplicaciones funcionan con cookies `SameSite=Lax`, las aplicaciones que se PUBLICAn en sitios o aplicaciones que hacen uso de `iframe` pueden encontrar que el estado de sesión o las cookies de autorización de formularios no se usan según lo esperado. Para solucionarlo, cambie el valor de `cookieSameSite` en la sección de configuración correspondiente, tal y como se explicó anteriormente.
+* HttpCookies (que establecen explícitamente `SameSite=None` en el código o en la configuración ahora tienen ese valor escrito con la cookie, mientras que antes se omitió. Esto puede producir problemas con exploradores más antiguos que solo admiten el estándar de borrador 2016.
+  * Cuando los exploradores de destino admiten el estándar de borrador de 2019 con cookies `SameSite=None`, recuerde también marcarlos `Secure` o es posible que no se reconozcan.
+  * Para revertir al comportamiento 2016 de no escribir `SameSite=None`, use la configuración de la aplicación `aspnet:SupressSameSiteNone=true`. Tenga en cuenta que esto se aplicará a todos los httpCookies (de la aplicación.
+
 ### <a name="azure-app-servicesamesite-cookie-handling"></a>Azure App Service: control de cookies de SameSite
 
-Consulte [Azure App Service: control de cookies de SameSite y .NET Framework revisión de 4.7.2](https://azure.microsoft.com/updates/app-service-samesite-cookie-update/) para obtener más información.
+Consulte [Azure App Service: control de cookies de SameSite y .NET Framework revisión de 4.7.2](https://azure.microsoft.com/updates/app-service-samesite-cookie-update/) para obtener información sobre cómo Azure App Service configura los comportamientos de SameSite en las aplicaciones de .net 4.7.2.
 
 <a name="sob"></a>
 
@@ -106,5 +149,6 @@ Las versiones de Electron incluyen versiones anteriores de Chromium. Por ejemplo
 
 ## <a name="additional-resources"></a>Recursos adicionales
 
+* [Próximos cambios en la cookie de SameSite en ASP.NET y ASP.NET Core](https://devblogs.microsoft.com/aspnet/upcoming-samesite-cookie-changes-in-asp-net-and-asp-net-core/)
 * [Blog de cromo: desarrolladores: Prepárese para New SameSite = None; Configuración de cookies seguras](https://blog.chromium.org/2019/10/developers-get-ready-for-new.html)
 * [Explicación de las cookies de SameSite](https://web.dev/samesite-cookies-explained/)
