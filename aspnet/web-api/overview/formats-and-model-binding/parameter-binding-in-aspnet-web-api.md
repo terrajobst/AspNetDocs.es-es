@@ -9,12 +9,12 @@ ms.custom: seoapril2019
 ms.assetid: e42c8388-04ed-4341-9fdb-41b1b4c06320
 msc.legacyurl: /web-api/overview/formats-and-model-binding/parameter-binding-in-aspnet-web-api
 msc.type: authoredcontent
-ms.openlocfilehash: 032368f94ce32cf6231458649e8fdd42bee685e9
-ms.sourcegitcommit: 88fc80e3f65aebdf61ec9414810ddbc31c543f04
+ms.openlocfilehash: 464cb9b45dc0b62c4da38b7cf612934808854d32
+ms.sourcegitcommit: e365196c75ce93cd8967412b1cfdc27121816110
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/22/2020
-ms.locfileid: "76519263"
+ms.lasthandoff: 02/07/2020
+ms.locfileid: "77074909"
 ---
 # <a name="parameter-binding-in-aspnet-web-api"></a>Enlace de parámetros en ASP.NET Web API
 
@@ -129,7 +129,7 @@ Con un proveedor de enlace de modelos, todavía necesita agregar el atributo **[
 
 [!code-csharp[Main](parameter-binding-in-aspnet-web-api/samples/sample13.cs)]
 
-## <a name="value-providers"></a>Proveedores de valor
+## <a name="value-providers"></a>Proveedores de valores
 
 He mencionado que un enlazador de modelos obtiene valores de un proveedor de valores. Para escribir un proveedor de valores personalizado, implemente la interfaz **IValueProvider** . Este es un ejemplo que extrae los valores de las cookies de la solicitud:
 
@@ -205,7 +205,7 @@ Si lo desea, puede reemplazar todo el servicio **IActionValueBinder** por una im
 
 ## <a name="additional-resources"></a>Recursos adicionales
 
-[Ejemplo de enlace de parámetros personalizados](http://github.com/aspnet/samples/tree/master/samples/aspnet/WebApi/CustomParameterBinding)
+[Ejemplo de enlace de parámetros personalizados](https://github.com/aspnet/samples/tree/master/samples/aspnet/WebApi/CustomParameterBinding)
 
 Mike retrete escribió una buena serie de entradas de blog sobre el enlace de parámetros de la API Web:
 

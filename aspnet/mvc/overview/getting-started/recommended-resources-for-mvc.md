@@ -8,12 +8,12 @@ ms.date: 04/10/2014
 ms.assetid: 7958d725-e958-4566-a85b-535eeb985f94
 msc.legacyurl: /mvc/overview/getting-started/recommended-resources-for-mvc
 msc.type: authoredcontent
-ms.openlocfilehash: 98089df48550216b50330d9b354168f570d857cd
-ms.sourcegitcommit: 22fbd8863672c4ad6693b8388ad5c8e753fb41a2
+ms.openlocfilehash: daccaedae0b0e60f5086f270f214f87da564a85d
+ms.sourcegitcommit: e365196c75ce93cd8967412b1cfdc27121816110
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/28/2019
-ms.locfileid: "74583183"
+ms.lasthandoff: 02/07/2020
+ms.locfileid: "77074935"
 ---
 # <a name="mvc-recommended-resources"></a>Recursos recomendados de MVC
 
@@ -80,7 +80,7 @@ por [Rick Anderson]((https://twitter.com/RickAndMSFT))
 
 <a id="security"></a>
 
-## <a name="security"></a>de seguridad
+## <a name="security"></a>Seguridad
 
 - [Creación de una aplicación ASP.NET MVC 5 con el inicio de sesión de Facebook y Google OAuth2](../security/create-an-aspnet-mvc-5-app-with-facebook-and-google-oauth2-and-openid-sign-on.md)
 - [Qué no se debe hacer en ASP.NET y qué hacer en su lugar](../../../aspnet/overview/web-development-best-practices/what-not-to-do-in-aspnet-and-what-to-do-instead.md)
@@ -99,7 +99,7 @@ por [Rick Anderson]((https://twitter.com/RickAndMSFT))
 - [Seguridad en ASP.NET MVC](http://www.codeproject.com/Articles/654846/Security-In-ASP-NET-MVC)
 - [Protección de la aplicación ASP.NET MVC 4](https://blogs.msdn.com/b/rickandy/archive/2012/03/23/securing-your-asp-net-mvc-4-app-and-the-new-allowanonymous-attribute.aspx)
 - [Vídeo de información general sobre los procedimientos de seguridad de Pluralsight](http://www.pluralsight-training.net/microsoft/players/PSODPlayer?author=scott-allen&amp;name=mvc3-building-security&amp;mode=live&amp;clip=0&amp;course=aspdotnet-mvc3-intro)
-- [Prevención de XSRF/CSRF en ASP.NET MVC y Web Pages](../security/xsrfcsrf-prevention-in-aspnet-mvc-and-web-pages.md)
+- [XSRF/CSRF Prevention in ASP.NET MVC and Web Pages](../security/xsrfcsrf-prevention-in-aspnet-mvc-and-web-pages.md) (Prevención de XSRF y CSRF en ASP.NET MVC y Web Pages)
 - [10 principales OWASP para desarrolladores de .NET](http://www.troyhunt.com/2010/05/owasp-top-10-for-net-developers-part-1.html)
 - [Usar proveedores OAuth con MVC 4](../older-versions/using-oauth-providers-with-mvc.md)
 - [Prueba de piratería de aplicaciones ASP.net](https://msdn.microsoft.com/magazine/hh580736.aspx) Artículo de diciembre de 2011 de MSDN Magazine del tulipán de Adam
@@ -123,7 +123,7 @@ por [Rick Anderson]((https://twitter.com/RickAndMSFT))
 - [La pertenencia no es igual que la autenticación mediante formularios](http://brockallen.com/2012/06/04/membership-is-not-the-same-as-forms-authentication/)
 - [Piense dos veces sobre el uso de MembershipProvider (y SimpleMembership)](http://brockallen.com/2012/09/02/think-twice-about-using-membershipprovider-and-simplemembership/)
 - [Implementación de la autenticación de dos factores MVC con Google Authenticator](http://www.codeproject.com/Articles/403355/Implementing-MVC-Two-Factor-Authentication-with-Go)
-- new
+- nuevo
 - [ASP.NET Identity y Table Storage de Azure](https://blogs.msdn.com/b/stuartleeks/archive/2014/01/15/asp-net-identity-and-windows-azure-table-storage.aspx)
 
 <a id="OWIN"></a>
@@ -315,7 +315,7 @@ por [Rick Anderson]((https://twitter.com/RickAndMSFT))
 - [Creación de aplicaciones de prueba unitaria en ASP.NET MVC: tutorial para principiantes](http://www.codeproject.com/Articles/579035/Creating-Unit-Testable-Applications-in-ASP-NET-MVC)
 - [Inyección de dependencia del controlador MVC de ASP.NET para principiantes](http://www.codeproject.com/Articles/560798/ASP-NET-MVC-controller-dependency-injection-for-be)
 - [Escribir pruebas unitarias para un método de acción de ASP.NET MVC que controla la solicitud de Ajax y la solicitud normal](https://weblogs.asp.net/shijuvarghese/archive/2012/12/09/writing-unit-tests-for-an-asp-net-mvc-action-method-that-handles-ajax-request-and-normal-request.aspx)
-- [Roble: incorpore el desarrollo dinámico y sin problemas a ASP.NET MVC](http://amirrajan.github.com/Oak/)
+- [Roble: incorpore el desarrollo dinámico y sin problemas a ASP.NET MVC](https://amirrajan.github.com/Oak/)
 - [Desarrollo de una aplicación ASP.NET MVC 4 para TDD con xUnit y MOQ](http://www.dotnetcurry.com/ShowArticle.aspx?ID=836)
 - [Probar vistas de MVC de ASP.net, desde un proyecto nuevo al servidor de compilación](https://channel9.msdn.com/Events/aspConf/aspConf/Testing-ASP-NET-MVC-Views-from-New-Project-to-the-Build-Server) (vídeo)
 - [Inicio rápido: desarrollo controlado por pruebas](https://channel9.msdn.com/Events/aspConf/aspConf/Quick-Start-Test-Driven-Development)(vídeo)
@@ -327,7 +327,7 @@ por [Rick Anderson]((https://twitter.com/RickAndMSFT))
 
 <a id="best"></a>
 
-## <a name="best-practices"></a>Procedimientos recomendados
+## <a name="best-practices"></a>Prácticas recomendadas
 
 - [Qué no se debe hacer en ASP.NET y qué hacer en su lugar](../../../aspnet/overview/web-development-best-practices/what-not-to-do-in-aspnet-and-what-to-do-instead.md)
 - [Lista de comprobación para desarrolladores web](http://webdevchecklist.com/aspnet)
@@ -380,7 +380,7 @@ por [Rick Anderson]((https://twitter.com/RickAndMSFT))
 - [ASP.NET MVC en la parte 5 del capó](http://www.pieterg.com/2013/4/aspnet-mvc-under-the-hood-part-5) [ActionInvoker](https://msdn.microsoft.com/library/system.web.mvc.controller.actioninvoker(v=vs.108).aspx)
 - [ASP.NET MVC en la parte 6 del capó](http://www.pieterg.com/2013/5/aspnet-mvc-under-the-hood-part-6) Cómo se detectan ActionFilters y cómo se aplican
 - [Cree su propio ViewWebPage personalizado para ASP.NET MVC](http://www.love2dev.com/#!article/Create-Your-Own-Custom-ViewWebPage-for-ASPNET-MVC)
-- [Seguimiento en las vistas de Razor para ASP.NET MVC](https://blogs.msdn.com/b/webdev/archive/2013/07/16/tracing-in-asp-net-mvc-razor-views.aspx)
+- [Seguimiento en vistas Razor de ASP.NET MVC](https://blogs.msdn.com/b/webdev/archive/2013/07/16/tracing-in-asp-net-mvc-razor-views.aspx)
 - [Representación de vistas de Razor de ASP.NET MVC fuera de MVC revisadas](http://www.west-wind.com/weblog/posts/2013/Jul/15/Rendering-ASPNET-MVC-Razor-Views-outside-of-MVC-revisited)
 - [Cinco herramientas de front-end esenciales que se deben usar con proyectos modernos de MVC](http://www.adamtibi.net/06-2013/five-essential-front-end-tools-that-should-be-used-with-modern-mvc-projects)
 - [Características y puntos débiles del enlace de modelos de ASP.NET MVC](https://msdn.microsoft.com/magazine/hh781022.aspx)
