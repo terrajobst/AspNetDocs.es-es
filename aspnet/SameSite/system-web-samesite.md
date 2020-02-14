@@ -5,12 +5,12 @@ description: Aprenda a usar las cookies de SameSite en ASP.NET
 ms.author: riande
 ms.date: 1/22/2019
 uid: samesite/system-web-samesite
-ms.openlocfilehash: c81ca38648609aa5347d2a8cc11889fc85d81711
-ms.sourcegitcommit: 4d439e01c82c7c95b19216fedaf5b1a11a1deb06
+ms.openlocfilehash: c262e300361f33621e8bd126a34b251c23f56e1a
+ms.sourcegitcommit: 6bd0d7581ec36dc32cb85d0d5fc0e51068dd4423
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/29/2020
-ms.locfileid: "76826619"
+ms.lasthandoff: 02/14/2020
+ms.locfileid: "77234767"
 ---
 # <a name="work-with-samesite-cookies-in-aspnet"></a>Trabajar con cookies de SameSite en ASP.NET
 
@@ -55,7 +55,7 @@ ASP.Net también emite cuatro cookies específicas propias para estas caracterí
    <forms cookieSameSite="Lax" requireSSL="false" />
   </authentication>
   <sessionState cookieSameSite="Lax" /> <!-- No config attribute for Secure -->
-  <roleManager cookieRequiresSSL="false" /> <!-- No config attribute for SameSite -->
+  <roleManager cookieRequireSSL="false" /> <!-- No config attribute for SameSite -->
  <system.web>
 <configuration>
 ```  
@@ -66,7 +66,7 @@ ASP.Net también emite cuatro cookies específicas propias para estas caracterí
 
 La compatibilidad con SameSite se implementó por primera vez en .NET 4.7.2 con el [estándar de borrador 2016](https://tools.ietf.org/html/draft-west-first-party-cookies-07#section-4.1).
 
-Las actualizaciones del 19 de noviembre de 2019 de Windows actualizaron .NET 4.7.2 + del estándar 2016 al estándar 2019. Hay actualizaciones adicionales disponibles para otras versiones de Windows. Para obtener más información, vea <xref:samesite/kbs-samesite>.
+Las actualizaciones del 19 de noviembre de 2019 de Windows actualizaron .NET 4.7.2 + del estándar 2016 al estándar 2019. Hay actualizaciones adicionales disponibles para otras versiones de Windows. Para más información, consulte <xref:samesite/kbs-samesite>.
 
  El borrador 2019 de la especificación SameSite:
 
