@@ -9,16 +9,16 @@ ms.assetid: 053e23c4-13c9-40fa-87cb-3e9b0823b31e
 ms.custom: seoapril2019
 msc.legacyurl: /identity/overview/features-api/two-factor-authentication-using-sms-and-email-with-aspnet-identity
 msc.type: authoredcontent
-ms.openlocfilehash: 5f5218ca6c65ed3a2cd39d4e100349efa35d14cd
-ms.sourcegitcommit: 6f0e10e4ca61a1e5534b09c655fd35cdc6886c8a
+ms.openlocfilehash: 527b4392846e60dae0b216fdeabf21fd6618e4d7
+ms.sourcegitcommit: 7709c0a091b8d55b7b33bad8849f7b66b23c3d72
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/15/2019
-ms.locfileid: "74115090"
+ms.lasthandoff: 02/19/2020
+ms.locfileid: "77456743"
 ---
 # <a name="two-factorauthentication-using-sms-and-email-with-aspnet-identity"></a>Autenticación en dos fases mediante SMS y correo electrónico con ASP.NET Identity
 
-por [Hao Kung](https://github.com/HaoK), [Pranav Rastogi](https://github.com/rustd), [Rick Anderson]((https://twitter.com/RickAndMSFT)), [Suhas Joshi](https://github.com/suhasj)
+por [Hao Kung](https://github.com/HaoK), [Pranav Rastogi](https://github.com/rustd), [Rick Anderson](https://twitter.com/RickAndMSFT), [Suhas Joshi](https://github.com/suhasj)
 
 > En este tutorial se muestra cómo configurar la autenticación en dos fases (2FA) mediante SMS y el correo electrónico.
 > 
@@ -69,7 +69,7 @@ En este tutorial se proporcionan instrucciones sobre el uso de Twilio o ASPSMS, 
 2. **Instalación de paquetes adicionales o adición de referencias de servicio**  
   
    Twilio  
-   En la consola del administrador de paquetes, escriba el siguiente comando:  
+   En la Consola del Administrador de paquetes, escriba el siguiente comando:  
     `Install-Package Twilio`  
   
    ASPSMS:  
@@ -129,7 +129,7 @@ En este tutorial se proporcionan instrucciones sobre el uso de Twilio o ASPSMS, 
   
     ![](two-factor-authentication-using-sms-and-email-with-aspnet-identity/_static/image5.png)
 
-### <a name="examine-the-code"></a>Examinar el código
+### <a name="examine-the-code"></a>Examen del código
 
 [!code-csharp[Main](two-factor-authentication-using-sms-and-email-with-aspnet-identity/samples/sample3.cs?highlight=2)]
 

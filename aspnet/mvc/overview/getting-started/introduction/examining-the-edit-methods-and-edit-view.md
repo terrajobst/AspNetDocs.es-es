@@ -8,16 +8,16 @@ ms.date: 01/06/2019
 ms.assetid: 52a4d5fe-aa31-4471-b3cb-a064f82cb791
 msc.legacyurl: /mvc/overview/getting-started/introduction/examining-the-edit-methods-and-edit-view
 msc.type: authoredcontent
-ms.openlocfilehash: 946c88d2b337e3bf634f815c7f1ce045f29d9d84
-ms.sourcegitcommit: 88fc80e3f65aebdf61ec9414810ddbc31c543f04
+ms.openlocfilehash: 6cef963910b957e8b4ad7c7909385f6dbdff95c1
+ms.sourcegitcommit: 7709c0a091b8d55b7b33bad8849f7b66b23c3d72
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/22/2020
-ms.locfileid: "76518754"
+ms.lasthandoff: 02/19/2020
+ms.locfileid: "77456068"
 ---
 # <a name="examining-the-edit-methods-and-edit-view"></a>Examinar los métodos y la vista Edit
 
-por [Rick Anderson]((https://twitter.com/RickAndMSFT))
+por [Rick Anderson](https://twitter.com/RickAndMSFT)
 
 [!INCLUDE [Tutorial Note](index.md)]
 
@@ -29,7 +29,7 @@ También puede hacer que la referencia cultural de fecha sea específica de la s
 
 [!code-csharp[Main](examining-the-edit-methods-and-edit-view/samples/sample2.cs?highlight=3)]
 
-En el próximo tutorial hablaremos de [DataAnnotations](https://msdn.microsoft.com/library/system.componentmodel.dataannotations.aspx). El atributo [Display](https://msdn.microsoft.com/library/system.componentmodel.dataannotations.displayattribute.aspx) especifica qué se muestra como nombre de un campo (en este caso, "Release Date" en lugar de "ReleaseDate"). El atributo [DataType](https://msdn.microsoft.com/library/system.componentmodel.dataannotations.datatypeattribute.aspx) especifica el tipo de los datos, en este caso es una fecha, por lo que no se muestra la información de hora almacenada en el campo. El atributo [DisplayFormat](https://msdn.microsoft.com/library/system.componentmodel.dataannotations.displayformatattribute.aspx) es necesario para un error en el explorador Chrome que presenta los formatos de fecha incorrectamente.
+En el tutorial siguiente se habla sobre [DataAnnotations](https://msdn.microsoft.com/library/system.componentmodel.dataannotations.aspx). El atributo [Display](https://msdn.microsoft.com/library/system.componentmodel.dataannotations.displayattribute.aspx) especifica qué se muestra como nombre de un campo (en este caso, "Release Date" en lugar de "ReleaseDate"). El atributo [DataType](https://msdn.microsoft.com/library/system.componentmodel.dataannotations.datatypeattribute.aspx) especifica el tipo de los datos, en este caso es una fecha, por lo que no se muestra la información de hora almacenada en el campo. El atributo [DisplayFormat](https://msdn.microsoft.com/library/system.componentmodel.dataannotations.displayformatattribute.aspx) es necesario para un error en el explorador Chrome que presenta los formatos de fecha incorrectamente.
 
 Ejecute la aplicación y vaya al controlador de `Movies`. Mantenga el puntero del mouse sobre un vínculo de **edición** para ver la dirección URL a la que está vinculado.
 

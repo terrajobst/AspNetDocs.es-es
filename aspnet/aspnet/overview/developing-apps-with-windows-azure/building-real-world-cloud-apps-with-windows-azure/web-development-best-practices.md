@@ -8,16 +8,16 @@ ms.date: 06/12/2014
 ms.assetid: 52d6c941-2cd9-442f-9872-2c798d6d90cd
 msc.legacyurl: /aspnet/overview/developing-apps-with-windows-azure/building-real-world-cloud-apps-with-windows-azure/web-development-best-practices
 msc.type: authoredcontent
-ms.openlocfilehash: 0956aaaf1f6a1a0d2f5d93f98cb6959cec98dbaf
-ms.sourcegitcommit: 22fbd8863672c4ad6693b8388ad5c8e753fb41a2
+ms.openlocfilehash: dfd8a3ac2328d3f17dfbe36e68b37d181177b0f4
+ms.sourcegitcommit: 7709c0a091b8d55b7b33bad8849f7b66b23c3d72
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/28/2019
-ms.locfileid: "74582702"
+ms.lasthandoff: 02/19/2020
+ms.locfileid: "77457094"
 ---
 # <a name="web-development-best-practices-building-real-world-cloud-apps-with-azure"></a>Prácticas recomendadas de desarrollo web (creación de aplicaciones en la nube reales con Azure)
 
-por [Mike Wasson](https://github.com/MikeWasson), [Rick Anderson]((https://twitter.com/RickAndMSFT)), [Tom Dykstra](https://github.com/tdykstra)
+por [Mike Wasson](https://github.com/MikeWasson), [Rick Anderson](https://twitter.com/RickAndMSFT), [Tom Dykstra](https://github.com/tdykstra)
 
 [Descargar el proyecto de corrección de ti](https://code.msdn.microsoft.com/Fix-It-app-for-Building-cdd80df4) o [descargar el libro electrónico](https://blogs.msdn.com/b/microsoft_press/archive/2014/07/23/free-ebook-building-cloud-apps-with-microsoft-azure.aspx)
 
@@ -45,7 +45,7 @@ La mayoría de las aplicaciones del mundo real necesitan almacenar el estado de 
 
 Como ejemplo de lo fácil que es escalar una aplicación en sitios web de Windows Azure si el nivel Web no tiene estado, consulte la pestaña **escala** de un sitio web de Windows Azure en el portal de administración:
 
-![Pestaña escala](web-development-best-practices/_static/image1.png)
+![Pestaña Escala](web-development-best-practices/_static/image1.png)
 
 Si desea agregar servidores Web, basta con que arrastre el control deslizante recuento de instancias hacia la derecha. Establézcalo en 5 y haga clic en **Guardar**y, en segundos, tiene 5 servidores Web en Windows Azure que controlan el tráfico del sitio Web.
 
@@ -76,7 +76,7 @@ La capacidad de escalar horizontalmente la aplicación es casi ilimitada en Wind
 <a id="sessionstate"></a>
 ## <a name="avoid-session-state"></a>Evitar el estado de sesión
 
-A menudo no resulta práctico en una aplicación en la nube del mundo real para evitar almacenar algún tipo de estado para una sesión de usuario, pero algunos enfoques afectan al rendimiento y la escalabilidad más que otros. Si tiene que almacenar el estado, la mejor solución es mantener la cantidad de estado pequeña y almacenarla en cookies. Si eso no es factible, la siguiente mejor solución es usar el estado de sesión ASP.NET con un proveedor para la [caché distribuida en memoria](distributed-caching.md#sessionstate). La peor solución desde el punto de vista de rendimiento y escalabilidad es usar un proveedor de estado de sesión respaldado por la base de datos.
+No suele ser práctico evitar almacenar algún tipo de estado para una sesión de usuario en una aplicación de nube real, pero algunos enfoques afectan al rendimiento y a la escalabilidad más que otros Si tiene que almacenar el estado, la mejor solución es que la cantidad sea reducida y que se almacene en cookies. Si eso no es factible, la siguiente mejor solución es usar el estado de sesión ASP.NET con un proveedor para la [caché distribuida en memoria](distributed-caching.md#sessionstate). La peor solución desde el punto de vista del rendimiento y la escalabilidad es usar un proveedor de estado de sesión con copia de seguridad de base de datos.
 
 <a id="cdn"></a>
 ## <a name="use-a-cdn-to-cache-static-file-assets"></a>Usar una red CDN para almacenar en caché recursos de archivos estáticos

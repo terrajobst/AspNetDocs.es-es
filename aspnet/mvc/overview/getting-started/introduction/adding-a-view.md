@@ -5,16 +5,16 @@ description: Agregar una vista a una aplicación MVC
 ms.author: riande
 ms.date: 01/23/2019
 uid: mvc/overview/getting-started/introduction/adding-a-view
-ms.openlocfilehash: 4b369028aca1e8a6cace60466b8049ccc02a2ec2
-ms.sourcegitcommit: 88fc80e3f65aebdf61ec9414810ddbc31c543f04
+ms.openlocfilehash: 0bc6ac06d12aaee4b2a11c1bf246f9f20f0be017
+ms.sourcegitcommit: 7709c0a091b8d55b7b33bad8849f7b66b23c3d72
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/22/2020
-ms.locfileid: "76519068"
+ms.lasthandoff: 02/19/2020
+ms.locfileid: "77456652"
 ---
 # <a name="adding-a-view"></a>Agregar una vista
 
-por [Rick Anderson]((https://twitter.com/RickAndMSFT))
+por [Rick Anderson](https://twitter.com/RickAndMSFT)
 
 [!INCLUDE [Tutorial Note](index.md)]
 

@@ -8,16 +8,16 @@ ms.date: 10/17/2013
 ms.assetid: caa1ba4a-f9f0-4181-ba21-042e3997861d
 msc.legacyurl: /mvc/overview/getting-started/introduction/accessing-your-models-data-from-a-controller
 msc.type: authoredcontent
-ms.openlocfilehash: e01953dcfb2abf2db53a8aa869aa75b40485daca
-ms.sourcegitcommit: 88fc80e3f65aebdf61ec9414810ddbc31c543f04
+ms.openlocfilehash: 5d882d765133d32d3acdba9ffb5d43b69119a273
+ms.sourcegitcommit: 7709c0a091b8d55b7b33bad8849f7b66b23c3d72
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/22/2020
-ms.locfileid: "76519094"
+ms.lasthandoff: 02/19/2020
+ms.locfileid: "77457237"
 ---
 # <a name="accessing-your-models-data-from-a-controller"></a>Obtener acceso a los datos del modelo desde un controlador
 
-por [Rick Anderson]((https://twitter.com/RickAndMSFT))
+por [Rick Anderson](https://twitter.com/RickAndMSFT)
 
 [!INCLUDE [Tutorial Note](index.md)]
 
@@ -60,7 +60,7 @@ Seleccione el vínculo **Crear nuevo**. Escriba algunos detalles sobre una pelí
 ![](accessing-your-models-data-from-a-controller/_static/image5.png)
 
 > [!NOTE]
-> Es posible que no pueda escribir comas o puntos decimales en el campo precio. para admitir la validación de jQuery para configuraciones regionales distintas del inglés que usan una coma (&quot;,&quot;) para un separador decimal y formatos de fecha que no son de Inglés de EE. UU., debe incluir *Globalization. js* y el `Globalize.parseFloat`[https://github.com/jquery/globalize](https://github.com/jquery/globalize) archivo *culturas. culturas. js* . Mostraré cómo hacerlo en el siguiente tutorial. Por ahora, escriba solamente números enteros como 10.
+> Es posible que no pueda escribir comas o puntos decimales en el campo precio. para admitir la validación de jQuery para configuraciones regionales distintas del inglés que usan una coma (&quot;,&quot;) para un separador decimal y formatos de fecha que no son de Inglés de EE. UU., debe incluir *Globalization. js* y el `Globalize.parseFloat`[https://github.com/jquery/globalize](https://github.com/jquery/globalize) archivo *culturas. culturas. js* . Mostraré cómo hacerlo en el siguiente tutorial. Por ahora, tan solo debe escribir números enteros como 10.
 
 Al hacer clic en el botón **crear** , el formulario se envía al servidor, donde se guarda la información de la película en la base de datos. A continuación, se le redirigirá a la dirección URL de */Movies* , donde podrá ver la película recién creada en la lista.
 

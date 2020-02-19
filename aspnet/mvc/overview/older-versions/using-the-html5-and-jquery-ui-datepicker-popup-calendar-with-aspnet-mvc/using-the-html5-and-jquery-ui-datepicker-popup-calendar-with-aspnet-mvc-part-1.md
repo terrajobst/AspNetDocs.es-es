@@ -1,91 +1,91 @@
 ---
 uid: mvc/overview/older-versions/using-the-html5-and-jquery-ui-datepicker-popup-calendar-with-aspnet-mvc/using-the-html5-and-jquery-ui-datepicker-popup-calendar-with-aspnet-mvc-part-1
-title: Uso de HTML5 y calendario emergente de la interfaz de usuario Datepicker de jQuery con ASP.NET MVC - parte 1 | Microsoft Docs
+title: Usar el calendario emergente del DatePicker de la interfaz de usuario de HTML5 y jQuery con ASP.NET MVC, parte 1 | Microsoft Docs
 author: Rick-Anderson
-description: Este tutorial le enseñará los aspectos básicos de cómo trabajar con plantillas de editor, las plantillas de presentación y el calendario emergente de jQuery UI datepicker en una máquina virtual de ASP.NET...
+description: Este tutorial le enseñará los aspectos básicos de cómo trabajar con plantillas de editor, plantillas de pantalla y el calendario emergente de DatePicker de la interfaz de usuario de jQuery en un ASP.NET...
 ms.author: riande
 ms.date: 08/29/2011
 ms.assetid: c23d27f7-b0cf-44f2-8445-fb69e045c674
 msc.legacyurl: /mvc/overview/older-versions/using-the-html5-and-jquery-ui-datepicker-popup-calendar-with-aspnet-mvc/using-the-html5-and-jquery-ui-datepicker-popup-calendar-with-aspnet-mvc-part-1
 msc.type: authoredcontent
-ms.openlocfilehash: 6e7d31d96a36b55e2e1a9a475e2d90526cc6a5b2
-ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
+ms.openlocfilehash: c1c2380f24c72f6aabaaacaf975e95288a384ff1
+ms.sourcegitcommit: 7709c0a091b8d55b7b33bad8849f7b66b23c3d72
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/06/2019
-ms.locfileid: "65112393"
+ms.lasthandoff: 02/19/2020
+ms.locfileid: "77457627"
 ---
-# <a name="using-the-html5-and-jquery-ui-datepicker-popup-calendar-with-aspnet-mvc---part-1"></a>Uso de HTML5 y calendario emergente de la interfaz de usuario Datepicker de jQuery con ASP.NET MVC - parte 1
+# <a name="using-the-html5-and-jquery-ui-datepicker-popup-calendar-with-aspnet-mvc---part-1"></a>Usar el calendario emergente DatePicker de HTML5 y jQuery UI con ASP.NET MVC, parte 1
 
-by [Rick Anderson]((https://twitter.com/RickAndMSFT))
+por [Rick Anderson](https://twitter.com/RickAndMSFT)
 
-> Este tutorial le enseñará los aspectos básicos de cómo trabajar con plantillas de editor, las plantillas de presentación y el calendario emergente de jQuery UI datepicker en una aplicación Web de ASP.NET MVC.
+> Este tutorial le enseñará los aspectos básicos de cómo trabajar con plantillas de editor, plantillas de pantalla y el calendario emergente de DatePicker de la interfaz de usuario de jQuery en una aplicación web MVC de ASP.NET.
 
-Este tutorial le enseñará los aspectos básicos de cómo trabajar con plantillas de editor, las plantillas de presentación y jQuery [calendario emergente de la interfaz de usuario datepicker](http://plugins.jquery.com/project/datepicker) en una aplicación Web de ASP.NET MVC. Para este tutorial, puede utilizar Microsoft Visual Web Developer 2010 Express Service Pack 1 (&quot;Visual Web Developer&quot;), que es una versión gratuita de Microsoft Visual Studio, o puede usar Visual Studio 2010 SP1 si ya la tiene.
+Este tutorial le enseñará los aspectos básicos de cómo trabajar con plantillas de editor, plantillas de pantalla y el [calendario emergente de DatePicker](http://plugins.jquery.com/project/datepicker) de la interfaz de usuario de jQuery en una aplicación web MVC de ASP.net. En este tutorial, puede usar Microsoft Visual Web Developer 2010 Express Service Pack 1 (&quot;Visual Web Developer&quot;), que es una versión gratuita de Microsoft Visual Studio, o puede usar Visual Studio 2010 SP1 si ya lo tiene.
 
-Antes de empezar, asegúrese de que ha instalado los requisitos previos descritos a continuación. Puede instalar todos ellos haciendo clic en el siguiente vínculo: [Instalador de plataforma Web](https://www.microsoft.com/web/gallery/install.aspx?appid=VWD2010SP1Pack). Como alternativa, puede instalar el software necesario mediante los vínculos siguientes individualmente:
+Antes de empezar, asegúrese de que ha instalado los requisitos previos que se enumeran a continuación. Para instalar todos ellos, haga clic en el vínculo siguiente: [instalador de plataforma web](https://www.microsoft.com/web/gallery/install.aspx?appid=VWD2010SP1Pack). Como alternativa, puede instalar individualmente el software necesario mediante los siguientes vínculos:
 
 - [Requisitos previos de Visual Studio Web Developer Express SP1](https://www.microsoft.com/web/gallery/install.aspx?appid=VWD2010SP1Pack)
 - [ASP.NET MVC 3 Tools Update](https://www.microsoft.com/web/gallery/install.aspx?appsxml=&amp;appid=MVC3)
-- [SQL Server Compact 4.0](https://www.microsoft.com/web/gallery/install.aspx?appid=SQLCE;SQLCEVSTools_4_0)(tiempo de ejecución de herramientas de soporte técnico +)
+- [SQL Server Compact 4,0](https://www.microsoft.com/web/gallery/install.aspx?appid=SQLCE;SQLCEVSTools_4_0)(compatibilidad con herramientas y tiempo de ejecución)
 
-Si usa Visual Studio 2010, en lugar de Visual Web Developer, instale los requisitos previos, haga clic en el siguiente vínculo: [Requisitos previos de Visual Studio 2010](https://www.microsoft.com/web/gallery/install.aspx?appsxml=&amp;appid=VS2010SP1Pack).
+Si usa Visual Studio 2010 en lugar de Visual Web Developer, instale los requisitos previos haciendo clic en el siguiente vínculo: [requisitos previos de Visual Studio 2010](https://www.microsoft.com/web/gallery/install.aspx?appsxml=&amp;appid=VS2010SP1Pack).
 
-En este tutorial se supone que ha completado la [Introducción a MVC 3](../getting-started-with-aspnet-mvc3/cs/intro-to-aspnet-mvc-3.md) tutorial o que está familiarizado con el desarrollo de ASP.NET MVC. Este tutorial comienza con el proyecto completado de la [Introducción a MVC 3](../getting-started-with-aspnet-mvc3/cs/intro-to-aspnet-mvc-3.md) tutorial.
+En este tutorial se supone que ha completado el tutorial [de introducción con MVC 3](../getting-started-with-aspnet-mvc3/cs/intro-to-aspnet-mvc-3.md) o que está familiarizado con el desarrollo de ASP.NET MVC. Este tutorial comienza con el proyecto completado del tutorial [Introducción con MVC 3](../getting-started-with-aspnet-mvc3/cs/intro-to-aspnet-mvc-3.md) .
 
-En este tutorial se muestra código en C#. Sin embargo, el [proyecto inicial](https://archive.msdn.microsoft.com/Project/Download/FileDownload.aspx?ProjectName=aspnetmvcsamples&amp;DownloadId=15800) y proyecto completado también están disponibles en Visual Basic.
+En este tutorial se muestra C#el código de. Sin embargo, el [proyecto de inicio](https://archive.msdn.microsoft.com/Project/Download/FileDownload.aspx?ProjectName=aspnetmvcsamples&amp;DownloadId=15800) y el proyecto completado también están disponibles en Visual Basic.
 
-Un proyecto de Visual Studio con C# y código fuente de Visual Basic está disponible para este tema: [Descargar](https://archive.msdn.microsoft.com/Project/Download/FileDownload.aspx?ProjectName=aspnetmvcsamples&amp;DownloadId=15800).
+Un proyecto de Visual Studio C# con y Visual Basic código fuente está disponible para acompañar este tema: [Descargar](https://archive.msdn.microsoft.com/Project/Download/FileDownload.aspx?ProjectName=aspnetmvcsamples&amp;DownloadId=15800).
 
-### <a name="what-youll-build"></a>¿Qué va a crear
+### <a name="what-youll-build"></a>Lo que creará
 
-Deberá agregar plantillas (en concreto, editar y mostrar las plantillas) a la aplicación simple de la lista de películas que se creó en el [Introducción a MVC 3](../getting-started-with-aspnet-mvc3/cs/intro-to-aspnet-mvc-3.md) tutorial. También agregará un [datepicker de jQuery UI](http://jqueryui.com/demos/datepicker/) calendario emergente para simplificar el proceso de especificación de fechas. Captura de pantalla siguiente muestra la aplicación modificada con el calendario emergente de jQuery UI datepicker muestra.
+Agregará plantillas (específicamente, plantillas de edición y visualización) a la aplicación de lista de películas sencilla que se creó en el tutorial [Introducción con MVC 3](../getting-started-with-aspnet-mvc3/cs/intro-to-aspnet-mvc-3.md) . También agregará un calendario emergente DatePicker de la [interfaz de usuario de jQuery](http://jqueryui.com/demos/datepicker/) para simplificar el proceso de escritura de fechas. En la captura de pantalla siguiente se muestra la aplicación modificada con el calendario emergente DatePicker de jQuery UI mostrado.
 
-![termine de jQuery](using-the-html5-and-jquery-ui-datepicker-popup-calendar-with-aspnet-mvc-part-1/_static/image1.png)
+![jQuery terminado](using-the-html5-and-jquery-ui-datepicker-popup-calendar-with-aspnet-mvc-part-1/_static/image1.png)
 
 ### <a name="skills-youll-learn"></a>Habilidades que aprenderá
 
-Aquí es lo que aprenderá:
+Aprenderá lo siguiente:
 
-- Cómo usar los atributos de la [DataAnnotations](https://msdn.microsoft.com/library/system.componentmodel.dataannotations.aspx) espacio de nombres para controlar el formato de datos cuando se muestre y cuando está en modo de edición.
-- Creación de plantillas (Editar y mostrar las plantillas) para controlar el formato de datos.
-- Cómo agregar el [datepicker de jQuery UI](http://jqueryui.com/demos/datepicker/) como una manera de especificar los campos de fecha.
+- Cómo usar los atributos del espacio de nombres [DataAnnotations](https://msdn.microsoft.com/library/system.componentmodel.dataannotations.aspx) para controlar el formato de los datos cuando se muestran y cuando están en modo de edición.
+- Cómo crear plantillas (editar y mostrar plantillas) para controlar el formato de los datos.
+- Cómo agregar el DatePicker de la [interfaz de usuario de jQuery](http://jqueryui.com/demos/datepicker/) como una manera de especificar los campos de fecha.
 
 ### <a name="getting-started"></a>Introducción
 
-Si no dispone de la aplicación de la lista de películas desde el proyecto de inicio, descargarlo: 
+Si aún no tiene la aplicación de lista de películas del proyecto de inicio, descárguelo: 
 
 * [Descargar](https://code.msdn.microsoft.com/Introduction-to-MVC-3-10d1b098).
-* En el Explorador de Windows, haga clic en el *MvcMovie.zip* de archivo y seleccione **propiedades**. 
-* En el **MvcMovie.zip propiedades** cuadro de diálogo, seleccione **desbloquear**. (Desbloqueo evita recibir una advertencia de seguridad que se produce cuando se intenta usar un *.zip* archivo que ha descargado desde el web.)
+* En el explorador de Windows, haga clic con el botón secundario en el archivo *MvcMovie. zip* y seleccione **propiedades**. 
+* En el cuadro de diálogo **propiedades de MvcMovie. zip** , seleccione **desbloquear**. (El desbloqueo evita recibir una advertencia de seguridad que se produce al intentar usar un archivo *.zip* que ha descargado de la web).
 
 ![](using-the-html5-and-jquery-ui-datepicker-popup-calendar-with-aspnet-mvc-part-1/_static/image2.png)
 
-Haga clic en el *MvcMovie.zip* de archivo y seleccione **extraer todo** para descomprimir el archivo. En Visual Studio 2010 o en Visual Web Developer, abra el *MvcMovieCS\_TU.sln* archivo.
+Haga clic con el botón secundario en el archivo *MvcMovie. zip* y seleccione **extraer todo** para descomprimir el archivo. En Visual Web Developer o Visual Studio 2010, abra el archivo *MvcMovieCS\_MA. sln* .
 
-En **el Explorador de soluciones**, haga doble clic en el *Views\Shared\\_Layout.cshtml* para abrirlo. Cambiar el `H1` encabezado desde **MVC Movie App** a **película jQuery**. Presione CTRL+F5 para ejecutar la aplicación y haga clic en el **inicio** ficha, que le llevará a la `Index` método del controlador de películas. Para probar la aplicación, seleccione la **editar** vínculo y el **detalles** vínculo para una de las películas. Tenga en cuenta que en el índice, editar, y las vistas de detalles, la fecha de publicación y precio bien tienen el formato:
+En **Explorador de soluciones**, haga doble clic en el *\\Views\Shared _Layout. cshtml* para abrirlo. Cambie el encabezado de `H1` de la **aplicación de película MVC** a **jQuery jQuery**. Presione CTRL + F5 para ejecutar la aplicación y haga clic en la pestaña **Inicio** , que le llevará al método `Index` del controlador de película. Para probar la aplicación, seleccione el vínculo **Editar** y el vínculo **detalles** de una de las películas. Tenga en cuenta que en las vistas de índice, edición y detalles, la fecha y el precio de lanzamiento tienen un formato correcto:
 
 ![](using-the-html5-and-jquery-ui-datepicker-popup-calendar-with-aspnet-mvc-part-1/_static/image3.png)
 
-El formato de la fecha y el precio es el resultado del uso de la [DisplayFormat](https://msdn.microsoft.com/library/system.componentmodel.dataannotations.displayformatattribute.aspx) atributo en las propiedades de la `Movie` clase.
+El formato de la fecha y el precio es el resultado de utilizar el atributo [DisplayFormat](https://msdn.microsoft.com/library/system.componentmodel.dataannotations.displayformatattribute.aspx) en las propiedades de la clase `Movie`.
 
-Abra el *Movie.cs* de archivos y marque como comentario el `DisplayFormat` atributo el `ReleaseDate` y `Price` propiedades. Resultante `Movie` clase tiene este aspecto:
+Abra el archivo *Movie.CS* y comente el atributo `DisplayFormat` en las propiedades `ReleaseDate` y `Price`. La clase `Movie` resultante tiene el siguiente aspecto:
 
 [!code-csharp[Main](using-the-html5-and-jquery-ui-datepicker-popup-calendar-with-aspnet-mvc-part-1/samples/sample1.cs)]
 
-Presione CTRL+F5 para ejecutar la aplicación y seleccione el **inicio** pestaña para ver la lista de películas. Esta vez la fecha de lanzamiento muestra la fecha y hora, y el campo de precio ya no muestra el símbolo de moneda. El cambio en el `Movie` clase deshacer el formato más bonito que vio anteriormente, pero se corregirá en un momento.
+Presione CTRL + F5 de nuevo para ejecutar la aplicación y seleccione la pestaña **Inicio** para ver la lista de películas. Esta vez, la fecha de lanzamiento muestra la fecha y la hora, y el campo precio ya no muestra el símbolo de moneda. El cambio en la clase `Movie` ha deshecho el bonito formato que vio anteriormente, pero lo corregiremos en un momento.
 
 ![](using-the-html5-and-jquery-ui-datepicker-popup-calendar-with-aspnet-mvc-part-1/_static/image4.png)
 
-### <a name="using-the-dataannotations-datatype-attribute-to-specify-the-data-type"></a>Usar el atributo DataAnnotations DataType para especificar el tipo de datos
+### <a name="using-the-dataannotations-datatype-attribute-to-specify-the-data-type"></a>Usar el atributo DataType de DataAnnotations para especificar el tipo de datos
 
-Reemplace la comentada `DisplayFormat` atributo para el `ReleaseDate` propiedad con el [DataType](https://msdn.microsoft.com/library/system.componentmodel.dataannotations.datatype.aspx) atributo, utilizando el `Date` enumeración. Reemplace el `DisplayFormat` atributo para el `Price` propiedad con el [DataType](https://msdn.microsoft.com/library/system.componentmodel.dataannotations.datatype.aspx) atributo nuevo, esta vez mediante el `Currency` enumeración. Este es el aspecto que tiene el código completo:
+Reemplace el atributo `DisplayFormat` comentado para la propiedad `ReleaseDate` por el atributo [DataType](https://msdn.microsoft.com/library/system.componentmodel.dataannotations.datatype.aspx) , mediante la enumeración `Date`. Reemplace el atributo `DisplayFormat` de la propiedad `Price` por el atributo [DataType](https://msdn.microsoft.com/library/system.componentmodel.dataannotations.datatype.aspx) de nuevo, pero esta vez con la enumeración `Currency`. Este es el aspecto del código completado:
 
 [!code-csharp[Main](using-the-html5-and-jquery-ui-datepicker-popup-calendar-with-aspnet-mvc-part-1/samples/sample2.cs)]
 
-Ejecute la aplicación. Ahora la fecha de lanzamiento y las propiedades de precio se formatean correctamente (es decir, con los formatos de fecha y moneda adecuados). El [DataType](https://msdn.microsoft.com/library/system.componentmodel.dataannotations.datatype.aspx) atributo proporciona metadatos de tipo para el MVC de ASP.NET integrados plantillas para que los campos que se representan en el formato correcto. Mediante el `DataType` atributo es preferible al uso la `DisplayFormat` atributo que se encontraba originalmente en el código, porque el `DataType` atributo hace que el modelo más limpio y más flexible para propósitos como la internacionalización.
+Ejecute la aplicación. Ahora, las propiedades fecha de lanzamiento y precio tienen el formato correcto (es decir, con los formatos de fecha y moneda adecuados). El atributo [DataType](https://msdn.microsoft.com/library/system.componentmodel.dataannotations.datatype.aspx) proporciona metadatos de tipo para las plantillas ASP.NET MVC integradas para que los campos se representen en el formato correcto. El uso del atributo `DataType` es preferible al uso del atributo `DisplayFormat` que estaba originalmente en el código, ya que el atributo `DataType` hace que el modelo sea más limpio y más flexible para propósitos como la internacionalización.
 
-En la sección siguiente verá cómo hacer que las plantillas personalizadas para mostrar los campos de fecha.
+En la sección siguiente, verá cómo crear plantillas personalizadas para mostrar los campos de fecha.
 
 > [!div class="step-by-step"]
 > [Siguiente](using-the-html5-and-jquery-ui-datepicker-popup-calendar-with-aspnet-mvc-part-2.md)

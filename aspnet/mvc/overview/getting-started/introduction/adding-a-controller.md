@@ -8,16 +8,16 @@ ms.date: 10/17/2013
 ms.assetid: cc764f3b-6921-486a-8f44-c6ccd1249acd
 msc.legacyurl: /mvc/overview/getting-started/introduction/adding-a-controller
 msc.type: authoredcontent
-ms.openlocfilehash: 80000b366203eff4b9524b7a5995832753b9eed3
-ms.sourcegitcommit: 88fc80e3f65aebdf61ec9414810ddbc31c543f04
+ms.openlocfilehash: 194a8a7398e163f0c37164a8724f98b16444984b
+ms.sourcegitcommit: 7709c0a091b8d55b7b33bad8849f7b66b23c3d72
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/22/2020
-ms.locfileid: "76519055"
+ms.lasthandoff: 02/19/2020
+ms.locfileid: "77457224"
 ---
 # <a name="adding-a-controller"></a>Agregar un controlador
 
-por [Rick Anderson]((https://twitter.com/RickAndMSFT))
+por [Rick Anderson](https://twitter.com/RickAndMSFT)
 
 [!INCLUDE [Tutorial Note](index.md)]
 
@@ -80,7 +80,7 @@ Vamos a modificar ligeramente el ejemplo para que pueda pasar parte de la inform
 
 ![](adding-a-controller/_static/image7.png)
 
-En el ejemplo anterior, no se utiliza el segmento de dirección URL (`Parameters`), los parámetros `name` y `numTimes` se pasan como [cadenas de consulta](http://en.wikipedia.org/wiki/Query_string). El carácter comodín ? (signo de interrogación) en la dirección URL anterior es un separador y las cadenas de consulta siguen. El carácter &amp; separa las cadenas de consulta.
+En el ejemplo anterior, no se utiliza el segmento de dirección URL (`Parameters`), los parámetros `name` y `numTimes` se pasan como [cadenas de consulta](http://en.wikipedia.org/wiki/Query_string). El signo ? (signo de interrogación) en la dirección URL anterior es un separador y las cadenas de consulta siguen. El carácter &amp; separa las cadenas de consulta.
 
 Reemplace el método de bienvenida por el código siguiente:
 

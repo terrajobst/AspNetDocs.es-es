@@ -8,16 +8,16 @@ ms.date: 06/12/2014
 ms.assetid: 364ce84e-5af8-4e08-afc9-75a512b01f84
 msc.legacyurl: /aspnet/overview/developing-apps-with-windows-azure/building-real-world-cloud-apps-with-windows-azure/design-to-survive-failures
 msc.type: authoredcontent
-ms.openlocfilehash: 9bf9acb8b4f8521d03c053c124c5fc4a07d6cb9a
-ms.sourcegitcommit: 22fbd8863672c4ad6693b8388ad5c8e753fb41a2
+ms.openlocfilehash: 348232af531b5d53dc3cb46d6d2c7931d95a572d
+ms.sourcegitcommit: 7709c0a091b8d55b7b33bad8849f7b66b23c3d72
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/28/2019
-ms.locfileid: "74585653"
+ms.lasthandoff: 02/19/2020
+ms.locfileid: "77457133"
 ---
 # <a name="design-to-survive-failures-building-real-world-cloud-apps-with-azure"></a>Diseño para sobrevivir a errores (creación de aplicaciones en la nube reales con Azure)
 
-por [Mike Wasson](https://github.com/MikeWasson), [Rick Anderson]((https://twitter.com/RickAndMSFT)), [Tom Dykstra](https://github.com/tdykstra)
+por [Mike Wasson](https://github.com/MikeWasson), [Rick Anderson](https://twitter.com/RickAndMSFT), [Tom Dykstra](https://github.com/tdykstra)
 
 [Descargar el proyecto de corrección de ti](https://code.msdn.microsoft.com/Fix-It-app-for-Building-cdd80df4) o [descargar el libro electrónico](https://blogs.msdn.com/b/microsoft_press/archive/2014/07/23/free-ebook-building-cloud-apps-with-microsoft-azure.aspx)
 
@@ -58,7 +58,7 @@ Se puede producir un error en todas las regiones. Un desastre natural puede dest
 
 Un objetivo de Azure es hacer que el control de todos estos tipos de errores sea mucho más fácil y verá algunos ejemplos de cómo lo hacemos en los capítulos siguientes.
 
-## <a name="slas"></a>Contrato
+## <a name="slas"></a>SLA
 
 A menudo, los usuarios suelen conocer los acuerdos de nivel de servicio (SLA) en el entorno de nube. Básicamente, se trata de promesas que las compañías hacen sobre la confiabilidad del servicio. Un acuerdo de nivel de servicio del 99,9% significa que debe esperar que el servicio funcione correctamente el 99,9% del tiempo. Este es un valor bastante habitual para un acuerdo de nivel de servicio y suena como un número muy alto, pero es posible que no se tenga en cuanta cuánto tiempo de inactividad se importe realmente en el 0,1%. Esta es una tabla que muestra cuánto tiempo de inactividad varios porcentajes de acuerdo de nivel de servicio van a más de un año, un mes y una semana.
 
@@ -70,7 +70,7 @@ Uno de los elementos que debe conocer sobre un acuerdo de nivel de servicio es e
 
 Por supuesto, siempre aspiramos a hacer mejor que el acuerdo de nivel de servicio; Normalmente, será mucho menor que eso. La promesa es que, si el tiempo de inactividad es mayor que el tiempo de inactividad máximo, puede solicitar dinero. Es posible que la cantidad de dinero que reciba probablemente no compense por completo el impacto de la empresa en el exceso de tiempo de inactividad, pero ese aspecto del contrato de nivel de servicio actúa como una directiva de cumplimiento y le permite saber que lo tomamos muy en serio.
 
-### <a name="composite-slas"></a>SLAs compuestos
+### <a name="composite-slas"></a>Acuerdos de Nivel de Servicio compuestos
 
 Una cuestión importante que hay que tener en cuenta cuando se examinan los acuerdos de nivel de servicio es el impacto del uso de varios servicios en una aplicación, cada uno de los cuales tiene un acuerdo de nivel de servicio independiente. Por ejemplo, la aplicación Fix it usa Azure App Service Web Apps, Azure Storage y SQL Database. Estos son los números de contrato de nivel de servicio a partir de la fecha en que se escribe este libro electrónico en diciembre, 2013:
 
@@ -78,7 +78,7 @@ Una cuestión importante que hay que tener en cuenta cuando se examinan los acue
 
 ¿Cuál es el tiempo de inactividad máximo que cabría esperar para la aplicación en función de estos acuerdos de nivel de servicio? Podría pensar que el tiempo de inactividad es igual al peor porcentaje del contrato de nivel de servicio o al 99,9% en este caso. Esto sería cierto si los tres servicios no siempre superaran al mismo tiempo, pero eso no es necesariamente lo que sucede realmente. Cada servicio puede producir un error de forma independiente en momentos diferentes, por lo que tiene que calcular el SLA compuesto multiplicando los números de contrato de nivel de servicio individuales.
 
-![ACUERDO de nivel de servicio compuesto](design-to-survive-failures/_static/image4.png)
+![Acuerdo de Nivel de Servicio compuesto](design-to-survive-failures/_static/image4.png)
 
 Por lo tanto, la aplicación podría estar inactiva no solo 43,2 minutos al mes, sino 3 veces esa cantidad, 108 minutos al mes, y sigue estando dentro de los límites del contrato de nivel de servicio de Azure.
 
@@ -122,7 +122,7 @@ Documentación:
 - [Continuidad empresarial en Azure SQL Database](https://msdn.microsoft.com/library/windowsazure/hh852669.aspx). Documentación sobre SQL Database características de alta disponibilidad y recuperación ante desastres.
 - [Alta disponibilidad y recuperación ante desastres para SQL Server en Azure virtual machines](https://msdn.microsoft.com/library/windowsazure/jj870962.aspx).
 
-Vídeos:
+Videos:
 
 - [Failsafe: creación de Cloud Services escalables y resistentes](https://channel9.msdn.com/Series/FailSafe). Series de nueve partes de Ulrich Homann, Marc Mercuri y Mark SIMM. Presenta conceptos de alto nivel y principios arquitectónicos de una manera muy accesible e interesante, con historias tomadas de la experiencia del equipo de asesoramiento al cliente (CAT) de Microsoft con clientes reales. Los episodios 1 y 8 profundizan en los motivos para diseñar aplicaciones en la nube que sobreviven a los errores. Vea también el debate de seguimiento de la limitación en el episodio 2 a partir de 49:57, la explicación de los puntos de error y los modos de error en el episodio 2 a partir de 56:05 y la explicación de los disyuntores del episodio 3 a partir de 40:55.
 - [Building Big: lecciones aprendidas de clientes de Azure, parte II](https://channel9.msdn.com/Events/Build/2012/3-030). Mark SIMM habla sobre el diseño de errores y la instrumentación de todo. Similar a la serie failsafe, pero profundiza en más detalles.

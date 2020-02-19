@@ -8,16 +8,16 @@ ms.date: 07/20/2015
 ms.assetid: 406518e9-3817-49ce-8b90-e82bc461e2c0
 msc.legacyurl: /aspnet/overview/developing-apps-with-windows-azure/building-real-world-cloud-apps-with-windows-azure/distributed-caching
 msc.type: authoredcontent
-ms.openlocfilehash: c66187b990a828c53bd2f8115e3c9660fc6022ed
-ms.sourcegitcommit: 22fbd8863672c4ad6693b8388ad5c8e753fb41a2
+ms.openlocfilehash: 87a7516415895e761d1589fd459b93e5c15c0f85
+ms.sourcegitcommit: 7709c0a091b8d55b7b33bad8849f7b66b23c3d72
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/28/2019
-ms.locfileid: "74582809"
+ms.lasthandoff: 02/19/2020
+ms.locfileid: "77457003"
 ---
 # <a name="distributed-caching-building-real-world-cloud-apps-with-azure"></a>Almacenamiento en caché distribuido (creación de aplicaciones en la nube reales con Azure)
 
-por [Mike Wasson](https://github.com/MikeWasson), [Rick Anderson]((https://twitter.com/RickAndMSFT)), [Tom Dykstra](https://github.com/tdykstra)
+por [Mike Wasson](https://github.com/MikeWasson), [Rick Anderson](https://twitter.com/RickAndMSFT), [Tom Dykstra](https://github.com/tdykstra)
 
 [Descargar el proyecto de corrección de ti](https://code.msdn.microsoft.com/Fix-It-app-for-Building-cdd80df4) o [descargar el libro electrónico](https://blogs.msdn.com/b/microsoft_press/archive/2014/07/23/free-ebook-building-cloud-apps-with-microsoft-azure.aspx)
 
@@ -90,12 +90,12 @@ Ha visto cómo la aplicación de corrección de ti podría implementar el almace
 
 Para obtener más información sobre el almacenamiento en caché, vea los siguientes recursos.
 
-Documentation
+Documentación
 
 - [Caché de Azure](https://msdn.microsoft.com/library/gg278356.aspx). Documentación oficial de MSDN sobre el almacenamiento en caché en Azure.
 - [Patrones y prácticas de Microsoft: Guía de Azure](https://msdn.microsoft.com/library/dn568099.aspx). Consulte la guía de almacenamiento en caché y el patrón de reserva.
 - [Failsafe: Guía para arquitecturas de nube resistentes](https://msdn.microsoft.com/library/windowsazure/jj853352.aspx). Notas del producto de Marc Mercuri, Ulrich Homann y Andrew Townhill. Vea la sección sobre el almacenamiento en caché.
-- [Prácticas recomendadas para el diseño de servicios a gran escala en Azure Cloud Services](https://msdn.microsoft.com/library/windowsazure/jj717232.aspx). Con. En las notas del producto, Mark SIMM y Michael Thomassy. Vea la sección sobre el almacenamiento en caché distribuido.
+- [Prácticas recomendadas para el diseño de servicios a gran escala en Azure Cloud Services](https://msdn.microsoft.com/library/windowsazure/jj717232.aspx). Hora En las notas del producto, Mark SIMM y Michael Thomassy. Vea la sección sobre el almacenamiento en caché distribuido.
 - [Almacenamiento en caché distribuido en la ruta de acceso a la escalabilidad](https://msdn.microsoft.com/magazine/dd942840.aspx). Un artículo de MSDN Magazine anterior (2009), pero una introducción claramente escrita al almacenamiento en caché distribuido en general. profundiza en más profundidad que las secciones de almacenamiento en caché de las notas del producto de infalible y procedimientos recomendados.
 
 Vídeos
@@ -103,7 +103,7 @@ Vídeos
 - [Failsafe: creación de Cloud Services escalables y resistentes](https://channel9.msdn.com/Series/FailSafe). Series de nueve partes de Ulrich Homann, Marc Mercuri y Mark SIMM. Presenta una vista de nivel 400 de cómo diseñar aplicaciones en la nube. Esta serie se centra en la teoría y los motivos por los que: para obtener más información sobre cómo hacerlo, consulte la creación de grandes series mediante Mark SIMM. Consulte la descripción de Caching en el episodio 3 a partir de 1:24:14.
 - [Building Big: lecciones aprendidas de clientes de Azure, parte I](https://channel9.msdn.com/Events/Build/2012/3-029). Simon Davies describe el almacenamiento en caché distribuido a partir de 46:00. Similar a la serie failsafe, pero profundiza en más detalles. La presentación se proporcionó el 31 de octubre de 2012, por lo que no cubre el servicio de almacenamiento en caché de Web Apps en Azure App Service que se presentó en 2013.
 
-Ejemplo de código
+Código de ejemplo
 
 - [Aspectos básicos del servicio en la nube en Azure](https://code.msdn.microsoft.com/Cloud-Service-Fundamentals-4ca72649). Aplicación de ejemplo que implementa el almacenamiento en caché distribuido. Vea la entrada de blog adjunta [aspectos básicos del servicio en la nube: aspectos básicos de almacenamiento en caché](https://blogs.msdn.com/b/windowsazure/archive/2013/10/03/cloud-service-fundamentals-caching-basics.aspx).
 

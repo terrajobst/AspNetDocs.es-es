@@ -8,16 +8,16 @@ ms.date: 06/12/2014
 ms.assetid: 1bc333c5-f096-4ea7-b170-779accc21c1a
 msc.legacyurl: /aspnet/overview/developing-apps-with-windows-azure/building-real-world-cloud-apps-with-windows-azure/the-fix-it-sample-application
 msc.type: authoredcontent
-ms.openlocfilehash: e6fda47babd3c2505315f42667c45f09482218c2
-ms.sourcegitcommit: 22fbd8863672c4ad6693b8388ad5c8e753fb41a2
+ms.openlocfilehash: 896196bdb6a6b0d12a6c798ead510e37dd38a9fc
+ms.sourcegitcommit: 7709c0a091b8d55b7b33bad8849f7b66b23c3d72
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/28/2019
-ms.locfileid: "74583742"
+ms.lasthandoff: 02/19/2020
+ms.locfileid: "77456886"
 ---
 # <a name="appendix-the-fix-it-sample-application-building-real-world-cloud-apps-with-azure"></a>Apéndice: aplicación de ejemplo de corrección (creación de aplicaciones en la nube reales con Azure)
 
-por [Mike Wasson](https://github.com/MikeWasson), [Rick Anderson]((https://twitter.com/RickAndMSFT)), [Tom Dykstra](https://github.com/tdykstra)
+por [Mike Wasson](https://github.com/MikeWasson), [Rick Anderson](https://twitter.com/RickAndMSFT), [Tom Dykstra](https://github.com/tdykstra)
 
 [Descargar el proyecto de corrección de ti](https://code.msdn.microsoft.com/Fix-It-app-for-Building-cdd80df4)
 
@@ -26,7 +26,7 @@ por [Mike Wasson](https://github.com/MikeWasson), [Rick Anderson]((https://twitt
 Este apéndice para crear aplicaciones en la nube de mundo real con el libro electrónico de Azure contiene las siguientes secciones que proporcionan información adicional sobre la aplicación de ejemplo de corrección de ti que puede descargar:
 
 - [Problemas conocidos](#knownissues)
-- [Procedimientos recomendados](#bestpractices)
+- [procedimientos recomendados](#bestpractices)
 - [Cómo ejecutar la aplicación desde Visual Studio en el equipo local](#run-in-vs)
 - [Implementación de la aplicación base para Azure App Service Web Apps mediante scripts de Windows PowerShell](#deploybase)
 - [Solución de problemas de los scripts de Windows PowerShell](#troubleshooting)
@@ -39,14 +39,14 @@ La aplicación Fix it se desarrolló originalmente para ilustrar lo más sencill
 
 En la lista siguiente se incluyen los problemas que deben abordarse en una aplicación de producción, pero por un motivo u otro que decidimos no abordar en la versión inicial de la aplicación de ejemplo Fix it.
 
-### <a name="security"></a>de seguridad
+### <a name="security"></a>Seguridad
 
 - Asegúrese de que no se puede asignar una tarea a un propietario no existente.
 - Asegúrese de que solo puede ver y modificar las tareas que ha creado o que tiene asignadas.
 - Use HTTPS para las páginas de inicio de sesión y las cookies de autenticación.
 - Especifique un límite de tiempo para las cookies de autenticación.
 
-### <a name="input-validation"></a>Validación de entrada
+### <a name="input-validation"></a>Validación de entradas
 
 En general, una aplicación de producción realizaría más validaciones de entrada que la aplicación de corrección de ti. Por ejemplo, el tamaño de imagen/tamaño de archivo de imagen permitido para la carga debe ser limitado.
 
@@ -215,7 +215,7 @@ Hay dos maneras de ejecutar la aplicación Fix it:
 <a id="runbase"></a>
 ### <a name="run-the-base-application"></a>Ejecutar la aplicación base
 
-1. Instale [Visual Studio 2017](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=button+cta&utm_content=download+vs2017).
+1. Instalación de [Visual Studio 2017](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=button+cta&utm_content=download+vs2017).
 2. Instale el [SDK de Azure para .net para Visual Studio](https://azure.microsoft.com/downloads/).
 3. Descargue el archivo. zip de la [Galería de código de MSDN](https://code.msdn.microsoft.com/Fix-It-app-for-Building-cdd80df4).
 4. En el explorador de archivos, haga clic con el botón derecho en el archivo. zip, haga clic en propiedades y, a continuación, en el ventana Propiedades haga clic en desbloquear.
@@ -249,7 +249,7 @@ Hay dos maneras de ejecutar la aplicación Fix it:
    3. En Explorador de soluciones, haga clic con el botón secundario en la solución FixIt y seleccione **propiedades**.
    4. Seleccione **proyectos de inicio múltiples**.
    5. En la lista desplegable **acción** , en MyFixIt y MyFixItCloudService, seleccione **iniciar**.
-   6. Haga clic en **Aceptar**.
+   6. Haga clic en **OK**.
    7. Presione **F5** para ejecutar ambos proyectos.
 
       Al ejecutar el proyecto MyFixItCloudService, Visual Studio inicia el emulador de proceso de Azure. En función de la configuración del firewall, es posible que deba permitir el emulador a través del firewall.
@@ -263,7 +263,7 @@ Si desea ejecutar en Azure sin usar colas y realizó los cambios para que se eje
 
 En estas instrucciones se supone que ya ha descargado y ejecutado la solución de corrección de ti localmente y que tiene una cuenta de Azure o tiene una suscripción de Azure que está autorizado a administrar.
 
-1. Instale la consola de **Azure PowerShell** . Para obtener instrucciones, consulte [Cómo instalar y configurar Azure PowerShell](https://docs.microsoft.com/powershell/azure/overview?view=azurermps-4.3.1).
+1. Instale la consola de **Azure PowerShell** . Para obtener instrucciones, consulte [Instalación y configuración de Azure PowerShell](https://docs.microsoft.com/powershell/azure/overview?view=azurermps-4.3.1).
 
     Esta consola personalizada está configurada para trabajar con su suscripción de Azure. El módulo de Azure se instala en el directorio *archivos de programa* y se importa automáticamente en cada uso de la consola de Azure PowerShell.
 

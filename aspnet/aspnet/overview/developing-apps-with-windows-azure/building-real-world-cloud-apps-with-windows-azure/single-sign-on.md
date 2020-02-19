@@ -8,16 +8,16 @@ ms.date: 06/12/2014
 ms.assetid: 7d82d5e9-0619-4f22-9e03-32a6d52940a5
 msc.legacyurl: /aspnet/overview/developing-apps-with-windows-azure/building-real-world-cloud-apps-with-windows-azure/single-sign-on
 msc.type: authoredcontent
-ms.openlocfilehash: 7e32f444dc38132296cffd45ac658f5abf51f314
-ms.sourcegitcommit: 22fbd8863672c4ad6693b8388ad5c8e753fb41a2
+ms.openlocfilehash: 1ca93cce22487295a24aae95437b3e69dfc5b504
+ms.sourcegitcommit: 7709c0a091b8d55b7b33bad8849f7b66b23c3d72
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/28/2019
-ms.locfileid: "74585281"
+ms.lasthandoff: 02/19/2020
+ms.locfileid: "77457146"
 ---
 # <a name="single-sign-on-building-real-world-cloud-apps-with-azure"></a>Inicio de sesión único (creación de aplicaciones en la nube reales con Azure)
 
-por [Mike Wasson](https://github.com/MikeWasson), [Rick Anderson]((https://twitter.com/RickAndMSFT)), [Tom Dykstra](https://github.com/tdykstra)
+por [Mike Wasson](https://github.com/MikeWasson), [Rick Anderson](https://twitter.com/RickAndMSFT), [Tom Dykstra](https://github.com/tdykstra)
 
 [Descargar el proyecto de corrección de ti](https://code.msdn.microsoft.com/Fix-It-app-for-Building-cdd80df4) o [descargar el libro electrónico](https://blogs.msdn.com/b/microsoft_press/archive/2014/07/23/free-ebook-building-cloud-apps-with-microsoft-azure.aspx)
 
@@ -42,7 +42,7 @@ Lo que Azure AD le permite hacer es crear un directorio en la nube. Es una carac
 
 Puede ser completamente independiente de la Active Directory local; puede colocar a cualquiera que desee en él y autenticarlos en aplicaciones de Internet.
 
-![Windows Azure Active Directory](single-sign-on/_static/image2.png)
+![Microsoft Azure Active Directory](single-sign-on/_static/image2.png)
 
 También puede integrarlo con su instancia de AD local.
 
@@ -128,7 +128,7 @@ Solo tiene que ejecutarlo en un controlador de dominio de la organización, en W
 
 A veces le preguntamos cómo es seguro esto: ¿usa Microsoft para sus datos empresariales confidenciales? Y la respuesta es sí. Por ejemplo, si va al sitio interno de Microsoft SharePoint en [https://microsoft.sharepoint.com/](https://microsoft.sharepoint.com/), se le pedirá que inicie sesión.
 
-![Inicio de sesión de Office 365](single-sign-on/_static/image20.png)
+![Inicio de sesión en Office 365](single-sign-on/_static/image20.png)
 
 Microsoft ha habilitado ADFS, por lo que, cuando escriba un identificador de Microsoft, se le redirigirá a una página de inicio de sesión de ADFS.
 
@@ -177,9 +177,9 @@ En el [siguiente capítulo](data-storage-options.md) se examinan las opciones de
 <a id="resources"></a>
 ## <a name="resources"></a>Recursos
 
-Para obtener más información, vea los siguientes recursos:
+Para obtener más información, consulte los siguientes recursos:
 
-- [Azure Active Directory documentación](https://docs.microsoft.com/azure/active-directory/). Página del portal de Azure AD documentación en el sitio de windowsazure.com. Para ver tutoriales paso a paso, consulte la sección **desarrollar** .
+- [Documentación de Azure Active Directory](https://docs.microsoft.com/azure/active-directory/). Página del portal de Azure AD documentación en el sitio de windowsazure.com. Para ver tutoriales paso a paso, consulte la sección **desarrollar** .
 - [Azure multi-factor Authentication](https://docs.microsoft.com/azure/multi-factor-authentication/). Página del portal para obtener documentación sobre la autenticación multifactor en Azure.
 - [Opciones de autenticación de cuenta de organización](../../../../visual-studio/overview/2013/creating-web-projects-in-visual-studio.md#orgauthoptions). Explicación de las opciones de autenticación de Azure AD en el cuadro de diálogo Visual Studio 2013 New-Project.
 - [Patrones y prácticas de Microsoft: patrón de identidad federada](https://msdn.microsoft.com/library/dn589790.aspx).

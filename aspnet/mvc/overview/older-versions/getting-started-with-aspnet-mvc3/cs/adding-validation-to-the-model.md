@@ -8,116 +8,116 @@ ms.date: 01/12/2011
 ms.assetid: 9af927e2-1c3b-43d9-917d-1df75be3c482
 msc.legacyurl: /mvc/overview/older-versions/getting-started-with-aspnet-mvc3/cs/adding-validation-to-the-model
 msc.type: authoredcontent
-ms.openlocfilehash: d6ad229775da61544d2d97e75b291d158e79af87
-ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
+ms.openlocfilehash: 19d86dc0df931a9d135e46209559892b77626cf6
+ms.sourcegitcommit: 7709c0a091b8d55b7b33bad8849f7b66b23c3d72
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/06/2019
-ms.locfileid: "65130143"
+ms.lasthandoff: 02/19/2020
+ms.locfileid: "77457730"
 ---
 # <a name="adding-validation-to-the-model-c"></a>Agregar la validación al modelo (C#)
 
-by [Rick Anderson]((https://twitter.com/RickAndMSFT))
+por [Rick Anderson](https://twitter.com/RickAndMSFT)
 
 > > [!NOTE]
-> > Hay disponible una versión actualizada de este tutorial [aquí](../../../getting-started/introduction/getting-started.md) que usa ASP.NET MVC 5 y Visual Studio 2013. Es más seguro y mucho más fácil de seguir y se muestran las características más.
+> > [Hay disponible una](../../../getting-started/introduction/getting-started.md) versión actualizada de este tutorial que usa ASP.NET MVC 5 y Visual Studio 2013. Es más seguro, mucho más fácil de seguir y demuestra más características.
 > 
 > 
-> Este tutorial le enseñará los aspectos básicos de la creación de una aplicación Web de ASP.NET MVC mediante Microsoft Visual Web Developer 2010 Express Service Pack 1, que es una versión gratuita de Microsoft Visual Studio. Antes de empezar, asegúrese de que ha instalado los requisitos previos descritos a continuación. Puede instalar todos ellos haciendo clic en el siguiente vínculo: [Instalador de plataforma Web](https://www.microsoft.com/web/gallery/install.aspx?appid=VWD2010SP1Pack). Como alternativa, puede instalar individualmente los requisitos previos mediante los vínculos siguientes:
+> Este tutorial le enseñará los aspectos básicos de la creación de una aplicación web MVC de ASP.NET con Microsoft Visual Web Developer 2010 Express Service Pack 1, que es una versión gratuita de Microsoft Visual Studio. Antes de empezar, asegúrese de que ha instalado los requisitos previos que se enumeran a continuación. Para instalar todos ellos, haga clic en el vínculo siguiente: [instalador de plataforma web](https://www.microsoft.com/web/gallery/install.aspx?appid=VWD2010SP1Pack). Como alternativa, puede instalar individualmente los requisitos previos con los siguientes vínculos:
 > 
 > - [Requisitos previos de Visual Studio Web Developer Express SP1](https://www.microsoft.com/web/gallery/install.aspx?appid=VWD2010SP1Pack)
 > - [ASP.NET MVC 3 Tools Update](https://www.microsoft.com/web/gallery/install.aspx?appsxml=&amp;appid=MVC3)
-> - [SQL Server Compact 4.0](https://www.microsoft.com/web/gallery/install.aspx?appid=SQLCE;SQLCEVSTools_4_0)(tiempo de ejecución de herramientas de soporte técnico +)
+> - [SQL Server Compact 4,0](https://www.microsoft.com/web/gallery/install.aspx?appid=SQLCE;SQLCEVSTools_4_0)(compatibilidad con herramientas y tiempo de ejecución)
 > 
-> Si usa Visual Studio 2010, en lugar de Visual Web Developer 2010, instale los requisitos previos, haga clic en el siguiente vínculo: [Requisitos previos de Visual Studio 2010](https://www.microsoft.com/web/gallery/install.aspx?appsxml=&amp;appid=VS2010SP1Pack).
+> Si utiliza Visual Studio 2010 en lugar de Visual Web Developer 2010, instale los requisitos previos haciendo clic en el siguiente vínculo: [requisitos previos de Visual Studio 2010](https://www.microsoft.com/web/gallery/install.aspx?appsxml=&amp;appid=VS2010SP1Pack).
 > 
-> Un proyecto de Visual Web Developer con código fuente de C# está disponible como acompañamiento de este tema. [Descargue la versión de C#](https://code.msdn.microsoft.com/Introduction-to-MVC-3-10d1b098). Si prefiere Visual Basic, cambie a la [versión de Visual Basic](../vb/intro-to-aspnet-mvc-3.md) de este tutorial.
+> Hay disponible un proyecto de Visual C# Web Developer con código fuente para acompañar este tema. [Descargue la C# versión](https://code.msdn.microsoft.com/Introduction-to-MVC-3-10d1b098). Si prefiere Visual Basic, cambie a la [versión Visual Basic](../vb/intro-to-aspnet-mvc-3.md) de este tutorial.
 
-En esta sección agregará lógica de validación para el `Movie` modelo y se asegurará de que las reglas de validación se aplican cada vez que un usuario intenta crear o editar una película con la aplicación.
+En esta sección, agregará la lógica de validación al modelo de `Movie` y se asegurará de que las reglas de validación se apliquen siempre que un usuario intente crear o editar una película mediante la aplicación.
 
-## <a name="keeping-things-dry"></a>Mantener las cosas seco
+## <a name="keeping-things-dry"></a>Mantener todo seco
 
-Uno de los principios de diseño principales de ASP.NET MVC es DRY ("no repitas"). ASP.NET MVC le anima a especificar funcionalidad o comportamiento de una sola vez y, a continuación, hacer que se reflejen en todas partes en una aplicación. Esto reduce la cantidad de código que necesita para escribir y hace que el código que escribir mucho más fácil mantener.
+Uno de los principios de diseño principales de ASP.NET MVC está seco ("Una vez y solo una"). ASP.NET MVC le anima a que especifique la funcionalidad o el comportamiento solo una vez y, a continuación, haga que se refleje en todas partes en una aplicación. Esto reduce la cantidad de código que necesita escribir y hace que el código que se escribe sea mucho más fácil de mantener.
 
-La compatibilidad de validación proporcionada por ASP.NET MVC y Entity Framework Code First es un buen ejemplo del principio DRY en acción. Puede especificar mediante declaración las reglas de validación en un solo lugar (en la clase del modelo) y, a continuación, esas reglas se aplican en toda la aplicación.
+La compatibilidad de validación proporcionada por ASP.NET MVC y Entity Framework Code First es un buen ejemplo del principio seco en acción. Puede especificar mediante declaración las reglas de validación en un solo lugar (en la clase de modelo) y, a continuación, esas reglas se aplican en todas partes de la aplicación.
 
-Echemos un vistazo a cómo puede aprovechar las ventajas de esta compatibilidad de validación de la aplicación de película.
+Echemos un vistazo a cómo puede aprovechar esta compatibilidad de validación en la aplicación de películas.
 
 ## <a name="adding-validation-rules-to-the-movie-model"></a>Agregar reglas de validación al modelo de película
 
-Para comenzar, agregar alguna lógica de validación para el `Movie` clase.
+Empezará agregando una lógica de validación a la clase `Movie`.
 
-Abra el archivo *Movie.cs*. Agregar un `using` instrucción en la parte superior del archivo que se hace referencia a la [ `System.ComponentModel.DataAnnotations` ](https://msdn.microsoft.com/library/system.componentmodel.dataannotations.aspx) espacio de nombres:
+Abra el archivo *Movie.cs*. Agregue una instrucción `using` en la parte superior del archivo que hace referencia al espacio de nombres [`System.ComponentModel.DataAnnotations`](https://msdn.microsoft.com/library/system.componentmodel.dataannotations.aspx) :
 
 [!code-csharp[Main](adding-validation-to-the-model/samples/sample1.cs)]
 
-El espacio de nombres forma parte de .NET Framework. Proporciona un conjunto integrado de atributos de validación que se pueden aplicar mediante declaración a cualquier clase o propiedad.
+El espacio de nombres forma parte de la .NET Framework. Proporciona un conjunto integrado de atributos de validación que puede aplicar mediante declaración a cualquier clase o propiedad.
 
-Ahora, actualice el `Movie` clase para aprovechar las ventajas de los integrados [ `Required` ](https://msdn.microsoft.com/library/system.componentmodel.dataannotations.requiredattribute.aspx), [ `StringLength` ](https://msdn.microsoft.com/library/system.componentmodel.dataannotations.stringlengthattribute.aspx), y [ `Range` ](https://msdn.microsoft.com/library/system.componentmodel.dataannotations.rangeattribute.aspx) atributos de validación . Use el código siguiente como ejemplo de dónde aplicar los atributos.
+Ahora, actualice la clase `Movie` para aprovechar los atributos de validación [`Required`](https://msdn.microsoft.com/library/system.componentmodel.dataannotations.requiredattribute.aspx), [`StringLength`](https://msdn.microsoft.com/library/system.componentmodel.dataannotations.stringlengthattribute.aspx)y [`Range`](https://msdn.microsoft.com/library/system.componentmodel.dataannotations.rangeattribute.aspx) integrados. Use el código siguiente como ejemplo de dónde aplicar los atributos.
 
 [!code-csharp[Main](adding-validation-to-the-model/samples/sample2.cs)]
 
-Los atributos de validación especifican el comportamiento que quiere aplicar en las propiedades del modelo al que se aplican. El `Required` atributo indica que una propiedad debe tener un valor; en este ejemplo, una película tiene que tener valores para el `Title`, `ReleaseDate`, `Genre`, y `Price` propiedades para que sean válidos. El atributo `Range` restringe un valor a un intervalo determinado. El atributo `StringLength` permite establecer la longitud máxima de una propiedad de cadena y, opcionalmente, su longitud mínima.
+Los atributos de validación especifican el comportamiento que quiere aplicar en las propiedades del modelo al que se aplican. El atributo `Required` indica que una propiedad debe tener un valor; en este ejemplo, una película tiene que tener valores para las propiedades `Title`, `ReleaseDate`, `Genre`y `Price` para ser válidos. El atributo `Range` restringe un valor a un intervalo determinado. El atributo `StringLength` permite establecer la longitud máxima de una propiedad de cadena y, opcionalmente, su longitud mínima.
 
-En primer lugar, código garantiza que se aplican las reglas de validación que especifique en una clase de modelo antes de que la aplicación guarda los cambios en la base de datos. Por ejemplo, el código siguiente generará una excepción cuando el `SaveChanges` se denomina método, porque varios necesario `Movie` faltan valores de propiedad y el precio es cero (lo que está fuera del intervalo válido).
+Code First garantiza que las reglas de validación que especifique en una clase de modelo se aplican antes de que la aplicación guarde los cambios en la base de datos. Por ejemplo, el código siguiente producirá una excepción cuando se llame al método `SaveChanges`, porque faltan algunos valores de propiedad `Movie` obligatorios y el precio es cero (que está fuera del intervalo válido).
 
 [!code-csharp[Main](adding-validation-to-the-model/samples/sample3.cs)]
 
-Las reglas de validación que aplique automáticamente .NET Framework ayuda a que la aplicación sea más robusto. También nos permite asegurarnos de que todo se valida y que no nos dejamos ningún dato incorrecto en la base de datos accidentalmente.
+El hecho de que las reglas de validación las aplique automáticamente el .NET Framework ayuda a que la aplicación sea más sólida. También nos permite asegurarnos de que todo se valida y que no nos dejamos ningún dato incorrecto en la base de datos accidentalmente.
 
-Este es el código completo para la actualización *Movie.cs* archivo:
+Esta es una lista de código completa para el archivo *Movie.CS* actualizado:
 
 [!code-csharp[Main](adding-validation-to-the-model/samples/sample4.cs)]
 
-## <a name="validation-error-ui-in-aspnet-mvc"></a>Error de validación de la interfaz de usuario en ASP.NET MVC
+## <a name="validation-error-ui-in-aspnet-mvc"></a>Interfaz de usuario de error de validación en ASP.NET MVC
 
-Vuelva a ejecutar la aplicación y navegue hasta la */Movies* dirección URL.
+Vuelva a ejecutar la aplicación y vaya a la dirección URL de */Movies* .
 
-Haga clic en el **crear películas** vínculo para agregar una nueva película. Rellene el formulario con algunos valores no válidos y, a continuación, haga clic en el **crear** botón.
+Haga clic en el vínculo **crear película** para agregar una nueva película. Rellene el formulario con algunos valores no válidos y, a continuación, haga clic en el botón **crear** .
 
 [![8_validationErrors](adding-validation-to-the-model/_static/image2.png)](adding-validation-to-the-model/_static/image1.png)
 
-Observe cómo el formulario automáticamente usa un color de fondo para resaltar los cuadros de texto que contienen datos no válidos y se genera un mensaje de error de validación adecuado junto a cada uno de ellos. Los mensajes de error coinciden con las cadenas de error que especificó cuando anota el `Movie` clase. Los errores se aplican del lado cliente (mediante JavaScript) y del lado servidor (en caso de que un usuario tiene JavaScript deshabilitado).
+Observe cómo el formulario ha utilizado automáticamente un color de fondo para resaltar los cuadros de texto que contienen datos no válidos y ha emitido un mensaje de error de validación adecuado junto a cada uno de ellos. Los mensajes de error coinciden con las cadenas de error especificadas al anotar la clase `Movie`. Los errores se aplican tanto en el lado cliente (mediante JavaScript) como en el lado servidor (en caso de que un usuario tenga JavaScript deshabilitado).
 
-Una ventaja real es que no necesita cambiar una sola línea de código en el `MoviesController` clase o en el *Create.cshtml* vista con el fin de habilitar esta interfaz de usuario de validación. El controlador y las vistas que creó anteriormente en este tutorial automáticamente seleccionaron las reglas de validación que especificó mediante atributos en el `Movie` clase de modelo.
+Una ventaja real es que no necesitaba cambiar una sola línea de código en la clase `MoviesController` o en la vista *Create. cshtml* para habilitar esta interfaz de usuario de validación. El controlador y las vistas que creó anteriormente en este tutorial seleccionaron automáticamente las reglas de validación que especificó mediante atributos en la clase de modelo `Movie`.
 
-## <a name="how-validation-occurs-in-the-create-view-and-create-action-method"></a>Cómo se produce la validación en el crear, ver y crea método de acción
+## <a name="how-validation-occurs-in-the-create-view-and-create-action-method"></a>Cómo se produce la validación en el método Create View y Create Action
 
-Tal vez se pregunte cómo se generó la validación de la interfaz de usuario sin actualizar el código en el controlador o las vistas. La lista siguiente muestra lo que el `Create` métodos en el `MovieController` se parecen a clase. Son iguales que cómo haya creado anteriormente en este tutorial.
+Tal vez se pregunte cómo se generó la validación de la interfaz de usuario sin actualizar el código en el controlador o las vistas. La siguiente lista muestra el aspecto de los métodos de `Create` en la clase `MovieController`. No se modifican de la forma en que se crearon anteriormente en este tutorial.
 
 [!code-csharp[Main](adding-validation-to-the-model/samples/sample5.cs)]
 
-El primer método de acción muestra el formulario de creación inicial. El segundo administra el envío de formulario. El segundo `Create` llamadas al método `ModelState.IsValid` para comprobar si la película tiene errores de validación. Al llamar a este método se evalúan todos los atributos de validación que se hayan aplicado al objeto. Si el objeto tiene errores de validación, el `Create` método vuelve a mostrar el formulario. Si no hay ningún error, el método guarda la nueva película en la base de datos.
+El primer método de acción muestra el formulario de creación inicial. El segundo controla el envío del formulario. El segundo método `Create` llama a `ModelState.IsValid` para comprobar si la película tiene errores de validación. Al llamar a este método se evalúan todos los atributos de validación que se hayan aplicado al objeto. Si el objeto tiene errores de validación, el método `Create` vuelve a mostrar el formulario. Si no hay ningún error, el método guarda la nueva película en la base de datos.
 
-A continuación se presenta la *Create.cshtml* plantilla de vista que se ha aplicado scaffolding anteriormente en este tutorial. Los métodos de acción que se muestran arriba la usan para mostrar el formulario inicial y para volver a mostrarlo en caso de error.
+A continuación se muestra la plantilla de vista *Create. cshtml* que se ha aplicado con scaffolding anteriormente en el tutorial. Los métodos de acción que se muestran arriba la usan para mostrar el formulario inicial y para volver a mostrarlo en caso de error.
 
 [!code-cshtml[Main](adding-validation-to-the-model/samples/sample6.cshtml)]
 
-Observe cómo el código usa un `Html.EditorFor` auxiliar para generar el `<input>` para cada elemento `Movie` propiedad. Junto a esta aplicación auxiliar es una llamada a la `Html.ValidationMessageFor` método auxiliar. Estos dos métodos auxiliares que funcionan con el objeto de modelo que se pasa por el controlador a la vista (en este caso, un `Movie` objeto). Automáticamente buscar atributos de validación especificados en los mensajes de error de modelo y la presentación según corresponda.
+Observe cómo el código utiliza una aplicación auxiliar de `Html.EditorFor` para generar el elemento `<input>` para cada propiedad `Movie`. Junto a esta aplicación auxiliar es una llamada al método auxiliar `Html.ValidationMessageFor`. Estos dos métodos auxiliares funcionan con el objeto de modelo que pasa el controlador a la vista (en este caso, un objeto `Movie`). Buscan automáticamente los atributos de validación especificados en el modelo y muestran los mensajes de error según corresponda.
 
-Lo que resulta agradable sobre este enfoque es que el controlador ni la plantilla de vista Create conoce nada acerca de las reglas de validación real que se apliquen o los mensajes de error específico que se muestra. Las reglas de validación y las cadenas de error solo se especifican en la clase `Movie`.
+Lo que es muy útil para este enfoque es que ni el controlador ni la plantilla de creación de vistas saben nada sobre las reglas de validación reales que se aplican o sobre los mensajes de error específicos que se muestran. Las reglas de validación y las cadenas de error solo se especifican en la clase `Movie`.
 
-Si desea cambiar la lógica de validación más adelante, puede hacerlo en exactamente un solo lugar. No tendrá que preocuparse de que diferentes partes de la aplicación sean incoherentes con el modo en que se aplican las reglas: toda la lógica de validación se definirá en un solo lugar y se usará en todas partes. Esto mantiene el código muy limpio y hace que sea fácil de mantener y evolucionar. También significa que respeta totalmente el principio DRY.
+Si desea cambiar la lógica de validación más adelante, puede hacerlo en exactamente un lugar. No tendrá que preocuparse de que diferentes partes de la aplicación sean incoherentes con el modo en que se aplican las reglas: toda la lógica de validación se definirá en un solo lugar y se usará en todas partes. Esto mantiene el código muy limpio y hace que sea fácil de mantener y evolucionar. También significa que respeta totalmente el principio DRY.
 
 ## <a name="adding-formatting-to-the-movie-model"></a>Agregar formato al modelo de película
 
-Abra el archivo *Movie.cs*. El [ `System.ComponentModel.DataAnnotations` ](https://msdn.microsoft.com/library/system.componentmodel.dataannotations.aspx) espacio de nombres proporciona atributos de formato además del conjunto integrado de atributos de validación. Que va a aplicar el [ `DisplayFormat` ](https://msdn.microsoft.com/library/system.componentmodel.dataannotations.displayformatattribute.aspx) atributo y un [ `DataType` ](https://msdn.microsoft.com/library/system.componentmodel.dataannotations.datatype.aspx) valor de enumeración para la fecha de lanzamiento y los campos de precio. El siguiente código muestra la `ReleaseDate` y `Price` propiedades con los valores adecuados [ `DisplayFormat` ](https://msdn.microsoft.com/library/system.componentmodel.dataannotations.displayformatattribute.aspx) atributo.
+Abra el archivo *Movie.cs*. El espacio de nombres [`System.ComponentModel.DataAnnotations`](https://msdn.microsoft.com/library/system.componentmodel.dataannotations.aspx) proporciona atributos de formato además del conjunto integrado de atributos de validación. Aplicará el [`DisplayFormat`](https://msdn.microsoft.com/library/system.componentmodel.dataannotations.displayformatattribute.aspx) atributo y un valor de enumeración de [`DataType`](https://msdn.microsoft.com/library/system.componentmodel.dataannotations.datatype.aspx) a la fecha de lanzamiento y a los campos de precio. En el código siguiente se muestran las propiedades `ReleaseDate` y `Price` con el atributo [`DisplayFormat`](https://msdn.microsoft.com/library/system.componentmodel.dataannotations.displayformatattribute.aspx) adecuado.
 
 [!code-csharp[Main](adding-validation-to-the-model/samples/sample7.cs)]
 
-Como alternativa, podría establecer explícitamente un [ `DataFormatString` ](https://msdn.microsoft.com/library/system.string.format.aspx) valor. El código siguiente muestra la propiedad fecha de lanzamiento con una cadena de formato de fecha (es decir, "d"). Usaría esto para especificar que no desea tiempo como parte de la fecha de lanzamiento.
+Como alternativa, puede establecer explícitamente un valor de [`DataFormatString`](https://msdn.microsoft.com/library/system.string.format.aspx) . En el código siguiente se muestra la propiedad Date Release con una cadena de formato de fecha (es decir, "d"). Se usaría para especificar que no desea tiempo como parte de la fecha de lanzamiento.
 
 [!code-csharp[Main](adding-validation-to-the-model/samples/sample8.cs)]
 
-El siguiente código formatos el `Price` propiedad como moneda.
+En el código siguiente se da formato a la propiedad `Price` como Currency.
 
 [!code-csharp[Main](adding-validation-to-the-model/samples/sample9.cs)]
 
-La completa `Movie` clase se muestra a continuación.
+A continuación se muestra la clase `Movie` completa.
 
 [!code-csharp[Main](adding-validation-to-the-model/samples/sample10.cs)]
 
-Ejecute la aplicación y vaya a la `Movies` controlador.
+Ejecute la aplicación y vaya al controlador de `Movies`.
 
 ![8_format_SM](adding-validation-to-the-model/_static/image3.png)
 

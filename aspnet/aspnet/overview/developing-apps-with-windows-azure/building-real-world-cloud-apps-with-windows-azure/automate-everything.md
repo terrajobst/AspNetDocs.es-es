@@ -8,16 +8,16 @@ ms.date: 06/12/2014
 ms.assetid: ba6e6baa-9b9f-471f-b39d-b007a3addadc
 msc.legacyurl: /aspnet/overview/developing-apps-with-windows-azure/building-real-world-cloud-apps-with-windows-azure/automate-everything
 msc.type: authoredcontent
-ms.openlocfilehash: d5c8190d0b0c91bf9e42f6ef03adc5b07a65359a
-ms.sourcegitcommit: 22fbd8863672c4ad6693b8388ad5c8e753fb41a2
+ms.openlocfilehash: e741a753a36ebdaefbff8eee0b38911785c716ac
+ms.sourcegitcommit: 7709c0a091b8d55b7b33bad8849f7b66b23c3d72
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/28/2019
-ms.locfileid: "74582887"
+ms.lasthandoff: 02/19/2020
+ms.locfileid: "77457172"
 ---
 # <a name="automate-everything-building-real-world-cloud-apps-with-azure"></a>Automatice todo (creación de aplicaciones en la nube reales con Azure)
 
-por [Mike Wasson](https://github.com/MikeWasson), [Rick Anderson]((https://twitter.com/RickAndMSFT)), [Tom Dykstra](https://github.com/tdykstra)
+por [Mike Wasson](https://github.com/MikeWasson), [Rick Anderson](https://twitter.com/RickAndMSFT), [Tom Dykstra](https://github.com/tdykstra)
 
 [Descargar el proyecto de corrección de ti](https://code.msdn.microsoft.com/Fix-It-app-for-Building-cdd80df4) o [descargar el libro electrónico](https://blogs.msdn.com/b/microsoft_press/archive/2014/07/23/free-ebook-building-cloud-apps-with-microsoft-azure.aspx)
 
@@ -49,13 +49,13 @@ Para la aplicación Fix it, hemos creado algunos scripts de Windows PowerShell q
 
 El primer script que veremos se denomina *New-AzureWebsiteEnv. PS1*. Crea un entorno de Azure en el que puede implementar la aplicación Fix it para realizar pruebas. Las tareas principales que realiza este script son las siguientes:
 
-- Crear una aplicación web.
+- Cree una aplicación web.
 - Cree una cuenta de almacenamiento. (Necesario para los blobs y las colas, como verá en los capítulos posteriores).
 - Cree un servidor de SQL Database y dos bases de datos: una base de datos de aplicación y una base de datos de pertenencia.
 - Almacene la configuración en Azure que la aplicación usará para acceder a la cuenta de almacenamiento y a las bases de datos.
 - Cree archivos de configuración que se usarán para automatizar la implementación.
 
-### <a name="run-the-script"></a>Ejecute el script
+### <a name="run-the-script"></a>Ejecute el script.
 
 > [!NOTE]
 > En esta parte del capítulo se muestran ejemplos de scripts y los comandos que se especifican para ejecutarlos. Esta es una demostración y no proporciona todo lo que necesita saber para ejecutar los scripts. Para obtener instrucciones paso a paso sobre cómo hacerlo, consulte [Apéndice: aplicación de ejemplo de corrección](the-fix-it-sample-application.md#deploybase).
@@ -70,7 +70,7 @@ El parámetro `Name` especifica el nombre que se va a usar al crear la base de d
 
 Una vez finalizado el script, puede ver en el portal de administración lo que se ha creado. Encontrará dos bases de datos:
 
-![bases de datos](automate-everything/_static/image3.png)
+![Bases de datos](automate-everything/_static/image3.png)
 
 Una cuenta de almacenamiento:
 
@@ -78,7 +78,7 @@ Una cuenta de almacenamiento:
 
 Y una aplicación web:
 
-![Sitio Web](automate-everything/_static/image5.png)
+![Sitio web](automate-everything/_static/image5.png)
 
 En la pestaña **configurar** de la aplicación Web, puede ver que tiene la configuración de la cuenta de almacenamiento y las cadenas de conexión de SQL Database configuradas para la aplicación Fix it.
 
@@ -114,7 +114,7 @@ Se requieren dos parámetros:
 
 Los parámetros opcionales le permiten especificar la ubicación del centro de datos (el valor predeterminado es "oeste de EE. UU."), el nombre del administrador del servidor de bases de datos (el valor predeterminado es "dbUser") y una regla de Firewall para el servidor de base de datos.
 
-### <a name="create-the-web-app"></a>Creación de la aplicación Web
+### <a name="create-the-web-app"></a>Creación de la aplicación web
 
 Lo primero que hace el script es crear la aplicación Web mediante una llamada al cmdlet `New-AzureWebsite`, pasándole los valores de parámetro de ubicación y nombre de la aplicación web:
 
@@ -254,8 +254,8 @@ En el [siguiente capítulo](source-control.md) veremos el código fuente y expli
 - [Scripter de fin de semana: introducción con Azure y PowerShell](https://blogs.technet.com/b/heyscriptingguy/archive/2013/06/22/weekend-scripter-getting-started-with-windows-azure-and-powershell.aspx). En un blog dedicado a Windows PowerShell, esta publicación proporciona una excelente introducción al uso de PowerShell para las funciones de administración de Azure.
 - [Instale y configure la interfaz de la línea de comandos multiplataforma de Azure](https://docs.microsoft.com/cli/azure/install-azure-cli?view=azure-cli-latest). Tutorial de introducción para una plataforma de scripting de Azure que funciona en Mac y Linux, así como en sistemas Windows.
 - [Sección herramientas de línea de comandos del tema descarga de herramientas y SDK de Azure](https://azure.microsoft.com/downloads/). Página del portal para obtener documentación y descargas relacionadas con las herramientas de línea de comandos para Azure.
-- [Automatizar todo con las bibliotecas de administración de Azure y .net](http://www.hanselman.com/blog/PennyPinchingInTheCloudAutomatingEverythingWithTheWindowsAzureManagementLibrariesAndNET.aspx). Scott Hanselman presenta la API de administración de .NET para Azure.
-- [Usar scripts de Windows PowerShell para publicar en entornos de desarrollo y pruebas](https://msdn.microsoft.com/library/azure/dn642480.aspx). Documentación de MSDN en la que se explica cómo usar los scripts de publicación que Visual Studio genera automáticamente para proyectos Web.
+- [Automatización de todo con las bibliotecas de administración de Azure y .NET](http://www.hanselman.com/blog/PennyPinchingInTheCloudAutomatingEverythingWithTheWindowsAzureManagementLibrariesAndNET.aspx). Scott Hanselman presenta la API de administración de .NET para Azure.
+- [Uso de scripts de Windows PowerShell para publicar en entornos de prueba y desarrollo](https://msdn.microsoft.com/library/azure/dn642480.aspx). Documentación de MSDN en la que se explica cómo usar los scripts de publicación que Visual Studio genera automáticamente para proyectos Web.
 - [PowerShell Tools for Visual Studio 2013](https://visualstudiogallery.msdn.microsoft.com/c9eb3ba8-0c59-4944-9a62-6eee37294597). Extensión de Visual Studio que agrega compatibilidad de idioma para Windows PowerShell en Visual Studio.
 
 > [!div class="step-by-step"]

@@ -8,16 +8,16 @@ ms.date: 06/12/2014
 ms.assetid: e51fcecb-cb33-4f9e-8428-6d2b3d0fe1bf
 msc.legacyurl: /aspnet/overview/developing-apps-with-windows-azure/building-real-world-cloud-apps-with-windows-azure/data-storage-options
 msc.type: authoredcontent
-ms.openlocfilehash: f97d973d87db895441f813376d757a8a2e94b255
-ms.sourcegitcommit: 22fbd8863672c4ad6693b8388ad5c8e753fb41a2
+ms.openlocfilehash: 9357ed5aef39bed501cdac9ac26d46c884d4fae0
+ms.sourcegitcommit: 7709c0a091b8d55b7b33bad8849f7b66b23c3d72
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/28/2019
-ms.locfileid: "74585929"
+ms.lasthandoff: 02/19/2020
+ms.locfileid: "77457185"
 ---
 # <a name="data-storage-options-building-real-world-cloud-apps-with-azure"></a>Opciones de almacenamiento de datos (creación de aplicaciones en la nube reales con Azure)
 
-por [Mike Wasson](https://github.com/MikeWasson), [Rick Anderson]((https://twitter.com/RickAndMSFT)), [Tom Dykstra](https://github.com/tdykstra)
+por [Mike Wasson](https://github.com/MikeWasson), [Rick Anderson](https://twitter.com/RickAndMSFT), [Tom Dykstra](https://github.com/tdykstra)
 
 [Descargar el proyecto de corrección de ti](https://code.msdn.microsoft.com/Fix-It-app-for-Building-cdd80df4) o [descargar el libro electrónico](https://blogs.msdn.com/b/microsoft_press/archive/2014/07/23/free-ebook-building-cloud-apps-with-microsoft-azure.aspx)
 
@@ -37,14 +37,14 @@ La nube hace que sea relativamente fácil usar una variedad de almacenes de dato
 
 En la tabla se muestran cuatro tipos de bases de datos NoSQL:
 
-- [Las bases de datos de clave/valor](https://msdn.microsoft.com/library/dn313285.aspx#sec7) almacenan un único objeto serializado para cada valor de clave. Son buenos para almacenar grandes volúmenes de datos en los que desea obtener un elemento para un valor de clave determinado y no tiene que realizar consultas en función de otras propiedades del elemento.
+- [Las bases de datos de clave/valor](https://msdn.microsoft.com/library/dn313285.aspx#sec7) almacenan un único objeto serializado para cada valor de clave. Se recomiendan para almacenar grandes volúmenes de datos donde se desee obtener un elemento para un valor de clave determinado valor de clave y no tiene que realizar consultas basándose en otras propiedades del elemento.
 
     [Azure BLOB Storage](https://azure.microsoft.com/documentation/articles/storage-dotnet-how-to-use-blobs/) es una base de datos de clave-valor que funciona como el almacenamiento de archivos en la nube, con valores de clave que se corresponden con los nombres de carpeta y archivo. Puede recuperar un archivo por su nombre de archivo y carpeta, no buscando valores en el contenido del archivo.
 
     [Azure Table Storage](https://azure.microsoft.com/documentation/articles/storage-dotnet-how-to-use-tables/) es también una base de datos de clave/valor. Cada valor se denomina *entidad* (similar a una fila, identificada por una clave de partición y una clave de fila) y contiene varias *propiedades* (similares a las columnas, pero no todas las entidades de una tabla tienen que compartir las mismas columnas). La consulta en columnas distintas de la clave es extremadamente ineficaz y debe evitarse. Por ejemplo, puede almacenar los datos de Perfil de usuario, con una partición que almacena información acerca de un solo usuario. Puede almacenar datos como el nombre de usuario, el hash de contraseña, la fecha de nacimiento, etc., en propiedades independientes de una entidad o en entidades independientes en la misma partición. Pero no querrá consultar a todos los usuarios con un intervalo determinado de fechas de nacimiento y no puede ejecutar una consulta de combinación entre la tabla de perfil y otra tabla. El almacenamiento de tablas es más escalable y más económico que una base de datos relacional, pero no habilita consultas complejas ni combinaciones.
 - [Documentdatabases](https://msdn.microsoft.com/library/dn313285.aspx#sec8) son bases de datos de clave/valor en las que los valores son *documentos*. "Documento" no se usa en el sentido de un documento de Word o Excel, sino que es una colección de campos y valores con nombre, cualquiera de los cuales podría ser un documento secundario. Por ejemplo, en una tabla de historial de pedidos, un documento de pedido podría tener los campos número de pedido, fecha de pedido y cliente. y el campo Customer puede tener los campos name y Address. La base de datos codifica los datos de campo en un formato como XML, YAML, JSON o BSON; o bien, puede usar texto sin formato. Una característica que establece las bases de datos de documentos además de las bases de datos de clave y valor es la posibilidad de realizar consultas en los campos que no son de clave y definir índices secundarios para que las consultas sean más eficaces. Esta capacidad hace que una base de datos de documentos sea más adecuada para las aplicaciones que necesitan recuperar datos en función de criterios más complejos que el valor de la clave del documento. Por ejemplo, en una base de datos de documentos de historial de pedidos de ventas, podría consultar varios campos como el ID. de producto, el ID. de cliente, el nombre del cliente, etc. [MongoDB](http://www.mongodb.org/) es una conocida base de datos de documentos.
 - [Las bases de datos de familia de columnas](https://msdn.microsoft.com/library/dn313285.aspx#sec9) son almacenes de datos de clave/valor que permiten estructurar el almacenamiento de datos en colecciones de columnas relacionadas denominadas familias de columnas. Por ejemplo, una base de datos de censo podría tener un grupo de columnas para el nombre de una persona (primero, medio, último), un grupo para la dirección de la persona y un grupo para la información de Perfil de la persona (DOB, sexo, etc.). A continuación, la base de datos puede almacenar cada familia de columnas en una partición independiente manteniendo todos los datos de una persona relacionada con la misma clave. Después, puede leer toda la información del perfil sin tener que leer toda la información sobre el nombre y la dirección. [Cassandra](http://cassandra.apache.org/) es una conocida base de datos de familia de columnas.
-- [Las bases](https://msdn.microsoft.com/library/dn313285.aspx#sec10) de datos de grafos almacenan información como una colección de objetos y relaciones. El propósito de una base de datos de grafos es permitir a una aplicación realizar de forma eficaz consultas que atraviesan la red de objetos y las relaciones entre ellos. Por ejemplo, los objetos podrían ser empleados en una base de datos de recursos humanos y es posible que desee facilitar consultas como "Buscar todos los empleados que trabajan directa o indirectamente para Scott". [Neo4j](http://www.neo4j.org/) es una conocida base de datos de gráficos.
+- [Las bases](https://msdn.microsoft.com/library/dn313285.aspx#sec10) de datos de grafos almacenan información como una colección de objetos y relaciones. El propósito de una base de datos de grafos es permitir a una aplicación realizar de forma eficaz consultas que atraviesan la red de objetos y las relaciones entre ellos. Por ejemplo, los objetos podrían ser los empleados en una base de datos de recursos humanos y puede desear facilitar consultas como "buscar todos los empleados que trabajan directa o indirectamente para Scott". [Neo4j](http://www.neo4j.org/) es una conocida base de datos de gráficos.
 
 En comparación con las bases de datos relacionales, las opciones de NoSQL ofrecen una escalabilidad y rentabilidad mucho mayores para el almacenamiento y el análisis de datos no estructurados. El inconveniente es que no proporcionan la rica capacidad de consulta y las sólidas capacidades de integridad de datos de las bases de datos relacionales. NoSQL funcionaría bien para los datos de registro de IIS, lo que implica un gran volumen sin necesidad de consultas de combinación. NoSQL no funcionaría tan bien para las transacciones bancarias, que requiere integridad de datos absoluta y implica muchas relaciones con otros datos relacionados con la cuenta.
 
@@ -66,7 +66,7 @@ En Azure, [HDInsight](https://azure.microsoft.com/services/hdinsight/) le permit
     ![Registros para Blob Storage](data-storage-options/_static/image2.png)
 - A medida que la aplicación obtiene tráfico, los registros de IIS del servidor Web se escriben en el almacenamiento de blobs.
 
-    ![Registros de servidor Web](data-storage-options/_static/image3.png)
+    ![Registros de servidor web](data-storage-options/_static/image3.png)
 - En el portal, haga clic en **nuevo** - **Data Services** - **HDInsight** - **creación rápida**y especifique un nombre de clúster de hdinsight, el tamaño del clúster (número de nodos de datos del clúster de hdinsight) y un nombre de usuario y una contraseña para el clúster de hdinsight.
 
     ![HDInsight](data-storage-options/_static/image4.png)
@@ -99,8 +99,8 @@ Las opciones de almacenamiento de datos enumeradas anteriormente incluyen soluci
 Entre las soluciones de datos de PaaS que ofrece Azure se incluyen:
 
 - Azure SQL Database (antes conocido como SQL Azure). Base de datos relacional en la nube basada en SQL Server.
-- Almacenamiento de tabla de Azure. Una base de datos NoSQL de clave/valor.
-- Almacenamiento de blobs de Azure. Almacenamiento de archivos en la nube.
+- Azure Table Storage Una base de datos NoSQL de clave/valor.
+- Azure Blob Storage. Almacenamiento de archivos en la nube.
 
 En el caso de IaaS, puede ejecutar todo lo que puede cargar en una máquina virtual, por ejemplo:
 
@@ -125,7 +125,7 @@ Azure hace que las opciones de almacenamiento de datos de IaaS sean tan fáciles
 - No tiene que crear máquinas virtuales, solo tiene que usar el portal o un script para configurar un almacén de datos. Si desea un almacén de datos de 200 terabytes, simplemente puede hacer clic en un botón o ejecutar un comando y, en segundos, está listo para su uso.
 - No tiene que administrar ni aplicar revisiones a las máquinas virtuales que usa el servicio. Microsoft lo hace automáticamente.-no tiene que preocuparse por la configuración de la infraestructura de escalado o alta disponibilidad. Microsoft se encarga de todo esto.
 - No tiene que comprar licencias; las tarifas de licencias se incluyen en las tarifas de servicio.
-- Solo paga por lo que usa.
+- Pague solo por lo que usa.
 
 Las opciones de almacenamiento de datos de PaaS en Azure incluyen ofertas por proveedores de terceros. Por ejemplo, puede elegir el [complemento MongoLab](https://azure.microsoft.com/documentation/articles/store-mongolab-web-sites-dotnet-store-data-mongodb/) de la tienda de Azure para aprovisionar una base de datos de MongoDB como servicio.
 
@@ -144,10 +144,10 @@ Estas son algunas preguntas que hay que tener en cuenta a la hora de elegir un e
 | Facilidad de escalabilidad | ¿Con qué frecuencia y cuántos serán los datos para escalar? -¿La plataforma implementa de forma nativa el escalado horizontal? -¿Es fácil agregar o quitar capacidad (tamaño y rendimiento)? Las tablas y bases de datos relacionales no se particionan automáticamente para que sean escalables, por lo que son difíciles de escalar más allá de ciertas limitaciones. Los almacenes de datos NoSQL, como Azure Table Storage, crean particiones inherentemente a todo, y casi no hay límite para agregar particiones. Puede escalar fácilmente Table Storage hasta 200 terabytes, pero el tamaño máximo de la base de datos para Azure SQL Database es de 500 gigabytes. Puede escalar los datos relacionales mediante la creación de particiones en varias bases de datos, pero la configuración de una aplicación para que admita ese modelo implica una gran cantidad de trabajo de programación. |
 | Instrumentación y capacidad de administración | -¿Es fácil instrumentar, supervisar y administrar la plataforma? Deberá mantenerse informado sobre el estado y el rendimiento del almacén de datos, por lo que debe saber por adelantado las métricas que proporciona una plataforma de forma gratuita y lo que tiene que desarrollar usted mismo. |
 | Operaciones | -¿Es fácil implementar y ejecutar la plataforma en Azure? PaaS? IaaS? Linuxun? Table Storage y SQL Database son fáciles de configurar en Azure. Las plataformas que no están integradas en las soluciones PaaS de Azure requieren más esfuerzo. |
-| Compatibilidad con API | -¿Está disponible una API que facilita el trabajo con la plataforma? Para el servicio tabla de Azure hay un SDK con una API de .NET que admite el modelo de programación asincrónica de .NET 4,5. Si va a escribir una aplicación de .NET, será mucho más fácil escribir y probar el código para el servicio tabla de Azure en comparación con otra plataforma de almacén de datos de columna de clave y valor que no tenga ninguna API o una menos completa. |
+| Compatibilidad de la API | -¿Está disponible una API que facilita el trabajo con la plataforma? Para el servicio tabla de Azure hay un SDK con una API de .NET que admite el modelo de programación asincrónica de .NET 4,5. Si va a escribir una aplicación de .NET, será mucho más fácil escribir y probar el código para el servicio tabla de Azure en comparación con otra plataforma de almacén de datos de columna de clave y valor que no tenga ninguna API o una menos completa. |
 | Integridad transaccional y coherencia de los datos | -¿Es fundamental que la plataforma admita las transacciones para garantizar la coherencia de los datos? Para realizar un seguimiento de los correos electrónicos masivos enviados, el rendimiento y el bajo costo de almacenamiento de datos pueden ser más importantes que la compatibilidad automática con transacciones o la integridad referencial en la plataforma de datos, lo que hace que Azure Table Service sea una buena elección. Para realizar un seguimiento de los saldos de cuentas bancarias o los pedidos de compra, una plataforma de base de datos relacional que proporciona garantías transaccionales fuertes sería una mejor opción. |
 | Continuidad empresarial | -¿Es fácil realizar copias de seguridad, restauraciones y recuperación ante desastres? Los datos de producción más pronto o posteriores se dañarán y necesitará una función para deshacer. Las bases de datos relacionales suelen tener una funcionalidad de restauración más específica, como la capacidad de restaurar a un momento dado. Entender qué características de restauración están disponibles en cada plataforma que está considerando es un factor importante a tener en cuenta. |
-| Cost | -Si más de una plataforma puede admitir la carga de trabajo de datos, ¿cómo se comparan en el costo? Por ejemplo, si usa ASP.NET Identity, puede almacenar datos de Perfil de usuario en Azure Table Service o Azure SQL Database. Si no necesita las funciones de consulta enriquecidas de SQL Database, puede elegir las tablas de Azure en parte porque cuesta mucho menos para una cantidad determinada de almacenamiento. |
+| Coste | -Si más de una plataforma puede admitir la carga de trabajo de datos, ¿cómo se comparan en el costo? Por ejemplo, si usa ASP.NET Identity, puede almacenar datos de Perfil de usuario en Azure Table Service o Azure SQL Database. Si no necesita las funciones de consulta enriquecidas de SQL Database, puede elegir las tablas de Azure en parte porque cuesta mucho menos para una cantidad determinada de almacenamiento. |
 
 Lo que se suele recomendar es conocer la respuesta a las preguntas de cada una de estas categorías antes de elegir sus soluciones de almacenamiento de datos.
 
@@ -168,7 +168,7 @@ También es fácil crear bases de datos mediante el portal.
 
 Haga clic en **nuevo: Data Services** -- **SQL Database** -- **creación rápida**, escriba un nombre de base de datos, elija un servidor que ya tenga en la cuenta o cree uno nuevo y haga clic en **crear SQL Database**.
 
-![Crear una base de datos de SQL Database](data-storage-options/_static/image9.png)
+![New SQL Database](data-storage-options/_static/image9.png)
 
 Espere unos segundos y tenga una base de datos en Azure lista para su uso.
 
@@ -262,7 +262,7 @@ La informática en la nube hace que sea práctico mezclar y hacer coincidir los 
 
 ## <a name="resources"></a>Recursos
 
-Para obtener más información, vea los siguientes recursos.
+Para obtener más información, vea los recursos siguientes.
 
 Elección de una plataforma de base de datos:
 
@@ -282,7 +282,7 @@ Elección entre SQL Server y SQL Database:
 Uso de Entity Framework y SQL Database en una aplicación Web de ASP.NET
 
 - [Introducción con EF 6 con MVC 5](../../../../mvc/overview/getting-started/getting-started-with-ef-using-mvc/creating-an-entity-framework-data-model-for-an-asp-net-mvc-application.md). Serie de tutoriales de nueve partes que le guía a través de la creación de una aplicación MVC que usa EF e implementa la base de datos en Azure y SQL Database.
-- [Implementación web de ASP.net con Visual Studio](../../../../web-forms/overview/deployment/visual-studio-web-deployment/introduction.md). Serie de tutoriales de doce partes que profundizan en la implementación de una base de datos mediante EF Code First.
+- [Implementación web de ASP.NET con Visual Studio](../../../../web-forms/overview/deployment/visual-studio-web-deployment/introduction.md). Serie de tutoriales de doce partes que profundizan en la implementación de una base de datos mediante EF Code First.
 - [Implemente una aplicación ASP.NET MVC 5 segura con suscripción, OAuth y SQL Database en un sitio web de Azure](https://azure.microsoft.com/documentation/articles/web-sites-dotnet-deploy-aspnet-mvc-app-membership-oauth-sql-database/). Tutorial paso a paso que le guía en la creación de una aplicación web que usa la autenticación de, almacena tablas de aplicación en la base de datos de pertenencia, modifica el esquema de la base de datos e implementa la aplicación en Azure.
 - [Mapa de contenido de ASP.net Data Access](https://go.microsoft.com/fwlink/p/?LinkId=282414). Vínculos a recursos para trabajar con EF y SQL Database.
 

@@ -8,16 +8,16 @@ ms.date: 11/03/2015
 ms.assetid: 7ead83bc-c08c-4b26-8617-00e07292e35c
 msc.legacyurl: /aspnet/overview/developing-apps-with-windows-azure/building-real-world-cloud-apps-with-windows-azure/transient-fault-handling
 msc.type: authoredcontent
-ms.openlocfilehash: fc281e3d8f7c9edd4d98b029a67e58113132a8b3
-ms.sourcegitcommit: 22fbd8863672c4ad6693b8388ad5c8e753fb41a2
+ms.openlocfilehash: e798cb83cfb97db63fef6dc38c8f62804461d01b
+ms.sourcegitcommit: 7709c0a091b8d55b7b33bad8849f7b66b23c3d72
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/28/2019
-ms.locfileid: "74583654"
+ms.lasthandoff: 02/19/2020
+ms.locfileid: "77456860"
 ---
 # <a name="transient-fault-handling-building-real-world-cloud-apps-with-azure"></a>Control de errores transitorios (creación de aplicaciones en la nube reales con Azure)
 
-por [Mike Wasson](https://github.com/MikeWasson), [Rick Anderson]((https://twitter.com/RickAndMSFT)), [Tom Dykstra](https://github.com/tdykstra)
+por [Mike Wasson](https://github.com/MikeWasson), [Rick Anderson](https://twitter.com/RickAndMSFT), [Tom Dykstra](https://github.com/tdykstra)
 
 [Descargar el proyecto de corrección de ti](https://code.msdn.microsoft.com/Fix-It-app-for-Building-cdd80df4) o [descargar el libro electrónico](https://blogs.msdn.com/b/microsoft_press/archive/2014/07/23/free-ebook-building-cloud-apps-with-microsoft-azure.aspx)
 
@@ -80,9 +80,9 @@ En el [siguiente capítulo](distributed-caching.md), veremos cómo mejorar el re
 
 ## <a name="resources"></a>Recursos
 
-Para obtener más información, vea los siguientes recursos:
+Para obtener más información, consulte los siguientes recursos:
 
-Documentation
+Documentación
 
 - [Prácticas recomendadas para el diseño de servicios a gran escala en Azure Cloud Services](https://msdn.microsoft.com/library/windowsazure/jj717232.aspx). En las notas del producto, Mark SIMM y Michael Thomassy. Similar a la serie failsafe, pero profundiza en más detalles. Consulte la sección telemetría y diagnósticos.
 - [Failsafe: Guía para arquitecturas de nube resistentes](https://msdn.microsoft.com/library/windowsazure/jj853352.aspx). Notas del producto de Marc Mercuri, Ulrich Homann y Andrew Townhill. Versión de la Página Web de la serie de vídeos FailSafe.
@@ -96,9 +96,9 @@ Vídeos
 - [Failsafe: creación de Cloud Services escalables y resistentes](https://channel9.msdn.com/Series/FailSafe). Series de nueve partes de Ulrich Homann, Marc Mercuri y Mark SIMM. Presenta conceptos de alto nivel y principios arquitectónicos de una manera muy accesible e interesante, con historias tomadas de la experiencia del equipo de asesoramiento al cliente (CAT) de Microsoft con clientes reales. Consulte la descripción de los disyuntores en el episodio 3 a partir de 40:55.
 - [Building Big: lecciones aprendidas de clientes de Azure, parte II](https://channel9.msdn.com/Events/Build/2012/3-030). Mark SIMM habla sobre el diseño de errores, el control de errores transitorios y la instrumentación de todo.
 
-Ejemplo de código
+Código de ejemplo
 
-- [Aspectos básicos del servicio en la nube en Azure](https://code.msdn.microsoft.com/Cloud-Service-Fundamentals-4ca72649). Aplicación de ejemplo creada por el equipo de asesoramiento al cliente de Microsoft Azure que muestra cómo utilizar el [bloque de control de errores transitorios](http://nuget.org/packages/EnterpriseLibrary.TransientFaultHandling/) (TFH) de Enterprise Library. Para obtener más información, consulte [nivel de acceso a datos de los aspectos básicos del servicio en la nube: control de errores transitorios](https://social.technet.microsoft.com/wiki/contents/articles/18665.cloud-service-fundamentals-data-access-layer-transient-fault-handling.aspx). Se recomienda TFH para el acceso a la base de datos mediante ADO.NET directamente (sin usar Entity Framework).
+- [Aspectos básicos del servicio en la nube en Azure](https://code.msdn.microsoft.com/Cloud-Service-Fundamentals-4ca72649). Aplicación de ejemplo creada por el equipo de asesoramiento al cliente de Microsoft Azure que muestra cómo utilizar el [bloque de control de errores transitorios](http://nuget.org/packages/EnterpriseLibrary.TransientFaultHandling/) (TFH) de Enterprise Library. Para obtener más información, consulte [Capa de acceso a datos de fundamentos del servicio de nube: tratamiento de errores transitorios](https://social.technet.microsoft.com/wiki/contents/articles/18665.cloud-service-fundamentals-data-access-layer-transient-fault-handling.aspx). Se recomienda TFH para el acceso a la base de datos mediante ADO.NET directamente (sin usar Entity Framework).
 
 > [!div class="step-by-step"]
 > [Anterior](monitoring-and-telemetry.md)

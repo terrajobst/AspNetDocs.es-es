@@ -8,16 +8,16 @@ ms.date: 06/12/2014
 ms.assetid: 7e97cfc3-d830-4002-8ff7-5790d1ff49e6
 msc.legacyurl: /aspnet/overview/developing-apps-with-windows-azure/building-real-world-cloud-apps-with-windows-azure/more-patterns-and-guidance
 msc.type: authoredcontent
-ms.openlocfilehash: afade34477d1136883e7543d09e73dfbe435690e
-ms.sourcegitcommit: 22fbd8863672c4ad6693b8388ad5c8e753fb41a2
+ms.openlocfilehash: 57e32bf7568ecb0eb22f0f2b585310dcab2d5d43
+ms.sourcegitcommit: 7709c0a091b8d55b7b33bad8849f7b66b23c3d72
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/28/2019
-ms.locfileid: "74585361"
+ms.lasthandoff: 02/19/2020
+ms.locfileid: "77457081"
 ---
 # <a name="more-patterns-and-guidance-building-real-world-cloud-apps-with-azure"></a>Más patrones e instrucciones (creación de aplicaciones en la nube reales con Azure)
 
-por [Mike Wasson](https://github.com/MikeWasson), [Rick Anderson]((https://twitter.com/RickAndMSFT)), [Tom Dykstra](https://github.com/tdykstra)
+por [Mike Wasson](https://github.com/MikeWasson), [Rick Anderson](https://twitter.com/RickAndMSFT), [Tom Dykstra](https://github.com/tdykstra)
 
 [Descargar el proyecto de corrección de ti](https://code.msdn.microsoft.com/Fix-It-app-for-Building-cdd80df4) o [descargar el libro electrónico](https://blogs.msdn.com/b/microsoft_press/archive/2014/07/23/free-ebook-building-cloud-apps-with-microsoft-azure.aspx)
 
@@ -45,7 +45,7 @@ Vea también patrones e instrucciones de informática en la nube adicionales en 
 
 En cada uno de los capítulos de este libro electrónico se proporcionan vínculos a recursos para obtener más información sobre ese tema específico. En la lista siguiente se proporcionan vínculos a información general de los procedimientos recomendados y patrones recomendados para el desarrollo en la nube con Azure.
 
-Documentation
+Documentación
 
 - [Prácticas recomendadas para el diseño de servicios a gran escala en Azure Cloud Services](https://msdn.microsoft.com/library/windowsazure/jj717232.aspx). En las notas del producto, Mark SIMM y Michael Thomassy.
 - [Failsafe: Guía para arquitecturas de nube resistentes](https://msdn.microsoft.com/library/windowsazure/jj853352.aspx). Notas del producto de Marc Mercuri, Ulrich Homann y Andrew Townhill. Versión de la Página Web de la serie de vídeos FailSafe.
@@ -57,7 +57,7 @@ Vídeos
 - [Failsafe: creación de Cloud Services escalables y resistentes](https://channel9.msdn.com/Series/FailSafe). Series de vídeos de nueve partes de Ulrich Homann, Marc Mercuri y Mark SIMM. Presenta una vista de nivel 400 de cómo diseñar aplicaciones en la nube. Esta serie se centra en la teoría y los motivos de los patrones recomendados; para obtener más información sobre cómo hacerlo, consulte la creación de grandes series mediante Mark SIMM.
 - [Building Big: lecciones aprendidas de clientes de Azure, parte 1](https://channel9.msdn.com/Events/Build/2012/3-029) y [parte 2](https://channel9.msdn.com/Events/Build/2012/3-030). Series de vídeos de dos partes de Simon Davies y Mark SIMM, similar a la serie FailSafe, pero orientadas más hacia la implementación práctica.
 
-Ejemplo de código
+Código de ejemplo
 
 - [La aplicación Fix it que acompaña a este libro electrónico](https://code.msdn.microsoft.com/Fix-It-app-for-Building-cdd80df4?cdn_id=2013-12-03-002).
 - [Aspectos básicos del servicio en la nube C# en Azure en para Visual Studio 2012](https://aka.ms/csf). Proyecto descargable en el sitio de la galería de código de Microsoft, que incluye código y documentación desarrollados por el equipo de asesoramiento al cliente (CAT) de Microsoft. Muestra muchas de las prácticas recomendadas que se recomiendan en la serie de vídeos inseguros y la creación de grandes series de vídeos y las notas del producto de FailSafe. La página de la galería de código también incluye vínculos a la documentación ampliada por los autores del proyecto; vea especialmente el vínculo de la [colección wiki de aspectos básicos del servicio](https://social.technet.microsoft.com/wiki/contents/articles/17987.cloud-service-fundamentals.aspx) en la nube en el cuadro azul situado cerca de la parte superior de la descripción del proyecto. Este proyecto y la documentación del mismo se desarrollan activamente, lo que lo convierte en una mejor opción para la información sobre muchos temas que notas del producto similares pero anteriores.
@@ -111,7 +111,7 @@ Los miembros del [Consejo Asesor de instrucciones para desarrolladores de Micros
 - Sunil Sabat
 - [Aleksey Sinyagin](http://www.linkedin.com/in/sinyagin)
 - Bill Wagner
-- Michael madera
+- Michael Wood
 
 Otros miembros de DGAC revisaron y comentaron en el esquema preliminar:
 
@@ -122,7 +122,7 @@ Otros miembros de DGAC revisaron y comentaron en el esquema preliminar:
 - Gianni Rosa Gallina
 - Paulo Morgado
 - Jason Oliveira
-- Alberto poblacion
+- Alberto Poblacion
 - Ryan Riley
 - Perez Jones Tsisah
 - Roger Whitehead

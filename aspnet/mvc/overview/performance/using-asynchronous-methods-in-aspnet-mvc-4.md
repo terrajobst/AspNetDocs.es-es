@@ -8,16 +8,16 @@ ms.date: 06/06/2012
 ms.assetid: a56572ba-81c3-47af-826d-941e9c4775ec
 msc.legacyurl: /mvc/overview/performance/using-asynchronous-methods-in-aspnet-mvc-4
 msc.type: authoredcontent
-ms.openlocfilehash: 5df6a9c136b1934b3afd731eb0ceac1e0faa483e
-ms.sourcegitcommit: 6f0e10e4ca61a1e5534b09c655fd35cdc6886c8a
+ms.openlocfilehash: 15692b18fc112c4c6cce4d50a243a0e8d5fb52a4
+ms.sourcegitcommit: 7709c0a091b8d55b7b33bad8849f7b66b23c3d72
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/15/2019
-ms.locfileid: "74115082"
+ms.lasthandoff: 02/19/2020
+ms.locfileid: "77457757"
 ---
 # <a name="using-asynchronous-methods-in-aspnet-mvc-4"></a>Usar métodos asincrónicos en ASP.NET MVC 4
 
-por [Rick Anderson]((https://twitter.com/RickAndMSFT))
+por [Rick Anderson](https://twitter.com/RickAndMSFT)
 
 > Este tutorial le enseñará los aspectos básicos de la creación de una aplicación web MVC de ASP.NET asincrónica con [Visual Studio Express 2012 para web](https://www.microsoft.com/visualstudio/11), que es una versión gratuita de Microsoft Visual Studio. También puede usar [Visual Studio 2012](https://www.microsoft.com/visualstudio/11).
 > 
@@ -33,36 +33,36 @@ Para obtener más información sobre el uso de las palabras clave [Await](https:
 
 ## <a id="HowRequestsProcessedByTP"></a>Cómo procesa el grupo de subprocesos las solicitudes
 
-En el servidor Web, el .NET Framework mantiene un grupo de subprocesos que se usan para atender las solicitudes de ASP.NET. Cuando llega una solicitud, se envía un subproceso del grupo para procesar esa solicitud. Si la solicitud se procesa de forma sincrónica, el subproceso que procesa la solicitud está ocupado mientras se procesa la solicitud y ese subproceso no puede atender a otra solicitud.   
+En el servidor Web, el .NET Framework mantiene un grupo de subprocesos que se usan para atender las solicitudes de ASP.NET. Cuando se recibe una solicitud, se envía un subproceso del grupo para procesarla. Si la solicitud se procesa de forma sincrónica, el subproceso que procesa la solicitud está ocupado mientras se procesa la solicitud y ese subproceso no puede atender a otra solicitud.   
   
 Esto podría no ser un problema, porque el grupo de subprocesos puede ser lo suficientemente grande como para alojar muchos subprocesos ocupados. Sin embargo, el número de subprocesos del grupo de subprocesos es limitado (el máximo predeterminado para .NET 4,5 es 5.000). En aplicaciones de gran tamaño con una gran simultaneidad de solicitudes de ejecución prolongada, todos los subprocesos disponibles podrían estar ocupados. Esta condición se conoce como colapso de subprocesos. Cuando se alcanza esta condición, el servidor web pone en cola las solicitudes. Si la cola de solicitudes se llena, el servidor Web rechazará las solicitudes con un Estado HTTP 503 (servidor demasiado ocupado). El grupo de subprocesos de CLR tiene limitaciones en las nuevas inyecciones de subprocesos. Si la simultaneidad es más grande (es decir, el sitio web puede obtener repentinamente un gran número de solicitudes) y todos los subprocesos de solicitud disponibles están ocupados debido a llamadas de back-end con latencia elevada, la velocidad de inserción de subprocesos limitada puede hacer que la aplicación responda muy mal. Además, cada nuevo subproceso agregado al grupo de subprocesos tiene una sobrecarga (por ejemplo, 1 MB de memoria de pila). Una aplicación web que usa métodos sincrónicos para atender las llamadas de latencia alta en las que el grupo de subprocesos crece hasta el máximo predeterminado de 5, 000 subprocesos consumen aproximadamente 5 GB de memoria más que una aplicación capaz de atender las mismas solicitudes con 4,5. métodos asincrónicos y solo 50 subprocesos. Cuando está realizando el trabajo asincrónico, no siempre se usa un subproceso. Por ejemplo, al realizar una solicitud de servicio Web asincrónica, ASP.NET no usará ningún subproceso entre la llamada al método **asincrónico** y el **Await**. El uso del grupo de subprocesos para atender las solicitudes con latencia alta puede conducir a una gran cantidad de memoria y un uso deficiente del hardware del servidor.
 
-## <a name="processing-asynchronous-requests"></a>Procesamiento de solicitudes asincrónicas
+## <a name="processing-asynchronous-requests"></a>Procesar solicitudes asincrónicas
 
-En una aplicación web que ve un gran número de solicitudes simultáneas en el inicio o tiene una carga elevada (donde la simultaneidad aumenta repentinamente), al realizar llamadas asincrónicas al servicio Web se aumenta la capacidad de respuesta de la aplicación. Una solicitud asincrónica tarda la misma cantidad de tiempo en procesarse que una solicitud sincrónica. Si una solicitud realiza una llamada de servicio Web que requiere dos segundos para completarse, la solicitud tarda dos segundos si se realiza de forma sincrónica o asincrónica. Sin embargo, durante una llamada asincrónica, no se impide que un subproceso responda a otras solicitudes mientras espera a que se complete la primera solicitud. Por consiguiente, las solicitudes asincrónicas impiden la puesta en cola de solicitudes y el crecimiento del grupo de subprocesos cuando hay muchas solicitudes simultáneas que invocan operaciones de ejecución prolongada.
+En una aplicación web que ve un gran número de solicitudes simultáneas en el inicio o tiene una carga elevada (donde la simultaneidad aumenta repentinamente), al realizar llamadas asincrónicas al servicio Web se aumenta la capacidad de respuesta de la aplicación. Una solicitud asincrónica tarda el mismo tiempo en procesarse que una sincrónica. Si una solicitud realiza una llamada de servicio Web que requiere dos segundos para completarse, la solicitud tarda dos segundos si se realiza de forma sincrónica o asincrónica. Sin embargo, durante una llamada asincrónica, no se impide que un subproceso responda a otras solicitudes mientras espera a que se complete la primera solicitud. Por consiguiente, las solicitudes asincrónicas impiden la puesta en cola de solicitudes y el crecimiento del grupo de subprocesos cuando hay muchas solicitudes simultáneas que invocan operaciones de ejecución prolongada.
 
 ## <a id="ChoosingSyncVasync"></a>Elegir métodos de acción sincrónicos o asincrónicos
 
-En esta sección se enumeran las directrices sobre Cuándo usar métodos de acción sincrónicos o asincrónicos. Estas son simplemente instrucciones; examine cada aplicación individualmente para determinar si los métodos asincrónicos ayudan a mejorar el rendimiento.
+En esta sección se muestran las directrices para decidir cuándo utilizar métodos de acción sincrónicos o asincrónicos. Estas son simplemente instrucciones; examine cada aplicación individualmente para determinar si los métodos asincrónicos ayudan a mejorar el rendimiento.
 
 En general, use métodos sincrónicos para las siguientes condiciones:
 
 - Las operaciones son simples o de ejecución breve.
 - La simplicidad es más importante que la eficacia.
-- Las operaciones son principalmente operaciones de CPU en lugar de operaciones que implican una gran sobrecarga de disco o de red. El uso de métodos de acción asincrónicos en operaciones enlazadas a la CPU no proporciona ninguna ventaja y produce una mayor sobrecarga.
+- Las operaciones son principalmente operaciones de la CPU y no operaciones que requieren una gran sobrecarga del disco o de la red. El uso de métodos de acción asincrónicos en operaciones relacionadas con la CPU no proporciona ninguna ventaja y da lugar a mayor sobrecarga.
 
 En general, use métodos asincrónicos para las siguientes condiciones:
 
 - Está llamando a servicios que se pueden consumir mediante métodos asincrónicos y usa .NET 4,5 o superior.
-- Las operaciones están enlazadas a la red o por e/s en lugar de enlazadas a la CPU.
-- El paralelismo es más importante que la simplicidad del código.
-- Desea proporcionar un mecanismo que permita a los usuarios cancelar una solicitud de ejecución prolongada.
+- Las operaciones están relacionadas con la red o con E/S y no con la CPU.
+- El paralelismo es más importante que la simplicidad de código.
+- Se desea proporcionar un mecanismo que permita al usuario cancelar solicitudes de ejecución prolongada.
 - Cuando la ventaja de cambiar subprocesos supera el costo del cambio de contexto. En general, debe hacer que un método sea asincrónico si el método sincrónico espera en el subproceso de solicitud ASP.NET mientras no realiza ningún trabajo. Al hacer que la llamada sea asincrónica, el subproceso de solicitud ASP.NET no se detiene y no realiza ningún trabajo mientras espera a que se complete la solicitud del servicio Web.
 - Las pruebas muestran que las operaciones de bloqueo son un cuello de botella en el rendimiento del sitio y que IIS puede atender más solicitudes mediante métodos asincrónicos para estas llamadas de bloqueo.
 
-En el ejemplo descargable se muestra cómo usar los métodos de acción asincrónicos de forma eficaz. El ejemplo proporcionado se diseñó para proporcionar una demostración sencilla de la programación asincrónica en ASP.NET MVC 4 con .NET 4,5. El ejemplo no pretende ser una arquitectura de referencia para la programación asincrónica en ASP.NET MVC. El programa de ejemplo llama a los métodos de [ASP.net web API](../../../web-api/index.md) que, a su vez, llaman a [Task. Delay](https://msdn.microsoft.com/library/hh139096(VS.110).aspx) para simular llamadas a servicios Web de ejecución prolongada. La mayoría de las aplicaciones de producción no mostrarán tales ventajas obvias en el uso de métodos de acción asincrónicos.   
+En el ejemplo descargable se muestra cómo utilizar con eficacia los métodos de acción asincrónicos. El ejemplo proporcionado se diseñó para proporcionar una demostración sencilla de la programación asincrónica en ASP.NET MVC 4 con .NET 4,5. El ejemplo no pretende ser una arquitectura de referencia para la programación asincrónica en ASP.NET MVC. El programa de ejemplo llama a los métodos de [ASP.net web API](../../../web-api/index.md) que, a su vez, llaman a [Task. Delay](https://msdn.microsoft.com/library/hh139096(VS.110).aspx) para simular llamadas a servicios Web de ejecución prolongada. La mayoría de las aplicaciones de producción no mostrarán tales ventajas obvias en el uso de métodos de acción asincrónicos.   
   
-Pocas aplicaciones requieren que todos los métodos de acción sean asincrónicos. A menudo, convertir algunos métodos de acción sincrónicos en métodos asincrónicos proporciona el mejor aumento de la eficacia para la cantidad de trabajo necesario.
+Pocas aplicaciones exigen que todos los métodos de acción sean asincrónicos. Con frecuencia, basta con convertir algunos métodos de acción sincrónicos en métodos asincrónicos para obtener la máxima eficacia para la cantidad de trabajo requerida.
 
 ## <a id="SampleApp"></a>La aplicación de ejemplo
 
@@ -109,7 +109,7 @@ Dentro del cuerpo del método `GetGizmosAsync` otro método asincrónico, se lla
 
 La palabra clave **Await** no bloquea el subproceso hasta que se completa la tarea. Registra el resto del método como una devolución de llamada en la tarea y devuelve inmediatamente. Cuando se complete la tarea esperada, se invocará esa devolución de llamada y, por tanto, se reanudará la ejecución del método justo donde se quedó. Para obtener más información sobre el uso de las palabras clave [Await](https://msdn.microsoft.com/library/hh156528(VS.110).aspx) y [Async](https://msdn.microsoft.com/library/hh156513(VS.110).aspx) y el espacio de nombres [Task](https://msdn.microsoft.com/library/system.threading.tasks.task.aspx) , vea [referencias asincrónicas](https://docs.microsoft.com/dotnet/csharp/language-reference/keywords/async).
 
-En el código siguiente se muestran los métodos `GetGizmos` y `GetGizmosAsync`.
+El siguiente código muestra los métodos `GetGizmos` y `GetGizmosAsync`.
 
 [!code-csharp[Main](using-asynchronous-methods-in-aspnet-mvc-4/samples/sample5.cs)]
 

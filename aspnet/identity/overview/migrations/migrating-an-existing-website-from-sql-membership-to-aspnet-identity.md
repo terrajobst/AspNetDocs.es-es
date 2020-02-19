@@ -9,16 +9,16 @@ ms.custom: seoapril2019
 ms.assetid: 220d3d75-16b2-4240-beae-a5b534f06419
 msc.legacyurl: /identity/overview/migrations/migrating-an-existing-website-from-sql-membership-to-aspnet-identity
 msc.type: authoredcontent
-ms.openlocfilehash: eacfbb8a5b2d1aa3678892bc2077a56185fdebbc
-ms.sourcegitcommit: 88fc80e3f65aebdf61ec9414810ddbc31c543f04
+ms.openlocfilehash: 633229cc4311d151121bf6a91b9fa8aeecca1197
+ms.sourcegitcommit: 7709c0a091b8d55b7b33bad8849f7b66b23c3d72
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/22/2020
-ms.locfileid: "76519159"
+ms.lasthandoff: 02/19/2020
+ms.locfileid: "77456158"
 ---
 # <a name="migrating-an-existing-website-from-sql-membership-to-aspnet-identity"></a>Migrar un sitio web existente desde la pertenencia de SQL a ASP.NET Identity
 
-por [Rick Anderson]((https://twitter.com/RickAndMSFT)), [Suhas Joshi](https://github.com/suhasj)
+por [Rick Anderson](https://twitter.com/RickAndMSFT), [Suhas Joshi](https://github.com/suhasj)
 
 > En este tutorial se muestran los pasos necesarios para migrar una aplicación web existente con datos de roles y usuarios creados mediante la pertenencia a SQL al nuevo sistema de ASP.NET Identity. Este enfoque implica cambiar el esquema de la base de datos existente por el que necesita el ASP.NET Identity y enlazarlo en las clases antiguas y nuevas. Después de adoptar este enfoque, una vez que se haya migrado la base de datos, las actualizaciones futuras de la identidad se tratarán sin esfuerzo.
 
@@ -83,15 +83,15 @@ Este archivo de script es específico de este ejemplo. Si el esquema de las tabl
 
 Para que las clases de ASP.NET Identity funcionen de forma prebox con los datos de los usuarios existentes, es necesario migrar el esquema de la base de datos al que necesita ASP.NET Identity. Podemos hacer esto agregando nuevas tablas y copiando la información existente en esas tablas. De forma predeterminada ASP.NET Identity usa EntityFramework para volver a asignar las clases del modelo de identidad a la base de datos para almacenar o recuperar información. Estas clases de modelo implementan las interfaces de identidad básicas que definen los objetos de usuario y de función. Las tablas y las columnas de la base de datos se basan en estas clases de modelo. Las clases del modelo EntityFramework en la identidad v 2.1.0 y sus propiedades se definen a continuación.
 
-| **IdentityUser** | **Type** | **IdentityRole** | **IdentityUserRole** | **IdentityUserLogin** | **IdentityUserClaim** |
+| **IdentityUser** | **Tipo** | **IdentityRole** | **IdentityUserRole** | **IdentityUserLogin** | **IdentityUserClaim** |
 | --- | --- | --- | --- | --- | --- |
-| Id. | cadena | Id. | RoleId | ProviderKey | Id. |
-| Nombre de usuario | cadena | Name | UserId | UserId | ClaimType |
-| PasswordHash | cadena |  |  | LoginProvider | ClaimValue |
-| SecurityStamp | cadena |  |  |  | Identificador de\_de usuario |
-| Correo electrónico | cadena |  |  |  |  |
+| Identificador | string | Identificador | RoleId | ProviderKey | Identificador |
+| Nombre de usuario | string | Nombre | UserId | UserId | ClaimType |
+| PasswordHash | string |  |  | LoginProvider | ClaimValue |
+| SecurityStamp | string |  |  |  | Identificador de\_de usuario |
+| Email | string |  |  |  |  |
 | EmailConfirmed | bool |  |  |  |  |
-| PhoneNumber | cadena |  |  |  |  |
+| PhoneNumber | string |  |  |  |  |
 | PhoneNumberConfirmed | bool |  |  |  |  |
 | LockoutEnabled | bool |  |  |  |  |
 | LockoutEndDate | DateTime |  |  |  |  |
@@ -101,11 +101,11 @@ Necesitamos tener tablas para cada uno de estos modelos con columnas que se corr
 
 | **Clase** | **Table** | **Clave principal** | **Clave externa** |
 | --- | --- | --- | --- |
-| IdentityUser | AspnetUsers | Id. |  |
-| IdentityRole | AspnetRoles | Id. |  |
+| IdentityUser | AspnetUsers | Identificador |  |
+| IdentityRole | AspnetRoles | Identificador |  |
 | IdentityUserRole | AspnetUserRole | UserId + RoleId | Identificador de\_de usuario:&gt;AspnetUsers RoleId-&gt;AspnetRoles |
 | IdentityUserLogin | AspnetUserLogins | ProviderKey + UserId + LoginProvider | UserId-&gt;AspnetUsers |
-| IdentityUserClaim | AspnetUserClaims | Id. | User\_Id-&gt;AspnetUsers |
+| IdentityUserClaim | AspnetUserClaims | Identificador | Identificador de\_de usuario:&gt;AspnetUsers |
 
 Con esta información, podemos crear instrucciones SQL para crear nuevas tablas. Podemos escribir cada instrucción individualmente o generar el script completo mediante los comandos de PowerShell de EntityFramework que podemos editar según sea necesario. Para ello, en VS, abra la **consola del administrador de paquetes** desde el menú **Ver** o **herramientas** .
 
@@ -144,11 +144,11 @@ Este archivo de script es específico de este ejemplo. En el caso de las aplicac
 
     A continuación se muestra cómo se asigna la información de las tablas de pertenencia a SQL al nuevo sistema de identidad.
 
-    aspnet\_Roles --&gt; AspNetRoles
+    Roles de\_de ASPNET:&gt; AspNetRoles
 
     ASP\_netUsers y ASP\_netMembership--&gt; AspNetUsers
 
-    aspnet\_UserInRoles --&gt; AspNetUserRoles
+    ASPNET\_UserInRoles--&gt; AspNetUserRoles
 
     Como se explicó en la sección anterior, las tablas AspNetUserClaims y AspNetUserLogins están vacías. El campo ' discriminador ' de la tabla AspNetUser debe coincidir con el nombre de la clase de modelo que se define como paso siguiente. Además, la columna PasswordHash tiene el formato ' contraseña cifrada | contraseña sal | formato de contraseña '. Esto le permite usar lógica de cifrado de pertenencia a SQL especial para poder reutilizar las contraseñas antiguas. Esto se explica más adelante en el artículo.
 

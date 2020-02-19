@@ -8,16 +8,16 @@ ms.date: 06/12/2014
 ms.assetid: 513837a7-cfea-4568-a4e9-1f5901245d24
 msc.legacyurl: /aspnet/overview/developing-apps-with-windows-azure/building-real-world-cloud-apps-with-windows-azure/data-partitioning-strategies
 msc.type: authoredcontent
-ms.openlocfilehash: b8c901ec30b6d37237f80100a2978350ac389b7a
-ms.sourcegitcommit: 88fc80e3f65aebdf61ec9414810ddbc31c543f04
+ms.openlocfilehash: efc3fa0255aa765e515412c5fa4098303a9d9234
+ms.sourcegitcommit: 7709c0a091b8d55b7b33bad8849f7b66b23c3d72
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/22/2020
-ms.locfileid: "76519172"
+ms.lasthandoff: 02/19/2020
+ms.locfileid: "77457029"
 ---
 # <a name="data-partitioning-strategies-building-real-world-cloud-apps-with-azure"></a>Estrategias de particionamiento de datos (creación de aplicaciones en la nube reales con Azure)
 
-por [Mike Wasson](https://github.com/MikeWasson), [Rick Anderson]((https://twitter.com/RickAndMSFT)), [Tom Dykstra](https://github.com/tdykstra)
+por [Mike Wasson](https://github.com/MikeWasson), [Rick Anderson](https://twitter.com/RickAndMSFT), [Tom Dykstra](https://github.com/tdykstra)
 
 [Descargar el proyecto de corrección de ti](https://code.msdn.microsoft.com/Fix-It-app-for-Building-cdd80df4) o [descargar el libro electrónico](https://blogs.msdn.com/b/microsoft_press/archive/2014/07/23/free-ebook-building-cloud-apps-with-microsoft-azure.aspx)
 
@@ -100,7 +100,7 @@ Documentación:
 - [Prácticas recomendadas para el diseño de servicios a gran escala en Windows Azure Cloud Services](https://msdn.microsoft.com/library/windowsazure/jj717232.aspx). En las notas del producto, Mark SIMM y Michael Thomassy.
 - [Patrones y prácticas de Microsoft: patrones de diseño en la nube](https://msdn.microsoft.com/library/dn568099.aspx). Vea Guía de creación de particiones de datos, patrón de particionamiento.
 
-Vídeos:
+Videos:
 
 - [Failsafe: creación de Cloud Services escalables y resistentes](https://channel9.msdn.com/Series/FailSafe). Series de nueve partes de Ulrich Homann, Marc Mercuri y Mark SIMM. Presenta conceptos de alto nivel y principios arquitectónicos de una manera muy accesible e interesante, con historias tomadas de la experiencia del equipo de asesoramiento al cliente (CAT) de Microsoft con clientes reales. Consulte la explicación de la creación de particiones en el episodio 7.
 - [Building Big: lecciones aprendidas de clientes de Windows Azure, parte I](https://channel9.msdn.com/Events/Build/2012/3-029). Mark SIMM describe los esquemas de partición, las estrategias de particionamiento, cómo implementar el particionamiento y SQL Database federaciones, a partir de 19:49. Similar a la serie failsafe, pero profundiza en más detalles.

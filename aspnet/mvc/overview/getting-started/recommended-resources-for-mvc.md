@@ -8,16 +8,16 @@ ms.date: 04/10/2014
 ms.assetid: 7958d725-e958-4566-a85b-535eeb985f94
 msc.legacyurl: /mvc/overview/getting-started/recommended-resources-for-mvc
 msc.type: authoredcontent
-ms.openlocfilehash: daccaedae0b0e60f5086f270f214f87da564a85d
-ms.sourcegitcommit: e365196c75ce93cd8967412b1cfdc27121816110
+ms.openlocfilehash: 11f4a7cae8d425873b1828a9e5f51471def954fb
+ms.sourcegitcommit: 7709c0a091b8d55b7b33bad8849f7b66b23c3d72
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/07/2020
-ms.locfileid: "77074935"
+ms.lasthandoff: 02/19/2020
+ms.locfileid: "77457159"
 ---
 # <a name="mvc-recommended-resources"></a>Recursos recomendados de MVC
 
-por [Rick Anderson]((https://twitter.com/RickAndMSFT))
+por [Rick Anderson](https://twitter.com/RickAndMSFT)
 
 > En este tema se proporcionan vínculos a recursos de documentación sobre ASP.NET MVC 5. Si conoce una gran entrada de blog, un subproceso de [stackoverflow](http://stackoverflow.com/) o cualquier otro vínculo que le resulte útil [, envíeme](mailto:aspnetue@microsoft.com?subject=Great ASP.NET MVC link) un correo electrónico con el vínculo. Los vínculos que se proporcionan aquí se actualizan periódicamente. Puede encontrar vínculos de ASP.NET MVC en el [mapa de contenido de MSDN](https://msdn.microsoft.com/library/gg416514(v=vs.108).aspx), pero en muchos casos todavía relevantes).
 >

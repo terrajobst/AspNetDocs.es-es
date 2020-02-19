@@ -2,147 +2,147 @@
 uid: mvc/overview/older-versions/getting-started-with-aspnet-mvc4/adding-a-view
 title: Agregar una vista | Microsoft Docs
 author: Rick-Anderson
-description: 'Nota: Una versión actualizada de este tutorial está disponible aquí que usa ASP.NET MVC 5 y Visual Studio 2013. Es más seguro y mucho más fácil de seguir y demostraciones...'
+description: 'Nota: hay disponible una versión actualizada de este tutorial que usa ASP.NET MVC 5 y Visual Studio 2013. Es más seguro, mucho más fácil de seguir y demo...'
 ms.author: riande
 ms.date: 08/28/2012
 ms.assetid: dde851d7-882e-4d99-9b96-cf96daed81cc
 msc.legacyurl: /mvc/overview/older-versions/getting-started-with-aspnet-mvc4/adding-a-view
 msc.type: authoredcontent
-ms.openlocfilehash: 58dc8baf3f2e8e3cf412c0f9c7d9355f933c89d9
-ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
+ms.openlocfilehash: 81c2e1f46b08cbc9b5aa5d6c1b36d9d8dc2ba581
+ms.sourcegitcommit: 7709c0a091b8d55b7b33bad8849f7b66b23c3d72
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/06/2019
-ms.locfileid: "65129962"
+ms.lasthandoff: 02/19/2020
+ms.locfileid: "77457640"
 ---
 # <a name="adding-a-view"></a>Agregar una vista
 
-by [Rick Anderson]((https://twitter.com/RickAndMSFT))
+por [Rick Anderson](https://twitter.com/RickAndMSFT)
 
 > > [!NOTE]
-> > Hay disponible una versión actualizada de este tutorial [aquí](../../getting-started/introduction/getting-started.md) que usa ASP.NET MVC 5 y Visual Studio 2013. Es más seguro y mucho más fácil de seguir y se muestran las características más.
+> > [Hay disponible una](../../getting-started/introduction/getting-started.md) versión actualizada de este tutorial que usa ASP.NET MVC 5 y Visual Studio 2013. Es más seguro, mucho más fácil de seguir y demuestra más características.
 
-En esta sección va a modificar el `HelloWorldController` clase para usar la vista archivos de plantilla correctamente encapsulan el proceso de generar respuestas HTML a un cliente.
+En esta sección, va a modificar la clase `HelloWorldController` para usar los archivos de plantilla de vista con el fin de encapsular correctamente el proceso de generación de respuestas HTML a un cliente.
 
-Creará un archivo de plantilla de vista mediante el [motor de vistas Razor](https://weblogs.asp.net/scottgu/archive/2010/07/02/introducing-razor.aspx) introducidos con ASP.NET MVC 3. Las plantillas de vista Razor tienen una *.cshtml* la extensión de archivo y proporcionan una manera elegante para crear el código HTML de salida con C#. Minimiza el número de caracteres y pulsaciones de teclas necesarias cuando se escribe una plantilla de vista Razor y permite un rápido, fluido flujo de trabajo de codificación.
+Creará un archivo de plantilla de vista mediante el [motor de vistas de Razor](https://weblogs.asp.net/scottgu/archive/2010/07/02/introducing-razor.aspx) que se presentó con ASP.NET MVC 3. Las plantillas de vista basadas en Razor tienen una extensión de archivo *. cshtml* y proporcionan una forma elegante de crear la C#salida HTML mediante. Razor minimiza el número de caracteres y pulsaciones de teclas necesarios al escribir una plantilla de vista y habilita un flujo de trabajo de codificación de fluido rápido.
 
-Actualmente, el método `Index` devuelve una cadena con un mensaje que está codificado de forma rígida en la clase de controlador. Cambiar el `Index` método devuelva un `View` de objeto, como se muestra en el código siguiente:
+Actualmente, el método `Index` devuelve una cadena con un mensaje que está codificado de forma rígida en la clase de controlador. Cambie el método de `Index` para que devuelva un objeto `View`, como se muestra en el código siguiente:
 
 [!code-csharp[Main](adding-a-view/samples/sample1.cs)]
 
-El `Index` método anterior usa una plantilla de vista para generar una respuesta HTML al explorador. Los métodos de controlador (también conocido como [métodos de acción](http://rachelappel.com/asp.net-mvc-actionresults-explained)), como el `Index` método anterior, suelen devolver un [ActionResult](https://msdn.microsoft.com/library/system.web.mvc.actionresult.aspx) (o una clase derivada de [ActionResult](https://msdn.microsoft.com/library/system.web.mvc.actionresult.aspx)), los tipos no primitivos como cadena.
+El método `Index` anterior utiliza una plantilla de vista para generar una respuesta HTML al explorador. Los métodos de controlador (también conocidos como [métodos de acción](http://rachelappel.com/asp.net-mvc-actionresults-explained)), como el método `Index` anterior, normalmente devuelven un [ActionResult](https://msdn.microsoft.com/library/system.web.mvc.actionresult.aspx) (o una clase derivada de [ActionResult](https://msdn.microsoft.com/library/system.web.mvc.actionresult.aspx)), no tipos primitivos como cadena.
 
-En el proyecto, agregue una plantilla de vista que puede usar con el `Index` método. Para ello, haga clic en el `Index` método y haga clic en **agregar vista**.
+En el proyecto, agregue una plantilla de vista que pueda usar con el método `Index`. Para ello, haga clic con el botón secundario dentro del método `Index` y haga clic en **Agregar vista**.
 
 ![](adding-a-view/_static/image1.png)
 
-El **agregar vista** aparece el cuadro de diálogo. Deje los valores predeterminados de la manera son y haga clic en el **agregar** botón:
+Aparece el cuadro de diálogo **Agregar vista** . Deje los valores predeterminados tal y como están y haga clic en el botón **Agregar** :
 
 ![](adding-a-view/_static/image2.png)
 
-El *MvcMovie\Views\HelloWorld* carpeta y el *MvcMovie\Views\HelloWorld\Index.cshtml* se crean archivos. Puede verlos en **el Explorador de soluciones**:
+Se crean la carpeta *MvcMovie\Views\HelloWorld* y el archivo *MvcMovie\Views\HelloWorld\Index.cshtml* . Puede verlos en **Explorador de soluciones**:
 
 ![](adding-a-view/_static/image3.png)
 
-La siguiente muestra la *Index.cshtml* archivo creado:
+A continuación se muestra el archivo *index. cshtml* que se creó:
 
 ![HelloWorldIndex](adding-a-view/_static/image4.png)
 
-Agregue el siguiente código HTML bajo el `<h2>` etiqueta.
+Agregue el siguiente código HTML en la etiqueta `<h2>`.
 
 [!code-html[Main](adding-a-view/samples/sample2.html)]
 
-La completa *MvcMovie\Views\HelloWorld\Index.cshtml* archivo se muestra a continuación.
+A continuación se muestra el archivo *MvcMovie\Views\HelloWorld\Index.cshtml* completo.
 
 [!code-cshtml[Main](adding-a-view/samples/sample3.cshtml?highlight=7-8)]
 
-Si utiliza Visual Studio 2012, en el Explorador de soluciones, haga clic la *Index.cshtml* de archivo y seleccione **ver en Inspector de página**.
+Si usa Visual Studio 2012, en el explorador de soluciones, haga clic con el botón derecho en el archivo *index. cshtml* y seleccione **ver en inspector de página**.
 
 ![PI](adding-a-view/_static/image5.png)
 
-El [tutorial del Inspector de página](../../views/using-page-inspector-in-aspnet-mvc.md) tiene más información sobre esta nueva herramienta.
+En el [tutorial de inspector de página](../../views/using-page-inspector-in-aspnet-mvc.md) se ofrece más información sobre esta nueva herramienta.
 
-Como alternativa, ejecute la aplicación y vaya a la `HelloWorld` controlador (`http://localhost:xxxx/HelloWorld`). El `Index` método en el controlador no hacen mucho trabajo; simplemente ejecutó la instrucción `return View()`, que especifica que el método debe utilizar un archivo de plantilla de vista para presentar una respuesta al explorador. Dado que no especifica explícitamente el nombre del archivo de plantilla de vista para usar, ASP.NET MVC usa de forma predeterminada el *Index.cshtml* los archivos de vista el *\Views\HelloWorld* carpeta. La siguiente imagen muestra la cadena &quot;Hola desde nuestra plantilla de vista!&quot; codificado de forma rígida en la vista.
+Como alternativa, ejecute la aplicación y vaya al controlador de `HelloWorld` (`http://localhost:xxxx/HelloWorld`). El método `Index` del controlador no hace mucho trabajo; simplemente ejecutó la instrucción `return View()`, que especificaba que el método debe utilizar un archivo de plantilla de vista para representar una respuesta al explorador. Dado que no especificó explícitamente el nombre del archivo de plantilla de vista que se va a usar, ASP.NET MVC tenía como valor predeterminado el archivo de vista *index. cshtml* en la carpeta *\Views\HelloWorld* . En la imagen siguiente se muestra la cadena &quot;Hello de nuestra plantilla de vista.&quot; codificado de forma rígida en la vista.
 
 ![](adding-a-view/_static/image6.png)
 
-Parece bastante bueno. Sin embargo, tenga en cuenta que se muestra la barra de título del explorador &quot;indizar mi A ASP.NET&quot; y el vínculo grande en la parte superior de la página se lee &quot;su logotipo aquí.&quot; A continuación el &quot;su logotipo aquí.&quot; vínculo son aproximadamente de registro y registro en vínculos y, a continuación que se vincula a la página principal y póngase en contacto con las páginas. Vamos a cambiar algunas de ellas.
+Parece bastante bueno. Sin embargo, tenga en cuenta que la barra de título del explorador muestra &quot;index My ASP.NET A&quot; y el vínculo Big en la parte superior de la página indica &quot;su logotipo aquí.&quot; debajo del &quot;su logotipo aquí.&quot; vínculo son registros e inicios de sesión y, a continuación, vínculos a las páginas Inicio, acerca de y contacto. Vamos a cambiar algunos de ellos.
 
 ## <a name="changing-views-and-layout-pages"></a>Cambiar vistas y páginas de diseño
 
-En primer lugar, desea cambiar la &quot;su logotipo aquí.&quot; título en la parte superior de la página. Es común a todas las páginas que el texto. En realidad se implementa en un único lugar en el proyecto, aunque aparezca en todas las páginas en la aplicación. Vaya a la */Views/Shared* carpeta **el Explorador de soluciones** y abra el  *\_Layout.cshtml* archivo. Este archivo se denomina un *página de diseño* y es el recurso compartido &quot;shell&quot; que usan todas las demás páginas.
+En primer lugar, desea cambiar el &quot;su logotipo aquí.&quot; título en la parte superior de la página. Ese texto es común a todas las páginas. Realmente se implementa en un solo lugar del proyecto, aunque aparezca en todas las páginas de la aplicación. Vaya a la carpeta */views/Shared* en **Explorador de soluciones** y abra el archivo *\_layout. cshtml* . Este archivo se denomina *Página de diseño* y es el shell de &quot;compartido&quot; que usan todas las demás páginas.
 
 ![_LayoutCshtml](adding-a-view/_static/image7.png)
 
-Las plantillas de diseño permiten especificar el diseño del contenedor HTML del sitio en un solo lugar y, a continuación, aplicarla en varias páginas del sitio. Busque la línea `@RenderBody()`. `RenderBody` es un marcador de posición donde se mostrarán todas las páginas específicas de vista que cree, &quot;encapsuladas&quot; en la página de diseño. Por ejemplo, si selecciona el vínculo acerca la *Views\Home\About.cshtml* vista se representa dentro de la `RenderBody` método.
+Las plantillas de diseño permiten especificar el diseño del contenedor HTML del sitio en un solo lugar y, después, aplicarlo en varias páginas del sitio. Busque la línea `@RenderBody()`. `RenderBody` es un marcador de posición donde se mostrarán todas las páginas específicas de vista que cree, &quot;encapsuladas&quot; en la página de diseño. Por ejemplo, si selecciona el vínculo about, la vista *Views\Home\About.cshtml* se representa dentro del método `RenderBody`.
 
-Cambie el encabezado de título del sitio en la plantilla de diseño de &quot;su logotipo aquí&quot; a &quot;MVC Movie&quot;.
+Cambie el encabezado del título del sitio en la plantilla de diseño &quot;su logotipo aquí&quot; a &quot;película de MVC&quot;.
 
 [!code-cshtml[Main](adding-a-view/samples/sample4.cshtml)]
 
-Reemplace el contenido del elemento de título con el marcado siguiente:
+Reemplace el contenido del elemento title por el marcado siguiente:
 
 [!code-cshtml[Main](adding-a-view/samples/sample5.cshtml)]
 
-Ejecute la aplicación y observe que ahora dice &quot;MVC Movie &quot;. Haga clic en el **sobre** vínculo y ver cómo se muestra esa página &quot;MVC Movie&quot;, demasiado. Fuimos capaces de realizar el cambio una vez en la plantilla de diseño y dispone de todas las páginas del sitio refleja el nuevo título.
+Ejecute la aplicación y observe que ahora dice &quot;&quot;de película de MVC. Haga clic en el vínculo **About (acerca de** ) y verá cómo la página muestra &quot;&quot;de películas MVC también. Pudimos realizar el cambio una vez en la plantilla de diseño y hacer que todas las páginas del sitio reflejen el nuevo título.
 
 ![](adding-a-view/_static/image8.png)
 
 Ahora, vamos a cambiar el título de la vista de índice.
 
-Abra *MvcMovie\Views\HelloWorld\Index.cshtml*. Hay dos lugares para realizar un cambio: en primer lugar, el texto que aparece en el título del explorador y, a continuación, en el encabezado secundario (el `<h2>` elemento). Haremos que sean algo diferentes para que pueda ver qué parte del código cambia cada área de la aplicación.
+Abra *MvcMovie\Views\HelloWorld\Index.cshtml*. Hay dos lugares para hacer un cambio: en primer lugar, el texto que aparece en el título del explorador y, a continuación, en el encabezado secundario (el elemento `<h2>`). Haremos que sean algo diferentes para que pueda ver qué parte del código cambia cada área de la aplicación.
 
 [!code-cshtml[Main](adding-a-view/samples/sample6.cshtml)]
 
-Para indicar el título HTML para mostrar el código anterior establece un `Title` propiedad de la `ViewBag` objeto (que se encuentra en la *Index.cshtml* plantilla de vista). Si repasa el código fuente de la plantilla de diseño, observará que la plantilla utiliza este valor en el `<title>` elemento como parte de la `<head>` sección del archivo HTML que se modificó anteriormente. Mediante este `ViewBag` enfoque, puede pasar fácilmente otros parámetros entre la plantilla de vista y el archivo de diseño.
+Para indicar el título HTML que se va a mostrar, el código anterior establece una propiedad `Title` del objeto `ViewBag` (que se encuentra en la plantilla de vista *index. cshtml* ). Si vuelve al código fuente de la plantilla de diseño, observará que la plantilla usa este valor en el elemento `<title>` como parte de la `<head>` sección del código HTML que se modificó anteriormente. Con este enfoque de `ViewBag`, puede pasar fácilmente otros parámetros entre la plantilla de vista y el archivo de diseño.
 
-Ejecute la aplicación y vaya a `http://localhost:xx/HelloWorld`. Tenga en cuenta que el título del explorador, el encabezado principal y los encabezados secundarios han cambiado. (Si no ve los cambios en el explorador, es posible que esté viendo contenido almacenado en caché. Presione Ctrl+F5 en el explorador para forzar que se cargue la respuesta del servidor). El título del explorador se crea con el `ViewBag.Title` se establece el *Index.cshtml* ver la plantilla y el adicionales &quot;-Movie App&quot; agregado en el archivo de diseño.
+Ejecute la aplicación y vaya a `http://localhost:xx/HelloWorld`. Tenga en cuenta que el título del explorador, el encabezado principal y los encabezados secundarios han cambiado. (Si no ve los cambios en el explorador, es posible que esté viendo contenido almacenado en caché. Presione Ctrl + F5 en el explorador para forzar que se cargue la respuesta del servidor). El título del explorador se crea con el `ViewBag.Title` que se establece en la plantilla de vista *index. cshtml* y la aplicación &quot;-Movie adicional&quot; agrega en el archivo de diseño.
 
-Observe también cómo el contenido en el *Index.cshtml* plantilla de vista se combinó con el  *\_Layout.cshtml* se envió la plantilla de vista y una única respuesta HTML al explorador. Con las plantillas de diseño es realmente fácil hacer cambios para que se apliquen en todas las páginas de la aplicación.
+Observe también cómo el contenido de la plantilla de vista *index. cshtml* se combinó con la plantilla de vista *\_layout. cshtml* y se envió una única respuesta HTML al explorador. Con las plantillas de diseño es realmente fácil hacer cambios para que se apliquen en todas las páginas de la aplicación.
 
 ![](adding-a-view/_static/image9.png)
 
-Nuestra pequeña cantidad de &quot;datos&quot; (en este caso el &quot;Hola desde nuestra plantilla de vista!&quot; mensaje) está codificado de forma rígida, sin embargo. La aplicación de MVC tiene un &quot;V&quot; (vista) y tiene un &quot;C&quot; (controlador), pero no &quot;M&quot; (model) todavía. En breve, le guiaremos a través de cómo crear una base de datos y recuperar los datos del modelo del mismo.
+Nuestro poco de &quot;de datos&quot; (en este caso, el &quot;Hola de nuestra plantilla de vista!&quot; mensaje) está codificado de forma rígida. La aplicación MVC tiene un&quot; de &quot;V (vista) y tiene un&quot; de &quot;C (controlador), pero todavía no &quot;&quot; M (modelo). En breve, veremos cómo crear una base de datos y recuperar los datos del modelo.
 
 ## <a name="passing-data-from-the-controller-to-the-view"></a>Pasar datos del controlador a la vista
 
-Antes de hablar acerca de los modelos y vaya a una base de datos, sin embargo, en primer lugar hablemos acerca de cómo pasar información desde el controlador a una vista. Las clases de controlador se invocan en respuesta a una solicitud de dirección URL entrante. Una clase de controlador es donde se escribe el código que controla el explorador entrante solicita, recupera datos de una base de datos y, en última instancia decida qué tipo de respuesta para enviar al explorador. Plantillas de vista, a continuación, pueden utilizarse desde un controlador para generar y dar formato a una respuesta HTML al explorador.
+Sin embargo, antes de ir a una base de datos y hablar acerca de los modelos, vamos a hablar primero sobre cómo pasar información desde el controlador a una vista. Las clases de controlador se invocan en respuesta a una solicitud de dirección URL entrante. Una clase de controlador es donde se escribe el código que controla las solicitudes entrantes del explorador, recupera los datos de una base de datos y, en última instancia, decide qué tipo de respuesta devolver al explorador. Las plantillas de vista se pueden usar desde un controlador para generar y dar formato a una respuesta HTML en el explorador.
 
-Los controladores son responsables de proporcionar los datos u objetos son necesarios para una plantilla de vista presentar una respuesta al explorador. Procedimiento recomendado: **Una plantilla de vista nunca debe realizar la lógica de negocios ni interactuar directamente con una base de datos**. En su lugar, una plantilla de vista deban trabajar solo con los datos que se proporcionan el controlador. Esto mantiene &quot;separación de preocupaciones&quot; ayuda a mantener el código limpio, fácil de probar y más fácil de mantener.
+Los controladores son responsables de proporcionar los datos u objetos necesarios para que una plantilla de vista represente una respuesta al explorador. Procedimiento recomendado: **una plantilla de vista nunca debe realizar la lógica de negocios ni interactuar directamente con una base de datos**. En su lugar, una plantilla de vista debería funcionar solo con los datos que le proporciona el controlador. Mantener este &quot;la separación de preocupaciones&quot; ayuda a mantener el código limpio, comprobable y más fácil de mantener.
 
-Actualmente, el `Welcome` método de acción en el `HelloWorldController` clase toma un `name` y un `numTimes` parámetro y, a continuación, obtiene los valores directamente en el explorador. En lugar de que el controlador represente esta respuesta como una cadena, vamos a cambiar el controlador para que use una plantilla de vista en su lugar. La plantilla de vista generará una respuesta dinámica, lo que significa que debe pasar las partes de datos adecuadas desde el controlador a la vista para que se genere la respuesta. Para ello, indique al controlador que coloque los datos dinámicos (parámetros) que necesita la plantilla de vista en un `ViewBag` objeto que puede tener acceso la plantilla de vista.
+Actualmente, el método de acción `Welcome` de la clase `HelloWorldController` toma un `name` y un parámetro `numTimes` y, a continuación, genera los valores directamente en el explorador. En lugar de hacer que el controlador represente esta respuesta como una cadena, vamos a cambiar el controlador para usar una plantilla de vista en su lugar. La plantilla de vista generará una respuesta dinámica, lo que significa que debe pasar las partes de datos adecuadas desde el controlador a la vista para que se genere la respuesta. Para ello, haga que el controlador Coloque los datos dinámicos (parámetros) que necesita la plantilla de vista en un objeto `ViewBag` al que pueda tener acceso la plantilla de vista.
 
-Vuelva a la *HelloWorldController.cs* y cambie el `Welcome` método para agregar un `Message` y `NumTimes` valor para el `ViewBag` objeto. `ViewBag` es un objeto dinámico, lo que significa que puede colocar todo lo desee en él; la `ViewBag` objeto no tiene ninguna propiedad definida hasta que coloca algo dentro de él. El [sistema de enlace de modelos ASP.NET MVC](http://odetocode.com/Blogs/scott/archive/2009/04/27/6-tips-for-asp-net-mvc-model-binding.aspx) asigna automáticamente los parámetros con nombre (`name` y `numTimes`) de la cadena de consulta en la barra de direcciones para los parámetros del método. El archivo *HelloWorldController.cs* completo tiene este aspecto:
+Vuelva al archivo *HelloWorldController.CS* y cambie el método `Welcome` para agregar un `Message` y `NumTimes` valor al objeto `ViewBag`. `ViewBag` es un objeto dinámico, lo que significa que puede colocar todo lo que desee en él. el objeto `ViewBag` no tiene ninguna propiedad definida hasta que coloque algo dentro de ella. El [sistema de enlace de modelos de ASP.NET MVC](http://odetocode.com/Blogs/scott/archive/2009/04/27/6-tips-for-asp-net-mvc-model-binding.aspx) asigna automáticamente los parámetros con nombre (`name` y `numTimes`) de la cadena de consulta de la barra de direcciones a los parámetros del método. El archivo *HelloWorldController.cs* completo tiene este aspecto:
 
 [!code-csharp[Main](adding-a-view/samples/sample7.cs)]
 
-Ahora el `ViewBag` objeto contiene los datos que se pasará automáticamente a la vista.
+Ahora, el objeto de `ViewBag` contiene datos que se pasarán a la vista automáticamente.
 
-A continuación, necesita una plantilla de vista principal. En el **compilar** menú, seleccione **MvcMovie compilación** para asegurarse de que se compila el proyecto.
+A continuación, necesitará una plantilla de vista de bienvenida. En el menú **compilar** , seleccione compilar **MvcMovie** para asegurarse de que se compila el proyecto.
 
-A continuación, haga clic en el `Welcome` método y haga clic en **agregar vista**.
+A continuación, haga clic con el botón secundario dentro del método `Welcome` y haga clic en **Agregar vista**.
 
 ![](adding-a-view/_static/image10.png)
 
-Esto es lo que el **agregar vista** cuadro de diálogo es similar a:
+Este es el aspecto del cuadro de diálogo **Agregar vista** :
 
 ![](adding-a-view/_static/image11.png)
 
-Haga clic en **agregar**y, a continuación, agregue el siguiente código bajo el `<h2>` elemento en el nuevo *Welcome.cshtml* archivo. Se creará un bucle que dice &quot;Hello&quot; tantas veces como el usuario indica que debería. La completa *Welcome.cshtml* archivo se muestra a continuación.
+Haga clic en **Agregar**y, a continuación, agregue el siguiente código en el elemento `<h2>` del nuevo archivo *welcome. cshtml* . Creará un bucle que indica &quot;Hello&quot; tantas veces como indique el usuario. A continuación se muestra el archivo *welcome. cshtml* completo.
 
 [!code-cshtml[Main](adding-a-view/samples/sample8.cshtml)]
 
-Ejecute la aplicación y vaya a la dirección URL siguiente:
+Ejecute la aplicación y vaya a la siguiente dirección URL:
 
 `http://localhost:xx/HelloWorld/Welcome?name=Scott&numtimes=4`
 
-Ahora los datos se toman de la dirección URL y pasa al controlador mediante la [enlazador de modelos](http://odetocode.com/Blogs/scott/archive/2009/04/27/6-tips-for-asp-net-mvc-model-binding.aspx). El controlador empaqueta los datos en un `ViewBag` objeto y pasa ese objeto a la vista. La vista, a continuación, muestra los datos como HTML al usuario.
+Ahora se toman los datos de la dirección URL y se pasan al controlador mediante el [enlazador de modelos](http://odetocode.com/Blogs/scott/archive/2009/04/27/6-tips-for-asp-net-mvc-model-binding.aspx). El controlador empaqueta los datos en un objeto `ViewBag` y pasa ese objeto a la vista. A continuación, la vista muestra los datos como HTML al usuario.
 
 ![](adding-a-view/_static/image12.png)
 
-En el ejemplo anterior, hemos usado un `ViewBag` objeto que se va a pasar datos a una vista del controlador. Esta última en el tutorial, usaremos un modelo de vista para pasar datos de un controlador a una vista. El enfoque del modelo de vista para pasar los datos es generalmente mucho más conveniente el enfoque de contenedor de vista. Consulte la entrada de blog [vistas dinámicas de V fuertemente tipados](https://blogs.msdn.com/b/rickandy/archive/2011/01/28/dynamic-v-strongly-typed-views.aspx) para obtener más información.
+En el ejemplo anterior, usamos un objeto `ViewBag` para pasar datos del controlador a una vista. En la última parte del tutorial, usaremos un modelo de vista para pasar datos de un controlador a una vista. El enfoque del modelo de vista para pasar datos generalmente es mucho más recomendable que el enfoque de vista de bolsa. Para obtener más información, vea la entrada de blog [vistas fuertemente tipadas de V](https://blogs.msdn.com/b/rickandy/archive/2011/01/28/dynamic-v-strongly-typed-views.aspx) .
 
-Bueno, eso era un tipo de un &quot;M&quot; para el modelo, pero no el tipo de base de datos. Vamos a aprovechar lo que hemos aprendido para crear una base de datos de películas.
+Bueno, esto era un tipo de &quot;M&quot; para el modelo, pero no el tipo de base de datos. Vamos a aprovechar lo que hemos aprendido para crear una base de datos de películas.
 
 > [!div class="step-by-step"]
 > [Anterior](adding-a-controller.md)

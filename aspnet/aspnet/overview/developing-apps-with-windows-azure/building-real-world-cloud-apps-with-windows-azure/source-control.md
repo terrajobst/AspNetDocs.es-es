@@ -8,16 +8,16 @@ ms.date: 06/23/2015
 ms.assetid: 2a0370d3-c2fb-4bf3-88b8-aad5a736c793
 msc.legacyurl: /aspnet/overview/developing-apps-with-windows-azure/building-real-world-cloud-apps-with-windows-azure/source-control
 msc.type: authoredcontent
-ms.openlocfilehash: a6f445e46d41b646cf6c25af2e65bc73e831d5ed
-ms.sourcegitcommit: 22fbd8863672c4ad6693b8388ad5c8e753fb41a2
+ms.openlocfilehash: 5a1e0d7cd3c396d4be79c8958422602055eb3db1
+ms.sourcegitcommit: 7709c0a091b8d55b7b33bad8849f7b66b23c3d72
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/28/2019
-ms.locfileid: "74583709"
+ms.lasthandoff: 02/19/2020
+ms.locfileid: "77457107"
 ---
 # <a name="source-control-building-real-world-cloud-apps-with-azure"></a>Control de código fuente (creación de aplicaciones en la nube reales con Azure)
 
-por [Mike Wasson](https://github.com/MikeWasson), [Rick Anderson]((https://twitter.com/RickAndMSFT)), [Tom Dykstra](https://github.com/tdykstra)
+por [Mike Wasson](https://github.com/MikeWasson), [Rick Anderson](https://twitter.com/RickAndMSFT), [Tom Dykstra](https://github.com/tdykstra)
 
 [Descargar el proyecto de corrección de ti](https://code.msdn.microsoft.com/Fix-It-app-for-Building-cdd80df4) o [descargar el libro electrónico](https://blogs.msdn.com/b/microsoft_press/archive/2014/07/23/free-ebook-building-cloud-apps-with-microsoft-azure.aspx)
 
@@ -95,7 +95,7 @@ Y agregue los archivos de script a la carpeta de la solución.
 
 ![Selección del menú Agregar elemento existente](source-control/_static/image6.png)
 
-![Agregar elemento existente, cuadro de diálogo](source-control/_static/image7.png)
+![Cuadro de diálogo Agregar elemento existente](source-control/_static/image7.png)
 
 Los archivos de script se incluyen ahora en el proyecto y el control de código fuente está realizando el seguimiento de los cambios de versión junto con los cambios correspondientes del código fuente.
 
@@ -147,11 +147,11 @@ Visual Studio le pregunta si desea usar TFVC (control de versiones centralizado)
 
 Al seleccionar git y hacer clic en **Aceptar**, Visual Studio crea un nuevo repositorio de Git local en la carpeta de la solución. El nuevo repositorio todavía no tiene archivos; tendrá que agregarlos al repositorio mediante una confirmación de Git. Haga clic con el botón secundario en la solución en **Explorador de soluciones**y, a continuación, haga clic en **confirmar**.
 
-![Confirmación](source-control/_static/image11.png)
+![Commit](source-control/_static/image11.png)
 
 Visual Studio organiza automáticamente en fases todos los archivos de proyecto de la confirmación y los enumera en **Team Explorer** en el panel de **cambios incluidos** . (Si hubiera algunos que no deseaba incluir en la confirmación, puede seleccionarlos, hacer clic con el botón secundario y hacer clic en **excluir**).
 
-![Explorador de equipo](source-control/_static/image12.png)
+![Team Explorer](source-control/_static/image12.png)
 
 Escriba un Comentario de confirmación y haga clic en **confirmar**, y Visual Studio ejecutará la confirmación y mostrará el ID. de confirmación.
 

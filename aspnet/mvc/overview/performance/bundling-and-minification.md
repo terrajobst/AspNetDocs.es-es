@@ -8,16 +8,16 @@ ms.date: 08/23/2012
 ms.assetid: 5894dc13-5d45-4dad-8096-136499120f1d
 msc.legacyurl: /mvc/overview/performance/bundling-and-minification
 msc.type: authoredcontent
-ms.openlocfilehash: 239980d747c6e0d6be1e9b4fe0371e276e37cf21
-ms.sourcegitcommit: 88fc80e3f65aebdf61ec9414810ddbc31c543f04
+ms.openlocfilehash: 61bfe5dbac04b57e1461183b66ead2f01fe0734c
+ms.sourcegitcommit: 7709c0a091b8d55b7b33bad8849f7b66b23c3d72
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/22/2020
-ms.locfileid: "76519289"
+ms.lasthandoff: 02/19/2020
+ms.locfileid: "77457770"
 ---
-# <a name="bundling-and-minification"></a>Agrupar y minificar
+# <a name="bundling-and-minification"></a>Unión y minificación
 
-por [Rick Anderson]((https://twitter.com/RickAndMSFT))
+por [Rick Anderson](https://twitter.com/RickAndMSFT)
 
 > La agrupación y la minificación son dos técnicas que puede usar en ASP.NET 4,5 para mejorar el tiempo de carga de la solicitud. La agrupación y minificación mejora el tiempo de carga al reducir el número de solicitudes al servidor y reducir el tamaño de los activos solicitados (como CSS y JavaScript).
 
@@ -54,7 +54,7 @@ Además de quitar los comentarios y los espacios en blanco innecesarios, se ha c
 | **Original** | **Cambia** |
 | --- | --- |
 | imageTagAndImageID | n |
-| imageContext | m |
+| imageContext | t |
 | imageElement | i |
 
 ## <a name="impact-of-bundling-and-minification"></a>Impacto de la agrupación y Minificación
@@ -64,7 +64,7 @@ En la tabla siguiente se muestran varias diferencias importantes entre enumerar 
 |  | **Usar B/M** | **Sin B/M** | **Cambio** |
 | --- | --- | --- | --- |
 | **Solicitudes de archivo** | 9 | 34 | 256% |
-| **KB enviados** | 3.26 | 11.92 | 266% |
+| **KB enviados** | 3,26 | 11.92 | 266% |
 | **KB recibidos** | 388.51 | 530 | 36% |
 | **Tiempo de carga** | 510 MS | 780 MS | 53% |
 
@@ -154,9 +154,9 @@ La ruta de acceso virtual especificada en el método `Include` y el patrón de b
 
 Considere un proyecto con los siguientes archivos JavaScript:
 
-- *Scripts\\Common\\AddAltToImg.js*
+- *Scripts\\Common\\AddAltToImg. js*
 - *Scripts\\Common\\ToggleDiv. js*
-- *Scripts\\Common\\ToggleImg.js*
+- *Scripts\\Common\\ToggleImg. js*
 - *Scripts\\Common\\Sub1\\ToggleLinks. js*
 
 ![DIR imag](bundling-and-minification/_static/image7.png)
@@ -165,12 +165,12 @@ En la tabla siguiente se muestran los archivos agregados a un paquete mediante e
 
 | **Call** | **Archivos agregados o excepción generados** |
 | --- | --- |
-| Include("~/Scripts/Common/\*.js") | *AddAltToImg.js*, *ToggleDiv.js*, *ToggleImg.js* |
-| Include("~/Scripts/Common/T\*.js") | Excepción de patrón no válida. El carácter comodín solo se permite en el prefijo o sufijo. |
+| Include ("~/Scripts/Common/\*. js") | *AddAltToImg. js*, *ToggleDiv. js*, *ToggleImg. js* |
+| Include ("~/Scripts/Common/T\*. js") | Excepción de patrón no válida. El carácter comodín solo se permite en el prefijo o sufijo. |
 | Incluya ("~/Scripts/Common/\*OG.\*") | Excepción de patrón no válida. Solo se permite un carácter comodín. |
 | Include ("~/Scripts/Common/T\*") | *ToggleDiv. js*, *ToggleImg. js* |
 | Include ("~/Scripts/Common/\*") | Excepción de patrón no válida. Un segmento de carácter comodín puro no es válido. |
-| IncludeDirectory("~/Scripts/Common", "T\*") | *ToggleDiv. js*, *ToggleImg. js* |
+| IncludeDirectory ("~/Scripts/Common", "T\*") | *ToggleDiv. js*, *ToggleImg. js* |
 | IncludeDirectory ("~/Scripts/Common", "T\*", true) | *ToggleDiv. js*, *ToggleImg. js*, *ToggleLinks. js* |
 
 Agregar explícitamente cada archivo a una agrupación suele ser preferible a la carga de archivos con comodín por los siguientes motivos:
