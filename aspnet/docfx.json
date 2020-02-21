@@ -35,20 +35,16 @@
     ],
     "overwrite": [],
     "externalReference": [],
-    "xrefService": [
-      "https://xref.docs.microsoft.com/query?uid={uid}"
-    ],
     "globalMetadata": {
       "_navPath": "/foo",
-      "_navRel": "/foo",
       "disable_contribution_on_translation_quality": [
         "MT",
         "MTE75",
         "MTE95",
         "Blank"
       ],
+      "_navRel": "/foo",
       "breadcrumb_path": "/aspnet/breadcrumb/toc.json",
-      "bilingual_type": "hover over",
       "ms.prod": "aspnet-framework",
       "ms.topic": "conceptual",
       "uhfHeaderId": "MSDocsHeader-DotNet",
