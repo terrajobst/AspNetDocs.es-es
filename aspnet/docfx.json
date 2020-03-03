@@ -43,6 +43,7 @@
         "MTE95",
         "Blank"
       ],
+      "bilingual_type": "hover over",
       "_navRel": "/foo",
       "breadcrumb_path": "/aspnet/breadcrumb/toc.json",
       "ms.prod": "aspnet-framework",
