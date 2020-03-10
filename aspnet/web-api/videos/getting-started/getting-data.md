@@ -1,25 +1,25 @@
 ---
 uid: web-api/videos/getting-started/getting-data
-title: 'ASP.NET Web API, parte 2: Obtención de datos | Microsoft Docs'
+title: 'ASP.NET Web API, parte 2: obtención de datos | Microsoft Docs'
 author: jongalloway
-description: 'Nota: Este vídeo contiene información de una versión preliminar de ASP.NET Web API'
+description: 'Nota: este vídeo contiene información de una versión preliminar de ASP.NET Web API'
 ms.author: riande
 ms.date: 02/15/2012
 ms.assetid: 0fed43a5-4703-41ff-8da9-15917cbc0944
 msc.legacyurl: /web-api/videos/getting-started/getting-data
 msc.type: video
 ms.openlocfilehash: 2e584a7a924d985de57d7d61ab45812af19093d1
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59391915"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78484249"
 ---
-# <a name="aspnet-web-api-part-2-getting-data"></a><span data-ttu-id="5afa0-103">ASP.NET Web API, parte 2: Obtener datos</span><span class="sxs-lookup"><span data-stu-id="5afa0-103">ASP.NET Web API, Part 2: Getting Data</span></span>
+# <a name="aspnet-web-api-part-2-getting-data"></a><span data-ttu-id="f1a36-103">ASP.NET Web API, parte 2: obtención de datos</span><span class="sxs-lookup"><span data-stu-id="f1a36-103">ASP.NET Web API, Part 2: Getting Data</span></span>
 
-<span data-ttu-id="5afa0-104">por [Jon Galloway](https://github.com/jongalloway)</span><span class="sxs-lookup"><span data-stu-id="5afa0-104">by [Jon Galloway](https://github.com/jongalloway)</span></span>
+<span data-ttu-id="f1a36-104">por [Jon Galloway](https://github.com/jongalloway)</span><span class="sxs-lookup"><span data-stu-id="f1a36-104">by [Jon Galloway](https://github.com/jongalloway)</span></span>
 
 > [!NOTE]
-> <span data-ttu-id="5afa0-105">Este vídeo contiene información de una versión preliminar de ASP.NET Web API.</span><span class="sxs-lookup"><span data-stu-id="5afa0-105">This video contains information from a pre-release version of ASP.NET Web API.</span></span> <span data-ttu-id="5afa0-106">Para obtener información sobre qué ha cambiado, vea el código de ejemplo actualizado en [https://code.msdn.microsoft.com/ASPNET-Web-API-JavaScript-d0d64dd7](https://code.msdn.microsoft.com/ASPNET-Web-API-JavaScript-d0d64dd7)</span><span class="sxs-lookup"><span data-stu-id="5afa0-106">For information on what changed, see the updated sample code at [https://code.msdn.microsoft.com/ASPNET-Web-API-JavaScript-d0d64dd7](https://code.msdn.microsoft.com/ASPNET-Web-API-JavaScript-d0d64dd7)</span></span>
+> <span data-ttu-id="f1a36-105">Este vídeo contiene información de una versión preliminar de ASP.NET Web API.</span><span class="sxs-lookup"><span data-stu-id="f1a36-105">This video contains information from a pre-release version of ASP.NET Web API.</span></span> <span data-ttu-id="f1a36-106">Para obtener información sobre lo que ha cambiado, consulte el código de ejemplo actualizado en [https://code.msdn.microsoft.com/ASPNET-Web-API-JavaScript-d0d64dd7](https://code.msdn.microsoft.com/ASPNET-Web-API-JavaScript-d0d64dd7)</span><span class="sxs-lookup"><span data-stu-id="f1a36-106">For information on what changed, see the updated sample code at [https://code.msdn.microsoft.com/ASPNET-Web-API-JavaScript-d0d64dd7](https://code.msdn.microsoft.com/ASPNET-Web-API-JavaScript-d0d64dd7)</span></span>
 
-[<span data-ttu-id="5afa0-107">&#9654;Vea el vídeo (4 minutos)</span><span class="sxs-lookup"><span data-stu-id="5afa0-107">&#9654; Watch video (4 minutes)</span></span>](https://channel9.msdn.com/Blogs/ASP-NET-Site-Videos/getting-data)
+[<span data-ttu-id="f1a36-107">&#9654;Ver vídeo (4 minutos)</span><span class="sxs-lookup"><span data-stu-id="f1a36-107">&#9654; Watch video (4 minutes)</span></span>](https://channel9.msdn.com/Blogs/ASP-NET-Site-Videos/getting-data)

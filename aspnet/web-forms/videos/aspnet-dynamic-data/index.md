@@ -1,38 +1,38 @@
 ---
 uid: web-forms/videos/aspnet-dynamic-data/index
-title: Datos dinámicos de ASP.NET | Microsoft Docs
+title: Datos dinámicos ASP.NET | Microsoft Docs
 author: rick-anderson
-description: Cómo usar datos dinámicos de ASP.NET para crear aplicaciones con scaffold que saben automáticamente cómo tener acceso a datos.
+description: Cómo usar ASP.NET datos dinámicos para crear aplicaciones con scaffolding que sepan automáticamente cómo realizar el acceso a los datos.
 ms.author: riande
 ms.date: 10/05/2011
 ms.assetid: cd51e6c4-6ff9-419d-8ac8-a39b79d63c78
 msc.legacyurl: /web-forms/videos/aspnet-dynamic-data
 msc.type: chapter
 ms.openlocfilehash: 622f4c5243d094d1ab6b58a909795bc5230c62ce
-ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/06/2019
-ms.locfileid: "65116402"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78514531"
 ---
-# <a name="aspnet-dynamic-data"></a><span data-ttu-id="f8c73-103">Datos dinámicos de ASP.NET</span><span class="sxs-lookup"><span data-stu-id="f8c73-103">ASP.NET Dynamic Data</span></span>
+# <a name="aspnet-dynamic-data"></a><span data-ttu-id="31a59-103">Datos dinámicos de ASP.NET</span><span class="sxs-lookup"><span data-stu-id="31a59-103">ASP.NET Dynamic Data</span></span>
 
-> <span data-ttu-id="f8c73-104">Cómo usar datos dinámicos de ASP.NET para crear aplicaciones con scaffold que saben automáticamente cómo tener acceso a datos.</span><span class="sxs-lookup"><span data-stu-id="f8c73-104">How to use ASP.NET Dynamic Data to create scaffolded applications that automatically know how to perform data access.</span></span>
+> <span data-ttu-id="31a59-104">Cómo usar ASP.NET datos dinámicos para crear aplicaciones con scaffolding que sepan automáticamente cómo realizar el acceso a los datos.</span><span class="sxs-lookup"><span data-stu-id="31a59-104">How to use ASP.NET Dynamic Data to create scaffolded applications that automatically know how to perform data access.</span></span>
 
-- [<span data-ttu-id="f8c73-105">Su primer scaffold y qué son los datos dinámicos</span><span class="sxs-lookup"><span data-stu-id="f8c73-105">Your First Scaffold and What is Dynamic Data</span></span>](your-first-scaffold-and-what-is-dynamic-data.md)
-- [<span data-ttu-id="f8c73-106">Habilitar la edición en línea de GridView</span><span class="sxs-lookup"><span data-stu-id="f8c73-106">Enable Inline GridView Editing</span></span>](how-do-i-enable-inline-gridview-editing.md)
-- [<span data-ttu-id="f8c73-107">Cambiar la representación de los campos</span><span class="sxs-lookup"><span data-stu-id="f8c73-107">Change how my Fields render</span></span>](how-do-i-change-how-my-fields-render.md)
-- [<span data-ttu-id="f8c73-108">Controlar las excepciones de la lógica de negocios</span><span class="sxs-lookup"><span data-stu-id="f8c73-108">Handle Business Logic Exceptions</span></span>](how-do-i-handle-business-logic-exceptions.md)
-- [<span data-ttu-id="f8c73-109">Crear páginas personalizadas</span><span class="sxs-lookup"><span data-stu-id="f8c73-109">Make Custom Pages</span></span>](how-do-i-make-custom-pages.md)
-- [<span data-ttu-id="f8c73-110">Mostrar tipos de datos desconocidos</span><span class="sxs-lookup"><span data-stu-id="f8c73-110">Display Unknown datatypes</span></span>](how-do-i-display-unknown-datatypes.md)
-- [<span data-ttu-id="f8c73-111">Usar un DynamicControl en los controles ListView y DetailsView</span><span class="sxs-lookup"><span data-stu-id="f8c73-111">Use a DynamicControl in ListView and DetailsView Controls</span></span>](how-do-i-use-a-dynamiccontrol-in-listview-and-detailsview-controls.md)
-- [<span data-ttu-id="f8c73-112">Introducción a los datos dinámicos</span><span class="sxs-lookup"><span data-stu-id="f8c73-112">Getting Started with Dynamic Data</span></span>](getting-started-with-dynamic-data.md)
-- [<span data-ttu-id="f8c73-113">Empezar a editar las plantillas en aplicaciones de datos dinámicos de ASP.NET</span><span class="sxs-lookup"><span data-stu-id="f8c73-113">Begin Editing the Templates in ASP.NET Dynamic Data Applications</span></span>](begin-editing-the-templates-in-aspnet-dynamic-data-applications.md)
-- [<span data-ttu-id="f8c73-114">Empezar a modificar las aplicaciones de datos dinámicos con el enrutamiento de direcciones URL</span><span class="sxs-lookup"><span data-stu-id="f8c73-114">Begin Modifying Dynamic Data Applications with URL Routing</span></span>](begin-modifying-dynamic-data-applications-with-url-routing.md)
-- [<span data-ttu-id="f8c73-115">Habilitar la edición en línea en las aplicaciones de datos dinámicos de ASP.NET</span><span class="sxs-lookup"><span data-stu-id="f8c73-115">Enable In-Line Editing in ASP.NET Dynamic Data Applications</span></span>](enable-in-line-editing-in-aspnet-dynamic-data-applications.md)
-- [<span data-ttu-id="f8c73-116">Habilitar el enrutamiento específico de tabla en aplicaciones de datos dinámicos</span><span class="sxs-lookup"><span data-stu-id="f8c73-116">Enable Table Specific Routing in Dynamic Data Applications</span></span>](how-to-enable-table-specific-routing-in-dynamic-data-applications.md)
-- [<span data-ttu-id="f8c73-117">Usar la validación de atributos en aplicaciones de datos dinámicos de ASP.NET</span><span class="sxs-lookup"><span data-stu-id="f8c73-117">Use Attribute Validation in ASP.NET Dynamic Data Applications</span></span>](how-to-use-attribute-validation-in-aspnet-dynamic-data-applications.md)
-- [<span data-ttu-id="f8c73-118">Implementar la validación de campos personalizados con una lógica imperativa en VB o C#</span><span class="sxs-lookup"><span data-stu-id="f8c73-118">Implement Custom Field Validation with Imperative Logic in VB or C#</span></span>](how-to-implement-custom-field-validation-with-imperative-logic-in-vb-or-c.md)
-- [<span data-ttu-id="f8c73-119">Quitar columnas de las cuadrículas de datos de DynamicData</span><span class="sxs-lookup"><span data-stu-id="f8c73-119">Remove Columns From Your DynamicData Data Grids</span></span>](how-to-remove-columns-from-your-dynamicdata-data-grids.md)
-- [<span data-ttu-id="f8c73-120">Crear formularios personalizados específicos de tabla en una aplicación de datos dinámicos de ASP.NET</span><span class="sxs-lookup"><span data-stu-id="f8c73-120">Create Table Specific Custom Forms in an ASP.NET Dynamic Data Application</span></span>](how-to-create-table-specific-custom-forms-in-an-aspnet-dynamic-data-application.md)
-- [<span data-ttu-id="f8c73-121">Formato de formularios personalizados de datos dinámicos de ASP.NET</span><span class="sxs-lookup"><span data-stu-id="f8c73-121">ASP.NET Dynamic Data Custom Form Formatting</span></span>](aspnet-dynamic-data-custom-form-formatting.md)
+- [<span data-ttu-id="31a59-105">Su primer scaffold y qué son los datos dinámicos</span><span class="sxs-lookup"><span data-stu-id="31a59-105">Your First Scaffold and What is Dynamic Data</span></span>](your-first-scaffold-and-what-is-dynamic-data.md)
+- [<span data-ttu-id="31a59-106">Habilitar la edición en línea de GridView</span><span class="sxs-lookup"><span data-stu-id="31a59-106">Enable Inline GridView Editing</span></span>](how-do-i-enable-inline-gridview-editing.md)
+- [<span data-ttu-id="31a59-107">Cambiar la representación de los campos</span><span class="sxs-lookup"><span data-stu-id="31a59-107">Change how my Fields render</span></span>](how-do-i-change-how-my-fields-render.md)
+- [<span data-ttu-id="31a59-108">Controlar las excepciones de la lógica de negocios</span><span class="sxs-lookup"><span data-stu-id="31a59-108">Handle Business Logic Exceptions</span></span>](how-do-i-handle-business-logic-exceptions.md)
+- [<span data-ttu-id="31a59-109">Crear páginas personalizadas</span><span class="sxs-lookup"><span data-stu-id="31a59-109">Make Custom Pages</span></span>](how-do-i-make-custom-pages.md)
+- [<span data-ttu-id="31a59-110">Mostrar tipos de datos desconocidos</span><span class="sxs-lookup"><span data-stu-id="31a59-110">Display Unknown datatypes</span></span>](how-do-i-display-unknown-datatypes.md)
+- [<span data-ttu-id="31a59-111">Usar un DynamicControl en los controles ListView y DetailsView</span><span class="sxs-lookup"><span data-stu-id="31a59-111">Use a DynamicControl in ListView and DetailsView Controls</span></span>](how-do-i-use-a-dynamiccontrol-in-listview-and-detailsview-controls.md)
+- [<span data-ttu-id="31a59-112">Introducción a los datos dinámicos</span><span class="sxs-lookup"><span data-stu-id="31a59-112">Getting Started with Dynamic Data</span></span>](getting-started-with-dynamic-data.md)
+- [<span data-ttu-id="31a59-113">Empezar a editar las plantillas en aplicaciones de datos dinámicos de ASP.NET</span><span class="sxs-lookup"><span data-stu-id="31a59-113">Begin Editing the Templates in ASP.NET Dynamic Data Applications</span></span>](begin-editing-the-templates-in-aspnet-dynamic-data-applications.md)
+- [<span data-ttu-id="31a59-114">Empezar a modificar las aplicaciones de datos dinámicos con el enrutamiento de direcciones URL</span><span class="sxs-lookup"><span data-stu-id="31a59-114">Begin Modifying Dynamic Data Applications with URL Routing</span></span>](begin-modifying-dynamic-data-applications-with-url-routing.md)
+- [<span data-ttu-id="31a59-115">Habilitar la edición en línea en las aplicaciones de datos dinámicos de ASP.NET</span><span class="sxs-lookup"><span data-stu-id="31a59-115">Enable In-Line Editing in ASP.NET Dynamic Data Applications</span></span>](enable-in-line-editing-in-aspnet-dynamic-data-applications.md)
+- [<span data-ttu-id="31a59-116">Habilitar el enrutamiento específico de tabla en aplicaciones de datos dinámicos</span><span class="sxs-lookup"><span data-stu-id="31a59-116">Enable Table Specific Routing in Dynamic Data Applications</span></span>](how-to-enable-table-specific-routing-in-dynamic-data-applications.md)
+- [<span data-ttu-id="31a59-117">Usar la validación de atributos en aplicaciones de datos dinámicos de ASP.NET</span><span class="sxs-lookup"><span data-stu-id="31a59-117">Use Attribute Validation in ASP.NET Dynamic Data Applications</span></span>](how-to-use-attribute-validation-in-aspnet-dynamic-data-applications.md)
+- [<span data-ttu-id="31a59-118">Implementar la validación de campos personalizados con una lógica imperativa en VB o C#</span><span class="sxs-lookup"><span data-stu-id="31a59-118">Implement Custom Field Validation with Imperative Logic in VB or C#</span></span>](how-to-implement-custom-field-validation-with-imperative-logic-in-vb-or-c.md)
+- [<span data-ttu-id="31a59-119">Quitar columnas de las cuadrículas de datos de DynamicData</span><span class="sxs-lookup"><span data-stu-id="31a59-119">Remove Columns From Your DynamicData Data Grids</span></span>](how-to-remove-columns-from-your-dynamicdata-data-grids.md)
+- [<span data-ttu-id="31a59-120">Crear formularios personalizados específicos de tabla en una aplicación de datos dinámicos de ASP.NET</span><span class="sxs-lookup"><span data-stu-id="31a59-120">Create Table Specific Custom Forms in an ASP.NET Dynamic Data Application</span></span>](how-to-create-table-specific-custom-forms-in-an-aspnet-dynamic-data-application.md)
+- [<span data-ttu-id="31a59-121">Formato de formularios personalizados de datos dinámicos de ASP.NET</span><span class="sxs-lookup"><span data-stu-id="31a59-121">ASP.NET Dynamic Data Custom Form Formatting</span></span>](aspnet-dynamic-data-custom-form-formatting.md)
