@@ -8,11 +8,11 @@ title: Documentación de ASP.NET
 ms.date: 08/24/2018
 description: Aprenda a desarrollar aplicaciones de ASP.NET y aplicaciones web de ASP.NET. Consulte la documentación y obtenga código de ejemplo, tutoriales y mucho más.
 ms.openlocfilehash: 6309704444d60d42d49c3a8f1683045dc503e761
-ms.sourcegitcommit: cd35be4b25eb05724a5f074214bbdf6573349eda
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/29/2019
-ms.locfileid: "70161693"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78419779"
 ---
 <!-- markdownlint-disable MD033 -->
 <div id="main" class="v2">
@@ -439,7 +439,7 @@ ms.locfileid: "70161693"
                         </ul>
                     </li>
                     <li>
-                        <a href="#aspnet_framework">Marcos</a>
+                        <a href="#aspnet_framework">Marcos de trabajo</a>
                         <ul id="aspnet_framework" class="cardsC">
                             <li>
                                 <div class="container intro">
