@@ -9,12 +9,12 @@ ms.assetid: 77431f19-f341-410f-a67f-802f6ce8c845
 msc.legacyurl: /ajax/cdn/jquery-templates
 msc.type: folder
 ms.openlocfilehash: a0747f2d9c43cfc62a540c0296cf690d54477bf6
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59404993"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78453577"
 ---
-# <a name="jquery-templates"></a><span data-ttu-id="79468-102">jQuery Templates</span><span class="sxs-lookup"><span data-stu-id="79468-102">jQuery Templates</span></span>
+# <a name="jquery-templates"></a><span data-ttu-id="6ffb3-102">jQuery Templates</span><span class="sxs-lookup"><span data-stu-id="6ffb3-102">jQuery Templates</span></span>
 
-- [<span data-ttu-id="79468-103">jQuery Templates Beta 1</span><span class="sxs-lookup"><span data-stu-id="79468-103">jQuery Templates Beta 1</span></span>](cdnjquerytemplatesbeta1.md)
+- [<span data-ttu-id="6ffb3-103">jQuery Templates Beta 1</span><span class="sxs-lookup"><span data-stu-id="6ffb3-103">jQuery Templates Beta 1</span></span>](cdnjquerytemplatesbeta1.md)
