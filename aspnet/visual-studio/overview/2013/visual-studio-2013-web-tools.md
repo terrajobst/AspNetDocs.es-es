@@ -1,33 +1,33 @@
 ---
 uid: visual-studio/overview/2013/visual-studio-2013-web-tools
-title: 'Laboratorio práctico: Herramientas Web de Visual Studio 2013 | Microsoft Docs'
+title: 'Laboratorio práctico: Visual Studio 2013 herramientas web | Microsoft Docs'
 author: rick-anderson
-description: Visual Studio es un entorno de desarrollo excelente. Windows basada en NET y proyectos web. Incluye un editor de texto eficaz que puede usarse fácilmente para...
+description: Visual Studio es un entorno de desarrollo excelente para. Proyectos de Windows y Web basados en .net. Incluye un eficaz editor de texto que se puede usar fácilmente para...
 ms.author: riande
 ms.date: 07/16/2014
 ms.assetid: 09e82351-816b-402d-acd1-0f9ac6901d16
 msc.legacyurl: /visual-studio/overview/2013/visual-studio-2013-web-tools
 msc.type: authoredcontent
 ms.openlocfilehash: 2fb987dd9b26ad9f0e8a88fd881bde4505ec4148
-ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/06/2019
-ms.locfileid: "65115897"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78505009"
 ---
-# <a name="hands-on-lab-visual-studio-2013-web-tools"></a>Laboratorio práctico: Herramientas web de Visual Studio 2013
+# <a name="hands-on-lab-visual-studio-2013-web-tools"></a>Laboratorio práctico: Visual Studio 2013 herramientas web
 
-por [campamentos Web Team](https://twitter.com/webcamps)
+por [equipo de grupos de web](https://twitter.com/webcamps)
 
-[Descargue el Kit de aprendizaje de campamentos de Web](https://aka.ms/webcamps-training-kit)
+[Descargar el kit de aprendizaje de Web.](https://aka.ms/webcamps-training-kit)
 
-> Visual Studio es un entorno de desarrollo excelente. Windows basada en NET y proyectos web. Incluye un editor de texto eficaz que puede usarse fácilmente para editar archivos independientes sin un proyecto.
+> Visual Studio es un entorno de desarrollo excelente para. Proyectos de Windows y Web basados en .net. Incluye un eficaz editor de texto que se puede usar fácilmente para editar archivos independientes sin un proyecto.
 > 
-> Visual Studio mantiene un árbol de análisis completo, como modificar cada archivo. Esto permite que Visual Studio proporcionar sin precedentes de autocompletado y las acciones basadas en el documento al mismo tiempo que la experiencia de desarrollo más agradable y mucho más rápida. Estas características son especialmente eficaces en documentos HTML y CSS.
+> Visual Studio mantiene un árbol de análisis completo mientras edita cada archivo. Esto permite que Visual Studio proporcione acciones de finalización automática y basadas en documentos sin parangón, a la vez que hace que la experiencia de desarrollo sea mucho más rápida y agradable. Estas características son especialmente eficaces en documentos HTML y CSS.
 > 
-> Toda esta potencia también está disponible para las extensiones, de forma que sea fácil de ampliar los editores con características nuevas y eficaces para satisfacer sus necesidades. Web Essentials es una colección (principalmente) mejoras relacionadas con la web para Visual Studio. Incluye una gran cantidad de nuevas finalizaciones de IntelliSense (especialmente para CSS), nuevas características de vínculo de explorador, automatic JSHint para JavaScript, archivos, nuevas advertencias para HTML y CSS y muchas otras características que son esenciales para el desarrollo web moderno.
+> Toda esta potencia también está disponible para las extensiones, lo que facilita la ampliación de los editores con nuevas y eficaces características que se adaptan a sus necesidades. Web Essentials es una colección de mejoras (principalmente) relacionadas con la Web de Visual Studio. Incluye muchas finalizaciones de IntelliSense nuevas (especialmente para CSS), nuevas características de vínculo del explorador, JSHint automáticas para archivos JavaScript, nuevas advertencias para HTML y CSS, y muchas otras características que son esenciales para el desarrollo web moderno.
 > 
-> Todo el código de ejemplo y fragmentos de código se incluyen en el Kit de entrenamiento campamentos de Web, que está disponible en [ https://aka.ms/webcamps-training-kit ](https://aka.ms/webcamps-training-kit).
+> Todo el código de ejemplo y los fragmentos de código se incluyen en el kit de aprendizaje de Web., disponible en [https://aka.ms/webcamps-training-kit](https://aka.ms/webcamps-training-kit).
 
 <a id="Overview"></a>
 ## <a name="overview"></a>Información general
@@ -35,17 +35,17 @@ por [campamentos Web Team](https://twitter.com/webcamps)
 <a id="Objectives"></a>
 ### <a name="objectives"></a>Objetivos
 
-En este laboratorio práctico, aprenderá cómo:
+En este laboratorio práctico, aprenderá a:
 
-- Usar las nuevas características del editor HTML incluidas en Web Essentials como fragmentos de código enriquecidos de HTML5 y el Zen de codificación
-- Usar las nuevas características del editor CSS incluidas en Web Essentials como el selector de colores y la información sobre herramientas de explorador matriz
-- Usar las nuevas características del editor de JavaScript incluidas en Web Essentials, como extraer al archivo e IntelliSense para todos los elementos HTML
-- Intercambiar datos entre su explorador y Visual Studio mediante el vínculo de explorador
+- Usar las nuevas características del editor HTML incluidas en Web Essentials, como fragmentos de código HTML5 enriquecidos y codificación Zen
+- Usar las nuevas características del editor de CSS incluidas en Web Essentials como la información sobre herramientas del selector de colores y la matriz del explorador
+- Usar las nuevas características del editor de JavaScript incluidas en Web Essentials como extraer a archivo e IntelliSense para todos los elementos HTML
+- Intercambio de datos entre el explorador y Visual Studio mediante el vínculo del explorador
 
 <a id="Prerequisites"></a>
 ### <a name="prerequisites"></a>Requisitos previos
 
-El siguiente es necesario para completar este laboratorio práctico:
+Para completar este laboratorio práctico, es necesario lo siguiente:
 
 - [Microsoft Visual Studio Professional 2013](https://www.microsoft.com/visualstudio/) o superior
 - [Web Essentials 2013](http://vswebessentials.com/)
@@ -54,456 +54,456 @@ El siguiente es necesario para completar este laboratorio práctico:
 <a id="Setup"></a>
 ### <a name="setup"></a>Programa de instalación
 
-Para poder ejecutar los ejercicios en este laboratorio práctico, deberá configurar primero el entorno.
+Con el fin de ejecutar los ejercicios de este laboratorio práctico, deberá configurar el entorno primero.
 
-1. Abra una ventana del explorador de Windows y vaya a la práctica **origen** carpeta.
-2. Haga clic en **Setup.cmd** y seleccione **ejecutar como administrador** para iniciar el proceso de instalación que se configure su entorno e instalará los fragmentos de código de Visual Studio para este laboratorio.
-3. Si se muestra el cuadro de diálogo Control de cuentas de usuario, confirme la acción para continuar.
+1. Abra una ventana del explorador de Windows y vaya a la carpeta de **origen** del laboratorio.
+2. Haga clic con el botón secundario en **setup. cmd** y seleccione **Ejecutar como administrador** para iniciar el proceso de instalación que configurará el entorno e instalará los fragmentos de código de Visual Studio para este laboratorio.
+3. Si se muestra el cuadro de diálogo control de cuentas de usuario, confirme la acción para continuar.
 
 > [!NOTE]
-> Asegúrese de que ha comprobado todas las dependencias para este laboratorio antes de ejecutar el programa de instalación.
+> Asegúrese de que ha comprobado todas las dependencias de este laboratorio antes de ejecutar el programa de instalación.
 
 <a id="CodeSnippets"></a>
-### <a name="using-the-code-snippets"></a>Uso de los fragmentos de código
+### <a name="using-the-code-snippets"></a>Usar los fragmentos de código
 
-En todo el documento de laboratorio, se le pedirá que inserte los bloques de código. Para su comodidad, la mayoría de este código se proporciona como fragmentos de código de Visual Studio, puede acceder desde dentro de Visual Studio 2013 para evitar tener que agregarla manualmente.
+En todo el documento de laboratorio, se le indicará que inserte bloques de código. Para su comodidad, la mayor parte de este código se proporciona como fragmentos de Visual Studio Code, a los que puede acceder desde Visual Studio 2013 para evitar tener que agregarlo manualmente.
 
 > [!NOTE]
-> Cada ejercicio viene acompañado por una solución inicial ubicada en el **comenzar** carpeta del ejercicio que le permite seguir cada ejercicio independientemente de los demás. Ten en cuenta que los fragmentos de código que se agregan durante un ejercicio faltan en estos a partir de las soluciones y es posible que no funcione hasta que haya completado el ejercicio. En el código fuente para un ejercicio, también encontrará un **final** carpeta que contiene una solución de Visual Studio con el código que se obtiene al completar los pasos descritos en el ejercicio correspondiente. Puede usar estas soluciones como instrucciones si necesita más ayuda mientras se trabaja a través de este laboratorio práctico.
+> Cada ejercicio va acompañado de una solución de inicio que se encuentra en la carpeta **Inicio** del ejercicio que le permite seguir cada ejercicio con independencia de los demás. Tenga en cuenta que los fragmentos de código que se agregan durante un ejercicio no se encuentran en estas soluciones de inicio y puede que no funcionen hasta que haya completado el ejercicio. Dentro del código fuente de un ejercicio, también encontrará una carpeta **final** que contiene una solución de Visual Studio con el código que es el resultado de completar los pasos del ejercicio correspondiente. Puede usar estas soluciones como guía si necesita ayuda adicional a medida que trabaja en este laboratorio práctico.
 
 ---
 
 <a id="Exercises"></a>
 ## <a name="exercises"></a>Ejercicios
 
-Este laboratorio práctico incluye los ejercicios siguientes:
+Este laboratorio práctico incluye los siguientes ejercicios:
 
-1. [Trabajar con el vínculo con exploradores y Web Essentials](#Exercise1)
-2. [Sacar partido de IntelliSense y fragmentos de código](#Exercise2)
+1. [Trabajar con vínculos del explorador y Web Essentials](#Exercise1)
+2. [Aprovechar las ventajas de los fragmentos de código e IntelliSense](#Exercise2)
 
 > [!NOTE]
-> Primera vez que inicie Visual Studio, debe seleccionar una de las colecciones de configuraciones predefinidas. Cada colección predefinida está diseñado para que coincida con un estilo de desarrollo determinado y determina los diseños de ventana, comportamiento del editor, fragmentos de código de IntelliSense y opciones del cuadro de diálogo. Los procedimientos de este laboratorio describen las acciones necesarias para realizar una tarea concreta en Visual Studio cuando se usa el **configuración General de desarrollo** colección. Si elige una colección de configuraciones diferentes para el entorno de desarrollo, puede haber diferencias en los pasos que debe tener en cuenta.
+> Al iniciar Visual Studio por primera vez, debe seleccionar una de las colecciones de configuraciones predefinidas. Cada colección predefinida está diseñada para coincidir con un estilo de desarrollo determinado y determina los diseños de ventana, el comportamiento del editor, los fragmentos de código de IntelliSense y las opciones del cuadro de diálogo. En los procedimientos de este laboratorio se describen las acciones necesarias para realizar una tarea determinada en Visual Studio cuando se usa la colección de **configuración de desarrollo general** . Si elige una colección de valores de configuración diferente para el entorno de desarrollo, puede haber diferencias en los pasos que debe tener en cuenta.
 
 <a id="Exercise1"></a>
-### <a name="exercise-1-working-with-browser-link-and-web-essentials"></a>Ejercicio 1: Trabajar con el vínculo con exploradores y Web Essentials
+### <a name="exercise-1-working-with-browser-link-and-web-essentials"></a>Ejercicio 1: trabajar con vínculos de explorador y Web Essentials
 
-**Web Essentials** es una extensión de Visual Studio que se agrega una variedad de características útiles para el desarrollo web moderno, centrado principalmente en hacer que la experiencia de desarrollo web mucho más rápida y más agradable. Web Essentials puede instalar desde la Galería de extensiones de Visual Studio.
+**Web Essentials** es una extensión de Visual Studio que agrega una gran variedad de características útiles para el desarrollo web moderno, principalmente centradas en facilitar la experiencia de desarrollo web mucho más rápida y agradable. Puede instalar Web Essentials desde la galería de extensiones en Visual Studio.
 
-**Vínculo de explorador** es una característica nueva incluida en Visual Studio 2013 que proporciona un canal entre el IDE de Visual Studio y en cualquier explorador abierto para intercambiar datos entre su aplicación web y Visual Studio. Web Essentials amplía el vínculo de explorador con herramientas para manipular el modelo de objetos DOM y los estilos CSS de las páginas web directamente desde el explorador.
+El **vínculo del explorador** es una característica nueva incluida en Visual Studio 2013 que proporciona un canal entre el IDE de Visual Studio y cualquier explorador abierto para intercambiar datos entre la aplicación web y Visual Studio. Web Essentials amplía el vínculo del explorador con herramientas para manipular el modelo de objetos DOM y los estilos CSS de las páginas web directamente desde el explorador.
 
-En este ejercicio, explorará algunas de las características admitidas por **Web Essentials** y **Browser Link** para mejorar una página de prueba simple.
+En este ejercicio, explorará algunas de las características compatibles con **Web Essentials** y el **vínculo del explorador** para mejorar una sencilla página de cuestionario.
 
 <a id="Ex1Task1"></a>
 #### <a name="task-1---running-the-project-in-multiple-browsers"></a>Tarea 1: ejecutar el proyecto en varios exploradores
 
-En esta tarea, configurará la aplicación web para ejecutar en varios exploradores a la vez, lo que resulta útil para las pruebas entre exploradores.
+En esta tarea, configurará la aplicación web para que se ejecute en varios exploradores a la vez, lo que resulta útil para las pruebas entre exploradores.
 
 1. Abra **Microsoft Visual Studio**.
-2. En el **archivo** menú, seleccione **abiertos | Proyecto o solución...**  y vaya a **Ex1 WorkingwithBrowserLinkandWebEssentials\Begin** en el **origen** carpeta del laboratorio (C:\WebCampsTK\HOL\VSWebTooling\Source). Seleccione **Begin.sln** y haga clic en **abierto**.
-3. En la barra de herramientas de Visual Studio, expanda el menú del explorador y seleccione **examinar con...** .
+2. En el menú **archivo** , seleccione **abrir | Proyecto o solución..** . y vaya a **EX1-WorkingwithBrowserLinkandWebEssentials\Begin** en la carpeta de **origen** del laboratorio (C:\WebCampsTK\HOL\VSWebTooling\Source). Seleccione **Begin. sln** y haga clic en **abrir**.
+3. En la barra de herramientas de Visual Studio, expanda el menú del explorador y seleccione **examinar con..** ..
 
-    ![Opción del menú Examinar con](visual-studio-2013-web-tools/_static/image1.png "examinar con... en el menú del explorador")
+    ![Opción de menú explorar con](visual-studio-2013-web-tools/_static/image1.png "Examinar con... en el menú del explorador")
 
-    *Explorar con opción de menú*
-4. En el **explorar con** cuadro de diálogo, seleccione **Google Chrome** y **Internet Explorer** manteniendo presionada la **CTRL** clave y haga clic en  **Establecer como predeterminado**.
+    *Opción de menú explorar con*
+4. En el cuadro de diálogo **explorar con** , seleccione **Google Chrome** e **Internet Explorer** manteniendo presionada la tecla **Ctrl** y haga clic en **establecer como predeterminado**.
 
-    ![Examinar con el cuadro de diálogo](visual-studio-2013-web-tools/_static/image2.png "examinar con el cuadro de diálogo")
+    ![Cuadro de diálogo explorar con](visual-studio-2013-web-tools/_static/image2.png "Cuadro de diálogo explorar con")
 
-    *Selección de varios exploradores predeterminados*
-5. Google Chrome e Internet Explorer deberían aparecer ahora como los exploradores predeterminados. Haga clic en **cancelar** para cerrar el cuadro de diálogo.
+    *Seleccionar varios exploradores predeterminados*
+5. Google Chrome e Internet Explorer deben aparecer ahora como exploradores predeterminados. Haga clic en **Cancelar** para cerrar el cuadro de diálogo.
 
-    ![Google Chrome e Internet Explorer como exploradores predeterminados](visual-studio-2013-web-tools/_static/image3.png "exploradores predeterminados de Internet Explorer y Google Chrome")
+    ![Google Chrome e Internet Explorer como exploradores predeterminados](visual-studio-2013-web-tools/_static/image3.png "Exploradores predeterminados de Google Chrome e Internet Explorer")
 
     *Google Chrome e Internet Explorer como exploradores predeterminados*
 
     > [!NOTE]
-    > Después de configurar los exploradores de forma predeterminada, el **varios exploradores** opción está seleccionada en el menú del explorador.
+    > Después de configurar los exploradores predeterminados, se selecciona la opción **varios exploradores** en el menú del explorador.
     > 
-    > ![Varios exploradores](visual-studio-2013-web-tools/_static/image4.png "varios exploradores")
+    > ![Varios exploradores](visual-studio-2013-web-tools/_static/image4.png "Varios exploradores")
 6. Presione **CTRL** + **F5** para ejecutar la aplicación sin depuración.
-7. Al abrirán dos ventanas del explorador, colocar uno de ellos encima del otro para ver las actualizaciones en los dos exploradores simultáneamente. Los exploradores deben mostrar una página web con un rectángulo azul claro.
+7. Cuando se abran las ventanas del explorador, coloque una de ellas por encima de la otra para ver las actualizaciones en ambos exploradores simultáneamente. Los exploradores deben mostrar una página web con un rectángulo azul claro.
 
-    ![Colocación de un explorador encima del otro](visual-studio-2013-web-tools/_static/image5.png "colocar encima de los otros exploradores")
+    ![Colocar un explorador sobre el otro](visual-studio-2013-web-tools/_static/image5.png "Colocar un explorador sobre el otro")
 
-    *Colocación de un explorador encima del otro*
+    *Colocar un explorador sobre el otro*
 8. No cierre los exploradores. Los usará en la siguiente tarea.
 
 <a id="Ex1Task2"></a>
-#### <a name="task-2---using-zen-coding-to-create-html-elements"></a>Tarea 2: usar Zen de codificación para crear elementos HTML
+#### <a name="task-2---using-zen-coding-to-create-html-elements"></a>Tarea 2: uso de código Zen para crear elementos HTML
 
-**Codificación Zen** es un editor de código de complemento de alta velocidad HTML, XML, XSL (o cualquier otro formato de código estructurado) y editar. El núcleo de este complemento es un motor de abreviatura eficaz que permite expandir expresiones - similares a los selectores CSS - en código HTML. Zen de codificación es una forma rápida para escribir la sintaxis del selector de estilo HTML mediante CSS.
+La **codificación de Zen** es un complemento de editor para la codificación y edición de HTML de alta velocidad, XML, XSL (o cualquier otro formato de código estructurado). El núcleo de este complemento es un eficaz motor de abreviaturas que permite expandir expresiones, similares a los selectores de CSS, en código HTML. La codificación Zen es una forma rápida de escribir HTML mediante una sintaxis de selector de estilo CSS.
 
 En este ejercicio, usará la característica de codificación Zen proporcionada por Web Essentials para generar los botones HTML que representan las opciones de la pregunta.
 
-1. Cambie a Visual Studio.
-2. Abra el **Index.cshtml** archivo se encuentra en la **vistas** | **inicio** carpeta.
-3. Reemplace el **&lt;!--TODO: agregar opciones aquí--&gt;** comentario con el código siguiente y presione **ficha**.
+1. Vuelva a Visual Studio.
+2. Abra el archivo **index. cshtml** que se encuentra en la carpeta **views** | **Home** .
+3. Reemplace el **&lt;!--todo: agregar opciones aquí--&gt;** comentario con el código siguiente y presione **Tab**.
 
     [!code-css[Main](visual-studio-2013-web-tools/samples/sample1.css)]
-4. El código debe ampliarse a HTML.
+4. El código debe expandirse a HTML.
 
-    ![Expande HTML](visual-studio-2013-web-tools/_static/image6.png "expandido HTML")
+    ![HTML expandido](visual-studio-2013-web-tools/_static/image6.png "HTML expandido")
 
     *HTML expandido*
 
     > [!NOTE]
-    > Para obtener más información sobre sintaxis Zen de codificación, vea el siguiente [artículo](http://www.johnpapa.net/zen-coding-in-visual-studio-2012/).
-5. Haga clic en el **Actualizar exploradores** botón para actualizar los dos exploradores.
+    > Para más información sobre la sintaxis de codificación de Zen, consulte el [artículo](http://www.johnpapa.net/zen-coding-in-visual-studio-2012/)siguiente.
+5. Haga clic en el botón **Actualizar exploradores vinculados** para actualizar los dos exploradores.
 
-    ![Actualizar exploradores](visual-studio-2013-web-tools/_static/image7.png "Actualizar exploradores")
+    ![Actualizar exploradores vinculados](visual-studio-2013-web-tools/_static/image7.png "Actualizar exploradores vinculados")
 
-    *Actualizar exploradores*
+    *Actualizar exploradores vinculados*
 
-    ![Internet Explorer - página se actualiza con cuatro botones](visual-studio-2013-web-tools/_static/image8.png "Internet Explorer - página se actualiza con cuatro botones")
+    ![Internet Explorer-Página actualizada con cuatro botones](visual-studio-2013-web-tools/_static/image8.png "Internet Explorer-Página actualizada con cuatro botones")
 
-    *Internet Explorer - página se actualiza con cuatro botones*
+    *Internet Explorer-Página actualizada con cuatro botones*
 
-    ![Google Chrome: página se actualiza con cuatro botones](visual-studio-2013-web-tools/_static/image9.png "Google Chrome: página se actualiza con cuatro botones")
+    ![Google Chrome-Página actualizada con cuatro botones](visual-studio-2013-web-tools/_static/image9.png "Google Chrome-Página actualizada con cuatro botones")
 
-    *Google Chrome: página se actualiza con cuatro botones*
-6. Cambie a Visual Studio.
-7. Los botones se han agregado a la página, pero aun así deberá agregar una pregunta de la plantilla. Para ello, usará una nueva característica en Web Essentials llamado **Lorem Ipsum generador**. Busque el **div** elemento con el **clase** atributo **front**.
-8. Agregue el siguiente código como el primer elemento secundario de la **div**y presione **ficha**.
+    *Google Chrome-Página actualizada con cuatro botones*
+6. Vuelva a Visual Studio.
+7. Ha agregado los botones a la página, pero todavía necesita agregar una pregunta de plantilla. Para ello, utilizará una nueva característica de Web Essentials denominada de **Lorem ipsum generator**. Busque el elemento **div** con el atributo de **clase** **delante**.
+8. Agregue el código siguiente como primer elemento secundario del **div**y presione **Tab**.
 
     [!code-css[Main](visual-studio-2013-web-tools/samples/sample2.css)]
-9. El código debe ampliarse a HTML.
+9. El código debe expandirse a HTML.
 
-    ![Lorem Ipsum autogenerados](visual-studio-2013-web-tools/_static/image10.png "Lorem Ipsum autogenerados")
+    ![Lorem Ipsum generado automáticamente](visual-studio-2013-web-tools/_static/image10.png "Lorem Ipsum generado automáticamente")
 
-    *Lorem Ipsum autogenerados*
+    *Lorem Ipsum generado automáticamente*
 
     > [!NOTE]
-    > Como parte de la programación Zen, ahora puede generar código de Lorem Ipsum directamente en el editor de HTML. Simplemente escriba **lorem** y posicionamiento **ficha** y un 30 Lorem Ipsum se insertará el texto de word. P. ej., *lorem10* inserta 10 palabras Lorem Ipsum.
-10. Se agregará un logotipo en la parte superior de la pregunta mediante el uso de otra característica nueva en Web Essentials llamado **generador Lorem píxel**. Agregue el siguiente código como el primer elemento secundario de la **div** elemento con **contenedor** como **clase** valor y presione **ficha**.
+    > Como parte de la codificación de Zen, ahora puede generar código Lorem ipsum directamente en el editor HTML. Simplemente escriba **Lorem** y pulse **Tab** y se insertará un texto de 30 palabras Lorem ipsum. P. ej., *lorem10* inserta 10 palabras ipsum ipsum.
+10. Agregará un logotipo en la parte superior de la pregunta mediante otra característica nueva en Web Essentials denominada generador de **píxeles Lorem**. Agregue el código siguiente como primer elemento secundario del elemento **div** con **Container** como valor de **clase** y presione **Tab**.
 
     [!code-css[Main](visual-studio-2013-web-tools/samples/sample3.css)]
-11. El código debe expandirse en HTML.
+11. El código debe expandirse a HTML.
 
-    ![Lorem píxel autogenerados](visual-studio-2013-web-tools/_static/image11.png "Lorem píxel autogenerados")
+    ![Lorem pixel generado automáticamente](visual-studio-2013-web-tools/_static/image11.png "Lorem pixel generado automáticamente")
 
-    *Lorem píxel autogenerados*
-
-    > [!NOTE]
-    > Como parte de la programación Zen, también puede generar código de Lorem píxel directamente en el editor de HTML. Simplemente escriba **animales de 200 x 200 pix** y posicionamiento **ficha** y un **img** etiqueta con una imagen de 200 x 200 de un animal que se van a insertar. Para obtener más información, consulte [Lorem píxel](http://www.lorempixel.com).
-12. Haga clic en el **Actualizar exploradores** botón para actualizar los dos exploradores.
-
-    ![Internet Explorer - autogenerados imagen y texto](visual-studio-2013-web-tools/_static/image12.png "Internet Explorer - autogenerados imagen y texto")
-
-    *Internet Explorer - autogenerados imagen y texto*
-
-    ![Google Chrome: autogenerados imagen y texto](visual-studio-2013-web-tools/_static/image13.png "Google Chrome: texto e imágenes generadas automáticamente")
-
-    *Google Chrome: texto e imágenes generadas automáticamente*
+    *Lorem pixel generado automáticamente*
 
     > [!NOTE]
-    > Dado que la imagen se selecciona aleatoriamente al agregar el fragmento de código, la imagen que se muestra en los exploradores puede diferir.
+    > Como parte de la codificación de Zen, también puede generar código Lorem píxel directamente en el editor HTML. Simplemente escriba **PIX-200 x 200-Animals** y presione la **tecla TAB** y se insertará una etiqueta **IMG** con una imagen de 200 x 200 de un animal. Para obtener más información, consulte [Lorem pixel](http://www.lorempixel.com).
+12. Haga clic en el botón **Actualizar exploradores vinculados** para actualizar los dos exploradores.
+
+    ![Internet Explorer: imagen y texto generados automáticamente](visual-studio-2013-web-tools/_static/image12.png "Internet Explorer: imagen y texto generados automáticamente")
+
+    *Internet Explorer: imagen y texto generados automáticamente*
+
+    ![Google Chrome: imagen y texto generados automáticamente](visual-studio-2013-web-tools/_static/image13.png "Google Chrome: imagen y texto generados automáticamente")
+
+    *Google Chrome: imagen y texto generados automáticamente*
+
+    > [!NOTE]
+    > Dado que la imagen se selecciona aleatoriamente al agregar el fragmento de código, la imagen que se muestra en los exploradores puede ser diferente.
 13. No cierre los exploradores. Los usará en la siguiente tarea.
 
 <a id="Ex1Task3"></a>
 #### <a name="task-3---updating-a-style-property"></a>Tarea 3: actualizar una propiedad de estilo
 
-En esta tarea, utilizará el vínculo de explorador **inspeccionar modo** característica para detectar la ubicación exacta donde se genera el elemento DOM específico y, a continuación, actualice la propiedad de color de ese elemento mediante un selector de color proporcionado por Web Essentials.
+En esta tarea, usará la característica de **modo inspeccionar** del vínculo del explorador para detectar la ubicación exacta en la que se genera el elemento DOM específico y, a continuación, actualizar la propiedad color de ese elemento mediante un selector de colores proporcionado por Web Essentials.
 
-1. En el Explorador de Internet Explorer, presione **CTRL** + **ALT** + **me** para habilitar el modo de inspeccionar.
+1. En el explorador de Internet Explorer, presione **CTRL** + **Alt** + **I** habilitar el modo de inspección.
 2. Mueva el puntero sobre el borde azul claro y haga clic en.
 
-    ![Mover el puntero sobre el borde azul claro](visual-studio-2013-web-tools/_static/image14.png "mover el puntero sobre el borde azul claro")
+    ![Mover el puntero sobre el borde de color azul claro](visual-studio-2013-web-tools/_static/image14.png "Mover el puntero sobre el borde de color azul claro")
 
-    *Mover el puntero sobre el borde azul claro*
-3. Cambie a Visual Studio. Observe cómo el elemento HTML que seleccionó en el explorador también se selecciona en el editor HTML de Visual Studio.
+    *Mover el puntero sobre el borde de color azul claro*
+3. Vuelva a Visual Studio. Observe cómo el elemento HTML que seleccionó en el explorador también está seleccionado en el editor HTML de Visual Studio.
 
-    ![Elemento HTML seleccionado en el editor HTML de Visual Studio](visual-studio-2013-web-tools/_static/image15.png "elemento HTML seleccionado en el editor HTML de Visual Studio")
+    ![Elemento HTML seleccionado en el editor HTML de Visual Studio](visual-studio-2013-web-tools/_static/image15.png "Elemento HTML seleccionado en el editor HTML de Visual Studio")
 
     *Elemento HTML seleccionado en el editor HTML de Visual Studio*
-4. A continuación, actualizaremos la **front** clase CSS con el fin de cambiar el estilo del elemento seleccionado. Para ello, presione **CTRL** + **,** para abrir el **navegar a** cuadro de búsqueda. Tipo **site.css** y presione **ENTRAR** para abrir el archivo.
+4. Ahora se actualizará la clase CSS **frontal** para cambiar el estilo del elemento seleccionado. Para ello, presione **CTRL** ** + para** abrir el cuadro de búsqueda **navegar a** . Escriba **site. CSS** y presione **entrar** para abrir el archivo.
 
-    ![Abrir el archivo Site.css](visual-studio-2013-web-tools/_static/image16.png "al abrir el archivo Site.css")
+    ![Abriendo archivo site. CSS](visual-studio-2013-web-tools/_static/image16.png "Abriendo archivo site. CSS")
 
-    *Al abrir el archivo Site.css*
-5. Presione **CTRL** + **F** y tipo **.front .flip contenedor** para encontrar el selector de CSS.
-6. Haga clic en el cuadrado azul claro en la propiedad de borde de la clase para abrir el selector de colores.
+    *Abriendo archivo site. CSS*
+5. Presione **CTRL** + **F** y escriba **. Flip-container. Front** para buscar el selector de CSS.
+6. Haga clic en el cuadrado azul claro en la propiedad border de la clase para abrir el selector de colores.
 
-    ![Abrir el selector de colores](visual-studio-2013-web-tools/_static/image17.png "abrir el selector de colores")
+    ![Abrir el selector de colores](visual-studio-2013-web-tools/_static/image17.png "Abrir el selector de colores")
 
     *Abrir el selector de colores*
-7. Expanda el selector de colores, haga clic en el botón de contenido y seleccione un nuevo color.
+7. Expanda el selector de colores haciendo clic en el botón de contenido adicional y seleccione un nuevo color.
 
-    ![Expandir el selector de colores](visual-studio-2013-web-tools/_static/image18.png "expandiendo el selector de colores")
+    ![Expandir el selector de colores](visual-studio-2013-web-tools/_static/image18.png "Expandir el selector de colores")
 
     *Expandir el selector de colores*
-8. Presione **CTRL** + **ALT** + **ENTRAR** para actualizar los exploradores vinculados.
+8. Presione **CTRL** + **Alt** + **entrar** para actualizar los exploradores vinculados.
 9. Cambie a Internet Explorer y observe cómo ha cambiado el color del borde.
 
-    ![Internet Explorer: actualizarlo el color del borde](visual-studio-2013-web-tools/_static/image19.png "Internet Explorer: actualizarlo el color del borde")
+    ![Internet Explorer-color actualizado del borde](visual-studio-2013-web-tools/_static/image19.png "Internet Explorer-color actualizado del borde")
 
-    *Internet Explorer: actualizarlo el color del borde*
+    *Internet Explorer-color actualizado del borde*
 10. Cambie a Google Chrome y observe cómo ha cambiado el color del borde.
 
-    ![Google Chrome: actualizarlo el color del borde](visual-studio-2013-web-tools/_static/image20.png "Google Chrome: actualizarlo el color del borde")
+    ![Google Chrome: color de borde actualizado](visual-studio-2013-web-tools/_static/image20.png "Google Chrome: color de borde actualizado")
 
-    *Google Chrome: actualizarlo el color del borde*
-11. Cambie a Visual Studio.
-12. Vaya al final de la **Site.css** archivo y presione **CTRL** + **F** para localizar el **.btn** selector.
-13. Tenga en cuenta que el **- webkit-border-radius** propiedad está subrayada en verde.
+    *Google Chrome: color de borde actualizado*
+11. Vuelva a Visual Studio.
+12. Vaya al final del archivo **site. CSS** y presione **Ctrl** + **F** para buscar el selector **. BTN** .
+13. Observe que la propiedad **-webkit-border-radius** está subrayada en verde.
 
-    ![propiedad - webkit-border-radius del selector btn](visual-studio-2013-web-tools/_static/image21.png "propiedad - webkit-border-radius del selector btn")
+    ![propiedad-webkit-border-radius del selector BTN](visual-studio-2013-web-tools/_static/image21.png "propiedad-webkit-border-radius del selector BTN")
 
-    *propiedad - webkit-border-radius del selector btn*
-14. Colocar el símbolo de intercalación en el **- webkit-border-radius** propiedad. Debe aparecer una línea azul debajo de la primera letra de la primera palabra de la propiedad. Se trata de la **de etiquetas inteligentes**.
-15. Presione **CTRL** + **.** Abra el menú de sugerencias y haga clic en **agregar falta la propiedad estándar (border-radius)**.
+    *propiedad-webkit-border-radius del selector BTN*
+14. Colocar el símbolo de intercalación en la propiedad **-webkit-border-radius** . Debe aparecer una línea azul debajo de la primera letra de la primera palabra de la propiedad. Esta es la **etiqueta inteligente**.
+15. Presione **CTRL** +  **.** para abrir el menú sugerencias y haga clic en **Agregar propiedad estándar que falta (Border-RADIUS)** .
 
-    ![Falta la sugerencia de la propiedad estándar de agregar](visual-studio-2013-web-tools/_static/image22.png "agregar falta la sugerencia de la propiedad estándar")
+    ![Agregar sugerencia de propiedad estándar que falta](visual-studio-2013-web-tools/_static/image22.png "Agregar sugerencia de propiedad estándar que falta")
 
-    *Agregar falta la sugerencia de la propiedad estándar*
-16. El **border-radius** propiedad se agrega automáticamente a la regla CSS.
+    *Agregar sugerencia de propiedad estándar que falta*
+16. La propiedad **border-radius** se agrega automáticamente a la regla CSS.
 
-    ![Falta la propiedad estándar agregado](visual-studio-2013-web-tools/_static/image23.png "falta la propiedad estándar agregado")
+    ![Falta la propiedad estándar agregada](visual-studio-2013-web-tools/_static/image23.png "Falta la propiedad estándar agregada")
 
-    *Falta la propiedad estándar agregado*
-17. Mueva el puntero sobre el **border-radius** propiedad para mostrar el **información sobre herramientas de explorador matriz**. El **información sobre herramientas de explorador matriz** muestra la disponibilidad de la propiedad en cada explorador.
+    *Falta la propiedad estándar agregada*
+17. Mueva el puntero sobre la propiedad **border-radius** para mostrar la **información sobre herramientas**de la matriz de explorador. La **información sobre herramientas** de la matriz del explorador muestra la disponibilidad de la propiedad en cada explorador.
 
-    ![Información sobre herramientas de explorador matriz](visual-studio-2013-web-tools/_static/image24.png "información sobre herramientas de explorador matriz")
+    ![Información sobre herramientas de la matriz de explorador](visual-studio-2013-web-tools/_static/image24.png "Información sobre herramientas de la matriz de explorador")
 
-    *Información sobre herramientas de explorador matriz*
-18. Tenga en cuenta que el valor de la **border-radius** propiedad está subrayada todavía. Mueva el puntero sobre el valor para ver el mensaje de advertencia.
+    *Información sobre herramientas de la matriz de explorador*
+18. Observe que el valor de la propiedad **border-radius** todavía está subrayado. Mueva el puntero sobre el valor para ver el mensaje de advertencia.
 
-    ![Advertencia de valor de propiedad Border-radius](visual-studio-2013-web-tools/_static/image25.png "advertencia de valor de propiedad de radio de borde")
+    ![ADVERTENCIA de valor de propiedad border-radius](visual-studio-2013-web-tools/_static/image25.png "ADVERTENCIA de valor de propiedad border-radius")
 
-    *Advertencia de valor de propiedad de radio de borde*
-19. Quite la unidad de la **border-radius** valor de propiedad como sugiere la información sobre herramientas.
-20. Como **border-radius** es la propiedad estándar para definir el borde redondeado cómo son las esquinas, puede quitar el **- webkit-border-radius** propiedad y valor de la regla de CSS.
-21. Colocar el símbolo de intercalación en el **ajuste** propiedad y observe que la etiqueta inteligente también aparece a continuación.
-22. Abra el menú y haga clic en **agregar especificaciones de proveedor que falta**.
+    *ADVERTENCIA de valor de propiedad border-radius*
+19. Quite la unidad del valor de propiedad **border-radius** como se sugiere en la información sobre herramientas.
+20. Como **border-radius** es la propiedad estándar para definir el modo en que se redondean las esquinas de los bordes redondeados, puede quitar la propiedad **-webkit-border-radius** y el valor de la regla de CSS.
+21. Coloque el símbolo de intercalación en la propiedad de **ajuste automático de texto** y observe que la etiqueta inteligente también aparece a continuación.
+22. Abra el menú y haga clic en **Agregar información específica del proveedor que falta**.
 
-    ![Agregar la sugerencia de características específicas de proveedor que falta](visual-studio-2013-web-tools/_static/image26.png "agregar sugerencias de características específicas de proveedor que faltan")
+    ![Agregar sugerencia de detalles de proveedor que faltan](visual-studio-2013-web-tools/_static/image26.png "Agregar sugerencia de detalles de proveedor que faltan")
 
-    *Agregar la sugerencia de características específicas de proveedor que falta*
-23. El **-ms-ajuste** propiedad se agrega automáticamente a la regla CSS.
+    *Agregar sugerencia de detalles de proveedor que faltan*
+23. La propiedad **-MS-Word-Wrap** se agrega automáticamente a la regla CSS.
 
-    ![Propiedad de proveedor específica agregada](visual-studio-2013-web-tools/_static/image27.png "propiedad específico de proveedor agregada")
+    ![Propiedad específica del proveedor agregada](visual-studio-2013-web-tools/_static/image27.png "Propiedad específica del proveedor agregada")
 
-    *Propiedad de proveedor específica agregada*
+    *Propiedad específica del proveedor agregada*
 
 <a id="Ex1Task4"></a>
-#### <a name="task-4---updating-the-html-code-from-the-browser"></a>Tarea 4: actualizar el código HTML desde el explorador
+#### <a name="task-4---updating-the-html-code-from-the-browser"></a>Tarea 4: actualización del código HTML desde el explorador
 
-En esta tarea, utilizará el vínculo de explorador **el modo de diseño** característica para modificar el objeto DOM desde el explorador y transferir los cambios en el archivo de código fuente HTML en Visual Studio.
+En esta tarea, usará la característica de **modo de diseño** del vínculo del explorador para editar el objeto DOM desde el explorador y transferir los cambios al archivo de código fuente HTML en Visual Studio.
 
-1. En Google Chrome, presione **CTRL** + **ALT** + **d.** para habilitar el modo de diseño.
-2. Mueva el puntero sobre el **Lorem Ipsum dolor sit amet** etiqueta y haga clic en.
+1. En Google Chrome, presione **CTRL** + **Alt** + **D** para habilitar el modo de diseño.
+2. Mueva el puntero sobre la etiqueta **Lorem ipsum dolor sit amet** y haga clic en.
 
-    ![Edición de la pregunta](visual-studio-2013-web-tools/_static/image28.png "la pregunta de edición")
+    ![Editar la pregunta](visual-studio-2013-web-tools/_static/image28.png "Editar la pregunta")
 
-    *Edición de la pregunta*
-3. Debería aparecer un cursor. Reemplace el texto original con *¿cómo se ve como cuando escribe una pregunta más?* y, a continuación, presione **ESC** para salir del modo de diseño.
+    *Editar la pregunta*
+3. Debería aparecer un cursor. Reemplace el texto original por el *que aparece cuando escribo una pregunta más larga*y, a continuación, presione **ESC** para salir del modo de diseño.
 
-    ![Pregunta editar](visual-studio-2013-web-tools/_static/image29.png "pregunta editado")
+    ![Pregunta modificada](visual-studio-2013-web-tools/_static/image29.png "Pregunta modificada")
 
-    *Pregunta editado*
-4. Cambiar a Visual Studio y abra **Index.cshtml**, si aún no está abierto. Tenga en cuenta que el texto interno de la **&lt;p&gt;** se ha actualizado el elemento.
+    *Pregunta modificada*
+4. Vuelva a Visual Studio y Abra **index. cshtml**, si aún no está abierto. Observe que se ha actualizado el texto interno del elemento **&lt;p&gt;** .
 
-    ![Pregunta de actualizado en la página HTML](visual-studio-2013-web-tools/_static/image30.png "pregunta actualizado en la página HTML")
+    ![Pregunta actualizada en la página HTML](visual-studio-2013-web-tools/_static/image30.png "Pregunta actualizada en la página HTML")
 
     *Pregunta actualizada en la página HTML*
 
 <a id="Ex1Task5"></a>
-#### <a name="task-5---reviewing-seo-related-warnings"></a>Advertencias relacionadas con la tarea 5: revisión de SEO
+#### <a name="task-5---reviewing-seo-related-warnings"></a>Tarea 5: revisar las advertencias relacionadas con SEO
 
-**Optimización de motor de búsqueda** (SEO) es el proceso de realizar un rango de sitio Web superior en la lista de un motor de búsqueda de resultados. Cuanto mayor sea el sitio clasifica y más coherente aparece, los visitantes más obtendrán el sitio de ese motor de búsqueda. Web Essentials incorpora una herramienta analítica que examina el HTML, los problemas de informes se encuentra y proporciona asistencia para corregirlas.
+La **optimización del motor de búsqueda** (SEO) es el proceso de crear una clasificación de sitio web superior en la lista de resultados de un motor de búsqueda. Cuanto mayor sea el número de sitios y más constantemente se muestren, más visitantes obtendrá el sitio de ese motor de búsqueda. Web Essentials incorpora una herramienta de análisis que examina HTML, notifica los problemas encontrados y proporciona ayuda para corregirlos.
 
-1. Vaya a la **vista** menú y haga clic en **lista de errores** para abrir el **lista de errores** ventana.
+1. Vaya al menú **Ver** y haga clic en **lista de errores** para abrir la ventana de **lista de errores** .
 
-    ![Error en la vista Lista menú](visual-studio-2013-web-tools/_static/image31.png "lista de errores en el menú Ver")
+    ![Lista de errores en el menú Ver](visual-studio-2013-web-tools/_static/image31.png "Lista de errores en el menú Ver")
 
-    *Menú de vista de lista de errores*
-2. Tenga en cuenta que hay una advertencia de SEO que le notifica que una **&lt;meta&gt;** para falta la descripción de la página de etiquetas. Haga doble clic en la entrada de advertencia de SEO para corregirlo.
+    *Lista de errores en el menú Ver*
+2. Observe que hay una advertencia de SEO que notifica que falta un **&lt;etiqueta meta&gt;** de la descripción de la página. Haga doble clic en la entrada de advertencia de SEO para corregirlo.
 
-    ![Ventana Lista de errores](visual-studio-2013-web-tools/_static/image32.png "ventana Lista de errores")
+    ![Lista de errores (ventana)](visual-studio-2013-web-tools/_static/image32.png "Lista de errores (ventana)")
 
     *Lista de errores (ventana)*
-3. En el **Web Essentials** cuadro de diálogo, haga clic en **Sí** para insertar una descripción &lt;meta&gt; etiqueta.
+3. En el cuadro de diálogo **Web Essentials** , haga clic en **sí** para insertar una descripción &lt;etiqueta meta&gt;.
 
-    ![Cuadro de diálogo Web Essentials](visual-studio-2013-web-tools/_static/image33.png "cuadro de diálogo Web Essentials")
+    ![Web Essentials (cuadro de diálogo)](visual-studio-2013-web-tools/_static/image33.png "Web Essentials (cuadro de diálogo)")
 
-    *Cuadro de diálogo Web Essentials*
-4. El editor para  **\_Layout.cshtml** se abre y la **&lt;meta&gt;** etiqueta a la que se agrega automáticamente a la **head** sección de la Archivo HTML.
+    *Web Essentials (cuadro de diálogo)*
+4. Se abre el editor de **\_layout. cshtml** y la etiqueta **&lt;meta&gt;** se agrega automáticamente a la sección de **encabezado** del archivo HTML.
 
-    ![Etiqueta META que agrega automáticamente en la página de _diseño](visual-studio-2013-web-tools/_static/image34.png "etiqueta Meta que agrega automáticamente en la página de _diseño")
+    ![Etiqueta meta agregada automáticamente en _Layout página](visual-studio-2013-web-tools/_static/image34.png "Etiqueta meta agregada automáticamente en _Layout página")
 
-    *Etiqueta META que agrega automáticamente a \_página de diseño*
-5. Cambie el valor de la **contenido** atributo *GeekQuiz* y guarde el archivo.
+    *Etiqueta meta agregada automáticamente a \_página de diseño*
+5. Cambie el valor del atributo **Content** a *GeekQuiz* y guarde el archivo.
 
 <a id="Exercise2"></a>
-### <a name="exercise-2-taking-advantage-of-code-snippets-and-intellisense"></a>Ejercicio 2: Sacar partido de IntelliSense y fragmentos de código
+### <a name="exercise-2-taking-advantage-of-code-snippets-and-intellisense"></a>Ejercicio 2: sacar partido de los fragmentos de código e IntelliSense
 
-Web Essentials, el editor HTML se ha ampliado con funcionalidad adicional. En este ejercicio, verá algunas características nuevas que resultan útiles al desarrollar aplicaciones web.
+Con Web Essentials, el editor HTML se ha ampliado con funcionalidad adicional. En este ejercicio, verá algunas características nuevas que son útiles al desarrollar aplicaciones Web.
 
 <a id="Ex2Task1"></a>
 #### <a name="task-1---using-intellisense-in-html-documents"></a>Tarea 1: uso de IntelliSense en documentos HTML
 
-Se llama a la primera característica nueva que se ve en esta tarea **IntelliSense dinámico**. IntelliSense dinámica lee otras etiquetas y atributos para deducir los posibles identificadores que va a usar.
+La primera característica nueva que verá en esta tarea se denomina **IntelliSense dinámico**. IntelliSense dinámico Lee otras etiquetas y atributos para deducir los posibles identificadores que se usarán.
 
-En esta tarea, creará un nuevo elemento de formulario HTML que contiene una etiqueta y un campo de entrada. A continuación, agregará un **para** atributo a la etiqueta para enlazarla a la entrada, para ver sugerencias de IntelliSense en función de los identificadores de las entradas en el ámbito.
+En esta tarea, creará un nuevo elemento de formulario HTML que contiene una etiqueta y un campo de entrada. A continuación, agregará un atributo **for** a la etiqueta para enlazarlo a la entrada y verá sugerencias de IntelliSense basadas en los identificadores de las entradas en el ámbito.
 
-1. Abrir **Visual Studio Express 2013 para Web** y **Begin.sln** solución se encuentra en el **Begin/origen/Ex2-TakingAdvantageofCodeSnippetsandIntelliSense** carpeta. Como alternativa, puede continuar con la solución que obtuvo en el ejercicio anterior.
-2. En **el Explorador de soluciones**, abra el **Index.cshtml** archivo se encuentra en la **vistas** | **inicio** carpeta.
-3. Agregue el siguiente formulario dentro de la **&lt;sección&gt;** elemento.
+1. Abra **Visual Studio Express 2013 para web** y la solución **Begin. sln** que se encuentra en la carpeta **source/Ex2-TakingAdvantageofCodeSnippetsandIntelliSense/Begin** . Como alternativa, puede continuar con la solución que obtuvo en el ejercicio anterior.
+2. En **Explorador de soluciones**, abra el archivo **index. cshtml** que se encuentra en la carpeta **views** | **Home** .
+3. Agregue el siguiente formulario dentro de la **sección&lt;&gt;** elemento.
 
-    (Código de fragmento de código - *VisualStudio2013WebTooling* - *Ex2* - *formulario*)
+    (Fragmento de código- *VisualStudio2013WebTooling* - *Ex2* - *formulario*)
 
     [!code-html[Main](visual-studio-2013-web-tools/samples/sample4.html)]
-4. La etiqueta input debe ir precedida de una etiqueta con una descripción del campo. Agregue la siguiente etiqueta antes de la etiqueta de entrada.
+4. La etiqueta de entrada debe ir precedida de una etiqueta con alguna Descripción del campo. Agregue la siguiente etiqueta delante de la etiqueta de entrada.
 
     [!code-html[Main](visual-studio-2013-web-tools/samples/sample5.html)]
-5. El **para** atributo de un **&lt;etiqueta&gt;** especifica qué elemento de formulario de una etiqueta que está enlazado. El valor del atributo debe ser igual al identificador del elemento relacionado. Agregar el **para** atributo a la **&lt;etiqueta&gt;** elemento. Como se muestra en la siguiente ilustración, el &quot;nombre&quot; valor aparece en el cuadro de IntelliSense, según el identificador de los elementos dentro del mismo ámbito (incluido  **&lt;formulario&gt;**).
+5. El atributo **for** de una **etiqueta de&lt;&gt;** especifica a qué elemento de formulario está enlazada una etiqueta. El valor del atributo debe ser igual al identificador del elemento relacionado. Agregue el atributo **for** al elemento **&lt;etiqueta&gt;** . Como se muestra en la ilustración siguiente, el nombre de &quot;&quot; valor aparece en el cuadro IntelliSense, en función del identificador de los elementos que se encuentran dentro del mismo ámbito (el **formulario de&lt;envolvente&gt;** ).
 
-    ![Muestra el identificador en IntelliSense](visual-studio-2013-web-tools/_static/image35.png "que muestra el Id. de IntelliSense")
+    ![Mostrar el identificador en IntelliSense](visual-studio-2013-web-tools/_static/image35.png "Mostrar el identificador en IntelliSense")
 
-    *Que muestra el Id. de IntelliSense*
-6. Eliminar el agregado recientemente **&lt;formulario&gt;** elemento y su contenido.
+    *Mostrar el identificador en IntelliSense*
+6. Elimine el **formulario&lt;** recientemente agregado&gt;elemento y su contenido.
 
 <a id="Ex2Task2"></a>
 #### <a name="task-2---using-html-code-snippets"></a>Tarea 2: usar fragmentos de código HTML
 
-HTML5 introdujo más de 25 etiquetas semánticas nuevas. Visual Studio ya tenía la compatibilidad con IntelliSense para estas etiquetas, pero Visual Studio 2013 facilita más rápidas y fáciles de escribir el marcado mediante la adición de nuevos fragmentos de código. Aunque estas etiquetas no son complicadas, conlleva algunas sutilezas, tales como agregar el códec de reserva adecuado para el *audio* etiqueta. En esta tarea, verá los fragmentos de código HTML para la etiqueta de audio.
+HTML5 presentó más de 25 etiquetas semánticas nuevas. Visual Studio ya tenía compatibilidad con IntelliSense para estas etiquetas, pero Visual Studio 2013 agiliza y facilita la escritura de marcado agregando nuevos fragmentos de código. Aunque estas etiquetas no son complicadas, incluyen algunos matices pequeños, como agregar las reservas de códec correctas para la etiqueta de *audio* . En esta tarea, verá los fragmentos de código HTML para la etiqueta de audio.
 
-1. En el **Index.cshtml** de archivo, escriba  **&lt;aud** dentro de la **&lt;sección&gt;** elemento tal como se muestra en la ilustración siguiente.
+1. En el archivo **index. cshtml** , escriba **&lt;AUD** dentro de la **sección&lt;&gt;** elemento, tal y como se muestra en la ilustración siguiente.
 
-    ![Inserción de un elemento audio](visual-studio-2013-web-tools/_static/image36.png "insertar un elemento de audio")
+    ![Insertar un elemento de audio](visual-studio-2013-web-tools/_static/image36.png "Insertar un elemento de audio")
 
-    *Inserción de un elemento de audio*
-2. Presione **ficha** dos veces y observe cómo se agrega el código siguiente en la página y el cursor se coloca en el **src** atributo del primer origen.
+    *Insertar un elemento de audio*
+2. Presione la **tecla TAB** dos veces y observe cómo se agrega el código siguiente en la página y el cursor se coloca en el atributo **src** del primer origen.
 
     [!code-html[Main](visual-studio-2013-web-tools/samples/sample6.html)]
 
     > [!NOTE]
-    > Al presionar el **ficha** clave dos veces, el fragmento de código se inserta. El fragmento de audio muestra el uso estándar de la *audio* etiqueta, con dos archivos de origen para la compatibilidad mejorada.
-3. Elimine la segunda línea y actualizar el origen de la primera línea con el siguiente vínculo en el estudio WebCampsTV Katana: [ http://media.ch9.ms/ch9/11d8/604b8163-fad3-4f12-9607-b404201211d8/KatanaProject.mp3 ](http://media.ch9.ms/ch9/11d8/604b8163-fad3-4f12-9607-b404201211d8/KatanaProject.mp3). El código resultante se muestra a continuación.
+    > Al presionar la tecla **Tab** dos veces, se inserta el fragmento de código. El fragmento de código de audio muestra el uso estándar de la etiqueta de *audio* , con dos archivos de origen para mejorar la compatibilidad.
+3. Elimine la segunda línea y actualice el origen de la primera línea con el siguiente vínculo a WebCampsTV Katana show: [http://media.ch9.ms/ch9/11d8/604b8163-fad3-4f12-9607-b404201211d8/KatanaProject.mp3](http://media.ch9.ms/ch9/11d8/604b8163-fad3-4f12-9607-b404201211d8/KatanaProject.mp3). El código resultante se muestra a continuación.
 
     [!code-html[Main](visual-studio-2013-web-tools/samples/sample7.html)]
 
     > [!NOTE]
-    > El archivo de origen *KatanaProject.mp3* sirve como ejemplo. Puede usar otro origen, si lo prefiere.
+    > El archivo de código fuente *KatanaProject. mp3* se usa como ejemplo. Puede usar otro origen si lo prefiere.
 4. Presione **CTRL** + **S** para guardar el archivo.
 5. Presione **CTRL** + **F5** para iniciar la aplicación.
-6. Tenga en cuenta que un Reproductor de audio se ha agregado a la aplicación.
+6. Observe que se ha agregado un reproductor de audio a la aplicación.
 
-    ![Reproductor de audio en Internet Explorer](visual-studio-2013-web-tools/_static/image37.png "Reproductor de Audio en Internet Explorer")
+    ![Reproductor de audio en Internet Explorer](visual-studio-2013-web-tools/_static/image37.png "Reproductor de audio en Internet Explorer")
 
     *Reproductor de audio en Internet Explorer*
 
-    ![Reproductor de audio en Google Chrome](visual-studio-2013-web-tools/_static/image38.png "Reproductor de Audio en Google Chrome")
+    ![Reproductor de audio en Google Chrome](visual-studio-2013-web-tools/_static/image38.png "Reproductor de audio en Google Chrome")
 
     *Reproductor de audio en Google Chrome*
 7. No cierre los exploradores. Los usará en la siguiente tarea.
 
 <a id="Ex2Task3"></a>
-#### <a name="task-3---using-intellisense-in-javascript-documents"></a>Tarea 3: uso de IntelliSense en documentos de JavaScript
+#### <a name="task-3---using-intellisense-in-javascript-documents"></a>Tarea 3: usar IntelliSense en documentos de JavaScript
 
-Con Web Essentials 2013, hojas de estilo y páginas HTML generan una lista de identificadores y nombres de clase. En esta tarea, obtendrá información sobre cómo mejoran la compatibilidad con IntelliSense para JavaScript en Web Essentials 2013 esas listas.
+Con Web Essentials 2013, hojas de estilos y páginas HTML, se genera una lista de identificadores y nombres de clase. En esta tarea, aprenderá cómo esas listas mejoran la compatibilidad con IntelliSense para JavaScript en Web Essentials 2013.
 
-1. En el **Index.cshtml** , agregue el código siguiente para definir un **script** etiqueta para el código JavaScript.
+1. En el archivo **index. cshtml** , agregue el código siguiente para definir una etiqueta de **script** para el código JavaScript.
 
     [!code-cshtml[Main](visual-studio-2013-web-tools/samples/sample8.cshtml)]
-2. Agregue el código siguiente dentro de la **script** etiqueta para definir la función de devolución de llamada listo.
+2. Agregue el código siguiente dentro de la etiqueta de **script** para definir la función de devolución de llamada Ready.
 
-    (Código de fragmento de código - *VisualStudio2013WebTooling* - *Ex2* - *ReadyFunction*)
+    (Fragmento de código- *VisualStudio2013WebTooling* - *Ex2* - *ReadyFunction*)
 
     [!code-javascript[Main](visual-studio-2013-web-tools/samples/sample9.js)]
-3. Colocar el símbolo de intercalación en el **script** etiqueta y presione **CTRL** + **.** Para abrir el menú de la sugerencia.
-4. Haga clic en **extraer al archivo**.
+3. Coloque el símbolo de intercalación en la etiqueta de **script** y presione **Ctrl** +  **.** para abrir el menú de sugerencias.
+4. Haga clic en **extraer a archivo**.
 
-    ![Extraer JavaScript a la sugerencia de archivo](visual-studio-2013-web-tools/_static/image39.png "JavaScript extraer a la sugerencia de archivo")
+    ![Sugerencia de extracción a archivo de JavaScript](visual-studio-2013-web-tools/_static/image39.png "Sugerencia de extracción a archivo de JavaScript")
 
-    *Extraer JavaScript a la sugerencia de archivo*
-5. En el **Guardar como** ventana, seleccione el **Scripts** carpeta, el nombre del archivo **init.js** y haga clic en **guardar**.
+    *Sugerencia de extracción a archivo de JavaScript*
+5. En la ventana **Guardar como** , seleccione la carpeta **scripts** , asigne al archivo el nombre **init. js** y haga clic en **Guardar**.
 
-    ![Guardar como ventana](visual-studio-2013-web-tools/_static/image40.png "ventana Guardar como")
+    ![Guardar como ventana](visual-studio-2013-web-tools/_static/image40.png "Guardar como ventana")
 
     *Guardar como ventana*
 
     > [!NOTE]
-    > El **init.js** se crea el archivo y el contenido de la secuencia de comandos se mueve al archivo.
+    > Se crea el archivo **init. js** y el contenido del script se mueve al archivo.
     > 
-    > ![Archivo init.js creado con el contenido incluido](visual-studio-2013-web-tools/_static/image41.png "archivo Init.js creado con el contenido incluido")
+    > ![Archivo init. js creado con el contenido incluido](visual-studio-2013-web-tools/_static/image41.png "Archivo init. js creado con el contenido incluido")
     > 
-    > *Archivo init.js creado con el contenido incluido*
-6. Abra el **Index.cshtml** de archivo y compruebe que la etiqueta de script se ha reemplazado por una referencia a la **init.js** archivo.
+    > *Archivo init. js creado con el contenido incluido*
+6. Abra el archivo **index. cshtml** y compruebe que la etiqueta de script se ha reemplazado por una referencia al archivo **init. js** .
 
-    ![Referencia de html init.js](visual-studio-2013-web-tools/_static/image42.png "Init.js referencia de html")
+    ![Referencia HTML de init. js](visual-studio-2013-web-tools/_static/image42.png "Referencia HTML de init. js")
 
-    *Referencia de html init.js*
-7. Vaya a la **el Explorador de soluciones** y tenga en cuenta que el **init.js** archivo se incluye automáticamente en la solución.
+    *Referencia HTML de init. js*
+7. Vaya al **Explorador de soluciones** y observe que el archivo **init. js** se incluyó automáticamente en la solución.
 
-    ![Archivo init.js incluido en la solución](visual-studio-2013-web-tools/_static/image43.png "archivo Init.js incluido en la solución")
+    ![Archivo init. js incluido en la solución](visual-studio-2013-web-tools/_static/image43.png "Archivo init. js incluido en la solución")
 
-    *Archivo init.js incluido en la solución*
-8. Vuelva a la **init.js** archivo para actualizar el **listo** función de devolución de llamada.
-9. Dentro de la definición de devolución de llamada de función que se pasa a *listo*, agregue el código siguiente para obtener todos los elementos mediante un atributo de clase específica.
+    *Archivo init. js incluido en la solución*
+8. Vuelva al archivo **init. js** para actualizar la devolución de llamada de función **preparada** .
+9. Dentro de la definición de devolución de llamada de función que se pasa a *Ready*, agregue el código siguiente para obtener todos los elementos de un atributo de clase específico.
 
     [!code-javascript[Main](visual-studio-2013-web-tools/samples/sample10.js)]
-10. Presione **CTRL** + **espacio** entre comillas dentro de la **getElementsByClassName** llamada de función.
+10. Presione **CTRL** + **espacio** entre comillas dentro de la llamada a la función **getElementsByClassName** .
 
-    ![Que muestra IntelliSense para la función getElementsByClassName](visual-studio-2013-web-tools/_static/image44.png "que muestra IntelliSense para la función getElementsByClassName")
+    ![Mostrar IntelliSense para la función getElementsByClassName](visual-studio-2013-web-tools/_static/image44.png "Mostrar IntelliSense para la función getElementsByClassName")
 
-    *IntelliSense que muestra para la función getElementsByClassName*
+    *Mostrar IntelliSense para la función getElementsByClassName*
 
     > [!NOTE]
-    > Observe que IntelliSense muestra las clases definidas en las hojas de estilo del proyecto.
+    > Observe que IntelliSense muestra las clases definidas en las hojas de estilos del proyecto.
 11. Reemplace la línea que ha creado con el código siguiente.
 
     [!code-javascript[Main](visual-studio-2013-web-tools/samples/sample11.js)]
-12. Coloque el cursor después de **au** dentro de las comillas en el **getElementsByTagName** función y presione **CTRL** + **espacio**.
+12. Coloque el cursor después de **au** dentro de las comillas en la función **getElementsByTagName** y presione **Ctrl** + **espacio**.
 
-    ![Que muestra IntelliSense para el método getElementByTagName](visual-studio-2013-web-tools/_static/image45.png "que muestra IntelliSense para el método getElementByTagName")
+    ![Mostrar IntelliSense para el método getElementByTagName](visual-studio-2013-web-tools/_static/image45.png "Mostrar IntelliSense para el método getElementByTagName")
 
-    *Que muestra IntelliSense para el método getElementsByTagName*
-13. Seleccione **&quot;audio&quot;** en la lista y presione **ENTRAR**. El resultado se muestra en la ilustración siguiente.
+    *Mostrar IntelliSense para el método getElementsByTagName*
+13. Seleccione **&quot;&quot;de audio** de la lista y presione **entrar**. El resultado se muestra en la ilustración siguiente.
 
-    ![Recuperar elementos de Audio](visual-studio-2013-web-tools/_static/image46.png "recuperar elementos de Audio")
+    ![Recuperación de elementos de audio](visual-studio-2013-web-tools/_static/image46.png "Recuperación de elementos de audio")
 
-    *Recuperar elementos de Audio*
-14. En **el Explorador de soluciones**, haga clic en el **init.js** de archivos en el **Scripts** carpeta y seleccione **archivos JavaScript minimizar** desde el **Web Essentials** menú.
+    *Recuperación de elementos de audio*
+14. En **Explorador de soluciones**, haga clic con el botón derecho en el archivo **init. js** de la carpeta **scripts** y seleccione **minimizar JavaScript files** en el menú **Web Essentials** .
 
-    ![Minimizar los archivos JavaScript](visual-studio-2013-web-tools/_static/image47.png "archivos JavaScript minimizar")
+    ![Archivos de minimizar JavaScript](visual-studio-2013-web-tools/_static/image47.png "Archivos JavaScript de minimizar")
 
-    *Minimizar los archivos de JavaScript*
-15. Cuando se le solicite para habilitar la reducción automática cuando los cambios del archivo de origen, haga clic en **Sí**.
+    *Archivos de minimizar JavaScript*
+15. Cuando se le pida que habilite minificación automática cuando el archivo de código fuente cambie, haga clic en **sí**.
 
-    ![Habilitar la advertencia de reducción automática](visual-studio-2013-web-tools/_static/image48.png "habilitar la advertencia de reducción automática")
+    ![Habilitar la advertencia automática de minificación](visual-studio-2013-web-tools/_static/image48.png "Habilitar la advertencia automática de minificación")
 
-    *Habilitar la advertencia de reducción automática*
+    *Habilitar la advertencia automática de minificación*
 
     > [!NOTE]
-    > El **init.min.js** se crea y se agrega como una dependencia de la **init.js** archivo.
+    > **Init. min. js** se crea y se agrega como una dependencia del archivo **init. js** .
     > 
-    > ![Archivo init.min.js creado](visual-studio-2013-web-tools/_static/image49.png "archivo Init.min.js creado")
+    > ![Archivo init. min. js creado](visual-studio-2013-web-tools/_static/image49.png "Archivo init. min. js creado")
     > 
-    > *Archivo init.min.js creado*
-16. Abra el **init.min.js** de archivo y tenga en cuenta que el archivo se han minimizado.
+    > *Archivo init. min. js creado*
+16. Abra el archivo **init. min. js** y observe que el archivo es reducida.
 
-    ![Contenido del archivo init.min.js](visual-studio-2013-web-tools/_static/image50.png "Init.min.js contenido del archivo")
+    ![Contenido del archivo init. min. js](visual-studio-2013-web-tools/_static/image50.png "Contenido del archivo init. min. js")
 
-    *Contenido del archivo init.min.js*
-17. En el **init.js** , agregue el código siguiente el **getElementsByTagName** llamada para reproducir todos los elementos de audio de función.
+    *Contenido del archivo init. min. js*
+17. En el archivo **init. js** , agregue el siguiente código debajo de la llamada de la función **getElementsByTagName** para reproducir todos los elementos de audio.
 
-    (Código de fragmento de código - *VisualStudio2013WebTooling* - *Ex2* - *PlayAudioElements*)
+    (Fragmento de código- *VisualStudio2013WebTooling* - *Ex2* - *PlayAudioElements*)
 
     [!code-csharp[Main](visual-studio-2013-web-tools/samples/sample12.cs)]
-18. Haga clic en **CTRL** + **S** para guardar el archivo. Puesto que ya está abierto el archivo minimizado, verá un cuadro de diálogo que dice que el archivo se modificó fuera del editor de origen. Haga clic en **Sí**.
+18. Haga clic en **CTRL** + **S** para guardar el archivo. Puesto que el archivo reducida ya está abierto, verá un cuadro de diálogo que indica que el archivo se modificó fuera del editor de código fuente. Haga clic en **Sí**.
 
-    ![Advertencia de Microsoft Visual Studio](visual-studio-2013-web-tools/_static/image51.png "advertencia de Microsoft Visual Studio")
+    ![Microsoft Visual Studio ADVERTENCIA](visual-studio-2013-web-tools/_static/image51.png "Microsoft Visual Studio ADVERTENCIA")
 
-    *Advertencia de Microsoft Visual Studio*
-19. Vuelva a la **init.min.js** archivo para comprobar que el archivo se ha actualizado con el nuevo código.
+    *Microsoft Visual Studio ADVERTENCIA*
+19. Vuelva al archivo **init. min. js** para comprobar que el archivo se actualizó con el código nuevo.
 
-    ![Actualizado el archivo init.min.js](visual-studio-2013-web-tools/_static/image52.png "archivo Init.min.js actualizado")
+    ![Archivo init. min. js actualizado](visual-studio-2013-web-tools/_static/image52.png "Archivo init. min. js actualizado")
 
-    *Archivo init.min.js actualizado*
-20. Haga clic en el **actualizar el vínculo explorador** botón.
-21. Una vez que los dos exploradores se actualizan los reproductores de audio que se vio en la tarea anterior empezará a reproducirse automáticamente.
+    *Archivo init. min. js actualizado*
+20. Haga clic en el botón **actualizar vínculo del explorador** .
+21. Una vez actualizados los dos exploradores, los reproductores de audio que vio en la tarea anterior comenzarán a reproducirse automáticamente.
 
-    ![Reproductor de audio incluido en la vista](visual-studio-2013-web-tools/_static/image53.png "incluido en la vista de Reproductor de Audio")
+    ![Reproductor de audio incluido en la vista](visual-studio-2013-web-tools/_static/image53.png "Reproductor de audio incluido en la vista")
 
     *Reproductor de audio incluido en la vista*
 
@@ -512,9 +512,9 @@ Con Web Essentials 2013, hojas de estilo y páginas HTML generan una lista de id
 <a id="Summary"></a>
 ## <a name="summary"></a>Resumen
 
-Al completar este laboratorio práctico ha aprendido cómo:
+Al completar este laboratorio práctico, ha aprendido a:
 
-- Usar las nuevas características del editor HTML incluidas en Web Essentials como fragmentos de código enriquecidos de HTML5 y el Zen de codificación
-- Usar las nuevas características del editor CSS incluidas en Web Essentials como el selector de colores y la información sobre herramientas de explorador matriz
-- Usar las nuevas características del editor de JavaScript incluidas en Web Essentials, como extraer al archivo e IntelliSense para todos los elementos HTML
-- Intercambiar datos entre su explorador y Visual Studio mediante el vínculo de explorador
+- Usar las nuevas características del editor HTML incluidas en Web Essentials, como fragmentos de código HTML5 enriquecidos y codificación Zen
+- Usar las nuevas características del editor de CSS incluidas en Web Essentials como la información sobre herramientas del selector de colores y la matriz del explorador
+- Usar las nuevas características del editor de JavaScript incluidas en Web Essentials como extraer a archivo e IntelliSense para todos los elementos HTML
+- Intercambio de datos entre el explorador y Visual Studio mediante el vínculo del explorador

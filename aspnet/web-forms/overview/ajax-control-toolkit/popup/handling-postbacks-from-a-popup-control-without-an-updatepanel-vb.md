@@ -9,11 +9,11 @@ ms.assetid: a0b9186c-0912-4fff-916a-6d17e696a50b
 msc.legacyurl: /web-forms/overview/ajax-control-toolkit/popup/handling-postbacks-from-a-popup-control-without-an-updatepanel-vb
 msc.type: authoredcontent
 ms.openlocfilehash: aaecf77c1d25f2c99ef4e9948d79fc01b837169b
-ms.sourcegitcommit: 22fbd8863672c4ad6693b8388ad5c8e753fb41a2
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/28/2019
-ms.locfileid: "74611719"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78446143"
 ---
 # <a name="handling-postbacks-from-a-popup-control-without-an-updatepanel-vb"></a>Controlar los postbacks desde un control emergente sin un UpdatePanel (VB)
 
@@ -23,7 +23,7 @@ por [Christian Wenz](https://github.com/wenz)
 
 > El extensor PopupControl en el kit de herramientas de control de AJAX ofrece una manera sencilla de desencadenar un elemento emergente cuando se activa cualquier otro control. Cuando se produce un postback en este tipo de panel y hay varios paneles en la página, es difícil determinar en qué panel se hizo clic.
 
-## <a name="overview"></a>Información general del
+## <a name="overview"></a>Información general
 
 El extensor PopupControl en el kit de herramientas de control de AJAX ofrece una manera sencilla de desencadenar un elemento emergente cuando se activa cualquier otro control. Cuando se produce un postback en este tipo de panel y hay varios paneles en la página, es difícil determinar en qué panel se hizo clic.
 
@@ -43,7 +43,7 @@ Cuando se carga la página, el código JavaScript agrega un controlador de event
 
 [!code-html[Main](handling-postbacks-from-a-popup-control-without-an-updatepanel-vb/samples/sample3.html)]
 
-En el código del lado servidor, se debe leer el valor del campo oculto. Dado que los campos de formulario ocultos son triviales de manipular, es necesario un enfoque de lista blanca para validar el valor oculto. Una vez identificado el cuadro de texto correcto, se escribe en él la fecha del calendario.
+En el código del lado servidor, se debe leer el valor del campo oculto. Puesto que son triviales para manipular campos ocultos de formulario, se requiere un enfoque de lista de permitidos para validar el valor hidden. Una vez identificado el cuadro de texto correcto, se escribe en él la fecha del calendario.
 
 [!code-aspx[Main](handling-postbacks-from-a-popup-control-without-an-updatepanel-vb/samples/sample4.aspx)]
 

@@ -9,11 +9,11 @@ ms.assetid: 68b8c023-92fa-4df6-9563-1764e16e4b04
 msc.legacyurl: /web-forms/overview/data-access/filtering-scenarios-with-the-datalist-and-repeater/master-detail-filtering-acess-two-pages-datalist-cs
 msc.type: authoredcontent
 ms.openlocfilehash: 545b24a66476c55aff88ac62d3a6528105fea6c0
-ms.sourcegitcommit: 22fbd8863672c4ad6693b8388ad5c8e753fb41a2
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/28/2019
-ms.locfileid: "74631475"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78491653"
 ---
 # <a name="masterdetail-filtering-across-two-pages-c"></a>Filtrado de maestro y detalles en dos páginas (C#)
 

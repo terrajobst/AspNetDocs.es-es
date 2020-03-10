@@ -9,11 +9,11 @@ ms.assetid: 0270e0df-6fde-4a8f-a2cb-2cacc55143f2
 msc.legacyurl: /web-forms/overview/ajax-control-toolkit/animation/executing-animations-using-client-side-code-cs
 msc.type: authoredcontent
 ms.openlocfilehash: b6ba1553b9c8c51d5d6ae1679e53f9cc1d17b769
-ms.sourcegitcommit: 22fbd8863672c4ad6693b8388ad5c8e753fb41a2
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/28/2019
-ms.locfileid: "74599655"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78484027"
 ---
 # <a name="executing-animations-using-client-side-code-c"></a>Ejecutar animaciones con código de cliente (C#)
 
@@ -23,7 +23,7 @@ por [Christian Wenz](https://github.com/wenz)
 
 > El control de animación de ASP.NET AJAX control Toolkit no es solo un control, sino un marco de trabajo completo para agregar animaciones a un control. También se puede desencadenar la ejecución de la animación mediante el código JavaScript del lado cliente personalizado.
 
-## <a name="overview"></a>Información general del
+## <a name="overview"></a>Información general
 
 El control de animación de ASP.NET AJAX control Toolkit no es solo un control, sino un marco de trabajo completo para agregar animaciones a un control. También se puede desencadenar la ejecución de la animación mediante el código JavaScript del lado cliente personalizado.
 

@@ -1,6 +1,6 @@
 ---
 uid: web-api/overview/hosting-aspnet-web-api/use-owin-to-self-host-web-api
-title: Use OWIN para autohospedaje de ASP.NET Web API - ASP.NET 4.x
+title: Use OWIN para autohospedar ASP.NET Web API ASP.NET 4. x
 author: rick-anderson
 description: Tutorial con código que muestra cómo hospedar ASP.NET Web API en una aplicación de consola.
 ms.author: riande
@@ -10,64 +10,64 @@ ms.assetid: a90a04ce-9d07-43ad-8250-8a92fb2bd3d5
 msc.legacyurl: /web-api/overview/hosting-aspnet-web-api/use-owin-to-self-host-web-api
 msc.type: authoredcontent
 ms.openlocfilehash: 872b931391a63ef82b96e5b264c070c0b5e9605d
-ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/06/2019
-ms.locfileid: "65131658"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78448333"
 ---
-# <a name="use-owin-to-self-host-aspnet-web-api"></a>Use OWIN para autohospedaje de ASP.NET Web API 
+# <a name="use-owin-to-self-host-aspnet-web-api"></a>Usar OWIN para autohospedar ASP.NET Web API 
 
-> Este tutorial muestra cómo hospedar ASP.NET Web API en una aplicación de consola, el uso de OWIN para autohospedaje el marco API Web.
+> En este tutorial se muestra cómo hospedar ASP.NET Web API en una aplicación de consola mediante OWIN para autohospedar el marco de la API Web.
 >
-> [Interfaz Web abierta para .NET](http://owin.org) (OWIN) define una abstracción entre los servidores web de .NET y aplicaciones web. OWIN desacopla la aplicación web desde el servidor, lo que hace que OWIN ideal para el autohospedaje de una aplicación web en su propio proceso, fuera de IIS.
+> [Open Web Interface for .net](http://owin.org) (OWIN) define una abstracción entre los servidores Web .net y las aplicaciones Web. OWIN desacopla la aplicación web del servidor, lo que hace que OWIN sea ideal para hospedar automáticamente una aplicación web en su propio proceso, fuera de IIS.
 >
-> ## <a name="software-versions-used-in-the-tutorial"></a>Versiones de software que se usa en el tutorial
+> ## <a name="software-versions-used-in-the-tutorial"></a>Versiones de software usadas en el tutorial
 >
 >
 > - [Visual Studio 2017](https://visualstudio.microsoft.com/downloads/) 
-> - Web API 5.2.7
+> - API Web 5.2.7
 
 > [!NOTE]
-> Puede encontrar el código fuente completo para este tutorial en [github.com/aspnet/samples](https://github.com/aspnet/samples/tree/master/samples/aspnet/WebApi/OwinSelfhostSample).
+> Puede encontrar el código fuente completo de este tutorial en [github.com/ASPNET/samples](https://github.com/aspnet/samples/tree/master/samples/aspnet/WebApi/OwinSelfhostSample).
 
 ## <a name="create-a-console-application"></a>Creación de una aplicación de consola
 
-En el **archivo** menú, **New**, a continuación, seleccione **proyecto**. Desde **instalado**, en **Visual C#** , seleccione **Windows Desktop** y, a continuación, seleccione **aplicación de consola (.Net Framework)**. Denomine el proyecto "OwinSelfhostSample" y seleccione **Aceptar**.
+En el menú **archivo** , haga clic en **nuevo**y seleccione **proyecto**. En **instalado**, en **Visual C#** , seleccione **escritorio de Windows** y, a continuación, seleccione **aplicación de consola (.NET Framework)** . Asigne al proyecto el nombre "OwinSelfhostSample" y seleccione **Aceptar**.
 
 [![](use-owin-to-self-host-web-api/_static/image7.png)](use-owin-to-self-host-web-api/_static/image7.png)
 
-## <a name="add-the-web-api-and-owin-packages"></a>Agregue los paquetes de Web API y OWIN
+## <a name="add-the-web-api-and-owin-packages"></a>Incorporación de la API Web y los paquetes OWIN
 
-Desde el **herramientas** menú, seleccione **Administrador de paquetes de NuGet**, a continuación, seleccione **Package Manager Console**. En la ventana de consola de administrador de paquetes, escriba el siguiente comando:
+En el menú **herramientas** , seleccione **Administrador de paquetes NuGet**y, a continuación, seleccione **consola del administrador de paquetes**. En la ventana Package Manager Console, escriba el siguiente comando:
 
 `Install-Package Microsoft.AspNet.WebApi.OwinSelfHost`
 
-Esto instalará el paquete de selfhost WebAPI OWIN y todos los paquetes necesarios de OWIN.
+Se instalará el paquete de WebAPI OWIN selfhost y todos los paquetes OWIN necesarios.
 
 [![](use-owin-to-self-host-web-api/_static/image4.png)](use-owin-to-self-host-web-api/_static/image3.png)
 
-## <a name="configure-web-api-for-self-host"></a>Configurar Web API para autohospedar
+## <a name="configure-web-api-for-self-host"></a>Configuración de la API Web para el autohospedaje
 
-En el Explorador de soluciones, haga clic en el proyecto y seleccione **agregar** / **clase** para agregar una nueva clase. Asigne a la clase el nombre `Startup`.
+En Explorador de soluciones, haga clic con el botón secundario en el proyecto y seleccione **agregar** / **clase** para agregar una nueva clase. Asigne a la clase el nombre `Startup`.
 
 ![](use-owin-to-self-host-web-api/_static/image5.png)
 
-Reemplace todo el código repetitivo en este archivo por lo siguiente:
+Reemplace todo el código reutilizable de este archivo por lo siguiente:
 
 [!code-csharp[Main](use-owin-to-self-host-web-api/samples/sample1.cs)]
 
-## <a name="add-a-web-api-controller"></a>Agregar un controlador Web API
+## <a name="add-a-web-api-controller"></a>Incorporación de un controlador de API Web
 
-A continuación, agregue una clase de controlador Web API. En el Explorador de soluciones, haga clic en el proyecto y seleccione **agregar** / **clase** para agregar una nueva clase. Asigne a la clase el nombre `ValuesController`.
+A continuación, agregue una clase de controlador de API Web. En Explorador de soluciones, haga clic con el botón secundario en el proyecto y seleccione **agregar** / **clase** para agregar una nueva clase. Asigne a la clase el nombre `ValuesController`.
 
-Reemplace todo el código repetitivo en este archivo por lo siguiente:
+Reemplace todo el código reutilizable de este archivo por lo siguiente:
 
 [!code-csharp[Main](use-owin-to-self-host-web-api/samples/sample2.cs)]
 
-## <a name="start-the-owin-host-and-make-a-request-with-httpclient"></a>Iniciar al Host OWIN y realizar una solicitud con HttpClient
+## <a name="start-the-owin-host-and-make-a-request-with-httpclient"></a>Inicio del host OWIN y solicitud con HttpClient
 
-Reemplace todo el código reutilizable en el archivo Program.cs por el siguiente:
+Reemplace todo el código reutilizable en el archivo Program.cs por lo siguiente:
 
 [!code-csharp[Main](use-owin-to-self-host-web-api/samples/sample3.cs)]
 
@@ -83,4 +83,4 @@ Para ejecutar la aplicación, presione F5 en Visual Studio. La salida debe tener
 
 [Información general del proyecto Katana](../../../aspnet/overview/owin-and-katana/an-overview-of-project-katana.md)
 
-[Hospedar ASP.NET Web API en un rol de trabajo de Azure](host-aspnet-web-api-in-an-azure-worker-role.md)
+[ASP.NET Web API host en un rol de trabajo de Azure](host-aspnet-web-api-in-an-azure-worker-role.md)

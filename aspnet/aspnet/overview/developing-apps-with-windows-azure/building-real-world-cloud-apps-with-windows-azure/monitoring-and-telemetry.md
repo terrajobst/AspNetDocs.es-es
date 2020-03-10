@@ -9,11 +9,11 @@ ms.assetid: 7e986ab5-6615-4638-add7-4614ce7b51db
 msc.legacyurl: /aspnet/overview/developing-apps-with-windows-azure/building-real-world-cloud-apps-with-windows-azure/monitoring-and-telemetry
 msc.type: authoredcontent
 ms.openlocfilehash: f61810ea7b486b2fa0bbb234edea7541eedde835
-ms.sourcegitcommit: 7709c0a091b8d55b7b33bad8849f7b66b23c3d72
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/19/2020
-ms.locfileid: "77457068"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78471139"
 ---
 # <a name="monitoring-and-telemetry-building-real-world-cloud-apps-with-azure"></a>Supervisión y telemetría (creación de aplicaciones en la nube reales con Azure)
 
@@ -79,7 +79,7 @@ Estas son solo algunas de las estadísticas que puede ver:
     ![Tiempo de respuesta](monitoring-and-telemetry/_static/image10.png)
 - Tasas de rendimiento (en solicitudes por minuto) en distintos momentos del día.
 
-    ![Throughput](monitoring-and-telemetry/_static/image11.png)
+    ![Rendimiento](monitoring-and-telemetry/_static/image11.png)
 - Tiempo de CPU del servidor dedicado a administrar diferentes solicitudes HTTP.
 
     ![Tiempos de transacción Web](monitoring-and-telemetry/_static/image12.png)
@@ -255,7 +255,7 @@ En el [siguiente capítulo](transient-fault-handling.md) veremos cómo controlar
 
 ## <a name="resources"></a>Recursos
 
-Para obtener más información, vea los recursos siguientes.
+Para obtener más información, vea los siguientes recursos.
 
 Documentación principalmente sobre la telemetría:
 
@@ -278,7 +278,7 @@ Documentación principalmente acerca de la solución de problemas:
 - [AzureTools: utilidad de diagnóstico usada por el equipo de Azure soporte técnico Developer](https://blogs.msdn.com/b/kwill/archive/2013/08/26/azuretools-the-diagnostic-utility-used-by-the-windows-azure-developer-support-team.aspx?Redirected=true). Presenta y proporciona un vínculo de descarga para una herramienta que se puede usar en una máquina virtual de Azure para descargar y ejecutar una amplia variedad de herramientas de diagnóstico y supervisión. Resulta útil cuando se necesita diagnosticar un problema en una máquina virtual determinada.
 - [Solución de problemas de una aplicación web en Azure App Service con Visual Studio](https://docs.microsoft.com/azure/app-service-web/web-sites-dotnet-troubleshoot-visual-studio). Un tutorial paso a paso para empezar a trabajar con el seguimiento de System. Diagnostics y la depuración remota.
 
-Videos:
+Vídeos:
 
 - [Failsafe: creación de Cloud Services escalables y resistentes](https://channel9.msdn.com/Series/FailSafe). Series de nueve partes de Ulrich Homann, Marc Mercuri y Mark SIMM. Presenta conceptos de alto nivel y principios arquitectónicos de una manera muy accesible e interesante, con historias tomadas de la experiencia del equipo de asesoramiento al cliente (CAT) de Microsoft con clientes reales. Los episodios 4 y 9 están relacionados con la supervisión y la telemetría. El episodio 9 incluye información general de los servicios de supervisión MetricsHub, AppDynamics, New Relic y PagerDuty.
 - [Building Big: lecciones aprendidas de clientes de Azure, parte II](https://channel9.msdn.com/Events/Build/2012/3-030). Mark SIMM habla sobre el diseño de errores y la instrumentación de todo. Similar a la serie failsafe, pero profundiza en más detalles.

@@ -10,11 +10,11 @@ ms.custom: seoapril2019
 msc.legacyurl: /identity/overview/getting-started/aspnet-identity-recommended-resources
 msc.type: authoredcontent
 ms.openlocfilehash: 4b2a6689839f66121f4a32ee5934f6cda50ae812
-ms.sourcegitcommit: 7709c0a091b8d55b7b33bad8849f7b66b23c3d72
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/19/2020
-ms.locfileid: "77456575"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78499795"
 ---
 # <a name="aspnet-identity-recommended-resources"></a>Recursos recomendados de ASP.NET Identity
 
@@ -42,7 +42,7 @@ por [Rick Anderson](https://twitter.com/RickAndMSFT)
 - [Implemente una aplicación ASP.NET MVC segura con pertenencia, OAuth y SQL Database en Azure](https://docs.microsoft.com/aspnet/core/security/authorization/secure-data). En este tutorial se agrega la implementación de Azure, cómo proteger la aplicación con roles, cómo usar la API de pertenencia para agregar usuarios y roles y otras características de seguridad.
 - [Introducción a ASP.NET Identity](introduction-to-aspnet-identity.md)
 - [Creación de una aplicación web de ASP.NET MVC 5 segura con inicio de sesión, confirmación de correo electrónico y restablecimiento de contraseña](../../../mvc/overview/security/create-an-aspnet-mvc-5-web-app-with-email-confirmation-and-password-reset.md)
-- [Aplicación de ASP.NET MVC 5 con autenticación en dos fases de SMS y correo electrónico](../../../mvc/overview/security/aspnet-mvc-5-app-with-sms-and-email-two-factor-authentication.md)
+- [Aplicación de ASP.NET MVC 5 con autenticación en dos fases por SMS y correo electrónico](../../../mvc/overview/security/aspnet-mvc-5-app-with-sms-and-email-two-factor-authentication.md)
 
 <a id="feat"></a>
 

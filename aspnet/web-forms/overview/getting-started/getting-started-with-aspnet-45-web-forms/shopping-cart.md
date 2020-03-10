@@ -9,11 +9,11 @@ ms.assetid: 6898c601-6c31-432f-8388-e6843f8a17cb
 msc.legacyurl: /web-forms/overview/getting-started/getting-started-with-aspnet-45-web-forms/shopping-cart
 msc.type: authoredcontent
 ms.openlocfilehash: d3b619ebd9448d30857ffbaf17fd245b1d54a662
-ms.sourcegitcommit: 88fc80e3f65aebdf61ec9414810ddbc31c543f04
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/22/2020
-ms.locfileid: "76519302"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78521119"
 ---
 # <a name="shopping-cart"></a>Carro de la compra
 

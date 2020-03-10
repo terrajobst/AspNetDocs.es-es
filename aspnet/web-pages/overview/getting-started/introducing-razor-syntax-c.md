@@ -9,11 +9,11 @@ ms.assetid: aa67d304-583b-4bf8-a231-195656cfb587
 msc.legacyurl: /web-pages/overview/getting-started/introducing-razor-syntax-c
 msc.type: authoredcontent
 ms.openlocfilehash: c2f420bb7c2f7d2e31654c20fb9ec7497a30a9f7
-ms.sourcegitcommit: 6f0e10e4ca61a1e5534b09c655fd35cdc6886c8a
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/27/2019
-ms.locfileid: "74564884"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78521209"
 ---
 # <a name="introduction-to-aspnet-web-programming-using-the-razor-syntax-c"></a>Introducción a la programación web de ASP.NET mediante la sintaxisC#Razor ()
 
@@ -295,7 +295,7 @@ A diferencia de los comentarios de Razor, los comentarios HTML *se* representan 
 
 Razor tiene limitaciones en los bloques anidados C#de. Para obtener más información [, C# consulte las variables con nombre y los bloques anidados generar código roto](http://aspnetwebstack.codeplex.com/workitem/1914)
 
-## <a name="variables"></a>Variables
+## <a name="variables"></a>variables
 
 Una variable es un objeto con nombre que se utiliza para almacenar los datos. Puede asignar cualquier valor a las variables, pero el nombre debe comenzar por un carácter alfabético y no puede contener espacios en blanco ni caracteres reservados.
 
@@ -630,7 +630,7 @@ Este es un ejemplo para ayudarle a comprender las diferencias:
 
 | Dirección URL completa | `http://mycompanyserver/humanresources/CompanyPolicy.htm` |
 | --- | --- |
-| Nombre del servidor | *mycompanyserver* |
+| Nombre de servidor | *mycompanyserver* |
 | Ruta de acceso virtual | */humanresources/CompanyPolicy.htm* |
 | Ruta de acceso física | *C:\mywebsites\humanresources\CompanyPolicy.htm* |
 
@@ -693,7 +693,7 @@ El valor que se va a probar se encuentra entre paréntesis (en el ejemplo, la va
 
 El resultado de los dos últimos bloques condicionales mostrados en un explorador:
 
-![Razor: Img10](introducing-razor-syntax-c/_static/image10.jpg)
+![Razor-Img10](introducing-razor-syntax-c/_static/image10.jpg)
 
 ### <a name="looping-code"></a>Código de bucle
 
@@ -743,8 +743,8 @@ Para aclarar que está haciendo referencia a las propiedades y los métodos del 
 
 Puede utilizar las propiedades del objeto `Page` para obtener una gran cantidad de información, como:
 
-- `Request`. Como ya ha visto, se trata de una colección de información sobre la solicitud actual, incluido el tipo de explorador que realizó la solicitud, la dirección URL de la página, la identidad del usuario, etc.
-- `Response`. Se trata de una colección de información sobre la respuesta (página) que se enviará al explorador cuando el código del servidor haya terminado de ejecutarse. Por ejemplo, puede usar esta propiedad para escribir información en la respuesta. 
+- `Request`Operador Como ya ha visto, se trata de una colección de información sobre la solicitud actual, incluido el tipo de explorador que realizó la solicitud, la dirección URL de la página, la identidad del usuario, etc.
+- `Response`Operador Se trata de una colección de información sobre la respuesta (página) que se enviará al explorador cuando el código del servidor haya terminado de ejecutarse. Por ejemplo, puede usar esta propiedad para escribir información en la respuesta. 
 
     [!code-cshtml[Main](introducing-razor-syntax-c/samples/sample58.cshtml)]
 
@@ -765,7 +765,7 @@ Puede determinar el número de elementos de una matriz obteniendo su `Length` pr
 
 La salida del código de la matriz de cadenas que se muestra en un explorador:
 
-![Razor: Img13](introducing-razor-syntax-c/_static/image13.jpg)
+![Razor-Img13](introducing-razor-syntax-c/_static/image13.jpg)
 
 Un diccionario es una colección de pares clave-valor, donde se proporciona la clave (o nombre) para establecer o recuperar el valor correspondiente:
 

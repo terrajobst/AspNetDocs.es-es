@@ -9,11 +9,11 @@ ms.assetid: 8b7fcf7b-722b-498d-a4e4-7c93701e0c95
 msc.legacyurl: /web-forms/overview/data-access/displaying-data-with-the-datalist-and-repeater/nested-data-web-controls-vb
 msc.type: authoredcontent
 ms.openlocfilehash: c3c62ce4293498d3b325031ac9817f8935b183b2
-ms.sourcegitcommit: 22fbd8863672c4ad6693b8388ad5c8e753fb41a2
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/28/2019
-ms.locfileid: "74629576"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78495433"
 ---
 # <a name="nested-data-web-controls-vb"></a>Controles web de datos anidados (VB)
 

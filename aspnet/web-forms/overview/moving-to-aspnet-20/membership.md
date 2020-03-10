@@ -1,202 +1,202 @@
 ---
 uid: web-forms/overview/moving-to-aspnet-20/membership
-title: Membership | Microsoft Docs
+title: Pertenencia | Microsoft Docs
 author: microsoft
-description: Pertenencia a ASP.NET se basa en el éxito del modelo de autenticación de formularios de ASP.NET 1.x. Autenticación de formularios ASP.NET proporciona una manera cómoda de ensam...
+description: La pertenencia a ASP.NET se basa en el éxito del modelo de autenticación de formularios desde ASP.NET 1. x. La autenticación de formularios ASP.NET proporciona una manera cómoda de Incorp...
 ms.author: riande
 ms.date: 02/20/2005
 ms.assetid: f2339485-5d78-4c5e-8c0a-dc9b8a315345
 msc.legacyurl: /web-forms/overview/moving-to-aspnet-20/membership
 msc.type: authoredcontent
 ms.openlocfilehash: da6fc205bd852a818d65425586cec38fdb08d310
-ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/06/2019
-ms.locfileid: "65131055"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78521707"
 ---
 # <a name="membership"></a>Pertenencia
 
 por [Microsoft](https://github.com/microsoft)
 
-> Pertenencia a ASP.NET se basa en el éxito del modelo de autenticación de formularios de ASP.NET 1.x. Autenticación de formularios ASP.NET proporciona una manera cómoda para incorporar un formulario de inicio de sesión en la aplicación ASP.NET y validar a los usuarios con una base de datos u otro almacén de datos.
+> La pertenencia a ASP.NET se basa en el éxito del modelo de autenticación de formularios desde ASP.NET 1. x. La autenticación de formularios ASP.NET proporciona una manera cómoda de incorporar un formulario de inicio de sesión en la aplicación ASP.NET y validar a los usuarios en una base de datos u otro almacén de datos.
 
-Pertenencia a ASP.NET se basa en el éxito del modelo de autenticación de formularios de ASP.NET 1.x. Autenticación de formularios ASP.NET proporciona una manera cómoda para incorporar un formulario de inicio de sesión en la aplicación ASP.NET y validar a los usuarios con una base de datos u otro almacén de datos. Los miembros de la clase FormsAuthentication permiten controlar las cookies para la autenticación, busque un inicio de sesión válido, inicie sesión un usuario etcetera. Sin embargo, al implementar la autenticación de formularios en una aplicación ASP.NET 1.x puede requerir una gran cantidad de código.
+La pertenencia a ASP.NET se basa en el éxito del modelo de autenticación de formularios desde ASP.NET 1. x. La autenticación de formularios ASP.NET proporciona una manera cómoda de incorporar un formulario de inicio de sesión en la aplicación ASP.NET y validar a los usuarios en una base de datos u otro almacén de datos. Los miembros de la clase FormsAuthentication permiten controlar las cookies para la autenticación, buscar un inicio de sesión válido, cerrar la sesión de un usuario, etc. Sin embargo, la implementación de la autenticación de formularios en una aplicación ASP.NET 1. x puede requerir una cantidad considerable de código.
 
-Pertenencia a ASP.NET 2.0 constituye un gran avance con respecto a la autenticación de formularios por sí solo. (Pertenencia es más eficaz cuando se combina con la autenticación de formularios, pero no es un requisito mediante la autenticación de formularios). Como verá en breve, puede usar pertenencia a ASP.NET y los controles de inicio de sesión de ASP.NET 2.0 para implementar un sistema de pertenencia eficaz sin tener que escribir mucho código en absoluto.
+La pertenencia a ASP.NET 2,0 es un avance importante sobre el uso de la autenticación de formularios solo. (La pertenencia es más sólida cuando se acopla con la autenticación de formularios, pero el uso de la autenticación de formularios no es un requisito). Como verá pronto, puede usar la pertenencia a ASP.NET y los controles de inicio de sesión de ASP.NET 2,0 para implementar un sistema de pertenencia eficaz sin escribir mucho código.
 
-## <a name="implementing-membership-in-aspnet-20"></a>Implementación de pertenencia en ASP.NET 2.0
+## <a name="implementing-membership-in-aspnet-20"></a>Implementar la pertenencia a ASP.NET 2,0
 
-Pertenencia se implementa con cuatro pasos. Tenga en cuenta que hay muchos pasos secundarios que están implicados, así como la configuración opcional que también se puede implementar. Estos pasos están pensados para ilustrar el panorama general de la configuración de pertenencia.
+La pertenencia se implementa siguiendo cuatro pasos. Tenga en cuenta que hay muchos subpasos que participan, así como una configuración opcional que también se puede implementar. Estos pasos están pensados para ilustrar la visión general de la configuración de la pertenencia.
 
-1. Crear la base de datos de pertenencia (si SQL Server se usa como almacén de pertenencia.)
-2. Especifique las opciones de pertenencia en los archivos de configuración de aplicaciones. (Pertenencia está habilitada de forma predeterminada).
-3. Determinar el tipo de almacén de pertenencia que desee utilizar. Las opciones son: 
+1. Cree la base de datos de pertenencia (si se usa SQL Server como almacén de pertenencia).
+2. Especifique las opciones de pertenencia en los archivos de configuración de la aplicación. (La pertenencia está habilitada de forma predeterminada).
+3. Determine el tipo de almacén de pertenencia que desea usar. Las opciones son: 
 
-    - Microsoft SQL Server (versión 7.0 o posterior)
+    - Microsoft SQL Server (versión 7,0 o posterior)
     - Active Directory Store
     - Proveedor de pertenencia personalizado
-4. Configure la aplicación para la autenticación de formularios de ASP.NET. Una vez más, pertenencia está diseñada para aprovechar las ventajas de la autenticación de formularios, pero no es un requisito mediante la autenticación de formularios.
-5. Definir las cuentas de usuario para la suscripción y configurar roles si lo desea.
+4. Configure la aplicación para la autenticación de formularios ASP.NET. Una vez más, la pertenencia se ha diseñado para aprovechar la autenticación de formularios, pero el uso de la autenticación de formularios no es un requisito.
+5. Defina las cuentas de usuario para la pertenencia y configure los roles si lo desea.
 
-## <a name="creating-the-membership-database"></a>Creación de la base de datos de pertenencia
+## <a name="creating-the-membership-database"></a>Crear la base de datos de pertenencia
 
-Si usa SQL Server 7.0 o posterior como almacén de pertenencia, puede usar aspnet\_utilidad regsql (disponible más fácilmente desde el Visual Studio .NET 2005 símbolo) para configurar la base de datos. Aspnet\_regsql utilidad puede usarse como una herramienta de línea de comandos o mediante un asistente GUI. El método del asistente es la manera más fácil de configurar la base de datos. Para tener acceso al asistente, simplemente ejecute el siguiente comando:
+Si usa SQL Server 7,0 o posterior como almacén de pertenencia, puede usar la utilidad ASPNET\_regsql (disponible más fácilmente desde el símbolo del sistema de Visual Studio .NET 2005) para configurar la base de datos. La utilidad ASPNET\_regsql se puede usar como una herramienta de símbolo del sistema o mediante un asistente de GUI. El método del asistente es la forma más sencilla de configurar la base de datos. Para obtener acceso al asistente, basta con ejecutar el siguiente comando:
 
 `aspnet_regsql W`
 
-Una vez que ejecute este comando, se le mostrará con el Asistente para configuración de ASP.NET SQL Server como se muestra a continuación.
+Una vez que ejecute el comando, se le presentará el Asistente para la instalación de ASP.NET SQL Server como se muestra a continuación.
 
 ![](membership/_static/image1.jpg)
 
-**Figura 1**
+**Ilustración 1**
 
-El Asistente para la instalación de ASP.NET SQL Server crea el sitio Web en la instancia que especifique en el asistente. Sin embargo, ASP.NET usará la cadena de conexión en el archivo machine.config para conectarse a la base de datos. De forma predeterminada, esta cadena de conexión señala a una instancia de SQL Server 2005, por lo que si usa una instancia de SQL Server 2000 o SQL Server 7.0, deberá modificar la cadena de conexión en el archivo machine.config. Esa cadena de conexión se puede encontrar aquí:
+El Asistente para la instalación de ASP.NET SQL Server crea el sitio web en la instancia de que especifique en el asistente. Sin embargo, ASP.NET usará la cadena de conexión en el archivo Machine. config para conectarse a la base de datos. De forma predeterminada, esta cadena de conexión apuntará a una instancia SQL Server 2005, por lo que si usa una instancia de SQL Server 2000 o SQL Server 7,0, deberá modificar la cadena de conexión en el archivo Machine. config. Esa cadena de conexión se puede encontrar aquí:
 
 [!code-xml[Main](membership/samples/sample1.xml)]
 
-Lamentablemente, si no modifica la cadena de conexión, ASP.NET no le proporcionará un error descriptivo. Simplemente continuará quejarse de decir que no ha creado la base de datos. En el caso anterior, he modificado la cadena de conexión para que apunte a mi instancia local de SQL Server 2000.
+Desafortunadamente, si no modifica la cadena de conexión, ASP.NET no le proporcionará un error descriptivo. Simplemente se seguirá queja de que no ha creado la base de datos. En el caso anterior, he modificado la cadena de conexión para que apunte a mi instancia local de SQL Server 2000.
 
-## <a name="specifying-configuration-and-adding-users-and-roles"></a>Especificar la configuración y agregar usuarios y Roles
+## <a name="specifying-configuration-and-adding-users-and-roles"></a>Especificación de la configuración y adición de usuarios y roles
 
-El paso siguiente para configurar la pertenencia es agregar la información necesaria para el archivo web.config de la aplicación. En ASP.NET 1.x, modificar el archivo web.config en ocasiones, era difícil debido a la utilización de lowerCamelCase y la falta de Intellisense. Visual Studio .NET 2005 facilita la tarea con Intellisense para archivos de configuración, pero ASP.NET 2.0 va un paso más allá al proporcionar una interfaz Web para editar archivos de configuración.
+El siguiente paso en la configuración de la pertenencia es agregar la información necesaria al archivo Web. config de la aplicación. En ASP.NET 1. x, la modificación del archivo Web. config a veces era difícil debido al uso de lowerCamelCase y a la falta de IntelliSense. Visual Studio .NET 2005 hace que la tarea sea mucho más fácil con IntelliSense para los archivos de configuración, pero ASP.NET 2,0 va un paso más allá proporcionando una interfaz web para editar archivos de configuración.
 
-Puede iniciar la interfaz Web, haga clic en el botón de configuración de ASP.NET en la barra de herramientas del explorador de soluciones como se muestra a continuación. También puede iniciar la interfaz Web a través de los elementos emergentes que se muestran cuando se insertan los controles de inicio de sesión.
+Puede iniciar la interfaz web haciendo clic en el botón configuración de ASP.NET en la barra de herramientas Explorador de soluciones como se muestra a continuación. También puede iniciar la interfaz web a través de elementos emergentes que se muestran cuando se insertan controles de inicio de sesión.
 
 ![](membership/_static/image2.jpg)
 
-**Figura 2**
+**Ilustración 2**
 
-Esto inicia la herramienta de administración de sitios Web de ASP.NET se muestra a continuación. La administración de sitios Web de ASP.NET es una interfaz de pestaña de cuatro que facilita la administración de configuración de la aplicación. Están disponibles las siguientes pestañas:
+Esto inicia la herramienta de administración del sitio web de ASP.NET que se muestra a continuación. La administración del sitio web de ASP.NET es una interfaz de cuatro pestañas que facilita la administración de la configuración de la aplicación. Las siguientes pestañas están disponibles:
 
 - **Página principal**
-- **Seguridad** configurar usuarios, roles y acceso.
-- **Aplicación** configurar configuración de la aplicación.
-- **Proveedor** configurar y probar el proveedor de pertenencia de las aplicaciones.
+- **Seguridad** de Configurar usuarios, roles y acceso.
+- **Aplicación** de Configurar las opciones de la aplicación.
+- **Proveedor** de Configure y pruebe el proveedor de pertenencia de las aplicaciones.
 
-La herramienta de administración de sitios Web permite fácilmente crear nuevos usuarios, crear nuevos roles, así como administrar usuarios y roles. Esta capacidad no está disponible en la interfaz de Windows. La interfaz de Windows le permite definir fácilmente la configuración de autorización y agregar, eliminar y administrar los proveedores de funciones que no están en la herramienta de administración de sitios Web.
+La herramienta de administración de sitios web le permite crear fácilmente nuevos usuarios, crear nuevos roles y administrar usuarios y roles. Esta capacidad no está disponible en la interfaz de Windows. La interfaz de Windows permite definir fácilmente la configuración de autorización y agregar, eliminar y administrar proveedores, funcionalidades que no están en la herramienta de administración de sitios Web.
 
-Para iniciar la interfaz de Windows, abra el complemento de Internet Information Services, haga doble clic en la aplicación y elija Propiedades. Haga clic en la ficha ASP.NET y, a continuación, haga clic en el botón Editar configuración. (La aplicación debe ejecutarse en ASP.NET 2.0 para el botón de edición de la configuración esté habilitada. Puede configurar la versión de ASP.NET en el cuadro de diálogo ASP.NET). Como se muestra a continuación, se muestra el cuadro de diálogo Opciones de configuración de ASP.NET.
+Para iniciar la interfaz de Windows, abra el complemento Internet Information Services, haga clic con el botón derecho en la aplicación y elija Propiedades. Haga clic en la pestaña ASP.NET y, a continuación, haga clic en el botón Editar configuración. (La aplicación debe ejecutarse en ASP.NET 2,0 para que el botón Editar configuración esté habilitado. También puede configurar la versión de ASP.NET en el cuadro de diálogo ASP.NET). Se muestra el cuadro de diálogo Opciones de configuración de ASP.NET, como se muestra a continuación.
 
 ![](membership/_static/image3.jpg)
 
-**Figura 3**
+**Ilustración 3**
 
-En la ficha General, se enumeran las cadenas de conexión y configuración de la aplicación. Los valores en cursiva se definen en un archivo de configuración principal (el archivo machine.config o un archivo web.config en un nivel superior) y la configuración no está en cursiva es desde el archivo de configuración de aplicaciones. Si se agrega una configuración, quitado o modificado en el nivel de aplicación ASP.NET se agregar, quitar o modificar la configuración en el archivo web.config de los niveles de aplicación en lugar de quitar la configuración del archivo de configuración desde el que se ha heredado.
+En la pestaña general, se enumeran las cadenas de conexión y la configuración de la aplicación. Cualquier configuración en cursiva se define en un archivo de configuración principal (ya sea Machine. config o Web. config en un nivel superior) y la configuración no en cursiva procede del archivo de configuración de aplicaciones. Si se agrega, quita o edita una configuración en el nivel de aplicación, ASP.NET agregará, quitará o modificará la configuración en el archivo Web. config de los niveles de aplicación en lugar de quitar la configuración del archivo de configuración del que se hereda.
 
-A continuación se muestra la ficha autenticación. Esto es donde podrá configurar la configuración de pertenencia. Formularios de configuración de autenticación, los proveedores de pertenencia y los proveedores de funciones se pueden configurar aquí.
+A continuación se muestra la pestaña autenticación. Aquí es donde se configurarán los valores de pertenencia. La configuración de autenticación de formularios, los proveedores de pertenencia y los proveedores de roles se pueden configurar aquí.
 
 ![](membership/_static/image4.jpg)
 
-**Figura 4**
+**Ilustración 4**
 
-## <a name="implementing-membership-in-your-application"></a>Implementar la pertenencia en la aplicación
+## <a name="implementing-membership-in-your-application"></a>Implementar la pertenencia a la aplicación
 
-La manera más fácil de implementar la pertenencia de ASP.NET 2.0 en la aplicación es usar los controles de inicio de sesión proporcionados. Este método permite implementar los conceptos básicos de la pertenencia a ASP.NET 2.0 sin escribir ningún código en absoluto.
+La manera más sencilla de implementar la pertenencia a ASP.NET 2,0 en la aplicación es usar los controles de inicio de sesión proporcionados. Este método permite implementar los aspectos básicos de la pertenencia a ASP.NET 2,0 sin escribir ningún código.
 
-Los controles de inicio de sesión siguientes están disponibles en ASP.NET 2.0:
+Los siguientes controles de inicio de sesión están disponibles en ASP.NET 2,0:
 
 ## <a name="login-control"></a>Control de inicio de sesión
 
-El control de inicio de sesión proporciona una interfaz para que alguien inicie sesión en el sistema de pertenencia. Proporciona un cuadro de texto Nombre de usuario y contraseña y un botón de inicio de sesión. Muchas otras características comunes, como un vínculo para registrarse para las personas que aún no ha hecho por lo tanto, una casilla de verificación que permite al usuario iniciar sesión automáticamente en visitas posteriores, un vínculo para un recordatorio de contraseña, etcetera. Todas las características del control de inicio de sesión son personalizables a través de las propiedades del control.
+El control de inicio de sesión proporciona una interfaz para que alguien inicie sesión en el sistema de pertenencia. Proporciona un cuadro de texto de nombre de usuario y contraseña y un botón de inicio de sesión. Muchas otras características comunes, como un vínculo para registrarse para personas que aún no lo han hecho, una casilla que permite al usuario iniciar sesión automáticamente en visitas posteriores, un vínculo para un recordatorio de contraseña, etc. Todas las características del control de inicio de sesión se pueden personalizar a través de las propiedades del control.
 
-En ASP.NET 1.x, los desarrolladores tenían que escribir una gran cantidad de código para realizar una búsqueda cuando se usa la autenticación de formularios. Con la pertenencia a ASP.NET 2.0, puede validar a los usuarios sin escribir ningún código en absoluto. ASP.NET realizará automáticamente la búsqueda del usuario para usted. (Si está utilizando el control de inicio de sesión sin usar la pertenencia a ASP.NET, puede usar el **OnAuthenticate** método para validar el usuario.)
+En ASP.NET 1. x, los desarrolladores tenían que escribir una cantidad equitativa de código para realizar una búsqueda al utilizar la autenticación de formularios. Con la pertenencia a ASP.NET 2,0, puede validar los usuarios sin necesidad de escribir ningún código. ASP.NET realizará automáticamente la búsqueda del usuario. (Si usa el control de inicio de sesión sin usar la pertenencia a ASP.NET, puede usar el método **OnAuthenticate** para validar al usuario).
 
 ## <a name="loginview-control"></a>Control LoginView
 
-El control LoginView es un control con plantilla que proporciona dos plantillas de forma predeterminada. AnonymousTemplate y LoggedInTemplate. La plantilla que se muestra viene determinada por si el usuario se registra en el sistema de pertenencia. Este control se usa normalmente para mostrar un control de inicio de sesión cuando un usuario no ha iniciado y un control LoginStatus y/o otros controles de inicio de sesión cuando el usuario ha iniciado sesión. Si usa administración de roles en su aplicación ASP.NET, el control LoginView puede mostrar una plantilla específica, según la función de los usuarios. (Más en ASP.NET administración de roles se tratarán más adelante.)
+El control LoginView es un control con plantilla que proporciona dos plantillas de forma predeterminada; AnonymousTemplate y LoggedInTemplate. La plantilla que se muestra viene determinada por si el usuario ha iniciado sesión en el sistema de pertenencia o no. Este control se utiliza normalmente para mostrar un control de inicio de sesión cuando un usuario aún no ha iniciado sesión y un control LoginStatus y/u otros controles de inicio de sesión cuando el usuario ha iniciado sesión. Si usa la administración de roles en la aplicación ASP.NET, el control LoginView puede mostrar una plantilla específica basada en el rol usuarios. (Más información sobre la administración de roles de ASP.NET se tratará más adelante).
 
 ## <a name="passwordrecovery-control"></a>Control PasswordRecovery
 
-El control PasswordRecovery permite a los usuarios recibirán un correo electrónico con su contraseña actual o restablecer su contraseña. Texto no cifrado y contraseñas cifradas se pueden recuperar y por correo electrónico a los usuarios. Si la contraseña está en hash, no puede recuperarse. En su lugar, el usuario será necesario para realizar un restablecimiento de contraseña.
+El control PasswordRecovery permite a los usuarios recibir un correo electrónico con su contraseña actual o restablecer su contraseña. El texto sin cifrar y las contraseñas cifradas se pueden recuperar y enviar por correo electrónico a los usuarios. Si se aplica un algoritmo hash a la contraseña, no se puede recuperar. En su lugar, se solicitará al usuario que realice un restablecimiento de contraseña.
 
-## <a name="loginstatus-control"></a>Control LoginStatus
+## <a name="loginstatus-control"></a>LoginStatus (control)
 
-El control LoginStatus se usa para mostrar un indicador de inicio de sesión a los usuarios que no se ha iniciado sesión y un indicador de cierre de sesión a los usuarios que han iniciado sesión en. La propiedad Request.IsAuthenticated se usa para determinar qué indicador para mostrar. El indicador muestra el control LoginStatus puede ser texto (implementa a través de la **LoginText** y **LogoutText** propiedades) o imágenes (implementa a través de la **LoginImageUrl**y **LogoutImageUrl** propiedades.)
+El control LoginStatus se usa para mostrar un indicador de inicio de sesión a los usuarios que no han iniciado sesión y un indicador de cierre de sesión para los usuarios que han iniciado sesión actualmente. La propiedad request. IsAuthenticated se usa para determinar el indicador que se va a mostrar. El indicador mostrado por el control LoginStatus puede ser texto (implementado a través de las propiedades **LoginText** y **LogoutText** ) o imágenes (implementadas a través de las propiedades **LoginImageUrl** y **LogoutImageUrl** ).
 
-Cuando un usuario cierra la sesión a través del control LoginStatus, que se redirige a la dirección URL especificada por el **LogoutPageUrl** propiedad. Si no se establece esa propiedad, se actualiza la página actual. Puesto que el sitio es probable que está protegido mediante autenticación de formularios, la actualización de la página actual redirigirá al usuario a la página de inicio de sesión para el sitio.
+Cuando un usuario cierra sesión a través del control LoginStatus, se le redirige a la dirección URL especificada por la propiedad **LogoutPageUrl** . Si no se establece esa propiedad, se actualiza la página actual. Dado que es probable que el sitio esté protegido por la autenticación de formularios, la actualización de la página actual redirigirá al usuario a la página de inicio de sesión del sitio.
 
-## <a name="loginname-control"></a>Control LoginName
+## <a name="loginname-control"></a>LoginName (control)
 
-El control LoginName muestra el nombre de usuario del usuario conectado actualmente en el sitio.
+El control LoginName muestra el nombre de usuario del usuario que ha iniciado sesión actualmente en el sitio.
 
 ## <a name="createuserwizard-control"></a>Control CreateUserWizard
 
-El control CreateUserWizard proporciona a los usuarios una forma cómoda para registrarse en el sistema de pertenencia. Puede agregar pasos (implementados como una colección de WizardSteps) a través de la interfaz que se muestra a continuación.
+El control CreateUserWizard proporciona a los usuarios una manera cómoda de registrarse para el sistema de pertenencia. Puede Agregar pasos (implementados como una colección de WizardSteps) a través de la interfaz que se muestra a continuación.
 
 ![](membership/_static/image5.jpg)
 
 **Figura 5**
 
-CreateUserWizard es un control con plantilla que se deriva de la clase de asistente y proporciona las siguientes plantillas:
+CreateUserWizard es un control con plantilla que se deriva de la clase Wizard y proporciona las siguientes plantillas:
 
-- **HeaderTemplate** esta plantilla controla la apariencia del encabezado del asistente.
-- **SidebarTemplate** esta plantilla controla la apariencia de la barra lateral del asistente.
-- **StartNavigationTemplate** este controles de plantilla son el aspecto del panel de navegación del asistente en el paso de inicio.
-- **StepNavigationTemplate** esta plantilla controla la apariencia del área de navegación cuando no esté en el paso de inicio o fin.
-- **FinishNavigationTemplate** esta plantilla controla la apariencia del área de navegación cuando en el paso Finalizar.
+- **HeaderTemplate** Esta plantilla controla la apariencia del encabezado del asistente.
+- **SidebarTemplate** Esta plantilla controla la apariencia de la barra lateral del asistente.
+- **StartNavigationTemplate** Esta plantilla controla la apariencia de la navegación del asistente en el paso Inicio.
+- **StepNavigationTemplate** Esta plantilla controla la apariencia del área de navegación cuando no está en el paso iniciar o finalizar.
+- **FinishNavigationTemplate** Esta plantilla controla la apariencia del área de navegación en el paso finalizar.
 
-Además, para cada paso que agregue al asistente, ASP.NET creará una plantilla personalizada que contiene una plantilla ContentTemplate y un CustomNavigationTemplate para ese paso. Para obtener detalles completos acerca de cómo personalizar el control CreateUserWizard, consulte la documentación de VS.NET 2005:
+Además, para cada paso que agregue al asistente, ASP.NET creará una plantilla personalizada que contiene tanto ContentTemplate como CustomNavigationTemplate para ese paso. Para obtener detalles completos sobre cómo personalizar CreateUserWizard, consulte la documentación de VS.NET 2005:
 
-## <a name="changepassword-control"></a>Control ChangePassword
+## <a name="changepassword-control"></a>ChangePassword (control)
 
-El control ChangePassword permite a los usuarios cambiar su contraseña. Si la propiedad DisplayUserName es true (es false de forma predeterminada), el usuario puede cambiar su contraseña cuando no se inició sesión. Si el usuario *es* ya haya iniciado sesión y la propiedad DisplayUserName es true, el usuario podrá cambiar la contraseña de otro usuario que no se registra en el suministro de que conocen el identificador de usuario de ese usuario.
+El control ChangePassword permite a los usuarios cambiar su contraseña. Si la propiedad DisplayUserName es true (de forma predeterminada, es false), el usuario puede cambiar su contraseña cuando no haya iniciado sesión. Si el usuario *ya ha* iniciado sesión y la propiedad DisplayUserName es true, el usuario podrá cambiar la contraseña de otro usuario que no haya iniciado sesión, lo que le indicará el identificador de usuario de dicho usuario.
 
-Tenga en cuenta que si desea que los usuarios puedan cambiar las contraseñas sin tener que iniciar sesión, deberá asegurarse de que la página en el que se muestra el control ChangePassword permite el acceso anónimo. Obviamente, los usuarios tendrán que proporcionar su contraseña anterior con el fin de cambiar su contraseña.
+Tenga en cuenta que si desea que los usuarios puedan cambiar las contraseñas sin tener que iniciar sesión, deberá asegurarse de que la página en la que se muestra el control ChangePassword permite el acceso anónimo. Obviamente, los usuarios tendrán que proporcionar la contraseña anterior para poder cambiar su contraseña.
 
 ## <a name="role-management"></a>Administración de roles
 
-Administración de funciones permite asignar a usuarios a un rol determinado y, a continuación, restringir el acceso a determinados archivos o carpetas en función de ese rol. Administración de roles también proporciona una API para que mediante programación puede determinar la función de alguien lo o determinar todos los usuarios de un rol determinado y responder según corresponda.
+La administración de roles permite asignar usuarios a un rol determinado y, a continuación, restringir el acceso a determinados archivos o carpetas en función de ese rol. La administración de roles también proporciona una API para que pueda determinar mediante programación el rol de alguien o determinar todos los usuarios de un rol determinado y responder en consecuencia.
 
-Administración de roles no es un requisito de pertenencia a ASP.NET, ni es un requisito para poder usar la administración de roles de pertenencia. Sin embargo, los dos bien complementan entre sí y es probable que los desarrolladores usarán ellos junto con otros.
+La administración de roles no es un requisito de la pertenencia a ASP.NET, ni se integra un requisito para poder usar la administración de roles. Sin embargo, los dos complementos se encargan perfectamente y es probable que los desarrolladores los utilicen conjuntamente entre sí.
 
-Para habilitar la administración de roles en la aplicación, realice el siguiente cambio en el archivo web.config:
+Para habilitar la administración de roles en la aplicación, realice el siguiente cambio en el archivo Web. config:
 
 [!code-xml[Main](membership/samples/sample2.xml)]
 
-Cuando el **cacheRolesInCookie** atributo está establecido en true, ASP.NET almacena en caché una pertenencia a roles de los usuarios en una cookie en el cliente. Esto permite realizar búsquedas de rol que se produzca sin llamadas en RoleProvider. Cuando se usa este atributo, los desarrolladores pueden realizar para asegurarse de que el **cookieProtection** atributo se establece en All. (Esto es el valor predeterminado). Esto garantiza que los datos de cookies se cifran y ayuda a garantizar que el contenido de las cookies no ha sido alterado. Puede agregar funciones mediante la herramienta de administración de sitios Web. Permite definir los roles, configurar el acceso a partes del sitio basándose en dichos roles y asignar a usuarios a roles fácilmente.
+Cuando el atributo **cacheRolesInCookie** está establecido en true, ASP.net almacena en caché la pertenencia a un rol de usuario en una cookie en el cliente. Esto permite que se produzcan búsquedas de roles sin llamadas a RoleProvider. Al utilizar este atributo, se recomienda a los desarrolladores que se aseguren de que el atributo **cookieProtection** está establecido en ALL. (Esta es la configuración predeterminada). Esto garantiza que los datos de la cookie están cifrados y ayuda a garantizar que el contenido de las cookies no se ha modificado. Los roles se pueden agregar mediante la herramienta de administración de sitios Web. Permite definir fácilmente roles, configurar el acceso a partes del sitio en función de esos roles y asignar usuarios a roles.
 
 ![](membership/_static/image6.jpg)
 
 **Figura 6**
 
-Como se indicó anteriormente, se pueden agregar nuevos roles simplemente escribir el nombre del rol y, a continuación, haciendo clic en Agregar rol. Roles existentes pueden ser administrados o eliminar haciendo clic en el vínculo apropiado en la lista de roles existentes.
+Como se mostró anteriormente, se pueden agregar nuevos roles simplemente escribiendo el nombre del rol y haciendo clic en agregar rol. Los roles existentes se pueden administrar o eliminar haciendo clic en el vínculo correspondiente en la lista de roles existentes.
 
-Al administrar un rol, puede agregar o quitar usuarios, como se muestra a continuación.
+Al administrar un rol, puede Agregar o quitar usuarios, como se muestra a continuación.
 
 ![](membership/_static/image7.jpg)
 
 **Figura 7**
 
-Activando la casilla de la función del usuario, puede agregar fácilmente un usuario a un rol específico. ASP.NET actualiza automáticamente la base de datos de pertenencia con las entradas apropiadas. También deberá configurar las reglas de acceso para la aplicación. Los desarrolladores de ASP.NET 1.x están familiarizados con hacerlo a través de la &lt;autorización&gt; elemento en el archivo web.config y esa opción aún está disponible en ASP.NET 2.0. Sin embargo, es mucho más fácil administrar el acceso a las reglas utilizando el sitio Web de herramienta de administración como se muestra a continuación.
+Al activar la casilla el usuario tiene el rol, puede agregar fácilmente un usuario a un rol específico. ASP.NET actualizará automáticamente la base de datos de pertenencia con las entradas adecuadas. También querrá configurar reglas de acceso para la aplicación. ASP.NET 1. x los desarrolladores están familiarizados con este procedimiento a través del elemento &lt;Authorization&gt; en el archivo Web. config, y esa opción sigue estando disponible en ASP.NET 2,0. Sin embargo, es más fácil administrar las reglas de acceso mediante la herramienta de administración de sitios web, como se muestra a continuación.
 
 ![](membership/_static/image8.jpg)
 
 **Figura 8**
 
-En este caso, se resalta la carpeta de administración (su difícil ver porque la herramienta resalta en color gris claro) y se ha concedido acceso a la función Administrators. Se deniegan todos los demás usuarios. Puede hacer clic en el icono principal para seleccionar una regla y, a continuación, utilice los botones Subir y Bajar para organizar las reglas. Igual que con ASP.NET &lt;autorización&gt; elemento, las reglas se procesan en el orden en que aparecen. En otras palabras, si se invierte el orden de reglas en la captura anterior, nadie tendría acceso a la carpeta de administración porque la primera regla que encontraría ASP.NET sería la regla que deniegue todo el mundo a la carpeta.
+En este caso, la carpeta de administración se resalta (es difícil de ver porque la herramienta lo resalta en gris claro) y se ha concedido acceso al rol administradores. Se deniegan todos los demás usuarios. Puede hacer clic en el icono del encabezado para seleccionar una regla y, a continuación, usar los botones subir y bajar para organizar las reglas. Al igual que con el elemento de&gt; de autorización de ASP.NET &lt;, las reglas se procesan en el orden en que aparecen. En otras palabras, si se invierte el orden de las reglas en la captura anterior, nadie tendría acceso a la carpeta de administración porque la primera regla que ASP.NET encontraría sería la regla que deniega a todos los usuarios a la carpeta.
 
-ASP.NET 2.0 agrega un archivo web.config en la carpeta para el que está especificando una regla de acceso. Las reglas de acceso pueden modificarse mediante el archivo de configuración o mediante la herramienta de administración de sitios Web. En otras palabras, la herramienta de administración de sitios Web es simplemente una interfaz a través del cual se puede editar el archivo de configuración en un entorno fácil de usar.
+ASP.NET 2,0 agrega un archivo Web. config a la carpeta para la que está especificando una regla de acceso. Las reglas de acceso se pueden editar mediante el archivo de configuración o a través de la herramienta de administración de sitios Web. En otras palabras, la herramienta de administración de sitios web es simplemente una interfaz a través de la cual se puede editar el archivo de configuración en un entorno fácil de usar.
 
-## <a name="using-roles-in-code"></a>Uso de Roles en el código
+## <a name="using-roles-in-code"></a>Usar roles en el código
 
-La API de administración de roles no ha cambiado desde la versión 1.x. El **IsInRole** método se usa para determinar si un usuario está en un rol determinado.
+La API para la administración de roles no ha cambiado desde la versión 1. x. El método **IsInRole** se usa para determinar si un usuario está en un rol determinado.
 
 [!code-csharp[Main](membership/samples/sample3.cs)]
 
-ASP.NET también crea una instancia de RolePrincipal como miembro del contexto actual. El objeto RolePrincipal puede utilizarse para obtener todos los roles a los que pertenece el usuario como sigue:
+ASP.NET también crea una instancia de RolePrincipal como miembro del contexto actual. El objeto RolePrincipal se puede usar para obtener todos los roles a los que pertenece el usuario como se indica a continuación:
 
 [!code-csharp[Main](membership/samples/sample4.cs)]
 
-## <a name="using-rolegroups-with-the-loginview-control"></a>Uso de grupos de funciones con el Control LoginView
+## <a name="using-rolegroups-with-the-loginview-control"></a>Usar RoleGroups con el control LoginView
 
-Ahora que tiene conocimientos de administración de roles y pertenencia, veamos brevemente cómo el control LoginView aprovecha esta capacidad en ASP.NET 2.0. Como se dijo anteriormente, el control LoginView es un control con plantilla que contiene dos plantillas de forma predeterminada. AnonymousTemplate y LoggedInTemplate. Dentro de las tareas LoginView diálogo es un vínculo (se muestra a continuación) que le permite editar grupos de funciones.
+Ahora que conoce la administración de roles y la pertenencia, analice brevemente cómo el control LoginView aprovecha esta funcionalidad en ASP.NET 2,0. Como se explicó anteriormente, el control LoginView es un control con plantilla que contiene dos plantillas de forma predeterminada. AnonymousTemplate y LoggedInTemplate. En el cuadro de diálogo tareas de LoginView hay un vínculo (que se muestra a continuación) que le permite editar RoleGroups.
 
 ![](membership/_static/image9.jpg)
 
-**Figura 9**
+**Ilustración 9**
 
-Cada objeto RoleGroup contiene una matriz de cadenas que define los roles que se aplica RoleGroup. Para agregar un nuevo RoleGroup para el control LoginView, haga clic en el vínculo Editar grupos de funciones. En la imagen anterior, puede ver que he agregado un nuevo RoleGroup para administradores. Si selecciona esa RoleGroup (RoleGroup[0]) en la lista desplegable de vistas, puedo configurar una plantilla que solo se mostrará a los miembros del rol de administradores. En la imagen siguiente, he agregado un nuevo RoleGroup que se aplica a los miembros del rol Sales y la función de distribución. Esto agrega un segundo RoleGroup a la lista desplegable de vistas en el cuadro de diálogo de tareas de LoginView y agregado algo a esa plantilla será visible ningún usuario de la venta o la distribución de rol.
+Cada objeto RoleGroup contiene una matriz de cadenas que define los roles a los que se aplica el RoleGroup. Para agregar un nuevo RoleGroup al control LoginView, haga clic en el vínculo editar RoleGroups. En la imagen anterior, puede ver que he agregado un nuevo RoleGroup para administradores. Al seleccionar el valor de RoleGroup (RoleGroup [0]) en la lista desplegable vistas, puedo configurar una plantilla que solo se mostrará a los miembros del rol administradores. En la imagen siguiente, se ha agregado un nuevo RoleGroup que se aplica a los miembros del rol de ventas y el rol de distribución. Esto agrega un segundo RoleGroup al menú desplegable vistas en el cuadro de diálogo tareas de LoginView y todo lo que se agregue a esa plantilla será visible para cualquier usuario del rol de ventas o de distribución.
 
 ![](membership/_static/image10.jpg)
 
@@ -204,55 +204,55 @@ Cada objeto RoleGroup contiene una matriz de cadenas que define los roles que se
 
 ## <a name="overriding-the-existing-membership-provider"></a>Reemplazar el proveedor de pertenencia existente
 
-Hay un par de formas de ampliar la funcionalidad de pertenencia a ASP.NET. En primer lugar, obviamente, puede cambiar la funcionalidad existente de la clase SqlMembershipProvider herede de él e invalidando sus métodos. Por ejemplo, si desea implementar su propia funcionalidad cuando se crean los usuarios, puede crear su propia clase que hereda de SqlMembershipProvider como sigue:
+Hay un par de maneras en que puede ampliar la funcionalidad de la pertenencia a ASP.NET. En primer lugar, puede cambiar obviamente la funcionalidad existente de la clase SqlMembershipProvider heredando de ella e invalidando sus métodos. Por ejemplo, si desea implementar su propia funcionalidad cuando se crean usuarios, puede crear su propia clase que herede de SqlMembershipProvider como se indica a continuación:
 
 [!code-csharp[Main](membership/samples/sample5.cs)]
 
-Si, por otro lado, desea crear su propio proveedor (para almacenar la información de pertenencia a una base de datos, por ejemplo), puede crear su propio proveedor.
+Por otro lado, si desea crear su propio proveedor (para almacenar la información de pertenencia en una base de datos de Access, por ejemplo), puede crear su propio proveedor.
 
 ## <a name="creating-your-own-membership-provider"></a>Crear su propio proveedor de pertenencia
 
-Para crear su propio proveedor de pertenencia, primero deberá crear una clase que hereda de la clase MembershipProvider. Si utilizas VB.NET, Visual Studio 2005 agregará el código auxiliar para todos los métodos que necesita para invalidar. Si está utilizando C#, es responsabilidad suya para agregar el código auxiliar.
+Para crear su propio proveedor de pertenencia, primero deberá crear una clase que herede de la clase MembershipProvider. Si usa VB.NET, Visual Studio 2005 agregará el código auxiliar para todos los métodos que necesita invalidar. Si usa C#, puede Agregar el código auxiliar.
 
-Deberá reemplazar lo siguiente:
+Tendrá que invalidar lo siguiente:
 
 - Propiedad ApplicationName
 - ChangePassword (función)
-- Función ChangePasswordQuestionAndAnswer
-- Función CreateUser
+- ChangePasswordQuestionAndAnswer función)
+- CreateUser (función)
 - Función DeleteUser
-- Propiedad EnablePasswordReset
+- EnablePasswordReset (propiedad)
 - Propiedad EnablePasswordRetrieval
-- Función FindUsersByEmail
-- Función FindUsersByName
-- Función GetAllUsers
-- Función GetNumberOfUsersOnline
-- Función GetPassword
-- Función GetUser
-- Función GetUserNameByEmail
+- FindUsersByEmail función)
+- FindUsersByName función)
+- GetAllUsers función)
+- GetNumberOfUsersOnline función)
+- GetPassword (función)
+- GetUser, función
+- GetUserNameByEmail función)
 - Propiedad MaxInvalidPasswordAttempts
 - Propiedad MinRequiredNonAlphanumericCharacters
-- Propiedad MinRequiredPasswordLength
+- MinRequiredPasswordLength (propiedad)
 - Propiedad PasswordAttemptWindow
 - Propiedad PasswordFormat
 - Propiedad PasswordStrengthRegularExpression
 - Propiedad RequiresQuestionAndAnswer
 - Propiedad RequiresUniqueEmail
-- Función ResetPassword
-- Desbloquear la función de usuario
-- Función UpdateUser
-- ValidateUser (función)
+- ResetPassword función)
+- Desbloqueo de la función de usuario
+- UpdateUser función)
+- ValidateUser función)
 
-Thats bastante lista para implementar como desarrollador de C#. Le resultará más fácil de crear la clase en VB.NET sin ninguna implementación y, a continuación, usar .NET Reflector u otra herramienta similar para convertir el código en C#.
+Que es una lista que se va a implementar C# como desarrollador. Puede que le resulte más fácil crear la clase en VB.NET sin ninguna implementación y, a continuación, usar .NET reflector u otra herramienta similar para C#convertir el código en.
 
-La cadena de conexión y otras propiedades deben establecerse los valores predeterminados en el método Initialize. (El método Initialize se activa cuando el proveedor se carga en tiempo de ejecución). El segundo parámetro al método Initialize es de tipo System.Collections.Specialized.NameValueCollection y es una referencia a la &lt;agregar&gt; elemento que está asociado con su proveedor personalizado en el archivo web.config. Esa entrada tiene el siguiente aspecto:
+La cadena de conexión y otras propiedades deben establecerse en sus valores predeterminados en el método Initialize. (El método Initialize se activa cuando el proveedor se carga en tiempo de ejecución). El segundo parámetro del método Initialize es de tipo System. Collections. Specialized. NameValueCollection y es una referencia al &lt;agregar&gt; elemento asociado a su proveedor personalizado en el archivo Web. config. Esa entrada tiene el siguiente aspecto:
 
 [!code-xml[Main](membership/samples/sample6.xml)]
 
-Este es un ejemplo del método de inicialización.
+Este es un ejemplo del método Initialize.
 
 [!code-csharp[Main](membership/samples/sample7.cs)]
 
-Para validar el usuario cuando envía el formulario de inicio de sesión, deberá usar el método ValidateUser. Este método se desencadena cuando el usuario hace clic en el botón de inicio de sesión en el control de inicio de sesión. Coloque el código que realiza la búsqueda de usuario en este método.
+Para validar al usuario cuando envíe su formulario de inicio de sesión, debe usar el método ValidateUser. Este método se desencadena cuando el usuario hace clic en el botón de inicio de sesión del control de inicio de sesión. En este método, colocará el código que realiza la búsqueda del usuario.
 
-Como puede ver, escribir su propio proveedor de pertenencia no es difícil y le permite ampliar esta poderosa funcionalidad de ASP.NET 2.0.
+Como puede ver, escribir su propio proveedor de pertenencia no es difícil y le permite ampliar esta eficaz funcionalidad de ASP.NET 2,0.

@@ -9,6 +9,6 @@ Considere la posibilidad de usar [ASP.net Core API Web](/aspnet/core/web-api). P
 * Un sistema de configuración basado en el entorno y preparado para la nube.
 * Inserción de dependencias integrada.
 * Una canalización de solicitudes HTTP ligera, modular y de alto rendimiento.
-* Capacidad de hospedar en [Kestrel](/aspnet/core/fundamentals/servers/kestrel), [IIS] (XREF: host-and-Deploy/IIS/index [, http. sys](xref:fundamentals/servers/httpsys), [nginx](xref:host-and-deploy/linux-nginx), [Apache](xref:host-and-deploy/linux-apache)y [Docker](xref:host-and-deploy/docker/index).
+* Capacidad de hospedar en [Kestrel](/aspnet/core/fundamentals/servers/kestrel), [IIS](xref:host-and-deploy/iis/index), [http. sys](xref:fundamentals/servers/httpsys), [nginx](xref:host-and-deploy/linux-nginx), [Apache](xref:host-and-deploy/linux-apache)y [Docker](xref:host-and-deploy/docker/index).
 * Control de versiones en paralelo.
 * Herramientas que simplifican el desarrollo web moderno.

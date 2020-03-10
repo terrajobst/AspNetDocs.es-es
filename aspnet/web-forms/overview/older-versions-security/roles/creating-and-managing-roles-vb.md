@@ -9,11 +9,11 @@ ms.assetid: 83af9f5f-9a00-4f83-8afc-e98bdd49014e
 msc.legacyurl: /web-forms/overview/older-versions-security/roles/creating-and-managing-roles-vb
 msc.type: authoredcontent
 ms.openlocfilehash: 825e2afb750925637d308b7ceb35e1b02b708c1d
-ms.sourcegitcommit: 22fbd8863672c4ad6693b8388ad5c8e753fb41a2
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/28/2019
-ms.locfileid: "74586250"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78455917"
 ---
 # <a name="creating-and-managing-roles-vb"></a>Crear y administrar roles (VB)
 

@@ -9,11 +9,11 @@ ms.assetid: fae968c9-1902-487d-b053-86a46dd52c3f
 msc.legacyurl: /web-forms/overview/ajax-control-toolkit/accordion/dynamically-adding-an-accordion-pane-vb
 msc.type: authoredcontent
 ms.openlocfilehash: be48db5ea3de4af46b0f864cc9e73d2f518294a4
-ms.sourcegitcommit: 22fbd8863672c4ad6693b8388ad5c8e753fb41a2
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/28/2019
-ms.locfileid: "74607197"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78484147"
 ---
 # <a name="dynamically-adding-an-accordion-pane-vb"></a>Agregar dinámicamente un panel Accordion (VB)
 
@@ -23,7 +23,7 @@ por [Christian Wenz](https://github.com/wenz)
 
 > El control Accordion en el kit de herramientas de control de AJAX proporciona varios paneles y permite al usuario mostrar uno de ellos a la vez. Los paneles se declaran normalmente dentro de la propia página, pero el código del lado servidor puede usarse para lograr el mismo resultado.
 
-## <a name="overview"></a>Información general del
+## <a name="overview"></a>Información general
 
 El control Accordion en el kit de herramientas de control de AJAX proporciona varios paneles y permite al usuario mostrar uno de ellos a la vez. Los paneles se declaran normalmente dentro de la propia página, pero el código del lado servidor puede usarse para lograr el mismo resultado.
 

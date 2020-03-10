@@ -2,27 +2,27 @@
 uid: tutorials
 title: Tutoriales de ASP.NET | Microsoft Docs
 author: tdykstra
-description: Una lista de las guías paso a paso para desarrollar aplicaciones de ASP.NET.
+description: Una lista de guías paso a paso para desarrollar aplicaciones ASP.NET.
 ms.assetid: fddf8e5e-c055-4f81-b691-78deef871112
 ms.author: riande
 ms.date: 09/20/2017
 ms.openlocfilehash: 106b4b88d2e7de90900b7a73570ecd6140e2db66
-ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/06/2019
-ms.locfileid: "65113189"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78449731"
 ---
 # <a name="aspnet-tutorials"></a>Tutoriales de ASP.NET
 
 [!INCLUDE[](~/includes/rp.md)]
 
-Están disponibles las siguientes guías paso a paso para desarrollar aplicaciones de ASP.NET.
+Están disponibles las siguientes guías paso a paso para desarrollar aplicaciones ASP.NET.
 
 > [!NOTE]
-> ¿Buscar tutoriales de ASP.NET Core?  Encontrarlos [aquí](https://docs.microsoft.com/aspnet/core/tutorials/).
+> ¿Buscar tutoriales de ASP.NET Core?  Encontrarlas [aquí](https://docs.microsoft.com/aspnet/core/tutorials/).
 
-## <a name="web-forms"></a>Formularios Web Forms
+## <a name="web-forms"></a>formularios Web Forms
 
 * [Edición del código de formularios Web Forms de ASP.NET en Visual Studio 2013](web-forms/overview/getting-started/code-editing-in-web-forms-pages.md)
 * [Usar el Inspector de página en Visual Studio 2012](web-forms/overview/getting-started/hands-on-labs/using-page-inspector-in-visual-studio-2012.md)
@@ -38,7 +38,7 @@ Están disponibles las siguientes guías paso a paso para desarrollar aplicacion
 * [ASP.NET 4 - Implementación de empresa, serie 3: configuración de TFS](web-forms/overview/deployment/configuring-team-foundation-server-for-web-deployment/index.md)
 * [ASP.NET 4 - Implementación de empresa, serie 4: temas avanzados](web-forms/overview/deployment/advanced-enterprise-web-deployment/index.md)
 * [ASP.NET 4 - Tailspin Spyworks](web-forms/overview/older-versions-getting-started/tailspin-spyworks/index.md)
-* [ASP.NET 4 - Introducción a Entity Framework 4 y formularios Web Forms](web-forms/overview/older-versions-getting-started/getting-started-with-ef/index.md)
+* [ASP.NET 4: Introducción a Entity Framework 4 y formularios Web Forms](web-forms/overview/older-versions-getting-started/getting-started-with-ef/index.md)
 * [ASP.NET 4 - Continuación de Entity Framework 4 y los formularios Web Forms](web-forms/overview/older-versions-getting-started/continuing-with-ef/index.md)
 * [ASP.NET 4 - Implementación web con SQL Server Compact mediante Visual Studio](web-forms/overview/older-versions-getting-started/deployment-to-a-hosting-provider/index.md)
 
@@ -60,7 +60,7 @@ Están disponibles las siguientes guías paso a paso para desarrollar aplicacion
 * [Introducción a Web API 2 (C#)](web-api/overview/getting-started-with-aspnet-web-api/tutorial-your-first-web-api.md)
 * [Usar Web API con Formularios Web Forms de ASP.NET](web-api/overview/getting-started-with-aspnet-web-api/using-web-api-with-aspnet-web-forms.md)
 * [Crear páginas de ayuda de Web API](web-api/overview/getting-started-with-aspnet-web-api/creating-api-help-pages.md)
-* [Laboratorio práctico: Crear una aplicación de página única (SPA) con ASP.NET Web API y Angular.js](web-api/overview/getting-started-with-aspnet-web-api/build-a-single-page-application-spa-with-aspnet-web-api-and-angularjs.md)
+* [Laboratorio práctico: Compilar una aplicación de una página (SPA) con ASP.NET Web API y Angular.js](web-api/overview/getting-started-with-aspnet-web-api/build-a-single-page-application-spa-with-aspnet-web-api-and-angularjs.md)
 * [Crear una API de REST con enrutamiento de atributos en Web API 2](web-api/overview/web-api-routing-and-actions/create-a-rest-api-with-attribute-routing.md)
 * [Usar Web API 2 con Entity Framework 6](web-api/overview/data/using-web-api-with-entity-framework/index.md)
 * [Llamar a Web API desde una aplicación de Windows Phone 8 (C#)](web-api/overview/mobile-clients/calling-web-api-from-a-windows-phone-8-application.md)
@@ -78,7 +78,7 @@ Están disponibles las siguientes guías paso a paso para desarrollar aplicacion
 * [Hospedar Web API 2 en un rol de trabajo de Azure](web-api/overview/hosting-aspnet-web-api/host-aspnet-web-api-in-an-azure-worker-role.md)
 * [Inserción de dependencias en Web API 2](web-api/overview/advanced/dependency-injection.md)
 * [Llamar a una API web desde un cliente .NET (C#)](web-api/overview/advanced/calling-a-web-api-from-a-net-client.md)
-* [Enviar datos de formulario HTML en Web API: Datos de formato form-urlencoded](web-api/overview/advanced/sending-html-form-data-part-1.md)
+* [Enviar datos de formulario HTML en Web API: Datos con codificación URL de formulario](web-api/overview/advanced/sending-html-form-data-part-1.md)
 * [Enviar datos de formulario HTML en Web API: Carga de archivos y MIME de varias partes](web-api/overview/advanced/sending-html-form-data-part-2.md)
 
 ## <a name="web-pages"></a>Páginas web
@@ -92,7 +92,7 @@ Están disponibles las siguientes guías paso a paso para desarrollar aplicacion
 * [Validar la entrada del usuario en los sitios de ASP.NET Web Pages](web-pages/overview/ui-layouts-and-themes/validating-user-input-in-aspnet-web-pages-sites.md)
 * [Crear una apariencia coherente](web-pages/overview/ui-layouts-and-themes/3-creating-a-consistent-look.md)
 * [Personalizar el comportamiento de todo el sitio](web-pages/overview/ui-layouts-and-themes/18-customizing-site-wide-behavior.md)
-* [Trabajar con imágenes](web-pages/overview/ui-layouts-and-themes/9-working-with-images.md)
+* [Working with Images (Trabajo con imágenes)](web-pages/overview/ui-layouts-and-themes/9-working-with-images.md)
 * [Trabajar con vídeo](web-pages/overview/ui-layouts-and-themes/10-working-with-video.md)
 * [Crear y usar un asistente en un sitio de ASP.NET Web Pages](web-pages/overview/ui-layouts-and-themes/creating-and-using-a-helper-in-an-aspnet-web-pages-site.md)
 * [Instalar un asistente](web-pages/overview/ui-layouts-and-themes/installing-helpers.md)
@@ -101,7 +101,7 @@ Están disponibles las siguientes guías paso a paso para desarrollar aplicacion
 * [Representar sitios de ASP.NET Web Pages para dispositivos móviles](web-pages/overview/mobile/rendering-aspnet-web-pages-sites-for-mobile-devices.md)
 * [Trabajar con datos](web-pages/overview/data/5-working-with-data.md)
 * [Mostrar datos en un gráfico](web-pages/overview/data/7-displaying-data-in-a-chart.md)
-* [Trabajar con archivos](web-pages/overview/data/working-with-files.md)
+* [Working with Files (Trabajo con archivos)](web-pages/overview/data/working-with-files.md)
 * [Introducción a la depuración](web-pages/overview/testing-and-debugging/introduction-to-debugging.md)
 * [Agregar seguridad y pertenencia](web-pages/overview/security/16-adding-security-and-membership.md)
 * [Habilitar el inicio de sesión desde sitios externos en un sitio de ASP.NET Web Pages](web-pages/overview/security/enabling-login-from-external-sites-in-an-aspnet-web-pages-site.md)
@@ -116,7 +116,7 @@ Están disponibles las siguientes guías paso a paso para desarrollar aplicacion
 * [Tutorial: Introducción a SignalR 2 y MVC 5](signalr/overview/getting-started/tutorial-getting-started-with-signalr-and-mvc.md)
 * [Tutorial: Alta frecuencia en tiempo real con SignalR 2](signalr/overview/getting-started/tutorial-high-frequency-realtime-with-signalr.md)
 * [Tutorial: Difusión de servidores con SignalR 2](signalr/overview/getting-started/tutorial-server-broadcast-with-signalr.md)
-* [Laboratorio práctico: Aplicaciones Web en tiempo real con SignalR](signalr/overview/getting-started/real-time-web-applications-with-signalr.md)
+* [Laboratorio práctico: Aplicaciones web en tiempo real con SignalR](signalr/overview/getting-started/real-time-web-applications-with-signalr.md)
 * [Pruebas unitarias de aplicaciones de SignalR](signalr/overview/testing-and-debugging/unit-testing-signalr-applications.md)
 * [Habilitar el seguimiento de SignalR](signalr/overview/testing-and-debugging/enabling-signalr-tracing.md)
 * [Escalabilidad horizontal de SignalR con Azure Service Bus](signalr/overview/performance/scaleout-with-windows-azure-service-bus.md)
@@ -124,14 +124,14 @@ Están disponibles las siguientes guías paso a paso para desarrollar aplicacion
 * [Escalabilidad horizontal de SignalR con SQL Server](signalr/overview/performance/scaleout-with-sql-server.md)
 * [Pruebas de densidad de la conexión de SignalR con Crank](signalr/overview/performance/signalr-connection-density-testing-with-crank.md)
 * [Usar los contadores de rendimiento de SignalR en un rol web de Azure](signalr/overview/performance/using-signalr-performance-counters-in-an-azure-web-role.md)
-* [Tutorial: Interna de SignalR](signalr/overview/deployment/tutorial-signalr-self-host.md)
+* [Tutorial: Prueba interna de SignalR](signalr/overview/deployment/tutorial-signalr-self-host.md)
 * [Usar SignalR con Web Apps en Azure App Service](signalr/overview/deployment/using-signalr-with-azure-web-sites.md)
 
 ## <a name="aspnet-identity"></a>ASP.NET Identity
 
 * [Agregar ASP.NET Identity a un proyecto de formularios Web Forms vacío o existente](identity/overview/getting-started/adding-aspnet-identity-to-an-empty-or-existing-web-forms-project.md)
 * [Desarrollo de aplicaciones ASP.NET con Azure Active Directory](identity/overview/getting-started/developing-aspnet-apps-with-windows-azure-active-directory.md)
-* [Identidad de ASP.NET: Uso de MySQL con almacenamiento con un proveedor de MySQL de Entity Framework (C#)](identity/overview/getting-started/aspnet-identity-using-mysql-storage-with-an-entityframework-mysql-provider.md)
+* [ASP.NET Identity: Usar Almacenamiento de MySQL con un proveedor de MySQL de Entity Framework (C#)](identity/overview/getting-started/aspnet-identity-using-mysql-storage-with-an-entityframework-mysql-provider.md)
 * [Confirmación de la cuenta y recuperación de la contraseña con ASP.NET Identity (C#)](identity/overview/features-api/account-confirmation-and-password-recovery-with-aspnet-identity.md)
 * [Autenticación en dos fases mediante SMS y correo electrónico con ASP.NET Identity](identity/overview/features-api/two-factor-authentication-using-sms-and-email-with-aspnet-identity.md)
 * [Implementar un proveedor de almacenamiento personalizado de ASP.NET Identity de MySQL](identity/overview/extensibility/implementing-a-custom-mysql-aspnet-identity-storage-provider.md)

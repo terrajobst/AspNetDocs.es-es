@@ -9,11 +9,11 @@ ms.assetid: 603c9bd3-b895-4ec6-853b-0c81ff36d580
 msc.legacyurl: /web-forms/overview/data-access/basic-reporting/declarative-parameters-cs
 msc.type: authoredcontent
 ms.openlocfilehash: 87c8cfe064abc536e6015b0e553618981da9fefe
-ms.sourcegitcommit: 22fbd8863672c4ad6693b8388ad5c8e753fb41a2
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/28/2019
-ms.locfileid: "74613340"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78483247"
 ---
 # <a name="declarative-parameters-c"></a>Parámetros declarativos (C#)
 

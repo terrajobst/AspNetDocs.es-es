@@ -9,11 +9,11 @@ ms.assetid: c76dbc35-a914-4ee3-919c-4f4d1fa05104
 msc.legacyurl: /web-forms/overview/deployment/visual-studio-web-deployment/deploying-a-code-update
 msc.type: authoredcontent
 ms.openlocfilehash: 3881833bfe2a50a38a357614f92f434a04a8ab08
-ms.sourcegitcommit: 22fbd8863672c4ad6693b8388ad5c8e753fb41a2
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/28/2019
-ms.locfileid: "74626777"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78457645"
 ---
 # <a name="aspnet-web-deployment-using-visual-studio-deploying-a-code-update"></a>Implementación web de ASP.NET con Visual Studio: implementación de una actualización de código
 
@@ -23,13 +23,13 @@ por [Tom Dykstra](https://github.com/tdykstra)
 
 > En esta serie de tutoriales se muestra cómo implementar (publicar) una aplicación Web de ASP.NET en Azure App Service Web Apps o en un proveedor de hospedaje de terceros mediante Visual Studio 2012 o Visual Studio 2010. Para obtener información sobre la serie, vea [el primer tutorial de la serie](introduction.md).
 
-## <a name="overview"></a>Información general del
+## <a name="overview"></a>Información general
 
 Después de la implementación inicial, el trabajo de mantenimiento y desarrollo del sitio web continúa y antes de que se desee implementar una actualización. Este tutorial le guiará por el proceso de implementación de una actualización en el código de la aplicación. La actualización que implementa e implementa en este tutorial no implica un cambio en la base de datos; en el siguiente tutorial, verá qué es diferente de la implementación de un cambio en la base de datos.
 
 Aviso: Si recibe un mensaje de error o algo no funciona a medida que avanza en el tutorial, asegúrese de consultar la [Página de solución de problemas](troubleshooting.md).
 
-## <a name="make-a-code-change"></a>Hacer un cambio de código
+## <a name="make-a-code-change"></a>Cambio de código
 
 Como ejemplo sencillo de una actualización de la aplicación, agregará a la página de **instructores** una lista de cursos impartidos por el instructor seleccionado.
 
@@ -53,7 +53,7 @@ Antes de poder usar los perfiles de publicación para implementar en pruebas, en
 
 1. Para abrir el Asistente para **publicación web** , haga clic con el botón secundario en el proyecto ContosoUniversity y haga clic en **publicar**.
 2. Haga clic en el perfil de **prueba** en la lista desplegable **perfil** .
-3. Haga clic en la pestaña **configuración** .
+3. Haga clic en la pestaña **Configuración** .
 4. En **DefaultConnection** en la sección **bases** de datos, desactive la casilla **Actualizar base de datos** .
 5. Haga clic en la pestaña **perfil** y, a continuación, haga clic en el perfil de **almacenamiento provisional** en la lista desplegable **perfil** .
 6. Cuando se le pregunte si desea guardar los cambios realizados en el perfil de **prueba** , haga clic en **sí**.

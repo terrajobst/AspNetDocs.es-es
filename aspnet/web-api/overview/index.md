@@ -1,8 +1,8 @@
 ---
 uid: web-api/overview/index
-title: Web de la Guía de API - ASP.NET 4.x
+title: Guía de Web API-ASP.NET 4. x
 author: rick-anderson
-description: Lista de instrucciones de ASP.NET Web API para ASP.NET 4.x
+description: Lista de instrucciones de ASP.NET Web API para ASP.NET 4. x
 ms.author: riande
 ms.date: 01/17/2012
 ms.custom: seoapril2019
@@ -10,11 +10,11 @@ ms.assetid: daca6735-b5d3-4ef5-af33-ee682926238b
 msc.legacyurl: /web-api/overview
 msc.type: book
 ms.openlocfilehash: 304c0d71e5e18f9d3f0768464fe39d6e6946600d
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59422907"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78448303"
 ---
 # <a name="web-api-guidance"></a>Guía de Web API
 
@@ -24,7 +24,7 @@ ms.locfileid: "59422907"
     - [Resultados de la acción en Web API 2](getting-started-with-aspnet-web-api/action-results.md)
     - [Usar Web API con Formularios Web Forms de ASP.NET](getting-started-with-aspnet-web-api/using-web-api-with-aspnet-web-forms.md)
     - [Crear páginas de ayuda de Web API](getting-started-with-aspnet-web-api/creating-api-help-pages.md)
-    - [Laboratorio práctico: Crear una aplicación de página única (SPA) con ASP.NET Web API y Angular.js](getting-started-with-aspnet-web-api/build-a-single-page-application-spa-with-aspnet-web-api-and-angularjs.md)
+    - [Laboratorio práctico: Compilar una aplicación de una página (SPA) con ASP.NET Web API y Angular.js](getting-started-with-aspnet-web-api/build-a-single-page-application-spa-with-aspnet-web-api-and-angularjs.md)
 - [Enrutamiento](web-api-routing-and-actions/index.md)
 
     - [Enrutamiento en Web API](web-api-routing-and-actions/routing-in-aspnet-web-api.md)
@@ -112,7 +112,7 @@ ms.locfileid: "59422907"
     - [Llamar a una API web desde un cliente .NET (C#)](advanced/calling-a-web-api-from-a-net-client.md)
     - [Controladores de mensajes HTTP en Web API](advanced/http-message-handlers.md)
     - [Controladores de mensajes HttpClient en Web API](advanced/httpclient-message-handlers.md)
-    - [Enviar datos de formulario HTML en Web API: Datos de formato form-urlencoded](advanced/sending-html-form-data-part-1.md)
+    - [Enviar datos de formulario HTML en Web API: Datos con codificación URL de formulario](advanced/sending-html-form-data-part-1.md)
     - [Enviar datos de formulario HTML en Web API: Carga de archivos y MIME de varias partes](advanced/sending-html-form-data-part-2.md)
     - [Cookies HTTP en ASP.NET Web API](advanced/http-cookies.md)
 - [Versiones](releases/index.md)

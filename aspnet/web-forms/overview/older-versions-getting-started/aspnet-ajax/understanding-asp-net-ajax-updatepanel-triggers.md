@@ -9,11 +9,11 @@ ms.assetid: faab8503-2984-48a9-8a40-7728461abc50
 msc.legacyurl: /web-forms/overview/older-versions-getting-started/aspnet-ajax/understanding-asp-net-ajax-updatepanel-triggers
 msc.type: authoredcontent
 ms.openlocfilehash: b1cc869f373d4f8283b4d92af74707c3f11fef61
-ms.sourcegitcommit: 22fbd8863672c4ad6693b8388ad5c8e753fb41a2
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/28/2019
-ms.locfileid: "74588799"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78440545"
 ---
 # <a name="understanding-aspnet-ajax-updatepanel-triggers"></a>Descripción de los desencadenadores UpdatePanel de ASP.NET AJAX
 
@@ -53,7 +53,7 @@ Del mismo modo, el elemento `<asp:PostBackTrigger>` se puede usar para desencade
 
 *Descendientes de marcado:*
 
-| **Etiqueta** | **Descripción** |
+| **Tag** | **Descripción** |
 | --- | --- |
 | &lt;ASP: AsyncPostBackTrigger&gt; | Especifica un control y evento que producirá una actualización de página parcial para el UpdatePanel que contiene esta referencia de desencadenador. |
 | &lt;ASP: PostBackTrigger&gt; | Especifica un control y un evento que producirán una actualización de página completa (una actualización de página completa). Esta etiqueta se puede usar para forzar una actualización completa cuando un control desencadenaría de otro modo la representación parcial. |

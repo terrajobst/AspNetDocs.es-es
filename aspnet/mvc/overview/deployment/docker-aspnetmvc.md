@@ -2,17 +2,17 @@
 uid: mvc/overview/deployment/docker
 title: Migrar aplicaciones de ASP.NET MVC a contenedores de Windows
 description: Aprenda a ejecutar una aplicación existente de ASP.NET MVC en un contenedor de Docker de Windows
-keywords: Windows Containers,Docker,ASP.NET MVC
+keywords: Contenedores de Windows, Docker, ASP. NET MVC
 author: BillWagner
 ms.author: wiwagn
 ms.date: 12/14/2018
 ms.assetid: c9f1d52c-b4bd-4b5d-b7f9-8f9ceaf778c4
 ms.openlocfilehash: ef184f4256c20e2a66de8fd2d4f8e67f07d9a086
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57053432"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78471553"
 ---
 # <a name="migrating-aspnet-mvc-applications-to-windows-containers"></a>Migrar aplicaciones de ASP.NET MVC a contenedores de Windows
 
@@ -37,14 +37,14 @@ La [aplicación finalizada](https://github.com/dotnet/samples/tree/master/framew
 
 El equipo de desarrollo debe tener el siguiente software:
 
-- [Windows 10 Anniversary Update](https://www.microsoft.com/software-download/windows10/) (o posterior) o [Windows Server 2016](https://www.microsoft.com/cloud-platform/windows-server) (o posterior)
+- [Actualización de aniversario de Windows 10](https://www.microsoft.com/software-download/windows10/) (o superior) o [Windows Server 2016](https://www.microsoft.com/cloud-platform/windows-server) (o posterior)
 - [Docker para Windows](https://docs.docker.com/docker-for-windows/): versión 1.13.0 estable o 1.12 Beta 26 (o versiones más recientes)
 - [Visual Studio 2017](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=button+cta&utm_content=download+vs2017)
 
 > [!IMPORTANT]
 > Si usa Windows Server 2016, siga las instrucciones de [Implementación de host de contenedor - Windows Server](https://msdn.microsoft.com/virtualization/windowscontainers/deployment/deployment).
 
-Después de instalar e iniciar Docker, haga doble clic en el icono de bandeja y seleccione **cambiar a contenedores de Windows**. Esto es necesario para ejecutar imágenes de Docker basadas en Windows. Este comando tarda algunos segundos en ejecutarse:
+Después de instalar e iniciar Docker, haga clic con el botón derecho en el icono de la bandeja y seleccione **Switch to Windows containers** (Conmutar a contenedores de Windows), Esto es necesario para ejecutar imágenes de Docker basadas en Windows. Este comando tarda algunos segundos en ejecutarse:
 
 ![Contenedor de Windows][windows-container]
 
@@ -60,7 +60,7 @@ Reúna en un mismo lugar todos los recursos que necesita cargar en una imagen de
 
 ![Conexión de publicación][publish-connection]
 
-Abra la sección **Opciones de publicación de archivos** de la pestaña **Configuración**. Seleccione **Precompilar durante la publicación**. Esta optimización significa que compilará vistas en el contenedor de Docker, está copiando las vistas precompiladas.
+Abra la sección **Opciones de publicación de archivos** de la pestaña **configuración** . Seleccione **precompilar durante la publicación**. Esta optimización significa que compilará vistas en el contenedor de Docker, está copiando las vistas precompiladas.
 
 ![Configuración de publicación][publish-settings]
 
@@ -68,9 +68,9 @@ Haga clic en **Publicar** y Visual Studio copiará todos los recursos necesarios
 
 ## <a name="build-the-image"></a>Compilar la imagen
 
-Cree un nuevo archivo denominado *Dockerfile* para definir la imagen de Docker. *Dockerfile* contiene instrucciones para compilar la imagen final e incluye los nombres de imagen base, componentes necesarios, la aplicación que desea ejecutar y otras imágenes de configuración. *Dockerfile* es la entrada para el `docker build` comando que crea la imagen.
+Cree un nuevo archivo denominado *Dockerfile* para definir la imagen de Docker. *Dockerfile* contiene instrucciones para compilar la imagen final e incluye cualquier nombre de imagen base, componentes necesarios, la aplicación que quiere ejecutar y otras imágenes de configuración. *Dockerfile* es la entrada al comando `docker build` que crea la imagen.
 
-Para este ejercicio, creará una imagen basada en la `microsoft/aspnet` imagen se encuentra en [Docker Hub](https://hub.docker.com/r/microsoft/aspnet/).
+Para este ejercicio, creará una imagen basada en la imagen `microsoft/aspnet` ubicada en [Docker Hub](https://hub.docker.com/r/microsoft/aspnet/).
 La imagen base, `microsoft/aspnet`, es una imagen de Windows Server. Contiene Windows Server Core, IIS y ASP.NET 4.7.2. Al ejecutar esta imagen en el contenedor, iniciará de forma automática IIS y los sitios web instalados.
 
 El Dockerfile que crea la imagen tiene el siguiente aspecto:
@@ -85,7 +85,7 @@ FROM microsoft/aspnet
 COPY ./bin/Release/PublishOutput/ /inetpub/wwwroot
 ```
 
-No hay ningún comando `ENTRYPOINT` en este Dockerfile. No se necesita ninguno. Cuando se ejecuta Windows Server con IIS, el proceso IIS es el punto de entrada, que está configurado para iniciarse en la imagen base aspnet.
+No hay ningún comando `ENTRYPOINT` en este Dockerfile. No se necesita ninguno. Al ejecutar Windows Server con IIS, el proceso de IIS es el punto de entrada, que está configurado para iniciarse en la imagen base de ASPNET.
 
 Ejecute el comando de compilación Docker para crear la imagen que se ejecuta en la aplicación ASP.NET. Para ello, abra una ventana de PowerShell en el directorio del proyecto y escriba el siguiente comando en el directorio de la solución:
 
@@ -93,7 +93,7 @@ Ejecute el comando de compilación Docker para crear la imagen que se ejecuta en
 docker build -t mvcrandomanswers .
 ```
 
-Este comando para compilar la imagen nueva con las instrucciones del dockerfile y nomenclatura (-t etiquetado) la imagen como mvcrandomanswers. Esto puede incluir la extracción de la imagen base de [Docker Hub](http://hub.docker.com) y después agrega la aplicación a esa imagen.
+Este comando creará la nueva imagen siguiendo las instrucciones de la Dockerfile, asignando el nombre (etiquetado-t) a la imagen como mvcrandomanswers. Esto puede incluir la extracción de la imagen base de [Docker Hub](http://hub.docker.com) y después agrega la aplicación a esa imagen.
 
 Una vez que el comando finaliza, puede ejecutar el comando `docker images` para ver información sobre la nueva imagen:
 
@@ -114,7 +114,7 @@ docker run -d --name randomanswers mvcrandomanswers
 
 El argumento `-d` indica a Docker que inicie la imagen en modo desasociado. Esto significa que la imagen de Docker se ejecuta desconectada del shell actual.
 
-En muchos ejemplos de docker, es posible que vea -p para asignar los puertos de contenedor y el host. La imagen de aspnet predeterminada ya configuró el contenedor para escuchar en el puerto 80 y exponerla.
+En muchos ejemplos de Docker, puede ver-p para asignar los puertos del contenedor y del host. La imagen ASPNET predeterminada ya configuró el contenedor para que escuche en el puerto 80 y lo exponga.
 
 El argumento `--name randomanswers` da un nombre al contenedor en ejecución. Puede usar este nombre en lugar del identificador del contenedor en la mayoría de los comandos.
 
@@ -122,7 +122,7 @@ El argumento `mvcrandomanswers` es el nombre de la imagen que se iniciará.
 
 ## <a name="verify-in-the-browser"></a>Comprobar en el explorador
 
-Una vez que se inicie el contenedor, conectar con el contenedor en ejecución mediante `http://localhost` en el ejemplo mostrado. Escriba esa dirección URL en el explorador y debería ver el sitio en ejecución.
+Una vez que se inicia el contenedor, conéctese al contenedor en ejecución mediante `http://localhost` en el ejemplo que se muestra. Escriba esa dirección URL en el explorador y debería ver el sitio en ejecución.
 
 > [!NOTE]
 > Algún software de proxy o VPN puede impedir que explore su sitio.
@@ -134,7 +134,7 @@ El directorio de ejemplo en GitHub contiene un [script de PowerShell](https://gi
 ./run.ps1
 ```
 
-El comando anterior crea la imagen, muestra la lista de imágenes del equipo e inicia un contenedor.
+El comando anterior compila la imagen, muestra la lista de imágenes en el equipo e inicia un contenedor.
 
 Para detener el contenedor, envíe un comando `docker stop`:
 

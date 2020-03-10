@@ -1,6 +1,6 @@
 ---
 uid: web-pages/overview/index
-title: Orientación de las páginas Web | Microsoft Docs
+title: Guía de Web pages | Microsoft Docs
 author: rick-anderson
 description: ''
 ms.author: riande
@@ -9,13 +9,13 @@ ms.assetid: 1a2ed0e8-63da-4110-9896-e2731d86f7c4
 msc.legacyurl: /web-pages/overview
 msc.type: book
 ms.openlocfilehash: b4c9e9eb85f6ba9a1e2b2d0a1bbaf027ee25bc0d
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59381853"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78520561"
 ---
-# <a name="web-pages-guidance"></a>Orientación de las páginas Web
+# <a name="web-pages-guidance"></a>Guía de páginas web
 
 - [Introducción](getting-started/index.md)
 
@@ -45,7 +45,7 @@ ms.locfileid: "59381853"
     - [Validar la entrada del usuario en los sitios de ASP.NET Web Pages](ui-layouts-and-themes/validating-user-input-in-aspnet-web-pages-sites.md)
     - [Crear una apariencia coherente](ui-layouts-and-themes/3-creating-a-consistent-look.md)
     - [Personalizar el comportamiento de todo el sitio](ui-layouts-and-themes/18-customizing-site-wide-behavior.md)
-    - [Trabajar con imágenes](ui-layouts-and-themes/9-working-with-images.md)
+    - [Working with Images (Trabajo con imágenes)](ui-layouts-and-themes/9-working-with-images.md)
     - [Trabajar con vídeo](ui-layouts-and-themes/10-working-with-video.md)
     - [Crear y usar un asistente en un sitio de ASP.NET Web Pages](ui-layouts-and-themes/creating-and-using-a-helper-in-an-aspnet-web-pages-site.md)
     - [Instalar un asistente](ui-layouts-and-themes/installing-helpers.md)
@@ -58,7 +58,7 @@ ms.locfileid: "59381853"
 
     - [Trabajar con datos](data/5-working-with-data.md)
     - [Mostrar datos en un gráfico](data/7-displaying-data-in-a-chart.md)
-    - [Trabajar con archivos](data/working-with-files.md)
+    - [Working with Files (Trabajo con archivos)](data/working-with-files.md)
 - [Pruebas y depuración](testing-and-debugging/index.md)
 
     - [Introducción a la depuración](testing-and-debugging/introduction-to-debugging.md)

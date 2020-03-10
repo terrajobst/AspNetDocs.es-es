@@ -9,11 +9,11 @@ ms.assetid: 416438a1-3b2f-4d27-bf53-6b76223c33bf
 msc.legacyurl: /web-forms/overview/deployment/visual-studio-web-deployment/deploying-to-production
 msc.type: authoredcontent
 ms.openlocfilehash: ddc3d15f0436c4c3a24491cf0377111768da67df
-ms.sourcegitcommit: 22fbd8863672c4ad6693b8388ad5c8e753fb41a2
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/28/2019
-ms.locfileid: "74617642"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78513673"
 ---
 # <a name="aspnet-web-deployment-using-visual-studio-deploying-to-production"></a>Implementación web de ASP.NET con Visual Studio: implementación en producción
 
@@ -23,7 +23,7 @@ por [Tom Dykstra](https://github.com/tdykstra)
 
 > En esta serie de tutoriales se muestra cómo implementar (publicar) una aplicación Web de ASP.NET en Azure App Service Web Apps o en un proveedor de hospedaje de terceros mediante Visual Studio 2012 o Visual Studio 2010. Para obtener información sobre la serie, vea [el primer tutorial de la serie](introduction.md).
 
-## <a name="overview"></a>Información general del
+## <a name="overview"></a>Información general
 
 En este tutorial, configurará una cuenta de Microsoft Azure, creará entornos de ensayo y producción e implementará la aplicación Web de ASP.NET en los entornos de ensayo y producción mediante la característica de publicación con un solo clic de Visual Studio.
 
@@ -33,7 +33,7 @@ Aviso: Si recibe un mensaje de error o algo no funciona a medida que avanza en e
 
 ## <a name="get-a-microsoft-azure-account"></a>Obtener una cuenta de Microsoft Azure
 
-Si aún no tiene una cuenta de Azure, puede crear una cuenta de evaluación gratuita en un par de minutos. Para obtener más información, consulte [evaluación gratuita de Azure](https://azure.microsoft.com/free/?WT.mc_id=A443DD604).
+Si aún no tiene una cuenta de Azure, puede crear una cuenta de evaluación gratuita en un par de minutos. Para obtener más información, consulte [Evaluación gratuita de Azure](https://azure.microsoft.com/free/?WT.mc_id=A443DD604).
 
 ## <a name="create-a-staging-environment"></a>Crear un entorno de ensayo
 
@@ -55,7 +55,7 @@ En esta sección del tutorial, creará una aplicación web y una base de datos q
     Se abre el Asistente para **crear nuevo sitio web** . El Asistente para **creación personalizada** le permite crear un sitio web y una base de datos al mismo tiempo.
 3. En el paso **crear sitio web** del asistente, escriba una cadena en el cuadro **dirección URL** que se usará como dirección URL única para el entorno de ensayo de la aplicación. Por ejemplo, escriba ContosoUniversity-staging123 (incluidos los números aleatorios al final para que sea único en caso de que se realice ContosoUniversity-staging).
 
-    La dirección URL completa consistirá en lo que escriba aquí y el sufijo que aparece junto al cuadro de texto.
+    La URL completa consistirá en el valor que escriba más el sufijo que aparece junto al cuadro de texto.
 4. En la lista desplegable **región** , elija la región más cercana a usted.
 
     Esta configuración especifica en qué centro de datos se ejecutará la aplicación Web.
@@ -67,12 +67,12 @@ En esta sección del tutorial, creará una aplicación web y una base de datos q
 
     ![Paso crear sitio web](deploying-to-production/_static/image1.png)
 
-    El asistente avanza al paso **especificar configuración de base de datos** .
+    El asistente avanza hasta el paso **Especificación de la configuración de la base de datos** .
 8. En el cuadro **nombre** , escriba *ContosoUniversity* más un número aleatorio para que sea único, por ejemplo, *ContosoUniversity123*.
 9. En el cuadro **servidor** , seleccione **nuevo SQL Database servidor**.
 10. Escriba un nombre de administrador y una contraseña.
 
-    Aquí no escribe un nombre y una contraseña existentes. Va a escribir un nombre y una contraseña nuevos que está definiendo ahora para usarlos más adelante al obtener acceso a la base de datos.
+    Aquí no escribe un nombre y una contraseña existentes. Escribirá un nombre y una contraseña nuevos que definirá ahora para usarlos más adelante cuando acceda a la base de datos.
 11. En el cuadro **región** , elija la misma región que eligió para la aplicación Web.
 
     Mantener el servidor Web y el servidor de base de datos en la misma región le ofrece el mejor rendimiento y minimiza los gastos.
@@ -110,15 +110,15 @@ Ahora que ha creado una aplicación web y una base de datos para el entorno de e
     ![guardar el archivo. publishsettings](deploying-to-production/_static/image6.png)
 
     > [!WARNING]
-    > Seguridad: el archivo *. publishsettings* contiene sus credenciales (sin codificar) que se usan para administrar sus servicios y suscripciones de Azure. El procedimiento recomendado de seguridad para este archivo consiste en almacenarlo temporalmente fuera de los directorios de origen (por ejemplo, en la carpeta Bibliotecas\documentos) y, a continuación, eliminarlo una vez completada la importación. Un usuario malintencionado que obtenga acceso al archivo *. publishsettings* puede editar, crear y eliminar sus servicios de Azure.
+    > Seguridad: el archivo *. publishsettings* contiene sus credenciales (sin codificar) que se usan para administrar sus servicios y suscripciones de Azure. El procedimiento recomendado para este archivo consiste en almacenarlo temporalmente fuera de los directorios de origen (por ejemplo en la carpeta Bibliotecas\Documentos) y, a continuación, eliminarlo cuando la importación se haya completado. Un usuario malintencionado que obtenga acceso al archivo *. publishsettings* puede editar, crear y eliminar sus servicios de Azure.
 
 ### <a name="create-a-publish-profile"></a>Crear un perfil de publicación
 
 1. En Visual Studio, haga clic con el botón derecho en el proyecto ContosoUniversity en **Explorador de soluciones** y seleccione **publicar** en el menú contextual.
 
-    Se abre el Asistente para **publicación web** .
-2. Haga clic en la pestaña **perfil** .
-3. Haga clic en **importar**.
+    Se abre el asistente para **publicación web** .
+2. Haga clic en la pestaña **Perfil**.
+3. Haga clic en **Import**.
 4. Navegue hasta el archivo *. publishsettings* que descargó anteriormente y, a continuación, haga clic en **abrir**.
 
     ![Importar configuración de publicación (cuadro de diálogo)](deploying-to-production/_static/image7.png)
@@ -198,13 +198,13 @@ En este tutorial, creará un archivo *robots. txt* .
 
     Quiere que los motores de búsqueda cataloguen su aplicación de producción, por lo que debe excluir este archivo de la implementación de producción. Para ello, configurará un valor en el perfil de publicación de producción al crearlo.
 
-### <a name="deploy-to-staging"></a>Implementar en el almacenamiento provisional
+### <a name="deploy-to-staging"></a>Implementación en entorno de ensayo
 
 1. Abra el Asistente para **publicación web** haciendo clic con el botón secundario en el proyecto contoso University y haciendo clic en **publicar**.
 2. Asegúrese de que está seleccionado el perfil de **almacenamiento provisional** .
 3. Haga clic en **Publicar**.
 
-    La ventana **salida** muestra las acciones de implementación que se realizaron e informa de la finalización correcta de la implementación. El explorador predeterminado se abre automáticamente en la dirección URL de la aplicación web implementada.
+    La ventana **Salida** muestra qué acciones de implementación se realizaron e informa de la correcta finalización de la implementación. El explorador predeterminado se abre automáticamente en la dirección URL de la aplicación web implementada.
 
 ## <a name="test-in-the-staging-environment"></a>Prueba en el entorno de ensayo
 
@@ -224,7 +224,7 @@ Solicite una dirección URL no válida para producir un error en el que se reali
 
 La aplicación que ha creado se ejecuta ahora en la nube en una aplicación web que es similar a la que va a usar para producción. Dado que todo funciona correctamente, el siguiente paso es implementar en producción.
 
-## <a name="deploy-to-production"></a>Implementación en producción
+## <a name="deploy-to-production"></a>Implementar en producción
 
 El proceso de creación de una aplicación Web de producción y la implementación en producción es el mismo que para el almacenamiento provisional, salvo que debe excluir el archivo *robots. txt* de la implementación. Para ello, edite el archivo de Perfil de publicación.
 
@@ -265,7 +265,7 @@ Un archivo *. pubxml* contiene la configuración que pertenece a un perfil de pu
 
     Para obtener más información sobre cómo excluir archivos y carpetas, vea ¿puedo [excluir archivos o carpetas específicos de la implementación?](https://msdn.microsoft.com/library/ee942158.aspx#can_i_exclude_specific_files_or_folders_from_deployment) en las **preguntas más frecuentes sobre la implementación web para Visual Studio y ASP.net** en MSDN.
 
-### <a name="deploy-to-production"></a>Implementación en producción
+### <a name="deploy-to-production"></a>Implementar en producción
 
 1. Abra el Asistente para **publicación web** Asegúrese de que el perfil de publicación de **producción** está seleccionado y, a continuación, haga clic en **iniciar vista previa** en la pestaña **vista previa** para comprobar que el archivo *robots. txt* no se copiará en la aplicación de producción.
 
@@ -287,7 +287,7 @@ Ahora ha implementado y probado correctamente su aplicación web y está disponi
 En el siguiente tutorial, actualizará el código de la aplicación e implementará el cambio en los entornos de prueba, ensayo y producción.
 
 > [!NOTE]
-> Mientras la aplicación está en uso en el entorno de producción, debe implementar un plan de recuperación. Es decir, debe realizar copias de seguridad periódicas de las bases de datos de la aplicación de producción en una ubicación de almacenamiento segura y debe mantener varias generaciones de dichas copias de seguridad. Al actualizar la base de datos, debe realizar una copia de seguridad inmediatamente antes del cambio. Después, si comete un error y no lo detecta hasta después de implementarlo en producción, podrá recuperar la base de datos al estado en que se encontraba antes de que se dañara. Para obtener más información, vea [Azure SQL Database copias de seguridad y restauración](https://msdn.microsoft.com/library/windowsazure/jj650016.aspx).
+> Mientras la aplicación está en uso en el entorno de producción, debe implementar un plan de recuperación. Es decir, debe realizar copias de seguridad periódicas de las bases de datos de la aplicación de producción en una ubicación de almacenamiento segura y debe mantener varias generaciones de dichas copias de seguridad. Al actualizar la base de datos, debe realizar una copia de seguridad inmediatamente antes del cambio. Después, si comete un error y no lo detecta hasta después de implementarlo en producción, podrá recuperar la base de datos al estado en que se encontraba antes de que se dañara. Para obtener más información, consulte [Copia de seguridad y restauración de bases de datos de Azure SQL](https://msdn.microsoft.com/library/windowsazure/jj650016.aspx).
 > 
 > 
 > [!NOTE]

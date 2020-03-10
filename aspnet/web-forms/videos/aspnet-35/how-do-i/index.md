@@ -1,23 +1,23 @@
 ---
 uid: web-forms/videos/aspnet-35/how-do-i/index
-title: ¿Cómo | Microsoft Docs
+title: Cómo | Microsoft Docs
 author: rick-anderson
-description: Esta serie de vídeos de varias partes muestra cómo aprovechar las ventajas de las nuevas características de ASP.NET 3.5 y Visual Studio 2008.
+description: En esta serie de vídeos de varias partes se muestra cómo aprovechar las nuevas características de ASP.NET 3,5 y Visual Studio 2008.
 ms.author: riande
 ms.date: 11/14/2011
 ms.assetid: 6a25069b-c80f-45f3-a901-4548442c37b6
 msc.legacyurl: /web-forms/videos/aspnet-35/how-do-i
 msc.type: chapter
 ms.openlocfilehash: 73e3191b168b7d7ea92d1ee7d6509d283a9d5b39
-ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/06/2019
-ms.locfileid: "65133786"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78462451"
 ---
 # <a name="how-do-i"></a>¿Cómo...?
 
-> Esta serie de vídeos de varias partes muestra cómo aprovechar las ventajas de las nuevas características de ASP.NET 3.5 y Visual Studio 2008.
+> En esta serie de vídeos de varias partes se muestra cómo aprovechar las nuevas características de ASP.NET 3,5 y Visual Studio 2008.
 
 - [Crear una página maestra en Visual Studio 2008](how-do-i-create-a-master-page-in-visual-studio-2008.md)
 - [Crear una página maestra anidada en Visual Studio 2008](how-do-i-create-nested-master-page-in-visual-studio-2008.md)

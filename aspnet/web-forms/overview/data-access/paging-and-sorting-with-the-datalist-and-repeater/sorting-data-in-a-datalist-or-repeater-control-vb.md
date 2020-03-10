@@ -9,11 +9,11 @@ ms.assetid: 97c13898-0741-45f9-b3fa-7540ab1679e6
 msc.legacyurl: /web-forms/overview/data-access/paging-and-sorting-with-the-datalist-and-repeater/sorting-data-in-a-datalist-or-repeater-control-vb
 msc.type: authoredcontent
 ms.openlocfilehash: 81e07bec8569b9ee987dfaa84dec9eec95a2692f
-ms.sourcegitcommit: 22fbd8863672c4ad6693b8388ad5c8e753fb41a2
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/28/2019
-ms.locfileid: "74638236"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78465259"
 ---
 # <a name="sorting-data-in-a-datalist-or-repeater-control-vb"></a>Ordenar datos en un control DataList o Repeater (VB)
 

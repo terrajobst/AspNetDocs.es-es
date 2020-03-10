@@ -1,19 +1,19 @@
 ---
 uid: mvc/overview/older-versions-1/nerddinner/re-use-ui-using-master-pages-and-partials
-title: Volver a usar la interfaz de usuario mediante páginas maestras y parciales | Microsoft Docs
+title: Volver a usar la interfaz de usuario con páginas maestras y parciales | Microsoft Docs
 author: microsoft
-description: Paso 7 examina maneras que podemos aplicar el principio DRY dentro de nuestras plantillas de vista para eliminar la duplicación de código, con plantillas de vista parcial y páginas maestras.
+description: El paso 7 examina las formas en las que se puede aplicar el "principio seco" dentro de las plantillas de vista para eliminar la duplicación de código mediante plantillas de vista parcial y páginas maestras.
 ms.author: riande
 ms.date: 07/27/2010
 ms.assetid: d4243a4a-e91c-4116-9ae0-5c08e5285677
 msc.legacyurl: /mvc/overview/older-versions-1/nerddinner/re-use-ui-using-master-pages-and-partials
 msc.type: authoredcontent
 ms.openlocfilehash: 0b17cb6ac14b7f187bf1f175097a37907689d46e
-ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/06/2019
-ms.locfileid: "65128346"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78468727"
 ---
 # <a name="re-use-ui-using-master-pages-and-partials"></a>Reutilizar la interfaz de usuario con páginas maestras y parciales
 
@@ -21,53 +21,53 @@ por [Microsoft](https://github.com/microsoft)
 
 [Descargar PDF](http://aspnetmvcbook.s3.amazonaws.com/aspnetmvc-nerdinner_v1.pdf)
 
-> Este es el paso 7 de manera gratuita ["" la aplicación NerdDinner](introducing-the-nerddinner-tutorial.md) que le guía a través cómo compilar un pequeño, pero completa, aplicación web mediante ASP.NET MVC 1.
+> Este es el paso 7 de un [tutorial de aplicación "NerdDinner"](introducing-the-nerddinner-tutorial.md) gratuito en el que se explica cómo crear una aplicación web pequeña, pero completa, con ASP.NET MVC 1.
 > 
-> Paso 7 examina maneras que podemos aplicar el "principio DRY" dentro de nuestras plantillas de vista para eliminar la duplicación de código, con plantillas de vista parcial y páginas maestras.
+> El paso 7 examina las formas en las que se puede aplicar el "principio seco" dentro de las plantillas de vista para eliminar la duplicación de código, con plantillas de vista parcial y páginas maestras.
 > 
-> Si usa ASP.NET MVC 3, se recomienda que siga el [Introducción a trabajar con MVC 3](../../older-versions/getting-started-with-aspnet-mvc3/cs/intro-to-aspnet-mvc-3.md) o [MVC Music Store](../../older-versions/mvc-music-store/mvc-music-store-part-1.md) tutoriales.
+> Si usa ASP.NET MVC 3, se recomienda seguir los tutoriales [de la introducción con MVC 3](../../older-versions/getting-started-with-aspnet-mvc3/cs/intro-to-aspnet-mvc-3.md) o MVC [Music Store](../../older-versions/mvc-music-store/mvc-music-store-part-1.md) .
 
-## <a name="nerddinner-step-7-partials-and-master-pages"></a>Paso 7 de NerdDinner: Parciales y páginas maestras
+## <a name="nerddinner-step-7-partials-and-master-pages"></a>NerdDinner paso 7: particiones y páginas maestras
 
-Una de las filosofías de diseño que abarca de ASP.NET MVC es el principio "Hacer no repitas" (conocido comúnmente como "DRY"). Un diseño seco ayuda a eliminar la duplicación de código y lógica, lo que en última instancia, hace que las aplicaciones más rápidas para crear y fáciles de mantener.
+Una de las filosofías de diseño que ASP.NET MVC adopta es el principio "no repetirse" (conocido comúnmente como "seco"). Un diseño seco ayuda a eliminar la duplicación de código y lógica, que en última instancia agiliza la compilación y el mantenimiento de las aplicaciones.
 
-Ya hemos visto el principio DRY aplicado en algunos de nuestros escenarios de NerdDinner. Algunos ejemplos: nuestra lógica de validación se implementa dentro de nuestro nivel de modelo, lo que permite que se aplican en ambos editar y crear escenarios en nuestro controlador; volver a estamos usando la plantilla de vista de "NotFound" a través de los métodos de acción de edición, detalles y eliminación; estamos usando un patrón de convención de nomenclatura con nuestras plantillas de vista, lo que elimina la necesidad de especificar explícitamente el nombre cuando llamamos el método auxiliar View(); y se vuelve a utilizar la clase DinnerFormViewModel para ambos editar y creación escenarios de acción.
+Ya hemos visto el principio seco aplicado en varios de nuestros escenarios de NerdDinner. Algunos ejemplos: nuestra lógica de validación se implementa dentro de nuestra capa del modelo, lo que permite que se aplique en los escenarios de edición y creación de nuestro controlador. vamos a usar la plantilla de vista "NotFound" en los métodos de acción de edición, detalles y eliminación. Usamos un patrón de nomenclatura de Convención con nuestras plantillas de vista, lo que elimina la necesidad de especificar explícitamente el nombre cuando se llama al método auxiliar View (). y vamos a usar la clase DinnerFormViewModel para escenarios de acción de edición y creación.
 
-Ahora veamos maneras que podemos aplicar el "principio DRY" dentro de nuestras plantillas de vista para eliminar la duplicación de código allí también.
+Veamos ahora las maneras en las que podemos aplicar el "principio seco" en nuestras plantillas de vista para eliminar también la duplicación de código.
 
-### <a name="re-visiting-our-edit-and-create-view-templates"></a>Volver a visitar nuestro editar y crear plantillas de vista
+### <a name="re-visiting-our-edit-and-create-view-templates"></a>Volver a visitar nuestras plantillas editar y crear vista
 
-Actualmente estamos usando dos plantillas de vista diferentes: "Edit.aspx" y "Create.aspx –" para mostrar el formulario de la cena la interfaz de usuario. Una comparación visual rápida de ellos resalta similitud son. A continuación es el aspecto que tiene el formulario de creación:
+Actualmente se están usando dos plantillas de vista diferentes: "Edit. aspx" y "Create. aspx", para mostrar la interfaz de usuario del formulario de cena. Una comparación visual rápida de los aspectos destaca su similitud. A continuación se muestra el aspecto del formulario de creación:
 
 ![](re-use-ui-using-master-pages-and-partials/_static/image1.png)
 
-Y aquí es el aspecto de nuestro formulario "Editar":
+Y este es el aspecto de nuestro formulario "Editar":
 
 ![](re-use-ui-using-master-pages-and-partials/_static/image2.png)
 
-¿No hay mucho de una diferencia está allí? Que no sea el texto de título y el encabezado, los controles de entrada y el diseño del formulario son idénticos.
+¿No existe una gran diferencia? Aparte del texto del título y del encabezado, el diseño del formulario y los controles de entrada son idénticos.
 
-Si se abrirán el "Edit.aspx" y "Create.aspx" plantillas de vista que se dará cuenta de que contienen código de control de diseño y la entrada de forma idéntica. Esta duplicación significa que se acabará por tener que realizar cambios dos veces cada vez que se presentan o cambiar una propiedad cena nueva - que no es válida.
+Si abrimos las plantillas de vista "Edit. aspx" y "Create. aspx", veremos que contienen un diseño de formulario y un código de control de entrada idénticos. Esta duplicación significa que tenemos que realizar cambios dos veces en cualquier momento en que se introduzca o cambie una nueva propiedad cena, lo que no es bueno.
 
-### <a name="using-partial-view-templates"></a>Uso de plantillas de vista parcial
+### <a name="using-partial-view-templates"></a>Usar plantillas de vista parcial
 
-ASP.NET MVC admite la capacidad para definir plantillas de "vista parcial" que se pueden usar para encapsular la lógica de representación de la vista de una parte de una página secundaria. "Parciales" proporcionan una manera útil para definir la lógica de procesamiento de la vista una vez y, a continuación, volver a usarlo en varios lugares a través de una aplicación.
+ASP.NET MVC admite la capacidad de definir plantillas de "vista parcial" que se pueden usar para encapsular la lógica de representación de la vista para una subparte de una página. "Parciales" proporcionan una manera útil de definir la lógica de representación de la vista una vez y, a continuación, volver a usarla en varios lugares de una aplicación.
 
-Para ayudar a "DRY-up" nuestro Edit.aspx y duplicación de plantilla de vista Create.aspx, podemos crear una plantilla de vista parcial denominada "DinnerForm.ascx" que encapsula el diseño del formulario y comunes a los elementos de entrada. Haremos esto con el botón secundario en nuestro directorio / Views/Dinners y eligiendo la "Add -&gt;vista" comando de menú:
+Para ayudar a "SECAr" la duplicación de la plantilla de vista Edit. aspx y Create. aspx, podemos crear una plantilla de vista parcial denominada "DinnerForm. ascx" que encapsula el diseño del formulario y los elementos de entrada comunes a ambos. Haremos esto haciendo clic con el botón derecho en nuestro directorio/Views/Dinners y eligiendo el comando de menú "agregar&gt;vista":
 
 ![](re-use-ui-using-master-pages-and-partials/_static/image3.png)
 
-Se mostrará el cuadro de diálogo "Agregar vista". Llamaremos a la nueva vista que desea crear "DinnerForm", active la casilla "Crear una vista parcial" en el cuadro de diálogo e indique que se le pasa una clase DinnerFormViewModel:
+Se mostrará el cuadro de diálogo "agregar vista". Asignaremos un nombre a la nueva vista que queremos crear "DinnerForm", seleccionaremos la casilla "crear una vista parcial" en el cuadro de diálogo e indicar que le pasaremos a una clase DinnerFormViewModel:
 
 ![](re-use-ui-using-master-pages-and-partials/_static/image4.png)
 
-Cuando hacemos clic en el botón "Agregar", Visual Studio creará una nueva plantilla de vista de "DinnerForm.ascx" para nosotros dentro del directorio "\Views\Dinners".
+Cuando hacemos clic en el botón "agregar", Visual Studio creará una nueva plantilla de vista "DinnerForm. ascx" en el directorio "\Views\Dinners".
 
-Se puede, a continuación, copiar y pegar el diseño del formulario duplicados o introducir el código de control de nuestras plantillas de vista Edit.aspx/ Create.aspx en nuestra nueva plantilla de vista parcial "DinnerForm.ascx":
+A continuación, se puede copiar y pegar el código de control de entrada y diseño de formulario duplicado de las plantillas de vista de edición. aspx/Create. aspx en la nueva plantilla de vista parcial "DinnerForm. ascx":
 
 [!code-aspx[Main](re-use-ui-using-master-pages-and-partials/samples/sample1.aspx)]
 
-A continuación, podemos actualizar nuestro editar y crear plantillas de vista para llamar a la plantilla parcial DinnerForm y eliminar la duplicación de formulario. Esto se logra mediante la llamada Html.RenderPartial("DinnerForm") dentro de nuestras plantillas de vista:
+A continuación, podemos actualizar las plantillas editar y crear vista para llamar a la plantilla parcial DinnerForm y eliminar la duplicación del formulario. Para ello, se llama a HTML. RenderPartial ("DinnerForm") en nuestras plantillas de vista:
 
 ##### <a name="createaspx"></a>Create.aspx
 
@@ -77,61 +77,61 @@ A continuación, podemos actualizar nuestro editar y crear plantillas de vista p
 
 [!code-aspx[Main](re-use-ui-using-master-pages-and-partials/samples/sample3.aspx)]
 
-Puede calificar explícitamente la ruta de acceso de la plantilla parcial que desea al llamar a Html.RenderPartial (por ejemplo: ~ Views/Dinners/DinnerForm.ascx "). En nuestro código anterior, no obstante, estamos aprovechando el patrón de nomenclatura basado en convenciones en ASP.NET MVC y simplemente especificar "DinnerForm" como el nombre de la parcial para representar. Al hacer esto ASP.NET MVC buscará primero en el directorio basado en convenciones vistas (DinnersController sería/Views/Dinners). Si no encuentra la plantilla parcial allí, a continuación, será para él en el directorio /Views/Shared.
+Puede calificar explícitamente la ruta de acceso de la plantilla parcial que desea al llamar a HTML. RenderPartial (por ejemplo: ~ views/cenas/DinnerForm. ascx "). Sin embargo, en el código anterior, aprovechamos el patrón de nomenclatura basado en convenciones dentro de ASP.NET MVC y simplemente especificamos "DinnerForm" como el nombre de la parcial que se va a representar. Cuando hacemos esto, ASP.NET MVC buscará primero en el directorio de vistas basadas en convenciones (para DinnersController esto sería/Views/Dinners). Si no encuentra la plantilla parcial allí, la buscará en el directorio/Views/Shared
 
-Cuando se llama Html.RenderPartial() con solo el nombre de la vista parcial, ASP.NET MVC pasará a la vista parcial los mismos modelos y ViewData diccionario objetos utilizados por la plantilla de vista que realiza la llamada. Como alternativa, existen versiones sobrecargadas de Html.RenderPartial() que le permiten pasar un objeto de modelo alternativo o de diccionario ViewData de la vista parcial a usar. Esto es útil para escenarios donde solo se desea pasar un subconjunto del modelo completo/ViewModel.
+Cuando se llama a HTML. RenderPartial () con solo el nombre de la vista parcial, ASP.NET MVC pasará a la vista parcial los mismos objetos de modelo y de diccionario ViewData usados por la plantilla de vista de llamada. Como alternativa, hay versiones sobrecargadas de HTML. RenderPartial () que le permiten pasar un objeto de modelo alternativo y/o un diccionario ViewData para que lo use la vista parcial. Esto resulta útil en escenarios en los que solo desea pasar un subconjunto del modelo/ViewModel completo.
 
-| **Tema de lado: ¿Por qué &lt;%%&gt; en lugar de &lt;% = %&gt;?** |
+| **Tema del lado: ¿por qué &lt;%%&gt; en lugar de &lt;% =%&gt;?** |
 | --- |
-| Uno de los aspectos sutiles que es posible que haya observado con el código anterior es que estamos usando un &lt;%%&gt; bloquear en lugar de un &lt;% = %&gt; bloquear al llamar a Html.RenderPartial(). &lt;% = %&gt; bloques en ASP.NET indican que un programador desea representar un valor especificado (por ejemplo: &lt;% = "Hello" %&gt; representaría "Hello"). &lt;%%&gt; bloques en su lugar, indican que el desarrollador desea ejecutar el código, y cualquier elemento representado salida dentro de ellos debe realizarse explícitamente (por ejemplo: &lt;Response.Write("Hello") %&gt;. La razón por la que usamos un &lt;%%&gt; es bloque con nuestro código Html.RenderPartial anterior porque el método Html.RenderPartial() no devuelve una cadena y, en su lugar genera el contenido directamente a la plantilla de vista que realiza la llamada del flujo de salida. Esto lo hace por motivos de eficiencia de rendimiento y, por lo que evita la necesidad de crear un objeto de cadena temporal (potencialmente muy grandes). Esto reduce el uso de memoria y mejora el rendimiento general de la aplicación. Un error común al usar Html.RenderPartial() consiste en olvide agregar un punto y coma al final de la llamada cuando está dentro de un &lt;%%&gt; bloque. Por ejemplo, este código producirá un error del compilador: &lt;Html.RenderPartial("DinnerForm") %&gt; en su lugar, deberá escribir: &lt;% Html.RenderPartial("DinnerForm"); %&gt; esto es porque &lt;%%&gt; bloques son instrucciones de código independiente y cuando se usa C# instrucciones de código deben terminarse con punto y coma. |
+| Uno de los aspectos sutiles que podría haber observado con el código anterior es que usamos un bloque &lt;%%&gt; en lugar de un bloque &lt;% =%&gt; al llamar a HTML. RenderPartial (). &lt;% =%&gt; bloques en ASP.NET indican que un desarrollador desea representar un valor especificado (por ejemplo: &lt;% = "Hello"%&gt; presentaría "Hello"). en su lugar &lt;%%&gt; bloques indican que el desarrollador desea ejecutar código y que cualquier salida representada dentro de ellos debe realizarse explícitamente (por ejemplo: &lt;% Response. Write ("Hello")%&gt;. La razón por la que usamos un bloque &lt;%%&gt; con el código HTML. RenderPartial anterior es porque el método html. RenderPartial () no devuelve una cadena y, en su lugar, genera el contenido directamente en el flujo de salida de la plantilla de vista de llamada. Esto lo hace por motivos de eficiencia de rendimiento y, al hacerlo, evita la necesidad de crear un objeto de cadena temporal (potencialmente muy grande). Esto reduce el uso de memoria y mejora el rendimiento general de la aplicación. Un error común al usar HTML. RenderPartial () es olvidar agregar un punto y coma al final de la llamada cuando está dentro de un bloque &lt;%%&gt;. Por ejemplo, este código producirá un error del compilador: &lt;% HTML. RenderPartial ("DinnerForm")%&gt; en su lugar debe escribir: &lt;% HTML. RenderPartial ("DinnerForm"); %&gt; esto se debe a que los bloques &lt;%%&gt; son instrucciones de código independientes y cuando C# las instrucciones de código deben terminar con un punto y coma. |
 
-### <a name="using-partial-view-templates-to-clarify-code"></a>Uso de plantillas de vista parcial para aclarar el código
+### <a name="using-partial-view-templates-to-clarify-code"></a>Usar plantillas de vista parcial para aclarar el código
 
-Hemos creado la plantilla de vista parcial "DinnerForm" para evitar la duplicación de lógica de procesamiento de la vista en varios lugares. Este es el motivo más común para crear plantillas de vista parcial.
+Creamos la plantilla de vista parcial "DinnerForm" para evitar la duplicación de la lógica de representación de la vista en varios lugares. Esta es la razón más común para crear plantillas de vista parcial.
 
-A veces, todavía tiene sentido crear las vistas parciales, incluso cuando solo se llama en un solo lugar. A menudo muy complicado ver plantillas pueden convertirse en mucho más fáciles de leer cuando su lógica de procesamiento de la vista se extraen y dividir en uno o más bien denominado parcial de plantillas.
+A veces, tiene sentido crear vistas parciales incluso cuando solo se llama en un único lugar. Las plantillas de vista muy complicadas suelen ser mucho más fáciles de leer cuando se extrae la lógica de representación de la vista y se crean particiones en una o varias plantillas parciales con el mismo nombre.
 
-Por ejemplo, considere el siguiente fragmento de código desde el archivo Site.master en nuestro proyecto (lo que estamos buscando en breve). El código es relativamente sencillo leer – en parte porque vincular la lógica para mostrar un inicio de sesión o cierre de sesión en la parte superior derecha de la pantalla se encapsula dentro de la parte "LogOnUserControl":
+Por ejemplo, considere el siguiente fragmento de código del archivo site. Master en nuestro proyecto (que veremos en breve). El código es relativamente sencillo de leer, en parte porque la lógica para mostrar un vínculo de inicio de sesión o cierre de sesión en la parte superior derecha de la pantalla se encapsula dentro de "control logonusercontrol" parcial:
 
 [!code-aspx[Main](re-use-ui-using-master-pages-and-partials/samples/sample4.aspx)]
 
-Cada vez que encuentre confundirse intentando entender el marcado html/código dentro de una plantilla de vista, considere si no sería más claro si algunos de los se ha extraído y refactorizado en las vistas parciales con un nombre adecuado.
+Siempre que se sienta confuso intentando comprender el marcado HTML/código dentro de una plantilla de vista, considere si no sería más claro si alguna de ellas se extrajo y refactorizase en vistas parciales con un nombre correcto.
 
 ### <a name="master-pages"></a>Páginas maestras
 
-Además de admitir las vistas parciales, ASP.NET MVC también admite la capacidad para crear plantillas de "página principal" que pueden utilizarse para definir el diseño común y el código html de nivel superior de un sitio. Marcador de posición, a continuación, se pueden agregar controles a la página maestra para identificar regiones reemplazables que se pueden invalidadas o "rellena" las vistas de contenido. Esto proporciona una manera muy eficaz (y SECA) para aplicar un diseño común en una aplicación.
+Además de admitir vistas parciales, ASP.NET MVC también admite la capacidad de crear plantillas de "página maestra" que se pueden usar para definir el diseño común y el código HTML de nivel superior de un sitio. Los controles de marcador de posición de contenido se pueden agregar a la página maestra para identificar las regiones reemplazables que se pueden reemplazar o "rellenar" en las vistas. Esto proporciona una manera muy eficaz (y seca) de aplicar un diseño común en una aplicación.
 
-De forma predeterminada, nuevos proyectos de MVC de ASP.NET tienen una plantilla de página maestra que se agregan automáticamente a ellos. Esta página principal se denomina "Site.master" y la vida dentro de la carpeta \Views\Shared\:
+De forma predeterminada, se agregan automáticamente a los nuevos proyectos de ASP.NET MVC una plantilla de página maestra. Esta página maestra se denomina "site. Master" y vive dentro de la carpeta \Views\Shared\:
 
 ![](re-use-ui-using-master-pages-and-partials/_static/image5.png)
 
-El archivo Site.master predeterminado como el siguiente. Define el código html exterior del sitio, junto con un menú de navegación en la parte superior. Contiene dos controles que puede reemplazar el marcador de posición de contenido: uno para el título y la otra para la que se debe reemplazar el contenido de una página principal:
+El archivo site. Master predeterminado tiene el siguiente aspecto. Define el HTML exterior del sitio, junto con un menú para la navegación en la parte superior. Contiene dos controles de marcador de posición de contenido reemplazable: uno para el título y el otro para el que se debe reemplazar el contenido principal de una página:
 
 [!code-aspx[Main](re-use-ui-using-master-pages-and-partials/samples/sample5.aspx)]
 
-Todas las plantillas de vista que hemos creado para nuestra aplicación NerdDinner ("List", "Detalles", "Editar", "Crear", "NotFound", etcetera) se basaban en esta plantilla Site.master. Esto se indica mediante el atributo "MasterPageFile" que se agregó de forma predeterminada a la parte superior &lt;% @ Page %&gt; directiva cuando creamos nuestras vistas mediante el cuadro de diálogo "Agregar vista":
+Todas las plantillas de vista que hemos creado para nuestra aplicación NerdDinner ("list", "details", "Edit", "Create", "NotFound", etc.) se han basado en esta plantilla site. Master. Esto se indica mediante el atributo "MasterPageFile" que se agregó de forma predeterminada a la Directiva Top &lt;% @ Page%&gt; cuando se crearon las vistas mediante el cuadro de diálogo "agregar vista":
 
 [!code-aspx[Main](re-use-ui-using-master-pages-and-partials/samples/sample6.aspx)]
 
-Esto significa que podemos cambiar el contenido de Site.master y tienen los cambios automáticamente se aplica y usar cuando se procesa alguna de nuestras plantillas de vista.
+Esto significa que se puede cambiar el contenido del sitio. Master y hacer que los cambios se apliquen y se usen automáticamente cuando se represente cualquiera de nuestras plantillas de vista.
 
-Vamos a actualizar sección de encabezado de nuestra Site.master para que el encabezado de nuestra aplicación es "NerdDinner" en lugar de "Mi aplicación de MVC". Vamos a actualizar también el menú de navegación para que la primera pestaña es "Buscar una cena" (controladas por el método de acción de HomeController Index()) y vamos a agregar una nueva pestaña denominada "Host una cena" (controladas por el método de acción de DinnersController Create()):
+Vamos a actualizar nuestra sección de encabezado de site. Master para que el encabezado de nuestra aplicación sea "NerdDinner" en lugar de "My MVC Application". Vamos a actualizar también el menú de navegación para que la primera pestaña sea "buscar una cena" (controlada por el método de acción index () de HomeController) y agregaremos una nueva pestaña denominada "anfitrión a cena" (controlada por el método de acción Create () de DinnersController):
 
 [!code-aspx[Main](re-use-ui-using-master-pages-and-partials/samples/sample7.aspx)]
 
-Cuando se guarda el archivo Site.master y actualizar nuestro explorador veremos el encabezado de cambios se reflejen en todas las vistas dentro de nuestra aplicación. Por ejemplo:
+Al guardar el archivo site. Master y actualizar nuestro explorador, veremos que los cambios de encabezado se muestran en todas las vistas de nuestra aplicación. Por ejemplo:
 
 ![](re-use-ui-using-master-pages-and-partials/_static/image6.png)
 
-Y con el */dinners/Edit / [id]* dirección URL:
+Y con la dirección URL de */Dinners/Edit/[id]* :
 
 ![](re-use-ui-using-master-pages-and-partials/_static/image7.png)
 
 ### <a name="next-step"></a>Paso siguiente
 
-Parciales y páginas maestras proporcionan opciones muy flexibles que permiten organizar limpiamente vistas. Encontrará que ayudan a evitar la duplicación de vista de contenido / de código y que sea más fácil leer y mantener las plantillas de vista.
+Las particiones y las páginas maestras proporcionan opciones muy flexibles que permiten organizar las vistas de forma limpia. Descubrirá que le ayudan a evitar la duplicación del código o el contenido de la vista, y facilitan la lectura y el mantenimiento de las plantillas de vista.
 
-Ahora vamos a volver a visitar el escenario de lista que se generó anteriormente y habilitar la compatibilidad con la paginación escalable.
+Vamos a revisar el escenario de enumeración que hemos creado anteriormente y habilitar la compatibilidad con paginación escalable.
 
 > [!div class="step-by-step"]
 > [Anterior](use-viewdata-and-implement-viewmodel-classes.md)

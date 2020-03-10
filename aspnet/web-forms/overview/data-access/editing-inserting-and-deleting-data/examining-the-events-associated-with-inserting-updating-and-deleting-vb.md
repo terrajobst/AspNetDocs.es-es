@@ -9,11 +9,11 @@ ms.assetid: c9bd10a7-eff8-4d8c-bec9-963c2aef2d6e
 msc.legacyurl: /web-forms/overview/data-access/editing-inserting-and-deleting-data/examining-the-events-associated-with-inserting-updating-and-deleting-vb
 msc.type: authoredcontent
 ms.openlocfilehash: 35edb3cefc6fe23bb56e667c02d10dc7798f730d
-ms.sourcegitcommit: 22fbd8863672c4ad6693b8388ad5c8e753fb41a2
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/28/2019
-ms.locfileid: "74633137"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78492979"
 ---
 # <a name="examining-the-events-associated-with-inserting-updating-and-deleting-vb"></a>Examinar los eventos relacionados con la inserción, actualización y eliminación (VB)
 

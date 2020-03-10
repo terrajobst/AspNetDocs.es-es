@@ -9,11 +9,11 @@ ms.assetid: a89d6f32-b71b-4036-8ff7-5f8ac2a6eca8
 msc.legacyurl: /web-forms/overview/older-versions-getting-started/deployment-to-a-hosting-provider/deployment-to-a-hosting-provider-migrating-to-sql-server-10-of-12
 msc.type: authoredcontent
 ms.openlocfilehash: c5281a42596d95e725b32e652c75785abe0fd64e
-ms.sourcegitcommit: 22fbd8863672c4ad6693b8388ad5c8e753fb41a2
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/28/2019
-ms.locfileid: "74640557"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78462841"
 ---
 # <a name="deploying-an-aspnet-web-application-with-sql-server-compact-using-visual-studio-or-visual-web-developer-migrating-to-sql-server---10-of-12"></a>Implementación de una aplicación Web de ASP.NET con SQL Server Compact con Visual Studio o Visual Web Developer: migración a SQL Server-10 de 12
 
@@ -25,7 +25,7 @@ por [Tom Dykstra](https://github.com/tdykstra)
 > 
 > Para ver un tutorial que muestra las características de implementación que se introdujeron después de la versión RC de Visual Studio 2012, muestra cómo implementar SQL Server ediciones distintas de SQL Server Compact y muestra cómo realizar la implementación en Azure App Service Web Apps, vea [implementación web de ASP.net con Visual Studio](../../deployment/visual-studio-web-deployment/introduction.md).
 
-## <a name="overview"></a>Información general del
+## <a name="overview"></a>Información general
 
 En este tutorial se muestra cómo migrar de SQL Server Compact a SQL Server. Uno de los motivos por los que podría querer hacer esto es aprovechar las ventajas de SQL Server características que SQL Server Compact no admite, como procedimientos almacenados, desencadenadores, vistas o replicación. Para obtener más información sobre las diferencias entre SQL Server Compact y SQL Server, vea el tutorial [implementación de SQL Server Compact](deployment-to-a-hosting-provider-deploying-sql-server-compact-databases-2-of-12.md) .
 
@@ -112,7 +112,7 @@ Normalmente, la pestaña **empaquetar/publicar SQL** está deshabilitada porque 
 
 Haga clic en **Importar desde web. config**.
 
-![Selecting_Import_from_Web. config](deployment-to-a-hosting-provider-migrating-to-sql-server-10-of-12/_static/image5.png)
+![Selecting_Import_from_Web.config](deployment-to-a-hosting-provider-migrating-to-sql-server-10-of-12/_static/image5.png)
 
 Visual Studio busca cadenas de conexión en el archivo *Web. config* , encuentra una para la base de datos de pertenencia y otra para la base de datos School, y agrega una fila que corresponde a cada cadena de conexión de la tabla de entradas de la **base de datos** . Las cadenas de conexión que encuentra son para las bases de datos de SQL Server Compact existentes y el siguiente paso será configurar cómo y dónde implementar estas bases de datos.
 
@@ -224,7 +224,7 @@ En **Explorador de soluciones**, haga clic con el botón secundario en el proyec
 
 Seleccione la pestaña **perfil** .
 
-Haga clic en **administrar perfiles**.
+Haga clic en **Administrar perfiles**.
 
 Seleccione **prueba**, haga clic en **quitar**y, a continuación, haga clic en **cerrar**.
 
@@ -347,7 +347,7 @@ En **Explorador de soluciones**, haga clic con el botón secundario en el proyec
 
 Seleccione la pestaña **perfil** .
 
-Haga clic en **administrar perfiles**.
+Haga clic en **Administrar perfiles**.
 
 Seleccione **producción**, haga clic en **quitar**y, a continuación, haga clic en **cerrar**.
 
@@ -398,7 +398,7 @@ Abra el archivo *Web. config* y reemplace el elemento `connectionStrings` por el
 
 En **Explorador de soluciones**, seleccione el proyecto ContosoUniversity y, a continuación, haga clic en **configuración de ASP.net** en el menú **proyecto** .
 
-Selecciona la pestaña Seguridad.
+Seleccione la pestaña Seguridad.
 
 Haga clic en **crear o administrar roles**y, a continuación, cree un rol de **Administrador** .
 

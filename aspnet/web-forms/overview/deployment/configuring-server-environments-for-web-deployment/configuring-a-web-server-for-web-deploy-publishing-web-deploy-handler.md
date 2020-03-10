@@ -9,11 +9,11 @@ ms.assetid: 90ebf911-1c46-4470-b876-1335bd0f590f
 msc.legacyurl: /web-forms/overview/deployment/configuring-server-environments-for-web-deployment/configuring-a-web-server-for-web-deploy-publishing-web-deploy-handler
 msc.type: authoredcontent
 ms.openlocfilehash: baaebd32f08d3c6b861572c5c5a16ec0fb70aaf0
-ms.sourcegitcommit: 22fbd8863672c4ad6693b8388ad5c8e753fb41a2
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/28/2019
-ms.locfileid: "74589040"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78458641"
 ---
 # <a name="configuring-a-web-server-for-web-deploy-publishing-web-deploy-handler"></a>Configurar un servidor web para la publicación de la implementación web (controlador de implementación web)
 
@@ -21,7 +21,7 @@ ms.locfileid: "74589040"
 
 > En este tema se describe cómo configurar un servidor Web de Internet Information Services (IIS) para admitir la publicación e implementación web mediante el controlador de Web Deploy de IIS.
 > 
-> Cuando trabaja con Web Deploy 2,0 o posterior, hay tres enfoques principales que puede usar para obtener sus aplicaciones o sitios en un servidor Web. Puede:
+> Cuando trabaja con Web Deploy 2,0 o posterior, hay tres enfoques principales que puede usar para obtener sus aplicaciones o sitios en un servidor Web. Puede realizar lo siguiente:
 > 
 > - Use el *servicio agente remoto de web deploy*. Este enfoque requiere menos configuración del servidor Web, pero debe proporcionar las credenciales de un administrador del servidor local para poder implementar cualquier cosa en el servidor.
 > - Use el *controlador de web deploy*. Este enfoque es mucho más complejo y requiere más esfuerzo inicial para configurar el servidor Web. Sin embargo, si usa este enfoque, puede configurar IIS para permitir que los usuarios que no son administradores realicen la implementación. El controlador de Web Deploy solo está disponible en la versión 7 o posterior de IIS.
@@ -86,7 +86,7 @@ En este caso, debe instalar estos elementos:
 
     > [!NOTE]
     > Ahora puede iniciar el instalador de plataforma web en cualquier momento desde el menú **Inicio** . Para ello, en el menú **Inicio** , haga clic en **todos los programas**y, a continuación, haga clic en **instalador de plataforma web de Microsoft**.
-3. En la parte superior de la ventana **instalador de plataforma web** , haga clic en **productos**.
+3. En la parte superior de la ventana **Instalador de plataforma Web** ventana, haga clic en **Productos**.
 4. En el lado izquierdo de la ventana, en el panel de navegación, haga clic en **marcos de trabajo**.
 5. En la fila **Microsoft .NET Framework 4** , si el .NET Framework no está ya instalado, haga clic en **Agregar**.
 
@@ -100,7 +100,7 @@ En este caso, debe instalar estos elementos:
 9. En la fila **herramienta de implementación Web 2,1** , haga clic en **Agregar**.
 10. En la fila **IIS: autenticación básica** , haga clic en **Agregar**.
 11. En la fila **IIS: servicio de administración** , haga clic en **Agregar**.
-12. Haga clic en **Instalar**. El instalador de plataforma web mostrará una lista de productos&#x2014;junto con las dependencias asociadas&#x2014;que se van a instalar y le pedirá que acepte los términos de licencia.
+12. Haga clic en **Instalar**. El instalador de plataforma Web mostrará una lista de productos &#x2014; junto con las dependencias asociadas &#x2014; esté instalado y se le pedirá que acepte los términos de licencia.
 
     ![](configuring-a-web-server-for-web-deploy-publishing-web-deploy-handler/_static/image2.png)
 13. Revise los términos de licencia y, si da su consentimiento a los términos **, haga clic en Acepto.**
@@ -204,7 +204,7 @@ Aunque no hay nada que le impida implementar contenido en el sitio web predeterm
     > [!NOTE]
     > En un entorno de producción, probablemente querrá hospedar el sitio web en el puerto 80 y configurar un encabezado de host, junto con los registros DNS coincidentes. Para obtener más información sobre cómo configurar los encabezados de host en IIS 7, vea [configurar un encabezado de host para un sitio web (IIS 7)](https://technet.microsoft.com/library/cc753195(WS.10).aspx). Para obtener más información sobre el rol de servidor DNS en Windows Server, consulte [Introducción](https://technet.microsoft.com/library/cc770392.aspx) al servidor DNS y [servidor DNS](https://technet.microsoft.com/windowsserver/dd448607).
 9. En el panel **acciones** , en **Editar sitio**, haga clic en **enlaces**.
-10. En el cuadro de diálogo **enlaces de sitios** , haga clic en **Agregar**.
+10. En el cuadro de diálogo **Enlaces de sitios**, haga clic en **Agregar**.
 
     ![](configuring-a-web-server-for-web-deploy-publishing-web-deploy-handler/_static/image12.png)
 11. En el cuadro de diálogo **Agregar enlace de sitio** , establezca la **dirección IP** y el **Puerto** para que coincidan con la configuración de sitio existente.
@@ -214,7 +214,7 @@ Aunque no hay nada que le impida implementar contenido en el sitio web predeterm
 
     > [!NOTE]
     > El primer enlace de sitio le permite tener acceso al sitio localmente mediante la dirección IP y el puerto o el `http://localhost:85`. El segundo enlace de sitio le permite tener acceso al sitio desde otros equipos del dominio mediante el nombre de equipo (por ejemplo, http://stageweb1:85).
-13. En el cuadro de diálogo **enlaces de sitios** , haga clic en **cerrar**.
+13. En el cuadro de diálogo **Enlaces de sitios**, haga clic en **Cerrar**.
 14. En el panel **conexiones** , haga clic en **grupos de aplicaciones**.
 15. En el panel **grupos de aplicaciones** , haga clic con el botón secundario en el nombre del grupo de aplicaciones y, a continuación, haga clic en **configuración básica**. De forma predeterminada, el nombre del grupo de aplicaciones coincidirá con el nombre del sitio web (por ejemplo, **DemoSite**).
 16. En la lista **versión de .net CLR** , seleccione **.net CLR v 4.0.30319**y, a continuación, haga clic en **Aceptar**.
@@ -224,7 +224,7 @@ Aunque no hay nada que le impida implementar contenido en el sitio web predeterm
     > [!NOTE]
     > La solución de ejemplo requiere .NET Framework 4,0. Esto no es un requisito para Web Deploy en general.
 
-Para que el sitio web atienda el contenido, la identidad del grupo de aplicaciones debe tener permisos de lectura en la carpeta local que almacena el contenido. En IIS 7,5, los grupos de aplicaciones se ejecutan con una identidad de grupo de aplicaciones única de forma predeterminada (a diferencia de las versiones anteriores de IIS, donde los grupos de aplicaciones normalmente se ejecutaban con la cuenta de servicio de red). La identidad del grupo de aplicaciones no es una cuenta de usuario real y no aparece en ninguna lista de usuarios o&#x2014;grupos, sino que se crea dinámicamente cuando se inicia el grupo de aplicaciones. Cada identidad del grupo de aplicaciones se agrega al grupo de seguridad local de **IIS\_IUSRS** como un elemento oculto.
+Para que el sitio web atienda el contenido, la identidad del grupo de aplicaciones debe tener permisos de lectura en la carpeta local que almacena el contenido. En IIS 7,5, los grupos de aplicaciones se ejecutan con una identidad de grupo de aplicaciones única de forma predeterminada (a diferencia de las versiones anteriores de IIS, donde los grupos de aplicaciones normalmente se ejecutaban con la cuenta de servicio de red). La identidad del grupo de aplicaciones no es una cuenta de usuario real y no se muestra en las listas de usuarios o grupos &#x2014; en su lugar, se crea dinámicamente cuando se inicia el grupo de aplicaciones. Cada identidad del grupo de aplicaciones se agrega al grupo de seguridad local de **IIS\_IUSRS** como un elemento oculto.
 
 Para conceder permisos a una identidad del grupo de aplicaciones en un archivo o carpeta, tiene dos opciones:
 
@@ -240,8 +240,8 @@ El enfoque más común consiste en asignar permisos al grupo local de **IIS\_IUS
 
 1. En el explorador de Windows, vaya a la ubicación de la carpeta local.
 2. Haga clic con el botón secundario en la carpeta y, a continuación, haga clic en **propiedades**.
-3. En la pestaña **seguridad** , haga clic en **Editar**y, a continuación, haga clic en **Agregar**.
-4. Haga clic en **ubicaciones**. En el cuadro de diálogo **ubicaciones** , seleccione el servidor local y, a continuación, haga clic en **Aceptar**.
+3. En el separador **Security**, haga clic en **Edit** y, luego, haga clic en **Add**.
+4. Haga clic en **Ubicaciones**. En el cuadro de diálogo **ubicaciones** , seleccione el servidor local y, a continuación, haga clic en **Aceptar**.
 
     ![](configuring-a-web-server-for-web-deploy-publishing-web-deploy-handler/_static/image15.png)
 5. En el cuadro de diálogo **Seleccionar usuarios o grupos** , escriba **IIS\_IUSRS**, haga clic en **Comprobar nombres**y, a continuación, haga clic en **Aceptar**.
@@ -273,7 +273,7 @@ Como tarea final, debe conceder los permisos adecuados al usuario que no sea adm
 
 De forma predeterminada, el servicio de administración web de IIS escucha en el puerto TCP 8172. Si el Firewall de Windows está habilitado en el servidor Web, deberá crear una nueva regla de entrada para permitir el tráfico TCP en el puerto 8172 (de forma predeterminada, se permite todo el tráfico saliente en el Firewall de Windows). Si usa un firewall de terceros, debe crear reglas para permitir el tráfico.
 
-| Direction | Desde el puerto | A Puerto | Tipo de puerto |
+| Dirección | Desde el puerto | A Puerto | Tipo de puerto |
 | --- | --- | --- | --- |
 | Entrada | Cualquiera | 8172 | TCP |
 | Salida | 8172 | Cualquiera | TCP |

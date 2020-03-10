@@ -10,11 +10,11 @@ ms.custom: seoapril2019
 msc.legacyurl: /identity/overview/getting-started/developing-aspnet-apps-with-windows-azure-active-directory
 msc.type: authoredcontent
 ms.openlocfilehash: 28425ea8d1312dfc6e14df9677396f2cbcf6f16d
-ms.sourcegitcommit: 7709c0a091b8d55b7b33bad8849f7b66b23c3d72
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/19/2020
-ms.locfileid: "77456730"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78471745"
 ---
 # <a name="developing-aspnet-apps-with-azure-active-directory"></a>Desarrollo de aplicaciones ASP.NET con Azure Active Directory
 
@@ -24,7 +24,7 @@ Las herramientas de Microsoft ASP.NET para Azure Active Directory simplifican la
 
 En este tutorial se muestra cómo crear una aplicación ASP.NET que está configurada para el inicio de sesión con [Azure Active Directory](https://msdn.microsoft.com/library/azure/mt168838.aspx) (Azure ad). También aprenderá a llamar a la Graph API para obtener información sobre el usuario que ha iniciado sesión actualmente y cómo implementar la aplicación en Azure.
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>Requisitos previos
 
 1. [Visual Studio Express 2013 para web](https://my.visualstudio.com/Downloads?q=visual%20studio%202013#d-2013-express) o [Visual Studio 2013](https://my.visualstudio.com/Downloads?q=visual%20studio%202013).
 2. Se requiere [Visual Studio 2013 update 4](https://www.microsoft.com/download/details.aspx?id=44921) -Update 3 o posterior.
@@ -73,13 +73,13 @@ En los pasos siguientes se usa [Visual Studio Express 2013 para web](https://www
 4. Después de hacer clic en **Aceptar**, aparecerá un cuadro de diálogo de inicio de sesión que tendrá que iniciar sesión con una cuenta de administrador global (no la cuenta de Microsoft asociada a su suscripción). Si ha creado una cuenta de administrador anterior, deberá cambiar la contraseña y, a continuación, volver a iniciar sesión con la nueva contraseña.
 
     ![](developing-aspnet-apps-with-windows-azure-active-directory/_static/image9.png)
-5. Una vez que se haya autenticado correctamente, el cuadro de diálogo **nuevo proyecto de ASP.net** mostrará la opción de autenticación (**organización** ) y el directorio donde se registrará la nueva aplicación (*aricka0yahoo.onmicrosoft.com* en la siguiente imagen). Debajo de esta información, active la casilla **host en la nube**. Si esta casilla está activada, el proyecto se aprovisionará como una aplicación Web de Azure y se habilitará para facilitar su publicación más adelante. Haga clic en **OK**.
+5. Una vez que se haya autenticado correctamente, el cuadro de diálogo **nuevo proyecto de ASP.net** mostrará la opción de autenticación (**organización** ) y el directorio donde se registrará la nueva aplicación (*aricka0yahoo.onmicrosoft.com* en la siguiente imagen). Debajo de esta información, active la casilla **host en la nube**. Si esta casilla está activada, el proyecto se aprovisionará como una aplicación Web de Azure y se habilitará para facilitar su publicación más adelante. Haga clic en **Aceptar**.
 
     ![](developing-aspnet-apps-with-windows-azure-active-directory/_static/image10.png)
 6. Aparecerá el cuadro de diálogo **configurar sitio web de Azure** con una región y un nombre de sitio generados automáticamente. Tenga en cuenta también la cuenta en la que ha iniciado sesión actualmente en el cuadro de diálogo. Desea asegurarse de que esta cuenta es la a la que está asociada la suscripción de Azure, normalmente una cuenta de Microsoft.
 
     > [!NOTE]
-    > Este proyecto requiere una base de datos. Debe seleccionar una de las bases de datos existentes o crear una nueva. Se necesita una base de datos porque el proyecto ya usa un archivo de base de datos local para almacenar una pequeña cantidad de datos de configuración de autenticación. Al implementar la aplicación en un sitio web de Azure, esta base de datos no está empaquetada con la implementación, por lo que debe elegir una que sea accesible en la nube. Haga clic en **OK**.
+    > Este proyecto requiere una base de datos. Debe seleccionar una de las bases de datos existentes o crear una nueva. Se necesita una base de datos porque el proyecto ya usa un archivo de base de datos local para almacenar una pequeña cantidad de datos de configuración de autenticación. Al implementar la aplicación en un sitio web de Azure, esta base de datos no está empaquetada con la implementación, por lo que debe elegir una que sea accesible en la nube. Haga clic en **Aceptar**.
 
     ![](developing-aspnet-apps-with-windows-azure-active-directory/_static/image11.png)
 7. Se creará el proyecto y las opciones de autenticación y las opciones de la aplicación web se configurarán automáticamente con el proyecto. Una vez completado este proceso, ejecute el proyecto de forma local presionando **^ F5**. Se le pedirá que inicie sesión con su cuenta de organización. Proporcione el nombre de usuario y la contraseña de la cuenta que creó anteriormente y haga clic en **iniciar sesión**.

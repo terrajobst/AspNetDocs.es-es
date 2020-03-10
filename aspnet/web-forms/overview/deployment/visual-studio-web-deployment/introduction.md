@@ -9,11 +9,11 @@ ms.assetid: 24ad086d-865e-433c-9ac9-05f1a553da16
 msc.legacyurl: /web-forms/overview/deployment/visual-studio-web-deployment/introduction
 msc.type: authoredcontent
 ms.openlocfilehash: 96dd31d949633e001fc595621bedbf74e98000fc
-ms.sourcegitcommit: 22fbd8863672c4ad6693b8388ad5c8e753fb41a2
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/28/2019
-ms.locfileid: "74640233"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78521761"
 ---
 # <a name="aspnet-web-deployment-using-visual-studio-introduction"></a>Implementación web de ASP.NET con Visual Studio: introducción
 
@@ -31,7 +31,7 @@ por [Tom Dykstra](https://github.com/tdykstra)
 > 
 > Este contenido también está disponible como libro electrónico gratuito en [la galería de libros electrónicos de TechNet](https://social.technet.microsoft.com/wiki/contents/articles/11608.e-book-gallery-for-microsoft-technologies.aspx#ASPNETWebDeploymentusingVisualStudio).
 
-## <a name="overview"></a>Información general del
+## <a name="overview"></a>Información general
 
 Estos tutoriales le guían en la implementación de una aplicación Web ASP.NET que incluye bases de datos de SQL Server. Primero implementará en IIS en el equipo de desarrollo local para realizar pruebas y, a continuación, Web Apps en Azure App Service y Azure SQL Database para el almacenamiento provisional y la producción. Verá cómo realizar la implementación mediante la publicación con un solo clic de Visual Studio y verá cómo realizar la implementación mediante la línea de comandos.
 
@@ -39,7 +39,7 @@ El número de tutoriales puede hacer que el proceso de implementación parezca d
 
 Los tutoriales están diseñados para ejecutarse en secuencia y cada parte se basa en la parte anterior. Puede omitir partes que no son relevantes para su situación, pero es posible que tenga que ajustar los procedimientos en los tutoriales posteriores.
 
-## <a name="intended-audience"></a>Público previsto
+## <a name="intended-audience"></a>Destinatarios
 
 Los tutoriales están dirigidos a desarrolladores de ASP.NET que trabajan en entornos en los que:
 

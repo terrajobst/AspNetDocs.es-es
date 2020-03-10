@@ -1,23 +1,23 @@
 ---
 uid: web-forms/overview/getting-started/getting-started-with-aspnet-45-web-forms/index
-title: Introducción a ASP.NET 4.5 Web Forms y Visual Studio 2013 | Microsoft Docs
+title: Introducción con formularios Web Forms de ASP.NET 4,5 y Visual Studio 2013 | Microsoft Docs
 author: rick-anderson
-description: Esta serie de tutoriales aprenderá los conceptos básicos de la creación de una aplicación de formularios Web Forms ASP.NET con ASP.NET 4.5 y Visual Studio 2013 Express para Web. A Visua...
+description: Esta serie de tutoriales le enseñará los aspectos básicos de la creación de una aplicación de formularios Web Forms ASP.NET con ASP.NET 4,5 y Visual Studio 2013 Express para Web. A Visua...
 ms.author: riande
 ms.date: 04/09/2012
 ms.assetid: dc6aa59a-9cb0-4a81-b5f3-ec545a0e958d
 msc.legacyurl: /web-forms/overview/getting-started/getting-started-with-aspnet-45-web-forms
 msc.type: chapter
 ms.openlocfilehash: 75ac7d454462a7f7f1e071ce5ee9d892eb329c6f
-ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/06/2019
-ms.locfileid: "65131393"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78461491"
 ---
 # <a name="getting-started-with-aspnet-45-web-forms-and-visual-studio-2013"></a>Introducción a los formularios Web Forms de ASP.NET 4.5 y Visual Studio 2013
 
-> Esta serie de tutoriales aprenderá los conceptos básicos de la creación de una aplicación de formularios Web Forms ASP.NET con ASP.NET 4.5 y Microsoft Visual Studio Express 2013 para Web. Un proyecto de Visual Studio 2013 con código fuente de C# está disponible para acompañar esta serie de tutoriales.
+> Esta serie de tutoriales le enseñará los aspectos básicos de la creación de una aplicación de formularios Web Forms ASP.NET con ASP.NET 4,5 y Microsoft Visual Studio Express 2013 para Web. Hay disponible un proyecto C# de Visual Studio 2013 con código fuente para acompañar esta serie de tutoriales.
 
 - [Introducción a los formularios Web Forms y Visual Studio](introduction-and-overview.md)
 - [Crear el proyecto](create-the-project.md)

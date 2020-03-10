@@ -9,11 +9,11 @@ ms.assetid: 75af2e17-6ed3-4d24-8ea1-bc340027c318
 msc.legacyurl: /single-page-application/overview/templates/hottowel-template
 msc.type: authoredcontent
 ms.openlocfilehash: eeab69e75546791978bb09d7823d95caf9dca1a0
-ms.sourcegitcommit: e365196c75ce93cd8967412b1cfdc27121816110
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/07/2020
-ms.locfileid: "77075065"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78467143"
 ---
 # <a name="hot-towel-template"></a>Plantilla de Hot Towel
 
@@ -43,9 +43,9 @@ El formato de WebPhone SPA proporciona una carpeta de aplicación que contiene l
 Dentro de la carpeta de la aplicación:
 
 - Durandal
-- services
+- servicios
 - ViewModels
-- views
+- vistas
 
 La carpeta de la aplicación contiene una colección de módulos. Estos módulos encapsulan la funcionalidad y declaran las dependencias en otros módulos. La carpeta views contiene el código HTML de la aplicación y la carpeta ViewModels contiene la lógica de presentación para las vistas (un patrón MVVM común). La carpeta servicios es ideal para alojar cualquier servicio común que la aplicación pueda necesitar, como la recuperación de datos HTTP o la interacción del almacenamiento local. Es común que varios ViewModels vuelvan a usar el código de los módulos de servicio.
 

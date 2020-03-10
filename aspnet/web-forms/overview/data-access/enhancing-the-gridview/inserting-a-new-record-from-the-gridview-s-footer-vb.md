@@ -9,11 +9,11 @@ ms.assetid: 528acc48-f20c-4b4e-aa16-4cc02f068ebb
 msc.legacyurl: /web-forms/overview/data-access/enhancing-the-gridview/inserting-a-new-record-from-the-gridview-s-footer-vb
 msc.type: authoredcontent
 ms.openlocfilehash: 67ef370a90bc843f5c2da80bb43c8ef8de216b51
-ms.sourcegitcommit: 22fbd8863672c4ad6693b8388ad5c8e753fb41a2
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/28/2019
-ms.locfileid: "74631750"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78477415"
 ---
 # <a name="inserting-a-new-record-from-the-gridviews-footer-vb"></a>Insertar un nuevo registro desde el pie de página de GridView (VB)
 

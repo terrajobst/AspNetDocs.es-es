@@ -9,11 +9,11 @@ ms.assetid: a2f1c635-0817-4a9a-8c13-d5b5d29727c0
 msc.legacyurl: /web-forms/overview/getting-started/creating-a-basic-web-forms-page
 msc.type: authoredcontent
 ms.openlocfilehash: 5d13a51128eecd92a82cfd06054448582a348e11
-ms.sourcegitcommit: 84b1681d4e6253e30468c8df8a09fe03beea9309
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/02/2019
-ms.locfileid: "73445684"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78511081"
 ---
 # <a name="using-visual-studio-2013-to-create-a-basic-aspnet-45-web-forms-page"></a>Uso de Visual Studio 2013 para crear una página de formularios Web Forms básica de ASP.NET 4,5
 
@@ -58,11 +58,11 @@ En esta parte del tutorial, creará un proyecto de aplicación web y le agregar�
 
     Aparecerá el cuadro de diálogo **Nuevo proyecto** .
 3. Seleccione el grupo **plantillas -&gt;**  **C# visual** -&gt; plantillas **Web** de la izquierda.
-4. Elija la plantilla **aplicación Web ASP.net** en la columna central.
+4. Elija la plantilla **Aplicación web ASP.NET** en la columna central.
 5. Asigne al proyecto el nombre ***BasicWebApp*** y haga clic en el botón **Aceptar** .   
-![cuadro de diálogo nuevo proyecto](creating-a-basic-web-forms-page/_static/image2.png)
+![Cuadro de diálogo Nuevo proyecto](creating-a-basic-web-forms-page/_static/image2.png)
 6. A continuación, seleccione la plantilla de **formularios Web Forms** y haga clic en el botón **Aceptar** para crear el proyecto.  
-![cuadro de diálogo nuevo proyecto de ASP.NET](creating-a-basic-web-forms-page/_static/image3.png)  
+![Cuadro de diálogo New ASP.NET Project](creating-a-basic-web-forms-page/_static/image3.png)  
 
     Visual Studio crea un nuevo proyecto que incluye funcionalidad pregenerada basada en la plantilla de formularios Web Forms. No solo proporciona una página *Home. aspx* , una página *About. aspx* , una página *Contact. aspx* , sino que también incluye funcionalidad de pertenencia que registra usuarios y guarda sus credenciales para que puedan iniciar sesión en su sitio Web. Cuando se crea una nueva página, Visual Studio muestra de forma predeterminada la página en la vista **código fuente** , donde puede ver los elementos HTML de la página. En la ilustración siguiente se muestra lo que se puede ver en la vista **código fuente** si se ha creado una nueva página web denominada *BasicWebApp. aspx*.  
     ![Vista Código fuente](creating-a-basic-web-forms-page/_static/image4.png)
@@ -101,7 +101,7 @@ Cuando se crea una nueva aplicación de formularios Web Forms mediante la planti
 2. En **Explorador de soluciones**, haga clic con el botón secundario en el nombre de la aplicación web (en este tutorial, el nombre de la aplicación es **BasicWebSite**) y, a continuación, haga clic en **Agregar** -&gt; **nuevo elemento**.   
 Se abrirá el cuadro de diálogo **Agregar nuevo elemento**.
 3. Seleccione el grupo plantillas **Web** de **Visual C#**  -&gt; a la izquierda. A continuación, seleccione **Web Forms** en la lista central y asígnele el nombre *FirstWebPage. aspx*.   
-    ![cuadro de diálogo Agregar nuevo elemento](creating-a-basic-web-forms-page/_static/image6.png)
+    ![Cuadro de diálogo Agregar nuevo elemento](creating-a-basic-web-forms-page/_static/image6.png)
 4. Haga clic en **Agregar** para agregar la página web al proyecto.  
 Visual Studio crea la nueva página y la abre.
 
@@ -162,7 +162,7 @@ Tenga en cuenta que es posible que tenga que expandir la ventana **cuadro de her
 
     ![Tres controles en Vista de diseño](creating-a-basic-web-forms-page/_static/image9.png "Tres controles de la vista Diseño")
 
-### <a name="setting-control-properties"></a>Establecer propiedades de control
+### <a name="setting-control-properties"></a>Establecer propiedades de controles
 
 Visual Studio ofrece varias maneras de establecer las propiedades de los controles en la página. En esta parte del tutorial, establecerá las propiedades en la vista de **diseño** y la vista de **código fuente** .
 
@@ -180,7 +180,7 @@ Visual Studio ofrece varias maneras de establecer las propiedades de los control
 
     > [!NOTE] 
     > 
-    > Todos los controles están dentro de un elemento **Form** , que también tiene el atributo **runat =&quot;Server&quot;** . El atributo **runat =&quot;server&quot;** y el prefijo **asp:** para las etiquetas de control marcan los controles para que los procese ASP.net en el servidor cuando se ejecuta la página. El código fuera de **&lt;formulario runat =&quot;server&quot;&gt;** y **&lt;script runat =&quot;Server**&quot;&gt;elementos se envía sin cambios al explorador, por lo que el código de ASP.net debe estar dentro de un elemento. cuya etiqueta de apertura contiene el atributo **runat =&quot;server&quot;** .
+    > Todos los controles están dentro de un elemento **Form** , que también tiene el atributo **runat =&quot;Server&quot;** . El atributo **runat =&quot;server&quot;** y el prefijo **asp:** para las etiquetas de control marcan los controles para que los procese ASP.net en el servidor cuando se ejecuta la página. El código fuera de **&lt;formulario runat =&quot;server&quot;&gt;** y **&lt;script runat =&quot;Server**&quot;&gt;elementos se envía sin cambios al explorador, por lo que el código ASP.net debe estar dentro de un elemento cuya etiqueta de apertura contenga el atributo **&quot;del servidor runat =&quot;** .
 4. A continuación, agregará una propiedad adicional al control [etiqueta](https://msdn.microsoft.com/library/system.web.ui.webcontrols.label.aspx) . Coloque el punto de inserción directamente después de **asp: etiqueta** en la etiqueta **&lt;asp: Label&gt;** y presione la **barra espaciadora**.
 
     Aparece una lista desplegable que muestra la lista de propiedades disponibles que puede establecer para un control [etiqueta](https://msdn.microsoft.com/library/system.web.ui.webcontrols.label.aspx) . Esta característica, denominada **IntelliSense**, le ayuda en la vista **código fuente** con la sintaxis de los controles de servidor, los elementos HTML y otros elementos de la página. En la ilustración siguiente se muestra la lista desplegable **IntelliSense** para el control [etiqueta](https://msdn.microsoft.com/library/system.web.ui.webcontrols.label.aspx) .

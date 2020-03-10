@@ -9,11 +9,11 @@ ms.assetid: 81ee500f-fc37-40d6-8722-f1b64720fbb6
 msc.legacyurl: /mvc/overview/security/create-an-aspnet-mvc-5-app-with-facebook-and-google-oauth2-and-openid-sign-on
 msc.type: authoredcontent
 ms.openlocfilehash: dd2e55d68ceb5a90134e394c00f3a3a231cb27d6
-ms.sourcegitcommit: 7709c0a091b8d55b7b33bad8849f7b66b23c3d72
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/19/2020
-ms.locfileid: "77457692"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78456511"
 ---
 # <a name="create-an-aspnet-mvc-5-app-with-facebook-twitter-linkedin-and-google-oauth2-sign-on-c"></a>Crear una aplicación de ASP.NET MVC 5 con el inicio de sesión OAuth2 de Facebook, Twitter, LinkedIn y Google (C#)
 
@@ -148,7 +148,7 @@ Para conectarse a proveedores de autenticación como Google y Facebook, tendrá 
 11. Una vez que haya proporcionado sus credenciales, el sistema le pedirá que le dé permisos a la aplicación web que acaba de crear:
   
     ![](create-an-aspnet-mvc-5-app-with-facebook-and-google-oauth2-and-openid-sign-on/_static/image20.png)
-12. Haga clic en **Aceptar**. Ahora se le redirigirá a la página de **registro** de la aplicación MvcAuth donde puede registrar su cuenta de Google. Tiene la opción de cambiar el nombre de registro de correo electrónico local que usa para su cuenta de Gmail, pero suele ser más práctico mantener el mismo alias de correo electrónico predeterminado (es decir, el que usó para la autenticación). Haga clic en **Registrar**.  
+12. Haga clic en **Aceptar**. Ahora se le redirigirá a la página de **registro** de la aplicación MvcAuth donde puede registrar su cuenta de Google. Tiene la opción de cambiar el nombre de registro de correo electrónico local que usa para su cuenta de Gmail, pero suele ser más práctico mantener el mismo alias de correo electrónico predeterminado (es decir, el que usó para la autenticación). Haga clic en **Registrarse**.  
   
     ![](create-an-aspnet-mvc-5-app-with-facebook-and-google-oauth2-and-openid-sign-on/_static/image21.png)
 

@@ -1,36 +1,36 @@
 ---
 uid: web-pages/overview/performance-and-traffic/15-caching-to-improve-the-performance-of-your-website
-title: Almacenamiento en caché de datos en ASP.NET Web Pages (Razor) sitio para mejorar el rendimiento | Microsoft Docs
+title: Almacenamiento en caché de datos en un sitio ASP.NET Web Pages (Razor) para mejorar el rendimiento | Microsoft Docs
 author: Rick-Anderson
-description: 'Puede acelerar su sitio Web al tener almacenar: es decir, caché, los resultados de datos que normalmente tardará bastante tiempo en recuperar o procesar un...'
+description: Puede acelerar el sitio web si lo almacena, es decir, almacenar en caché los resultados de los datos que, normalmente, tardarán un tiempo considerable en recuperar o procesar...
 ms.author: riande
 ms.date: 02/14/2014
 ms.assetid: 961e525b-7700-469e-8a68-d7010b6fb68c
 msc.legacyurl: /web-pages/overview/performance-and-traffic/15-caching-to-improve-the-performance-of-your-website
 msc.type: authoredcontent
 ms.openlocfilehash: 01796d3ca699a6af5d9162b22a926551435c2040
-ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/06/2019
-ms.locfileid: "65134590"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78521161"
 ---
-# <a name="caching-data-in-an-aspnet-web-pages-razor-site-for-better-performance"></a>Para mejorar el rendimiento de almacenamiento en caché datos en un sitio Web de ASP.NET Pages (Razor)
+# <a name="caching-data-in-an-aspnet-web-pages-razor-site-for-better-performance"></a>Almacenamiento en caché de datos en un sitio ASP.NET Web Pages (Razor) para mejorar el rendimiento
 
 por [Tom FitzMacken](https://github.com/tfitzmac)
 
-> En este artículo se explica cómo usar una aplicación auxiliar de la información en caché para mejorar el rendimiento en un sitio Web de ASP.NET Web Pages (Razor). Puede acelerar su sitio Web al tener almacenar &#8212; es decir, almacenar en caché &#8212; los resultados de los datos que normalmente podría tardar bastante tiempo en recuperar ni procesar y que no cambian con frecuencia.
+> En este artículo se explica cómo usar una aplicación auxiliar para almacenar en caché información para obtener un rendimiento más rápido en un sitio web de ASP.NET Web Pages (Razor). Puede acelerar el sitio web porque lo almacena &#8212; , almacenar en caché &#8212; los resultados de los datos que normalmente tardarían un tiempo considerable en recuperarse o procesarse y que no cambian a menudo.
 > 
 > **Lo que aprenderá:** 
 > 
 > - Cómo usar el almacenamiento en caché para mejorar la capacidad de respuesta de su sitio Web.
 > 
-> Estas son las características ASP.NET incorporadas en el artículo:
+> Estas son las características de ASP.NET presentadas en el artículo:
 > 
-> - El `WebCache` auxiliar.
+> - Aplicación auxiliar de `WebCache`.
 >   
 > 
-> ## <a name="software-versions-used-in-the-tutorial"></a>Versiones de software que se usa en el tutorial
+> ## <a name="software-versions-used-in-the-tutorial"></a>Versiones de software usadas en el tutorial
 > 
 > 
 > - ASP.NET Web Pages (Razor) 3
@@ -38,43 +38,43 @@ por [Tom FitzMacken](https://github.com/tfitzmac)
 > 
 > Este tutorial también funciona con ASP.NET Web Pages 2.
 
-Cada vez que un usuario solicita una página del sitio, el servidor web tiene que realizar algún trabajo con el fin de satisfacer la solicitud. Algunos de sus páginas, el servidor podría tener que realizar las tareas que toman (relativamente) mucho tiempo, como la recuperación de datos desde una base de datos. Incluso si estas tareas no tardan tiempo en términos absolutos, si su sitio experimenta una gran cantidad de tráfico, puede agregar una serie completa de las solicitudes individuales que hacer que el servidor web realizar la tarea complicada o lenta hasta una gran cantidad de trabajo. En última instancia, esto puede afectar al rendimiento del sitio.
+Cada vez que alguien solicita una página de su sitio, el servidor Web tiene que hacer algún trabajo para completar la solicitud. En algunas de las páginas, es posible que el servidor tenga que realizar tareas que tarden un período de tiempo (comparativamente), como la recuperación de datos de una base de datos. Incluso si estas tareas no tardan mucho en términos absolutos, si el sitio experimenta una gran cantidad de tráfico, toda una serie de solicitudes individuales que hacen que el servidor Web realice la tarea complicada o lenta puede Agregar un gran número de trabajo. En última instancia, esto puede afectar al rendimiento del sitio.
 
-Es una manera de mejorar el rendimiento de su sitio Web en casos como este en caché los datos. Si su sitio obtiene repetir las solicitudes de la misma información y la información no deben modificarse para cada persona y no es tiempo confidencial, en lugar de volver a capturar o volver a calcularse, puede capturar los datos una vez y, a continuación, almacenar los resultados. La próxima vez que llega una solicitud para que obtener información, simplemente obtenerlo fuera de la memoria caché.
+Una manera de mejorar el rendimiento de su sitio web en circunstancias como esta es almacenar los datos en caché. Si el sitio obtiene solicitudes repetidas para la misma información y no es necesario modificar la información para cada persona, y no es sensible a la hora, en lugar de volver a obtenerla o recalcularla, puede capturar los datos una vez y, después, almacenar los resultados. La próxima vez que llegue una solicitud para esa información, solo tendrá que salir de la memoria caché.
 
-En general, se almacenan en caché información que no cambia con frecuencia. Al colocar información en la memoria caché, se almacena en memoria en el servidor web. Puede especificar cuánto tiempo se deben almacenarse en caché, de segundos a días. Cuando expira el período de almacenamiento en caché, se quita automáticamente la información de la memoria caché.
+En general, se almacena en caché información que no cambia con frecuencia. Cuando se coloca información en la memoria caché, se almacena en memoria en el servidor Web. Puede especificar cuánto tiempo se debe almacenar en caché, de segundos a días. Cuando expire el período de almacenamiento en caché, la información se quitará automáticamente de la memoria caché.
 
 > [!NOTE]
-> Las entradas de la memoria caché podrían quitarse por motivos de distinto que han caducado. Por ejemplo, el servidor web podría temporalmente quede sin memoria y una manera de reclamar la memoria es generando entradas de la memoria caché. Como verá, incluso si ha poner información en la caché, tendrá que comprobar para asegurarse de que sigue ahí es cuando los necesite.
+> Es posible que se quiten las entradas de la memoria caché por motivos distintos de los que han expirado. Por ejemplo, el servidor Web podría quedarse sin memoria temporalmente y una forma de recuperar memoria es producir entradas fuera de la memoria caché. Como podrá ver, incluso si ha colocado información en la memoria caché, tendrá que comprobar que todavía está allí cuando la necesite.
 
-Imagine que su sitio Web tiene una página que muestra la temperatura actual y la previsión meteorológica. Para obtener este tipo de información, puede enviar una solicitud a un servicio externo. Puesto que esta información no cambia mucho (dentro de un período de tiempo de dos horas, por ejemplo) y ya que las llamadas externas requieren tiempo y ancho de banda, es un buen candidato para almacenar en caché.
+Imagine que su sitio web tiene una página que muestra la temperatura actual y la previsión meteorológica. Para obtener este tipo de información, puede enviar una solicitud a un servicio externo. Puesto que esta información no cambia mucho (en un período de dos horas, por ejemplo) y dado que las llamadas externas requieren tiempo y ancho de banda, es un buen candidato para el almacenamiento en caché.
 
 ## <a name="adding-caching-to-a-page"></a>Agregar almacenamiento en caché a una página
 
-ASP.NET incluye un `WebCache` auxiliar que facilita agregar almacenamiento en caché a su sitio y agregar datos a la memoria caché. En este procedimiento, creará una página que almacena en caché la hora actual. Esto no es un ejemplo del mundo real, ya que la hora actual es algo que cambian con frecuencia, y que no es más difícil de calcular. Sin embargo, es una buena manera de ilustrar el almacenamiento en caché en acción.
+ASP.NET incluye una aplicación auxiliar `WebCache` que facilita la tarea de agregar almacenamiento en caché al sitio y agregar datos a la memoria caché. En este procedimiento, creará una página que almacena en caché la hora actual. No se trata de un ejemplo real, ya que la hora actual es algo que cambia a menudo y que, además, no es complejo de calcular. Sin embargo, es una buena manera de ilustrar el almacenamiento en caché en acción.
 
-1. Agregar una nueva página denominada *WebCache.cshtml* al sitio Web.
-2. Agregue el código y el marcado siguiente a la página:
+1. Agregue una nueva página denominada *webcache. cshtml* al sitio Web.
+2. Agregue el código y el marcado siguientes a la página:
 
     [!code-cshtml[Main](15-caching-to-improve-the-performance-of-your-website/samples/sample1.cshtml)]
 
-    Al almacenar en caché datos, colocarlo en la caché mediante un nombre de esto es único en el sitio Web. En este caso, usará una entrada de caché denominada `CachedTime`. Se trata de la `cacheItemKey` se muestra en el ejemplo de código.
+    Al almacenar datos en caché, se coloca en la memoria caché con un nombre que es único en todo el sitio Web. En este caso, usará una entrada de caché denominada `CachedTime`. Este es el `cacheItemKey` que se muestra en el ejemplo de código.
 
-    El código lee primero el `CachedTime` entrada de caché. Si se devuelve un valor (es decir, si la entrada de caché no es null), el código simplemente establece el valor de la variable de tiempo a los datos de la memoria caché.
+    En primer lugar, el código lee la entrada de caché de `CachedTime`. Si se devuelve un valor (es decir, si la entrada de la caché no es null), el código simplemente establece el valor de la variable de tiempo en los datos de la memoria caché.
 
-    Sin embargo, si no existe la entrada de caché (es decir, es null), el código establece el valor de tiempo, lo agrega a la memoria caché y establece un valor de expiración a un minuto. Después de un minuto, se descarta la entrada de caché. (El valor de expiración predeterminado para un elemento en la memoria caché es 20 minutos). El comando `WebCache.Set(cacheItemKey, time, 1, false)` muestra cómo agregar el valor de tiempo actual a la memoria caché y establece la fecha de expiración en 1 minuto. Establecer el *slidingExpiration* parámetro `false` significa que la hora de expiración no se renueva cada vez que se solicita. Fecha de vencimiento exactamente 1 minuto después de que se agregó originalmente a la memoria caché. Si establece este valor en `true` la hora de expiración de 1 minuto se restablece cada vez que se solicita el valor de la memoria caché.
+    Sin embargo, si la entrada de caché no existe (es decir, es null), el código establece el valor de tiempo, lo agrega a la memoria caché y establece un valor de expiración en un minuto. Después de un minuto, se descarta la entrada de caché. (El valor de expiración predeterminado para un elemento de la memoria caché es de 20 minutos). El comando `WebCache.Set(cacheItemKey, time, 1, false)` muestra cómo agregar el valor de hora actual a la memoria caché y establecer su expiración en 1 minuto. Establecer el parámetro *SlidingExpiration* en `false` significa que la hora de expiración no se renueva cada vez que se solicita. Expirará exactamente 1 minuto después de que se agregara originalmente a la memoria caché. Si establece este valor en `true` se restablecerá el tiempo de expiración de 1 minuto cada vez que se solicite el valor de la memoria caché.
 
-    Este código muestra el patrón que siempre debe usar cuando almacena datos en caché. Antes de entrar algo fuera de la memoria caché, primero compruebe siempre si la `WebCache.Get` método ha devuelto null. Recuerde que la entrada de caché es posible que han expirado o es posible que se han quitado por algún otro motivo, por lo que nunca se garantiza que cualquier entrada determinada en la memoria caché.
-3. Ejecute *WebCache.cshtml* en un explorador. (Asegúrese de que la página está seleccionada en el **archivos** área de trabajo antes de ejecutarlo.) La primera vez que solicite la página, los datos de tiempo no se están en la memoria caché y el código tiene que agregar el valor de hora a la memoria caché.
+    Este código muestra el patrón que se debe usar siempre al almacenar datos en caché. Antes de sacar algo de la memoria caché, compruebe siempre si el método `WebCache.Get` ha devuelto null. Recuerde que es posible que la entrada de caché haya expirado o que se haya quitado por algún otro motivo, por lo que nunca se garantiza que una entrada determinada esté en la memoria caché.
+3. Ejecute *webcache. cshtml* en un explorador. (Asegúrese de que la página esté seleccionada en el área de trabajo **archivos** antes de ejecutarla). La primera vez que se solicita la página, los datos de hora no están en la memoria caché y el código tiene que agregar el valor de tiempo a la memoria caché.
 
     ![cache-1](15-caching-to-improve-the-performance-of-your-website/_static/image1.jpg)
-4. Actualizar *WebCache.cshtml* en el explorador. Esta vez, los datos de tiempo están en la memoria caché. Tenga en cuenta que el tiempo no ha cambiado desde la última vez que se vio la página.
+4. Actualice *webcache. cshtml* en el explorador. Esta vez, los datos de hora están en la memoria caché. Tenga en cuenta que la hora no ha cambiado desde la última vez que vio la página.
 
     ![cache-2](15-caching-to-improve-the-performance-of-your-website/_static/image2.jpg)
-5. Espere un minuto para que se puede vaciar la caché y, a continuación, actualice la página. La página nuevo indica que los datos de tiempo no se encontraron en la memoria caché y la hora de actualización se agrega a la memoria caché.
+5. Espere un minuto para que se vacíe la memoria caché y, a continuación, actualice la página. La página vuelve a indicar que los datos de hora no se encontraron en la memoria caché y la hora actualizada se agrega a la caché.
 
 <a id="Additional_Resources"></a>
 ## <a name="additional-resources"></a>Recursos adicionales
 
 - [Mostrar datos en un gráfico](https://go.microsoft.com/fwlink/?LinkId=202895)
-- [Referencia de API WebCache](https://msdn.microsoft.com/library/system.web.helpers.webcache(v=vs.99).aspx) (MSDN)
+- [Referencia de API de webcache](https://msdn.microsoft.com/library/system.web.helpers.webcache(v=vs.99).aspx) (MSDN)

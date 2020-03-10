@@ -9,11 +9,11 @@ ms.assetid: eb32a17b-626c-4373-9a7d-3387992f3c04
 msc.legacyurl: /web-api/overview/older-versions/using-web-api-1-with-entity-framework-5/using-web-api-with-entity-framework-part-7
 msc.type: authoredcontent
 ms.openlocfilehash: fe4074c701159a137be3644d65ca844f160c2399
-ms.sourcegitcommit: 22fbd8863672c4ad6693b8388ad5c8e753fb41a2
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/28/2019
-ms.locfileid: "74599986"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78484453"
 ---
 # <a name="part-7-creating-the-main-page"></a>Parte 7: creación de la Página principal
 

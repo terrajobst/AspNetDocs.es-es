@@ -9,11 +9,11 @@ ms.assetid: cfe2a6a0-1e56-4dc8-9537-c8ec76ba96a4
 msc.legacyurl: /web-forms/overview/data-access/introduction/creating-a-data-access-layer-cs
 msc.type: authoredcontent
 ms.openlocfilehash: 5aaf97dc8448dcb7b94ef2e4e23f34fd37ac4426
-ms.sourcegitcommit: 6f0e10e4ca61a1e5534b09c655fd35cdc6886c8a
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/15/2019
-ms.locfileid: "74115135"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78489907"
 ---
 # <a name="creating-a-data-access-layer-c"></a>Crear una capa de acceso a datos (C#)
 
@@ -168,7 +168,7 @@ Este código no nos requirió escribir un bit de código específico de acceso a
 
 Cada objeto que se usa en este ejemplo también es fuertemente tipado, lo que permite que Visual Studio proporcione IntelliSense y la comprobación de tipos en tiempo de compilación. Y lo mejor de todos los objetos DataTable devueltos por TableAdapter se pueden enlazar a controles Web de datos de ASP.NET, como GridView, DetailsView, DropDownList, CheckBoxList y otros muchos. En el ejemplo siguiente se muestra cómo enlazar la DataTable devuelta por el método **GetProducts ()** a un control GridView en una sola exploraciones de tres líneas de código dentro de la **Página\_** controlador de eventos de carga.
 
-AllProducts. aspx
+AllProducts.aspx
 
 [!code-aspx[Main](creating-a-data-access-layer-cs/samples/sample2.aspx)]
 
@@ -226,7 +226,7 @@ Estas consultas con parámetros se pueden probar directamente desde el diseñado
 
 Con el método **GetProductsByCategoryID (*CategoryID*)** de la capa Dal, ahora podemos crear una página ASP.net que muestra solo los productos de una categoría especificada. En el ejemplo siguiente se muestran todos los productos que se encuentran en la categoría Beverages, que tienen un **CategoryID** de 1.
 
-Beverages. asp
+Beverages.asp
 
 [!code-aspx[Main](creating-a-data-access-layer-cs/samples/sample4.aspx)]
 
@@ -422,7 +422,7 @@ Estos datos también se pueden mostrar en cualquiera de las páginas ASP. Contro
 
 Examinaremos cómo mostrar estos informes maestros y detallados en futuros tutoriales. Por ahora, este ejemplo está diseñado para ilustrar el uso del método personalizado agregado a la clase **Northwind. SuppliersRow** .
 
-SuppliersAndProducts. aspx
+SuppliersAndProducts.aspx
 
 [!code-aspx[Main](creating-a-data-access-layer-cs/samples/sample24.aspx)]
 

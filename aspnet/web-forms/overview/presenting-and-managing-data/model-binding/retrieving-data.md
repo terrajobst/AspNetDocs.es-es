@@ -9,11 +9,11 @@ ms.assetid: 9f24fb82-c7ac-48da-b8e2-51b3da17e365
 msc.legacyurl: /web-forms/overview/presenting-and-managing-data/model-binding/retrieving-data
 msc.type: authoredcontent
 ms.openlocfilehash: 81cca22cb4752d071d2a68986ae9ac2bed737594
-ms.sourcegitcommit: 22fbd8863672c4ad6693b8388ad5c8e753fb41a2
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/28/2019
-ms.locfileid: "74633172"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78520027"
 ---
 # <a name="retrieving-and-displaying-data-with-model-binding-and-web-forms"></a>Recuperar y Mostrar datos con el enlace de modelos y formularios Web Forms
 
@@ -47,7 +47,7 @@ En este tutorial, hará lo siguiente:
 
 1. En Visual Studio 2017, cree un proyecto de **aplicación Web de ASP.net (.NET Framework)** denominado **ContosoUniversityModelBinding**.
 
-   ![crear proyecto](retrieving-data/_static/image19.png)
+   ![creación de proyecto](retrieving-data/_static/image19.png)
 
 2. Seleccione **Aceptar**. Aparece el cuadro de diálogo para seleccionar una plantilla.
 
@@ -121,7 +121,7 @@ En la carpeta **Models** , agregue una clase denominada **UniversityModels.CS**.
 
 En este tutorial se usa [migraciones de Code First](https://docs.microsoft.com/ef/ef6/modeling/code-first/migrations/) para crear objetos y tablas de base de datos. Estas tablas almacenan información acerca de los estudiantes y sus cursos.
 
-   1. Seleccione **herramientas** > **Administrador de paquetes NuGet** > **consola del administrador de paquetes**.
+   1. Seleccione **Herramientas** > **Administrador de paquetes NuGet** > **Consola del Administrador de paquetes**.
 
    2. En la **consola del administrador de paquetes**, ejecute este comando:  
       `enable-migrations -ContextTypeName ContosoUniversityModelBinding.Models.SchoolContext`
@@ -158,7 +158,7 @@ Con datos de base de datos rellenados, ahora está listo para recuperar los dato
 
    [!code-aspx-csharp[Main](retrieving-data/samples/sample6.aspx)]
 
-   Aspectos que se deben tener en cuenta:
+   Cosas que hay que tener en cuenta:
    * Observe el valor establecido para la propiedad `SelectMethod` en el elemento GridView. Este valor especifica el método usado para recuperar los datos de GridView, que se crean en el paso siguiente. 
    
    * La propiedad `ItemType` se establece en la clase `Student` creada anteriormente. Esta configuración le permite hacer referencia a las propiedades de clase en el marcado. Por ejemplo, la clase `Student` tiene una colección denominada `Enrollments`. Puede usar `Item.Enrollments` para recuperar esa colección y, a continuación, utilizar la [Sintaxis de LINQ](https://docs.microsoft.com/dotnet/csharp/programming-guide/concepts/linq/query-syntax-and-method-syntax-in-linq) para recuperar la suma de los créditos inscritos de cada estudiante.
@@ -187,7 +187,7 @@ Con datos de base de datos rellenados, ahora está listo para recuperar los dato
  
    4. Guarde Students.aspx.cs.
 
-## <a name="run-your-application"></a>Ejecutar la aplicación 
+## <a name="run-your-application"></a>Ejecución de la aplicación 
 
 Ejecute la aplicación web (**F5**) y vaya a la página **Students** , que muestra lo siguiente:
 

@@ -9,11 +9,11 @@ ms.assetid: 3f42edd9-c5b8-4712-9055-970f7d38e350
 msc.legacyurl: /mvc/overview/older-versions/getting-started-with-aspnet-mvc3/cs/improving-the-details-and-delete-methods
 msc.type: authoredcontent
 ms.openlocfilehash: 54d7be8fe1bff604ae9c9e9914d7c6426ab85c1c
-ms.sourcegitcommit: 7709c0a091b8d55b7b33bad8849f7b66b23c3d72
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/19/2020
-ms.locfileid: "77457510"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78498709"
 ---
 # <a name="improving-the-details-and-delete-methods-c"></a>Mejorar los métodos Details y Delete (C#)
 
@@ -79,7 +79,7 @@ Si desea implementar la aplicación, es útil probar primero la aplicación en e
 
 Ahora le animamos a pasar a nuestro nivel intermedio creación de [un modelo de datos Entity Framework para una aplicación ASP.NET MVC](../../../getting-started/getting-started-with-ef-using-mvc/creating-an-entity-framework-data-model-for-an-asp-net-mvc-application.md) y tutoriales de [MVC Music Store](../../mvc-music-store/mvc-music-store-part-1.md) , para explorar los [artículos de ASP.net en MSDN](https://msdn.microsoft.com/library/gg416514(VS.98).aspx)y para consultar los numerosos vídeos y recursos en [https://asp.net/mvc](https://asp.net/mvc) para aprender más sobre ASP.NET MVC. Los [foros de ASP.NET MVC](https://forums.asp.net/1146.aspx) son un excelente lugar para formular preguntas.
 
-¡Disfrute!
+Disfrútelo.
 
 : Scott Hanselman ([http://hanselman.com](http://hanselman.com) y [@shanselman](http://twitter.com/shanselman) en Twitter) y Rick Anderson [blogs.msdn.com/rickAndy](https://blogs.msdn.com/rickAndy)
 

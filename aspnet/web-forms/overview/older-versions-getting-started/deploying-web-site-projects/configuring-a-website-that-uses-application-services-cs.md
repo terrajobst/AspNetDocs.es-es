@@ -9,11 +9,11 @@ ms.assetid: 1e33d1c6-3f9f-4c26-81e2-2a8f8907bb05
 msc.legacyurl: /web-forms/overview/older-versions-getting-started/deploying-web-site-projects/configuring-a-website-that-uses-application-services-cs
 msc.type: authoredcontent
 ms.openlocfilehash: 72aaca84b8c8d6e558d4c946faa57fa999d48bf8
-ms.sourcegitcommit: 22fbd8863672c4ad6693b8388ad5c8e753fb41a2
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/28/2019
-ms.locfileid: "74570190"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78511783"
 ---
 # <a name="configuring-a-website-that-uses-application-services-c"></a>Configurar un sitio web que usa servicios de aplicaciones (C#)
 
@@ -127,7 +127,7 @@ Solo tendrá que usar la herramienta `aspnet_regsql.exe` al implementar la aplic
 
 ### <a name="copying-user-accounts-from-development-to-production"></a>Copia de cuentas de usuario desde el desarrollo hasta el entorno de producción
 
-Al utilizar las clases de proveedor `SqlMembershipProvider` y `SqlRoleProvider` para almacenar la información de servicios de aplicación en una base de datos de SQL Server, la información de la cuenta de usuario y el rol se almacena en diversas tablas de base de datos, como `aspnet_Users`, `aspnet_Membership`, `aspnet_Roles`y `aspnet_UsersInRoles`, entre otros. Si durante el desarrollo crea cuentas de usuario en el entorno de desarrollo, puede replicar esas cuentas de usuario en producción copiando los registros correspondientes de las tablas de base de datos aplicables. Si utilizó el Asistente para la publicación de bases de datos para implementar los objetos de base de datos de servicios de aplicación, puede que también haya elegido copiar los registros, lo que daría lugar a que las cuentas de usuario creadas en desarrollo también estén en producción. Sin embargo, en función de los valores de configuración, es posible que los usuarios cuyas cuentas se crearon en desarrollo y se copien en producción no puedan iniciar sesión en el sitio web de producción. ¿Qué proporciona?
+Al utilizar las clases de proveedor `SqlMembershipProvider` y `SqlRoleProvider` para almacenar la información de servicios de aplicación en una base de datos de SQL Server, la información de la cuenta de usuario y el rol se almacena en diversas tablas de base de datos, como `aspnet_Users`, `aspnet_Membership`, `aspnet_Roles`y `aspnet_UsersInRoles`, entre otros. Si durante el desarrollo crea cuentas de usuario en el entorno de desarrollo, puede replicar esas cuentas de usuario en producción copiando los registros correspondientes de las tablas de base de datos aplicables. Si utilizó el Asistente para la publicación de bases de datos para implementar los objetos de base de datos de servicios de aplicación, puede que también haya elegido copiar los registros, lo que daría lugar a que las cuentas de usuario creadas en desarrollo también estén en producción. Sin embargo, en función de los valores de configuración, es posible que los usuarios cuyas cuentas se crearon en desarrollo y se copien en producción no puedan iniciar sesión en el sitio web de producción. ¿Qué ventajas aporta?
 
 Las clases de proveedor `SqlMembershipProvider` y `SqlRoleProvider` se diseñaron de forma que una sola base de datos podría servir como almacén de usuario para varias aplicaciones, donde cada aplicación podría, en teoría, tener usuarios con nombres de usuario y roles superpuestos con el mismo nombre. Para permitir esta flexibilidad, la base de datos mantiene una lista de aplicaciones en la tabla de `aspnet_Applications` y cada usuario está asociado a una de estas aplicaciones. En concreto, la tabla `aspnet_Users` tiene una columna `ApplicationId` que une cada usuario a un registro de la tabla `aspnet_Applications`.
 

@@ -2,22 +2,22 @@
 uid: web-forms/overview/data-access/caching-data/index
 title: Almacenar datos en caché | Microsoft Docs
 author: rick-anderson
-description: Esta serie de tutoriales explica el almacenamiento en caché, lo que puede mejorar el rendimiento del sitio y cómo aplicar el almacenamiento en caché a la capa de presentación mediante el control ObjectDataSource...
+description: En este tutorial se explica el almacenamiento en caché, que puede mejorar el rendimiento del sitio y cómo aplicar el almacenamiento en caché a la capa de presentación mediante el control ObjectDataSource...
 ms.author: riande
 ms.date: 10/05/2011
 ms.assetid: 7d7ee56c-a867-4777-9407-ec8f73a605a3
 msc.legacyurl: /web-forms/overview/data-access/caching-data
 msc.type: chapter
 ms.openlocfilehash: 3426a83f0b42d40ee57d4eb40abeecde6fac2985
-ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/06/2019
-ms.locfileid: "65109556"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78465631"
 ---
 # <a name="caching-data"></a>Almacenar datos en caché
 
-> Esta serie de tutoriales explica el almacenamiento en caché, lo que puede mejorar el rendimiento del sitio y cómo aplicar el almacenamiento en caché a la capa de presentación mediante el control ObjectDataSource.
+> En este tutorial se explica el almacenamiento en caché, que puede mejorar el rendimiento del sitio y cómo aplicar el almacenamiento en caché a la capa de presentación mediante el control ObjectDataSource.
 
 - [Almacenar datos en caché con ObjectDataSource (C#)](caching-data-with-the-objectdatasource-cs.md)
 - [Almacenar datos en caché en la arquitectura (C#)](caching-data-in-the-architecture-cs.md)

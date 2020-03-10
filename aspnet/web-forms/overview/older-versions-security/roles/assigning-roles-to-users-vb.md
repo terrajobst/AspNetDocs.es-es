@@ -9,11 +9,11 @@ ms.assetid: fd208ee9-69cc-4467-9783-b4e039bdd1d3
 msc.legacyurl: /web-forms/overview/older-versions-security/roles/assigning-roles-to-users-vb
 msc.type: authoredcontent
 ms.openlocfilehash: b53df4494eb0faef7c5e4547c2bf95e5fb071298
-ms.sourcegitcommit: 22fbd8863672c4ad6693b8388ad5c8e753fb41a2
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/28/2019
-ms.locfileid: "74577853"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78507283"
 ---
 # <a name="assigning-roles-to-users-vb"></a>Asignar roles a los usuarios (VB)
 

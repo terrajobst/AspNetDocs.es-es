@@ -9,11 +9,11 @@ ms.assetid: 866a7177-6884-451e-88f4-c934b1dd1af5
 msc.legacyurl: /web-forms/overview/older-versions-getting-started/master-pages/multiple-contentplaceholders-and-default-content-vb
 msc.type: authoredcontent
 ms.openlocfilehash: b71cacb143094dcc5cf483c69c2fcc0f10def51c
-ms.sourcegitcommit: 22fbd8863672c4ad6693b8388ad5c8e753fb41a2
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/28/2019
-ms.locfileid: "74628679"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78461497"
 ---
 # <a name="multiple-contentplaceholders-and-default-content-vb"></a>Varios ContentPlaceHolders y contenido predeterminado (VB)
 

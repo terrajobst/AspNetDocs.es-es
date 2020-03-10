@@ -1,32 +1,32 @@
 ---
 uid: web-pages/overview/mobile/rendering-aspnet-web-pages-sites-for-mobile-devices
-title: Representación ASP.NET Web Pages (Razor) sitios para dispositivos móviles | Microsoft Docs
+title: Sitios de ASP.NET Web Pages de representación (Razor) para dispositivos móviles | Microsoft Docs
 author: Rick-Anderson
-description: 'Este artículo describe cómo crear páginas en un sitio de ASP.NET Web Pages (Razor) que se representará correctamente en los dispositivos móviles. Lo que aprenderá: Cómo se...'
+description: 'En este artículo se describe cómo crear páginas en un sitio de ASP.NET Web Pages (Razor) que se representará correctamente en dispositivos móviles. Qué aprenderá: Cómo...'
 ms.author: riande
 ms.date: 02/17/2014
 ms.assetid: f15ab392-c05e-4269-83bf-7c6d2b8c8ec8
 msc.legacyurl: /web-pages/overview/mobile/rendering-aspnet-web-pages-sites-for-mobile-devices
 msc.type: authoredcontent
 ms.openlocfilehash: c012348d65e48a275cb0e4808fef2a7f31e5fb33
-ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/06/2019
-ms.locfileid: "65133516"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78454357"
 ---
-# <a name="rendering-aspnet-web-pages-razor-sites-for-mobile-devices"></a>Representar sitios de ASP.NET Web Pages (Razor) para dispositivos móviles
+# <a name="rendering-aspnet-web-pages-razor-sites-for-mobile-devices"></a>Sitios de ASP.NET Web Pages de representación (Razor) para dispositivos móviles
 
 por [Tom FitzMacken](https://github.com/tfitzmac)
 
-> Este artículo describe cómo crear páginas en un sitio de ASP.NET Web Pages (Razor) que se representará correctamente en los dispositivos móviles.
+> En este artículo se describe cómo crear páginas en un sitio de ASP.NET Web Pages (Razor) que se representará correctamente en dispositivos móviles.
 > 
-> Lo que aprenderá:
+> Temas que se abordarán:
 > 
-> - Cómo usar una convención de nomenclatura para especificar que una página está diseñado específicamente para dispositivos móviles.
+> - Cómo usar una Convención de nomenclatura para especificar que una página está diseñada específicamente para dispositivos móviles.
 >   
 > 
-> ## <a name="software-versions-used-in-the-tutorial"></a>Versiones de software que se usa en el tutorial
+> ## <a name="software-versions-used-in-the-tutorial"></a>Versiones de software usadas en el tutorial
 > 
 > 
 > - ASP.NET Web Pages (Razor) 3
@@ -34,25 +34,25 @@ por [Tom FitzMacken](https://github.com/tfitzmac)
 > 
 > Este tutorial también funciona con ASP.NET Web Pages 2.
 
-ASP.NET Web Pages le permite crear pantallas personalizadas para representar el contenido en dispositivos móviles o de otros dispositivos.
+ASP.NET Web Pages le permite crear pantallas personalizadas para representar el contenido en dispositivos móviles o en otros dispositivos.
 
-La manera más sencilla de crear la página específica del dispositivo en un sitio de ASP.NET Web Pages es mediante un patrón de nomenclatura de archivos similar al siguiente: *FileName.Mobile.cshtml*. Puede crear dos versiones de una página (por ejemplo, uno denominado *MyFile.cshtml* y otro llamado *MyFile.Mobile.cshtml*). En tiempo de ejecución, cuando se solicita un dispositivo móvil *MyFile.cshtml*, ASP.NET representa el contenido de *MyFile.Mobile.cshtml*. En caso contrario, *MyFile.cshtml* se representa.
+La manera más sencilla de crear una página específica del dispositivo en un sitio ASP.NET Web Pages es usar un patrón de nomenclatura de archivos como este: *filename. Mobile. cshtml*. Puede crear dos versiones de una página (por ejemplo, una denominada *archivo. cshtml* y otra denominada *archivo. Mobile. cshtml*). En tiempo de ejecución, cuando un dispositivo móvil solicita *archivo. cshtml*, ASP.net representa el contenido de *archivo. Mobile. cshtml*. De lo contrario, se representa el *archivo. cshtml* .
 
-El ejemplo siguiente muestra cómo habilitar la representación de dispositivos móvil mediante la adición de una página de contenido para dispositivos móviles. *Page1.cshtml* contiene contenido además de una barra lateral de navegación. *Page1.Mobile.cshtml* contiene el mismo contenido, pero omite la barra lateral.
+En el ejemplo siguiente se muestra cómo habilitar la representación móvil mediante la adición de una página de contenido para dispositivos móviles. *Página1. cshtml* contiene contenido más una barra lateral de navegación. *Page1. Mobile. cshtml* contiene el mismo contenido, pero omite la barra lateral.
 
-1. En un sitio de ASP.NET Web Pages, cree un archivo denominado *Page1.cshtml* y reemplace el contenido actual por el marcado siguiente.
+1. En un sitio de ASP.NET Web Pages, cree un archivo denominado *Page1. cshtml* y reemplace el contenido actual por el marcado siguiente.
 
     [!code-html[Main](rendering-aspnet-web-pages-sites-for-mobile-devices/samples/sample1.html)]
-2. Cree un archivo denominado *Page1.Mobile.cshtml* y reemplace el contenido existente por el marcado siguiente. Tenga en cuenta que la versión móvil de la página omite la sección de exploración para representar mejor en una pantalla más pequeña.
+2. Cree un archivo denominado *Page1. Mobile. cshtml* y reemplace el contenido existente por el marcado siguiente. Tenga en cuenta que la versión móvil de la página omite la sección de navegación para una mejor representación en una pantalla más pequeña.
 
     [!code-html[Main](rendering-aspnet-web-pages-sites-for-mobile-devices/samples/sample2.html)]
-3. Ejecute un explorador de escritorio y vaya a *Page1.cshtml*. ![mobilesites-1](rendering-aspnet-web-pages-sites-for-mobile-devices/_static/image1.png)
-4. Ejecute un explorador móvil (o un emulador de dispositivos móviles) y vaya a *Page1.cshtml*. (Tenga en cuenta que no incluye *.mobile.* como parte de la dirección URL). Aunque la solicitud es *Page1.cshtml*, ASP.NET representa *Page1.Mobile.cshtml*.
+3. Ejecute un explorador de escritorio y vaya a *página1. cshtml*. ![mobilesites-1](rendering-aspnet-web-pages-sites-for-mobile-devices/_static/image1.png)
+4. Ejecute un explorador móvil (o un emulador de dispositivos móviles) y vaya a *página1. cshtml*. (Tenga en cuenta que no incluye *. Mobile.* como parte de la dirección URL). Aunque la solicitud es a *Page1. cshtml*, ASP.net representa *página1. Mobile. cshtml*.
 
     ![mobilesites-2](rendering-aspnet-web-pages-sites-for-mobile-devices/_static/image2.png)
 
 > [!NOTE]
-> Para probar las páginas móviles, puede usar un simulador de dispositivos móviles que se ejecuta en un equipo de escritorio. Esta herramienta le permite probar las páginas web tal como aparecen en los dispositivos móviles (es decir, normalmente con mucho menor Mostrar área). Un ejemplo de un simulador es el [complemento modificador del agente de usuario](http://addons.mozilla.org/firefox/addon/user-agent-switcher/) para Mozilla Firefox, que le permite emular varios exploradores móviles desde una versión de escritorio de Firefox.
+> Para probar páginas móviles, puede usar un simulador de dispositivos móviles que se ejecute en un equipo de escritorio. Esta herramienta le permite probar las páginas web tal y como se verían en los dispositivos móviles (es decir, normalmente con un área de visualización mucho más pequeña). Un ejemplo de un simulador es el [complemento de conmutador de agente de usuario](http://addons.mozilla.org/firefox/addon/user-agent-switcher/) para Mozilla Firefox, que permite emular varios exploradores móviles desde una versión de escritorio de Firefox.
 
 <a id="Additional_Resources"></a>
 ## <a name="additional-resources"></a>Recursos adicionales

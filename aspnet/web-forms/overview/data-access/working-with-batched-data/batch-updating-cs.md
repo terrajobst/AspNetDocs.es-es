@@ -9,11 +9,11 @@ ms.assetid: 4e849bcc-c557-4bc3-937e-f7453ee87265
 msc.legacyurl: /web-forms/overview/data-access/working-with-batched-data/batch-updating-cs
 msc.type: authoredcontent
 ms.openlocfilehash: baaaf37c47cc57d90ea579a5c20949bf8cfc7a3c
-ms.sourcegitcommit: 22fbd8863672c4ad6693b8388ad5c8e753fb41a2
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/28/2019
-ms.locfileid: "74583392"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78476407"
 ---
 # <a name="batch-updating-c"></a>Actualización por lotes (C#)
 

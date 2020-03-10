@@ -9,11 +9,11 @@ ms.assetid: 0bbf7a6e-d7eb-4091-91e4-fff892777f32
 msc.legacyurl: /web-forms/overview/getting-started/getting-started-with-aspnet-45-web-forms/create_the_data_access_layer
 msc.type: authoredcontent
 ms.openlocfilehash: 0fcf050474a57be9ed53ec0783a6d6b7dde2bf4c
-ms.sourcegitcommit: 22fbd8863672c4ad6693b8388ad5c8e753fb41a2
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/28/2019
-ms.locfileid: "74575749"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78438379"
 ---
 # <a name="create-the-data-access-layer"></a>Crear la capa de acceso a datos
 
@@ -25,7 +25,7 @@ por [Erik Reitan](https://github.com/Erikre)
 
 En este tutorial se describe cómo crear, obtener acceso y revisar datos de una base de datos de mediante los formularios Web Forms de ASP.NET y Entity Framework Code First. Este tutorial se basa en el tutorial anterior "creación del proyecto" y forma parte de la serie de tutoriales de Wingtip Toy Store. Cuando haya completado este tutorial, habrá creado un grupo de clases de acceso a datos que se encuentran en la carpeta *modelos* del proyecto.
 
-## <a name="what-youll-learn"></a>Lo que aprenderá:
+## <a name="what-youll-learn"></a>Temas que se abordarán:
 
 - Cómo crear los modelos de datos.
 - Cómo inicializar y propagar la base de datos.
@@ -71,7 +71,7 @@ En este tutorial, empezará por agregar clases de entidad simples que representa
 3. Seleccione **clase** en el panel central y asigne a esta nueva clase el nombre *product.CS*.
 4. Haga clic en **Agregar**.  
    El nuevo archivo de clase se muestra en el editor.
-5. Reemplace el código predeterminado por el código siguiente:   
+5. Reemplace el código predeterminado por el siguiente:   
 
     [!code-csharp[Main](create_the_data_access_layer/samples/sample1.cs)]
 6. Cree otra clase repitiendo los pasos 1 a 4; no obstante, asigne a la nueva clase el nombre *Category.CS* y reemplace el código predeterminado por el código siguiente:  
@@ -84,7 +84,7 @@ Como se mencionó anteriormente, la clase `Category` representa el tipo de produ
 
 Es posible que haya observado que determinados miembros de las clases tienen atributos que especifican detalles sobre el miembro, como `[ScaffoldColumn(false)]`. Se trata de *anotaciones de datos*. Los atributos de anotación de datos pueden describir cómo validar los datos proporcionados por el usuario para ese miembro, especificar su formato y especificar cómo se modelan cuando se crea la base de datos.
 
-### <a name="context-class"></a>Context (clase)
+### <a name="context-class"></a>Context (Clase)
 
 Para empezar a usar las clases para el acceso a datos, debe definir una clase de contexto. Como se mencionó anteriormente, la clase de contexto administra las clases de entidad (como la clase `Product` y la clase `Category`) y proporciona acceso a los datos a la base de datos.
 
@@ -178,7 +178,7 @@ En el siguiente tutorial, actualizará la interfaz de usuario, agregará navegac
 [Guía para principiantes sobre el Entity Framework de ADO.NET](https://msdn.microsoft.com/data/ee712907)   
 [Desarrollo de Code First con Entity Framework](http://www.msteched.com/2010/Europe/DEV212) (vídeo)   
 [API fluida de relaciones Code First](https://msdn.microsoft.com/data/hh134698)   
-[Code First de las anotaciones de datos](https://msdn.microsoft.com/data/gg193958)  
+[Anotaciones de datos de Code First](https://msdn.microsoft.com/data/gg193958)  
 [Mejoras de productividad para el Entity Framework](https://blogs.msdn.com/b/efdesign/archive/2010/06/21/productivity-improvements-for-the-entity-framework.aspx?wa=wsignin1.0)
 
 > [!div class="step-by-step"]

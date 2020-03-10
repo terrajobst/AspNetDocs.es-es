@@ -2,18 +2,18 @@
 uid: web-forms/overview/deployment/web-deployment-in-the-enterprise/building-and-packaging-web-application-projects
 title: Compilar y empaquetar proyectos de aplicación Web | Microsoft Docs
 author: jrjlee
-description: Cuando desea implementar un proyecto de aplicación web en un entorno de servidor remoto, la primera tarea consiste en compilar el proyecto y generar una implementación de web paquetes?...
+description: Si desea implementar un proyecto de aplicación web en un entorno de servidor remoto, la primera tarea consiste en compilar el proyecto y generar un paquete de implementación WEBA...
 ms.author: riande
 ms.date: 05/04/2012
 ms.assetid: 94e92f80-a7e3-4d18-9375-ff8be5d666ac
 msc.legacyurl: /web-forms/overview/deployment/web-deployment-in-the-enterprise/building-and-packaging-web-application-projects
 msc.type: authoredcontent
 ms.openlocfilehash: 1d0ee0264ce6461d7b0159f1a44de4de31e2d079
-ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/06/2019
-ms.locfileid: "65114673"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78463231"
 ---
 # <a name="building-and-packaging-web-application-projects"></a>Crear y empaquetar proyectos de aplicación web
 
@@ -21,78 +21,78 @@ por [Jason Lee](https://github.com/jrjlee)
 
 [Descargar PDF](https://msdnshared.blob.core.windows.net/media/MSDNBlogsFS/prod.evol.blogs.msdn.com/CommunityServer.Blogs.Components.WeblogFiles/00/00/00/63/56/8130.DeployingWebAppsInEnterpriseScenarios.pdf)
 
-> Cuando desea implementar un proyecto de aplicación web en un entorno de servidor remoto, la primera tarea es compilar el proyecto y generar un paquete de implementación web. Este tema describe cómo funciona el proceso de compilación para proyectos de aplicación web. En concreto, se explica:
+> Si desea implementar un proyecto de aplicación web en un entorno de servidor remoto, la primera tarea consiste en compilar el proyecto y generar un paquete de implementación web. En este tema se describe cómo funciona el proceso de compilación para los proyectos de aplicación Web. En concreto, se explica lo siguiente:
 > 
-> - Cómo la canalización de publicación de Web (WPP) extiende el proceso de compilación para incluir la funcionalidad de implementación.
-> - Cómo la herramienta de implementación Web de Internet Information Services (IIS) (Web Deploy) convierte la aplicación web en un paquete de implementación.
-> - Cómo la compilación y empaquetado del proceso y qué archivos se crean.
+> - Cómo la canalización de publicación web (WPP) amplía el proceso de compilación para incluir la funcionalidad de implementación.
+> - Cómo la herramienta de implementación web de Internet Information Services (IIS) (Web Deploy) convierte la aplicación web en un paquete de implementación.
+> - Cómo funciona el proceso de compilación y empaquetado y qué archivos se crean.
 
-En Visual Studio 2010, el proceso de compilación e implementación para proyectos de aplicación web es compatible con la WPP. El WPP proporciona un conjunto de destinos de Microsoft Build Engine (MSBuild) que amplían la funcionalidad de MSBuild y habilitarlo para integrarse con Web Deploy. En Visual Studio, puede ver esta funcionalidad ampliada en las páginas de propiedades para el proyecto de aplicación web. El **Empaquetar/Publicar Web** página, junto con el **Empaquetar/publicar SQL** página le permite configurar cómo se empaqueta el proyecto de aplicación web para la implementación cuando se completa el proceso de compilación.
+En Visual Studio 2010, el proceso de compilación e implementación de los proyectos de aplicación web es compatible con WPP. WPP proporciona un conjunto de destinos Microsoft Build Engine (MSBuild) que amplían la funcionalidad de MSBuild y permiten que se integren con Web Deploy. En Visual Studio, puede ver esta funcionalidad extendida en las páginas de propiedades del proyecto de aplicación Web. La página **Web de paquete/publicación** , junto con la página **empaquetar/publicar SQL** , le permite configurar el modo en que se empaquetará el proyecto de aplicación web para la implementación cuando se complete el proceso de compilación.
 
 ![](building-and-packaging-web-application-projects/_static/image1.png)
 
-## <a name="how-does-the-wpp-work"></a>¿Cómo funciona el WPP?
+## <a name="how-does-the-wpp-work"></a>¿Cómo funciona WPP?
 
-Si nos fijamos un en el archivo de proyecto de C#: proyecto de aplicación basada en web, puede ver que importa los archivos .targets dos.
+Si echa un vistazo al archivo de proyecto de un C#proyecto de aplicación web basado en, puede ver que importa dos archivos. targets.
 
 [!code-xml[Main](building-and-packaging-web-application-projects/samples/sample1.xml)]
 
-La primera **importación** instrucción es común a todos los proyectos de Visual C#. Este archivo, *Microsoft.CSharp.targets*, contiene los destinos y tareas que son específicas de Visual C#. Por ejemplo, el compilador de C# (**Csc**) tarea se invoca aquí. El *Microsoft.CSharp.targets* archivo a su vez importa el *Microsoft.Common.targets* archivo. Esto define los destinos que son comunes a todos los proyectos, como **compilar**, **recompilar**, **ejecutar**, **compilar**, y **limpiar** . El segundo **importación** instrucción es específica de proyectos de aplicación web. El *Microsoft.WebApplication.targets* archivo a su vez importa el *Microsoft.Web.Publishing.targets* archivo. El *Microsoft.Web.Publishing.targets* archivo básicamente *es* el WPP. Define los destinos, como **paquete** y **MSDeployPublish**, invocación de Web Deploy para realizar varias tareas de implementación.
+La primera instrucción de **importación** es común a todos C# los proyectos visuales. Este archivo, *Microsoft. CSharp. targets*, contiene los destinos y las tareas que son C#específicas de visual. Por ejemplo, la C# tarea del compilador (**CSC**) se invoca aquí. A su vez, el archivo *Microsoft. CSharp. targets* importa el archivo *Microsoft. Common. targets* . Esto define los destinos comunes a todos los proyectos, como **compilar**, **volver**a generar, **Ejecutar**, **compilar**y **limpiar**. La segunda instrucción **Import** es específica de los proyectos de aplicación Web. A su vez, el archivo *Microsoft. WebApplication. targets* importa el archivo *Microsoft. Web. Publishing. targets* . El archivo *Microsoft. Web. Publishing. targets* básicamente *es* WPP. Define destinos, como **Package** y **MSDeployPublish**, que invocan web deploy para completar varias tareas de implementación.
 
-Para entender cómo se usan estos destinos adicionales, en la solución de ejemplo Contact Manager, abra el *Publish.proj* de archivos y eche un vistazo a la **BuildProjects** destino.
+Para entender cómo se usan estos destinos adicionales, en la solución de ejemplo Contact Manager, abra el archivo *Publish. proj* y eche un vistazo al destino **BuildProjects** .
 
 [!code-xml[Main](building-and-packaging-web-application-projects/samples/sample2.xml)]
 
-Este destino usa la **MSBuild** tareas para compilar varios proyectos. Tenga en cuenta la **DeployOnBuild** y **DeployTarget** propiedades:
+Este destino utiliza la tarea **msbuild** para compilar varios proyectos. Observe las propiedades **DeployOnBuild** y **DeployTarget** :
 
-- El **DeployOnBuild = true** propiedad básicamente significa que "Quiero ejecutar un destino adicional cuando se complete correctamente la compilación".
-- El **DeployTarget** propiedad identifica el nombre del destino que desea ejecutar cuando el **DeployOnBuild** es igual a la propiedad **true**. En este caso, está especificando que desea que MSBuild para ejecutar el **paquete** destino después de compilar el proyecto.
+- Esencialmente, la propiedad **DeployOnBuild = true** significa "deseo ejecutar un destino adicional cuando la compilación se complete correctamente".
+- La propiedad **DeployTarget** identifica el nombre del destino que desea ejecutar cuando la propiedad **DeployOnBuild** es igual a **true**. En este caso, está especificando que desea que MSBuild ejecute el **paquete** de destino después de compilar el proyecto.
 
-El **paquete** destino se define en el *Microsoft.Web.Publishing.targets* archivo. En esencia, este destino toma la salida de compilación del proyecto de aplicación web y lo convierte en un paquete de implementación web que se puede publicar en un servidor web IIS.
+El destino del **paquete** se define en el archivo *Microsoft. Web. Publishing. targets* . Esencialmente, este destino toma el resultado de la compilación del proyecto de aplicación web y lo convierte en un paquete de implementación web que se puede publicar en un servidor Web de IIS.
 
 > [!NOTE]
-> Para ver un archivo de proyecto (por ejemplo, <em>ContactManager.Mvc.csproj</em>) en Visual Studio 2010, primero debe descargar el proyecto de la solución. En el <strong>el Explorador de soluciones</strong> , haga clic en el nodo de proyecto y, a continuación, haga clic en <strong>descargar el proyecto</strong>. Haga clic en el nodo del proyecto nuevo y, a continuación, haga clic en <strong>editar</strong><em>[archivo de proyecto]</em>). El archivo de proyecto se abrirá en formato XML sin procesar. No olvide volver a cargar el proyecto cuando haya terminado.  
-> Para obtener más información sobre los destinos de MSBuild, tareas, y <strong>importación</strong> instrucciones, consulte [descripción del archivo de proyecto](understanding-the-project-file.md). Para obtener una introducción más detallada a los archivos de proyecto y el WPP, consulte [dentro de la Microsoft Build Engine: Uso de MSBuild y Team Foundation Build](http://amzn.com/0735645248) por Sayed Ibrahim Hashimi y William Bartholomew, ISBN: 978-0-7356-4524-0.
+> Para ver un archivo de proyecto (por ejemplo, <em>ContactManager. Mvc. csproj</em>) en Visual Studio 2010, primero debe descargar el proyecto de la solución. En la ventana <strong>Explorador de soluciones</strong> , haga clic con el botón secundario en el nodo del proyecto y, a continuación, haga clic en <strong>Descargar proyecto</strong>. Vuelva a hacer clic con el botón secundario en el nodo del proyecto y, a continuación, haga clic en <strong>Editar</strong><em>[archivo de proyecto]</em>). El archivo de proyecto se abrirá en su forma XML sin formato. Recuerde volver a cargar el proyecto cuando haya terminado.  
+> Para obtener más información sobre los destinos, las tareas y las instrucciones de <strong>importación</strong> de MSBuild, vea [Descripción del archivo de proyecto](understanding-the-project-file.md). Para obtener una introducción más detallada sobre los archivos de proyecto y WPP, vea [dentro del Microsoft Build Engine: usar MSBuild y Team Foundation Build](http://amzn.com/0735645248) de Sayed Ibrahim Hashimi y William Bartholomew, ISBN: 978-0-7356-4524-0.
 
-## <a name="what-is-a-web-deployment-package"></a>¿Qué es un paquete de implementación Web?
+## <a name="what-is-a-web-deployment-package"></a>¿Qué es un paquete de implementación web?
 
-Al compilar e implementar un proyecto de aplicación web, mediante el uso de Visual Studio 2010 o directamente mediante MSBuild, el resultado final es normalmente un *paquete de implementación web*. El paquete de implementación web es un archivo zip. Contiene todo lo que IIS y Web Deploy necesita con el fin de volver a crear la aplicación web, incluidos:
+Al compilar e implementar un proyecto de aplicación Web, ya sea mediante Visual Studio 2010 o mediante MSBuild directamente, el resultado final suele ser un *paquete de implementación web*. El paquete de implementación web es un archivo. zip. Contiene todo lo que necesita IIS y Web Deploy para volver a crear la aplicación Web, entre los que se incluyen:
 
-- El resultado compilado de la aplicación web, incluido el contenido, los archivos de recursos, archivos de configuración, JavaScript y en cascada recursos de estilo sheets (CSS) y así sucesivamente.
-- Hacer referencia a ensamblados para el proyecto de aplicación web y para cualquier proyectos dentro de la solución.
-- Secuencias de comandos SQL para generar las bases de datos que se va a implementar con la aplicación web.
+- La salida compilada de la aplicación Web, incluido el contenido, los archivos de recursos, los archivos de configuración, los recursos de JavaScript y las hojas de estilos en cascada (CSS), etc.
+- Ensamblados para el proyecto de aplicación web y para todos los proyectos a los que se hace referencia en la solución.
+- Scripts SQL para generar las bases de datos que se van a implementar con la aplicación Web.
 
-Una vez que se ha generado el paquete de implementación web, puede publicarlo en un servidor web IIS de varias maneras. Por ejemplo, puede implementar de forma remota estableciendo como destino el servicio del agente remoto de implementación Web o el controlador de implementación Web en el servidor web de destino, o puede usar el Administrador de IIS para importar manualmente el paquete en el servidor web de destino. Para obtener más información sobre estos enfoques de implementación, consulte [elegir el enfoque de derecha a la implementación Web](../configuring-server-environments-for-web-deployment/choosing-the-right-approach-to-web-deployment.md).
+Una vez generado el paquete de implementación web, puede publicarlo en un servidor Web de IIS de varias maneras. Por ejemplo, puede implementarla de forma remota al establecer como destino el servicio del agente remoto Web Deploy o el controlador de Web Deploy en el servidor Web de destino, o puede usar el administrador de IIS para importar manualmente el paquete en el servidor Web de destino. Para obtener más información sobre estos métodos de implementación, consulte [elección del enfoque adecuado para la implementación web](../configuring-server-environments-for-web-deployment/choosing-the-right-approach-to-web-deployment.md).
 
 ## <a name="how-does-the-build-process-work"></a>¿Cómo funciona el proceso de compilación?
 
-Esto muestra lo que sucede cuando se compila y empaqueta un proyecto de aplicación web:
+Esto muestra lo que ocurre al compilar y empaquetar un proyecto de aplicación web:
 
 ![](building-and-packaging-web-application-projects/_static/image2.png)
 
-Cuando compila un proyecto de aplicación web, el proceso de compilación genera un archivo denominado *[nombre de proyecto]. SourceManifest.xml*. Junto con el archivo de proyecto y la salida de compilación, esto *. SourceManifest.xml* archivo indica a Web Deploy debe incluir en el paquete de implementación web. Con estas entradas, Web Deploy genera un paquete de implementación web denominado *.zip [nombre de proyecto]*.
+Al compilar un proyecto de aplicación Web, el proceso de compilación genera un archivo denominado *[nombre del proyecto]. SourceManifest. XML*. Junto con el archivo de proyecto y la salida de la compilación, este *. El archivo SourceManifest. XML* indica web deploy lo que necesita incluir en el paquete de implementación web. Con estas entradas, Web Deploy genera un paquete de implementación web denominado *[Project Name]. zip*.
 
 Junto con el paquete de implementación web, el proceso de compilación genera dos archivos que pueden ayudarle a usar el paquete:
 
-- El *. deploy.cmd* archivo incluye un conjunto de comandos de Web Deploy (MSDeploy.exe) con parámetros que publicar el paquete de implementación web en un servidor web IIS remoto. Ejecuta el *. deploy.cmd* archivo, con los parámetros adecuados, normalmente proporciona un rápido y alternativa más fácil para construir manualmente el MSDeploy.exe comandos usted mismo.
-- El *SetParameters.xml* archivo proporciona un conjunto de valores de parámetro para el comando MSDeploy.exe. Estos valores incluyen propiedades como el nombre de la aplicación web IIS al que desea implementar el paquete, los valores de los puntos de conexión de servicio y las cadenas de conexión definen en el *web.config* archivo y cualquier propiedad de implementación valores definidos en las páginas de propiedades del proyecto.
+- El archivo *. deploy. cmd* incluye un conjunto de comandos de web deploy con parámetros (MSDeploy. exe) que publican el paquete de implementación web en un servidor Web remoto de IIS. La ejecución del archivo *. deploy. cmd* , con los parámetros adecuados, suele proporcionar una alternativa más rápida y sencilla para construir manualmente los comandos MSDeploy. exe.
+- El archivo *SetParameters. XML* proporciona un conjunto de valores de parámetro al comando MSDeploy. exe. Estos valores incluyen propiedades como el nombre de la aplicación Web de IIS en la que desea implementar el paquete, los valores de los extremos de servicio y las cadenas de conexión definidos en el archivo *Web. config* y los valores de propiedad de implementación definidos en las páginas de propiedades del proyecto.
 
-El *SetParameters.xml* archivo es clave para administrar el proceso de implementación. Este archivo se genera dinámicamente según el contenido del proyecto de aplicación web. Por ejemplo, si agrega una cadena de conexión para su *web.config* archivo, el proceso de compilación automáticamente detectará la cadena de conexión, la implementación se parametrizan en consecuencia y crear una entrada en el  *SetParameters.xml* archivo para que pueda modificar la cadena de conexión como parte del proceso de implementación. El tema siguiente, [configurar parámetros para la implementación del paquete Web](configuring-parameters-for-web-package-deployment.md), explica el rol de este archivo con más detalle y se describen las distintas formas en que se puede modificar durante la compilación e implementación.
+El archivo *SetParameters. XML* es fundamental para administrar el proceso de implementación. Este archivo se genera dinámicamente según el contenido del proyecto de aplicación Web. Por ejemplo, si agrega una cadena de conexión al archivo *Web. config* , el proceso de compilación detectará automáticamente la cadena de conexión, parametrizará la implementación en consecuencia y creará una entrada en el archivo *SetParameters. XML* para que pueda modificar la cadena de conexión como parte del proceso de implementación. En el tema siguiente, [configurar los parámetros para la implementación de paquetes web](configuring-parameters-for-web-package-deployment.md), se explica con más detalle el rol de este archivo y se describen las distintas formas en que se puede modificar durante la compilación y la implementación.
 
 > [!NOTE]
-> En Visual Studio 2010, el WPP no admite la compilación previa de las páginas en una aplicación web antes de empaquetado. La próxima versión de Visual Studio y el WPP incluirá la capacidad para precompilar una aplicación web como una opción de empaquetado.
+> En Visual Studio 2010, WPP no admite la precompilación de las páginas de una aplicación Web antes del empaquetado. La siguiente versión de Visual Studio y WPP incluirán la capacidad de precompilar una aplicación web como una opción de empaquetado.
 
 ## <a name="conclusion"></a>Conclusión
 
-En este tema se proporciona información general sobre la compilación y el proceso de empaquetado de proyectos de aplicación web en Visual Studio 2010. Describe cómo el WPP permite invocar comandos de Web Deploy de MSBuild y, asimismo, explica cómo la compilación y empaquetado del proceso.
+En este tema se proporciona información general sobre el proceso de compilación y empaquetado de proyectos de aplicación web en Visual Studio 2010. Describe cómo el WPP le permite invocar Web Deploy comandos desde MSBuild y explica cómo funciona el proceso de compilación y empaquetado.
 
-Una vez que ha creado un paquete de implementación web, el siguiente paso es implementarla. Para obtener más información, consulte [configurar parámetros para la implementación del paquete Web](configuring-parameters-for-web-package-deployment.md) y [implementar paquetes de Web](deploying-web-packages.md).
+Una vez que haya creado un paquete de implementación web, el siguiente paso es implementarlo. Para obtener más información, vea [configurar los parámetros para la implementación de paquetes web](configuring-parameters-for-web-package-deployment.md) e [implementar paquetes web](deploying-web-packages.md).
 
 ## <a name="further-reading"></a>Información adicional
 
-Los temas siguientes en este tutorial, [configurar parámetros para la implementación del paquete Web](configuring-parameters-for-web-package-deployment.md) y [implementar paquetes de Web](deploying-web-packages.md), proporcionan instrucciones sobre cómo usar el paquete de web que ha creado. El último tutorial de esta serie, [implementación Web de empresa avanzada](../advanced-enterprise-web-deployment/advanced-enterprise-web-deployment.md), se proporcionan instrucciones sobre cómo personalizar y solucionar problemas del proceso de empaquetado.
+Los temas siguientes de este tutorial, [configurar los parámetros para la implementación de](configuring-parameters-for-web-package-deployment.md) paquetes web e [implementar paquetes web](deploying-web-packages.md), proporcionan instrucciones sobre cómo usar el paquete web que ha creado. El último tutorial de esta serie, [Advanced Enterprise web Deployment](../advanced-enterprise-web-deployment/advanced-enterprise-web-deployment.md), proporciona instrucciones sobre cómo personalizar y solucionar problemas del proceso de empaquetado.
 
-Para obtener una introducción más detallada a los archivos de proyecto y el WPP, consulte [dentro de la Microsoft Build Engine: Uso de MSBuild y Team Foundation Build](http://amzn.com/0735645248) por Sayed Ibrahim Hashimi y William Bartholomew, ISBN: 978-0-7356-4524-0.
+Para obtener una introducción más detallada sobre los archivos de proyecto y WPP, vea [dentro del Microsoft Build Engine: usar MSBuild y Team Foundation Build](http://amzn.com/0735645248) de Sayed Ibrahim Hashimi y William Bartholomew, ISBN: 978-0-7356-4524-0.
 
 > [!div class="step-by-step"]
 > [Anterior](understanding-the-build-process.md)

@@ -9,11 +9,11 @@ ms.assetid: 7ead83bc-c08c-4b26-8617-00e07292e35c
 msc.legacyurl: /aspnet/overview/developing-apps-with-windows-azure/building-real-world-cloud-apps-with-windows-azure/transient-fault-handling
 msc.type: authoredcontent
 ms.openlocfilehash: e798cb83cfb97db63fef6dc38c8f62804461d01b
-ms.sourcegitcommit: 7709c0a091b8d55b7b33bad8849f7b66b23c3d72
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/19/2020
-ms.locfileid: "77456860"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78500425"
 ---
 # <a name="transient-fault-handling-building-real-world-cloud-apps-with-azure"></a>Control de errores transitorios (creación de aplicaciones en la nube reales con Azure)
 
@@ -80,7 +80,7 @@ En el [siguiente capítulo](distributed-caching.md), veremos cómo mejorar el re
 
 ## <a name="resources"></a>Recursos
 
-Para obtener más información, consulte los siguientes recursos:
+Para obtener más información, vea los siguientes recursos:
 
 Documentación
 

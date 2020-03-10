@@ -9,11 +9,11 @@ ms.assetid: 7958d725-e958-4566-a85b-535eeb985f94
 msc.legacyurl: /mvc/overview/getting-started/recommended-resources-for-mvc
 msc.type: authoredcontent
 ms.openlocfilehash: 11f4a7cae8d425873b1828a9e5f51471def954fb
-ms.sourcegitcommit: 7709c0a091b8d55b7b33bad8849f7b66b23c3d72
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/19/2020
-ms.locfileid: "77457159"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78470323"
 ---
 # <a name="mvc-recommended-resources"></a>Recursos recomendados de MVC
 
@@ -99,7 +99,7 @@ por [Rick Anderson](https://twitter.com/RickAndMSFT)
 - [Seguridad en ASP.NET MVC](http://www.codeproject.com/Articles/654846/Security-In-ASP-NET-MVC)
 - [Protección de la aplicación ASP.NET MVC 4](https://blogs.msdn.com/b/rickandy/archive/2012/03/23/securing-your-asp-net-mvc-4-app-and-the-new-allowanonymous-attribute.aspx)
 - [Vídeo de información general sobre los procedimientos de seguridad de Pluralsight](http://www.pluralsight-training.net/microsoft/players/PSODPlayer?author=scott-allen&amp;name=mvc3-building-security&amp;mode=live&amp;clip=0&amp;course=aspdotnet-mvc3-intro)
-- [XSRF/CSRF Prevention in ASP.NET MVC and Web Pages](../security/xsrfcsrf-prevention-in-aspnet-mvc-and-web-pages.md) (Prevención de XSRF y CSRF en ASP.NET MVC y Web Pages)
+- [Prevención de XSRF/CSRF en ASP.NET MVC y Web Pages](../security/xsrfcsrf-prevention-in-aspnet-mvc-and-web-pages.md)
 - [10 principales OWASP para desarrolladores de .NET](http://www.troyhunt.com/2010/05/owasp-top-10-for-net-developers-part-1.html)
 - [Usar proveedores OAuth con MVC 4](../older-versions/using-oauth-providers-with-mvc.md)
 - [Prueba de piratería de aplicaciones ASP.net](https://msdn.microsoft.com/magazine/hh580736.aspx) Artículo de diciembre de 2011 de MSDN Magazine del tulipán de Adam
@@ -123,7 +123,7 @@ por [Rick Anderson](https://twitter.com/RickAndMSFT)
 - [La pertenencia no es igual que la autenticación mediante formularios](http://brockallen.com/2012/06/04/membership-is-not-the-same-as-forms-authentication/)
 - [Piense dos veces sobre el uso de MembershipProvider (y SimpleMembership)](http://brockallen.com/2012/09/02/think-twice-about-using-membershipprovider-and-simplemembership/)
 - [Implementación de la autenticación de dos factores MVC con Google Authenticator](http://www.codeproject.com/Articles/403355/Implementing-MVC-Two-Factor-Authentication-with-Go)
-- nuevo
+- new
 - [ASP.NET Identity y Table Storage de Azure](https://blogs.msdn.com/b/stuartleeks/archive/2014/01/15/asp-net-identity-and-windows-azure-table-storage.aspx)
 
 <a id="OWIN"></a>
@@ -327,7 +327,7 @@ por [Rick Anderson](https://twitter.com/RickAndMSFT)
 
 <a id="best"></a>
 
-## <a name="best-practices"></a>Prácticas recomendadas
+## <a name="best-practices"></a>Procedimientos recomendados
 
 - [Qué no se debe hacer en ASP.NET y qué hacer en su lugar](../../../aspnet/overview/web-development-best-practices/what-not-to-do-in-aspnet-and-what-to-do-instead.md)
 - [Lista de comprobación para desarrolladores web](http://webdevchecklist.com/aspnet)

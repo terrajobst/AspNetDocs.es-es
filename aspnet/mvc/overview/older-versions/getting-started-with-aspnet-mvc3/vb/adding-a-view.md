@@ -9,11 +9,11 @@ ms.assetid: d3633f64-5d3c-45c9-ae4b-cb1563e3739f
 msc.legacyurl: /mvc/overview/older-versions/getting-started-with-aspnet-mvc3/vb/adding-a-view
 msc.type: authoredcontent
 ms.openlocfilehash: fa200935d83bb26c07b302449a6eba6fd67b5322
-ms.sourcegitcommit: 7709c0a091b8d55b7b33bad8849f7b66b23c3d72
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/19/2020
-ms.locfileid: "77457381"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78434521"
 ---
 # <a name="adding-a-view-vb"></a>Agregar una vista (VB)
 

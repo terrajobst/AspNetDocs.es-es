@@ -9,11 +9,11 @@ ms.assetid: accfa16a-ab15-4c26-9ad4-babdc2a77d2e
 msc.legacyurl: /aspnet/overview/developing-apps-with-windows-azure/building-real-world-cloud-apps-with-windows-azure/introduction
 msc.type: authoredcontent
 ms.openlocfilehash: b88573b3702b755b155e8da35f5f8a67931bafc6
-ms.sourcegitcommit: 7709c0a091b8d55b7b33bad8849f7b66b23c3d72
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/19/2020
-ms.locfileid: "77457120"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78500653"
 ---
 # <a name="building-real-world-cloud-apps-with-azure"></a>Creación de aplicaciones en la nube del mundo real con Azure
 
@@ -25,7 +25,7 @@ por [Mike Wasson](https://github.com/MikeWasson), [Rick Anderson](https://twitte
 > 
 > El contenido se basa en una presentación desarrollada por Scott Guthrie y se entrega en la Conferencia de desarrolladores noruegos (NDC) en junio de 2013 ([parte 1](http://vimeo.com/68215538), [parte 2](http://vimeo.com/68215602)) y en Microsoft Tech Ed Australia en septiembre de 2013 (parte[1](https://channel9.msdn.com/Events/TechEd/Australia/2013/AZR324), parte [2](https://channel9.msdn.com/Events/TechEd/Australia/2013/AZR325)). [Muchos otros](more-patterns-and-guidance.md#acknowledgments) han actualizado y ampliado el contenido al pasarlo de vídeo a formato escrito.
 
-## <a name="intended-audience"></a>Audiencia objetivo
+## <a name="intended-audience"></a>Destinatarios
 
 Los desarrolladores que están familiarizados con el desarrollo en la nube, la consideración de un cambio a la nube o son nuevos en el desarrollo en la nube encontrarán aquí una breve descripción de los conceptos y prácticas más importantes que necesitan conocer. Los conceptos se ilustran con ejemplos concretos, y cada capítulo se vincula a otros recursos para obtener información más detallada. Los ejemplos y los vínculos a recursos adicionales son para los marcos y servicios de Microsoft, pero los principios que se ilustran se aplican también a otros marcos de desarrollo web y entornos en la nube.
 
@@ -102,7 +102,7 @@ En este libro electrónico se explican trece patrones recomendados para el desar
 - [Apéndice: Aplicación de ejemplo Reparar](the-fix-it-sample-application.md)
 
     - Problemas conocidos
-    - Prácticas recomendadas
+    - Procedimientos recomendados
     - Cómo descargar, compilar, ejecutar e implementar.
 
 Estos patrones se aplican a todos los entornos de nube, pero se mostrarán mediante ejemplos basados en tecnologías y servicios de Microsoft, como Visual Studio, Team Foundation Service, ASP.NET y Azure.
@@ -167,7 +167,7 @@ Documentación:
 - [Web Apps en Azure App Service](https://azure.microsoft.com/services/app-service/web/). Página del portal para la documentación de Azure sobre Web Apps.
 - [Web Apps, Cloud Services y máquinas virtuales: ¿Cuándo se debe usar?](https://azure.microsoft.com/documentation/articles/choose-web-site-cloud-service-vm/) WAWS, tal como se muestra en este capítulo, es solo una de las tres formas en que puede ejecutar aplicaciones web en Azure. En este artículo se explican las diferencias entre las tres maneras y se proporcionan instrucciones sobre cómo elegir cuál es la adecuada para su escenario. Al igual que los sitios web, Cloud Services es una característica de PaaS de Azure. Las máquinas virtuales son una característica de IaaS. Para obtener una explicación de PaaS frente a IaaS, consulte el capítulo [Opciones de datos](data-storage-options.md#paasiaas) .
 
-Videos:
+Vídeos:
 
 - [Scott Guthrie comienza en el paso 0: ¿Qué es Azure Cloud OS?](https://azure.microsoft.com/documentation/videos/what-is-the-cloud-os-scottgu/)
 - [Arquitectura de sitios web: con Stefan Schackow](https://azure.microsoft.com/documentation/videos/why-azure-web-sites-plus-architecture/).

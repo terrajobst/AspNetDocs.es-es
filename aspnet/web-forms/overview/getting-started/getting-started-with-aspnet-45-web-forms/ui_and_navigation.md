@@ -9,11 +9,11 @@ ms.assetid: 5c76891d-e515-4885-b576-76bd2c494efe
 msc.legacyurl: /web-forms/overview/getting-started/getting-started-with-aspnet-45-web-forms/ui_and_navigation
 msc.type: authoredcontent
 ms.openlocfilehash: ac1dcaf1ba911fdcaeb3845c6836ec771733d93e
-ms.sourcegitcommit: 22fbd8863672c4ad6693b8388ad5c8e753fb41a2
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/28/2019
-ms.locfileid: "74636812"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78522907"
 ---
 # <a name="ui-and-navigation"></a>Interfaz de usuario y navegación
 
@@ -25,7 +25,7 @@ por [Erik Reitan](https://github.com/Erikre)
 
 En este tutorial, modificará la interfaz de usuario de la aplicación web predeterminada para admitir características de la aplicación de front-end de Wingtip Toys Store. Además, agregará una navegación simple y enlazada a datos. Este tutorial se basa en el tutorial anterior "creación de la capa de acceso a datos" y forma parte de la serie de tutoriales de Wingtip Toys.
 
-## <a name="what-youll-learn"></a>Lo que aprenderá:
+## <a name="what-youll-learn"></a>Temas que se abordarán:
 
 - Cómo cambiar la interfaz de usuario para admitir características de la aplicación de front-end de Wingtip Toys Store.
 - Cómo configurar un elemento HTML5 para incluir la navegación de páginas.
@@ -93,11 +93,11 @@ El atributo `CodeBehind` incluido en la Directiva `@Page` especifica el nombre d
 
 ### <a name="updating-the-master-page"></a>Actualización de la página maestra
 
-En los formularios Web Forms de ASP.NET, las páginas maestras le permiten crear un diseño coherente para las páginas de la aplicación. Una sola página maestra define la apariencia y el comportamiento estándar que desea para todas las páginas (o un grupo de páginas) en la aplicación. Después, puede crear páginas de contenido individuales que contengan el contenido que desea mostrar, tal como se explicó anteriormente. Cuando los usuarios solicitan las páginas de contenido, ASP.NET las combina con la página maestra para producir una salida que combine el diseño de la página maestra con el contenido de la página de contenido.
+En ASP.NET Web Forms, las páginas maestro permiten crear un diseño coherente de las páginas en la aplicación. Una sola página maestro define la apariencia y el comportamiento estándar que desea para todas las páginas (o un grupo de páginas) en su aplicación. Después, puede crear páginas de contenido individuales que contengan el contenido que desea mostrar, tal como se explicó anteriormente. Cuando los usuarios solicitan las páginas de contenido, ASP.NET las combina con la página maestra para producir un resultado que combine el diseño de la página maestra con el contenido de la página de contenido.
 
 El nuevo sitio necesita un único logotipo para mostrar en todas las páginas. Para agregar este logotipo, puede modificar el código HTML de la página maestra.
 
-1. En **Explorador de soluciones**, busque y abra la página **site. Master** .
+1. En el **Explorador de soluciones**, busque y abra la página **Site.Master** .
 2. Si la página está en la vista **diseño** , cambie a la vista **código fuente** .
 3. Actualice la página maestra **modificando o agregando** el marcado resaltado en amarillo: 
 
@@ -208,7 +208,7 @@ Este código mostrará todas las categorías de la base de datos. El control **L
 
 > [!NOTE] 
 > 
-> **Tip**
+> **Sugerencia**
 > 
 > Al agregar código escribiendo durante el desarrollo, puede estar seguro de que se encuentra un miembro válido de un objeto porque los controles de datos fuertemente tipados muestran los miembros disponibles basados en IntelliSense. IntelliSense ofrece opciones de código adecuadas para el contexto a medida que escribe código, como propiedades, métodos y objetos.
 
@@ -257,7 +257,7 @@ Ahora puede inspeccionar los datos contenidos en el archivo de base de datos *wi
     Se muestra **Explorador de servidores** . 
 
     ![Interfaz de usuario y navegación: Explorador de servidores](ui_and_navigation/_static/image8.png)
-4. Expanda la carpeta *tablas* .
+4. Expanda la carpeta *Tablas* .
 5. Haga clic con el botón secundario en la tabla **Products**y seleccione **Mostrar datos de tabla**.  
  Se muestra la tabla **productos** . 
 

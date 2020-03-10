@@ -9,11 +9,11 @@ ms.assetid: ec1cec4c-a75f-47af-a2ba-b1e2f971d24b
 msc.legacyurl: /web-forms/overview/deployment/visual-studio-web-deployment/project-properties
 msc.type: authoredcontent
 ms.openlocfilehash: b2811791a897c9166f6222c23dddc6921e5267ab
-ms.sourcegitcommit: 22fbd8863672c4ad6693b8388ad5c8e753fb41a2
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/28/2019
-ms.locfileid: "74614953"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78522943"
 ---
 # <a name="aspnet-web-deployment-using-visual-studio-project-properties"></a>Implementación web de ASP.NET con Visual Studio: propiedades del proyecto
 
@@ -23,7 +23,7 @@ por [Tom Dykstra](https://github.com/tdykstra)
 
 > En esta serie de tutoriales se muestra cómo implementar (publicar) una aplicación Web de ASP.NET en Azure App Service Web Apps o en un proveedor de hospedaje de terceros mediante Visual Studio 2012 o Visual Studio 2010. Para obtener información sobre la serie, vea [el primer tutorial de la serie](introduction.md).
 
-## <a name="overview"></a>Información general del
+## <a name="overview"></a>Información general
 
 Algunas opciones de implementación se configuran en las propiedades del proyecto que se almacenan en el archivo del proyecto (el archivo *. csproj* o *. vbproj* ). En la mayoría de los casos, los valores predeterminados de esta configuración son los deseados, pero puede usar la interfaz de usuario de **propiedades del proyecto** integrada en Visual Studio para trabajar con esta configuración si tiene que cambiarlas. En este tutorial, revisará la configuración de implementación en **las propiedades del proyecto**. También creará un archivo de marcador de posición que provoque la implementación de una carpeta vacía.
 

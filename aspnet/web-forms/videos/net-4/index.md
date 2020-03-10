@@ -2,22 +2,22 @@
 uid: web-forms/videos/net-4/index
 title: .NET 4 | Microsoft Docs
 author: rick-anderson
-description: Las nuevas características ASP.NET y la funcionalidad disponible en .NET Framework 4.
+description: Las nuevas características y funcionalidades de ASP.NET disponibles en el .NET Framework 4.
 ms.author: riande
 ms.date: 10/05/2011
 ms.assetid: bac10aee-6731-4a0f-84d7-9eef5e560ae5
 msc.legacyurl: /web-forms/videos/net-4
 msc.type: chapter
 ms.openlocfilehash: 47d4c49762768351246402b48373374f99fd636f
-ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/06/2019
-ms.locfileid: "65128468"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78501085"
 ---
 # <a name="net-4"></a>.NET 4
 
-> Las nuevas características ASP.NET y la funcionalidad disponible en .NET Framework 4.
+> Las nuevas características y funcionalidades de ASP.NET disponibles en el .NET Framework 4.
 
 - [Ajax](ajax/index.md)
 

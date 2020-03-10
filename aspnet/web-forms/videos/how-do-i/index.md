@@ -2,22 +2,22 @@
 uid: web-forms/videos/how-do-i/index
 title: Cómo | Microsoft Docs
 author: rick-anderson
-description: Cómo realizar diversas tareas comunes.
+description: Cómo realizar una serie de tareas comunes.
 ms.author: riande
 ms.date: 10/05/2011
 ms.assetid: 27591afa-3c14-47e6-8323-573f8f7aa862
 msc.legacyurl: /web-forms/videos/how-do-i
 msc.type: chapter
 ms.openlocfilehash: 12c988e64c5b724e04b6fc5f8eddc6a181764e1d
-ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/06/2019
-ms.locfileid: "65114923"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78519847"
 ---
 # <a name="how-do-i"></a>Cómo
 
-> Cómo realizar diversas tareas comunes.
+> Cómo realizar una serie de tareas comunes.
 
 - [Aprender las sugerencias y los trucos de los expertos](how-do-i-learn-the-tips-and-tricks-of-experts.md)
 - [Crear un sitio multilingüe con localización](how-do-i-create-a-multi-lingual-site-with-localization.md)
@@ -73,7 +73,7 @@ ms.locfileid: "65114923"
 - [Detectar las capacidades del explorador en ASP.NET Web Pages](how-do-i-detect-browser-capabilities-in-aspnet-web-pages.md)
 - [Asignar un control de servidor de ASP.NET al adaptador usado para representarlo](how-do-i-map-an-aspnet-server-control-to-the-adaptor-used-to-render-it.md)
 - [Pasar información de una página a otra mediante una cadena de consulta](how-do-i-pass-information-from-one-page-to-another-using-a-query-string.md)
-- [Utilice aspnet\_merge.exe Utilidad para combinar ensamblados](how-do-i-use-the-aspnet_mergeexe-utility-to-merge-assemblies.md)
+- [Usar la utilidad de combinación ASPNET\_. exe para combinar ensamblados](how-do-i-use-the-aspnet_mergeexe-utility-to-merge-assemblies.md)
 - [Implementar un postback entre páginas en ASP.NET](how-do-i-implement-a-cross-page-postback-in-aspnet.md)
 - [Agregar controles a una página web de ASP.NET mediante programación](how-do-i-add-controls-to-an-aspnet-web-page-programmatically.md)
 - [Usar un campo oculto para almacenar y manipular información de cliente](how-do-i-use-a-hidden-field-to-store-and-manipulate-client-side-information.md)

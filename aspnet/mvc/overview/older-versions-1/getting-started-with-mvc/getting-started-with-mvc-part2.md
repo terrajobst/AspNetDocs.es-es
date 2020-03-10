@@ -1,77 +1,77 @@
 ---
 uid: mvc/overview/older-versions-1/getting-started-with-mvc/getting-started-with-mvc-part2
-title: Agregar un controlador | Microsoft Docs
+title: Agregando un controlador | Microsoft Docs
 author: shanselman
-description: Una versión actualizada, si este tutorial está disponible aquí con Visual Studio 2013. El nuevo tutorial usa ASP.NET MVC 5, que proporciona muchas mejoras con respecto a t...
+description: Una versión actualizada si este tutorial está disponible aquí mediante Visual Studio 2013. En el nuevo tutorial se usa ASP.NET MVC 5, que proporciona muchas mejoras sobre t...
 ms.author: riande
 ms.date: 08/14/2010
 ms.assetid: ff03dcc0-da97-458d-838f-0823e7482642
 msc.legacyurl: /mvc/overview/older-versions-1/getting-started-with-mvc/getting-started-with-mvc-part2
 msc.type: authoredcontent
 ms.openlocfilehash: e2a298584473f57c2b14edf507f0f6886d906ea3
-ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/06/2019
-ms.locfileid: "65123062"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78437569"
 ---
 # <a name="adding-a-controller"></a>Agregar un controlador
 
 por [Scott Hanselman](https://github.com/shanselman)
 
 > > [!NOTE]
-> > Una versión actualizada, si está disponible en este tutorial [aquí](../../getting-started/introduction/getting-started.md) mediante [Visual Studio 2013](https://my.visualstudio.com/Downloads?q=visual%20studio%202013). El nuevo tutorial usa ASP.NET MVC 5, que proporciona muchas mejoras con respecto a este tutorial.
+> > Una versión actualizada si este tutorial está disponible [aquí](../../getting-started/introduction/getting-started.md) mediante [Visual Studio 2013](https://my.visualstudio.com/Downloads?q=visual%20studio%202013). En el nuevo tutorial se usa ASP.NET MVC 5, que proporciona muchas mejoras en este tutorial.
 >
 >
-> Este es un tutorial para principiantes que presenta los conceptos básicos de ASP.NET MVC. Creará una aplicación web simple que lee y escribe desde una base de datos. Visite el [centro de aprendizaje de ASP.NET MVC](../../../index.md) para buscar otros ASP.NET MVC, tutoriales y ejemplos.
+> Este es un tutorial para principiantes que presenta los conceptos básicos de ASP.NET MVC. Creará una aplicación web simple que lee y escribe en una base de datos. Visite el [centro de aprendizaje de MVC de ASP.net](../../../index.md) para buscar otros tutoriales y ejemplos de ASP.NET MVC.
 
-MVC es el acrónimo de modelo, vista, el controlador. MVC es un patrón para desarrollar aplicaciones de forma que cada parte tiene una responsabilidad que es diferente de otro.
+MVC representa el modelo, la vista y el controlador. MVC es un patrón para desarrollar aplicaciones, de modo que cada una de ellas tiene una responsabilidad diferente de otra.
 
-- Modelo: Los datos de la aplicación
-- Vistas: Los archivos de plantilla que se usará la aplicación para generar respuestas HTML de forma dinámica.
-- Controladores: Las clases que controlan las solicitudes entrantes de dirección URL a la aplicación, recuperar datos del modelo y, a continuación, especifique las plantillas de vista que representan una respuesta al cliente
+- Modelo: los datos de la aplicación
+- Vistas: los archivos de plantilla que usará la aplicación para generar dinámicamente respuestas HTML.
+- Controladores: clases que controlan las solicitudes de dirección URL de entrada a la aplicación, recuperan los datos del modelo y, a continuación, especifican plantillas de vista que representan una respuesta en el cliente.
 
-Se va a cubrir todos estos conceptos en este tutorial y le enseñaremos a usarlos para crear una aplicación.
+Trataremos todos estos conceptos en este tutorial y le mostraremos cómo usarlos para compilar una aplicación.
 
-Vamos a crear un nuevo controlador de clic derecho en la carpeta controladores en el Explorador de soluciones y seleccionando Agregar controlador.
+Vamos a crear un controlador nuevo; para ello, haga clic con el botón secundario en la carpeta Controllers en el explorador de soluciones y seleccione Agregar controlador.
 
 [![AddControllerRightClick](getting-started-with-mvc-part2/_static/image2.png)](getting-started-with-mvc-part2/_static/image1.png)
 
-Asigne un nombre al nuevo controlador "HelloWorldController" y haga clic en Agregar.
+Asigne al nuevo controlador el nombre "HelloWorldController" y haga clic en Agregar.
 
-[![Agregar cuadro de diálogo de controlador](getting-started-with-mvc-part2/_static/image4.png)](getting-started-with-mvc-part2/_static/image3.png)
+[![cuadro de diálogo Agregar controlador](getting-started-with-mvc-part2/_static/image4.png)](getting-started-with-mvc-part2/_static/image3.png)
 
-Observe que en el Explorador de soluciones a la derecha que se ha creado un nuevo archivo para llamó a HelloWorldController.cs y ahora se abre ese archivo en el **IDE**.
+Tenga en cuenta que en la Explorador de soluciones de la derecha se ha creado un nuevo archivo llamado HelloWorldController.cs y que el archivo ya está abierto en el **IDE**.
 
 [![HelloWorldControllerCode](getting-started-with-mvc-part2/_static/image6.png)](getting-started-with-mvc-part2/_static/image5.png)
 
-Cree dos nuevos métodos que tienen un aspecto similar al siguiente dentro de la nueva clase pública HelloWorldController. Usaremos una cadena HTML directamente desde nuestro controlador como un ejemplo.
+Cree dos nuevos métodos que se parezcan a este dentro de la nueva clase pública HelloWorldController. Se devolverá una cadena de HTML directamente desde nuestro controlador como ejemplo.
 
 [!code-csharp[Main](getting-started-with-mvc-part2/samples/sample1.cs)]
 
-El controlador se denomina HelloWorldController y al nuevo método se denomina índice. Ejecute la aplicación de nuevo, igual que antes (haga clic en el botón Reproducir o presione F5 para hacer esto). Una vez que haya iniciado el explorador, cambie la ruta de acceso en la barra de direcciones para `http://localhost:xx/HelloWorld` donde xx es cualquier número de su equipo ha elegido. Ahora el explorador debería parecerse a la captura de pantalla siguiente. En el método anterior, se devuelve una cadena que se pasa a un método llamado "Contenido". Le dijimos que el sistema sólo devuelve algo de HTML, y así ha sido!
+El controlador se denomina HelloWorldController y el nuevo método se denomina index. Vuelva a ejecutar la aplicación, igual que antes (haga clic en el botón reproducir o presione F5 para hacerlo). Una vez que se haya iniciado el explorador, cambie la ruta de acceso en la barra de direcciones a `http://localhost:xx/HelloWorld` donde XX es el número elegido por el equipo. Ahora el explorador debe ser similar a la captura de pantalla siguiente. En nuestro método anterior, se devolvió una cadena pasada en un método denominado "Content". Le indicamos que el sistema devolverá algo de HTML y lo hizo.
 
-ASP.NET MVC invoca diferentes clases de controlador (y diferentes métodos de acción dentro de ellos), dependiendo de la dirección URL entrante. La lógica de asignación predeterminada utilizada por ASP.NET MVC usa un formato similar al siguiente para controlar qué código se ejecuta:
+ASP.NET MVC invoca diferentes clases de controlador (y métodos de acción diferentes) en función de la dirección URL de entrada. La lógica de asignación predeterminada usada por ASP.NET MVC usa un formato como este para controlar qué código se ejecuta:
 
-/ [Controller] / [ActionName] / [parámetros]
+/[Controller]/[ActionName]/[parámetros]
 
-La primera parte de la dirección URL determina la clase de controlador para ejecutar. Por lo que /HelloWorld se asigna a la clase HelloWorldController. La segunda parte de la dirección URL determina el método de acción en la clase que se ejecutará. /HelloWorld/Index causara el método Index() de la clase HelloWorldController para ejecutar. Tenga en cuenta que sólo se tenía visite /HelloWorld anterior y el método que index estaba implícito. Esto es porque un método denominado "Index" es el método predeterminado que se llamará en un controlador si no se especifica explícitamente.
+La primera parte de la dirección URL determina la clase de controlador que se va a ejecutar. Por lo tanto,/HelloWorld se asigna a la clase HelloWorldController. La segunda parte de la dirección URL determina el método de acción de la clase que se va a ejecutar. Por lo tanto,/HelloWorld/Index haría que se ejecutara el método index () de la clase HelloWorldController. Tenga en cuenta que solo tuvimos que visitar/HelloWorld anteriormente y el índice de método era implícito. Esto se debe a que un método denominado "index" es el método predeterminado al que se llamará en un controlador si no se especifica uno explícitamente.
 
-[![Ésta es mi acción predeterminada](getting-started-with-mvc-part2/_static/image8.png)](getting-started-with-mvc-part2/_static/image7.png)
+[![se trata de la acción predeterminada](getting-started-with-mvc-part2/_static/image8.png)](getting-started-with-mvc-part2/_static/image7.png)
 
-Ahora, vamos a visitar `http://localhost:xx/HelloWorld/Welcome.` ahora nuestro método principal se ejecuta y devuelve la cadena HTML.
+Ahora, vamos a visitar `http://localhost:xx/HelloWorld/Welcome.` ahora nuestro método de bienvenida se ha ejecutado y ha devuelto su cadena HTML.
 
-Nuevamente, / [Controller] / [ActionName] / [parámetros], por lo que el controlador es HelloWorld y bienvenida en este caso es el método. Aún no hemos hecho los parámetros.
+De nuevo,/[Controller]/[ActionName]/[Parameters] el controlador es HelloWorld y Welcome es el método en este caso. Todavía no hemos hecho los parámetros.
 
-[![Este es el método de acción bienvenida](getting-started-with-mvc-part2/_static/image10.png)](getting-started-with-mvc-part2/_static/image9.png)
+[![este es el método de acción de bienvenida](getting-started-with-mvc-part2/_static/image10.png)](getting-started-with-mvc-part2/_static/image9.png)
 
-Vamos a modificar nuestro ejemplo ligeramente para que nos podemos pasar cierta información en de la dirección URL a nuestro controlador, por ejemplo así: / HelloWorld/Welcome? nombre = Scott&amp;numtimes = 4. Cambiar el método principal para que incluya dos parámetros y actualización como el siguiente. Tenga en cuenta que hemos usado para indicar que el parámetro numTimes debería valor predeterminado es 1 si no se pasa en la característica de parámetro opcional de C#.
+Vamos a modificar nuestro ejemplo ligeramente para que podamos pasar parte de la información de la dirección URL a nuestro controlador, como en este ejemplo:/HelloWorld/Welcome? Name = Scott&amp;numtimes = 4. Cambie el método de bienvenida para que incluya dos parámetros y actualícelo como se indica a continuación. Tenga en cuenta que hemos usado C# la característica opcional Parameter para indicar que el parámetro numTimes debe tener como valor predeterminado 1 si no se pasa.
 
 [!code-csharp[Main](getting-started-with-mvc-part2/samples/sample2.cs)]
 
-Ejecute la aplicación y visite `http://localhost:xx/HelloWorld/Welcome?name=Scott&numtimes=4` cambiar el valor de nombre y numtimes como sea necesario. El sistema asigna automáticamente los parámetros con nombre de la cadena de consulta en la barra de direcciones para los parámetros del método.
+Ejecute la aplicación y visite `http://localhost:xx/HelloWorld/Welcome?name=Scott&numtimes=4` cambiar el valor de Name y numtimes como desee. El sistema asigna automáticamente los parámetros con nombre de la cadena de consulta en la barra de direcciones a los parámetros del método.
 
-En estos ejemplos de ambos el controlador ha sido hace todo el trabajo y ha estado devolviendo HTML directamente. Normalmente no queremos que nuestra controladores devuelve HTML directamente - desde que termina siendo muy complicado de código. En su lugar, vamos a usar normalmente un archivo de plantilla de vista independiente para ayudar a generar la respuesta HTML. Veamos cómo podemos hacer esto. Cierre el explorador y volver al IDE.
+En ambos ejemplos, el controlador ha estado realizando todo el trabajo y ha devuelto el HTML directamente. Normalmente, no queremos que nuestros controladores devuelvan HTML directamente, ya que acaban siendo muy engorrosos para el código. En su lugar, usaremos normalmente un archivo de plantilla de vista independiente para ayudar a generar la respuesta HTML. Veamos cómo se puede hacer esto. Cierre el explorador y vuelva al IDE.
 
 > [!div class="step-by-step"]
 > [Anterior](getting-started-with-mvc-part1.md)

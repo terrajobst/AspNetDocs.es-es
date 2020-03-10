@@ -9,11 +9,11 @@ ms.assetid: 11425ff3-09fc-4efa-be9a-b53bce503460
 msc.legacyurl: /mvc/overview/older-versions/getting-started-with-aspnet-mvc4/examining-the-details-and-delete-methods
 msc.type: authoredcontent
 ms.openlocfilehash: 37787a26f37473b9d36792a9f7715982cb274074
-ms.sourcegitcommit: 7709c0a091b8d55b7b33bad8849f7b66b23c3d72
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/19/2020
-ms.locfileid: "77457562"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78485317"
 ---
 # <a name="examining-the-details-and-delete-methods"></a>Examinar los métodos Details y Delete
 

@@ -10,11 +10,11 @@ msc.legacyurl: /signalr/overview/getting-started/tutorial-high-frequency-realtim
 msc.type: authoredcontent
 ms.topic: tutorial
 ms.openlocfilehash: 2503e90735d6cfa445ee08c9e43f8443aa106096
-ms.sourcegitcommit: 22fbd8863672c4ad6693b8388ad5c8e753fb41a2
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/28/2019
-ms.locfileid: "74600452"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78450121"
 ---
 # <a name="tutorial-create-high-frequency-real-time-app-with-signalr-2"></a>Tutorial: creación de una aplicación en tiempo real de alta frecuencia con Signalr 2
 
@@ -24,10 +24,10 @@ La aplicación que cree muestra una forma que los usuarios pueden arrastrar. El 
 
 Los conceptos presentados en este tutorial tienen aplicaciones en juegos en tiempo real y otras aplicaciones de simulación.
 
-En este tutorial ha:
+En este tutorial va a:
 
 > [!div class="checklist"]
-> * Configurar el proyecto
+> * Configuración del proyecto
 > * Crear la aplicación base
 > * Asignar al centro cuando se inicia la aplicación
 > * Agregar el cliente
@@ -40,9 +40,9 @@ En este tutorial ha:
 
 ## <a name="prerequisites"></a>Requisitos previos
 
-* [Visual Studio 2017](https://visualstudio.microsoft.com/downloads/) con la carga de trabajo de **desarrollo web y ASP.net** .
+* [Visual Studio 2017](https://visualstudio.microsoft.com/downloads/) con la carga de trabajo de **ASP.NET y desarrollo web**.
 
-## <a name="set-up-the-project"></a>Configurar el proyecto
+## <a name="set-up-the-project"></a>Configuración del proyecto
 
 En esta sección, creará el proyecto en Visual Studio 2017.
 
@@ -62,7 +62,7 @@ En esta sección se muestra cómo usar Visual Studio 2017 para crear una aplicac
 
     En este paso se crea el archivo de clase *MoveShapeHub.CS* . Simultáneamente, agrega un conjunto de archivos de script y referencias de ensamblado que admiten Signalr en el proyecto.
 
-1. Seleccione **herramientas** > **Administrador de paquetes NuGet** > **consola del administrador de paquetes**.
+1. Seleccione **Herramientas** > **Administrador de paquetes NuGet** > **Consola del Administrador de paquetes**.
 
 1. En la **consola del administrador de paquetes**, ejecute este comando:
 
@@ -242,10 +242,10 @@ Para obtener más información acerca de Signalr, consulte los siguientes recurs
 
 ## <a name="next-steps"></a>Pasos siguientes
 
-En este tutorial ha:
+En este tutorial va a:
 
 > [!div class="checklist"]
-> * Configurar el proyecto
+> * Configuración del proyecto
 > * Creación de la aplicación base
 > * Asignado al centro cuando se inicia la aplicación
 > * Agregado el cliente

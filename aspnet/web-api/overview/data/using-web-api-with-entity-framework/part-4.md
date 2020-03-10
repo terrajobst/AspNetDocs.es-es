@@ -1,6 +1,6 @@
 ---
 uid: web-api/overview/data/using-web-api-with-entity-framework/part-4
-title: Controlar las relaciones de entidad | Microsoft Docs
+title: Control de las relaciones de entidad | Microsoft Docs
 author: MikeWasson
 description: ''
 ms.author: riande
@@ -9,61 +9,61 @@ ms.assetid: d2f5710c-23c7-40a5-9cd9-5d0516570cba
 msc.legacyurl: /web-api/overview/data/using-web-api-with-entity-framework/part-4
 msc.type: authoredcontent
 ms.openlocfilehash: be4948e5443a5eb4e1824c63dd0c445a7ee1928e
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59384699"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78449125"
 ---
 # <a name="handling-entity-relations"></a>Controlar las relaciones de entidad
 
 por [Mike Wasson](https://github.com/MikeWasson)
 
-[Descargue el proyecto completado](https://github.com/MikeWasson/BookService)
+[Descargar proyecto completado](https://github.com/MikeWasson/BookService)
 
-Esta sección describen algunos detalles de cómo EF carga las entidades relacionadas y cómo controlar las propiedades de navegación circular en las clases de modelo. (Esta sección proporciona los conocimientos y no es necesario para completar el tutorial. Si lo prefiere, vaya a [parte 5.](part-5.md).)
+En esta sección se describen algunos detalles de cómo EF carga las entidades relacionadas y cómo controlar las propiedades de navegación circulares en las clases de modelo. (En esta sección se proporciona información básica y no es necesario para completar el tutorial. Si lo prefiere, vaya a la [parte 5.](part-5.md).)
 
-## <a name="eager-loading-versus-lazy-loading"></a>Diligente frente a la carga diferida
+## <a name="eager-loading-versus-lazy-loading"></a>Carga diligente frente a carga diferida
 
-Cuando se usa EF con una base de datos relacional, es importante comprender cómo EF carga los datos relacionados.
+Al usar EF con una base de datos relacional, es importante comprender cómo EF carga los datos relacionados.
 
-También es útil ver las consultas SQL que genera EF. Para realizar el seguimiento de SQL, agregue la siguiente línea de código para el `BookServiceContext` constructor:
+También resulta útil ver las consultas SQL que genera EF. Para realizar el seguimiento de SQL, agregue la siguiente línea de código al constructor `BookServiceContext`:
 
 [!code-csharp[Main](part-4/samples/sample1.cs)]
 
-Si envía una solicitud GET a /api/books, devuelve JSON similar al siguiente:
+Si envía una solicitud GET a/API/Books, devuelve JSON similar al siguiente:
 
 [!code-console[Main](part-4/samples/sample2.cmd)]
 
-Puede ver que la propiedad Author es null, aunque el libro contiene un AuthorId válido. Eso es porque EF no carga las entidades relacionadas del autor. Esto confirma que el registro de seguimiento de la consulta SQL:
+Puede ver que la propiedad Author es null, aunque el libro contenga una AuthorId válida. Esto se debe a que EF no está cargando las entidades de autor relacionadas. El registro de seguimiento de la consulta SQL confirma lo siguiente:
 
 [!code-console[Main](part-4/samples/sample3.sql)]
 
-La instrucción SELECT toma de la tabla de los libros en pantalla y no hace referencia a la tabla de autor.
+La instrucción SELECT toma de la tabla Books y no hace referencia a la tabla Author.
 
-Como referencia, este es el método en el `BooksController` clase que devuelve la lista de los libros en pantalla.
+Como referencia, este es el método de la clase `BooksController` que devuelve la lista de libros.
 
 [!code-csharp[Main](part-4/samples/sample4.cs)]
 
-Veamos cómo podemos volver al autor como parte de los datos JSON. Hay tres formas de cargar datos relacionados en Entity Framework: la carga diligente, la carga diferida y la carga explícita. Existen ventajas y desventajas con cada una de ellas, por lo que es importante comprender cómo funcionan.
+Veamos cómo podemos devolver el autor como parte de los datos JSON. Hay tres maneras de cargar datos relacionados en Entity Framework: carga diligente, carga diferida y carga explícita. Existen ventajas e inconvenientes con cada técnica, por lo que es importante comprender cómo funcionan.
 
 ### <a name="eager-loading"></a>Carga diligente
 
-Con *carga diligente*, EF carga las entidades relacionadas como parte de la consulta de base de datos inicial. Para realizar la carga diligente, utilice el **System.Data.Entity.Include** método de extensión.
+Con la *carga diligente*, EF carga las entidades relacionadas como parte de la consulta de base de datos inicial. Para realizar la carga diligente, use el método de extensión **System. Data. Entity. include** .
 
 [!code-csharp[Main](part-4/samples/sample5.cs)]
 
-Esto indica a EF para incluir los datos del autor de la consulta. Si realiza este cambio y ejecutar la aplicación, ahora los datos JSON tendrá este aspecto:
+Esto indica a EF que incluya los datos de autor en la consulta. Si realiza este cambio y ejecuta la aplicación, ahora los datos JSON tienen el siguiente aspecto:
 
 [!code-console[Main](part-4/samples/sample6.cmd)]
 
-El registro de seguimiento muestra que EF realiza una combinación en las tablas del libro y autor.
+El registro de seguimiento muestra que EF realizó una combinación en las tablas Book y Author.
 
 [!code-console[Main](part-4/samples/sample7.cmd)]
 
 ### <a name="lazy-loading"></a>Carga diferida
 
-Con la carga diferida, EF carga automáticamente una entidad relacionada cuando la propiedad de navegación para esa entidad se desreferencia. Para habilitar la carga diferida, que la propiedad de navegación virtual. Por ejemplo, en la clase Book:
+Con la carga diferida, EF carga automáticamente una entidad relacionada cuando se desreferencia la propiedad de navegación de esa entidad. Para habilitar la carga diferida, haga que la propiedad de navegación sea virtual. Por ejemplo, en la clase Book:
 
 [!code-csharp[Main](part-4/samples/sample8.cs?highlight=6)]
 
@@ -71,33 +71,33 @@ Ahora, considere el siguiente código:
 
 [!code-csharp[Main](part-4/samples/sample9.cs)]
 
-Cuando se habilita la carga diferida, obtener acceso a la `Author` propiedad `books[0]` hace que EF consultar la base de datos para el autor.
+Cuando se habilita la carga diferida, el acceso a la propiedad `Author` en `books[0]` hace que EF consulte en la base de datos el autor.
 
-La carga diferida requiere varios viajes de base de datos, dado que EF envía una consulta cada vez que recupera una entidad relacionada. Por lo general, desea deshabilitar para los objetos que se serializa la carga diferida. El serializador tiene que leer todas las propiedades en el modelo, que se desencadena al cargar las entidades relacionadas. Por ejemplo, presentamos las consultas SQL que EF serializa la lista de libros con la carga diferida habilitada. Puede ver que EF realiza tres consultas independientes para los autores de tres.
+La carga diferida requiere varios recorridos de base de datos, porque EF envía una consulta cada vez que recupera una entidad relacionada. Por lo general, desea deshabilitar la carga diferida para los objetos que se serializan. El serializador tiene que leer todas las propiedades del modelo, lo que desencadena la carga de las entidades relacionadas. Por ejemplo, estas son las consultas SQL cuando EF serializa la lista de libros con la carga diferida habilitada. Puede ver que EF realiza tres consultas independientes para los tres autores.
 
 [!code-console[Main](part-4/samples/sample10.sql)]
 
-Todavía hay veces cuando desea utilizar la carga diferida. Para hacer que la carga diligente EF generar una combinación muy compleja. O podría necesitar las entidades relacionadas para un pequeño subconjunto de los datos y la carga diferida sería más eficaz.
+Todavía hay ocasiones en las que podría querer usar la carga diferida. La carga diligente puede hacer que EF genere una combinación muy compleja. O bien, puede que necesite entidades relacionadas para un pequeño subconjunto de los datos y la carga diferida sería más eficaz.
 
-Es una forma de evitar problemas de serialización serializar objetos de transferencia de datos (dto) en lugar de objetos de entidad. Este enfoque le mostraré más adelante en el artículo.
+Una manera de evitar problemas de serialización es serializar los objetos de transferencia de datos (DTO) en lugar de los objetos de entidad. Mostraré este enfoque más adelante en el artículo.
 
 ### <a name="explicit-loading"></a>Carga explícita
 
-Carga explícita es similar a la carga diferida, salvo que obtener explícitamente los datos relacionados en el código; no sucede automáticamente cuando tiene acceso a una propiedad de navegación. Carga explícita le ofrece más control sobre cuándo se debe cargar los datos relacionados, pero requiere código adicional. Para obtener más información acerca de la carga explícita, vea [cargar entidades relacionadas](https://msdn.microsoft.com/data/jj574232#explicit).
+La carga explícita es similar a la carga diferida, salvo que se obtienen explícitamente los datos relacionados en el código. no se produce automáticamente cuando se obtiene acceso a una propiedad de navegación. La carga explícita le proporciona más control sobre cuándo cargar los datos relacionados, pero requiere código adicional. Para obtener más información sobre la carga explícita, vea [cargar entidades relacionadas](https://msdn.microsoft.com/data/jj574232#explicit).
 
-## <a name="navigation-properties-and-circular-references"></a>Las propiedades de navegación y las referencias circulares
+## <a name="navigation-properties-and-circular-references"></a>Propiedades de navegación y referencias circulares
 
-Cuando definen los modelos de libro y autor, definí una propiedad de navegación en el `Book` clase para la relación del autor del libro, pero no he definido una propiedad de navegación en la otra dirección.
+Al definir los modelos de libro y de autor, se define una propiedad de navegación en la clase `Book` para la relación de autor del libro, pero no se definió una propiedad de navegación en la otra dirección.
 
-¿Qué ocurre si agrega la propiedad de navegación correspondiente a la `Author` clase?
+¿Qué ocurre si agrega la propiedad de navegación correspondiente a la clase `Author`?
 
 [!code-csharp[Main](part-4/samples/sample11.cs?highlight=7)]
 
-Lamentablemente, esto crea un problema al serializar los modelos. Si carga los datos relacionados, crea un gráfico circular de objeto.
+Desafortunadamente, esto crea un problema al serializar los modelos. Si carga los datos relacionados, se crea un gráfico de objetos circulares.
 
 ![](part-4/_static/image1.png)
 
-Cuando se intente el formateador JSON o XML serializar el gráfico, producirá una excepción. Los dos formateadores generar mensajes de excepción diferente. Este es un ejemplo para el formateador JSON:
+Cuando el formateador JSON o XML intenta serializar el gráfico, producirá una excepción. Los dos formateadores producen mensajes de excepción diferentes. Este es un ejemplo del formateador JSON:
 
 [!code-console[Main](part-4/samples/sample12.cmd)]
 
@@ -105,9 +105,9 @@ Este es el formateador XML:
 
 [!code-xml[Main](part-4/samples/sample13.xml)]
 
-Una solución consiste en usar dto, que describe en la sección siguiente. Como alternativa, puede configurar los formateadores JSON y XML para controlar los ciclos de gráfico. Para obtener más información, consulte [referencias a objetos de control Circular](../../formats-and-model-binding/json-and-xml-serialization.md#handling_circular_object_references).
+Una solución es usar dto, que se describe en la sección siguiente. Como alternativa, puede configurar los formateadores JSON y XML para controlar los ciclos del gráfico. Para obtener más información, vea [controlar referencias circulares de objetos](../../formats-and-model-binding/json-and-xml-serialization.md#handling_circular_object_references).
 
-Para este tutorial, no necesita la `Author.Book` propiedad de navegación, por lo que puede dejarlo.
+En este tutorial, no necesita la propiedad de navegación `Author.Book`, por lo que puede dejarla fuera.
 
 > [!div class="step-by-step"]
 > [Anterior](part-3.md)

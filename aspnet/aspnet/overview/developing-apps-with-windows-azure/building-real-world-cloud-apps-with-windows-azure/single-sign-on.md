@@ -9,11 +9,11 @@ ms.assetid: 7d82d5e9-0619-4f22-9e03-32a6d52940a5
 msc.legacyurl: /aspnet/overview/developing-apps-with-windows-azure/building-real-world-cloud-apps-with-windows-azure/single-sign-on
 msc.type: authoredcontent
 ms.openlocfilehash: 1ca93cce22487295a24aae95437b3e69dfc5b504
-ms.sourcegitcommit: 7709c0a091b8d55b7b33bad8849f7b66b23c3d72
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/19/2020
-ms.locfileid: "77457146"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78500527"
 ---
 # <a name="single-sign-on-building-real-world-cloud-apps-with-azure"></a>Inicio de sesión único (creación de aplicaciones en la nube reales con Azure)
 
@@ -177,7 +177,7 @@ En el [siguiente capítulo](data-storage-options.md) se examinan las opciones de
 <a id="resources"></a>
 ## <a name="resources"></a>Recursos
 
-Para obtener más información, consulte los siguientes recursos:
+Para obtener más información, vea los siguientes recursos:
 
 - [Documentación de Azure Active Directory](https://docs.microsoft.com/azure/active-directory/). Página del portal de Azure AD documentación en el sitio de windowsazure.com. Para ver tutoriales paso a paso, consulte la sección **desarrollar** .
 - [Azure multi-factor Authentication](https://docs.microsoft.com/azure/multi-factor-authentication/). Página del portal para obtener documentación sobre la autenticación multifactor en Azure.

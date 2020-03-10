@@ -10,11 +10,11 @@ ms.assetid: c125ca47-606a-4d6f-a1fc-1fc62928af93
 msc.legacyurl: /web-api/overview/older-versions/creating-a-web-api-that-supports-crud-operations
 msc.type: authoredcontent
 ms.openlocfilehash: a096fd1c54df33b40115907a5c2517b2e3fec5b8
-ms.sourcegitcommit: 22fbd8863672c4ad6693b8388ad5c8e753fb41a2
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/28/2019
-ms.locfileid: "74600337"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78448045"
 ---
 # <a name="enabling-crud-operations-in-aspnet-web-api-1"></a>Habilitar operaciones CRUD en ASP.NET Web API 1
 
@@ -36,12 +36,12 @@ En este tutorial, creará una API Web muy sencilla para administrar una lista de
 
 La API Products expondrá los siguientes métodos.
 
-| Acción de | Método HTTP | URI relativo |
+| Acción | Método HTTP | URI relativo |
 | --- | --- | --- |
 | Obtener una lista de todos los productos | GET | /api/products |
 | Obtener un producto por identificador | GET | *identificador* de/API/Products/ |
 | Obtener un producto por categoría | GET | /API/Products? categoría =*categoría* |
-| Crear un nuevo producto | Exponer | /api/products |
+| Crear un nuevo producto | EXPONER | /api/products |
 | Actualizar un producto | PUT | *identificador* de/API/Products/ |
 | Eliminar un producto | SUPRIMIR | *identificador* de/API/Products/ |
 
@@ -51,7 +51,7 @@ Observe que algunos de los URI incluyen el ID. de producto en la ruta de acceso.
 
 La API Products define los URI para dos tipos de recursos:
 
-| Recurso | URI |
+| Recurso | Identificador URI |
 | --- | --- |
 | Lista de todos los productos. | /api/products |
 | Un producto individual. | *identificador* de/API/Products/ |
@@ -85,7 +85,7 @@ Un *modelo* es un objeto que representa los datos de la aplicación. En ASP.NET 
 
 En el caso de la API de ProductStore, nuestros datos se componen de productos, por lo que vamos a crear una nueva clase llamada `Product`.
 
-Si Explorador de soluciones todavía no está visible, haga clic en el menú **Ver** y seleccione **Explorador de soluciones**. En Explorador de soluciones, haga clic con el botón secundario en la carpeta **modelos** . En el menú contextual, seleccione **Agregar**y, a continuación, seleccione **clase**. Asigne a la clase el nombre &quot;&quot;del producto.
+Si el Explorador de soluciones no está visible, haga clic en el menú **Ver** y seleccione **Explorador de soluciones**. En Explorador de soluciones, haga clic con el botón secundario en la carpeta **modelos** . En el menú contextual, seleccione **Agregar**y, a continuación, seleccione **clase**. Asigne a la clase el nombre &quot;&quot;del producto.
 
 ![](creating-a-web-api-that-supports-crud-operations/_static/image3.png)
 
@@ -124,7 +124,7 @@ Si ha trabajado con ASP.NET MVC, ya está familiarizado con los controladores. E
 
 Continúe y elimine clase valuescontroller; para ello, haga clic con el botón derecho en el archivo en Explorador de soluciones y seleccione **eliminar.** Ahora agregue un nuevo controlador, como se indica a continuación:
 
-En **Explorador de soluciones**, haga clic con el botón secundario en la carpeta Controllers. Seleccione **Agregar** y, a continuación, seleccione **controlador**.
+En el **Explorador de soluciones**, haga clic con el botón derecho en la carpeta Controllers. Seleccione **Agregar** y, luego, **Controlador**.
 
 ![](creating-a-web-api-that-supports-crud-operations/_static/image6.png)
 
@@ -150,7 +150,7 @@ Agregue un campo que contenga una instancia de **IProductRepository** .
 
 La API de ProductStore expondrá varios &quot;leer&quot; acciones como métodos GET de HTTP. Cada acción se corresponderá con un método de la clase `ProductsController`.
 
-| Acción de | Método HTTP | URI relativo |
+| Acción | Método HTTP | URI relativo |
 | --- | --- | --- |
 | Obtener una lista de todos los productos | GET | /api/products |
 | Obtener un producto por identificador | GET | *identificador* de/API/Products/ |

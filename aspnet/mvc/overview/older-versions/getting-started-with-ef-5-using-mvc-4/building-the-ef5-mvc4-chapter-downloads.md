@@ -9,11 +9,11 @@ ms.assetid: d0a89089-eed8-4f61-a478-c5ffa30186f5
 msc.legacyurl: /mvc/overview/older-versions/getting-started-with-ef-5-using-mvc-4/building-the-ef5-mvc4-chapter-downloads
 msc.type: authoredcontent
 ms.openlocfilehash: 10237af40e3914b65e5181f17555697e86adea4b
-ms.sourcegitcommit: 7709c0a091b8d55b7b33bad8849f7b66b23c3d72
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/19/2020
-ms.locfileid: "77457861"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78485125"
 ---
 # <a name="building-the-chapter-downloads-for-the-ef-5-mvc-4-tutorials"></a>Compilación del capítulo descargas para los tutoriales de EF 5 MVC 4
 

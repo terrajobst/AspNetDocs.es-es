@@ -7,11 +7,11 @@ ms.author: riande
 ms.date: 01/17/2012
 ms.assetid: 5e2843f0-f499-448f-a712-33d4e9858321
 ms.openlocfilehash: 1e21c92e950893c0ff87c63f03f4710a158441fd
-ms.sourcegitcommit: e365196c75ce93cd8967412b1cfdc27121816110
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/07/2020
-ms.locfileid: "77075091"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78517537"
 ---
 # <a name="aspnet-webhooks-overview"></a>Información general de webhooks de ASP.NET
 

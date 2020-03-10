@@ -9,11 +9,11 @@ ms.assetid: 1c4588bb-255d-4088-b319-5208da756f4d
 msc.legacyurl: /web-forms/overview/data-access/basic-reporting/programmatically-setting-the-objectdatasource-s-parameter-values-cs
 msc.type: authoredcontent
 ms.openlocfilehash: 8aa57172abcfc779fa74b128ad76d42c41dc5b98
-ms.sourcegitcommit: 22fbd8863672c4ad6693b8388ad5c8e753fb41a2
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/28/2019
-ms.locfileid: "74602207"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78465943"
 ---
 # <a name="programmatically-setting-the-objectdatasources-parameter-values-c"></a>Configurar los valores de parámetro de ObjectDataSource mediante programación (C#)
 

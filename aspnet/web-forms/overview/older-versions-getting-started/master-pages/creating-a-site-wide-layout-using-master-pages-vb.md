@@ -9,11 +9,11 @@ ms.assetid: 30945276-8ed9-4b27-8e50-4309244d3559
 msc.legacyurl: /web-forms/overview/older-versions-getting-started/master-pages/creating-a-site-wide-layout-using-master-pages-vb
 msc.type: authoredcontent
 ms.openlocfilehash: c0ee6ed9d944b9a8ff2b2996e93706b8416de905
-ms.sourcegitcommit: 22fbd8863672c4ad6693b8388ad5c8e753fb41a2
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/28/2019
-ms.locfileid: "74584323"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78519229"
 ---
 # <a name="creating-a-site-wide-layout-using-master-pages-vb"></a>Crear un diseño de todo el sitio mediante páginas maestras (VB)
 

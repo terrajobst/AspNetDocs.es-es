@@ -9,11 +9,11 @@ ms.assetid: 35798f21-1606-434b-83f8-30166906ef49
 msc.legacyurl: /web-forms/overview/data-access/working-with-binary-files/updating-and-deleting-existing-binary-data-cs
 msc.type: authoredcontent
 ms.openlocfilehash: 3e37381ee48fcda8e0e10374aa7a6ae53c3cc77c
-ms.sourcegitcommit: 22fbd8863672c4ad6693b8388ad5c8e753fb41a2
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/28/2019
-ms.locfileid: "74587416"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78475147"
 ---
 # <a name="updating-and-deleting-existing-binary-data-c"></a>Actualizar y eliminar los datos binarios existentes (C#)
 
@@ -53,7 +53,7 @@ La última pantalla del asistente nos pide asignar un nombre al nuevo método Ta
 
 Además de actualizar la capa DAL, es necesario actualizar la capa BLL para incluir los métodos para actualizar y eliminar una categoría. Estos son los métodos que se invocarán desde el nivel de presentación.
 
-Para eliminar una categoría, podemos usar el método `Delete` generado automáticamente `CategoriesTableAdapter` s. Agregue el método siguiente a la clase `CategoriesBLL`:
+Para eliminar una categoría, podemos usar el método `Delete` generado automáticamente `CategoriesTableAdapter` s. Agregue el siguiente método a la clase `CategoriesBLL`:
 
 [!code-csharp[Main](updating-and-deleting-existing-binary-data-cs/samples/sample2.cs)]
 

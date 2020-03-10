@@ -1,7 +1,7 @@
 ---
 uid: mvc/overview/getting-started/database-first-development/changing-the-database
-title: 'Tutorial: Cambiar la base de datos para EF Database First con la aplicación de ASP.NET MVC'
-description: En este tutorial se centra en realizar una actualización en la estructura de base de datos y propagar ese cambio a lo largo de la aplicación web.
+title: 'Tutorial: cambio de la base de datos de EF Database First con la aplicación ASP.NET MVC'
+description: Este tutorial se centra en hacer una actualización de la estructura de la base de datos y propagar ese cambio en toda la aplicación Web.
 author: Rick-Anderson
 ms.author: riande
 ms.date: 01/28/2019
@@ -10,64 +10,64 @@ ms.assetid: cfd5c083-a319-482e-8f25-5b38caa93954
 msc.legacyurl: /mvc/overview/getting-started/database-first-development/changing-the-database
 msc.type: authoredcontent
 ms.openlocfilehash: 52cad1120908cf0d4f85770f8e2690f9415c5f56
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57038712"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78499525"
 ---
-# <a name="tutorial-change-the-database-for-ef-database-first-with-aspnet-mvc-app"></a>Tutorial: Cambiar la base de datos para EF Database First con la aplicación de ASP.NET MVC
+# <a name="tutorial-change-the-database-for-ef-database-first-with-aspnet-mvc-app"></a>Tutorial: cambio de la base de datos de EF Database First con la aplicación ASP.NET MVC
 
-Con Scaffolding de ASP.NET, MVC y Entity Framework, puede crear una aplicación web que proporciona una interfaz a una base de datos existente. Esta serie de tutoriales muestra cómo generar el código que permite a los usuarios mostrar, editar, crear automáticamente y eliminar datos que residen en una tabla de base de datos. El código generado corresponde a las columnas de la tabla de base de datos.
+Con el scaffolding de MVC, Entity Framework y ASP.NET, puede crear una aplicación web que proporcione una interfaz a una base de datos existente. En esta serie de tutoriales se muestra cómo generar automáticamente código que permite a los usuarios mostrar, editar, crear y eliminar datos que residen en una tabla de base de datos. El código generado corresponde a las columnas de la tabla de base de datos.
 
-En este tutorial se centra en realizar una actualización en la estructura de base de datos y propagar ese cambio a lo largo de la aplicación web.
+Este tutorial se centra en hacer una actualización de la estructura de la base de datos y propagar ese cambio en toda la aplicación Web.
 
-En este tutorial ha:
+En este tutorial va a:
 
 > [!div class="checklist"]
 > * Agregar una columna
-> * Agregue la propiedad a las vistas
+> * Agregar la propiedad a las vistas
 
 ## <a name="prerequisites"></a>Requisitos previos
 
-* [Generación de vistas](generating-views.md)
+* [Generar vistas](generating-views.md)
 
 ## <a name="add-a-column"></a>Agregar una columna
 
-Si actualiza la estructura de una tabla en la base de datos, deberá asegurarse de que el cambio se propaga al modelo de datos, vistas y controlador.
+Si actualiza la estructura de una tabla en la base de datos, debe asegurarse de que el cambio se propague al modelo de datos, las vistas y el controlador.
 
-Para este tutorial, agregará una nueva columna a la tabla Student para registrar el apellido del alumno. Para agregar esta columna, abra el proyecto de base de datos y abra el archivo Student.sql. Mediante el diseñador o en el código de Transact-SQL, agregue una columna denominada **MiddleName** que es un nvarchar (50) y permite valores NULL.
+En este tutorial, agregará una nueva columna a la tabla Student para registrar el segundo nombre del estudiante. Para agregar esta columna, abra el proyecto de base de datos y abra el archivo Student. SQL. A través del diseñador o del código T-SQL, agregue una columna denominada **MiddleName** que sea un nvarchar (50) y admita valores NULL.
 
-Implementar este cambio en la base de datos local, inicie el proyecto de base de datos (o F5). El nuevo campo se agrega a la tabla. Si no se ve en el Explorador de objetos de SQL Server, haga clic en el botón Actualizar en el panel.
+Implemente este cambio en la base de datos local. para ello, inicie el proyecto de base de datos (o F5). El nuevo campo se agrega a la tabla. Si no lo ve en el Explorador de objetos de SQL Server, haga clic en el botón actualizar en el panel.
 
-![Mostrar la nueva columna](changing-the-database/_static/image2.png)
+![Mostrar nueva columna](changing-the-database/_static/image2.png)
 
-La nueva columna existe en la tabla de base de datos, pero no existe actualmente en la clase de modelo de datos. Debe actualizar el modelo para incluir la nueva columna. En el **modelos** carpeta, abra el **ContosoModel.edmx** archivo para mostrar el diagrama del modelo. Tenga en cuenta que el modelo Student no contiene la propiedad MiddleName. Haga doble clic en cualquier lugar en la superficie de diseño y seleccione **actualizar modelo desde base de datos**.
+La nueva columna existe en la tabla de base de datos, pero no existe actualmente en la clase de modelo de datos. Debe actualizar el modelo para incluir la nueva columna. En la carpeta **Models** , abra el archivo **ContosoModel. edmx** para mostrar el diagrama del modelo. Observe que el modelo Student no contiene la propiedad MiddleName. Haga clic con el botón secundario en cualquier parte de la superficie de diseño y seleccione **Actualizar modelo desde base de datos**.
 
-En el asistente, seleccione el **actualizar** pestaña y, a continuación, seleccione **tablas** > **dbo** > **estudiante**. Haga clic en **Finalizar**.
+En el Asistente para actualización, seleccione la pestaña **Actualizar** y, a continuación, seleccione **tablas** > **DBO** > **Student**. Haga clic en **Finalizar**.
 
-Cuando finalice el proceso de actualización, el diagrama de base de datos incluye el nuevo **MiddleName** propiedad. Guardar el **ContosoModel.edmx** archivo. Debe guardar este archivo para la nueva propiedad se propagará a la **Student.cs** clase. Ahora que ha actualizado la base de datos y el modelo.
+Una vez finalizado el proceso de actualización, el diagrama de base de datos incluye la nueva propiedad **MiddleName** . Guarde el archivo **ContosoModel. edmx** . Debe guardar este archivo para que la nueva propiedad se propague a la clase **Student.CS** . Ahora ha actualizado la base de datos y el modelo.
 
 Compile la solución.
 
-## <a name="add-the-property-to-the-views"></a>Agregue la propiedad a las vistas
+## <a name="add-the-property-to-the-views"></a>Agregar la propiedad a las vistas
 
-Lamentablemente, las vistas todavía no contienen la nueva propiedad. Para actualizar las vistas tiene dos opciones: puede generar volver a las vistas mediante la adición de una vez más scaffolding para la clase Student o puede agregar manualmente la nueva propiedad a las vistas existentes. En este tutorial, agregará el scaffolding de nuevo porque no ha realizado los cambios personalizados en las vistas que se genera automáticamente. Considere la posibilidad de agregar manualmente la propiedad cuando ha realizado cambios en las vistas y no desea perder los cambios.
+Desafortunadamente, las vistas todavía no contienen la nueva propiedad. Para actualizar las vistas tiene dos opciones: puede volver a generar las vistas mediante la adición de scaffolding para la clase Student, o bien puede Agregar manualmente la nueva propiedad a las vistas existentes. En este tutorial, agregará el scaffolding de nuevo porque no ha realizado ningún cambio personalizado en las vistas generadas automáticamente. Puede considerar la posibilidad de agregar manualmente la propiedad cuando haya realizado cambios en las vistas y no desee perder los cambios.
 
-Para asegurarse de que las vistas se vuelven a creadas, eliminar el **estudiantes** carpeta bajo **vistas**y elimine el **StudentsController**. A continuación, haga clic en el **controladores** carpeta y agregar el scaffolding para el **estudiante** modelo. El nombre nuevo, el controlador **StudentsController**. Seleccione **Agregar**.
+Para asegurarse de que se vuelven a crear las vistas, elimine la carpeta **Students** en **views**y elimine **StudentsController**. A continuación, haga clic con el botón secundario en la carpeta **Controllers** y agregue scaffolding para el modelo **Student** . De nuevo, asigne al controlador el nombre **StudentsController**. Seleccione **Agregar**.
 
-Compile la solución de nuevo. Las vistas contienen ahora la propiedad MiddleName.
+Vuelva a compilar la solución. Las vistas contienen ahora la propiedad MiddleName.
 
-![Mostrar el segundo nombre](changing-the-database/_static/image5.png)
+![Mostrar segundo nombre](changing-the-database/_static/image5.png)
 
 ## <a name="next-steps"></a>Pasos siguientes
 
-En este tutorial ha:
+En este tutorial va a:
 
 > [!div class="checklist"]
 > * Se ha agregado una columna
-> * Agrega la propiedad a las vistas
+> * Se ha agregado la propiedad a las vistas
 
-Avance al siguiente tutorial para aprender a personalizar la vista para mostrar los detalles acerca de un registro de estudiante.
+Avance al siguiente tutorial para aprender a personalizar la vista para mostrar los detalles de un registro de estudiante.
 > [!div class="nextstepaction"]
-> [Personalizar una vista](customizing-a-view.md)
+> [Personalización de una vista](customizing-a-view.md)

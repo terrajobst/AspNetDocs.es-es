@@ -10,11 +10,11 @@ ms.custom: seoapril2019
 msc.legacyurl: /identity/overview/extensibility/overview-of-custom-storage-providers-for-aspnet-identity
 msc.type: authoredcontent
 ms.openlocfilehash: 21baedf6285b411f89627df9ca25d47a2a42e387
-ms.sourcegitcommit: 88fc80e3f65aebdf61ec9414810ddbc31c543f04
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/22/2020
-ms.locfileid: "76519107"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78472225"
 ---
 # <a name="overview-of-custom-storage-providers-for-aspnet-identity"></a>Información general sobre los proveedores de almacenamiento personalizado para ASP.NET Identity
 
@@ -38,7 +38,7 @@ De forma predeterminada, el sistema ASP.NET Identity almacena información de us
 
 ASP.NET Identity se incluye de forma predeterminada en muchas de las plantillas de Visual Studio 2013. Puede obtener actualizaciones para ASP.NET Identity mediante el [paquete NuGet de Microsoft ASPNET Identity EntityFramework](http://www.nuget.org/packages/Microsoft.AspNet.Identity.EntityFramework/).
 
-En este tema se incluyen las secciones siguientes:
+En este tema, se incluyen las siguientes secciones:
 
 - [Descripción de la arquitectura](#architecture)
 - [Descripción de los datos que se almacenan](#data)
@@ -68,12 +68,12 @@ No es necesario personalizar las clases de administrador porque al crear una nue
 
 Para implementar un proveedor de almacenamiento personalizado, debe comprender los tipos de datos que se usan con ASP.NET Identity y decidir qué características son relevantes para su aplicación.
 
-| Datos | Descripción |
+| Datos | Description |
 | --- | --- |
-| Usuarios de | Usuarios registrados de su sitio Web. Incluye el identificador de usuario y el nombre de usuario. Puede incluir una contraseña con hash si los usuarios inician sesión con credenciales específicas de su sitio (en lugar de usar credenciales de un sitio externo como Facebook) y marca de seguridad para indicar si ha cambiado algo en las credenciales de usuario. También puede incluir la dirección de correo electrónico, el número de teléfono, si está habilitada la autenticación en dos fases, el número actual de inicios de sesión erróneos y si una cuenta se ha bloqueado. |
+| Usuarios | Usuarios registrados de su sitio Web. Incluye el identificador de usuario y el nombre de usuario. Puede incluir una contraseña con hash si los usuarios inician sesión con credenciales específicas de su sitio (en lugar de usar credenciales de un sitio externo como Facebook) y marca de seguridad para indicar si ha cambiado algo en las credenciales de usuario. También puede incluir la dirección de correo electrónico, el número de teléfono, si está habilitada la autenticación en dos fases, el número actual de inicios de sesión erróneos y si una cuenta se ha bloqueado. |
 | Notificaciones de usuario | Un conjunto de instrucciones (o notificaciones) sobre el usuario que representa la identidad del usuario. Puede habilitar una expresión mayor de la identidad del usuario que se puede lograr a través de los roles. |
 | Inicios de sesión de usuario | Información sobre el proveedor de autenticación externo (como Facebook) que se va a usar al iniciar sesión en un usuario. |
-| Roles de | Grupos de autorización para el sitio. Incluye el identificador de rol y el nombre de rol (por ejemplo, "admin" o "Employee"). |
+| Roles | Grupos de autorización para el sitio. Incluye el identificador de rol y el nombre de rol (por ejemplo, "admin" o "Employee"). |
 
 <a id="dal"></a>
 ## <a name="create-the-data-access-layer"></a>Crear la capa de acceso a datos
@@ -86,7 +86,7 @@ Para obtener una implementación de MySQL de repositorios de datos para ASP.NET 
 
 En la capa de acceso a datos, se proporciona la lógica para guardar los datos de ASP.NET Identity en el origen de datos. La capa de acceso a datos para el proveedor de almacenamiento personalizado podría incluir las siguientes clases para almacenar información de usuarios y roles.
 
-| Clase | Descripción | Ejemplo |
+| Clase | Description | Ejemplo |
 | --- | --- | --- |
 | Contexto | Encapsula la información para conectarse al mecanismo de persistencia y ejecutar consultas. Esta clase es fundamental para el nivel de acceso a datos. Las demás clases de datos requerirán una instancia de esta clase para realizar sus operaciones. También inicializará las clases de almacén con una instancia de esta clase. | [MySQLDatabase](https://github.com/aspnet/samples/blob/master/samples/aspnet/Identity/AspNet.Identity.MySQL/MySQLDatabase.cs) |
 | Almacenamiento de usuario | Almacena y recupera información de usuario (como el nombre de usuario y el hash de contraseña). | [UserTable (MySQL)](https://github.com/aspnet/samples/blob/master/samples/aspnet/Identity/AspNet.Identity.MySQL/UserTable.cs) |
@@ -214,9 +214,9 @@ En el ejemplo siguiente se muestra una clase de almacén de roles. El parámetro
 
 [!code-csharp[Main](overview-of-custom-storage-providers-for-aspnet-identity/samples/sample8.cs)]
 
-- **IRoleStore&lt;TRole&gt;**  
+- **IRoleStore&lt;&gt; de Comtrol**  
   La interfaz [IRoleStore](https://msdn.microsoft.com/library/dn468195.aspx) define los métodos que se van a implementar en la clase de almacén de roles. Contiene métodos para crear, actualizar, eliminar y recuperar roles.
-- **RoleStore&lt;TRole&gt;**  
+- **RoleStore&lt;&gt; de Comtrol**  
   Para personalizar RoleStore, cree una clase que implemente la interfaz IRoleStore. Solo tiene que implementar esta clase si desea usar roles en el sistema. El constructor que toma un parámetro denominado *Database* de tipo ExampleDatabase solo es una ilustración de cómo pasar la clase de acceso a datos. Por ejemplo, en la implementación de MySQL, este constructor toma un parámetro de tipo MySQLDatabase.  
   
   Para obtener una implementación completa, vea [RoleStore (MySQL)](https://github.com/aspnet/samples/blob/master/samples/aspnet/Identity/AspNet.Identity.MySQL/RoleStore.cs) .

@@ -1,23 +1,23 @@
 ---
 uid: web-forms/overview/older-versions-getting-started/deployment-to-a-hosting-provider/index
-title: ASP.NET 4 - implementación Web con SQL Server Compact con Visual Studio | Microsoft Docs
+title: 'ASP.NET 4: implementación web con SQL Server Compact con Visual Studio | Microsoft Docs'
 author: rick-anderson
-description: Esta serie de tutoriales muestra cómo hacer que una aplicación web ASP.NET que usa SQL Server Compact disponibles a través de internet mediante su implementación en un h terceros...
+description: En esta serie de tutoriales se muestra cómo crear una aplicación Web ASP.NET que usa SQL Server Compact disponible a través de Internet mediante su implementación en un h de terceros...
 ms.author: riande
 ms.date: 11/29/2011
 ms.assetid: 6798c7e4-f08e-4802-9fa5-443f67d5df62
 msc.legacyurl: /web-forms/overview/older-versions-getting-started/deployment-to-a-hosting-provider
 msc.type: chapter
 ms.openlocfilehash: bb9a47eeb4197348e85bb469b68c0055e7c696a0
-ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/06/2019
-ms.locfileid: "65119444"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78514699"
 ---
 # <a name="aspnet-4---web-deployment-with-sql-server-compact-using-visual-studio"></a>ASP.NET 4 - Implementación web con SQL Server Compact mediante Visual Studio
 
-> Esta serie de tutoriales muestra cómo hacer que una aplicación web ASP.NET que usa SQL Server Compact disponibles a través de internet mediante su implementación en un proveedor de hospedaje de terceros. Requiere Visual Studio 2012 RC o Visual Studio 2010. Para obtener información más actualizada acerca de las características de implementación, o para obtener información sobre cómo implementar las ediciones de SQL Server que no sea de SQL Server Compact, vea [implementación Web de ASP.NET con Visual Studio](../../deployment/visual-studio-web-deployment/introduction.md).
+> En esta serie de tutoriales se muestra cómo crear una aplicación Web ASP.NET que use SQL Server Compact disponible a través de Internet mediante su implementación en un proveedor de hospedaje de terceros. Requiere Visual Studio 2012 RC o Visual Studio 2010. Para obtener más información sobre las características de implementación, o para obtener información sobre cómo implementar SQL Server ediciones que no sean SQL Server Compact, consulte [ASP.net web Deployment Using Visual Studio](../../deployment/visual-studio-web-deployment/introduction.md).
 
 - [Implementación web de Visual Studio con SQL Server Compact - Introducción](deployment-to-a-hosting-provider-introduction-1-of-12.md)
 - [Implementación web de Visual Studio con SQL Server Compact - Implementación de bases de datos de SQL Server Compact](deployment-to-a-hosting-provider-deploying-sql-server-compact-databases-2-of-12.md)

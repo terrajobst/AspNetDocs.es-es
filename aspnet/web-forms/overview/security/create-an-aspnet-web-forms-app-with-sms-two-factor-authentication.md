@@ -9,11 +9,11 @@ ms.assetid: 716264ae-ab72-45de-bfc5-53a6237089cf
 msc.legacyurl: /web-forms/overview/security/create-an-aspnet-web-forms-app-with-sms-two-factor-authentication
 msc.type: authoredcontent
 ms.openlocfilehash: c9558aca8a655071c0c94ed66433cf721f26c011
-ms.sourcegitcommit: 7709c0a091b8d55b7b33bad8849f7b66b23c3d72
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/19/2020
-ms.locfileid: "77466427"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78455983"
 ---
 # <a name="create-an-aspnet-web-forms-app-with-sms-two-factor-authentication-c"></a>Crear una aplicación de formularios Web Forms de ASP.NET con la autenticación en dos fases de SMS (C#)
 

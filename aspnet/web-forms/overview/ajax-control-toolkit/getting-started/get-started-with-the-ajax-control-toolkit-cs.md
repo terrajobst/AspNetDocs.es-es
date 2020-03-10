@@ -1,79 +1,79 @@
 ---
 uid: web-forms/overview/ajax-control-toolkit/getting-started/get-started-with-the-ajax-control-toolkit-cs
-title: Introducción a AJAX Control Toolkit (C#) | Microsoft Docs
+title: Introducción a AJAX control Toolkit (C#) | Microsoft Docs
 author: microsoft
-description: Aprenda todo lo que necesita saber para empezar a usar AJAX Control Toolkit.
+description: Aprenda todo lo que necesita saber para comenzar a usar el kit de herramientas de control de AJAX.
 ms.author: riande
 ms.date: 05/12/2009
 ms.assetid: 16dc5c11-65be-4eae-a818-9fad7f8259c6
 msc.legacyurl: /web-forms/overview/ajax-control-toolkit/getting-started/get-started-with-the-ajax-control-toolkit-cs
 msc.type: authoredcontent
 ms.openlocfilehash: 7478b090ec52778572d70065983de6be8bdb4e6b
-ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/06/2019
-ms.locfileid: "65128176"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78504091"
 ---
 # <a name="get-started-with-the-ajax-control-toolkit-c"></a>Introducción a AJAX Control Toolkit (C#)
 
 por [Microsoft](https://github.com/microsoft)
 
-> Aprenda todo lo que necesita saber para empezar a usar AJAX Control Toolkit.
+> Aprenda todo lo que necesita saber para comenzar a usar el kit de herramientas de control de AJAX.
 
-AJAX Control Toolkit contiene más de 30 controles gratuitos que puede usar en sus aplicaciones ASP.NET. En este tutorial, aprenderá a descargar AJAX Control Toolkit y agregar los controles del Kit de herramientas a su cuadro de herramientas de Visual Studio o Visual Web Developer Express.
+El kit de herramientas de control de AJAX contiene más de 30 controles gratuitos que puede usar en las aplicaciones de ASP.NET. En este tutorial, obtendrá información sobre cómo descargar el kit de herramientas de control de AJAX y agregar los controles del kit de herramientas al cuadro de herramientas de Visual Studio o Visual Web Developer Express.
 
-## <a name="downloading-the-ajax-control-toolkit"></a>Descarga de AJAX Control Toolkit
+## <a name="downloading-the-ajax-control-toolkit"></a>Descargar el kit de herramientas de control de AJAX
 
-El [AJAX Control Toolkit](http://devexpress.com/act) es un proyecto de código abierto desarrollado por los miembros de la Comunidad de ASP.NET y el equipo de ASP.NET. 
+[Ajax control Toolkit](http://devexpress.com/act) es un proyecto de código abierto desarrollado por los miembros de la comunidad asp.net y el equipo ASP.net. 
 
-[![Descarga de AJAX Control Toolkit](get-started-with-the-ajax-control-toolkit-cs/_static/image1.jpg)](get-started-with-the-ajax-control-toolkit-cs/_static/image1.png)
+[![descargar el kit de herramientas de control de AJAX](get-started-with-the-ajax-control-toolkit-cs/_static/image1.jpg)](get-started-with-the-ajax-control-toolkit-cs/_static/image1.png)
 
-**Figura 01**: Descarga de AJAX Control Toolkit ([haga clic aquí para ver imagen en tamaño completo](get-started-with-the-ajax-control-toolkit-cs/_static/image2.png))
+**Figura 01**: descarga de Ajax control Toolkit ([haga clic para ver la imagen de tamaño completo](get-started-with-the-ajax-control-toolkit-cs/_static/image2.png))
 
-Después de descargar el archivo, deberá desbloquear el archivo. Haga clic en el archivo, seleccione Propiedades y haga clic en el **desbloquear** botón (consulte la figura 2).
+Después de descargar el archivo, debe desbloquear el archivo. Haga clic con el botón derecho en el archivo, seleccione Propiedades y haga clic en el botón **desbloquear** (consulte la figura 2).
 
-[![Desbloquear el archivo ZIP de AJAX Control Toolkit](get-started-with-the-ajax-control-toolkit-cs/_static/image2.jpg)](get-started-with-the-ajax-control-toolkit-cs/_static/image3.png)
+[![desbloquear el archivo ZIP del kit de herramientas de control de AJAX](get-started-with-the-ajax-control-toolkit-cs/_static/image2.jpg)](get-started-with-the-ajax-control-toolkit-cs/_static/image3.png)
 
-**Figura 02**: Desbloquear el archivo ZIP de AJAX Control Toolkit ([haga clic aquí para ver imagen en tamaño completo](get-started-with-the-ajax-control-toolkit-cs/_static/image4.png))
+**Figura 02**: desbloqueo del archivo zip del kit de herramientas de control de Ajax ([haga clic para ver la imagen de tamaño completo](get-started-with-the-ajax-control-toolkit-cs/_static/image4.png))
 
-Después de desbloquear el archivo, puede descomprimir el archivo: Haga clic en el archivo y seleccione el **extraer todo** opción de menú. Ahora, estamos listos para agregar el Kit de herramientas al cuadro de herramientas de Visual Studio o Visual Web Developer.
+Después de desbloquear el archivo, puede descomprimir el archivo: haga clic con el botón derecho en el archivo y seleccione la opción de menú **extraer todo** . Ahora, estamos preparados para agregar el kit de herramientas al cuadro de herramientas de Visual Studio o Visual Web Developer.
 
-## <a name="adding-the-ajax-control-toolkit-to-the-toolbox"></a>Adición de AJAX Control Toolkit al cuadro de herramientas
+## <a name="adding-the-ajax-control-toolkit-to-the-toolbox"></a>Agregar el kit de herramientas de control de AJAX al cuadro de herramientas
 
-La manera más fácil de usar AJAX Control Toolkit consiste en agregar el Kit de herramientas a su cuadro de herramientas de Visual Studio o Visual Web Developer (consulte la figura 3). De este modo, se puede simplemente arrastre un control del Kit de herramientas a una página cuando desee usarlo.
+La forma más sencilla de usar AJAX control Toolkit es agregar el kit de herramientas al cuadro de herramientas de Visual Studio o Visual Web Developer (consulte la figura 3). De este modo, simplemente puede arrastrar un control de kit de herramientas a una página cuando desee usarlo.
 
-[![AJAX Control Toolkit aparece en el cuadro de herramientas](get-started-with-the-ajax-control-toolkit-cs/_static/image3.jpg)](get-started-with-the-ajax-control-toolkit-cs/_static/image5.png)
+[![AJAX control Toolkit aparece en el cuadro de herramientas](get-started-with-the-ajax-control-toolkit-cs/_static/image3.jpg)](get-started-with-the-ajax-control-toolkit-cs/_static/image5.png)
 
-**Figura 03**: AJAX Control Toolkit aparece en el cuadro de herramientas ([haga clic aquí para ver imagen en tamaño completo](get-started-with-the-ajax-control-toolkit-cs/_static/image6.png))
+**Figura 03**: el kit de herramientas de control de Ajax aparece en el cuadro de herramientas ([haga clic para ver la imagen de tamaño completo](get-started-with-the-ajax-control-toolkit-cs/_static/image6.png))
 
-En primer lugar, deberá agregar una pestaña de AJAX Control Toolkit al cuadro de herramientas. Siga estos pasos.
+En primer lugar, debe agregar una pestaña de AJAX control Toolkit al cuadro de herramientas. Siga estos pasos.
 
-1. Crear un nuevo sitio Web de ASP.NET si selecciona la opción de menú archivo, nuevo sitio Web. Haga doble clic en Default.aspx en la ventana Explorador de soluciones para abrir el archivo en el editor.
-2. Haga clic en el cuadro de herramientas debajo de la ficha General y seleccione la opción de menú **Agregar pestaña** (consulte la figura 4).
-3. Escriba una nueva ficha denominada AJAX Control Toolkit.
+1. Cree un nuevo sitio web de ASP.NET seleccionando el archivo de opción de menú, nuevo sitio Web. Haga doble clic en default. aspx en la ventana Explorador de soluciones para abrir el archivo en el editor.
+2. Haga clic con el botón derecho en el cuadro de herramientas debajo de la pestaña General y seleccione la opción de menú **Agregar pestaña** (vea la figura 4).
+3. Escriba una nueva pestaña denominada AJAX control Toolkit.
 
-[![Agregar una nueva pestaña](get-started-with-the-ajax-control-toolkit-cs/_static/image4.jpg)](get-started-with-the-ajax-control-toolkit-cs/_static/image7.png)
+[![agregar una nueva pestaña](get-started-with-the-ajax-control-toolkit-cs/_static/image4.jpg)](get-started-with-the-ajax-control-toolkit-cs/_static/image7.png)
 
-**Figura 04**: Agregar una ficha nueva ([haga clic aquí para ver imagen en tamaño completo](get-started-with-the-ajax-control-toolkit-cs/_static/image8.png))
+**Figura 04**: agregar una nueva pestaña ([haga clic para ver la imagen de tamaño completo](get-started-with-the-ajax-control-toolkit-cs/_static/image8.png))
 
-A continuación, deberá agregar los controles de AJAX Control Toolkit para la nueva pestaña. Siga estos pasos:
+A continuación, debe agregar los controles de AJAX control Toolkit a la nueva pestaña. Siga estos pasos:
 
-- Haga clic debajo de la ficha de AJAX Control Toolkit y seleccione la opción de menú **elegir elementos (consulte la figura 5)**.
-- Vaya a la ubicación donde descomprimió el AJAX Control Toolkit y seleccione el ensamblado AjaxControlToolkit.dll.
+- Haga clic con el botón derecho en la pestaña AJAX control Toolkit y seleccione **elementos (vea la figura 5)** .
+- Vaya a la ubicación donde descomprimió el kit de herramientas de control de AJAX y seleccione el ensamblado AjaxControlToolkit. dll.
 
-[![Elija los elementos que desea agregar al cuadro de herramientas](get-started-with-the-ajax-control-toolkit-cs/_static/image5.jpg)](get-started-with-the-ajax-control-toolkit-cs/_static/image9.png)
+[![elegir los elementos que se van a agregar al cuadro de herramientas](get-started-with-the-ajax-control-toolkit-cs/_static/image5.jpg)](get-started-with-the-ajax-control-toolkit-cs/_static/image9.png)
 
-**Figura 05**: Elija los elementos que desea agregar al cuadro de herramientas ([haga clic aquí para ver imagen en tamaño completo](get-started-with-the-ajax-control-toolkit-cs/_static/image10.png))
+**Figura 05**: elegir los elementos que se van a agregar al cuadro de herramientas ([haga clic para ver la imagen de tamaño completo](get-started-with-the-ajax-control-toolkit-cs/_static/image10.png))
 
-Después de completar estos pasos, todos los controles del Kit de herramientas aparecerá en el cuadro de herramientas.
+Después de completar estos pasos, todos los controles del kit de herramientas aparecerán en el cuadro de herramientas.
 
-## <a name="upgrading-to-a-new-version-of-the-toolkit"></a>Actualizar a una nueva versión del Kit de herramientas
+## <a name="upgrading-to-a-new-version-of-the-toolkit"></a>Actualización a una nueva versión del kit de herramientas
 
-Si usaba una versión anterior del Kit de herramientas y ahora necesita mover a una versión posterior aquí son los pasos recomendados:
+Si usaba una versión anterior del kit de herramientas y ahora necesita pasar a una versión posterior, estos son los pasos recomendados:
 
-- Binarios, elimine la versión anterior del ensamblado AjaxControlToolkit.dll desde la carpeta Bin del sitio Web.
-- Elementos de cuadro de herramientas - eliminar la ficha de AJAX Control Toolkit y siga los pasos anteriores para volver a crear la pestaña con la nueva versión del ensamblado AjaxControlToolkit.dll.
+- Binarios: Elimine la versión anterior del ensamblado AjaxControlToolkit. dll de la carpeta bin del sitio Web.
+- Elementos del cuadro de herramientas: Elimine la pestaña AJAX control Toolkit y siga los pasos anteriores para volver a crear la pestaña con la nueva versión del ensamblado AjaxControlToolkit. dll.
 
 > [!div class="step-by-step"]
 > [Siguiente](using-ajax-control-toolkit-controls-and-control-extenders-cs.md)

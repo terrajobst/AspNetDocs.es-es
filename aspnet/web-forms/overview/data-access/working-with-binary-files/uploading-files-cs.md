@@ -9,11 +9,11 @@ ms.assetid: b381b1da-feb3-4776-bc1b-75db53eb90ab
 msc.legacyurl: /web-forms/overview/data-access/working-with-binary-files/uploading-files-cs
 msc.type: authoredcontent
 ms.openlocfilehash: 4e3e32a829de386a681504c8d5d61dd258b8b2e6
-ms.sourcegitcommit: 22fbd8863672c4ad6693b8388ad5c8e753fb41a2
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/28/2019
-ms.locfileid: "74581677"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78441697"
 ---
 # <a name="uploading-files-c"></a>Carga de archivos (C#)
 
@@ -170,7 +170,7 @@ Después de agregar los dos `DataColumn` s al `CategoriesDataTable` y el método
 
 ## <a name="updating-the-business-logic-layer-bll"></a>Actualizar la capa de lógica de negocios (BLL)
 
-Con la capa DAL actualizada, todo lo que queda es aumentar el nivel de lógica de negocios (BLL) para incluir un método para el nuevo método de `CategoriesTableAdapter`. Agregue el método siguiente a la clase `CategoriesBLL`:
+Con la capa DAL actualizada, todo lo que queda es aumentar el nivel de lógica de negocios (BLL) para incluir un método para el nuevo método de `CategoriesTableAdapter`. Agregue el siguiente método a la clase `CategoriesBLL`:
 
 [!code-csharp[Main](uploading-files-cs/samples/sample4.cs)]
 

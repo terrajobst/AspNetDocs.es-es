@@ -2,18 +2,18 @@
 uid: web-pages/readme/overview
 title: Archivo Léame de WebMatrix | Microsoft Docs
 author: rick-anderson
-description: WebMatrix y ASP.NET Web Pages (Razor) versión 1.0 Léame
+description: Archivo Léame de la versión 1,0 de WebMatrix y ASP.NET Web Pages (Razor)
 ms.author: riande
 ms.date: 01/06/2011
 ms.assetid: 36c5beeb-45a7-48a0-9c30-f82cdf5c5f5f
 msc.legacyurl: /web-pages/readme
 msc.type: content
 ms.openlocfilehash: fac53e935860a90d8f2aa96699d56d66ade3a40f
-ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/06/2019
-ms.locfileid: "65133188"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78454273"
 ---
 # <a name="webmatrix-readme"></a>Archivo Léame de WebMatrix
 
@@ -22,55 +22,55 @@ ms.locfileid: "65133188"
 ## <a name="contents"></a>Contenido
 
 > [!NOTE]
-> Este archivo Léame se aplica a la 1.0 versión de WebMatrix.
+> Este archivo Léame se aplica a la versión 1,0 de WebMatrix.
 
 - [Información general](#Overview)
 - [Instalación](#Installation_Notes)
-- [Cómo publicar aplicaciones](#InstructionsForPublishingApplications)
-- [Los cambios y problemas](#ChangesAndIssues)
+- [Publicación de aplicaciones](#InstructionsForPublishingApplications)
+- [Cambios y problemas](#ChangesAndIssues)
 
-    - [Instalación de WebMatrix 1.0](#Known_Issues_Installation)
+    - [Instalación de WebMatrix 1,0](#Known_Issues_Installation)
     - [ASP.NET Web Pages](#Known_Issues_ASPNET) (Más información sobre páginas web de ASP.NET)
     - [WebMatrix](#Known_Issues_WebMatrix)
     - [IIS Express](#Known_Issues_IISExpress)
     - [SQL Server Compact](#Known_Issues_SQLServerCompact)
     - [Instalación de aplicaciones](#Known_Issues_Installing_Applications)
-    - [Publicación de aplicaciones](#Known_Issues_Publishing_Applications)
+    - [Publicar aplicaciones](#Known_Issues_Publishing_Applications)
 - [Para obtener más información](#More_Info)
 
 <a id="Overview"></a>
 
 ## <a name="overview"></a>Información general
 
-> Microsoft WebMatrix 1.0 es una pila de desarrollo web gratuito que se instala en pocos minutos. Se integra un servidor web con la base de datos y marcos para crear una única experiencia integrada de programación. Puede usar WebMatrix para agilizar la manera de codificar, probar y publicar su propio sitio Web ASP.NET o PHP, o puede usar WebMatrix para iniciar un nuevo sitio Web con aplicaciones de código abierto populares como DotNetNuke, Umbraco, WordPress o Joomla. WebMatrix usa el mismo servidor web eficaz, el motor de base de datos y el entorno de marcos que se ejecutará el sitio Web en internet, lo que hace la transición de desarrollo a producción homogénea y sin problemas.
+> Microsoft WebMatrix 1,0 es una pila de desarrollo web gratuita que se instala en minutos. Integra un servidor Web con marcos de trabajo de programación y base de datos para crear una experiencia única e integrada. Puede usar WebMatrix para simplificar la forma de codificar, probar y publicar su propio sitio Web ASP.NET o PHP, o puede usar WebMatrix para iniciar un nuevo sitio web con aplicaciones populares de código abierto como DotNetNuke, Umbraco, WordPress o Joomla. WebMatrix usa el mismo servidor Web, motor de base de datos y entorno de marcos que ejecutará el sitio web en Internet, lo que hace que la transición de desarrollo a producción sea fluida y fluida.
 
 <a id="Installation_Notes"></a>
 
 ## <a name="installation"></a>Instalación
 
-> Para instalar WebMatrix 1.0, primero debe instalar el [Microsoft Web Platform Installer 3.0](https://go.microsoft.com/fwlink/?LinkID=194638). Después de instalar al instalador de plataforma Web, puede usarlo para instalar WebMatrix.
+> Para instalar WebMatrix 1,0, primero debe instalar el [Instalador de plataforma web de Microsoft 3,0](https://go.microsoft.com/fwlink/?LinkID=194638). Después de instalar el instalador de plataforma web, puede usarlo para instalar WebMatrix.
 > 
-> Si tiene problemas durante la instalación, consulte [solución de problemas con el instalador de plataforma Web de Microsoft](https://go.microsoft.com/fwlink/?LinkId=196212).
+> Si tiene problemas durante la instalación, consulte la [solución de problemas con instalador de plataforma web de Microsoft](https://go.microsoft.com/fwlink/?LinkId=196212).
 
 <a id="InstructionsForPublishingApplications"></a>
-## <a name="how-to-publish-applications"></a>Cómo publicar aplicaciones
+## <a name="how-to-publish-applications"></a>Publicación de aplicaciones
 
-> Consulte [instrucciones paso a paso para publicar aplicaciones](https://go.microsoft.com/fwlink/?LinkID=196149)
+> Consulte [las instrucciones paso a paso para publicar aplicaciones](https://go.microsoft.com/fwlink/?LinkID=196149)
 
 <a id="ChangesAndIssues"></a>
 
-## <a name="changes-and-issues"></a>Los cambios y problemas
+## <a name="changes-and-issues"></a>Cambios y problemas
 
 <a id="Known_Issues_Installation"></a>
 
-### <a name="webmatrix-10-installation-issues"></a>Problemas de instalación de 1.0 de WebMatrix
+### <a name="webmatrix-10-installation-issues"></a>Problemas de instalación de WebMatrix 1,0
 
-#### <a name="issue-webmatrix-10-is-available-only-on-platforms-that-support-microsoft-net-framework-4"></a>Problema: WebMatrix 1.0 solo está disponible en las plataformas que admiten Microsoft .NET Framework 4
+#### <a name="issue-webmatrix-10-is-available-only-on-platforms-that-support-microsoft-net-framework-4"></a>Problema: WebMatrix 1,0 solo está disponible en plataformas compatibles con Microsoft .NET Framework 4
 
-> La versión 4 de .NET Framework es necesaria para WebMatrix. En algunos casos, el programa de instalación de 1.0 WebMatrix le permitirá intenta instalar en una plataforma que no forma parte del conjunto de configuración admitidos. En concreto, Windows Vista sin la actualización SP1 le permiten comenzar la instalación de WebMatrix, pero producirá un error en el componente de .NET Framework 4 y bloquear la instalación.
+> La versión 4 de .NET Framework es necesaria para WebMatrix. En algunos casos, el instalador de WebMatrix 1,0 le permitirá instalar en una plataforma que no forma parte del conjunto de configuración compatible. En concreto, Windows Vista sin la actualización de SP1 le permitirá comenzar la instalación de WebMatrix, pero se producirá un error en el componente .NET Framework 4 y se bloqueará la instalación.
 > 
-> **Workaround**  
-> Instalar en una plataforma compatible, que incluye:
+> **Solución alternativa**  
+> Instale en una plataforma compatible, que incluye:
 > 
 > - Windows 7
 > - Windows Server 2008
@@ -79,434 +79,434 @@ ms.locfileid: "65133188"
 > - Windows XP SP3
 > - Windows Server 2003 SP2
 
-#### <a name="issue-cannot-install-webmatrix-10-if-microsoft-visual-studio-2008-is-installed-without-microsoft-visual-studio-2008-sp1"></a>Problema: No se puede instalar WebMatrix 1.0 si se instala Microsoft Visual Studio 2008 sin Microsoft Visual Studio 2008 SP1
+#### <a name="issue-cannot-install-webmatrix-10-if-microsoft-visual-studio-2008-is-installed-without-microsoft-visual-studio-2008-sp1"></a>Problema: no se puede instalar WebMatrix 1,0 si Microsoft Visual Studio 2008 está instalado sin Microsoft Visual Studio 2008 SP1
 
-> **Workaround**  
-> Instalar [Microsoft Visual Studio 2008 SP1](https://www.microsoft.com/downloads/details.aspx?FamilyId=FBEE1648-7106-44A7-9649-6D9F6D58056E&amp;displaylang=en) desde el centro de descarga de Microsoft.
+> **Solución alternativa**  
+> Instale [Microsoft Visual Studio SP1 de 2008](https://www.microsoft.com/downloads/details.aspx?FamilyId=FBEE1648-7106-44A7-9649-6D9F6D58056E&amp;displaylang=en) desde el centro de descarga de Microsoft.
 
-#### <a name="issue-some-assemblies-for-sql-server-compact-40-are-not-installed-in-the-gac"></a>Problema: Algunos ensamblados de SQL Server Compact 4.0 no están instalados en la GAC
+#### <a name="issue-some-assemblies-for-sql-server-compact-40-are-not-installed-in-the-gac"></a>Problema: algunos ensamblados para SQL Server Compact 4,0 no están instalados en la GAC
 
-> Los ensamblados administrados para SQL Server Compact 4.0 no se colocan en la caché de ensamblados global (GAC) al instalar SQL Server Compact 4.0 en un equipo de 64 bits y el equipo tiene solo .NET Framework 3.5 SP1 Client Profile instalado. Son los ensamblados administrados que no están instalados en la GAC:
+> Los ensamblados administrados para SQL Server Compact 4,0 no se colocan en la caché de ensamblados global (GAC) cuando se instala SQL Server Compact 4,0 en un equipo de 64 bits y el equipo solo tiene instalado el perfil de cliente de .NET Framework 3,5 SP1. Los ensamblados administrados que no están instalados en la GAC son:
 > 
-> - *System.Data.SqlServerCe.dll* (proveedor de ADO.NET)
-> - *System.Data.SqlServerCe.Entity.dll* (ADO.NET Entity Framework)
+> - *System. Data. SqlServerCe. dll* (proveedor ADO.net)
+> - *System. Data. SqlServerCe. Entity. dll* (ADO.NET Entity Framework)
 > 
-> **Workaround**  
-> Desinstalar SQL Server Compact 4.0. Descargue e instale la versión completa de .NET Framework 3.5 SP1 desde la ubicación siguiente:  
+> **Solución alternativa**  
+> Desinstale SQL Server Compact 4,0. Descargue e instale la versión completa de .NET Framework 3,5 SP1 desde la siguiente ubicación:  
 >   
-> [Paquete de Microsoft .NET Framework 3.5 con Service 1 (paquete completo)](https://go.microsoft.com/fwlink/?LinkId=194828)  
+> [Microsoft .NET Framework 3,5 Service Pack 1 (paquete completo)](https://go.microsoft.com/fwlink/?LinkId=194828)  
 >   
-> A continuación, vuelva a instalar SQL Server Compact 4.0.
+> A continuación, reinstale SQL Server Compact 4,0.
 
-#### <a name="issue-cannot-uninstall-sql-server-compact-using-the-command-line"></a>Problema: No se puede desinstalar SQL Server Compact usando la línea de comandos
+#### <a name="issue-cannot-uninstall-sql-server-compact-using-the-command-line"></a>Problema: no se puede desinstalar SQL Server Compact mediante la línea de comandos
 
-> Desinstalación de SQL Server Compact usando las opciones de línea de comandos no funciona en esta versión.
+> La desinstalación de SQL Server Compact con las opciones de línea de comandos no funciona en esta versión.
 > 
-> **Workaround**  
-> Use *programas y características* en el Panel de Control de Windows para desinstalar Microsoft SQL Server Compact 4.0.
+> **Solución alternativa**  
+> Use *programas y características* en el panel de control de Windows para desinstalar Microsoft SQL Server Compact 4,0.
 
 <a id="Known_Issues_ASPNET"></a>
 
 ### <a name="aspnet-web-pages"></a>ASP.NET Web Pages
 
-Esta sección del documento describen las nuevas características, cambios y problemas conocidos con la 1.0 versión de ASP.NET Web Pages con sintaxis Razor.
+En esta sección del documento se describen las nuevas características, los cambios y los problemas conocidos de la versión 1,0 de ASP.NET Web Pages con sintaxis Razor.
 
 - [Características nuevas](#NewFeatures)
 - [Cambios](#Changes)
-- [Problemas](#Issues)
+- [Issues](#Issues)
 
-#### <a id="NewFeatures"></a>  Nuevas características
+#### <a id="NewFeatures"></a>Nuevas características
 
-#### <a name="new-configuration-setting-added-to-disable-the-package-manager"></a>New: Agrega el valor de configuración para deshabilitar al administrador de paquetes
+#### <a name="new-configuration-setting-added-to-disable-the-package-manager"></a>Nuevo: se ha agregado una opción de configuración para deshabilitar el administrador de paquetes
 
-> Un nuevo `asp:AdminManagerEnabled` clave está disponible para el `<appSettings>` elemento en el *web.config* archivo, que le permite deshabilitar completamente el Administrador de paquetes. El valor predeterminado para este elemento es true, lo que significa que si no se incluye en el *web.config* archivo, el Administrador de paquetes está habilitado. Para deshabilitar el Administrador de paquetes, agregue el siguiente elemento a la *web.config* archivo en la raíz del sitio Web:
+> Hay una nueva clave de `asp:AdminManagerEnabled` disponible para el elemento `<appSettings>` en el archivo *Web. config* , que le permite deshabilitar por completo el administrador de paquetes. El valor predeterminado de este elemento es true, lo que significa que si no se incluye en el archivo *Web. config* , el administrador de paquetes está habilitado. Para deshabilitar el administrador de paquetes, agregue el siguiente elemento al archivo *Web. config* en la raíz del sitio web:
 > 
 > [!code-xml[Main](overview/samples/sample1.xml)]
 
-#### <a id="Changes"></a>  Cambios
+#### <a id="Changes"></a>Realizadas
 
-#### <a name="change-webpagesadminfoldervirtualpath-key-renamed-to-aspadminfoldervirtualpath"></a>Cambio: clave "webPages:AdminFolderVirtualPath" ha cambiado a "asp: AdminFolderVirtualPath"
+#### <a name="change-webpagesadminfoldervirtualpath-key-renamed-to-aspadminfoldervirtualpath"></a>Cambio: la clave "Webpages: AdminFolderVirtualPath" cambió de nombre a "ASP: AdminFolderVirtualPath"
 
-> El `webPages:AdminFolderVirtualPath` clave que se puede agregar a la *web.config* archivo para especificar la ubicación del Administrador de paquetes se cambió para usar el `asp:` espacio de nombres en lugar de la `webPages` espacio de nombres. Si ha usado este elemento, debe cambiar el nombre del archivo de configuración.
+> Se ha cambiado el nombre de la clave `webPages:AdminFolderVirtualPath` que se puede Agregar al archivo *Web. config* para especificar la ubicación del administrador de paquetes para usar el espacio de nombres `asp:` en lugar del espacio de nombres `webPages`. Si ha usado este elemento, debe cambiarlo en el archivo de configuración.
 
 #### <a id="Issues"></a>  Problemas conocidos
 
-#### <a name="issue-passwords-for-membership-users-no-longer-recognized"></a>Problema: Contraseñas de usuarios de pertenencia que ya no se reconoce
+#### <a name="issue-passwords-for-membership-users-no-longer-recognized"></a>Problema: las contraseñas de los usuarios de pertenencia ya no se reconocen
 
-> El algoritmo para crear y almacenar las contraseñas de pertenencia (inicio de sesión) se ha cambiado para ser más seguro. Como resultado, no se reconocerá las contraseñas almacenadas para los miembros (usuarios) creados en las versiones Beta de ASP.NET Razor. 
+> El algoritmo para crear y almacenar contraseñas de pertenencia (inicio de sesión) se ha cambiado para que sea más seguro. Como resultado, no se reconocerán las contraseñas almacenadas para los miembros (usuarios) creados en las versiones beta de Razor ASP.NET. 
 > 
-> **Solución alternativa** si el sitio aún no se haya puesto en producción, quitar los registros de usuario de la base de datos de pertenencia. Si la base de datos está activa, volver a generar mediante programación las contraseñas existentes en la base de datos de pertenencia.
+> **Solución alternativa** Si el sitio todavía no se ha puesto en producción, quite los registros de usuario de la base de datos de pertenencia. Si la base de datos está activa, regenere las contraseñas existentes en la base de datos de pertenencia mediante programación.
 
-#### <a name="issue-unexpected-behavior-when-using-a-custom-user-table-for-membership"></a>Problema: Comportamiento inesperado cuando se usa una tabla de usuario personalizada para la suscripción
+#### <a name="issue-unexpected-behavior-when-using-a-custom-user-table-for-membership"></a>Problema: comportamiento inesperado al usar una tabla de usuario personalizada para la pertenencia
 
-> Para inicializar el proveedor de pertenencia para un sitio Web de ASP.NET Razor, llame a la `WebSecurity.InitializeDatabaseConnection` método. (En WebMatrix, la plantilla de sitio inicial incluye una llamada a este método en el  *\_AppStart.cshtml* archivo.) Si el `autoCreateTables` parámetro de este método está establecido en true (de forma predeterminada, se establece en true en la plantilla de sitio de inicio), y si un nombre de tabla no reconocida se pasa al método (el segundo parámetro), el método no produce un error. En su lugar, crea automáticamente la tabla.
+> Para inicializar el proveedor de pertenencia para un sitio web de Razor para ASP.NET, llame al método `WebSecurity.InitializeDatabaseConnection`. (En WebMatrix, la plantilla del sitio de inicio incluye una llamada a este método en el archivo *\_AppStart. cshtml* ). Si el parámetro `autoCreateTables` de este método está establecido en true (de forma predeterminada, se establece en true en la plantilla del sitio de inicio) y si se pasa un nombre de tabla no reconocido al método (el segundo parámetro), el método no produce un error. En su lugar, crea la tabla automáticamente.
 > 
-> Esto puede ser un problema si va a usar una tabla de usuario personalizada para la suscripción pero pase el nombre de tabla incorrecto para el `WebSecurity.InitializeDatabaseConnection` método. Dado que el método no predeterminada genera un error si no existe la tabla que se especifique, y porque crea una nueva tabla en su lugar, la aplicación puede parecer a trabajar. Sin embargo, código de aplicación que se basa en la tabla de usuario personalizada (y en los campos de él) puede producir un error con errores inesperados.
+> Esto puede ser un problema si tiene previsto usar una tabla de usuario personalizada para la pertenencia pero pasar el nombre de tabla incorrecto al método `WebSecurity.InitializeDatabaseConnection`. Dado que el método no genera de forma predeterminada un error si la tabla que especifique no existe, y porque en su lugar crea una nueva tabla, la aplicación puede parecer que funciona. Sin embargo, el código de aplicación que se basa en la tabla de usuario personalizada (y en los campos que contiene) puede producir errores inesperados.
 > 
-> **Workaround**  
-> Asegúrese de que pasa el nombre de la `InitializeDatabaseConnection` coincidencias de método, el perfil de usuario de la tabla en la base de datos de pertenencia o asegúrese de que el `autoCreateTables` parámetro se establece en false.
+> **Solución alternativa**  
+> Asegúrese de que el nombre pasado en el método `InitializeDatabaseConnection` coincide con la tabla de perfiles de usuario de la base de datos de pertenencia, o asegúrese de que el parámetro `autoCreateTables` está establecido en false.
 
-#### <a name="issue-error-message-the-admin-module-requires-access-to-appdata"></a>Problema: Mensaje de error "el módulo de administración requiere acceso a ~/App\_datos"
+#### <a name="issue-error-message-the-admin-module-requires-access-to-app_data"></a>Problema: mensaje de error "el módulo de administración requiere acceso a ~/App\_datos"
 
-> En algunas circunstancias, intentando crear usuarios o trabajar con el sistema de pertenencia ASP.NET puede hacer que la página Mostrar el error *el módulo de administración requiere acceso a ~/App\_datos*. Esto se produce si la cuenta que se está ejecutando en IIS o IIS Express no tiene permisos para crear y escribir en el *aplicación\_datos* carpeta bajo la raíz del sitio Web. 
+> En algunas circunstancias, intentar crear usuarios o trabajar de otro modo con el sistema de pertenencia de ASP.NET puede hacer que la página muestre el error. *el módulo de administración requiere acceso a ~/App\_datos*. Esto sucede si la cuenta con la que se ejecuta IIS o IIS Express no tiene permisos para crear y escribir en la carpeta de *datos de\_* de la aplicación en la raíz del sitio Web. 
 > 
-> **Solución alternativa** crear manualmente un *aplicación\_datos* carpeta para el sitio Web. Asegúrese de que la cuenta de Windows que se ejecuta la aplicación (normalmente, el servicio de red) tiene los permisos de lectura/escritura para las carpetas raíz de la aplicación y para las subcarpetas, como aplicación\_datos. Información más detallada está disponible en el artículo de Knowledge Base [problemas con las instancias de usuario de SQL Server Express y proyectos de aplicación Web ASP.net](https://support.microsoft.com/kb/2002980).
+> **Solución alternativa** Cree manualmente una carpeta de *datos de\_de aplicaciones* para el sitio Web. A continuación, asegúrese de que la cuenta de Windows en la que se ejecuta la aplicación (normalmente servicio de red) tiene permisos de lectura y escritura para las carpetas raíz de la aplicación y para las subcarpetas, como los datos de\_de la aplicación. Puede encontrar información más detallada en el artículo de Knowledge base sobre [problemas con SQL Server Express los proyectos de aplicación Web ASP.net y creación de instancias de usuario](https://support.microsoft.com/kb/2002980).
 
-#### <a name="issue-failed-to-generate-a-user-instance-of-sql-server-error"></a>Problema: Error "No se pudo generar una instancia de usuario de SQL Server"
+#### <a name="issue-failed-to-generate-a-user-instance-of-sql-server-error"></a>Problema: "no se pudo generar una instancia de usuario de SQL Server"
 
-> Si una aplicación WebMatrix Web usa SQL Server Express y se está ejecutando IIS 7.5 en Windows 7 o Windows Server 2008 R2, puede aparecer un error que indica que SQL Server no se puede recuperar la ruta de acceso de aplicación local del usuario en tiempo de ejecución.
+> Si una aplicación Web de WebMatrix usa SQL Server Express y ejecuta IIS 7,5 en Windows 7 o Windows Server 2008 R2, podría ver un error que indica que SQL Server no puede recuperar la ruta de acceso de la aplicación local del usuario en tiempo de ejecución.
 > 
-> **Solución alternativa** Asegúrese de que la cuenta de Windows que se ejecuta la aplicación (normalmente, el servicio de red) tiene los permisos de lectura/escritura para las carpetas raíz de la aplicación y para las subcarpetas como *aplicación\_datos*. Información más detallada está disponible en el artículo de Knowledge Base [problemas con las instancias de usuario de SQL Server Express y proyectos de aplicación Web ASP.net](https://support.microsoft.com/kb/2002980).
+> **Solución alternativa** Asegúrese de que la cuenta de Windows en la que se ejecuta la aplicación (normalmente servicio de red) tenga permisos de lectura y escritura para las carpetas raíz de la aplicación y para las subcarpetas, como los *datos de\_* de la aplicación. Puede encontrar información más detallada en el artículo de Knowledge base sobre [problemas con SQL Server Express los proyectos de aplicación Web ASP.net y creación de instancias de usuario](https://support.microsoft.com/kb/2002980).
 
-#### <a name="issue-files-that-contains-package-manager-resources-or-package-manager-passwords-are-servable-under-iis-60-and-earlier"></a>Problema: Los archivos que contiene los recursos del Administrador de paquetes o las contraseñas de administrador de paquetes son que se pueden proporcionar en IIS 6.0 y versiones anteriores
+#### <a name="issue-files-that-contains-package-manager-resources-or-package-manager-passwords-are-servable-under-iis-60-and-earlier"></a>Problema: los archivos que contienen recursos del administrador de paquetes o contraseñas del administrador de paquetes se pueden disponer en IIS 6,0 y versiones anteriores.
 
-> Si implementa una aplicación de ASP.NET Web Pages (Razor) que se generó con la versión RC2, y si la aplicación contiene un *password.txt* o *packagesources.txt* archivo */App\_ Administrador dedatos/*, IIS 6.0 servirá el archivo si se solicita, puede exponer las contraseñas para la instancia del Administrador de paquetes. 
+> Si implementa una aplicación de ASP.NET Web Pages (Razor) que se compiló con la versión RC2 y, si la aplicación contiene un archivo *password. txt* o *packagesources. txt* en */App\_Data/admin*, IIS 6,0 atenderá el archivo si se solicita, lo que podría exponer las contraseñas de la instancia del administrador de paquetes. 
 > 
-> **Solución alternativa** cambiar el nombre de la *password.txt* o *packagesources.txt* archivo *password.config* o *packagesources.config*. De forma predeterminada, IIS 6.0 no suministrará los archivos que tienen la *.config* extensión. (En IIS 7, no hay archivos en el *aplicación\_datos* se sirven carpeta, por lo que no es necesario cambiar el nombre de los archivos.)
+> **Solución alternativa** Cambie el nombre del archivo *password. txt* o *packagesources. txt* a *password. config* o *packagesources. config*. De forma predeterminada, IIS 6,0 no sirve los archivos que tienen la extensión *. config* . (En IIS 7, no se sirven archivos en la *aplicación\_* carpeta de datos, por lo que no es necesario cambiar el nombre de los archivos).
 
-#### <a name="issue-uninstalling-packages-installed-using-the-beta-3-release-does-not-completely-remove-package-components"></a>Problema: Los paquetes instalados con la versión Beta 3 de desinstalación no quita por completo los componentes del paquete
+#### <a name="issue-uninstalling-packages-installed-using-the-beta-3-release-does-not-completely-remove-package-components"></a>Problema: la desinstalación de paquetes instalados con la versión beta 3 no quita por completo los componentes del paquete
 
-> Si instaló un paquete mediante el Administrador de paquetes en la versión Beta 3 y, a continuación, intente desinstalar mediante la versión actual, el paquete no se desinstala completamente. Mediante el Administrador de paquetes **desinstalar** botón quita algunos componentes, pero deje el código de biblioteca del paquete y no actualiza el *package.config* archivo.
+> Si instaló un paquete con el administrador de paquetes en la versión beta 3 y, a continuación, intenta desinstalarlo con la versión actual, el paquete no se desinstalará por completo. Al usar el botón **desinstalar** del administrador de paquetes, se quitan algunos componentes, *pero el código* de la biblioteca del paquete no se actualiza.
 > 
 > **Solución alternativa**   
 > Siga estos pasos:  
-> 1. Eliminar el *aplicación\_Data\packages* carpeta. Esto quita todos los paquetes.   
-> 2. Eliminar el *packages.config* archivo en la raíz del sitio Web.
+> 1. Elimine la carpeta Data\packages de la *aplicación\_* . Esto quita todos los paquetes.   
+> 2. Elimine el archivo *packages. config* en la raíz del sitio Web.
 
-#### <a name="issue-in-visual-studio-invoking-the-web-based-package-manager-takes-the-application-offline"></a>Problema: En Visual Studio, invocar el Administrador de paquetes basada en web toma la aplicación sin conexión
+#### <a name="issue-in-visual-studio-invoking-the-web-based-package-manager-takes-the-application-offline"></a>Problema: en Visual Studio, al invocar el administrador de paquetes basado en Web, la aplicación se desconecta.
 
-> Si está trabajando en Visual Studio (no WebMatrix) y use la  *\_admin* funcionalidad para iniciar el Administrador de paquetes, Visual Studio se desconecta de la aplicación y registra el *aplicación\_ offline.htm* en la raíz del sitio Web, se interrumpirá su capacidad para usar el Administrador de paquetes.
+> Si está trabajando en Visual Studio (no WebMatrix) y usa la funcionalidad de *Administración de\_* para iniciar el administrador de paquetes, Visual Studio pone la aplicación sin conexión y envía la aplicación *\_offline. htm* a la raíz del sitio web, lo que interrumpe su capacidad de usar el administrador de paquetes.
 > 
 > [!NOTE]
-> Aunque normalmente vería este comportamiento cuando se usa la interfaz del Administrador de paquetes basado en web, se produce el mismo comportamiento si agregar, quitar o modificar los archivos en el *aplicación\_datos* carpeta.
+> Aunque lo más habitual es ver este comportamiento cuando se usa la interfaz del administrador de paquetes basada en Web, se produce el mismo comportamiento si se agregan, quitan o modifican archivos en la carpeta *\_de datos* de la aplicación.
 > 
 > **Solución alternativa**   
-> Para trabajar con paquetes en Visual Studio, utilice la extensión de NuGet en lugar del Administrador de paquetes basada en web. Para obtener información, consulte el [documentación de NuGet](https://docs.microsoft.com/nuget/). Si está trabajando con otros archivos en el *aplicación\_datos* carpeta, considere la posibilidad de mantener los archivos en otra parte, para evitar este problema. Si no es práctico, elimine el *aplicación\_offline.htm* archivo manualmente o espere a que el sitio vuelve a conectarse automáticamente (de forma predeterminada, después de 30 segundos).
+> Para trabajar con paquetes en Visual Studio, use la extensión NuGet en lugar del administrador de paquetes basado en Web. Para obtener información, consulte la [documentación de NuGet](https://docs.microsoft.com/nuget/). Si está trabajando con otros archivos en la carpeta *App\_Data* , considere la posibilidad de mantener los archivos en otro lugar para evitar este problema. Si no es práctico, elimine la *aplicación\_archivo. htm sin conexión* manualmente o espere hasta que el sitio vuelva a estar en línea automáticamente (de forma predeterminada, después de 30 segundos).
 
-#### <a name="issue-visual-studio-intellisense-and-project-templates-available-only-in-aspnet-mvc-version-3"></a>Problema: Visuales Studio IntelliSense y plantillas de proyectos disponibles sólo en ASP.NET MVC versión 3
+#### <a name="issue-visual-studio-intellisense-and-project-templates-available-only-in-aspnet-mvc-version-3"></a>Problema: IntelliSense de Visual Studio y las plantillas de proyecto solo están disponibles en ASP.NET MVC versión 3
 
-> Instalar ASP.NET Web Pages no también instalar tools para Visual Studio, como IntelliSense y plantillas de proyectos para aplicaciones de ASP.NET Web Pages.
+> La instalación de ASP.NET Web Pages no instala también herramientas para Visual Studio, como IntelliSense y plantillas de proyecto para las aplicaciones de ASP.NET Web Pages.
 > 
-> **Solución alternativa** para usar IntelliSense y plantillas de proyectos para aplicaciones de ASP.NET Web Pages en Visual Studio, instalar RC de ASP.NET MVC 3 mediante el instalador de plataforma Web o el [instalador independiente](https://go.microsoft.com/fwlink/?LinkID=191797).
+> **Solución alternativa** Para usar IntelliSense y plantillas de proyecto para ASP.NET Web Pages aplicaciones en Visual Studio, instale ASP.NET MVC 3 RC mediante el instalador de plataforma web o el [instalador independiente](https://go.microsoft.com/fwlink/?LinkID=191797).
 
-#### <a name="issue-reading-feeds-or-other-external-data-via-a-proxy-server"></a>Problema: Las fuentes de lectura o de otros datos externos a través de un servidor proxy
+#### <a name="issue-reading-feeds-or-other-external-data-via-a-proxy-server"></a>Problema: leer fuentes u otros datos externos a través de un servidor proxy
 
-> Si el servidor que ejecuta el sitio está detrás de un servidor proxy, deberá configurar la información de proxy en el *web.config* archivo para poder leer la información que proviene de fuera de su sitio. Por ejemplo, si usa el `ReCaptcha` auxiliar, la aplicación auxiliar se comunica con el servicio de reCAPTCHA, pero podría estar bloqueada por el servidor proxy. De forma similar, las fuentes que se usan en ASP.NET Web Pages, como la fuente utilizada por el Administrador de paquetes, pueden requerir la configuración de proxy.
+> Si el servidor que ejecuta el sitio está detrás de un servidor proxy, es posible que tenga que configurar la información del proxy en el archivo *Web. config* para poder leer información que procede de fuera de su sitio. Por ejemplo, si usa la aplicación auxiliar `ReCaptcha`, el ayudante se comunica con el servicio reCAPTCHA, pero podría estar bloqueado por el servidor proxy. Del mismo modo, las fuentes que se usan en ASP.NET Web Pages, como la fuente utilizada por el administrador de paquetes, pueden requerir la configuración del proxy.
 > 
-> Si experimenta problemas en trabajar con un servicio externo o trabajar con la fuente del paquete, colocar los elementos siguientes en la raíz de la aplicación *web.config* archivo:
+> Si tiene problemas al trabajar con un servicio externo o al trabajar con la fuente del paquete, coloque los elementos siguientes en el archivo *Web. config* raíz de la aplicación:
 > 
 > [!code-xml[Main](overview/samples/sample2.xml)]
 > 
-> Para obtener más información acerca de cómo configurar un servidor proxy, consulte [ &lt;proxy&gt; (configuración de red) del elemento](https://msdn.microsoft.com/library/sa91de1e.aspx) en el sitio Web de MSDN.
+> Para obtener más información acerca de la configuración de un servidor proxy, vea [&lt;elemento&gt; del proxy (configuración de red)](https://msdn.microsoft.com/library/sa91de1e.aspx) en el sitio web de MSDN.
 
-#### <a name="issue-uninstalling-the-net-framework-version-4-disables-aspnet-web-pages-with-razor-syntax"></a>Problema: Al desinstalar la versión 4 de .NET Framework se deshabilita ASP.NET Web Pages con sintaxis Razor
+#### <a name="issue-uninstalling-the-net-framework-version-4-disables-aspnet-web-pages-with-razor-syntax"></a>Problema: la desinstalación de la versión 4 de .NET Framework deshabilita ASP.NET Web Pages con sintaxis Razor
 
-> Si desinstala la versión 4 de .NET Framework y, a continuación, vuelva a instalarlo, se deshabilita ASP.NET Web Pages con sintaxis Razor. Las páginas con la *.cshtml* extensión no se ejecutan correctamente. Páginas Web de ASP.NET, se registra un ensamblado en la raíz de la máquina *web.config* archivo y quitar .NET Framework se elimina el archivo. Volver a instalar .NET Framework instala una nueva versión del archivo de configuración, pero no agrega la referencia del ensamblado de ASP.NET Web Pages.
+> Si desinstala la versión 4 de .NET Framework y, a continuación, vuelve a instalarla, ASP.NET Web Pages con sintaxis Razor está deshabilitada. Las páginas con la extensión *. cshtml* no se ejecutan correctamente. ASP.NET Web Pages registra un ensamblado en el archivo *Web. config* raíz del equipo y quita el .NET Framework quita ese archivo. Al volver a instalar el .NET Framework se instala una nueva versión del archivo de configuración, pero no se agrega la referencia del ensamblado ASP.NET Web Pages.
 > 
-> **Solución alternativa** después de volver a instalar .NET Framework, reinstale ASP.NET Web Pages con sintaxis Razor. Esto agrega el siguiente elemento a la *web.config* archivo en la raíz de la máquina, que se encuentra normalmente en la siguiente ubicación:  
+> **Solución alternativa** Después de volver a instalar el .NET Framework, vuelva a instalar ASP.NET Web Pages con sintaxis Razor. Esto agrega el siguiente elemento al archivo *Web. config* en la raíz de la máquina, que normalmente se encuentra en la siguiente ubicación:  
 > 
 > `C:\Windows\Microsoft.NET\Framework\v4.0.30319\Config (32-bit)`  
 > `C:\Windows\Microsoft.NET\Framework64\v4.0.30319\Config (64-bit)`
 > 
 > [!code-xml[Main](overview/samples/sample3.xml)]
 
-#### <a name="issue-extensionless-urls-do-not-find-cshtmlvbhtml-files-on-iis-7-or-iis-75"></a>Problema: Direcciones URL sin extensión no encuentra los archivos de.cshtml/.vbhtml en IIS 7 o IIS 7.5
+#### <a name="issue-extensionless-urls-do-not-find-cshtmlvbhtml-files-on-iis-7-or-iis-75"></a>Problema: las direcciones URL sin extensión no encuentran archivos. cshtml/. vbhtml en IIS 7 o IIS 7,5
 
-> En IIS 7 o IIS 7.5, las solicitudes con una dirección URL similar a la siguiente no están posible encontrar las páginas que tienen la *.cshtml* o *.vbhtml* extensión:  
+> En IIS 7 o IIS 7,5, las solicitudes con una dirección URL como la siguiente no pueden encontrar páginas que tengan la extensión *. cshtml* o *. vbhtml* :  
 > 
 > `http://www.example.com/ExampleSite/ExampleFile`  
 > 
-> El problema surge porque la reescritura de URL no está habilitada de forma predeterminada para IIS 7 o IIS 7.5. El escenario más probable es que no ve el problema al realizar pruebas localmente mediante IIS Express, pero la experiencia al implementar su sitio Web en un sitio Web de hospedaje.
+> El problema surge porque la reescritura de direcciones URL no está habilitada de forma predeterminada para IIS 7 o IIS 7,5. El escenario likeliest es que no ve el problema al realizar pruebas de forma local con IIS Express, pero lo experimenta al implementar el sitio web en un sitio web de hospedaje.
 > 
-> **Workaround**
+> **Solución alternativa**
 > 
-> - Si tiene control sobre el equipo del servidor, en el equipo servidor instalar la actualización que se describe en [hay una actualización disponible que habilita ciertos controladores de IIS 7.0 o IIS 7.5 para controlar las solicitudes cuyas direcciones URL no termina con un punto](https://support.microsoft.com/kb/980368).
-> - Si no tiene control sobre el equipo del servidor (por ejemplo, va a implementar en un sitio de hospedaje Web), agregue lo siguiente del sitio Web *web.config* archivo: 
+> - Si tiene control sobre el equipo servidor, en el equipo servidor Instale la actualización que se describe en [una actualización disponible que permite que determinados controladores de iis 7,0 o iis 7,5 controlen las solicitudes cuyas direcciones URL no finalizan con un punto](https://support.microsoft.com/kb/980368).
+> - Si no tiene control sobre el equipo del servidor (por ejemplo, si está implementando en un sitio web de hospedaje), agregue lo siguiente al archivo *Web. config* del sitio web: 
 > 
 >     [!code-xml[Main](overview/samples/sample4.xml)]
 
-#### <a name="issue-deploying-an-application-to-a-computer-that-does-not-have-sql-server-compact-installed"></a>Problema: Implementar una aplicación en un equipo que no tiene SQL Server Compact instalado
+#### <a name="issue-deploying-an-application-to-a-computer-that-does-not-have-sql-server-compact-installed"></a>Problema: implementación de una aplicación en un equipo que no tiene SQL Server Compact instalado
 
-> Las aplicaciones que incluyen bases de datos de SQL Server Compact pueden ejecutar en un equipo donde SQL Server Compact no está instalado. Microsoft WebMatrix 1.0 automáticamente copia estos archivos binarios para usted y realiza adecuado *web.config* transformaciones de archivos.
+> Las aplicaciones que incluyen SQL Server Compact bases de datos se pueden ejecutar en un equipo en el que no esté instalado SQL Server Compact. Microsoft WebMatrix 1,0 copia automáticamente estos archivos binarios y realiza las transformaciones del archivo *Web. config* adecuado.
 > 
-> **Solución alternativa** si tiene que copiar estos archivos y realizar el *web.config* cambios en los archivos manualmente, haga lo siguiente:
+> **Solución alternativa** Si necesita copiar estos archivos y hacer que los cambios en el archivo *Web. config* se realicen manualmente, haga lo siguiente:
 > 
-> 1. Copie los ensamblados del motor de base de datos a la *Bin* carpeta (y las subcarpetas) de la aplicación en el equipo de destino:  
+> 1. Copie los ensamblados del motor de base de datos en la carpeta *bin* (y en las subcarpetas) de la aplicación en el equipo de destino:  
 > 
->    - Copia *C:\Program Files\Microsoft SQL Server Edition\v4.0\Desktop\System.Data.SqlServerCe.dll*   
->      **to** *\Bin*
->    - Copia *C:\Program Files\Microsoft SQL Server Compact Edition\v4.0\Private\x86\\*  **a** *\Bin\x86*
->    - Copia *C:\Program Files\Microsoft SQL Server Compact Edition\v4.0\Private\amd64\\** **a** *\Bin\amd64*
+>    - Copy *c:\Archivos de programa\microsoft SQL Server Edition\v4.0\Desktop\System.Data.SqlServerCe.dll*   
+>      **a** *\Bin*
+>    - Copie *c:\Archivos de programa\microsoft SQL Server Compact Edition\v4.0\Private\x86\\* **en** *\Bin\x86*
+>    - Copie *c:\Archivos de programa\microsoft SQL Server Compact Edition\v4.0\Private\amd64\\* * **en** *\Bin\amd64*
 > 
-> 2. En la carpeta raíz del sitio Web, cree o abra un *web.config* archivo. (En WebMatrix 1.0, está disponible si hace clic en este tipo de archivo **todas** en el **elegir un tipo de archivo** cuadro de diálogo.)
-> 3. Agregue el siguiente elemento como elemento secundario de la `<configuration>` elemento (no está dentro de la `<system.web>` elemento):
+> 2. En la carpeta raíz del sitio web, cree o abra un archivo *Web. config* . (En WebMatrix 1,0, este tipo de archivo está disponible si hace clic en **todo** en el cuadro de diálogo **elegir un tipo de archivo** ).
+> 3. Agregue el siguiente elemento como elemento secundario del elemento `<configuration>` (no dentro del elemento `<system.web>`):
 > 
 >     [!code-xml[Main](overview/samples/sample5.xml)]
 
-#### <a name="issue-database-and-webgrid-helpers-do-not-work-in-medium-trust-in-visual-basic"></a>Problema: "Database" y "WebGrid" aplicaciones auxiliares no funcionan en Medium Trust en Visual Basic
+#### <a name="issue-database-and-webgrid-helpers-do-not-work-in-medium-trust-in-visual-basic"></a>Problema: las aplicaciones auxiliares de "base de datos" y "WebGrid" no funcionan en un nivel de confianza medio en Visual Basic
 
-> Si está utilizando Visual Basic (crear *.vbhtml* archivos), el `Database` y `WebGrid` aplicaciones auxiliares no funcionará si la aplicación está configurada para usar el nivel de confianza medio.
+> Si usa Visual Basic (crear archivos *. vbhtml* ), las aplicaciones auxiliares de `Database` y `WebGrid` no funcionarán si la aplicación está configurada para usar el nivel de confianza medio.
 > 
-> **Workaround**  
-> Si usa Visual Studio 2010, puede resolver este problema mediante la instalación de la versión del Service Pack 1. Hasta que esté disponible la versión final de la versión SP1, puede descargar la versión Beta de SP1 desde el [Microsoft Visual Studio 2010 Service Pack 1 Beta](https://www.microsoft.com/downloads/en/details.aspx?FamilyID=11ea69cb-cf12-4842-a3d7-b32a1e5642e2&amp;displaylang=en) página en Microsoft Download Center.   
+> **Solución alternativa**  
+> Si usa Visual Studio 2010, puede resolver este problema instalando la versión de Service Pack 1. Hasta que la versión final de la versión SP1 esté disponible, puede descargar la versión beta de SP1 desde la página [Microsoft Visual Studio 2010 Service Pack 1 beta](https://www.microsoft.com/downloads/en/details.aspx?FamilyID=11ea69cb-cf12-4842-a3d7-b32a1e5642e2&amp;displaylang=en) del centro de descarga de Microsoft.   
 >   
-> Si esto no es práctico, o si no usa Visual Studio 2010, temporalmente puede establece la aplicación para usar la plena confianza.
+> Si esto no es práctico, o si no usa Visual Studio 2010, puede establecer temporalmente la aplicación para que utilice plena confianza.
 
-#### <a name="issue-applicationpart-resources-are-externally-accessible"></a>Problema: Recursos de "ApplicationPart" son accesibles externamente
+#### <a name="issue-applicationpart-resources-are-externally-accessible"></a>Problema: los recursos "ApplicationPart" son accesibles externamente
 
-> Si un ensamblado contiene objetos que se deriva el `ApplicationPart` clase, que se exponen los recursos del ensamblado por el `ResourceRouteHandler` clase. Pongamos como ejemplo esta URL:  
+> Si un ensamblado contiene objetos que se derivan de la clase `ApplicationPart`, la clase `ResourceRouteHandler` expone los recursos de ese ensamblado. Pongamos como ejemplo esta URL:  
 >   
 > `~/r.ashx/System.Web.WebPages.Administration/Resources/AdminResources.resources`  
 >   
-> Esta solicitud de descarga todas las cadenas de recursos en el *System.Web.WebPages.Administration.dll* ensamblado. Se descargan todos los recursos incrustados (incluso aquellos que no están diseñados para ser servido como contenido estático). Si los recursos incrustados contienen información confidencial, esto puede representar un riesgo de seguridad. 
+> Esta solicitud descarga todas las cadenas de recursos en el ensamblado *System. Web. Webpages. Administration. dll* . Se descargan todos los recursos incrustados (incluso los que no están diseñados para servir como contenido estático). Si los recursos incrustados contienen información confidencial, esto puede representar un riesgo para la seguridad. 
 > 
 > **Solución alternativa**   
-> Si creas un **ApplicationPart** , asegúrese de que los recursos incrustados asociada con la que **ApplicationPart** ensamblado del objeto no contienen información confidencial.
+> Si crea un objeto **ApplicationPart** , asegúrese de que los recursos incrustados asociados al ensamblado del objeto **ApplicationPart** no contengan información confidencial.
 
 <a id="Known_Issues_WebMatrix"></a>
 
 ### <a name="webmatrix"></a>WebMatrix
 
 > [!NOTE]
-> Para obtener información acerca de problemas de instalación de WebMatrix, vea [problemas de instalación de WebMatrix](#Known_Issues_Installation) anteriormente en este documento.
+> Para obtener información sobre los problemas de instalación de WebMatrix, consulte los [problemas de instalación de WebMatrix](#Known_Issues_Installation) anteriormente en este documento.
 
-Esta sección del documento describen problemas conocidos para el entorno de desarrollo de WebMatrix.
+En esta sección del documento se describen los problemas conocidos del entorno de desarrollo de WebMatrix.
 
-#### <a name="issue-changes-in-the-username-or-password-of-a-database-connection-string-in-a-webconfig-file-are-not-reflected-in-the-databases-workspace"></a>Problema: No se reflejan los cambios en el nombre de usuario o contraseña de una cadena de conexión de base de datos en un archivo web.config en el área de trabajo de bases de datos
+#### <a name="issue-changes-in-the-username-or-password-of-a-database-connection-string-in-a-webconfig-file-are-not-reflected-in-the-databases-workspace"></a>Problema: los cambios en el nombre de usuario o la contraseña de una cadena de conexión de base de datos en un archivo Web. config no se reflejan en el área de trabajo bases de datos.
 
-> **Workaround**  
+> **Solución alternativa**  
 > 
-> 1. En el *web.config* de archivo, cambie el nombre de la base de datos en la cadena de conexión (por ejemplo, agregue "1" a él).
-> 2. Guardar el *web.config* archivo.
-> 3. Haga clic en **bases de datos** y actualizar.
-> 4. Cambiar el nombre de la base de datos en la cadena de conexión en el *web.config* archivo por el nombre de base de datos original.
-> 5. Guardar el *web.config* archivo.
-> 6. Haga clic en **bases de datos** y actualizar.
+> 1. En el archivo *Web. config* , cambie el nombre de la base de datos en la cadena de conexión (por ejemplo, agregue "1" a ella).
+> 2. Guarde el archivo *Web. config* .
+> 3. Haga clic en **bases de datos** y en actualizar.
+> 4. Vuelva a cambiar el nombre de la base de datos en la cadena de conexión en el archivo *Web. config* al nombre de la base de datos original.
+> 5. Guarde el archivo *Web. config* .
+> 6. Haga clic en **bases de datos** y en actualizar.
 
-#### <a name="issue-folders-created-by-webmatrix-cannot-be-deleted"></a>Problema: No se puede eliminar las carpetas creadas mediante WebMatrix
+#### <a name="issue-folders-created-by-webmatrix-cannot-be-deleted"></a>Problema: no se pueden eliminar las carpetas creadas por WebMatrix
 
-> Si WebMatrix se ejecuta con permisos elevados (es decir, Introducción al uso de WebMatrix el **ejecutar como administrador** opción en Windows), no se puede eliminar carpetas que se crean mediante WebMatrix mediante el Explorador de Windows.
+> Si WebMatrix se ejecuta con permisos elevados (es decir, inició WebMatrix con la opción **Ejecutar como administrador** en Windows), las carpetas que crea WebMatrix no se pueden eliminar con el explorador de Windows.
 > 
-> **Workaround**  
-> Ejecute el Explorador de Windows con permisos elevados. Siga estos pasos:  
+> **Solución alternativa**  
+> Ejecute el explorador de Windows con permisos elevados. Siga estos pasos:  
 > 
 > 1. En Windows, haga clic en **iniciar**.
-> 2. Escriba "Explorador de Windows" y haga clic en la entrada de **Windows Explorer**.
-> 3. Haga clic en **ejecutar como administrador**. A continuación, puede eliminar las carpetas.
+> 2. Escriba "explorador de Windows" y haga clic con el botón derecho en la entrada del **Explorador de Windows**.
+> 3. Haga clic en **Ejecutar como administrador**. Después, puede eliminar las carpetas.
 
-#### <a name="issue-webmatrix-10-is-unable-to-perform-certain-tasks-that-require-elevation"></a>Problema: WebMatrix 1.0 no puede realizar ciertas tareas que requieren la elevación
+#### <a name="issue-webmatrix-10-is-unable-to-perform-certain-tasks-that-require-elevation"></a>Problema: WebMatrix 1,0 no puede realizar determinadas tareas que requieren elevación
 
-> WebMatrix 1.0 no puede realizar ciertas tareas que requieren la elevación, como la instalación de componentes adicionales en las situaciones siguientes:
+> WebMatrix 1,0 no puede realizar determinadas tareas que requieren elevación, como la instalación de componentes adicionales en las siguientes situaciones:
 > 
-> - En Windows Vista o Windows 7, que ha iniciado sesión con una cuenta que no tiene privilegios administrativos y Control de cuentas de usuario (UAC) está deshabilitada.
-> - Está utilizando Microsoft Windows XP o Microsoft Windows Server 2003.
+> - En Windows Vista o Windows 7, inició sesión con una cuenta que no tiene privilegios administrativos y el control de cuentas de usuario (UAC) está deshabilitado.
+> - Utiliza Microsoft Windows XP o Microsoft Windows Server 2003.
 > 
-> **Workaround**  
-> Mayoría de las tareas en WebMatrix 1.0 no requiere permisos administrativos. Para aquellos que lo hacen, puede realizar la operación porque un administrador o siga estos pasos:
+> **Solución alternativa**  
+> La mayoría de las tareas de WebMatrix 1,0 no requieren permisos administrativos. Para los que sí lo hacen, puede realizar la operación como administrador o seguir estos pasos:
 > 
-> - En Windows Vista o Windows 7, habilitar UAC.
-> - En Windows XP, agregue el usuario al grupo de seguridad Administradores.
+> - En Windows Vista o Windows 7, habilite UAC.
+> - En Windows XP, agregue el usuario al grupo de seguridad administradores.
 
-#### <a name="issue-site-from-web-gallery-is-disabled"></a>Problema: "Sitio desde galería Web" está deshabilitado
+#### <a name="issue-site-from-web-gallery-is-disabled"></a>Problema: "sitio de la galería Web" está deshabilitado
 
-> El **sitio desde galería Web** opción está deshabilitada si el instalador de plataforma Web 3.0 no está instalado.
+> La opción **sitio de la galería web** está deshabilitada si el instalador de plataforma web 3,0 no está instalado.
 > 
-> **Workaround**  
-> Instalar el [instalador de plataforma Web de Microsoft 3.0](https://go.microsoft.com/fwlink/?LinkID=194638).
+> **Solución alternativa**  
+> Instale el [Instalador de plataforma web de Microsoft 3,0](https://go.microsoft.com/fwlink/?LinkID=194638).
 
-#### <a name="issue-google-chrome-is-not-available-as-a-run-option"></a>Problema: Google Chrome no está disponible como una opción de ejecución
+#### <a name="issue-google-chrome-is-not-available-as-a-run-option"></a>Problema: Google Chrome no está disponible como opción de ejecución
 
-> Google Chrome no se muestra en la lista de exploradores en **ejecutar** en el **inicio** ficha.
+> Google Chrome no se muestra en la lista de exploradores en **Ejecutar** en la pestaña **Inicio** .
 > 
-> **Workaround**  
-> Algunas versiones de Google Chrome no se registran correctamente con la característica de programas predeterminados en Windows. Como alternativa, inicie Google Chrome, haga clic en el *control Google Chrome y personalizar* menú, haga clic en *opciones*y, a continuación, haga clic en *Make Google Chrome mi explorador predeterminado*.
+> **Solución alternativa**  
+> Algunas versiones de Google Chrome no se registran correctamente con la característica programas predeterminados de Windows. Como solución alternativa, inicie Google Chrome, haga clic en el menú *personalizar y controlar Google Chrome* , haga clic en *Opciones*y, a continuación, haga clic en *crear Google Chrome mi explorador predeterminado*.
 
-#### <a name="issue-the-foreign-key-dialog-box-doesnt-allow-entering-a-primary-key"></a>Problema: El cuadro de diálogo "Foreign Key" no permite escribir una clave principal
+#### <a name="issue-the-foreign-key-dialog-box-doesnt-allow-entering-a-primary-key"></a>Problema: el cuadro de diálogo "clave externa" no permite escribir una clave principal
 
-> El **Foreign Key** cuadro de diálogo no permite especificar el nombre de clave principal de la tabla de clave principal.
+> El cuadro de diálogo **clave externa** no permite especificar el nombre de la clave principal de la tabla de clave principal.
 > 
-> **Workaround**  
+> **Solución alternativa**  
 > Esto tiene su porqué. No es necesario que escriba el nombre de la clave principal de la tabla de clave principal.
 
-#### <a name="issue-intellisense-is-not-available-in-webmatrix-for-razor-syntax-c-or-visual-basic"></a>Problema: IntelliSense no está disponible en WebMatrix para conocer la sintaxis Razor, C#, o Visual Basic
+#### <a name="issue-intellisense-is-not-available-in-webmatrix-for-razor-syntax-c-or-visual-basic"></a>Problema: IntelliSense no está disponible en WebMatrix para sintaxis Razor, C#o Visual Basic
 
-> IntelliSense se admite en WebMatrix para HTML y CSS. Sin embargo, no está disponible para otros lenguajes. 
+> IntelliSense es compatible con WebMatrix para HTML y CSS. Sin embargo, no está disponible para otros idiomas. 
 > 
 > **Solución alternativa**   
 > Ninguno.
 
-#### <a name="issue-intellisense-for-html-and-css-suggests-elements-that-are-not-contextually-appropriate"></a>Problema: IntelliSense para HTML y CSS sugiere los elementos que no son adecuados contextualmente
+#### <a name="issue-intellisense-for-html-and-css-suggests-elements-that-are-not-contextually-appropriate"></a>Problema: IntelliSense para HTML y CSS sugiere elementos que no son apropiados contextualmente.
 
-> IntelliSense para el marcado en WebMatrix es compatible con HTML mediante la [esquema XHTML 1.0 Transitional](http://www.w3.org/TR/2002/NOTE-xhtml1-schema-20020902/#xhtml1-transitional) y el uso de CSS el [esquema CSS 2.1](http://www.w3.org/TR/CSS2/). Dado que IntelliSense se basa en estos esquemas específicos, determinadas etiquetas, atributos o propiedades podrían sugiere que no son adecuadas para la definición de estilo o la página actual. Para HTML, también puede conducir a sugerencias inesperadas en el contenido que podría interpretarse como XHTML con formato incorrecto (por ejemplo, cuando no se cierran las etiquetas). Este problema podría ser más evidente si el punto de inserción está dentro de una etiqueta incompleta; en ese caso, IntelliSense puede sugerir nuevas etiquetas de apertura u ofrecen otras sugerencias incorrectos. 
+> IntelliSense para el marcado en WebMatrix admite HTML mediante el [esquema de transición XHTML 1,0](http://www.w3.org/TR/2002/NOTE-xhtml1-schema-20020902/#xhtml1-transitional) y CSS con el [esquema CSS 2,1](http://www.w3.org/TR/CSS2/). Dado que IntelliSense se basa en estos esquemas específicos, se pueden sugerir ciertas etiquetas, atributos o propiedades que no son adecuadas para la página o definición de estilo actual. En el caso de HTML, también puede provocar sugerencias inesperadas en el contenido que podrían interpretarse como XHTML con formato incorrecto (por ejemplo, cuando las etiquetas no están cerradas). Este problema puede ser más evidente si el punto de inserción está dentro de una etiqueta incompleta; en ese caso, IntelliSense podría sugerir nuevas etiquetas de apertura u ofrecer otras sugerencias incorrectas. 
 > 
 > **Solución alternativa**   
-> Para HTML, asegúrese de que está trabajando dentro de una página XHTML completa tiene el formato correcto. No hay ninguna solución alternativa para CSS.
+> Para HTML, asegúrese de que está trabajando en una página XHTML completa y bien formada. En el caso de CSS, no hay ninguna solución alternativa.
 
-#### <a name="issue-intellisense-is-not-invoked-while-you-type"></a>Problema: No se invoca IntelliSense mientras escribe
+#### <a name="issue-intellisense-is-not-invoked-while-you-type"></a>Problema: IntelliSense no se invoca mientras escribe
 
-> En ocasiones, no se puede invocar IntelliSense como HTML o CSS se está entrando en el editor. En concreto, esto puede ocurrir cuando el punto de inserción está directamente al lado de otro elemento o al final de un archivo. 
+> En ocasiones, es posible que IntelliSense no se invoque como HTML o CSS se esté escribiendo en el editor. En concreto, esto puede ocurrir cuando el punto de inserción se encuentra directamente junto a otro elemento o al final de un archivo. 
 > 
 > **Solución alternativa**   
-> Asegúrese de que hay espacio en blanco alrededor del punto de inserción y que no es el punto de inserción al final de un archivo. También puede invocar IntelliSense manualmente presionando CTRL+BARRA ESPACIADORA.
+> Asegúrese de que hay espacio en blanco alrededor del punto de inserción y que el punto de inserción no está al final de un archivo. También puede invocar IntelliSense manualmente presionando CTRL + barra espaciadora.
 
-#### <a name="issue-no-ui-is-available-for-disabling-intellisense"></a>Problema: Ninguna interfaz de usuario está disponible para deshabilitar IntelliSense
+#### <a name="issue-no-ui-is-available-for-disabling-intellisense"></a>Problema: no hay ninguna interfaz de usuario disponible para deshabilitar IntelliSense
 
-> WebMatrix 1.0 se proporciona ninguna interfaz de usuario o de gestos para deshabilitar IntelliSense. 
+> WebMatrix 1,0 no proporciona ninguna interfaz de usuario ni gesto para deshabilitar IntelliSense. 
 > 
 > **Solución alternativa**   
-> Inicie WebMatrix mediante el comando siguiente, que incluye un modificador que deshabilita IntelliSense:  
+> Inicie WebMatrix con el siguiente comando, que incluye un modificador que deshabilita IntelliSense:  
 >   
 > `WebMatrix.exe #ExecuteCommand# EditorIntelliSense off`
 
 <a id="Known_Issues_IISExpress"></a>
 ### <a name="iis-express"></a>IIS Express
 
-IIS Express tiene su propio archivo Léame, que está disponible en la siguiente URL:
+IIS Express tiene su propio archivo Léame, que está disponible en la siguiente dirección URL:
 
-[https://go.microsoft.com/fwlink/?LinkID=207675&amp; clcid = 0 x 409](https://go.microsoft.com/fwlink/?LinkID=207675&amp;clcid=0x409)
+[https://go.microsoft.com/fwlink/?LinkID=207675&amp; clcid = 0xA](https://go.microsoft.com/fwlink/?LinkID=207675&amp;clcid=0x409)
 
 <a id="Known_Issues_SQLServerCompact"></a>
 
 ### <a name="sql-server-compact"></a>SQL Server Compact
 
-SQL Server Compact tiene su propio archivo Léame, que está disponible en la siguiente URL:
+SQL Server Compact tiene su propio archivo Léame, que está disponible en la siguiente dirección URL:
 
 [https://go.microsoft.com/fwlink/?LinkID=208545](https://go.microsoft.com/fwlink/?LinkID=208545&amp;clcid=0x409)
 
-Para obtener información acerca de los problemas que implican la instalación de SQL Server Compact como parte de WebMatrix, consulte [problemas de instalación de WebMatrix](#Known_Issues_Installation) anteriormente en este documento.
+Para obtener información sobre los problemas que implican la instalación de SQL Server Compact como parte de WebMatrix, consulte los [problemas de instalación de WebMatrix](#Known_Issues_Installation) anteriormente en este documento.
 
-### <a id="Known_Issues_Installing_Applications"></a>  Instalación de aplicaciones
+### <a id="Known_Issues_Installing_Applications"></a>Instalación de aplicaciones
 
-#### <a name="issue-installing-an-application-can-take-a-long-time-if-the-users-my-documents-folder-is-redirected-to-a-network-share"></a>Problema: Instalar una aplicación puede tardar mucho tiempo si la carpeta Mis documentos del usuario se redirige a un recurso compartido de red
+#### <a name="issue-installing-an-application-can-take-a-long-time-if-the-users-my-documents-folder-is-redirected-to-a-network-share"></a>Problema: la instalación de una aplicación puede tardar mucho tiempo si la carpeta Mis documentos del usuario se redirige a un recurso compartido de red.
 
-> **Workaround**  
-> Ninguno. La aplicación puede tardar un rato para instalar, pero se instalará correctamente.
+> **Solución alternativa**  
+> Ninguno. La aplicación puede tardar un tiempo en instalarse, pero se instalará correctamente.
 
-### <a id="Known_Issues_Publishing_Applications"></a>  Publicación de aplicaciones
+### <a id="Known_Issues_Publishing_Applications"></a>Publicar aplicaciones
 
-#### <a name="issue-required-permissions-cannot-be-acquired-error-when-publishing-a-sql-compact-database"></a>Problema: "Requerido no se puede obtener permisos" error al publicar una base de datos SQL
+#### <a name="issue-required-permissions-cannot-be-acquired-error-when-publishing-a-sql-compact-database"></a>Problema: "no se pueden adquirir los permisos necesarios" al publicar una base de datos de SQL Compact
 
-> WebMatrix admite totalmente la implementación archivos binarios compatibles para SQL Server Compact a un servidor que se está ejecutando la versión 3.5 de .NET Framework con una configuración de nivel de confianza medio.
+> WebMatrix no es totalmente compatible con la implementación de archivos binarios auxiliares para SQL Server Compact en un servidor que ejecute .NET Framework versión 3,5 con una configuración de confianza media.
 > 
-> **Workaround**  
-> Es la solución preferida instalar .NET Framework 4 en el servidor. Como alternativa, haga lo siguiente:
+> **Solución alternativa**  
+> La solución preferida es instalar el .NET Framework 4 en el servidor. Como alternativa, haga lo siguiente:
 > 
-> 1. Agregue los siguientes elementos para el `SecurityClasses` sección *Web\_MediumTrust.config* archivo:
+> 1. Agregue los siguientes elementos a la sección `SecurityClasses` en el archivo *Web\_MediumTrust. config* :
 > 
 >     [!code-html[Main](overview/samples/sample6.html)]
-> 2. Crear un nuevo conjunto de permisos en el *Web\_MediumTrust.config* archivo con los siguientes permisos necesarios:
+> 2. Cree un nuevo conjunto de permisos en el archivo *Web\_MediumTrust. config* con los siguientes permisos necesarios:
 > 
 >     [!code-html[Main](overview/samples/sample7.html)]
-> 3. Se aplica el permiso establecido en SQL Server Compact colocando los siguientes elementos el *Web\_MediumTrust.config* archivo:
+> 3. Aplique el conjunto de permisos a SQL Server Compact colocando los siguientes elementos en el archivo *Web\_MediumTrust. config* :
 > 
 >     [!code-html[Main](overview/samples/sample8.html)]
 
-#### <a name="issue-gallery-and-phpbb-web-applications-display-a-service-is-unavailable-error-after-publishing"></a>Problema: Aplicaciones web de galería y PhpBB muestran un error "Servicio no está disponible" después de la publicación
+#### <a name="issue-gallery-and-phpbb-web-applications-display-a-service-is-unavailable-error-after-publishing"></a>Problema: las aplicaciones Web de galería y PhpBB muestran un error "el servicio no está disponible" después de la publicación
 
-> En algunas circunstancias, publicar una aplicación, produce un error "servicio no está disponible".
+> En algunas circunstancias, la publicación de una aplicación provoca el error "el servicio no está disponible".
 > 
-> **Workaround**  
-> En WebMatrix, agregue una barra diagonal inversa (\) al final del nombre del servidor en el **configuración de publicación** ventana y, a continuación, publicar la aplicación de nuevo.
+> **Solución alternativa**  
+> En WebMatrix, agregue una barra diagonal inversa (\) al final del nombre del servidor en la ventana **configuración de publicación** y, a continuación, vuelva a publicar la aplicación.
 
-#### <a name="issue-moodle-website-layout-and-links-are-broken-after-publishing"></a>Problema: Vínculos y el diseño del sitio Web de Moodle se interrumpen después de la publicación
+#### <a name="issue-moodle-website-layout-and-links-are-broken-after-publishing"></a>Problema: los vínculos y el diseño del sitio web de Moodle se rompen después de la publicación
 
 > Después de publicar una aplicación de Moodle, la aplicación no funciona correctamente.
 > 
-> **Workaround**  
-> En WebMatrix, agregue una barra diagonal (/) al final de la **nombre del sitio** campo el **configuración de publicación** ventana y, a continuación, publicar la aplicación de nuevo.
+> **Solución alternativa**  
+> En WebMatrix, agregue una barra diagonal (/) al final del campo **nombre del sitio** en la ventana **configuración de publicación** y, a continuación, vuelva a publicar la aplicación.
 
-#### <a name="issue-publishing-nopcommerce-fails-with-a-database-error"></a>Problema: NopCommerce publicación produce un error de base de datos
+#### <a name="issue-publishing-nopcommerce-fails-with-a-database-error"></a>Problema: la publicación de nopCommerce produce un error de base de datos
 
-> Publicación nopCommerce se produce un error y notifica un error de base de datos, como "insertar en la instrucción nop\_tabla del registro de error."
+> No se puede publicar nopCommerce y se notifica un error de base de datos como "error al insertar en la tabla de registro NOP\_."
 > 
-> **Workaround**  
+> **Solución alternativa**  
 > 
-> 1. En WebMatrix, haga clic en **ejecutar** para iniciar nopCommerce localmente.
-> 2. Inicie sesión en la página de administración.
-> 3. Haga clic en el **sistema** menú.
-> 4. Haga clic en el **registro** opción.
-> 5. Haga clic en el **Vaciar registro** botón.
+> 1. En WebMatrix, haga clic en **Ejecutar** para iniciar nopCommerce localmente.
+> 2. Inicie sesión en la página de administración de.
+> 3. Haga clic en el menú **sistema** .
+> 4. Haga clic en la opción **registrar** .
+> 5. Haga clic en el botón **Vaciar registro**.
 > 6. Vuelva a publicar nopCommerce.
 
-#### <a name="issue-silverstripe-cms-displays-a-http-500-php-fcgi-error-when-you-download-a-published-site"></a>Problema: Silverstripe CMS muestra un "Error FCGI PHP HTTP 500" al descargar un sitio publicado
+#### <a name="issue-silverstripe-cms-displays-a-http-500-php-fcgi-error-when-you-download-a-published-site"></a>Problema: SilverStripe CMS muestra un error de FCGI de PHP HTTP 500 al descargar un sitio publicado
 
-> **Workaround**  
-> Tras hacer clic en **Descargar sitio publicado**, omitir `silverstripe-cache/manifest_main` en **vista previa de publicación**. Este archivo se usa para fines de almacenamiento en caché y es específico de cada equipo.
+> **Solución alternativa**  
+> Después de hacer clic en **Descargar sitio publicado**, omita `silverstripe-cache/manifest_main` en la **vista previa de publicación**. Este archivo se usa para el almacenamiento en caché y es específico para cada equipo.
 
-#### <a name="issue-subtext-displays-server-error-in--application-when-you-download-a-published-site"></a>Problema: SubText muestra "Error de servidor en la aplicación '/'" cuando se descarga un sitio publicado
+#### <a name="issue-subtext-displays-server-error-in--application-when-you-download-a-published-site"></a>Problema: el subtexto muestra el mensaje "error de servidor en '/' aplicación" al descargar un sitio publicado
 
-> **Workaround**  
-> Abra la carpeta del sitio *web.config* de archivo y reemplace el identificador de usuario y contraseña en la cadena de conexión de base de datos con las credenciales de administrador de SQL Server (las credenciales "sa").
+> **Solución alternativa**  
+> Abra el archivo *Web. config* del sitio y reemplace el ID. de usuario y la contraseña en la cadena de conexión de base de datos por el SQL Server credenciales de administrador (las credenciales "SA").
 > 
-> Como alternativa, siga estos pasos para conceder a la cuenta de usuario que ha iniciado sesión con `db_owner` permisos:
+> También puede seguir estos pasos para dar a la cuenta de usuario con la que ha iniciado sesión `db_owner` permisos:
 > 
-> 1. Instalar SQL Server Management Studio mediante el instalador de plataforma Web.
+> 1. Instale SQL Server Management Studio mediante el instalador de plataforma Web.
 > 2. Conéctese a la instancia local de SQL Server Express (de forma predeterminada, `.\SQLEXPRESS`).
-> 3. Haga clic en **bases de datos** &gt; *[localSubtextDatabase]* &gt; **seguridad** &gt; **usuarios** &gt; *[localSubtextUser*] (valor predeterminado es `subtextuser`], con el botón secundario y haga clic en **propiedades**.
-> 4. Seleccione **db\_propietario** en la sección de la pertenencia al rol.
+> 3. Haga clic en **bases de datos** &gt; *[LocalSubtextDatabase]* &gt; **Security** &gt; **users** &gt; *[localSubtextUser*] (el valor predeterminado es `subtextuser`], haga clic con el botón secundario y haga clic en **propiedades**.
+> 4. Seleccione **db\_Owner** en la sección pertenencia a roles.
 
-#### <a name="issue-site-might-not-work-after-publishing-if-the-destination-url-field-is-not-prefixed-with-http-or-https"></a>Problema: Sitio no funcionen después de publicar si el campo "Dirección URL de destino" no es el prefijo http:// o https://
+#### <a name="issue-site-might-not-work-after-publishing-if-the-destination-url-field-is-not-prefixed-with-http-or-https"></a>Problema: es posible que el sitio no funcione después de la publicación si el campo "dirección URL de destino" no tiene el prefijo http://o https://
 
-> En el **configuración de publicación** cuadro de diálogo, si la dirección URL de destino no comienza con `http://` o `https://`, el sitio no funcionen después de la implementación.
+> En el cuadro de diálogo **configuración de publicación** , si la dirección URL de destino no comienza con `http://` o `https://`, es posible que el sitio no funcione después de la implementación.
 > 
-> **Workaround**  
-> Asegúrese de que antes de publicar un sitio, la dirección URL de destino en el **configuración de publicación** inicia el cuadro de diálogo con `http://` o `https://`.
+> **Solución alternativa**  
+> Asegúrese de que antes de publicar un sitio, la dirección URL de destino en el cuadro de diálogo **configuración de publicación** comienza con `http://` o `https://`.
 
-#### <a name="issue-publishing-a-mysql-database-fails-with-the-error-failed-to-publish-the-database-this-can-happen-if-the-remote-database-cannot-run-the-script"></a>Problema: Publicación de una base de datos MySQL produce el error "no se pudo publicar la base de datos. Esto puede ocurrir si la base de datos remoto no puede ejecutar la secuencia de comandos."
+#### <a name="issue-publishing-a-mysql-database-fails-with-the-error-failed-to-publish-the-database-this-can-happen-if-the-remote-database-cannot-run-the-script"></a>Problema: al publicar una base de datos MySQL se produce el error "no se pudo publicar la base de datos. Esto puede ocurrir si la base de datos remota no puede ejecutar el script ".
 
-> El error puede producirse por una serie de motivos. Una razón que ve este error es si la secuencia de comandos de base de datos contiene un carácter de comillas simples (') y el juego de caracteres de destino MySQL la base de datos predeterminado no es UTF-8.
+> El error puede producirse por una serie de motivos. Uno de los motivos por los que puede ver este error es si el script de la base de datos contiene un carácter de comilla simple (') y el juego de caracteres predeterminado de la base de datos MySQL de destino no es UTF-8.
 > 
-> **Workaround**  
-> Establece el carácter predeterminado establecido para la base de datos MySQL remota en UTF-8.
+> **Solución alternativa**  
+> Establezca el juego de caracteres predeterminado para la base de datos MySQL remota en UTF-8.
 
-#### <a name="issue-some-links-are-not-visible-in-dotnetnuke-after-publishing-or-downloading-the-site"></a>Problema: Algunos vínculos no están visibles en DotNetNuke tras publicar o descargar del sitio
+#### <a name="issue-some-links-are-not-visible-in-dotnetnuke-after-publishing-or-downloading-the-site"></a>Problema: algunos vínculos no están visibles en DotNetNuke después de publicar o descargar el sitio
 
-> Si publicar o descargar un sitio de DotNetNuke, es posible que deba borrar la memoria caché para obtener los nuevos vínculos que aparecen en el sitio.
+> Si publica o descarga un sitio de DotNetNuke, es posible que tenga que borrar la memoria caché para que los nuevos vínculos aparezcan en el sitio.
 > 
-> **Workaround**
+> **Solución alternativa**
 > 
-> 1. Inicie sesión como "Host".
-> 2. Vaya al menú de host y seleccione **configuración de Host**.
-> 3. Desplácese hacia abajo y en **configuración avanzada**, expanda **configuración de rendimiento**.
-> 4. Haga clic en el **Borrar caché** vínculo para las páginas.
-> 5. Vaya a la parte inferior de la página y reiniciar la aplicación.
+> 1. Inicie sesión como "host".
+> 2. Vaya al menú host y seleccione **configuración de host**.
+> 3. Desplácese hacia abajo y, en **Configuración avanzada**, expanda **configuración de rendimiento**.
+> 4. Haga clic en el vínculo **Borrar caché** para las páginas.
+> 5. Vaya a la parte inferior de la página y reinicie la aplicación.
 
-#### <a name="issue-some-links-in-atomsite-are-broken-after-you-download-a-published-site"></a>Problema: Algunos vínculos de AtomSite se interrumpen después de descargar un sitio publicado
+#### <a name="issue-some-links-in-atomsite-are-broken-after-you-download-a-published-site"></a>Problema: algunos vínculos de AtomSite están rotos después de descargar un sitio publicado
 
-> **Workaround**  
-> En el *service.config* archivo, *users.config* archivo y todos los *.xml* archivos, reemplace la cadena de dirección URL (por ejemplo, `http://myhost.com/atomsite`) con locales (por ejemplo, `http://localhost:1239`).
+> **Solución alternativa**  
+> En el archivo *Service. config* , el archivo *users. config* y todos los archivos *. XML* , reemplace la cadena de dirección URL (por ejemplo, `http://myhost.com/atomsite`) por la local (por ejemplo, `http://localhost:1239`).
 
-#### <a name="issue-mysql-based-applications-like-wordpress-fail-to-publish-and-report-a-database-error"></a>Problema: Aplicaciones basadas en MySQL como WordPress no se pueden publicar y notificar un error de base de datos
+#### <a name="issue-mysql-based-applications-like-wordpress-fail-to-publish-and-report-a-database-error"></a>Problema: las aplicaciones basadas en MySQL como WordPress no pueden publicar y notificar un error de base de datos
 
-> De forma predeterminada, WebMatrix instala MySQL con el juego de caracteres UTF-8. Si instala MySQL en su propio y el juego de caracteres no es UTF-8 (por ejemplo, es Latin1), podría producir un error en el proceso de publicación para las bases de datos.
+> De forma predeterminada, WebMatrix instala MySQL con el juego de caracteres UTF-8. Si instala MySQL por su cuenta y el juego de caracteres no es UTF-8 (por ejemplo, es latin1), puede producirse un error en el proceso de publicación de las bases de datos.
 > 
-> **Workaround**
+> **Solución alternativa**
 > 
-> 1. Cambiar el juego de caracteres de MySQL a UTF-8. (Para obtener más información, consulte [intercalación y juego de caracteres de servidor](http://dev.mysql.com/doc/refman/5.0/en/charset-server.html) en el sitio Web de MySQL.)
+> 1. Cambie el juego de caracteres de MySQL a UTF-8. (Para obtener más información, consulte el [juego de caracteres del servidor y la intercalación](http://dev.mysql.com/doc/refman/5.0/en/charset-server.html) en el sitio web de MySQL).
 > 2. Vuelva a instalar la aplicación.
 > 3. Vuelva a publicar la aplicación.
 
-#### <a name="issue-download-published-site-fails-for-applications-that-have-browser-based-setup"></a>Problema: "Descargar sitio publicado" se produce un error para las aplicaciones que tienen el programa de instalación basada en explorador
+#### <a name="issue-download-published-site-fails-for-applications-that-have-browser-based-setup"></a>Problema: "descarga del sitio publicado" produce un error en las aplicaciones que tienen una instalación basada en explorador
 
-> Algunas aplicaciones (por ejemplo, Kentico CMS) requieren que se inicie en el explorador con el fin de realizar la configuración posterior a la instalación como la creación de una base de datos. Si publica una aplicación similar al siguiente sin completar la instalación basada en explorador, intenta descargar el mismo sitio desde un servidor remoto generará un error.
+> Algunas aplicaciones (por ejemplo, Kentico CMS) requieren que se inicien en el explorador para realizar la configuración posterior a la instalación, como crear una base de datos. Si publica una aplicación como esta sin completar la instalación basada en explorador, se producirá un error al intentar descargar el mismo sitio desde un servidor remoto.
 > 
-> **Workaround**  
-> Finalizar la instalación basada en explorador antes de publicar el sitio.
+> **Solución alternativa**  
+> Finalice la instalación basada en explorador antes de publicar el sitio.
 
-#### <a name="issue-download-published-site-fails-with-a-database-error-for-dotnetnuke-and-kooboo-cms"></a>Problema: "Descargar sitio publicado" se produce un error de base de datos de DotNetNuke y Kooboo CMS
+#### <a name="issue-download-published-site-fails-with-a-database-error-for-dotnetnuke-and-kooboo-cms"></a>Problema: "download Published site" produce un error de base de datos para DotNetNuke y Kooboo CMS
 
-> Si se intenta descargar una aplicación de un servidor y tener credenciales de administrador en la cadena de conexión de base de datos en el **configuración de publicación** cuadro de diálogo, es posible que vea el siguiente error en el registro de la publicación:
+> Si intenta descargar una aplicación desde un servidor y tiene credenciales de administrador en la cadena de conexión de base de datos en el cuadro de diálogo **configuración de publicación** , es posible que vea el siguiente error en el registro de publicación:
 > 
 > [!code-console[Main](overview/samples/sample9.cmd)]
 > 
-> **Workaround**  
-> Si es posible, vuelva a publicar el sitio (o publicarlo) con las credenciales sin privilegios de administrador para la base de datos.
+> **Solución alternativa**  
+> Si es práctico, vuelva a publicar el sitio (o haga que se publique) con credenciales que no sean de administrador para la base de datos.
 
 <a id="More_Info"></a>
 
 ## <a name="for-more-information"></a>Para obtener más información
 
-Para obtener más información acerca de WebMatrix 1.0, consulte los siguientes sitios Web:
+Para obtener más información acerca de WebMatrix 1,0, consulte los siguientes sitios web:
 
 - [IIS.net](http://iis.net/)
 - [ASP.NET](https://asp.net/webmatrix)

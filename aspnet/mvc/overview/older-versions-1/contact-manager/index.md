@@ -1,23 +1,23 @@
 ---
 uid: mvc/overview/older-versions-1/contact-manager/index
-title: Póngase en contacto con el administrador | Microsoft Docs
+title: Administrador de contactos | Microsoft Docs
 author: rick-anderson
-description: Cómo crear una aplicación de administración de contactos completa desde el principio para finalizar.
+description: Cómo compilar una aplicación de administración de contactos completa de principio a fin.
 ms.author: riande
 ms.date: 09/28/2011
 ms.assetid: 6b0f1fd7-6768-4549-ae9c-be9131103c4d
 msc.legacyurl: /mvc/overview/older-versions-1/contact-manager
 msc.type: chapter
 ms.openlocfilehash: 3ec9811be5afc00a126936529480082bf2d620e9
-ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/06/2019
-ms.locfileid: "65124143"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78470317"
 ---
 # <a name="contact-manager"></a>Contact Manager
 
-> Cómo crear una aplicación de administración de contactos completa desde el principio para finalizar.
+> Cómo compilar una aplicación de administración de contactos completa de principio a fin.
 
 - [Iteración n.º 1: Crear la aplicación (C#)](iteration-1-create-the-application-cs.md)
 - [Iteración n.º 2: Hacer que la aplicación tenga un buen aspecto (C#)](iteration-2-make-the-application-look-nice-cs.md)

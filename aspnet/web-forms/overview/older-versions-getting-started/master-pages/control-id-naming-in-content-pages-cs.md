@@ -9,11 +9,11 @@ ms.assetid: 1c7d0916-0988-4b4f-9a03-935e4b5af6af
 msc.legacyurl: /web-forms/overview/older-versions-getting-started/master-pages/control-id-naming-in-content-pages-cs
 msc.type: authoredcontent
 ms.openlocfilehash: e849e5860dc988e112cc3a65d976c16ecdf77416
-ms.sourcegitcommit: 22fbd8863672c4ad6693b8388ad5c8e753fb41a2
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/28/2019
-ms.locfileid: "74624459"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78520189"
 ---
 # <a name="control-id-naming-in-content-pages-c"></a>Nomenclatura de los identificadores de control en las páginas de contenido (C#)
 

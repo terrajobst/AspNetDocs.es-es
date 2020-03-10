@@ -9,11 +9,11 @@ ms.assetid: 615f3361-f21f-4338-8bc1-fce8ae071de9
 msc.legacyurl: /web-forms/overview/data-access/advanced-data-access-scenarios/adding-additional-datatable-columns-cs
 msc.type: authoredcontent
 ms.openlocfilehash: a96f254aa54e7077456ac1a9bd6c5e2a17619d96
-ms.sourcegitcommit: 22fbd8863672c4ad6693b8388ad5c8e753fb41a2
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/28/2019
-ms.locfileid: "74610708"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78444499"
 ---
 # <a name="adding-additional-datatable-columns-c"></a>Agregar columnas adicionales de DataTable (C#)
 
