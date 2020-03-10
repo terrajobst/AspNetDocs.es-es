@@ -9,11 +9,11 @@ ms.assetid: 49d8a66c-3ea8-4087-839f-179d1d94512a
 msc.legacyurl: /web-forms/overview/data-access/editing-inserting-and-deleting-data/handling-bll-and-dal-level-exceptions-in-an-asp-net-page-cs
 msc.type: authoredcontent
 ms.openlocfilehash: 2b9cdb5af6f33171b191d5a80473c7796eb098d9
-ms.sourcegitcommit: 22fbd8863672c4ad6693b8388ad5c8e753fb41a2
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/28/2019
-ms.locfileid: "74589327"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78492775"
 ---
 # <a name="handling-bll--and-dal-level-exceptions-in-an-aspnet-page-c"></a>Controlar las excepciones de nivel BLL y DAL en una página de ASP.NET (C#)
 
@@ -41,7 +41,7 @@ Para ilustrar el trabajo con estos eventos de nivel posterior, vamos a crear una
 
 En el tutorial anterior, creamos un control GridView modificable con solo dos campos, `ProductName` y `UnitPrice`. Esto requiere crear una sobrecarga adicional para el método `UpdateProduct` de la clase `ProductsBLL`, uno que solo aceptó tres parámetros de entrada (el nombre del producto, el precio por unidad y el ID.) en lugar de un parámetro para cada campo de producto. En este tutorial, vamos a practicar de nuevo esta técnica, creando un GridView modificable que muestra el nombre del producto, la cantidad por unidad, el precio por unidad y las unidades en existencias, pero solo permite editar el nombre, el precio por unidad y las unidades en existencias.
 
-Para dar cabida a este escenario, se necesitará otra sobrecarga del método `UpdateProduct`, uno que acepte cuatro parámetros: el nombre del producto, el precio unitario, las unidades en existencias y el identificador. Agregue el método siguiente a la clase `ProductsBLL`:
+Para dar cabida a este escenario, se necesitará otra sobrecarga del método `UpdateProduct`, uno que acepte cuatro parámetros: el nombre del producto, el precio unitario, las unidades en existencias y el identificador. Agregue el siguiente método a la clase `ProductsBLL`:
 
 [!code-csharp[Main](handling-bll-and-dal-level-exceptions-in-an-asp-net-page-cs/samples/sample1.cs)]
 

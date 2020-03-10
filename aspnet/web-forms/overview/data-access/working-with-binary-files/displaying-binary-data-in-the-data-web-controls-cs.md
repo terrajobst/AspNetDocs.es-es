@@ -9,11 +9,11 @@ ms.assetid: 5cbeb9f8-5f92-4ba8-87ae-0b4d460ae6d4
 msc.legacyurl: /web-forms/overview/data-access/working-with-binary-files/displaying-binary-data-in-the-data-web-controls-cs
 msc.type: authoredcontent
 ms.openlocfilehash: f38de7adcd77b3dc2622759646168cf533b8308f
-ms.sourcegitcommit: 22fbd8863672c4ad6693b8388ad5c8e753fb41a2
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/28/2019
-ms.locfileid: "74642526"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78475633"
 ---
 # <a name="displaying-binary-data-in-the-data-web-controls-c"></a>Mostrar datos binarios en los controles web de datos (C#)
 

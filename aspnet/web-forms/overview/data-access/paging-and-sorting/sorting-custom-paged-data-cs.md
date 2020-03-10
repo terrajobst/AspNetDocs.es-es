@@ -9,11 +9,11 @@ ms.assetid: 778baa4e-4af8-4665-947e-7a01d1a4dff2
 msc.legacyurl: /web-forms/overview/data-access/paging-and-sorting/sorting-custom-paged-data-cs
 msc.type: authoredcontent
 ms.openlocfilehash: e55ed9b92814753e95bdfdf26c2f051df6f2630d
-ms.sourcegitcommit: 22fbd8863672c4ad6693b8388ad5c8e753fb41a2
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/28/2019
-ms.locfileid: "74642377"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78476827"
 ---
 # <a name="sorting-custom-paged-data-c"></a>Ordenar datos paginados personalizados (C#)
 

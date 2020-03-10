@@ -1,6 +1,6 @@
 ---
 uid: ajax/cdn/jquery-datatables/index
-title: jQuery DataTables | Microsoft Docs
+title: DataTables de jQuery | Microsoft Docs
 author: rick-anderson
 description: ''
 ms.author: riande
@@ -9,11 +9,11 @@ ms.assetid: c3d609b5-ad52-4ff8-a79d-58a815efdb63
 msc.legacyurl: /ajax/cdn/jquery-datatables
 msc.type: folder
 ms.openlocfilehash: 386a4dc80f3d6823456632841a5632c5011c6fb9
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59401912"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78454039"
 ---
 # <a name="jquery-datatables"></a>jQuery DataTables
 

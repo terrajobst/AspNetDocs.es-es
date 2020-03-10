@@ -1,22 +1,22 @@
 ---
 uid: ajax/index
-title: 'Ajax de ASP.NET: Interactividad y la capacidad de respuesta mejorados | Microsoft Docs'
+title: 'ASP.NET AJAX: interactividad mejorada y capacidad de respuesta | Microsoft Docs'
 author: rick-anderson
-description: Agregar funcionalidad Ajax a las aplicaciones de ASP.NET con jQuery o Ajax Control Toolkit. Mejorar el rendimiento de las aplicaciones de Ajax con el Micro...
+description: Agregue funcionalidad Ajax a las aplicaciones de ASP.NET con jQuery o el kit de herramientas de control de Ajax. Mejore el rendimiento de las aplicaciones AJAX con el micro...
 ms.author: riande
 ms.date: 12/15/2009
 ms.assetid: 42b0bd66-bf2f-4993-8b5a-bac3028201fc
 msc.legacyurl: /ajax
 msc.type: content
 ms.openlocfilehash: 43c0593e7e2f8dd8db1a89f57bcaa5dbae2ae00d
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59420866"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78472717"
 ---
-# <a name="aspnet-ajax--enhanced-interactivity-and-responsiveness"></a>Ajax de ASP.NET: La capacidad de respuesta e interactividad mejorada
+# <a name="aspnet-ajax--enhanced-interactivity-and-responsiveness"></a>ASP.NET AJAX: interactividad mejorada y capacidad de respuesta
 
-- [AJAX Control Toolkit](https://go.devexpress.com/AjaxControlToolkit_ASP_Resources_ASP_AJAX_Index.aspx)
+- [Kit de herramientas de control de AJAX](https://go.devexpress.com/AjaxControlToolkit_ASP_Resources_ASP_AJAX_Index.aspx)
 - [jQuery](http://jquery.com/)
-- [Microsoft Ajax CDN](cdn/overview.md)
+- [CDN de Microsoft Ajax](cdn/overview.md)

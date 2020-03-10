@@ -9,11 +9,11 @@ ms.assetid: 32b7fb6e-d74b-4048-91f8-70631b2523ee
 msc.legacyurl: /web-forms/overview/older-versions-getting-started/master-pages/nested-master-pages-cs
 msc.type: authoredcontent
 ms.openlocfilehash: 67093266567a97cd22b353115616484fd9ef155e
-ms.sourcegitcommit: 22fbd8863672c4ad6693b8388ad5c8e753fb41a2
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/28/2019
-ms.locfileid: "74596772"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78463627"
 ---
 # <a name="nested-master-pages-c"></a>Páginas maestras anidadas (C#)
 

@@ -9,11 +9,11 @@ ms.assetid: 3a052ced-9cf5-47b8-a400-934f0b687c26
 msc.legacyurl: /web-forms/overview/data-access/working-with-binary-files/updating-and-deleting-existing-binary-data-vb
 msc.type: authoredcontent
 ms.openlocfilehash: 27ff6941008b4e7bf6d632e4c248fd1d35fb3589
-ms.sourcegitcommit: 22fbd8863672c4ad6693b8388ad5c8e753fb41a2
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/28/2019
-ms.locfileid: "74621197"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78475015"
 ---
 # <a name="updating-and-deleting-existing-binary-data-vb"></a>Actualizar y eliminar los datos binarios existentes (VB)
 
@@ -53,7 +53,7 @@ La última pantalla del asistente nos pide asignar un nombre al nuevo método Ta
 
 Además de actualizar la capa DAL, es necesario actualizar la capa BLL para incluir los métodos para actualizar y eliminar una categoría. Estos son los métodos que se invocarán desde el nivel de presentación.
 
-Para eliminar una categoría, podemos usar el método `Delete` generado automáticamente `CategoriesTableAdapter` s. Agregue el método siguiente a la clase `CategoriesBLL`:
+Para eliminar una categoría, podemos usar el método `Delete` generado automáticamente `CategoriesTableAdapter` s. Agregue el siguiente método a la clase `CategoriesBLL`:
 
 [!code-vb[Main](updating-and-deleting-existing-binary-data-vb/samples/sample2.vb)]
 

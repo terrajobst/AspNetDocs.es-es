@@ -9,11 +9,11 @@ ms.assetid: a3cef801-a54b-4ebd-93c3-55764e2e14b1
 msc.legacyurl: /visual-studio/overview/2012/windows-azure-authentication
 msc.type: authoredcontent
 ms.openlocfilehash: ce98effe18dd739504fb0d5453bae8a46c3ba102
-ms.sourcegitcommit: 7709c0a091b8d55b7b33bad8849f7b66b23c3d72
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/19/2020
-ms.locfileid: "77457484"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78449467"
 ---
 # <a name="windows-azure-authentication"></a>Autenticación de Windows Azure
 

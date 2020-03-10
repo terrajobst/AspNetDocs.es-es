@@ -9,11 +9,11 @@ ms.assetid: 54d9df99-1161-4899-b4e8-2679c85915e7
 msc.legacyurl: /web-forms/overview/older-versions-getting-started/aspnet-ajax/understanding-partial-page-updates-with-asp-net-ajax
 msc.type: authoredcontent
 ms.openlocfilehash: 4b87cb8f58dbd7f27b16bcb0d488ff361770d4fe
-ms.sourcegitcommit: 22fbd8863672c4ad6693b8388ad5c8e753fb41a2
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/28/2019
-ms.locfileid: "74622950"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78439273"
 ---
 # <a name="understanding-partial-page-updates-with-aspnet-ajax"></a>Descripción de las actualizaciones de página parcial con ASP.NET AJAX
 
@@ -105,14 +105,14 @@ Propiedades habilitadas para marcado:
 
 | **Nombre de la propiedad** | **ype** | **Descripción** |
 | --- | --- | --- |
-| AllowCustomErrors: redireccionamiento | Bool | Especifica si se va a utilizar la sección de errores personalizados del archivo Web. config para controlar los errores. |
-| AsyncPostBackError: mensaje | String | Obtiene o establece el mensaje de error enviado al cliente si se produce un error. |
-| AsyncPostBack: tiempo de espera | Int32 | Obtiene o establece la cantidad de tiempo predeterminada que un cliente debe esperar para que se complete la solicitud asincrónica. |
-| EnableScript-globalización | Bool | Obtiene o establece si la globalización de script está habilitada. |
-| EnableScript-localización | Bool | Obtiene o establece si la localización del script está habilitada. |
+| AllowCustomErrors-Redirect | Bool | Especifica si se va a utilizar la sección de errores personalizados del archivo Web. config para controlar los errores. |
+| AsyncPostBackError-Message | Cadena | Obtiene o establece el mensaje de error enviado al cliente si se produce un error. |
+| AsyncPostBack-Timeout | Int32 | Obtiene o establece la cantidad de tiempo predeterminada que un cliente debe esperar para que se complete la solicitud asincrónica. |
+| EnableScript-Globalization | Bool | Obtiene o establece si la globalización de script está habilitada. |
+| EnableScript-Localization | Bool | Obtiene o establece si la localización del script está habilitada. |
 | ScriptLoadTimeout | Int32 | Determina el número de segundos permitidos para cargar scripts en el cliente. |
 | ScriptMode | Enum (auto, Debug, release, inherit) | Obtiene o establece si se van a representar las versiones de lanzamiento de los scripts. |
-| ScriptPath | String | Obtiene o establece la ruta de acceso raíz a la ubicación de los archivos de script que se van a enviar al cliente. |
+| ScriptPath | Cadena | Obtiene o establece la ruta de acceso raíz a la ubicación de los archivos de script que se van a enviar al cliente. |
 
 Propiedades de solo código:
 
@@ -128,13 +128,13 @@ Propiedades de solo código:
 
 Métodos de código público:
 
-| **Nombre del método** | **ype** | **Descripción** |
+| **Nombre de método** | **ype** | **Descripción** |
 | --- | --- | --- |
-| SetFocus (cadena) | Void | Establece el foco del cliente en un control determinado cuando se ha completado la solicitud. |
+| SetFocus(string) | Void | Establece el foco del cliente en un control determinado cuando se ha completado la solicitud. |
 
 Descendientes de marcado:
 
-| **Etiqueta** | **Descripción** |
+| **Tag** | **Descripción** |
 | --- | --- |
 | &lt;AuthenticationService&gt; | Proporciona detalles sobre el proxy al servicio de autenticación de ASP.NET. |
 | &lt;ProfileService&gt; | Proporciona detalles sobre el proxy para el servicio de generación de perfiles ASP.NET. |
@@ -194,13 +194,13 @@ Propiedades de solo código:
 
 Métodos de código público:
 
-| **Nombre del método** | **ype** | **Descripción** |
+| **Nombre de método** | **ype** | **Descripción** |
 | --- | --- | --- |
-| Update () | Void | Actualiza el UpdatePanel especificado mediante programación. Permite que una solicitud de servidor desencadene una representación parcial de un UpdatePanel sin desencadenar. |
+| Update() | Void | Actualiza el UpdatePanel especificado mediante programación. Permite que una solicitud de servidor desencadene una representación parcial de un UpdatePanel sin desencadenar. |
 
 Descendientes de marcado:
 
-| **Etiqueta** | **Descripción** |
+| **Tag** | **Descripción** |
 | --- | --- |
 | &lt;ContentTemplate&gt; | Especifica el marcado que se va a utilizar para representar el resultado de la representación parcial. Elemento secundario de &lt;ASP:&gt;UpdatePanel. |
 | &lt;Desencadenadores&gt; | Especifica una colección de *n* controles asociados con la actualización de este UpdatePanel. Elemento secundario de &lt;ASP:&gt;UpdatePanel. |
@@ -269,13 +269,13 @@ Propiedades habilitadas para marcado:
 
 | **Nombre de la propiedad** | **ype** | **Descripción** |
 | --- | --- | --- |
-| AssociatedUpdate-PanelID | String | Especifica el identificador del UpdatePanel en el que debería informar este UpdateProgress. |
+| AssociatedUpdate-PanelID | Cadena | Especifica el identificador del UpdatePanel en el que debería informar este UpdateProgress. |
 | DisplayAfter | Valor int. | Especifica el tiempo de espera en milisegundos antes de que se muestre este control después de que comience la solicitud asincrónica. |
 | DynamicLayout | bool | Especifica si el progreso se representa dinámicamente. |
 
 Descendientes de marcado:
 
-| **Etiqueta** | **Descripción** |
+| **Tag** | **Descripción** |
 | --- | --- |
 | &lt;ProgressTemplate&gt; | Contiene el conjunto de plantillas de control para el contenido que se mostrará con este control. |
 

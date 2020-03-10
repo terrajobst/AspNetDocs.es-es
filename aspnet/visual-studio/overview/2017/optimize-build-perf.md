@@ -7,18 +7,18 @@ ms.author: riande
 ms.date: 08/29/2018
 msc.type: authoredcontent
 ms.openlocfilehash: c1a5cf5e59374b4c0dd7150c5dd62fbde42af555
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57050512"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78504979"
 ---
 # <a name="optimize-build-performance-for-solution"></a>Optimización del rendimiento de compilación de una solución
 
-15,8 de Visual Studio 2017 o versiones posteriores incluyen un elemento de menú: **Compilar** > **compilación de ASP.NET** > **optimizar el rendimiento de la compilación para la solución**.
+Visual Studio 2017 15,8 o posterior incluyen un elemento de menú: **compilación** > **compilación de ASP.net** > optimizar el **rendimiento de la compilación para la solución**.
 
-![captura de pantalla del nuevo elemento de menú](optimize-build-perf/_static/optimize-build-performance-for-solution.png)
+![Captura de pantalla del nuevo elemento de menú](optimize-build-perf/_static/optimize-build-performance-for-solution.png)
 
-ASP.NET compila sus vistas en tiempo de ejecución, lo que significa que un proyecto de ASP.NET conlleva una copia del compilador. Sin embargo en una máquina de desarrollo cuando la copia del compilador no coincide con la copia de Visual Studio, rendimiento de la compilación se ve afectado del orden de 1 a 3 segundos por compilación incremental. Esta característica actualiza la copia del proyecto del compilador para que coincida con Visual Studio, lo que normalmente se acelera las compilaciones incrementales.
+ASP.NET compila sus vistas en tiempo de ejecución, lo que significa que un proyecto de ASP.NET incluye una copia del compilador. Sin embargo, en un equipo de desarrollador cuando la copia del compilador no coincide con la copia de Visual Studio, el rendimiento de la compilación se ve afectado en el orden de 1-3 segundos por cada compilación incremental. Esta característica actualiza la copia del compilador del proyecto para que coincida con la de Visual Studio, lo que normalmente acelera las compilaciones incrementales.
 
-**Esto es aplicable al marco de ASP.NET 4.7.1 o posterior solo para proyectos, no se aplica a ASP.NET Core.**
+**Esto solo es aplicable a proyectos de ASP.NET Framework 4.7.1 o versiones posteriores, no se aplica a ASP.NET Core.**

@@ -10,11 +10,11 @@ ms.assetid: 2fc4797c-38ef-4cc7-926c-ca431c4739e8
 msc.legacyurl: /web-api/overview/getting-started-with-aspnet-web-api/action-results
 msc.type: authoredcontent
 ms.openlocfilehash: f00ac0db453053e53d6d6942dd1557b409f4167b
-ms.sourcegitcommit: 4b324a11131e38f920126066b94ff478aa9927f8
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/13/2019
-ms.locfileid: "70985840"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78448777"
 ---
 # <a name="action-results-in-web-api-2"></a>Resultados de la acción en Web API 2
 
@@ -42,7 +42,7 @@ En el resto de este tema se describe cada opción con más detalle.
 
 ## <a name="void"></a>void
 
-Si el tipo de valor `void`devuelto es, la API Web simplemente devuelve una respuesta http vacía con el código de estado 204 (sin contenido).
+Si el tipo de valor devuelto es `void`, Web API simplemente devuelve una respuesta HTTP vacía con el código de estado 204 (sin contenido).
 
 Controlador de ejemplo:
 
@@ -52,7 +52,7 @@ Respuesta HTTP:
 
 [!code-console[Main](action-results/samples/sample2.cmd)]
 
-## <a name="httpresponsemessage"></a>HttpResponseMessage
+## <a name="httpresponsemessage"></a>httpResponseMessage
 
 Si la acción devuelve un [HttpResponseMessage](https://msdn.microsoft.com/library/system.net.http.httpresponsemessage.aspx), la API Web convierte el valor devuelto directamente en un mensaje de respuesta http, utilizando las propiedades del objeto **HttpResponseMessage** para rellenar la respuesta.
 

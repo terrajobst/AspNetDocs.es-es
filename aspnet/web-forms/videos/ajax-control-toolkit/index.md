@@ -1,23 +1,23 @@
 ---
 uid: web-forms/videos/ajax-control-toolkit/index
-title: AJAX Control Toolkit | Microsoft Docs
+title: Kit de herramientas de control de Ajax | Microsoft Docs
 author: rick-anderson
-description: Cómo crear páginas mediante Ajax Control Toolkit de gran capacidad de respuesta Web de ASP.NET.
+description: Cómo crear páginas web de ASP.NET con una gran capacidad de respuesta mediante el kit de herramientas de control de Ajax.
 ms.author: riande
 ms.date: 10/05/2011
 ms.assetid: 6f7b1c74-cc73-42f9-8ef0-8b3d058dabfa
 msc.legacyurl: /web-forms/videos/ajax-control-toolkit
 msc.type: chapter
 ms.openlocfilehash: c92d686cdb7883efbb5e5b2997e4a490f83607f0
-ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/06/2019
-ms.locfileid: "65131524"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78518941"
 ---
 # <a name="ajax-control-toolkit"></a>Ajax Control Toolkit
 
-> Cómo crear páginas mediante Ajax Control Toolkit de gran capacidad de respuesta Web de ASP.NET.
+> Cómo crear páginas web de ASP.NET con una gran capacidad de respuesta mediante el kit de herramientas de control de Ajax.
 
 - [Introducción a ASP.NET AJAX Control Toolkit](how-do-i-get-started-with-the-aspnet-ajax-control-toolkit.md)
 - [Extensor de control CascadingDropDown de ASP.NET AJAX](how-do-i-use-the-aspnet-ajax-cascadingdropdown-control-extender.md)

@@ -9,11 +9,11 @@ ms.assetid: 08815768-2702-42ae-ae85-0a59934a11d1
 msc.legacyurl: /visual-studio/overview/2013/release-notes
 msc.type: authoredcontent
 ms.openlocfilehash: d8af9c8e7ee1316a5eac90c5959d07c628154e09
-ms.sourcegitcommit: 22fbd8863672c4ad6693b8388ad5c8e753fb41a2
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/28/2019
-ms.locfileid: "74600435"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78449527"
 ---
 # <a name="aspnet-and-web-tools-for-visual-studio-2013-release-notes"></a>Notas de la versión de ASP.NET and Web Tools para Visual Studio 2013
 
@@ -40,7 +40,7 @@ por [Microsoft](https://github.com/microsoft)
 - [Formularios Web Forms ASP.NET](#TOC9)
 - [ASP.NET MVC 5](#TOC10)
 - [ASP.NET Web API 2](#TOC11)
-- [ASP.NET Signalr](#TOC13)
+- [ASP.NET SignalR](#TOC13)
 - [ASP.NET Identity](#TOC8)
 - [Componentes OWIN de Microsoft](#TOC7)
 - [Entity Framework 6](#ef6)
@@ -54,7 +54,7 @@ por [Microsoft](https://github.com/microsoft)
 ASP.NET and Web Tools para Visual Studio 2013 se incluyen en el instalador principal y se pueden descargar [aquí](https://www.asp.net/downloads).
 
 <a id="TOC2"></a>
-## <a name="documentation"></a>Documentation
+## <a name="documentation"></a>Documentación
 
 Los tutoriales y otra información acerca de ASP.NET and Web Tools para Visual Studio 2013 están disponibles en el [sitio web de ASP.net](https://www.asp.net/).
 
@@ -139,7 +139,7 @@ Para obtener más información, vea los siguientes recursos:
 <a id="publish"></a>
 ## <a name="web-publish-enhancements"></a>Mejoras en la publicación en Web
 
-Visual Studio 2013 incluye características de publicación web nuevas y mejoradas. Estos son algunos de ellos:
+Visual Studio 2013 incluye características de publicación web nuevas y mejoradas. Estas son algunos de ellos:
 
 - [Automatice fácilmente el cifrado de archivos Web. config](https://go.microsoft.com/fwlink/?LinkId=325529). (Este vínculo y los dos apuntan a la documentación de MSDN que podrían no estar disponibles hasta el día 10/17).
 - [Automatizar fácilmente el uso de una aplicación durante la implementación](https://go.microsoft.com/fwlink/?LinkId=325530).
@@ -218,7 +218,7 @@ El enrutamiento de atributos también proporciona una sintaxis adecuada para esp
 
 Para obtener más información sobre el enrutamiento de atributos, consulte [enrutamiento de atributos en Web API 2](../../../web-api/overview/web-api-routing-and-actions/attribute-routing-in-web-api-2.md).
 
-### <a name="oauth-20"></a>OAuth 2,0
+### <a name="oauth-20"></a>OAuth 2.0
 
 Las plantillas de proyecto de aplicación de página única y API Web ahora admiten la autorización mediante OAuth 2,0. OAuth 2,0 es un marco para autorizar el acceso de cliente a los recursos protegidos. Funciona para una gran variedad de clientes, incluidos exploradores y dispositivos móviles.
 
@@ -280,9 +280,9 @@ Dado que la entidad de seguridad de la solicitud se transmite con la solicitud e
 
 Gracias a otra gran contribución de Brock Allen, ASP.NET ahora es totalmente compatible con el uso compartido de solicitudes de origen cruzado (CORS).
 
-La seguridad del explorador evita que una página web realice solicitudes AJAX a otro dominio. [CORS](http://www.w3.org/TR/cors/) es un estándar del W3C que permite a un servidor relajar la Directiva del mismo origen. Con CORS, un servidor puede permitir explícitamente algunas solicitudes entre orígenes y rechazar otras.
+La seguridad del explorador impide que una página web realice solicitudes AJAX a otro dominio. [CORS](http://www.w3.org/TR/cors/) es un estándar del W3C que permite a un servidor relajar la Directiva del mismo origen. Mediante CORS, un servidor puede permitir explícitamente algunas solicitudes entre orígenes y rechazar otras.
 
-Web API 2 ahora es compatible con CORS, incluido el control automático de las solicitudes preparatorias. Para obtener más información, vea [habilitar solicitudes entre orígenes en ASP.net web API](../../../web-api/overview/security/enabling-cross-origin-requests-in-web-api.md).
+Web API 2 ahora es compatible con CORS, incluido el control automático de las solicitudes preparatorias. Para obtener más información, consulte [Habilitación de solicitudes entre orígenes en API web de ASP.NET](../../../web-api/overview/security/enabling-cross-origin-requests-in-web-api.md).
 
 ### <a name="authentication-filters"></a>Filtros de autenticación
 
@@ -678,7 +678,7 @@ Solución:
 
 2. Pruebe el escenario en un explorador que no sea Internet Explorer.
 
-### <a name="web-forms-scaffolding"></a>Scaffolding de formularios Web Forms
+### <a name="web-forms-scaffolding"></a>Web Forms Scaffolding
 
 El scaffolding de formularios Web Forms se ha quitado de VS2013 y estará disponible en una actualización futura de Visual Studio. Sin embargo, todavía puede usar la técnica scaffolding en un proyecto de formularios Web Forms agregando dependencias de MVC y generando scaffolding para MVC. El proyecto contendrá una combinación de formularios Web Forms y MVC.
 

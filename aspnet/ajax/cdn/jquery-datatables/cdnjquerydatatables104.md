@@ -1,6 +1,6 @@
 ---
 uid: ajax/cdn/jquery-datatables/cdnjquerydatatables104
-title: jQuery DataTables 1.10.4 | Microsoft Docs
+title: DataTables de jQuery 1.10.4 | Microsoft Docs
 author: rick-anderson
 description: ''
 ms.author: riande
@@ -9,15 +9,15 @@ ms.assetid: a313fb9c-93c8-40ef-9c81-e1651ecaffa3
 msc.legacyurl: /ajax/cdn/jquery-datatables/cdnjquerydatatables104
 msc.type: content
 ms.openlocfilehash: 66beeb90d8838f707f2e1042c554aefab59fd6d9
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59414535"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78454153"
 ---
 # <a name="jquery-datatables-1104"></a>jQuery DataTables 1.10.4
 
-Los siguientes archivos para lo complementos DataTables de jQuery se hospedan en la red CDN:
+Los siguientes archivos para los complementos DataTables de jQuery se hospedan en la red CDN:
 
 - https://ajax.aspnetcdn.com/ajax/jquery.dataTables/1.10.4/jquery.dataTables.js
 - https://ajax.aspnetcdn.com/ajax/jquery.dataTables/1.10.4/jquery.dataTables.min.js

@@ -1,310 +1,310 @@
 ---
 uid: web-forms/overview/moving-to-aspnet-20/caching
-title: Caching | Microsoft Docs
+title: Almacenamiento en caché | Microsoft Docs
 author: microsoft
-description: Una descripción del almacenamiento en caché es importante para una aplicación ASP.NET de buen rendimiento. ASP.NET 1.x que ofrecen tres opciones distintas para el almacenamiento en caché; almacenamiento en caché, de salida...
+description: Es importante comprender el almacenamiento en caché para una aplicación de ASP.NET con un buen rendimiento. ASP.NET 1. x ofrecía tres opciones diferentes para el almacenamiento en caché; ,... de almacenamiento en caché de resultados
 ms.author: riande
 ms.date: 02/20/2005
 ms.assetid: 2bb109d2-e299-46ea-9054-fa0263b59165
 msc.legacyurl: /web-forms/overview/moving-to-aspnet-20/caching
 msc.type: authoredcontent
 ms.openlocfilehash: 4f0b021ca6ca151544dd9fb0587ed9e0cf14ff65
-ms.sourcegitcommit: dd0dc556a3d99a31d8fdbc763e9a2e53f3441b70
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/27/2019
-ms.locfileid: "67411236"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78464959"
 ---
 # <a name="caching"></a>Almacenamiento en memoria caché
 
 por [Microsoft](https://github.com/microsoft)
 
-> Una descripción del almacenamiento en caché es importante para una aplicación ASP.NET de buen rendimiento. ASP.NET 1.x que ofrecen tres opciones distintas para el almacenamiento en caché; caché de resultados, almacenamiento en caché y la API de caché.
+> Es importante comprender el almacenamiento en caché para una aplicación de ASP.NET con un buen rendimiento. ASP.NET 1. x ofrecía tres opciones diferentes para el almacenamiento en caché; almacenamiento en caché de resultados, almacenamiento en caché de fragmentos y API de caché.
 
-Una descripción del almacenamiento en caché es importante para una aplicación ASP.NET de buen rendimiento. ASP.NET 1.x que ofrecen tres opciones distintas para el almacenamiento en caché; caché de resultados, almacenamiento en caché y la API de caché. ASP.NET 2.0 ofrece las tres de estos métodos, pero agrega algunas importantes características adicionales. Hay varias nuevas dependencias de caché y los desarrolladores ahora tienen la opción de crear dependencias de caché personalizadas también. La configuración de almacenamiento en caché también se han mejorado considerablemente en ASP.NET 2.0.
+Es importante comprender el almacenamiento en caché para una aplicación de ASP.NET con un buen rendimiento. ASP.NET 1. x ofrecía tres opciones diferentes para el almacenamiento en caché; almacenamiento en caché de resultados, almacenamiento en caché de fragmentos y API de caché. ASP.NET 2,0 ofrece los tres métodos, pero agrega algunas características adicionales importantes. Hay varias dependencias de caché nuevas y los desarrolladores tienen también la opción de crear dependencias de caché personalizadas. La configuración del almacenamiento en caché también se ha mejorado significativamente en ASP.NET 2,0.
 
 ## <a name="new-features"></a>Características nuevas
 
-## <a name="cache-profiles"></a>Perfiles de memoria caché
+## <a name="cache-profiles"></a>Perfiles de caché
 
-Perfiles de caché permiten a los desarrolladores definir la configuración de caché específica que, a continuación, se puede aplicar a páginas individuales. Por ejemplo, si tiene algunas páginas que deben haber expirado de memoria caché después de 12 horas, puede crear fácilmente un perfil de caché que se puede aplicar a esas páginas. Para agregar un nuevo perfil de caché, use el &lt;outputCacheSettings&gt; sección del archivo de configuración. Por ejemplo, a continuación es la configuración de un perfil de caché denominado *twoday* que configura una duración de caché de 12 horas.
+Los perfiles de caché permiten a los desarrolladores definir una configuración de caché específica que se puede aplicar a las páginas individuales. Por ejemplo, si tiene algunas páginas que deben expirar de la memoria caché después de 12 horas, puede crear fácilmente un perfil de memoria caché que se pueda aplicar a esas páginas. Para agregar un nuevo perfil de caché, use la sección &lt;outputCacheSettings&gt; en el archivo de configuración. Por ejemplo, a continuación se muestra la configuración de un perfil de caché denominado *twoday* que configura una duración de la caché de 12 horas.
 
 [!code-xml[Main](caching/samples/sample1.xml)]
 
-Para aplicar este perfil de caché en una página concreta, use el atributo CacheProfile de la directiva @ OutputCache tal como se muestra a continuación:
+Para aplicar este perfil de caché a una página determinada, use el atributo CacheProfile de la directiva @ OutputCache, tal como se muestra a continuación:
 
 [!code-aspx[Main](caching/samples/sample2.aspx)]
 
 ## <a name="custom-cache-dependencies"></a>Dependencias de caché personalizadas
 
-Los desarrolladores de ASP.NET 1.x también lloramos para las dependencias de caché personalizada. En ASP.NET 1.x, la clase CacheDependency selló que los desarrolladores impedía de derivar sus propias clases. En ASP.NET 2.0, se quita esa limitación y los desarrolladores son gratuitos desarrollar sus propias dependencias de caché personalizadas. La clase CacheDependency permite la creación de una dependencia de caché personalizada basada en archivos, directorios o claves de caché.
+ASP.NET 1. x desarrolladores Cried para las dependencias de caché personalizadas. En ASP.NET 1. x, la clase CacheDependency estaba sellada y evitaba que los desarrolladores derivaran sus propias clases. En ASP.NET 2,0, se elimina esa limitación y los desarrolladores pueden desarrollar sus propias dependencias de caché personalizadas. La clase CacheDependency permite la creación de una dependencia de caché personalizada basada en archivos, directorios o claves de caché.
 
-Por ejemplo, el código siguiente crea una nueva dependencia de caché personalizada basada en un archivo llamado stuff.xml ubicado en la raíz de la aplicación Web:
+Por ejemplo, el código siguiente crea una nueva dependencia de caché personalizada basada en un archivo denominado material. XML que se encuentra en la raíz de la aplicación web:
 
 [!code-csharp[Main](caching/samples/sample3.cs)]
 
-En este escenario, cuando el archivo stuff.xml cambia, se invalida el elemento en caché.
+En este escenario, cuando el archivo cosas. XML cambia, se invalida el elemento almacenado en caché.
 
-También es posible crear una dependencia de caché personalizadas mediante las claves de caché. Con este método, la eliminación de la clave de caché, invalidará los datos en caché. Esto se ilustra en el siguiente ejemplo:
+También es posible crear una dependencia de caché personalizada mediante claves de caché. Con este método, la eliminación de la clave de caché invalidará los datos almacenados en caché. Esto se ilustra en el siguiente ejemplo:
 
 [!code-csharp[Main](caching/samples/sample4.cs)]
 
-Para invalidar el elemento que se insertó anteriormente, basta con quitar el elemento que se insertó en la memoria caché para que actúe como la clave de caché.
+Para invalidar el elemento que se insertó anteriormente, simplemente quite el elemento que se insertó en la memoria caché para que actúe como la clave de caché.
 
 [!code-csharp[Main](caching/samples/sample5.cs)]
 
-Tenga en cuenta que la clave del elemento que actúa como la clave de caché debe ser el mismo que el valor agregado a la matriz de claves de caché.
+Tenga en cuenta que la clave del elemento que actúa como clave de caché debe ser la misma que el valor agregado a la matriz de claves de caché.
 
-## <a name="polling-based-sql-cache-dependenciesalso-called-table-based-dependencies"></a>Basados en sondeos SQL caché Dependencies(Also called Table-Based Dependencies)
+## <a name="polling-based-sql-cache-dependenciesalso-called-table-based-dependencies"></a>Dependencias de caché de SQL basadas en sondeo (también denominadas dependencias basadas en tablas)
 
-SQL Server 7 y 2000 utilizan el modelo basado en sondeo de dependencias de caché de SQL. El modelo basado en sondeo usa un desencadenador en una tabla de base de datos que se desencadena cuando cambian los datos de la tabla. Las actualizaciones que desencadenen un **changeId** campo en la tabla de notificación que ASP.NET comprueba periódicamente. Si el **changeId** campo se ha actualizado, ASP.NET sepa que los datos han cambiado y no invalida los datos almacenados en caché.
+SQL Server 7 y 2000 usan el modelo basado en sondeo para las dependencias de caché de SQL. El modelo basado en sondeo utiliza un desencadenador en una tabla de base de datos que se desencadena cuando cambian los datos de la tabla. Dicho desencadenador actualiza un campo **changeId** en la tabla de notificación que ASP.net comprueba periódicamente. Si el campo **changeId** se ha actualizado, ASP.net sabe que los datos han cambiado y invalida los datos almacenados en caché.
 
 > [!NOTE]
-> SQL Server 2005 también puede usar el modelo basado en sondeo, pero dado que el modelo basado en sondeo no es el modelo más eficiente, es aconsejable utilizar un modelo basado en consultas (descrito más adelante) con SQL Server 2005.
+> SQL Server 2005 también puede usar el modelo basado en sondeo, pero dado que el modelo basado en sondeo no es el modelo más eficaz, es aconsejable usar un modelo basado en consultas (que se describe más adelante) con SQL Server 2005.
 
-En orden para una dependencia de caché SQL mediante el modelo basado en sondeo funcione correctamente, las tablas deben tener habilitadas las notificaciones. Esto puede realizarse mediante programación utilizando la clase SqlCacheDependencyAdmin o mediante el uso de aspnet\_regsql.exe utilidad.
+Para que una dependencia de caché de SQL que usa el modelo basado en sondeo funcione correctamente, las tablas deben tener habilitadas las notificaciones. Esto puede realizarse mediante programación con la clase SqlCacheDependencyAdmin o mediante la utilidad ASPNET\_regsql. exe.
 
-La línea de comandos siguiente registra la tabla Products en la base de datos de Northwind que se encuentra en una instancia de SQL Server denominada *dbase* dependencia de caché de SQL.
+La siguiente línea de comandos registra la tabla Products de la base de datos Northwind ubicada en una instancia de SQL Server denominada *dBase* para la dependencia de caché de SQL.
 
 [!code-console[Main](caching/samples/sample6.cmd)]
 
-El siguiente es una explicación de los modificadores de línea de comandos utilizados en el comando anterior:
+A continuación se muestra una explicación de los modificadores de la línea de comandos que se usan en el comando anterior:
 
-| **Conmutador de línea de comandos** | **Propósito** |
+| **Modificador de línea de comandos** | **Propósito** |
 | --- | --- |
 | -S *server* | Especifica el nombre del servidor. |
-| -ed | Especifica que se debe habilitar la base de datos para la dependencia de caché SQL. |
-| -d *database\_name* | Especifica el nombre de base de datos que debe habilitarse para la dependencia de caché SQL. |
-| -E | Especifica que aspnet\_regsql debe utilizar la autenticación de Windows al conectarse a la base de datos. |
-| -et | Especifica que se va a habilitar una tabla de base de datos para la dependencia de caché SQL. |
-| -t *table\_name* | Especifica el nombre de la tabla de base de datos para habilitar la dependencia de caché de SQL. |
+| -Ed | Especifica que la base de datos debe estar habilitada para la dependencia de caché de SQL. |
+| -d *\_nombre* de la base de datos | Especifica el nombre de la base de datos que debe habilitarse para la dependencia de caché de SQL. |
+| -E | Especifica que ASPNET\_regsql debe usar la autenticación de Windows al conectarse a la base de datos. |
+| -et | Especifica que se va a habilitar una tabla de base de datos para la dependencia de caché de SQL. |
+| -t *\_nombre* de la tabla | Especifica el nombre de la tabla de base de datos que se va a habilitar para la dependencia de caché de SQL. |
 
 > [!NOTE]
-> Hay otros modificadores disponibles para aspnet\_regsql.exe. ¿Para obtener una lista completa, ejecute aspnet\_regsql.exe-? desde una línea de comandos.
+> Hay otros modificadores disponibles para ASPNET\_regsql. exe. Para obtener una lista completa, ejecute ASPNET\_regsql. exe-? desde una línea de comandos.
 
-Cuando este comando ejecuta los siguientes cambios se realizan en la base de datos de SQL Server:
+Cuando este comando ejecuta los siguientes cambios se realizan en la base de datos SQL Server:
 
-- Un **AspNet\_SqlCacheTablesForChangeNotification** se agrega la tabla. Esta tabla contiene una fila por cada tabla en la base de datos para el que se ha habilitado una dependencia de caché SQL.
-- Los siguientes procedimientos almacenados se crean dentro de la base de datos:
+- Se agrega una tabla **SqlCacheTablesForChangeNotification de AspNet\_** . Esta tabla contiene una fila por cada tabla en la base de datos para la que se ha habilitado una dependencia de caché de SQL.
+- Los procedimientos almacenados siguientes se crean en la base de datos:
 
-| AspNet\_SqlCachePollingStoredProcedure | Consulta AspNet\_SqlCacheTablesForChangeNotification tabla y devuelve todas las tablas habilitadas para la dependencia de caché de SQL y el valor de changeId para cada tabla. Este procedimiento almacenado se utiliza para el sondeo para determinar si los datos han cambiado. |
+| AspNet\_SqlCachePollingStoredProcedure | Consulta la tabla SqlCacheTablesForChangeNotification de AspNet\_y devuelve todas las tablas que están habilitadas para la dependencia de caché de SQL y el valor de changeId para cada tabla. Este procedimiento almacenado se usa para sondear y determinar si los datos han cambiado. |
 | --- | --- |
-| AspNet\_SqlCacheQueryRegisteredTablesStoredProcedure | Devuelve todas las tablas habilitadas para la dependencia de caché SQL consultando AspNet\_SqlCacheTablesForChangeNotification tabla y devuelve todas las tablas habilitadas para SQL de la dependencia de caché. |
-| AspNet\_SqlCacheRegisterTableStoredProcedure | Registra una tabla para la dependencia de caché SQL mediante la adición de la entrada necesaria en la tabla de notificación y agrega el desencadenador. |
-| AspNet\_SqlCacheUnRegisterTableStoredProcedure | Anula el registro de una tabla para la dependencia de caché SQL mediante la eliminación de la entrada en la tabla de notificación y elimina el desencadenador. |
-| AspNet\_SqlCacheUpdateChangeIdStoredProcedure | Actualiza la tabla de notificación al incrementar el changeId para la tabla modificada. ASP.NET usa este valor para determinar si los datos han cambiado. Como se indica a continuación, este procedimiento almacenado se ejecuta el desencadenador que se crea cuando se habilita en la tabla. |
+| AspNet\_SqlCacheQueryRegisteredTablesStoredProcedure | Devuelve todas las tablas habilitadas para la dependencia de caché de SQL consultando la tabla SqlCacheTablesForChangeNotification de AspNet\_y devuelve todas las tablas habilitadas para la dependencia de caché de SQL. |
+| AspNet\_SqlCacheRegisterTableStoredProcedure | Registra una tabla para la dependencia de caché de SQL agregando la entrada necesaria en la tabla de notificación y agrega el desencadenador. |
+| AspNet\_SqlCacheUnRegisterTableStoredProcedure | Anula el registro de una tabla para la dependencia de caché de SQL quitando la entrada de la tabla de notificaciones y quita el desencadenador. |
+| AspNet\_SqlCacheUpdateChangeIdStoredProcedure | Actualiza la tabla de notificaciones incrementando el changeId de la tabla modificada. ASP.NET usa este valor para determinar si los datos han cambiado. Tal y como se indica a continuación, el desencadenador que se crea cuando se habilita la tabla ejecuta este procedimiento almacenado. |
 
-- Llama un desencadenador de SQL Server  **_tabla\_nombre_\_AspNet\_SqlCacheNotification\_desencadenador** se crea para la tabla. Este desencadenador ejecuta AspNet\_SqlCacheUpdateChangeIdStoredProcedure cuando se realiza una INSERCIÓN, actualización o eliminación en la tabla.
-- Un rol de SQL Server denominada **aspnet\_ChangeNotification\_ReceiveNotificationsOnlyAccess** se agrega a la base de datos.
+- Se crea un desencadenador de SQL Server denominado  **_TABLE\_Name_\_el desencadenador AspNet\_SqlCacheNotification\_** para la tabla. Este desencadenador ejecuta el AspNet\_SqlCacheUpdateChangeIdStoredProcedure cuando se realiza una inserción, una actualización o una eliminación en la tabla.
+- Se agrega a la base de datos un rol de SQL Server denominado **aspnet\_ChangeNotification\_ReceiveNotificationsOnlyAccess** .
 
-El **aspnet\_ChangeNotification\_ReceiveNotificationsOnlyAccess** rol de SQL Server tiene permisos de ejecución para AspNet\_SqlCachePollingStoredProcedure. Para el modelo de sondeo para que funcione correctamente, debe agregar su cuenta de proceso para aspnet\_ChangeNotification\_ReceiveNotificationsOnlyAccess rol. Aspnet\_regsql.exe herramienta no hará esto por usted.
+El rol **aspnet\_ChangeNotification\_ReceiveNotificationsOnlyAccess** SQL Server tiene permisos exec en ASPNET\_SqlCachePollingStoredProcedure. Para que el modelo de sondeo funcione correctamente, debe agregar la cuenta de proceso al rol ASPNET\_ChangeNotification\_ReceiveNotificationsOnlyAccess. La herramienta ASPNET\_regsql. exe no lo hará por usted.
 
-### <a name="configuring-polling-based-sql-cache-dependencies"></a>Configurar dependencias de caché de SQL basados en sondeos
+### <a name="configuring-polling-based-sql-cache-dependencies"></a>Configuración de las dependencias de caché de SQL basadas en sondeo
 
-Hay varios pasos que son necesarios para configurar las dependencias de caché SQL basados en sondeos. El primer paso es habilitar la base de datos y la tabla según se explicó anteriormente. Una vez completado este paso, el resto de la configuración es la siguiente:
+Hay varios pasos que son necesarios para configurar las dependencias de caché de SQL basadas en sondeo. El primer paso es habilitar la base de datos y la tabla tal y como se indicó anteriormente. Una vez completado el paso, el resto de la configuración es el siguiente:
 
-- Configuración del archivo de configuración de ASP.NET.
-- Configuración de SqlCacheDependency
+- Configurar el archivo de configuración ASP.NET.
+- Configurar SqlCacheDependency
 
-### <a name="configuring-the-aspnet-configuration-file"></a>Configuración del archivo de configuración de ASP.NET
+### <a name="configuring-the-aspnet-configuration-file"></a>Configuración del archivo de configuración ASP.NET
 
-Además de agregar una cadena de conexión como se describe en un módulo anterior, también debe configurar un &lt;caché&gt; elemento con un &lt;sqlCacheDependency&gt; elemento tal y como se muestra a continuación:
+Además de agregar una cadena de conexión como se describe en un módulo anterior, también debe configurar un elemento de&gt; de caché &lt;con un elemento &lt;sqlCacheDependency&gt; como se muestra a continuación:
 
 [!code-xml[Main](caching/samples/sample7.xml)]
 
-Esta configuración permite que una dependencia de caché SQL en el *pubs* base de datos. Tenga en cuenta que el pollTime atributo en el &lt;sqlCacheDependency&gt; elemento el valor predeterminado es 60000 milisegundos o 1 minuto. (Este valor no puede ser inferior a 500 milisegundos). En este ejemplo, el &lt;agregar&gt; elemento agrega una nueva base de datos e invalida el pollTime, si se establece en 9000000 milisegundos.
+Esta configuración habilita una dependencia de caché de SQL en la base de datos *pubs* . Tenga en cuenta que el atributo pollTime del elemento &lt;sqlCacheDependency&gt; tiene como valor predeterminado 60000 milisegundos o 1 minuto. (Este valor no puede ser inferior a 500 milisegundos). En este ejemplo, el &lt;agregar&gt; elemento agrega una nueva base de datos e invalida pollTime, estableciéndolo en 9 millones milisegundos.
 
-#### <a name="configuring-the-sqlcachedependency"></a>Configuración de SqlCacheDependency
+#### <a name="configuring-the-sqlcachedependency"></a>Configurar SqlCacheDependency
 
-El siguiente paso es configurar SqlCacheDependency. La manera más fácil de hacerlo es especificar el valor del atributo SqlDependency en la directiva @ Outcache como sigue:
+El siguiente paso consiste en configurar SqlCacheDependency. La forma más fácil de hacerlo es especificar el valor para el atributo SqlDependency en la Directiva @ outcache de la siguiente manera:
 
 [!code-aspx[Main](caching/samples/sample8.aspx)]
 
-En la directiva @ OutputCache anterior, una dependencia de caché SQL está configurada para el *autores* de tabla en la *pubs* base de datos. Se pueden configurar varias dependencias, sepárelos con punto y coma de este modo:
+En la directiva @ OutputCache anterior, se configura una dependencia de caché de SQL para la tabla *authors* en la base de datos *pubs* . Se pueden configurar varias dependencias separándolas con un punto y coma como el siguiente:
 
 [!code-aspx[Main](caching/samples/sample9.aspx)]
 
-Otro método de configuración de SqlCacheDependency es hacerlo mediante programación. El código siguiente crea una nueva dependencia de caché SQL en el *autores* de tabla en la *pubs* base de datos.
+Otro método para configurar SqlCacheDependency es hacerlo mediante programación. El código siguiente crea una nueva dependencia de caché de SQL en la tabla *authors* de la base de datos *pubs* .
 
 [!code-csharp[Main](caching/samples/sample10.cs)]
 
-Una de las ventajas de definir mediante programación la dependencia de caché SQL es que puede controlar las excepciones que se produzcan. Por ejemplo, si se intenta definir una dependencia de caché SQL para una base de datos que no se ha habilitado para la notificación, un **DatabaseNotEnabledForNotificationException** se producirá la excepción. En ese caso, puede intentar volver a habilitar la base de datos para las notificaciones mediante una llamada a la **SqlCacheDependencyAdmin.EnableNotifications** método y pásele el nombre de la base de datos.
+Una de las ventajas de definir mediante programación la dependencia de caché de SQL es que puede controlar cualquier excepción que se pueda producir. Por ejemplo, si intenta definir una dependencia de caché de SQL para una base de datos que no se ha habilitado para la notificación, se producirá una excepción **DatabaseNotEnabledForNotificationException** . En ese caso, puede intentar habilitar la base de datos para las notificaciones llamando al método **SqlCacheDependencyAdmin. EnableNotifications** y pasándole el nombre de la base de datos.
 
-Del mismo modo, si se intenta definir una dependencia de caché SQL para una tabla que no se ha habilitado para la notificación, un **TableNotEnabledForNotificationException** se iniciará. A continuación, puede llamar a la **SqlCacheDependencyAdmin.EnableTableForNotifications** método pasándole el nombre de la base de datos y el nombre de la tabla.
+Del mismo modo, si intenta definir una dependencia de caché de SQL para una tabla que no se ha habilitado para la notificación, se producirá una **TableNotEnabledForNotificationException** . Después, puede llamar al método **SqlCacheDependencyAdmin. EnableTableForNotifications** pasándole el nombre de la base de datos y el nombre de la tabla.
 
-Ejemplo de código siguiente muestra cómo configurar correctamente el control de excepciones al configurar una dependencia de caché SQL.
+En el ejemplo de código siguiente se muestra cómo configurar correctamente el control de excepciones al configurar una dependencia de caché de SQL.
 
 [!code-csharp[Main](caching/samples/sample11.cs)]
 
 Más información: [https://msdn.microsoft.com/library/t9x04ed2.aspx](https://msdn.microsoft.com/library/t9x04ed2.aspx)
 
-## <a name="query-based-sql-cache-dependencies-sql-server-2005-only"></a>Dependencias de caché basadas en consultas SQL (sólo en SQL Server 2005)
+## <a name="query-based-sql-cache-dependencies-sql-server-2005-only"></a>Dependencias de caché de SQL basadas en consultas (solo SQL Server 2005)
 
-Cuando se usa SQL Server 2005 para la dependencia de caché SQL, el modelo basado en sondeo no es necesario. Cuando se usa con SQL Server 2005, las dependencias de caché SQL se comunican directamente a través de conexiones de SQL a la instancia de SQL Server (es necesaria ninguna configuración adicional) con las notificaciones de consulta de SQL Server 2005.
+Cuando se usa SQL Server 2005 para la dependencia de caché de SQL, el modelo basado en sondeo no es necesario. Cuando se usa con SQL Server 2005, las dependencias de caché de SQL se comunican directamente a través de las conexiones SQL a la instancia de SQL Server (no es necesaria ninguna otra configuración) mediante notificaciones de consulta de SQL Server 2005.
 
-La manera más sencilla de habilitar la notificación de consulta es hacerlo mediante declaración estableciendo el **SqlCacheDependency** atributo del objeto de origen de datos a **CommandNotification** y establecer el **EnableCaching** atributo **true**. Con este método, se requiere ningún código. Si el resultado de un comando ejecuta en los datos de los cambios del origen, invalidará los datos de la memoria caché.
+La manera más sencilla de habilitar la notificación basada en consultas es hacerlo mediante declaración, estableciendo el atributo **SqlCacheDependency** del objeto de origen de datos en **CommandNotification** y estableciendo el atributo **EnableCaching** en **true**. Con este método, no se requiere ningún código. Si el resultado de un comando ejecutado en el origen de datos cambia, invalidará los datos de la memoria caché.
 
-El ejemplo siguiente configura un control de origen de datos para la dependencia de caché SQL:
+En el ejemplo siguiente se configura un control de origen de datos para la dependencia de caché de SQL:
 
 [!code-aspx[Main](caching/samples/sample12.aspx)]
 
-En este caso, si la consulta especificada en el **SelectCommand** devuelve un resultado diferente a la hizo inicialmente, se invalidan los resultados de la que se almacenan en caché.
+En este caso, si la consulta especificada en **SelectCommand** devuelve un resultado diferente del original, se invalidan los resultados almacenados en caché.
 
-También puede especificar que todos los orígenes de datos esté habilitada para las dependencias de caché SQL estableciendo el **SqlDependency** atributo de la **@ OutputCache** la directiva a **CommandNotification** . El ejemplo siguiente ilustra esto.
+También puede especificar que todos los orígenes de datos estén habilitados para las dependencias de caché de SQL estableciendo el atributo **SqlDependency** de la directiva **@ OutputCache** en **CommandNotification**. En el ejemplo siguiente se muestra esto.
 
 [!code-aspx[Main](caching/samples/sample13.aspx)]
 
 > [!NOTE]
-> Para obtener más información sobre las notificaciones de consulta en SQL Server 2005, vea los libros en pantalla de SQL Server.
+> Para obtener más información sobre las notificaciones de consulta en SQL Server 2005, vea el Libros en pantalla de SQL Server.
 
-Otro método de configuración de una dependencia de caché basada en consulta SQL es hacerlo mediante programación con la clase SqlCacheDependency. Ejemplo de código siguiente muestra cómo se consigue.
+Otro método de configuración de una dependencia de caché de SQL basada en consultas es hacerlo mediante programación con la clase SqlCacheDependency. En el ejemplo de código siguiente se muestra cómo se logra esto.
 
 [!code-csharp[Main](caching/samples/sample14.cs)]
 
 Más información: [https://msdn.microsoft.com/library/default.asp?url=/library/enus/dnvs05/html/querynotification.asp](https://msdn.microsoft.com/library/default.asp?url=/library/enus/dnvs05/html/querynotification.asp)
 
-## <a name="post-cache-substitution"></a>Substitución posterior a la caché
+## <a name="post-cache-substitution"></a>Sustitución posterior a la caché
 
-Almacenamiento en caché una página puede aumentar drásticamente el rendimiento de una aplicación Web. Sin embargo, en algunos casos necesita la mayor parte de la página en la memoria caché y algunos fragmentos de la página deben ser dinámicos. Por ejemplo, si crea una página de noticias que es totalmente estática durante períodos de tiempo, puede establecer la página completa en la memoria caché. Si desea incluir un anuncio que se puede cambiar en cada solicitud de página, la parte de la página que contiene el anuncio debe ser dinámico. Para que pueda almacenar en caché una página pero sustituir algún contenido dinámicamente, puede utilizar la sustitución posterior a la caché de ASP.NET. Con la sustitución posterior a la caché, toda la página está almacenado en caché con partes específicas marcadas como exento de almacenamiento en caché de salida. En el ejemplo de los anuncios, el control AdRotator permite aprovechar las ventajas de la sustitución posterior a la caché para que los anuncios creados dinámicamente para cada usuario y para cada actualización de la página.
+El almacenamiento en caché de una página puede aumentar drásticamente el rendimiento de una aplicación Web. Sin embargo, en algunos casos necesitará que la mayoría de las páginas estén almacenadas en caché y algunos fragmentos de la página sean dinámicos. Por ejemplo, si crea una página de noticias que es totalmente estática durante períodos de tiempo establecidos, puede establecer que la página completa se almacene en caché. Si desea incluir un banner de anuncio de rotación que cambió en cada solicitud de página, la parte de la página que contiene el anuncio debe ser dinámica. Para permitirle almacenar en caché una página pero sustituir el contenido de forma dinámica, puede usar la sustitución posterior a la caché de ASP.NET. Con la sustitución posterior a la caché, la página completa se almacena en caché con partes específicas marcadas como exentas del almacenamiento en caché. En el ejemplo de banners de anuncios, el control AdRotator permite aprovechar la sustitución posterior a la caché para que los anuncios se creen dinámicamente para cada usuario y para cada actualización de página.
 
 Hay tres maneras de implementar la sustitución posterior a la caché:
 
-- De forma declarativa, mediante el control de sustitución.
+- Mediante declaración, utilizando el control de sustitución.
 - Mediante programación, con la API de control de sustitución.
 - Implícitamente, mediante el control AdRotator.
 
 ### <a name="substitution-control"></a>Control de sustitución
 
-El control de sustitución de ASP.NET especifica una sección de una página almacenada en caché que se crean de forma dinámica en lugar de almacenar en caché. Coloque un control de sustitución en la ubicación en la página donde desea que aparezca el contenido dinámico. En tiempo de ejecución, el control de sustitución llama a un método que se especifique con la propiedad MethodName. El método debe devolver una cadena, que, a continuación, reemplaza el contenido del control de sustitución. El método debe ser un método estático en el control de página o control de usuario que lo contiene. Uso del control de sustitución hace que se almacena en caché del lado cliente para que cambien a almacenamiento en caché de servidor, para que la página no se almacenarán en el cliente. Esto garantiza que las solicitudes futuras a la página de llamar al método nuevo para generar contenido dinámico.
+El control de sustitución ASP.NET especifica una sección de una página almacenada en caché que se crea dinámicamente en lugar de almacenarse en caché. Coloque un control Substitution en la ubicación de la página en la que desea que aparezca el contenido dinámico. En tiempo de ejecución, el control de sustitución llama a un método que se especifica con la propiedad MethodName. El método debe devolver una cadena, que reemplaza el contenido del control de sustitución. El método debe ser un método estático en la página contenedora o en el control UserControl. El uso del control de sustitución hace que la caché del lado cliente se cambie a la caché del servidor, de modo que la página no se almacene en caché en el cliente. Esto garantiza que las solicitudes futuras a la página llamen de nuevo al método para generar contenido dinámico.
 
 ### <a name="substitution-api"></a>API de sustitución
 
-Para crear contenido dinámico para una página almacenada en caché mediante programación, puede llamar a la [WriteSubstitution](https://msdn.microsoft.com/library/system.web.httpresponse.writesubstitution.aspx) método en el código de página, pasándole el nombre de un método como parámetro. El método que controla la creación del contenido dinámico toma un único [HttpContext](https://msdn.microsoft.com/library/system.web.httpcontext.aspx) parámetro y devuelve una cadena. La cadena devuelta es el contenido que se sustituirá en la ubicación especificada. Una ventaja de una llamada al método WriteSubstitution en lugar de usar el control de sustitución mediante declaración es que puede llamar a un método de cualquier objeto en lugar de llamar a un método estático de la página o el objeto UserControl.
+Para crear contenido dinámico para una página en caché mediante programación, puede llamar al método [WriteSubstitution](https://msdn.microsoft.com/library/system.web.httpresponse.writesubstitution.aspx) en el código de la página, pasándole el nombre de un método como parámetro. El método que controla la creación del contenido dinámico toma un único parámetro [HttpContext](https://msdn.microsoft.com/library/system.web.httpcontext.aspx) y devuelve una cadena. La cadena devuelta es el contenido que se sustituirá en la ubicación especificada. Una ventaja de llamar al método WriteSubstitution en lugar de usar el control de sustitución mediante declaración es que se puede llamar a un método de cualquier objeto arbitrario en lugar de llamar a un método estático de la página o al objeto UserControl.
 
-Una llamada al método WriteSubstitution hace que se almacena en caché del lado cliente para que cambien a almacenamiento en caché de servidor, para que la página no se almacenarán en el cliente. Esto garantiza que las solicitudes futuras a la página de llamar al método nuevo para generar contenido dinámico.
+La llamada al método WriteSubstitution hace que la caché del lado cliente se cambie a la caché del servidor, de modo que la página no se almacene en caché en el cliente. Esto garantiza que las solicitudes futuras a la página llamen de nuevo al método para generar contenido dinámico.
 
-### <a name="adrotator-control"></a>Control AdRotator
+### <a name="adrotator-control"></a>AdRotator (control)
 
-AdRotator implementa el control de servidor admite internamente para la sustitución posterior a la caché. Si coloca un control AdRotator en la página, representará anuncios únicos en cada solicitud, independientemente de si se almacena en caché la página primaria. Como resultado, una página que incluye un control AdRotator es sólo en caché del lado servidor.
+El control de servidor AdRotator implementa la compatibilidad para la sustitución posterior a la caché. Si coloca un control AdRotator en la página, se representarán anuncios únicos en cada solicitud, independientemente de si la página primaria está almacenada en la memoria caché. Como resultado, una página que incluye un control AdRotator solo se almacena en caché en el lado del servidor.
 
 ## <a name="controlcachepolicy-class"></a>Clase ControlCachePolicy
 
-La clase ControlCachePolicy permite el control de fragmento de almacenamiento en caché mediante los controles de usuario mediante programación. ASP.NET incrusta los controles de usuario dentro de un [BasePartialCachingControl](https://msdn.microsoft.com/library/system.web.ui.basepartialcachingcontrol.aspx) instancia. La clase BasePartialCachingControl representa un control de usuario que tiene habilitada la memoria caché de salida.
+La clase ControlCachePolicy permite el control mediante programación del almacenamiento en caché de fragmentos mediante controles de usuario. ASP.NET inserta los controles de usuario en una instancia de [BasePartialCachingControl](https://msdn.microsoft.com/library/system.web.ui.basepartialcachingcontrol.aspx) . La clase BasePartialCachingControl representa un control de usuario que tiene habilitado el almacenamiento en caché de resultados.
 
-Al acceder a la [BasePartialCachingControl.CachePolicy](https://msdn.microsoft.com/library/system.web.ui.basepartialcachingcontrol.cachepolicy.aspx) propiedad de un [PartialCachingControl](https://msdn.microsoft.com/library/system.web.ui.partialcachingcontrol.aspx) control, siempre recibirá un objeto ControlCachePolicy válido. Sin embargo, si tiene acceso a la [UserControl.CachePolicy](https://msdn.microsoft.com/library/system.web.ui.usercontrol.cachepolicy.aspx) propiedad de un [UserControl](https://msdn.microsoft.com/library/system.web.ui.usercontrol.aspx) control, recibir un objeto ControlCachePolicy válido sólo si el control de usuario ya está contenido en un Control BasePartialCachingControl. Si no se ajusta, el objeto ControlCachePolicy devuelto por la propiedad producirá excepciones cuando se intenta manipular, porque no tiene un BasePartialCachingControl asociado. Para determinar si una instancia del control de usuario admite el almacenamiento en caché sin generar excepciones, inspeccione la [SupportsCaching](https://msdn.microsoft.com/library/system.web.ui.controlcachepolicy.supportscaching.aspx) propiedad.
+Al acceder a la propiedad [BasePartialCachingControl. CachePolicy](https://msdn.microsoft.com/library/system.web.ui.basepartialcachingcontrol.cachepolicy.aspx) de un control [PartialCachingControl](https://msdn.microsoft.com/library/system.web.ui.partialcachingcontrol.aspx) , siempre recibirá un objeto ControlCachePolicy válido. Sin embargo, si tiene acceso a la propiedad [UserControl. CachePolicy](https://msdn.microsoft.com/library/system.web.ui.usercontrol.cachepolicy.aspx) de un control [UserControl](https://msdn.microsoft.com/library/system.web.ui.usercontrol.aspx) , recibirá un objeto ControlCachePolicy válido solo si el control de usuario ya está incluido en un control BasePartialCachingControl. Si no se ajusta, el objeto ControlCachePolicy devuelto por la propiedad producirá excepciones al intentar manipularlo porque no tiene un BasePartialCachingControl asociado. Para determinar si una instancia de UserControl admite el almacenamiento en caché sin generar excepciones, inspeccione la propiedad [SupportsCaching](https://msdn.microsoft.com/library/system.web.ui.controlcachepolicy.supportscaching.aspx) .
 
-Uso de la clase ControlCachePolicy es una de varias maneras de que habilitar la caché de resultados. En la lista siguiente se describe los métodos que puede usar para habilitar el almacenamiento en caché de salida:
+El uso de la clase ControlCachePolicy es una de las diversas formas en que puede habilitar el almacenamiento en caché de resultados. En la lista siguiente se describen los métodos que puede usar para habilitar el almacenamiento en caché de resultados:
 
-- Use la [@ OutputCache](https://msdn.microsoft.com/library/hdxfb6cy.aspx) directiva para habilitar el almacenamiento en caché en escenarios declarativos de salida.
-- Use la [PartialCachingAttribute](https://msdn.microsoft.com/library/system.web.ui.partialcachingattribute.aspx) atributo para habilitar el almacenamiento en caché para un control de usuario en un archivo de código subyacente.
-- Utilice la clase ControlCachePolicy para especificar la configuración de caché en escenarios de programación en el que está trabajando con BasePartialCachingControl instancias que se han habilitado para caché mediante uno de los métodos anteriores y carga dinámicamente mediante el [System.Web.UI.TemplateControl.LoadControl](https://msdn.microsoft.com/library/system.web.ui.templatecontrol.loadcontrol.aspx) método.
+- Use la directiva [@ OutputCache](https://msdn.microsoft.com/library/hdxfb6cy.aspx) para habilitar el almacenamiento en caché de resultados en escenarios declarativos.
+- Use el atributo [PartialCachingAttribute](https://msdn.microsoft.com/library/system.web.ui.partialcachingattribute.aspx) para habilitar el almacenamiento en caché de un control de usuario en un archivo de código subyacente.
+- Use la clase ControlCachePolicy para especificar la configuración de la memoria caché en escenarios de programación en los que está trabajando con instancias de BasePartialCachingControl que se han habilitado para caché mediante uno de los métodos anteriores y cargados dinámicamente mediante el método [System. Web. UI. TemplateControl. LoadControl](https://msdn.microsoft.com/library/system.web.ui.templatecontrol.loadcontrol.aspx) .
 
-Se puede manipular correctamente una instancia ControlCachePolicy solo entre las fases de Init y PreRender del ciclo de vida del control. Si se modifica un objeto ControlCachePolicy después de la fase de preprocesamiento, ASP.NET genera una excepción porque los cambios realizados después de representa el control no afectan realmente a la configuración de la caché (un control se almacena en caché durante la fase de representación). Por último, una instancia del control de usuario (y, por tanto, su objeto ControlCachePolicy) solo está disponibles para la manipulación mediante programación cuando se representa realmente.
+Una instancia de ControlCachePolicy se puede manipular correctamente solo entre las fases init y PreRender del ciclo de vida del control. Si modifica un objeto ControlCachePolicy después de la fase de representación previa, ASP.NET produce una excepción porque cualquier cambio realizado después de que se represente el control no puede afectar realmente a la configuración de la memoria caché (un control se almacena en caché durante la fase de representación). Por último, una instancia de control de usuario (y por consiguiente su objeto ControlCachePolicy) solo está disponible para la manipulación mediante programación cuando se representa realmente.
 
-## <a name="changes-to-caching-configuration---the-ltcachinggt-element"></a>Los cambios en la configuración de almacenamiento en caché: el &lt;almacenamiento en caché&gt; elemento
+## <a name="changes-to-caching-configuration---the-ltcachinggt-element"></a>Cambios en la configuración de almacenamiento en caché: el elemento de&gt; de almacenamiento en caché &lt;
 
-Hay varios cambios en la configuración de almacenamiento en caché en ASP.NET 2.0. El &lt;almacenamiento en caché&gt; elemento es nuevo en ASP.NET 2.0 y le permite realizar cambios de configuración de almacenamiento en caché en el archivo de configuración. Los siguientes atributos están disponibles.
+Hay varios cambios en la configuración de almacenamiento en caché en ASP.NET 2,0. El elemento &lt;Caching&gt; es nuevo en ASP.NET 2,0 y permite realizar cambios en la configuración de almacenamiento en caché en el archivo de configuración. Están disponibles los siguientes atributos.
 
 | **Element** | **Descripción** |
 | --- | --- |
-| **cache** | Elemento opcional. Define la configuración de la caché global de la aplicación. |
-| **outputCache** | Elemento opcional. Especifica la configuración de caché de resultados de toda la aplicación. |
-| **outputCacheSettings** | Elemento opcional. Especifica la configuración de caché de resultados que se puede aplicar a las páginas de la aplicación. |
-| **sqlCacheDependency** | Elemento opcional. Configura las dependencias de caché SQL para una aplicación ASP.NET. |
+| **almacenar** | Elemento opcional. Define la configuración de la memoria caché global de la aplicación. |
+| **outputCache** | Elemento opcional. Especifica la configuración de la caché de resultados de toda la aplicación. |
+| **outputCacheSettings** | Elemento opcional. Especifica la configuración de la caché de resultados que se puede aplicar a las páginas de la aplicación. |
+| **sqlCacheDependency** | Elemento opcional. Configura las dependencias de caché de SQL para una aplicación ASP.NET. |
 
-### <a name="the-ltcachegt-element"></a>El &lt;caché&gt; elemento
+### <a name="the-ltcachegt-element"></a>El elemento&gt; de la memoria caché &lt;
 
-Los siguientes atributos están disponibles en el &lt;caché&gt; elemento:
+Los siguientes atributos están disponibles en el elemento de&gt; de caché de &lt;:
 
-| **Attribute** | **Descripción** |
+| **Atributo** | **Descripción** |
 | --- | --- |
-| **disableMemoryCollection** | Opcional **booleano** atributo. Obtiene o establece un valor que indica si la colección de la memoria caché que se produce cuando el equipo está bajo presión de memoria está deshabilitada. |
-| **disableExpiration** | Opcional **booleano** atributo. Obtiene o establece un valor que indica si la expiración de caché está deshabilitada. Cuando está deshabilitado, los elementos en caché no caducan y eliminación de registros obsoletos en segundo plano de elementos de caché expirados no se produce. |
-| **privateBytesLimit** | Opcional **Int64** atributo. Obtiene o establece un valor que indica el tamaño máximo de bytes privados de la aplicación antes de empezar a vaciar la memoria caché ha expirado elementos e intentar reclamar la memoria. Este límite incluye tanto memoria usada por la memoria caché como memoria normal sobrecarga de la aplicación en ejecución. Un valor de cero indica que ASP.NET usará su propia heurística para determinar cuándo se debe iniciar reclamar memoria. |
-| **percentagePhysicalMemoryUsedLimit** | Opcional **Int32** atributo. Obtiene o establece un valor que indica el porcentaje máximo de memoria física de un equipo que puede consumir una aplicación antes de empezar a vaciar la memoria caché ha expirado elementos e intentar reclamar la memoria que este uso de memoria incluye tanto de la memoria usada por la caché también como el uso de memoria normal de la aplicación en ejecución. Un valor de cero indica que ASP.NET usará su propia heurística para determinar cuándo se debe iniciar reclamar memoria. |
-| **privateBytesPollTime** | Opcional **TimeSpan** atributo. Obtiene o establece un valor que indica el intervalo de tiempo entre el sondeo para el uso de memoria de bytes privados de la aplicación. |
+| **disableMemoryCollection** | Atributo **Boolean** opcional. Obtiene o establece un valor que indica si la colección de memoria de caché que se produce cuando el equipo está bajo presión de memoria está deshabilitada. |
+| **disableExpiration** | Atributo **Boolean** opcional. Obtiene o establece un valor que indica si la expiración de la memoria caché está deshabilitada. Cuando está deshabilitado, los elementos en caché no expiran y no se produce la eliminación en segundo plano de los elementos de caché expirados. |
+| **privateBytesLimit** | Atributo **Int64** opcional. Obtiene o establece un valor que indica el tamaño máximo de los bytes privados de una aplicación antes de que la memoria caché comience a vaciar los elementos expirados e intentar reclamar la memoria. Este límite incluye la memoria usada por la memoria caché, así como la sobrecarga de memoria normal de la aplicación en ejecución. Un valor de cero indica que ASP.NET usará su propia heurística para determinar cuándo se debe iniciar la recuperación de la memoria. |
+| **percentagePhysicalMemoryUsedLimit** | Atributo **Int32** opcional. Obtiene o establece un valor que indica el porcentaje máximo de memoria física de una máquina que puede ser consumida por una aplicación antes de que la memoria caché comience a vaciar los elementos expirados e intentando recuperar memoria. este uso de memoria incluye también la memoria usada por la memoria caché. como el uso de memoria normal de la aplicación en ejecución. Un valor de cero indica que ASP.NET usará su propia heurística para determinar cuándo se debe iniciar la recuperación de la memoria. |
+| **privateBytesPollTime** | Atributo **TimeSpan** opcional. Obtiene o establece un valor que indica el intervalo de tiempo entre el sondeo del uso de memoria de bytes privados de la aplicación. |
 
-### <a name="the-ltoutputcachegt-element"></a>El &lt;outputCache&gt; elemento
+### <a name="the-ltoutputcachegt-element"></a>El elemento &lt;outputCache&gt;
 
-Los siguientes atributos están disponibles para el &lt;outputCache&gt; elemento.
+Los siguientes atributos están disponibles para el elemento &lt;outputCache&gt;.
 
-|       <strong>Attribute</strong>        |                                                                                                                                                                                                                                                       <strong>Descripción</strong>                                                                                                                                                                                                                                                       |
+|       <strong>Atributo</strong>        |                                                                                                                                                                                                                                                       <strong>Descripción</strong>                                                                                                                                                                                                                                                       |
 |-----------------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-|   <strong>enableOutputCache</strong>    |                                                                                                                                                          Opcional <strong>booleano</strong> atributo. Habilita o deshabilita la caché de resultados de página. Si deshabilita esta opción, no hay páginas se almacenan en caché independientemente de la configuración declarativa o mediante programación. Valor predeterminado es <strong>true</strong>.                                                                                                                                                           |
-|  <strong>enableFragmentCache</strong>   |                                                Opcional <strong>booleano</strong> atributo. Habilita o deshabilita la caché de fragmentos de la aplicación. Si deshabilita esta opción, no hay páginas se almacenan en caché sin tener en cuenta la [@ OutputCache](https://msdn.microsoft.com/library/hdxfb6cy.aspx) directiva o el almacenamiento en caché de perfil que se usa. Incluye un encabezado de control de caché que indica que no deben intentar servidores proxy de nivel superior, así como los clientes de explorador a la caché de resultados de página. Valor predeterminado es <strong>false</strong>.                                                 |
-| <strong>sendCacheControlHeader</strong> |                                                                                                                                                      Opcional <strong>booleano</strong> atributo. Obtiene o establece un valor que indica si el <strong>cache-control: private</strong> encabezado se envía el módulo de caché de resultados de forma predeterminada. Valor predeterminado es <strong>false</strong>.                                                                                                                                                      |
-|      <strong>omitVaryStar</strong>      | Opcional <strong>booleano</strong> atributo. Habilita o deshabilita el envío de Http "<strong>Vary: \</strong ><em>" encabezado de la respuesta. Con el valor predeterminado es False, un "</em>* Vary: \* <strong>" se envía el encabezado para las páginas en caché de salida. Cuando se envía el encabezado Vary, permite que diferentes versiones en la memoria caché según lo especificado en el encabezado Vary. Por ejemplo, <em>Vary: usuario-agentes</em> almacenará versiones diferentes de una página según el agente de usuario que se emite la solicitud. Valor predeterminado es ** false</strong>. |
+|   <strong>enableOutputCache</strong>    |                                                                                                                                                          Atributo <strong>Boolean</strong> opcional. Habilita o deshabilita la caché de resultados de la página. Si se deshabilita, no se almacena en caché ninguna página independientemente de la configuración de programación o declarativa. El valor predeterminado es <strong>true</strong>.                                                                                                                                                           |
+|  <strong>enableFragmentCache</strong>   |                                                Atributo <strong>Boolean</strong> opcional. Habilita o deshabilita la caché de fragmentos de aplicación. Si se deshabilita, no se almacena en caché ninguna página independientemente de la directiva [@ OutputCache](https://msdn.microsoft.com/library/hdxfb6cy.aspx) o el perfil de almacenamiento en caché usados. Incluye un encabezado Cache-Control que indica que los servidores proxy que preceden en la cadena, así como los clientes del explorador no deben intentar almacenar en caché los resultados de la página. El valor predeterminado es <strong>false</strong>.                                                 |
+| <strong>sendCacheControlHeader</strong> |                                                                                                                                                      Atributo <strong>Boolean</strong> opcional. Obtiene o establece un valor que indica si el módulo de caché de resultados envía el encabezado <strong>Cache-Control: Private</strong> de forma predeterminada. El valor predeterminado es <strong>false</strong>.                                                                                                                                                      |
+|      <strong>omitVaryStar</strong>      | Atributo <strong>Boolean</strong> opcional. Habilita o deshabilita el envío de un encabezado HTTP "<strong>Vary: \</strong ><em>" en la respuesta. Con el valor predeterminado de false,</em>se envía un encabezado "* Vary: \*<strong>" para las páginas almacenadas en caché de la salida. Cuando se envía el encabezado Vary, se pueden almacenar en caché diferentes versiones en función de lo que se especifique en el encabezado Vary. Por ejemplo, <em>varíe: los agentes de usuario</em> almacenarán versiones diferentes de una página en función del agente de usuario que emite la solicitud. El valor predeterminado es * * false</strong>. |
 
-### <a name="the-ltoutputcachesettingsgt-element"></a>El &lt;outputCacheSettings&gt; elemento
+### <a name="the-ltoutputcachesettingsgt-element"></a>El elemento &lt;outputCacheSettings&gt;
 
-El &lt;outputCacheSettings&gt; elemento permite la creación de perfiles de memoria caché como se describió anteriormente. El elemento secundario único para el &lt;outputCacheSettings&gt; elemento es el &lt;outputCacheProfiles&gt; (elemento) para configurar los perfiles de memoria caché.
+El elemento &lt;outputCacheSettings&gt; permite la creación de perfiles de caché tal y como se ha descrito anteriormente. El único elemento secundario del elemento &lt;outputCacheSettings&gt; es el elemento &lt;objetos OutputCacheProfile&gt; para configurar los perfiles de caché.
 
-### <a name="the-ltsqlcachedependencygt-element"></a>El &lt;sqlCacheDependency&gt; elemento
+### <a name="the-ltsqlcachedependencygt-element"></a>El elemento&gt; de &lt;sqlCacheDependency
 
-Los siguientes atributos están disponibles para el &lt;sqlCacheDependency&gt; elemento.
+Los siguientes atributos están disponibles para el elemento &lt;sqlCacheDependency&gt;.
 
-| **Attribute** | **Descripción** |
+| **Atributo** | **Descripción** |
 | --- | --- |
-| **enabled** | Requiere **booleano** atributo. Indica si se sondean los cambios. |
-| **pollTime** | Opcional **Int32** atributo. Establece la frecuencia con que SqlCacheDependency sondea la tabla de base de datos de los cambios. Este valor corresponde al número de milisegundos que transcurren entre sondeos sucesivos. No se puede establecer en menos de 500 milisegundos. Valor predeterminado es 1 minuto. |
+| **enabled** | Atributo **booleano** obligatorio. Indica si se sondea o no los cambios. |
+| **pollTime** | Atributo **Int32** opcional. Establece la frecuencia con la que SqlCacheDependency sondea la tabla de base de datos en busca de cambios. Este valor corresponde al número de milisegundos entre sondeos sucesivos. No se puede establecer en menos de 500 milisegundos. El valor predeterminado es 1 minuto. |
 
 ### <a name="more-information"></a>Más información
 
-No hay información adicional que debe tener en cuenta sobre la configuración de la memoria caché.
+Hay información adicional que debe tener en cuenta con respecto a la configuración de la memoria caché.
 
-- Si no se establece el límite de bytes privados del proceso de trabajo, la memoria caché usará uno de los límites siguientes: 
+- Si no se establece el límite de bytes privados del proceso de trabajo, la memoria caché utilizará uno de los siguientes límites: 
 
-    - x86 2GB: 800MB o el 60% de memoria RAM física, lo que sea menor
-    - x86 3GB: 1800MB o el 60% de memoria RAM física, lo que sea menor
-    - x64: 1 terabyte o 60% de memoria RAM física, lo que sea menor
-- Límite de bytes si tanto el proceso de trabajo privado y &lt;caché privateBytesLimit /&gt; están configurados, se utilizará la caché el valor mínimo de los dos.
-- Al igual que en la versión 1.x, se quite las entradas de caché y llamar a GC. Recopilar por dos motivos: 
+    - x86 2 GB: 800MB o 60% de la RAM física, lo que sea menor
+    - 3GB x86:1800MB o 60% de la RAM física, lo que sea menor
+    - x64:1 terabyte o 60% de la RAM física, lo que sea menor
+- Si se establecen el límite de bytes privados del proceso de trabajo y &lt;privateBytesLimit/&gt; de la memoria caché, la memoria caché usará el mínimo de los dos.
+- Al igual que en 1. x, se quitan las entradas de caché y se llama a GC. Recopile por dos motivos: 
 
     - Estamos muy cerca del límite de bytes privados
-    - La memoria disponible es inferior al 10% o casi
-- Puede deshabilitar el recorte y almacenar en caché para las condiciones de poca memoria disponible estableciendo eficazmente &lt;caché percentagePhysicalMemoryUseLimit /&gt; a 100.
-- A diferencia de 1.x, 2.0 suspender las llamadas de recorte y recopilar si la última GC. No reducir recopilar bytes privados o el tamaño de los montones administrados en más de un 1% del límite de memoria (caché).
+    - La memoria disponible es cercana o inferior al 10%
+- Puede deshabilitar eficazmente el recorte y la memoria caché para las condiciones de memoria insuficiente si establece &lt;percentagePhysicalMemoryUseLimit de caché/&gt; en 100.
+- A diferencia de 1. x, 2,0 suspenderá el recorte y recopilará llamadas si el último GC. Collect no reduciría los bytes privados o el tamaño de los montones administrados en más del 1% del límite de memoria (caché).
 
-## <a name="lab1-custom-cache-dependencies"></a>Lab1: Dependencias de caché personalizadas
+## <a name="lab1-custom-cache-dependencies"></a>Lab1: dependencias de caché personalizadas
 
-1. Cree un nuevo sitio Web.
-2. Agregue un nuevo archivo XML llamado cache.xml y guárdelo en la raíz de la aplicación Web.
-3. Agregue el código siguiente a la página\_Load (método) en el código subyacente de default.aspx: 
+1. Crear un sitio web nuevo.
+2. Agregue un nuevo archivo XML denominado cache. XML y guárdelo en la raíz de la aplicación Web.
+3. Agregue el código siguiente al método de carga de la página\_en el código subyacente de default. aspx: 
 
     [!code-csharp[Main](caching/samples/sample15.cs)]
-4. Agregue lo siguiente a la parte superior de default.aspx en la vista de origen: 
+4. Agregue lo siguiente a la parte superior de default. aspx en la vista de código fuente: 
 
     [!code-aspx[Main](caching/samples/sample16.aspx)]
-5. Examinar Default.aspx. ¿Qué decir el tiempo?
-6. Actualice el explorador. ¿Qué decir el tiempo?
-7. Abra cache.xml y agregue el código siguiente: 
+5. Examine default. aspx. ¿Qué significa la hora?
+6. Actualice el explorador. ¿Qué significa la hora?
+7. Abra cache. XML y agregue el código siguiente: 
 
     [!code-xml[Main](caching/samples/sample17.xml)]
-8. Guardar cache.xml.
-9. Actualice el explorador. ¿Qué decir el tiempo?
-10. Se explica por qué la hora se actualiza en lugar de mostrar los valores previamente almacenado en caché:
+8. Guarde cache. Xml.
+9. Actualice el explorador. ¿Qué significa la hora?
+10. Explique por qué se ha actualizado el tiempo en lugar de mostrar los valores previamente almacenados en caché:
 
-## <a name="lab-2-using-polling-based-cache-dependencies"></a>Práctica 2: Usar dependencias de caché basada en sondeo
+## <a name="lab-2-using-polling-based-cache-dependencies"></a>Práctica 2: usar dependencias de caché basadas en sondeos
 
-Esta práctica utiliza el proyecto que creó en el módulo anterior que permite la edición de los datos en la base de datos Northwind mediante un control GridView y DetailsView.
+En este laboratorio se usa el proyecto que creó en el módulo anterior que permite editar datos en la base de datos Northwind a través de un control GridView y DetailsView.
 
 1. Abra el proyecto en Visual Studio 2005.
-2. Ejecute aspnet\_regsql utilidad frente a la base de datos Northwind para habilitar la base de datos y la tabla Products. Use el siguiente comando desde un símbolo del sistema de Visual Studio: 
+2. Ejecute la utilidad ASPNET\_regsql en la base de datos Northwind para habilitar la base de datos y la tabla Products. Use el comando siguiente desde un símbolo del sistema de Visual Studio: 
 
     [!code-console[Main](caching/samples/sample18.cmd)]
-3. Agregue lo siguiente al archivo web.config: 
+3. Agregue lo siguiente al archivo Web. config: 
 
     [!code-xml[Main](caching/samples/sample19.xml)]
-4. Agregue un nuevo webform llamado showdata.aspx.
-5. Agregue el siguiente @ outputcache (directiva) a la página showdata.aspx: 
+4. Agregue un nuevo WebForm denominado showData. aspx.
+5. Agregue la siguiente directiva @ OutputCache a la página showData. aspx: 
 
     [!code-aspx[Main](caching/samples/sample20.aspx)]
-6. Agregue el código siguiente a la página\_carga de showdata.aspx: 
+6. Agregue el código siguiente a la página\_carga de showData. aspx: 
 
     [!code-html[Main](caching/samples/sample21.html)]
-7. Agregar un nuevo control SqlDataSource para showdata.aspx y configúrelo para utilizar la conexión de base de datos Northwind. Haga clic en siguiente.
-8. Seleccione las casillas de verificación ProductName y ProductID y haga clic en siguiente.
-9. Haga clic en Finalizar.
-10. Agregar un control GridView nuevo a la página showdata.aspx.
-11. En la lista desplegable, elija SqlDataSource1.
-12. Guarde y examinar showdata.aspx. Anote la hora mostrada.
+7. Agregue un nuevo control SqlDataSource a showData. aspx y configúrelo para utilizar la conexión a la base de datos Northwind. Haga clic en Siguiente.
+8. Active las casillas ProductName y ProductID y haga clic en siguiente.
+9. Haga clic en Finish.
+10. Agregue un nuevo GridView a la página showData. aspx.
+11. Elija SqlDataSource1 en la lista desplegable.
+12. Guarde y examine showData. aspx. Anote la hora que se muestra.

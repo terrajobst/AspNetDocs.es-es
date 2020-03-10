@@ -9,11 +9,11 @@ ms.assetid: 14d9aa1b-4dca-43a0-aa9d-a6e891fee019
 msc.legacyurl: /web-forms/overview/older-versions-getting-started/master-pages/nested-master-pages-vb
 msc.type: authoredcontent
 ms.openlocfilehash: 9bb39712855c37f5cbcbb447f7691e9451b8dc92
-ms.sourcegitcommit: 22fbd8863672c4ad6693b8388ad5c8e753fb41a2
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/28/2019
-ms.locfileid: "74642318"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78461455"
 ---
 # <a name="nested-master-pages-vb"></a>Páginas maestras anidadas (VB)
 

@@ -9,11 +9,11 @@ ms.assetid: 492f5ae2-bad7-4107-89a9-f04a9525dee7
 msc.legacyurl: /web-forms/overview/older-versions-getting-started/deploying-web-site-projects/asp-net-hosting-options-vb
 msc.type: authoredcontent
 ms.openlocfilehash: 4293114002aee15ddace1a3f19c240f35e6065f5
-ms.sourcegitcommit: 22fbd8863672c4ad6693b8388ad5c8e753fb41a2
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/28/2019
-ms.locfileid: "74620755"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78520795"
 ---
 # <a name="aspnet-hosting-options-vb"></a>Opciones de hospedaje de ASP.NET (VB)
 

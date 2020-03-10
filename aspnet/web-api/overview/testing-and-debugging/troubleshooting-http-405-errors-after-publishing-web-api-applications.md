@@ -9,11 +9,11 @@ ms.assetid: 07ec7d37-023f-43ea-b471-60b08ce338f7
 msc.legacyurl: /web-api/overview/testing-and-debugging/troubleshooting-http-405-errors-after-publishing-web-api-applications
 msc.type: authoredcontent
 ms.openlocfilehash: 1b47f1ade3619cfd010260352f6a96985ab3598b
-ms.sourcegitcommit: 84b1681d4e6253e30468c8df8a09fe03beea9309
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/02/2019
-ms.locfileid: "73445702"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78447031"
 ---
 # <a name="troubleshoot-web-api2-apps-that-work-in-visual-studio-and-fail-on-a-production-iis-server"></a>Solución de problemas de aplicaciones web API2 que funcionan en Visual Studio y producen errores en un servidor IIS de producción
 
@@ -33,19 +33,19 @@ El primer paso para aprender a solucionar los errores de HTTP 405 es entender qu
 
 Como una breve revisión, estos son algunos de los métodos HTTP más usados, tal como se define en RFC 2616, RFC 4918 y RFC 5789:
 
-| Método HTTP | Descripción |
+| Método HTTP | Description |
 | --- | --- |
-| **Obtener** | Este método se usa para recuperar datos de un URI y probablemente es el método HTTP más utilizado. |
+| **GET** | Este método se usa para recuperar datos de un URI y probablemente es el método HTTP más utilizado. |
 | **HEAD** | Este método es muy similar al método GET, salvo que realmente no recupera los datos del URI de solicitud; simplemente recupera el Estado HTTP. |
-| **Exponer** | Este método se utiliza normalmente para enviar datos nuevos al URI; POST se suele usar para enviar datos de formulario. |
-| **PONDRÁN** | Este método se utiliza normalmente para enviar datos sin procesar al URI; PUT se usa a menudo para enviar datos JSON o XML a aplicaciones de API Web. |
+| **POST** | Este método se utiliza normalmente para enviar datos nuevos al URI; POST se suele usar para enviar datos de formulario. |
+| **PUT** | Este método se utiliza normalmente para enviar datos sin procesar al URI; PUT se usa a menudo para enviar datos JSON o XML a aplicaciones de API Web. |
 | **DELETE** | Este método se usa para quitar datos de un URI. |
 | **OPTIONS** | Este método se usa normalmente para recuperar la lista de métodos HTTP que se admiten para un URI. |
 | **COPIAR MOVIMIENTO** | Estos dos métodos se usan con WebDAV y su finalidad es autoexplicativo. |
 | **MKCOL** | Este método se utiliza con WebDAV y se usa para crear una colección (por ejemplo, un directorio) en el URI especificado. |
 | **PROPFIND PROPPATCH** | Estos dos métodos se usan con WebDAV y se usan para consultar o establecer las propiedades de un URI. |
 | **DESBLOQUEO DE BLOQUEOS** | Estos dos métodos se usan con WebDAV y se usan para bloquear o desbloquear el recurso identificado por el URI de solicitud al crear. |
-| **DISTRIBUCIÓN** | Este método se utiliza para modificar un recurso HTTP existente. |
+| **PATCH** | Este método se utiliza para modificar un recurso HTTP existente. |
 
 Cuando uno de estos métodos HTTP está configurado para su uso en el servidor, el servidor responderá con el Estado HTTP y otros datos adecuados para la solicitud. (Por ejemplo, un método GET podría recibir una respuesta HTTP 200 ***OK*** y un método put podría recibir una respuesta ***http 201)*** .
 
@@ -69,7 +69,7 @@ En este ejemplo, el cliente HTTP envió una solicitud JSON válida a la direcci�
 
 ## <a name="resolve-http-405-errors"></a>Resolver errores HTTP 405
 
-Hay varios motivos por los que no se permite un verbo HTTP específico, pero hay un escenario principal que es la causa inicial de este error en IIS: se han definido varios controladores para el mismo verbo o método, y uno de los controladores está bloqueando el controlador esperado desde procesando la solicitud. A modo de explicación, IIS procesa los controladores de primero a último en función de las entradas del controlador de pedidos en los archivos *ApplicationHost. config* y *Web. config* , donde se usará la primera combinación de ruta de acceso, verbo, recurso, etc., para controlar la solicitud.
+Hay varios motivos por los que no se permite un verbo HTTP específico, pero hay un escenario principal que es la causa inicial de este error en IIS: se han definido varios controladores para el mismo verbo o método, y uno de los controladores está bloqueando el controlador esperado para procesar la solicitud. A modo de explicación, IIS procesa los controladores de primero a último en función de las entradas del controlador de pedidos en los archivos *ApplicationHost. config* y *Web. config* , donde se usará la primera combinación de ruta de acceso, verbo, recurso, etc., para controlar la solicitud.
 
 El ejemplo siguiente es un extracto de un archivo *ApplicationHost. config* para un servidor IIS que devolvió un error http 405 al usar el método put para enviar datos a una aplicación de API Web. En este extracto, se definen varios controladores HTTP y cada controlador tiene un conjunto diferente de métodos HTTP para los que está configurado: la última entrada de la lista es el controlador de contenido estático, que es el controlador predeterminado que se usa después de que los otros controladores hayan tenido un chanc e para examinar la solicitud:
 

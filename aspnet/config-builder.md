@@ -7,11 +7,11 @@ ms.author: riande
 ms.date: 10/29/2018
 msc.type: content
 ms.openlocfilehash: 5299d9ab057c3096773955a7461e77a80673ebfe
-ms.sourcegitcommit: 22fbd8863672c4ad6693b8388ad5c8e753fb41a2
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/28/2019
-ms.locfileid: "74586766"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78472309"
 ---
 # <a name="configuration-builders-for-aspnet"></a>Generadores de configuración para ASP.NET
 
@@ -103,7 +103,7 @@ El código anterior establecerá los valores de propiedad en:
 
 Por ejemplo, con el archivo *Web. config* anterior, las claves/valores de la imagen del editor del entorno anterior y el código anterior, se establecen los valores siguientes:
 
-|  Key              | {2&gt;Value&lt;2} |
+|  Clave              | Valor |
 | ----------------- | ------------ |
 |     AppSetting_ServiceID           | AppSetting_ServiceID de variables de env|
 |    AppSetting_default            | AppSetting_default valor de env |
@@ -136,7 +136,7 @@ El código anterior establecerá los valores de propiedad en:
 
 Por ejemplo, con el archivo *Web. config* anterior, las claves/valores de la imagen del editor del entorno anterior y el código anterior, se establecen los valores siguientes:
 
-|  Key              | {2&gt;Value&lt;2} |
+|  Clave              | Valor |
 | ----------------- | ------------ |
 |     ServiceID           | AppSetting_ServiceID de variables de env|
 |    default            | AppSetting_default valor de env |

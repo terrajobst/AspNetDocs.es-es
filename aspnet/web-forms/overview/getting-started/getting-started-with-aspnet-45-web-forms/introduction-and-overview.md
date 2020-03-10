@@ -9,11 +9,11 @@ ms.assetid: 9b96eaa1-8ef0-4338-a2e8-e0f970bfaf68
 msc.legacyurl: /web-forms/overview/getting-started/getting-started-with-aspnet-45-web-forms/introduction-and-overview
 msc.type: authoredcontent
 ms.openlocfilehash: 52d5eb7abe4520ebdf6667d299d055fc7619a635
-ms.sourcegitcommit: 22fbd8863672c4ad6693b8388ad5c8e753fb41a2
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/28/2019
-ms.locfileid: "74615455"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78458347"
 ---
 # <a name="getting-started-with-aspnet-45-web-forms-and-visual-studio-2017"></a>Introducción con formularios Web Forms de ASP.NET 4,5 y Visual Studio 2017
 
@@ -83,7 +83,7 @@ Las tareas de la serie de tutoriales incluyen:
 - Registro de rutas para la aplicación Web
 - Implementar el control de errores y el registro de errores
 
-## <a name="overview"></a>Información general del
+## <a name="overview"></a>Información general
 
 Esta serie de tutoriales está destinada a usuarios familiarizados con los conceptos de programación, pero que son nuevos en ASP.NET Web Forms. Si ya está familiarizado con los formularios Web Forms de ASP.NET, esta serie puede ayudarle a conocer las nuevas características de ASP.NET 4,5. Para los lectores que no estén familiarizados con los conceptos de programación y los formularios Web Forms de ASP.NET, consulte los tutoriales de formularios Web Forms adicionales que se proporcionan en la sección [Introducción](../../../index.md) del sitio Web de ASP.net.
 

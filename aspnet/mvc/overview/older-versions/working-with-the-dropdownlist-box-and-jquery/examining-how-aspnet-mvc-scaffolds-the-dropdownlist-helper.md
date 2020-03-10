@@ -9,11 +9,11 @@ ms.assetid: 8921d7f2-21f0-427a-8b27-2df7251174b0
 msc.legacyurl: /mvc/overview/older-versions/working-with-the-dropdownlist-box-and-jquery/examining-how-aspnet-mvc-scaffolds-the-dropdownlist-helper
 msc.type: authoredcontent
 ms.openlocfilehash: 275b20ad964b3e8ddc272a7448f0740ed0891eff
-ms.sourcegitcommit: 7709c0a091b8d55b7b33bad8849f7b66b23c3d72
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/19/2020
-ms.locfileid: "77457614"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78498361"
 ---
 # <a name="examining--how--aspnet-mvc-scaffolds-the-dropdownlist-helper"></a>Examinar cómo ASP.NET MVC agrega un scaffold al asistente DropDownList
 
@@ -99,7 +99,7 @@ Esta sobrecarga del método `Create` toma un objeto `album`, creado por el siste
 
 Puede usar la [herramienta Fiddler](http://www.fiddler2.com/fiddler2/) para examinar los valores de formulario publicados que usa el enlace de modelos MVC de ASP.net para crear el objeto Album.
 
-![](examining-how-aspnet-mvc-scaffolds-the-dropdownlist-helper/_static/image7.png).
+![](examining-how-aspnet-mvc-scaffolds-the-dropdownlist-helper/_static/image7.png)Operador
 
 ### <a name="refactoring-the-viewbag-selectlist-creation"></a>Refactorización de la creación de ViewBag SelectList
 

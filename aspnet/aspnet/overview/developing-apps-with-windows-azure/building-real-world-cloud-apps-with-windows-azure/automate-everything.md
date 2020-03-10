@@ -9,11 +9,11 @@ ms.assetid: ba6e6baa-9b9f-471f-b39d-b007a3addadc
 msc.legacyurl: /aspnet/overview/developing-apps-with-windows-azure/building-real-world-cloud-apps-with-windows-azure/automate-everything
 msc.type: authoredcontent
 ms.openlocfilehash: e741a753a36ebdaefbff8eee0b38911785c716ac
-ms.sourcegitcommit: 7709c0a091b8d55b7b33bad8849f7b66b23c3d72
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/19/2020
-ms.locfileid: "77457172"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78472681"
 ---
 # <a name="automate-everything-building-real-world-cloud-apps-with-azure"></a>Automatice todo (creación de aplicaciones en la nube reales con Azure)
 
@@ -49,13 +49,13 @@ Para la aplicación Fix it, hemos creado algunos scripts de Windows PowerShell q
 
 El primer script que veremos se denomina *New-AzureWebsiteEnv. PS1*. Crea un entorno de Azure en el que puede implementar la aplicación Fix it para realizar pruebas. Las tareas principales que realiza este script son las siguientes:
 
-- Cree una aplicación web.
+- Crear una aplicación web.
 - Cree una cuenta de almacenamiento. (Necesario para los blobs y las colas, como verá en los capítulos posteriores).
 - Cree un servidor de SQL Database y dos bases de datos: una base de datos de aplicación y una base de datos de pertenencia.
 - Almacene la configuración en Azure que la aplicación usará para acceder a la cuenta de almacenamiento y a las bases de datos.
 - Cree archivos de configuración que se usarán para automatizar la implementación.
 
-### <a name="run-the-script"></a>Ejecute el script.
+### <a name="run-the-script"></a>Ejecute el script
 
 > [!NOTE]
 > En esta parte del capítulo se muestran ejemplos de scripts y los comandos que se especifican para ejecutarlos. Esta es una demostración y no proporciona todo lo que necesita saber para ejecutar los scripts. Para obtener instrucciones paso a paso sobre cómo hacerlo, consulte [Apéndice: aplicación de ejemplo de corrección](the-fix-it-sample-application.md#deploybase).
@@ -78,7 +78,7 @@ Una cuenta de almacenamiento:
 
 Y una aplicación web:
 
-![Sitio web](automate-everything/_static/image5.png)
+![Sitio Web](automate-everything/_static/image5.png)
 
 En la pestaña **configurar** de la aplicación Web, puede ver que tiene la configuración de la cuenta de almacenamiento y las cadenas de conexión de SQL Database configuradas para la aplicación Fix it.
 

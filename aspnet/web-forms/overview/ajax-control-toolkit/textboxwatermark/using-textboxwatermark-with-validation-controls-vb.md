@@ -9,11 +9,11 @@ ms.assetid: e6c2cb98-f745-4bc8-973a-813879c8a891
 msc.legacyurl: /web-forms/overview/ajax-control-toolkit/textboxwatermark/using-textboxwatermark-with-validation-controls-vb
 msc.type: authoredcontent
 ms.openlocfilehash: 141cae26c9e52be510e2a5a8f816cbac977dcf3d
-ms.sourcegitcommit: 22fbd8863672c4ad6693b8388ad5c8e753fb41a2
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/28/2019
-ms.locfileid: "74597228"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78508753"
 ---
 # <a name="using-textboxwatermark-with-validation-controls-vb"></a>Usar TextBoxWatermark con los controles de validación (VB)
 
@@ -23,7 +23,7 @@ por [Christian Wenz](https://github.com/wenz)
 
 > El control TextBoxWatermark en el kit de herramientas de control de AJAX extiende un cuadro de texto para que se muestre un texto en el cuadro. Cuando un usuario hace clic en el cuadro, se vacía. Si el usuario deja el cuadro sin escribir texto, vuelve a aparecer el texto rellenado. Esto puede entrar en conflicto con los controles de validación de ASP.NET en la misma página, pero estos problemas pueden solucionarse.
 
-## <a name="overview"></a>Información general del
+## <a name="overview"></a>Información general
 
 El control `TextBoxWatermark` en el kit de herramientas de control de AJAX extiende un cuadro de texto para que se muestre un texto en el cuadro. Cuando un usuario hace clic en el cuadro, se vacía. Si el usuario deja el cuadro sin escribir texto, vuelve a aparecer el texto rellenado. Esto puede entrar en conflicto con los controles de validación de ASP.NET en la misma página, pero estos problemas pueden solucionarse.
 

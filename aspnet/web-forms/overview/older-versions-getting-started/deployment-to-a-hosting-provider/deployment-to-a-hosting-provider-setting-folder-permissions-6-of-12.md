@@ -9,11 +9,11 @@ ms.assetid: cd03a188-e947-4f55-9bda-b8bce201d8c6
 msc.legacyurl: /web-forms/overview/older-versions-getting-started/deployment-to-a-hosting-provider/deployment-to-a-hosting-provider-setting-folder-permissions-6-of-12
 msc.type: authoredcontent
 ms.openlocfilehash: 85a77a196cf3458bbb2e6308838a846936cd070b
-ms.sourcegitcommit: 22fbd8863672c4ad6693b8388ad5c8e753fb41a2
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/28/2019
-ms.locfileid: "74633498"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78511723"
 ---
 # <a name="deploying-an-aspnet-web-application-with-sql-server-compact-using-visual-studio-or-visual-web-developer-setting-folder-permissions---6-of-12"></a>Implementación de una aplicación Web de ASP.NET con SQL Server Compact con Visual Studio o Visual Web Developer: establecimiento de permisos de carpeta: 6 de 12
 
@@ -25,7 +25,7 @@ por [Tom Dykstra](https://github.com/tdykstra)
 > 
 > Para ver un tutorial que muestra las características de implementación que se introdujeron después de la versión RC de Visual Studio 2012, muestra cómo implementar SQL Server ediciones distintas de SQL Server Compact y muestra cómo realizar la implementación en Azure App Service Web Apps, vea [implementación web de ASP.net con Visual Studio](../../deployment/visual-studio-web-deployment/introduction.md).
 
-## <a name="overview"></a>Información general del
+## <a name="overview"></a>Información general
 
 En este tutorial, establecerá permisos de carpeta para la carpeta *Elmah* en el sitio Web implementado para que la aplicación pueda crear archivos de registro en esa carpeta.
 

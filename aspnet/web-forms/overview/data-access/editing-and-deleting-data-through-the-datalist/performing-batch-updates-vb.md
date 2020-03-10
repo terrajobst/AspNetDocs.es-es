@@ -9,11 +9,11 @@ ms.assetid: 8dac22a7-91de-4e3b-888f-a4c438b03851
 msc.legacyurl: /web-forms/overview/data-access/editing-and-deleting-data-through-the-datalist/performing-batch-updates-vb
 msc.type: authoredcontent
 ms.openlocfilehash: e54c9fc12da278492b54164cf657eea142a3dae6
-ms.sourcegitcommit: 22fbd8863672c4ad6693b8388ad5c8e753fb41a2
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/28/2019
-ms.locfileid: "74632607"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78494755"
 ---
 # <a name="performing-batch-updates-vb"></a>Realizar actualizaciones por lotes (VB)
 

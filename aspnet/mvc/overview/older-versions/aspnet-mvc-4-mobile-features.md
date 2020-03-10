@@ -9,11 +9,11 @@ ms.assetid: 27dc4fc8-1b51-43b0-933f-fc1b52476523
 msc.legacyurl: /mvc/overview/older-versions/aspnet-mvc-4-mobile-features
 msc.type: authoredcontent
 ms.openlocfilehash: 9716def069ca9f7115af32e16381f41bd4d13342
-ms.sourcegitcommit: 7709c0a091b8d55b7b33bad8849f7b66b23c3d72
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/19/2020
-ms.locfileid: "77457653"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78468433"
 ---
 # <a name="aspnet-mvc-4-mobile-features"></a>Características para móviles de ASP.NET MVC 4
 

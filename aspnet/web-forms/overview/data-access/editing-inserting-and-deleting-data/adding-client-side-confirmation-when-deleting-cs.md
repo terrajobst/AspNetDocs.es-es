@@ -9,11 +9,11 @@ ms.assetid: f6e2a12a-2b5e-48fd-8db3-1e94a500c19a
 msc.legacyurl: /web-forms/overview/data-access/editing-inserting-and-deleting-data/adding-client-side-confirmation-when-deleting-cs
 msc.type: authoredcontent
 ms.openlocfilehash: e7d53bc65fdbbfa9ce9bfa5fbdbfa0dea598eebe
-ms.sourcegitcommit: 22fbd8863672c4ad6693b8388ad5c8e753fb41a2
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/28/2019
-ms.locfileid: "74623561"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78479821"
 ---
 # <a name="adding-client-side-confirmation-when-deleting-c"></a>Agregar la confirmación del cliente al eliminar (C#)
 

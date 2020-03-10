@@ -9,11 +9,11 @@ ms.assetid: 423498f7-1a4b-44a1-b342-5f39d0bcf94f
 msc.legacyurl: /web-forms/overview/getting-started/getting-started-with-aspnet-45-web-forms/aspnet-error-handling
 msc.type: authoredcontent
 ms.openlocfilehash: 9514142ca50b33470a3f4c033e4f8e319a9ee09b
-ms.sourcegitcommit: 22fbd8863672c4ad6693b8388ad5c8e753fb41a2
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/28/2019
-ms.locfileid: "74636469"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78457027"
 ---
 # <a name="aspnet-error-handling"></a>Control de errores de ASP.NET
 
@@ -25,7 +25,7 @@ por [Erik Reitan](https://github.com/Erikre)
 
 En este tutorial, modificará la aplicación de ejemplo Wingtip Toys para incluir el control de errores y el registro de errores. El control de errores permitirá a la aplicación controlar correctamente los errores y mostrar los mensajes de error en consecuencia. El registro de errores le permitirá encontrar y corregir los errores que se hayan producido. Este tutorial se basa en el tutorial anterior "enrutamiento de direcciones URL" y forma parte de la serie de tutoriales de Wingtip Toys.
 
-## <a name="what-youll-learn"></a>Lo que aprenderá:
+## <a name="what-youll-learn"></a>Temas que se abordarán:
 
 - Cómo agregar control de errores global a la configuración de la aplicación.
 - Cómo agregar control de errores en los niveles de aplicación, página y código.
@@ -33,7 +33,7 @@ En este tutorial, modificará la aplicación de ejemplo Wingtip Toys para inclui
 - Cómo mostrar mensajes de error que no pongan en peligro la seguridad.
 - Cómo implementar el registro de errores de módulos y controladores de registro de errores (ELMAH).
 
-## <a name="overview"></a>Información general del
+## <a name="overview"></a>Información general
 
 Las aplicaciones de ASP.NET deben ser capaces de controlar los errores que se producen durante la ejecución de una manera coherente. ASP.NET usa el Common Language Runtime (CLR), que proporciona una manera de notificar a las aplicaciones de errores de una manera uniforme. Cuando se produce un error, se produce una excepción. Una excepción es cualquier error, condición o comportamiento inesperado que encuentra una aplicación.
 
@@ -54,7 +54,7 @@ El motor en tiempo de ejecución tiene un conjunto base de excepciones que deriv
 En una aplicación de formularios Web Forms ASP.NET, las excepciones se pueden controlar en función de una jerarquía de control específica. Una excepción se puede controlar en los niveles siguientes:
 
 - Nivel de aplicación
-- Nivel de página
+- De página
 - Nivel de código
 
 Cuando una aplicación controla excepciones, a menudo se puede recuperar y mostrar al usuario información adicional sobre la excepción que se hereda de la clase de excepción. Además del nivel de aplicación, página y código, también puede controlar excepciones en el nivel de módulo HTTP y mediante un controlador personalizado de IIS.
@@ -139,7 +139,7 @@ Actualice la configuración agregando una `customErrors` sección al archivo *We
 2. Agregue la sección `customErrors` al archivo *Web. config* dentro del nodo `<system.web>` como se indica a continuación:   
 
     [!code-xml[Main](aspnet-error-handling/samples/sample8.xml?highlight=3-5)]
-3. Guarde el archivo *Web. config* .
+3. Guarde el archivo *Web.config* .
 
 En la sección `customErrors` se especifica el modo, que se establece en "ON". También especifica el `defaultRedirect`, que indica a la aplicación a qué página se debe navegar cuando se produce un error. Además, se ha agregado un elemento error específico que especifica cómo controlar un error 404 cuando no se encuentra una página. Más adelante en este tutorial, agregará un control de errores adicional que capturará los detalles de un error en el nivel de aplicación.
 
@@ -317,7 +317,7 @@ Gracias por lo siguiente. Espero que este conjunto de tutoriales le haya ayudado
 
 Obtenga más información sobre la implementación de la aplicación web en Microsoft Azure, vea [implementación de una aplicación de formularios Web Forms de ASP.net segura con pertenencia, OAuth y SQL Database en un sitio web de Azure](https://azure.microsoft.com/documentation/articles/web-sites-dotnet-deploy-aspnet-webforms-app-membership-oauth-sql-database/).
 
-## <a name="free-trial"></a>Evaluación gratuita
+## <a name="free-trial"></a>Versión de prueba gratuita
 
 [Evaluación gratuita de Microsoft Azure](https://azure.microsoft.com/pricing/free-trial/)  
  La publicación de su sitio web en Microsoft Azure le permitirá ahorrar tiempo, mantenimiento y gastos. Es un proceso rápido de implementación de la aplicación web en Azure. Cuando necesite mantener y supervisar la aplicación Web, Azure ofrece una variedad de herramientas y servicios. Administre datos, tráfico, identidad, copias de seguridad, mensajería, medios y rendimiento en Azure. Y todo esto se proporciona en un enfoque muy rentable.
@@ -327,7 +327,7 @@ Obtenga más información sobre la implementación de la aplicación web en Micr
 [Registrar detalles de error con la supervisión de estado de ASP.NET](../../older-versions-getting-started/deploying-web-site-projects/logging-error-details-with-asp-net-health-monitoring-cs.md)   
 [ELMAH](https://code.google.com/p/elmah/)
 
-## <a name="acknowledgements"></a>Agradecimientos
+## <a name="acknowledgements"></a>Reconocimientos
 
 Me gustaría agradecer a las siguientes personas que realizaran importantes contribuciones al contenido de esta serie de tutoriales:
 
@@ -349,7 +349,7 @@ Me gustaría agradecer a las siguientes personas que realizaran importantes cont
 - [Tim Ammann, Microsoft](https://blogs.iis.net/timamm/default.aspx)
 - [Tom Dykstra, Microsoft](https://blogs.msdn.com/aspnetue)
 
-## <a name="community-contributions"></a>Contribuciones a la comunidad
+## <a name="community-contributions"></a>Contribuciones de la comunidad
 
 - Graham Mendick ([@grahammendick](http://twitter.com/grahammendick))  
   Ejemplo de código relacionado con Visual Studio 2012 en MSDN: [navegación Wingtip Toys](https://code.msdn.microsoft.com/Navigation-Wingtip-Toys-5f0daba2)

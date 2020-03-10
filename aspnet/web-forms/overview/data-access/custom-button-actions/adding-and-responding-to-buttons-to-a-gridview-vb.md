@@ -9,11 +9,11 @@ ms.assetid: 06c6bbd2-4bdc-435b-87a3-df2c868f4baa
 msc.legacyurl: /web-forms/overview/data-access/custom-button-actions/adding-and-responding-to-buttons-to-a-gridview-vb
 msc.type: authoredcontent
 ms.openlocfilehash: 8727d8faead02340d223c75845bf29f63d1a0834
-ms.sourcegitcommit: 22fbd8863672c4ad6693b8388ad5c8e753fb41a2
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/28/2019
-ms.locfileid: "74601006"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78442279"
 ---
 # <a name="adding-and-responding-to-buttons-to-a-gridview-vb"></a>Agregar y responder a los botones en un control GridView (VB)
 
@@ -245,7 +245,7 @@ La figura 20 muestra la página al ver los productos proporcionados por Homestea
 
 > [!NOTE]
 > GridView (y DetailsView) también puede tener botones, LinkButtons o ImageButtons agregados a su TemplateFields. Al igual que con el BoundField, estos botones, cuando se hace clic en ellos, provocarán un postback, lo que provocará el evento `RowCommand` de GridView. Sin embargo, al agregar botones en TemplateField, el botón s `CommandArgument` no se establece automáticamente en el índice de la fila como cuando se usa ButtonFields. Si necesita determinar el índice de fila del botón en el que se hizo clic en el controlador de eventos `RowCommand`, deberá establecer manualmente la propiedad Button s `CommandArgument` en su sintaxis declarativa dentro de TemplateField, mediante código como el siguiente:  
-> `<asp:Button runat="server" ... CommandArgument='<%# CType(Container, GridViewRow).RowIndex %>' />`.
+> `<asp:Button runat="server" ... CommandArgument='<%# CType(Container, GridViewRow).RowIndex %>' />`Operador
 
 ## <a name="summary"></a>Resumen
 

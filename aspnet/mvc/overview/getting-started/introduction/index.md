@@ -8,12 +8,12 @@ ms.date: 06/10/2013
 ms.assetid: 9afe7454-f1bd-4e81-8ecf-12fe54d080c1
 msc.legacyurl: /mvc/overview/getting-started/introduction
 msc.type: chapter
-ms.openlocfilehash: 055142be60257f0917eb22bc08471c0bec54ca2e
-ms.sourcegitcommit: 88fc80e3f65aebdf61ec9414810ddbc31c543f04
+ms.openlocfilehash: ca751a5b0eb43b9fa2ad26493b4a627bb964332f
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/22/2020
-ms.locfileid: "76518755"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78470599"
 ---
 # <a name="getting-started-with-aspnet-mvc-5"></a>Introducción a ASP.NET MVC 5
 
@@ -21,7 +21,7 @@ ms.locfileid: "76518755"
 
 [!INCLUDE [consider RP](../../../../includes/razor.md)]
 
-En esta serie de tutoriales se trata ASP.NET MVC: Source ubicada en [GitHub](https://github.com/aspnet/AspNetDocs/tree/master/aspnet/mvc/overview/getting-started/introduction/sample/MvcMovie/MvcMovie)
+En esta serie de tutoriales se trata ASP.NET MVC: Source ubicada en [GitHub](https://github.com/dotnet/AspNetDocs/tree/master/aspnet/mvc/overview/getting-started/introduction/sample/MvcMovie/MvcMovie)
 
 - [Introducción](getting-started.md)
 - [Agregar un controlador](adding-a-controller.md)
@@ -31,6 +31,6 @@ En esta serie de tutoriales se trata ASP.NET MVC: Source ubicada en [GitHub](htt
 - [Obtener acceso a los datos del modelo desde un controlador](accessing-your-models-data-from-a-controller.md)
 - [Examinar los métodos y la vista Edit](examining-the-edit-methods-and-edit-view.md)
 - [Agregar una búsqueda](adding-search.md)
-- [Adición de un nuevo campo](adding-a-new-field.md)
+- [Agregar un nuevo campo](adding-a-new-field.md)
 - [Agregar una validación](adding-validation.md)
 - [Examinar los métodos Details y Delete](examining-the-details-and-delete-methods.md)

@@ -9,11 +9,11 @@ ms.assetid: 041854a5-ea8c-4de0-82f1-121ba6cb2893
 msc.legacyurl: /web-forms/overview/older-versions-security/admin/unlocking-and-approving-user-accounts-vb
 msc.type: authoredcontent
 ms.openlocfilehash: 4a7474676b8f502c583e226678de2b275e0ea3c7
-ms.sourcegitcommit: 22fbd8863672c4ad6693b8388ad5c8e753fb41a2
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/28/2019
-ms.locfileid: "74590618"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78517735"
 ---
 # <a name="unlocking-and-approving-user-accounts-vb"></a>Desbloquear y autorizar cuentas de usuario (VB)
 
@@ -50,7 +50,7 @@ Después de agregar HyperLinkField a GridView, dedique un momento a ver la pági
 
 **Figura 1**: el HyperLinkField agrega un vínculo "administrar" para cada cuenta de usuario ([haga clic para ver la imagen de tamaño completo](unlocking-and-approving-user-accounts-vb/_static/image3.png))
 
-Vamos a crear la interfaz de usuario y el código para la página `UserInformation.aspx` en un momento, pero primero vamos a hablar sobre cómo cambiar mediante programación los Estados bloqueado y aprobado de un usuario. La [clase`MembershipUser`](https://msdn.microsoft.com/library/system.web.security.membershipuser.aspx) tiene propiedades [`IsLockedOut`](https://msdn.microsoft.com/library/system.web.security.membershipuser.islockedout.aspx) y [`IsApproved`](https://msdn.microsoft.com/library/system.web.security.membershipuser.isapproved.aspx). La propiedad `IsLockedOut` es de solo lectura. No hay ningún mecanismo para bloquear un usuario mediante programación; para desbloquear un usuario, use el [método`UnlockUser`](https://msdn.microsoft.com/library/system.web.security.membershipuser.unlockuser.aspx)de la clase `MembershipUser`. La propiedad `IsApproved` es legible y grabable. Para guardar los cambios en esta propiedad, es necesario llamar al [método`UpdateUser`](https://msdn.microsoft.com/library/system.web.security.membership.updateuser.aspx)de la clase `Membership`, pasando el objeto `MembershipUser` modificado.
+Vamos a crear la interfaz de usuario y el código para la página `UserInformation.aspx` en un momento, pero primero vamos a hablar sobre cómo cambiar mediante programación los Estados bloqueado y aprobado de un usuario. La [clase`MembershipUser`](https://msdn.microsoft.com/library/system.web.security.membershipuser.aspx) tiene propiedades [`IsLockedOut`](https://msdn.microsoft.com/library/system.web.security.membershipuser.islockedout.aspx) y [`IsApproved`](https://msdn.microsoft.com/library/system.web.security.membershipuser.isapproved.aspx). La propiedad `IsLockedOut` es de sólo lectura. No hay ningún mecanismo para bloquear un usuario mediante programación; para desbloquear un usuario, use el [método`UnlockUser`](https://msdn.microsoft.com/library/system.web.security.membershipuser.unlockuser.aspx)de la clase `MembershipUser`. La propiedad `IsApproved` es legible y grabable. Para guardar los cambios en esta propiedad, es necesario llamar al [método`UpdateUser`](https://msdn.microsoft.com/library/system.web.security.membership.updateuser.aspx)de la clase `Membership`, pasando el objeto `MembershipUser` modificado.
 
 Dado que la propiedad `IsApproved` se puede leer y escribir, un control CheckBox es probablemente el mejor elemento de la interfaz de usuario para configurar esta propiedad. Sin embargo, una casilla no funcionará para la propiedad `IsLockedOut` porque un administrador no puede bloquear a un usuario, solo puede desbloquear a un usuario. Una interfaz de usuario adecuada para la propiedad `IsLockedOut` es un botón que, al hacer clic en él, desbloquea la cuenta de usuario. Este botón solo debe habilitarse si el usuario está bloqueado.
 

@@ -9,11 +9,11 @@ ms.assetid: 977105f3-7987-4e50-8be7-afb53b4ca28a
 msc.legacyurl: /web-forms/overview/older-versions-getting-started/deploying-web-site-projects/deploying-your-site-using-visual-studio-vb
 msc.type: authoredcontent
 ms.openlocfilehash: 6c71e36a8a434947882cc767cd2f903ff6e8d422
-ms.sourcegitcommit: 22fbd8863672c4ad6693b8388ad5c8e753fb41a2
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/28/2019
-ms.locfileid: "74582494"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78474625"
 ---
 # <a name="deploying-your-site-using-visual-studio-vb"></a>Implementar el sitio con Visual Studio (VB)
 

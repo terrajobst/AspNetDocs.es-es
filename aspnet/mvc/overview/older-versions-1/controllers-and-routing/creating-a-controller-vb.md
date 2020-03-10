@@ -1,87 +1,87 @@
 ---
 uid: mvc/overview/older-versions-1/controllers-and-routing/creating-a-controller-vb
-title: Creación de un controlador (VB) | Microsoft Docs
+title: Crear un controlador (VB) | Microsoft Docs
 author: StephenWalther
-description: En este tutorial, Stephen Walther demuestra cómo puede agregar un controlador a una aplicación ASP.NET MVC.
+description: En este tutorial, Stephen Walther muestra cómo puede Agregar un controlador a una aplicación ASP.NET MVC.
 ms.author: riande
 ms.date: 03/02/2009
 ms.assetid: 204b7e86-f560-4611-8adb-785b33e777b9
 msc.legacyurl: /mvc/overview/older-versions-1/controllers-and-routing/creating-a-controller-vb
 msc.type: authoredcontent
 ms.openlocfilehash: 60636b79ab5fc06ca904dee90ce74f256e046d12
-ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/06/2019
-ms.locfileid: "65123627"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78486835"
 ---
 # <a name="creating-a-controller-vb"></a>Crear un controlador (VB)
 
-by [Stephen Walther](https://github.com/StephenWalther)
+por [Stephen Walther](https://github.com/StephenWalther)
 
-> En este tutorial, Stephen Walther demuestra cómo puede agregar un controlador a una aplicación ASP.NET MVC.
+> En este tutorial, Stephen Walther muestra cómo puede Agregar un controlador a una aplicación ASP.NET MVC.
 
-El objetivo de este tutorial es explicar cómo se puede crear controladores de MVC de ASP.NET nuevo. Aprenda a crear controladores mediante la opción de menú Agregar controlador de Visual Studio y mediante la creación de un archivo de clase a mano.
+El objetivo de este tutorial es explicar cómo se pueden crear controladores ASP.NET MVC nuevos. Aprenderá a crear controladores con la opción de menú Agregar controlador de Visual Studio y mediante la creación de un archivo de clase a mano.
 
-### <a name="using-the-add-controller-menu-option"></a>Mediante el agregar la opción de menú del controlador
+### <a name="using-the-add-controller-menu-option"></a>Uso de la opción de menú Agregar controlador
 
-Es la manera más fácil de crear un nuevo controlador secundario en la carpeta controladores en la ventana Explorador de soluciones de Visual Studio y seleccione el **Add, controlador** opción de menú (consulte la figura 1). Al seleccionar esta opción de menú se abre el **Agregar controlador** cuadro de diálogo (consulte la figura 2).
+La forma más fácil de crear un nuevo controlador es hacer clic con el botón derecho en la carpeta Controllers de la ventana de Explorador de soluciones de Visual Studio y seleccionar la opción de menú **Agregar, controlador** (vea la ilustración 1). Al seleccionar esta opción de menú, se abre el cuadro de diálogo **Agregar controlador** (vea la figura 2).
 
-[![El cuadro de diálogo nuevo proyecto](creating-a-controller-vb/_static/image1.jpg)](creating-a-controller-vb/_static/image1.png)
+[![el cuadro de diálogo nuevo proyecto](creating-a-controller-vb/_static/image1.jpg)](creating-a-controller-vb/_static/image1.png)
 
-**Figura 01**: Agregar un nuevo controlador ([haga clic aquí para ver imagen en tamaño completo](creating-a-controller-vb/_static/image2.png))
+**Figura 01**: adición de un nuevo controlador ([haga clic para ver la imagen de tamaño completo](creating-a-controller-vb/_static/image2.png))
 
-[![El cuadro de diálogo nuevo proyecto](creating-a-controller-vb/_static/image2.jpg)](creating-a-controller-vb/_static/image3.png)
+[![el cuadro de diálogo nuevo proyecto](creating-a-controller-vb/_static/image2.jpg)](creating-a-controller-vb/_static/image3.png)
 
-**Figura 02**: El cuadro de diálogo Agregar controlador ([haga clic aquí para ver imagen en tamaño completo](creating-a-controller-vb/_static/image4.png))
+**Figura 02**: cuadro de diálogo Agregar controlador ([haga clic para ver la imagen de tamaño completo](creating-a-controller-vb/_static/image4.png))
 
-Tenga en cuenta que la primera parte del nombre del controlador se resalta en el **Agregar controlador** cuadro de diálogo. Cada nombre de controlador debe finalizar con el sufijo *controlador*. Por ejemplo, puede crear un controlador denominado *ProductController* pero no un controlador denominado *producto*.
+Observe que la primera parte del nombre del controlador se resalta en el cuadro de diálogo **Agregar controlador** . Cada nombre de controlador debe terminar con el *controlador*de sufijo. Por ejemplo, puede crear un controlador denominado *ProductController* pero no un controlador denominado *Product*.
 
-Si crea un controlador que falta el *controlador* sufijo, a continuación, no podrá invocar el controlador. No hace esto, he en vano incontables horas de mi vida después cometer este error.
+Si crea un controlador que no tiene el sufijo del *controlador* , no podrá invocar el controlador. No haga esto--he perdido muchas horas de mi vida después de cometer este error.
 
-**Listing 1 - Controllers\ProductController.vb**
+**Lista 1-Controllers\ProductController.vb**
 
 [!code-vb[Main](creating-a-controller-vb/samples/sample1.vb)]
 
-Siempre debe crear los controladores en la carpeta Controllers. En caso contrario, deberá se infringen las convenciones de ASP.NET MVC y otros desarrolladores tendrán un tiempo más difícil comprender la aplicación.
+Siempre debe crear controladores en la carpeta Controllers. De lo contrario, infringirá las convenciones de ASP.NET MVC y otros desarrolladores tendrán un tiempo más difícil de entender su aplicación.
 
 ### <a name="scaffolding-action-methods"></a>Métodos de acción de scaffolding
 
-Cuando se crea un controlador, tiene la opción para generar automáticamente los métodos de acción Create, Update y los detalles (consulte la figura 3). Si selecciona esta opción, se genera la clase de controlador en el listado 2.
+Al crear un controlador, tiene la opción de generar automáticamente métodos de acción de creación, actualización y detalles (consulte la figura 3). Si selecciona esta opción, se genera la clase de controlador de la lista 2.
 
-[![Creación automática de los métodos de acción](creating-a-controller-vb/_static/image3.jpg)](creating-a-controller-vb/_static/image5.png)
+[![crear métodos de acción automáticamente](creating-a-controller-vb/_static/image3.jpg)](creating-a-controller-vb/_static/image5.png)
 
-**Figura 03**: Creación automática de los métodos de acción ([haga clic aquí para ver imagen en tamaño completo](creating-a-controller-vb/_static/image6.png))
+**Figura 03**: creación automática de métodos de acción ([haga clic para ver la imagen de tamaño completo](creating-a-controller-vb/_static/image6.png))
 
-**Listing 2 - Controllers\CustomerController.vb**
+**Lista 2-Controllers\CustomerController.vb**
 
 [!code-vb[Main](creating-a-controller-vb/samples/sample2.vb)]
 
-Estos métodos generados son los métodos auxiliares. Debe agregar la lógica real para crear, actualizar y mostrar los detalles de un cliente. Sin embargo, los métodos de código auxiliar proporcionan un buen punto de partida.
+Estos métodos generados son métodos de código auxiliar. Debe agregar la lógica real para crear, actualizar y mostrar los detalles de un cliente. Sin embargo, los métodos de código auxiliar proporcionan un buen punto de partida.
 
-### <a name="creating-a-controller-class"></a>Creación de una clase de controlador
+### <a name="creating-a-controller-class"></a>Crear una clase de controlador
 
-El controlador de MVC de ASP.NET es simplemente una clase. Si lo prefiere, puede omitir el scaffolding de controlador adecuado de Visual Studio y crear una clase de controlador a mano. Siga estos pasos:
+El controlador ASP.NET MVC es simplemente una clase. Si lo prefiere, puede omitir el práctico scaffolding del controlador de Visual Studio y crear una clase de controlador a mano. Siga estos pasos:
 
-1. Haga clic en la carpeta Controllers y seleccione la opción de menú **agregar, nuevo elemento** y seleccione el **clase** plantilla (consulte la figura 4).
-2. Nombre de la nueva clase PersonController.vb y haga clic en el **agregar** botón.
-3. Modifique el archivo resultante de la clase para que la clase hereda de la clase base System.Web.Mvc.Controller (consulte el listado 3).
+1. Haga clic con el botón derecho en la carpeta Controllers y seleccione la opción de menú **Agregar, nuevo elemento** y seleccione la plantilla de **clase** (consulte la figura 4).
+2. Asigne a la nueva clase el nombre PersonController. VB y haga clic en el botón **Agregar** .
+3. Modifique el archivo de clase resultante para que la clase herede de la clase base System. Web. Mvc. Controller (vea la lista 3).
 
-[![Crear una nueva clase](creating-a-controller-vb/_static/image4.jpg)](creating-a-controller-vb/_static/image7.png)
+[![crear una nueva clase](creating-a-controller-vb/_static/image4.jpg)](creating-a-controller-vb/_static/image7.png)
 
-**Figura 04**: Crear una nueva clase ([haga clic aquí para ver imagen en tamaño completo](creating-a-controller-vb/_static/image8.png))
+**Figura 04**: creación de una nueva clase ([haga clic para ver la imagen de tamaño completo](creating-a-controller-vb/_static/image8.png))
 
-**Listing 3 - Controllers\PersonController.vb**
+**Lista 3: Controllers\PersonController.vb**
 
 [!code-vb[Main](creating-a-controller-vb/samples/sample3.vb)]
 
-El controlador en el listado 3 expone una acción denominada Index() que devuelve la cadena "Hello World!". Puede invocar esta acción de controlador mediante la ejecución de la aplicación y solicitar una dirección URL similar al siguiente:
+El controlador de la lista 3 expone una acción denominada index () que devuelve la cadena "Hola mundo!". Para invocar esta acción del controlador, ejecute la aplicación y solicite una dirección URL similar a la siguiente:
 
 `http://localhost:40071/Person`
 
 > [!NOTE]
 > 
-> El servidor de desarrollo de ASP.NET utiliza un número de puerto aleatorio (por ejemplo, 40071). Cuando escriba una dirección URL para invocar un controlador, deberá proporcionar el número de puerto de la derecha. Puede determinar el número de puerto desplazando el puntero del mouse sobre el icono para el servidor de desarrollo de ASP.NET en el área de notificación de Windows (esquina inferior derecha de la pantalla).
+> El Servidor de desarrollo de ASP.NET utiliza un número de Puerto aleatorio (por ejemplo, 40071). Al escribir una dirección URL para invocar un controlador, deberá proporcionar el número de puerto correcto. Puede determinar el número de puerto al mantener el mouse sobre el icono del Servidor de desarrollo de ASP.NET en el área de notificación de Windows (parte inferior derecha de la pantalla).
 > 
 > [!div class="step-by-step"]
 > [Anterior](adding-dynamic-content-to-a-cached-page-vb.md)

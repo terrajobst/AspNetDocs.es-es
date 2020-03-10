@@ -1,23 +1,23 @@
 ---
 uid: web-forms/overview/deployment/advanced-enterprise-web-deployment/index
-title: ASP.NET 4 - implementación de empresa, serie 4 temas avanzados | Microsoft Docs
+title: ASP.NET 4-Enterprise Deployment series 4 temas avanzados | Microsoft Docs
 author: rick-anderson
-description: Este tutorial le mostrará cómo realizar diversas tareas que están necesario o deseable en muchos escenarios de implementación de empresa.
+description: En este tutorial se muestra cómo realizar varias tareas que son necesarias o deseables en muchos escenarios de implementación empresarial.
 ms.author: riande
 ms.date: 05/16/2012
 ms.assetid: eacf0e3a-c2e9-4f77-a676-249146f393e8
 msc.legacyurl: /web-forms/overview/deployment/advanced-enterprise-web-deployment
 msc.type: chapter
 ms.openlocfilehash: f72ec780623b4240762f35e479b36895db42cee0
-ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/06/2019
-ms.locfileid: "65127117"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78464131"
 ---
 # <a name="aspnet-4---enterprise-deployment-series-4-advanced-topics"></a>ASP.NET 4 - Implementación de empresa, serie 4: temas avanzados
 
-> Este tutorial le mostrará cómo realizar diversas tareas que están necesario o deseable en muchos escenarios de implementación de empresa.
+> En este tutorial se muestra cómo realizar varias tareas que son necesarias o deseables en muchos escenarios de implementación empresarial.
 
 - [Implementación web avanzada de empresa](advanced-enterprise-web-deployment.md)
 - [Realizar una implementación de hipótesis](performing-a-what-if-deployment.md)

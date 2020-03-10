@@ -10,28 +10,28 @@ msc.legacyurl: /signalr/overview/getting-started/tutorial-getting-started-with-s
 msc.type: authoredcontent
 ms.topic: tutorial
 ms.openlocfilehash: 5671e4f0123ca2b0cb5314336cf4411467feac70
-ms.sourcegitcommit: 22fbd8863672c4ad6693b8388ad5c8e753fb41a2
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/28/2019
-ms.locfileid: "74600483"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78431623"
 ---
 # <a name="tutorial-real-time-chat-with-signalr-2-and-mvc-5"></a>Tutorial: chat en tiempo real con Signalr 2 y MVC 5
 
 En este tutorial se muestra cómo usar ASP.NET Signalr 2 para crear una aplicación de chat en tiempo real. Puede Agregar Signalr a una aplicación de MVC 5 y crear una vista de chat para enviar y mostrar mensajes.
 
-En este tutorial ha:
+En este tutorial va a:
 
 > [!div class="checklist"]
-> * Configurar el proyecto
-> * Ejecutar el ejemplo
-> * Examinar el código
+> * Configuración del proyecto
+> * Ejecución del ejemplo
+> * Examen del código
 
 [!INCLUDE [Consider ASP.NET Core SignalR](~/includes/signalr/signalr-version-disambiguation.md)]
 
 ## <a name="prerequisites"></a>Requisitos previos
 
-* [Visual Studio 2017](https://visualstudio.microsoft.com/downloads/) con la carga de trabajo de **desarrollo web y ASP.net** .
+* [Visual Studio 2017](https://visualstudio.microsoft.com/downloads/) con la carga de trabajo de **ASP.NET y desarrollo web**.
 
 ## <a name="set-up-the-project"></a>Configurar el proyecto
 
@@ -192,10 +192,10 @@ Para obtener más información acerca de Signalr, consulte los siguientes recurs
 
 ## <a name="next-steps"></a>Pasos siguientes
 
-En este tutorial ha:
+En este tutorial va a:
 
 > [!div class="checklist"]
-> * Configurar el proyecto
+> * Configuración del proyecto
 > * Ejecutar el ejemplo
 > * Examinó el código
 

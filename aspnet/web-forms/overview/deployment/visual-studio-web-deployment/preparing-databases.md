@@ -9,11 +9,11 @@ ms.assetid: ae4def81-fa37-4883-a13e-d9896cbf6c36
 msc.legacyurl: /web-forms/overview/deployment/visual-studio-web-deployment/preparing-databases
 msc.type: authoredcontent
 ms.openlocfilehash: cdcb3578725c41e3c801afd54e6d34455bc4b281
-ms.sourcegitcommit: 22fbd8863672c4ad6693b8388ad5c8e753fb41a2
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/28/2019
-ms.locfileid: "74618527"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78517285"
 ---
 # <a name="aspnet-web-deployment-using-visual-studio-preparing-for-database-deployment"></a>Implementación web de ASP.NET con Visual Studio: preparación para la implementación de bases de datos
 
@@ -23,7 +23,7 @@ por [Tom Dykstra](https://github.com/tdykstra)
 
 > En esta serie de tutoriales se muestra cómo implementar (publicar) una aplicación Web de ASP.NET en Azure App Service Web Apps o en un proveedor de hospedaje de terceros mediante Visual Studio 2012 o Visual Studio 2010. Para obtener información sobre la serie, vea [el primer tutorial de la serie](introduction.md).
 
-## <a name="overview"></a>Información general del
+## <a name="overview"></a>Información general
 
 En este tutorial se muestra cómo preparar el proyecto para la implementación de la base de datos. La estructura de la base de datos y algunos (no todos) de los datos en las dos bases de datos de la aplicación deben implementarse en entornos de prueba, de ensayo y de producción.
 

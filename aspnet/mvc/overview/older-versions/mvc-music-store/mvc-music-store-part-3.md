@@ -1,117 +1,117 @@
 ---
 uid: mvc/overview/older-versions/mvc-music-store/mvc-music-store-part-3
-title: 'Parte 3: Las vistas y ViewModels | Microsoft Docs'
+title: 'Parte 3: vistas y ViewModels | Microsoft Docs'
 author: jongalloway
-description: Esta serie de tutoriales detalla todos los pasos realizados para compilar la aplicación de ejemplo de Music Store de ASP.NET MVC. Parte 3 aborda las vistas y ViewModels.
+description: En esta serie de tutoriales se detallan todos los pasos realizados para compilar la aplicación de ejemplo ASP.NET MVC Music Store. La parte 3 cubre las vistas y ViewModels.
 ms.author: riande
 ms.date: 04/21/2011
 ms.assetid: 94297aa0-1f2d-4d72-bbcb-63f64653e0c0
 msc.legacyurl: /mvc/overview/older-versions/mvc-music-store/mvc-music-store-part-3
 msc.type: authoredcontent
 ms.openlocfilehash: 3fcfc816cde22c697a78bab2c9ea7ace1bf68501
-ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/06/2019
-ms.locfileid: "65129678"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78451135"
 ---
-# <a name="part-3-views-and-viewmodels"></a>Parte 3: Vistas y ViewModels
+# <a name="part-3-views-and-viewmodels"></a>Parte 3: vistas y ViewModels
 
 por [Jon Galloway](https://github.com/jongalloway)
 
-> El Store de música de MVC es una aplicación de tutorial que presenta y explica paso a paso cómo usar ASP.NET MVC y Visual Studio para el desarrollo web.  
+> El almacén de música de MVC es una aplicación de tutorial que presenta y explica paso a paso cómo usar ASP.NET MVC y Visual Studio para el desarrollo web.  
 >   
-> El Store de música de MVC es una implementación de almacén de ejemplo ligera que vende álbumes de música en línea e implementa la administración básica del sitio, inicio de sesión de usuario y funcionalidad del carro de la compra.  
+> MVC Music Store es una implementación ligera de almacén de ejemplo que vende álbumes musicales en línea e implementa la funcionalidad básica de administración de sitios, Inicio de sesión de usuario y carro de la compra.  
 >   
-> Esta serie de tutoriales detalla todos los pasos realizados para compilar la aplicación de ejemplo de Music Store de ASP.NET MVC. Parte 3 aborda las vistas y ViewModels.
+> En esta serie de tutoriales se detallan todos los pasos realizados para compilar la aplicación de ejemplo ASP.NET MVC Music Store. La parte 3 cubre las vistas y ViewModels.
 
-Hasta ahora nos hemos simplemente ha devolver cadenas acciones de controlador. Que es una buena forma de hacerse una idea de cómo funcionan los controladores, pero es no cómo se desea crear una aplicación web real. Vamos a quiera una manera mejor de generar HTML a exploradores que visitan nuestro sitio: uno donde podemos usar los archivos de plantilla para personalizar más fácilmente el contenido HTML volver a enviar. Eso es exactamente lo que hacer las vistas.
+Hasta ahora hemos devuelto cadenas desde las acciones del controlador. Esta es una buena manera de hacerse una idea de cómo funcionan los controladores, pero no es cómo desea crear una aplicación web real. Vamos a querer una manera mejor de volver a generar HTML en los exploradores que visitan nuestro sitio: uno en el que podemos usar archivos de plantilla para personalizar más fácilmente el contenido HTML devuelto. Eso es exactamente lo que hacen las vistas.
 
-## <a name="adding-a-view-template"></a>Adición de una plantilla de vista
+## <a name="adding-a-view-template"></a>Agregar una plantilla de vista
 
-Para usar una plantilla de vista, se deberá cambiar el método de índice de HomeController para devolver un ActionResult y que devuelva View(), al igual que a continuación:
+Para usar una plantilla de vista, cambiaremos el método de índice de HomeController para devolver un ActionResult y hacer que devuelva la vista (), como se indica a continuación:
 
 [!code-csharp[Main](mvc-music-store-part-3/samples/sample1.cs)]
 
-El cambio anterior indica que, en lugar de devolver una cadena, queremos usar una "vista" para generar un resultado de vuelta en su lugar.
+El cambio anterior indica que en lugar de devolver una cadena, queremos usar una "vista" para volver a generar un resultado.
 
-Ahora vamos a agregar una plantilla de vista adecuada para nuestro proyecto. Para ello se deberá colocar el cursor de texto dentro del método de acción del índice, a continuación, haga clic en y seleccione "Agregar vista". Se abrirá el cuadro de diálogo Agregar vista:
+Ahora vamos a agregar una plantilla de vista adecuada a nuestro proyecto. Para ello, colocaremos el cursor de texto en el método de acción de índice, luego haga clic con el botón derecho y seleccione "agregar vista". Se abrirá el cuadro de diálogo Agregar vista:
 
 ![](mvc-music-store-part-3/_static/image1.jpg) ![](mvc-music-store-part-3/_static/image1.png)
 
-El cuadro de diálogo "Agregar vista" nos permite rápida y fácilmente generar los archivos de plantilla de vista. Cuadro de diálogo rellena previamente el nombre de la plantilla de vista para crear para que coincida con el método de acción que va a usar de manera predeterminada en "Agregar vista". Dado que hemos usado el menú contextual "Agregar vista" dentro del método de acción de Index() de nuestro HomeController, el cuadro de diálogo "Agregar vista" anterior tiene "Index" como el nombre de vista que se rellenan de forma predeterminada. No necesitamos cambiar cualquiera de las opciones de este cuadro de diálogo, haga clic en el botón Agregar.
+El cuadro de diálogo "agregar vista" nos permite generar archivos de plantilla de vista de forma rápida y sencilla. De forma predeterminada, el cuadro de diálogo "agregar vista" rellena previamente el nombre de la plantilla de vista que se va a crear para que coincida con el método de acción que la usará. Dado que usamos el menú contextual "agregar vista" dentro del método de acción index () de nuestro HomeController, el cuadro de diálogo "agregar vista" anterior tiene "index" como el nombre de la vista que se ha rellenado previamente de forma predeterminada. No es necesario cambiar ninguna de las opciones de este cuadro de diálogo, así que haga clic en el botón Agregar.
 
-Cuando hacemos clic en el botón Agregar, Visual Web Developer creará un Index.cshtml nueva plantilla de vista para nosotros en el directorio \Views\Home, creación de la carpeta si aún no existe.
+Al hacer clic en el botón Agregar, Visual Web Developer creará una nueva plantilla de vista index. cshtml para nosotros en el directorio \Views\Home y creará la carpeta si aún no existe.
 
 ![](mvc-music-store-part-3/_static/image2.png)
 
-El nombre y una ubicación del archivo "Index.cshtml" es importante y sigue las convenciones de nomenclatura predeterminada ASP.NET MVC. El nombre del directorio, \Views\Home, coincide con el controlador - que se denomina HomeController. El nombre de plantilla de vista Index, coincide con el método de acción de controlador que se va a mostrar la vista.
+El nombre y la ubicación de la carpeta del archivo "index. cshtml" es importante y sigue las convenciones de nomenclatura predeterminadas de ASP.NET MVC. El nombre del directorio, \Views\Home, coincide con el controlador, que se denomina HomeController. El nombre de la plantilla de vista, índice, coincide con el método de acción del controlador que mostrará la vista.
 
-ASP.NET MVC nos permite evitar tener que especificar explícitamente el nombre o la ubicación de una plantilla de vista cuando usamos esta convención de nomenclatura para devolver una vista. De forma predeterminada procesará la plantilla de vista \Views\Home\Index.cshtml cuando escribimos código similar al siguiente a continuación dentro de nuestro HomeController:
+ASP.NET MVC nos permite evitar tener que especificar explícitamente el nombre o la ubicación de una plantilla de vista cuando usamos esta Convención de nomenclatura para devolver una vista. De forma predeterminada, la plantilla de vista \Views\Home\Index.cshtml se representa cuando se escribe código como el siguiente en el HomeController:
 
 [!code-csharp[Main](mvc-music-store-part-3/samples/sample2.cs)]
 
-Visual Web Developer crea y abre la plantilla de vista "Index.cshtml" después de que se hace clic en el botón "Agregar" en el cuadro de diálogo "Agregar vista". A continuación, se muestra el contenido de Index.cshtml.
+Visual Web Developer creó y abrió la plantilla de vista "index. cshtml" después de hacer clic en el botón "agregar" del cuadro de diálogo "agregar vista". A continuación se muestra el contenido de index. cshtml.
 
 [!code-cshtml[Main](mvc-music-store-part-3/samples/sample3.cshtml)]
 
-Esta vista es mediante la sintaxis de Razor, que es más concisa que el motor de vistas de formularios Web Forms usado en formularios Web Forms de ASP.NET y las versiones anteriores de ASP.NET MVC. El motor de vistas de formularios Web Forms todavía está disponible en ASP.NET MVC 3, pero muchos desarrolladores consideran que el motor de vistas Razor se ajusta a desarrollo de ASP.NET MVC realmente bien.
+Esta vista usa el sintaxis Razor, que es más conciso que el motor de vista de formularios Web Forms usado en los formularios Web Forms de ASP.NET y versiones anteriores de ASP.NET MVC. El motor de vista de formularios Web Forms sigue estando disponible en ASP.NET MVC 3, pero muchos desarrolladores descubren que el motor de vistas de Razor se adapta al desarrollo de ASP.NET MVC realmente bien.
 
-Las tres primeras líneas establecen el título de página con ViewBag.Title. Se examinará cómo funciona esto con más detalle en breve, pero primero vamos a actualizar el texto del título de texto y ver la página. Actualización de la &lt;h2&gt; etiqueta a la que quiere decir "Esta es la página principal", tal como se muestra a continuación.
+Las tres primeras líneas establecen el título de la página mediante ViewBag. title. Veremos cómo funciona con más detalle pronto, pero primero vamos a actualizar el texto del encabezado de texto y ver la página. Actualice la etiqueta &lt;H2&gt; para decir "esta es la Página principal", como se muestra a continuación.
 
 [!code-cshtml[Main](mvc-music-store-part-3/samples/sample4.cshtml)]
 
-Ejecuta la aplicación de muestra que nuestro nuevo texto esté visible en la página principal.
+La ejecución de la aplicación muestra que el nuevo texto está visible en la Página principal.
 
 ![](mvc-music-store-part-3/_static/image3.png)
 
-## <a name="using-a-layout-for-common-site-elements"></a>Uso de un diseño para los elementos comunes del sitio
+## <a name="using-a-layout-for-common-site-elements"></a>Usar un diseño para los elementos comunes del sitio
 
-La mayoría de los sitios Web tienen contenido que se comparte entre varias páginas: exploración, pies de página, las imágenes de logotipo, referencias de hoja de estilos, etcetera. El motor de vistas Razor facilita esta tarea administrar el uso de una página denominada \_Layout.cshtml que se ha creado automáticamente para que podamos dentro de la carpeta/Views/Shared.
+La mayoría de los sitios web tienen contenido que se comparte entre muchas páginas: navegación, pies de página, imágenes de logotipo, referencias de hoja de estilos, etc. El motor de vistas de Razor facilita la administración mediante el uso de una página denominada \_layout. cshtml que se ha creado automáticamente en la carpeta/Views/Shared.
 
 ![](mvc-music-store-part-3/_static/image4.png)
 
-Haga doble clic en esta carpeta para ver el contenido, que se indican a continuación.
+Haga doble clic en esta carpeta para ver el contenido, que se muestra a continuación.
 
 [!code-cshtml[Main](mvc-music-store-part-3/samples/sample5.cshtml)]
 
-Se mostrará el contenido de nuestras vistas individuales de la @RenderBodycomando () y cualquier contenido común que se va a aparecer fuera de la que se pueden agregar a la \_Layout.cshtml marcado. Desearemos nuestro Store música de MVC para tener un encabezado común con vínculos a nuestra área de página principal y Store de todas las páginas del sitio, por lo que vamos a agregar a la plantilla directamente encima de esa @RenderBodyinstrucción ().
+El contenido de nuestras vistas individuales se mostrará con el comando @RenderBody() y cualquier contenido común que desee que aparezca fuera de, se puede Agregar al marcado \_layout. cshtml. Queremos que nuestra tienda de música de MVC tenga un encabezado común con vínculos a nuestra página principal y área de almacenamiento en todas las páginas del sitio, por lo que agregaremos a la plantilla directamente encima de la instrucción @RenderBody().
 
 [!code-cshtml[Main](mvc-music-store-part-3/samples/sample6.cshtml)]
 
-## <a name="updating-the-stylesheet"></a>Actualización de la hoja de estilos
+## <a name="updating-the-stylesheet"></a>Actualizar la hoja de estilos
 
-La plantilla proyecto vacío incluye un archivo CSS muy simplificado que solo incluye los estilos que se utiliza para mostrar mensajes de validación. El diseñador ha proporcionado algunos adicionales CSS e imágenes para definir la apariencia de nuestro sitio, así que agregaremos los ahora.
+La plantilla de proyecto vacía incluye un archivo CSS muy simplificado que solo incluye estilos que se usan para mostrar los mensajes de validación. Nuestro diseñador ha proporcionado algunos CSS e imágenes adicionales para definir la apariencia y el funcionamiento de nuestro sitio, por lo que los agregaremos en este momento.
 
-El archivo CSS e imágenes actualizados se incluyen en el directorio de contenido de Assets.zip MvcMusicStore que está disponible en [MVC-música-Store](https://github.com/evilDave/MVC-Music-Store). Seleccionaremos ambos en el Explorador de Windows y colocarlos en la carpeta de contenido de nuestra solución en Visual Web Developer, tal como se muestra a continuación:
+El archivo CSS actualizado y las imágenes se incluyen en el directorio de contenido de MvcMusicStore-Assets. zip, que está disponible en [MVC-Music-Store](https://github.com/evilDave/MVC-Music-Store). Seleccionaremos ambos en el explorador de Windows y los colocaremos en la carpeta de contenido de la solución en Visual Web Developer, como se muestra a continuación:
 
 ![](mvc-music-store-part-3/_static/image5.png)
 
-Le pedirá que confirme si desea sobrescribir el archivo Site.css existente. Haga clic en Sí.
+Se le pedirá que confirme si desea sobrescribir el archivo site. CSS existente. Haga clic en Sí.
 
 ![](mvc-music-store-part-3/_static/image6.png)
 
-La carpeta de contenido de la aplicación aparecerá ahora como sigue:
+La carpeta de contenido de la aplicación aparecerá ahora de la siguiente manera:
 
 ![](mvc-music-store-part-3/_static/image7.png)
 
-Ahora vamos a ejecutar la aplicación y ver el aspecto de los cambios en la página principal.
+Ahora vamos a ejecutar la aplicación y ver cómo se ven los cambios en la Página principal.
 
 ![](mvc-music-store-part-3/_static/image8.png)
 
-- Revisemos lo que ha cambiado: Método de acción del índice de HomeController encuentra y muestra la plantilla \Views\Home\Index.cshtmlView, aunque nuestro código había llamado "return View()", porque la plantilla de vista seguido la convención de nomenclatura estándar.
-- Un simple mensaje de bienvenida que se define dentro de la plantilla de vista \Views\Home\Index.cshtml muestra la página principal.
-- Está usando la página principal de nuestra \_Layout.cshtml plantilla, por lo que se encuentra el mensaje de bienvenida del diseño del sitio estándar HTML.
+- Vamos a revisar lo que ha cambiado: el método de acción de índice de HomeController encontró y mostraba la plantilla \Views\Home\Index.cshtmlView, aunque nuestro código llamara "Return View ()", ya que nuestra plantilla de vista siguió la Convención de nomenclatura estándar.
+- La Página principal muestra un mensaje de bienvenida sencillo que se define dentro de la plantilla de vista \Views\Home\Index.cshtml.
+- La Página principal usa nuestra plantilla \_layout. cshtml y, por tanto, el mensaje de bienvenida está incluido en el diseño HTML del sitio estándar.
 
-## <a name="using-a-model-to-pass-information-to-our-view"></a>Usar un modelo para pasar información a nuestro punto de vista
+## <a name="using-a-model-to-pass-information-to-our-view"></a>Usar un modelo para pasar información a nuestra vista
 
-Una plantilla de vista que muestra HTML codificados no va a hacer que un sitio web muy interesantes. Para crear un sitio web dinámico, en su lugar, desearemos pasar información de las acciones del controlador a nuestras plantillas de vista.
+Una plantilla de vista que solo muestra HTML codificado no va a crear un sitio web muy interesante. Para crear un sitio web dinámico, en su lugar desearemos pasar información de nuestras acciones del controlador a nuestras plantillas de vista.
 
-En el patrón Model-View-Controller, el término A que modelo hace referencia objetos que representan los datos de la aplicación. A menudo, los objetos del modelo se corresponden con las tablas de la base de datos, pero no tienen que.
+En el modelo modelo-vista-controlador, el término modelo hace referencia a los objetos que representan los datos de la aplicación. A menudo, los objetos de modelo se corresponden con las tablas de la base de datos, pero no tienen que hacerlo.
 
-Los métodos de acción de controlador que devuelven un ActionResult pueden pasar un objeto de modelo a la vista. Esto permite que un controlador para el paquete correctamente toda la información necesaria para generar una respuesta y, a continuación, pase la esta información para una plantilla de vista a usar para generar la respuesta adecuada de HTML. Esto es más fácil comprender por verlo en acción, así que vamos a empezar a trabajar.
+Los métodos de acción del controlador que devuelven un ActionResult pueden pasar un objeto de modelo a la vista. Esto permite a un controlador empaquetar correctamente toda la información necesaria para generar una respuesta y, a continuación, pasar esta información a una plantilla de vista para usar para generar la respuesta HTML adecuada. Esto es más fácil de entender si se ve en acción, así que vamos a empezar.
 
-En primer lugar, vamos a crear algunas clases de modelo para representar los géneros y álbumes dentro de nuestra tienda. Comencemos por crear una clase de género. Haga clic en la carpeta "Models" dentro del proyecto, elija la opción "Agregar clase" y "Genre.cs" el nombre del archivo.
+En primer lugar, crearemos algunas clases de modelo para representar los géneros y los álbumes de nuestra tienda. Comencemos por crear una clase Genre. Haga clic con el botón secundario en la carpeta "models" del proyecto, elija la opción "Agregar clase" y asigne al archivo el nombre "Genre.cs".
 
 ![](mvc-music-store-part-3/_static/image2.jpg)
 
@@ -121,139 +121,139 @@ A continuación, agregue una propiedad de nombre de cadena pública a la clase q
 
 [!code-csharp[Main](mvc-music-store-part-3/samples/sample7.cs)]
 
-*Nota: Si se lo está preguntando, el {get; configurar;} notación está realizando el uso de C#del autoimplementada característica Propiedades. Esto nos proporciona las ventajas de una propiedad sin necesidad de nosotros declarar un campo de respaldo.*
+*Nota: en caso de que se pregunte, la notación {Get; Set;} está haciendo uso C#de la característica de propiedades implementadas automáticamente. Esto nos ofrece las ventajas de una propiedad sin necesidad de declarar un campo de respaldo.*
 
-A continuación, siga los mismos pasos para crear una clase de álbum (denominada Album.cs) que tiene un título y una propiedad de género:
+A continuación, siga los mismos pasos para crear una clase album (denominada Album.cs) que tenga un título y una propiedad Genre:
 
 [!code-csharp[Main](mvc-music-store-part-3/samples/sample8.cs)]
 
-Ahora podemos modificar el StoreController para usar las vistas que muestran información dinámica de nuestro modelo. Si - para fines de demostración - ahora hemos llamado a nuestro álbumes según el identificador de solicitud, podríamos mostramos esa información como se muestra en la vista siguiente.
+Ahora podemos modificar StoreController para usar vistas que muestren información dinámica de nuestro modelo. Si, en este momento, se llamara a nuestros álbumes en función del identificador de solicitud, podríamos Mostrar esa información como en la siguiente vista.
 
 ![](mvc-music-store-part-3/_static/image10.png)
 
-Comenzaremos por cambiar la acción de Store detalles para que muestre la información de un álbum. Agregue una instrucción "using" en la parte superior de la **StoreControllers** clase para que incluya el espacio de nombres MvcMusicStore.Models, por lo que no necesitamos escribir MvcMusicStore.Models.Album cada vez que deseamos utilizar la clase del álbum. La sección "using" de esa clase debería aparecer ahora como sigue.
+Comenzaremos cambiando la acción Store details para que muestre la información de un solo álbum. Agregue una instrucción "Using" a la parte superior de la clase **StoreControllers** para incluir el espacio de nombres MvcMusicStore. Models, por lo que no es necesario escribir MvcMusicStore. Models. album cada vez que queremos usar la clase Album. La sección "Using" de esa clase debe aparecer ahora como se indica a continuación.
 
 [!code-csharp[Main](mvc-music-store-part-3/samples/sample9.cs)]
 
-A continuación, actualizaremos la acción de controlador de detalles para que devuelva un ActionResult en lugar de una cadena, como hicimos con el método de índice de HomeController.
+A continuación, actualizaremos la acción del controlador de detalles para que devuelva un ActionResult en lugar de una cadena, como hicimos con el método index de HomeController.
 
 [!code-csharp[Main](mvc-music-store-part-3/samples/sample10.cs)]
 
-Ahora podemos modificar la lógica para devolver un objeto de álbum a la vista. Más adelante en este tutorial se recuperará los datos de una base de datos, pero por ahora vamos a utilizar "ficticio datos" para empezar a trabajar.
+Ahora podemos modificar la lógica para devolver un objeto album a la vista. Más adelante en este tutorial se van a recuperar los datos de una base de datos de, pero, de momento, vamos a usar "datos ficticios" para comenzar.
 
 [!code-csharp[Main](mvc-music-store-part-3/samples/sample11.cs)]
 
-*Nota: Si no está familiarizado con C#, pueden suponer que usar var significa que nuestra variable álbum es en tiempo de ejecución. Esto no es correcto: el compilador de C# usa la inferencia de tipos en función de lo que estamos asignar a la variable para determinar el que álbum es de tipo álbum y compilar la variable local álbum como tipo de álbum, por lo que obtenemos la comprobación en tiempo de compilación y el editor de código de Visual Studio soporte técnico.*
+*Nota: Si no está familiarizado con C#, puede suponer que el uso de var significa que la variable de álbum está enlazada en tiempo de ejecución. Esto no es correcto: el C# compilador usa la inferencia de tipos en función de lo que estamos asignando a la variable para determinar que el álbum es de tipo album y compilando la variable de álbum local como un tipo de álbum, por lo que obtenemos la comprobación en tiempo de compilación y la compatibilidad con el editor de código de Visual Studio.*
 
-Ahora creemos una plantilla de vista que usa nuestro álbum para generar una respuesta HTML. Antes de hacerlo es necesario compilar el proyecto para que el cuadro de diálogo Agregar vista sepa sobre nuestra clase álbum recién creado. Puede compilar el proyecto seleccionando el Debug⇨Build MvcMusicStore elemento de menú (para obtener información adicional, puede utilizar el método abreviado Ctrl-Mayús-B para compilar el proyecto).
+Ahora vamos a crear una plantilla de vista que use nuestro álbum para generar una respuesta HTML. Antes de hacerlo, debemos compilar el proyecto para que el cuadro de diálogo Agregar vista Conozca nuestra clase de álbum recién creada. Puede compilar el proyecto seleccionando el elemento de menú Depurar ⇨ compilación MvcMusicStore (para crédito adicional, puede usar el método abreviado CTRL-SHIFT-B para compilar el proyecto).
 
 ![](mvc-music-store-part-3/_static/image11.png)
 
-Ahora que hemos configurado nuestra clases auxiliares, estamos listos para crear la plantilla de vista. Haga doble clic dentro del método de detalles y seleccione "Agregar vista..." en el menú contextual.
+Ahora que hemos configurado nuestras clases de soporte técnico, estamos preparados para crear nuestra plantilla de vista. Haga clic con el botón derecho en el método de detalles y seleccione "agregar vista..." en el menú contextual.
 
 ![](mvc-music-store-part-3/_static/image12.png)
 
-Vamos a crear una nueva plantilla de vista como hicimos antes con HomeController. Dado que vamos a crear desde el StoreController de forma predeterminada se generará en un archivo \Views\Store\Index.cshtml.
+Vamos a crear una nueva plantilla de vista como hicimos antes con el HomeController. Dado que se crea a partir de StoreController, se generará de forma predeterminada en un archivo \Views\Store\Index.cshtml.
 
-A diferencia de antes, vamos a activar la casilla de la vista "Crear fuertemente tipada". A continuación, vamos a seleccionar de nuestra clase "Álbum" dentro de la lista-downlist "Ver datos-class". Esto hará que el cuadro de diálogo "Agregar vista" crear una plantilla de vista que se espera que un álbum de objeto se pasa al que se va a usar.
+A diferencia de antes, vamos a activar la casilla "crear una vista fuertemente tipada". A continuación, vamos a seleccionar la clase "album" en el Drop-downlist de "View Data-Class". Esto hará que el cuadro de diálogo "agregar vista" cree una plantilla de vista que espera que se le pase un objeto de álbum para usar.
 
 ![](mvc-music-store-part-3/_static/image13.png)
 
-Cuando hacemos clic en el botón "Agregar" se creará la plantilla de vista \Views\Store\Details.cshtml, que contiene el código siguiente.
+Cuando hacemos clic en el botón "agregar", se creará la plantilla de vista \Views\Store\Details.cshtml, que contiene el código siguiente.
 
 [!code-cshtml[Main](mvc-music-store-part-3/samples/sample12.cshtml)]
 
-Tenga en cuenta la primera línea, que indica que esta vista está fuertemente tipado en nuestra clase álbum. El motor de vistas Razor entiende que se ha pasado un objeto de álbum, para que podamos acceder fácilmente a las propiedades del modelo y aún tiene la ventaja de IntelliSense en el editor de Visual Web Developer.
+Observe la primera línea, que indica que esta vista está fuertemente tipada a nuestra clase Album. El motor de vistas de Razor entiende que se ha pasado un objeto de álbum, por lo que podemos acceder fácilmente a las propiedades del modelo e incluso tener la ventaja de IntelliSense en el editor de Visual Web Developer.
 
-Actualización de la &lt;h2&gt; etiquetar para que se muestre la propiedad de título del álbum mediante la modificación de esa línea debe aparecer como sigue.
+Actualice la etiqueta del&gt; de &lt;H2 para que muestre la propiedad title del álbum modificando esa línea para que aparezca de la manera siguiente.
 
 [!code-cshtml[Main](mvc-music-store-part-3/samples/sample13.cshtml)]
 
-Tenga en cuenta que IntelliSense se activará cuando se escribe el período tras el @Model palabra clave, que muestra las propiedades y métodos que admite la clase del álbum.
+Observe que IntelliSense se desencadena cuando se escribe el punto después de la palabra clave @Model, que muestra las propiedades y los métodos que admite la clase Album.
 
-Ahora vamos a volver a ejecutar nuestro proyecto y visite la dirección URL de Store/detalles/5. Veremos los detalles de un álbum, como a continuación.
+Ahora vamos a ejecutar el proyecto y a visitar la dirección URL de/Store/Details/5. Veremos los detalles de un álbum como el que se muestra a continuación.
 
 ![](mvc-music-store-part-3/_static/image14.png)
 
-Ahora nos aseguraremos de hacer una actualización similar para el método de acción examinar Store. Actualice el método para que devuelva un ActionResult y modificar la lógica del método, por lo que crea un nuevo objeto de género y lo devuelve a la vista.
+Ahora crearemos una actualización similar para el método de acción de búsqueda en el almacén. Actualice el método para que devuelva un ActionResult y modifique la lógica del método para que cree un nuevo objeto Genre y lo devuelva a la vista.
 
 [!code-csharp[Main](mvc-music-store-part-3/samples/sample14.cs)]
 
-Haga clic en el método de exploración y seleccione "Agregar vista..." en el menú contextual, a continuación, agregará una vista que está fuertemente tipada agregue fuertemente tipados a la clase de género.
+Haga clic con el botón derecho en el método de exploración y seleccione "agregar vista..." en el menú contextual, agregue una vista fuertemente tipada agregue una fuertemente tipada a la clase Genre.
 
 ![](mvc-music-store-part-3/_static/image15.png)
 
-Actualización de la &lt;h2&gt; elemento en la vista de código (en /Views/Store/Browse.cshtml) para mostrar la información de género.
+Actualice el elemento&gt; de &lt;H2 en el código de vista (en/Views/Store/Browse.cshtml) para mostrar la información del género.
 
 [!code-cshtml[Main](mvc-music-store-part-3/samples/sample15.cshtml)]
 
-¿Ahora vamos a volver a ejecutar nuestro proyecto y vaya a/Store/examinar? Género = la dirección URL del Disco. Veremos la página Examinar muestra como a continuación.
+Ahora vamos a volver a ejecutar nuestro proyecto y a buscar el/Store/Browse? Genre = dirección URL de disco. Veremos la página examinar como se muestra a continuación.
 
 ![](mvc-music-store-part-3/_static/image16.png)
 
-Por último, vamos a hacer una actualización de un poco más compleja la **Store índice** método de acción y vista para mostrar una lista de todos los géneros en nuestra tienda. Haremos esto mediante el uso de una lista de géneros como el objeto del modelo, en lugar de simplemente un género único.
+Por último, vamos a crear una actualización ligeramente más compleja en el método de acción de índice de la **tienda** y la vista para mostrar una lista de todos los géneros de nuestra tienda. Lo haremos mediante una lista de géneros como objeto del modelo, en lugar de un solo género.
 
 [!code-csharp[Main](mvc-music-store-part-3/samples/sample16.cs)]
 
-Haga clic en el método de acción del índice de Store y seleccione Agregar vista como antes, seleccione el género como la clase del modelo y presione el botón Agregar.
+Haga clic con el botón derecho en el método de acción almacenar índice y seleccione Agregar vista como antes, seleccione género como clase de modelo y presione el botón Agregar.
 
 ![](mvc-music-store-part-3/_static/image17.png)
 
-Primero, cambiaremos el @model declaración para indicar que la vista esperen género varios objetos en lugar de solo uno. Cambio de la primera línea del /Store/Index.cshtml para que quede como sigue:
+En primer lugar, cambiaremos la declaración de @model para indicar que la vista esperará varios objetos de género en lugar de uno solo. Cambie la primera línea de/Store/Index.cshtml para que quede como sigue:
 
 [!code-cshtml[Main](mvc-music-store-part-3/samples/sample17.cshtml)]
 
-Esto indica que el motor de vistas de Razor que va a trabajar con un objeto de modelo que puede contener varios objetos de género. Estamos usando un objeto IEnumerable&lt;género&gt; en lugar de una lista&lt;género&gt; , ya que es más genérico, lo que nos permite cambiar más adelante nuestro tipo de modelo para cualquier tipo de objeto que admite la interfaz IEnumerable.
+Esto indica al motor de vistas de Razor que va a trabajar con un objeto de modelo que puede contener varios objetos de género. Estamos usando un género IEnumerable&lt;&gt; en lugar de una lista&lt;género&gt; ya que es más genérico, lo que nos permite cambiar el tipo de modelo más adelante a cualquier tipo de objeto que admita la interfaz IEnumerable.
 
-A continuación, podrá recorrer los objetos de género en el modelo tal como se muestra en el siguiente código de la vista completa.
+A continuación, vamos a recorrer los objetos de género en el modelo, tal como se muestra en el código de vista completado a continuación.
 
 [!code-cshtml[Main](mvc-music-store-part-3/samples/sample18.cshtml)]
 
-Observe que tenemos compatibilidad completa con IntelliSense tal como se escriba este código, por lo que cuando se escribe "@Model." vemos que todos los métodos y las propiedades que admite un IEnumerable de tipo género.
+Tenga en cuenta que tenemos compatibilidad completa con IntelliSense a medida que especificamos este código, de modo que cuando escribamos "@Model". vemos todos los métodos y las propiedades que admite un IEnumerable de tipo Genre.
 
 ![](mvc-music-store-part-3/_static/image18.png)
 
-Dentro de nuestro bucle "foreach", Visual Web Developer sepa que cada elemento es de tipo género, por lo que vemos IntelliSense para cada tipo género.
+En nuestro bucle "foreach", Visual Web Developer sabe que cada elemento es de tipo Genre, por lo que vemos IntelliSense para cada tipo de género.
 
 ![](mvc-music-store-part-3/_static/image19.png)
 
-A continuación, la característica de scaffolding examina el objeto de género y determina que cada uno tendrá una propiedad de nombre, por lo que recorre en bucle y escribe. También genera vínculos de edición, detalles y eliminación a cada elemento individual. Deberá aprovechamos más adelante en el administrador del almacén, pero por ahora nos gustaría tener una lista simple en su lugar.
+A continuación, la característica de scaffolding examinó el objeto Genre y determinó que cada uno tendrá una propiedad Name, de modo que recorra y escriba en bucle. También genera vínculos de edición, detalles y eliminación a cada elemento individual. Nos beneficiaremos de esto más adelante en nuestro administrador de tienda, pero por ahora nos gustaría tener una lista simple en su lugar.
 
-Cuando se ejecute la aplicación y vaya a/Store, vemos que se muestra el recuento y la lista de géneros.
+Cuando ejecutamos la aplicación y desplazamos hasta/Store, vemos que se muestra el recuento y la lista de géneros.
 
 ![](mvc-music-store-part-3/_static/image20.png)
 
 ## <a name="adding-links-between-pages"></a>Agregar vínculos entre páginas
 
-La dirección URL/Store que enumera los géneros actualmente enumera los nombres de género simplemente como texto sin formato. Vamos a cambiar esto por lo que instead of plain text en su lugar, tenemos el vínculo de los nombres de género a la dirección URL de exploración/Store apropiada, por lo que al hacer clic en un género musical, como "Disco" se le remitirá a/Store/examinar? genre = dirección URL del Disco. Podríamos actualizar nuestra plantilla de vista \Views\Store\Index.cshtml al resultado de estos vínculos mediante código como a continuación **(no escriba lo siguiente en: vamos a mejorarlo)**:
+En la dirección URL de/Store que muestra géneros se enumeran actualmente los nombres de género simplemente como texto sin formato. Vamos a cambiar esto para que, en lugar de texto sin formato, los nombres de los géneros se vinculen a la dirección URL de/Store/Browse adecuada, de modo que al hacer clic en un género musical como "disco" vaya a la dirección URL de/Store/Browse? Genre = disco. Podríamos actualizar nuestra plantilla de vista de \Views\Store\Index.cshtml para generar estos vínculos con código como **el siguiente (no lo escribas en)** :
 
 [!code-html[Main](mvc-music-store-part-3/samples/sample19.html)]
 
-Eso funciona, pero que podría dar lugar a problemas más adelante, ya que depende de una cadena estática. Por ejemplo, si quisiéramos cambiar el nombre del controlador, es necesario buscar a través de nuestro código busca vínculos que deben actualizarse.
+Eso funciona, pero podría provocar problemas más adelante, ya que se basa en una cadena codificada. Por ejemplo, si deseáramos cambiar el nombre del controlador, es necesario buscar en nuestro código los vínculos que deben actualizarse.
 
-Es un enfoque alternativo, que podemos usar para aprovechar las ventajas de un método de aplicación auxiliar HTML. ASP.NET MVC incluye métodos de aplicación auxiliar HTML que están disponibles desde nuestro código de plantilla de vista para realizar una serie de tareas comunes de esta manera. El método auxiliar Html.ActionLink() es especialmente útil y facilita la tarea de generar HTML &lt;un&gt; vincula y se encarga de molestos detalles como asegurándose de que las rutas de acceso de dirección URL están correctamente codificado como URL.
+Un enfoque alternativo que se puede utilizar es aprovechar un método auxiliar HTML. ASP.NET MVC incluye métodos auxiliares HTML que están disponibles en nuestro código de plantilla de vista para realizar diversas tareas comunes de la misma manera. El método auxiliar HTML. ActionLink () es un método especialmente útil y facilita la compilación de HTML &lt;un&gt; vínculos y se encarga de los detalles molestos, como asegurarse de que las rutas de acceso URL están codificadas correctamente como dirección URL.
 
-Html.ActionLink() tiene varias sobrecargas diferentes para permitir la especificación de toda la información que necesita para sus vínculos. En el caso más simple, deberá proporcionar el texto del vínculo y el método de acción al que desplazarse cuando se hace clic en el hipervínculo en el cliente. Por ejemplo, podemos vinculamos a "/ Store /" Index() método en la página de detalles de Store con el texto del vínculo "Ir a la Store Index" mediante la siguiente llamada:
+HTML. ActionLink () tiene varias sobrecargas diferentes para permitir especificar toda la información que necesita para los vínculos. En el caso más simple, proporcionará solo el texto del vínculo y el método de acción que se va a usar cuando se haga clic en el hipervínculo en el cliente. Por ejemplo, podemos crear un vínculo al método index () de "/Store/" en la página de detalles de la tienda con el texto del vínculo "ir al índice de la tienda" mediante la siguiente llamada:
 
 [!code-cshtml[Main](mvc-music-store-part-3/samples/sample20.cshtml)]
 
-*Nota: En este caso, no necesitamos especificar el nombre del controlador porque nos estamos simplemente vincula a otra acción dentro del mismo controlador que está representando la vista actual.*
+*Nota: en este caso, no es necesario especificar el nombre del controlador porque simplemente estamos vinculando a otra acción dentro del mismo controlador que representa la vista actual.*
 
-Los vínculos a la página Examinar deberá pasar un parámetro, sin embargo, por lo que vamos a usar otra sobrecarga del método Html.ActionLink toma tres parámetros:
+Sin embargo, los vínculos a la página examinar deberán pasar un parámetro, por lo que usaremos otra sobrecarga del método html. ActionLink que toma tres parámetros:
 
-- 1. Texto del vínculo, que mostrará el nombre de género
-- 2. Nombre de acción de controlador (Examinar)
-- 3. Valores de parámetro de ruta, especificando el nombre (género) y el valor (nombre de género)
+- 1. Texto del vínculo, que mostrará el nombre del género
+- 2. Nombre de acción del controlador (examinar)
+- 3. Valores de parámetro de la ruta, que especifican el nombre (género) y el valor (nombre de género)
 
-Poner todo junto, que le presentamos cómo vamos a escribir esos vínculos a la vista de índice Store:
+En conjunto, aquí se muestra cómo escribiremos esos vínculos en la vista de índice de tienda:
 
 [!code-cshtml[Main](mvc-music-store-part-3/samples/sample21.cshtml)]
 
-Ahora, cuando se vuelva a ejecuta nuestro proyecto y tener acceso a la dirección URL de /Store/ veremos un listado con géneros. Cada género es un hipervínculo: cuando hace clic en nos llevará a nuestro/Store/examinar? genre =*[género]* dirección URL.
+Ahora, al ejecutar el proyecto de nuevo y acceder a la dirección URL de/Store/, se verá una lista de géneros. Cada género es un hipervínculo, cuando se hace clic en él nos llevará a nuestra dirección URL de/Store/Browse? Genre = *[Genre]* .
 
 ![](mvc-music-store-part-3/_static/image3.jpg)
 
-El código HTML de la lista de género tiene este aspecto:
+El código HTML de la lista género tiene el siguiente aspecto:
 
 [!code-html[Main](mvc-music-store-part-3/samples/sample22.html)]
 

@@ -9,11 +9,11 @@ ms.assetid: 85554606-47cb-4e4f-9848-eed9da579056
 msc.legacyurl: /web-forms/overview/data-access/introduction/creating-a-business-logic-layer-cs
 msc.type: authoredcontent
 ms.openlocfilehash: df96f3e7422a0537bf1b003a33fe8d71a671ac33
-ms.sourcegitcommit: 22fbd8863672c4ad6693b8388ad5c8e753fb41a2
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/28/2019
-ms.locfileid: "74586193"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78490405"
 ---
 # <a name="creating-a-business-logic-layer-c"></a>Crear una capa de lógica empresarial (C#)
 

@@ -9,11 +9,11 @@ ms.assetid: 9dc264a6-feb8-474b-8b91-008c50708065
 msc.legacyurl: /web-forms/overview/data-access/editing-inserting-and-deleting-data/limiting-data-modification-functionality-based-on-the-user-vb
 msc.type: authoredcontent
 ms.openlocfilehash: c257a930e4d27fcd42591a541e700786bf413bf0
-ms.sourcegitcommit: 22fbd8863672c4ad6693b8388ad5c8e753fb41a2
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/28/2019
-ms.locfileid: "74626795"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78491923"
 ---
 # <a name="limiting-data-modification-functionality-based-on-the-user-vb"></a>Limitar la funcionalidad de modificación de datos basada en el usuario (VB)
 

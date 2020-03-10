@@ -9,11 +9,11 @@ ms.assetid: e5b6ed70-19ed-4024-ba4f-6d78e8acdc0f
 msc.legacyurl: /web-forms/overview/ajax-control-toolkit/reorderlist/using-postbacks-with-reorderlist-vb
 msc.type: authoredcontent
 ms.openlocfilehash: 5d6075e40df2c32df6c0d801243eff98fa7790b2
-ms.sourcegitcommit: 22fbd8863672c4ad6693b8388ad5c8e753fb41a2
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/28/2019
-ms.locfileid: "74611363"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78445933"
 ---
 # <a name="using-postbacks-with-reorderlist-vb"></a>Usar postbacks con ReorderList (VB)
 
@@ -23,7 +23,7 @@ por [Christian Wenz](https://github.com/wenz)
 
 > El control ReorderList en el kit de herramientas de control de AJAX proporciona una lista que el usuario puede reordenar mediante arrastrar y colocar. Cada vez que se reordene la lista, un postback informará al servidor del cambio.
 
-## <a name="overview"></a>Información general del
+## <a name="overview"></a>Información general
 
 El control `ReorderList` en el kit de herramientas de control de AJAX proporciona una lista que el usuario puede reordenar mediante arrastrar y colocar. Cada vez que se reordene la lista, un postback informará al servidor del cambio.
 

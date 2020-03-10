@@ -9,11 +9,11 @@ ms.assetid: f9adcb5d-6d70-4885-a3bf-ed95efb4da1a
 msc.legacyurl: /web-forms/overview/older-versions-security/admin/recovering-and-changing-passwords-vb
 msc.type: authoredcontent
 ms.openlocfilehash: 0ed1df9455af94a86ce59ecc06c55846a4880596
-ms.sourcegitcommit: 22fbd8863672c4ad6693b8388ad5c8e753fb41a2
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/28/2019
-ms.locfileid: "74618753"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78510613"
 ---
 # <a name="recovering-and-changing-passwords-vb"></a>Recuperar y cambiar las contraseñas (VB)
 

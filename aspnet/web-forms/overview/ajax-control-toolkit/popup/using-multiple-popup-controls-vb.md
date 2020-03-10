@@ -9,11 +9,11 @@ ms.assetid: 4da43d77-f6c4-43a8-9124-f1e8e1c8f0a2
 msc.legacyurl: /web-forms/overview/ajax-control-toolkit/popup/using-multiple-popup-controls-vb
 msc.type: authoredcontent
 ms.openlocfilehash: e1f4ff64e9fdf48ea63b75c97acd53a64b5ab5ce
-ms.sourcegitcommit: 22fbd8863672c4ad6693b8388ad5c8e753fb41a2
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/28/2019
-ms.locfileid: "74611591"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78496327"
 ---
 # <a name="using-multiple-popup-controls-vb"></a>Usar varios controles emergentes (VB)
 
@@ -23,7 +23,7 @@ por [Christian Wenz](https://github.com/wenz)
 
 > El extensor PopupControl en el kit de herramientas de control de AJAX ofrece una manera sencilla de desencadenar un elemento emergente cuando se activa cualquier otro control. También es posible usar más de un control popup en una página.
 
-## <a name="overview"></a>Información general del
+## <a name="overview"></a>Información general
 
 El extensor PopupControl en el kit de herramientas de control de AJAX ofrece una manera sencilla de desencadenar un elemento emergente cuando se activa cualquier otro control. También es posible usar más de un control popup en una página.
 

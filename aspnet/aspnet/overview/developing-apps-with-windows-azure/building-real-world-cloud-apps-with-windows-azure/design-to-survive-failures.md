@@ -9,11 +9,11 @@ ms.assetid: 364ce84e-5af8-4e08-afc9-75a512b01f84
 msc.legacyurl: /aspnet/overview/developing-apps-with-windows-azure/building-real-world-cloud-apps-with-windows-azure/design-to-survive-failures
 msc.type: authoredcontent
 ms.openlocfilehash: 348232af531b5d53dc3cb46d6d2c7931d95a572d
-ms.sourcegitcommit: 7709c0a091b8d55b7b33bad8849f7b66b23c3d72
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/19/2020
-ms.locfileid: "77457133"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78500767"
 ---
 # <a name="design-to-survive-failures-building-real-world-cloud-apps-with-azure"></a>Diseño para sobrevivir a errores (creación de aplicaciones en la nube reales con Azure)
 
@@ -122,7 +122,7 @@ Documentación:
 - [Continuidad empresarial en Azure SQL Database](https://msdn.microsoft.com/library/windowsazure/hh852669.aspx). Documentación sobre SQL Database características de alta disponibilidad y recuperación ante desastres.
 - [Alta disponibilidad y recuperación ante desastres para SQL Server en Azure virtual machines](https://msdn.microsoft.com/library/windowsazure/jj870962.aspx).
 
-Videos:
+Vídeos:
 
 - [Failsafe: creación de Cloud Services escalables y resistentes](https://channel9.msdn.com/Series/FailSafe). Series de nueve partes de Ulrich Homann, Marc Mercuri y Mark SIMM. Presenta conceptos de alto nivel y principios arquitectónicos de una manera muy accesible e interesante, con historias tomadas de la experiencia del equipo de asesoramiento al cliente (CAT) de Microsoft con clientes reales. Los episodios 1 y 8 profundizan en los motivos para diseñar aplicaciones en la nube que sobreviven a los errores. Vea también el debate de seguimiento de la limitación en el episodio 2 a partir de 49:57, la explicación de los puntos de error y los modos de error en el episodio 2 a partir de 56:05 y la explicación de los disyuntores del episodio 3 a partir de 40:55.
 - [Building Big: lecciones aprendidas de clientes de Azure, parte II](https://channel9.msdn.com/Events/Build/2012/3-030). Mark SIMM habla sobre el diseño de errores y la instrumentación de todo. Similar a la serie failsafe, pero profundiza en más detalles.

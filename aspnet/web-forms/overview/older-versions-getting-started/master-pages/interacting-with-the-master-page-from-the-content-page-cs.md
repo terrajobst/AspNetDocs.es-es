@@ -9,11 +9,11 @@ ms.assetid: 32d54638-71b2-491d-81f4-f7417a13a62f
 msc.legacyurl: /web-forms/overview/older-versions-getting-started/master-pages/interacting-with-the-master-page-from-the-content-page-cs
 msc.type: authoredcontent
 ms.openlocfilehash: 5ef030d3bed117e98fdd090f7c63643354b47f76
-ms.sourcegitcommit: 22fbd8863672c4ad6693b8388ad5c8e753fb41a2
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/28/2019
-ms.locfileid: "74583876"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78456133"
 ---
 # <a name="interacting-with-the-master-page-from-the-content-page-c"></a>Interactuar con la página maestra desde la página de contenido (C#)
 

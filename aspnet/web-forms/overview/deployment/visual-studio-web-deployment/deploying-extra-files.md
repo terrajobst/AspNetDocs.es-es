@@ -9,11 +9,11 @@ ms.assetid: 1cd91055-84bc-42c6-9d80-646f41429d4d
 msc.legacyurl: /web-forms/overview/deployment/visual-studio-web-deployment/deploying-extra-files
 msc.type: authoredcontent
 ms.openlocfilehash: eaa3141c22980f0c816e2f33b5597ac9fe69c23c
-ms.sourcegitcommit: 22fbd8863672c4ad6693b8388ad5c8e753fb41a2
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/28/2019
-ms.locfileid: "74594905"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78441367"
 ---
 # <a name="aspnet-web-deployment-using-visual-studio-deploying-extra-files"></a>Implementación web de ASP.NET con Visual Studio: implementación de archivos adicionales
 
@@ -23,7 +23,7 @@ por [Tom Dykstra](https://github.com/tdykstra)
 
 > En esta serie de tutoriales se muestra cómo implementar (publicar) una aplicación Web de ASP.NET en Azure App Service Web Apps o en un proveedor de hospedaje de terceros mediante Visual Studio 2012 o Visual Studio 2010. Para obtener información sobre la serie, vea [el primer tutorial de la serie](introduction.md).
 
-## <a name="overview"></a>Información general del
+## <a name="overview"></a>Información general
 
 En este tutorial se muestra cómo extender la canalización de publicación Web de Visual Studio para realizar una tarea adicional durante la implementación. La tarea consiste en copiar archivos adicionales que no están en la carpeta del proyecto en el sitio web de destino.
 
@@ -81,7 +81,7 @@ Esto completa esta serie de tutoriales sobre la implementación de una aplicaci�
 
 Si sabe cómo trabajar con archivos de MSBuild, puede automatizar muchas otras tareas de implementación escribiendo código en archivos *. pubxml* (para tareas específicas del perfil) o el archivo Project *. WPP. targets* (para las tareas que se aplican a todos los perfiles). Para obtener más información sobre los archivos *. pubxml* y *. WPP. targets* , vea [Cómo: editar la configuración de implementación en archivos de Perfil de publicación (. pubxml) y el archivo. WPP. targets en proyectos Web de Visual Studio](https://msdn.microsoft.com/library/ff398069). Para obtener una introducción básica a código de MSBuild, vea **la anatomía de un archivo de proyecto** en [la serie de implementación empresarial: Descripción del archivo de proyecto](../web-deployment-in-the-enterprise/understanding-the-project-file.md). Para obtener información sobre cómo trabajar con archivos de MSBuild para realizar tareas para sus propios escenarios, vea este libro: [en el Microsoft Build Engine: usar MSBuild y Team Foundation Build](http://msbuildbook.com) de Sayed Ibraham Hashimi y William Bartholomew.
 
-## <a name="acknowledgements"></a>Agradecimientos
+## <a name="acknowledgements"></a>Reconocimientos
 
 Me gustaría agradecer a las siguientes personas que realizaran importantes contribuciones al contenido de esta serie de tutoriales:
 

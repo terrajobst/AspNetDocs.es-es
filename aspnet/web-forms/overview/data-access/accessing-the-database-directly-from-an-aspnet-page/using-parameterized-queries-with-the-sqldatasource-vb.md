@@ -9,11 +9,11 @@ ms.assetid: e322f34c-83b7-41ea-ab65-ab1e0bdcc609
 msc.legacyurl: /web-forms/overview/data-access/accessing-the-database-directly-from-an-aspnet-page/using-parameterized-queries-with-the-sqldatasource-vb
 msc.type: authoredcontent
 ms.openlocfilehash: 19b93ff6c0878ae6ed546d347cafef95fd2a01e6
-ms.sourcegitcommit: 22fbd8863672c4ad6693b8388ad5c8e753fb41a2
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/28/2019
-ms.locfileid: "74598053"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78444721"
 ---
 # <a name="using-parameterized-queries-with-the-sqldatasource-vb"></a>Usar consultas parametrizadas con SqlDataSource (VB)
 

@@ -9,11 +9,11 @@ ms.assetid: 21a178de-4c5a-4211-8a9c-74ec576c0f30
 msc.legacyurl: /mvc/overview/older-versions/using-the-html5-and-jquery-ui-datepicker-popup-calendar-with-aspnet-mvc/using-the-html5-and-jquery-ui-datepicker-popup-calendar-with-aspnet-mvc-part-2
 msc.type: authoredcontent
 ms.openlocfilehash: 325cc90eb6e717c47863eda6253e0d48d796386b
-ms.sourcegitcommit: 7709c0a091b8d55b7b33bad8849f7b66b23c3d72
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/19/2020
-ms.locfileid: "77455898"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78498421"
 ---
 # <a name="using-the-html5-and-jquery-ui-datepicker-popup-calendar-with-aspnet-mvc---part-2"></a>Usar el calendario emergente del DatePicker de la interfaz de usuario de HTML5 y jQuery con ASP.NET MVC, parte 2
 
@@ -109,7 +109,7 @@ Para revisar: en este punto, el campo de `ReleaseDate` se muestra mediante la pl
 
 ### <a name="using-uihint-to-specify-a-display-template"></a>Usar UIHint para especificar una plantilla para mostrar
 
-Si la aplicación web tiene muchos campos de `DateTime` y, de forma predeterminada, desea mostrar todos o más en formato de solo fecha, la plantilla *DateTime. cshtml* es un buen enfoque. Pero, ¿qué ocurre si tiene unas cuantas fechas en las que desea mostrar la fecha y la hora completas? No se preocupe. Puede crear una plantilla adicional y usar el atributo [UIHint](https://msdn.microsoft.com/library/system.componentmodel.dataannotations.uihintattribute.uihint.aspx) para especificar el formato de la fecha y hora completas. Después, puede aplicar selectivamente esa plantilla. Puede usar el atributo [UIHint](https://msdn.microsoft.com/library/system.componentmodel.dataannotations.uihintattribute.uihint.aspx) en el nivel de modelo o puede especificar la plantilla dentro de una vista. En esta sección, verá cómo usar el atributo `UIHint` para cambiar selectivamente el formato de algunas instancias de campos de fecha y hora.
+Si la aplicación web tiene muchos campos de `DateTime` y, de forma predeterminada, desea mostrar todos o más en formato de solo fecha, la plantilla *DateTime. cshtml* es un buen enfoque. Pero, ¿qué ocurre si tiene unas cuantas fechas en las que desea mostrar la fecha y la hora completas? No hay problema. Puede crear una plantilla adicional y usar el atributo [UIHint](https://msdn.microsoft.com/library/system.componentmodel.dataannotations.uihintattribute.uihint.aspx) para especificar el formato de la fecha y hora completas. Después, puede aplicar selectivamente esa plantilla. Puede usar el atributo [UIHint](https://msdn.microsoft.com/library/system.componentmodel.dataannotations.uihintattribute.uihint.aspx) en el nivel de modelo o puede especificar la plantilla dentro de una vista. En esta sección, verá cómo usar el atributo `UIHint` para cambiar selectivamente el formato de algunas instancias de campos de fecha y hora.
 
 Abra el archivo *Views\Movies\DisplayTemplates\LoudDateTime.cshtml* y reemplace el código existente por lo siguiente:
 

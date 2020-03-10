@@ -9,11 +9,11 @@ ms.assetid: 113f10b3-a19a-471b-8ff6-db3c79ce8a91
 msc.legacyurl: /web-forms/overview/older-versions-security/roles/creating-and-managing-roles-cs
 msc.type: authoredcontent
 ms.openlocfilehash: a7883d0b05f2fa5a3fdac887f8c8b39d70418fb3
-ms.sourcegitcommit: 22fbd8863672c4ad6693b8388ad5c8e753fb41a2
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/28/2019
-ms.locfileid: "74595791"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78520069"
 ---
 # <a name="creating-and-managing-roles-c"></a>Crear y administrar roles (C#)
 

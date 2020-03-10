@@ -9,11 +9,11 @@ ms.assetid: 56e15b33-93b8-43ad-8e19-44c6647ea05c
 msc.legacyurl: /web-forms/overview/data-access/editing-inserting-and-deleting-data/implementing-optimistic-concurrency-cs
 msc.type: authoredcontent
 ms.openlocfilehash: 3cddb0efd28249ffc5708ece39c80581d078a5a2
-ms.sourcegitcommit: 22fbd8863672c4ad6693b8388ad5c8e753fb41a2
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/28/2019
-ms.locfileid: "74617481"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78492427"
 ---
 # <a name="implementing-optimistic-concurrency-c"></a>Implementar la simultaneidad optimista (C#)
 

@@ -9,11 +9,11 @@ ms.assetid: 94421d86-68c4-4471-bf5f-82d654a17252
 msc.legacyurl: /web-api/overview/older-versions/using-web-api-1-with-entity-framework-5/using-web-api-with-entity-framework-part-1
 msc.type: authoredcontent
 ms.openlocfilehash: a76a18f2bd95969358452085ef342fdca8a386e2
-ms.sourcegitcommit: 22fbd8863672c4ad6693b8388ad5c8e753fb41a2
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/28/2019
-ms.locfileid: "74600325"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78447937"
 ---
 # <a name="part-1-overview-and-creating-the-project"></a>Parte 1: información general y creación del proyecto
 
@@ -33,9 +33,9 @@ Los administradores pueden crear, eliminar o editar productos:
 
 ![](using-web-api-with-entity-framework-part-1/_static/image2.png)
 
-## <a name="skills-youll-learn"></a>Aptitudes que aprenderá
+## <a name="skills-youll-learn"></a>Habilidades que aprenderá
 
-Esto es lo que aprenderá:
+Aprenderá lo siguiente:
 
 - Cómo usar Entity Framework con ASP.NET Web API.
 - Cómo usar Knockout. js para crear una interfaz de usuario de cliente dinámica.
@@ -48,7 +48,7 @@ Aunque este tutorial es independiente, puede que desee leer los siguientes tutor
 
 Algunos conocimientos de [ASP.NET MVC](../../../../mvc/index.md) también son útiles.
 
-## <a name="overview"></a>Información general del
+## <a name="overview"></a>Información general
 
 En un nivel alto, esta es la arquitectura de la aplicación:
 

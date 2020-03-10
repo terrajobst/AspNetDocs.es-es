@@ -9,11 +9,11 @@ ms.assetid: ad3cb0ec-26cf-42d7-b81b-184a34ec9f86
 msc.legacyurl: /web-forms/overview/data-access/displaying-data-with-the-datalist-and-repeater/nested-data-web-controls-cs
 msc.type: authoredcontent
 ms.openlocfilehash: 8ef15bebb2c29976274b0cca1d6ace434ccc55ce
-ms.sourcegitcommit: 22fbd8863672c4ad6693b8388ad5c8e753fb41a2
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/28/2019
-ms.locfileid: "74640265"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78481273"
 ---
 # <a name="nested-data-web-controls-c"></a>Controles web de datos anidados (C#)
 

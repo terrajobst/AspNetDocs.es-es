@@ -1,6 +1,6 @@
 ---
 uid: ajax/cdn/jquery-datatables/cdnjquerydatatables190
-title: jQuery DataTables 1.9.0 | Microsoft Docs
+title: DataTables de jQuery 1.9.0 | Microsoft Docs
 author: rick-anderson
 description: ''
 ms.author: riande
@@ -9,15 +9,15 @@ ms.assetid: 0f9c7b5e-bac0-40f1-b353-bd46e8759836
 msc.legacyurl: /ajax/cdn/jquery-datatables/cdnjquerydatatables190
 msc.type: content
 ms.openlocfilehash: c2f251f6b2ca9a810de5d6e7fb93886ae510094b
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59408555"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78454033"
 ---
 # <a name="jquery-datatables-190"></a>jQuery DataTables 1.9.0
 
-Los siguientes archivos para lo complementos DataTables de jQuery se hospedan en la red CDN:
+Los siguientes archivos para los complementos DataTables de jQuery se hospedan en la red CDN:
 
 - https://ajax.aspnetcdn.com/ajax/jquery.dataTables/1.9.0/jquery.dataTables.js
 - https://ajax.aspnetcdn.com/ajax/jquery.dataTables/1.9.0/jquery.dataTables.min.js
