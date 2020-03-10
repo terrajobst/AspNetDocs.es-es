@@ -1,50 +1,50 @@
 ---
 uid: mvc/videos/mvc-2/how-do-i/index
-title: How-Do-I | Microsoft Docs
+title: 'Procedimientos: Microsoft Docs'
 author: rick-anderson
-description: Vídeos de esta sección cubren ASP.NET MVC, incluido cómo crear una aplicación de comercio electrónico completo desde el principio para finalizar de 'El escaparate -'.
+description: Los vídeos de esta sección cubren ASP.NET MVC, incluido cómo crear "el escaparate", una aplicación de comercio electrónico completa de principio a fin.
 ms.author: riande
 ms.date: 09/15/2011
 ms.assetid: 9bc6c53a-3e54-4f9d-8bef-0f3359aecf7b
 msc.legacyurl: /mvc/videos/mvc-2/how-do-i
 msc.type: chapter
 ms.openlocfilehash: 7c2fd0d57cdd6775eb027c0dc9b360443bacbfed
-ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/06/2019
-ms.locfileid: "65120529"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78431959"
 ---
-# <a name="how-do-i"></a><span data-ttu-id="724a3-103">¿Cómo puedo...?</span><span class="sxs-lookup"><span data-stu-id="724a3-103">How-Do-I</span></span>
+# <a name="how-do-i"></a><span data-ttu-id="b7cd4-103">¿Cómo puedo...?</span><span class="sxs-lookup"><span data-stu-id="b7cd4-103">How-Do-I</span></span>
 
-> <span data-ttu-id="724a3-104">Vídeos de esta sección cubren ASP.NET MVC, incluido cómo crear una aplicación de comercio electrónico completo desde el principio para finalizar de "The Storefront -".</span><span class="sxs-lookup"><span data-stu-id="724a3-104">Videos in this section cover ASP.NET MVC, including how to build "The Storefront" - an entire e-commerce application from start to finish.</span></span>
+> <span data-ttu-id="b7cd4-104">Los vídeos de esta sección cubren ASP.NET MVC, incluido cómo crear "el escaparate", una aplicación de comercio electrónico completa de principio a fin.</span><span class="sxs-lookup"><span data-stu-id="b7cd4-104">Videos in this section cover ASP.NET MVC, including how to build "The Storefront" - an entire e-commerce application from start to finish.</span></span>
 
-- [<span data-ttu-id="724a3-105">Crear una aplicación de lista de tareas con ASP.NET MVC</span><span class="sxs-lookup"><span data-stu-id="724a3-105">Creating a Tasklist Application with ASP.NET MVC</span></span>](creating-a-tasklist-application-with-aspnet-mvc.md)
-- [<span data-ttu-id="724a3-106">Crear una aplicación de base de datos de películas en 15 minutos con ASP.NET MVC</span><span class="sxs-lookup"><span data-stu-id="724a3-106">Creating a Movie Database Application in 15 minutes with ASP.NET MVC</span></span>](creating-a-movie-database-application-in-15-minutes-with-aspnet-mvc.md)
-- [<span data-ttu-id="724a3-107">Descripción de los modelos, las vistas y los controladores</span><span class="sxs-lookup"><span data-stu-id="724a3-107">Understanding Models, Views, and Controllers</span></span>](understanding-models-views-and-controllers.md)
-- [<span data-ttu-id="724a3-108">Información general sobre el controlador de ASP.NET MVC</span><span class="sxs-lookup"><span data-stu-id="724a3-108">ASP.NET MVC Controller Overview</span></span>](aspnet-mvc-controller-overview.md)
-- [<span data-ttu-id="724a3-109">Descripción de los controladores, las acciones de controlador y los resultados de las acciones</span><span class="sxs-lookup"><span data-stu-id="724a3-109">Understanding Controllers, Controller Actions, and Action Results</span></span>](understanding-controllers-controller-actions-and-action-results.md)
-- [<span data-ttu-id="724a3-110">Descripción de vistas, datos de vistas y asistentes de HTML</span><span class="sxs-lookup"><span data-stu-id="724a3-110">Understanding Views, View Data, and HTML Helpers</span></span>](understanding-views-view-data-and-html-helpers.md)
-- [<span data-ttu-id="724a3-111">Introducción al enrutamiento de direcciones URL</span><span class="sxs-lookup"><span data-stu-id="724a3-111">Intro to URL Routing</span></span>](an-introduction-to-url-routing.md)
-- [<span data-ttu-id="724a3-112">Prevenir ataques por inyección de código de JavaScript</span><span class="sxs-lookup"><span data-stu-id="724a3-112">Preventing JavaScript Injection Attacks</span></span>](preventing-javascript-injection-attacks.md)
-- [<span data-ttu-id="724a3-113">Crear pruebas unitarias para aplicaciones de ASP.NET MVC</span><span class="sxs-lookup"><span data-stu-id="724a3-113">Creating Unit Tests for ASP.NET MVC Applications</span></span>](creating-unit-tests-for-aspnet-mvc-applications.md)
-- [<span data-ttu-id="724a3-114">Crear asistentes de HTML personalizadas</span><span class="sxs-lookup"><span data-stu-id="724a3-114">Creating Custom HTML Helpers</span></span>](creating-custom-html-helpers.md)
-- [<span data-ttu-id="724a3-115">Crear clases de modelo con LINQ to SQL</span><span class="sxs-lookup"><span data-stu-id="724a3-115">Creating Model Classes with LINQ to SQL</span></span>](creating-model-classes-with-linq-to-sql.md)
-- [<span data-ttu-id="724a3-116">Mostrar una tabla de los datos de la base de datos</span><span class="sxs-lookup"><span data-stu-id="724a3-116">Displaying a Table of Database Data</span></span>](displaying-a-table-of-database-data.md)
-- [<span data-ttu-id="724a3-117">Vídeo técnico de 80 minutos sobre ASP.NET MVC para desarrolladores y compilación de NerdDinner</span><span class="sxs-lookup"><span data-stu-id="724a3-117">What is ASP.NET MVC 80 minute technical video for developers, building NerdDinner</span></span>](what-is-aspnet-mvc-80-minute-technical-video-for-developers-building-nerddinner.md)
-- [<span data-ttu-id="724a3-118">Vídeo de introducción de 3 minutos de ASP.NET MVC para la toma de decisiones</span><span class="sxs-lookup"><span data-stu-id="724a3-118">Why ASP.NET MVC 3 minute overview video for decision makers</span></span>](why-aspnet-mvc-3-minute-overview-video-for-decision-makers.md)
-- [<span data-ttu-id="724a3-119">ASP.NET MVC: 10 minutos vídeo técnico para desarrolladores</span><span class="sxs-lookup"><span data-stu-id="724a3-119">ASP.NET MVC: How 10 minute technical video for developers</span></span>](aspnet-mvc-how-10-minute-technical-video-for-developers.md)
-- [<span data-ttu-id="724a3-120">Devolver datos con formato JSON para una llamada de AJAX en una aplicación web de ASP.NET MVC</span><span class="sxs-lookup"><span data-stu-id="724a3-120">Return JSON Formatted Data for an AJAX Call in an ASP.NET MVC Web Application</span></span>](how-do-i-return-json-formatted-data-for-an-ajax-call-in-an-aspnet-mvc-web-application.md)
-- [<span data-ttu-id="724a3-121">Trabajar con datos en las vistas parciales de ASP.NET MVC</span><span class="sxs-lookup"><span data-stu-id="724a3-121">Work with Data in ASP.NET MVC Partial Views</span></span>](how-do-i-work-with-data-in-aspnet-mvc-partial-views.md)
-- [<span data-ttu-id="724a3-122">Implementar modelos de vista para administrar los datos para las vistas de MVC de ASP.NET</span><span class="sxs-lookup"><span data-stu-id="724a3-122">Implement View Models to Manage Data for ASP.NET MVC Views</span></span>](how-do-i-implement-view-models-to-manage-data-for-aspnet-mvc-views.md)
-- [<span data-ttu-id="724a3-123">Crear un asistente de HTML personalizada para una aplicación MVC</span><span class="sxs-lookup"><span data-stu-id="724a3-123">Create a Custom HTML Helper for an MVC Application</span></span>](how-do-i-create-a-custom-html-helper-for-an-mvc-application.md)
-- [<span data-ttu-id="724a3-124">Trabajar con los enlazadores de modelos en una aplicación MVC</span><span class="sxs-lookup"><span data-stu-id="724a3-124">Work with Model Binders in an MVC Application</span></span>](how-do-i-work-with-model-binders-in-an-mvc-application.md)
-- [<span data-ttu-id="724a3-125">Usar atributos HttpVerbs en una aplicación MVC</span><span class="sxs-lookup"><span data-stu-id="724a3-125">Use HttpVerbs Attributes in an MVC Application</span></span>](how-do-i-use-httpverbs-attributes-in-an-mvc-application.md)
-- [<span data-ttu-id="724a3-126">MVC2 - Codificación HTML</span><span class="sxs-lookup"><span data-stu-id="724a3-126">MVC2 - Html Encoding</span></span>](mvc2-html-encoding.md)
-- [<span data-ttu-id="724a3-127">MVC2 - Asistentes fuertemente tipadas</span><span class="sxs-lookup"><span data-stu-id="724a3-127">MVC2 - StronglyTyped Helpers</span></span>](mvc2-stronglytyped-helpers.md)
-- [<span data-ttu-id="724a3-128">MVC2 - Validación de modelos</span><span class="sxs-lookup"><span data-stu-id="724a3-128">MVC2 - Model Validation</span></span>](mvc2-model-validation.md)
-- [<span data-ttu-id="724a3-129">MVC2 - Personalización de plantillas</span><span class="sxs-lookup"><span data-stu-id="724a3-129">MVC2 - Template Customization</span></span>](mvc2-template-customization.md)
-- [<span data-ttu-id="724a3-130">ASP.NET MVC 2 - Áreas</span><span class="sxs-lookup"><span data-stu-id="724a3-130">ASP.NET MVC 2 - Areas</span></span>](aspnet-mvc-2-areas.md)
-- [<span data-ttu-id="724a3-131">ASP.NET MVC 2: Acción de representación</span><span class="sxs-lookup"><span data-stu-id="724a3-131">ASP.NET MVC 2 - Render Action</span></span>](aspnet-mvc-2-render-action.md)
-- [<span data-ttu-id="724a3-132">Introducción de 5 minutos a ASP.NET MVC</span><span class="sxs-lookup"><span data-stu-id="724a3-132">5 Minute Intro to ASP.NET MVC</span></span>](5-minute-introduction-to-aspnet-mvc.md)
-- [<span data-ttu-id="724a3-133">Aprendizaje óptimo de ASP.NET MVC</span><span class="sxs-lookup"><span data-stu-id="724a3-133">Best Learn ASP.NET MVC</span></span>](how-to-best-learn-asp-net-mvc.md)
+- [<span data-ttu-id="b7cd4-105">Crear una aplicación de lista de tareas con ASP.NET MVC</span><span class="sxs-lookup"><span data-stu-id="b7cd4-105">Creating a Tasklist Application with ASP.NET MVC</span></span>](creating-a-tasklist-application-with-aspnet-mvc.md)
+- [<span data-ttu-id="b7cd4-106">Crear una aplicación de base de datos de películas en 15 minutos con ASP.NET MVC</span><span class="sxs-lookup"><span data-stu-id="b7cd4-106">Creating a Movie Database Application in 15 minutes with ASP.NET MVC</span></span>](creating-a-movie-database-application-in-15-minutes-with-aspnet-mvc.md)
+- [<span data-ttu-id="b7cd4-107">Descripción de los modelos, las vistas y los controladores</span><span class="sxs-lookup"><span data-stu-id="b7cd4-107">Understanding Models, Views, and Controllers</span></span>](understanding-models-views-and-controllers.md)
+- [<span data-ttu-id="b7cd4-108">Información general sobre el controlador de ASP.NET MVC</span><span class="sxs-lookup"><span data-stu-id="b7cd4-108">ASP.NET MVC Controller Overview</span></span>](aspnet-mvc-controller-overview.md)
+- [<span data-ttu-id="b7cd4-109">Descripción de los controladores, las acciones de controlador y los resultados de las acciones</span><span class="sxs-lookup"><span data-stu-id="b7cd4-109">Understanding Controllers, Controller Actions, and Action Results</span></span>](understanding-controllers-controller-actions-and-action-results.md)
+- [<span data-ttu-id="b7cd4-110">Descripción de vistas, datos de vistas y asistentes de HTML</span><span class="sxs-lookup"><span data-stu-id="b7cd4-110">Understanding Views, View Data, and HTML Helpers</span></span>](understanding-views-view-data-and-html-helpers.md)
+- [<span data-ttu-id="b7cd4-111">Introducción al enrutamiento de direcciones URL</span><span class="sxs-lookup"><span data-stu-id="b7cd4-111">Intro to URL Routing</span></span>](an-introduction-to-url-routing.md)
+- [<span data-ttu-id="b7cd4-112">Prevenir ataques por inyección de código de JavaScript</span><span class="sxs-lookup"><span data-stu-id="b7cd4-112">Preventing JavaScript Injection Attacks</span></span>](preventing-javascript-injection-attacks.md)
+- [<span data-ttu-id="b7cd4-113">Crear pruebas unitarias para aplicaciones de ASP.NET MVC</span><span class="sxs-lookup"><span data-stu-id="b7cd4-113">Creating Unit Tests for ASP.NET MVC Applications</span></span>](creating-unit-tests-for-aspnet-mvc-applications.md)
+- [<span data-ttu-id="b7cd4-114">Crear asistentes de HTML personalizadas</span><span class="sxs-lookup"><span data-stu-id="b7cd4-114">Creating Custom HTML Helpers</span></span>](creating-custom-html-helpers.md)
+- [<span data-ttu-id="b7cd4-115">Crear clases de modelo con LINQ to SQL</span><span class="sxs-lookup"><span data-stu-id="b7cd4-115">Creating Model Classes with LINQ to SQL</span></span>](creating-model-classes-with-linq-to-sql.md)
+- [<span data-ttu-id="b7cd4-116">Mostrar una tabla de los datos de la base de datos</span><span class="sxs-lookup"><span data-stu-id="b7cd4-116">Displaying a Table of Database Data</span></span>](displaying-a-table-of-database-data.md)
+- [<span data-ttu-id="b7cd4-117">Vídeo técnico de 80 minutos sobre ASP.NET MVC para desarrolladores y compilación de NerdDinner</span><span class="sxs-lookup"><span data-stu-id="b7cd4-117">What is ASP.NET MVC 80 minute technical video for developers, building NerdDinner</span></span>](what-is-aspnet-mvc-80-minute-technical-video-for-developers-building-nerddinner.md)
+- [<span data-ttu-id="b7cd4-118">Vídeo de introducción de 3 minutos de ASP.NET MVC para la toma de decisiones</span><span class="sxs-lookup"><span data-stu-id="b7cd4-118">Why ASP.NET MVC 3 minute overview video for decision makers</span></span>](why-aspnet-mvc-3-minute-overview-video-for-decision-makers.md)
+- [<span data-ttu-id="b7cd4-119">ASP.NET MVC: Vídeo técnico de 10 minutos para desarrolladores</span><span class="sxs-lookup"><span data-stu-id="b7cd4-119">ASP.NET MVC: How 10 minute technical video for developers</span></span>](aspnet-mvc-how-10-minute-technical-video-for-developers.md)
+- [<span data-ttu-id="b7cd4-120">Devolver datos con formato JSON para una llamada de AJAX en una aplicación web de ASP.NET MVC</span><span class="sxs-lookup"><span data-stu-id="b7cd4-120">Return JSON Formatted Data for an AJAX Call in an ASP.NET MVC Web Application</span></span>](how-do-i-return-json-formatted-data-for-an-ajax-call-in-an-aspnet-mvc-web-application.md)
+- [<span data-ttu-id="b7cd4-121">Trabajar con datos en las vistas parciales de ASP.NET MVC</span><span class="sxs-lookup"><span data-stu-id="b7cd4-121">Work with Data in ASP.NET MVC Partial Views</span></span>](how-do-i-work-with-data-in-aspnet-mvc-partial-views.md)
+- [<span data-ttu-id="b7cd4-122">Implementar modelos de vista para administrar datos para las vistas de MVC de ASP.NET</span><span class="sxs-lookup"><span data-stu-id="b7cd4-122">Implement View Models to Manage Data for ASP.NET MVC Views</span></span>](how-do-i-implement-view-models-to-manage-data-for-aspnet-mvc-views.md)
+- [<span data-ttu-id="b7cd4-123">Crear un asistente de HTML personalizada para una aplicación MVC</span><span class="sxs-lookup"><span data-stu-id="b7cd4-123">Create a Custom HTML Helper for an MVC Application</span></span>](how-do-i-create-a-custom-html-helper-for-an-mvc-application.md)
+- [<span data-ttu-id="b7cd4-124">Trabajar con los enlazadores de modelos en una aplicación MVC</span><span class="sxs-lookup"><span data-stu-id="b7cd4-124">Work with Model Binders in an MVC Application</span></span>](how-do-i-work-with-model-binders-in-an-mvc-application.md)
+- [<span data-ttu-id="b7cd4-125">Usar atributos HttpVerbs en una aplicación MVC</span><span class="sxs-lookup"><span data-stu-id="b7cd4-125">Use HttpVerbs Attributes in an MVC Application</span></span>](how-do-i-use-httpverbs-attributes-in-an-mvc-application.md)
+- [<span data-ttu-id="b7cd4-126">MVC2 - Codificación HTML</span><span class="sxs-lookup"><span data-stu-id="b7cd4-126">MVC2 - Html Encoding</span></span>](mvc2-html-encoding.md)
+- [<span data-ttu-id="b7cd4-127">MVC2 - Asistentes fuertemente tipadas</span><span class="sxs-lookup"><span data-stu-id="b7cd4-127">MVC2 - StronglyTyped Helpers</span></span>](mvc2-stronglytyped-helpers.md)
+- [<span data-ttu-id="b7cd4-128">MVC2 - Validación de modelos</span><span class="sxs-lookup"><span data-stu-id="b7cd4-128">MVC2 - Model Validation</span></span>](mvc2-model-validation.md)
+- [<span data-ttu-id="b7cd4-129">MVC2 - Personalización de plantillas</span><span class="sxs-lookup"><span data-stu-id="b7cd4-129">MVC2 - Template Customization</span></span>](mvc2-template-customization.md)
+- [<span data-ttu-id="b7cd4-130">ASP.NET MVC 2 - Áreas</span><span class="sxs-lookup"><span data-stu-id="b7cd4-130">ASP.NET MVC 2 - Areas</span></span>](aspnet-mvc-2-areas.md)
+- [<span data-ttu-id="b7cd4-131">ASP.NET MVC 2: Acción de representación</span><span class="sxs-lookup"><span data-stu-id="b7cd4-131">ASP.NET MVC 2 - Render Action</span></span>](aspnet-mvc-2-render-action.md)
+- [<span data-ttu-id="b7cd4-132">Introducción de 5 minutos a ASP.NET MVC</span><span class="sxs-lookup"><span data-stu-id="b7cd4-132">5 Minute Intro to ASP.NET MVC</span></span>](5-minute-introduction-to-aspnet-mvc.md)
+- [<span data-ttu-id="b7cd4-133">Aprendizaje óptimo de ASP.NET MVC</span><span class="sxs-lookup"><span data-stu-id="b7cd4-133">Best Learn ASP.NET MVC</span></span>](how-to-best-learn-asp-net-mvc.md)
