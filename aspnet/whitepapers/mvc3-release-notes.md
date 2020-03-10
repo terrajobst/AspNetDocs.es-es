@@ -9,11 +9,11 @@ ms.assetid: f44c166e-7e91-48a0-a6f8-d9285f3594e5
 msc.legacyurl: /whitepapers/mvc3-release-notes
 msc.type: content
 ms.openlocfilehash: 504202068f5db4f8614bba02e8066ffecfd15b48
-ms.sourcegitcommit: 22fbd8863672c4ad6693b8388ad5c8e753fb41a2
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/28/2019
-ms.locfileid: "74619237"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78501043"
 ---
 # <a name="aspnet-mvc-3"></a>ASP.NET MVC 3
 
@@ -91,7 +91,7 @@ ms.locfileid: "74619237"
 - [Ausencia](#0.1__Toc274034231)
 
 <a id="overview"></a>
-## <a name="overview"></a>Información general del
+## <a name="overview"></a>Información general
 
 En este documento se describe la versión de ASP.NET MVC 3 RTM para Visual Studio 2010. ASP.NET MVC es un marco para desarrollar aplicaciones web que usa el patrón Model-View-Controller (MVC). El instalador de ASP.NET MVC 3 incluye los siguientes componentes:
 
@@ -130,7 +130,7 @@ Los componentes de tiempo de ejecución de ASP.NET MVC 3 requieren el software s
 - Visual Studio 2010 o Visual Web Developer 2010 Express.
 
 <a id="documentation"></a>
-## <a name="documentation"></a>Documentation
+## <a name="documentation"></a>Documentación
 
 La documentación de ASP.NET MVC está disponible en el sitio web de MSDN en la dirección URL siguiente:
 
@@ -141,7 +141,7 @@ Los tutoriales y otra información sobre ASP.NET MVC están disponibles en la p�
 [https://www.asp.net/mvc/](../mvc/index.md)
 
 <a id="support"></a>
-## <a name="support"></a>Compatibilidad con
+## <a name="support"></a>Compatibilidad
 
 Se trata de una versión con soporte técnico completo. Puede encontrar información sobre cómo obtener soporte técnico en el [sitio web de soporte técnico de Microsoft](https://support.microsoft.com/).
 
@@ -169,7 +169,7 @@ Para actualizar manualmente una aplicación existente de ASP.NET MVC 2 a la vers
 
     [!code-console[Main](mvc3-release-notes/samples/sample1.cmd)]
 
-    Reemplácelo con lo siguiente:
+    Reemplácelo por el siguiente:
 
     [!code-console[Main](mvc3-release-notes/samples/sample2.cmd)]
 6. En Explorador de soluciones, elimine la referencia a *System. Web. Mvc* (que apunta a la dll de la versión 2) y, a continuación, agregue una referencia a *System. Web. Mvc* (v 3.0.0.0).
@@ -507,7 +507,7 @@ En esta versión se incluye compatibilidad para modificar la lista de plantillas
 
 Las plantillas predeterminadas son las siguientes:
 
-Vacío. Contiene un conjunto mínimo de archivos para un proyecto de ASP.NET MVC, incluida la estructura de directorios predeterminada para los proyectos de ASP.NET MVC, un archivo site. CSS que contiene los estilos predeterminados de ASP.NET MVC y un directorio de scripts que contiene los archivos de JavaScript predeterminados.
+Vacía. Contiene un conjunto mínimo de archivos para un proyecto de ASP.NET MVC, incluida la estructura de directorios predeterminada para los proyectos de ASP.NET MVC, un archivo site. CSS que contiene los estilos predeterminados de ASP.NET MVC y un directorio de scripts que contiene los archivos de JavaScript predeterminados.
 
 Aplicación de Internet. Contiene la funcionalidad de ejemplo que muestra cómo usar el proveedor de pertenencia con ASP.NET MVC.
 
@@ -648,7 +648,7 @@ En esta versión no se incluye compatibilidad para modificar la lista de plantil
 
 Las plantillas predeterminadas son las siguientes:
 
-Vacío. Contiene un conjunto mínimo de archivos para un proyecto de ASP.NET MVC, incluida la estructura de directorios predeterminada para los proyectos de ASP.NET MVC, un pequeño archivo site. CSS que contiene los estilos predeterminados de ASP.NET MVC y un directorio de scripts que contiene los archivos de JavaScript predeterminados.
+Vacía. Contiene un conjunto mínimo de archivos para un proyecto de ASP.NET MVC, incluida la estructura de directorios predeterminada para los proyectos de ASP.NET MVC, un pequeño archivo site. CSS que contiene los estilos predeterminados de ASP.NET MVC y un directorio de scripts que contiene los archivos de JavaScript predeterminados.
 
 Aplicación de Internet. Contiene la funcionalidad de ejemplo que muestra cómo usar el proveedor de pertenencia dentro de ASP.NET MVC.
 
@@ -733,15 +733,15 @@ La nueva versión incluye compatibilidad con la resolución de dependencias para
 
 ASP.NET MVC incluye métodos auxiliares de Ajax como los siguientes:
 
-- Ajax. ActionLink
-- Ajax. RouteLink
-- De Ajax. BeginForm
-- Ajax. BeginRouteForm
+- Ajax.ActionLink
+- Ajax.RouteLink
+- Ajax.BeginForm
+- Ajax.BeginRouteForm
 
 Estos métodos usan JavaScript para invocar un método de acción en el servidor en lugar de usar un postback completo. Esta funcionalidad se ha actualizado para aprovechar las ventajas de jQuery de manera discreta. En lugar de emitir de forma intrusiva scripts de cliente en línea, estos métodos auxiliares separan el comportamiento del marcado mediante la emisión de atributos HTML5 mediante el prefijo de *AJAX de datos* . A continuación, se aplica el comportamiento al marcado haciendo referencia a los archivos de JavaScript adecuados. Asegúrese de que se hace referencia a los siguientes archivos JavaScript:
 
-- jQuery-1.4.1. js
-- jQuery. discreto. Ajax. js
+- jquery-1.4.1.js
+- jquery.unobtrusive.ajax.js
 
 Esta característica está habilitada de forma predeterminada en el archivo Web. config en las nuevas plantillas de proyecto de ASP.NET MVC 3, pero está deshabilitada de forma predeterminada para los proyectos existentes. Para obtener más información, consulte [Agregar marcas para toda la aplicación para la validación del cliente y JavaScript discreto](#0.1_AddedApplicationWideFlagsForClientValida) más adelante en este documento.
 
@@ -757,9 +757,9 @@ Esto requiere que la propiedad ViewContext. UnobtrusiveJavaScriptEnabled esté e
 
 Asegúrese también de que se hace referencia a los siguientes archivos JavaScript.
 
-- jQuery-1.4.1. js
-- jQuery. Validate. js
-- jQuery. Validate. discreto. js
+- jquery-1.4.1.js
+- jquery.validate.js
+- jquery.validate.unobtrusive.js
 
 Esta característica está habilitada de forma predeterminada en el archivo Web. config en las nuevas plantillas de proyecto de ASP.NET MVC 3, pero está deshabilitada de forma predeterminada para los proyectos existentes. Para obtener más información, consulte [nuevas marcas para toda la aplicación para la validación de clientes y JavaScript discreto](#0.1_AddedApplicationWideFlagsForClientValida) más adelante en este documento.
 
@@ -839,7 +839,7 @@ JsonValueProviderFactory se registra ahora de forma predeterminada.
 
 El orden de ejecución de los filtros de excepciones ha cambiado en los filtros de excepciones que tienen el mismo valor de orden. En ASP.NET MVC 2 y versiones anteriores, los filtros de excepción en el controlador con el mismo orden que los de un método de acción se ejecutaban antes que los filtros de excepción en el método de acción. Este suele ser el caso cuando se aplican filtros de excepción sin un valor de orden especificado. En ASP.NET MVC 3, este orden se ha invertido para que el controlador de excepciones más específico se ejecute primero. Como en versiones anteriores, si se especifica explícitamente la propiedad Order, los filtros se ejecutan en el orden especificado.
 
-## <a id="0.1__Toc274034230"></a>Problemas conocidos
+## <a id="0.1__Toc274034230"></a>  Problemas conocidos
 
 Durante la instalación, el cuadro de diálogo aceptación del CLUF muestra los términos de la licencia en una ventana menor de lo previsto.
 
@@ -861,6 +861,6 @@ Hay un problema conocido que hace que la autenticación de formularios redirija 
 
 ## <a id="0.1__Toc274034231"></a>Ausencia
 
-© 2011 Microsoft Corporation. Reservados todos los derechos. Este documento se proporciona "tal cual". La información y las opiniones expresadas en este documento, incluidas las direcciones URL y otras referencias a sitios web de Internet, pueden cambiar sin previo aviso. Al utilizarlas, acepta el riesgo que ello conlleva.
+© 2011 Microsoft Corporation. All rights reserved. Este documento se proporciona "tal cual". La información y las opiniones expresadas en este documento, como las direcciones URL y otras referencias a sitios web de Internet, pueden cambiar sin previo aviso. Usted asume el riesgo de utilizarla.
 
 Este documento no le proporciona ningún derecho legal sobre ninguna propiedad intelectual de ningún producto de Microsoft. Puede copiar y usar este documento para su uso interno de referencia.

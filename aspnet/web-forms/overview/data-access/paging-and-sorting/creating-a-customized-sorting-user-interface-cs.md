@@ -9,11 +9,11 @@ ms.assetid: 6f81b633-9d01-4e52-ae4a-2ea6bc109475
 msc.legacyurl: /web-forms/overview/data-access/paging-and-sorting/creating-a-customized-sorting-user-interface-cs
 msc.type: authoredcontent
 ms.openlocfilehash: 93ec07a13de80e4c874ff46b5dfa626b60b632c8
-ms.sourcegitcommit: 22fbd8863672c4ad6693b8388ad5c8e753fb41a2
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/28/2019
-ms.locfileid: "74597375"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78502711"
 ---
 # <a name="creating-a-customized-sorting-user-interface-c"></a>Crear una interfaz de usuario de ordenación personalizada (C#)
 

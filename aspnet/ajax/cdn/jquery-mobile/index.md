@@ -9,11 +9,11 @@ ms.assetid: c13785b6-5538-4511-92de-4afdb4a1d0f1
 msc.legacyurl: /ajax/cdn/jquery-mobile
 msc.type: folder
 ms.openlocfilehash: f539911e5d7db6bf13f8e1ad41a1358c5b02c76c
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59383205"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78453625"
 ---
 # <a name="jquery-mobile"></a>jQuery Mobile
 

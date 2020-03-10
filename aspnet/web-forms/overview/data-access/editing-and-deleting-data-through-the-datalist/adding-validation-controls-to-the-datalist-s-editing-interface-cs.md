@@ -9,11 +9,11 @@ ms.assetid: 3ecc21c5-da0e-40ab-abb4-fac1e47398ad
 msc.legacyurl: /web-forms/overview/data-access/editing-and-deleting-data-through-the-datalist/adding-validation-controls-to-the-datalist-s-editing-interface-cs
 msc.type: authoredcontent
 ms.openlocfilehash: e3c14b7098da832bd28f57026e81dcb7f7ba7130
-ms.sourcegitcommit: 22fbd8863672c4ad6693b8388ad5c8e753fb41a2
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/28/2019
-ms.locfileid: "74640497"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78480859"
 ---
 # <a name="adding-validation-controls-to-the-datalists-editing-interface-c"></a>Agregar controles de validación a la interfaz de edición de DataList (C#)
 
@@ -29,7 +29,7 @@ Hasta ahora en los tutoriales de edición de DataList, las interfaces de edició
 
 En este tutorial veremos lo fácil que es agregar controles de validación a la `EditItemTemplate` DataList s para proporcionar una interfaz de usuario de edición más infalible. En concreto, este tutorial toma el ejemplo creado en el tutorial anterior y aumenta la interfaz de edición para incluir la validación adecuada.
 
-## <a name="step-1-replicating-the-example-fromhandling-bll--and-dal-level-exceptionshandling-bll-and-dal-level-exceptions-csmd"></a>Paso 1: replicar el ejemplo desde el control de las[excepciones de nivel BLL y Dal](handling-bll-and-dal-level-exceptions-cs.md)
+## <a name="step-1-replicating-the-example-fromhandling-bll--and-dal-level-exceptions"></a>Paso 1: replicar el ejemplo desde el control de las[excepciones de nivel BLL y Dal](handling-bll-and-dal-level-exceptions-cs.md)
 
 En el tutorial [control de excepciones de nivel BLL y Dal](handling-bll-and-dal-level-exceptions-cs.md) , hemos creado una página que enumera los nombres y los precios de los productos de una lista de controles de dos columnas y editables. Nuestro objetivo de este tutorial es aumentar la interfaz de edición de DataList para incluir controles de validación. En concreto, nuestra lógica de validación hará lo siguiente:
 

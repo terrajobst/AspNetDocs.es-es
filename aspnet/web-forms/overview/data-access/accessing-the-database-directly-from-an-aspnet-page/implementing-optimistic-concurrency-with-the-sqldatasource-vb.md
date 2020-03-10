@@ -9,11 +9,11 @@ ms.assetid: a8fa72ee-8328-4854-a419-c1b271772303
 msc.legacyurl: /web-forms/overview/data-access/accessing-the-database-directly-from-an-aspnet-page/implementing-optimistic-concurrency-with-the-sqldatasource-vb
 msc.type: authoredcontent
 ms.openlocfilehash: 431734b5245c20ac840147cf0827fa7f8d1e4d17
-ms.sourcegitcommit: 22fbd8863672c4ad6693b8388ad5c8e753fb41a2
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/28/2019
-ms.locfileid: "74597642"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78445315"
 ---
 # <a name="implementing-optimistic-concurrency-with-the-sqldatasource-vb"></a>Implementar la simultaneidad optimista con SqlDataSource (VB)
 

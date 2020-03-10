@@ -1,6 +1,6 @@
 ---
 uid: mvc/overview/index
-title: Guía de ASP.NET MVC | Microsoft Docs
+title: Instrucciones para MVC de ASP.NET | Microsoft Docs
 author: rick-anderson
 description: ''
 ms.author: riande
@@ -9,11 +9,11 @@ ms.assetid: 946574c5-b5cb-423b-a6e1-a2cfb506ecf9
 msc.legacyurl: /mvc/overview
 msc.type: book
 ms.openlocfilehash: 608eb755b00e1e5c9ff4323732ca39c629bc6e30
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59390030"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78470305"
 ---
 # <a name="aspnet-mvc-guidance"></a>Guía de ASP.NET MVC
 

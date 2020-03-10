@@ -9,11 +9,11 @@ ms.assetid: df5a1525-386f-4632-972c-57b199870bc3
 msc.legacyurl: /web-forms/overview/data-access/custom-formatting/custom-formatting-based-upon-data-vb
 msc.type: authoredcontent
 ms.openlocfilehash: 268dc763ef6954903f721a3015daaf10bf9bccb1
-ms.sourcegitcommit: 22fbd8863672c4ad6693b8388ad5c8e753fb41a2
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/28/2019
-ms.locfileid: "74613035"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78482767"
 ---
 # <a name="custom-formatting-based-upon-data-vb"></a>Formato personalizado basado en datos (VB)
 

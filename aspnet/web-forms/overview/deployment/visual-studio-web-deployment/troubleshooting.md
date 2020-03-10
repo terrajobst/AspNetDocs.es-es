@@ -9,11 +9,11 @@ ms.assetid: c0090595-ab3b-4b9b-9e16-7a1891e8cb2f
 msc.legacyurl: /web-forms/overview/deployment/visual-studio-web-deployment/troubleshooting
 msc.type: authoredcontent
 ms.openlocfilehash: b42476fca18b04f4557a216ee205cfd9220023e8
-ms.sourcegitcommit: 22fbd8863672c4ad6693b8388ad5c8e753fb41a2
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/28/2019
-ms.locfileid: "74623582"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78465097"
 ---
 # <a name="aspnet-web-deployment-using-visual-studio-troubleshooting"></a>Implementación web de ASP.NET con Visual Studio: solución de problemas
 
@@ -25,10 +25,10 @@ por [Tom Dykstra](https://github.com/tdykstra)
 
 En esta página se describen algunos problemas comunes que pueden surgir al implementar una aplicación Web de ASP.NET con Visual Studio. Para cada uno de ellos, se proporcionan una o varias causas posibles y las soluciones correspondientes.
 
-Los escenarios mostrados se aplican a los proveedores de hospedaje de Azure y de terceros. Para obtener más información sobre la solución de problemas de aplicaciones web en Azure App Service, consulte los siguientes recursos:
+Los escenarios mostrados se aplican a los proveedores de hospedaje de Azure y de terceros. Para obtener más información sobre cómo solucionar problemas de aplicaciones web en Azure App Service, consulte los siguientes recursos:
 
 - [Solución de problemas de una aplicación web en Azure App Service con Visual Studio](https://azure.microsoft.com/documentation/articles/web-sites-dotnet-troubleshoot-visual-studio/)
-- [Supervisar Web Apps en Azure App Service](https://azure.microsoft.com/documentation/articles/web-sites-monitor//)
+- [Supervisión de Web Apps en Azure App Service](https://azure.microsoft.com/documentation/articles/web-sites-monitor//)
 - [Anuncio del lanzamiento del SDK de Windows Azure 2,0 para .net](http://https://weblogs.asp.net/scottgu/announcing-the-release-of-windows-azure-sdk-2-0-for-net) (blog de ScottGu, muestra cómo obtener registros de diagnóstico en Visual Studio)
 
 ## <a name="server-error-in--application---current-custom-error-settings-prevent-details-of-the-error-from-being-viewed-remotely"></a>Error de servidor en la aplicación '/': la configuración de error personalizada actual impide que los detalles del error se vean de forma remota.
@@ -48,7 +48,7 @@ Para permitir que la aplicación muestre mensajes de error detallados cuando se 
 1. Si el archivo Web. config de la aplicación tiene un elemento customErrors en el elemento System. Web, cambie el atributo de modo a "OFF". De lo contrario, agregue un elemento customErrors en el elemento System. Web con el atributo Mode establecido en "OFF", como se muestra en el ejemplo siguiente: 
 
     [!code-xml[Main](troubleshooting/samples/sample2.xml)]
-2. Implementar la aplicación.
+2. Implemente la aplicación.
 3. Ejecute la aplicación y repita cualquier cosa que haya hecho antes de que se produjera el error. Ahora puede ver cuál es el mensaje de error real.
 4. Cuando haya resuelto el error, restaure el valor de customErrors original y vuelva a implementar la aplicación.
 
@@ -58,7 +58,7 @@ Para permitir que la aplicación muestre mensajes de error detallados cuando se 
 
 Al intentar ejecutar un proyecto en Visual Studio, aparecerá una página de error con un mensaje similar al ejemplo siguiente:
 
-Error de servidor en '/' aplicación. No se puede crear ni instantánea ' ContosoUniversity ' cuando el archivo ya existe.
+Error del servidor en la aplicación '/'. No se puede crear ni instantánea ' ContosoUniversity ' cuando el archivo ya existe.
 
 ### <a name="possible-cause-and-solution"></a>Causa posible y solución
 
@@ -70,7 +70,7 @@ Espere un minuto y actualice el explorador, o vuelva a compilar el sitio e inten
 
 Al implementar un sitio que usa SQL Server Compact y ejecutar una página en el sitio implementado que tiene acceso a la base de datos, verá el mensaje de error siguiente:
 
-Acceso denegado. (Excepción de HRESULT: 0x80070005 (E\_ACCESSDENIED))
+Se denegó el acceso. (Excepción de HRESULT: 0x80070005 (E\_ACCESSDENIED))
 
 ### <a name="possible-cause-and-solution"></a>Causa posible y solución
 

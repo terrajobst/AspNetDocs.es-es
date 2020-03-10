@@ -1,19 +1,19 @@
 ---
 uid: mvc/overview/older-versions-1/nerddinner/use-controllers-and-views-to-implement-a-listingdetails-ui
-title: Usar controladores y vistas para implementar una interfaz de usuario de la lista/detalles | Microsoft Docs
+title: Usar controladores y vistas para implementar una interfaz de usuario de lista/detalles | Microsoft Docs
 author: microsoft
-description: Paso 4 muestra cómo agregar un controlador a la aplicación que aprovecha las ventajas de nuestro modelo para proporcionar a los usuarios una experiencia de navegación de la lista/detalles de datos...
+description: En el paso 4 se muestra cómo agregar un controlador a la aplicación que aprovecha nuestro modelo para proporcionar a los usuarios una experiencia de navegación de lista de datos/detalles...
 ms.author: riande
 ms.date: 07/27/2010
 ms.assetid: 64116e56-1c9a-4f07-8097-bb36cbb6e57f
 msc.legacyurl: /mvc/overview/older-versions-1/nerddinner/use-controllers-and-views-to-implement-a-listingdetails-ui
 msc.type: authoredcontent
 ms.openlocfilehash: 74319fe5ea4c79b50140834349e2fdf86420cfbb
-ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/06/2019
-ms.locfileid: "65128201"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78486223"
 ---
 # <a name="use-controllers-and-views-to-implement-a-listingdetails-ui"></a>Usar controladores y vistas para implementar una interfaz de usuario de lista/detalles
 
@@ -21,281 +21,281 @@ por [Microsoft](https://github.com/microsoft)
 
 [Descargar PDF](http://aspnetmvcbook.s3.amazonaws.com/aspnetmvc-nerdinner_v1.pdf)
 
-> Este es el paso 4 de manera gratuita ["" la aplicación NerdDinner](introducing-the-nerddinner-tutorial.md) que le guía a través cómo compilar un pequeño, pero completa, aplicación web mediante ASP.NET MVC 1.
+> Este es el paso 4 de un [tutorial de aplicación "NerdDinner"](introducing-the-nerddinner-tutorial.md) gratuito en el que se explica cómo crear una aplicación web pequeña, pero completa, con ASP.NET MVC 1.
 > 
-> Paso 4 muestra cómo agregar un controlador a la aplicación que aprovecha las ventajas de nuestro modelo para proporcionar a los usuarios una experiencia de navegación de lista/detalles de datos para las cenas en nuestro sitio de NerdDinner.
+> En el paso 4 se muestra cómo agregar un controlador a la aplicación que aprovecha nuestro modelo para proporcionar a los usuarios una experiencia de navegación de lista y detalles de datos para cenas en nuestro sitio de NerdDinner.
 > 
-> Si usa ASP.NET MVC 3, se recomienda que siga el [Introducción a trabajar con MVC 3](../../older-versions/getting-started-with-aspnet-mvc3/cs/intro-to-aspnet-mvc-3.md) o [MVC Music Store](../../older-versions/mvc-music-store/mvc-music-store-part-1.md) tutoriales.
+> Si usa ASP.NET MVC 3, se recomienda seguir los tutoriales [de la introducción con MVC 3](../../older-versions/getting-started-with-aspnet-mvc3/cs/intro-to-aspnet-mvc-3.md) o MVC [Music Store](../../older-versions/mvc-music-store/mvc-music-store-part-1.md) .
 
-## <a name="nerddinner-step-4-controllers-and-views"></a>Paso 4 de NerdDinner: Controladores y vistas
+## <a name="nerddinner-step-4-controllers-and-views"></a>NerdDinner paso 4: Controladores y vistas
 
-Con marcos web tradicional (ASP clásico, PHP, ASP.NET Web Forms, etcetera), las direcciones URL entrantes suelen asignarse a los archivos en disco. Por ejemplo: una solicitud para una dirección URL como "/ Products.aspx" o "/ Products.php" podría ser procesados por un archivo "Products.aspx" o "Products.php".
+Con los marcos web tradicionales (ASP clásico, PHP, Web Forms de ASP.NET, etc.), las direcciones URL de entrada se asignan normalmente a archivos en disco. Por ejemplo: una solicitud para una dirección URL como "/Products.aspx" o "/Products.php" puede ser procesada por un archivo "Products. aspx" o "Products. php".
 
-Marcos basados en Web MVC asignan las direcciones URL al código del servidor de forma ligeramente diferente. En lugar de asignar direcciones URL entrantes a los archivos, en su lugar asignar URL a métodos en clases. Estas clases se denominan "Controladores" y son responsables de procesar las solicitudes HTTP entrantes, control de entrada del usuario, recuperar y guardar los datos y determinar la respuesta enviada al cliente (Mostrar HTML, descargar un archivo, redirigir a otro Dirección URL, etcetera).
+Los marcos MVC basados en Web asignan direcciones URL al código del servidor de una manera ligeramente diferente. En lugar de asignar las direcciones URL entrantes a los archivos, asignan direcciones URL a métodos en las clases. Estas clases se denominan "controladores" y son responsables del procesamiento de solicitudes HTTP entrantes, el control de la entrada del usuario, la recuperación y el almacenamiento de datos, y la determinación de la respuesta que se devuelve al cliente (mostrar HTML, descargar un archivo, redirigir a otro URL, etc.).
 
-Ahora que hemos creado un modelo básico para nuestra aplicación NerdDinner, el siguiente paso será agregar un controlador a la aplicación que se aprovecha para proporcionar a los usuarios una experiencia de navegación de lista/detalles de datos para las cenas en nuestro sitio.
+Ahora que hemos creado un modelo básico para nuestra aplicación de NerdDinner, el siguiente paso será agregar un controlador a la aplicación que aproveche las ventajas del mismo para proporcionar a los usuarios una experiencia de navegación de lista y detalles de datos para las cenas en nuestro sitio.
 
-### <a name="adding-a-dinnerscontroller-controller"></a>Agregar un controlador de DinnersController
+### <a name="adding-a-dinnerscontroller-controller"></a>Adición de un controlador de DinnersController
 
-Nos comenzar con el botón secundario en la carpeta "Controladores" dentro de nuestro proyecto web y, a continuación, seleccione el **Add -&gt;controlador** comando de menú (también puede ejecutar este comando escribiendo Ctrl-M, Ctrl-C):
+Comenzaremos haciendo clic con el botón derecho en la carpeta "Controllers" dentro de nuestro proyecto web y, a continuación, seleccionaremos el comando de menú **Agregar controlador de&gt;** (también puede ejecutar este comando escribiendo Ctrl-M, Ctrl-C):
 
 ![](use-controllers-and-views-to-implement-a-listingdetails-ui/_static/image1.png)
 
-Se abrirá el cuadro de diálogo "Agregar controlador":
+Se abrirá el cuadro de diálogo "agregar controlador":
 
 ![](use-controllers-and-views-to-implement-a-listingdetails-ui/_static/image2.png)
 
-Se le asigne un nombre del nuevo controlador "DinnersController" y haga clic en el botón "Agregar". Visual Studio, a continuación, agregará un archivo DinnersController.cs bajo nuestro directorio \Controllers:
+Asignaremos el nombre "DinnersController" al nuevo controlador y hacer clic en el botón "agregar". A continuación, Visual Studio agregará un archivo DinnersController.cs en nuestro directorio \Controllers:
 
 ![](use-controllers-and-views-to-implement-a-listingdetails-ui/_static/image3.png)
 
-También se abrirá la nueva clase DinnersController dentro del editor de código.
+También abrirá la nueva clase DinnersController en el editor de código.
 
-### <a name="adding-index-and-details-action-methods-to-the-dinnerscontroller-class"></a>Adición de Index() y Details() los métodos de acción a la clase DinnersController
+### <a name="adding-index-and-details-action-methods-to-the-dinnerscontroller-class"></a>Agregar métodos de acción index () y Details () a la clase DinnersController
 
-Queremos permitir a que los visitantes con nuestra aplicación para examinar una lista de instancias dinners próximas y permitirles hacer clic en cualquier cena en la lista para ver los detalles específicos sobre él. Haremos esto mediante la publicación de las siguientes direcciones URL desde nuestra aplicación:
+Queremos habilitar visitantes con nuestra aplicación para examinar una lista de las próximas cenas y permitirles hacer clic en cualquier cena de la lista para ver detalles específicos sobre ella. Haremos esto mediante la publicación de las siguientes direcciones URL desde nuestra aplicación:
 
 | **URL** | **Propósito** |
 | --- | --- |
-| */Dinners/* | Mostrar una lista HTML de próximas dinners |
-| */ Dinners/detalles / [id]* | Mostrar los detalles sobre una cena específico indicado por un parámetro "id" incrustado dentro de la dirección URL: que coincidirá con el DinnerID de la cena en la base de datos. Por ejemplo: /Dinners/Details/2 mostraría una página HTML con detalles acerca de la cena cuyo valor DinnerID es 2. |
+| */Dinners/* | Mostrar una lista HTML de las próximas cenas |
+| */Dinners/Details/[id.]* | Muestra detalles sobre una cena específica indicada por un parámetro "ID" insertado en la dirección URL, que coincidirá con el DinnerID de la cena en la base de datos. Por ejemplo:/Dinners/Details/2 mostraría una página HTML con detalles sobre la cena cuyo valor DinnerID es 2. |
 
-Implementaciones iniciales de estas direcciones URL se publicarán agregando dos público "métodos de acción" a nuestra clase DinnersController como a continuación:
+Publicaremos implementaciones iniciales de estas direcciones URL agregando dos "métodos de acción" públicos a nuestra clase DinnersController como se muestra a continuación:
 
 [!code-csharp[Main](use-controllers-and-views-to-implement-a-listingdetails-ui/samples/sample1.cs)]
 
-A continuación, se podrá ejecutar la aplicación NerdDinner y use nuestro explorador para invocarlos. Escribir en el *"/ Dinners /"* hará que la dirección URL de nuestro *Index()* método a ejecutar y lo enviará de vuelta la respuesta siguiente:
+A continuación, ejecutaremos la aplicación NerdDinner y usaremos nuestro explorador para invocarla. Al escribir la dirección URL *"/Dinners/"* , se ejecutará el método *index ()* y se devolverá la siguiente respuesta:
 
 ![](use-controllers-and-views-to-implement-a-listingdetails-ui/_static/image4.png)
 
-Escribir en el *"/ Dinners/detalles/2"* hará que la dirección URL de nuestro *Details()* método para ejecutar y volver a enviar la respuesta siguiente:
+Al escribir la dirección URL *"/Dinners/details/2"* , se ejecutará nuestro método *Details ()* y se devolverá la siguiente respuesta:
 
 ![](use-controllers-and-views-to-implement-a-listingdetails-ui/_static/image5.png)
 
-Tal vez se pregunte: ¿Cómo supo ASP.NET MVC para crear nuestra clase DinnersController e invocar dichos métodos? Comprender que vamos a echar un vistazo a cómo funciona el enrutamiento.
+Es posible que se pregunte: ¿cómo ASP.NET MVC sabía crear nuestra clase DinnersController e invocar esos métodos? Para comprenderlo, echemos un vistazo rápido a cómo funciona el enrutamiento.
 
-### <a name="understanding-aspnet-mvc-routing"></a>Understanding ASP.NET MVC enrutamiento
+### <a name="understanding-aspnet-mvc-routing"></a>Descripción del enrutamiento de ASP.NET MVC
 
-ASP.NET MVC incluye un eficaz motor de enrutamiento de dirección URL que proporciona mucha flexibilidad para controlar cómo se asignan las direcciones URL a las clases de controlador. Permite personalizar completamente cómo ASP.NET MVC elige qué clase de controlador para crear el método va a invocar en él, así como configurar maneras diferentes que las variables pueden se analiza desde la dirección URL o la cadena de consulta automáticamente y se pasa al método como parámetro argumentos. Ofrece la flexibilidad necesaria para totalmente optimizar un sitio para SEO (optimización de motor de búsqueda), así como publicar cualquier estructura de dirección URL que queremos desde una aplicación.
+ASP.NET MVC incluye un potente motor de enrutamiento de direcciones URL que proporciona una gran flexibilidad a la hora de controlar cómo se asignan las direcciones URL a las clases de controlador. Nos permite personalizar por completo cómo ASP.NET MVC elige qué clase de controlador se debe crear, qué método se debe invocar en ella, así como configurar diferentes maneras en que las variables se pueden analizar automáticamente desde la dirección URL/QueryString y pasar al método como argumentos de parámetro. Ofrece la flexibilidad de optimizar completamente un sitio para SEO (optimización del motor de búsqueda), así como publicar cualquier estructura de direcciones URL que desee de una aplicación.
 
-De forma predeterminada, los nuevos proyectos de ASP.NET MVC vienen con un conjunto preconfigurado de reglas de enrutamiento de direcciones URL ya está registrado. Esto nos permite empezar fácilmente en una aplicación sin tener que configurar explícitamente nada. Los registros de regla de enrutamiento predeterminada pueden encontrarse dentro de la clase "Application" de nuestros proyectos, que se pueden abrir haciendo doble clic en el archivo "Global.asax" en la raíz de nuestro proyecto:
+De forma predeterminada, los nuevos proyectos de ASP.NET MVC acompañan a un conjunto preconfigurado de reglas de enrutamiento de direcciones URL ya registradas. Esto nos permite empezar a trabajar fácilmente en una aplicación sin tener que configurar nada explícitamente. Los registros de reglas de enrutamiento predeterminados se pueden encontrar dentro de la clase "Application" de nuestros proyectos, que podemos abrir haciendo doble clic en el archivo "global. asax" en la raíz del proyecto:
 
 ![](use-controllers-and-views-to-implement-a-listingdetails-ui/_static/image6.png)
 
-Las reglas de enrutamiento de ASP.NET MVC predeterminada se registran en el método "RegisterRoutes" de esta clase:
+Las reglas de enrutamiento de MVC de ASP.NET predeterminadas se registran en el método "RegisterRoutes" de esta clase:
 
 [!code-csharp[Main](use-controllers-and-views-to-implement-a-listingdetails-ui/samples/sample2.cs)]
 
-Las rutas de". MapRoute() "llamada al método anterior registra una regla de enrutamiento predeterminado que asigna las direcciones URL entrantes a las clases de controlador con el formato de dirección URL:" / {controller} / {action} / {id} ", donde"controlador"es el nombre de la clase de controlador para crear una instancia,"action"es el nombre de un método público que se invocará en la base de datos e "id" es un parámetro opcional incrustado dentro de la dirección URL que puede pasarse como argumento al método. El tercer parámetro transferido a la llamada al método "MapRoute()" es un conjunto de valores predeterminados que se usará para los valores de controlador / / Id. de acción en caso de que no están presentes en la dirección URL (controlador = "Hogar" Action = "Index", Id = "").
+Las rutas. La llamada al método MapRoute () "registra una regla de enrutamiento predeterminada que asigna las direcciones URL entrantes a las clases de controlador mediante el formato de dirección URL:"/{Controller}/{Action}/{ID} ", donde" Controller "es el nombre de la clase de controlador para crear una instancia," Action "es el nombre de un método público que se va a invocar en él y" ID "es un parámetro opcional incrustado en la dirección URL que se puede pasar como argumento al método. El tercer parámetro pasado a la llamada al método "MapRoute ()" es un conjunto de valores predeterminados que se usarán para los valores de controlador/acción/identificador en caso de que no estén presentes en la dirección URL (Controller = "Home", Action = "index", ID = "").
 
-A continuación es una tabla que muestra cómo una variedad de direcciones URL se asignan mediante el valor predeterminado "<em>/ {controladores} / {action} / {id}"</em>regla de ruta:
+A continuación se muestra una tabla que muestra cómo se asignan varias direcciones URL mediante la regla de ruta predeterminada "<em>/{Controllers}/{Action}/{ID}"</em>:
 
-| **URL** | **Clase de controlador** | **Método de acción** | **Parámetros pasados** |
+| **URL** | **Controller (clase)** | **Método de acción** | **Parámetros pasados** |
 | --- | --- | --- | --- |
-| */Dinners/Details/2* | DinnersController | Details(ID) | id=2 |
-| */Dinners/Edit/5* | DinnersController | Edit(ID) | id=5 |
+| */Dinners/Details/2* | DinnersController | Detalles (ID.) | ID. = 2 |
+| */Dinners/Edit/5* | DinnersController | Editar (ID.) | ID. = 5 |
 | */Dinners/Create* | DinnersController | Create() | N/D |
-| */ Dinners* | DinnersController | Index() | N/D |
-| */Home* | HomeController | Index() | N/D |
-| */* | HomeController | Index() | N/D |
+| */Dinners* | DinnersController | Index () | N/D |
+| */Home* | HomeController | Index () | N/D |
+| */* | HomeController | Index () | N/D |
 
-Las tres últimas filas muestran los valores predeterminados (controlador = Home, acción = índice, Id = "") que se va a usar. Dado que el método "Index" está registrado como el nombre de acción predeterminada si no se especifica uno, el "/ Dinners" y "/ Home" causa de las direcciones URL del método de acción Index() que se invocará en sus clases de controlador. Dado que el controlador "Home" está registrado como el controlador predeterminado si no se especifica uno, la dirección URL "/" hace HomeController crearse y el método de acción Index() en que se invoque.
+Las tres últimas filas muestran los valores predeterminados (Controller = Home, Action = index, ID = "") que se están usando. Dado que el método "index" está registrado como el nombre de la acción predeterminada si no se especifica ninguno, las direcciones URL "/Dinners" y "/Home" hacen que se invoque el método de acción index () en sus clases de controlador. Dado que el controlador "Home" está registrado como controlador predeterminado si no se especifica ninguno, la dirección URL "/" hace que se cree el HomeController y el método de acción index () que se va a invocar.
 
-Si no le gusta estas reglas de enrutamiento de dirección URL predeterminada, la buena noticia es que son fáciles de cambiar: solo editarlos dentro del método RegisterRoutes anterior. Para nuestra aplicación NerdDinner, sin embargo, no vamos a cambiar cualquiera de las reglas de enrutamiento de dirección URL predeterminada, en lugar de ello, utilizaremos como-es.
+Si no le gusta estas reglas de enrutamiento de direcciones URL predeterminadas, la buena noticia es que son fáciles de cambiar, simplemente editarlas en el método RegisterRoutes anterior. Sin embargo, para nuestra aplicación NerdDinner, no vamos a cambiar ninguna de las reglas de enrutamiento de direcciones URL predeterminadas, sino que solo las usaremos tal cual.
 
-### <a name="using-the-dinnerrepository-from-our-dinnerscontroller"></a>Uso de la instancia DinnerRepository desde nuestro DinnersController
+### <a name="using-the-dinnerrepository-from-our-dinnerscontroller"></a>Uso del DinnerRepository de DinnersController
 
-Vamos a reemplazar ahora nuestra implementación actual de la DinnersController Index() y Details() métodos de acción con las implementaciones que usan nuestro modelo.
+Vamos a reemplazar ahora nuestra implementación actual de los métodos de acción index () y Details () de DinnersController con implementaciones que usan nuestro modelo.
 
-Vamos a usar la clase de instancia DinnerRepository que hemos creado anteriormente para implementar el comportamiento. Estudiaremos comience agregando una instrucción "using" que hace referencia el espacio de nombres "NerdDinner.Models" y, a continuación, declare una instancia de nuestra instancia DinnerRepository como un campo en nuestra clase DinnerController.
+Usaremos la clase DinnerRepository que creamos anteriormente para implementar el comportamiento. Comenzaremos agregando una instrucción "Using" que haga referencia al espacio de nombres "NerdDinner. models" y, a continuación, declare una instancia de DinnerRepository como un campo en nuestra clase DinnerController.
 
-Más adelante en este capítulo se presentaré el concepto de "Inserción de dependencias" y mostrar otra manera de los controladores obtener una referencia a una instancia DinnerRepository que permite una mejor unidad pruebas – pero derecho ahora simplemente vamos a crear una instancia de nuestra instancia DinnerRepository en línea como a continuación.
+Más adelante en este capítulo introduciremos el concepto de "inserción de dependencias" y mostraremos otra manera para que nuestros controladores obtengan una referencia a un DinnerRepository que permita una mejor prueba unitaria, pero, de momento, solo crearemos una instancia de nuestro DinnerRepository como se indica a continuación.
 
 [!code-csharp[Main](use-controllers-and-views-to-implement-a-listingdetails-ui/samples/sample3.cs)]
 
-Ahora estamos preparados generar una respuesta HTML con nuestros objetos del modelo de datos recuperados.
+Ahora estamos preparados para volver a generar una respuesta HTML mediante nuestros objetos de modelo de datos recuperados.
 
-### <a name="using-views-with-our-controller"></a>Utilizar vistas con nuestro controlador
+### <a name="using-views-with-our-controller"></a>Uso de vistas con nuestro controlador
 
-Aunque es posible escribir código en nuestros métodos de acción para ensamblar HTML y, a continuación, utilice el *Response.Write ()* método auxiliar para enviar al cliente, que enfoque pasa a ser bastante difícil rápidamente. Un enfoque mucho mejor es para que podamos realizar solo aplicación y la lógica de datos dentro de nuestros métodos de acción de DinnersController y, a continuación, pasar los datos necesarios para presentar una respuesta HTML a una plantilla de vista"independiente" que es responsable de generar la representación de HTML del mismo. Como veremos en un momento, una plantilla de "ver" es un archivo de texto que normalmente contiene una combinación de marcado HTML y código de representación incrustado.
+Aunque es posible escribir código dentro de los métodos de acción para ensamblar HTML y, a continuación, usar el método auxiliar *Response. Write ()* para devolverlo al cliente, este enfoque resulta bastante difícil de manejar rápidamente. Un enfoque mucho mejor es para nosotros solo realizar la lógica de la aplicación y los datos dentro de los métodos de acción de DinnersController y, a continuación, pasar los datos necesarios para representar una respuesta HTML a una plantilla de "vista" independiente responsable de generar la representación HTML. del mismo. Como veremos en un momento, una plantilla "vista" es un archivo de texto que normalmente contiene una combinación de marcado HTML y código de representación incrustado.
 
-Separar la lógica del controlador de la representación de la vista aporta varias ventajas grandes. En particular ayuda a exigir una "separación de preocupaciones" clara entre el código de aplicación y el código de formato de representación/interfaz de usuario. Esto facilita enormemente en la lógica de aplicación de prueba unitaria de forma aislada de la lógica de procesamiento de la interfaz de usuario. Facilita más tarde modificar las plantillas de representación de la interfaz de usuario sin tener que realizar cambios de código de aplicación. Y puede que resulte más fácil para los desarrolladores y diseñadores colaborar en proyectos.
+La separación de la lógica del controlador de nuestra representación de la vista aporta varias ventajas. En concreto, ayuda a aplicar una "separación de preocupaciones" clara entre el código de la aplicación y el código de formato y representación de la interfaz de usuario. Esto hace que sea mucho más fácil realizar pruebas unitarias de la lógica de la aplicación en el aislamiento de la lógica de representación de la interfaz de usuario. De este modo, resulta más fácil modificar las plantillas de representación de la interfaz de usuario sin tener que realizar cambios en el código de la aplicación. Y puede facilitar a los desarrolladores y diseñadores la colaboración en proyectos.
 
-Podemos actualizar nuestra clase DinnersController para indicar que queremos usar una plantilla de vista para volver a enviar una respuesta de IU de HTML cambiando las firmas de método de nuestros métodos de acción de dos de tener un tipo de valor devuelto de "void" en su lugar, tener un tipo de valor devuelto de "ActionResult". A continuación, podemos llamar a la *View()* método auxiliar en la clase base del controlador para devolver un objeto "ViewResult" similar a la siguiente:
+Podemos actualizar nuestra clase DinnersController para indicar que deseamos usar una plantilla de vista para devolver una respuesta de la interfaz de usuario HTML cambiando las signaturas de método de los dos métodos de acción de tener un tipo de valor devuelto de "Void" a en su lugar un tipo de valor devuelto de "ActionResult". A continuación, podemos llamar al método auxiliar *View ()* en la clase base del controlador para devolver un objeto "ViewResult" como el siguiente:
 
 [!code-csharp[Main](use-controllers-and-views-to-implement-a-listingdetails-ui/samples/sample4.cs)]
 
-La firma de la *View()* método auxiliar, usamos anteriormente como el siguiente:
+La firma del método auxiliar *View ()* que usamos anteriormente tiene el siguiente aspecto:
 
 ![](use-controllers-and-views-to-implement-a-listingdetails-ui/_static/image7.png)
 
-El primer parámetro para el *View()* método auxiliar es el nombre del archivo de plantilla de vista que desea usar para representar la respuesta HTML. El segundo parámetro es un objeto de modelo que contiene los datos que necesita la plantilla de vista para representar la respuesta HTML.
+El primer parámetro del método auxiliar *View ()* es el nombre del archivo de plantilla de vista que se desea usar para representar la respuesta HTML. El segundo parámetro es un objeto de modelo que contiene los datos que necesita la plantilla de vista para representar la respuesta HTML.
 
-Dentro de nuestro método de acción Index() estamos llamando a la *View()* método auxiliar y que indica que van a representar un listado de HTML de instancias dinners mediante una plantilla de vista "Index". La plantilla de vista que estamos pasando una secuencia de objetos de la cena para generar la lista de:
+En nuestro método de acción index (), se llama al método de la aplicación auxiliar *View ()* y se indica que queremos representar una lista HTML de cenas mediante una plantilla de vista "index". Vamos a pasar la plantilla de vista a una secuencia de objetos cenas de la que se va a generar la lista:
 
 [!code-csharp[Main](use-controllers-and-views-to-implement-a-listingdetails-ui/samples/sample5.cs)]
 
-Dentro de nuestro método de acción Details() se intenta recuperar un objeto de la cena con el identificador proporcionado en la dirección URL. Si se encuentra una cena válida que llamamos el *View()* método auxiliar, que indica que deseamos utilizar una plantilla de vista "Detalles" para representar el objeto recuperado de la cena. Si se solicita una cena no válido, se representará un mensaje de error útiles que indica que la cena no existe con una plantilla de vista de "NotFound" (y una versión sobrecargada de la *View()* método auxiliar que simplemente toma el nombre de plantilla ):
+En nuestro método de acción Details (), se intenta recuperar un objeto cena con el identificador proporcionado en la dirección URL. Si se encuentra una cena válida, llamamos al método auxiliar *View ()* , que indica que queremos usar una plantilla de vista "details" para representar el objeto cena recuperado. Si se solicita una cena no válida, se presenta un mensaje de error útil que indica que la cena no existe mediante una plantilla de vista "NotFound" (y una versión sobrecargada del método auxiliar *View ()* que solo toma el nombre de la plantilla):
 
 [!code-csharp[Main](use-controllers-and-views-to-implement-a-listingdetails-ui/samples/sample6.cs)]
 
-Implementemos ahora las plantillas de vista de "NotFound", "Detalles" y "Index".
+Vamos a implementar ahora las plantillas de vista "NotFound", "details" y "index".
 
-### <a name="implementing-the-notfound-view-template"></a>Implementar la plantilla de vista de "NotFound"
+### <a name="implementing-the-notfound-view-template"></a>Implementación de la plantilla de vista "NotFound"
 
-Comenzaremos por implementar la plantilla de vista de "NotFound", que muestra un mensaje de error descriptivo que indica que no se encuentra la cena solicitada.
+Comenzaremos implementando la plantilla de vista "NotFound", que muestra un mensaje de error descriptivo que indica que no se puede encontrar la cena solicitada.
 
-Crearemos una nueva plantilla de vista colocando el cursor de texto dentro de un método de acción de controlador y, a continuación, haga clic en y elija el comando de menú "Agregar vista" (también podemos ejecutar este comando escribiendo Ctrl-M, Ctrl-V):
+Vamos a crear una nueva plantilla de vista colocando el cursor de texto dentro de un método de acción del controlador y, a continuación, hacer clic con el botón derecho y elegir el comando de menú "agregar vista" (también podemos ejecutar este comando escribiendo Ctrl-M, Ctrl-V):
 
 ![](use-controllers-and-views-to-implement-a-listingdetails-ui/_static/image8.png)
 
-Se abrirá un cuadro de diálogo "Agregar vista", como a continuación. De forma predeterminada, que el cuadro de diálogo rellenará automáticamente el nombre de la vista para crear para que coincida con el nombre del método de acción el cursor se encontraba cuando se inicia el cuadro de diálogo (en este caso, "Detalles"). Puesto que deseamos implementar primero la plantilla de "NotFound", se deberá invalidar este nombre de la vista y establecerlo en su lugar "NotFound":
+Se abrirá un cuadro de diálogo "agregar vista" como se muestra a continuación. De forma predeterminada, el cuadro de diálogo rellenará previamente el nombre de la vista que se va a crear para que coincida con el nombre del método de acción en el que se encontraba el cursor cuando se inició el cuadro de diálogo (en este caso, "details"). Dado que queremos implementar primero la plantilla "NotFound", reemplazaremos este nombre de vista y lo estableceremos en, en su lugar, en "NotFound":
 
 ![](use-controllers-and-views-to-implement-a-listingdetails-ui/_static/image9.png)
 
-Cuando hacemos clic en el botón "Agregar", Visual Studio creará una nueva plantilla de vista de "NotFound.aspx" para nosotros dentro del directorio "\Views\Dinners" (que también se creará si aún no existe el directorio):
+Cuando hacemos clic en el botón "agregar", Visual Studio creará una nueva plantilla de vista "NotFound. aspx" para nosotros en el directorio "\Views\Dinners" (que también creará si el directorio no existe ya):
 
 ![](use-controllers-and-views-to-implement-a-listingdetails-ui/_static/image10.png)
 
-También abrirá nuestra nueva plantilla de vista "NotFound.aspx" en el editor de código:
+También abrirá nuestra nueva plantilla de vista "NotFound. aspx" en el editor de código:
 
 ![](use-controllers-and-views-to-implement-a-listingdetails-ui/_static/image11.png)
 
-Plantillas de vista de forma predeterminada tienen dos "áreas de contenido" que podemos agregar contenido y el código. La primera nos permite personalizar la "title" de la página HTML enviado de vuelta. El segundo nos permite personalizar el "contenido principal" de la página HTML enviado de vuelta.
+De forma predeterminada, las plantillas de vista tienen dos "regiones de contenido" donde se pueden agregar contenido y código. Lo primero nos permite personalizar el "título" de la página HTML que se devuelve. La segunda nos permite personalizar el "contenido principal" de la página HTML que se devuelve.
 
-Para implementar la plantilla de vista de "NotFound" vamos a agregar algún contenido básico:
+Para implementar nuestra plantilla de vista "NotFound", agregaremos contenido básico:
 
 [!code-aspx[Main](use-controllers-and-views-to-implement-a-listingdetails-ui/samples/sample7.aspx)]
 
-Se puede, a continuación, pruebe el código dentro del explorador. Para hacer esto, vamos a petición la *"/ Dinners/detalles/9999"* dirección URL. Esto hará referencia a una cena que actualmente no existe en la base de datos y hará que el método de acción DinnersController.Details() representar la plantilla de vista de "NotFound":
+A continuación, podemos probarla en el explorador. Para ello, vamos a solicitar la dirección URL *"/Dinners/details/9999"* . Esto hará referencia a una cena que no existe actualmente en la base de datos y hará que nuestro método de acción DinnersController. Details () presente la plantilla de vista "NotFound":
 
 ![](use-controllers-and-views-to-implement-a-listingdetails-ui/_static/image12.png)
 
-Una cosa que observará en la captura de pantalla anterior es que la plantilla de vista básica ha heredado de un montón de HTML que rodea el contenido en la pantalla principal. Esto es porque la plantilla de vista está usando una plantilla de "página principal" que nos permite aplicar un diseño coherente en todas las vistas en el sitio. Trataremos cómo funcionan en una parte posterior de este tutorial más las páginas maestras.
+Una de las cosas que observará en la captura de pantalla anterior es que nuestra plantilla de vista básica ha heredado un montón de HTML que rodea el contenido principal de la pantalla. Esto se debe a que nuestra plantilla de vista está usando una plantilla de "página maestra" que nos permite aplicar un diseño coherente en todas las vistas del sitio. Veremos cómo funcionan más las páginas maestras más adelante en este tutorial.
 
-### <a name="implementing-the-details-view-template"></a>Implementar la plantilla de vista "Detalles"
+### <a name="implementing-the-details-view-template"></a>Implementación de la plantilla de vista "details"
 
-Implementemos ahora la plantilla de vista "Detalles": lo que generará HTML para un modelo único de la cena.
+Ahora vamos a implementar la plantilla de vista "details", que generará HTML para un único modelo de cena.
 
-Se deberá hacer esto colocando el cursor de texto dentro del método de acción de detalles y, a continuación, haga clic en y elija el comando de menú "Agregar vista" (o presione Ctrl-M, Ctrl-V):
+Haremos esto colocando el cursor de texto en el método de acción de detalles y luego haga clic con el botón derecho y elija el comando de menú "agregar vista" (o presione Ctrl-M, Ctrl-V):
 
 ![](use-controllers-and-views-to-implement-a-listingdetails-ui/_static/image13.png)
 
-Se abrirá el cuadro de diálogo "Agregar vista". Mantendremos el nombre de vista predeterminado ("Detalles"). También la casilla "Crear una vista fuertemente tipada" en el cuadro de diálogo y seleccionar (mediante la lista desplegable de combobox) el nombre del tipo de modelo que estamos pasando desde el controlador a la vista. Para esta vista que estamos pasando un objeto de la cena (el nombre completo de este tipo es: "NerdDinner.Models.Dinner"):
+Se abrirá el cuadro de diálogo "agregar vista". Conservaremos el nombre de la vista predeterminada ("details"). También seleccionaremos la casilla "crear una vista fuertemente tipada" en el cuadro de diálogo y seleccionaremos (mediante la lista desplegable del cuadro combinado) el nombre del tipo de modelo que pasamos del controlador a la vista. En esta vista vamos a pasar un objeto cena (el nombre completo de este tipo es: "NerdDinner. Models. cena"):
 
 ![](use-controllers-and-views-to-implement-a-listingdetails-ui/_static/image14.png)
 
-A diferencia de la plantilla anterior, donde se decidió crear una "Vista vacía", esta vez que aquí se elegirá automáticamente "aplicar la técnica scaffolding" la vista mediante una plantilla de "Detalles". Podemos indicar esto cambiando la lista desplegable "Ver el contenido" en el cuadro de diálogo anterior.
+A diferencia de la plantilla anterior, donde decidimos crear una "vista vacía", esta vez elegiremos automáticamente "scaffolding" a la vista mediante una plantilla "details". Podemos indicarlo cambiando la lista desplegable "ver contenido" en el cuadro de diálogo anterior.
 
-"Scaffolding" generará una implementación inicial de la plantilla de vista de detalles basándose en el objeto Dinner que estamos pasando a él. Esto proporciona una manera fácil para que podamos empezar a trabajar rápidamente en nuestra implementación de plantilla de vista.
+"Scaffolding" generará una implementación inicial de la plantilla de vista de detalles basada en el objeto cena que pasamos a ella. Esto proporciona una manera fácil de empezar a trabajar rápidamente en nuestra implementación de la plantilla de vista.
 
-Cuando hacemos clic en el botón "Agregar", Visual Studio creará un nuevo archivo de plantilla de vista "Details.aspx" para nosotros en nuestro directorio "\Views\Dinners":
+Cuando hacemos clic en el botón "agregar", Visual Studio creará un nuevo archivo de plantilla de vista "details. aspx" para nosotros en nuestro directorio "\Views\Dinners":
 
 ![](use-controllers-and-views-to-implement-a-listingdetails-ui/_static/image15.png)
 
-También se abrirá nuestra nueva plantilla de vista "Details.aspx" en el editor de código. Contendrá una implementación de scaffold inicial de una vista de detalles basada en un modelo de la cena. El motor de scaffolding usa la reflexión de .NET para ver las propiedades públicas expuestas en la clase que lo ha pasado y agregará el contenido adecuado en función de cada tipo que se encuentra:
+También abrirá nuestra nueva plantilla de vista "details. aspx" en el editor de código. Contendrá una implementación de scaffolding inicial de una vista de detalles basada en un modelo de cena. El motor de scaffolding usa la reflexión de .NET para ver las propiedades públicas expuestas en la clase pasada y agregará el contenido adecuado en función de cada tipo que encuentre:
 
 [!code-aspx[Main](use-controllers-and-views-to-implement-a-listingdetails-ui/samples/sample8.aspx)]
 
-Podemos solicitamos la *"/ Dinners/detalles/1"* dirección URL para ver el aspecto de esta implementación de scaffold "Detalles" en el explorador. Utilizando esta dirección URL, se mostrará una de las instancias dinners que se agregan manualmente a nuestra base de datos cuando se crea por primera vez:
+Podemos solicitar la dirección URL *"/Dinners/details/1"* para ver cuál es el aspecto de la implementación de scaffolding "details" en el explorador. El uso de esta dirección URL mostrará una de las cenas que se agregaron manualmente a nuestra base de datos cuando se creó por primera vez:
 
 ![](use-controllers-and-views-to-implement-a-listingdetails-ui/_static/image16.png)
 
-Esto obtiene nos en marcha rápidamente y nos ofrece una implementación inicial de nuestra vista Details.aspx. A continuación, podemos ir y ajustarlo para personalizar la interfaz de usuario para satisfacción nuestra.
+Esto nos permite empezar a trabajar rápidamente y nos proporciona una implementación inicial de la vista details. aspx. A continuación, podemos ir y retocarlo para personalizar la interfaz de usuario a nuestra satisfacción.
 
-Cuando se examina más detenidamente en la plantilla Details.aspx, buscaremos que lo contiene HTML estático, así como código de representación incrustado. &lt;%%&gt; fragmentos de código insertados ejecutan código cuando se representa la plantilla de vista, y &lt;% = %&gt; fragmentos de código insertados ejecute el código contenido en ellos y, a continuación, representar el resultado al flujo de salida de la plantilla.
+Cuando examinemos la plantilla details. aspx más detenidamente, veremos que contiene HTML estático, así como código de representación incrustado. &lt;%%&gt; código de información de código ejecuta código cuando se representa la plantilla de vista y &lt;% =%&gt; fragmentos de código ejecutan el código incluido en ellos y, a continuación, representan el resultado en el flujo de salida de la plantilla.
 
-Podemos escribir código dentro de nuestra vista que tiene acceso al objeto de modelo de "Cena" que se ha pasado desde nuestro controlador mediante una propiedad de "Modelo" fuertemente tipado. Visual Studio nos proporciona intellisense de código completo al obtener acceso a esta propiedad "Model" dentro del editor:
+Podemos escribir código dentro de nuestra vista que tenga acceso al objeto de modelo "cena" que se pasó desde nuestro controlador mediante una propiedad de "modelo" fuertemente tipada. Visual Studio nos proporciona código completo (IntelliSense) al tener acceso a esta propiedad "Model" en el editor:
 
 ![](use-controllers-and-views-to-implement-a-listingdetails-ui/_static/image17.png)
 
-Vamos a hacer algunos ajustes para que el origen de nuestra plantilla de vista de detalles final se parece a esta:
+Vamos a hacer algunos ajustes para que el origen de la plantilla de vista de detalles final tenga el siguiente aspecto:
 
 [!code-aspx[Main](use-controllers-and-views-to-implement-a-listingdetails-ui/samples/sample9.aspx)]
 
-Cuando tenemos acceso a la *"/ Dinners/detalles/1"* URL nuevo se va a representar como el siguiente:
+Cuando accedamos de nuevo a la dirección URL *"/Dinners/details/1"* , ahora se presentará como se indica a continuación:
 
 ![](use-controllers-and-views-to-implement-a-listingdetails-ui/_static/image18.png)
 
-### <a name="implementing-the-index-view-template"></a>Implementar la plantilla de vista "Index"
+### <a name="implementing-the-index-view-template"></a>Implementar la plantilla de vista "índice"
 
-Implementemos ahora la plantilla de vista "Index": lo que generará una lista de instancias Dinners próximas. Tareas pendientes, esta se coloque el cursor de texto dentro del método de acción del índice y a la derecha, a continuación, haga clic en y elija el comando de menú "Agregar vista" (o presione Ctrl-M, Ctrl-V).
+Ahora vamos a implementar la plantilla de vista "index", que generará una lista de las próximas cenas. Para ello, colocaremos el cursor de texto en el método de acción de índice y, a continuación, hacer clic con el botón derecho y elegir el comando de menú "agregar vista" (o presionar Ctrl-M, Ctrl-V).
 
-En el cuadro de diálogo "Agregar vista" se mantendrán la plantilla de vista denominada "Índice" y seleccione la casilla de verificación "Crear una vista fuertemente tipada". Este tiempo se elegirá automáticamente generar una plantilla de vista "List" y seleccione "NerdDinner.Models.Dinner" como el tipo de modelo, pasado a la vista (que ya hayamos indicado vamos a crear una "lista" scaffold hará que el cuadro de diálogo Agregar vista se supone que se están pasar una secuencia de objetos de la cena de nuestro controlador a la vista):
+En el cuadro de diálogo "agregar vista", guardaremos la plantilla de vista denominada "índice" y seleccionaremos la casilla "crear una vista fuertemente tipada". Esta vez, elegiremos generar automáticamente una plantilla de vista "list" y seleccionaremos "NerdDinner. Models. cena" como el tipo de modelo que se pasa a la vista (lo que nos ha indicado que vamos a crear un scaffolding de "lista" hará que el cuadro de diálogo Agregar vista asuma que estamos pasar una secuencia de objetos cenas del controlador a la vista):
 
 ![](use-controllers-and-views-to-implement-a-listingdetails-ui/_static/image19.png)
 
-Cuando hacemos clic en el botón "Agregar", Visual Studio creará un nuevo archivo de plantilla de vista "Index.aspx" para nosotros en nuestro directorio "\Views\Dinners". Aplicará "la técnica scaffolding" una implementación inicial dentro de él que proporciona una lista de tabla HTML de las instancias Dinners pasamos a la vista.
+Cuando hacemos clic en el botón "agregar", Visual Studio creará un nuevo archivo de plantilla de vista "index. aspx" para nosotros en nuestro directorio "\Views\Dinners". "Scaffolding" es una implementación inicial dentro de ella que proporciona una lista de tablas HTML de las cenas que pasamos a la vista.
 
-Cuando se ejecutan la aplicación y el acceso a la *"/ Dinners /"* representará nuestra lista de instancias dinners de dirección URL de este modo:
+Cuando se ejecuta la aplicación y se accede a la dirección URL *"/Dinners/"* , se presentará nuestra lista de cenas, como por ejemplo:
 
 ![](use-controllers-and-views-to-implement-a-listingdetails-ui/_static/image20.png)
 
-La solución de la tabla anterior nos da un diseño de cuadrícula de nuestros datos cena, que no es bastante lo que queremos para nuestro consumidor orientado a la lista de la cena. Podemos actualizar la plantilla de vista Index.aspx y modificarlo para mostrar menos columnas de datos y utilizar un &lt;ul&gt; elemento para representarlos en lugar de una tabla con el código siguiente:
+La solución de tabla anterior nos proporciona un diseño similar a la red de los datos de la cena, que no es lo que queremos para nuestra lista de cenas orientada al consumidor. Podemos actualizar la plantilla de vista index. aspx y modificarla para que muestre menos columnas de datos y usar un elemento &lt;UL&gt; para representarlos en lugar de una tabla mediante el código siguiente:
 
 [!code-aspx[Main](use-controllers-and-views-to-implement-a-listingdetails-ui/samples/sample10.aspx)]
 
-Usamos la palabra clave de "var" dentro de la instrucción foreach anterior se recorrer cada cena en nuestro modelo. Aquellos familiarizados con C# 3.0 podrían pensar que usar "var" significa que el objeto de la cena es en tiempo de ejecución. En su lugar, significa que el compilador está utilizando la inferencia de tipos con respecto a la propiedad fuertemente tipada "Model" (que es de tipo "IEnumerable&lt;Dinner&gt;") y compilar la variable local "cena" como un tipo de la cena: lo que significa que obtenemos completas IntelliSense y buscando dentro de bloques de código de tiempo de compilación:
+Usamos la palabra clave "var" dentro de la instrucción foreach anterior a medida que se recorre cada cena del modelo. Los que no están C# familiarizados con 3,0 pueden creer que el uso de "var" significa que el objeto cena está enlazado en tiempo de ejecución. En su lugar, significa que el compilador usa la inferencia de tipos en la propiedad "Model" fuertemente tipada (que es de tipo "IEnumerable&lt;cena&gt;") y compilar la variable local "cena" como tipo de cena, lo que significa que obtenemos la comprobación completa de IntelliSense y tiempo de compilación en bloques de código:
 
 ![](use-controllers-and-views-to-implement-a-listingdetails-ui/_static/image21.png)
 
-Cuando se actualice la vista el */dinners* dirección URL de nuestro explorador nuestra vista actualizada ahora parece a continuación:
+Cuando se alcanza la actualización en la dirección URL de */Dinners* en nuestro explorador, nuestra vista actualizada ahora tiene el siguiente aspecto:
 
 ![](use-controllers-and-views-to-implement-a-listingdetails-ui/_static/image22.png)
 
-Esto está buscando una mejor – pero todavía no está completamente allí. El último paso es habilitar a los usuarios finales clic Dinners individuales en la lista y ver los detalles sobre ellos. Se implementará con la representación de elementos de hipervínculo HTML que vincula al método de acción de detalles en nuestra DinnersController.
+Esto es más eficaz, pero aún no está completamente. El último paso consiste en permitir que los usuarios finales haga clic en las cenas individuales en la lista y vea los detalles sobre ellas. Lo implementaremos mediante la representación de elementos de hipervínculo HTML que se vinculan al método de acción details en nuestro DinnersController.
 
-Podemos generar estas hipervínculos dentro de nuestra vista de índice en una de dos maneras. La primera consiste en crear manualmente HTML &lt;un&gt; elementos como el siguiente, donde incrustamos &lt;%%&gt; se bloquea dentro la &lt;un&gt; elemento HTML:
+Podemos generar estos hipervínculos en nuestra vista de índice de una de estas dos maneras. La primera es crear manualmente HTML &lt;un&gt; elementos como el siguiente, donde se insertan &lt;bloques%%&gt; en el &lt;un elemento HTML&gt;:
 
 ![](use-controllers-and-views-to-implement-a-listingdetails-ui/_static/image23.png)
 
-Es un enfoque alternativo, podemos usar para aprovechar el método de aplicación auxiliar "Html.ActionLink()" integrado en ASP.NET MVC que admite la creación mediante programación un elemento HTML &lt;un&gt; elemento que se vincula a otro método de acción en un Controlador:
+Un enfoque alternativo que se puede usar es aprovechar el método auxiliar integrado "HTML. ActionLink ()" en ASP.NET MVC que admite la creación mediante programación de un elemento HTML &lt;un&gt; elemento que se vincula a otro método de acción en un controlador:
 
 [!code-aspx[Main](use-controllers-and-views-to-implement-a-listingdetails-ui/samples/sample11.aspx)]
 
-El primer parámetro al método auxiliar Html.ActionLink() es el texto del vínculo para mostrar (en este caso el título de la cena), el segundo parámetro es el nombre de acción de controlador que queremos generar el vínculo para (en este caso, el método detalles), y el tercer parámetro es un conjunto de parámetros para enviar a la acción (implementada como un tipo anónimo con valores y nombres de propiedad). En este caso vamos a especificar el parámetro "id" de la cena se desea establecer un vínculo y, debido a la dirección URL de enrutamiento predeterminado de reglas en ASP.NET MVC es "{Controller} / {Action} / {id}" el método auxiliar Html.ActionLink() generará el siguiente resultado:
+Primer parámetro para el código HTML. el método auxiliar ActionLink () es el texto del vínculo que se va a mostrar (en este caso, el título de la cena), el segundo parámetro es el nombre de la acción del controlador en el que se desea generar el vínculo (en este caso, el método Details) y el tercer parámetro es un conjunto de parámetros que se van a enviar a la acción (se implementa como un En este caso, estamos especificando el parámetro "ID" de la cena a la que queremos vincularnos y, dado que la regla de enrutamiento de direcciones URL predeterminada en ASP.NET MVC es "{Controller}/{Action}/{id}", el método auxiliar HTML. ActionLink () generará el siguiente resultado:
 
 [!code-html[Main](use-controllers-and-views-to-implement-a-listingdetails-ui/samples/sample12.html)]
 
-Para nuestra vista Index.aspx se utilizará el enfoque de método de aplicación auxiliar de Html.ActionLink() y tener cada cena en el vínculo de la lista a la dirección URL de los detalles adecuados:
+En nuestra vista index. aspx, usaremos el método de aplicación auxiliar HTML. ActionLink () y cada cena en la lista se vinculará a la dirección URL de detalles adecuada:
 
 [!code-aspx[Main](use-controllers-and-views-to-implement-a-listingdetails-ui/samples/sample13.aspx)]
 
-Y ahora cuando se presione el */dinners* URL nuestra lista cena como el siguiente:
+Y ahora, cuando lleguemos a la dirección URL de */Dinners* , nuestra lista de cenas tiene el siguiente aspecto:
 
 ![](use-controllers-and-views-to-implement-a-listingdetails-ui/_static/image24.png)
 
-Cuando hacemos clic en cualquiera de las instancias Dinners en la lista navegaremos para ver detalles acerca de él:
+Cuando hacemos clic en cualquiera de las cenas de la lista, navegaremos para ver detalles sobre ella:
 
 ![](use-controllers-and-views-to-implement-a-listingdetails-ui/_static/image25.png)
 
-### <a name="convention-based-naming-and-the-views-directory-structure"></a>Basado en convenciones de nomenclatura y la estructura de directorios \Views
+### <a name="convention-based-naming-and-the-views-directory-structure"></a>Nomenclatura basada en Convención y la estructura de directorios \Views
 
-Las aplicaciones de ASP.NET MVC predeterminada usan un directorio basado en convenciones de nomenclatura estructura al resolver las plantillas de vista. Esto permite a los desarrolladores evitar tener que completar una ruta de acceso al hacer referencia a vistas desde dentro de una clase de controlador. De forma predeterminada ASP.NET MVC buscará el archivo de plantilla de vista dentro de la * \Views\[Nombredelcontrolador]\* directorio debajo de la aplicación.
+Las aplicaciones de ASP.NET MVC usan de forma predeterminada una estructura de nomenclatura de directorios basada en convenciones al resolver plantillas de vista. Esto permite a los desarrolladores evitar tener que calificar completamente una ruta de acceso de ubicación al hacer referencia a vistas desde una clase de controlador. De forma predeterminada, ASP.NET MVC buscará el archivo de plantilla de vista en el directorio * \Views\[ControllerName]\* debajo de la aplicación.
 
-Por ejemplo, hemos trabajado en la clase DinnersController: lo que hace referencia explícitamente a tres plantillas de vista: "Index", "Detalles" y "NotFound". ASP.NET MVC predeterminada buscará estas vistas dentro de la *\Views\Dinners* directorio bajo el directorio raíz de la aplicación:
+Por ejemplo, hemos estado trabajando en la clase DinnersController, que hace referencia explícitamente a tres plantillas de vista: "index", "details" y "NotFound". ASP.NET MVC buscará estas vistas en el directorio *\Views\Dinners* debajo del directorio raíz de la aplicación de forma predeterminada:
 
 ![](use-controllers-and-views-to-implement-a-listingdetails-ui/_static/image26.png)
 
-Tenga en cuenta anteriormente cómo hay actualmente son tres clases de controlador en el proyecto (DinnersController, HomeController y AccountController: se agregaron los dos últimos de forma predeterminada cuando se crea el proyecto), y hay tres de los subdirectorios (uno para cada controlador) dentro del directorio \Views.
+Observe sobre cómo existen actualmente tres clases de controlador en el proyecto (DinnersController, HomeController y AccountController; los dos últimos se agregaron de forma predeterminada cuando se creó el proyecto) y hay tres subdirectorios (uno para cada uno). Controller) en el directorio \Views
 
-Las vistas que se hace referencia desde los controladores de inicio y las cuentas resolverán automáticamente sus plantillas de vista de los respectivos *\Views\Home* y *\Views\Account* directorios. El *\Views\Shared* subdirectorio proporciona una manera de almacenar las plantillas de vista que se reutilizan entre varios controladores dentro de la aplicación. Cuando intente resolver una plantilla de vista ASP.NET MVC, comprobará primero dentro de la *\Views\[controlador]* directorio específico, y si no encuentra la plantilla de vista se buscará en el *\Views\ Compartido* directory.
+Las vistas a las que se hace referencia desde los controladores Home y accounts resolverán automáticamente sus plantillas de vista a partir de los directorios *\Views\Home* y *\Views\Account* correspondientes. El subdirectorio *\Views\Shared* proporciona una manera de almacenar las plantillas de vista que se reutilizan en varios controladores dentro de la aplicación. Cuando ASP.NET MVC intenta resolver una plantilla de vista, primero comprobará en el directorio específico de *\Views\[Controller]* y, si no encuentra la plantilla de vista allí, se buscará en el directorio *\Views\Shared*
 
-Cuando se trata de nomenclatura de plantillas de vista individuales, la recomendación es que la plantilla de vista comparten el mismo nombre que el método de acción que ha provocado que representar. Por ejemplo, por encima de nuestro índice"" método de acción es mediante la vista de "Índice" para representar el resultado de la vista y el método de acción "Detalles" está usando la vista "Detalles" para representar sus resultados. Esto facilita ver rápidamente qué plantilla se asocia con cada acción.
+En lo que se refiere a las plantillas de vista individuales, la guía recomendada es hacer que la plantilla de vista comparta el mismo nombre que el método de acción que hizo que se representara. Por ejemplo, en el método de acción "índice" se usa la vista "índice" para representar el resultado de la vista y el método de acción "details" está usando la vista "details" para representar los resultados. Esto hace que sea fácil ver rápidamente qué plantilla está asociada a cada acción.
 
-Los desarrolladores no es necesario especificar explícitamente el nombre de la plantilla de vista cuando la plantilla de vista tiene el mismo nombre que el método de acción que se invoca en el controlador. En su lugar, simplemente para pasar el objeto de modelo al método auxiliar "View()" (sin especificar el nombre de vista) y ASP.NET MVC deducirá automáticamente que deseamos utilizar el *\Views\[Nombredelcontrolador]\[ActionName]* plantilla de vista en el disco para representarlo.
+No es necesario que los desarrolladores especifiquen explícitamente el nombre de la plantilla de vista cuando la plantilla de vista tiene el mismo nombre que el método de acción que se invoca en el controlador. En su lugar, se puede pasar el objeto de modelo al método auxiliar "View ()" (sin especificar el nombre de vista) y ASP.NET MVC infiere que se desea usar la plantilla de vista *\Views\[ControllerName]\[ActionName]* en el disco para representarlo.
 
-Esto nos permite limpiar un poco nuestro código de controlador y evitar la duplicación de nombre dos veces en nuestro código:
+Esto nos permite limpiar el código del controlador un poco y evitar duplicar el nombre dos veces en nuestro código:
 
 [!code-csharp[Main](use-controllers-and-views-to-implement-a-listingdetails-ui/samples/sample14.cs)]
 
-El código anterior es todo lo que es necesario para implementar una buena cena lista/detalles experiencia para el sitio.
+El código anterior es todo lo que se necesita para implementar una buena experiencia de lista y detalles de la cena para el sitio.
 
 #### <a name="next-step"></a>Paso siguiente
 
-Ahora tenemos una buena cena experiencia integrada de exploración.
+Ahora tenemos una buena experiencia de exploración de la cena creada.
 
-Vamos a ahora habilitar la compatibilidad de edición de formularios de datos CRUD (creación, lectura, actualización, eliminación).
+Ahora vamos a habilitar la compatibilidad con la edición de formularios de datos CRUD (crear, leer, actualizar y eliminar).
 
 > [!div class="step-by-step"]
 > [Anterior](build-a-model-with-business-rule-validations.md)

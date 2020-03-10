@@ -9,11 +9,11 @@ ms.assetid: 18c31709-3f9d-4d93-8b01-f1356bf610b4
 msc.legacyurl: /web-forms/overview/ajax-control-toolkit/confirmbutton/using-a-confirmbutton-in-a-repeater-vb
 msc.type: authoredcontent
 ms.openlocfilehash: 001233d866d8a731d93d6900f714cd2060f3d08c
-ms.sourcegitcommit: 22fbd8863672c4ad6693b8388ad5c8e753fb41a2
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/28/2019
-ms.locfileid: "74599340"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78497545"
 ---
 # <a name="using-a-confirmbutton-in-a-repeater-vb"></a>Usar un ConfirmButton en un control Repeater (VB)
 
@@ -23,7 +23,7 @@ por [Christian Wenz](https://github.com/wenz)
 
 > El extensor ConfirmButton en el kit de herramientas de control de AJAX crea una ventana emergente sí/no cuando el usuario hace clic en un botón (incluido el control LinkButton). Solo si se hace clic en sí, se ejecuta la acción del botón; de lo contrario, se cancela. Esto también es posible en un repetidor.
 
-## <a name="overview"></a>Información general del
+## <a name="overview"></a>Información general
 
 El extensor ConfirmButton en el kit de herramientas de control de AJAX crea una ventana emergente sí/no cuando el usuario hace clic en un botón (incluido el control LinkButton). Solo si se hace clic en sí, se ejecuta la acción del botón; de lo contrario, se cancela. Esto también es posible en un repetidor.
 

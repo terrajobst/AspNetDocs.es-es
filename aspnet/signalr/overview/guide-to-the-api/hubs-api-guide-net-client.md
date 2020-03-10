@@ -9,11 +9,11 @@ ms.assetid: 6d02d9f7-94e5-4140-9f51-5a6040f274f6
 msc.legacyurl: /signalr/overview/guide-to-the-api/hubs-api-guide-net-client
 msc.type: authoredcontent
 ms.openlocfilehash: d3536f1c15cd7dad7cd660becf0577e5c131f707
-ms.sourcegitcommit: 295cf898a4c87e264b0c35c7254b0fa4169f2278
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/13/2019
-ms.locfileid: "74057005"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78467407"
 ---
 # <a name="aspnet-signalr-hubs-api-guide---net-client-c"></a>Guía de la API de ASP.NET Signalr hubs:C#cliente .net ()
 
@@ -85,7 +85,7 @@ Los vínculos a los temas de referencia de la API se redirigen a la versión .NE
 
 <a id="clientsetup"></a>
 
-## <a name="client-setup"></a>Configuración de cliente
+## <a name="client-setup"></a>Configuración del cliente
 
 Instale el paquete NuGet [Microsoft. Aspnet. signalr. Client](http://nuget.org/packages/Microsoft.AspNet.SignalR.Client) (no el paquete [Microsoft. Aspnet. signalr](http://nuget.org/packages/microsoft.aspnet.signalr) ). Este paquete es compatible con los clientes de WinRT, Silverlight, WPF, aplicación de consola y Windows Phone, tanto para .NET 4 como para .NET 4,5.
 
@@ -189,7 +189,7 @@ Para agregar certificados de cliente, use el método `AddClientCertificate` en e
 
 ## <a name="how-to-create-the-hub-proxy"></a>Cómo crear el proxy de concentrador
 
-Para definir métodos en el cliente a los que puede llamar un concentrador desde el servidor e invocar métodos en un concentrador en el servidor, cree un proxy para el concentrador llamando a `CreateHubProxy` en el objeto de conexión. La cadena que se pasa a `CreateHubProxy` es el nombre de la clase del concentrador o el nombre especificado por el atributo `HubName` si se usó uno en el servidor. La coincidencia de nombres no distingue mayúsculas de minúsculas.
+Para definir métodos en el cliente a los que puede llamar un concentrador desde el servidor e invocar métodos en un concentrador en el servidor, cree un proxy para el concentrador llamando a `CreateHubProxy` en el objeto de conexión. La cadena que se pasa a `CreateHubProxy` es el nombre de la clase del concentrador o el nombre especificado por el atributo `HubName` si se usó uno en el servidor. La coincidencia de nombres no distingue mayúsculas y minúsculas.
 
 **Clase hub en el servidor**
 

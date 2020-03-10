@@ -2,211 +2,211 @@
 uid: mvc/overview/older-versions-1/deployment/using-asp-net-mvc-with-different-versions-of-iis-cs
 title: Usar ASP.NET MVC con distintas versiones de IIS (C#) | Microsoft Docs
 author: microsoft
-description: En este tutorial, aprenderá a usar ASP.NET MVC y el enrutamiento de direcciones URL, con diferentes versiones de Internet Information Services. Aprenda estrategias diferentes...
+description: En este tutorial, aprenderá a usar ASP.NET MVC y el enrutamiento de direcciones URL con diferentes versiones de Internet Information Services. Aprenderá distintas estrategias...
 ms.author: riande
 ms.date: 08/19/2008
 ms.assetid: b0cf4a34-2c1d-4717-bb54-ff029e722990
 msc.legacyurl: /mvc/overview/older-versions-1/deployment/using-asp-net-mvc-with-different-versions-of-iis-cs
 msc.type: authoredcontent
 ms.openlocfilehash: 3b0a9509c0600f3598fd1218a7b383430548d4c0
-ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/06/2019
-ms.locfileid: "65123242"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78486529"
 ---
 # <a name="using-aspnet-mvc-with-different-versions-of-iis-c"></a>Usar ASP.NET MVC con distintas versiones de IIS (C#)
 
 por [Microsoft](https://github.com/microsoft)
 
-> En este tutorial, aprenderá a usar ASP.NET MVC y el enrutamiento de direcciones URL, con diferentes versiones de Internet Information Services. Aprenda estrategias distintas para usar ASP.NET MVC con IIS 7.0 (modo clásico), IIS 6.0 y versiones anteriores de IIS.
+> En este tutorial, aprenderá a usar ASP.NET MVC y el enrutamiento de direcciones URL con diferentes versiones de Internet Information Services. Aprenderá diferentes estrategias para usar ASP.NET MVC con IIS 7,0 (modo clásico), IIS 6,0 y versiones anteriores de IIS.
 
-El marco de MVC de ASP.NET depende de enrutamiento de ASP.NET para enrutar las solicitudes del explorador a acciones del controlador. Para sacar provecho de enrutamiento de ASP.NET, es posible que deba realizar pasos de configuración adicionales en el servidor web. Todo depende de la versión de Internet Information Services (IIS) y el modo de la aplicación de procesamiento de solicitudes.
+El marco de MVC de ASP.NET depende del enrutamiento de ASP.NET para enrutar las solicitudes del explorador a las acciones de controlador. Con el fin de aprovechar el enrutamiento de ASP.NET, es posible que tenga que realizar pasos de configuración adicionales en el servidor Web. Todo depende de la versión de Internet Information Services (IIS) y el modo de procesamiento de solicitudes de la aplicación.
 
-Este es un resumen de las distintas versiones de IIS:
+A continuación se muestra un resumen de las distintas versiones de IIS:
 
-- IIS 7.0 (modo integrado) - ninguna configuración especial necesaria para usar el enrutamiento de ASP.NET.
-- IIS 7.0 (modo clásico): debe realizar una configuración especial para usar el enrutamiento de ASP.NET.
-- IIS 6.0 o a continuación: tiene que realizar cualquier configuración especial para usar el enrutamiento de ASP.NET.
+- IIS 7,0 (modo integrado): no se necesita ninguna configuración especial para usar el enrutamiento ASP.NET.
+- IIS 7,0 (modo clásico): debe realizar una configuración especial para usar el enrutamiento ASP.NET.
+- IIS 6,0 o inferior: debe realizar una configuración especial para usar el enrutamiento ASP.NET.
 
-La versión más reciente de IIS es la versión 7.5 (en Win7). IIS 7 de IIS se incluye con Windows Server 2008 y VISTA SP1 y superior. También puede instalar IIS 7.0 en cualquier versión del sistema operativo Vista excepto Home Basic (vea [ https://technet.microsoft.com/library/cc731179%28WS.10%29.aspx ](https://technet.microsoft.com/library/cc731179%28WS.10%29.aspx)).
+La versión más reciente de IIS es la versión 7,5 (en Win7). IIS 7 de IIS se incluye con Windows Server 2008 y VISTA/SP1 y versiones posteriores. También puede instalar IIS 7,0 en cualquier versión del sistema operativo de vista excepto Home Basic (consulte [https://technet.microsoft.com/library/cc731179%28WS.10%29.aspx](https://technet.microsoft.com/library/cc731179%28WS.10%29.aspx)).
 
-IIS 7.0 admite dos modos de procesamiento de solicitudes. Puede usar el modo integrado o en modo clásico. No es necesario realizar ningún paso de configuración especial cuando se usa IIS 7.0 en modo integrado. Sin embargo, es necesario realizar configuración adicional al utilizar IIS 7.0 en modo clásico.
+IIS 7,0 admite dos modos de procesamiento de solicitudes. Puede usar el modo integrado o el modo clásico. No es necesario realizar ningún paso de configuración especial al usar IIS 7,0 en el modo integrado. Sin embargo, es necesario realizar una configuración adicional cuando se usa IIS 7,0 en modo clásico.
 
-Microsoft Windows Server 2003 incluye IIS 6.0. No puede actualizar IIS 6.0 a IIS 7.0, cuando se usa el sistema operativo Windows Server 2003. Debe realizar pasos de configuración adicionales cuando se usa IIS 6.0.
+Microsoft Windows Server 2003 incluye IIS 6,0. No se puede actualizar IIS 6,0 a IIS 7,0 cuando se usa el sistema operativo Windows Server 2003. Debe realizar pasos de configuración adicionales al usar IIS 6,0.
 
-Microsoft Windows XP Professional incluye IIS 5.1. Debe realizar pasos de configuración adicionales cuando se usa IIS 5.1.
+Microsoft Windows XP Professional incluye IIS 5,1. Debe realizar pasos de configuración adicionales al usar IIS 5,1.
 
-Por último, Microsoft Windows 2000 y Microsoft Windows 2000 Professional incluye IIS 5.0. Debe realizar pasos de configuración adicionales cuando se usa IIS 5.0.
+Por último, Microsoft Windows 2000 y Microsoft Windows 2000 Professional incluyen IIS 5,0. Debe realizar pasos de configuración adicionales al usar IIS 5,0.
 
-## <a name="integrated-versus-classic-mode"></a>Integrado en comparación con el modo clásico
+## <a name="integrated-versus-classic-mode"></a>Modo integrado frente al modo clásico
 
-IIS 7.0 puede procesar las solicitudes mediante dos modos de procesamiento de solicitudes diferente: integrado y clásico. El modo integrado de proporciona un mejor rendimiento y más características. El modo clásico se incluye por razones de compatibilidad con versiones anteriores de IIS.
+IIS 7,0 puede procesar solicitudes con dos modos de procesamiento de solicitudes diferentes: integrado y clásico. El modo integrado proporciona un mejor rendimiento y más características. El modo clásico se incluye para la compatibilidad con versiones anteriores de IIS.
 
-El modo de procesamiento de solicitud viene determinada por el grupo de aplicaciones. Puede determinar de qué modo de procesamiento está usando una aplicación web en particular al determinar el grupo de aplicaciones asociado a la aplicación. Siga estos pasos:
+El modo de procesamiento de solicitudes viene determinado por el grupo de aplicaciones. Puede determinar qué modo de procesamiento utiliza una aplicación web determinada determinando el grupo de aplicaciones asociado a la aplicación. Siga estos pasos:
 
-1. Inicie el Administrador de Internet Information Services
-2. En la ventana conexiones, seleccione una aplicación
-3. En la ventana de acciones, haga clic en el **configuración básica** vínculo para abrir el cuadro de diálogo Editar aplicación cuadro (consulte la figura 1)
+1. Iniciar el administrador de Internet Information Services
+2. En la ventana conexiones, seleccione una aplicación.
+3. En la ventana acciones, haga clic en el vínculo **configuración básica** para abrir el cuadro de diálogo Editar aplicación (vea la ilustración 1).
 4. Tome nota del grupo de aplicaciones seleccionado.
 
-De forma predeterminada, IIS está configurado para admitir dos grupos de aplicaciones: **DefaultAppPool** y **Classic .NET AppPool**. Si se selecciona DefaultAppPool, la aplicación se está ejecutando en modo de procesamiento de solicitud integrada. Si se selecciona Classic .NET AppPool, la aplicación se ejecuta en modo de procesamiento de solicitudes clásico.
+De forma predeterminada, IIS está configurado para admitir dos grupos de aplicaciones: **DefaultAppPool** y **clásico .net AppPool**. Si DefaultAppPool está seleccionado, la aplicación se ejecuta en modo de procesamiento de solicitudes integrado. Si se selecciona clásico .NET AppPool, la aplicación se ejecuta en modo de procesamiento de solicitudes clásico.
 
-[![El cuadro de diálogo nuevo proyecto](using-asp-net-mvc-with-different-versions-of-iis-cs/_static/image1.jpg)](using-asp-net-mvc-with-different-versions-of-iis-cs/_static/image1.png)
+[![el cuadro de diálogo nuevo proyecto](using-asp-net-mvc-with-different-versions-of-iis-cs/_static/image1.jpg)](using-asp-net-mvc-with-different-versions-of-iis-cs/_static/image1.png)
 
-**Figura 1**: Detectar el modo de procesamiento de solicitud ([haga clic aquí para ver imagen en tamaño completo](using-asp-net-mvc-with-different-versions-of-iis-cs/_static/image2.png))
+**Figura 1**: detección del modo de procesamiento de solicitudes ([haga clic para ver la imagen de tamaño completo](using-asp-net-mvc-with-different-versions-of-iis-cs/_static/image2.png))
 
-Tenga en cuenta que puede modificar el modo de procesamiento de solicitudes en el cuadro de diálogo Editar aplicación. Haga clic en el botón de selección y cambie el grupo de aplicaciones asociado a la aplicación. Tenga en cuenta que hay problemas de compatibilidad al cambiar una aplicación ASP.NET del modelo clásico al modo integrado. Para obtener más información, vea los artículos siguientes:
+Tenga en cuenta que puede modificar el modo de procesamiento de solicitudes en el cuadro de diálogo Editar aplicación. Haga clic en el botón seleccionar y cambie el grupo de aplicaciones asociado a la aplicación. Observe que hay problemas de compatibilidad al cambiar una aplicación de ASP.NET del modo clásico al modo integrado. Para obtener más información, vea los artículos siguientes:
 
-- Actualización de ASP.NET 1.1 a IIS 7.0 en Windows Vista y Windows Server 2008: [https://www.iis.net/learn/application-frameworks/building-and-running-aspnet-applications/upgrading-aspnet-11-to-iis-on-windows-vista-and-windows-server-2008](https://www.iis.net/learn/application-frameworks/building-and-running-aspnet-applications/upgrading-aspnet-11-to-iis-on-windows-vista-and-windows-server-2008)
-- Integración de ASP.NET con IIS 7.0: [https://www.iis.net/learn/application-frameworks/building-and-running-aspnet-applications/aspnet-integration-with-iis](https://www.iis.net/learn/application-frameworks/building-and-running-aspnet-applications/aspnet-integration-with-iis)
+- Actualización de ASP.NET 1,1 a IIS 7,0 en Windows Vista y Windows Server 2008: [https://www.iis.net/learn/application-frameworks/building-and-running-aspnet-applications/upgrading-aspnet-11-to-iis-on-windows-vista-and-windows-server-2008](https://www.iis.net/learn/application-frameworks/building-and-running-aspnet-applications/upgrading-aspnet-11-to-iis-on-windows-vista-and-windows-server-2008)
+- Integración de ASP.NET con IIS 7,0- [https://www.iis.net/learn/application-frameworks/building-and-running-aspnet-applications/aspnet-integration-with-iis](https://www.iis.net/learn/application-frameworks/building-and-running-aspnet-applications/aspnet-integration-with-iis)
 
-Si una aplicación de ASP.NET utiliza DefaultAppPool, no es necesario realizar ningún paso adicional para obtener el enrutamiento de ASP.NET (y, por tanto, ASP.NET MVC) para que funcione. Sin embargo, si la aplicación de ASP.NET está configurada para usar Classic .NET AppPool, a continuación, siga leyendo, tiene más trabajo que hacer.
+Si una aplicación de ASP.NET usa DefaultAppPool, no es necesario realizar ningún paso adicional para que el enrutamiento de ASP.NET (y, por lo tanto, ASP.NET MVC) funcione. Sin embargo, si la aplicación ASP.NET está configurada para usar el .NET AppPool clásico, siga leyendo y tendrá más trabajo que hacer.
 
 ## <a name="using-aspnet-mvc-with-older-versions-of-iis"></a>Usar ASP.NET MVC con versiones anteriores de IIS
 
-Si necesita usar ASP.NET MVC con una versión anterior de IIS a IIS 7.0 o deba utilizar IIS 7.0 en modo clásico, tiene dos opciones. En primer lugar, puede modificar la tabla de rutas para usar las extensiones de archivo. Por ejemplo, en lugar de solicitar una dirección URL como /Store/Details, podría solicitar una dirección URL como /Store.aspx/Details.
+Si necesita usar ASP.NET MVC con una versión anterior de IIS que IIS 7,0 o necesita usar IIS 7,0 en modo clásico, tiene dos opciones. En primer lugar, puede modificar la tabla de rutas para usar las extensiones de archivo. Por ejemplo, en lugar de solicitar una dirección URL como/Store/Details, solicitaría una dirección URL como/Store.aspx/Details.
 
-La segunda opción es crear algo llamado un *asignación de script comodín*. Una asignación de script comodín permite asignar todas las solicitudes en el marco de ASP.NET.
+La segunda opción consiste en crear algo denominado *mapa de script comodín*. Una asignación de script comodín permite asignar cada solicitud al marco ASP.NET.
 
-Si no tiene acceso al servidor web (por ejemplo, su ASP.NET MVC aplicación hospedada por un proveedor de servicios de Internet), a continuación, deberá usar la primera opción. Si no desea modificar la apariencia de las direcciones URL y tener acceso al servidor web, a continuación, puede usar la segunda opción.
+Si no tiene acceso al servidor Web (por ejemplo, la aplicación ASP.NET MVC se hospeda en un proveedor de servicios de Internet), deberá usar la primera opción. Si no desea modificar la apariencia de las direcciones URL y tiene acceso al servidor Web, puede usar la segunda opción.
 
-Exploramos cada opción en detalle en las secciones siguientes.
+En las secciones siguientes se explora cada opción en detalle.
 
 ## <a name="adding-extensions-to-the-route-table"></a>Agregar extensiones a la tabla de rutas
 
-La manera más fácil de obtener el enrutamiento de ASP.NET para que funcione con versiones anteriores de IIS es modificar la tabla de rutas en el archivo Global.asax. El valor predeterminado y el archivo Global.asax sin modificar en el listado 1 configura una ruta con el nombre de la ruta predeterminada.
+La forma más fácil de conseguir que el enrutamiento de ASP.NET funcione con versiones anteriores de IIS es modificar la tabla de rutas en el archivo global. asax. El archivo global. asax predeterminado y sin modificar de la lista 1 configura una ruta denominada ruta predeterminada.
 
-**Listado 1 - Global.asax (sin cambios)**
+**Lista 1: global. asax (sin modificar)**
 
 [!code-csharp[Main](using-asp-net-mvc-with-different-versions-of-iis-cs/samples/sample1.cs)]
 
-La ruta predeterminada configurada en el listado 1 permite a las direcciones URL de ruta que tienen un aspecto similar al siguiente:
+La ruta predeterminada configurada en la lista 1 le permite enrutar las direcciones URL que tienen el siguiente aspecto:
 
 /Home/Index
 
-/ Product/detalles/3
+/Product/Details/3
 
-O producto
+/Product
 
-Lamentablemente, las versiones anteriores de IIS no pasan estas solicitudes para el marco de ASP.NET. Por lo tanto, estas solicitudes no se enrutan a un controlador. Por ejemplo, si se realiza una solicitud de explorador para el índice de/Home de dirección URL, a continuación, obtendrá la página de error en la figura 2.
+Desafortunadamente, las versiones anteriores de IIS no pasarán estas solicitudes al marco ASP.NET. Por lo tanto, estas solicitudes no se enrutarán a un controlador. Por ejemplo, si realiza una solicitud de explorador para la dirección URL/Home/Index, obtendrá la página de error en la figura 2.
 
-[![El cuadro de diálogo nuevo proyecto](using-asp-net-mvc-with-different-versions-of-iis-cs/_static/image2.jpg)](using-asp-net-mvc-with-different-versions-of-iis-cs/_static/image3.png)
+[![el cuadro de diálogo nuevo proyecto](using-asp-net-mvc-with-different-versions-of-iis-cs/_static/image2.jpg)](using-asp-net-mvc-with-different-versions-of-iis-cs/_static/image3.png)
 
-**Figura 2**: Recibir un error 404 no encontrado ([haga clic aquí para ver imagen en tamaño completo](using-asp-net-mvc-with-different-versions-of-iis-cs/_static/image4.png))
+**Figura 2**: recepción de un error 404 no encontrado ([haga clic para ver la imagen de tamaño completo](using-asp-net-mvc-with-different-versions-of-iis-cs/_static/image4.png))
 
-Versiones anteriores de IIS solo asignan algunas solicitudes para el marco de ASP.NET. La solicitud debe ser para una dirección URL con la extensión de archivo de la derecha. Por ejemplo, una solicitud para /SomePage.aspx se asigna al marco de ASP.NET. Sin embargo, una solicitud para /SomePage.htm no lo hace.
+Las versiones anteriores de IIS solo asignan determinadas solicitudes al marco ASP.NET. La solicitud debe ser para una dirección URL con la extensión de archivo correcta. Por ejemplo, una solicitud de/SomePage.aspx se asigna al marco de ASP.NET. Sin embargo, una solicitud para/SomePage.htm no lo hace.
 
-Por lo tanto, para configurar el enrutamiento de ASP.NET para que funcione, se debe modificar la ruta predeterminada para que incluya una extensión de archivo que se asigna al marco de ASP.NET.
+Por lo tanto, para que el enrutamiento de ASP.NET funcione, es necesario modificar la ruta predeterminada para que incluya una extensión de archivo que esté asignada al marco de ASP.NET.
 
-Esto se realiza mediante un script denominado `registermvc.wsf`. Se incluye con la versión 1 de ASP.NET MVC en `C:\Program Files\Microsoft ASP.NET\ASP.NET MVC\Scripts`, pero a partir del 2 de ASP.NET este script se ha movido a ASP.NET Futures, disponible en [ http://aspnet.codeplex.com/releases/view/39978 ](http://aspnet.codeplex.com/releases/view/39978).
+Esto se hace mediante un script denominado `registermvc.wsf`. Se incluyó con la versión ASP.NET MVC 1 en `C:\Program Files\Microsoft ASP.NET\ASP.NET MVC\Scripts`, pero a partir de ASP.NET 2 este script se ha pasado a los futuros ASP.NET, disponible en [http://aspnet.codeplex.com/releases/view/39978](http://aspnet.codeplex.com/releases/view/39978).
 
-Ejecuta este script registra una nueva extensión .mvc con IIS. Después de registrar la extensión .mvc, puede modificar las rutas en el archivo Global.asax para que las rutas de usar la extensión .mvc.
+Al ejecutar este script, se registra una nueva extensión. MVC con IIS. Después de registrar la extensión. MVC, puede modificar las rutas en el archivo global. asax para que las rutas usen la extensión. Mvc.
 
-El archivo Global.asax modificado en el listado 2 funciona con versiones anteriores de IIS.
+El archivo global. asax modificado de la lista 2 funciona con versiones anteriores de IIS.
 
-**Listado 2 - Global.asax (modificado con las extensiones)**
+**Lista 2-global. asax (modificado con extensiones)**
 
 [!code-csharp[Main](using-asp-net-mvc-with-different-versions-of-iis-cs/samples/sample2.cs)]
 
-**Importante**: no olvide crear una aplicación de MVC de ASP.NET nuevo después de modificar el archivo Global.asax.
+**Importante**: Recuerde volver a compilar la aplicación ASP.NET MVC después de cambiar el archivo global. asax.
 
-Hay dos cambios importantes en el archivo Global.asax en el listado 2. Ahora hay dos rutas definidas en Global.asax. Patrón de URL de la ruta predeterminada, la primera ruta, ahora es similar a:
+Hay dos cambios importantes en el archivo global. asax en la lista 2. Ahora hay dos rutas definidas en global. asax. El patrón de dirección URL para la ruta predeterminada, la primera ruta, ahora tiene el siguiente aspecto:
 
 {controller}.mvc/{action}/{id}
 
-La adición de la extensión .mvc cambia el tipo de archivos que intercepta el módulo de enrutamiento de ASP.NET. Con este cambio, la aplicación de ASP.NET MVC ahora enruta las solicitudes similar al siguiente:
+La adición de la extensión. Mvc cambia el tipo de archivos que intercepta el módulo de enrutamiento ASP.NET. Con este cambio, la aplicación ASP.NET MVC ahora enruta solicitudes como las siguientes:
 
 /Home.mvc/Index/
 
-/Product.Mvc/Details/3
+/Product.mvc/Details/3
 
 /Product.mvc/
 
-La segunda ruta, la ruta raíz, es nueva. Este patrón de URL de la ruta raíz es una cadena vacía. Esta ruta es necesaria para la coincidencia de las solicitudes realizadas en la raíz de la aplicación. Por ejemplo, la ruta raíz coincidirá con una solicitud que tiene este aspecto:
+La segunda ruta, la ruta raíz, es nueva. Este patrón de dirección URL para la ruta raíz es una cadena vacía. Esta ruta es necesaria para hacer coincidir las solicitudes realizadas con la raíz de la aplicación. Por ejemplo, la ruta raíz coincidirá con una solicitud similar a la siguiente:
 
 [http://www.YourApplication.com/](http://www.YourApplication.com/)
 
-Después de realizar estas modificaciones en la tabla de rutas, deberá asegurarse de que todos los vínculos en la aplicación son compatibles con estos nuevos patrones de dirección URL. En otras palabras, asegúrese de que todos los vínculos de incluyen la extensión .mvc. Si usa el método auxiliar Html.ActionLink() para generar los vínculos, a continuación, no es necesario realizar ningún cambio.
+Después de realizar estas modificaciones en la tabla de rutas, deberá asegurarse de que todos los vínculos de la aplicación sean compatibles con estos nuevos patrones de direcciones URL. En otras palabras, asegúrese de que todos los vínculos incluyen la extensión. Mvc. Si usa el método auxiliar HTML. ActionLink () para generar los vínculos, no debería ser necesario realizar ningún cambio.
 
-En lugar de la secuencia de comandos registermvc.wcf, puede agregar una nueva extensión para IIS que se asigna a mano para el marco de ASP.NET. Al agregar una nueva extensión, asegúrese de que la casilla de verificación con la etiqueta **Compruebe que el archivo existe** no está activada.
+En lugar de usar el script registermvc. WCF, puede Agregar una nueva extensión a IIS que esté asignada a ASP.NET Framework manualmente. Cuando agregue una nueva extensión, asegúrese de que la casilla **comprobar que el archivo existe** no está activada.
 
 ## <a name="hosted-server"></a>Servidor hospedado
 
-No siempre tendrá acceso al servidor web. Por ejemplo, si va a hospedar la aplicación de ASP.NET MVC mediante un proveedor de hospedaje de Internet, no tendrá necesariamente acceso a IIS.
+No siempre tiene acceso al servidor Web. Por ejemplo, si hospeda la aplicación ASP.NET MVC mediante un proveedor de hospedaje de Internet, no tendrá necesariamente acceso a IIS.
 
-En ese caso, debe usar una de las extensiones de archivo existentes que están asignadas para el marco de ASP.NET. El .aspx, .axd y .ashx extensiones son ejemplos de extensiones de archivo asignadas a ASP.NET.
+En ese caso, debe usar una de las extensiones de archivo existentes que se asignan al marco ASP.NET. Entre los ejemplos de extensiones de archivo asignadas a ASP.NET se incluyen las extensiones. aspx,. axd y. ashx.
 
-Por ejemplo, el archivo Global.asax modificado en el listado 3 utiliza la extensión .aspx en lugar de la extensión .mvc.
+Por ejemplo, el archivo global. asax modificado de la lista 3 utiliza la extensión. aspx en lugar de la extensión. Mvc.
 
-**Listado 3 - Global.asax (modificado con las extensiones de aspx)**
+**Lista 3-global. asax (modificado con extensiones. aspx)**
 
 [!code-csharp[Main](using-asp-net-mvc-with-different-versions-of-iis-cs/samples/sample3.cs)]
 
-El archivo Global.asax en el listado 3 es exactamente el mismo que el archivo Global.asax anterior con la salvedad de que usa la extensión .aspx en lugar de la extensión .mvc. No tienes que realizar ninguna configuración en el servidor web remoto para usar la extensión de aspx.
+El archivo global. asax de la lista 3 es exactamente el mismo que el archivo global. asax anterior, excepto por el hecho de que usa la extensión. aspx en lugar de la extensión. Mvc. No es necesario realizar ninguna configuración en el servidor Web remoto para utilizar la extensión. aspx.
 
-## <a name="creating-a-wildcard-script-map"></a>Creación de una asignación de Script comodín
+## <a name="creating-a-wildcard-script-map"></a>Creación de una asignación de script comodín
 
-Si no desea modificar las direcciones URL de la aplicación de ASP.NET MVC y tener acceso al servidor web, tiene una opción adicional. Puede crear una asignación de script comodín que se asigna a todas las solicitudes al servidor web para el marco de ASP.NET. De este modo, puede usar el valor predeterminado de tabla de rutas de ASP.NET MVC con IIS 7.0 (en el modo clásico) o IIS 6.0.
+Si no desea modificar las direcciones URL de la aplicación ASP.NET MVC y tiene acceso al servidor Web, tiene una opción adicional. Puede crear una asignación de script comodín que asigne todas las solicitudes al servidor Web al marco ASP.NET. De este modo, puede usar la tabla de ruta predeterminada de ASP.NET MVC con IIS 7,0 (en modo clásico) o IIS 6,0.
 
-Tenga en cuenta que esta opción hace que IIS interceptar cada solicitud realizada en el servidor web. Esto incluye las solicitudes de imágenes, páginas ASP clásicas y páginas HTML. Por lo tanto, lo que permite un carácter comodín asignación de script a ASP.NET tienen implicaciones de rendimiento.
+Tenga en cuenta que esta opción hace que IIS intercepte todas las solicitudes realizadas en el servidor Web. Esto incluye las solicitudes de imágenes, páginas ASP clásicas y páginas HTML. Por lo tanto, la habilitación de una asignación de script comodín a ASP.NET tiene implicaciones de rendimiento.
 
-Le mostramos cómo habilitar una asignación de script comodín para IIS 7.0:
+Aquí se muestra cómo habilitar una asignación de script comodín para IIS 7,0:
 
-1. Seleccione la aplicación en la ventana Conexiones
-2. Asegúrese de que el **características** seleccionar vista
-3. Haga doble clic en el **asignaciones de controlador** botón
-4. Haga clic en el **Agregar asignación de Script comodín** vincular (consulte la figura 3)
-5. Escriba la ruta de acceso a aspnet\_archivo isapi.dll (puede copiar esta ruta de acceso de la asignación de script PageHandlerFactory)
-6. Escriba el nombre de MVC
-7. Haga clic en el **Aceptar** botón
+1. Seleccione la aplicación en la ventana conexiones
+2. Asegúrese de que está seleccionada la vista **características** .
+3. Haga doble clic en el botón **asignaciones de controlador**
+4. Haga clic en el vínculo **Agregar asignación de script comodín** (vea la figura 3).
+5. Escriba la ruta de acceso al archivo Aspnet\_ISAPI. dll (puede copiar esta ruta de acceso desde la asignación de script PageHandlerFactory)
+6. Escriba el nombre MVC
+7. Haga clic en el botón **Aceptar**
 
-[![El cuadro de diálogo nuevo proyecto](using-asp-net-mvc-with-different-versions-of-iis-cs/_static/image3.jpg)](using-asp-net-mvc-with-different-versions-of-iis-cs/_static/image5.png)
+[![el cuadro de diálogo nuevo proyecto](using-asp-net-mvc-with-different-versions-of-iis-cs/_static/image3.jpg)](using-asp-net-mvc-with-different-versions-of-iis-cs/_static/image5.png)
 
-**Figura 3**: Creación de una asignación de script comodín con IIS 7.0 ([haga clic aquí para ver imagen en tamaño completo](using-asp-net-mvc-with-different-versions-of-iis-cs/_static/image6.png))
+**Figura 3**: creación de una asignación de script comodín con IIS 7,0 ([haga clic para ver la imagen de tamaño completo](using-asp-net-mvc-with-different-versions-of-iis-cs/_static/image6.png))
 
-Siga estos pasos para crear una asignación de script comodín con IIS 6.0:
+Siga estos pasos para crear un mapa de scripts comodín con IIS 6,0:
 
-1. Haga clic en un sitio Web y seleccione Propiedades
-2. Seleccione el **Home Directory** ficha
-3. Haga clic en el **configuración** botón
-4. Seleccione el **asignaciones** ficha
-5. Haga clic en el **insertar** (consulte la figura 4)
-6. Pegue la ruta de acceso aspnet\_isapi.dll en el campo ejecutable (puede copiar esta ruta de acceso de la asignación de script para archivos .aspx)
-7. Desactive la casilla **Compruebe que el archivo existe**
-8. Haga clic en el **Aceptar** botón
+1. Haga clic con el botón secundario en un sitio web y seleccione Propiedades.
+2. Seleccione la pestaña **directorio principal** .
+3. Haga clic en el botón **configuración**
+4. Seleccione la pestaña **asignaciones**
+5. Haga clic en el botón **Insertar** (consulte la figura 4).
+6. Pegue la ruta de acceso al archivo Aspnet\_ISAPI. dll en el campo ejecutable (puede copiar esta ruta de acceso de la asignación de scripts para los archivos. aspx).
+7. Desactive la casilla **comprobar que el archivo existe**
+8. Haga clic en el botón **Aceptar**
 
-[![El cuadro de diálogo nuevo proyecto](using-asp-net-mvc-with-different-versions-of-iis-cs/_static/image4.jpg)](using-asp-net-mvc-with-different-versions-of-iis-cs/_static/image7.png)
+[![el cuadro de diálogo nuevo proyecto](using-asp-net-mvc-with-different-versions-of-iis-cs/_static/image4.jpg)](using-asp-net-mvc-with-different-versions-of-iis-cs/_static/image7.png)
 
-**Figura 4**: Creación de una asignación de script comodín con IIS 6.0 ([haga clic aquí para ver imagen en tamaño completo](using-asp-net-mvc-with-different-versions-of-iis-cs/_static/image8.png))
+**Figura 4**: creación de una asignación de script comodín con IIS 6,0 ([haga clic para ver la imagen de tamaño completo](using-asp-net-mvc-with-different-versions-of-iis-cs/_static/image8.png))
 
-Después de habilitar asignaciones de secuencia de comandos de comodines, deberá modificar la tabla de rutas en el archivo Global.asax para que incluya una ruta raíz. En caso contrario, aparecerá la página de error en la figura 5 cuando se realiza una solicitud para la página raíz de la aplicación. Puede usar el archivo Global.asax modificado en el listado 4.
+Después de habilitar las asignaciones de scripts comodín, debe modificar la tabla de rutas en el archivo global. asax para que incluya una ruta raíz. De lo contrario, obtendrá la página de error en la figura 5 cuando realice una solicitud para la página raíz de la aplicación. Puede usar el archivo global. asax modificado en la lista 4.
 
-[![El cuadro de diálogo nuevo proyecto](using-asp-net-mvc-with-different-versions-of-iis-cs/_static/image5.jpg)](using-asp-net-mvc-with-different-versions-of-iis-cs/_static/image9.png)
+[![el cuadro de diálogo nuevo proyecto](using-asp-net-mvc-with-different-versions-of-iis-cs/_static/image5.jpg)](using-asp-net-mvc-with-different-versions-of-iis-cs/_static/image9.png)
 
-**Figura 5**: Falta el error de la ruta raíz ([haga clic aquí para ver imagen en tamaño completo](using-asp-net-mvc-with-different-versions-of-iis-cs/_static/image10.png))
+**Figura 5**: falta un error en la ruta raíz ([haga clic para ver la imagen de tamaño completo](using-asp-net-mvc-with-different-versions-of-iis-cs/_static/image10.png))
 
-**Listado 4 - Global.asax (modificado con la ruta raíz)**
+**Lista 4: global. asax (modificado con ruta raíz)**
 
 [!code-csharp[Main](using-asp-net-mvc-with-different-versions-of-iis-cs/samples/sample4.cs)]
 
-Después de habilitar una asignación de script comodín para IIS 7.0 o IIS 6.0, puede realizar las solicitudes que funcionan con la tabla de rutas predeterminadas que tienen un aspecto similar al siguiente:
+Después de habilitar una asignación de script comodín para IIS 7,0 o IIS 6,0, puede hacer que las solicitudes que funcionan con la tabla de rutas predeterminada tengan el aspecto siguiente:
 
 /
 
 /Home/Index
 
-/ Product/detalles/3
+/Product/Details/3
 
-O producto
+/Product
 
 ## <a name="summary"></a>Resumen
 
-El objetivo de este tutorial era explicar cómo puede usar ASP.NET MVC cuando se usa una versión anterior de IIS (o IIS 7.0 en modo clásico). Se explican dos métodos de obtención de enrutamiento de ASP.NET para que funcione con versiones anteriores de IIS: Modificar la tabla de enrutamiento predeterminada o crear una asignación de script comodín.
+El objetivo de este tutorial era explicar cómo se puede usar ASP.NET MVC cuando se usa una versión anterior de IIS (o IIS 7,0 en modo clásico). Analizamos dos métodos para que el enrutamiento de ASP.NET funcione con versiones anteriores de IIS: modificar la tabla de rutas predeterminada o crear una asignación de script comodín.
 
-La primera opción, deberá modificar las direcciones URL usadas en la aplicación de ASP.NET MVC. Una ventaja muy significativa de esta primera opción es que no necesita acceso a un servidor web para modificar la tabla de rutas. Esto significa que puede usar esta opción incluso al hospedar su aplicación ASP.NET MVC con un Internet empresa de hospedaje.
+La primera opción requiere que modifique las direcciones URL usadas en la aplicación ASP.NET MVC. Una ventaja muy importante de esta primera opción es que no necesita acceso a un servidor web para modificar la tabla de rutas. Esto significa que puede usar esta primera opción incluso al hospedar su aplicación ASP.NET MVC con una empresa de hospedaje de Internet.
 
-La segunda opción es crear una asignación de script comodín. La ventaja de esta segunda opción es que no es necesario modificar las direcciones URL. La desventaja de esta segunda opción es que puede afectar el rendimiento de su aplicación ASP.NET MVC.
+La segunda opción consiste en crear una asignación de script comodín. La ventaja de esta segunda opción es que no es necesario modificar las direcciones URL. El inconveniente de esta segunda opción es que puede afectar al rendimiento de la aplicación ASP.NET MVC.
 
 > [!div class="step-by-step"]
 > [Siguiente](using-asp-net-mvc-with-different-versions-of-iis-vb.md)

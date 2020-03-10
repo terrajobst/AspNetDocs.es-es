@@ -9,11 +9,11 @@ ms.assetid: 9410a23c-9697-4f07-bd71-e62b0ceac655
 msc.legacyurl: /web-forms/overview/data-access/editing-and-deleting-data-through-the-datalist/an-overview-of-editing-and-deleting-data-in-the-datalist-vb
 msc.type: authoredcontent
 ms.openlocfilehash: 49b09cbf0f12f7c7233c3bb2a8b3b2c073bf117e
-ms.sourcegitcommit: 22fbd8863672c4ad6693b8388ad5c8e753fb41a2
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/28/2019
-ms.locfileid: "74573211"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78495247"
 ---
 # <a name="an-overview-of-editing-and-deleting-data-in-the-datalist-vb"></a>Información general sobre la edición y eliminación de datos en DataList (VB)
 

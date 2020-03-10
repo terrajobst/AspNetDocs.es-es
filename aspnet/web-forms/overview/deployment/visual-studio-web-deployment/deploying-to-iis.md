@@ -9,11 +9,11 @@ ms.assetid: 8bf2c4fb-4ee5-4841-bfc2-03462c1f7a7a
 msc.legacyurl: /web-forms/overview/deployment/visual-studio-web-deployment/deploying-to-iis
 msc.type: authoredcontent
 ms.openlocfilehash: 738318cce442fdc5d58dd1e4c992d4941be2487e
-ms.sourcegitcommit: 22fbd8863672c4ad6693b8388ad5c8e753fb41a2
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/28/2019
-ms.locfileid: "74591250"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78520375"
 ---
 # <a name="aspnet-web-deployment-using-visual-studio-deploying-to-test"></a>ASP.NET Web Deployment Using Visual Studio: Deploying to test
 
@@ -23,7 +23,7 @@ En esta serie de tutoriales se muestra cómo implementar (publicar) una aplicaci
 
 Para obtener una versión actual de la implementación en Azure, consulte [creación de una aplicación Web de ASP.net Core en Azure](/azure/app-service/app-service-web-get-started-dotnet).
 
-## <a name="overview"></a>Información general del
+## <a name="overview"></a>Información general
 
 En este tutorial, implementará una aplicación Web de ASP.NET en Internet Information Server (IIS) en el equipo local.
 
@@ -51,7 +51,7 @@ Descargue e instale el proyecto y la solución de inicio de Visual Studio para c
 
 [Descargar el proyecto de inicio](https://go.microsoft.com/fwlink/p/?LinkId=282627)
 
-## <a name="install-iis"></a>Instalar IIS
+## <a name="install-iis"></a>Instalación de IIS
 
 Para implementar en IIS en el equipo de desarrollo, confirme que IIS y Web Deploy están instalados. De forma predeterminada, Visual Studio instala Web Deploy, pero IIS no se incluye en la configuración predeterminada de Windows 10, Windows 8 o Windows 7. Si ya ha instalado IIS y el grupo de aplicaciones predeterminado ya está establecido en .NET 4, vaya a [la sección siguiente](#sqlexpress).
 
@@ -109,13 +109,13 @@ Después de instalar IIS, ejecute el **Administrador de IIS** para asegurarse de
 
 7. En el cuadro de diálogo **modificar grupo de aplicaciones** , cambie la **versión de .net CLR** a **.net CLR v 4.0.30319**. Seleccione **Aceptar**.
 
-   ![Selecting_. NET_4_for_DefaultAppPool](deploying-to-iis/_static/image6a.png)
+   ![Selecting_.NET_4_for_DefaultAppPool](deploying-to-iis/_static/image6a.png)
 
 Ahora está listo para publicar una aplicación web en IIS. Sin embargo, en primer lugar, cree bases de datos para pruebas.
 
 <a id="sqlexpress"></a>
 
-## <a name="install-sql-server-express"></a>Instalar SQL Server Express
+## <a name="install-sql-server-express"></a>Instalación de SQL Server Express
 
 LocalDB no está diseñado para funcionar en IIS, por lo que el entorno de prueba debe tener SQL Server Express instalado. Si utiliza Visual Studio 2010 SQL Server Express, ya está instalado de forma predeterminada. Si utiliza Visual Studio 2012 o una versión posterior, instale SQL Server Express.
 
@@ -174,13 +174,13 @@ Puede configurar el perfil de publicación para ejecutar el script Grant en la b
 
 1. En Visual Studio, abra el archivo *Grant. SQL* que creó anteriormente.
 
-2. Seleccione **conectar**. 
+2. Seleccione **Conectar**. 
 
-    ![Botón conectar](deploying-to-iis/_static/image11.png)
+    ![Botón Conectar](deploying-to-iis/_static/image11.png)
 
-3. En el cuadro de diálogo **conectar con el servidor** , escriba *.\SQLExpress* como el **nombre del servidor**. Seleccione **conectar**.
+3. En el cuadro de diálogo **conectar con el servidor** , escriba *.\SQLExpress* como el **nombre del servidor**. Seleccione **Conectar**.
 
-4. En la lista desplegable base de datos, seleccione **ContosoUniversity**. Seleccione **Ejecutar**. 
+4. En la lista desplegable base de datos, seleccione **ContosoUniversity**. Seleccione **Execute**(Ejecutar). 
 
    ![](deploying-to-iis/_static/image12.png)
 

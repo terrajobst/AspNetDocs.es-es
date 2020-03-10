@@ -9,11 +9,11 @@ ms.assetid: f8fd58e2-f932-4f08-ab3d-fbf8ff3295d2
 msc.legacyurl: /web-forms/overview/data-access/editing-and-deleting-data-through-the-datalist/handling-bll-and-dal-level-exceptions-cs
 msc.type: authoredcontent
 ms.openlocfilehash: 35ff60be6ed67ea8d1bf226ae70f590100597757
-ms.sourcegitcommit: 22fbd8863672c4ad6693b8388ad5c8e753fb41a2
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/28/2019
-ms.locfileid: "74634135"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78494971"
 ---
 # <a name="handling-bll--and-dal-level-exceptions-c"></a>Controlar las excepciones de nivel BLL y DAL (C#)
 

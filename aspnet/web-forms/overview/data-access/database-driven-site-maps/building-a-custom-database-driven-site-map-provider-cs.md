@@ -9,11 +9,11 @@ ms.assetid: 04b7591d-106f-4f05-87e9-d416cb65a8a6
 msc.legacyurl: /web-forms/overview/data-access/database-driven-site-maps/building-a-custom-database-driven-site-map-provider-cs
 msc.type: authoredcontent
 ms.openlocfilehash: a3e27b37703b12c9796e8516f0d805aef1fdf8d8
-ms.sourcegitcommit: 22fbd8863672c4ad6693b8388ad5c8e753fb41a2
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/28/2019
-ms.locfileid: "74637260"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78495859"
 ---
 # <a name="building-a-custom-database-driven-site-map-provider-c"></a>Crear un proveedor personalizado de mapas del sitio controlado por base de datos (C#)
 

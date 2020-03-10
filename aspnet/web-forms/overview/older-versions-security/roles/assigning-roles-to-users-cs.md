@@ -9,11 +9,11 @@ ms.assetid: d522639a-5aca-421e-9a76-d73f95607f57
 msc.legacyurl: /web-forms/overview/older-versions-security/roles/assigning-roles-to-users-cs
 msc.type: authoredcontent
 ms.openlocfilehash: 3346e47cf604ed1d4003ca83203116666e37cb1b
-ms.sourcegitcommit: 22fbd8863672c4ad6693b8388ad5c8e753fb41a2
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/28/2019
-ms.locfileid: "74634076"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78461389"
 ---
 # <a name="assigning-roles-to-users-c"></a>Asignar roles a los usuarios (C#)
 

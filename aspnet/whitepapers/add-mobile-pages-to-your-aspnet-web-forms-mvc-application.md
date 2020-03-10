@@ -1,112 +1,112 @@
 ---
 uid: whitepapers/add-mobile-pages-to-your-aspnet-web-forms-mvc-application
-title: Cómo Agregar las páginas móviles a los formularios de ASP.NET Web / aplicación MVC | Microsoft Docs
+title: 'Cómo: agregar páginas móviles a la aplicación de formularios Web Forms o MVC de ASP.NET | Microsoft Docs'
 author: rick-anderson
-description: Esta página se describe varias maneras de servir páginas optimizadas para dispositivos móviles de los formularios Web Forms de ASP.NET / aplicación de MVC y sugiere la arquitectura y...
+description: En este artículo se describen las distintas formas de servir páginas optimizadas para dispositivos móviles de la aplicación ASP.NET Web Forms/MVC y se sugiere la arquitectura y...
 ms.author: riande
 ms.date: 01/20/2011
 ms.assetid: 3124f28e-cc32-418a-afe3-519fa56f4c36
 msc.legacyurl: /whitepapers/add-mobile-pages-to-your-aspnet-web-forms-mvc-application
 msc.type: content
 ms.openlocfilehash: 63c555358d06a9506bb5c8c993800c3307108192
-ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/06/2019
-ms.locfileid: "65114444"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78462217"
 ---
-# <a name="how-to-add-mobile-pages-to-your-aspnet-web-forms--mvc-application"></a>Cómo Agregar páginas de dispositivos móviles a los formularios Web Forms o a la aplicación de MVC de ASP.NET
+# <a name="how-to-add-mobile-pages-to-your-aspnet-web-forms--mvc-application"></a>Cómo: agregar páginas móviles a la aplicación de formularios Web Forms o MVC de ASP.NET
 
 > **Se aplica a**
 > 
-> - Versión de formularios Web Forms ASP.NET 4.0
-> - ASP.NET MVC versión 3.0
+> - ASP.NET Web Forms versión 4,0
+> - ASP.NET MVC versión 3,0
 > 
 > **Resumen**
 > 
-> Esta página se describe varias maneras de servir páginas optimizadas para dispositivos móviles de los formularios Web Forms de ASP.NET / aplicación de MVC y sugiere la arquitectura y diseño cuestiones a considerar cuando el destino es una amplia gama de dispositivos. Este documento también explica por qué los controles ASP.NET Mobile desde ASP.NET 2.0 a 3.5 ahora están obsoletos y se tratan algunas alternativas modernas.
+> En este artículo se describen las distintas formas de atender las páginas optimizadas para dispositivos móviles desde la aplicación Web Forms/MVC de ASP.NET y se sugieren problemas de diseño y arquitectura que se deben tener en cuenta a la hora de dirigirse a una amplia gama de dispositivos. En este documento también se explica por qué los controles móviles de ASP.NET de ASP.NET 2,0 a 3,5 ahora están obsoletos y se describen algunas alternativas modernas.
 
 ## <a name="contents"></a>Contenido
 
 - Información general
 - Opciones de arquitectura
-- Detección de explorador y del dispositivo
-- Cómo las aplicaciones de formularios Web Forms ASP.NET pueden presentar páginas específicas de dispositivos móviles
-- Cómo las aplicaciones de ASP.NET MVC pueden presentar páginas específicas de dispositivos móviles
+- Detección de exploradores y dispositivos
+- Cómo pueden las aplicaciones de formularios Web Forms de ASP.NET presentar páginas específicas para dispositivos móviles
+- Cómo pueden las aplicaciones MVC de ASP.NET presentar páginas específicas para móviles
 - Recursos adicionales
 
-Para obtener ejemplos de código descargable que muestra las técnicas de este artículo técnico para ASP.NET Web Forms y MVC, consulte [Mobile Apps & sitios con ASP.NET](https://docs.microsoft.com/aspnet/mobile/overview).
+Para ver ejemplos de código descargables que muestran las técnicas de estas notas del producto para formularios Web Forms de ASP.NET y MVC, consulte [Mobile Apps sitios de & con ASP.net](https://docs.microsoft.com/aspnet/mobile/overview).
 
 ## <a name="overview"></a>Información general
 
-Los dispositivos móviles – smartphones, tabletas y teléfonos de la característica: siguen creciendo en popularidad como un medio para tener acceso a la Web. Para muchos desarrolladores web y las empresas orientados a web, esto significa que resulta cada vez más importante proporcionar una gran experiencia de exploración para los visitantes utilizan esos dispositivos.
+Dispositivos móviles: smartphones, teléfonos de características y tabletas: continúe creciendo en popularidad como medio para tener acceso a la Web. Para muchos desarrolladores web y empresas orientadas a la web, esto significa que es cada vez más importante proporcionar una excelente experiencia de exploración para los visitantes que usan esos dispositivos.
 
-### <a name="how-earlier-versions-of-aspnet-supported-mobile-browsers"></a>Cómo versiones preliminares de los exploradores móviles compatibles con ASP.NET
+### <a name="how-earlier-versions-of-aspnet-supported-mobile-browsers"></a>Cómo las versiones anteriores de ASP.NET eran compatibles con los exploradores móviles
 
-Las versiones de ASP.NET 2.0 a 3.5 incluye *controles ASP.NET Mobile*: un conjunto de controles de servidor para dispositivos móviles en el *System.Web.Mobile.dll* ensamblado y el  *En System.Web.UI.MobileControls* espacio de nombres. El ensamblado todavía está incluido en ASP.NET 4, pero está en desuso. Para migrar a los enfoques más modernos, tales como los descritos en este artículo, se aconseja a los desarrolladores.
+ASP.NET Versions 2,0 to 3,5 incluye *ASP.NET Mobile Controls*: un conjunto de controles de servidor para dispositivos móviles en el ensamblado *System. Web. Mobile. dll* y el espacio de nombres *System. Web. UI. MobileControls* . El ensamblado todavía está incluido en ASP.NET 4, pero está en desuso. Se recomienda a los desarrolladores que migren a enfoques más modernos, como los descritos en este documento.
 
-El motivo por qué controles móviles de ASP.NET se han marcado como obsoleto es que su diseño se centra en los teléfonos móviles que son comunes en torno a 2005 y anterior. Los controles están diseñados principalmente para representar el marcado de cHTML o de WML (en lugar de HTML normal) para los exploradores WAP de aquella era. Pero WAP, WML y cHTML ya no son relevantes para la mayoría de los proyectos, porque HTML se ha convertido en el lenguaje de marcado ubicuo para exploradores de escritorio y móviles iguales.
+La razón por la que los controles móviles ASP.NET se han marcado como obsoletos es que su diseño está orientado en torno a los teléfonos móviles que eran comunes en torno a 2005 y versiones anteriores. Los controles están diseñados principalmente para representar el marcado WML o cHTML (en lugar de HTML normal) para los exploradores WAP de esa era. No obstante, WAP, WML y cHTML ya no son relevantes para la mayoría de los proyectos, porque HTML ahora se ha convertido en el lenguaje de marcado omnipresente para exploradores móviles y de escritorio.
 
-### <a name="the-challenges-of-supporting-mobile-devices-today"></a>Los desafíos de hoy en día se admiten aquellos dispositivos móviles
+### <a name="the-challenges-of-supporting-mobile-devices-today"></a>Los desafíos de admitir dispositivos móviles hoy en día
 
-Aunque los exploradores móviles ahora casi totalmente compatible con HTML, todavía sufrirán muchos desafíos al que tiene como finalidad crear excelentes experiencias de exploración móviles:
+Aunque los exploradores móviles ahora son compatibles con HTML de un momento más universal, se enfrentarán a muchos desafíos a la hora de crear excelentes experiencias de exploración móvil:
 
-- ***Tamaño de pantalla*** : los dispositivos móviles varían considerablemente en el formulario y sus pantallas suelen ser mucho menor que los monitores de escritorio. Por lo tanto, es posible que deba crear diseños de página completamente diferente para ellos.
-- ***Métodos de entrada*** : algunos dispositivos tienen teclados, algunos tienen fonocaptores, otros usuarios usan un toque. Deberá considerar navegación varios mecanismos y los datos de los métodos de entrada.
-- ***Cumplimiento de estándares*** – muchos exploradores móviles no son compatibles con los estándares más recientes de HTML, CSS o JavaScript.
-- ***Ancho de banda*** : rendimiento de la red de telefonía móvil datos varía ampliamente y algunos usuarios finales se encuentran en las tarifas que cobran por en megabytes.
+- ***Tamaño de pantalla*** : los dispositivos móviles varían drásticamente en el formulario, y sus pantallas suelen ser mucho menores que los monitores de escritorio. Por lo tanto, puede que tenga que diseñar diseños de página completamente diferentes para ellos.
+- ***Métodos de entrada*** : algunos dispositivos tienen teclados, otros tienen lápiz óptico y otros usan la función táctil. Es posible que tenga que tener en cuenta varios mecanismos de navegación y métodos de entrada de datos.
+- ***Compatibilidad con estándares*** : muchos exploradores móviles no son compatibles con los estándares HTML, CSS o JavaScript más recientes.
+- ***Ancho de banda*** : el rendimiento de la red de datos móviles varía de forma natural y algunos usuarios finales tienen tarifas que se cobran por megabyte.
 
-No hay ninguna solución única; la aplicación tendrá que buscar y comportarse de manera diferente según el dispositivo tener acceso a él. Dependiendo de qué nivel de compatibilidad con dispositivos móvil que desee, esto puede ser un desafío mayor para los desarrolladores web que alguna vez fue el escritorio "wars explorador".
+No hay ninguna solución que sea de un solo tamaño. la aplicación tendrá que buscar y comportarse de forma diferente según el dispositivo que tiene acceso a ella. En función del nivel de soporte técnico móvil que desee, puede ser un desafío mayor para los desarrolladores web que en el caso de las "guerras del explorador".
 
-Desarrolladores que abordan la compatibilidad del explorador móvil por primera vez a menudo inicialmente crean que solo es importante admitir los smartphones más recientes y más sofisticados (p. ej., Windows Phone 7, iPhone o Android), quizás porque los desarrolladores a menudo personalmente poseen como dispositivos. Sin embargo, todavía son extremadamente populares teléfonos más baratos y sus propietarios deben usar para navegar por Internet, especialmente en los países donde los teléfonos móviles son más fáciles de obtener que una conexión de banda ancha. Debe decidir qué gama de dispositivos para admitir teniendo en cuenta sus clientes es probable que su negocio. Si va a crear un folleto en línea para un spa de mantenimiento de lujo, podría tomar la decisión de negocio solo como destino smartphones avanzados, mientras que si va a crear un sistema de reservas de vale para un cine, probablemente necesitará tener en cuenta que los visitantes con menos eficaces características teléfonos.
+Los desarrolladores que se aproximan a la compatibilidad con exploradores móviles por primera vez suelen pensar que solo es importante admitir los smartphones más recientes y más sofisticados (por ejemplo, Windows Phone 7, iPhone o Android), quizás porque los desarrolladores suelen ser de su propiedad. dispositivos. Sin embargo, los teléfonos más baratos siguen siendo extremadamente populares y sus propietarios los usan para explorar la web, especialmente en los países en los que los teléfonos móviles son más fáciles de obtener que una conexión de banda ancha. Su empresa deberá decidir qué gama de dispositivos se admiten si tiene en cuenta a sus clientes probables. Si va a crear un catálogo en línea para un spa de estado de lujo, puede tomar una decisión empresarial únicamente para dirigirse a smartphones avanzados, mientras que si está creando un sistema de reserva de vales para una cine, es probable que tenga que tener en cuenta los visitantes con características menos eficaces. teléfonos.
 
 ## <a name="architectural-options"></a>Opciones de arquitectura
 
-Antes de entrar en los detalles técnicos específicos de ASP.NET Web Forms o MVC, tenga en cuenta que los desarrolladores web en general tienen tres opciones posibles principales para admitir exploradores móviles:
+Antes de obtener los detalles técnicos específicos de los formularios Web Forms o MVC de ASP.NET, tenga en cuenta que los desarrolladores web en general tienen tres opciones principales para admitir exploradores móviles:
 
-1. ***No hacer nada:*** simplemente puede crear una aplicación web orientada a servicios de escritorio estándar y se basan en los exploradores móviles se representan de manera aceptable. 
+1. ***No hacer nada:*** Puede simplemente crear una aplicación web estándar y orientada al escritorio y basarse en exploradores móviles para representarla de forma aceptable. 
 
-    - **Ventaja**: Es la opción más económica de implementar y mantener: un trabajo adicional no
-    - **Desventaja**: Le ofrece la experiencia del usuario final peor: 
+    - **Ventaja**: es la opción más barata de implementar y mantener: sin trabajo adicional
+    - **Desventaja**: ofrece la peor experiencia del usuario final: 
 
-        - Los smartphones más recientes puede representar el HTML, así como un explorador de escritorio, pero todavía se verán obligados a los usuarios para aplicar zoom y desplazamiento horizontal y verticalmente para consumir el contenido en una pantalla pequeña. Esto está lejos de ser óptimo.
-        - Los dispositivos más antiguos y los teléfonos de característica pueden producir un error al representar el marcado de forma satisfactoria.
-        - Incluso en los últimos dispositivos Tablet PC (cuyas pantallas pueden ser tan grandes como las de portátiles), se aplican las reglas de interacción diferentes. Entrada basados en funcionalidad táctil funciona mejor con los botones más grandes y vincula diseminación aún más separado y no hay ninguna manera de mantener el mouse de un cursor del mouse sobre un menú emergente.
-2. ***Resolver el problema en el cliente* –** con cuidado de uso de CSS y [mejora progresiva](http://en.wikipedia.org/wiki/Progressive_enhancement) puede crear marcado, estilos y scripts que se adapten a cualquier explorador que está ejecutando. Por ejemplo, con [las consultas de medios de CSS 3](http://www.w3.org/TR/2010/CR-css3-mediaqueries-20100727/), podría crear un diseño de varias columna que se convierte en un diseño de columna única en los dispositivos cuyas pantallas son más estrechas que el umbral seleccionado. 
+        - Los smartphones más recientes pueden presentar el código HTML, así como un explorador de escritorio, pero los usuarios todavía se verán obligados a hacer zoom y desplazarse horizontal y verticalmente para consumir el contenido en una pantalla pequeña. Esto está lejos del óptimo.
+        - Los dispositivos y los teléfonos de características más antiguos pueden no representar el marcado de forma satisfactoria.
+        - Incluso en los dispositivos de tableta más recientes (cuyas pantallas pueden ser tan grandes como las pantallas de portátiles), se aplican reglas de interacción diferentes. La entrada táctil funciona mejor con botones y vínculos más grandes que se reparten más allá y no hay ninguna manera de mantener el cursor del mouse sobre un menú emergente.
+2. ***Resolver el problema en el cliente* :** con un uso cuidadoso de CSS y la [mejora progresiva](http://en.wikipedia.org/wiki/Progressive_enhancement) , puede crear marcado, estilos y scripts que se adapten a cualquier explorador que los ejecute. Por ejemplo, con [las consultas de medios CSS 3](http://www.w3.org/TR/2010/CR-css3-mediaqueries-20100727/), puede crear un diseño de varias columnas que se convierte en un diseño de una sola columna en los dispositivos cuyas pantallas son más estrechas que el umbral seleccionado. 
 
-    - **Ventaja**: Optimiza la representación del dispositivo específico en uso, incluso para futuros dispositivos desconocidos función cualquier pantalla y las características de entrada tienen
-    - **Ventaja**: Permite compartir la lógica del lado servidor en todos los tipos de dispositivo: duplicación mínima de código ni esfuerzo alguno fácilmente
-    - **Desventaja**: Los dispositivos móviles son muy diferentes del que es posible que realmente quiere las páginas móviles sea completamente distinto de las páginas de escritorio, que muestra información diferentes dispositivos de escritorio. Estas variaciones pueden ser ineficaces o poco probables de conseguir con eficacia a través de CSS por sí solo, especialmente teniendo en cuenta cómo incoherentemente dispositivos antiguos interpretan las reglas de CSS. Esto es especialmente cierto para los atributos CSS 3.
-    - **Desventaja**: No proporciona compatibilidad con lógica de servidor diferente y flujos de trabajo para distintos dispositivos. Por ejemplo, no es posible, implemente una compra carro de la desprotección flujo de trabajo simplificado para usuarios móviles mediante CSS por sí solo.
-    - **Desventaja**: Uso de ancho de banda ineficaz. El servidor puede tener que transmitir el marcado y los estilos que se aplican a todos los dispositivos posibles, aunque el dispositivo de destino sólo utilizará un subconjunto de esa información.
-3. ***Solucionar el problema en el servidor* –** si el servidor sabe cuál es el dispositivo tiene acceso a ella, o en menos de las características de ese dispositivo, como su tamaño de la pantalla y el método de entrada, y ya sea un dispositivo móvil: se puede ejecutar una lógica diferente y marcado HTML diferentes de salida. 
+    - **Ventaja**: optimiza la representación del dispositivo específico en uso, incluso en el caso de dispositivos futuros desconocidos según la pantalla y las características de entrada que tengan.
+    - **Ventaja**: le permite compartir fácilmente la lógica del lado servidor en todos los tipos de dispositivos: duplicación mínima de código o esfuerzo
+    - **Desventaja**: los dispositivos móviles son tan diferentes de los dispositivos de escritorio que realmente desea que las páginas móviles sean completamente diferentes de las páginas de escritorio, mostrando información diferente. Estas variaciones pueden ser ineficaces o imposibles de lograr de forma sólida a través de CSS, en especial teniendo en cuenta cómo los dispositivos más antiguos incoherentes interpretan las reglas de CSS. Esto es especialmente cierto en el caso de los atributos CSS 3.
+    - **Desventaja**: no proporciona compatibilidad con la lógica del lado servidor y los flujos de trabajo de distintos dispositivos. Por ejemplo, no puede implementar un flujo de trabajo de retirada de carro de la compra simplificado para usuarios móviles por medio de CSS únicamente.
+    - **Desventaja**: uso de ancho de banda ineficaz. Es posible que el servidor tenga que transmitir el marcado y los estilos que se aplican a todos los dispositivos posibles, aunque el dispositivo de destino solo usará un subconjunto de esa información.
+3. ***Solucione el problema en el servidor* :** Si el servidor sabe qué dispositivo está accediendo a él, o al menos las características de ese dispositivo, como el tamaño de pantalla y el método de entrada, y si se trata de un dispositivo móvil, puede ejecutar una lógica diferente y generar un marcado HTML diferente. 
 
-    - **Ventaja:** Obtener la máxima flexibilidad. No hay ningún límite a cuánto puede variar la lógica del lado servidor para dispositivos móviles u optimizar el marcado para el diseño deseado, específicos del dispositivo.
-    - **Ventaja:** Uso eficaz del ancho de banda. Solo necesita transmitir el marcado y la información de estilo que se va a usar el dispositivo de destino.
-    - **Desventaja:** A veces, fuerza la repetición de código o el esfuerzo (p. ej., que puede crear copias similares pero ligeramente distintos de las páginas de formularios Web Forms o las vistas de MVC). Donde sea posible que separará lógica común en una capa subyacente o servicio, pero aún así, algunas partes del código de interfaz de usuario o de marcado que tenga que se duplican y, a continuación, se mantienen en paralelo.
-    - **Desventaja:** Detección de dispositivos no es trivial. Se requiere una lista o una base de datos de tipos de dispositivos conocidos y sus características (que no sea siempre actualizadas perfectamente) y no está garantizado que coincidan exactamente con todas las solicitudes entrantes. Este documento describe algunas opciones y sus riesgos más adelante.
+    - **Ventaja:** Flexibilidad máxima. No hay ningún límite en cuanto a cuánto puede variar la lógica del lado servidor para dispositivos móviles u optimizar el marcado para el diseño deseado específico del dispositivo.
+    - **Ventaja:** Uso eficaz del ancho de banda. Solo necesita transmitir el marcado y la información de estilo que el dispositivo de destino va a usar.
+    - **Desventaja:** A veces obliga a repetir el trabajo o el código (por ejemplo, creando copias similares pero ligeramente diferentes de las páginas de formularios Web Forms o las vistas de MVC). Siempre que sea posible, se factoriza la lógica común en un nivel o servicio subyacente, pero es posible que algunas partes del código o el marcado de la interfaz de usuario se dupliquen y se mantengan en paralelo.
+    - **Desventaja:** La detección de dispositivos no es trivial. Requiere una lista o una base de datos de tipos de dispositivo conocidos y sus características (que puede que no siempre estén bien actualizadas) y no se garantiza que coincidan con precisión con cada solicitud entrante. En este documento se describen algunas opciones y sus problemas más adelante.
 
-Para obtener los mejores resultados, la mayoría de los desarrolladores encontrar que necesitan para combinar las opciones de (2) y (3). Diferencias menores de estilo se implementan mejor en el cliente mediante CSS o JavaScript incluso, mientras que las diferencias más importantes en los datos, el flujo de trabajo o el marcado se implementan la forma más eficaz en el código del lado servidor.
+Para obtener los mejores resultados, la mayoría de los desarrolladores tienen que combinar las opciones (2) y (3). Las diferencias estilísticas secundarias se adaptan mejor al cliente mediante CSS o incluso JavaScript, mientras que las principales diferencias en los datos, el flujo de trabajo o el marcado se implementan de forma más eficaz en el código del lado servidor.
 
-### <a name="this-paper-focuses-on-server-side-techniques"></a>Este documento se centra en técnicas de servidor
+### <a name="this-paper-focuses-on-server-side-techniques"></a>Este documento se centra en las técnicas del lado servidor
 
-Puesto que ASP.NET Web Forms y MVC son ambas tecnologías principalmente en el servidor, en este artículo se centrará en las técnicas de servidor que le permiten generar marcado diferente y la lógica para los exploradores móviles. Por supuesto, también se puede combinar con cualquier técnica de lado cliente (p. ej., CSS 3 las consultas de medios, mejora progresiva de JavaScript), pero es más una cuestión de diseño web de desarrollo de ASP.NET.
+Dado que los formularios Web Forms y MVC de ASP.NET son principalmente tecnologías del lado servidor, estas notas del producto se centrarán en las técnicas de servidor que permiten generar diferentes marcado y lógica para los exploradores móviles. Por supuesto, también puede combinarlo con cualquier técnica de cliente (por ejemplo, consultas de medios CSS 3, JavaScript de mejora progresiva), pero esto es más importante para el diseño web que el desarrollo de ASP.NET.
 
-## <a name="browser-and-device-detection"></a>Detección de explorador y del dispositivo
+## <a name="browser-and-device-detection"></a>Detección de exploradores y dispositivos
 
-El requisito previo de claves para todas las técnicas de lado servidor para admitir dispositivos móviles es saber qué dispositivo usa el visitante. De hecho, aún mejor que saber el número de fabricante y modelo del dispositivo es saber el *características* del dispositivo. Pueden incluir características:
+El requisito previo de clave para todas las técnicas de servidor para admitir dispositivos móviles es saber qué dispositivo usa el visitante. De hecho, incluso mejor que conocer el fabricante y el número de modelo de ese dispositivo está conociendo las *características* del dispositivo. Las características pueden incluir:
 
 - ¿Es un dispositivo móvil?
-- Método de entrada (mouse/teclado, táctil, teclado, un joystick,...)
-- Tamaño de pantalla (físicamente y en píxeles)
-- Formatos admitidos de medios y datos
+- Método de entrada (mouse/teclado, táctil, teclado, joystick,...)
+- Tamaño de la pantalla (físicamente y en píxeles)
+- Formatos de datos y medios admitidos
 - Etc.
 
-Es mejor tomar decisiones basadas en las características que el número de modelo, ya que, a continuación, estará equipado mejor para controlar futuros dispositivos.
+Es mejor tomar decisiones en función de las características que el número de modelo, ya que, de este modo, estará mejor equipado para controlar futuros dispositivos.
 
-### <a name="using-aspnets-built-in-browser-detection-support"></a>Uso de ASP. Compatibilidad con detección de explorador integrado de la red
+### <a name="using-aspnets-built-in-browser-detection-support"></a>Mediante ASP. Compatibilidad con la detección integrada del explorador de la red
 
-Los desarrolladores de ASP.NET Web Forms y MVC inmediatamente pueden detectar características importantes de un explorador visita inspeccionando las propiedades de la *Request.Browser* objeto. Por ejemplo, vea
+Los desarrolladores de formularios Web Forms de ASP.NET y MVC pueden detectar inmediatamente características importantes de un explorador visitante mediante la inspección de las propiedades del objeto *request. Browser* . Por ejemplo, vea
 
 - Request.Browser.IsMobileDevice
 - Request.Browser.MobileDeviceManufacturer, Request.Browser.MobileDeviceModel
@@ -114,169 +114,169 @@ Los desarrolladores de ASP.NET Web Forms y MVC inmediatamente pueden detectar ca
 - Request.Browser.SupportsXmlHttp
 - ...y muchos otros
 
-En segundo plano, la plataforma ASP.NET coincide con la entrada *User-Agent* encabezado HTTP (UA) con expresiones regulares en un conjunto de archivos XML de definición de explorador. De forma predeterminada, la plataforma incluye las definiciones para varios dispositivos móviles comunes, y puede agregar archivos de definición de explorador personalizados para que otros usuarios que quieran reconocer. Para obtener más información, vea la página MSDN [controles de servidor Web de ASP.NET y las capacidades del explorador](https://msdn.microsoft.com/library/x3k2ssx2.aspx).
+En segundo plano, la plataforma ASP.NET coincide con el encabezado HTTP de *agente de usuario* (UA) entrante con expresiones regulares en un conjunto de archivos XML de definición de explorador. De forma predeterminada, la plataforma incluye definiciones para muchos dispositivos móviles comunes y puede Agregar archivos de definición de explorador personalizados para los demás usuarios que desee reconocer. Para obtener más información, vea la página de MSDN [ASP.net controles de servidor Web y capacidades del explorador](https://msdn.microsoft.com/library/x3k2ssx2.aspx).
 
-### <a name="using-the-wurfl-device-database-via-51degreesmobi-foundation"></a>Uso de la base de datos del dispositivo WURFL a través de 51Degrees.mobi Foundation
+### <a name="using-the-wurfl-device-database-via-51degreesmobi-foundation"></a>Usar la base de datos de dispositivos WURFL a través de 51Degrees.mobi Foundation
 
-Mientras que ASP. Compatibilidad con detección de explorador integrado de la red será suficiente para muchas aplicaciones, hay dos casos principales es posible que no sea suficiente:
+While ASP. La compatibilidad con la detección integrada del explorador de la red será suficiente para muchas aplicaciones. hay dos casos principales en los que es posible que no sea suficiente:
 
-- ***Desea reconocer los últimos dispositivos***(sin necesidad de crear manualmente los archivos de definición de explorador para ellos). Tenga en cuenta que los archivos de definición de explorador del 4 de .NET no son lo suficientemente recientes como para reconocer los iPad de Apple, teléfonos Android, exploradores de Opera Mobile o Windows Phone 7.
-- ***Necesita información más detallada sobre las capacidades de dispositivo***. Es posible que deba saber sobre el método de entrada de un dispositivo (por ejemplo, el teclado de vs táctil) o qué audio formatea el explorador admite. Esta información no está disponible en los archivos de definición de explorador estándar.
+- ***Quiere reconocer los dispositivos más recientes***(sin crear manualmente los archivos de definición del explorador). Tenga en cuenta que los archivos de definición del explorador de .NET 4 no son lo suficientemente recientes para reconocer Windows Phone 7, teléfonos Android, exploradores de Operating Mobile o Apple iPad.
+- ***Necesita información más detallada sobre las funcionalidades del dispositivo***. Es posible que tenga que conocer el método de entrada de un dispositivo (por ejemplo, Touch vs teclado) o los formatos de audio que admite el explorador. Esta información no está disponible en los archivos de definición de explorador estándar.
 
-El [ *Wireless Universal Resource File* proyecto (WURFL)](http://wurfl.sourceforge.net/) mantiene mucho más detallada y actualizada información acerca de los dispositivos móviles en uso hoy en día.
+El [proyecto de *archivo de recursos universal inalámbrico* (wurfl)](http://wurfl.sourceforge.net/) mantiene información más actualizada y detallada acerca de los dispositivos móviles que se usan hoy en día.
 
-La buena noticia para los desarrolladores de .NET es que ASP. Característica de detección de explorador de la red es extensible, por lo que es posible mejorarlo para solucionar estos problemas. Por ejemplo, puede agregar el código abierto [ *51Degrees.mobi Foundation* ](https://github.com/51Degrees/dotNET-Device-Detection) biblioteca al proyecto. Es un IHttpModule de ASP.NET o un explorador capacidades de proveedor (se puede utilizar en aplicaciones de formularios Web Forms y MVC), que lee los datos WURFL y lo enlaza a ASP directamente. Mecanismo de detección de explorador integrado de la red. Una vez haya instalado el módulo, *Request.Browser* repentinamente contendrá información mucho más precisa y detallada: lo reconocerá muchos de los dispositivos que se ha mencionado anteriormente y enumerar sus capacidades (incluido correctamente funcionalidades adicionales como método de entrada). Consulte la documentación del proyecto para obtener más detalles.
+La gran noticia para los desarrolladores de .NET es que ASP. La característica de detección de exploradores de red es extensible, por lo que es posible mejorarla para solucionar estos problemas. Por ejemplo, puede Agregar la biblioteca de código abierto [*51Degrees.mobi Foundation*](https://github.com/51Degrees/dotNET-Device-Detection) Library al proyecto. Es un proveedor de funciones de ASP.NET o IHttpModule (utilizable en formularios Web Forms y aplicaciones MVC) que lee directamente los datos de WURFL y los enlaza a ASP. Mecanismo de detección de explorador integrado de la red. Una vez que haya instalado el módulo, *request. Browser* contendrá una información mucho más precisa y detallada: reconocerá correctamente muchos de los dispositivos mencionados anteriormente y mostrará sus capacidades (incluidas otras funcionalidades como el método de entrada). Consulte la documentación del proyecto para obtener más detalles.
 
-## <a name="how-web-forms-applications-can-present-mobile-specific-pages"></a>Cómo las aplicaciones de formularios Web Forms pueden presentar páginas específicas de dispositivos móviles
+## <a name="how-web-forms-applications-can-present-mobile-specific-pages"></a>Cómo pueden las aplicaciones de Web Forms presentar páginas específicas para dispositivos móviles
 
-De forma predeterminada, presentamos cómo se muestra una nueva aplicación de formularios Web Forms en dispositivos móviles comunes:
+De forma predeterminada, este es el modo en que se muestra una nueva aplicación de formularios Web Forms en dispositivos móviles comunes:
 
 ![](add-mobile-pages-to-your-aspnet-web-forms-mvc-application/_static/image1.png)
 
-Claramente, ni el diseño es apta para móviles muy: esta página se diseñó para un monitor grande, orientado a horizontal, no para una pantalla pequeña orientación vertical. Así que ¿qué puede hacer al respecto?
+Claramente, ninguno de los diseños tiene un aspecto muy descriptivo: esta página se diseñó para un monitor grande, orientado a horizontal, no para una pequeña pantalla orientada verticalmente. ¿Qué puede hacer al respecto?
 
-Como se explicó anteriormente en este artículo, hay muchas maneras de personalizar las páginas para dispositivos móviles. Algunas técnicas están basadas en servidor, otros se ejecutan en el cliente.
+Como se explicó anteriormente en este documento, hay muchas maneras de adaptar las páginas para dispositivos móviles. Algunas técnicas se basan en el servidor y otras se ejecutan en el cliente.
 
-### <a name="creating-a-mobile-specific-master-page"></a>Creación de una página maestra específica móvil
+### <a name="creating-a-mobile-specific-master-page"></a>Crear una página maestra específica para dispositivos móviles
 
-Según sus requisitos, puede usar los mismos formularios Web para todos los visitantes, pero tiene dos páginas maestra independientes: uno para los visitantes del escritorio, otro para los visitantes en dispositivos móviles. Esto ofrece la flexibilidad de cambiar el nivel superior marcado HTML para adaptarlo a dispositivos móviles, sin que sea necesario duplicar cualquier lógica de página o la hoja de estilos CSS.
+En función de sus requisitos, puede usar los mismos formularios Web para todos los visitantes, pero tener dos páginas maestras independientes: una para los visitantes del escritorio, otra para los visitantes móviles. Esto le ofrece la flexibilidad de cambiar la hoja de estilos CSS o el marcado HTML de nivel superior para adaptarse a los dispositivos móviles, sin obligarle a duplicar la lógica de la página.
 
-Esto es fácil de hacer. Por ejemplo, puede agregar un controlador de PreInit como el siguiente a un formulario Web Forms:
+Esto es fácil de hacer. Por ejemplo, puede Agregar un controlador de PreInit como el siguiente a un formulario web:
 
 [!code-csharp[Main](add-mobile-pages-to-your-aspnet-web-forms-mvc-application/samples/sample1.cs)]
 
-Ahora, cree una página maestra denominada Mobile.Master en la carpeta de nivel superior de la aplicación y se usará cuando se detecta un dispositivo móvil. La página maestra móvil puede hacer referencia a una hoja de estilos CSS específicas de dispositivos móviles si es necesario. Los visitantes escritorio seguirán viendo la página maestra predeterminada, no lo móvil.
+Ahora, cree una página maestra denominada Mobile. Master en la carpeta de nivel superior de la aplicación y se usará cuando se detecte un dispositivo móvil. Si es necesario, la página maestra móvil puede hacer referencia a una hoja de estilos CSS específica del móvil. Los visitantes del escritorio seguirán viendo la página maestra predeterminada, no la del móvil.
 
-### <a name="creating-independent-mobile-specific-web-forms"></a>Creación de independiente de formularios Web Forms específicas de dispositivos móviles
+### <a name="creating-independent-mobile-specific-web-forms"></a>Creación de formularios Web Forms específicos para móviles independientes
 
-Para obtener la máxima flexibilidad, puede ir mucho más allá de simplemente tener páginas maestras independientes para distintos tipos de dispositivos. Puede implementar dos *totalmente independientes conjuntos de páginas de formularios Web Forms* : uno establecido para los exploradores de escritorio, otro conjunto para dispositivos móviles. Esto funciona mejor si desea presentar información muy diferente o flujos de trabajo a los visitantes en dispositivos móviles. El resto de esta sección describe este enfoque en detalle.
+Para obtener la máxima flexibilidad, puede profundizar mucho más que simplemente tener páginas maestras independientes para diferentes tipos de dispositivos. Puede implementar dos *conjuntos totalmente independientes de páginas de formularios Web Forms* : uno para los exploradores de escritorio y otro para los móviles. Esto funciona mejor si desea presentar información o flujos de trabajo muy diferentes a los visitantes móviles. En el resto de esta sección se describe detalladamente este enfoque.
 
-Suponiendo que ya tiene una aplicación de formularios Web Forms diseñada para los exploradores de escritorio, la manera más fácil para continuar es crear una subcarpeta denominada "Mobile" dentro del proyecto y compilar las páginas móviles no existe. Puede crear todo un sitio secundario, con sus propias páginas maestras, las hojas de estilo y páginas, utilizando las mismas técnicas que usaría para cualquier otra aplicación de formularios Web Forms. No es necesario generar un equivalente para móviles *cada* página en el sitio de escritorio; puede elegir qué subconjunto de funcionalidad que tiene sentido para los visitantes en dispositivos móviles.
+Suponiendo que ya tiene una aplicación de formularios Web Forms diseñada para los exploradores de escritorio, la manera más fácil de proceder es crear una subcarpeta denominada "móvil" dentro del proyecto y crear las páginas móviles allí. Puede crear un subsitio completo, con sus propias páginas maestras, hojas de estilos y páginas, con las mismas técnicas que usaría para cualquier otra aplicación de formularios Web Forms. No tiene que generar necesariamente un equivalente móvil para *cada* página del sitio de escritorio; puede elegir qué subconjunto de funcionalidad tiene sentido para los visitantes móviles.
 
-Las páginas móviles pueden compartir recursos estáticos comunes (como imágenes, JavaScript o CSS archivos) con sus páginas normales si lo desea. Puesto que la carpeta "Mobile" le *no* marcarse como una aplicación independiente cuando se hospeda en IIS (es simplemente una subcarpeta simple de páginas de formularios Web Forms), también compartirán las mismas configuración, los datos de sesión y otras infraestructuras como su páginas del escritorio.
+Las páginas móviles pueden compartir recursos estáticos comunes (como imágenes, JavaScript o archivos CSS) con las páginas normales, si así lo desea. Dado que la carpeta "móvil" *no* se marcará como una aplicación independiente cuando se hospeda en IIS (es simplemente una subcarpeta simple de páginas de formularios Web Forms), también compartirá la misma configuración, los mismos datos de sesión y otras infraestructuras que las páginas de escritorio.
 
 > [!NOTE]
-> Puesto que este enfoque implica normalmente algunas duplicaciones de código (las páginas móviles están probable que comparten algunas similitudes con páginas de escritorio), es importante el factor de cualquier negocio lógica o datos acceso código común en una capa subyacente compartida o un servicio. En caso contrario, deberá doble el esfuerzo de crear y mantener la aplicación.
+> Dado que este enfoque normalmente implica la duplicación de código (es probable que las páginas móviles compartan algunas similitudes con las páginas de escritorio), es importante factorizar cualquier lógica de negocios común o el código de acceso a datos en una capa o servicio compartido subyacente. De lo contrario, se duplicará el esfuerzo de crear y mantener la aplicación.
 
-#### <a name="redirecting-mobile-visitors-to-your-mobile-pages"></a>Redirigir visitantes en dispositivos móviles a las páginas móviles
+#### <a name="redirecting-mobile-visitors-to-your-mobile-pages"></a>Redirigir a los visitantes móviles a las páginas móviles
 
-A menudo resulta conveniente redirigir los visitantes en dispositivos móviles a las páginas móviles sólo en el *primera* solicitar en su sesión de exploración (y no en todas las solicitudes en su sesión), porque:
+A menudo es conveniente redirigir a los visitantes móviles a las páginas móviles solo en la *primera* solicitud de su sesión de exploración (y no en todas las solicitudes de su sesión), porque:
 
-- A continuación, puede permitir fácilmente visitantes en dispositivos móviles tener acceso a las páginas de escritorio si lo desean, simplemente poner un vínculo en la página maestra que se va a "Versión de escritorio". El visitante no pueden redirigir a una página móvil, porque ya no es la primera solicitud en su sesión.
-- Evita el riesgo de interferir con las solicitudes de los recursos dinámicos compartidos entre las partes de escritorio y móviles de su sitio (por ejemplo, si tiene un formulario Web comunes que se muestran las partes móviles y de escritorio de su sitio en un IFRAME, así como ciertos controladores de Ajax)
+- Después, puede permitir que los visitantes móviles accedan fácilmente a las páginas de escritorio si lo desean: solo tiene que colocar un vínculo en la página maestra que vaya a "versión de escritorio". El visitante no se redirigirá de nuevo a una página móvil, ya que ya no es la primera solicitud de su sesión.
+- Evita el riesgo de interferir con las solicitudes de los recursos dinámicos compartidos entre los elementos móviles y de escritorio del sitio (por ejemplo, si tiene un formulario web común que los componentes de escritorio y móviles del sitio se muestran en un IFRAME, o algunos controladores Ajax).
 
-Para ello, puede colocar la lógica de redirección en una **sesión\_iniciar** método. Por ejemplo, agregue el método siguiente al archivo Global.asax.cs:
+Para ello, puede colocar la lógica de redirección en una **sesión\_** método de inicio. Por ejemplo, agregue el método siguiente al archivo Global.asax.cs:
 
 [!code-csharp[Main](add-mobile-pages-to-your-aspnet-web-forms-mvc-application/samples/sample2.cs)]
 
-#### <a name="configuring-forms-authentication-to-respect-your-mobile-pages"></a>Configurar la autenticación de formularios para respetar las páginas móviles
+#### <a name="configuring-forms-authentication-to-respect-your-mobile-pages"></a>Configuración de la autenticación de formularios para respetar las páginas móviles
 
-Tenga en cuenta que la autenticación de formularios hace determinadas suposiciones sobre dónde puede redirigir a los visitantes durante y después del proceso de autenticación:
+Tenga en cuenta que la autenticación mediante formularios realiza determinadas suposiciones sobre dónde puede redirigir a los visitantes durante y después del proceso de autenticación:
 
-- Cuando un usuario necesita autenticarse, autenticación de formularios redirigirá a la página de inicio de sesión de escritorio, independientemente de si un usuario móvil o de escritorio (ya que solo tiene un concepto de *una* dirección URL de inicio de sesión). Suponiendo que desea aplicar el estilo de la página de inicio de sesión móvil diferente, deberá mejorar su página de inicio de sesión de escritorio para que lo redirige a los usuarios móviles a una página de inicio de sesión móvil independiente. Por ejemplo, agregue el código siguiente a su **desktop** código de página de inicio de sesión en segundo plano: 
+- Cuando un usuario debe autenticarse, la autenticación de formularios los redirigirá a la página de inicio de sesión de escritorio, independientemente de si es un usuario de escritorio o móvil (porque solo tiene un concepto de *una* dirección URL de inicio de sesión). Suponiendo que desea aplicar estilo a la página de inicio de sesión móvil de forma diferente, debe mejorar la página de inicio de sesión de escritorio para que redirija a los usuarios móviles a una página de inicio de sesión móvil independiente. Por ejemplo, agregue el código siguiente al código subyacente de la página de inicio de sesión de **escritorio** : 
 
     [!code-csharp[Main](add-mobile-pages-to-your-aspnet-web-forms-mvc-application/samples/sample3.cs)]
-- Después de que un usuario inicia sesión correctamente, la autenticación de formularios de forma predeterminada redirigirá a la página principal del escritorio (ya que solo tiene un concepto de *uno* página predeterminada). Necesario mejorar su página de inicio de sesión móvil para que lo redirige a la página principal de mobile después un registro correcto. Por ejemplo, agregue el código siguiente a su **móvil** código de página de inicio de sesión en segundo plano: 
+- Después de que un usuario inicie sesión correctamente, la autenticación de formularios redirigirá de forma predeterminada a la Página principal del escritorio (porque solo tiene un concepto de *una* página predeterminada). Debe mejorar la página de inicio de sesión móvil para que redirija a la Página principal móvil después de un inicio de sesión correcto. Por ejemplo, agregue el código siguiente al código subyacente de la página de inicio de sesión **móvil** : 
 
     [!code-csharp[Main](add-mobile-pages-to-your-aspnet-web-forms-mvc-application/samples/sample4.cs)]
   
-  Este código supone que la página tiene un control de servidor de inicio de sesión llamado LoginUser, como se muestra en la plantilla de proyecto predeterminada.
+  En este código se supone que la página tiene un control de servidor de inicio de sesión denominado LoginUser, como en la plantilla de proyecto predeterminada.
 
-### <a name="working-with-output-caching"></a>Trabajar con la caché de resultados
+### <a name="working-with-output-caching"></a>Trabajar con el almacenamiento en caché de resultados
 
-Si usa la caché de resultados, tenga en cuenta que de forma predeterminada, es posible que un usuario de escritorio visitar una URL de determinadas (lo que su salida se almacene en caché), seguido por un usuario móvil que, a continuación, recibe el resultado de desktop almacenados en caché. Esta advertencia se aplica si solo está variar la página maestra por tipo de dispositivo, o implementar totalmente separada formularios Web Forms por tipo de dispositivo.
+Si usa el almacenamiento en caché de resultados, tenga en cuidado que, de forma predeterminada, es posible que un usuario de escritorio visite una determinada dirección URL (lo que hace que su salida se almacene en caché), seguida de un usuario móvil que recibe la salida del escritorio almacenado en caché. Esta advertencia se aplica tanto si solo está modificando la página maestra por tipo de dispositivo, como si implementa formularios Web Forms totalmente independientes por tipo de dispositivo.
 
-Para evitar el problema, puede indicar a ASP.NET para modificar la entrada de caché según si el visitante usa un dispositivo móvil. Agregue un parámetro VaryByCustom a la declaración de directiva OutputCache de la página de la manera siguiente:
+Para evitar el problema, puede indicar a ASP.NET que varíe la entrada de la memoria caché según si el visitante usa un dispositivo móvil. Agregue un parámetro VaryByCustom a la declaración OutputCache de la página como se indica a continuación:
 
 [!code-aspx[Main](add-mobile-pages-to-your-aspnet-web-forms-mvc-application/samples/sample5.aspx)]
 
-A continuación, defina *isMobileDevice* como una caché personalizada parámetro agregando el siguiente método reemplace al archivo Global.asax.cs:
+A continuación, defina *isMobileDevice* como parámetro de caché personalizado agregando la siguiente invalidación de método al archivo global.asax.CS:
 
 [!code-csharp[Main](add-mobile-pages-to-your-aspnet-web-forms-mvc-application/samples/sample6.cs)]
 
-Esto garantizará que visitantes en dispositivos móviles a la página no reciben la salida guardado previamente en la memoria caché un visitante de escritorio.
+Esto garantizará que los visitantes móviles de la página no reciban la salida previamente colocada en la memoria caché por un visitante del escritorio.
 
-### <a name="a-working-example"></a>Un ejemplo práctico
+### <a name="a-working-example"></a>Un ejemplo funcional
 
-Para ver estas técnicas en acción, descargue [ejemplos de código de este artículo técnico](https://docs.microsoft.com/aspnet/mobile/overview). La aplicación de ejemplo de formularios Web Forms redirige automáticamente a los usuarios móviles a un conjunto de páginas específicas de dispositivos móviles en una subcarpeta denominada Mobile. El marcado y los estilos de dichas páginas mejor está optimizado para los exploradores móviles, como puede ver en las capturas de pantalla siguiente:
+Para ver estas técnicas en acción, descargue los [ejemplos de código de este documento](https://docs.microsoft.com/aspnet/mobile/overview). La aplicación de ejemplo de formularios Web Forms redirige automáticamente a los usuarios móviles a un conjunto de páginas específicas de dispositivos móviles en una subcarpeta denominada móvil. El marcado y el estilo de esas páginas están optimizados mejor para los exploradores móviles, como puede ver en las siguientes capturas de pantallas:
 
 ![](add-mobile-pages-to-your-aspnet-web-forms-mvc-application/_static/image2.png)
 
-Para obtener más sugerencias sobre cómo optimizar su marcado y CSS para los exploradores móviles, consulte la sección "Estilos páginas móviles para los exploradores móviles" más adelante en este documento.
+Para obtener más sugerencias sobre cómo optimizar el marcado y CSS para exploradores móviles, vea la sección "aplicar estilos a páginas móviles para exploradores móviles" más adelante en este documento.
 
-## <a name="how-aspnet-mvc-applications-can-present-mobile-specific-pages"></a>Cómo las aplicaciones de ASP.NET MVC pueden presentar páginas específicas de dispositivos móviles
+## <a name="how-aspnet-mvc-applications-can-present-mobile-specific-pages"></a>Cómo pueden las aplicaciones MVC de ASP.NET presentar páginas específicas para móviles
 
-Puesto que el patrón Model-View-Controller separa la lógica de aplicación (en los controladores) desde la lógica de presentación (en las vistas), puede elegir desde cualquiera de los métodos siguientes para controlar la compatibilidad con dispositivos móvil en el código del lado servidor:
+Dado que el patrón modelo-vista-controlador separa la lógica de la aplicación (en los controladores) de la lógica de presentación (en vistas), puede elegir cualquiera de los métodos siguientes para controlar la compatibilidad con dispositivos móviles en el código del servidor:
 
-1. ***Usar los mismos controladores y vistas para los exploradores de escritorio y móviles, pero representan las vistas con distintos diseños de Razor según el tipo de dispositivo*** Esta opción funciona mejor si están mostrando datos idénticos en todos los dispositivos, pero simplemente desea proporcionar distintas hojas de estilo CSS o cambiar algunos elementos de HTML de nivel superior para dispositivos móviles.
-2. ***Usar los mismos controladores para los exploradores de escritorio y móviles, pero presentar vistas distintas según el tipo de dispositivo***. Esta opción funciona mejor si está mostrando aproximadamente los mismos datos y proporcionar los mismos flujos de trabajo para los usuarios finales, pero desea presentar HTML muy diferente para satisfacer el dispositivo que se usa.
-3. ***Crear áreas bien diferenciadas para los exploradores de escritorio y móviles, implementar vistas y controladores independientes para cada*** Esta opción funciona mejor si mostrar pantallas muy diferentes, que contiene información diferente e iniciales al usuario a través de diferentes flujos de trabajo optimizado para su tipo de dispositivo. Significa que es posible que algunos repetición de código, pero puede minimizar esto mediante la exclusión lógica común en una capa o de servicio subyacente.
+1. ***utilizan los mismos controladores y vistas para los exploradores de escritorio y móviles, pero representan las vistas con diseños de Razor diferentes en función del tipo de dispositivo *.** Esta opción funciona mejor si muestra datos idénticos en todos los dispositivos, pero simplemente desea proporcionar diferentes hojas de estilos CSS o cambiar algunos elementos HTML de nivel superior para dispositivos móviles.
+2. ***Use los mismos controladores para los exploradores de escritorio y móviles, pero represente vistas diferentes según el tipo de dispositivo***. Esta opción funciona mejor si se muestran aproximadamente los mismos datos y se proporcionan los mismos flujos de trabajo para los usuarios finales, pero se desea representar un marcado HTML muy diferente para adaptarse al dispositivo que se está usando.
+3. ***crear áreas independientes para exploradores móviles y de escritorio, implementando controladores independientes y vistas para cada *.** Esta opción funciona mejor si se muestran pantallas muy diferentes, que contienen información diferente y que conducen al usuario a través de diferentes flujos de trabajo optimizados para su tipo de dispositivo. Puede significar alguna repetición del código, pero puede minimizarlo mediante la división de la lógica común en una capa o servicio subyacente.
 
-Si desea aprovechar el **primera** opción y variar solo el diseño de Razor por tipo de dispositivo, es muy fácil. Solo tiene que modificar su \_ViewStart.cshtml archivo como sigue:
+Si desea tomar la **primera** opción y variar solo el diseño de Razor por tipo de dispositivo, es muy fácil. Solo tiene que modificar el archivo \_ViewStart. cshtml de la siguiente manera:
 
 [!code-cshtml[Main](add-mobile-pages-to-your-aspnet-web-forms-mvc-application/samples/sample7.cshtml)]
 
-Ahora puede crear un diseño específico de dispositivos móviles denominado \_LayoutMobile.cshtml con una estructura de la página y CSS reglas optimizados para dispositivos móviles.
+Ahora puede crear un diseño específico para móviles denominado \_LayoutMobile. cshtml con una estructura de página y reglas CSS optimizadas para dispositivos móviles.
 
-Si desea aprovechar el **segundo** opción render vistas totalmente diferente según el tipo de dispositivo del visitante, consulte [entrada de blog de Scott Hanselman](http://www.hanselman.com/blog/ABetterASPNETMVCMobileDeviceCapabilitiesViewEngine.aspx).
+Si desea que la **segunda** opción represente vistas totalmente diferentes según el tipo de dispositivo del visitante, consulte la [entrada de blog de Scott Hanselman](http://www.hanselman.com/blog/ABetterASPNETMVCMobileDeviceCapabilitiesViewEngine.aspx).
 
-El resto de este artículo se centra en la **tercer** opción – Crear controladores independientes *y* vistas para dispositivos móviles: para que pueda controlar exactamente qué subconjunto de funcionalidad se ofrece para los visitantes en dispositivos móviles.
+El resto de este documento se centra en la **tercera** opción: crear controladores *y* vistas independientes para dispositivos móviles, por lo que puede controlar exactamente qué subconjunto de funcionalidad se ofrece para los visitantes móviles.
 
-### <a name="setting-up-a-mobile-area-within-your-aspnet-mvc-application"></a>Configurar un área dentro de la aplicación de MVC de ASP.NET Mobile
+### <a name="setting-up-a-mobile-area-within-your-aspnet-mvc-application"></a>Configuración de un área móvil en la aplicación ASP.NET MVC
 
-Puede agregar un área denominada "Mobile" a una aplicación ASP.NET MVC existente de la manera normal: haga doble clic en el nombre del proyecto en el Explorador de soluciones, a continuación, elija Agregar à área. A continuación, puede agregar controladores y vistas como lo haría para cualquier otra área dentro de una aplicación ASP.NET MVC. Por ejemplo, agregar a su área móvil un nuevo controlador denominado HomeController para que actúe como una página de inicio para los visitantes en dispositivos móviles.
+Puede Agregar un área denominada "móvil" a una aplicación existente de ASP.NET MVC de la manera normal: haga clic con el botón derecho en el nombre del proyecto en Explorador de soluciones y, a continuación, elija Agregar área de à. Después, puede agregar controladores y vistas como lo haría con cualquier otra área dentro de una aplicación ASP.NET MVC. Por ejemplo, agregue al área móvil un nuevo controlador denominado HomeController para que actúe como una página principal para los visitantes móviles.
 
-### <a name="ensuring-the-url-mobile-reaches-the-mobile-homepage"></a>Lo que garantiza la dirección URL de /Mobile llega a la página principal de móvil
+### <a name="ensuring-the-url-mobile-reaches-the-mobile-homepage"></a>Asegurarse de que la dirección URL/Mobile llegue a la Página principal móvil
 
-Si desea que la dirección URL /Mobile para llegar a la acción Index en HomeController dentro de su área móvil, deberá realizar dos pequeños cambios en la configuración de enrutamiento. En primer lugar, actualice la clase MobileAreaRegistration para que el HomeController es el controlador predeterminado en el área móvil, tal como se muestra en el código siguiente:
+Si desea que la dirección URL/Mobile llegue a la acción de índice en HomeController dentro del área móvil, deberá realizar dos pequeños cambios en la configuración de enrutamiento. En primer lugar, actualice la clase MobileAreaRegistration para que HomeController sea el controlador predeterminado en el área móvil, tal como se muestra en el código siguiente:
 
 [!code-csharp[Main](add-mobile-pages-to-your-aspnet-web-forms-mvc-application/samples/sample8.cs)]
 
-Esto significa que la página principal de móvil ahora se ubicarán en /Mobile en lugar de/Mobile/Home, porque "Hogar" es ahora el implícitamente nombre de controlador de forma predeterminada para las páginas móviles.
+Esto significa que la Página principal móvil ahora se encontrará en/Mobile, en lugar de/Mobile/Home, ya que "Home" es ahora el nombre del controlador predeterminado implícitamente para las páginas móviles.
 
-A continuación, tenga en cuenta que al agregar un segundo HomeController a su aplicación (es decir, la móviles, además de escritorio uno existente), habrá divide la página principal de escritorio normal. Se producirá un error con el error "*se encontraron varios tipos que coinciden con el controlador denominado 'Inicio'* ". Para resolver este problema, actualice la configuración de enrutamiento de nivel superior (de Global.asax.cs) para especificar que el HomeController escritorio debería tener prioridad cuando hay ambigüedad:
+A continuación, tenga en cuenta que al agregar un segundo HomeController a la aplicación (es decir, el móvil, además del escritorio existente), habrá interrumpido la Página principal de escritorio normal. Se producirá un error que indica*que se encontraron varios tipos que coinciden con el controlador denominado ' Home '* ". Para resolver este error, actualice la configuración de enrutamiento de nivel superior (en Global.asax.cs) para especificar que el HomeController de escritorio debe tener prioridad cuando haya ambigüedad:
 
 [!code-csharp[Main](add-mobile-pages-to-your-aspnet-web-forms-mvc-application/samples/sample9.cs)]
 
-Ahora el error irá ubicación y la dirección URL http:\/\/*suSitio*/ llegará a la página principal de escritorio y http:\/\/*suSitio*le /mobile/ llegue a la página principal de dispositivos móvil.
+Ahora el error desaparecerá y la dirección URL http:\/\/*yoursite*/llegará a la Página principal del escritorio y http:\/\/*yoursite*/Mobile/llegarán a la Página principal de Mobile.
 
-### <a name="redirecting-mobile-visitors-to-your-mobile-area"></a>Redirigir visitantes en dispositivos móviles a su área móvil
+### <a name="redirecting-mobile-visitors-to-your-mobile-area"></a>Redirigir visitantes móviles a su área móvil
 
-Hay muchas diferentes puntos de extensibilidad de ASP.NET MVC, por lo que hay muchas maneras posibles para inyectar lógica de redirección. Es una opción clara crear un atributo de filtro, [RedirectMobileDevicesToMobileArea], que realiza un redireccionamiento si se cumplen las condiciones siguientes:
+Hay muchos puntos de extensibilidad diferentes en ASP.NET MVC, por lo que hay muchas formas posibles de inyectar la lógica de redirección. Una opción ordenada es crear un atributo de filtro, [RedirectMobileDevicesToMobileArea], que realiza una redirección si se cumplen las condiciones siguientes:
 
-1. Es la primera solicitud en la sesión del usuario (es decir, Session.IsNewSession es igual a true)
-2. La solicitud procede de un explorador móvil (es decir, Request.Browser.IsMobileDevice es igual a true)
-3. El usuario ya no solicita un recurso en el área móvil (es decir, el *ruta* parte de la dirección URL no empieza por /Mobile)
+1. Es la primera solicitud de la sesión del usuario (es decir, Session. IsNewSession es igual a true)
+2. La solicitud proviene de un explorador móvil (es decir, Request. Browser. IsMobileDevice es igual a true)
+3. El usuario todavía no está solicitando un recurso en el área móvil (es decir, la parte de la *ruta de acceso* de la dirección URL no comienza por/Mobile)
 
-El ejemplo descargable incluido en este artículo incluye una implementación de esta lógica. Se implementa como un filtro de autorización, derivado de AuthorizeAttribute, lo que significa que pueda funcionar correctamente, incluso si está utilizando el almacenamiento en caché de salida (en caso contrario, si un visitante escritorio primera accesos a una URL determinada, el resultado de desktop podrían almacenarse en caché y, después, atiende a posteriores visitantes en dispositivos móviles).
+El ejemplo descargable incluido en estas notas del producto incluye una implementación de esta lógica. Se implementa como un filtro de autorización, que se deriva de AuthorizeAttribute, lo que significa que puede funcionar correctamente incluso si se usa el almacenamiento en caché de resultados (de lo contrario, si un visitante del escritorio accede primero a una dirección URL determinada, la salida del escritorio se podría almacenar en caché y, a continuación, atender a visitantes móviles posteriores).
 
-Ya que es un filtro, puede elegir uno de ellos para aplicarla a determinados controladores y acciones, por ejemplo,
+Como filtro, puede elegir aplicarlo a controladores y acciones específicos, por ejemplo,
 
 [!code-csharp[Main](add-mobile-pages-to-your-aspnet-web-forms-mvc-application/samples/sample10.cs)]
 
-… o puede aplicarla a todos los controladores y acciones como un MVC 3 *filtros globales* en el archivo Global.asax.cs:
+… o bien, puede aplicarlo a todos los controladores y acciones como un *filtro global* de MVC 3 en el archivo global.asax.CS:
 
 [!code-csharp[Main](add-mobile-pages-to-your-aspnet-web-forms-mvc-application/samples/sample11.cs)]
 
-El ejemplo descargable también muestra cómo puede crear subclases de este atributo que redireccionan a ubicaciones específicas dentro de su área móvil. Esto significa, por ejemplo, que puede:
+En el ejemplo descargable también se muestra cómo puede crear subclases de este atributo que se redirigen a ubicaciones específicas dentro de su área móvil. Esto significa que, por ejemplo, puede:
 
-- Registrar un filtro global tal como se muestra arriba que envía los visitantes en dispositivos móviles a la página principal móvil de forma predeterminada.
-- También aplicar un filtro de [RedirectMobileDevicesToMobileProductPage] especial a una acción de "ver el producto" que toma los visitantes en dispositivos móviles a la versión móvil de cualquier página del producto que lo haya solicitado.
-- También se aplican otras subclases del filtro especiales para realizar determinadas acciones, redirigiendo a la página móvil equivalente visitantes en dispositivos móviles
+- Registre un filtro global como se muestra arriba que envía a los visitantes móviles a la página de inicio móvil de forma predeterminada.
+- Aplique también un filtro especial [RedirectMobileDevicesToMobileProductPage] a una acción "ver producto" que lleve a los visitantes móviles a la versión móvil de cualquier página del producto que haya solicitado.
+- Aplique también otras subclases especiales del filtro a acciones específicas, redirigiendo a los visitantes móviles a la página móvil equivalente
 
-### <a name="configuring-forms-authentication-to-respect-your-mobile-pages"></a>Configurar la autenticación de formularios para respetar las páginas móviles
+### <a name="configuring-forms-authentication-to-respect-your-mobile-pages"></a>Configuración de la autenticación de formularios para respetar las páginas móviles
 
-Si usa la autenticación de formularios, debe tener en cuenta que cuando un usuario necesita iniciar sesión, redirige automáticamente al usuario a una sola "iniciar sesión" dirección URL específica, cuyo valor predeterminado es **/cuenta/inicio de sesión**. Esto significa que los usuarios móviles que se le redirija a la acción escritorio "iniciar sesión".
+Si utiliza la autenticación de formularios, debe tener en cuenta que cuando un usuario necesita iniciar sesión, redirige automáticamente al usuario a una dirección URL de "Inicio de sesión" específica, que de forma predeterminada es **/account/Logon**. Esto significa que los usuarios móviles se pueden redirigir a la acción "iniciar sesión" del escritorio.
 
-Para evitar este problema, agregue lógica a la acción "iniciar sesión" del escritorio para que los usuarios móviles redirige de nuevo a una acción "iniciar sesión" móviles. Si usa la plantilla de aplicación de ASP.NET MVC predeterminada, actualizar acción de inicio de sesión de AccountController como sigue:
+Para evitar este problema, agregue la lógica a la acción "iniciar sesión" del escritorio para que redirija a los usuarios móviles de nuevo a una acción de inicio de sesión móvil. Si está usando la plantilla de aplicación de ASP.NET MVC predeterminada, actualice la acción de inicio de sesión de AccountController como se indica a continuación:
 
 [!code-csharp[Main](add-mobile-pages-to-your-aspnet-web-forms-mvc-application/samples/sample12.cs)]
 
-… y, a continuación, implementar una acción de "iniciar sesión" específicas de dispositivos móviles adecuados en un controlador llamado AccountController en su área móvil.
+… y, a continuación, implemente una acción adecuada de "Inicio de sesión" específica de Mobile en un controlador denominado AccountController en su área móvil.
 
-### <a name="working-with-output-caching"></a>Trabajar con la caché de resultados
+### <a name="working-with-output-caching"></a>Trabajar con el almacenamiento en caché de resultados
 
-Si usa el filtro [OutputCache], debe forzar la entrada de caché que varían según el tipo de dispositivo. Por ejemplo, escriba:
+Si utiliza el filtro [OutputCache], debe forzar que la entrada de la caché varíe según el tipo de dispositivo. Por ejemplo, escriba:
 
 [!code-javascript[Main](add-mobile-pages-to-your-aspnet-web-forms-mvc-application/samples/sample13.js)]
 
@@ -284,79 +284,79 @@ A continuación, agregue el método siguiente al archivo Global.asax.cs:
 
 [!code-csharp[Main](add-mobile-pages-to-your-aspnet-web-forms-mvc-application/samples/sample14.cs)]
 
-Esto garantizará que visitantes en dispositivos móviles a la página no reciben la salida guardado previamente en la memoria caché un visitante de escritorio.
+Esto garantizará que los visitantes móviles de la página no reciban la salida previamente colocada en la memoria caché por un visitante del escritorio.
 
-### <a name="a-working-example"></a>Un ejemplo práctico
+### <a name="a-working-example"></a>Un ejemplo funcional
 
-Para ver estas técnicas en acción, descargue [código de este artículo técnico asociado ejemplos](https://docs.microsoft.com/aspnet/mobile/overview). El ejemplo incluye una aplicación de ASP.NET MVC 3 (Release Candidate) ha mejorado para admitir dispositivos móviles mediante los métodos descritos anteriormente.
+Para ver estas técnicas en acción, descargue los [ejemplos asociados de código de este documento](https://docs.microsoft.com/aspnet/mobile/overview). El ejemplo incluye una aplicación de ASP.NET MVC 3 (versión candidata) mejorada para admitir dispositivos móviles mediante los métodos descritos anteriormente.
 
-## <a name="further-guidance-and-suggestions"></a>Más orientación y sugerencias
+## <a name="further-guidance-and-suggestions"></a>Instrucciones y sugerencias adicionales
 
-En la siguiente explicación se aplica tanto a los formularios Web Forms y los desarrolladores MVC que usan las técnicas descritas en este documento.
+La siguiente explicación se aplica a los desarrolladores de Web Forms y MVC que usan las técnicas descritas en este documento.
 
-### <a name="enhancing-your-redirection-logic-using-51degreesmobi-foundation"></a>Mejorar su lógica de redirección mediante 51Degrees.mobi Foundation
+### <a name="enhancing-your-redirection-logic-using-51degreesmobi-foundation"></a>Mejora de la lógica de redirección mediante 51Degrees.mobi Foundation
 
-La lógica de redirección que se muestra en este documento puede ser suficiente para la aplicación, pero no funcionará si tiene que deshabilitar las sesiones, o con los exploradores móviles que rechazan las cookies (estos no tienen sesiones), ya que no sabrá si una solicitud determinada es la primera de ellas desde ese visitante.
+La lógica de redirección que se muestra en este documento puede ser perfectamente suficiente para la aplicación, pero no funcionará si necesita deshabilitar sesiones o con exploradores móviles que rechacen las cookies (no pueden tener sesiones), ya que no sabrá si una solicitud determinada es el primero de ese visitante.
 
-Ya ha aprendido cómo la base de código abierto 51Degrees.mobi puede mejorar la precisión de ASP. Detección de explorador de la red. También tiene una capacidad integrada para redirigir los visitantes en dispositivos móviles a ubicaciones específicas configurados en el archivo Web.config. Es capaz de funcionar sin dependiendo de las sesiones ASP.NET (y, por tanto, las cookies) al almacenar un registro temporal de los valores hash de los encabezados HTTP y las direcciones IP de los visitantes, de modo que lo sepa si cada solicitud es la primera de ellas desde un visitante determinado.
+Ya aprendió cómo la base de 51Degrees.mobi de código abierto puede mejorar la precisión de ASP. Detección del explorador de la red. También tiene una capacidad integrada para redirigir a los visitantes móviles a ubicaciones específicas configuradas en Web. config. Es capaz de trabajar sin depender de las sesiones de ASP.NET (y, por lo tanto, de las cookies) mediante el almacenamiento de un registro temporal de los valores hash de los encabezados HTTP y las direcciones IP de los visitantes, de modo que sepa si cada solicitud es la primera de un determinado visitador.
 
-El siguiente elemento agregado a la sección fiftyOne del archivo web.config redirigirá la primera solicitud desde un dispositivo móvil detectado a la página ~ / Mobile/Default.aspx. Las solicitudes de páginas bajo la carpeta móvil le *no* redirigirá, independientemente del tipo de dispositivo. Si el dispositivo móvil ha estado inactivo durante un período de 20 minutos o más el dispositivo se olvidarán y las solicitudes posteriores se tratará como nuevos para los fines de redirección.
+El siguiente elemento que se agrega a la sección fiftyOne del archivo Web. config redirigirá la primera solicitud de un dispositivo móvil detectado a la página ~/Mobile/Default.aspx. *No* se redirigirán las solicitudes a las páginas de la carpeta móvil, independientemente del tipo de dispositivo. Si el dispositivo móvil ha estado inactivo durante un período de 20 minutos o más, el dispositivo se olvidará y las solicitudes subsiguientes se tratarán como nuevas para los propósitos de la redirección.
 
 [!code-xml[Main](add-mobile-pages-to-your-aspnet-web-forms-mvc-application/samples/sample15.xml)]
 
-Para obtener más información, consulte [51degrees.mobi documentación Foundation](https://github.com/51Degrees/dotNET-Device-Detection).
+Para obtener más información, consulte la [documentación de 51Degrees.mobi Foundation](https://github.com/51Degrees/dotNET-Device-Detection).
 
 > [!NOTE]
-> Le *puede* característica de redirección de la Fundación de 51Degrees.mobi de uso en aplicaciones de ASP.NET MVC, pero tendrá que definir la configuración de redirección en cuanto a direcciones URL sin formato, no en términos de los parámetros de enrutamiento o colocar filtros de MVC en acciones. Esto es porque (en el momento de redactar) 51Degrees.mobi Foundation no reconoce los filtros o enrutamiento.
+> *Puede* usar la característica de redirección de 51Degrees.mobi Foundation en aplicaciones ASP.NET MVC, pero tendrá que definir la configuración de redireccionamiento en términos de direcciones URL sin formato, no en términos de enrutamiento o mediante la colocación de filtros MVC en acciones. Esto se debe a que, en el momento de la escritura, 51Degrees.mobi Foundation no reconoce filtros ni rutas.
 
-### <a name="disabling-transcoders-and-proxy-servers"></a>Deshabilitar servidores Proxy y los transcodificadores
+### <a name="disabling-transcoders-and-proxy-servers"></a>Deshabilitar transcodificadores y servidores proxy
 
-Operadores de red móvil tienen dos objetivos amplia en su enfoque a internet móvil:
+Los operadores de red móvil tienen dos objetivos generales en su enfoque para la Internet móvil:
 
-1. Proporcionar como contenido mucho pertinente como sea posible
-2. Maximizar el número de clientes que pueden compartir el ancho de banda de red limitado de radio
+1. Proporcione tanto contenido relevante como sea posible
+2. Maximice el número de clientes que pueden compartir el ancho de banda de red de radio limitado
 
-Puesto que la mayoría de las páginas web se diseñaron para pantallas de tamaño de escritorio grandes y conexiones de banda ancha de línea rápido se ha corregido, usar muchos operadores *transcodificadores* o *servidores proxy* que alterar dinámicamente el contenido web. Puede modificar el formato HTML o CSS para que se ajuste a pantallas más pequeñas (especialmente para la "característica teléfonos" que no tienen la capacidad de procesamiento para controlar los diseños complejos), y pueden volver a comprimir las imágenes (lo que reduce considerablemente su calidad) para mejorar las velocidades de entrega de la página.
+Dado que la mayoría de las páginas web se diseñaron para pantallas de gran tamaño de escritorio y conexiones de banda ancha de línea fija rápidas, muchos operadores utilizan *transcodificadores* o *servidores proxy* que modifican dinámicamente el contenido Web. Pueden modificar el marcado HTML o CSS para adaptarse a pantallas más pequeñas (especialmente para "teléfonos de características" que carecen de la capacidad de procesamiento para administrar diseños complejos) y pueden volver a comprimir las imágenes (lo que reduce significativamente su calidad) para mejorar la velocidad de entrega de páginas.
 
-Pero si ha realizado el esfuerzo para producir una versión optimizada para móviles de su sitio, probablemente no desea que el operador de red que interfieran con él cualquiera aún más. Puede agregar la siguiente línea a la página\_eventos de carga en cualquier formulario Web Forms de ASP.NET:
+Pero si ha realizado el esfuerzo de generar una versión optimizada para dispositivos móviles de su sitio, es probable que no desee que el operador de red interfiera más. Puede Agregar la siguiente línea a la página\_evento Load en cualquier formulario Web ASP.NET:
 
 [!code-csharp[Main](add-mobile-pages-to-your-aspnet-web-forms-mvc-application/samples/sample16.cs)]
 
-O bien, para un controlador ASP.NET MVC, puede agregar la siguiente invalidación de método para que se aplique a todas las acciones en el controlador:
+O bien, para un controlador ASP.NET MVC, puede Agregar la siguiente invalidación de método para que se aplique a todas las acciones de ese controlador:
 
 [!code-csharp[Main](add-mobile-pages-to-your-aspnet-web-forms-mvc-application/samples/sample17.cs)]
 
-El mensaje HTTP resultante informa a los transcodificadores conformes de W3C y los servidores de proxy no alterar el contenido. Por supuesto, no hay ninguna garantía de que los operadores de redes móviles respetará este mensaje.
+El mensaje HTTP resultante informa a los transcodificadores y proxies compatibles con W3C de no modificar el contenido. Por supuesto, no hay ninguna garantía de que los operadores de red móvil respeten este mensaje.
 
-### <a name="styling-mobile-pages-for-mobile-browsers"></a>Aplicar estilos a las páginas móviles para los exploradores móviles
+### <a name="styling-mobile-pages-for-mobile-browsers"></a>Aplicar estilos a páginas móviles para exploradores móviles
 
-Está fuera del ámbito de este documento describir en detalle qué tipos de trabajo de marcado HTML correctamente o qué técnicas de diseño web maximizar la facilidad de uso en determinados dispositivos. Se copia para buscar un diseño lo suficientemente sencillo, optimizado para una pantalla tamaño mobile, sin usar no confiable HTML o CSS trucos de posicionamiento. Sin embargo, es una técnica importante que merece la pena mencionar, el *etiqueta meta de ventanilla*.
+Queda fuera del ámbito de este documento describir con gran detalle qué tipos de marcado HTML funcionan correctamente o qué técnicas de diseño web maximizan la facilidad de uso en determinados dispositivos. Depende de usted encontrar un diseño suficientemente sencillo, optimizado para una pantalla de tamaño móvil, sin usar trucos de posicionamiento HTML o CSS no confiables. Una técnica importante que merece la pena mencionar, sin embargo, es la *etiqueta meta*de la ventanilla.
 
-Lo ciertos exploradores móviles, en un esfuerzo para mostrar las páginas web diseñadas para los monitores de escritorio, representan la página en un lienzo virtual, también denominado "ventanilla" (por ejemplo, la ventanilla virtual es 980 píxeles de ancho en iPhone y 850 píxeles de ancho en Opera Mobile de forma predeterminada) y, a continuación, Reduzca el resultado para ajustarla a píxeles físicos de la pantalla. El usuario puede, a continuación, usar el zoom y panorámica dicha ventanilla. Esto tiene la ventaja que permite que el explorador muestre la página en su diseño previsto, pero también tiene la desventaja que obliga a Zoom y panorámica, que no es apto para el usuario. Si va a diseñar para dispositivos móviles, es mejor diseño para una pantalla estrecha para que no sea necesario zoom o desplazamiento horizontal.
+Algunos exploradores móviles modernos, en un esfuerzo muestran páginas Web diseñadas para monitores de escritorio, representan la página en un lienzo virtual, también denominado "ventanilla" (por ejemplo, la ventanilla virtual tiene un ancho de 980 píxeles en el iPhone y 850 píxeles de ancho en Opera Mobile de forma predeterminada) y, a continuación, escale el resultado hacia abajo para ajustarse a los píxeles físicos de la pantalla. Después, el usuario puede acercar y desplazarse por la ventanilla. Esto tiene la ventaja de que permite que el explorador muestre la página en su diseño previsto, pero también tiene la desventaja de que fuerza el zoom y la panorámica, lo que no resulta cómodo para el usuario. Si está diseñando para móviles, es mejor diseñar una pantalla estrecha para que no sea necesario hacer zoom o desplazamiento horizontal.
 
-Una manera de indicar al explorador móvil ancho debe ser la ventanilla es a través de la no estándar *ventanilla* etiqueta meta. Por ejemplo, si agrega lo siguiente a la sección de encabezado de la página,
+Una manera de indicar al explorador móvil el ancho que debe tener la ventanilla a través de la etiqueta meta no estándar de la *ventanilla* . Por ejemplo, si agrega lo siguiente a la sección principal de la página,
 
 [!code-html[Main](add-mobile-pages-to-your-aspnet-web-forms-mvc-application/samples/sample18.html)]
 
-… a continuación, compatibilidad con exploradores de smartphone se diseñe la página en un lienzo virtual a nivel de 480 píxeles. Esto significa que, si los elementos HTML definen el ancho en términos de porcentaje, se interpretará los porcentajes en relación con este ancho de 480 píxeles, no el ancho del área de visualización predeterminado. Como resultado, el usuario es menos probable que tenga que aplicar el zoom y desplazar horizontalmente: considerablemente mejora la experiencia de exploración móvil.
+… a continuación, los exploradores de smartphone diseñarán la página en un lienzo virtual de ancho de 480 píxeles. Esto significa que si los elementos HTML definen su ancho en términos porcentuales, los porcentajes se interpretarán con respecto a este ancho de 480 píxeles, no al ancho de la ventanilla predeterminado. Como resultado, es menos probable que el usuario tenga que hacer zoom y panorámica horizontalmente, lo que mejora considerablemente la experiencia de exploración móvil.
 
-Si desea que el ancho de la ventanilla para que coincida con píxeles físicos del dispositivo, se puede especificar lo siguiente:
+Si desea que el ancho de la ventanilla coincida con los píxeles físicos del dispositivo, puede especificar lo siguiente:
 
 [!code-html[Main](add-mobile-pages-to-your-aspnet-web-forms-mvc-application/samples/sample19.html)]
 
-Para que funcione correctamente, debe no fuerza explícitamente elementos que se va a superar ese ancho (por ejemplo, mediante un *ancho* atributo o propiedad CSS), en caso contrario, se forzará el explorador para usar un área de visualización mayor independientemente. Vea también: [más detalles acerca de la etiqueta de ventanilla no estándar](https://developer.apple.com/library/safari/#documentation/AppleApplications/Reference/SafariHTMLRef/Articles/MetaTags.html).
+Para que esto funcione correctamente, no debe forzar explícitamente que los elementos superen ese ancho (por ejemplo, mediante el uso de un atributo de *ancho* o una propiedad de CSS); de lo contrario, el explorador se verá obligado a usar una ventanilla mayor independientemente de. Vea también: [más detalles sobre la etiqueta viewport no estándar](https://developer.apple.com/library/safari/#documentation/AppleApplications/Reference/SafariHTMLRef/Articles/MetaTags.html).
 
-Los smartphones más modernos admiten *orientación dual*: se mantendrían en modo vertical u horizontal. Por lo tanto, es importante no realizar suposiciones sobre el ancho de pantalla en píxeles. No incluso se supone que se ha corregido el ancho de pantalla, dado que el usuario puede orientar volver a su dispositivo mientras están en la página.
+La mayoría de los smartphones modernos admiten la *doble orientación*: se pueden mantener en modo vertical u horizontal. Por lo tanto, es importante no hacer suposiciones sobre el ancho de pantalla en píxeles. Ni siquiera Supongamos que el ancho de la pantalla es fijo, ya que el usuario puede volver a orientar el dispositivo mientras está en la página.
 
-Dispositivos Windows Mobile y Blackberry antiguos también pueden aceptar las siguientes etiquetas meta en el encabezado de página para informarles de contenido se ha optimizado para dispositivos móviles y, por tanto, no deben transformarse.
+Los dispositivos de Windows Mobile y BlackBerry más antiguos también pueden aceptar las siguientes etiquetas meta en el encabezado de página para informar de que el contenido se ha optimizado para dispositivos móviles y, por tanto, no debe transformarse.
 
 [!code-html[Main](add-mobile-pages-to-your-aspnet-web-forms-mvc-application/samples/sample20.html)]
 
 ## <a name="additional-resources"></a>Recursos adicionales
 
-Para obtener una lista de los emuladores de dispositivos móviles y los simuladores puede usar para probar la aplicación web ASP.NET mobile, consulte la página [simular dispositivos móviles conocidos para realizar pruebas](../mobile/device-simulators.md).
+Para obtener una lista de emuladores y simuladores de dispositivos móviles que puede usar para probar la aplicación Web de ASP.NET móvil, consulte la página [simular dispositivos móviles populares para pruebas](../mobile/device-simulators.md).
 
 ## <a name="credits"></a>Créditos
 
 - Autor principal: Steven Sanderson
-- Los revisores / adicionales escritores de contenido: James Rosewell, Mikael Söderström, Scott Hanselman, Scott Hunter
+- Revisores/escritores de contenido adicionales: James Rosewell, Mikael Söderström, Scott Hanselman, Scott Hunter

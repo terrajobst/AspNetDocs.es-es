@@ -9,11 +9,11 @@ ms.assetid: 1f68f59d-9c1e-4cf3-b304-c13ae6b7203e
 msc.legacyurl: /web-forms/overview/ajax-control-toolkit/popup/handling-postbacks-from-a-popup-control-with-an-updatepanel-cs
 msc.type: authoredcontent
 ms.openlocfilehash: 8b9e58d68b3d6c5d01ceaba6c01653e9574b541b
-ms.sourcegitcommit: 22fbd8863672c4ad6693b8388ad5c8e753fb41a2
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/28/2019
-ms.locfileid: "74606336"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78496669"
 ---
 # <a name="handling-postbacks-from-a-popup-control-with-an-updatepanel-c"></a>Controlar los postbacks desde un control emergente con un UpdatePanel (C#)
 
@@ -23,7 +23,7 @@ por [Christian Wenz](https://github.com/wenz)
 
 > El extensor PopupControl en el kit de herramientas de control de AJAX ofrece una manera sencilla de desencadenar un elemento emergente cuando se activa cualquier otro control. Se debe tener especial cuidado cuando se produce un postback dentro de este tipo de elemento emergente.
 
-## <a name="overview"></a>Información general del
+## <a name="overview"></a>Información general
 
 El extensor PopupControl en el kit de herramientas de control de AJAX ofrece una manera sencilla de desencadenar un elemento emergente cuando se activa cualquier otro control. Se debe tener especial cuidado cuando se produce un postback dentro de este tipo de elemento emergente.
 

@@ -9,11 +9,11 @@ ms.assetid: c1a35f18-bab9-41f7-8497-15530c37a09d
 msc.legacyurl: /web-forms/overview/older-versions-getting-started/aspnet-ajax/understanding-asp-net-ajax-localization
 msc.type: authoredcontent
 ms.openlocfilehash: 003e7939accd7a68dab97441b3d999bca835b85a
-ms.sourcegitcommit: 22fbd8863672c4ad6693b8388ad5c8e753fb41a2
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/28/2019
-ms.locfileid: "74600858"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78456631"
 ---
 # <a name="understanding-aspnet-ajax-localization"></a>Descripción de localización de ASP.NET AJAX
 
@@ -57,12 +57,12 @@ Los scripts de referencia cultural neutra no deben incluir ningún identificador
 
 En la tabla siguiente se resumen las convenciones de nomenclatura de archivos con ejemplos:
 
-| Nombre de archivo | Significado |
+| Filename | Significado |
 | --- | --- |
-| Script. js | Un script neutro de versión de lanzamiento. |
-| Script. Debug. js | Un script de referencia cultural neutra de versión de depuración. |
-| Script. en-US. js | Una versión de lanzamiento en inglés, Estados Unidos script. |
-| Script.debug.es-CO. js | Un script de la versión de depuración Español de Columbia. |
+| Script.js | Un script neutro de versión de lanzamiento. |
+| Script.debug.js | Un script de referencia cultural neutra de versión de depuración. |
+| Script.en-US.js | Una versión de lanzamiento en inglés, Estados Unidos script. |
+| Script.debug.es-CO.js | Un script de la versión de depuración Español de Columbia. |
 
 ## <a name="walkthrough-create-an-localized-embedded-script"></a>Tutorial: crear un script incrustado y adaptado
 
