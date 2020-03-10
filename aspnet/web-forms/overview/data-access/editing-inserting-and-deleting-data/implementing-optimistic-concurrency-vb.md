@@ -9,11 +9,11 @@ ms.assetid: 2646968c-2826-4418-b1d0-62610ed177e3
 msc.legacyurl: /web-forms/overview/data-access/editing-inserting-and-deleting-data/implementing-optimistic-concurrency-vb
 msc.type: authoredcontent
 ms.openlocfilehash: 28c39fe2a290cc3a5b093fdd09de341630606137
-ms.sourcegitcommit: 22fbd8863672c4ad6693b8388ad5c8e753fb41a2
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/28/2019
-ms.locfileid: "74628734"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78492367"
 ---
 # <a name="implementing-optimistic-concurrency-vb"></a>Implementar la simultaneidad optimista (VB)
 

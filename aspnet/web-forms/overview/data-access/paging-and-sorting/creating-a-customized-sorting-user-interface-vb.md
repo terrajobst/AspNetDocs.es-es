@@ -9,11 +9,11 @@ ms.assetid: f3897a74-cc6a-4032-8f68-465f155e296a
 msc.legacyurl: /web-forms/overview/data-access/paging-and-sorting/creating-a-customized-sorting-user-interface-vb
 msc.type: authoredcontent
 ms.openlocfilehash: 66127630560141cd795beb15f525a7fba85f3993
-ms.sourcegitcommit: 22fbd8863672c4ad6693b8388ad5c8e753fb41a2
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/28/2019
-ms.locfileid: "74607337"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78502651"
 ---
 # <a name="creating-a-customized-sorting-user-interface-vb"></a>Crear una interfaz de usuario de ordenación personalizada (VB)
 

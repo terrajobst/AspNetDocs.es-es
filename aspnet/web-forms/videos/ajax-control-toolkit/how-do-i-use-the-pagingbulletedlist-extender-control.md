@@ -1,27 +1,27 @@
 ---
 uid: web-forms/videos/ajax-control-toolkit/how-do-i-use-the-pagingbulletedlist-extender-control
-title: '[¿Cómo lo hago?:] ¿Utilice la opción de control extensor Pagingbulletedlist? | Microsoft Docs'
+title: '[Cómo:] ¿Usar el control extensor de PagingBulletedList? | Microsoft Docs'
 author: JoeStagner
-description: Este vídeo muestra el uso de la variable de control extensor pagingbulletedlist de ASP.NET AJAX Control Toolkit. Aprendemos cómo el extende PagingBulletedList...
+description: En este vídeo se muestra el uso del control extensor de PagingBulletedList desde el kit de herramientas de control de AJAX de ASP.NET. Aprendemos cómo PagingBulletedList extender...
 ms.author: riande
 ms.date: 06/12/2007
 ms.assetid: 7f2231f1-c105-499e-b980-c24824bed56a
 msc.legacyurl: /web-forms/videos/ajax-control-toolkit/how-do-i-use-the-pagingbulletedlist-extender-control
 msc.type: video
 ms.openlocfilehash: 4b6326fcf3c62dda8519b2d86236f2be7caef825
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59386845"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78518953"
 ---
-# <a name="how-do-i-use-the-pagingbulletedlist-extender-control"></a>[¿Cómo lo hago?:] ¿Utilice la opción de control extensor Pagingbulletedlist?
+# <a name="how-do-i-use-the-pagingbulletedlist-extender-control"></a>[Cómo:] ¿Usar el control extensor de PagingBulletedList?
 
 por [Joe Stagner](https://github.com/JoeStagner)
 
-Este vídeo muestra el uso de la variable de control extensor pagingbulletedlist de ASP.NET AJAX Control Toolkit. Se obtenga información sobre cómo agrega el extensor PagingBulletedList del lado cliente, paginación y ordenación al control BulletedList ASP.NET estándar, lo que mejora considerablemente la experiencia del usuario cuando se presenta una amplia lista de elementos. También vemos cómo podemos definir código JavaScript personalizado y experiencia de CSS para administrar completamente el usuario.
+En este vídeo se muestra el uso del control extensor de PagingBulletedList desde el kit de herramientas de control de AJAX de ASP.NET. Aprendemos cómo el extensor PagingBulletedList agrega paginación del lado cliente y ordenación al control BulletedList estándar de ASP.NET, lo que mejora en gran medida la experiencia del usuario al presentar una amplia lista de elementos. También veremos cómo podemos definir JavaScript y CSS personalizados para administrar completamente la experiencia del usuario.
 
-[&#9654;Vea el vídeo (25 minutos)](https://channel9.msdn.com/Blogs/ASP-NET-Site-Videos/how-do-i-use-the-pagingbulletedlist-extender-control)
+[&#9654;Ver vídeo (25 minutos)](https://channel9.msdn.com/Blogs/ASP-NET-Site-Videos/how-do-i-use-the-pagingbulletedlist-extender-control)
 
 > [!div class="step-by-step"]
 > [Anterior](how-do-i-use-the-aspnet-ajax-listsearch-extender.md)

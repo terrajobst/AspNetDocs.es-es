@@ -1,8 +1,8 @@
 ---
 uid: web-api/overview/older-versions/build-restful-apis-with-aspnet-web-api
-title: Compilar API RESTful con ASP.NET Web API - ASP.NET 4.x
+title: Cree API de RESTful con ASP.NET Web API ASP.NET 4. x
 author: rick-anderson
-description: 'Laboratorio práctico: Usar Web API en ASP.NET 4.x para crear una sencilla API de REST para una aplicación de administrador de contactos.'
+description: 'Laboratorio práctico: Use Web API en ASP.NET 4. x para compilar una sencilla API de REST para una aplicación de Contact Manager.'
 ms.author: riande
 ms.date: 02/18/2013
 ms.custom: seoapril2019
@@ -10,591 +10,591 @@ ms.assetid: 87daa99f-3810-407e-b969-dd28a192959d
 msc.legacyurl: /web-api/overview/older-versions/build-restful-apis-with-aspnet-web-api
 msc.type: authoredcontent
 ms.openlocfilehash: 35b115d6b4f84084e78e429bbb4842670e57bba4
-ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/06/2019
-ms.locfileid: "65132263"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78504271"
 ---
-# <a name="build-restful-apis-with-aspnet-web-api"></a>Compilar API RESTful con ASP.NET Web API
+# <a name="build-restful-apis-with-aspnet-web-api"></a>Compilación de API de RESTful con ASP.NET Web API
 
-por [campamentos Web Team](https://twitter.com/webcamps)
+por [equipo de grupos de web](https://twitter.com/webcamps)
 
-> Laboratorio práctico: Usar Web API en ASP.NET 4.x para crear una sencilla API de REST para una aplicación de administrador de contactos. También creará un cliente para usar la API.
+> Laboratorio práctico: Use Web API en ASP.NET 4. x para compilar una sencilla API de REST para una aplicación de Contact Manager. También creará un cliente para usar la API.
 
-En los últimos años, se ha convertido en claro que HTTP no es solo para servir como páginas HTML. También es una plataforma eficaz para crear las API Web, con unos cuantos verbos (GET, POST etc.) además de algunos conceptos simples como *URI* y *encabezados*. ASP.NET Web API es un conjunto de componentes que simplifican la programación de HTTP. Dado que se basa en el tiempo de ejecución de ASP.NET MVC, API Web controla automáticamente los detalles de bajo nivel de transporte de HTTP. Al mismo tiempo, API Web expone naturalmente el modelo de programación HTTP. De hecho, es uno de los objetivos de la API Web *no* abstraer la realidad de HTTP. Como resultado, la API Web es flexible y fácil de extender.  El estilo arquitectónico REST ha demostrado para ser una forma eficaz de aprovechar HTTP - aunque ciertamente no es el enfoque sólo es válido para HTTP. El Administrador de contactos expondrá el RESTful para enumerar, agregar y quitar contactos, entre otros. 
+En los últimos años, se ha vuelto claro que HTTP no es solo para proporcionar páginas HTML. También es una plataforma eficaz para la creación de API Web, con una serie de verbos (GET, POST, etc.) además de algunos conceptos simples, como los *URI* y los *encabezados*. ASP.NET Web API es un conjunto de componentes que simplifican la programación HTTP. Dado que se basa en el tiempo de ejecución de ASP.NET MVC, Web API controla automáticamente los detalles de transporte de bajo nivel de HTTP. Al mismo tiempo, la API Web expone de forma natural el modelo de programación HTTP. De hecho, un objetivo de Web API es *no* abstraer la realidad de http. Como resultado, la API Web es flexible y fácil de ampliar.  El estilo arquitectónico REST ha demostrado ser una manera eficaz de aprovechar HTTP, aunque ciertamente no es el único enfoque válido para HTTP. El administrador de contactos expondrá el RESTful para enumerar, agregar y quitar contactos, entre otros. 
 
-Esta práctica requiere una comprensión básica de HTTP, REST y se supone que tiene conocimientos prácticos básicos de HTML, JavaScript y jQuery.
+Este laboratorio requiere un conocimiento básico de HTTP, REST y supone que tiene conocimientos prácticos básicos de HTML, JavaScript y jQuery.
 > 
 > > [!NOTE]
-> > El sitio Web de ASP.NET tiene un área dedicada para el marco de ASP.NET Web API en [ https://asp.net/web-api ](https://asp.net/web-api). Este sitio seguirá proporcionando información más reciente, ejemplos y noticias relacionadas con la API Web, así que comprobación con frecuencia si gustaría profundizar más en el arte de la creación de API Web personalizadas disponibles para prácticamente cualquier marco de desarrollo o de dispositivo.
+> > El sitio web de ASP.NET tiene un área dedicada al marco de ASP.NET Web API en [https://asp.net/web-api](https://asp.net/web-api). Este sitio seguirá proporcionando información de última hora, ejemplos y noticias relacionados con Web API, por lo que debe comprobarlo con frecuencia si desea profundizar más en el arte de crear API Web personalizadas disponibles para prácticamente cualquier dispositivo o marco de desarrollo.
 > > 
-> > ASP.NET Web API, similar a ASP.NET MVC 4, tiene gran flexibilidad en cuanto a la separación de la capa de servicio desde los controladores que le permite usar algunos de los marcos de trabajo disponibles de inserción de dependencias bastante fácil. Hay un buen ejemplo de MSDN que se muestra cómo usar Ninject para inserción de dependencias en un proyecto de ASP.NET Web API que puede descargarse desde [aquí](https://code.msdn.microsoft.com/ASPNET-Web-API-JavaScript-d0d64dd7).
+> > ASP.NET Web API, similar a ASP.NET MVC 4, tiene una gran flexibilidad en cuanto a la separación del nivel de servicio de los controladores, lo que le permite usar fácilmente varios de los marcos de inserción de dependencias disponibles. Hay un buen ejemplo en MSDN que muestra cómo usar Ninject para la inserción de dependencias en un proyecto ASP.NET Web API que puede descargar desde [aquí](https://code.msdn.microsoft.com/ASPNET-Web-API-JavaScript-d0d64dd7).
 > 
 > 
-> Todo el código de ejemplo y fragmentos de código se incluyen en el Kit de entrenamiento campamentos de Web, que está disponible en [ https://go.microsoft.com/fwlink/?LinkID=248297&clcid=0x409 ](https://go.microsoft.com/fwlink/?LinkID=248297&clcid=0x409).
+> Todo el código de ejemplo y los fragmentos de código se incluyen en el kit de aprendizaje de Web., disponible en [https://go.microsoft.com/fwlink/?LinkID=248297&clcid=0x409](https://go.microsoft.com/fwlink/?LinkID=248297&clcid=0x409).
 
 <a id="Objectives"></a>
 ### <a name="objectives"></a>Objetivos
 
-En este laboratorio práctico, aprenderá cómo:
+En este laboratorio práctico, aprenderá a:
 
-- Implementar una API Web RESTful
+- Implementación de una API web RESTful
 - Llamar a la API desde un cliente HTML
 
 <a id="Prerequisites"></a>
 ### <a name="prerequisites"></a>Requisitos previos
 
-El siguiente es necesario para completar este laboratorio práctico:
+Para completar este laboratorio práctico, es necesario lo siguiente:
 
-- [Microsoft Visual Studio Express 2012 para Web](https://www.microsoft.com/visualstudio/eng/products/visual-studio-express-for-web) o superior (leer [Apéndice B](#AppendixB) para obtener instrucciones sobre cómo instalarlo).
+- [Microsoft Visual Studio Express 2012 para web](https://www.microsoft.com/visualstudio/eng/products/visual-studio-express-for-web) o superior (Lea el [Apéndice B](#AppendixB) para obtener instrucciones sobre cómo instalarlo).
 
 <a id="Setup"></a>
 ### <a name="setup"></a>Programa de instalación
 
-**Instalación de fragmentos de código**
+**Instalar fragmentos de código**
 
-Para mayor comodidad, gran parte del código que se va a administrar a lo largo de este laboratorio está disponible como fragmentos de código de Visual Studio. Para instalar los fragmentos de código que se ejecute **.\Source\Setup\CodeSnippets.vsi** archivo.
+Para mayor comodidad, gran parte del código que va a administrar a lo largo de este laboratorio está disponible como fragmentos de código de Visual Studio. Para instalar el archivo **.\Source\Setup\CodeSnippets.VSI** de ejecución de fragmentos de código.
 
-Si no está familiarizado con los fragmentos de código de Visual Studio y desea aprender a usarlas, puede consultar el apéndice de este documento &quot; [Apéndice A: Usar fragmentos de código](#AppendixA)&quot;.
+Si no está familiarizado con los fragmentos de Visual Studio Code y desea obtener información sobre cómo usarlos, puede consultar el apéndice de este documento &quot;[Apéndice A: usar fragmentos de código](#AppendixA)&quot;.
 
 <a id="Exercises"></a>
 ## <a name="exercises"></a>Ejercicios
 
-Este laboratorio práctico incluye en el siguiente ejercicio:
+Este laboratorio práctico incluye el siguiente ejercicio:
 
-1. [Ejercicio 1: Crear una API de Web de solo lectura](#Exercise1)
-2. [Ejercicio 2: Crear una API Web de lectura/escritura](#Exercise2)
-3. [Ejercicio 3: Usar la API Web desde un cliente HTML](#Exercise3)
+1. [Ejercicio 1: creación de una API Web de solo lectura](#Exercise1)
+2. [Ejercicio 2: creación de una API Web de lectura/escritura](#Exercise2)
+3. [Ejercicio 3: usar la API Web desde un cliente HTML](#Exercise3)
 
 > [!NOTE]
-> Cada ejercicio está acompañado por un **final** carpeta que contiene la solución resultante debe obtener después de completar los ejercicios. Puede usar esta solución como una guía si necesita ayuda adicional para trabajar a través de los ejercicios.
+> Cada ejercicio va acompañado de una carpeta **final** que contiene la solución resultante que debe obtener después de completar los ejercicios. Puede usar esta solución como guía si necesita ayuda adicional para trabajar en los ejercicios.
 
-Tiempo estimado para completar esta práctica: **60 minutos**.
+Tiempo estimado para completar este laboratorio: **60 minutos**.
 
 <a id="Exercise1"></a>
 
 <a id="Exercise_1_Create_a_Read-Only_Web_API"></a>
-### <a name="exercise-1-create-a-read-only-web-api"></a>Ejercicio 1: Crear una API de Web de solo lectura
+### <a name="exercise-1-create-a-read-only-web-api"></a>Ejercicio 1: creación de una API Web de solo lectura
 
-En este ejercicio, implementará los métodos GET de solo lectura para el Administrador de contactos.
+En este ejercicio, implementará los métodos GET de solo lectura para el administrador de contactos.
 
 <a id="Ex1Task1"></a>
 
 <a id="Task_1_-_Creating_the_API_Project"></a>
-#### <a name="task-1---creating-the-api-project"></a>Tarea 1: crear el proyecto de API
+#### <a name="task-1---creating-the-api-project"></a>Tarea 1: creación del proyecto de API
 
-En esta tarea, utilizará las nuevas plantillas de proyecto web ASP.NET para crear una aplicación web de API Web.
+En esta tarea, usará las nuevas plantillas de proyecto Web de ASP.NET para crear una aplicación Web de API Web.
 
-1. Ejecute **Visual Studio 2012 Express para Web**, para ello, vaya a **iniciar** y tipo **VS Express para Web** , a continuación, presione **ENTRAR**.
-2. Desde el **archivo** menú, seleccione **nuevo proyecto**. Seleccione el **Visual C# | Web** tipo desde la vista de árbol del tipo de proyecto del proyecto y, después, seleccione el **aplicación Web de ASP.NET MVC 4** tipo de proyecto. Establezca el proyecto **nombre** a *ContactManager* y el **nombre de la solución** a *comenzar*, a continuación, haga clic en **Aceptar**.
+1. Ejecute **Visual Studio 2012 Express para web**. para ello, vaya a **inicio** y escriba **vs Express para web** Presione **entrar**.
+2. En el menú **archivo** , seleccione **nuevo proyecto**. Seleccione el **Visual C# |** Tipo de proyecto web en la vista de árbol tipo de proyecto y, a continuación, seleccione el tipo de proyecto **aplicación web MVC 4 ASP.net** . Establezca el **nombre** del proyecto en *ContactManager* y el **nombre** de la solución en *Inicio*; a continuación, haga clic en **Aceptar**.
 
-    ![Crear un nuevo proyecto de aplicación de ASP.NET MVC 4.0 Web](build-restful-apis-with-aspnet-web-api/_static/image1.png "crear un nuevo proyecto de aplicación de ASP.NET MVC 4.0 Web")
+    ![Creación de un nuevo proyecto de aplicación Web ASP.NET MVC 4,0](build-restful-apis-with-aspnet-web-api/_static/image1.png "Creación de un nuevo proyecto de aplicación Web ASP.NET MVC 4,0")
 
-    *Crear un nuevo proyecto de aplicación de ASP.NET MVC 4.0 Web*
-3. En el cuadro de diálogo de tipo de proyecto de ASP.NET MVC 4, seleccione el **API Web** tipo de proyecto. Haga clic en **Aceptar**.
+    *Creación de un nuevo proyecto de aplicación Web ASP.NET MVC 4,0*
+3. En el cuadro de diálogo tipo de proyecto de ASP.NET MVC 4, seleccione el tipo de proyecto **API Web** . Haga clic en **Aceptar**.
 
-    ![Especifica el tipo de proyecto Web API](build-restful-apis-with-aspnet-web-api/_static/image2.png "especifica el tipo de proyecto Web API")
+    ![Especificación del tipo de proyecto de API Web](build-restful-apis-with-aspnet-web-api/_static/image2.png "Especificación del tipo de proyecto de API Web")
 
-    *Especifica el tipo de proyecto Web API*
+    *Especificación del tipo de proyecto de API Web*
 
 <a id="Ex1Task2"></a>
 
 <a id="Task_2_-_Creating_the_Contact_Manager_API_Controllers"></a>
 #### <a name="task-2---creating-the-contact-manager-api-controllers"></a>Tarea 2: creación de los controladores de API de Contact Manager
 
-En esta tarea, creará las clases del controlador en el que van a residir los métodos de API.
+En esta tarea, creará las clases de controlador en las que residirán los métodos de la API.
 
-1. Eliminar el archivo denominado **ValuesController.cs** en **controladores** carpeta del proyecto.
-2. Haga clic en el **controladores** carpeta en el proyecto y seleccione **Add | Controlador** en el menú contextual.
+1. Elimine el archivo denominado **ValuesController.CS** dentro de la carpeta **Controllers** del proyecto.
+2. Haga clic con el botón derecho en la carpeta **Controllers** del proyecto y seleccione **Agregar | Controlador** del menú contextual.
 
-    ![Agregar un nuevo controlador para el proyecto](build-restful-apis-with-aspnet-web-api/_static/image3.png "agregando un nuevo controlador al proyecto")
+    ![Agregar un nuevo controlador al proyecto](build-restful-apis-with-aspnet-web-api/_static/image3.png "Agregar un nuevo controlador al proyecto")
 
     *Agregar un nuevo controlador al proyecto*
-3. En el **Agregar controlador** cuadro de diálogo que aparece, seleccione **controlador de API en blanco** en el menú de la plantilla. Nombre de la clase de controlador **ContactController**. A continuación, haga clic en **agregar.**
+3. En el cuadro de diálogo **Agregar controlador** que aparece, seleccione **controlador de API vacío** en el menú plantilla. Asigne a la clase de controlador el nombre **ContactController**. A continuación, haga clic en **Agregar.**
 
-    ![Mediante el cuadro de diálogo Agregar controlador para crear un nuevo controlador de API Web](build-restful-apis-with-aspnet-web-api/_static/image4.png "mediante el cuadro de diálogo Agregar controlador para crear un nuevo controlador de API Web")
+    ![Usar el cuadro de diálogo Agregar controlador para crear un nuevo controlador de API Web](build-restful-apis-with-aspnet-web-api/_static/image4.png "Usar el cuadro de diálogo Agregar controlador para crear un nuevo controlador de API Web")
 
     *Usar el cuadro de diálogo Agregar controlador para crear un nuevo controlador de API Web*
-4. Agregue el código siguiente a la **ContactController**.
+4. Agregue el código siguiente a **ContactController**.
 
-    (Código de fragmento de código - *Web API laboratorio - Ex01 - Get (método) API*)
+    (Fragmento de código: *API Web Lab-EX01-Get API Method*)
 
     [!code-csharp[Main](build-restful-apis-with-aspnet-web-api/samples/sample1.cs)]
-5. Presione **F5** para depurar la aplicación. Debería aparecer la página principal predeterminada para un proyecto Web API.
+5. Presione **F5** para depurar la aplicación. Debe aparecer la Página principal predeterminada de un proyecto de API Web.
 
-    ![La página principal predeterminada de una aplicación de ASP.NET Web API](build-restful-apis-with-aspnet-web-api/_static/image5.png "la página principal predeterminada de una aplicación de ASP.NET Web API")
+    ![La Página principal predeterminada de una aplicación ASP.NET Web API](build-restful-apis-with-aspnet-web-api/_static/image5.png "La Página principal predeterminada de una aplicación ASP.NET Web API")
 
-    *La página principal predeterminada de una aplicación de ASP.NET Web API*
-6. En la ventana de Internet Explorer, presione el **F12** tecla para abrir el **Developer Tools** ventana. Haga clic en el **red** pestaña y, a continuación, haga clic en el **Iniciar captura** botón para empezar a capturar el tráfico de red en la ventana.
+    *La Página principal predeterminada de una aplicación ASP.NET Web API*
+6. En la ventana de Internet Explorer, presione la tecla **F12** para abrir la ventana **herramientas de desarrollo** . Haga clic en la pestaña **red** y, a continuación, haga clic en el botón **Iniciar captura** para empezar a capturar el tráfico de red en la ventana.
 
-    ![Abre la pestaña red e iniciando captura de red](build-restful-apis-with-aspnet-web-api/_static/image6.png "abre la pestaña red e iniciando captura de red")
+    ![Apertura de la pestaña red e inicio de la captura de red](build-restful-apis-with-aspnet-web-api/_static/image6.png "Apertura de la pestaña red e inicio de la captura de red")
 
-    *Abre la pestaña red e iniciar la captura de red*
-7. Anexe la dirección URL en la barra de direcciones del explorador con **/api/contact** y presione ENTRAR. Los detalles de la transmisión aparecerán en la ventana de captura de red. Tenga en cuenta que el tipo MIME de la respuesta es **application/json**. Esto demuestra cómo el formato de salida predeterminado es JSON.
+    *Apertura de la pestaña red e inicio de la captura de red*
+7. Anexe la dirección URL de la barra de direcciones del explorador con **/API/Contact** y presione Entrar. Los detalles de la transmisión aparecerán en la ventana captura de red. Tenga en cuenta que el tipo MIME de la respuesta es **Application/JSON**. Esto muestra cómo el formato de salida predeterminado es JSON.
 
-    ![Ver la salida de la solicitud de API Web en la vista de red](build-restful-apis-with-aspnet-web-api/_static/image7.png "viendo la salida de la solicitud de API Web en la vista de red")
+    ![Visualización de la salida de la solicitud de API Web en la vista de red](build-restful-apis-with-aspnet-web-api/_static/image7.png "Visualización de la salida de la solicitud de API Web en la vista de red")
 
-    *Ver la salida de la solicitud de API Web en la vista de red*
+    *Visualización de la salida de la solicitud de API Web en la vista de red*
 
     > [!NOTE]
-    > Configuración predeterminada de Internet Explorer 10 en este momento será preguntar si el usuario desea guardar o abrir la secuencia resultante de la llamada de API Web. El resultado será un archivo de texto que contiene el resultado JSON de la llamada a la dirección URL de Web API. No cancele el cuadro de diálogo para poder ver el contenido de la respuesta a través de la ventana de herramientas de desarrolladores.
-8. Haga clic en el **vaya a la vista detallada** botón para ver más detalles sobre la respuesta de la llamada API.
+    > El comportamiento predeterminado de Internet Explorer 10 en este momento será preguntar si el usuario desea guardar o abrir el flujo resultante de la llamada a la API Web. La salida será un archivo de texto que contenga el resultado JSON de la llamada URL de la API Web. No cancele el cuadro de diálogo para poder ver el contenido de la respuesta a través de la ventana de herramientas de desarrolladores.
+8. Haga clic en el botón **ir a vista detallada** para ver más detalles sobre la respuesta de esta llamada de API.
 
-    ![Cambie a la vista detallada](build-restful-apis-with-aspnet-web-api/_static/image8.png "cambiar a vista de detalles")
+    ![Cambiar a la vista detallada](build-restful-apis-with-aspnet-web-api/_static/image8.png "Cambiar a la vista de detalles")
 
-    *Cambie a la vista detallada*
-9. Haga clic en el **cuerpo de respuesta** pestaña para ver el texto de respuesta JSON real.
+    *Cambiar a la vista detallada*
+9. Haga clic en la pestaña **cuerpo de respuesta** para ver el texto de respuesta JSON real.
 
-    ![Ver el JSON de salida de texto en el monitor de red](build-restful-apis-with-aspnet-web-api/_static/image9.png "ver el JSON de salida de texto en el monitor de red")
+    ![Visualización del texto de salida JSON en el monitor de red](build-restful-apis-with-aspnet-web-api/_static/image9.png "Visualización del texto de salida JSON en el monitor de red")
 
-    *Ver el texto de salida JSON en el monitor de red*
+    *Visualización del texto de salida JSON en el monitor de red*
 
 <a id="Ex1Task3"></a>
 
 <a id="Task_3_-_Creating_the_Contact_Models_and_Augment_the_Contact_Controller"></a>
-#### <a name="task-3---creating-the-contact-models-and-augment-the-contact-controller"></a>Tarea 3: creación de los modelos de contacto y aumentar el controlador de contacto
+#### <a name="task-3---creating-the-contact-models-and-augment-the-contact-controller"></a>Tarea 3: crear los modelos de contacto y aumentar el controlador de contactos
 
-En esta tarea, creará las clases del controlador en el que van a residir los métodos de API.
+En esta tarea, creará las clases de controlador en las que residirán los métodos de la API.
 
-1. Haga clic en el **modelos** carpeta y seleccione **Add | Clase...**  en el menú contextual.
+1. Haga clic con el botón derecho en la carpeta **modelos** y seleccione **Agregar | Clase...** en el menú contextual.
 
-    ![Agregar un modelo nuevo a la aplicación web](build-restful-apis-with-aspnet-web-api/_static/image10.png "adición de un modelo nuevo a la aplicación web")
+    ![Agregar un nuevo modelo a la aplicación Web](build-restful-apis-with-aspnet-web-api/_static/image10.png "Agregar un nuevo modelo a la aplicación Web")
 
-    *Agregar un modelo nuevo a la aplicación web*
-2. En el **Agregar nuevo elemento** cuadro de diálogo, el nombre del nuevo archivo **Contact.cs** y haga clic en **agregar.**
+    *Agregar un nuevo modelo a la aplicación Web*
+2. En el cuadro de diálogo **Agregar nuevo elemento** , asigne al nuevo archivo el nombre **Contact.CS** y haga clic en **Agregar.**
 
-    ![Crear el nuevo archivo de clase de contacto](build-restful-apis-with-aspnet-web-api/_static/image11.png "crear el nuevo archivo de clase de contacto")
+    ![Crear el nuevo archivo de clase de contacto](build-restful-apis-with-aspnet-web-api/_static/image11.png "Crear el nuevo archivo de clase de contacto")
 
     *Crear el nuevo archivo de clase de contacto*
-3. Agregue el código resaltado siguiente a la **póngase en contacto con** clase.
+3. Agregue el siguiente código resaltado a la clase **Contact** .
 
-    (Código de fragmento de código - *clase póngase en contacto con el laboratorio de API - Ex01 - Web*)
+    (Fragmento de código- *Web API Lab-EX01-Contact (clase*))
 
     [!code-csharp[Main](build-restful-apis-with-aspnet-web-api/samples/sample2.cs)]
-4. En el **ContactController** de clases, seleccione la palabra **cadena** en la definición de método de la **obtener** método y escriba la palabra *póngase en contacto con*. Una vez se ha escrito la palabra, aparecerá un indicador al principio de la palabra **póngase en contacto con**. Ya sea mantenga presionada la tecla el **Ctrl** clave y presione la tecla de punto (.) o haga clic en el icono con el mouse para abrir el cuadro de diálogo de asistencia en el editor de código para rellenar automáticamente el **mediante** la directiva para los modelos espacio de nombres.
+4. En la clase **ContactController** , seleccione la palabra **cadena** en la definición de método del método **Get** y escriba la palabra *Contact*. Una vez escrita la palabra, aparecerá un indicador al principio de la palabra **contacto**. Mantenga presionada la tecla **Ctrl** y presione la tecla punto (.) o haga clic en el icono con el mouse para abrir el cuadro de diálogo de asistencia en el editor de código y rellene automáticamente la directiva **using** para el espacio de nombres Models.
 
-    ![Mediante la asistencia de Intellisense para las declaraciones de espacio de nombres](build-restful-apis-with-aspnet-web-api/_static/image12.png)
+    ![Usar la asistencia de IntelliSense para las declaraciones de espacio de nombres](build-restful-apis-with-aspnet-web-api/_static/image12.png)
 
-    *Mediante la asistencia de Intellisense para las declaraciones de espacio de nombres*
-5. Modifique el código para el **obtener** método para que devuelva una matriz de instancias de modelo de contacto.
+    *Usar la asistencia de IntelliSense para las declaraciones de espacio de nombres*
+5. Modifique el código para el método **Get** para que devuelva una matriz de instancias de modelo de contacto.
 
-    (Código de fragmento de código - *devolver una lista de contactos de laboratorio de API Web - Ex01 -*)
+    (Fragmento de código: *API Web Lab-EX01: devolver una lista de contactos*)
 
     [!code-csharp[Main](build-restful-apis-with-aspnet-web-api/samples/sample3.cs)]
 6. Presione **F5** para depurar la aplicación web en el explorador. Para ver los cambios realizados en la salida de respuesta de la API, realice los pasos siguientes.
 
-   1. Una vez que el explorador se abre, presione **F12** si las herramientas de desarrollo no están abiertas todavía.
-   2. Haga clic en el **red** ficha.
-   3. Presione el **Iniciar captura** botón.
-   4. Agregue el sufijo de dirección URL **/api/contact** a la dirección URL en la barra de direcciones y presione la **ENTRAR** clave.
-   5. Presione el **vaya a la vista detallada** botón.
-   6. Seleccione el **cuerpo de respuesta** ficha. Debería ver una cadena JSON que representa el formulario serializado de una matriz de instancias de contacto.
+   1. Una vez que se abra el explorador, presione **F12** si las herramientas de desarrollo no están abiertas todavía.
+   2. Haga clic en la pestaña **red** .
+   3. Presione el botón **Iniciar captura** .
+   4. Agregue el sufijo de dirección URL **/API/Contact** a la dirección URL en la barra de direcciones y presione la tecla **entrar** .
+   5. Presione el botón **ir a vista detallada** .
+   6. Seleccione la pestaña **cuerpo de respuesta** . Debería ver una cadena JSON que representa el formato serializado de una matriz de instancias de contacto.
 
-      ![Salida de una llamada al método de Web API compleja serializados de JSON](build-restful-apis-with-aspnet-web-api/_static/image13.png "salida de una llamada al método de Web API compleja serializados de JSON")
+      ![Salida serializada de JSON de una llamada de método de API Web compleja](build-restful-apis-with-aspnet-web-api/_static/image13.png "Salida serializada de JSON de una llamada de método de API Web compleja")
 
-      *Salida de una llamada al método de Web API compleja serializados de JSON*
+      *Salida serializada de JSON de una llamada de método de API Web compleja*
 
 <a id="Ex1Task4"></a>
 
 <a id="Task_4_-_Extracting_Functionality_into_a_Service_Layer"></a>
-#### <a name="task-4---extracting-functionality-into-a-service-layer"></a>Tarea 4: funcionalidad de extracción en una capa de servicio
+#### <a name="task-4---extracting-functionality-into-a-service-layer"></a>Tarea 4: extracción de la funcionalidad en un nivel de servicio
 
-Esta tarea mostrará cómo extraer la funcionalidad en una capa de servicio para que sea fácil para los desarrolladores separar su funcionalidad de servicio de la capa de controlador, lo que permite la reutilización de los servicios que realmente realizan el trabajo.
+Esta tarea mostrará cómo extraer funcionalidad en un nivel de servicio para facilitar a los desarrolladores la separación de su funcionalidad de servicio del nivel de controlador, lo que permite la reutilización de los servicios que realmente realizan el trabajo.
 
-1. Cree una nueva carpeta en la raíz de la solución y asígnele el nombre **servicios**. Para ello, haga clic en **ContactManager** proyecto, seleccione **agregar** | **nueva carpeta**, asígnele el nombre *servicios*.
+1. Cree una nueva carpeta en la raíz de la solución y asígnele el nombre **servicios**. Para ello, haga clic con el botón derecho en proyecto **ContactManager** , seleccione **Agregar** | **nueva carpeta**, asígnele el nombre *servicios*.
 
-    ![Creando carpeta de servicios](build-restful-apis-with-aspnet-web-api/_static/image14.png "carpeta crear servicios")
+    ![Creando carpeta de servicios](build-restful-apis-with-aspnet-web-api/_static/image14.png "Creando carpeta de servicios")
 
-    *Creando la carpeta de servicios*
-2. Haga clic en el **servicios** carpeta y seleccione **Add | Clase...**  en el menú contextual.
+    *Creando carpeta de servicios*
+2. Haga clic con el botón derecho en la carpeta **servicios** y seleccione **Agregar | Clase...** en el menú contextual.
 
-    ![Agregar una nueva clase a la carpeta servicios](build-restful-apis-with-aspnet-web-api/_static/image15.png "agregando una nueva clase a la carpeta de servicios")
+    ![Agregar una nueva clase a la carpeta servicios](build-restful-apis-with-aspnet-web-api/_static/image15.png "Agregar una nueva clase a la carpeta servicios")
 
-    *Agregar una nueva clase a la carpeta de servicios*
-3. Cuando el **Agregar nuevo elemento** aparece el cuadro de diálogo, el nombre de la nueva clase **ContactRepository** y haga clic en **agregar**.
+    *Agregar una nueva clase a la carpeta servicios*
+3. Cuando aparezca el cuadro de diálogo **Agregar nuevo elemento** , asigne a la nueva clase el nombre **ContactRepository** y haga clic en **Agregar**.
 
-    ![Creación de un archivo de clase para que contenga el código de la capa de repositorio póngase en contacto con servicio](build-restful-apis-with-aspnet-web-api/_static/image16.png "creación de un archivo de clase para que contenga el código de la capa de servicio del repositorio de contacto")
+    ![Crear un archivo de clase que contenga el código para la capa de servicio del repositorio de contactos](build-restful-apis-with-aspnet-web-api/_static/image16.png "Crear un archivo de clase que contenga el código para la capa de servicio del repositorio de contactos")
 
-    *Creación de un archivo de clase para que contenga el código de la capa de servicio del repositorio de contacto*
-4. Agregue una mediante la directiva a la **ContactRepository.cs** archivo para incluir el espacio de nombres de los modelos.
+    *Crear un archivo de clase que contenga el código para la capa de servicio del repositorio de contactos*
+4. Agregue una directiva using al archivo **ContactRepository.CS** para incluir el espacio de nombres de los modelos.
 
     [!code-csharp[Main](build-restful-apis-with-aspnet-web-api/samples/sample4.cs)]
-5. Agregue el código resaltado siguiente a la **ContactRepository.cs** archivo para implementar el método GetAllContacts.
+5. Agregue el siguiente código resaltado al archivo **ContactRepository.CS** para implementar el método GetAllContacts.
 
-    (Código de fragmento de código - *Web de repositorio de contactos de laboratorio de API - Ex01 -*)
+    (Fragmento de código- *Web API Lab-EX01-repositorio del contacto*)
 
     [!code-csharp[Main](build-restful-apis-with-aspnet-web-api/samples/sample5.cs)]
-6. Abra el **ContactController.cs** archivo si aún no está abierto.
-7. Agregue lo siguiente mediante la instrucción a la sección de declaración de espacio de nombres del archivo.
+6. Abra el archivo **ContactController.CS** si aún no está abierto.
+7. Agregue la siguiente instrucción using a la sección de declaración de espacio de nombres del archivo.
 
     [!code-csharp[Main](build-restful-apis-with-aspnet-web-api/samples/sample6.cs)]
-8. Agregue el código resaltado siguiente a la **ContactController.cs** clase para agregar un campo privado para representar la instancia del repositorio, por lo que usar el resto de la clase pueden hacer los miembros de la implementación del servicio.
+8. Agregue el siguiente código resaltado a la clase **ContactController.CS** para agregar un campo privado que represente la instancia del repositorio, de modo que el resto de los miembros de clase pueda usar la implementación del servicio.
 
-    (Código de fragmento de código - *API laboratorio - Ex01 - contacto controlador Web*)
+    (Fragmento de código- *Web API Lab-EX01-Contact Controller*)
 
     [!code-csharp[Main](build-restful-apis-with-aspnet-web-api/samples/sample7.cs)]
-9. Cambiar el **obtener** método por lo que ofrece utilizar el servicio del repositorio de contactos.
+9. Cambie el método **Get** para que use el servicio de repositorio de contactos.
 
-    (Código de fragmento de código - *devolver una lista de contactos a través del repositorio de laboratorio de API Web - Ex01 -*)
+    (Fragmento de código: *API Web Lab-EX01: devolver una lista de contactos a través del repositorio*)
 
     [!code-csharp[Main](build-restful-apis-with-aspnet-web-api/samples/sample8.cs)]
-10. Coloque un punto de interrupción en el **ContactController**del **obtener** definición de método.
+10. Coloque un punto de interrupción en la definición del método **Get** de **ContactController**.
 
-   ![Agregar puntos de interrupción en el controlador de contacto](build-restful-apis-with-aspnet-web-api/_static/image17.png "agregar puntos de interrupción en el controlador de contacto")
+   ![Agregar puntos de interrupción al controlador de contacto](build-restful-apis-with-aspnet-web-api/_static/image17.png "Agregar puntos de interrupción al controlador de contacto")
 
-   *Agregar puntos de interrupción en el controlador de contacto*
+   *Agregar puntos de interrupción al controlador de contacto*
 11. Presione **F5** para ejecutar la aplicación.
-12. Cuando el explorador se abre, presione **F12** para abrir las herramientas de desarrollo.
-13. Haga clic en el **red** ficha.
-14. Haga clic en el **Iniciar captura** botón.
-15. Anexe la dirección URL en la barra de direcciones con el sufijo **/api/contact** y presione **ENTRAR** para cargar el controlador de API.
-16. Visual Studio 2012 debe interrumpir una vez **obtener** método comienza la ejecución.
+12. Cuando se abra el explorador, presione **F12** para abrir las herramientas de desarrollo.
+13. Haga clic en la pestaña **red** .
+14. Haga clic en el botón **Iniciar captura** .
+15. Anexe la dirección URL en la barra de direcciones con el sufijo **/API/Contact** y presione **entrar** para cargar el controlador de API.
+16. Visual Studio 2012 debería interrumpir una vez que el método **Get** comience la ejecución.
 
-   ![Importantes dentro del método Get](build-restful-apis-with-aspnet-web-api/_static/image18.png "importantes dentro del método Get")
+   ![Interrumpir dentro del método get](build-restful-apis-with-aspnet-web-api/_static/image18.png "Interrumpir dentro del método get")
 
-   *Última hora dentro del método Get*
+   *Interrumpir dentro del método get*
 17. Presione **F5** para continuar.
-18. Vuelva a Internet Explorer si aún no está en el foco. Tenga en cuenta la ventana de captura de red.
+18. Vuelva a Internet Explorer si aún no está en el foco. Observe la ventana de captura de red.
 
-    ![Vista en Internet Explorer que muestra los resultados de la llamada de API Web de red](build-restful-apis-with-aspnet-web-api/_static/image19.png "vista en Internet Explorer que muestra los resultados de la llamada de API Web de red")
+    ![Vista de red en Internet Explorer que muestra los resultados de la llamada a la API Web](build-restful-apis-with-aspnet-web-api/_static/image19.png "Vista de red en Internet Explorer que muestra los resultados de la llamada a la API Web")
 
-    *Vista de red en Internet Explorer que muestra los resultados de la llamada de API Web*
-19. Haga clic en el **vaya a la vista detallada** botón.
-20. Haga clic en el **cuerpo de respuesta** ficha. Tenga en cuenta la salida JSON de la llamada de API y cómo representa los dos contactos recuperados por la capa de servicio.
+    *Vista de red en Internet Explorer que muestra los resultados de la llamada a la API Web*
+19. Haga clic en el botón **ir a vista detallada** .
+20. Haga clic en la pestaña **cuerpo de respuesta** . tenga en cuenta la salida JSON de la llamada de API y cómo representa los dos contactos recuperados por el nivel de servicio.
 
-    ![Ver la salida JSON desde la API Web en la ventana de herramientas de desarrollador](build-restful-apis-with-aspnet-web-api/_static/image20.png "ver la salida JSON desde la API Web en la ventana de herramientas para desarrolladores")
+    ![Visualización de la salida JSON desde la API Web en la ventana herramientas de desarrollo](build-restful-apis-with-aspnet-web-api/_static/image20.png "Visualización de la salida JSON desde la API Web en la ventana herramientas de desarrollo")
 
-    *Ver la salida JSON desde la API Web en la ventana de herramientas para desarrolladores*
+    *Visualización de la salida JSON desde la API Web en la ventana herramientas de desarrollo*
 
 <a id="Exercise2"></a>
 
 <a id="Exercise_2_Create_a_ReadWrite_Web_API"></a>
-### <a name="exercise-2-create-a-readwrite-web-api"></a>Ejercicio 2: Crear una API Web de lectura/escritura
+### <a name="exercise-2-create-a-readwrite-web-api"></a>Ejercicio 2: creación de una API Web de lectura/escritura
 
-En este ejercicio, implementará POST y PUT métodos para el Administrador de contactos habilitarlo con características de edición de datos.
+En este ejercicio, implementará los métodos POST y PUT para el administrador de contactos con el fin de habilitarlo con características de edición de datos.
 
 <a id="Ex2Task1"></a>
 
 <a id="Task_1_-_Opening_the_Web_API_Project"></a>
-#### <a name="task-1---opening-the-web-api-project"></a>Tarea 1: abrir el proyecto de API Web
+#### <a name="task-1---opening-the-web-api-project"></a>Tarea 1: apertura del proyecto de API Web
 
-En esta tarea, preparará mejorar el proyecto Web API que creó en el ejercicio 1 para que pueda aceptar la entrada del usuario.
+En esta tarea, preparará la mejora del proyecto de API Web creado en el ejercicio 1 para que pueda aceptar datos proporcionados por el usuario.
 
-1. Ejecute **Visual Studio 2012 Express para Web**, para ello, vaya a **iniciar** y tipo **VS Express para Web** , a continuación, presione **ENTRAR**.
-2. Abra el **comenzar** solución ubicado en **origen/Ex02-ReadWriteWebAPI/inicio/** carpeta. En caso contrario, es posible que siga usando la **final** solución obtenido completando el ejercicio anterior.
+1. Ejecute **Visual Studio 2012 Express para web**. para ello, vaya a **inicio** y escriba **vs Express para web** Presione **entrar**.
+2. Abra la carpeta **Begin** Solution ubicada en **source/Ex02-ReadWriteWebAPI/Begin/** . De lo contrario, puede seguir usando la solución **final** obtenida al completar el ejercicio anterior.
 
-   1. Si abrió proporcionado **comenzar** solución, deberá descargar algunos paquetes de NuGet que faltan antes de continuar. Para ello, haga clic en el **proyecto** menú y seleccione **administrar paquetes de NuGet**.
-   2. En el **administrar paquetes de NuGet** cuadro de diálogo, haga clic en **restaurar** para descargar los paquetes que falten.
-   3. Por último, compile la solución haciendo **compilar** | **compilar solución**.
+   1. Si ha abierto la solución de **Inicio** proporcionada, tendrá que descargar algunos paquetes NuGet que faltan antes de continuar. Para ello, haga clic en el menú **proyecto** y seleccione **administrar paquetes NuGet**.
+   2. En el cuadro de diálogo **administrar paquetes NuGet** , haga clic en **restaurar** para descargar los paquetes que faltan.
+   3. Por último, compile la solución haciendo clic en **Compilar** | **compilar solución**.
 
       > [!NOTE]
-      > Una de las ventajas de usar NuGet es que no tienen que enviar todas las bibliotecas en el proyecto, lo que reduce el tamaño del proyecto. Con las herramientas avanzadas de NuGet, mediante la especificación de las versiones del paquete en el archivo Packages.config, podrá descargar todas las bibliotecas requeridas en la primera vez que ejecute el proyecto. Esto es por eso tendrá que ejecutar estos pasos después de abrir una solución existente de este laboratorio.
-3. Abra el **Services/ContactRepository.cs** archivo.
+      > Una de las ventajas de usar NuGet es que no tiene que enviar todas las bibliotecas del proyecto, lo que reduce el tamaño del proyecto. Con las herramientas avanzadas de NuGet, especificando las versiones de paquete en el archivo packages. config, podrá descargar todas las bibliotecas necesarias la primera vez que ejecute el proyecto. Esta es la razón por la que tendrá que ejecutar estos pasos después de abrir una solución existente desde este laboratorio.
+3. Abra el archivo **Services/ContactRepository. CS** .
 
 <a id="Ex2Task2"></a>
 
 <a id="Task_2_-_Adding_Data-Persistence_Features_to_the_Contact_Repository_Implementation"></a>
-#### <a name="task-2---adding-data-persistence-features-to-the-contact-repository-implementation"></a>Tarea 2: agregar características de persistencia de datos para la implementación de repositorio de contactos
+#### <a name="task-2---adding-data-persistence-features-to-the-contact-repository-implementation"></a>Tarea 2: agregar características de persistencia de datos a la implementación del repositorio de contactos
 
-En esta tarea, se aumentan la clase ContactRepository del proyecto de API Web creado en el ejercicio 1 para que pueda conservar y aceptar entrada del usuario y nuevas instancias de contacto.
+En esta tarea, ampliará la clase ContactRepository del proyecto de API Web creado en el ejercicio 1 para que pueda conservar y aceptar la entrada del usuario y las nuevas instancias de contacto.
 
-1. Agregue la siguiente constante a la **ContactRepository** clase para representar el nombre de la memoria caché elemento clave nombre del servidor web más adelante en este ejercicio.
+1. Agregue la siguiente constante a la clase **ContactRepository** para representar el nombre del nombre de la clave del elemento de la caché del servidor Web más adelante en este ejercicio.
 
     [!code-csharp[Main](build-restful-apis-with-aspnet-web-api/samples/sample9.cs)]
-2. Agregue un constructor a la **ContactRepository** que contiene el código siguiente.
+2. Agregue un constructor a **ContactRepository** que contenga el código siguiente.
 
-    (Código de fragmento de código - *Web Constructor del repositorio de contactos de laboratorio API - Ex02 -*)
+    (Fragmento de código- *Web API Lab-Ex02-constructor de repositorio de contactos*)
 
     [!code-csharp[Main](build-restful-apis-with-aspnet-web-api/samples/sample10.cs)]
-3. Modifique el código para el **GetAllContacts** método tal y como se muestra a continuación.
+3. Modifique el código para el método **GetAllContacts** como se muestra a continuación.
 
-    (Código de fragmento de código - *Web API laboratorio - Ex02 - obtener todos los contactos*)
+    (Fragmento de código- *Web API Lab-Ex02-obtener todos los contactos*)
 
     [!code-csharp[Main](build-restful-apis-with-aspnet-web-api/samples/sample11.cs)]
 
     > [!NOTE]
-    > En este ejemplo es para fines de demostración y usa memoria caché del servidor web como un medio de almacenamiento, para que los valores se estén disponibles para varios clientes simultáneamente, en lugar de usar un mecanismo de almacenamiento de sesión o una duración de almacenamiento de la solicitud. Se podría usar Entity Framework, almacenamiento de XML o cualquier otra variedad en lugar de la caché del servidor web.
-4. Implementar un nuevo método denominado **SaveContact** a la **ContactRepository** clase para realizar el trabajo del proceso de guardar un contacto. El **SaveContact** método debe tomar un único **póngase en contacto con** valor de parámetro y devuelva un valor booleano que indica éxito o error.
+    > Este ejemplo se usa para fines de demostración y utilizará la memoria caché del servidor web como medio de almacenamiento, de modo que los valores estarán disponibles para varios clientes simultáneamente, en lugar de usar un mecanismo de almacenamiento de sesión o una duración de almacenamiento de solicitudes. Puede usar Entity Framework, el almacenamiento XML o cualquier otra variedad en lugar de la memoria caché del servidor Web.
+4. Implemente un nuevo método denominado **SaveContact** en la clase **ContactRepository** para realizar el trabajo de guardar un contacto. El método **SaveContact** debe tomar un único parámetro **Contact** y devolver un valor booleano que indique si se ha realizado correctamente o no.
 
-    (Código de fragmento de código - *Web API laboratorio - Ex02 - implementación del método SaveContact*)
+    (Fragmento de código- *Web API Lab-Ex02-implementando el método SaveContact*)
 
     [!code-csharp[Main](build-restful-apis-with-aspnet-web-api/samples/sample12.cs)]
 
 <a id="Exercise3"></a>
 
 <a id="Exercise_3_Consume_the_Web_API_from_an_HTML_Client"></a>
-### <a name="exercise-3-consume-the-web-api-from-an-html-client"></a>Ejercicio 3: Usar la API Web desde un cliente HTML
+### <a name="exercise-3-consume-the-web-api-from-an-html-client"></a>Ejercicio 3: usar la API Web desde un cliente HTML
 
-En este ejercicio, creará un cliente HTML para llamar a la API Web. Este cliente facilitará el intercambio de datos con la API Web con JavaScript y mostrará los resultados en un explorador web mediante el formato HTML.
+En este ejercicio, creará un cliente HTML para llamar a la API Web. Este cliente facilitará el intercambio de datos con la API Web mediante JavaScript y mostrará los resultados en un explorador Web mediante el marcado HTML.
 
 <a id="Ex3Task1"></a>
 
 <a id="Task_1_-_Modifying_the_Index_View_to_Provide_a_GUI_for_Displaying_Contacts"></a>
-#### <a name="task-1---modifying-the-index-view-to-provide-a-gui-for-displaying-contacts"></a>Tarea 1: modificación de la vista de índice para proporcionar una interfaz gráfica de usuario para mostrar contactos
+#### <a name="task-1---modifying-the-index-view-to-provide-a-gui-for-displaying-contacts"></a>Tarea 1: modificar la vista de índice para proporcionar una GUI para mostrar contactos
 
 En esta tarea, modificará la vista de índice predeterminada de la aplicación web para admitir el requisito de mostrar la lista de contactos existentes en un explorador HTML.
 
-1. Abra **Visual Studio 2012 Express para Web** si aún no está abierto.
-2. Abra el **comenzar** solución ubicado en **origen/Ex03-ConsumingWebAPI/inicio/** carpeta. En caso contrario, es posible que siga usando la **final** solución obtenido completando el ejercicio anterior.
+1. Abra **Visual Studio 2012 Express para web** si aún no está abierto.
+2. Abra la carpeta **Begin** Solution ubicada en **source/Ex03-ConsumingWebAPI/Begin/** . De lo contrario, puede seguir usando la solución **final** obtenida al completar el ejercicio anterior.
 
-   1. Si abrió proporcionado **comenzar** solución, deberá descargar algunos paquetes de NuGet que faltan antes de continuar. Para ello, haga clic en el **proyecto** menú y seleccione **administrar paquetes de NuGet**.
-   2. En el **administrar paquetes de NuGet** cuadro de diálogo, haga clic en **restaurar** para descargar los paquetes que falten.
-   3. Por último, compile la solución haciendo **compilar** | **compilar solución**.
+   1. Si ha abierto la solución de **Inicio** proporcionada, tendrá que descargar algunos paquetes NuGet que faltan antes de continuar. Para ello, haga clic en el menú **proyecto** y seleccione **administrar paquetes NuGet**.
+   2. En el cuadro de diálogo **administrar paquetes NuGet** , haga clic en **restaurar** para descargar los paquetes que faltan.
+   3. Por último, compile la solución haciendo clic en **Compilar** | **compilar solución**.
 
       > [!NOTE]
-      > Una de las ventajas de usar NuGet es que no tienen que enviar todas las bibliotecas en el proyecto, lo que reduce el tamaño del proyecto. Con las herramientas avanzadas de NuGet, mediante la especificación de las versiones del paquete en el archivo Packages.config, podrá descargar todas las bibliotecas requeridas en la primera vez que ejecute el proyecto. Esto es por eso tendrá que ejecutar estos pasos después de abrir una solución existente de este laboratorio.
-3. Abra el **Index.cshtml** ubicado en el archivo **vistas/inicio** carpeta.
-4. Reemplace el código HTML dentro del elemento div con el identificador **cuerpo** para que quede como el código siguiente.
+      > Una de las ventajas de usar NuGet es que no tiene que enviar todas las bibliotecas del proyecto, lo que reduce el tamaño del proyecto. Con las herramientas avanzadas de NuGet, especificando las versiones de paquete en el archivo packages. config, podrá descargar todas las bibliotecas necesarias la primera vez que ejecute el proyecto. Esta es la razón por la que tendrá que ejecutar estos pasos después de abrir una solución existente desde este laboratorio.
+3. Abra el archivo **index. cshtml** que se encuentra en la carpeta **views/Home** .
+4. Reemplace el código HTML dentro del elemento div con el **cuerpo** del identificador para que sea similar al código siguiente.
 
     [!code-html[Main](build-restful-apis-with-aspnet-web-api/samples/sample13.html)]
-5. Agregue el siguiente código Javascript en la parte inferior del archivo para realizar la solicitud HTTP a la API Web.
+5. Agregue el siguiente código JavaScript en la parte inferior del archivo para realizar la solicitud HTTP a la API Web.
 
     [!code-cshtml[Main](build-restful-apis-with-aspnet-web-api/samples/sample14.cshtml)]
-6. Abra el **ContactController.cs** archivo si aún no está abierto.
-7. Coloque un punto de interrupción en el **obtener** método de la **ContactController** clase.
+6. Abra el archivo **ContactController.CS** si aún no está abierto.
+7. Coloque un punto de interrupción en el método **Get** de la clase **ContactController** .
 
-    ![Al colocar un punto de interrupción en el método Get del controlador API](build-restful-apis-with-aspnet-web-api/_static/image21.png "colocando un punto de interrupción en el método Get del controlador de API")
+    ![Colocar un punto de interrupción en el método get del controlador de API](build-restful-apis-with-aspnet-web-api/_static/image21.png "Colocar un punto de interrupción en el método get del controlador de API")
 
-    *Al colocar un punto de interrupción en el método Get del controlador de API*
+    *Colocar un punto de interrupción en el método get del controlador de API*
 8. Presione **F5** para ejecutar el proyecto. El explorador cargará el documento HTML.
 
     > [!NOTE]
-    > Asegúrese de que va a examinar la dirección URL raíz de la aplicación.
-9. Una vez que la página se carga y ejecuta el código JavaScript, se alcanzará el punto de interrupción y se pausará la ejecución del código en el controlador.
+    > Asegúrese de que está explorando la dirección URL raíz de la aplicación.
+9. Una vez que se carga la página y se ejecuta JavaScript, se alcanza el punto de interrupción y la ejecución del código se pausará en el controlador.
 
-    ![Depuración en las llamadas de API Web con VS Express para Web](build-restful-apis-with-aspnet-web-api/_static/image22.png "depuración en las llamadas de API Web con VS Express para Web")
+    ![Depurar en las llamadas a la API Web mediante VS Express para Web](build-restful-apis-with-aspnet-web-api/_static/image22.png "Depurar en las llamadas a la API Web mediante VS Express para Web")
 
-    *Depuración en la llamada de API Web mediante Visual Studio 2012 Express para Web*
-10. Quitar el punto de interrupción y presione **F5** o la barra de herramientas depuración **continuar** botón para continuar cargando la vista en el explorador. Una vez que se complete la llamada de API Web debería ver los contactos devueltos por la API Web llame a mostrados como elementos de lista en el explorador.
+    *Depuración en la llamada de la API Web con Visual Studio 2012 Express for Web*
+10. Quite el punto de interrupción y presione **F5** o el botón **continuar** de la barra de herramientas de depuración para continuar cargando la vista en el explorador. Una vez que se complete la llamada a la API Web, debería ver los contactos devueltos por la llamada a la API Web que se muestra como elementos de lista en el explorador.
 
-    ![Resultados de la llamada de API que se muestra en el explorador como elementos de lista](build-restful-apis-with-aspnet-web-api/_static/image23.png "los resultados de la llamada de API que se muestra en el explorador como elementos de lista")
+    ![Resultados de la llamada API mostrada en el explorador como elementos de lista](build-restful-apis-with-aspnet-web-api/_static/image23.png "Resultados de la llamada API mostrada en el explorador como elementos de lista")
 
-    *Resultados de la llamada de API que se muestra en el explorador como elementos de lista*
+    *Resultados de la llamada API mostrada en el explorador como elementos de lista*
 11. Detenga la depuración.
 
 <a id="Ex3Task2"></a>
 
 <a id="Task_2_-_Modifying_the_Index_View_to_Provide_a_GUI_for_Creating_Contacts"></a>
-#### <a name="task-2---modifying-the-index-view-to-provide-a-gui-for-creating-contacts"></a>Tarea 2: modificar la vista de índice para proporcionar una interfaz gráfica de usuario para la creación de contactos
+#### <a name="task-2---modifying-the-index-view-to-provide-a-gui-for-creating-contacts"></a>Tarea 2: modificación de la vista de índice para proporcionar una GUI para crear contactos
 
-En esta tarea, continuará modificar la vista de índice de la aplicación MVC. Se agregará un formulario a la página HTML que capturará la entrada del usuario y enviarlo a la API Web para crear un nuevo contacto, y se creará un nuevo método de controlador Web API para recopilar la fecha de la interfaz gráfica de usuario.
+En esta tarea, seguirá modificando la vista de índice de la aplicación MVC. Se agregará un formulario a la página HTML que capturará los datos proporcionados por el usuario y los enviará a la API Web para crear un nuevo contacto, y se creará un nuevo método de controlador de API Web para recopilar la fecha de la GUI.
 
-1. Abra el **ContactController.cs** archivo.
-2. Agregue un nuevo método a la clase de controlador denominada **Post** tal como se muestra en el código siguiente.
+1. Abra el archivo **ContactController.CS** .
+2. Agregue un nuevo método a la clase de controlador denominada **post** tal y como se muestra en el código siguiente.
 
-    (Código de fragmento de código - *Web método Post de laboratorio de API - Ex03 -*)
+    (Fragmento de código- *Web API Lab-Ex03-post (método*))
 
     [!code-csharp[Main](build-restful-apis-with-aspnet-web-api/samples/sample15.cs)]
-3. Abra el **Index.cshtml** archivo en Visual Studio si aún no está abierto.
+3. Abra el archivo **index. cshtml** en Visual Studio si aún no está abierto.
 4. Agregue el código HTML siguiente al archivo justo después de la lista sin ordenar que agregó en la tarea anterior.
 
     [!code-html[Main](build-restful-apis-with-aspnet-web-api/samples/sample16.html)]
-5. Dentro del elemento de secuencia de comandos en la parte inferior del documento, agregue el siguiente código resaltado para controlar los eventos de clic de botón, que enviará los datos a la API Web mediante una llamada HTTP POST.
+5. En el elemento script situado en la parte inferior del documento, agregue el siguiente código resaltado para controlar los eventos de clic de botón, que publicarán los datos en la API Web mediante una llamada HTTP POST.
 
     [!code-html[Main](build-restful-apis-with-aspnet-web-api/samples/sample17.html)]
-6. En **ContactController.cs**, coloque un punto de interrupción en el **Post** método.
+6. En **ContactController.CS**, coloque un punto de interrupción en el método **post** .
 7. Presione **F5** para ejecutar la aplicación en el explorador.
-8. Una vez que se carga la página en el explorador, escriba un nuevo nombre de contacto y el identificador y haga clic en el **guardar** botón.
+8. Una vez que la página se cargue en el explorador, escriba un nuevo nombre y un identificador de contacto y haga clic en el botón **Guardar** .
 
-    ![Carga el documento de cliente HTML en el explorador](build-restful-apis-with-aspnet-web-api/_static/image24.png "cargará el documento de cliente HTML en el explorador")
+    ![Documento HTML del cliente cargado en el explorador](build-restful-apis-with-aspnet-web-api/_static/image24.png "Documento HTML del cliente cargado en el explorador")
 
-    *Carga el documento HTML de cliente en el explorador*
-9. Cuando la ventana del depurador se interrumpe la **Post** método, echar un vistazo a las propiedades de la **póngase en contacto con** parámetro. Los valores deben coincidir con los datos especificados en el formulario.
+    *Documento HTML del cliente cargado en el explorador*
+9. Cuando la ventana del depurador se interrumpa en el método **post** , eche un vistazo a las propiedades del parámetro **Contact** . Los valores deben coincidir con los datos que especificó en el formulario.
 
-    ![El objeto de contacto que se envían a la API Web desde el cliente](build-restful-apis-with-aspnet-web-api/_static/image25.png "objeto póngase en contacto con el que se envían a la API Web desde el cliente")
+    ![El objeto de contacto que se envía a la API Web desde el cliente.](build-restful-apis-with-aspnet-web-api/_static/image25.png "El objeto de contacto que se envía a la API Web desde el cliente.")
 
-    *El objeto de contacto que se envían a la API Web desde el cliente*
-10. Paso a través del método en el depurador hasta el **respuesta** variable se ha creado. Tras la inspección en el **variables locales** ventana en el depurador, verá que se han establecido todas las propiedades.
+    *El objeto de contacto que se envía a la API Web desde el cliente.*
+10. Recorra el método en el depurador hasta que se haya creado la variable de **respuesta** . Al realizar la inspección en la ventana **variables locales** del depurador, verá que se han establecido todas las propiedades.
 
-   ![La respuesta después de la creación en el depurador](build-restful-apis-with-aspnet-web-api/_static/image26.png "la respuesta después de la creación en el depurador")
+   ![La respuesta siguiente a la creación en el depurador](build-restful-apis-with-aspnet-web-api/_static/image26.png "La respuesta siguiente a la creación en el depurador")
 
-   *La respuesta después de la creación en el depurador*
-11. Si presiona **F5** o haga clic en **continuar** en el depurador se completará la solicitud. Cuando cambie al explorador, el nuevo contacto se agregó a la lista de contactos almacenados por la **ContactRepository** implementación.
+   *La respuesta siguiente a la creación en el depurador*
+11. Si presiona **F5** o hace clic en **continuar** en el depurador, la solicitud se completará. Una vez que vuelva al explorador, el nuevo contacto se ha agregado a la lista de contactos almacenados por la implementación de **ContactRepository** .
 
-   ![El explorador refleja la creación correcta de la nueva instancia de contacto](build-restful-apis-with-aspnet-web-api/_static/image27.png "el explorador refleja la creación correcta de la nueva instancia de contacto")
+   ![El explorador refleja la creación correcta de la nueva instancia de contacto](build-restful-apis-with-aspnet-web-api/_static/image27.png "El explorador refleja la creación correcta de la nueva instancia de contacto")
 
    *El explorador refleja la creación correcta de la nueva instancia de contacto*
 
 > [!NOTE]
-> Además, puede implementar esta aplicación a Azure siguiente [Apéndice C: Publicar una aplicación de ASP.NET MVC 4 mediante Web Deploy](#AppendixC).
+> Además, puede implementar esta aplicación en Azure después del [Apéndice C: publicación de una aplicación de ASP.NET MVC 4 mediante Web deploy](#AppendixC).
 
 ---
 
 <a id="Summary"></a>
 ## <a name="summary"></a>Resumen
 
-Este laboratorio presenta el nuevo marco de ASP.NET Web API y la implementación de API Web RESTful mediante el marco de trabajo. Desde aquí, puede crear un nuevo repositorio que facilita la persistencia de datos mediante cualquier número de mecanismos y conectar ese servicio en lugar del simple proporcionada como ejemplo en este laboratorio. Web API es compatible con un número de características adicionales, como la habilitación de la comunicación de clientes que no sean HTML escritos en cualquier lenguaje que admita HTTP y JSON o XML. La capacidad para hospedar una API Web fuera de una aplicación web típica también es posible, así como es la capacidad para crear sus propios formatos de serialización.
+Este laboratorio le ha incorporado el nuevo marco de ASP.NET Web API y la implementación de las API Web de RESTful mediante el marco de trabajo. Desde aquí, puede crear un nuevo repositorio que facilite la persistencia de los datos mediante cualquier número de mecanismos y conecte el servicio en lugar del simple proporcionado como ejemplo en este laboratorio. Web API admite varias características adicionales, como la habilitación de la comunicación desde clientes no HTML escritos en cualquier lenguaje que admita HTTP y JSON o XML. También es posible hospedar una API Web fuera de una aplicación web típica, así como la capacidad de crear sus propios formatos de serialización.
 
-El sitio Web de ASP.NET tiene un área dedicada para el marco de ASP.NET Web API en [ [ https://asp.net/web-api ](https://asp.net/web-api) ](https://asp.net/web-api). Este sitio seguirá proporcionando información más reciente, ejemplos y noticias relacionadas con la API Web, así que comprobación con frecuencia si gustaría profundizar más en el arte de la creación de API Web personalizadas disponibles para prácticamente cualquier marco de desarrollo o de dispositivo.
+El sitio web de ASP.NET tiene un área dedicada al marco de ASP.NET Web API en [[https://asp.net/web-api](https://asp.net/web-api)](https://asp.net/web-api). Este sitio seguirá proporcionando información de última hora, ejemplos y noticias relacionados con Web API, por lo que debe comprobarlo con frecuencia si desea profundizar más en el arte de crear API Web personalizadas disponibles para prácticamente cualquier dispositivo o marco de desarrollo.
 
 <a id="AppendixA"></a>
 
 <a id="Appendix_A_Using_Code_Snippets"></a>
-## <a name="appendix-a-using-code-snippets"></a>Apéndice A: Usar fragmentos de código
+## <a name="appendix-a-using-code-snippets"></a>Apéndice A: usar fragmentos de código
 
-Con fragmentos de código, tiene todo el código que necesita a su alcance. El documento de laboratorio le dirá exactamente cuándo se pueden utilizar, como se muestra en la ilustración siguiente.
+Con los fragmentos de código, tiene todo el código que necesita a su alcance. El documento de laboratorio le indicará exactamente cuándo se pueden usar, como se muestra en la ilustración siguiente.
 
-![Uso de fragmentos de código de Visual Studio para insertar código en el proyecto](build-restful-apis-with-aspnet-web-api/_static/image28.png "fragmentos de código en Visual Studio para insertar código en el proyecto")
+![Usar fragmentos de código de Visual Studio para insertar código en el proyecto](build-restful-apis-with-aspnet-web-api/_static/image28.png "Usar fragmentos de código de Visual Studio para insertar código en el proyecto")
 
-*Uso de fragmentos de código de Visual Studio para insertar código en el proyecto*
+*Usar fragmentos de código de Visual Studio para insertar código en el proyecto*
 
 <a id="CodeSnippetUsingKeyBoard"></a>
 
 <a id="To_add_a_code_snippet_using_the_keyboard_C_only"></a>
-### <a name="to-add-a-code-snippet-using-the-keyboard-c-only"></a>Para agregar un fragmento de código mediante el teclado (solo C#)
+### <a name="to-add-a-code-snippet-using-the-keyboard-c-only"></a>Para agregar un fragmento de código mediante el tecladoC# (solo)
 
 1. Coloque el cursor donde desea insertar el código.
 2. Comience a escribir el nombre del fragmento de código (sin espacios ni guiones).
-3. Observe cómo IntelliSense muestra los nombres de fragmentos de código coincidentes.
-4. Seleccione el fragmento de código correcto (o siga escribiendo hasta que se selecciona el nombre del fragmento de código completo).
-5. Presione la tecla Tab dos veces para insertar el fragmento de código en la ubicación del cursor.
+3. Ver como IntelliSense muestra los nombres de los fragmentos de código coincidentes.
+4. Seleccione el fragmento de código correcto (o siga escribiendo hasta que se seleccione el nombre del fragmento de código completo).
+5. Presione la tecla TAB dos veces para insertar el fragmento de código en la ubicación del cursor.
 
-    ![Comience a escribir el nombre del fragmento](build-restful-apis-with-aspnet-web-api/_static/image29.png "comience a escribir el nombre del fragmento de código")
+    ![Comience a escribir el nombre del fragmento de código.](build-restful-apis-with-aspnet-web-api/_static/image29.png "Comience a escribir el nombre del fragmento de código.")
 
-    *Comience a escribir el nombre del fragmento de código*
+    *Comience a escribir el nombre del fragmento de código.*
 
-    ![Presione la tecla Tab para seleccionar el fragmento de código resaltada](build-restful-apis-with-aspnet-web-api/_static/image30.png "presione Tab para seleccionar el fragmento de código resaltada")
+    ![Presione TAB para seleccionar el fragmento de código resaltado](build-restful-apis-with-aspnet-web-api/_static/image30.png "Presione TAB para seleccionar el fragmento de código resaltado")
 
-    *Presione la tecla Tab para seleccionar el fragmento de código resaltada*
+    *Presione TAB para seleccionar el fragmento de código resaltado*
 
-    ![Vuelva a presionar Tab y el fragmento de código se expandirán](build-restful-apis-with-aspnet-web-api/_static/image31.png "vuelva a presionar Tab y el fragmento de código se expandirán")
+    ![Presione la tecla TAB de nuevo y el fragmento de código se expandirá](build-restful-apis-with-aspnet-web-api/_static/image31.png "Presione la tecla TAB de nuevo y el fragmento de código se expandirá")
 
-    *Vuelva a presionar Tab y el fragmento de código se expandirán*
+    *Presione la tecla TAB de nuevo y el fragmento de código se expandirá*
 
 <a id="CodeSnippetUsingMouse"></a>
 
 <a id="To_add_a_code_snippet_using_the_mouse_C_Visual_Basic_and_XML"></a>
-### <a name="to-add-a-code-snippet-using-the-mouse-c-visual-basic-and-xml"></a>Para agregar un fragmento de código con el mouse (C#, en Visual Basic y XML)
+### <a name="to-add-a-code-snippet-using-the-mouse-c-visual-basic-and-xml"></a>Para agregar un fragmento de código mediante el mouseC#(, Visual Basic y XML)
 
-1. Haga doble clic en el desea insertar el fragmento de código.
-2. Seleccione **Insertar fragmento de código** seguido **Mis fragmentos de código**.
-3. Seleccione el fragmento de código relevante en la lista, haciendo clic en él.
+1. Haga clic con el botón secundario en el lugar donde desea insertar el fragmento de código.
+2. Seleccione **Insertar fragmento** de código seguido de **mis fragmentos de código**.
+3. Seleccione el fragmento de código relevante de la lista haciendo clic en él.
 
-    ![Con el botón secundario donde desea insertar el fragmento de código y seleccione Insertar fragmento de código](build-restful-apis-with-aspnet-web-api/_static/image32.png "contextual donde desea insertar el fragmento de código y seleccione Insertar fragmento de código")
+    ![Haga clic con el botón derecho en el lugar donde desea insertar el fragmento de código y seleccione Insertar fragmento de código.](build-restful-apis-with-aspnet-web-api/_static/image32.png "Haga clic con el botón derecho en el lugar donde desea insertar el fragmento de código y seleccione Insertar fragmento de código.")
 
-    *Haga doble clic donde desea insertar el fragmento de código y seleccione Insertar fragmento de código*
+    *Haga clic con el botón derecho en el lugar donde desea insertar el fragmento de código y seleccione Insertar fragmento de código.*
 
-    ![Elegir el fragmento de código relevante en la lista, hacer clic en ella](build-restful-apis-with-aspnet-web-api/_static/image33.png "elegir el fragmento de código relevante en la lista, hacer clic en ella")
+    ![Seleccione el fragmento de código relevante de la lista; para ello, haga clic en él](build-restful-apis-with-aspnet-web-api/_static/image33.png "Seleccione el fragmento de código relevante de la lista; para ello, haga clic en él")
 
-    *Elegir el fragmento de código relevante en la lista, hacer clic en ella*
+    *Seleccione el fragmento de código relevante de la lista; para ello, haga clic en él*
 
 <a id="AppendixB"></a>
 
 <a id="Appendix_B_Installing_Visual_Studio_Express_2012_for_Web"></a>
-## <a name="appendix-b-installing-visual-studio-express-2012-for-web"></a>Apéndice B: Instalación de Visual Studio Express 2012 para Web
+## <a name="appendix-b-installing-visual-studio-express-2012-for-web"></a>Apéndice B: instalación de Visual Studio Express 2012 para Web
 
-Puede instalar **Microsoft Visual Studio Express 2012 para Web** u otro &quot;Express&quot; versión utilizando el **[Microsoft Web Platform Installer](https://www.microsoft.com/web/downloads/platform.aspx)**. Las instrucciones siguientes le guían a través de los pasos necesarios para instalar *Visual studio Express 2012 para Web* mediante *Microsoft Web Platform Installer*.
+Puede instalar **Microsoft Visual Studio Express 2012 para web** u otra versión de &quot;Express&quot; con el **[instalador de plataforma web de Microsoft](https://www.microsoft.com/web/downloads/platform.aspx)** . Las instrucciones siguientes le guían por los pasos necesarios para instalar *Visual Studio Express 2012 para web* mediante *instalador de plataforma web de Microsoft*.
 
-1. Vaya a [ [ https://go.microsoft.com/?linkid=9810169 ](https://go.microsoft.com/?linkid=9810169) ](https://go.microsoft.com/?linkid=9810169). Como alternativa, si ya ha instalado el instalador de plataforma Web, puede abrirla y busque el producto &quot; <em>Visual Studio Express 2012 for Web con Azure SDK</em>&quot;.
-2. Haga clic en **instalar ahora**. Si no tienes **instalador de plataforma Web** se le redirigirá para descargarlo e instalarlo en primer lugar.
-3. Una vez **instalador de plataforma Web** está abierto, haga clic en **instalar** para iniciar el programa de instalación.
+1. Vaya a [[https://go.microsoft.com/?linkid=9810169](https://go.microsoft.com/?linkid=9810169)](https://go.microsoft.com/?linkid=9810169). Como alternativa, si ya tiene instalado el instalador de plataforma web, puede abrirlo y buscar el producto &quot;<em>Visual Studio Express 2012 para web con el SDK de Azure</em>&quot;.
+2. Haga clic en **instalar ahora**. Si no tiene el **instalador de plataforma web** , se le redirigirá para que lo descargue e instale primero.
+3. Una vez que el **instalador de plataforma web** está abierto, haga clic en **instalar** para iniciar la instalación.
 
-    ![Instale Visual Studio Express](build-restful-apis-with-aspnet-web-api/_static/image34.png "instale Visual Studio Express")
+    ![Instalar Visual Studio Express](build-restful-apis-with-aspnet-web-api/_static/image34.png "Instalar Visual Studio Express")
 
-    *Instale Visual Studio Express*
-4. Leer todos los productos las licencias y los términos y haga clic en **acepto** para continuar.
+    *Instalar Visual Studio Express*
+4. Lea todos los términos y licencias de los productos y **haga clic en Acepto para** continuar.
 
-    ![Acepte los términos de licencia](build-restful-apis-with-aspnet-web-api/_static/image35.png)
+    ![Aceptación de los términos de licencia](build-restful-apis-with-aspnet-web-api/_static/image35.png)
 
-    *Acepte los términos de licencia*
-5. Espere hasta que finalice el proceso de descarga e instalación.
+    *Aceptación de los términos de licencia*
+5. Espere hasta que se complete el proceso de descarga e instalación.
 
     ![Progreso de la instalación](build-restful-apis-with-aspnet-web-api/_static/image36.png)
 
     *Progreso de la instalación*
-6. Cuando se complete la instalación, haga clic en **finalizar**.
+6. Cuando se complete la instalación, haga clic en **Finalizar**.
 
     ![Instalación completada](build-restful-apis-with-aspnet-web-api/_static/image37.png)
 
     *Instalación completada*
-7. Haga clic en **Exit** para cerrar el instalador de plataforma Web.
-8. Para abrir Visual Studio Express para Web, vaya a la **iniciar** pantalla y comienza a escribir &quot; **VS Express**&quot;, a continuación, haga clic en el **VS Express para Web** icono.
+7. Haga clic en **salir** para cerrar el instalador de plataforma Web.
+8. Para abrir Visual Studio Express para Web, vaya a la pantalla **Inicio** y empiece a escribir &quot;&quot;**vs Express** y, a continuación, haga clic en el icono de **vs Express para web** .
 
-    ![VS Express para el icono de Web](build-restful-apis-with-aspnet-web-api/_static/image38.png)
+    ![VS Express para Web icono](build-restful-apis-with-aspnet-web-api/_static/image38.png)
 
-    *VS Express para el icono de Web*
+    *VS Express para Web icono*
 
 <a id="AppendixC"></a>
 
 <a id="Appendix_C_Publishing_an_ASPNET_MVC_4_Application_using_Web_Deploy"></a>
-## <a name="appendix-c-publishing-an-aspnet-mvc-4-application-using-web-deploy"></a>Apéndice C: Publicar una aplicación de ASP.NET MVC 4 mediante Web Deploy
+## <a name="appendix-c-publishing-an-aspnet-mvc-4-application-using-web-deploy"></a>Apéndice C: publicación de una aplicación de ASP.NET MVC 4 con Web Deploy
 
-En este apéndice se mostrará cómo crear un nuevo sitio web desde el Portal de Azure y publicar la aplicación que obtuvo siguiendo el laboratorio, que aprovecha la característica de publicación Web Deploy proporcionada por Azure.
+Este apéndice le mostrará cómo crear un nuevo sitio web desde Azure portal y publicar la aplicación que obtuvo siguiendo el laboratorio, aprovechando la característica de publicación de Web Deploy proporcionada por Azure.
 
 <a id="ApxCTask1"></a>
 
 <a id="Task_1_-_Creating_a_New_Web_Site_from_the_Windows_Azure_Portal"></a>
-#### <a name="task-1---creating-a-new-web-site-from-the-azure-portal"></a>Tarea 1: crear un nuevo sitio Web desde el Portal de Azure
+#### <a name="task-1---creating-a-new-web-site-from-the-azure-portal"></a>Tarea 1: creación de un nuevo sitio web desde Azure portal
 
-1. Vaya a la [Portal de administración de Azure](https://manage.windowsazure.com/) e inicie sesión con las credenciales de Microsoft asociadas con su suscripción.
-
-    > [!NOTE]
-    > Con Azure puede hospedar 10 sitios Web ASP.NET de forma gratuita y, a continuación, escalar a medida que crece el tráfico. Puede registrarse [aquí](https://aka.ms/aspnet-hol-azure).
-
-    ![Inicie sesión en el portal de Windows Azure](build-restful-apis-with-aspnet-web-api/_static/image39.png "inicie sesión en el portal de Windows Azure")
-
-    *Inicie sesión en el Portal*
-2. Haga clic en **New** en la barra de comandos.
-
-    ![Crear un nuevo sitio Web](build-restful-apis-with-aspnet-web-api/_static/image40.png "crear un nuevo sitio Web")
-
-    *Crear un nuevo sitio Web*
-3. Haga clic en **proceso** | **sitio Web**. A continuación, seleccione **creación rápida** opción. Proporcione una dirección URL disponible para el nuevo sitio web y haga clic en **crear sitio Web**.
+1. Vaya a [Azure portal de administración](https://manage.windowsazure.com/) e inicie sesión con las credenciales de Microsoft asociadas a su suscripción.
 
     > [!NOTE]
-    > Azure es el host para una aplicación web que se ejecutan en la nube que puede controlar y administrar. La opción Creación rápida permite implementar una aplicación web completada en Azure desde fuera del portal. No incluye los pasos para configurar una base de datos.
+    > Con Azure, puede hospedar 10 sitios web de ASP.NET de forma gratuita y, a continuación, escalar a medida que crezca el tráfico. Puede registrarse [aquí](https://aka.ms/aspnet-hol-azure).
 
-    ![Crear un nuevo sitio Web mediante Creación rápida](build-restful-apis-with-aspnet-web-api/_static/image41.png "crear un nuevo sitio Web mediante Creación rápida")
+    ![Iniciar sesión en Windows Azure Portal](build-restful-apis-with-aspnet-web-api/_static/image39.png "Iniciar sesión en Windows Azure Portal")
 
-    *Crear un nuevo sitio Web mediante Creación rápida*
-4. Espere hasta que el nuevo **sitio Web** se crea.
-5. Una vez creado el sitio Web, haga clic en el vínculo situado bajo el **URL** columna. Compruebe que funciona el nuevo sitio Web.
+    *Iniciar sesión en el portal*
+2. Haga clic en **nuevo** en la barra de comandos.
 
-    ![Exploración al sitio web nuevo](build-restful-apis-with-aspnet-web-api/_static/image42.png "exploración al sitio web nuevo")
+    ![Crear un nuevo sitio web](build-restful-apis-with-aspnet-web-api/_static/image40.png "Crear un nuevo sitio web")
 
-    *Exploración al sitio web nuevo*
-
-    ![Sitio Web que se ejecuta](build-restful-apis-with-aspnet-web-api/_static/image43.png "sitio Web que se ejecuta")
-
-    *Sitio Web que se ejecuta*
-6. Vuelva al portal y haga clic en el nombre del sitio web en el **nombre** columna para mostrar las páginas de administración.
-
-    ![Abrir las páginas de administración del sitio web](build-restful-apis-with-aspnet-web-api/_static/image44.png "abrir las páginas de administración del sitio web")
-
-    *Abrir las páginas de administración del sitio Web*
-7. En el **panel** página, en el **primea** sección, haga clic en el **descargar perfil de publicación** vínculo.
+    *Crear un nuevo sitio web*
+3. Haga clic en **compute** | **sitio web**. A continuación, seleccione la opción **creación rápida** . Proporcione una dirección URL disponible para el nuevo sitio web y haga clic en **crear sitio web**.
 
     > [!NOTE]
-    > El *perfil de publicación* contiene toda la información necesaria para publicar una aplicación web en un Azure para cada método de publicación habilitado. El perfil de publicación contiene las direcciones URL, las credenciales de usuario y las cadenas de base de datos necesarias para conectarse y autenticarse en cada uno de los puntos de conexión para el que está habilitado un método de publicación. **Microsoft WebMatrix 2**, **Microsoft Visual Studio Express para Web** y **Microsoft Visual Studio 2012** admiten la lectura de perfiles de publicación para automatizar la configuración de estos programas para publicación de aplicaciones web en Azure.
+    > Azure es el host para una aplicación web que se ejecuta en la nube que puede controlar y administrar. La opción creación rápida permite implementar una aplicación web completada en Azure desde fuera del portal. No incluye los pasos para configurar una base de datos.
 
-    ![Descargando el sitio web de perfil de publicación](build-restful-apis-with-aspnet-web-api/_static/image45.png "descargando el sitio web de perfil de publicación")
+    ![Crear un nuevo sitio web mediante creación rápida](build-restful-apis-with-aspnet-web-api/_static/image41.png "Crear un nuevo sitio web mediante creación rápida")
 
-    *Descargando el sitio Web de perfil de publicación*
-8. Descargue el archivo de perfil de publicación en una ubicación conocida. Aún más en este ejercicio verá cómo usar este archivo para publicar una aplicación web en Azure desde Visual Studio.
+    *Crear un nuevo sitio web mediante creación rápida*
+4. Espere hasta que se cree el nuevo **sitio web** .
+5. Una vez creado el sitio web, haga clic en el vínculo de la columna **URL** . Compruebe que el nuevo sitio web funciona.
 
-    ![Guardar el archivo de perfil de publicación](build-restful-apis-with-aspnet-web-api/_static/image46.png "guardar el perfil de publicación")
+    ![Ir al nuevo sitio web](build-restful-apis-with-aspnet-web-api/_static/image42.png "Ir al nuevo sitio web")
 
-    *Guardar el archivo de perfil de publicación*
+    *Ir al nuevo sitio web*
+
+    ![Sitio web en ejecución](build-restful-apis-with-aspnet-web-api/_static/image43.png "Sitio web en ejecución")
+
+    *Sitio web en ejecución*
+6. Vuelva al portal y haga clic en el nombre del sitio web en la columna **nombre** para mostrar las páginas de administración.
+
+    ![Abrir las páginas de administración de sitios web](build-restful-apis-with-aspnet-web-api/_static/image44.png "Abrir las páginas de administración de sitios web")
+
+    *Abrir las páginas de administración de sitios web*
+7. En la página **Panel** , en la sección **vista rápida** , haga clic en el vínculo **Descargar Perfil de publicación** .
+
+    > [!NOTE]
+    > El *Perfil de publicación* contiene toda la información necesaria para publicar una aplicación web en Azure para cada método de publicación habilitado. El perfil de publicación contiene las direcciones URL, las credenciales de usuario y las cadenas de base de datos necesarias para conectarse a todos los extremos para los que está habilitado un método de publicación y autenticarse en ellos. **Microsoft WebMatrix 2**, **Microsoft Visual Studio Express para Web** y **Microsoft Visual Studio 2012** admiten la lectura de perfiles de publicación para automatizar la configuración de estos programas para la publicación de aplicaciones web en Azure.
+
+    ![Descargar el perfil de publicación del sitio web](build-restful-apis-with-aspnet-web-api/_static/image45.png "Descargar el perfil de publicación del sitio web")
+
+    *Descargar el perfil de publicación del sitio web*
+8. Descargue el archivo de Perfil de publicación en una ubicación conocida. Además, en este ejercicio verá cómo usar este archivo para publicar una aplicación web en Azure desde Visual Studio.
+
+    ![Guardar el archivo de Perfil de publicación](build-restful-apis-with-aspnet-web-api/_static/image46.png "Guardar el perfil de publicación")
+
+    *Guardar el archivo de Perfil de publicación*
 
 <a id="ApxCTask2"></a>
 
 <a id="Task_2_-_Configuring_the_Database_Server"></a>
 #### <a name="task-2---configuring-the-database-server"></a>Tarea 2: configurar el servidor de base de datos
 
-Si la aplicación hace uso de SQL Server deberá crear un servidor de base de datos SQL de bases de datos. Si desea implementar una aplicación simple que no utiliza SQL Server, podría omitir esta tarea.
+Si su aplicación usa bases de datos de SQL Server, deberá crear un servidor de SQL Database. Si desea implementar una aplicación simple que no usa SQL Server podría omitir esta tarea.
 
-1. Necesitará un servidor de base de datos SQL para almacenar la base de datos de aplicación. Puede ver los servidores de base de datos SQL de la suscripción en el portal de administración de Azure en **bases de datos Sql** | **servidores** | **panel del servidor**. Si no tiene un servidor creado, puede crear una mediante el **agregar** botón en la barra de comandos. Tome nota de la **nombre del servidor y dirección URL, nombre de inicio de sesión de administrador y contraseña**, ya que lo usará en las siguientes tareas. No cree la base de datos, como se crearán en una etapa posterior.
+1. Necesitará un servidor de SQL Database para almacenar la base de datos de la aplicación. Puede ver los servidores de SQL Database de su suscripción en el portal de administración de Azure en **bases de datos SQL** | **servidores** | el **panel del servidor**. Si no tiene un servidor creado, puede crear uno mediante el botón **Agregar** de la barra de comandos. Anote el nombre del **servidor y la dirección URL, el nombre de inicio de sesión y la contraseña del administrador**, ya que los usará en las siguientes tareas. No cree todavía la base de datos, ya que se creará en una etapa posterior.
 
-    ![Panel de base de datos SQL Server](build-restful-apis-with-aspnet-web-api/_static/image47.png "panel de base de datos SQL Server")
+    ![Panel de SQL Database Server](build-restful-apis-with-aspnet-web-api/_static/image47.png "Panel de SQL Database Server")
 
-    *Panel de base de datos SQL Server*
-2. En la siguiente tarea probará la conexión de base de datos desde Visual Studio, por ese motivo debe incluir la dirección IP local en la lista del servidor de **direcciones IP permitidas**. Para ello, haga clic en **configurar**, seleccione la dirección IP de **dirección IP del cliente actual** y péguelo en el **dirección IP inicial** y **ladirecciónIPfinal** cuadros de texto y haga clic en el ![add-client-ip-address-ok-button](build-restful-apis-with-aspnet-web-api/_static/image48.png) botón.
+    *Panel de SQL Database Server*
+2. En la siguiente tarea probará la conexión de base de datos desde Visual Studio, por ese motivo, debe incluir la dirección IP local en la lista de **direcciones IP permitidas**del servidor. Para ello, haga clic en **configurar**, seleccione la dirección IP de la **dirección IP del cliente actual** y péguela en los cuadros de texto **dirección IP inicial** y **dirección IP final** , y haga clic en el botón ![agregar-Client-IP-dirección-aceptar-botón](build-restful-apis-with-aspnet-web-api/_static/image48.png).
 
-    ![Agregar dirección IP del cliente](build-restful-apis-with-aspnet-web-api/_static/image49.png)
+    ![Agregando la dirección IP del cliente](build-restful-apis-with-aspnet-web-api/_static/image49.png)
 
-    *Agregar dirección IP del cliente*
-3. Una vez el **dirección IP del cliente** se agrega a las direcciones IP permitidas de lista, haga clic en **guardar** para confirmar los cambios.
+    *Agregando la dirección IP del cliente*
+3. Una vez agregada la **dirección IP del cliente** a la lista direcciones IP permitidas, haga clic en **Guardar** para confirmar los cambios.
 
     ![Confirmar cambios](build-restful-apis-with-aspnet-web-api/_static/image50.png)
 
@@ -603,58 +603,58 @@ Si la aplicación hace uso de SQL Server deberá crear un servidor de base de da
 <a id="ApxCTask3"></a>
 
 <a id="Task_3_-_Publishing_an_ASPNET_MVC_4_Application_using_Web_Deploy"></a>
-#### <a name="task-3---publishing-an-aspnet-mvc-4-application-using-web-deploy"></a>Tarea 3: publicar una aplicación de ASP.NET MVC 4 mediante Web Deploy
+#### <a name="task-3---publishing-an-aspnet-mvc-4-application-using-web-deploy"></a>Tarea 3: publicación de una aplicación de ASP.NET MVC 4 con Web Deploy
 
-1. Vuelva a la solución de ASP.NET MVC 4. En el **el Explorador de soluciones**, haga clic en el proyecto de sitio web y seleccione **publicar**.
+1. Vuelva a la solución ASP.NET MVC 4. En el **Explorador de soluciones**, haga clic con el botón secundario en el proyecto del sitio web y seleccione **publicar**.
 
-    ![Publicar la aplicación](build-restful-apis-with-aspnet-web-api/_static/image51.png "publicar la aplicación")
+    ![Publicar la aplicación](build-restful-apis-with-aspnet-web-api/_static/image51.png "Publicar la aplicación")
 
     *Publicar el sitio web*
-2. Importar el perfil de publicación que guardó en la primera tarea.
+2. Importe el perfil de publicación que guardó en la primera tarea.
 
-    ![Importar el perfil de publicación](build-restful-apis-with-aspnet-web-api/_static/image52.png "importar el perfil de publicación")
+    ![Importar el perfil de publicación](build-restful-apis-with-aspnet-web-api/_static/image52.png "Importar el perfil de publicación")
 
-    *Importar perfil de publicación*
-3. Haga clic en **validar conexión**. Una vez completada la validación, haga clic en **siguiente**.
+    *Importando Perfil de publicación*
+3. Haga clic en **validar conexión**. Una vez finalizada la validación, haga clic en **siguiente**.
 
     > [!NOTE]
-    > Validación está completa cuando aparece una marca de verificación verde junto al botón Validar conexión.
+    > La validación se completa una vez que aparece una marca de verificación verde junto al botón validar conexión.
 
-    ![Validación de la conexión](build-restful-apis-with-aspnet-web-api/_static/image53.png "validación de la conexión")
+    ![Validando conexión](build-restful-apis-with-aspnet-web-api/_static/image53.png "Validando conexión")
 
-    *Validación de la conexión*
-4. En el **configuración** página, en el **bases de datos** sección, haga clic en el botón situado junto al cuadro de texto de la conexión de base de datos (es decir, **DefaultConnection**).
+    *Validando conexión*
+4. En la página **configuración** , en la sección **bases** de datos, haga clic en el botón situado junto al cuadro de texto de la conexión de base de datos (es decir, **DefaultConnection**).
 
-    ![Configuración de implementación Web](build-restful-apis-with-aspnet-web-api/_static/image54.png "configuración de implementación Web")
+    ![Configuración de web deploy](build-restful-apis-with-aspnet-web-api/_static/image54.png "Configuración de web deploy")
 
-    *Configuración de implementación Web*
-5. Configure la conexión de base de datos como sigue:
+    *Configuración de web deploy*
+5. Configure la conexión de base de datos de la siguiente manera:
 
-   - En el **nombre del servidor** escriba la dirección URL de base de datos de SQL server mediante el *tcp:* prefijo.
-   - En **nombre de usuario** escriba el nombre de inicio de sesión del Administrador de servidor.
-   - En **contraseña** escriba la contraseña de inicio de sesión del Administrador de servidor.
+   - En el **nombre del servidor** , escriba la dirección URL del servidor de SQL Database mediante el prefijo *TCP:* .
+   - En **nombre de usuario** , escriba el nombre de inicio de sesión del administrador del servidor.
+   - En **contraseña** , escriba la contraseña de inicio de sesión del administrador del servidor.
    - Escriba un nuevo nombre de base de datos, por ejemplo: *MVC4SampleDB*.
 
-     ![Configuración de la cadena de conexión de destino](build-restful-apis-with-aspnet-web-api/_static/image55.png "configuración de la cadena de conexión de destino")
+     ![Configuración de la cadena de conexión de destino](build-restful-apis-with-aspnet-web-api/_static/image55.png "Configuración de la cadena de conexión de destino")
 
      *Configuración de la cadena de conexión de destino*
-6. A continuación, haga clic en **Aceptar**. Cuando se le pedirá que cree la base de datos, haga clic en **Sí**.
+6. A continuación, haga clic en **Aceptar**. Cuando se le pida que cree la base de datos, haga clic en **sí**.
 
-    ![Creación de la base de datos](build-restful-apis-with-aspnet-web-api/_static/image56.png "creación de la cadena de la base de datos")
+    ![Crear la base de datos](build-restful-apis-with-aspnet-web-api/_static/image56.png "Crear la cadena de base de datos")
 
-    *Creación de la base de datos*
-7. La cadena de conexión que se usará para conectarse a la base de datos de SQL en Windows Azure se muestra en el cuadro de texto de conexión predeterminado. Después, haga clic en **Siguiente**.
+    *Crear la base de datos*
+7. La cadena de conexión que usará para conectarse a SQL Database en Windows Azure se muestra en el cuadro de texto conexión predeterminada. Después, haga clic en **Siguiente**.
 
-    ![Cadena de conexión que apunte a la base de datos SQL](build-restful-apis-with-aspnet-web-api/_static/image57.png "cadena de conexión que apunte a la base de datos SQL")
+    ![Cadena de conexión que apunta a SQL Database](build-restful-apis-with-aspnet-web-api/_static/image57.png "Cadena de conexión que apunta a SQL Database")
 
-    *Cadena de conexión que apunte a la base de datos SQL*
-8. En el **Preview** página, haga clic en **publicar**.
+    *Cadena de conexión que apunta a SQL Database*
+8. En la página **vista previa** , haga clic en **publicar**.
 
-    ![Publicar la aplicación web](build-restful-apis-with-aspnet-web-api/_static/image58.png "publicar la aplicación web")
+    ![Publicación de la aplicación Web](build-restful-apis-with-aspnet-web-api/_static/image58.png "Publicación de la aplicación Web")
 
-    *Publicar la aplicación web*
-9. Una vez que finalice el proceso de publicación, el explorador predeterminado abrirá el sitio web publicado.
+    *Publicación de la aplicación Web*
+9. Una vez finalizado el proceso de publicación, el explorador predeterminado abrirá el sitio Web publicado.
 
-    ![Publica la aplicación en Windows Azure](build-restful-apis-with-aspnet-web-api/_static/image59.png "publica la aplicación en Windows Azure")
+    ![Aplicación publicada en Windows Azure](build-restful-apis-with-aspnet-web-api/_static/image59.png "Aplicación publicada en Windows Azure")
 
     *Aplicación publicada en Azure*

@@ -9,11 +9,11 @@ ms.assetid: ee4b924e-8002-4dc3-819f-695fca1ff867
 msc.legacyurl: /web-forms/overview/older-versions-security/membership/storing-additional-user-information-vb
 msc.type: authoredcontent
 ms.openlocfilehash: cb352de6f7c2d117b41532112a87956c8dde62f8
-ms.sourcegitcommit: 22fbd8863672c4ad6693b8388ad5c8e753fb41a2
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/28/2019
-ms.locfileid: "74639180"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78488347"
 ---
 # <a name="storing-additional-user-information-vb"></a>Almacenar información de usuario adicional (VB)
 

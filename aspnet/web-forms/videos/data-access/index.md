@@ -9,11 +9,11 @@ ms.assetid: a923735c-2d34-456c-8327-40aa62a4c1d6
 msc.legacyurl: /web-forms/videos/data-access
 msc.type: chapter
 ms.openlocfilehash: 66c8851d53cef59ea560818a054729115ca62b3b
-ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/06/2019
-ms.locfileid: "65106755"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78464299"
 ---
 # <a name="data-access"></a>Acceso a datos en ASP.NET (Visual Studio)
 
@@ -26,14 +26,14 @@ ms.locfileid: "65106755"
     - [Trabajar con conjuntos de datos y filtros de una aplicación ASP](adonet-data-services/how-to-work-with-datasets-and-filters-from-an-asp-application.md)
 - ["¿Cómo...?" con LINQ](how-do-i-with-linq/index.md)
 
-    - [LINQ to SQL: información general](how-do-i-with-linq/how-do-i-linq-to-sql-overview.md)
+    - [LINQ to SQL: Información general](how-do-i-with-linq/how-do-i-linq-to-sql-overview.md)
     - [LINQ to SQL: Modelo de datos](how-do-i-with-linq/how-do-i-linq-to-sql-data-model.md)
     - [LINQ to SQL: Consultar la base de datos](how-do-i-with-linq/how-do-i-linq-to-sql-querying-the-database.md)
-    - [LINQ to SQL: Actualizando la base de datos](how-do-i-with-linq/how-do-i-linq-to-sql-updating-the-database.md)
+    - [LINQ to SQL: Actualizar la base de datos](how-do-i-with-linq/how-do-i-linq-to-sql-updating-the-database.md)
     - [LINQ to SQL: LinqDataSource](how-do-i-with-linq/how-do-i-linq-to-sql-linqdatasource.md)
-    - [LINQ to SQL: Custom LinqDataSource](how-do-i-with-linq/how-do-i-linq-to-sql-custom-linqdatasource.md)
-    - [LINQ to SQL: Uso de procedimientos almacenados](how-do-i-with-linq/how-do-i-linq-to-sql-using-stored-procedures.md)
-    - [LINQ to SQL: Actualizar con procedimientos almacenados](how-do-i-with-linq/how-do-i-linq-to-sql-updating-with-stored-procedures.md)
+    - [LINQ to SQL: LinqDataSource personalizado](how-do-i-with-linq/how-do-i-linq-to-sql-custom-linqdatasource.md)
+    - [LINQ to SQL: Usar procedimientos almacenados](how-do-i-with-linq/how-do-i-linq-to-sql-using-stored-procedures.md)
+    - [LINQ to SQL: Actualización con procedimientos almacenados](how-do-i-with-linq/how-do-i-linq-to-sql-updating-with-stored-procedures.md)
     - [LINQ to SQL: Ejecutar SQL arbitrario](how-do-i-with-linq/how-do-i-linq-to-sql-executing-arbitrary-sql.md)
 - [Vídeos de LINQ del equipo de VB](linq-videos-from-the-vb-team/index.md)
 

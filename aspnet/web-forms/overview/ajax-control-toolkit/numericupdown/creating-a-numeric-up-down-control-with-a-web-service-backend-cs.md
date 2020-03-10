@@ -9,11 +9,11 @@ ms.assetid: c99bbc72-d4de-41ed-92a4-9a4632368363
 msc.legacyurl: /web-forms/overview/ajax-control-toolkit/numericupdown/creating-a-numeric-up-down-control-with-a-web-service-backend-cs
 msc.type: authoredcontent
 ms.openlocfilehash: 816a840b9e93b95a049c3a4cb792e9deeab28983
-ms.sourcegitcommit: 22fbd8863672c4ad6693b8388ad5c8e753fb41a2
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/28/2019
-ms.locfileid: "74598905"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78509017"
 ---
 # <a name="creating-a-numeric-updown-control-with-a-web-service-backend-c"></a>Crear un control NumericUpDown con un back-end de servicio web (C#)
 
@@ -23,7 +23,7 @@ por [Christian Wenz](https://github.com/wenz)
 
 > En lugar de permitir que un usuario escriba un valor en una casilla, un control numérico de arriba y abajo (que existe en Windows y otros sistemas operativos) podría resultar más cómodo. De forma predeterminada, el control NumericUpDown siempre aumenta o disminuye un valor en 1, pero un servicio Web demuestra una mayor flexibilidad.
 
-## <a name="overview"></a>Información general del
+## <a name="overview"></a>Información general
 
 En lugar de permitir que un usuario escriba un valor en una casilla, un control numérico de arriba y abajo (que existe en Windows y otros sistemas operativos) podría resultar más cómodo. De forma predeterminada, el control `NumericUpDown` siempre aumenta o disminuye un valor en 1, pero un servicio Web demuestra una mayor flexibilidad.
 

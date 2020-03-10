@@ -9,11 +9,11 @@ ms.assetid: 78f8d194-03b9-44a5-8255-90e7cd1c2ee1
 msc.legacyurl: /web-forms/overview/older-versions-getting-started/master-pages/creating-a-site-wide-layout-using-master-pages-cs
 msc.type: authoredcontent
 ms.openlocfilehash: 1a5e85c443a2a3642ec185ab1897c43cdb2ab1f7
-ms.sourcegitcommit: 22fbd8863672c4ad6693b8388ad5c8e753fb41a2
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/28/2019
-ms.locfileid: "74619513"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78507337"
 ---
 # <a name="creating-a-site-wide-layout-using-master-pages-c"></a>Crear un diseño de todo el sitio mediante páginas maestras (C#)
 
@@ -127,7 +127,7 @@ Para lograr el diseño del sitio que se muestra en la figura 6, empiece por actu
 
 El diseño de la página maestra se define mediante una serie de elementos HTML `<div>`. El `<div>` de `topContent` contiene el marcado que aparece en la parte superior de cada página, mientras que los `mainContent`, `leftContent`y `footerContent` `<div>` s se usan para mostrar el contenido de la página, la columna izquierda y el icono "con alimentación Microsoft ASP.NET", respectivamente. Además de agregar estos elementos `<div>`, también cambió el nombre de la propiedad `ID` del control ContentPlaceHolder principal de `ContentPlaceHolder1` a `MainContent`.
 
-Las reglas de formato y diseño de estos elementos `<div>` coordenados se escriben en el archivo de [hoja de estilos en cascada (CSS)](http://en.wikipedia.org/wiki/Cascading_Style_Sheets) `Styles.css`, que se especifica a través de un elemento de&gt; vínculo de &lt;en el elemento &lt;del encabezado de la página maestra. Estas diversas reglas definen la apariencia y el funcionamiento de cada elemento `<div>` indicado anteriormente. Por ejemplo, el elemento `topContent` `<div>`, que muestra el texto y el vínculo "tutoriales de páginas principales", tiene sus reglas de formato especificadas en `Styles.css` de la siguiente manera:
+Las reglas de formato y diseño de estos elementos `<div>` coordenados se escriben en el archivo de [hoja de estilos en cascada (CSS)](http://en.wikipedia.org/wiki/Cascading_Style_Sheets) `Styles.css`, que se especifica a través de un elemento de&gt; vínculo de &lt;en el elemento &lt;del encabezado de la página maestra.&gt; Estas diversas reglas definen la apariencia y el funcionamiento de cada elemento `<div>` indicado anteriormente. Por ejemplo, el elemento `topContent` `<div>`, que muestra el texto y el vínculo "tutoriales de páginas principales", tiene sus reglas de formato especificadas en `Styles.css` de la siguiente manera:
 
 [!code-css[Main](creating-a-site-wide-layout-using-master-pages-cs/samples/sample3.css)]
 

@@ -2,22 +2,22 @@
 uid: web-forms/videos/aspnet-ajax/index
 title: ASP.NET AJAX | Microsoft Docs
 author: rick-anderson
-description: Formas de trabajar con ASP.NET AJAX para crear páginas de alta capacidad de respuesta, incluso si no es un experto en JavaScript.
+description: Formas de trabajar con ASP.NET AJAX para crear páginas con una gran capacidad de respuesta, incluso si no es un experto en JavaScript.
 ms.author: riande
 ms.date: 10/05/2011
 ms.assetid: 754b8c66-cefc-42d6-9f02-685efabdfcc6
 msc.legacyurl: /web-forms/videos/aspnet-ajax
 msc.type: chapter
 ms.openlocfilehash: 52cc785a92bc3e902f0f3266333d6157c6a78354
-ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/06/2019
-ms.locfileid: "65116140"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78510109"
 ---
 # <a name="aspnet-ajax"></a>ASP.NET AJAX
 
-> Formas de trabajar con ASP.NET AJAX para crear páginas de alta capacidad de respuesta, incluso si no es un experto en JavaScript.
+> Formas de trabajar con ASP.NET AJAX para crear páginas con una gran capacidad de respuesta, incluso si no es un experto en JavaScript.
 
 - [Introducción a ASP.NET AJAX](how-do-i-get-started-with-aspnet-ajax.md)
 - [Implementar actualizaciones dinámicas de página parcial con ASP.NET AJAX](how-do-i-implement-dynamic-partial-page-updates-with-aspnet-ajax.md)

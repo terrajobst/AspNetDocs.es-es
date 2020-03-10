@@ -2,74 +2,74 @@
 uid: mvc/overview/older-versions-1/controllers-and-routing/creating-a-route-constraint-vb
 title: Crear una restricción de ruta (VB) | Microsoft Docs
 author: StephenWalther
-description: En este tutorial, Stephen Walther demuestra cómo puede controlar cómo el explorador solicita coincidencia rutas mediante la creación de las restricciones de ruta con expresiones regulares.
+description: En este tutorial, Stephen Walther muestra cómo puede controlar cómo las solicitudes del explorador coinciden con las rutas mediante la creación de restricciones de ruta con expresiones regulares.
 ms.author: riande
 ms.date: 02/16/2009
 ms.assetid: b7cce113-c82c-45bf-b97b-357e5d9f7f56
 msc.legacyurl: /mvc/overview/older-versions-1/controllers-and-routing/creating-a-route-constraint-vb
 msc.type: authoredcontent
 ms.openlocfilehash: 205742dd8f866c8828008c8aac7ab3f98b173ceb
-ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/06/2019
-ms.locfileid: "65123422"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78486775"
 ---
 # <a name="creating-a-route-constraint-vb"></a>Crear una restricción de ruta (VB)
 
-by [Stephen Walther](https://github.com/StephenWalther)
+por [Stephen Walther](https://github.com/StephenWalther)
 
-> En este tutorial, Stephen Walther demuestra cómo puede controlar cómo el explorador solicita coincidencia rutas mediante la creación de las restricciones de ruta con expresiones regulares.
+> En este tutorial, Stephen Walther muestra cómo puede controlar cómo las solicitudes del explorador coinciden con las rutas mediante la creación de restricciones de ruta con expresiones regulares.
 
-Utilice las restricciones de ruta para restringir las solicitudes del explorador que coinciden con una ruta determinada. Puede usar una expresión regular para especificar una restricción de ruta.
+Las restricciones de ruta se usan para restringir las solicitudes del explorador que coinciden con una ruta determinada. Puede usar una expresión regular para especificar una restricción de ruta.
 
-Por ejemplo, imagine que ha definido la ruta en el listado 1 en el archivo Global.asax.
+Por ejemplo, Imagine que ha definido la ruta en la lista 1 en el archivo global. asax.
 
-**Listing 1 - Global.asax.vb**
+**Lista 1: global. asax. VB**
 
 [!code-vb[Main](creating-a-route-constraint-vb/samples/sample1.vb)]
 
-Listado 1 contiene una ruta con el nombre de producto. Puede usar la ruta de producto para asignar las solicitudes del explorador a ProductController contenido en el listado 2.
+La lista 1 contiene una ruta denominada product. Puede usar la ruta del producto para asignar solicitudes del explorador al ProductController incluido en la lista 2.
 
-**Listing 2 - Controllers\ProductController.vb**
+**Lista 2-Controllers\ProductController.vb**
 
 [!code-vb[Main](creating-a-route-constraint-vb/samples/sample2.vb)]
 
-Tenga en cuenta que la acción Details() expuesta por el controlador del producto acepta un solo parámetro denominado productId. Este parámetro es un entero.
+Tenga en cuenta que la acción Details () expuesta por el controlador del producto acepta un único parámetro denominado productId. Este parámetro es un parámetro entero.
 
-La ruta definida en el listado 1 coincide con cualquiera de las direcciones URL siguientes:
+La ruta definida en la enumeración 1 coincidirá con cualquiera de las siguientes direcciones URL:
 
-- / Product/23
-- / Product/7
+- /Product/23
+- /Product/7
 
-Por desgracia, la ruta también coincidirá con las direcciones URL siguientes:
+Desafortunadamente, la ruta también coincidirá con las siguientes direcciones URL:
 
-- / Product/bLa, bla
-- / Product/apple
+- /Product/blah
+- /Product/apple
 
-Dado que la acción Details() espera un parámetro entero, que realiza una solicitud que contiene un valor distinto de un valor entero se producirá un error. Por ejemplo, si escribe la dirección URL /Product/apple en el explorador, a continuación, obtendrá la página de error en la figura 1.
+Dado que la acción Details () espera un parámetro de entero, la realización de una solicitud que contenga algo distinto de un valor entero producirá un error. Por ejemplo, si escribe la dirección URL/Product/Apple en el explorador, se mostrará la página de error en la figura 1.
 
-[![El cuadro de diálogo nuevo proyecto](creating-a-route-constraint-vb/_static/image1.jpg)](creating-a-route-constraint-vb/_static/image1.png)
+[![el cuadro de diálogo nuevo proyecto](creating-a-route-constraint-vb/_static/image1.jpg)](creating-a-route-constraint-vb/_static/image1.png)
 
-**Figura 01**: Puede ver una página explode ([haga clic aquí para ver imagen en tamaño completo](creating-a-route-constraint-vb/_static/image2.png))
+**Figura 01**: visualización de una página de explosión ([haga clic para ver la imagen de tamaño completo](creating-a-route-constraint-vb/_static/image2.png))
 
-Lo realmente desea es que solo coinciden con las direcciones URL que contienen un productId entero adecuado. Puede usar una restricción al definir una ruta para restringir las direcciones URL que coinciden con la ruta. La ruta de producto modificada en el listado 3 contiene una restricción de expresión regular que coincida solo con enteros.
+Lo que realmente desea hacer es que solo coincida con las direcciones URL que contengan un número entero de productId adecuado. Puede usar una restricción al definir una ruta para restringir las direcciones URL que coinciden con la ruta. La ruta del producto modificada de la lista 3 contiene una restricción de expresión regular que solo coincide con enteros.
 
-**Listing 3 - Global.asax.vb**
+**Lista 3: global. asax. VB**
 
 [!code-vb[Main](creating-a-route-constraint-vb/samples/sample3.vb)]
 
-La expresión regular de \d+ coincide con uno o más números enteros. Esta restricción hace que la ruta de productos para que coincida con las direcciones URL siguientes:
+La expresión regular \d + coincide con uno o varios enteros. Esta restricción hace que la ruta del producto coincida con las siguientes direcciones URL:
 
-- / Product/3
-- / Product/8999
+- /Product/3
+- /Product/8999
 
 Pero no las direcciones URL siguientes:
 
-- / Product/apple
-- O producto
+- /Product/apple
+- /Product
 
-Estas solicitudes de explorador se controlarán mediante otra ruta o, si no hay ninguna ruta coincidente, un *no se encontró el recurso* , se devolverá el error.
+Estas solicitudes del explorador se controlarán mediante otra ruta o, si no hay ninguna ruta coincidente, se devolverá un error *de recurso no encontrado* .
 
 > [!div class="step-by-step"]
 > [Anterior](creating-custom-routes-vb.md)

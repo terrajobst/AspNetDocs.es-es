@@ -9,11 +9,11 @@ ms.assetid: 3e8b0627-3eb7-488e-807e-067cba7cec05
 msc.legacyurl: /web-forms/overview/older-versions-getting-started/deploying-web-site-projects/strategies-for-database-development-and-deployment-cs
 msc.type: authoredcontent
 ms.openlocfilehash: 4d9dbaf41926b43af171619ee34f58da84b5dab1
-ms.sourcegitcommit: 22fbd8863672c4ad6693b8388ad5c8e753fb41a2
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/28/2019
-ms.locfileid: "74582194"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78509389"
 ---
 # <a name="strategies-for-database-development-and-deployment-c"></a>Estrategias del desarrollo e implementación de bases de datos (C#)
 

@@ -1,6 +1,6 @@
 ---
 uid: web-forms/videos/tailspin-spyworks/tailspin-spyworks-intro-ui-and-edm
-title: Tailspin Spyworks - introducción la interfaz de usuario y EDM | Microsoft Docs
+title: Tailspin Spyworks-Introducción a la interfaz de usuario y EDM | Microsoft Docs
 author: JoeStagner
 description: Joe Stagner inicia la aplicación de formularios Web Forms de ejemplo Tailspin Spyworks implementando la plantilla predeterminada.
 ms.author: riande
@@ -9,11 +9,11 @@ ms.assetid: e81c1e34-f64f-4889-9981-8400d7bb49e4
 msc.legacyurl: /web-forms/videos/tailspin-spyworks/tailspin-spyworks-intro-ui-and-edm
 msc.type: video
 ms.openlocfilehash: cc0593453494d843a92a84d929eec75d9b386860
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59392747"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78455521"
 ---
 # <a name="tailspin-spyworks---intro-ui-and-edm"></a>Tailspin Spyworks - Introducción a la interfaz de usuario y EDM
 
@@ -21,7 +21,7 @@ por [Joe Stagner](https://github.com/JoeStagner)
 
 Joe Stagner inicia la aplicación de formularios Web Forms de ejemplo Tailspin Spyworks implementando la plantilla predeterminada.
 
-[&#9654;Vea el vídeo (12 minutos)](https://channel9.msdn.com/Blogs/ASP-NET-Site-Videos/tailspin-spyworks-intro-ui-and-edm)
+[&#9654;Ver vídeo (12 minutos)](https://channel9.msdn.com/Blogs/ASP-NET-Site-Videos/tailspin-spyworks-intro-ui-and-edm)
 
 > [!div class="step-by-step"]
 > [Anterior](tailspin-spyworks-implementing-and-using-the-also-purchased-control.md)

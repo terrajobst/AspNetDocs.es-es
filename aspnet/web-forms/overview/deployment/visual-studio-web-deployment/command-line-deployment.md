@@ -9,11 +9,11 @@ ms.assetid: 82b8dea0-f062-4ee4-8784-3ffa30fbb1ca
 msc.legacyurl: /web-forms/overview/deployment/visual-studio-web-deployment/command-line-deployment
 msc.type: authoredcontent
 ms.openlocfilehash: 13cfe4492398b59f2c80394689cc113ccb218c60
-ms.sourcegitcommit: 22fbd8863672c4ad6693b8388ad5c8e753fb41a2
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/28/2019
-ms.locfileid: "74634208"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78512077"
 ---
 # <a name="aspnet-web-deployment-using-visual-studio-command-line-deployment"></a>Implementación web de ASP.NET con Visual Studio: implementación desde la línea de comandos
 
@@ -23,7 +23,7 @@ por [Tom Dykstra](https://github.com/tdykstra)
 
 > En esta serie de tutoriales se muestra cómo implementar (publicar) una aplicación Web de ASP.NET en Azure App Service Web Apps o en un proveedor de hospedaje de terceros mediante Visual Studio 2012 o Visual Studio 2010. Para obtener información sobre la serie, vea [el primer tutorial de la serie](introduction.md).
 
-## <a name="overview"></a>Información general del
+## <a name="overview"></a>Información general
 
 En este tutorial se muestra cómo invocar la canalización de publicación Web de Visual Studio desde la línea de comandos. Esto resulta útil en escenarios en los que desea [automatizar el proceso de implementación](../../../../aspnet/overview/developing-apps-with-windows-azure/building-real-world-cloud-apps-with-windows-azure/continuous-integration-and-continuous-delivery.md) en lugar de hacerlo manualmente en Visual Studio, normalmente mediante un [sistema de control de versiones de código fuente](../../../../aspnet/overview/developing-apps-with-windows-azure/building-real-world-cloud-apps-with-windows-azure/source-control.md).
 
@@ -102,7 +102,7 @@ Se admiten tres métodos de publicación para la publicación de la línea de co
 
 La configuración de compilación y la plataforma deben establecerse en Visual Studio o en la línea de comandos. Los perfiles de publicación incluyen propiedades que se denominan `LastUsedBuildConfiguration` y `LastUsedPlatform`, pero no puede establecer estas propiedades para determinar cómo se compila el proyecto. Para obtener más información, vea [msbuild: How to Set the Configuration Property en el](http://sedodream.com/2012/10/27/MSBuildHowToSetTheConfigurationProperty.aspx) blog de Sayed Hashimi.
 
-## <a name="deploy-to-staging"></a>Implementar en el almacenamiento provisional
+## <a name="deploy-to-staging"></a>Implementación en entorno de ensayo
 
 Para implementar en Azure, debe agregar la contraseña a la línea de comandos. Si ha guardado la contraseña en el perfil de publicación en Visual Studio, se almacenará en formato cifrado en el archivo. *pubxml. User* . MSBuild no tiene acceso a ese archivo al realizar una implementación de línea de comandos, por lo que tiene que pasar la contraseña en un parámetro de línea de comandos.
 
@@ -119,7 +119,7 @@ Para implementar en Azure, debe agregar la contraseña a la línea de comandos. 
 
     Como vimos anteriormente para el entorno de prueba, es posible que tenga que crear algunos estudiantes para ver las estadísticas en la página **acerca** de.
 
-## <a name="deploy-to-production"></a>Implementación en producción
+## <a name="deploy-to-production"></a>Implementar en producción
 
 El proceso de implementación en producción es similar al proceso de ensayo.
 

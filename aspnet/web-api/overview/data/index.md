@@ -1,8 +1,8 @@
 ---
 uid: web-api/overview/data/index
-title: Trabajar con datos en ASP.NET Web API - ASP.NET 4.x
+title: Trabajar con datos en ASP.NET Web API ASP.NET 4. x
 author: rick-anderson
-description: Cómo programar CRUD (crear, leer, actualizar y eliminar) las operaciones en API Web para ASP.NET 4.x.
+description: Cómo programar operaciones CRUD (crear, leer, actualizar, eliminar) en Web API para ASP.NET 4. x.
 ms.author: riande
 ms.date: 10/23/2014
 ms.custom: seoapril2019
@@ -10,15 +10,15 @@ ms.assetid: 995cbe38-7dbd-4c36-a5d0-a761944c7636
 msc.legacyurl: /web-api/overview/data
 msc.type: chapter
 ms.openlocfilehash: 210d6c1b207bbba0e9b809c9bba3a3d567015013
-ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/06/2019
-ms.locfileid: "65126214"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78504871"
 ---
 # <a name="working-with-data-in-aspnet-web-api"></a>Trabajar con datos en ASP.NET Web API
 
-> Cómo programar CRUD (crear, leer, actualizar y eliminar) las operaciones de API Web.
+> Cómo programar operaciones CRUD (crear, leer, actualizar, eliminar) en Web API.
 
 - [Usar Web API 2 con Entity Framework 6](using-web-api-with-entity-framework/index.md)
 

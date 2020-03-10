@@ -9,11 +9,11 @@ ms.assetid: 4fb72f75-32ab-4bf7-a764-be20367be726
 msc.legacyurl: /web-forms/overview/data-access/working-with-batched-data/batch-deleting-vb
 msc.type: authoredcontent
 ms.openlocfilehash: 0974a16764eee2ef03cf36b4b15f9ef41f99982b
-ms.sourcegitcommit: 22fbd8863672c4ad6693b8388ad5c8e753fb41a2
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/28/2019
-ms.locfileid: "74621765"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78476461"
 ---
 # <a name="batch-deleting-vb"></a>Eliminación por lotes (VB)
 

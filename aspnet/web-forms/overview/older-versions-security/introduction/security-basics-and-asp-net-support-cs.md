@@ -9,11 +9,11 @@ ms.assetid: 07e15538-2f29-40c6-b2e7-e6115075ac83
 msc.legacyurl: /web-forms/overview/older-versions-security/introduction/security-basics-and-asp-net-support-cs
 msc.type: authoredcontent
 ms.openlocfilehash: 1ccaac101a83d0e28b07b220b8b7b61a9039227e
-ms.sourcegitcommit: 22fbd8863672c4ad6693b8388ad5c8e753fb41a2
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/28/2019
-ms.locfileid: "74642442"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78520075"
 ---
 # <a name="security-basics-and-aspnet-support-c"></a>Conceptos básicos de seguridad y compatibilidad de ASP.NET (C#)
 
@@ -34,7 +34,7 @@ Este es el primer tutorial de una serie de tutoriales que explorarán técnicas 
 - Crear, actualizar y eliminar cuentas de usuario
 - Limitar el acceso a una página web, un directorio o una funcionalidad específica basada en el usuario que ha iniciado sesión
 - Utilice ASP. Marco de trabajo de roles de la red para asociar cuentas de usuario a roles
-- Administrar roles de usuario
+- Administrar los roles de usuario
 - Limitar el acceso a una página web, un directorio o una funcionalidad específica según el rol del usuario que ha iniciado sesión
 - Personalizar y ampliar ASP. Controles Web de seguridad de la red
 

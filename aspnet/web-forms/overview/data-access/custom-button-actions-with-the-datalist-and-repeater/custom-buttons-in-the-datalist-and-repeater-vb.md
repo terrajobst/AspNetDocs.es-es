@@ -9,11 +9,11 @@ ms.assetid: 1afdb14d-6e49-4e1f-aead-2934730d472e
 msc.legacyurl: /web-forms/overview/data-access/custom-button-actions-with-the-datalist-and-repeater/custom-buttons-in-the-datalist-and-repeater-vb
 msc.type: authoredcontent
 ms.openlocfilehash: bc7e94e59226b739c2948434c1bfecb46b3d7856
-ms.sourcegitcommit: 22fbd8863672c4ad6693b8388ad5c8e753fb41a2
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/28/2019
-ms.locfileid: "74607653"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78465355"
 ---
 # <a name="custom-buttons-in-the-datalist-and-repeater-vb"></a>Botones personalizados en los controles DataList y Repeater (VB)
 

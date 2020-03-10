@@ -9,11 +9,11 @@ ms.assetid: 2086cb1a-ab78-49ae-9c0b-03891c69776a
 msc.legacyurl: /web-forms/overview/data-access/editing-inserting-and-deleting-data/adding-validation-controls-to-the-editing-and-inserting-interfaces-cs
 msc.type: authoredcontent
 ms.openlocfilehash: 110ee08f1d0707664ef6268f34ceab9da30a3e61
-ms.sourcegitcommit: 22fbd8863672c4ad6693b8388ad5c8e753fb41a2
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/28/2019
-ms.locfileid: "74589694"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78494323"
 ---
 # <a name="adding-validation-controls-to-the-editing-and-inserting-interfaces-c"></a>Agregar controles de validación a las interfaces de edición e inserción (C#)
 
@@ -33,7 +33,7 @@ Para proporcionar una interfaz personalizada de edición o inserción, es necesa
 
 En este tutorial veremos lo fácil que es agregar controles de validación al `EditItemTemplate` de TemplateField y `InsertItemTemplate` para proporcionar una interfaz de usuario más infalible. En concreto, este tutorial toma el ejemplo creado en el tutorial [examen de los eventos asociados con la inserción, actualización y eliminación,](examining-the-events-associated-with-inserting-updating-and-deleting-cs.md) y aumenta las interfaces de edición e inserción para incluir la validación adecuada.
 
-## <a name="step-1-replicating-the-example-fromexamining-the-events-associated-with-inserting-updating-and-deletingexamining-the-events-associated-with-inserting-updating-and-deleting-csmd"></a>Paso 1: replicar el ejemplo desde el[examen de los eventos asociados a la inserción, actualización y eliminación](examining-the-events-associated-with-inserting-updating-and-deleting-cs.md)
+## <a name="step-1-replicating-the-example-fromexamining-the-events-associated-with-inserting-updating-and-deleting"></a>Paso 1: replicar el ejemplo desde el[examen de los eventos asociados a la inserción, actualización y eliminación](examining-the-events-associated-with-inserting-updating-and-deleting-cs.md)
 
 En el tutorial [examinar los eventos asociados con la inserción, actualización y eliminación](examining-the-events-associated-with-inserting-updating-and-deleting-cs.md) , hemos creado una página con los nombres y los precios de los productos en un control GridView modificable. Además, la página incluye un DetailsView cuya propiedad `DefaultMode` se estableció en `Insert`, por lo que siempre se representa en modo de inserción. Desde este DetailsView, el usuario puede escribir el nombre y el precio de un nuevo producto, hacer clic en Insertar y agregarlo al sistema (consulte la figura 1).
 

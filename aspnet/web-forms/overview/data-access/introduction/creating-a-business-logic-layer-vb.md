@@ -9,11 +9,11 @@ ms.assetid: 142e5181-29ce-4bb9-907b-2a0becf7928b
 msc.legacyurl: /web-forms/overview/data-access/introduction/creating-a-business-logic-layer-vb
 msc.type: authoredcontent
 ms.openlocfilehash: 2ee4789ea9567b7bcd70eb63695e0b1d73076dc2
-ms.sourcegitcommit: 22fbd8863672c4ad6693b8388ad5c8e753fb41a2
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/28/2019
-ms.locfileid: "74572644"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78490201"
 ---
 # <a name="creating-a-business-logic-layer-vb"></a>Crear una capa de lógica empresarial (VB)
 
@@ -62,7 +62,7 @@ En el caso de la clase `ProductsBLL` es necesario agregar un total de siete mét
 - `UpdateProduct(productName, supplierID, categoryID, quantityPerUnit, unitPrice, unitsInStock, unitsOnOrder, reorderLevel, discontinued, productID)` actualiza un producto existente en la base de datos con los valores pasados; Devuelve `True` si se actualizó exactamente una fila; de lo contrario, `False`
 - `DeleteProduct(productID)` elimina el producto especificado de la base de datos
 
-ProductsBLL. VB
+ProductsBLL.vb
 
 [!code-vb[Main](creating-a-business-logic-layer-vb/samples/sample1.vb)]
 
@@ -147,7 +147,7 @@ Desafortunadamente, no podemos especificar comprobaciones de límites, como el v
 
 A continuación, cree un controlador de eventos para el evento `ColumnChanging` que garantice que los valores de las columnas `UnitPrice`, `UnitsInStock`, `UnitsOnOrder`y `ReorderLevel` (si no `NULL`) son mayores o iguales que cero. Si alguna de estas columnas está fuera del intervalo, inicie una `ArgumentException`.
 
-ProductsDataTable. ColumnChanging. VB
+ProductsDataTable.ColumnChanging.vb
 
 [!code-vb[Main](creating-a-business-logic-layer-vb/samples/sample5.vb)]
 

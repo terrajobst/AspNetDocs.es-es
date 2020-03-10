@@ -9,11 +9,11 @@ ms.assetid: 1bc333c5-f096-4ea7-b170-779accc21c1a
 msc.legacyurl: /aspnet/overview/developing-apps-with-windows-azure/building-real-world-cloud-apps-with-windows-azure/the-fix-it-sample-application
 msc.type: authoredcontent
 ms.openlocfilehash: 896196bdb6a6b0d12a6c798ead510e37dd38a9fc
-ms.sourcegitcommit: 7709c0a091b8d55b7b33bad8849f7b66b23c3d72
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/19/2020
-ms.locfileid: "77456886"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78471397"
 ---
 # <a name="appendix-the-fix-it-sample-application-building-real-world-cloud-apps-with-azure"></a>Apéndice: aplicación de ejemplo de corrección (creación de aplicaciones en la nube reales con Azure)
 
@@ -26,7 +26,7 @@ por [Mike Wasson](https://github.com/MikeWasson), [Rick Anderson](https://twitte
 Este apéndice para crear aplicaciones en la nube de mundo real con el libro electrónico de Azure contiene las siguientes secciones que proporcionan información adicional sobre la aplicación de ejemplo de corrección de ti que puede descargar:
 
 - [Problemas conocidos](#knownissues)
-- [procedimientos recomendados](#bestpractices)
+- [Procedimientos recomendados](#bestpractices)
 - [Cómo ejecutar la aplicación desde Visual Studio en el equipo local](#run-in-vs)
 - [Implementación de la aplicación base para Azure App Service Web Apps mediante scripts de Windows PowerShell](#deploybase)
 - [Solución de problemas de los scripts de Windows PowerShell](#troubleshooting)
@@ -249,7 +249,7 @@ Hay dos maneras de ejecutar la aplicación Fix it:
    3. En Explorador de soluciones, haga clic con el botón secundario en la solución FixIt y seleccione **propiedades**.
    4. Seleccione **proyectos de inicio múltiples**.
    5. En la lista desplegable **acción** , en MyFixIt y MyFixItCloudService, seleccione **iniciar**.
-   6. Haga clic en **OK**.
+   6. Haga clic en **Aceptar**.
    7. Presione **F5** para ejecutar ambos proyectos.
 
       Al ejecutar el proyecto MyFixItCloudService, Visual Studio inicia el emulador de proceso de Azure. En función de la configuración del firewall, es posible que deba permitir el emulador a través del firewall.

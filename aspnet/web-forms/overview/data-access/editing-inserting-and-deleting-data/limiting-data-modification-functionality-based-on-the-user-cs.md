@@ -9,11 +9,11 @@ ms.assetid: 2b251c82-77cf-4e36-baa9-b648eddaa394
 msc.legacyurl: /web-forms/overview/data-access/editing-inserting-and-deleting-data/limiting-data-modification-functionality-based-on-the-user-cs
 msc.type: authoredcontent
 ms.openlocfilehash: c3cacaddb7e9b493ba39718f41dcaab360d36fd9
-ms.sourcegitcommit: 22fbd8863672c4ad6693b8388ad5c8e753fb41a2
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/28/2019
-ms.locfileid: "74580701"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78478429"
 ---
 # <a name="limiting-data-modification-functionality-based-on-the-user-c"></a>Limitar la funcionalidad de modificación de datos basada en el usuario (C#)
 

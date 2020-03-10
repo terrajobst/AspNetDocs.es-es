@@ -9,11 +9,11 @@ ms.assetid: bf751e1f-7db9-4039-be55-d1ee33769c3a
 msc.legacyurl: /web-pages/videos/aspnet-razor-pages/working-with-forms-part-1
 msc.type: video
 ms.openlocfilehash: dcbc86e137f8e4d2539f27bf6d188df90119d867
-ms.sourcegitcommit: 84b1681d4e6253e30468c8df8a09fe03beea9309
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/02/2019
-ms.locfileid: "73445499"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78514111"
 ---
 # <a name="working-with-forms-part-1"></a>Trabajar con formularios (parte 1)
 

@@ -1,135 +1,135 @@
 ---
 uid: mvc/overview/advanced/custom-mvc-templates
-title: Plantilla personalizada de MVC | Microsoft Docs
+title: Plantilla de MVC personalizada | Microsoft Docs
 author: joeloff
-description: Crear una plantilla como una extensión VSIX.
+description: Cree una plantilla como una extensión VSIX.
 ms.author: riande
 ms.date: 12/10/2012
 ms.assetid: b0a214c7-2f38-4dbc-b47f-bd7bd9df97bd
 msc.legacyurl: /mvc/overview/advanced/custom-mvc-templates
 msc.type: authoredcontent
 ms.openlocfilehash: 0603bc24e070e223551813f66a75889a2e46fd35
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59379552"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78499603"
 ---
 # <a name="custom-mvc-template"></a>Plantilla personalizada de MVC
 
 por [Jacques Eloff](https://github.com/joeloff)
 
-La versión de MVC 3 Tools Update para Visual Studio 2010 introdujo a un asistente de proyecto independiente para los proyectos de MVC. El cambio se realizó por dos factores. En primer lugar, la introducción de nuevas plantillas de MVC 3 y compatibilidad con motores de vista adicionales como Razor dar lugar a que genera el cuadro de diálogo nuevo proyecto en Visual Studio. En segundo lugar, los clientes tenían han formulado para puntos de extensibilidad y el Asistente para nuevo proyecto MVC nos podría permitirse la oportunidad de responder a estas solicitudes.
+La versión de MVC 3 Tools Update para Visual Studio 2010 presentó un asistente de proyecto independiente para proyectos de MVC. El cambio se ha controlado por dos factores. En primer lugar, la introducción de nuevas plantillas en MVC 3 y la compatibilidad con motores de vista adicionales como Razor conducen a saturar el cuadro de diálogo nuevo proyecto en Visual Studio. En segundo lugar, los clientes habían solicitado puntos de extensibilidad y el Asistente para nuevo proyecto de MVC nos proporcionaría la oportunidad de responder a estas solicitudes.
 
-Adición de plantillas personalizadas era un proceso arduo que dependía de mediante el registro para que las nuevas plantillas visible para el Asistente para proyectos MVC. El autor de una nueva plantilla tenía incluirlo dentro de un archivo MSI para asegurarse de que las entradas del registro necesarias se crearía en tiempo de instalación. La alternativa era hacer que un archivo ZIP que contiene la plantilla disponible y tiene el usuario final cree manualmente las entradas del registro necesarias.
+Agregar plantillas personalizadas era un proceso arduo en el que se usaba el registro para hacer que las nuevas plantillas estuvieran visibles para el Asistente para proyectos de MVC. El autor de una nueva plantilla tenía que ajustarla dentro de una MSI para asegurarse de que se crearían las entradas del registro necesarias en el momento de la instalación. La alternativa era crear un archivo ZIP que contenga la plantilla disponible y hacer que el usuario final cree manualmente las entradas del registro necesarias.
 
-Ninguno de los enfoques mencionados anteriormente es ideal, por lo que decidimos aprovechar algunas de las infraestructuras existentes proporcionadas por [VSIX](https://msdn.microsoft.com/library/ff363239.aspx) extensiones para que sea más fácil de crear, distribuir e instalar las plantillas personalizadas de MVC a partir de MVC 4 para Visual Studio 2012. Algunas de las ventajas que ofrece este enfoque son:
+Ninguno de los enfoques anteriores es idóneo, por lo que hemos decidido aprovechar algunas de las infraestructuras existentes que proporcionan las extensiones [VSIX](https://msdn.microsoft.com/library/ff363239.aspx) para que sea más fácil crear, distribuir e instalar plantillas MVC personalizadas a partir de MVC 4 para Visual Studio 2012. Algunas de las ventajas que ofrece este enfoque son:
 
-- Una extensión VSIX puede contener varias plantillas que admiten diferentes lenguajes (C# y Visual Basic) y varios motores de vista (ASPX y Razor).
-- Una extensión VSIX puede tener como destino varias SKU de Visual Studio incluidas SKU de Express.
-- El [Galería de Visual Studio](https://visualstudiogallery.msdn.microsoft.com/) facilita la distribución de la extensión a un público amplio.
-- Facilitando la tarea crear las correcciones y actualizaciones de las plantillas personalizadas, se pueden actualizar las extensiones VSIX.
+- Una extensión VSIX puede contener varias plantillas que admiten diferentes lenguajes (C# y Visual Basic) y varios motores de vista (aspx y Razor).
+- Una extensión VSIX puede tener como destino varias SKU de Visual Studio, incluidas las SKU Express.
+- La [Galería de Visual Studio](https://visualstudiogallery.msdn.microsoft.com/) facilita la distribución de la extensión a un público ancho.
+- Las extensiones VSIX se pueden actualizar facilitando la creación de correcciones y actualizaciones en las plantillas personalizadas.
 
 ## <a name="prerequisites"></a>Requisitos previos
 
-- Los usuarios deben estar familiarizado con la creación de plantillas de proyecto, incluido el marcado necesario para los archivos de vstemplate, etcetera.
-- Los usuarios deberán tener Visual Studio Professional y versiones superiores instalados. Crear proyectos VSIX no admiten las SKU de Express.
-- [Visual Studio 2012 SDK](https://www.microsoft.com/download/details.aspx?id=30668) instalado.
+- Los usuarios deben estar familiarizados con la creación de plantillas de proyecto, incluido el marcado necesario para los archivos vstemplate, etc.
+- Los usuarios deberán tener Visual Studio Professional y versiones posteriores instaladas. Las SKU Express no admiten la creación de proyectos VSIX.
+- [SDK de Visual Studio 2012](https://www.microsoft.com/download/details.aspx?id=30668) instalado.
 
 ## <a name="example"></a>Ejemplo
 
-El primer paso es crear un nuevo proyecto VSIX con C# o Visual Basic. Seleccione **archivo > Nuevo proyecto**, a continuación, haga clic en **extensibilidad** en el panel izquierdo y seleccione el **proyecto VSIX**.
+El primer paso es crear un nuevo proyecto de VSIX con C# o Visual Basic. Seleccione **archivo > nuevo proyecto**y, a continuación, haga clic en **extensibilidad** en el panel izquierdo y seleccione el **Proyecto VSIX**.
 
 ![nuevo proyecto](custom-mvc-templates/_static/image1.jpg)
 
 Una vez creado el proyecto, se abrirá el diseñador VSIX.
 
-![Metadatos del Diseñador de proyectos](custom-mvc-templates/_static/image2.jpg)
+![Metadatos del diseñador de proyectos](custom-mvc-templates/_static/image2.jpg)
 
-El diseñador puede usarse para modificar algunas de las propiedades generales de la extensión que se mostrará a los usuarios cuando instale la extensión o examinar las extensiones instaladas en Visual Studio (**Herramientas > extensiones y actualizaciones**). Cuando haya completado la información general haga clic en el **pestaña destinos de instalación**.
+El diseñador se puede usar para editar algunas de las propiedades generales de la extensión que se mostrarán a los usuarios cuando instalen la extensión o examinen las extensiones instaladas en Visual Studio (**herramientas > extensiones y actualizaciones**). Una vez que haya completado la información general, haga clic en la **pestaña destinos de instalación**.
 
-![Destinos de instalación de diseñador del proyecto](custom-mvc-templates/_static/image3.jpg)
+![Destinos de instalación del diseñador de proyectos](custom-mvc-templates/_static/image3.jpg)
 
-Esta ficha sirve para especificar la SKU y versiones de Visual Studio que son compatibles con la extensión. Seleccione la casilla de verificación **este VSIX se instala para todos los usuarios** para habilitar las instalaciones por equipo de la extensión VSIX. Haga clic en el **New** situado a la derecha para agregar SKU adicionales, como Web Developer Express (VWD).
+Esta pestaña se usa para especificar las SKU y las versiones de Visual Studio que son compatibles con la extensión. Active la casilla de **este VSIX está instalado para que todos los usuarios** habiliten las instalaciones por equipo de VSIX. Haga clic en el botón **nuevo** de la derecha para agregar SKU adicionales, como Web Developer Express (vWD existente).
 
 ![Agregar nuevo destino de instalación](custom-mvc-templates/_static/image4.jpg)
 
-Si piensa admitir todos los profesionales y versiones posteriores SKU (Professional, Premium y Ultimate) sólo deberá seleccionar la SKU mínima de la familia de **Microsoft.VisualStudio.Pro**. No olvide guardar todos los cambios una vez completados los destinos de instalación.
+Si piensa admitir todas las SKU profesionales y posteriores (Professional, Premium y Ultimate), solo tiene que seleccionar la SKU mínima en la familia **Microsoft.VisualStudio.Pro**. Recuerde guardar todos los cambios una vez que haya completado los destinos de instalación.
 
-![Destinos de instalación de diseñador del proyecto](custom-mvc-templates/_static/image5.jpg)
+![Destinos de instalación del diseñador de proyectos](custom-mvc-templates/_static/image5.jpg)
 
-El **activos** ficha sirve para agregar todos los archivos de contenido a la extensión VSIX. Debido a que MVC requiere metadatos personalizados que va a editar el XML sin formato del archivo de manifiesto de VSIX en lugar de usar el **activos** tab para agregar contenido. Empiece agregando el contenido de la plantilla al proyecto VSIX. Es importante que la estructura de la carpeta y el contenido refleja el diseño del proyecto. El ejemplo siguiente contiene cuatro plantillas de proyecto que se derivan de la plantilla de proyecto de MVC básica. Asegúrese de que todos los archivos que componen la plantilla de proyecto (todos los elementos debajo de la carpeta ProjectTemplates) se agregan a la **contenido** itemgroup en VSIX de proyecto de archivos y que cada elemento contiene el  **CopyToOutputDirectory** y **IncludeInVsix** establecer metadatos, como se muestra en el ejemplo siguiente.
+La pestaña **activos** se usa para agregar todos los archivos de contenido a VSIX. Puesto que MVC requiere metadatos personalizados, editará el XML sin formato del archivo de manifiesto VSIX en lugar de usar la pestaña **activos** para agregar contenido. Comience agregando el contenido de la plantilla al Proyecto VSIX. Es importante que la estructura de la carpeta y el contenido reflejen el diseño del proyecto. El ejemplo siguiente contiene cuatro plantillas de proyecto que se derivaron de la plantilla de proyecto básica de MVC. Asegúrese de que todos los archivos que componen la plantilla de proyecto (todo lo que se encuentra debajo de la carpeta ProjectTemplates) se agregan al **contenido** de ItemGroup en el archivo de Proyecto VSIX y que cada elemento contiene el conjunto de metadatos **CopyToOutputDirectory** y **IncludeInVsix** , como se muestra en el ejemplo siguiente.
 
-&lt;Content Include=&quot;ProjectTemplates\MyMvcWebApplicationProjectTemplate.csaspx\BasicWeb.config&quot;&gt;
+el contenido de &lt;incluye =&quot;ProjectTemplates\MyMvcWebApplicationProjectTemplate.csaspx\BasicWeb.config&quot;&gt;
 
-&lt;CopyToOutputDirectory&gt;Always&lt;/CopyToOutputDirectory&gt;
+&lt;CopyToOutputDirectory&gt;siempre&lt;/CopyToOutputDirectory&gt;
 
 &lt;IncludeInVSIX&gt;true&lt;/IncludeInVSIX&gt;
 
 &lt;/Content&gt;
 
-Si no es así, el IDE intentará compilar el contenido de la plantilla al compilar la extensión VSIX y probablemente verá un error. Los archivos de código en las plantillas a menudo contienen especial [parámetros de plantilla](https://msdn.microsoft.com/library/eehb4faa(v=vs.110).aspx) utilizado por Visual Studio cuando se crea una instancia de la plantilla de proyecto y, por tanto, no se puede compilar en el IDE.
+Si no es así, el IDE intentará compilar el contenido de la plantilla al compilar el VSIX y es probable que vea un error. Los archivos de código de las plantillas suelen contener [parámetros de plantilla](https://msdn.microsoft.com/library/eehb4faa(v=vs.110).aspx) especiales usados por Visual Studio cuando se crea una instancia de la plantilla de proyecto y, por lo tanto, no se pueden compilar en el IDE.
 
 ![Explorador de soluciones](custom-mvc-templates/_static/image6.jpg)
 
-Cierre el diseñador VSIX, a continuación, haga clic con el botón derecho en el **source.extension.manifest** archivo **el Explorador de soluciones** y seleccione **abrir con** y elija el **(XML Editor de texto)** opción.
+Cierre el diseñador VSIX, haga clic con el botón derecho en el archivo **source. Extension. manifest** en **Explorador de soluciones** y seleccione **abrir con** y elija la opción **Editor XML (texto)** .
 
-![Abrir cuadro de diálogo](custom-mvc-templates/_static/image7.jpg)
+![Cuadro de diálogo Abrir con](custom-mvc-templates/_static/image7.jpg)
 
-Crear un **&lt;activos&gt;** elemento y agregue un **&lt;activos&gt;** (elemento) para cada archivo que se debe incluir en VSIX. El **tipo** atributo de cada **&lt;activos&gt;** elemento debe establecerse en **Microsoft.VisualStudio.Mvc.Template**. Se trata de un espacio de nombres personalizado que comprende únicamente el Asistente de proyecto MVC. Consulte la documentación de esquema 2.0 de VSIX para obtener más información sobre la estructura y el diseño del archivo de manifiesto.
+Cree un elemento **&lt;Assets&gt;** y agregue un elemento **&lt;&gt;Asset** para cada archivo que se debe incluir en VSIX. El atributo de **tipo** de cada **&lt;elemento&gt;** debe establecerse en **Microsoft. VisualStudio. Mvc. template**. Se trata de un espacio de nombres personalizado que solo entiende el Asistente para proyectos de MVC. Consulte la documentación del esquema de VSIX 2,0 para obtener información adicional sobre la estructura y el diseño del archivo de manifiesto.
 
-Limitarse a agregar los archivos a la extensión VSIX no es suficiente para registrar las plantillas con el Asistente MVC. Deberá proporcionar información como el nombre de la plantilla, descripción, motores de vista compatible y lenguaje de programación para el Asistente MVC. Esta información se transporta en atributos personalizados asociados con el **&lt;activos&gt;** para cada elemento **vstemplate** archivo.
+Simplemente agregar los archivos a VSIX no es suficiente para registrar las plantillas con el Asistente de MVC. Debe proporcionar información como el nombre de la plantilla, la descripción, los motores de vista admitidos y el lenguaje de programación para el Asistente de MVC. Esta información se lleva a cabo en atributos personalizados asociados al elemento **&lt;&gt;de recursos** para cada archivo **VSTemplate** .
 
-&lt;Asset d:VsixSubPath=&quot;ProjectTemplates\MyMvcWebApplicationProjectTemplate.csaspx&quot;
+&lt;Asset d:VsixSubPath =&quot;ProjectTemplates\MyMvcWebApplicationProjectTemplate.csaspx&quot;
 
-Type=&quot;Microsoft.VisualStudio.Mvc.Template&quot;
+Type =&quot;Microsoft. VisualStudio. Mvc. template&quot;
 
-d:Source=&quot;File&quot;
+d:Source =&quot;&quot; archivo
 
-Path=&quot;ProjectTemplates\MyMvcWebApplicationProjectTemplate.csaspx\BasicMvcWebApplicationProjectTemplate.11.csaspx.vstemplate&quot;
+Path =&quot;ProjectTemplates\MyMvcWebApplicationProjectTemplate.csaspx\BasicMvcWebApplicationProjectTemplate.11.csaspx.vstemplate&quot;
 
-ProjectType=&quot;MVC&quot;
+ProjectType =&quot;MVC&quot;
 
 Language =&quot;C#&quot;
 
-ViewEngine=&quot;Aspx&quot;
+ViewEngine =&quot;&quot; aspx
 
-TemplateId=&quot;MyMvcApplication&quot;
+TemplateId =&quot;MyMvcApplication&quot;
 
-Título =&quot;aplicación Web básica personalizada&quot;
+Title =&quot;aplicación web básica personalizada&quot;
 
-Descripción =&quot;una plantilla personalizada que deriva de una aplicación web de MVC básica (Razor)&quot;
+Description =&quot;una plantilla personalizada derivada de una aplicación web MVC (Razor) básica&quot;
 
-Versión =&quot;4.0&quot;/&gt;
+Versión =&quot;4,0&quot;/&gt;
 
-A continuación encontrará una explicación de los atributos personalizados que deben estar presentes:
+A continuación se muestra una explicación de los atributos personalizados que deben estar presentes:
 
 - **ProjectType** debe establecerse en MVC.
-- **Lenguaje** designa el lenguaje de programación compatible con la plantilla. Los valores válidos son de C# o VB.
-- **ViewEngine** designa el motor de vistas compatible con la plantilla como Aspx o Razor. Puede especificar un valor personalizado para este campo.
-- **TemplateId** se usa para agrupar las plantillas. Si el valor coincide con un identificador de plantilla existente será reemplazar plantillas que se registraron anteriormente con el Asistente MVC.
-- **Título** designa la breve descripción que aparece en el Asistente MVC debajo de cada plantilla de proyecto.
+- **Language** designa el lenguaje de desarrollo que admite la plantilla. Los valores válidos C# son o VB.
+- **ViewEngine** designa el motor de vistas admitido por la plantilla como aspx o Razor. Puede especificar un valor personalizado para este campo.
+- **TemplateId** se utiliza para agrupar las plantillas. Si el valor coincide con un ID. de plantilla existente, se invalidarán las plantillas registradas anteriormente con el Asistente de MVC.
+- **Título** designa la breve descripción que se muestra en el Asistente de MVC debajo de cada plantilla de proyecto.
 - **Descripción** designa una descripción más detallada de la plantilla.
 
-Una vez que haya agregado todos los archivos en el manifiesto y guardarlo, observará que el **activos** ficha en el diseñador mostrará todos los archivos, pero no los atributos personalizados que ha agregado a la **&lt;activos&gt;** elementos para el **vstemplate** archivos.
+Una vez que haya agregado todos los archivos al manifiesto y lo haya guardado, observará que en la pestaña **activos** del diseñador se mostrarán todos los archivos, pero no los atributos personalizados que ha agregado a los elementos **&lt;activo&gt;** de los archivos **VSTemplate** .
 
-![Activos de diseñador de proyectos](custom-mvc-templates/_static/image8.jpg)
+![Activos del diseñador de proyectos](custom-mvc-templates/_static/image8.jpg)
 
-Todo lo que queda ahora es compilar el proyecto VSIX e instalarlo.
+Lo único que queda ahora es compilar el Proyecto VSIX e instalarlo.
 
-Asegúrese de que estén cerradas todas las instancias de Visual Studio en el equipo donde va a probar la extensión VSIX. Visual Studio examina si hay nuevas extensiones durante el inicio, por lo que si se abre el IDE mientras se instala una extensión VSIX deberá reiniciar Visual Studio. En el explorador, haga doble clic en el archivo VSIX para iniciar el **instalador de VSIX**, haga clic en **instalar** y, a continuación, inicie Visual Studio.
+Asegúrese de que todas las instancias de Visual Studio están cerradas en el equipo en el que desea probar la extensión VSIX. Visual Studio busca nuevas extensiones durante el inicio, por lo que si el IDE está abierto mientras se instala un VSIX, deberá reiniciar Visual Studio. En el explorador, haga doble clic en el archivo VSIX para iniciar el **instalador de VSIX**, haga clic en **instalar** y, a continuación, inicie Visual Studio.
 
 ![Instalador de VSIX](custom-mvc-templates/_static/image9.jpg)
 
-En el menú, seleccione **Herramientas > extensiones y actualizaciones** para confirmar que se ha instalado la extensión. Si el instalador de VSIX se notifican los errores durante la instalación de la extensión puede ver el registro del instalador de VSIX para obtener más información. Normalmente, se crea el registro en el **% temp %** carpeta del usuario que instala la extensión, por ejemplo **C:\Users\Bob\AppData\Local\Temp**.
+En el menú, seleccione **herramientas > extensiones y actualizaciones** para confirmar que se ha instalado la extensión. Si el instalador de VSIX ha detectado errores durante la instalación de la extensión, puede ver el registro del instalador de VSIX para obtener más información. El registro se crea normalmente en la carpeta **% temp%** del usuario que instaló la extensión, por ejemplo **C:\Users\Bob\AppData\Local\Temp**.
 
 ![Extensiones y actualizaciones](custom-mvc-templates/_static/image10.jpg)
 
-Después de cerrar la ventana puede crear un proyecto de MVC 4 para ver si las nuevas plantillas se muestran en el Asistente MVC.
+Después de cerrar la ventana, puede crear un proyecto de MVC 4 para ver si las nuevas plantillas se muestran en el Asistente de MVC.
 
-![Nuevo proyecto de ASP.NET MVC 4](custom-mvc-templates/_static/image11.jpg)
+![Nuevo proyecto ASP.NET MVC 4](custom-mvc-templates/_static/image11.jpg)
 
 ## <a name="limitations"></a>Limitaciones
 
-1. El Asistente MVC no admite plantillas personalizadas localizadas.
-2. El asistente no notificará los errores si se produce un error buscar las plantillas personalizadas. Si cualquiera de los atributos personalizados necesarios están presente, la plantilla podría excluirse simplemente desde el asistente.
+1. El Asistente de MVC no admite plantillas personalizadas localizadas.
+2. El asistente no notificará ningún error si no encuentra plantillas personalizadas. Si falta alguno de los atributos personalizados necesarios, la plantilla se excluiría simplemente del asistente.

@@ -9,11 +9,11 @@ ms.assetid: 002ada5c-f114-47ab-a441-57dbdb728ea0
 msc.legacyurl: /mvc/overview/older-versions/getting-started-with-aspnet-mvc3/cs/accessing-your-models-data-from-a-controller
 msc.type: authoredcontent
 ms.openlocfilehash: 2e9c7f24d426635760b613f570b85455ce71b3dc
-ms.sourcegitcommit: 7709c0a091b8d55b7b33bad8849f7b66b23c3d72
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/19/2020
-ms.locfileid: "77458173"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78506029"
 ---
 # <a name="accessing-your-models-data-from-a-controller-c"></a>Obtener acceso a los datos del modelo desde un controlador (C#)
 

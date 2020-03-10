@@ -9,11 +9,11 @@ ms.assetid: c285dc6f-a1c6-46e6-ac03-3830947f57e3
 msc.legacyurl: /web-forms/overview/older-versions-getting-started/deploying-web-site-projects/precompiling-your-website-vb
 msc.type: authoredcontent
 ms.openlocfilehash: 1a46870b73f95300ef5bc1f72dda74d7d62ab11f
-ms.sourcegitcommit: 22fbd8863672c4ad6693b8388ad5c8e753fb41a2
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/28/2019
-ms.locfileid: "74588317"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78509443"
 ---
 # <a name="precompiling-your-website-vb"></a>Precompilar el sitio web (VB)
 

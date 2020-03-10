@@ -9,11 +9,11 @@ ms.assetid: 0ecb03b6-52a0-4731-8c7a-436391d36838
 msc.legacyurl: /web-forms/overview/data-access/basic-reporting/programmatically-setting-the-objectdatasource-s-parameter-values-vb
 msc.type: authoredcontent
 ms.openlocfilehash: f1dd50f46528e8dd51f85e503604d3f0dbc21ad2
-ms.sourcegitcommit: 22fbd8863672c4ad6693b8388ad5c8e753fb41a2
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/28/2019
-ms.locfileid: "74601837"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78465919"
 ---
 # <a name="programmatically-setting-the-objectdatasources-parameter-values-vb"></a>Configurar los valores de parámetro de ObjectDataSource mediante programación (VB)
 

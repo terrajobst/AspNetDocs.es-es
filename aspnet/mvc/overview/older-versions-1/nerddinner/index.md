@@ -2,22 +2,22 @@
 uid: mvc/overview/older-versions-1/nerddinner/index
 title: NerdDinner | Microsoft Docs
 author: rick-anderson
-description: Cómo crear el sitio Web de NerdDinner.com con ASP.NET MVC 1. Para la versión de ASP.NET MVC 3, visite nerddinner en GitHub.
+description: Cómo compilar el sitio web de NerdDinner.com con ASP.NET MVC 1. Para la versión de ASP.NET MVC 3, visite nerddinner en GitHub.
 ms.author: riande
 ms.date: 09/28/2011
 ms.assetid: 6edfe14c-415a-4281-b6fa-69e9b38a82c8
 msc.legacyurl: /mvc/overview/older-versions-1/nerddinner
 msc.type: chapter
 ms.openlocfilehash: 4d85781cbd792c6d553665f33d8e699ac3f8fbc3
-ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/06/2019
-ms.locfileid: "65125569"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78468931"
 ---
 # <a name="nerddinner"></a>NerdDinner
 
-> Cómo crear el sitio Web de NerdDinner.com con ASP.NET MVC 1. Para la versión de ASP.NET MVC, visite [NerdDinner en GitHub](https://github.com/AspNetMVPSamples/NerdDinner).
+> Cómo compilar el sitio web de NerdDinner.com con ASP.NET MVC 1. Para la versión de ASP.NET MVC, visite [NerdDinner en github](https://github.com/AspNetMVPSamples/NerdDinner).
 
 - [Introducción al tutorial de NerdDinner](introducing-the-nerddinner-tutorial.md)
 - [Crear un proyecto de ASP.NET MVC](create-a-new-aspnet-mvc-project.md)

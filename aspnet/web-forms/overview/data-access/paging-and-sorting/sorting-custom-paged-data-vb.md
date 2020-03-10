@@ -9,11 +9,11 @@ ms.assetid: 4823a186-caaf-4116-a318-c7ff4d955ddc
 msc.legacyurl: /web-forms/overview/data-access/paging-and-sorting/sorting-custom-paged-data-vb
 msc.type: authoredcontent
 ms.openlocfilehash: 934c7558d907611732ae6f04c553bc9e295c569b
-ms.sourcegitcommit: 22fbd8863672c4ad6693b8388ad5c8e753fb41a2
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/28/2019
-ms.locfileid: "74618495"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78501715"
 ---
 # <a name="sorting-custom-paged-data-vb"></a>Ordenar datos paginados personalizados (VB)
 

@@ -9,11 +9,11 @@ ms.assetid: a6e2e1a0-c925-43e9-b711-1f178fdd72d7
 msc.legacyurl: /web-forms/overview/older-versions-getting-started/master-pages/interacting-with-the-content-page-from-the-master-page-vb
 msc.type: authoredcontent
 ms.openlocfilehash: 5367ad1b7f2fa11c635ad95754c9bcc1edcb6c1d
-ms.sourcegitcommit: 22fbd8863672c4ad6693b8388ad5c8e753fb41a2
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/28/2019
-ms.locfileid: "74615581"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78464539"
 ---
 # <a name="interacting-with-the-content-page-from-the-master-page-vb"></a>Interactuar con la página de contenido desde la página maestra (VB)
 

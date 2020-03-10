@@ -2,21 +2,21 @@
 uid: aspnet/overview/web-development-best-practices/async-and-await
 title: Async y Await | Microsoft Docs
 author: shanselman
-description: Scott Hanselman, se muestra cómo usar Async y Await en ASP.NET 4.5.
+description: Scott Hanselman muestra cómo usar la compatibilidad con Async y Await en ASP.NET 4,5.
 ms.author: riande
 ms.date: 08/15/2012
 ms.assetid: 776bf687-c2c2-438f-8796-a93d0ccd164b
 msc.legacyurl: /aspnet/overview/web-development-best-practices/async-and-await
 msc.type: video
 ms.openlocfilehash: 97a1d761c545a4087b006890b031a14c14c6d886
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59399039"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78500143"
 ---
 # <a name="async-and-await"></a>Async y Await
 
 por [Scott Hanselman](https://github.com/shanselman)
 
-[&#9654;Vea el vídeo (5 minutos)](https://channel9.msdn.com/Blogs/ASP-NET-Site-Videos/async-and-await)
+[&#9654;Ver vídeo (5 minutos)](https://channel9.msdn.com/Blogs/ASP-NET-Site-Videos/async-and-await)

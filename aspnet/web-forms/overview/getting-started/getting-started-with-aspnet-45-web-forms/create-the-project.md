@@ -9,11 +9,11 @@ ms.assetid: 2ce36f78-8ecb-4ab1-b748-6d0ab633ea3f
 msc.legacyurl: /web-forms/overview/getting-started/getting-started-with-aspnet-45-web-forms/create-the-project
 msc.type: authoredcontent
 ms.openlocfilehash: 62918b17f42e54dfe4e45a08927b1039dcbb7012
-ms.sourcegitcommit: 22fbd8863672c4ad6693b8388ad5c8e753fb41a2
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/28/2019
-ms.locfileid: "74576065"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78461575"
 ---
 # <a name="create-the-project"></a>Crear el proyecto
 
@@ -25,7 +25,7 @@ por [Erik Reitan](https://github.com/Erikre)
 
 En este tutorial, creará, revisará y ejecutará el proyecto predeterminado en Visual Studio, lo que le permitirá familiarizarse con las características de ASP.NET. Además, revisará el entorno de Visual Studio.
 
-## <a name="what-youll-learn"></a>Lo que aprenderá:
+## <a name="what-youll-learn"></a>Temas que se abordarán:
 
 - Cómo crear un nuevo proyecto de formularios Web Forms.
 - La estructura de archivos del proyecto de formularios Web Forms.
@@ -40,7 +40,7 @@ En este tutorial, creará, revisará y ejecutará el proyecto predeterminado en 
 
     ![Crear el elemento de menú proyecto-nuevo proyecto](create-the-project/_static/image1.png)
 3. Seleccione el grupo **plantillas -&gt;**  **C# visual** -&gt; plantillas **Web** de la izquierda.
-4. Elija la plantilla **aplicación Web ASP.net** en la columna central.  
+4. Elija la plantilla **Aplicación web ASP.NET** en la columna central.  
  Esta serie de tutoriales utiliza .NET Framework 4.5.2.
 5. Asigne al proyecto el nombre *WingtipToys* y elija el botón **Aceptar** . 
 
@@ -49,7 +49,7 @@ En este tutorial, creará, revisará y ejecutará el proyecto predeterminado en 
     > [!NOTE]
     > El nombre del proyecto en esta serie de tutoriales es **WingtipToys**. Se recomienda usar este nombre de proyecto *exacto* para que el código proporcionado en toda la serie de tutoriales funcione según lo esperado.
 
-6. Haga clic en el botón **cambiar autenticación** . Seleccione **cuentas de usuario individuales** y haga clic en el botón **Aceptar** .
+6. Haga clic en el botón **Cambiar autenticación**. Seleccione **cuentas de usuario individuales** y haga clic en el botón **Aceptar** .
 
 7. Seleccione la plantilla de **formularios Web Forms** y haga clic en el botón **Aceptar** .
 
@@ -91,12 +91,12 @@ En Visual Studio, la ventana de **Explorador de soluciones** permite administrar
 
 Visual Studio crea algunas carpetas y archivos iniciales para el proyecto. Los primeros archivos con los que va a trabajar más adelante en este tutorial son los siguientes:
 
-| **Archivo** | **Función** |
+| **Archivo** | **Propósito** |
 | --- | --- |
 | *Default. aspx* | Normalmente, la primera página que se muestra cuando la aplicación se ejecuta en un explorador. |
 | *Site. Master* | Una página que le permite crear un diseño coherente y usar el comportamiento estándar para las páginas de la aplicación. |
 | *Global. asax* | Un archivo opcional que contiene código para responder a los eventos de nivel de aplicación y de sesión generados por ASP.NET o por módulos HTTP. |
-| *Web. config* | Los datos de configuración de una aplicación. |
+| *Web.config* | Los datos de configuración de una aplicación. |
 
 ### <a name="running-the-default-web-application"></a>Ejecutar la aplicación web predeterminada
 

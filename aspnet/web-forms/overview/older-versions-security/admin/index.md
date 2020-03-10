@@ -1,23 +1,23 @@
 ---
 uid: web-forms/overview/older-versions-security/admin/index
-title: ASP.NET 3.5 - administración de seguridad | Microsoft Docs
+title: ASP.NET 3,5-Administración de seguridad | Microsoft Docs
 author: rick-anderson
-description: Esta serie de tutoriales muestra una forma de crear una página de administración que le permite administrar usuarios y roles.
+description: En esta serie de tutoriales se muestra una forma de crear una página de administración que permite administrar usuarios y roles.
 ms.author: riande
 ms.date: 10/05/2011
 ms.assetid: b715c4ec-6f4b-4f7e-8ee3-b1613477ce61
 msc.legacyurl: /web-forms/overview/older-versions-security/admin
 msc.type: chapter
 ms.openlocfilehash: aa267058e1697c94f49f886087f769e3fcac25ca
-ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/06/2019
-ms.locfileid: "65130568"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78458263"
 ---
 # <a name="aspnet-35---security-administration"></a>ASP.NET 3.5 - Administración de la seguridad
 
-> Esta serie de tutoriales muestra una forma de crear una página de administración que le permite administrar usuarios y roles.
+> En esta serie de tutoriales se muestra una forma de crear una página de administración que permite administrar usuarios y roles.
 
 - [Crear una interfaz para seleccionar una cuenta de usuario entre varias cuentas (C#)](building-an-interface-to-select-one-user-account-from-many-cs.md)
 - [Recuperar y cambiar las contraseñas (C#)](recovering-and-changing-passwords-cs.md)

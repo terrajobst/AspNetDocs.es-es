@@ -9,11 +9,11 @@ ms.assetid: 2a0370d3-c2fb-4bf3-88b8-aad5a736c793
 msc.legacyurl: /aspnet/overview/developing-apps-with-windows-azure/building-real-world-cloud-apps-with-windows-azure/source-control
 msc.type: authoredcontent
 ms.openlocfilehash: 5a1e0d7cd3c396d4be79c8958422602055eb3db1
-ms.sourcegitcommit: 7709c0a091b8d55b7b33bad8849f7b66b23c3d72
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/19/2020
-ms.locfileid: "77457107"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78500533"
 ---
 # <a name="source-control-building-real-world-cloud-apps-with-azure"></a>Control de código fuente (creación de aplicaciones en la nube reales con Azure)
 
@@ -147,7 +147,7 @@ Visual Studio le pregunta si desea usar TFVC (control de versiones centralizado)
 
 Al seleccionar git y hacer clic en **Aceptar**, Visual Studio crea un nuevo repositorio de Git local en la carpeta de la solución. El nuevo repositorio todavía no tiene archivos; tendrá que agregarlos al repositorio mediante una confirmación de Git. Haga clic con el botón secundario en la solución en **Explorador de soluciones**y, a continuación, haga clic en **confirmar**.
 
-![Commit](source-control/_static/image11.png)
+![Confirmación](source-control/_static/image11.png)
 
 Visual Studio organiza automáticamente en fases todos los archivos de proyecto de la confirmación y los enumera en **Team Explorer** en el panel de **cambios incluidos** . (Si hubiera algunos que no deseaba incluir en la confirmación, puede seleccionarlos, hacer clic con el botón secundario y hacer clic en **excluir**).
 

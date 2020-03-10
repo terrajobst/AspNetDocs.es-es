@@ -9,11 +9,11 @@ ms.assetid: b19f0875-7d3e-4ecf-baa1-a0c693c765b3
 msc.legacyurl: /web-forms/overview/ajax-control-toolkit/accordion/databinding-to-an-accordion-vb
 msc.type: authoredcontent
 ms.openlocfilehash: bfb31940c0395c7ed1d5d471fb8fb686b66c59ad
-ms.sourcegitcommit: 22fbd8863672c4ad6693b8388ad5c8e753fb41a2
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/28/2019
-ms.locfileid: "74599949"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78498031"
 ---
 # <a name="databinding-to-an-accordion-vb"></a>Enlace de datos a Accordion (VB)
 
@@ -23,7 +23,7 @@ por [Christian Wenz](https://github.com/wenz)
 
 > El control Accordion en el kit de herramientas de control de AJAX proporciona varios paneles y permite al usuario mostrar uno de ellos a la vez. Los paneles se declaran normalmente dentro de la propia página, pero el enlace a un origen de datos ofrece más flexibilidad.
 
-## <a name="overview"></a>Información general del
+## <a name="overview"></a>Información general
 
 El control Accordion en el kit de herramientas de control de AJAX proporciona varios paneles y permite al usuario mostrar uno de ellos a la vez. Los paneles se declaran normalmente dentro de la propia página, pero el enlace a un origen de datos ofrece más flexibilidad.
 

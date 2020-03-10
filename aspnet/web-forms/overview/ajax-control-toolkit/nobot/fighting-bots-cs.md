@@ -9,11 +9,11 @@ ms.assetid: 0a1917e0-884a-4576-8e93-9ed660faae51
 msc.legacyurl: /web-forms/overview/ajax-control-toolkit/nobot/fighting-bots-cs
 msc.type: authoredcontent
 ms.openlocfilehash: fef55edf12a024e4dd66e2a18ea371ab4dac861f
-ms.sourcegitcommit: 22fbd8863672c4ad6693b8388ad5c8e753fb41a2
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/28/2019
-ms.locfileid: "74606433"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78509071"
 ---
 # <a name="fighting-bots-c"></a>Combatir los bots (C#)
 
@@ -23,7 +23,7 @@ por [Christian Wenz](https://github.com/wenz)
 
 > Los bots automatizados transforman Weblogs y otros sitios web con correo no deseado, enviando formularios de comentarios sin intervención del usuario. El control NoBot en el kit de herramientas de control de AJAX de ASP.NET puede ayudar a combatir esos bots.
 
-## <a name="overview"></a>Información general del
+## <a name="overview"></a>Información general
 
 Los bots automatizados transforman Weblogs y otros sitios web con correo no deseado, enviando formularios de comentarios sin intervención del usuario. El control NoBot en el kit de herramientas de control de AJAX de ASP.NET puede ayudar a combatir esos bots.
 

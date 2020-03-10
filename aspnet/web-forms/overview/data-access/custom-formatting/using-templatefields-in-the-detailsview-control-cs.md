@@ -9,11 +9,11 @@ ms.assetid: 83efb21f-b231-446e-9356-f4c6cbcc6713
 msc.legacyurl: /web-forms/overview/data-access/custom-formatting/using-templatefields-in-the-detailsview-control-cs
 msc.type: authoredcontent
 ms.openlocfilehash: 55c667800a9fb19d200bcf4b68e2c59ca4ef5d0e
-ms.sourcegitcommit: 22fbd8863672c4ad6693b8388ad5c8e753fb41a2
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/28/2019
-ms.locfileid: "74622230"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78481867"
 ---
 # <a name="using-templatefields-in-the-detailsview-control-c"></a>Usar TemplateFields en el control DetailsView (C#)
 

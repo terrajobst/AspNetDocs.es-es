@@ -9,11 +9,11 @@ ms.assetid: b83ab819-2b05-4776-b7b4-79ef78d457a5
 msc.legacyurl: /web-forms/overview/older-versions-getting-started/deployment-to-a-hosting-provider/deployment-to-a-hosting-provider-deploying-to-the-production-environment-7-of-12
 msc.type: authoredcontent
 ms.openlocfilehash: db838633accdedd7c0693b126a007e254ca681e4
-ms.sourcegitcommit: 22fbd8863672c4ad6693b8388ad5c8e753fb41a2
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/28/2019
-ms.locfileid: "74627257"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78458173"
 ---
 # <a name="deploying-an-aspnet-web-application-with-sql-server-compact-using-visual-studio-or-visual-web-developer-deploying-to-the-production-environment---7-of-12"></a>Implementación de una aplicación Web de ASP.NET con SQL Server Compact con Visual Studio o Visual Web Developer: implementación en el entorno de producción (7 de 12)
 
@@ -25,7 +25,7 @@ por [Tom Dykstra](https://github.com/tdykstra)
 > 
 > Para ver un tutorial que muestra las características de implementación que se introdujeron después de la versión RC de Visual Studio 2012, muestra cómo implementar SQL Server ediciones distintas de SQL Server Compact y muestra cómo realizar la implementación en Azure App Service Web Apps, vea [implementación web de ASP.net con Visual Studio](../../deployment/visual-studio-web-deployment/introduction.md).
 
-## <a name="overview"></a>Información general del
+## <a name="overview"></a>Información general
 
 En este tutorial, configurará una cuenta con un proveedor de hospedaje e implementará la aplicación Web de ASP.NET en el entorno de producción mediante la característica de publicación con un solo clic de Visual Studio.
 
@@ -99,7 +99,7 @@ Seleccione la pestaña **publicación web** .
 
 ![Pestaña publicación web del panel de control](deployment-to-a-hosting-provider-deploying-to-the-production-environment-7-of-12/_static/image21.png)
 
-Cree las credenciales que se usarán para la publicación en web escribiendo un nombre de usuario y una contraseña. Puede especificar las mismas credenciales que usa para iniciar sesión en el panel de control. A continuación, haga clic en **Habilitar**.
+Cree las credenciales que se usarán para la publicación en web escribiendo un nombre de usuario y una contraseña. Puede especificar las mismas credenciales que usa para iniciar sesión en el panel de control. A continuación, haga clic en **Enable** (Habilitar).
 
 ![Panel de control crear credenciales de publicación](deployment-to-a-hosting-provider-deploying-to-the-production-environment-7-of-12/_static/image22.png)
 
@@ -148,7 +148,7 @@ Antes de publicar, cambie el nombre del perfil para que se aplique el archivo de
 
 ![Asistente para publicación web administración de perfiles](deployment-to-a-hosting-provider-deploying-to-the-production-environment-7-of-12/_static/image29.png)
 
-En el cuadro de diálogo **Editar perfiles de publicación web** , seleccione el perfil de producción, haga clic en cambiar **nombre**y cambie el nombre del perfil a producción. A continuación, haga clic en **cerrar**.
+En el cuadro de diálogo **Editar perfiles de publicación web** , seleccione el perfil de producción, haga clic en cambiar **nombre**y cambie el nombre del perfil a producción. A continuación, haga clic en **Cerrar**.
 
 ![Cuadro de diálogo Editar perfiles de publicación Web](deployment-to-a-hosting-provider-deploying-to-the-production-environment-7-of-12/_static/image30.png)
 

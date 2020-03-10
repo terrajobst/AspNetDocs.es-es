@@ -9,11 +9,11 @@ ms.assetid: ac6916d0-a5ab-4218-9760-7ba9e72d258c
 msc.legacyurl: /web-forms/overview/data-access/working-with-batched-data/batch-deleting-cs
 msc.type: authoredcontent
 ms.openlocfilehash: ed832c38b4972f440ab64c141e29c85f0a9df920
-ms.sourcegitcommit: 22fbd8863672c4ad6693b8388ad5c8e753fb41a2
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/28/2019
-ms.locfileid: "74588899"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78476611"
 ---
 # <a name="batch-deleting-c"></a>Eliminación por lotes (C#)
 

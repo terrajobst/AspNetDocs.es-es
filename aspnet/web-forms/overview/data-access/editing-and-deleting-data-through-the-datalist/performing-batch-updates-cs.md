@@ -9,11 +9,11 @@ ms.assetid: 57743ca7-5695-4e07-aed1-44b297f245a9
 msc.legacyurl: /web-forms/overview/data-access/editing-and-deleting-data-through-the-datalist/performing-batch-updates-cs
 msc.type: authoredcontent
 ms.openlocfilehash: cde12a4d24555216adc49dd02818901278932eaa
-ms.sourcegitcommit: 22fbd8863672c4ad6693b8388ad5c8e753fb41a2
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/28/2019
-ms.locfileid: "74631560"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78480049"
 ---
 # <a name="performing-batch-updates-c"></a>Realizar actualizaciones por lotes (C#)
 

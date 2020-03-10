@@ -9,11 +9,11 @@ ms.assetid: d7729af4-1eda-4ff2-8b61-dbbe4fc11d10
 msc.legacyurl: /whitepapers/aspnet4
 msc.type: content
 ms.openlocfilehash: ecde48f6bd88ee5f569bfeb8b70c26a50bc869c2
-ms.sourcegitcommit: 22fbd8863672c4ad6693b8388ad5c8e753fb41a2
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/28/2019
-ms.locfileid: "74576867"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78511435"
 ---
 # <a name="aspnet-4-and-visual-studio-2010-web-development-overview"></a>Información general sobre la implementación web de ASP.NET 4 y Visual Studio 2010
 
@@ -730,7 +730,7 @@ El control incluye las siguientes características:
 - Enlace sencillo y manipulación de los datos del gráfico.
 - Compatibilidad con formatos de datos comunes, como fechas, horas y monedas.
 - Compatibilidad con la interactividad y la personalización orientada a eventos, incluidos los eventos de clic de cliente mediante Ajax.
-- Administrar el estado.
+- Administración de estados.
 - Transmisión de flujo binario.
 
 Las siguientes figuras muestran ejemplos de gráficos financieros producidos por el control de gráfico ASP.NET.
@@ -927,8 +927,8 @@ De forma predeterminada, cuando una aplicación web o un sitio web tiene como de
 
 El valor de *controlRenderingCompatibility* es una cadena, que permite nuevas definiciones de versiones posibles en futuras versiones. En la versión actual, se admiten los siguientes valores para esta propiedad:
 
-- "3,5". Este valor indica la representación y el marcado heredados. El marcado representado por los controles es 100% compatible con versiones anteriores y se respeta el valor de la propiedad *xhtmlConformance* .
-- "4,0". Si la propiedad tiene esta configuración, los controles de servidor Web de ASP.NET hacen lo siguiente:
+- "3.5". Este valor indica la representación y el marcado heredados. El marcado representado por los controles es 100% compatible con versiones anteriores y se respeta el valor de la propiedad *xhtmlConformance* .
+- "4.0". Si la propiedad tiene esta configuración, los controles de servidor Web de ASP.NET hacen lo siguiente:
 - La propiedad *xhtmlConformance* siempre se trata como "STRICT". Como resultado, los controles representan el marcado XHTML 1,0 STRICT.
 - Deshabilitar los controles que no son de entrada ya no representa estilos no válidos.
 - los elementos *div* alrededor de los campos ocultos están ahora con estilo para que no interfieran con las reglas CSS creadas por el usuario.
@@ -977,10 +977,10 @@ Después, puede definir una clase CSS que se aplique solo a los elementos *ocult
 De forma predeterminada, los siguientes controles de servidor Web ASP.NET que admiten plantillas se ajustan automáticamente en una tabla externa que se usa para aplicar estilos en línea:
 
 - *FormView*
-- *Inicio*
+- *Inicio de sesión*
 - *PasswordRecovery*
 - *ChangePassword*
-- *Para*
+- *Asistente*
 - *CreateUserWizard*
 
 Se ha agregado una nueva propiedad denominada *RenderOuterTable* a estos controles que permite quitar la tabla externa del marcado. Por ejemplo, considere el ejemplo siguiente de un control *FormView* :
@@ -1081,7 +1081,7 @@ El control presenta HTML similar al siguiente:
 
 [!code-html[Main](overview/samples/sample88.html)]
 
-En ASP.NET 3,5 SP1, aunque puede cambiar el contenido de la plantilla, aún tiene un control limitado sobre la salida del control del *Asistente* . En ASP.NET 4, puede crear una plantilla de *LayoutTemplate* e insertar controles de *marcador de posición* (mediante nombres reservados) para especificar cómo desea que se represente el control del *Asistente* . En el ejemplo siguiente se muestra lo siguiente:
+En ASP.NET 3,5 SP1, aunque puede cambiar el contenido de la plantilla, aún tiene un control limitado sobre la salida del control del *Asistente* . En ASP.NET 4, puede crear una plantilla de *LayoutTemplate* e insertar controles de *marcador de posición* (mediante nombres reservados) para especificar cómo desea que se represente el control del *Asistente* . Esto se muestra en el ejemplo siguiente:
 
 [!code-aspx[Main](overview/samples/sample89.aspx)]
 
@@ -1364,18 +1364,18 @@ Los siguientes sitios web proporcionan información adicional sobre ASP.NET 4 y 
 
 Este documento es preliminar y puede cambiar considerablemente antes de la versión comercial final del software que se describe en él.
 
-La información contenida en este documento representa la visión actual de Microsoft Corporation acerca de los asuntos tratados hasta la fecha de su publicación. Como Microsoft debe responder a condiciones de mercado variables, no debe interpretarse como un compromiso por parte de Microsoft y Microsoft no puede garantizar la precisión de la información que se presente después de la fecha de publicación.
+La información que incluye este documento representa el punto de vista actual de Microsoft Corporation sobre las cuestiones descritas en la fecha de la publicación. Debido a que Microsoft debe responder a las condiciones de mercado cambiantes, no se debe interpretar como un compromiso por parte de Microsoft y Microsoft no puede garantizar la precisión de la información presentada después de la fecha de publicación.
 
-Estas notas del producto se proporcionan únicamente a título informativo. MICROSOFT NO OTORGA NINGUNA GARANTÍA, YA SEA EXPRESA, IMPLÍCITA O REGLAMENTARIA, EN CUANTO A LA INFORMACIÓN DE ESTE DOCUMENTO.
+Estas notas del producto solo tienen fines informativos. MICROSOFT NO OTORGA NINGUNA GARANTÍA, EXPRESA, IMPLÍCITA O ESTUTARIAS, EN LA INFORMACIÓN DE ESTE DOCUMENTO.
 
-Es responsabilidad del usuario el cumplimiento de todas las leyes de derechos de autor aplicables. Sin limitar los derechos de autor, ninguna parte de este documento se puede reproducir, almacenar o introducir en un sistema de recuperación, ni transmitir en forma o medio algunos (ya sea electrónico, mecánico, fotocopiado, grabado u otros) ni con ningún fin, sin la previa autorización por escrito de Microsoft.
+Es responsabilidad del usuario el cumplimiento de toda la legislación aplicable en materia de copyright. Sin limitación de los derechos protegidos por copyright, ninguna parte del presente documento podrá ser reproducida, almacenada o introducida en un sistema de recuperación, o bien transmitida en ninguna forma o medio (electrónico, mecánico, mediante fotocopia o grabación, etc.), ni con ningún propósito, sin la autorización expresa y por escrito de Microsoft Corporation.
 
-Microsoft puede ser titular de patentes, solicitudes de patentes, marcas, derechos de autor, y otros derechos de propiedad intelectual sobre los contenidos de este documento. El suministro de este documento no le otorga ninguna licencia sobre estas patentes, marcas, derechos de autor, u otros derechos de propiedad intelectual, a menos que ello se prevea en un contrato por escrito de licencia de Microsoft.
+Microsoft puede ser titular de patentes, solicitudes de patentes, marcas, derechos de autor u otros derechos de propiedad intelectual sobre los contenidos de este documento. Este documento no otorga ninguna licencia sobre estas patentes, marcas, derechos de autor u otros derechos de propiedad intelectual, a menos que se indique expresamente en un contrato escrito de licencia de Microsoft.
 
 A menos que se indique lo contrario, las compañías, organizaciones, productos, nombres de dominio, direcciones de correo electrónico, logotipos, personas, lugares y eventos que se describen aquí son ficticios y no tienen ninguna asociación con ninguna empresa, organización, producto, nombre de dominio y correo electrónico reales. la dirección, el logotipo, la persona, el lugar o el evento está pensado o debe deducirse.
 
-© 2009 Microsoft Corporation. Reservados todos los derechos.
+© 2009 Microsoft Corporation. All rights reserved.
 
 Microsoft y Windows son marcas registradas o marcas comerciales de Microsoft Corporation en Estados Unidos y en otros países.
 
-Los nombres de las empresas y productos reales aquí mencionados pueden ser marcas comerciales de sus respectivos propietarios.
+Los nombres de las compañías y productos reales mencionados en el presente documento pueden ser marcas comerciales de sus respectivos propietarios.

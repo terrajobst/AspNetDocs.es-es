@@ -9,11 +9,11 @@ ms.assetid: e8e0809b-25c4-4c3b-8d12-9a17048148ae
 msc.legacyurl: /web-forms/overview/data-access/paging-and-sorting-with-the-datalist-and-repeater/paging-report-data-in-a-datalist-or-repeater-control-cs
 msc.type: authoredcontent
 ms.openlocfilehash: 16686c7e41926698c0da9c60d3cf26e858f5daca
-ms.sourcegitcommit: 22fbd8863672c4ad6693b8388ad5c8e753fb41a2
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/28/2019
-ms.locfileid: "74617747"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78503263"
 ---
 # <a name="paging-report-data-in-a-datalist-or-repeater-control-c"></a>Paginar datos de informe en un control DataList o Repeater (C#)
 

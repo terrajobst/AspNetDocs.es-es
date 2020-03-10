@@ -9,11 +9,11 @@ ms.assetid: 4830d984-bd2c-4a08-bfe5-2385599f1f7d
 msc.legacyurl: /web-forms/overview/data-access/editing-inserting-and-deleting-data/customizing-the-data-modification-interface-vb
 msc.type: authoredcontent
 ms.openlocfilehash: 85ec7bdde6b2bffbbda066b0441bbd36b7072197
-ms.sourcegitcommit: 22fbd8863672c4ad6693b8388ad5c8e753fb41a2
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/28/2019
-ms.locfileid: "74584979"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78479257"
 ---
 # <a name="customizing-the-data-modification-interface-vb"></a>Personalizar la interfaz de modificación de datos (VB)
 

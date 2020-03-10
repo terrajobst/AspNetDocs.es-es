@@ -1,38 +1,38 @@
 ---
 uid: web-pages/overview/ui-layouts-and-themes/10-working-with-video
-title: Mostrando el vídeo en ASP.NET Web Pages (Razor) sitio | Microsoft Docs
+title: Visualización de vídeo en un sitio de ASP.NET Web Pages (Razor) | Microsoft Docs
 author: Rick-Anderson
-description: Este capítulo explica cómo mostrar el vídeo en un sitio con la página de la sintaxis de Razor de ASP.NET Web Pages.
+description: En este capítulo se explica cómo mostrar vídeo en un ASP.NET Web Pages con sintaxis Razor página.
 ms.author: riande
 ms.date: 02/20/2014
 ms.assetid: 332fb3da-e2a5-460d-bb90-dd911e1e2c95
 msc.legacyurl: /web-pages/overview/ui-layouts-and-themes/10-working-with-video
 msc.type: authoredcontent
 ms.openlocfilehash: 516d46f38ce8910209f4207c474b0404bf012950
-ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/06/2019
-ms.locfileid: "65130947"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78510385"
 ---
-# <a name="displaying-video-in-an-aspnet-web-pages-razor-site"></a>Mostrando el vídeo en un sitio Web de ASP.NET Pages (Razor)
+# <a name="displaying-video-in-an-aspnet-web-pages-razor-site"></a>Mostrar vídeo en un sitio de ASP.NET Web Pages (Razor)
 
 por [Tom FitzMacken](https://github.com/tfitzmac)
 
-> En este artículo se explica cómo usar un Reproductor de vídeo (media) en un sitio Web de ASP.NET Web Pages (Razor) para permitir que los usuarios ver los vídeos que se almacenan en el sitio. ASP.NET Web Pages con sintaxis Razor le permite reproducir Flash (*.swf*), Media Player (*.wmv*) y Silverlight (*.xap*) vídeos.
+> En este artículo se explica cómo usar un reproductor de vídeo (multimedia) en un sitio web de ASP.NET Web Pages (Razor) para permitir a los usuarios ver los vídeos almacenados en el sitio. ASP.NET Web Pages con sintaxis Razor le permite reproducir vídeos de Flash ( *. SWF*), Media Player ( *. wmv*) y Silverlight ( *. xap*).
 > 
-> Lo que aprenderá:
+> Temas que se abordarán:
 > 
-> - Cómo elegir un Reproductor de vídeo.
+> - Cómo elegir un reproductor de vídeo.
 > - Cómo agregar vídeo a una página web.
-> - Cómo establecer los atributos del Reproductor de vídeo.
+> - Cómo establecer los atributos del reproductor de vídeo.
 > 
-> Estos son el código de Razor de ASP.NET las páginas de las características incluidas en el artículo:
+> Estas son las características de las páginas de Razor ASP.NET presentadas en el artículo:
 > 
-> - El `Video` auxiliar.
+> - Aplicación auxiliar de `Video`.
 >   
 > 
-> ## <a name="software-versions-used-in-the-tutorial"></a>Versiones de software que se usa en el tutorial
+> ## <a name="software-versions-used-in-the-tutorial"></a>Versiones de software usadas en el tutorial
 > 
 > 
 > - ASP.NET Web Pages (Razor) 2
@@ -43,142 +43,142 @@ por [Tom FitzMacken](https://github.com/tfitzmac)
 
 ## <a name="introduction"></a>Introducción
 
-Es posible que desee mostrar un vídeo en su sitio. Una manera de hacerlo consiste en Vincular a un sitio que ya tiene el vídeo, como YouTube. Si desea insertar un vídeo de estos sitios directamente en sus propias páginas, puede obtener normalmente el código HTML desde el sitio y, a continuación, cópiela en la página. Por ejemplo, en el ejemplo siguiente se muestra cómo insertar un YouTube vídeo:
+Es posible que desee mostrar un vídeo en el sitio. Una forma de hacerlo es vincular a un sitio que ya tiene el vídeo, como YouTube. Si desea insertar un vídeo desde estos sitios directamente en sus propias páginas, normalmente puede obtener el formato HTML del sitio y, a continuación, copiarlo en la página. Por ejemplo, en el ejemplo siguiente se muestra cómo insertar un vídeo de YouTube:
 
 [!code-html[Main](10-working-with-video/samples/sample1.html?highlight=10-14)]
 
-Si desea reproducir un vídeo que se encuentra en su propio sitio Web (no en un sitio público de uso compartido de vídeo), no se puede vincular directamente a ella mediante marcado incrustado similar al siguiente. Sin embargo, puede reproducir vídeos desde su sitio mediante el `Video` aplicación auxiliar, que representa un reproductor multimedia directamente en una página.
+Si desea reproducir un vídeo que se encuentra en su propio sitio web (no en un sitio de uso compartido de vídeo público), no se puede vincular directamente a él mediante el marcado insertado como este. Sin embargo, puede reproducir vídeos desde su sitio mediante la aplicación auxiliar de `Video`, que representa un reproductor multimedia directamente en una página.
 
 <a id="Choosing_a_Video_Player"></a>
-## <a name="choosing-a-video-player"></a>Elección de un Reproductor de vídeo
+## <a name="choosing-a-video-player"></a>Elección de un reproductor de vídeo
 
-Existen muchos formatos de archivos de vídeo, y cada formato normalmente requiere otro reproductor y la otra forma de configurar el Reproductor. En las páginas de Razor de ASP.NET, puede reproducir un vídeo en una página web mediante la `Video` auxiliar. El `Video` auxiliar simplifica el proceso de inserción de vídeos en una página web porque genera automáticamente el `object` y `embed` elementos HTML que se usan normalmente para agregar vídeo a la página.
+Hay muchos formatos para los archivos de vídeo y cada formato normalmente requiere un reproductor diferente y una manera diferente de configurar el reproductor. En las páginas de Razor ASP.NET, puede reproducir un vídeo en una página web con la aplicación auxiliar de `Video`. La aplicación auxiliar de `Video` simplifica el proceso de insertar vídeos en una página web, ya que genera automáticamente los elementos HTML `object` y `embed` que se usan normalmente para agregar vídeo a la página.
 
-El `Video` auxiliar admite los siguientes reproductores de medios:
+La aplicación auxiliar de `Video` admite los siguientes reproductores multimedia:
 
 - Adobe Flash
-- El Reproductor de Windows Media
+- Windows MediaPlayer
 - Microsoft Silverlight
 
-### <a name="the-flash-player"></a>El Reproductor de Flash
+### <a name="the-flash-player"></a>El reproductor de Flash
 
-El `Flash` encargado de la `Video` auxiliares permiten reproducir vídeos Flash (*.swf* archivos) en una página web. Como mínimo, tendrá que proporcionar una ruta de acceso al archivo de vídeo. Si se especifica nada, pero la ruta de acceso, el Reproductor usa los valores predeterminados establecidos por la versión actual de Flash. Configuración predeterminada típica es:
+El reproductor de `Flash` de la aplicación auxiliar de `Video` le permite reproducir vídeos Flash (archivos *. SWF* ) en una página web. Como mínimo, debe proporcionar una ruta de acceso al archivo de vídeo. Si no especifica nada excepto la ruta de acceso, el reproductor usa los valores predeterminados establecidos por la versión actual de Flash. La configuración predeterminada típica es la siguiente:
 
-- El vídeo se muestra con su ancho y alto predeterminados y sin un color de fondo.
+- El vídeo se muestra con el ancho y el alto predeterminados y sin un color de fondo.
 - El vídeo se reproduce automáticamente cuando se carga la página.
 - El vídeo se repite continuamente hasta que se detiene explícitamente.
 - El vídeo se escala para mostrar todo el vídeo, en lugar de recortar el vídeo para ajustarse a un tamaño específico.
 - El vídeo se reproduce en una ventana.
 
-### <a name="the-mediaplayer-player"></a>El Reproductor de MediaPlayer
+### <a name="the-mediaplayer-player"></a>El reproductor de MediaPlayer
 
-El `MediaPlayer` encargado de la `Video` auxiliar le permite reproducir vídeos de Windows Media (*.wmv* archivos), Windows Media audio (*.wma* archivos) y MP3 (*. mp3* los archivos) en una página web. Debe incluir la ruta de acceso del archivo multimedia para reproducir; todos los demás parámetros son opcionales. Si especifica solo una ruta de acceso, el Reproductor usa la configuración predeterminada establecida por la versión actual de MediaPlayer, tales como:
+El reproductor de `MediaPlayer` de la aplicación auxiliar de `Video` le permite reproducir vídeos de Windows Media (archivos *. wmv* ), audio de Windows Media (archivos *. WMA* ) y MP3 (archivos *. mp3* ) en una página web. Debe incluir la ruta de acceso del archivo multimedia que se va a reproducir. todos los demás parámetros son opcionales. Si especifica solo una ruta de acceso, el reproductor utiliza la configuración predeterminada establecida por la versión actual de MediaPlayer, como:
 
-- El vídeo se muestra con su ancho y alto predeterminados.
+- El vídeo se muestra con el ancho y el alto predeterminados.
 - El vídeo se reproduce automáticamente cuando se carga la página.
 - El vídeo se reproduce una vez (no se repite).
-- El Reproductor muestra el conjunto completo de controles en la interfaz de usuario.
+- El reproductor muestra el conjunto completo de controles en la interfaz de usuario.
 - El vídeo se reproduce en una ventana.
 
-### <a name="the-silverlight-player"></a>El Reproductor de Silverlight
+### <a name="the-silverlight-player"></a>El reproductor de Silverlight
 
-El `Silverlight` encargado de la `Video` auxiliar le permite reproducir el vídeo de Windows Media (*.wmv* archivos), Windows Media Audio (*.wma* archivos) y MP3 (*. mp3* archivos). Debe establecer el parámetro path para que apunte a un paquete de aplicación basada en Silverlight (*.xap* archivo). También debe establecer los parámetros de anchura y altura. Todos los demás parámetros son opcionales. Cuando se usa el Reproductor de Silverlight para vídeo, si se establecen solamente los parámetros necesarios, el Reproductor Silverlight muestra el vídeo sin un color de fondo.
+El reproductor de `Silverlight` de la aplicación auxiliar de `Video` le permite reproducir Windows Media Video (archivos *. wmv* ), Windows Media Audio (archivos *. WMA* ) y MP3 (archivos *. mp3* ). Debe establecer el parámetro Path para que señale a un paquete de aplicación basado en Silverlight (archivo *. xap* ). También debe establecer los parámetros de ancho y alto. Todos los demás parámetros son opcionales. Cuando se usa el reproductor de Silverlight para vídeo, si solo se establecen los parámetros necesarios, el reproductor de Silverlight muestra el vídeo sin un color de fondo.
 
 > [!NOTE]
-> En caso de que aún no sabe Silverlight: el *.xap* archivo es un archivo comprimido que contiene las instrucciones de diseño en un *.xaml* archivo de código administrado de los ensamblados y recursos opcionales. Puede crear un *.xap* archivo en Visual Studio como un proyecto de aplicación de Silverlight.
+> En caso de que aún no conozca Silverlight: el archivo *. xap* es un archivo comprimido que contiene instrucciones de diseño en un archivo *. Xaml* , código administrado en ensamblados y recursos opcionales. Puede crear un archivo *. xap* en Visual Studio como un proyecto de aplicación de Silverlight.
 
-El `Silverlight` Reproductor de vídeo que utiliza tanto la configuración proporcionada para el Reproductor y la configuración que se proporciona en el *.xap* archivo.
+El reproductor de vídeo `Silverlight` usa la configuración que se proporciona para el reproductor y la configuración que se proporciona en el archivo *. xap* .
 
 > [!TIP] 
 > 
 > <a id="SB_MimeTypes"></a>
 > ### <a name="mime-types"></a>Tipos de MIME
 > 
-> Cuando un explorador descarga un archivo, el explorador se asegura de que el tipo de archivo coincide con el tipo MIME que se especifica para el documento que se va a representar. El tipo MIME es el tipo de medios o de tipo de contenido de un archivo. El `Video` auxiliar usa los tipos MIME siguientes:
+> Cuando un explorador descarga un archivo, el explorador se asegura de que el tipo de archivo coincide con el tipo MIME especificado para el documento que se está representando. El tipo MIME es el tipo de contenido o el tipo de medio de un archivo. La aplicación auxiliar de `Video` usa los siguientes tipos MIME:
 > 
 > - `application/x-shockwave-flash`
 > - `application/x-mplayer2`
 > - `application/x-silverlight-2`
 
 <a id="Playing_Flash"></a>
-## <a name="playing-flash-swf-videos"></a>Reproducción de vídeos de Flash (.swf)
+## <a name="playing-flash-swf-videos"></a>Reproducir vídeos Flash (. SWF)
 
-Este procedimiento muestra cómo reproducir un vídeo Flash denominado *sample.swf*. El procedimiento se supone que tiene una carpeta denominada *Media* en su sitio y que la *.swf* archivo se encuentra en esa carpeta.
+En este procedimiento se muestra cómo reproducir un vídeo Flash denominado *sample. SWF*. En el procedimiento se supone que tiene una carpeta denominada *media* en el sitio y que el archivo *. SWF* está en esa carpeta.
 
-1. Agregue la ASP.NET Web Helpers Library a su sitio Web, como se describe en [las aplicaciones auxiliares de la instalación en un sitio de ASP.NET Web Pages](https://go.microsoft.com/fwlink/?LinkId=252372), si aún no lo ha agregado.
-2. En el sitio Web, agregue una página y asígnele el nombre *FlashVideo.cshtml*.
-3. Agregue el marcado siguiente a la página: 
+1. Agregue la biblioteca de aplicaciones auxiliares Web de ASP.NET a su sitio web, tal como se describe en [instalación de aplicaciones auxiliares en un sitio de ASP.NET Web pages](https://go.microsoft.com/fwlink/?LinkId=252372), si aún no lo ha hecho.
+2. En el sitio web, agregue una página y asígnele el nombre *FlashVideo. cshtml*.
+3. Agregue el siguiente marcado a la página: 
 
     [!code-cshtml[Main](10-working-with-video/samples/sample2.cshtml)]
-4. Ejecute la página en un explorador. (Asegúrese de que la página está seleccionada en el **archivos** área de trabajo antes de ejecutarlo.) Se abrirá la página y el vídeo se reproduce automáticamente. 
+4. Ejecute la página en un explorador. (Asegúrese de que la página esté seleccionada en el área de trabajo **archivos** antes de ejecutarla). Se muestra la página y el vídeo se reproduce automáticamente. 
 
-    ![[image]](10-working-with-video/_static/image1.jpg "ch08_video-1.jpg")
+    ![impresión](10-working-with-video/_static/image1.jpg "ch08_video -1. jpg")
 
-Puede establecer el `quality` parámetro para ver un vídeo Flash a `low`, `autolow`, `autohigh`, `medium`, `high`, y `best`:
+Puede establecer el parámetro `quality` para un vídeo Flash en `low`, `autolow`, `autohigh`, `medium`, `high`y `best`:
 
 [!code-cshtml[Main](10-working-with-video/samples/sample3.cshtml)]
 
-Puede cambiar el vídeo Flash para reproducir en un tamaño específico mediante el `scale` parámetro, que puede establecer lo siguiente:
+Puede cambiar el vídeo Flash para que se reproduzca con un tamaño específico mediante el parámetro `scale`, que puede establecer en lo siguiente:
 
-- `showall`. Esto hace que todo el vídeo visible mientras mantiene la relación de aspecto original. Sin embargo, puede terminar con los bordes en cada lado.
-- `noorder`. Esto se puede escalar el vídeo mientras se mantiene la relación de aspecto original, pero podría recortarse.
-- `exactfit`. Esto hace que todo el vídeo visible sin conservar la relación de aspecto original, pero pueden producirse distorsiones.
+- `showall`Operador Esto hace que todo el vídeo sea visible mientras mantiene la relación de aspecto original. Sin embargo, es posible que acabe con bordes en cada lado.
+- `noorder`Operador Esto escala el vídeo mientras mantiene la relación de aspecto original, pero puede que se recorte.
+- `exactfit`Operador Esto hace que todo el vídeo sea visible sin conservar la relación de aspecto original, pero puede producirse una distorsión.
 
-Si no especifica un `scale` parámetro, todo el vídeo estará visible y se mantendrá la relación de aspecto original sin cualquier recorte. El ejemplo siguiente muestra cómo usar el `scale` parámetro:
+Si no especifica un parámetro `scale`, todo el vídeo será visible y la relación de aspecto original se mantendrá sin recortes. En el ejemplo siguiente se muestra cómo usar el parámetro `scale`:
 
 [!code-cshtml[Main](10-working-with-video/samples/sample4.cshtml)]
 
-El Reproductor de Flash es compatible con un configuración con nombre de modo de vídeo `windowMode`. Puede establecerlo en `window`, `opaque`, y `transparent`. De forma predeterminada, el `windowMode` está establecido en `window`, que muestra el vídeo en una ventana independiente en la página web. El `opaque` configuración oculta todo detrás del vídeo en la página web. El `transparent` configuración permite que el fondo de la página web se muestra en el vídeo, suponiendo que cualquier parte del vídeo es transparente.
+Flash Player admite una configuración de modo de vídeo denominada `windowMode`. Puede establecerlo en `window`, `opaque`y `transparent`. De forma predeterminada, la `windowMode` se establece en `window`, que muestra el vídeo en una ventana independiente de la Página Web. El valor `opaque` oculta todo lo que hay detrás del vídeo en la Página Web. El valor `transparent` permite que el fondo de la página web se muestre a través del vídeo, suponiendo que cualquier parte del vídeo es transparente.
 
 <a id="Playing_MediaPlayer"></a>
-## <a name="playing-mediaplayer-wmv-videos"></a>Reproducción de MediaPlayer (*.wmv*) vídeos
+## <a name="playing-mediaplayer-wmv-videos"></a>Reproducir vídeos de MediaPlayer ( *. wmv*)
 
-El siguiente procedimiento muestra cómo reproducir un vídeo de Media de ventana denominado *sample.wmv* que se encuentra en la *Media* carpeta.
+En el procedimiento siguiente se muestra cómo reproducir un vídeo de Windows Media denominado *sample. wmv* que se encuentra en la carpeta *multimedia* .
 
-1. Agregue la ASP.NET Web Helpers Library a su sitio Web, como se describe en [las aplicaciones auxiliares de la instalación en un sitio de ASP.NET Web Pages](https://go.microsoft.com/fwlink/?LinkId=252372), si no lo ha hecho ya.
-2. Crear una nueva página denominada *MediaPlayerVideo.cshtml*.
-3. Agregue el marcado siguiente a la página: 
+1. Agregue la biblioteca de aplicaciones auxiliares Web de ASP.NET a su sitio web, tal como se describe en [instalación de aplicaciones auxiliares en un sitio de ASP.NET Web pages](https://go.microsoft.com/fwlink/?LinkId=252372), si no lo ha hecho ya.
+2. Cree una nueva página denominada *MediaPlayerVideo. cshtml*.
+3. Agregue el siguiente marcado a la página: 
 
     [!code-cshtml[Main](10-working-with-video/samples/sample5.cshtml)]
 4. Ejecute la página en un explorador. El vídeo se carga y se reproduce automáticamente. 
 
-    ![[image]](10-working-with-video/_static/image2.jpg "ch08_video-2.jpg")
+    ![impresión](10-working-with-video/_static/image2.jpg "ch08_video -2. jpg")
 
-Puede establecer `playCount` en un entero que indica cuántas veces debe para reproducir el vídeo automáticamente:
+Puede establecer `playCount` en un entero que indique el número de veces que se reproducirá el vídeo automáticamente:
 
 [!code-cshtml[Main](10-working-with-video/samples/sample6.cshtml)]
 
-El `uiMode` parámetro le permite especificar qué controles aparecen en la interfaz de usuario. Puede establecer `uiMode` a `invisible`, `none`, `mini`, o `full`. Si no se especifica un `uiMode` parámetro, que será el vídeo se muestra con la ventana de estado, seek barras, controlar los botones y los controles de volumen además de la ventana de vídeo. Estos controles también se mostrará si usa el Reproductor para reproducir un archivo de audio. Este es un ejemplo de cómo usar el `uiMode` parámetro:
+El parámetro `uiMode` permite especificar qué controles se muestran en la interfaz de usuario. Puede establecer `uiMode` en `invisible`, `none`, `mini`o `full`. Si no especifica un parámetro de `uiMode`, el vídeo se mostrará con la ventana de estado, la barra de búsqueda, los botones de control y los controles de volumen, además de la ventana de vídeo. Estos controles también se mostrarán si usa el reproductor para reproducir un archivo de audio. A continuación se muestra un ejemplo de cómo usar el parámetro `uiMode`:
 
 [!code-cshtml[Main](10-working-with-video/samples/sample7.cshtml)]
 
-De forma predeterminada, audio está activada cuando el vídeo se reproduce. Puede silenciar el audio estableciendo el `mute` parámetro en true:
+De forma predeterminada, el audio está encendido cuando el vídeo se reproduce. Puede silenciar el audio estableciendo el parámetro `mute` en true:
 
 [!code-cshtml[Main](10-working-with-video/samples/sample8.cshtml)]
 
-Puede controlar el nivel de audio del vídeo MediaPlayer estableciendo el `volume` parámetro en un valor entre 0 y 100. El valor predeterminado es 50. Por ejemplo:
+Puede controlar el nivel de audio del vídeo de MediaPlayer si establece el parámetro `volume` en un valor entre 0 y 100. El valor predeterminado es 50. Por ejemplo:
 
 [!code-cshtml[Main](10-working-with-video/samples/sample9.cshtml)]
 
 <a id="Playing_Silverlight"></a>
-## <a name="playing-silverlight-videos"></a>Reproducción de vídeos de Silverlight
+## <a name="playing-silverlight-videos"></a>Reproducir vídeos de Silverlight
 
-Este procedimiento muestra cómo reproducir vídeo contenido en un Silverlight *.xap* página en una carpeta denominada *Media*.
+Este procedimiento muestra cómo reproducir el vídeo contenido en una página de Silverlight *. xap* que se encuentra en una carpeta denominada *media*.
 
-1. Agregue la ASP.NET Web Helpers Library a su sitio Web, como se describe en [las aplicaciones auxiliares de la instalación en un sitio de ASP.NET Web Pages](https://go.microsoft.com/fwlink/?LinkId=252372), si no lo ha hecho ya.
-2. Crear una nueva página denominada *SilverlightVideo.cshtml*.
-3. Agregue el marcado siguiente a la página: 
+1. Agregue la biblioteca de aplicaciones auxiliares Web de ASP.NET a su sitio web, tal como se describe en [instalación de aplicaciones auxiliares en un sitio de ASP.NET Web pages](https://go.microsoft.com/fwlink/?LinkId=252372), si no lo ha hecho ya.
+2. Cree una nueva página denominada *SilverlightVideo. cshtml*.
+3. Agregue el siguiente marcado a la página: 
 
     [!code-cshtml[Main](10-working-with-video/samples/sample10.cshtml)]
 4. Ejecute la página en un explorador. 
 
-    ![[image]](10-working-with-video/_static/image3.jpg "ch08_video-3.jpg")
+    ![impresión](10-working-with-video/_static/image3.jpg "ch08_video -3. jpg")
 
 <a id="Additional_Resources"></a>
 ## <a name="additional-resources"></a>Recursos adicionales
 
-[Información general sobre Silverlight](https://msdn.microsoft.com/library/bb404700(VS.95).aspx)
+[Información general de Silverlight](https://msdn.microsoft.com/library/bb404700(VS.95).aspx)
 
-[Atributos de etiqueta de objeto y la INSERCIÓN de Flash](http://kb2.adobe.com/cps/127/tn_12701.html)
+[Atributos de etiqueta de INCRUSTAción y objeto Flash](http://kb2.adobe.com/cps/127/tn_12701.html)
 
-[Etiqueta PARAM de SDK de Windows Media Player 11](https://msdn.microsoft.com/library/aa392321(VS.85).aspx)
+[Etiquetas de parámetros del SDK de Windows Media Player 11](https://msdn.microsoft.com/library/aa392321(VS.85).aspx)

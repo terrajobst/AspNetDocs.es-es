@@ -9,11 +9,11 @@ ms.assetid: 7d821db5-6cbb-4b38-af14-198f9155fc82
 msc.legacyurl: /web-forms/overview/data-access/working-with-batched-data/wrapping-database-modifications-within-a-transaction-vb
 msc.type: authoredcontent
 ms.openlocfilehash: dee95ee2789a69aac5aa79b8358e58e3ee99e1b2
-ms.sourcegitcommit: 22fbd8863672c4ad6693b8388ad5c8e753fb41a2
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/28/2019
-ms.locfileid: "74636521"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78475891"
 ---
 # <a name="wrapping-database-modifications-within-a-transaction-vb"></a>Ajustar las modificaciones de base de datos dentro de una transacción (VB)
 

@@ -9,11 +9,11 @@ ms.assetid: 9af927e2-1c3b-43d9-917d-1df75be3c482
 msc.legacyurl: /mvc/overview/older-versions/getting-started-with-aspnet-mvc3/cs/adding-validation-to-the-model
 msc.type: authoredcontent
 ms.openlocfilehash: 19d86dc0df931a9d135e46209559892b77626cf6
-ms.sourcegitcommit: 7709c0a091b8d55b7b33bad8849f7b66b23c3d72
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/19/2020
-ms.locfileid: "77457730"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78498829"
 ---
 # <a name="adding-validation-to-the-model-c"></a>Agregar la validación al modelo (C#)
 

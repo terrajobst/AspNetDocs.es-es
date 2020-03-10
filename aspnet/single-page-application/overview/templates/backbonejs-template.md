@@ -9,11 +9,11 @@ ms.assetid: 00aca413-f067-4108-9bd1-cf21e64a2646
 msc.legacyurl: /single-page-application/overview/templates/backbonejs-template
 msc.type: authoredcontent
 ms.openlocfilehash: 7297db7d5b35a53b40f9d9162960e529a167bd12
-ms.sourcegitcommit: e365196c75ce93cd8967412b1cfdc27121816110
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/07/2020
-ms.locfileid: "77074896"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78449779"
 ---
 # <a name="backbone-template"></a>Plantilla de Backbone
 
@@ -87,7 +87,7 @@ Este es el código de Navigation. TS para enlazar los eventos:
 
 [!code-csharp[Main](backbonejs-template/samples/sample4.cs)]
 
-**Modelos**
+**Models**
 
 Los modelos se definen en ~/scripts/Application/Models. Todos los modelos tienen tres cosas básicas: atributos predeterminados, reglas de validación y un punto final del servidor. Este es un ejemplo típico:
 
@@ -113,7 +113,7 @@ Ahora veamos el lado del servidor.
 
 En una aplicación de una sola página, el servidor solo desempeña un rol pequeño en la interfaz de usuario. Normalmente, el servidor representa la página inicial y, a continuación, envía y recibe datos JSON.
 
-La plantilla tiene dos controladores MVC: `HomeController` representa la página inicial y `SupportsController` se usa para confirmar nuevas cuentas de usuario y restablecer contraseñas. Todos los demás controladores de la plantilla son ASP.NET Web API controladores, que envían y reciben datos JSON. De forma predeterminada, los controladores usan la nueva clase de `WebSecurity` para realizar tareas relacionadas con el usuario. Sin embargo, también tienen constructores opcionales que permiten pasar los delegados para estas tareas. Esto facilita la realización de pruebas y permite reemplazar `WebSecurity` por otra cosa, mediante el uso de un contenedor de IoC. Este es un ejemplo:
+La plantilla tiene dos controladores MVC: `HomeController` representa la página inicial y `SupportsController` se usa para confirmar nuevas cuentas de usuario y restablecer contraseñas. Todos los demás controladores de la plantilla son ASP.NET Web API controladores, que envían y reciben datos JSON. De forma predeterminada, los controladores usan la nueva clase de `WebSecurity` para realizar tareas relacionadas con el usuario. Sin embargo, también tienen constructores opcionales que permiten pasar los delegados para estas tareas. Esto facilita la realización de pruebas y permite reemplazar `WebSecurity` por otra cosa, mediante el uso de un contenedor de IoC. A continuación se muestra un ejemplo:
 
 [!code-csharp[Main](backbonejs-template/samples/sample8.cs)]
 

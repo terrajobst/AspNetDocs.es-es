@@ -9,11 +9,11 @@ ms.assetid: 41c818b7-603a-402b-8847-890a63547b6f
 msc.legacyurl: /web-forms/overview/data-access/custom-formatting/displaying-summary-information-in-the-gridview-s-footer-vb
 msc.type: authoredcontent
 ms.openlocfilehash: c208b4a756f5700be46eec924d8cf8f49b9d2507
-ms.sourcegitcommit: 22fbd8863672c4ad6693b8388ad5c8e753fb41a2
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/28/2019
-ms.locfileid: "74616511"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78482083"
 ---
 # <a name="displaying-summary-information-in-the-gridviews-footer-vb"></a>Mostrar información de resumen en el pie de página de GridView (VB)
 

@@ -9,11 +9,11 @@ ms.assetid: 878f6c31-972d-45f4-8849-5c633b511409
 msc.legacyurl: /mvc/overview/older-versions/getting-started-with-aspnet-mvc3/vb/adding-validation-to-the-model
 msc.type: authoredcontent
 ms.openlocfilehash: 7f3f195bc30ed23a637b59f15e6fc8431e39e217
-ms.sourcegitcommit: 7709c0a091b8d55b7b33bad8849f7b66b23c3d72
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/19/2020
-ms.locfileid: "77457210"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78498577"
 ---
 # <a name="adding-validation-to-the-model-vb"></a>Agregar la validación al modelo (VB)
 

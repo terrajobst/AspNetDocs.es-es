@@ -9,11 +9,11 @@ ms.assetid: 05e4c88f-5101-4277-a323-b6774d98f69e
 msc.legacyurl: /web-forms/overview/deployment
 msc.type: chapter
 ms.openlocfilehash: 1483abc212b5f122ad3e2b88474c42b208bb748e
-ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/06/2019
-ms.locfileid: "65134288"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78520381"
 ---
 # <a name="deployment"></a>Implementación
 
@@ -36,8 +36,8 @@ ms.locfileid: "65134288"
 - [ASP.NET 4 - Introducción a la implementación de empresa](deploying-web-applications-in-enterprise-scenarios/index.md)
 
     - [Implementar aplicaciones web en escenarios empresariales mediante Visual Studio 2010](deploying-web-applications-in-enterprise-scenarios/deploying-web-applications-in-enterprise-scenarios.md)
-    - [Implementación Web de empresa: Información general del escenario](deploying-web-applications-in-enterprise-scenarios/enterprise-web-deployment-scenario-overview.md)
-    - [Administración del ciclo de vida de aplicaciones: Entornos de desarrollo a producción](deploying-web-applications-in-enterprise-scenarios/application-lifecycle-management-from-development-to-production.md)
+    - [Implementación web de empresa: información general del escenario](deploying-web-applications-in-enterprise-scenarios/enterprise-web-deployment-scenario-overview.md)
+    - [Administración del ciclo de vida de las aplicaciones: del desarrollo a la producción](deploying-web-applications-in-enterprise-scenarios/application-lifecycle-management-from-development-to-production.md)
 - [ASP.NET 4 - Implementación de empresa, serie 1](web-deployment-in-the-enterprise/index.md)
 
     - [Implementación web en la empresa](web-deployment-in-the-enterprise/web-deployment-in-the-enterprise.md)
@@ -55,9 +55,9 @@ ms.locfileid: "65134288"
 
     - [Configurar entornos de servidor para la implementación web](configuring-server-environments-for-web-deployment/configuring-server-environments-for-web-deployment.md)
     - [Elegir el enfoque adecuado para la implementación web](configuring-server-environments-for-web-deployment/choosing-the-right-approach-to-web-deployment.md)
-    - [Escenario: Configurar un entorno de prueba para la implementación de Web](configuring-server-environments-for-web-deployment/scenario-configuring-a-test-environment-for-web-deployment.md)
-    - [Escenario: Configuración de un entorno de ensayo para la implementación Web](configuring-server-environments-for-web-deployment/scenario-configuring-a-staging-environment-for-web-deployment.md)
-    - [Escenario: Configurar un entorno de producción para la implementación Web](configuring-server-environments-for-web-deployment/scenario-configuring-a-production-environment-for-web-deployment.md)
+    - [Escenario: Configurar un entorno de prueba para la implementación web](configuring-server-environments-for-web-deployment/scenario-configuring-a-test-environment-for-web-deployment.md)
+    - [Escenario: Configurar un entorno de ensayo para la implementación web](configuring-server-environments-for-web-deployment/scenario-configuring-a-staging-environment-for-web-deployment.md)
+    - [Escenario: Configurar un entorno de producción para la implementación web](configuring-server-environments-for-web-deployment/scenario-configuring-a-production-environment-for-web-deployment.md)
     - [Configurar un servidor web para la publicación de la implementación web (agente remoto)](configuring-server-environments-for-web-deployment/configuring-a-web-server-for-web-deploy-publishing-remote-agent.md)
     - [Configurar un servidor web para la publicación de la implementación web (controlador de implementación web)](configuring-server-environments-for-web-deployment/configuring-a-web-server-for-web-deploy-publishing-web-deploy-handler.md)
     - [Configurar un servidor web para la publicación de la implementación web (implementación sin conexión)](configuring-server-environments-for-web-deployment/configuring-a-web-server-for-web-deploy-publishing-offline-deployment.md)

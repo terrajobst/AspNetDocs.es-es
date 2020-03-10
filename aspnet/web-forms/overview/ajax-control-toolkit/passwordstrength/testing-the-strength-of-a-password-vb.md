@@ -9,11 +9,11 @@ ms.assetid: 9215a37f-3133-4887-8ed2-3689f3a53551
 msc.legacyurl: /web-forms/overview/ajax-control-toolkit/passwordstrength/testing-the-strength-of-a-password-vb
 msc.type: authoredcontent
 ms.openlocfilehash: b614e1788eeafc175dd792ec6d3e4619f9ea2b7a
-ms.sourcegitcommit: 22fbd8863672c4ad6693b8388ad5c8e753fb41a2
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/28/2019
-ms.locfileid: "74606254"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78508975"
 ---
 # <a name="testing-the-strength-of-a-password-vb"></a>Probar la seguridad de una contraseña (VB)
 
@@ -23,7 +23,7 @@ por [Christian Wenz](https://github.com/wenz)
 
 > Las contraseñas son necesarias casi en cualquier lugar, por lo que los usuarios diferidos tienden a elegir contraseñas sencillas que son fáciles de interrumpir. El control PasswordStrength en el kit de herramientas de control de AJAX de ASP.NET puede comprobar la calidad de una contraseña.
 
-## <a name="overview"></a>Información general del
+## <a name="overview"></a>Información general
 
 Las contraseñas son necesarias casi en cualquier lugar, por lo que los usuarios diferidos tienden a elegir contraseñas sencillas que son fáciles de interrumpir. El control `PasswordStrength` en el kit de herramientas de control de ASP.NET AJAX puede comprobar la calidad de una contraseña.
 

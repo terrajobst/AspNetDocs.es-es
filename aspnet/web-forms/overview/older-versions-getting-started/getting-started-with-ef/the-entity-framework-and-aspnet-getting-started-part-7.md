@@ -1,139 +1,139 @@
 ---
 uid: web-forms/overview/older-versions-getting-started/getting-started-with-ef/the-entity-framework-and-aspnet-getting-started-part-7
-title: Introducción a Entity Framework 4.0 Database First y 4 de ASP.NET Web Forms, parte 7 | Microsoft Docs
+title: Introducción con Entity Framework 4,0 Database First y ASP.NET 4 formularios Web Forms, parte 7 | Microsoft Docs
 author: tdykstra
-description: La aplicación web de Contoso University muestra cómo crear aplicaciones de formularios Web Forms de ASP.NET mediante Entity Framework. La aplicación de ejemplo es...
+description: En la aplicación Web de ejemplo contoso University se muestra cómo crear aplicaciones de formularios Web Forms de ASP.NET mediante el Entity Framework. La aplicación de ejemplo es...
 ms.author: riande
 ms.date: 12/03/2010
 ms.assetid: f8afb245-b705-419c-8790-0b295e90d5e2
 msc.legacyurl: /web-forms/overview/older-versions-getting-started/getting-started-with-ef/the-entity-framework-and-aspnet-getting-started-part-7
 msc.type: authoredcontent
 ms.openlocfilehash: 18d4b44c5e23fd6942c3adf48a33a5602e6df6d0
-ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/06/2019
-ms.locfileid: "65133101"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78488527"
 ---
-# <a name="getting-started-with-entity-framework-40-database-first-and-aspnet-4-web-forms---part-7"></a>Introducción a Entity Framework 4.0 Database First y ASP.NET 4 Web Forms, parte 7
+# <a name="getting-started-with-entity-framework-40-database-first-and-aspnet-4-web-forms---part-7"></a>Introducción con Entity Framework 4,0 Database First y ASP.NET 4 formularios Web Forms, parte 7
 
 por [Tom Dykstra](https://github.com/tdykstra)
 
-> La aplicación web de Contoso University muestra cómo crear aplicaciones de formularios Web Forms de ASP.NET con el Entity Framework 4.0 y Visual Studio 2010. Para obtener información acerca de la serie de tutoriales, vea [el primer tutorial de la serie](the-entity-framework-and-aspnet-getting-started-part-1.md)
+> En la aplicación Web de ejemplo contoso University se muestra cómo crear aplicaciones de formularios Web Forms de ASP.NET mediante el Entity Framework 4,0 y Visual Studio 2010. Para obtener información sobre la serie de tutoriales, consulte [el primer tutorial de la serie](the-entity-framework-and-aspnet-getting-started-part-1.md) .
 
 ## <a name="using-stored-procedures"></a>Utilizar procedimientos almacenados
 
-En el tutorial anterior implementa un patrón de herencia de tabla por jerarquía. Este tutorial le mostrará cómo utilizar procedimientos almacenados para obtener más control sobre el acceso de la base de datos.
+En el tutorial anterior, implementó un patrón de herencia de tabla por jerarquía. En este tutorial se muestra cómo usar procedimientos almacenados para obtener más control sobre el acceso a la base de datos.
 
-Entity Framework le permite especificar que debe usar los procedimientos almacenados para el acceso a la base de datos. Para cualquier tipo de entidad, puede especificar un procedimiento almacenado que se usará para la creación, actualización o eliminación de entidades de ese tipo. A continuación, en el modelo de datos puede agregar referencias a procedimientos almacenados que puede usar para realizar tareas como la recuperación de conjuntos de entidades.
+El Entity Framework le permite especificar que debe utilizar procedimientos almacenados para el acceso a la base de datos. Para cualquier tipo de entidad, puede especificar un procedimiento almacenado que se utilizará para crear, actualizar o eliminar entidades de ese tipo. Después, en el modelo de datos, puede Agregar referencias a los procedimientos almacenados que puede usar para realizar tareas como la recuperación de conjuntos de entidades.
 
-Uso de procedimientos almacenados es un requisito común para el acceso a la base de datos. En algunos casos, un administrador de base de datos puede requerir que todos los accesos de base de datos pasen por los procedimientos almacenados por motivos de seguridad. En otros casos, puede crear lógica de negocios en algunos de los procesos que Entity Framework usa cuando actualiza la base de datos. Por ejemplo, cada vez que se elimina una entidad puede copiarlo en una base de datos de archivo. O bien, siempre que se actualiza una fila puede escribir una fila en una tabla de registro que registra en el que hizo el cambio. Puede realizar estos tipos de tareas en un procedimiento almacenado que se llama cada vez que elimina una entidad de Entity Framework o actualiza una entidad.
+El uso de procedimientos almacenados es un requisito común para el acceso a la base de datos. En algunos casos, es posible que un administrador de bases de datos requiera que todo el acceso a la base de datos pase por procedimientos almacenados por motivos de seguridad. En otros casos, puede que desee crear lógica de negocios en algunos de los procesos que utiliza el Entity Framework al actualizar la base de datos. Por ejemplo, cada vez que se elimina una entidad, puede que desee copiarla en una base de datos de archivo. O, cada vez que se actualiza una fila, es posible que desee escribir una fila en una tabla de registro que registre quién realizó el cambio. Puede realizar estos tipos de tareas en un procedimiento almacenado al que se llama cada vez que el Entity Framework elimina una entidad o actualiza una entidad.
 
-Como se muestra en el tutorial anterior, no creará todas las páginas nuevas. En su lugar, va a cambiar la manera en que Entity Framework tiene acceso a la base de datos para algunas de las páginas que ya ha creado.
+Como en el tutorial anterior, no se crearán páginas nuevas. En su lugar, cambiará la forma en que el Entity Framework tiene acceso a la base de datos para algunas de las páginas que ya ha creado.
 
-En este tutorial podrá crear procedimientos almacenados en la base de datos para insertar `Student` y `Instructor` entidades. Deberá agregarlos al modelo de datos, y especificará el Entity Framework debe usarlos para agregar `Student` y `Instructor` entidades a la base de datos. También creará un procedimiento almacenado que se puede utilizar para recuperar `Course` entidades.
+En este tutorial, creará procedimientos almacenados en la base de datos para insertar entidades `Student` y `Instructor`. Los agregará al modelo de datos y especificará que los Entity Framework deberían utilizarlos para agregar `Student` y `Instructor` entidades a la base de datos. También creará un procedimiento almacenado que puede usar para recuperar entidades `Course`.
 
-## <a name="creating-stored-procedures-in-the-database"></a>Creación de procedimientos almacenados en la base de datos
+## <a name="creating-stored-procedures-in-the-database"></a>Crear procedimientos almacenados en la base de datos
 
-(Si está utilizando el *School.mdf* archivo del proyecto disponible para su descarga con este tutorial, puede omitir esta sección porque ya existen los procedimientos almacenados.)
+(Si utiliza el archivo *School. MDF* del proyecto disponible para su descarga con este tutorial, puede omitir esta sección porque los procedimientos almacenados ya existen).
 
-En **Explorador de servidores**, expanda *School.mdf*, haga clic en **Stored Procedures**y seleccione **Agregar nuevo procedimiento almacenado**.
+En **Explorador de servidores**, expanda *School. MDF*, haga clic con el botón secundario en **procedimientos almacenados**y seleccione **Agregar nuevo procedimiento almacenado**.
 
 [![image15](the-entity-framework-and-aspnet-getting-started-part-7/_static/image2.png)](the-entity-framework-and-aspnet-getting-started-part-7/_static/image1.png)
 
-Copie las instrucciones SQL siguientes y péguelos en la ventana de procedimiento almacenado, reemplazando el procedimiento almacenado esqueleto.
+Copie las siguientes instrucciones SQL y péguelas en la ventana procedimiento almacenado, reemplazando el procedimiento almacenado esqueleto.
 
 [!code-sql[Main](the-entity-framework-and-aspnet-getting-started-part-7/samples/sample1.sql)]
 
 [![image14](the-entity-framework-and-aspnet-getting-started-part-7/_static/image4.png)](the-entity-framework-and-aspnet-getting-started-part-7/_static/image3.png)
 
-`Student` las entidades tienen cuatro propiedades: `PersonID`, `LastName`, `FirstName`, y `EnrollmentDate`. La base de datos el valor de identificador genera automáticamente y el procedimiento almacenado acepta parámetros para los otros tres. El procedimiento almacenado devuelve el valor de la clave de registro de la fila nueva para que Entity Framework puede realizar un seguimiento de la versión de la entidad que mantiene en memoria.
+`Student` entidades tienen cuatro propiedades: `PersonID`, `LastName`, `FirstName`y `EnrollmentDate`. La base de datos genera automáticamente el valor de identificador y el procedimiento almacenado acepta parámetros para los otros tres. El procedimiento almacenado devuelve el valor de la clave de registro de la nueva fila para que el Entity Framework pueda realizar un seguimiento de la versión de la entidad que mantiene en la memoria.
 
-Guarde y cierre la ventana de procedimiento almacenado.
+Guarde y cierre la ventana del procedimiento almacenado.
 
-Crear un `InsertInstructor` procedimiento almacenado en la misma manera, mediante las instrucciones SQL siguientes:
+Cree un `InsertInstructor` procedimiento almacenado de la misma manera, mediante las siguientes instrucciones SQL:
 
 [!code-sql[Main](the-entity-framework-and-aspnet-getting-started-part-7/samples/sample2.sql)]
 
-Crear `Update` procedimientos almacenados para `Student` y `Instructor` entidades también. (La base de datos ya tiene un `DeletePerson` procedimiento almacenado que funcionará para ambos `Instructor` y `Student` entidades.)
+Cree también `Update` procedimientos almacenados para las entidades `Student` y `Instructor`. (La base de datos ya tiene un procedimiento almacenado `DeletePerson` que funcionará para las entidades `Instructor` y `Student`).
 
 [!code-sql[Main](the-entity-framework-and-aspnet-getting-started-part-7/samples/sample3.sql)]
 
 [!code-sql[Main](the-entity-framework-and-aspnet-getting-started-part-7/samples/sample4.sql)]
 
-En este tutorial, asignará las tres funciones: insert, update y delete, para cada tipo de entidad. La versión 4 de Entity Framework permite asignar solo uno o dos de estas funciones a los procedimientos almacenados sin asignación de los demás, con una excepción: si asigna la función de actualización pero no la función de eliminación, Entity Framework se iniciará una excepción cuando se intento de eliminar una entidad. En Entity Framework versión 3.5, no tenía tanta flexibilidad para asignar procedimientos almacenados: si se ha asignado una función ha sido necesario para asignar las tres.
+En este tutorial, asignará las tres funciones, INSERT, Update y DELETE, para cada tipo de entidad. La Entity Framework versión 4 le permite asignar solo una o dos de estas funciones a procedimientos almacenados sin asignar las demás, con una excepción: Si asigna la función de actualización pero no la función de eliminación, el Entity Framework producirá una excepción cuando intento de eliminar una entidad. En la versión 3,5 de Entity Framework, no tenía esta gran flexibilidad en la asignación de procedimientos almacenados: Si asigna una función, era necesario asignar los tres.
 
-Para crear un procedimiento almacenado que lee en lugar de las actualizaciones de datos, cree uno que todos los selecciona `Course` entidades, mediante las instrucciones SQL siguientes:
+Para crear un procedimiento almacenado que lea en lugar de los datos de actualizaciones, cree uno que seleccione todas `Course` entidades, mediante las siguientes instrucciones SQL:
 
 [!code-sql[Main](the-entity-framework-and-aspnet-getting-started-part-7/samples/sample5.sql)]
 
-## <a name="adding-the-stored-procedures-to-the-data-model"></a>Adición de los procedimientos almacenados al modelo de datos
+## <a name="adding-the-stored-procedures-to-the-data-model"></a>Agregar los procedimientos almacenados al modelo de datos
 
-Los procedimientos almacenados se definen ahora en la base de datos, pero deben agregarse al modelo de datos para que estén disponibles para Entity Framework. Abra *SchoolModel.edmx*, haga clic en la superficie de diseño y seleccione **actualizar modelo desde base de datos**. En el **agregar** pestaña de la **elija los objetos de base de datos** cuadro de diálogo, expanda **procedimientos almacenados**, seleccione los procedimientos almacenados recién creados y `DeletePerson` procedimiento almacenado y, a continuación, haga clic en **finalizar**.
+Ahora, los procedimientos almacenados se definen en la base de datos, pero se deben agregar al modelo de datos para que estén disponibles para el Entity Framework. Abra *SchoolModel. edmx*, haga clic con el botón secundario en la superficie de diseño y seleccione **Actualizar modelo desde base de datos**. En la pestaña **Agregar** del cuadro de diálogo **Elija los objetos de base de datos** , expanda **procedimientos almacenados**, seleccione los procedimientos almacenados recién creados y el `DeletePerson` procedimiento almacenado y, a continuación, haga clic en **Finalizar**.
 
 [![image20](the-entity-framework-and-aspnet-getting-started-part-7/_static/image6.png)](the-entity-framework-and-aspnet-getting-started-part-7/_static/image5.png)
 
-## <a name="mapping-the-stored-procedures"></a>Asignación de los procedimientos almacenados
+## <a name="mapping-the-stored-procedures"></a>Asignar los procedimientos almacenados
 
-En el Diseñador de modelos de datos, haga clic en el `Student` entidad y seleccione **asignación de procedimientos almacenados**.
+En el diseñador de modelos de datos, haga clic con el botón secundario en la entidad `Student` y seleccione **asignación de procedimiento almacenado**.
 
 [![image21](the-entity-framework-and-aspnet-getting-started-part-7/_static/image8.png)](the-entity-framework-and-aspnet-getting-started-part-7/_static/image7.png)
 
-El **detalles de Mapping** aparece la ventana, en el que puede especificar los procedimientos almacenados que Entity Framework debe usar para insertar, actualizar y eliminar entidades de este tipo.
+Aparece la ventana detalles de la **asignación** , en la que puede especificar procedimientos almacenados que el Entity Framework debe usar para insertar, actualizar y eliminar entidades de este tipo.
 
-[![image22](the-entity-framework-and-aspnet-getting-started-part-7/_static/image10.png)](the-entity-framework-and-aspnet-getting-started-part-7/_static/image9.png)
+[![Image22](the-entity-framework-and-aspnet-getting-started-part-7/_static/image10.png)](the-entity-framework-and-aspnet-getting-started-part-7/_static/image9.png)
 
-Establecer el **insertar** función **InsertStudent**. La ventana muestra una lista de parámetros de procedimiento almacenado, los cuales deben asignarse a una propiedad de entidad. Dos de estas se asignan automáticamente porque los nombres son iguales. No hay ninguna propiedad de entidad denominada `FirstName`, por lo que debe seleccionar manualmente `FirstMidName` desde una lista desplegable que muestra las propiedades de entidad disponible. (Esto es porque ha cambiado el nombre de la `FirstName` propiedad `FirstMidName` en el primer tutorial.)
+Establezca la función **Insert** en **InsertStudent**. En la ventana se muestra una lista de parámetros de procedimientos almacenados, cada uno de los cuales debe estar asignado a una propiedad de entidad. Dos de estos se asignan automáticamente porque los nombres son los mismos. No hay ninguna propiedad de entidad denominada `FirstName`, por lo que debe seleccionar manualmente `FirstMidName` en una lista desplegable que muestra las propiedades de la entidad disponibles. (Esto se debe a que ha cambiado el nombre de la propiedad `FirstName` por `FirstMidName` en el primer tutorial).
 
 [![image23](the-entity-framework-and-aspnet-getting-started-part-7/_static/image12.png)](the-entity-framework-and-aspnet-getting-started-part-7/_static/image11.png)
 
-En el mismo **detalles de Mapping** ventana, asigne el `Update` función a la `UpdateStudent` procedimiento almacenado (asegúrese de especificar `FirstMidName` como el valor del parámetro `FirstName`, tal y como hizo con el `Insert` procedimiento almacenado) y el `Delete` función a la `DeletePerson` procedimiento almacenado.
+En la misma ventana detalles de la **asignación** , asigne la función `Update` al procedimiento almacenado `UpdateStudent` (Asegúrese de especificar `FirstMidName` como el valor del parámetro para `FirstName`, como hizo con el `Insert` procedimiento almacenado) y la función `Delete` en el procedimiento almacenado `DeletePerson`.
 
 [![image01](the-entity-framework-and-aspnet-getting-started-part-7/_static/image14.png)](the-entity-framework-and-aspnet-getting-started-part-7/_static/image13.png)
 
-Siga el mismo procedimiento para asignar el insert, update y delete de procedimientos almacenados para instructores para el `Instructor` entidad.
+Siga el mismo procedimiento para asignar los procedimientos almacenados de inserción, actualización y eliminación para los instructores a la entidad `Instructor`.
 
 [![image02](the-entity-framework-and-aspnet-getting-started-part-7/_static/image16.png)](the-entity-framework-and-aspnet-getting-started-part-7/_static/image15.png)
 
-Los procedimientos almacenados que leen en lugar de actualizar los datos, usa el **Explorador de modelos** escribirlo devuelve ventana para el procedimiento almacenado se asignan a la entidad. En el Diseñador de modelos de datos, haga clic en la superficie de diseño y seleccione **Explorador de modelos**. Abra el **SchoolModel.Store** nodo y, a continuación, abra el **Stored Procedures** nodo. A continuación, haga clic en el `GetCourses` procedimiento almacenado y seleccione **Agregar importación de función**.
+En el caso de los procedimientos almacenados que leen en lugar de actualizar datos, se usa la ventana **Explorador de modelos** para asignar el procedimiento almacenado al tipo de entidad que devuelve. En el diseñador de modelos de datos, haga clic con el botón secundario en la superficie de diseño y seleccione **Explorador de modelos**. Abra el nodo **SchoolModel. Store** y, a continuación, abra el nodo **procedimientos almacenados** . A continuación, haga clic con el botón secundario en el `GetCourses` procedimiento almacenado y seleccione **Agregar importación de función**.
 
 [![image24](the-entity-framework-and-aspnet-getting-started-part-7/_static/image18.png)](the-entity-framework-and-aspnet-getting-started-part-7/_static/image17.png)
 
-En el **Agregar importación de función** cuadro de diálogo **devuelve una colección de** seleccione **entidades**y, a continuación, seleccione `Course` como el tipo de entidad devueltos. Cuando haya terminado, haga clic en **Aceptar**. Guarde y cierre el *.edmx* archivo.
+En el cuadro de diálogo **Agregar importación de función** , en **devuelve una colección de** **entidades**seleccionadas y, a continuación, seleccione `Course` como el tipo de entidad devuelto. Cuando haya terminado, haga clic en **Aceptar**. Guarde y cierre el archivo *. edmx* .
 
 [![image25](the-entity-framework-and-aspnet-getting-started-part-7/_static/image20.png)](the-entity-framework-and-aspnet-getting-started-part-7/_static/image19.png)
 
-## <a name="using-insert-update-and-delete-stored-procedures"></a>Mediante la inserción, actualización y eliminación de los procedimientos almacenados
+## <a name="using-insert-update-and-delete-stored-procedures"></a>Usar procedimientos almacenados INSERT, Update y DELETE
 
-Procedimientos almacenados para insertar, actualizar y eliminar datos se usan por Entity Framework automáticamente después de agregarlos al modelo de datos y les asigna a las entidades adecuadas. Ahora puede ejecutar el *StudentsAdd.aspx* página, y cada vez que crea un nuevo alumno, Entity Framework usará el `InsertStudent` procedimiento almacenado para agregar la nueva fila a la `Student` tabla.
+Los procedimientos almacenados para insertar, actualizar y eliminar datos los utiliza el Entity Framework automáticamente después de agregarlos al modelo de datos y asignarlos a las entidades adecuadas. Ahora puede ejecutar la página *StudentsAdd. aspx* y cada vez que cree un estudiante nuevo, el Entity Framework utilizará el `InsertStudent` procedimiento almacenado para agregar la nueva fila a la tabla de `Student`.
 
 [![image03](the-entity-framework-and-aspnet-getting-started-part-7/_static/image22.png)](the-entity-framework-and-aspnet-getting-started-part-7/_static/image21.png)
 
-Ejecute el *Students.aspx* página y el alumno nuevo aparece en la lista.
+Ejecute la página Students *. aspx* y el nuevo estudiante aparecerá en la lista.
 
 [![image04](the-entity-framework-and-aspnet-getting-started-part-7/_static/image24.png)](the-entity-framework-and-aspnet-getting-started-part-7/_static/image23.png)
 
-Cambie el nombre para comprobar que funciona la función de actualización y, a continuación, elimine el estudiante para comprobar que funciona la función de eliminación.
+Cambie el nombre para comprobar que la función de actualización funciona y, a continuación, elimine el estudiante para comprobar que funciona la función de eliminación.
 
 [![image05](the-entity-framework-and-aspnet-getting-started-part-7/_static/image26.png)](the-entity-framework-and-aspnet-getting-started-part-7/_static/image25.png)
 
-## <a name="using-select-stored-procedures"></a>Uso de procedimientos almacenados Select
+## <a name="using-select-stored-procedures"></a>Usar procedimientos almacenados Select
 
-Entity Framework no se ejecuta automáticamente los procedimientos almacenados como `GetCourses`, y no se pueden utilizar con el `EntityDataSource` control. Para poder utilizarlos, llamarlos desde el código.
+El Entity Framework no ejecuta automáticamente procedimientos almacenados como `GetCourses`y no se pueden usar con el control `EntityDataSource`. Para usarlos, se les llama desde el código.
 
-Abra el *InstructorsCourses.aspx.cs* archivo. El `PopulateDropDownLists` método usa una consulta de LINQ to Entities para recuperar todas las entidades course, por lo que puede recorrer en iteración la lista y determinar las que está asignado un instructor y cuáles están asignados:
+Abra el archivo *InstructorsCourses.aspx.CS* . El método `PopulateDropDownLists` usa una consulta LINQ to Entities para recuperar todas las entidades Course para que pueda recorrer en bucle la lista y determinar a qué se asigna un instructor y cuáles están sin asignar:
 
 [!code-csharp[Main](the-entity-framework-and-aspnet-getting-started-part-7/samples/sample6.cs)]
 
-Reemplazar por el código siguiente:
+Reemplácelo por el código siguiente:
 
 [!code-csharp[Main](the-entity-framework-and-aspnet-getting-started-part-7/samples/sample7.cs)]
 
-La página ahora usa el `GetCourses` procedimiento almacenado para recuperar la lista de todos los cursos. Ejecute la página para comprobar que funciona igual que antes.
+La página ahora usa el `GetCourses` procedimiento almacenado para recuperar la lista de todos los cursos. Ejecute la página para comprobar que funciona como antes.
 
-(Es posible que las propiedades de navegación de las entidades recuperadas por un procedimiento almacenado no se rellena automáticamente con los datos relacionados con las entidades, según `ObjectContext` configuración predeterminada. Para obtener más información, consulte [cargar objetos relacionados](https://msdn.microsoft.com/library/bb896272.aspx) en MSDN Library.)
+(Es posible que las propiedades de navegación de las entidades recuperadas por un procedimiento almacenado no se rellenen automáticamente con los datos relacionados con dichas entidades, en función de la configuración predeterminada de `ObjectContext`. Para obtener más información, vea [cargar objetos relacionados](https://msdn.microsoft.com/library/bb896272.aspx) en MSDN Library).
 
-En el siguiente tutorial, obtendrá información sobre cómo usar la funcionalidad de datos dinámicos para facilitar la prueba y el programa de reglas de formato y validación de datos. En lugar de especificar en las reglas de cada página web como las cadenas de formato de datos y si se requiere un campo, puede especificar estas reglas en los metadatos del modelo de datos y se aplican automáticamente en todas las páginas.
+En el siguiente tutorial, aprenderá a usar la funcionalidad de datos dinámicos para que sea más fácil programar y probar reglas de validación y formato de datos. En lugar de especificar en cada una de las reglas de página web como cadenas de formato de datos y si se requiere o no un campo, puede especificar dichas reglas en los metadatos del modelo de datos y se aplican automáticamente en todas las páginas.
 
 > [!div class="step-by-step"]
 > [Anterior](the-entity-framework-and-aspnet-getting-started-part-6.md)

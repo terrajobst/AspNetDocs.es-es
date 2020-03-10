@@ -9,11 +9,11 @@ ms.assetid: 48b58a18-5ea4-468c-b326-f35331b3e1e9
 msc.legacyurl: /web-forms/overview/older-versions-getting-started/master-pages/urls-in-master-pages-cs
 msc.type: authoredcontent
 ms.openlocfilehash: 2551a5361256234883bb37e46e794037284445a4
-ms.sourcegitcommit: 22fbd8863672c4ad6693b8388ad5c8e753fb41a2
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/28/2019
-ms.locfileid: "74640962"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78473455"
 ---
 # <a name="urls-in-master-pages-c"></a>Direcciones URL en páginas maestras (C#)
 
@@ -58,7 +58,7 @@ A continuación, actualice el archivo de `Web.sitemap` para incluir una nueva en
 
 [!code-xml[Main](urls-in-master-pages-cs/samples/sample3.xml)]
 
-La página de `Default.aspx` recién creada debe tener cuatro controles de contenido correspondientes a los cuatro ContentPlaceHolders en `Site.master`. Agregue texto al control de contenido que hace referencia a la `MainContent` ContentPlaceHolder y, a continuación, visite la página a través de un explorador. Como se muestra en la figura 2, el explorador no puede encontrar el archivo de imagen de `PoweredByASPNET.gif`. ¿Qué está ocurriendo aquí?
+La página de `Default.aspx` recién creada debe tener cuatro controles de contenido correspondientes a los cuatro ContentPlaceHolders en `Site.master`. Agregue texto al control de contenido que hace referencia a la `MainContent` ContentPlaceHolder y, a continuación, visite la página a través de un explorador. Como se muestra en la figura 2, el explorador no puede encontrar el archivo de imagen de `PoweredByASPNET.gif`. ¿Qué ocurre aquí?
 
 La página de contenido de `~/Admin/Default.aspx` se envía al mismo código HTML para la región de `footerContent` que la página `About.aspx`:
 

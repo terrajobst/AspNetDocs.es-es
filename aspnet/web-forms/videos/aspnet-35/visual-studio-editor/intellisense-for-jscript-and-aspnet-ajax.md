@@ -1,27 +1,27 @@
 ---
 uid: web-forms/videos/aspnet-35/visual-studio-editor/intellisense-for-jscript-and-aspnet-ajax
-title: IntelliSense para Jscript y ASP.NET AJAX | Microsoft Docs
+title: IntelliSense para JScript y ASP.NET AJAX | Microsoft Docs
 author: rick-anderson
-description: Este vídeo proporciona información general de las nuevas características de Intellisense para JavaScript en Visual Studio 2008 incluidos los métodos de JavaScript de core, externo .js archivos i...
+description: Este vídeo proporciona información general sobre las nuevas características de IntelliSense para JavaScript en Visual Studio 2008, incluidos los métodos básicos de JavaScript, archivos. js externos i...
 ms.author: riande
 ms.date: 11/15/2007
 ms.assetid: 9d490341-f228-432e-a386-e6e51476c165
 msc.legacyurl: /web-forms/videos/aspnet-35/visual-studio-editor/intellisense-for-jscript-and-aspnet-ajax
 msc.type: video
 ms.openlocfilehash: be9719fa00f381b76236b964eb14f070c7b0f2bc
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59409868"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78462385"
 ---
 # <a name="intellisense-for-jscript-and-aspnet-ajax"></a>IntelliSense para Jscript y ASP.NET AJAX
 
 por [Chris Pels](https://twitter.com/chrispels)
 
-Este vídeo proporciona información general de las nuevas características de Intellisense para JavaScript en Visual Studio 2008 incluidos los métodos de JavaScript de core, archivos .js externas en las páginas .aspx, entre los archivos .js externo, con las bibliotecas de Microsoft core como MicrosoftAjax.js, cliente Comportamientos de JavaScript, controles, bibliotecas y servicios web. Además, se muestra la integración de los nuevos comentarios XML para JavaScript con Intellisense.
+Este vídeo proporciona información general sobre las nuevas características de IntelliSense para JavaScript en Visual Studio 2008, incluidos los métodos básicos de JavaScript, los archivos. js externos en páginas. aspx, entre archivos externos. js, con las bibliotecas principales de Microsoft como MicrosoftAjax. js, cliente Comportamientos, controles y bibliotecas de JavaScript, y servicios Web. Además, se muestra la integración de los nuevos comentarios XML para JavaScript con IntelliSense.
 
-[&#9654;Vea el vídeo (20 minutos)](https://channel9.msdn.com/Blogs/ASP-NET-Site-Videos/intellisense-for-jscript-and-aspnet-ajax)
+[&#9654;Ver vídeo (20 minutos)](https://channel9.msdn.com/Blogs/ASP-NET-Site-Videos/intellisense-for-jscript-and-aspnet-ajax)
 
 > [!div class="step-by-step"]
 > [Anterior](multi-targeting-support-in-visual-studio-2008.md)

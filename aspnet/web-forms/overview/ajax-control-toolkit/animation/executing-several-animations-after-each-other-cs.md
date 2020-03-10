@@ -9,11 +9,11 @@ ms.assetid: 7dc02b18-2b5d-4844-b7c5-cbd818477163
 msc.legacyurl: /web-forms/overview/ajax-control-toolkit/animation/executing-several-animations-after-each-other-cs
 msc.type: authoredcontent
 ms.openlocfilehash: e378ac038796dbd44e89d099532b9e186dcf673f
-ms.sourcegitcommit: 22fbd8863672c4ad6693b8388ad5c8e753fb41a2
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/28/2019
-ms.locfileid: "74575446"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78497827"
 ---
 # <a name="executing-several-animations-after-each-other-c"></a>Ejecutar varias animaciones una tras otra (C#)
 

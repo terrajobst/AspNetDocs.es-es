@@ -1,19 +1,19 @@
 ---
 uid: mvc/overview/older-versions-1/nerddinner/implement-efficient-data-paging
-title: Implementar la paginación eficiente de los datos | Microsoft Docs
+title: Implementar la paginación eficaz de los datos | Microsoft Docs
 author: microsoft
-description: Paso 8 muestra cómo agregar compatibilidad con la paginación a nuestra dirección URL de/dinners para que en lugar de mostrar 1000s de instancias dinners a la vez, se mostrará solo 10 instancias dinners próximos a...
+description: En el paso 8 se muestra cómo agregar compatibilidad con la paginación a nuestra dirección URL de/Dinners para que, en lugar de mostrar miles de cenas a la vez, solo se muestren las 10 cenas próximas en...
 ms.author: riande
 ms.date: 07/27/2010
 ms.assetid: adea836d-dbc2-4005-94ea-53aef09e9e34
 msc.legacyurl: /mvc/overview/older-versions-1/nerddinner/implement-efficient-data-paging
 msc.type: authoredcontent
 ms.openlocfilehash: 2d9a0dba381b71755ac626f76d52bc5bcb434447
-ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/06/2019
-ms.locfileid: "65125642"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78486487"
 ---
 # <a name="implement-efficient-data-paging"></a>Implementar la paginación de datos eficaz
 
@@ -21,119 +21,119 @@ por [Microsoft](https://github.com/microsoft)
 
 [Descargar PDF](http://aspnetmvcbook.s3.amazonaws.com/aspnetmvc-nerdinner_v1.pdf)
 
-> Este es el paso 8 de manera gratuita ["" la aplicación NerdDinner](introducing-the-nerddinner-tutorial.md) que le guía a través cómo compilar un pequeño, pero completa, aplicación web mediante ASP.NET MVC 1.
+> Este es el paso 8 de un [tutorial de aplicación "NerdDinner"](introducing-the-nerddinner-tutorial.md) gratuito en el que se explica cómo crear una aplicación web pequeña, pero completa, con ASP.NET MVC 1.
 > 
-> Paso 8 muestra cómo agregar compatibilidad con la paginación a nuestra dirección URL de/dinners para que en lugar de mostrar 1000s de instancias dinners a la vez, solo podrá mostrar 10 instancias dinners próximas a la vez - y permitir a los usuarios finales página atrás y hacia delante a través de la lista completa de una manera descriptiva SEO.
+> En el paso 8 se muestra cómo agregar compatibilidad de paginación a nuestra dirección URL de/Dinners para que, en lugar de mostrar miles de cenas a la vez, solo se muestren 10 próximas cenas a la vez, y que los usuarios finales puedan avanzar y retroceder por toda la lista de una manera fácil de SEO.
 > 
-> Si usa ASP.NET MVC 3, se recomienda que siga el [Introducción a trabajar con MVC 3](../../older-versions/getting-started-with-aspnet-mvc3/cs/intro-to-aspnet-mvc-3.md) o [MVC Music Store](../../older-versions/mvc-music-store/mvc-music-store-part-1.md) tutoriales.
+> Si usa ASP.NET MVC 3, se recomienda seguir los tutoriales [de la introducción con MVC 3](../../older-versions/getting-started-with-aspnet-mvc3/cs/intro-to-aspnet-mvc-3.md) o MVC [Music Store](../../older-versions/mvc-music-store/mvc-music-store-part-1.md) .
 
-## <a name="nerddinner-step-8-paging-support"></a>Paso 8 de NerdDinner: Compatibilidad con la paginación
+## <a name="nerddinner-step-8-paging-support"></a>NerdDinner paso 8: compatibilidad con la paginación
 
-Si el sitio se realiza correctamente, tendrá miles de instancias dinners próximas. Es necesario para asegurarse de que se adapta para administrar todas estas cenas tienen nuestra interfaz de usuario y permite a los usuarios examinar ellos. Para habilitar esto, vamos a agregar compatibilidad con la paginación a nuestro */dinners* dirección URL para que en lugar de mostrar 1000s de instancias dinners al mismo tiempo, se le solo mostrar 10 instancias dinners próximas a la vez - y permiten a los usuarios finales página atrás y hacia delante a través de la lista completa de una manera descriptiva SEO.
+Si el sitio se realiza correctamente, tendrá miles de cenas. Tenemos que asegurarnos de que la interfaz de usuario se escala para controlar todas estas cenas y permite que los usuarios las examinen. Para habilitar esta opción, agregaremos compatibilidad con la paginación a nuestra dirección URL de */Dinners* para que en lugar de mostrar miles de cenas a la vez, solo mostraremos las 10 cenas a la vez y permitiremos a los usuarios finales avanzar y retroceder por toda la lista de una manera fácil de SEO.
 
-### <a name="index-action-method-recap"></a>Resumen de método de acción de Index()
+### <a name="index-action-method-recap"></a>Resumen del método de acción index ()
 
-El método de acción Index() dentro de nuestra clase DinnersController actualmente es similar a la siguiente:
+El método de acción index () dentro de nuestra clase DinnersController tiene actualmente el siguiente aspecto:
 
 [!code-csharp[Main](implement-efficient-data-paging/samples/sample1.cs)]
 
-Cuando se realiza una solicitud a la */dinners* dirección URL, se recupera una lista de todas las próximas dinners y, a continuación, presenta una lista de todas ellas:
+Cuando se realiza una solicitud a la dirección URL de */Dinners* , se recupera una lista de todas las cenas futuras y, a continuación, se presenta una lista de todas ellas:
 
 ![](implement-efficient-data-paging/_static/image1.png)
 
-### <a name="understanding-iqueryablelttgt"></a>Understanding IQueryable&lt;T&gt;
+### <a name="understanding-iqueryablelttgt"></a>Descripción de IQueryable&lt;T&gt;
 
-*IQueryable&lt;T&gt;*  es una interfaz que se introdujo con LINQ como parte de .NET 3.5. Habilita escenarios eficaces "aplazamiento" se puede emplear las ventajas de implementar la compatibilidad con la paginación.
+*IQueryable&lt;t&gt;* es una interfaz que se presentó con LINQ como parte de .net 3,5. Permite escenarios eficaces de "ejecución diferida" que podemos aprovechar para implementar la compatibilidad con la paginación.
 
-En nuestra instancia DinnerRepository nos estamos devolviendo un tipo IQueryable&lt;Dinner&gt; secuencia desde nuestro método FindUpcomingDinners():
+En nuestro DinnerRepository, se devuelve una secuencia de&gt; de IQueryable&lt;cena desde nuestro método FindUpcomingDinners ():
 
 [!code-csharp[Main](implement-efficient-data-paging/samples/sample2.cs)]
 
-IQueryable&lt;Dinner&gt; objeto devuelto por el método FindUpcomingDinners() encapsula una consulta para recuperar objetos de la cena de nuestra base de datos mediante LINQ to SQL. Lo que es importante, no se ejecutará la consulta en la base de datos hasta que se intente acceso/iterar por los datos en la consulta, o hasta que llamamos al método ToList() en él. El código que llama a nuestro método FindUpcomingDinners() puede optar por agregar filtros de las operaciones "encadenados" adicionales al IQueryable&lt;Dinner&gt; objeto antes de ejecutar la consulta. LINQ to SQL, a continuación, es lo suficientemente inteligente como para ejecutar la consulta combinada en la base de datos cuando se solicitan los datos.
+El objeto IQueryable&lt;cena&gt; devuelto por nuestro método FindUpcomingDinners () encapsula una consulta para recuperar objetos cena de nuestra base de datos mediante LINQ to SQL. Lo importante es que no ejecute la consulta en la base de datos hasta que se intente acceder a los datos de la consulta o iterarlos en ellos, o hasta que se llame al método ToList () en él. El código que llama al método FindUpcomingDinners () puede optar entre agregar operaciones o filtros adicionales "encadenados" al objeto IQueryable&lt;cena&gt; antes de ejecutar la consulta. LINQ to SQL es lo suficientemente inteligente como para ejecutar la consulta combinada en la base de datos cuando se solicitan los datos.
 
-Para implementar la lógica de paginación podemos actualizar método de acción de Index() de nuestro DinnersController para que se aplique operadores "Skip" y "Take" adicionales al IQueryable devuelto&lt;Dinner&gt; secuencia antes de llamar a ToList() en él:
+Para implementar la lógica de paginación, podemos actualizar el método de acción de índice () de DinnersController para que aplique operadores "SKIP" y "Take" adicionales a la secuencia IQueryable&lt;cena&gt; antes de llamar a ToList () en ella:
 
 [!code-csharp[Main](implement-efficient-data-paging/samples/sample3.cs)]
 
-El código anterior omite los 10 primeros dinners próximos en la base de datos y, a continuación, devuelve las 20 cenas. LINQ to SQL es lo suficientemente inteligente como para crear una consulta optimizada de SQL que realiza esta omitiendo la lógica en la base de datos SQL y no en el servidor web. Esto significa que, incluso si tenemos millones de instancias Dinners próximos en la base de datos, se recuperarán sólo las 10 que queremos como parte de esta solicitud (lo que eficaz y escalable).
+El código anterior omite las 10 primeras cenas en la base de datos y, a continuación, devuelve 20 cenas. LINQ to SQL es lo suficientemente inteligente como para construir una consulta SQL optimizada que lleve a cabo esta lógica de omisión en la base de datos SQL, y no en el servidor Web. Esto significa que, aunque tengamos millones de cenas en la base de datos, solo se recuperarán los 10 que queremos como parte de esta solicitud (lo que hace que sea eficaz y escalable).
 
 ### <a name="adding-a-page-value-to-the-url"></a>Agregar un valor de "página" a la dirección URL
 
-En lugar de codificar un intervalo de páginas específico, desearemos nuestras direcciones URL para incluir un parámetro de "página" que indica el intervalo de la cena solicita un usuario.
+En lugar de codificar de forma rígida un intervalo de páginas específico, queremos que nuestras direcciones URL incluyan un parámetro "página" que indique el intervalo de cena que solicita un usuario.
 
-#### <a name="using-a-querystring-value"></a>Uso de un valor de cadena de consulta
+#### <a name="using-a-querystring-value"></a>Usar un valor QueryString
 
-El código siguiente muestra cómo podemos actualizar nuestro método de acción de Index() para admitir un parámetro de cadena de consulta y habilitar las direcciones URL como */dinners? página = 2*:
+En el código siguiente se muestra cómo se puede actualizar el método de acción index () para admitir un parámetro QueryString y habilitar direcciones URL como */Dinners? Page = 2*:
 
 [!code-csharp[Main](implement-efficient-data-paging/samples/sample4.cs)]
 
-El método de acción de Index() anterior tiene un parámetro denominado "página". El parámetro se declara como un entero que acepta valores null (que es lo que int? indica). Esto significa que el */dinners? página = 2* URL hará que un valor de "2" que se pasarán como el valor del parámetro. El */dinners* dirección URL (sin un valor de cadena de consulta) hará que un valor null que se pasa.
+El método de acción index () anterior tiene un parámetro denominado "Page". El parámetro se declara como un entero que acepta valores NULL (es decir, int? indica). Esto significa que la dirección URL de */Dinners? Page = 2* hará que se pase un valor de "2" como valor de parámetro. La dirección URL de */Dinners* (sin un valor QueryString) hará que se pase un valor null.
 
-Nos estamos multiplicar el valor de la página por el tamaño de página (en este caso 10 filas) para determinar cuántas instancias dinners para pasarla por alto. Usamos el [C# "" operador de incorporación null (?) ](https://weblogs.asp.net/scottgu/archive/2007/09/20/the-new-c-null-coalescing-operator-and-using-it-with-linq.aspx) lo que resulta útil cuando se trabaja con tipos que aceptan valores NULL. El código anterior asigna el valor 0 de página si el parámetro de página es null.
+Estamos multiplicando el valor de la página por el tamaño de la página (en este caso, 10 filas) para determinar cuántas cenas debe omitir. Estamos usando el [ C# operador "Coalesce" (??) null,](https://weblogs.asp.net/scottgu/archive/2007/09/20/the-new-c-null-coalescing-operator-and-using-it-with-linq.aspx) que es útil cuando se trabaja con tipos que aceptan valores NULL. El código anterior asigna el valor 0 a la página si el parámetro de página es NULL.
 
-#### <a name="using-embedded-url-values"></a>Con los valores de dirección URL incrustada
+#### <a name="using-embedded-url-values"></a>Usar valores de URL insertados
 
-Una alternativa al uso de un valor de cadena de consulta sería incrustar el parámetro de página dentro de la propia URL. Por ejemplo: */Dinners/Page/2* o */Dinners/2*. ASP.NET MVC incluye un eficaz motor de enrutamiento de dirección URL que facilita la compatibilidad con escenarios como éste.
+Una alternativa al uso de un valor QueryString sería incrustar el parámetro Page dentro de la propia dirección URL real. Por ejemplo: */Dinners/Page/2* o */Dinners/2*. ASP.NET MVC incluye un potente motor de enrutamiento de direcciones URL que facilita la compatibilidad con escenarios como este.
 
-Podemos registrar reglas de enrutamientos personalizadas que se asigna ninguna dirección URL o la dirección URL entrante, dar formato a cualquier método de clase o una acción de controlador que deseamos. Todo lo que necesitamos to-do es abrir el archivo Global.asax dentro de nuestro proyecto:
+Podemos registrar reglas de enrutamiento personalizadas que asignen cualquier dirección URL o formato de dirección URL entrante a cualquier método de acción o clase de controlador que desee. Lo único que debemos hacer es abrir el archivo global. asax dentro de nuestro proyecto:
 
 ![](implement-efficient-data-paging/_static/image2.png)
 
-Y, a continuación, registre una nueva regla de asignación mediante el método auxiliar MapRoute() como la primera llamada a las rutas. MapRoute() siguiente:
+Y, a continuación, registre una nueva regla de asignación con el método auxiliar MapRoute () como la primera llamada a las rutas. MapRoute () a continuación:
 
 [!code-csharp[Main](implement-efficient-data-paging/samples/sample5.cs)]
 
-Anteriormente, se está registrando una nueva regla de enrutamiento denominada "UpcomingDinners". Nos estamos indicando que tiene el formato de dirección URL "Dinners/página {páginas}", donde {page} es un valor de parámetro incrustado dentro de la dirección URL. El tercer parámetro al método MapRoute() indica que deberíamos asignamos las direcciones URL que coinciden con este formato para el método de acción Index() en la clase DinnersController.
+Por encima, registramos una nueva regla de enrutamiento denominada "UpcomingDinners". Estamos indicando que tiene el formato de dirección URL "cenas/Page/{Page}", donde {Page} es un valor de parámetro incrustado en la dirección URL. El tercer parámetro al método MapRoute () indica que se deben asignar las direcciones URL que coinciden con este formato al método de acción index () en la clase DinnersController.
 
-Podemos usar exactamente el mismo Index() código que teníamos antes con nuestro escenario de cadena de consulta: excepto ahora nuestro parámetro "página" procederán de la dirección URL y no la cadena de consulta:
+Podemos usar el mismo código de índice () exacto que teníamos antes con el escenario de cadena de cadenas, excepto que ahora nuestro parámetro de "página" proviene de la dirección URL y no de la cadena de QueryString:
 
 [!code-csharp[Main](implement-efficient-data-paging/samples/sample6.cs)]
 
-Y ahora al ejecutar la aplicación y escriba en */dinners* veremos los 10 primeros dinners próximas:
+Y ahora, cuando ejecutemos la aplicación y escribamos en */Dinners* , veremos las 10 primeras cenas:
 
 ![](implement-efficient-data-paging/_static/image3.png)
 
-Y cuando se escriba en */Dinners/Page/1* se verá la página siguiente de instancias dinners:
+Y cuando escribamos en */Dinners/Page/1* , veremos la siguiente página de cenas:
 
 ![](implement-efficient-data-paging/_static/image4.png)
 
-### <a name="adding-page-navigation-ui"></a>Adición de la interfaz de usuario de navegación de páginas
+### <a name="adding-page-navigation-ui"></a>Agregar interfaz de usuario de navegación de páginas
 
-El último paso para completar este escenario de paginación será implementar la navegación de "siguiente" y "anterior" interfaz de usuario dentro de nuestra plantilla de vista para permitir que los usuarios saltar fácilmente los datos de la cena.
+El último paso para completar el escenario de paginación es implementar la interfaz de usuario de navegación "siguiente" y "anterior" en nuestra plantilla de vista para que los usuarios puedan omitir fácilmente los datos de la cena.
 
-Para implementar esto correctamente, necesitaremos saber el número total de instancias Dinners de la base de datos, así como la forma muchas páginas de datos de esto se traduce en. Necesitaremos calcular si el valor de "página" solicitada actualmente está al principio o al final de los datos y mostrar u ocultar la interfaz de usuario "anterior" y "siguiente" en consecuencia. Podríamos implementamos esta lógica dentro de nuestro método de acción Index(). También podemos agregar una clase auxiliar para nuestro proyecto que encapsula esta lógica de una manera más reutilizable.
+Para implementarlo correctamente, es necesario conocer el número total de cenas en la base de datos, así como cuántas páginas de datos se traducen en. A continuación, tendremos que calcular si el valor de "página" solicitado actualmente está al principio o al final de los datos, y mostrar u ocultar la interfaz de usuario "anterior" y "siguiente" en consecuencia. Podríamos implementar esta lógica en nuestro método de acción index (). Como alternativa, podemos agregar una clase auxiliar a nuestro proyecto que encapsula esta lógica de forma más reutilizable.
 
-A continuación es una clase auxiliar "PaginatedList" simple que se deriva de la lista&lt;T&gt; una clase de colección integrados en .NET Framework. Implementa una clase de colección reutilizable que puede usarse para paginar cualquier secuencia de datos de IQueryable. En nuestra aplicación NerdDinner tendremos trabajar a través de IQueryable&lt;Dinner&gt; resultados, pero podría fácilmente usarse contra IQueryable&lt;producto&gt; o IQueryable&lt;cliente&gt;da como resultado en otros escenarios de aplicación:
+A continuación se muestra una sencilla clase auxiliar "PaginatedList" que deriva de la lista&lt;T&gt; clase de colección integrada en el .NET Framework. Implementa una clase de colección reutilizable que se puede utilizar para paginar cualquier secuencia de datos IQueryable. En nuestra aplicación de NerdDinner, trabajaremos en IQueryable&lt;cena&gt; resultados, pero se podría usar fácilmente con IQueryable&lt;Product&gt; o IQueryable&lt;Customer&gt; resultados en otros escenarios de aplicación:
 
 [!code-csharp[Main](implement-efficient-data-paging/samples/sample7.cs)]
 
-Tenga en cuenta sobre cómo calcula y, a continuación, expone propiedades como "PageIndex", "PageSize", "TotalCount" y "TotalPages". También, a continuación, expone dos propiedades de aplicación auxiliar "HasPreviousPage" y "HasNextPage" que indican si la página de datos de la colección está al principio o al final de la secuencia original. El código anterior provocará dos consultas SQL ejecutarlas: la primera para recuperar el recuento del número total de objetos de la cena (Esto no devuelve los objetos; en su lugar realiza una instrucción "SELECT COUNT" que devuelve un entero) y la segunda para recuperar solo las filas de datos que necesitamos, desde nuestra base de datos para la página de datos actual.
+Observe lo anterior cómo calcula y expone propiedades como "PageIndex", "PageSize", "TotalCount" y "TotalPages". También expone dos propiedades auxiliares "HasPreviousPage" y "HasNextPage" que indican si la página de datos de la colección está al principio o al final de la secuencia original. El código anterior hará que se ejecuten dos consultas SQL: la primera para recuperar el recuento del número total de objetos de cenas (esto no devuelve los objetos, sino que realiza una instrucción "SELECT COUNT" que devuelve un entero) y el segundo para recuperar solo las filas de datos que necesitamos de nuestra base de datos para la página de datos actual.
 
-A continuación, podemos actualizar nuestro método de aplicación auxiliar DinnersController.Index() para crear un PaginatedList&lt;Dinner&gt; desde nuestro DinnerRepository.FindUpcomingDinners() resultado y pasarlo a nuestra plantilla de vista:
+A continuación, podemos actualizar el método de la aplicación auxiliar DinnersController. index () para crear un PaginatedList&lt;cena&gt; desde el resultado de DinnerRepository. FindUpcomingDinners () y pasarlo a nuestra plantilla de vista:
 
 [!code-csharp[Main](implement-efficient-data-paging/samples/sample8.cs)]
 
-A continuación, podemos actualizar la plantilla de vista \Views\Dinners\Index.aspx va a heredar ViewPage&lt;NerdDinner.Helpers.PaginatedList&lt;Dinner&gt; &gt; en lugar de ViewPage&lt;IEnumerable&lt;Dinner&gt;&gt;y, a continuación, agregue el código siguiente a la parte inferior de la plantilla de vista para mostrar u ocultar la interfaz de usuario de navegación anterior y siguiente:
+A continuación, podemos actualizar la plantilla de vista \Views\Dinners\Index.aspx para que herede de ViewPage&lt;NerdDinner. helpers. PaginatedList&lt;cena&gt;&gt; en lugar de ViewPage&lt;IEnumerable&lt;cena&gt;&gt;y, a continuación, agregue el código siguiente al final de la plantilla de vista para mostrar u ocultar la interfaz de usuario de navegación siguiente y anterior:
 
 [!code-aspx[Main](implement-efficient-data-paging/samples/sample9.aspx)]
 
-Tenga en cuenta sobre cómo estamos usando el método auxiliar Html.RouteLink() para generar nuestra hipervínculos. Este método es similar al método auxiliar Html.ActionLink() que hemos usado anteriormente. La diferencia es que se genera la dirección URL con el "UpcomingDinners" configuramos dentro de nuestro archivo Global.asax de regla de enrutamiento. Esto garantiza que vamos a generar las direcciones URL para el método de acción Index() que tienen el formato: */dinners/página / {page}* : donde el valor de {la página de} es una variable, ofrecemos anteriormente según el PageIndex actual.
+Observe cómo se usa el método auxiliar HTML. RouteLink () para generar los hipervínculos. Este método es similar al método auxiliar HTML. ActionLink () que hemos usado previamente. La diferencia es que la dirección URL se genera mediante la regla de enrutamiento "UpcomingDinners" que se configura en el archivo global. asax. Esto garantiza que se generen direcciones URL en el método de acción index () que tenga el formato: */Dinners/Page/{Page}* , donde el valor de {Page} es una variable que se proporciona anteriormente basándose en el PageIndex actual.
 
-Y ahora Cuando ejecutemos nuestra aplicación nuevo veremos 10 instancias dinners a la vez en el explorador:
+Y ahora, cuando ejecutemos de nuevo la aplicación, veremos 10 cenas a la vez en nuestro explorador:
 
 ![](implement-efficient-data-paging/_static/image5.png)
 
-También tenemos &lt; &lt; &lt; y &gt; &gt; &gt; navegación de la interfaz de usuario en la parte inferior de la página que nos permite saltar hacia delante y hacia atrás a través de nuestros datos mediante direcciones URL accesibles de motor de búsqueda:
+También tenemos &lt;&lt;&lt; y &gt;&gt;la interfaz de usuario de navegación en la parte inferior de la página, lo que nos permite omitir la redirección hacia delante y hacia atrás por los datos mediante las direcciones URL accesibles del motor de búsqueda:&gt;
 
 ![](implement-efficient-data-paging/_static/image6.png)
 
-| **Tema de lado: Comprender las implicaciones de IQueryable&lt;T&gt;** |
+| **Tema del lado: Descripción de las implicaciones de IQueryable&lt;T&gt;** |
 | --- |
-| IQueryable&lt;T&gt; es una característica muy eficaz que permite una variedad de escenarios de ejecución aplazada interesantes (como paginación y la composición según las consultas). Como con todas las características eficaces, desea tener cuidado con cómo utilizarlo y asegúrese de que no está en peligro. Es importante reconocer que devolver un IQueryable&lt;T&gt; resultado desde el repositorio permite que el código que realiza la llamada anexar en los métodos de operador encadenadas al mismo y, por lo que participan en la ejecución de consultas ultimate. Si no desea proporcionar esta capacidad de código de llamada, a continuación, se debe devolver hacer una copia de IList&lt;T&gt; o IEnumerable&lt;T&gt; results - que contienen los resultados de una consulta que ya se ha ejecutado. Para escenarios de paginación esto requeriría que se va a insertar la lógica de paginación de datos reales en el método del repositorio que se llama. En este escenario podríamos Actualizamos nuestro método de buscador FindUpcomingDinners() para que tenga una firma que ya sea un PaginatedList devuelve: PaginatedList&lt; Dinner&gt; {} FindUpcomingDinners (pageIndex int, int pageSize) o devolver un IList&lt;Dinner&gt;y utilice "totalCount" parámetro de salida para devolver el recuento total de instancias Dinners: IList&lt;Dinner&gt; FindUpcomingDinners (pageIndex int, int pageSize, out int totalCount) {} |
+| IQueryable&lt;T&gt; es una característica muy eficaz que permite una variedad de escenarios de ejecución aplazados interesantes (como las consultas basadas en la paginación y la composición). Al igual que con todas las características eficaces, se recomienda tener cuidado con la forma de usarla y asegurarse de que no se abusa de él. Es importante reconocer que devolver un IQueryable&lt;T&gt; resultado del repositorio permite que el código de llamada se anexe a él en métodos de operador encadenados, por lo que debe participar en la última ejecución de la consulta. Si no desea proporcionar código de llamada a esta capacidad, debe devolver IList&lt;T&gt; o IEnumerable&lt;T&gt; resultados, que contienen los resultados de una consulta que ya se ha ejecutado. En los escenarios de paginación, esto requeriría que inserte la lógica de paginación de datos real en el método de repositorio al que se llama. En este escenario, podríamos actualizar nuestro método Finder de FindUpcomingDinners () para que tenga una firma que devolviera un PaginatedList: PaginatedList&lt; cena&gt; FindUpcomingDinners (int pageIndex, int PageSize) {} o Return a IList&lt;cena&gt;y use un parámetro out "totalCount" para devolver el recuento total de cenas: IList&lt;cena&gt; FindUpcomingDinners (int pageIndex, int PageSize, out int totalCount) {} |
 
 ### <a name="next-step"></a>Paso siguiente
 
-Ahora veamos cómo podemos agregar compatibilidad con autenticación y autorización a nuestra aplicación.
+Ahora veamos cómo podemos agregar compatibilidad con la autenticación y la autorización a nuestra aplicación.
 
 > [!div class="step-by-step"]
 > [Anterior](re-use-ui-using-master-pages-and-partials.md)

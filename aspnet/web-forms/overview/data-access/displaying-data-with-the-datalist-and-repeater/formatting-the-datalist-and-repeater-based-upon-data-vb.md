@@ -9,11 +9,11 @@ ms.assetid: e2f401ae-37bb-4b19-aa97-d6b385d40f88
 msc.legacyurl: /web-forms/overview/data-access/displaying-data-with-the-datalist-and-repeater/formatting-the-datalist-and-repeater-based-upon-data-vb
 msc.type: authoredcontent
 ms.openlocfilehash: c9b60e4dacd992962942034e84c01cb82e039c81
-ms.sourcegitcommit: 22fbd8863672c4ad6693b8388ad5c8e753fb41a2
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/28/2019
-ms.locfileid: "74636696"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78508099"
 ---
 # <a name="formatting-the-datalist-and-repeater-based-upon-data-vb"></a>Dar formato a los controles DataList y Repeater en función de los datos (VB)
 

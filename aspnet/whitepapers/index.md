@@ -2,18 +2,18 @@
 uid: whitepapers/index
 title: Notas del producto | Microsoft Docs
 author: rick-anderson
-description: En esta página encontrará las notas del producto que le ayudarán a instalar y configurar ASP.NET y para ayudarle a escribir aplicaciones ASP.NET seguras, rápidas y flexibles.
+description: En esta página encontrará notas del producto para ayudarle a instalar y configurar ASP.NET y para ayudarle a escribir aplicaciones ASP.NET seguras, rápidas y flexibles.
 ms.author: riande
 ms.date: 11/15/2011
 ms.assetid: 3824e2d7-446f-406b-9c8b-5a1634359a78
 msc.legacyurl: ''
 msc.type: content
 ms.openlocfilehash: 6d1251da10705867ad25b53afd69bb70c647fc18
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59388665"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78520597"
 ---
 # <a name="whitepapers"></a>Notas del producto
 
@@ -28,7 +28,7 @@ ms.locfileid: "59388665"
 - [ASP.NET MVC 3](mvc3-release-notes.md)
 - [ASP.NET MVC 4](mvc4-beta-release-notes.md)
 - [Ejecutar ASP.NET 1.1 con IIS 6.0](aspnet-and-iis6.md)
-- [Cómo: Agregar las páginas móviles a los formularios de ASP.NET Web / aplicación de MVC](add-mobile-pages-to-your-aspnet-web-forms-mvc-application.md)
+- [Cómo agregar páginas de dispositivos móviles a los formularios Web Forms o a la aplicación de MVC de ASP.NET](add-mobile-pages-to-your-aspnet-web-forms-mvc-application.md)
 - [Corregir el error "Aplicación de servidor no disponible" después de aplicar la actualización de seguridad de Internet Explorer](ms03-32-issue.md)
 - [Ejecución en paralelo de ASP.NET de .NET Framework 1.0 y 1.1](side-by-side-with-10.md)
 - [ASP.NET MVC 4](mvc4-release-notes.md)

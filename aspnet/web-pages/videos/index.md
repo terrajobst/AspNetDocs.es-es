@@ -9,16 +9,16 @@ ms.assetid: febf2824-4e3d-4dc6-84c5-f99777ec6144
 msc.legacyurl: /web-pages/videos
 msc.type: book
 ms.openlocfilehash: 4c22b024240740d971740e9f043231ccbcdc47fb
-ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/06/2019
-ms.locfileid: "65127683"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78512785"
 ---
 # <a name="videos"></a>Vídeos
 
 > [!NOTE] 
-> WebMatrix no se recomienda como un entorno de desarrollo integrado para ASP.NET Web Pages. Use [Visual Studio](xref:aspnet/web-pages/overview/getting-started/program-asp-net-web-pages-in-visual-studio) o [código de Visual Studio](https://code.visualstudio.com/).
+> WebMatrix ya no se recomienda como un entorno de desarrollo integrado para ASP.NET Web Pages. Use [Visual Studio](xref:aspnet/web-pages/overview/getting-started/program-asp-net-web-pages-in-visual-studio) o [Visual Studio Code](https://code.visualstudio.com/).
 
 - [Introducción](introduction/index.md)
 
@@ -32,7 +32,7 @@ ms.locfileid: "65127683"
     - [Crear una página de edición de datos en WebMatrix](introduction/create-an-edit-data-page-in-webmatrix.md)
     - [Crear una página de eliminación de datos en WebMatrix](introduction/create-a-delete-data-page-in-webmatrix.md)
     - [Publicar un sitio web en Internet mediante WebMatrix](introduction/publish-a-website-to-the-internet-using-webmatrix.md)
-- [Páginas de Razor de ASP.NET](aspnet-razor-pages/index.md)
+- [Razor Pages ASP.NET](aspnet-razor-pages/index.md)
 
     - [Introducción a WebMatrix y ASP.NET Web Pages](aspnet-razor-pages/getting-started-with-webmatrix-and-aspnet-web-pages.md)
     - [Introducción a la sintaxis de Razor de programación web de ASP.NET](aspnet-razor-pages/introduction-to-aspnet-web-programming-using-the-razor-syntax.md)
@@ -45,8 +45,8 @@ ms.locfileid: "65127683"
     - [Mostrar datos en una cuadrícula](aspnet-razor-pages/displaying-data-in-a-grid.md)
     - [Mostrar datos en un gráfico (parte 1)](aspnet-razor-pages/displaying-data-in-a-chart-part-1.md)
     - [Mostrar datos en un gráfico (parte 2)](aspnet-razor-pages/displaying-data-in-a-chart-part-2.md)
-    - [Trabajar con archivos](aspnet-razor-pages/working-with-files.md)
-    - [Trabajar con imágenes](aspnet-razor-pages/working-with-images.md)
+    - [Working with Files (Trabajo con archivos)](aspnet-razor-pages/working-with-files.md)
+    - [Working with Images (Trabajo con imágenes)](aspnet-razor-pages/working-with-images.md)
     - [Trabajar con vídeo](aspnet-razor-pages/working-with-video.md)
     - [Agregar correo electrónico al sitio web](aspnet-razor-pages/adding-email-to-your-web-site.md)
     - [Agregar búsqueda al sitio web](aspnet-razor-pages/adding-search-to-your-web-site.md)

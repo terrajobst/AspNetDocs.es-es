@@ -9,11 +9,11 @@ ms.assetid: cf5acaf5-d4f6-4957-badc-b89956b285f3
 msc.legacyurl: /web-forms/overview/data-access/displaying-data-with-the-datalist-and-repeater/showing-multiple-records-per-row-with-the-datalist-control-cs
 msc.type: authoredcontent
 ms.openlocfilehash: 3280a7b5f28207d3e640a6480f47869ce19692bc
-ms.sourcegitcommit: 22fbd8863672c4ad6693b8388ad5c8e753fb41a2
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/28/2019
-ms.locfileid: "74638568"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78481111"
 ---
 # <a name="showing-multiple-records-per-row-with-the-datalist-control-c"></a>Mostrar varios registros por fila con el control DataList (C#)
 

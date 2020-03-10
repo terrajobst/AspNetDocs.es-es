@@ -9,11 +9,11 @@ ms.assetid: f8d78a88-cc91-40d8-bce3-3d7954f6033b
 msc.legacyurl: /web-forms/overview/older-versions-getting-started/deploying-web-site-projects/determining-what-files-need-to-be-deployed-cs
 msc.type: authoredcontent
 ms.openlocfilehash: 1dd4a1179d32f776626c08a07205dc9aabed588d
-ms.sourcegitcommit: 22fbd8863672c4ad6693b8388ad5c8e753fb41a2
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/28/2019
-ms.locfileid: "74596377"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78516583"
 ---
 # <a name="determining-what-files-need-to-be-deployed-c"></a>Determinar qué archivos se deben implementar (C#)
 

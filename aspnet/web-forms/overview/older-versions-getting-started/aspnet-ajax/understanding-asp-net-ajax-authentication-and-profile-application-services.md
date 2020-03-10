@@ -9,11 +9,11 @@ ms.assetid: 6ab4efb6-aab6-45ac-ad2c-bdec5848ef9e
 msc.legacyurl: /web-forms/overview/older-versions-getting-started/aspnet-ajax/understanding-asp-net-ajax-authentication-and-profile-application-services
 msc.type: authoredcontent
 ms.openlocfilehash: cab9acb1ffd75cca87f6c575a6abdd000235828e
-ms.sourcegitcommit: 22fbd8863672c4ad6693b8388ad5c8e753fb41a2
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/28/2019
-ms.locfileid: "74635688"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78520315"
 ---
 # <a name="understanding-aspnet-ajax-authentication-and-profile-application-services"></a>Descripción de la autenticación de ASP.NET AJAX y los servicios de aplicaciones de perfiles
 
@@ -57,12 +57,12 @@ Una vez habilitado y configurado el servicio de autenticación de AJAX, el scrip
 
 El método login () comienza una solicitud para autenticar las credenciales del usuario. Este método es asincrónico y no bloquea la ejecución.
 
-*Los*
+*Parámetros:*
 
-| **Nombre del parámetro** | **Al** |
+| **Nombre de parámetro** | **Significado** |
 | --- | --- |
-| userName | Obligatoria. Nombre de usuario que se va a autenticar. |
-| Contraseña de | Opcional (el valor predeterminado es null). Contraseña del usuario. |
+| userName | Obligatorio. Nombre de usuario que se va a autenticar. |
+| contraseña | Opcional (el valor predeterminado es null). Contraseña del usuario. |
 | isPersistent | Opcional (el valor predeterminado es false). Si la cookie de autenticación del usuario debe persistir entre sesiones. Si es false, el usuario cerrará la sesión cuando se cierre el explorador o expire la sesión. |
 | redirectUrl | Opcional (el valor predeterminado es null). Dirección URL a la que se redirigirá el explorador tras una autenticación correcta. Si este parámetro es null o una cadena vacía, no se produce ninguna redirección. |
 | customInfo | Opcional (el valor predeterminado es null). Este parámetro no se usa actualmente y se reserva para uso futuro. |
@@ -70,7 +70,7 @@ El método login () comienza una solicitud para autenticar las credenciales del 
 | failedCallback | Opcional (el valor predeterminado es null). Función a la que se llamará cuando se haya producido un error en el inicio de sesión. Si se especifica, este parámetro invalida la propiedad defaultFailedCallback. |
 | userContext | Opcional (el valor predeterminado es null). Datos de contexto de usuario personalizados que se deben pasar a las funciones de devolución de llamada. |
 
-*Valor devuelto:*
+*Return Value* (Valor devuelto):
 
 Esta función no incluye un valor devuelto. Sin embargo, se incluyen varios comportamientos al finalizar una llamada a esta función:
 
@@ -82,16 +82,16 @@ Esta función no incluye un valor devuelto. Sin embargo, se incluyen varios comp
 
 El método Logout () quita la cookie de credenciales y cierra la sesión del usuario actual de la aplicación Web.
 
-*Los*
+*Parámetros:*
 
-| **Nombre del parámetro** | **Al** |
+| **Nombre de parámetro** | **Significado** |
 | --- | --- |
 | redirectUrl | Opcional (el valor predeterminado es null). Dirección URL a la que se redirigirá el explorador tras una autenticación correcta. Si este parámetro es null o una cadena vacía, no se produce ninguna redirección. |
 | logoutCompletedCallback | Opcional (el valor predeterminado es null). Función a la que se va a llamar cuando se haya completado correctamente el cierre de sesión. Si se especifica, este parámetro reemplaza la propiedad defaultLogoutCompleted. |
 | failedCallback | Opcional (el valor predeterminado es null). Función a la que se llamará cuando se haya producido un error en el inicio de sesión. Si se especifica, este parámetro invalida la propiedad defaultFailedCallback. |
 | userContext | Opcional (el valor predeterminado es null). Datos de contexto de usuario personalizados que se deben pasar a las funciones de devolución de llamada. |
 
-*Valor devuelto:*
+*Return Value* (Valor devuelto):
 
 Esta función no incluye un valor devuelto. Sin embargo, se incluyen varios comportamientos al finalizar una llamada a esta función:
 
@@ -107,9 +107,9 @@ La referencia a la función especificada por esta propiedad debe tener la siguie
 
 [!code-javascript[Main](understanding-asp-net-ajax-authentication-and-profile-application-services/samples/sample2.js)]
 
-*Los*
+*Parámetros:*
 
-| **Nombre del parámetro** | **Al** |
+| **Nombre de parámetro** | **Significado** |
 | --- | --- |
 | error | Especifica la información del error. |
 | userContext | Especifica la información de contexto de usuario proporcionada al llamar a la función login o logout. |
@@ -123,9 +123,9 @@ La referencia a la función especificada por esta propiedad debe tener la siguie
 
 [!code-javascript[Main](understanding-asp-net-ajax-authentication-and-profile-application-services/samples/sample3.js)]
 
-*Los*
+*Parámetros:*
 
-| **Nombre del parámetro** | **Al** |
+| **Nombre de parámetro** | **Significado** |
 | --- | --- |
 | validCredentials | Especifica si el usuario proporcionó credenciales válidas. `true` si el usuario inició sesión correctamente; de lo contrario `false`. |
 | userContext | Especifica la información de contexto del usuario que se proporciona cuando se llamó a la función login. |
@@ -139,9 +139,9 @@ La referencia a la función especificada por esta propiedad debe tener la siguie
 
 [!code-javascript[Main](understanding-asp-net-ajax-authentication-and-profile-application-services/samples/sample4.js)]
 
-*Los*
+*Parámetros:*
 
-| **Nombre del parámetro** | **Al** |
+| **Nombre de parámetro** | **Significado** |
 | --- | --- |
 | result | Este parámetro siempre será `null`; está reservado para un uso futuro. |
 | userContext | Especifica la información de contexto del usuario que se proporciona cuando se llamó a la función login. |
@@ -203,9 +203,9 @@ El campo de propiedades expone todos los datos de perfil configurados como propi
 
 Carga una lista seleccionada o todas las propiedades del servidor.
 
-*Los*
+*Parámetros:*
 
-| **Nombre del parámetro** | **Al** |
+| **Nombre de parámetro** | **Significado** |
 | --- | --- |
 | propertyNames | Opcional (el valor predeterminado es null). Propiedades que se van a cargar desde el servidor. |
 | loadCompletedCallback | Opcional (el valor predeterminado es null). Función a la que se va a llamar cuando se complete la carga. |
@@ -220,9 +220,9 @@ Si no se proporciona el parámetro `propertyNames`, todas las propiedades config
 
 El método Save () guarda la lista de propiedades especificada (o todas las propiedades) en el perfil ASP.NET del usuario.
 
-*Los*
+*Parámetros:*
 
-| **Nombre del parámetro** | **Al** |
+| **Nombre de parámetro** | **Significado** |
 | --- | --- |
 | propertyNames | Opcional (el valor predeterminado es null). Propiedades que se van a guardar en el servidor. |
 | saveCompletedCallback | Opcional (el valor predeterminado es null). Función a la que se llama cuando se ha completado el guardado. |
@@ -241,11 +241,11 @@ La referencia a la función especificada por esta propiedad debe tener la siguie
 
 [!code-javascript[Main](understanding-asp-net-ajax-authentication-and-profile-application-services/samples/sample9.js)]
 
-*Los*
+*Parámetros:*
 
-| **Nombre del parámetro** | **Al** |
+| **Nombre de parámetro** | **Significado** |
 | --- | --- |
-| Error de : | Especifica la información del error. |
+| Error | Especifica la información del error. |
 | userContext | Especifica la información de contexto de usuario proporcionada al llamar a la función de carga o guardado. |
 | methodName | Nombre del método de llamada. |
 
@@ -257,9 +257,9 @@ La referencia a la función especificada por esta propiedad debe tener la siguie
 
 [!code-javascript[Main](understanding-asp-net-ajax-authentication-and-profile-application-services/samples/sample10.js)]
 
-*Los*
+*Parámetros:*
 
-| **Nombre del parámetro** | **Al** |
+| **Nombre de parámetro** | **Significado** |
 | --- | --- |
 | numPropsSaved | Especifica el número de propiedades que se guardaron. |
 | userContext | Especifica la información de contexto de usuario proporcionada al llamar a la función de carga o guardado. |
@@ -273,9 +273,9 @@ La referencia a la función especificada por esta propiedad debe tener la siguie
 
 [!code-javascript[Main](understanding-asp-net-ajax-authentication-and-profile-application-services/samples/sample11.js)]
 
-*Los*
+*Parámetros:*
 
-| **Nombre del parámetro** | **Al** |
+| **Nombre de parámetro** | **Significado** |
 | --- | --- |
 | numPropsLoaded | Especifica el número de propiedades cargadas. |
 | userContext | Especifica la información de contexto de usuario proporcionada al llamar a la función de carga o guardado. |

@@ -9,11 +9,11 @@ ms.assetid: 9201656a-e1c2-4020-824b-18fb632d2925
 msc.legacyurl: /web-forms/overview/data-access/working-with-binary-files/displaying-binary-data-in-the-data-web-controls-vb
 msc.type: authoredcontent
 ms.openlocfilehash: 27c901af092aa990f557750dc5d2c42ba2644c02
-ms.sourcegitcommit: 22fbd8863672c4ad6693b8388ad5c8e753fb41a2
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/28/2019
-ms.locfileid: "74640912"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78489103"
 ---
 # <a name="displaying-binary-data-in-the-data-web-controls-vb"></a>Mostrar datos binarios en los controles web de datos (VB)
 

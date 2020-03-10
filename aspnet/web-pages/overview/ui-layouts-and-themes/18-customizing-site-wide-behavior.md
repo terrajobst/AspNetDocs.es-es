@@ -1,125 +1,125 @@
 ---
 uid: web-pages/overview/ui-layouts-and-themes/18-customizing-site-wide-behavior
-title: Personalizar el comportamiento de todo el sitio para ASP.NET Web Pages (Razor) sitios | Microsoft Docs
+title: Personalizar el comportamiento de todo el sitio para sitios de ASP.NET Web Pages (Razor) | Microsoft Docs
 author: Rick-Anderson
-description: Este capítulo explica cómo realizar la configuración en todo el sitio Web o una carpeta completa, en lugar de simplemente una página.
+description: En este capítulo se explica cómo establecer la configuración en todo el sitio web o en una carpeta completa, en lugar de simplemente en una página.
 ms.author: riande
 ms.date: 02/17/2014
 ms.assetid: e158bed7-226f-4275-b02e-7553bd58c669
 msc.legacyurl: /web-pages/overview/ui-layouts-and-themes/18-customizing-site-wide-behavior
 msc.type: authoredcontent
 ms.openlocfilehash: f05e05f725d9209bce283ce18659ae5efe4de2ee
-ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/06/2019
-ms.locfileid: "65131856"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78515251"
 ---
-# <a name="customizing-site-wide-behavior-for-aspnet-web-pages-razor-sites"></a>Personalizar el comportamiento de todo el sitio para los sitios de ASP.NET Web Pages (Razor)
+# <a name="customizing-site-wide-behavior-for-aspnet-web-pages-razor-sites"></a>Personalización del comportamiento en todo el sitio para sitios de ASP.NET Web Pages (Razor)
 
 por [Tom FitzMacken](https://github.com/tfitzmac)
 
-> En este artículo se explica cómo hacer que la configuración de sitio para las páginas en un sitio Web de ASP.NET Web Pages (Razor).
+> En este artículo se explica cómo crear la configuración del sitio para las páginas en un sitio web de ASP.NET Web Pages (Razor).
 > 
-> Lo que aprenderá:
+> Temas que se abordarán:
 > 
-> - Cómo ejecutar código que le permita conjunto de valores (valores globales o configuración de aplicación auxiliar) para todas las páginas de un sitio.
-> - Cómo ejecutar código que le permite establecer los valores de todas las páginas en una carpeta.
-> - Cómo ejecutar código antes y después de una página de carga.
+> - Cómo ejecutar código que le permite establecer valores (valores globales o valores auxiliares) para todas las páginas de un sitio.
+> - Cómo ejecutar código que le permite establecer los valores de todas las páginas de una carpeta.
+> - Cómo ejecutar código antes y después de que se cargue una página.
 > - Cómo enviar errores a una página de error central.
-> - Cómo agregar autenticación a todas las páginas en una carpeta.
+> - Cómo agregar autenticación a todas las páginas de una carpeta.
 >   
 > 
-> ## <a name="software-versions-used-in-the-tutorial"></a>Versiones de software que se usa en el tutorial
+> ## <a name="software-versions-used-in-the-tutorial"></a>Versiones de software usadas en el tutorial
 > 
 > 
 > - ASP.NET Web Pages (Razor) 2
 > - WebMatrix 3
-> - ASP.NET Web Helpers Library (paquete de NuGet)
+> - Biblioteca de aplicaciones auxiliares Web de ASP.NET (paquete NuGet)
 >   
 > 
-> Este tutorial también funciona con 3 páginas Web de ASP.NET y Visual Studio 2013 (o Visual Studio Express 2013 para Web), excepto que no puede usar la biblioteca de aplicaciones auxiliares de Web de ASP.NET.
+> Este tutorial también funciona con ASP.NET Web Pages 3 y Visual Studio 2013 (o Visual Studio Express 2013 para web), salvo que no se puede usar la biblioteca de aplicaciones auxiliares Web de ASP.NET.
 
 <a id="Adding_Website_Startup_Code"></a>
-## <a name="adding-website-startup-code-for-aspnet-web-pages"></a>Agregar código de inicio del sitio Web de ASP.NET Web Pages
+## <a name="adding-website-startup-code-for-aspnet-web-pages"></a>Agregar código de inicio del sitio web para ASP.NET Web Pages
 
-Para gran parte del código que se escribe en ASP.NET Web Pages, una página individual puede contener todo el código necesario para dicha página. Por ejemplo, si una página envía un mensaje de correo electrónico, es posible colocar todo el código para esa operación en una sola página. Esto puede incluir el código para inicializar la configuración para enviar correo electrónico (es decir, para el servidor SMTP) y para enviar el mensaje de correo electrónico.
+En gran parte del código que se escribe en ASP.NET Web Pages, una página individual puede contener todo el código necesario para esa página. Por ejemplo, si una página envía un mensaje de correo electrónico, es posible colocar todo el código para esa operación en una sola página. Esto puede incluir el código para inicializar la configuración para enviar correo electrónico (es decir, para el servidor SMTP) y para enviar el mensaje de correo electrónico.
 
-Sin embargo, en algunas situaciones, es posible que desee ejecutar código antes de cualquier página en el sitio se ejecuta. Esto es útil para establecer los valores que se pueden usar en cualquier lugar en el sitio (denominados *valores globales*.) Por ejemplo, algunas aplicaciones auxiliares requieren que proporcione valores como configuración de correo electrónico o las claves de cuenta. Puede ser útil para mantener esta configuración en los valores globales.
+Sin embargo, en algunas situaciones, puede que desee ejecutar código antes de que se ejecute cualquier página del sitio. Esto resulta útil para establecer los valores que se pueden usar en cualquier parte del sitio (denominados *valores globales*). Por ejemplo, algunas aplicaciones auxiliares requieren que proporcione valores como la configuración de correo electrónico o las claves de cuenta. Puede ser útil para mantener esta configuración en valores globales.
 
-Puede hacerlo mediante la creación de una página denominada  *\_AppStart.cshtml* en la raíz del sitio. Si esta página no existe, se ejecuta la primera vez que se solicita cualquier página del sitio. Por lo tanto, es un buen lugar para ejecutar el código para establecer los valores globales. (Porque  *\_AppStart.cshtml* tiene un prefijo de subrayado, ASP.NET no enviará la página en un explorador, incluso si los usuarios solicitar directamente.)
+Para ello, puede crear una página denominada *\_AppStart. cshtml* en la raíz del sitio. Si esta página existe, se ejecuta la primera vez que se solicita una página del sitio. Por lo tanto, es un buen lugar para ejecutar código con el fin de establecer valores globales. (Dado que *\_AppStart. cshtml* tiene un prefijo de subrayado, ASP.net no enviará la página a un explorador aunque los usuarios la soliciten directamente).
 
-El siguiente diagrama muestra cómo el  *\_AppStart.cshtml* página funciona. Cuando llega una solicitud para una página y, si se trata de la primera solicitud para cualquier página en el sitio, ASP.NET comprueba primero si un  *\_AppStart.cshtml* página existe. Si es así, cualquier código presente en el  *\_AppStart.cshtml* página se ejecuta y, a continuación, se ejecuta la página solicitada.
+En el diagrama siguiente se muestra cómo funciona la página de *\_AppStart. cshtml* . Cuando llega una solicitud para una página y se trata de la primera solicitud de cualquier página del sitio, ASP.NET comprueba primero si existe una página de *\_AppStart. cshtml* . En ese caso, se ejecuta cualquier código de la página *\_AppStart. cshtml* y, a continuación, se ejecuta la página solicitada.
 
-![[image]](18-customizing-site-wide-behavior/_static/image1.jpg)
+![[imagen]](18-customizing-site-wide-behavior/_static/image1.jpg)
 
-## <a name="setting-global-values-for-your-website"></a>Configuración de valores globales para su sitio Web
+## <a name="setting-global-values-for-your-website"></a>Establecer valores globales para el sitio web
 
-1. En la carpeta raíz de un sitio Web de WebMatrix, cree un archivo denominado  *\_AppStart.cshtml*. El archivo debe estar en la raíz del sitio.
+1. En la carpeta raíz de un sitio web de WebMatrix, cree un archivo denominado *\_AppStart. cshtml*. El archivo debe estar en la raíz del sitio.
 2. Reemplace el contenido existente por lo siguiente: 
 
     [!code-cshtml[Main](18-customizing-site-wide-behavior/samples/sample1.cshtml)]
 
-    Este código almacena un valor en el `AppState` diccionario, que está disponible automáticamente para todas las páginas del sitio. Tenga en cuenta que el  *\_AppStart.cshtml* archivo no tiene ningún marcado en ella. La página se ejecute el código y, a continuación, redirigir a la página solicitada originalmente.
+    Este código almacena un valor en el Diccionario de `AppState`, que está disponible automáticamente para todas las páginas del sitio. Tenga en cuenta que el archivo *\_AppStart. cshtml* no tiene ningún marcado. La página ejecutará el código y, a continuación, redirigirá a la página que se solicitó originalmente.
 
     > [!NOTE]
-    > Tenga cuidado al colocar código en el  *\_AppStart.cshtml* archivo. Si se produce algún error en el código en el  *\_AppStart.cshtml* archivo, no se iniciará el sitio Web.
-3. En la carpeta raíz, cree una nueva página denominada *AppName.cshtml*.
-4. Reemplace el marcado predeterminado y el código con lo siguiente: 
+    > Tenga cuidado al colocar el código en el archivo *\_AppStart. cshtml* . Si se produce algún error en el código del archivo *\_AppStart. cshtml* , el sitio web no se iniciará.
+3. En la carpeta raíz, cree una nueva página denominada *AppName. cshtml*.
+4. Reemplace el marcado y el código predeterminados por lo siguiente: 
 
     [!code-html[Main](18-customizing-site-wide-behavior/samples/sample2.html)]
 
-    Este código extrae el valor de la `AppState` objeto configuradas en el  *\_AppStart.cshtml* página.
-5. Ejecute el *AppName.cshtml* página en un explorador. (Asegúrese de que la página está seleccionada en el **archivos** área de trabajo antes de ejecutarlo.) La página muestra el valor global. 
+    Este código extrae el valor del objeto `AppState` que estableció en la página *\_AppStart. cshtml* .
+5. Ejecute la página *AppName. cshtml* en un explorador. (Asegúrese de que la página esté seleccionada en el área de trabajo **archivos** antes de ejecutarla). La página muestra el valor global. 
 
-    ![[image]](18-customizing-site-wide-behavior/_static/image2.jpg)
+    ![[imagen]](18-customizing-site-wide-behavior/_static/image2.jpg)
 
 <a id="Setting_Values_For_Helpers"></a>
-## <a name="setting-values-for-helpers"></a>Valores de configuración para las aplicaciones auxiliares
+## <a name="setting-values-for-helpers"></a>Establecer valores para aplicaciones auxiliares
 
-Un buen uso de la  *\_AppStart.cshtml* archivo consiste en establecer valores para las aplicaciones auxiliares que se utilice en su sitio y que tienen que inicializarse. Ejemplos típicos son configuraciones de correo electrónico para el `WebMail` auxiliar y las claves públicas y privadas para la `ReCaptcha` auxiliar. En estos casos, puede establecer los valores de una vez en el  *\_AppStart.cshtml* y, a continuación, están ya establecidos para todas las páginas del sitio.
+Un buen uso para el archivo *\_AppStart. cshtml* es establecer los valores de las aplicaciones auxiliares que se usan en el sitio y que se deben inicializar. Algunos ejemplos típicos son la configuración de correo electrónico de la aplicación auxiliar de `WebMail` y las claves privadas y públicas de la aplicación auxiliar de `ReCaptcha`. En casos como estos, puede establecer los valores una vez en el *\_AppStart. cshtml* y, a continuación, ya están establecidos para todas las páginas del sitio.
 
-Este procedimiento muestra cómo establecer `WebMail` configuración global. (Para obtener más información sobre el uso de la `WebMail` auxiliares, consulte [agregando un correo electrónico a un sitio de ASP.NET Web Pages](../getting-started/11-adding-email-to-your-web-site.md).)
+En este procedimiento se muestra cómo establecer la configuración de `WebMail` globalmente. (Para obtener más información acerca del uso de la aplicación auxiliar de `WebMail`, consulte [Agregar correo electrónico a un sitio de ASP.NET Web pages](../getting-started/11-adding-email-to-your-web-site.md)).
 
-1. Agregue la ASP.NET Web Helpers Library a su sitio Web, como se describe en [las aplicaciones auxiliares de la instalación en un sitio de ASP.NET Web Pages](https://go.microsoft.com/fwlink/?LinkId=252372), si aún no lo ha agregado.
-2. Si aún no tiene un  *\_AppStart.cshtml* , en la carpeta raíz de un sitio Web, cree un archivo denominado  *\_AppStart.cshtml*.
-3. Agregue el siguiente `WebMail` configuración para el  *\_AppStart.cshtml* archivo: 
+1. Agregue la biblioteca de aplicaciones auxiliares Web de ASP.NET a su sitio web, tal como se describe en [instalación de aplicaciones auxiliares en un sitio de ASP.NET Web pages](https://go.microsoft.com/fwlink/?LinkId=252372), si aún no lo ha hecho.
+2. Si aún no tiene un archivo *\_AppStart. cshtml* , en la carpeta raíz de un sitio web, cree un archivo denominado *\_AppStart. cshtml*.
+3. Agregue la siguiente configuración de `WebMail` al archivo *\_AppStart. cshtml* : 
 
     [!code-cshtml[Main](18-customizing-site-wide-behavior/samples/sample3.cshtml?highlight=2-7)]
 
-    Modificar la configuración relacionada en el código de correo electrónico lo siguiente:
+    Modifique la siguiente configuración relacionada con el correo electrónico en el código:
 
-   - Establecer `your-SMTP-host` en el nombre del servidor SMTP que tienen acceso a.
-   - Establecer `your-user-name-here` al nombre de usuario de la cuenta del servidor SMTP.
-   - Establecer `your-account-password` a la contraseña de la cuenta del servidor SMTP.
-   - Establecer `your-email-address-here` a su propia dirección de correo electrónico. Se trata de la dirección de correo electrónico que se envía el mensaje desde. (Algunos proveedores de correo electrónico no le permiten especificar otro `From` de direcciones y usará el nombre de usuario como la `From` dirección.)
+   - Establezca `your-SMTP-host` en el nombre del servidor SMTP al que tenga acceso.
+   - Establezca `your-user-name-here` en el nombre de usuario de la cuenta del servidor SMTP.
+   - Establezca `your-account-password` en la contraseña de la cuenta del servidor SMTP.
+   - Establezca `your-email-address-here` en su propia dirección de correo electrónico. Esta es la dirección de correo electrónico desde la que se envía el mensaje. (Algunos proveedores de correo electrónico no permiten especificar una dirección de `From` diferente y usarán su nombre de usuario como dirección `From`).
 
-     Para obtener más información acerca de la configuración de SMTP, vea [configuración de correo electrónico](https://go.microsoft.com/fwlink/?LinkID=202899#configuring_email_settings) en el artículo [enviar correo electrónico desde un sitio de ASP.NET Web Pages (Razor)](https://go.microsoft.com/fwlink/?LinkID=202899) y [problemas con el envío de correo electrónico](https://go.microsoft.com/fwlink/?LinkId=253001#email)en el [de ASP.NET Web Pages (Razor) Guía de solución de problemas](https://go.microsoft.com/fwlink/?LinkId=253001).
-4. Guardar el  *\_AppStart.cshtml* de archivo y ciérrelo.
-5. En la carpeta raíz de un sitio Web, cree la nueva página denominada *TestEmail.cshtml*.
+     Para obtener más información acerca de la configuración de SMTP, consulte Configuración del [correo](https://go.microsoft.com/fwlink/?LinkID=202899#configuring_email_settings) electrónico en el artículo [envío de correo electrónico desde un sitio de ASP.NET Web pages (Razor)](https://go.microsoft.com/fwlink/?LinkID=202899) y [problemas con el envío de correo electrónico](https://go.microsoft.com/fwlink/?LinkId=253001#email) en la [Guía de solución de problemas de ASP.NET Web pages (Razor)](https://go.microsoft.com/fwlink/?LinkId=253001).
+4. Guarde el archivo *\_AppStart. cshtml* y ciérrelo.
+5. En la carpeta raíz de un sitio web, cree una nueva página denominada *TestEmail. cshtml*.
 6. Reemplace el contenido existente por lo siguiente: 
 
      [!code-cshtml[Main](18-customizing-site-wide-behavior/samples/sample4.cshtml)]
-7. Ejecute el *TestEmail.cshtml* página en un explorador.
-8. Rellene los campos para enviarse a usted mismo un mensaje de correo electrónico y, a continuación, haga clic en **enviar**.
-9. Compruebe su correo electrónico para asegurarse de que ha llegado el mensaje.
+7. Ejecute la página *TestEmail. cshtml* en un explorador.
+8. Rellene los campos para enviarse un mensaje de correo electrónico y, a continuación, haga clic en **Enviar**.
+9. Compruebe su correo electrónico para asegurarse de que ha recibido el mensaje.
 
-La parte importante de este ejemplo es que la configuración que no suele cambiar, como el nombre del servidor SMTP y las credenciales de correo electrónico, se establecen en el  *\_AppStart.cshtml* archivo. De este modo que no es necesario establecerlas de nuevo en cada página donde enviar correo electrónico. (Aunque si por alguna razón necesita cambiar esta configuración, puede establecer ellos individualmente en una página.) En la página, solo hay que establecer los valores que suele cambian cada vez, al igual que el destinatario y el cuerpo del mensaje de correo electrónico.
+La parte importante de este ejemplo es que la configuración que no suele cambiar, como el nombre del servidor SMTP y las credenciales de correo electrónico, se establece en el archivo *\_AppStart. cshtml* . De este modo, no tendrá que volver a configurarlos en cada página en la que envíe el correo electrónico. (Sin embargo, si por alguna razón necesita cambiar esta configuración, puede establecerla individualmente en una página). En la página, solo se establecen los valores que normalmente cambian cada vez, como el destinatario y el cuerpo del mensaje de correo electrónico.
 
 <a id="Running_Code_Before_and_After"></a>
-## <a name="running-code-before-and-after-files-in-a-folder"></a>Ejecutar código antes y después de los archivos en una carpeta
+## <a name="running-code-before-and-after-files-in-a-folder"></a>Ejecutar código antes y después de los archivos de una carpeta
 
-Al igual que puede usar  *\_AppStart.cshtml* para escribir código antes de ejecutan las páginas del sitio, puede escribir código que se ejecuta antes (y después de) cualquier página en una carpeta concreta que se ejecute. Esto es útil para cosas como el establecimiento de la misma página de diseño para todas las páginas en una carpeta, o para comprobar que un usuario ha iniciado sesión antes de ejecutar una página en la carpeta.
+Del mismo modo que puede usar *\_AppStart. cshtml* para escribir código antes de que se ejecuten las páginas del sitio, puede escribir código que se ejecute antes (y después) cualquier página de una carpeta determinada que se ejecute. Esto resulta útil para cosas como establecer la misma página de diseño para todas las páginas de una carpeta, o para comprobar que un usuario ha iniciado sesión antes de ejecutar una página en la carpeta.
 
-Para las páginas en particular las carpetas, puede crear código en un archivo denominado  *\_PageStart.cshtml*. El siguiente diagrama muestra cómo el  *\_PageStart.cshtml* página funciona. Cuando llega una solicitud para una página, ASP.NET comprueba primero un  *\_AppStart.cshtml* página y que ejecuta. A continuación, ASP.NET comprueba si hay un  *\_PageStart.cshtml* página y, si es así, que se ejecuta. A continuación, ejecuta la página solicitada.
+En el caso de las páginas de carpetas concretas, puede crear código en un archivo denominado *\_PageStart. cshtml*. En el diagrama siguiente se muestra cómo funciona la página *\_PageStart. cshtml* . Cuando llega una solicitud para una página, ASP.NET busca primero una página de *\_AppStart. cshtml* y la ejecuta. A continuación, ASP.NET comprueba si hay una\_página de *PageStart. cshtml* y, en caso afirmativo, la ejecuta. A continuación, ejecuta la página solicitada.
 
-Dentro de la  *\_PageStart.cshtml* página, puede especificar dónde durante el procesamiento que desee en la página solicitada para ejecutar mediante la inclusión de un `RunPage` método. Esto le permite ejecutar código antes de que se ejecuta la página solicitada y, a continuación, otra vez después de él. Si no incluye `RunPage`, todo el código de  *\_PageStart.cshtml* ejecuciones y, a continuación, en la página solicitada se ejecuta automáticamente.
+Dentro de la página *\_PageStart. cshtml* , puede especificar dónde desea que se ejecute la página solicitada, incluyendo un método `RunPage`. Esto le permite ejecutar código antes de que se ejecute la página solicitada y, después, otra vez. Si no incluye `RunPage`, se ejecuta todo el código de *\_PageStart. cshtml* y, a continuación, la página solicitada se ejecuta automáticamente.
 
-![[image]](18-customizing-site-wide-behavior/_static/image3.jpg)
+![[imagen]](18-customizing-site-wide-behavior/_static/image3.jpg)
 
-ASP.NET permite crear una jerarquía de  *\_PageStart.cshtml* archivos. Puede colocar un  *\_PageStart.cshtml* archivo en la raíz del sitio y en cualquier subcarpeta. Cuando se solicita una página, el  *\_PageStart.cshtml* archivo en las ejecuciones de nivel superior (más cercana a la raíz del sitio), seguido por el  *\_PageStart.cshtml* archivo en el siguiente subcarpeta, y así sucesivamente hacia abajo de la estructura de subcarpetas hasta que la solicitud llega a la carpeta que contiene la página solicitada. Después de todos los aplicable  *\_PageStart.cshtml* han ejecutado archivos, se ejecuta la página solicitada.
+ASP.NET permite crear una jerarquía de archivos *\_PageStart. cshtml* . Puede colocar un *\_archivo PageStart. cshtml* en la raíz del sitio y en cualquier subcarpeta. Cuando se solicita una página, se ejecuta la *\_archivo PageStart. cshtml* en el nivel superior (más cercano a la raíz del sitio), seguido del *\_archivo PageStart. cshtml* en la subcarpeta siguiente, y así sucesivamente en la estructura de la subcarpeta hasta que la solicitud llega a la carpeta que contiene la página solicitada. Una vez que se han ejecutado todos los archivos *\_PageStart. cshtml* correspondientes, se ejecuta la página solicitada.
 
-Por ejemplo, podría tener la siguiente combinación de  *\_PageStart.cshtml* archivos y *Default.cshtml* archivo:
+Por ejemplo, podría tener la siguiente combinación de *\_archivos PageStart. cshtml* y el archivo *default. cshtml* :
 
 [!code-cshtml[Main](18-customizing-site-wide-behavior/samples/sample5.cshtml)]
 
@@ -127,86 +127,86 @@ Por ejemplo, podría tener la siguiente combinación de  *\_PageStart.cshtml* ar
 
 [!code-cshtml[Main](18-customizing-site-wide-behavior/samples/sample7.cshtml)]
 
-Al ejecutar */myfolder/default.cshtml*, verá lo siguiente:
+Al ejecutar */MyFolder/default.cshtml*, verá lo siguiente:
 
 [!code-console[Main](18-customizing-site-wide-behavior/samples/sample8.cmd)]
 
-## <a name="running-initialization-code-for-all-pages-in-a-folder"></a>Ejecutar código de inicialización para todas las páginas en una carpeta
+## <a name="running-initialization-code-for-all-pages-in-a-folder"></a>Ejecutar código de inicialización para todas las páginas de una carpeta
 
-Un buen uso de  *\_PageStart.cshtml* archivos consiste en inicializar la misma página de diseño para todos los archivos en una única carpeta.
+Un buen uso de *\_archivos PageStart. cshtml* es inicializar la misma página de diseño para todos los archivos de una sola carpeta.
 
-1. En la carpeta raíz, cree una carpeta nueva denominada *InitPages*.
-2. En el *InitPages* carpeta del sitio Web, cree un archivo denominado  *\_PageStart.cshtml* y reemplácelo por el marcado predeterminado y el código siguiente: 
+1. En la carpeta raíz, cree una nueva carpeta denominada *InitPages*.
+2. En la carpeta *InitPages* de su sitio web, cree un archivo denominado *\_PageStart. cshtml* y reemplace el marcado y el código predeterminados por lo siguiente: 
 
     [!code-cshtml[Main](18-customizing-site-wide-behavior/samples/sample9.cshtml)]
-3. En la raíz del sitio Web, cree una carpeta denominada *Shared*.
-4. En el *Shared* carpeta, cree un archivo denominado  *\_Layout1.cshtml* y reemplácelo por el marcado predeterminado y el código siguiente: 
+3. En la raíz del sitio web, cree una carpeta denominada *Shared*.
+4. En la carpeta *compartida* , cree un archivo denominado *\_Layout1. cshtml* y reemplace el marcado y el código predeterminados por lo siguiente: 
 
     [!code-cshtml[Main](18-customizing-site-wide-behavior/samples/sample10.cshtml)]
-5. En el *InitPages* carpeta, cree un archivo denominado *Content1.cshtml* y reemplace el contenido existente por lo siguiente: 
+5. En la carpeta *InitPages* , cree un archivo denominado *Content1. cshtml* y reemplace el contenido existente por lo siguiente: 
 
     [!code-html[Main](18-customizing-site-wide-behavior/samples/sample11.html)]
-6. En el *InitPages* carpeta, cree otro archivo llamado *Content2.cshtml* y reemplace el marcado predeterminado con lo siguiente: 
+6. En la carpeta *InitPages* , cree otro archivo denominado *Content2. cshtml* y reemplace el marcado predeterminado por lo siguiente: 
 
     [!code-html[Main](18-customizing-site-wide-behavior/samples/sample12.html)]
-7. Ejecute *Content1.cshtml* en un explorador. 
+7. Ejecute *Content1. cshtml* en un explorador. 
 
-    ![[image]](18-customizing-site-wide-behavior/_static/image4.jpg)
+    ![[imagen]](18-customizing-site-wide-behavior/_static/image4.jpg)
 
-    Cuando el *Content1.cshtml* página se ejecuta, el  *\_PageStart.cshtml* archivo establece `Layout` y también establece `PageData["MyBackground"]` a un color. En *Content1.cshtml*, el diseño y el color se aplican.
-8. Mostrar *Content2.cshtml* en un explorador. 
+    Cuando se ejecuta la página *Content1. cshtml* , el archivo *\_PageStart. cshtml* establece `Layout` y también establece `PageData["MyBackground"]` en un color. En *Content1. cshtml*, se aplican el diseño y el color.
+8. Mostrar *Content2. cshtml* en un explorador. 
 
-    El diseño es el mismo, porque ambas páginas utilizan la misma página de diseño y el color como inicializado en  *\_PageStart.cshtml*.
+    El diseño es el mismo, ya que ambas páginas usan la misma página de diseño y el mismo color que se inicializaron en *\_PageStart. cshtml*.
 
-## <a name="using-pagestartcshtml-to-handle-errors"></a>Uso de \_PageStart.cshtml para controlar los errores
+## <a name="using-_pagestartcshtml-to-handle-errors"></a>Uso de \_PageStart. cshtml para controlar errores
 
-Usa otra buena para el  *\_PageStart.cshtml* es crear un medio para controlar los errores de programación (excepciones) que pueden producirse en cualquier archivo *.cshtml* página en una carpeta. En este ejemplo se muestra una manera de hacerlo.
+Otro buen uso de la *\_archivo PageStart. cshtml* es crear una manera de controlar los errores de programación (excepciones) que pueden producirse en cualquier página *. cshtml* de una carpeta. En este ejemplo se muestra una manera de hacerlo.
 
 1. En la carpeta raíz, cree una carpeta denominada *InitCatch*.
-2. En el *InitCatch* carpeta del sitio Web, cree un archivo denominado  *\_PageStart.cshtml* y reemplácelo por el marcado existente y el código siguiente: 
+2. En la carpeta *InitCatch* de su sitio web, cree un archivo denominado *\_PageStart. cshtml* y reemplace el marcado y el código existentes por lo siguiente: 
 
     [!code-cshtml[Main](18-customizing-site-wide-behavior/samples/sample13.cshtml)]
 
-    En este código, intente ejecutar la página solicitada explícitamente mediante una llamada a la `RunPage` método dentro de un `try` bloque. Si se produce algún error de programación en la solicitud de página, el código dentro de la `catch` bloquear ejecuciones. En este caso, el código redirige a una página (*Error.cshtml*) y pasa el nombre del archivo que encontró el error como parte de la dirección URL. (Se creará la página en breve.)
-3. En el *InitCatch* carpeta del sitio Web, cree un archivo denominado *Exception.cshtml* y reemplácelo por el marcado existente y el código siguiente: 
+    En este código, intente ejecutar la página solicitada explícitamente llamando al método `RunPage` dentro de un bloque `try`. Si se produce algún error de programación en la página solicitada, se ejecuta el código dentro del bloque `catch`. En este caso, el código redirige a una página (*error. cshtml*) y pasa el nombre del archivo que experimentó el error como parte de la dirección URL. (Creará la página en breve).
+3. En la carpeta *InitCatch* de su sitio web, cree un archivo denominado *Exception. cshtml* y reemplace el marcado y el código existentes por lo siguiente: 
 
     [!code-cshtml[Main](18-customizing-site-wide-behavior/samples/sample14.cshtml)]
 
-    Para fines de este ejemplo, lo que está haciendo en esta página es deliberadamente creando un error al intentar abrir un archivo de base de datos que no existe.
-4. En la carpeta raíz, cree un archivo denominado *Error.cshtml* y reemplácelo por el marcado existente y el código siguiente: 
+    Para los fines de este ejemplo, lo que está haciendo en esta página es la creación deliberada de un error al intentar abrir un archivo de base de datos que no existe.
+4. En la carpeta raíz, cree un archivo denominado *error. cshtml* y reemplace el marcado y el código existentes por lo siguiente: 
 
     [!code-html[Main](18-customizing-site-wide-behavior/samples/sample15.html)]
 
-    En esta página, la expresión `@Request["source"]` Obtiene el valor de la dirección URL y lo muestra.
-5. En la barra de herramientas, haga clic en **guardar**.
-6. Ejecute *Exception.cshtml* en un explorador. 
+    En esta página, la expresión `@Request["source"]` obtiene el valor de la dirección URL y lo muestra.
+5. En la barra de herramientas, haga clic en **Guardar**.
+6. Ejecute *Exception. cshtml* en un explorador. 
 
-    ![[image]](18-customizing-site-wide-behavior/_static/image5.jpg)
+    ![[imagen]](18-customizing-site-wide-behavior/_static/image5.jpg)
 
-    Se produce un error en *Exception.cshtml*, el  *\_PageStart.cshtml* página redirige a la *Error.cshtml* archivo, que muestra el mensaje.
+    Dado que se produce un error en *Exception. cshtml*, la página *\_PageStart. cshtml* redirige al archivo *error. cshtml* , que muestra el mensaje.
 
-    Para obtener más información sobre las excepciones, vea [Introducción a ASP.NET Web Pages de programación mediante la sintaxis Razor](https://go.microsoft.com/fwlink/?LinkID=251587).
+    Para obtener más información sobre las excepciones, vea [Introducción a la programación de ASP.NET Web pages mediante la sintaxis Razor](https://go.microsoft.com/fwlink/?LinkID=251587).
 
 <a id="Using__PageStart.cshtml_to_Restrict_Folder_Access"></a>
-## <a name="using-pagestartcshtml-to-restrict-folder-access"></a>Uso de \_PageStart.cshtml para restringir el acceso de carpeta
+## <a name="using-_pagestartcshtml-to-restrict-folder-access"></a>Usar \_PageStart. cshtml para restringir el acceso a las carpetas
 
-También puede usar el  *\_PageStart.cshtml* archivos para restringir el acceso a todos los archivos en una carpeta.
+También puede usar el archivo *\_PageStart. cshtml* para restringir el acceso a todos los archivos de una carpeta.
 
-1. En WebMatrix, cree un nuevo sitio Web mediante la **sitio desde plantilla** opción.
-2. En las plantillas disponibles, seleccione **Starter Site**.
+1. En WebMatrix, cree un nuevo sitio web con la opción **sitio a partir de plantilla** .
+2. En plantillas disponibles, seleccione **sitio de inicio**.
 3. En la carpeta raíz, cree una carpeta denominada *AuthenticatedContent*.
-4. En el *AuthenticatedContent* carpeta, cree un archivo denominado  *\_PageStart.cshtml* y reemplácelo por el marcado existente y el código siguiente: 
+4. En la carpeta *AuthenticatedContent* , cree un archivo denominado *\_PageStart. cshtml* y reemplace el marcado y el código existentes por lo siguiente: 
 
     [!code-cshtml[Main](18-customizing-site-wide-behavior/samples/sample16.cshtml)]
 
-    El código se inicia al impedir que todos los archivos en la carpeta que se va a almacenar en caché. (Esto es necesario para escenarios como los equipos públicos, si no desea páginas en caché de un usuario esté disponible para el usuario siguiente). A continuación, el código determina si el usuario ha iniciado sesión en el sitio antes de poder ver cualquiera de las páginas en la carpeta. Si el usuario no ha iniciado sesión, el código redirige a la página de inicio de sesión. La página de inicio de sesión puede devolver al usuario a la página solicitada originalmente si incluye un valor de cadena de consulta denominado `ReturnUrl`.
-5. Crear una nueva página en el *AuthenticatedContent* carpeta denominada *Page.cshtml*.
-6. Reemplace el marcado predeterminado con lo siguiente:  
+    El código comienza evitando que se almacenen en caché todos los archivos de la carpeta. (Esto es necesario para escenarios como equipos públicos, donde no desea que las páginas almacenadas en caché de un usuario estén disponibles para el siguiente usuario). A continuación, el código determina si el usuario ha iniciado sesión en el sitio para que pueda ver cualquiera de las páginas de la carpeta. Si el usuario no ha iniciado sesión, el código redirige a la página de inicio de sesión. La página de inicio de sesión puede devolver al usuario a la página que se solicitó originalmente si incluye un valor de cadena de consulta denominado `ReturnUrl`.
+5. Cree una nueva página en la carpeta *AuthenticatedContent* denominada *Page. cshtml*.
+6. Reemplace el marcado predeterminado por lo siguiente:  
 
     [!code-cshtml[Main](18-customizing-site-wide-behavior/samples/sample17.cshtml)]
-7. Ejecute *Page.cshtml* en un explorador. El código le redirige a una página de inicio de sesión. Debe registrar antes de iniciar sesión. Después de que ha registrado y ha iniciado sesión, puede navegar a la página y ver su contenido.
+7. Ejecute *Page. cshtml* en un explorador. El código le redirige a una página de inicio de sesión. Debe registrarse antes de iniciar sesión. Después de haber registrado y iniciado sesión, puede navegar a la página y ver su contenido.
 
 <a id="Additional_Resources"></a>
 ## <a name="additional-resources"></a>Recursos adicionales
 
-[Introducción a ASP.NET Web Pages usando la sintaxis Razor de programación](https://go.microsoft.com/fwlink/?LinkID=251587)
+[Introducción a la programación de ASP.NET Web Pages mediante la sintaxis Razor](https://go.microsoft.com/fwlink/?LinkID=251587)

@@ -1,355 +1,355 @@
 ---
 uid: web-pages/overview/getting-started/introducing-aspnet-web-pages-2/intro-to-web-pages-programming
-title: 'Introducción a ASP.NET Web Pages: conceptos básicos de programación | Microsoft Docs'
+title: Introducción a los conceptos básicos de la programación de ASP.NET Web Pages | Microsoft Docs
 author: Rick-Anderson
-description: "Este tutorial proporciona información general sobre cómo programar en ASP.NET Web Pages con sintaxis Razor. Lo que aprenderá: La sintaxis 'Razor' básica que usa para la incorporación de cambios..."
+description: 'En este tutorial se ofrece información general sobre cómo programar en ASP.NET Web Pages con sintaxis Razor. Lo que aprenderá: la sintaxis básica "Razor" que se usa para PR...'
 ms.author: riande
 ms.date: 06/17/2015
 ms.assetid: 7526ed45-a97d-4e8a-8301-01324ef0eff9
 msc.legacyurl: /web-pages/overview/getting-started/introducing-aspnet-web-pages-2/intro-to-web-pages-programming
 msc.type: authoredcontent
 ms.openlocfilehash: 474de7671ac2931e5ba9ff635d77385403644521
-ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/06/2019
-ms.locfileid: "65130495"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78509983"
 ---
-# <a name="introducing-aspnet-web-pages---programming-basics"></a>Introducción a las páginas Web ASP.NET - conceptos básicos de programación
+# <a name="introducing-aspnet-web-pages---programming-basics"></a>Introducción a los conceptos básicos de la programación de ASP.NET Web Pages
 
 por [Tom FitzMacken](https://github.com/tfitzmac)
 
-> Este tutorial proporciona información general sobre cómo programar en ASP.NET Web Pages con sintaxis Razor.
+> En este tutorial se ofrece información general sobre cómo programar en ASP.NET Web Pages con sintaxis Razor.
 > 
-> Lo que aprenderá:
+> Temas que se abordarán:
 > 
-> - La sintaxis "Razor" básica que usan para la programación en ASP.NET Web Pages.
-> - Algunos básica C#, que es el lenguaje de programación que se va a usar.
-> - Algunos conceptos básicos de programación de páginas Web.
-> - Cómo instalar paquetes (componentes que contienen código creado previamente) para usar con su sitio.
-> - Cómo usar *aplicaciones auxiliares* para realizar tareas comunes de programación.
+> - La sintaxis básica "Razor" que se usa para programar en ASP.NET Web Pages.
+> - Algunos aspectos C#básicos, que es el lenguaje de programación que se va a usar.
+> - Algunos conceptos fundamentales de programación para las páginas Web.
+> - Cómo instalar paquetes (componentes que contienen código creado previamente) para usarlos con el sitio.
+> - Cómo usar las *aplicaciones auxiliares* para realizar tareas de programación comunes.
 >   
 > 
-> Características y tecnologías tratadas:
+> Características y tecnologías descritas:
 > 
-> - NuGet y el Administrador de paquetes.
-> - El `Gravatar` auxiliar.
+> - NuGet y el administrador de paquetes.
+> - Aplicación auxiliar de `Gravatar`.
 
-Este tutorial es principalmente un ejercicio de presentación de la sintaxis de programación que va a usar para ASP.NET Web Pages. Obtendrá información sobre *sintaxis Razor* y lenguaje de programación de código que está escrito en C#. Obtuvo un vistazo a esta sintaxis en el tutorial anterior; en este tutorial explicaremos la sintaxis más.
+Este tutorial es principalmente un ejercicio en el que se presenta la sintaxis de programación que se usará para ASP.NET Web Pages. Conocerá *Sintaxis Razor* y el código escrito en el C# lenguaje de programación. En el tutorial anterior, tiene una visión de esta sintaxis; en este tutorial explicaremos la sintaxis más.
 
-Prometemos que este tutorial trata la mayoría de programación que verá en un tutorial de inicio único y que es el tutorial único que es *sólo* acerca de la programación. En el resto de los tutoriales en este conjunto, en realidad creará las páginas que hacer cosas interesantes.
+Prometemos que este tutorial implica la mayor parte de la programación que verá en un solo tutorial, y que es el único tutorial que *solo* trata sobre programación. En los tutoriales restantes de este conjunto, creará realmente páginas que hacen cosas interesantes.
 
-También obtendrá información sobre *aplicaciones auxiliares de*. Una aplicación auxiliar es un componente, un fragmento de empaquetado de seguridad de código, que se pueden agregar a una página. La aplicación auxiliar realiza el trabajo que en caso contrario, podría ser una tarea tediosa o complejas hacer a mano.
+También obtendrá información sobre las *aplicaciones auxiliares*. Una aplicación auxiliar es un componente (un fragmento de código empaquetado) que se puede Agregar a una página. El ayudante realiza un trabajo que, de lo contrario, podría ser tedioso o complejo de hacer a mano.
 
-## <a name="creating-a-page-to-play-with-razor"></a>Creación de una página para jugar con Razor
+## <a name="creating-a-page-to-play-with-razor"></a>Crear una página para reproducirla con Razor
 
-En esta sección reproducirá un poco con Razor para que pueda hacerse una idea de la sintaxis básica.
+En esta sección, reproducirá un poco con Razor para que pueda hacerse una idea de la sintaxis básica.
 
-Inicie WebMatrix si ya no se está ejecutando. Deberá usar el sitio Web que creó en el tutorial anterior ([Introducción a trabajar con páginas Web](https://go.microsoft.com/fwlink/?LinkId=251578)). Para volver a abrirlo, haga clic en **Mis sitios** y elija **WebPageMovies**:
+Inicie WebMatrix si aún no se está ejecutando. Usará el sitio web que creó en el tutorial anterior ([Introducción con páginas web](https://go.microsoft.com/fwlink/?LinkId=251578)). Para volver a abrirlo, haga clic en **mis sitios** y elija **WebPageMovies**:
 
-![Pantalla que muestra las opciones de abrir sitio y el resaltado de Mis sitios de inicio de WebMatrix](intro-to-web-pages-programming/_static/image1.png)
+![Pantalla Inicio de WebMatrix que muestra las opciones del sitio abierto y mis sitios resaltados](intro-to-web-pages-programming/_static/image1.png)
 
-Seleccione el **archivos** área de trabajo.
+Seleccione el área de trabajo **archivos** .
 
-En la cinta de opciones, haga clic en **New** para crear una página. Seleccione **CSHTML** y el nombre de la nueva página *TestRazor.cshtml*.
+En la cinta de opciones, haga clic en **nuevo** para crear una página. Seleccione **CSHTML** y asigne a la nueva página el nombre *TestRazor. CSHTML*.
 
 Haga clic en **Aceptar**.
 
-Copie lo siguiente en el archivo y reemplazar completamente lo que no existe ya está.
+Copie lo siguiente en el archivo, reemplazando completamente lo que ya existe.
 
 > [!NOTE]
-> Cuando copie código o marcado de los ejemplos en una página, la sangría y la alineación quizás no sea el mismo que en el tutorial. Sangría y alineación no afectan a cómo se ejecuta el código, sin embargo.
+> Al copiar código o marcado de los ejemplos en una página, la sangría y la alineación podrían no ser las mismas que en el tutorial. Sin embargo, la sangría y la alineación no afectan al modo en que se ejecuta el código.
 
 [!code-cshtml[Main](intro-to-web-pages-programming/samples/sample1.cshtml)]
 
-## <a name="examining-the-example-page"></a>Examen de la página de ejemplo
+## <a name="examining-the-example-page"></a>Examinar la página de ejemplo
 
-La mayoría de lo que ve es HTML normal. Sin embargo, en la parte superior hay este bloque de código:
+La mayor parte de lo que se ve es HTML normal. Sin embargo, en la parte superior, este bloque de código:
 
 [!code-cshtml[Main](intro-to-web-pages-programming/samples/sample2.cshtml)]
 
-Tenga en cuenta lo siguiente acerca de este bloque de código:
+Tenga en cuenta lo siguiente sobre este bloque de código:
 
-- El carácter @ indica a ASP.NET que lo que sigue es el código de Razor, no HTML. ASP.NET tratará todo tras el @ caracteres como código hasta que se ejecuta de nuevo en HTML. (En este caso, es el &lt;! DOCTYPE&gt; elemento.
-- Las llaves ({y}) contenga un bloque de código Razor si el código tiene más de una línea. Las llaves indicar a ASP.NET, donde el código para ese bloque se inicia y finaliza.
-- La / / caracteres marcan un comentario, es decir, una parte del código que no se ejecutará.
-- Cada instrucción tiene que finalizar con un punto y coma (;). (Sin comentarios, aunque.)
-- Puede almacenar valores en *variables*, que se crea (*declarar*) con la palabra clave var. Cuando se crea una variable, darle un nombre, que puede incluir letras, números y caracteres de subrayado (\_). Los nombres de variable no pueden empezar con un número y no pueden usar el nombre de una palabra clave de programación (por ejemplo, var).
-- Escriba las cadenas de caracteres (por ejemplo, "ASP.NET" y "Páginas Web") entre comillas. (Deben ser comillas dobles). No son números entre comillas.
-- No importa el espacio en blanco fuera de las comillas. No importan principalmente saltos de línea. la excepción es que no se puede dividir una cadena entre comillas entre líneas. No importan la sangría y alineación.
+- El carácter @ indica a ASP.NET que lo que sigue es código Razor, no HTML. ASP.NET tratará todo lo que haya después del carácter @ como código hasta que vuelva a ejecutarse en HTML. (En este caso, eso es el &lt;. DOCTYPE&gt; elemento.
+- Las llaves ({y}) encierran un bloque de código Razor si el código tiene más de una línea. Las llaves indican a ASP.NET dónde se inicia y finaliza el código para ese bloque.
+- Los caracteres//marcan un comentario, es decir, una parte del código que no se ejecutará.
+- Cada instrucción tiene que terminar con un punto y coma (;). (Sin embargo, no comentarios).
+- Puede almacenar valores en *variables*, que crea (*declare*) con la palabra clave var. Cuando se crea una variable, se le asigna un nombre, que puede incluir letras, números y caracteres de subrayado (\_). Los nombres de variable no pueden comenzar con un número y no pueden usar el nombre de una palabra clave de programación (como var).
+- Las cadenas de caracteres (como "ASP.NET" y "páginas web") se delimitan entre comillas. (Deben ser comillas dobles). Los números no están entre comillas.
+- No importa espacios en blanco fuera de las comillas. Los saltos de línea no importan principalmente; la excepción es que no se puede dividir una cadena entre comillas entre las líneas. La sangría y la alineación no importan.
 
-Algo que no sea obvio a partir de este ejemplo es que todo el código distingue mayúsculas de minúsculas. Esto significa que la suma de la variable es una variable diferente que las variables que se podría denominar la suma o la suma. De forma similar, var es una palabra clave, pero Var no es.
+Algo que no es obvio en este ejemplo es que todo el código distingue mayúsculas de minúsculas. Esto significa que la variable TheSum es una variable diferente de las variables que se pueden denominar theSum o TheSum. Del mismo modo, var es una palabra clave, pero var no lo es.
 
 ### <a name="objects-and-properties-and-methods"></a>Objetos y propiedades y métodos
 
-Es la expresión DateTime.Now. En términos sencillos, fecha y hora es un *objeto*. Un objeto es algo que se puede programar con, una página, un cuadro de texto, un archivo, una imagen, una solicitud web, un mensaje de correo electrónico, un registro de cliente, etcetera. Los objetos tienen uno o más *propiedades* que describen sus características. Un objeto de cuadro de texto tiene una propiedad de texto (entre otros), un objeto de solicitud tiene una propiedad de dirección Url (y otros), un mensaje de correo electrónico tiene una propiedad From y una propiedad To, y así sucesivamente. Los objetos también tienen *métodos* que son los "verbos" pueden realizar. Trabajará con objetos mucho.
+Después hay la expresión DateTime. Now. En términos simples, DateTime es un *objeto*. Un objeto es un elemento que se puede programar con (una página, un cuadro de texto, un archivo, una imagen, una solicitud Web, un mensaje de correo electrónico, un registro de cliente, etc.). Los objetos tienen una o más *propiedades* que describen sus características. Un objeto de cuadro de texto tiene una propiedad de texto (entre otros), un objeto de solicitud tiene una propiedad de dirección URL (y otros), un mensaje de correo electrónico tiene una propiedad From y una propiedad to, y así sucesivamente. Los objetos también tienen *métodos* que son los "verbos" que pueden realizar. Trabajará con objetos mucho.
 
-Como puede ver en el ejemplo, fecha y hora es un objeto que le permita programa fechas y horas. Tiene una propiedad denominada ahora devuelve la fecha y hora actuales.
+Como puede ver en el ejemplo, DateTime es un objeto que le permite programar fechas y horas. Tiene una propiedad denominada Now que devuelve la fecha y hora actuales.
 
-### <a name="using-code-to-render-markup-in-the-page"></a>Uso de código para representar el marcado en la página
+### <a name="using-code-to-render-markup-in-the-page"></a>Usar código para representar el marcado en la página
 
-En el cuerpo de la página, tenga en cuenta lo siguiente:
+En el cuerpo de la página, observe lo siguiente:
 
 [!code-html[Main](intro-to-web-pages-programming/samples/sample3.html)]
 
-Nuevamente, el carácter @ indica a ASP.NET que lo que sigue es el código, no HTML. En el marcado se puede agregar seguido de una expresión de código y ASP.NET representará el valor de ese derecho de la expresión en ese momento. En el ejemplo, @a representará a todo lo que es el valor de la variable denominada una, @product representa cualquier cosa que esté en el producto con nombre de variable y así sucesivamente.
+De nuevo, el carácter @ indica a ASP.NET que lo que sigue es código, no HTML. En el marcado puede Agregar @ seguido de una expresión de código y ASP.NET representará el valor de esa expresión justo en ese punto. En el ejemplo, @a representará cualquier valor de la variable denominada a, @product representa lo que hay en la variable denominada product, etc.
 
-No está limitado a las variables, sin embargo. En algunos casos, el carácter @ precede a una expresión:
+Sin embargo, no está limitado a las variables. En algunas instancias aquí, el carácter @ precede a una expresión:
 
-- @(una\*b) el producto de cualquier cosa que esté en las variables se representa un y b. (El \* significa de operador de multiplicación.)
-- @(tecnología + "" + producto) representa los valores de la tecnología de las variables y el producto después de concatenarlas todas y agregar un espacio entre ellos. El operador (+) para concatenar cadenas es igual que el operador para sumar números. ASP.NET normalmente pueden indicar si está trabajando con números o con cadenas y hace lo correcto con el operador +.
-- @Request.Url representa la propiedad de dirección Url del objeto de solicitud. El objeto de solicitud contiene información sobre la solicitud actual desde el explorador y, por supuesto, la propiedad de dirección Url contiene la dirección URL de la solicitud actual.
+- @ (a\*b) representa el producto de lo que se encuentra en las variables a y b. (El operador \* significa multiplicación).
+- @ (Technology + "" + Product) representa los valores de la tecnología de variables y el producto después de concatenarlos y agregar un espacio entre ellos. El operador (+) para concatenar cadenas es igual que el operador para sumar números. Normalmente, ASP.NET puede indicar si está trabajando con números o con cadenas y hace lo correcto con el operador +.
+- @Request.Url representa la propiedad URL del objeto de solicitud. El objeto de solicitud contiene información sobre la solicitud actual desde el explorador y, por supuesto, la propiedad URL contiene la dirección URL de esa solicitud actual.
 
-El ejemplo también está diseñado para mostrar que puede trabajar de maneras diferentes. Puede realizar cálculos en el bloque de código en la parte superior, colocar los resultados en una variable y, a continuación, representar la variable en el marcado. O bien, puede hacer cálculos en un derecho de la expresión en el marcado. El método que se utilice depende de lo que está haciendo y, en cierta medida, en sus propias preferencias.
+El ejemplo también está diseñado para mostrarle que puede trabajar de maneras diferentes. Puede realizar cálculos en el bloque de código de la parte superior, colocar los resultados en una variable y, a continuación, representar la variable en el marcado. O bien, puede realizar cálculos en una expresión directamente en el marcado. El método que use dependerá de lo que esté haciendo y, en cierta medida, según sus preferencias.
 
 ### <a name="seeing-the-code-in-action"></a>Ver el código en acción
 
-Haga clic en el nombre del archivo y, a continuación, elija **iniciar en el explorador**. Vea la página en el explorador con todos los valores y las expresiones que se resuelve en la página.
+Haga clic con el botón secundario en el nombre del archivo y, a continuación, elija **iniciar en el explorador**. Verá la página en el explorador con todos los valores y las expresiones que se resuelven en la página.
 
-![Página de 'TestRazor' que se ejecuta en el explorador](intro-to-web-pages-programming/_static/image2.png)
+![Página ' TestRazor ' en ejecución en el explorador](intro-to-web-pages-programming/_static/image2.png)
 
-Examine el código fuente en el explorador.
+Examine el origen en el explorador.
 
-![Origen de la página 'Test Razor' en el explorador](intro-to-web-pages-programming/_static/image3.png)
+![Origen de la página "probar Razor" en el explorador](intro-to-web-pages-programming/_static/image3.png)
 
-Tal y como se espera que su experiencia en el tutorial anterior, ninguno de los códigos de Razor están en la página. Todo lo que ve son los valores de presentación real. Cuando se ejecuta una página, realmente está realizando una solicitud al servidor web que está integrado en WebMatrix. Cuando se recibe la solicitud, ASP.NET resuelve todos los valores y las expresiones y procesa sus valores en la página. A continuación, envía la página al explorador.
+Tal como se espera de su experiencia en el tutorial anterior, no hay ningún código Razor en la página. Lo único que ve son los valores de presentación reales. Al ejecutar una página, realmente está realizando una solicitud al servidor Web integrado en WebMatrix. Cuando se recibe la solicitud, ASP.NET resuelve todos los valores y las expresiones y representa sus valores en la página. A continuación, envía la página al explorador.
 
 > [!TIP] 
 > 
-> **Razor y C#**
+> **Razor yC#**
 > 
-> Hasta ahora hemos dicho que está trabajando con sintaxis Razor. Esto es cierto, pero no es la historia completa. El lenguaje de programación real utiliza se denomina *C#*. C# creado por Microsoft hace una década y ha convertido en uno de los lenguajes de programación principales para crear aplicaciones de Windows. Todas las reglas que ha visto acerca de cómo asignar un nombre de una variable y cómo crear instrucciones y así sucesivamente son realmente todas las reglas del lenguaje C#.
+> Hasta ahora hemos mencionado que está trabajando con sintaxis Razor. Eso es cierto, pero no es la historia completa. Se llama *C#* al lenguaje de programación real que está usando. C#fue creado por Microsoft hace una década y se ha convertido en uno de los principales lenguajes de programación para crear aplicaciones de Windows. Todas las reglas que ha visto sobre cómo asignar un nombre a una variable y cómo crear instrucciones, etc., son realmente todas las C# reglas del lenguaje.
 > 
-> Razor se refiere concretamente en el pequeño conjunto de convenciones para cómo insertar este código en una página. Por ejemplo, la convención de usar para marcar el código de la página y usar @ {} para insertar un bloque de código es el aspecto de Razor de una página. Las aplicaciones auxiliares también se consideran parte de Razor. Sintaxis de Razor se usa en más lugares que acaba en ASP.NET Web Pages. (Por ejemplo, se utiliza en las vistas de MVC de ASP.NET también.)
+> Razor hace referencia más específicamente al conjunto reducido de convenciones sobre cómo insertar este código en una página. Por ejemplo, la Convención de usar @ para marcar el código en la página y usar @ {} para insertar un bloque de código es el aspecto de Razor de una página. Las aplicaciones auxiliares también se consideran parte de Razor. Sintaxis Razor se usa en más lugares que en ASP.NET Web Pages. (Por ejemplo, también se usa en las vistas de MVC de ASP.NET).
 > 
-> Mencionamos esto porque si busca información acerca de la programación ASP.NET Web Pages, encontrará una gran cantidad de referencias a Razor. Sin embargo, una gran cantidad de esas referencias no se aplican a lo que va a realizar y, por tanto, puede resultar confuso. Y, de hecho, muchas de sus preguntas sobre programación realmente se va a ser sobre cómo trabajar con C# o trabajar con ASP.NET. Por lo que si observa específicamente para obtener información acerca de Razor, es posible que no encontrará las respuestas que necesita.
+> Lo mencionamos porque, si busca información sobre la programación ASP.NET Web Pages, encontrará una gran cantidad de referencias a Razor. Sin embargo, muchas de esas referencias no se aplican a lo que está haciendo y, por tanto, pueden resultar confusos. Y, de hecho, muchas de las preguntas de programación van a ser sobre cómo trabajar con C# ASP.net o trabajar con ellas. Por lo tanto, si busca específicamente información sobre Razor, puede que no encuentre las respuestas que necesita.
 
-## <a name="adding-some-conditional-logic"></a>Agregar lógica condicional
+## <a name="adding-some-conditional-logic"></a>Agregar una lógica condicional
 
-Una de las características importantes sobre el uso de código en una página es que puede cambiar lo que se produce según varias condiciones. En esta parte del tutorial, podrá experimentar con algunos métodos para cambiar lo que se muestra en la página.
+Una de las excelentes características sobre el uso de código en una página es que puede cambiar lo que sucede en función de las distintas condiciones. En esta parte del tutorial, reproducirá algunas maneras de cambiar lo que se muestra en la página.
 
-El ejemplo será simple y un poco retocado, por lo que podemos concentrar en la lógica condicional. La página que se va a crear hará lo siguiente:
+El ejemplo será sencillo y ligeramente inventado para que podamos concentrarnos en la lógica condicional. La página que creará hará lo siguiente:
 
-- Mostrar texto diferente en la página en función de si es la primera vez que se muestra la página o si ha elegido un botón para enviar la página. Que será la primera prueba condicional.
-- Mostrar el mensaje solo si se pasa un valor determinado en la cadena de consulta de la dirección URL (http://...?show=true). Que será la segunda prueba condicional.
+- Muestre texto diferente en la página dependiendo de si es la primera vez que se muestra la página o si ha hecho clic en un botón para enviar la página. Que será la primera prueba condicional.
+- Mostrar el mensaje solo si se pasa un valor determinado en la cadena de consulta de la dirección URL (http://...? show = true). Que será la segunda prueba condicional.
 
-En WebMatrix, cree una página y asígnele el nombre *TestRazorPart2.cshtml*. (En la cinta de opciones, haga clic en **New**, elija **CSHTML**, asigne el nombre y, a continuación, haga clic en **Aceptar**.)
+En WebMatrix, cree una página y asígnele el nombre *TestRazorPart2. cshtml*. (En la cinta de opciones, haga clic en **nuevo**, elija **CSHTML**, asigne un nombre al archivo y, a continuación, haga clic en **Aceptar**).
 
-Reemplace el contenido de la página con lo siguiente:
+Reemplace el contenido de esa página por lo siguiente:
 
 [!code-cshtml[Main](intro-to-web-pages-programming/samples/sample4.cshtml)]
 
-El bloque de código en la parte superior, inicializa una variable denominada message con algo de texto. En el cuerpo de la página, se muestra el contenido de la variable de mensaje dentro de un &lt;p&gt; elemento. También contiene el marcado un &lt;entrada&gt; elemento para crear un **enviar** botón.
+El bloque de código de la parte superior Inicializa una variable denominada Message con texto. En el cuerpo de la página, el contenido de la variable de mensaje se muestra dentro de un elemento &lt;p&gt;. El marcado también contiene un elemento &lt;&gt; de entrada para crear un botón de **envío** .
 
-Ejecute la página para ver cómo funciona ahora. Por ahora, es básicamente una página estática, incluso si hace clic en el **enviar** botón.
+Ejecute la página para ver cómo funciona ahora. Por ahora, es básicamente una página estática, aunque haga clic en el botón **Enviar** .
 
-Vuelva a WebMatrix. Dentro del bloque de código, agregue el siguiente código resaltado *después* la línea que inicializa el mensaje:
+Vuelva a WebMatrix. Dentro del bloque de código, agregue el siguiente código resaltado *después* de la línea que inicializa el mensaje:
 
 [!code-cshtml[Main](intro-to-web-pages-programming/samples/sample5.cshtml?highlight=4-6)]
 
-### <a name="the-if---block"></a>If bloque {}
+### <a name="the-if---block"></a>El bloque if {}
 
-Lo que acaba de agregar era if condición. En el código, la condición if debe tener una estructura similar al siguiente:
+Lo que acaba de agregar era una condición if. En el código, la condición If tiene una estructura como la siguiente:
 
 [!code-csharp[Main](intro-to-web-pages-programming/samples/sample6.cs)]
 
-La condición de prueba está entre paréntesis. Debe ser un valor o una expresión que devuelve true o false. Si la condición es true, ASP.NET se ejecuta la instrucción o instrucciones que están dentro de las llaves. (Estos son la *, a continuación,* forma parte de la *if-then* lógica.) Si la condición es false, se omite el bloque de código.
+La condición que se va a probar se encuentra entre paréntesis. Debe ser un valor o una expresión que devuelva true o false. Si la condición es true, ASP.NET ejecuta la instrucción o instrucciones que se encuentran dentro de las llaves. ( *Son parte de la lógica* *if-then* ). Si la condición es falsa, se omite el bloque de código.
 
-Estos son algunos ejemplos de condiciones que puede probar en if instrucción:
+Estos son algunos ejemplos de condiciones que puede probar en una instrucción If:
 
 [!code-csharp[Main](intro-to-web-pages-programming/samples/sample7.cs)]
 
-Puede probar variables con valores o de expresiones mediante un *operador lógico* o *operador de comparación*: igual a (==), mayor que (&gt;), menor que (&lt;), mayor o igual a (&gt;=) y menor o igual a (&lt;=). El! = significa operador no es igual a, por ejemplo, si (un! = 0) significa *si una no es igual a 0*.
+Puede probar variables con valores o con expresiones mediante un *operador lógico* o un *operador de comparación*: igual a (= =), mayor que (&gt;), menor que (&lt;), mayor o igual que (&gt;=) y menor o igual que (&lt;=). El operador! = significa que no es igual a (por ejemplo, si (a! = 0) significa que *no es igual a 0*.
 
 > [!NOTE]
-> Asegúrese de que se tenga en cuenta que el operador de comparación de igual a (==) no es el mismo =. El = operador se usa solo para asignar valores (var un = 2). Si mezcla estos operadores de, obtendrá un error u obtendrá resultados extraños.
+> Asegúrese de que observa que el operador de comparación para es igual a (= =) no es igual que =. El operador = solo se usa para asignar valores (var a = 2). Si combina estos operadores, recibirá un error o obtendrá algunos resultados más extraños.
 
-Para probar si algo es true, la sintaxis completa es if(IsDone == true). Pero también puede usar el método abreviado if(IsDone). Si no hay ningún operador de comparación, ASP.NET se da por supuesto que está probando para true.
+Para probar si algo es true, la sintaxis completa es si (hace = = true). Pero también puede usar el método abreviado si (hace). Si no hay ningún operador de comparación, ASP.NET supone que está probando la verdadera.
 
-¡El operador! operador por sí mismo: un operador lógico NOT. Por ejemplo, la condición if (! IsPost) significa *si no se cumple IsPost*.
+El operador ! por sí solo significa un operador lógico NOT. Por ejemplo, la condición if (! IsPost) significa *si IsPost no es true*.
 
-Puede combinar condiciones mediante el uso de un operador lógico AND (&amp; &amp; operador) o el operador lógico OR (|| (operador)). Por ejemplo, la última de if condiciones en los medios de los ejemplos anteriores *si FileProcessingIsDone no está establecida en true displayMessage y se establece en false*.
+Puede combinar condiciones mediante un operador lógico AND (&amp;&amp;) o Logical OR (| | Operator). Por ejemplo, la última de las condiciones if de los ejemplos anteriores significa *si FileProcessingIsDone no está establecido en true y displayMessage está establecido en false*.
 
 ### <a name="the-else-block"></a>El bloque else
 
-Una última cosa sobre if bloques: una si el bloque puede ir seguido de un bloque else. Un bloque else es útil es que tiene que ejecutar código diferente cuando la condición es false. Este es un ejemplo sencillo:
+Una de las cosas finales sobre los bloques if: un bloque if puede ir seguido de un bloque else. Un bloque else es útil si tiene que ejecutar código diferente cuando la condición es falsa. A continuación se muestra un sencillo ejemplo:
 
 [!code-csharp[Main](intro-to-web-pages-programming/samples/sample8.cs)]
 
-Podrá ver algunos ejemplos en los tutoriales posteriores de esta serie donde resulta útil usar un bloque else.
+En los tutoriales posteriores de esta serie verá algunos ejemplos en los que el uso de un bloque else es útil.
 
 ### <a name="testing-whether-the-request-is-a-submit-post"></a>Comprobar si la solicitud es un envío (post)
 
-Hay más, pero volvamos al ejemplo, que tiene el if(IsPost) condición {...}. IsPost es realmente una propiedad de la página actual. La primera vez que se solicita la página, IsPost devuelve false. Sin embargo, si haga clic en un botón o enviar la página de lo contrario, es decir, publicarlo, IsPost devuelve true. Por lo tanto IsPost le permite determinar si está trabajando con un envío de formulario. (En términos de verbos HTTP, si la solicitud es una operación GET, IsPost devuelve false. Si la solicitud es una operación POST, IsPost devuelve true.) En un tutorial posterior a trabajar con formularios de entrada, donde esta prueba es muy útil.
+Hay más, pero vamos a volver al ejemplo, que tiene la condición if (IsPost) {...}. IsPost es realmente una propiedad de la página actual. La primera vez que se solicita la página, IsPost devuelve false. Sin embargo, si hace clic en un botón o envía la página; es decir, la publica, IsPost devuelve true. Por lo tanto, IsPost le permite determinar si está tratando con un envío de formulario. (En términos de verbos HTTP, si la solicitud es una operación GET, IsPost devuelve false. Si la solicitud es una operación POST, IsPost devuelve true). En un tutorial posterior, trabajará con los formularios de entrada, donde esta prueba resulta especialmente útil.
 
-Ejecute la página. Dado que esta es la primera vez se solicita la página, vea "Esto es la primera vez que se ha solicitado la página". Esa cadena es el valor que inicializa la variable de mensaje. Hay una prueba if(IsPost), pero que devuelve false en este momento, para que bloquee el código dentro de if no se ejecuta.
+Ejecute la página. Dado que esta es la primera vez que solicita la página, verá "esta es la primera vez que solicitó la página". Esa cadena es el valor al que ha inicializado la variable de mensaje. Hay una prueba if (IsPost), pero que devuelve false en ese momento, por lo que el código dentro del bloque If no se ejecuta.
 
-Haga clic en el **enviar** botón. La página se vuelve a solicitar. Como antes, se establece la variable de mensaje "Este es la primera vez...". Pero esta vez, la prueba if(IsPost) devuelve true, por lo que el código dentro de bloque se ejecuta. El código cambia el valor de la variable de mensaje en un valor diferente, que es lo que se presenta en el marcado.
+Haga clic en el botón **Enviar** . La página se vuelve a solicitar. Como antes, la variable de mensaje se establece en "esta es la primera vez...". Pero esta vez, la prueba if (IsPost) devuelve true, por lo que el código incluido en el bloque if se ejecuta. El código cambia el valor de la variable de mensaje a un valor diferente, que es lo que se representa en el marcado.
 
-Ahora agregue if condición en el marcado. A continuación el &lt;p&gt; elemento que contiene el **enviar** botón, agregue el siguiente marcado:
+Ahora, agregue una condición if en el marcado. Debajo del elemento &lt;p&gt; que contiene el botón **Enviar** , agregue el siguiente marcado:
 
 [!code-cshtml[Main](intro-to-web-pages-programming/samples/sample9.cshtml)]
 
-Va a agregar código dentro del marcado, por lo que tienes para empezar @. A continuación, hay una instrucción if prueba similar al que agregó anteriormente en el bloque de código. Entre las llaves, no obstante, va a agregar HTML ordinario, como mínimo, es normal hasta que se llega a @DateTime.Now. Se trata de otro poco de código Razor, nuevamente tiene que agregar delante de él.
+Va a agregar código dentro del marcado, por lo que tiene que empezar con @. Después hay una prueba IF similar a la que agregó anteriormente en el bloque de código. Dentro de las llaves, sin embargo, está agregando HTML ordinario, es decir, es ordinaria hasta que llega a @DateTime.Now. Este es otro poco de código Razor, por lo que debe agregar @ delante de él.
 
-El punto aquí es que puede agregar si condiciones tanto en el bloque de código en la parte superior y en el marcado. Si usas if condición en el cuerpo de la página, las líneas dentro del bloque puede estar marcado o código. En ese caso, y como ocurre en cualquier momento mezclar código y marcado, tendrá que usar para dejar claro a ASP.NET donde es el código.
+El punto aquí es que puede agregar condiciones if en el bloque de código en la parte superior y en el marcado. Si usa una condición if en el cuerpo de la página, las líneas dentro del bloque pueden ser de marcado o de código. En ese caso, y como es cierto siempre que mezcle el marcado y el código, debe usar @ para que quede claro a ASP.NET donde se encuentra el código.
 
-Ejecute la página y haga clic en **enviar**. Esta vez no solo ve un mensaje diferente al enviar ("ahora que ha enviado..."), pero verá un mensaje nuevo que muestra la fecha y hora.
+Ejecute la página y haga clic en **Enviar**. Esta vez no solo ve un mensaje diferente cuando se envía ("ahora se ha enviado..."), pero aparece un mensaje nuevo que muestra la fecha y la hora.
 
-![Página 'Test Razor 2' que se ejecuta en el explorador con la marca de tiempo que se muestra después de enviar](intro-to-web-pages-programming/_static/image4.png)
+![Página ' probar Razor 2 ' que se ejecuta en el explorador con la marca de tiempo que se muestra después del envío](intro-to-web-pages-programming/_static/image4.png)
 
-### <a name="testing-the-value-of-a-query-string"></a>Comprobación del valor de una cadena de consulta
+### <a name="testing-the-value-of-a-query-string"></a>Probar el valor de una cadena de consulta
 
-Una prueba más. En esta ocasión, añadirá if bloque que prueba un valor denominado show que se puede pasar la cadena de consulta. (Como en este ejemplo: `http://localhost:43097/TestRazorPart2.cshtml?show=true`) va a cambiar la página para que el mensaje se ha sido mostrar ("Esta es la primera vez...", etc.) solo se muestra si el valor de presentación es true.
+Una prueba más. Esta vez, agregará un bloque if que prueba un valor denominado show que podría pasarse en la cadena de consulta. (Similar a esto: `http://localhost:43097/TestRazorPart2.cshtml?show=true`) Cambiará la página para que el mensaje que se muestra ("esta es la primera vez...", etc.) solo se muestra si el valor de show es true.
 
-En la parte inferior (pero interior) el bloque de código en la parte superior de la página, agregue lo siguiente:
+En la parte inferior (pero dentro) el bloque de código situado en la parte superior de la página, agregue lo siguiente:
 
 [!code-csharp[Main](intro-to-web-pages-programming/samples/sample10.cs)]
 
-El aspecto de ahora del bloque de código completo similar al ejemplo siguiente. (Recuerde que al copiar el código en la página, la sangría podría ser diferente. Pero no afecta a cómo se ejecuta el código).
+El bloque de código completo ahora tiene un aspecto similar al del ejemplo siguiente. (Recuerde que al copiar el código en la página, la sangría podría ser diferente. Pero esto no afecta al modo en que se ejecuta el código).
 
 [!code-cshtml[Main](intro-to-web-pages-programming/samples/sample11.cshtml)]
 
-El nuevo código en el bloque Inicializa una variable denominada showMessage en false. Después, hace if prueba para buscar un valor en la cadena de consulta. Cuando se solicita en primer lugar la página, tiene una dirección URL como esta:
+El nuevo código del bloque Inicializa una variable denominada showMessage en false. A continuación, realiza una prueba IF para buscar un valor en la cadena de consulta. La primera vez que se solicita la página, tiene una dirección URL como esta:
 
 `http://localhost:43097/TestRazorPart2.cshtml`
 
-El código determina si la dirección URL contiene una variable denominada que se muestran en la cadena de consulta similar a esta versión de la dirección URL:
+El código determina si la dirección URL contiene una variable denominada show en la cadena de consulta, como esta versión de la dirección URL:
 
-`http://localhost:43097/TestRazorPart2.cshtml`?show=true
+`http://localhost:43097/TestRazorPart2.cshtml`? show = true
 
-La propia prueba examina la propiedad de cadena de consulta del objeto de solicitud. Si la cadena de consulta contiene un elemento denominado show, y si ese elemento se establece en true, if bloque se ejecuta y establece la variable showMessage en true.
+La propia prueba examina la propiedad QueryString del objeto de solicitud. Si la cadena de consulta contiene un elemento denominado show y dicho elemento se establece en true, el bloque if se ejecuta y establece la variable showMessage en true.
 
-Como puede ver, hay un truco. Como su nombre indica, la cadena de consulta es una cadena. Sin embargo, solo puede probar para true y false si el valor que se está probando es el valor booleano (true/false). Antes de poder probar el valor de la variable de mostrar la cadena de consulta, tendrá que convertirlo en un valor booleano. Eso es lo que hace el método AsBool: toma una cadena como entrada y lo convierte en un valor booleano. Claramente, si la cadena es "true", el método AsBool convierte ese valor en true. Si el valor de la cadena es cualquier otra cosa, AsBool devuelve false.
+Aquí hay un truco, como puede ver. Como se indica en el nombre, la cadena de consulta es una cadena. Sin embargo, solo puede probar true y false si el valor que está probando es un valor booleano (true/false). Antes de poder probar el valor de la variable show en la cadena de consulta, tiene que convertirlo en un valor booleano. Eso es lo que hace el método asbool: toma una cadena como entrada y la convierte en un valor booleano. Claramente, si la cadena es "true", el método asbool convierte ese valor en true. Si el valor de la cadena es cualquier otro, asbool devuelve false.
 
 > [!TIP] 
 > 
-> **Tipos de datos y métodos As()**
+> **Tipos de datos y métodos as ()**
 > 
-> Hemos sólo dijimos hasta el momento que cuando se crea una variable, use la palabra clave var. Esto no es la historia completa, sin embargo. Con el fin de manipular los valores, para agregar números, o concatenar cadenas, o comparar las fechas o de pruebas para true o false, C# tiene que trabajar con una representación interna correspondiente del valor. C# puede *normalmente* averiguar cuál debe ser esa representación (es decir, ¿qué *tipo* los datos) basándose en lo que hace con los valores. Sin embargo, no puede hacer. De lo contrario, tendrá que ayuda al indicar explícitamente cómo C# debe representar los datos. El método AsBool hace eso, indica a C# que un valor de cadena "true" o "false" debe tratarse como un valor booleano. Existen métodos similares para representar cadenas como otros tipos, como AsInt (tratado como un número entero), AsDateTime (tratado como una fecha y hora), AsFloat (tratado como un número de punto flotante) y así sucesivamente. Cuando se usa como métodos (), si C# no puede representar el valor de cadena cuando se le solicite, verá un error.
+> Solo hemos dicho que cuando cree una variable, use la palabra clave var. Sin embargo, eso no es todo. Para manipular los valores, para agregar números, concatenar cadenas o comparar fechas, o para probar true/false, C# tiene que trabajar con una representación interna adecuada del valor. C#*normalmente* , puede averiguar cuál debe ser la representación (es decir, el *tipo* de datos) en función de lo que está haciendo con los valores. Sin embargo, ahora y no es posible hacerlo. Si no es así, tiene que ayudarle indicando de C# forma explícita cómo debe representar los datos. El método asbool lo hace, lo que C# indica que un valor de cadena de "true" o "false" se debe tratar como un valor booleano. Existen métodos similares para representar cadenas como otros tipos también, como AsInt (tratar como entero), asdatetime (tratar como fecha y hora), asfloat (tratar como número de punto flotante), etc. Cuando se usan como métodos como (), si C# no puede representar el valor de cadena como se ha solicitado, verá un error.
 
-En el marcado de la página, quite o comente este elemento (aquí se muestra marcado como comentario):
+En el marcado de la página, quite o comente este elemento (aquí se muestra comentado):
 
 [!code-html[Main](intro-to-web-pages-programming/samples/sample12.html)]
 
-Derecha donde quitado o comentadas ese texto, agregue lo siguiente:
+Justo donde haya quitado o comentado el texto, agregue lo siguiente:
 
 [!code-cshtml[Main](intro-to-web-pages-programming/samples/sample13.cshtml)]
 
-El si prueba indica que si es true, la variable showMessage representará un &lt;p&gt; elemento con el valor de la variable de mensaje.
+La prueba IF indica que si la variable showMessage es true, representa un elemento &lt;p&gt; con el valor de la variable Message.
 
 ### <a name="summary-of-your-conditional-logic"></a>Resumen de la lógica condicional
 
-En caso de que no está completamente seguro de lo que acaba de hacer, presentamos un resumen.
+En caso de que no esté totalmente seguro de lo que acaba de hacer, aquí se muestra un resumen.
 
-- Se inicializa la variable de mensaje en una cadena predeterminada ("Esta es la primera vez...").
-- Si la solicitud de página es el resultado de un envío (post), el valor del mensaje se cambia a "ahora que ha enviado..."
-- Se inicializa la variable showMessage en false.
-- Si contiene la cadena de consulta? mostrar = true, la variable showMessage se establece en true.
-- En el marcado, si es true, showMessage un &lt;p&gt; se representa el elemento que se muestra el valor del mensaje. (Si es false showMessage, nada se representa en ese momento en el marcado.)
-- En el marcado, si la solicitud es una publicación de un &lt;p&gt; se representa el elemento que muestra la fecha y hora.
+- La variable de mensaje se inicializa en una cadena predeterminada ("esta es la primera vez...").
+- Si la solicitud de página es el resultado de un envío (post), el valor del mensaje cambia a "Now has enviado..."
+- La variable showMessage se inicializa en false.
+- Si la cadena de consulta contiene? show = true, la variable showMessage está establecida en true.
+- En el marcado, si showMessage es true, se representa un elemento &lt;p&gt; que muestra el valor de Message. (Si showMessage es false, no se representa nada en ese punto en el marcado).
+- En el marcado, si la solicitud es una publicación, se representa un elemento &lt;p&gt; que muestra la fecha y la hora.
 
-Ejecute la página. No hay ningún mensaje, porque showMessage es false, por lo que en el marcado de la prueba if(showMessage) devuelve false.
+Ejecute la página. No hay ningún mensaje, porque showMessage es false, por lo que en el marcado la prueba if (showMessage) devuelve false.
 
-Haga clic en **Enviar**. Ver la fecha y hora, pero aún no contiene ningún mensaje.
+Haga clic en **Enviar**. Verá la fecha y la hora, pero sin ningún mensaje.
 
-En el explorador, vaya al cuadro de dirección URL y agregue lo siguiente al final de la dirección URL:? mostrar = true y, a continuación, presione ENTRAR.
+En el explorador, vaya al cuadro de dirección URL y agregue lo siguiente al final de la dirección URL:? show = true y, a continuación, presione Entrar.
 
-![Página 'Test Razor 2' en el explorador que muestra la cadena de consulta](intro-to-web-pages-programming/_static/image5.png)
+![Página "probar Razor 2" del explorador que muestra la cadena de consulta](intro-to-web-pages-programming/_static/image5.png)
 
-Aparecerá la página de nuevo. (Debido a que cambió la dirección URL, esto es una nueva solicitud, no un envío). Haga clic en **enviar** nuevo. El mensaje aparecerá de nuevo, como es la fecha y hora.
+La página se muestra de nuevo. (Como ha cambiado la dirección URL, se trata de una nueva solicitud, no de un envío). Haga clic en **Enviar** de nuevo. El mensaje se muestra de nuevo, como la fecha y la hora.
 
-![Página 'Test 2 Razor' después de enviar cuando hay una cadena de consulta](intro-to-web-pages-programming/_static/image6.png)
+![Página ' probar Razor 2 ' después del envío cuando hay una cadena de consulta](intro-to-web-pages-programming/_static/image6.png)
 
-En la dirección URL, cambie? mostrar = true para? mostrar = false y presione ENTRAR. Enviar la página de nuevo. La página es volver a cómo inicia, ningún mensaje.
+En la dirección URL, cambie? show = true a? show = false y presione Entrar. Vuelva a enviar la página. La página vuelve a empezar, sin mensaje.
 
-Como se indicó anteriormente, la lógica de este ejemplo es un poco retocado. Sin embargo, si se va a aparecer en muchas de las páginas, y tardará uno o varios de los formularios que ha visto aquí.
+Como se indicó anteriormente, la lógica de este ejemplo es un poco inventado. Sin embargo, si va a aparecer en muchas de sus páginas y toma uno o varios de los formularios que ha visto aquí.
 
-## <a name="installing-a-helper-displaying-a-gravatar-image"></a>Instalar una aplicación auxiliar (mostrar una imagen de Gravatar)
+## <a name="installing-a-helper-displaying-a-gravatar-image"></a>Instalación de una aplicación auxiliar (Mostrar una imagen de Gravatar)
 
-Algunas tareas que las personas desean hacer en las páginas web a menudo requieren una gran cantidad de código o requieren conocimientos adicionales. Ejemplos: mostrar un gráfico para los datos; colocar un Facebook "Como" botón en una página; envío de correo electrónico desde su sitio Web; recortar o cambiar el tamaño de imágenes. uso de PayPal para su sitio. Para que sea fácil de hacer este tipo de cosas, ASP.NET Web Pages le permite usar *aplicaciones auxiliares de*. Las aplicaciones auxiliares son componentes que se instala un sitio y que le permiten realizar tareas habituales con solo unas pocas líneas de código Razor.
+Algunas tareas que los usuarios suelen querer realizar en páginas Web requieren mucho código o requieren conocimientos adicionales. Ejemplos: mostrar un gráfico para datos; colocar un botón "like" de Facebook en una página; enviar correo electrónico desde su sitio web; recortar o cambiar el tamaño de las imágenes; usar PayPal para su sitio. Para facilitar la creación de estos tipos de cosas, ASP.NET Web Pages le permite usar *aplicaciones auxiliares*. Las aplicaciones auxiliares son componentes que se instalan para un sitio y que permiten realizar tareas típicas mediante el uso de unas pocas líneas de código Razor.
 
-ASP.NET Web Pages tiene algunas aplicaciones auxiliares integradas. Sin embargo, muchas aplicaciones auxiliares están disponibles en paquetes (complementos) que se proporcionan con el Administrador de paquetes de NuGet. NuGet le permite seleccionar un paquete para instalarlo y, a continuación, se encarga de todos los detalles de la instalación.
+ASP.NET Web Pages tiene algunas aplicaciones auxiliares integradas. Sin embargo, hay muchas aplicaciones auxiliares disponibles en paquetes (complementos) que se proporcionan mediante el administrador de paquetes NuGet. NuGet le permite seleccionar un paquete para instalarlo y, a continuación, se ocupa de todos los detalles de la instalación.
 
-En esta parte del tutorial, instalará una aplicación auxiliar que le permite mostrar una imagen de Gravatar ("avatar globalmente reconocido"). Obtendrá información sobre estas dos cosas. Uno es cómo buscar e instalar una aplicación auxiliar. También aprenderá cómo una aplicación auxiliar facilita hacer algo en caso contrario, deberá hacer con una gran cantidad de código que se tendría que escribir manualmente.
+En esta parte del tutorial, instalará una aplicación auxiliar que le permite mostrar una imagen de Gravatar ("Avatar Globally reconocid"). Aprenderá dos cosas. Uno es cómo buscar e instalar una aplicación auxiliar. También aprenderá cómo una aplicación auxiliar facilita hacer algo que, de otro modo, tendría que hacer con una gran cantidad de código que tendría que escribir.
 
-Puede registrar su propio Gravatar en el sitio Web de Gravatar en [ http://www.gravatar.com/ ](http://www.gravatar.com/), pero no es esencial para crear una cuenta de Gravatar para llevar a cabo esta parte del tutorial.
+Puede registrar su propia Gravatar en el sitio web de Gravatar en [http://www.gravatar.com/](http://www.gravatar.com/), pero no es esencial crear una cuenta de Gravatar para realizar esta parte del tutorial.
 
-En WebMatrix, haga clic en el **NuGet** botón.
+En WebMatrix, haga clic en el botón **NuGet** .
 
-![Cuadro de diálogo de la Galería de NuGet en WebMatrix](intro-to-web-pages-programming/_static/image7.png)
+![Cuadro de diálogo Galería de NuGet en WebMatrix](intro-to-web-pages-programming/_static/image7.png)
 
-Esto inicia el Administrador de paquetes de NuGet y muestra los paquetes disponibles. (No todos los paquetes son aplicaciones auxiliares; algunos agregan funcionalidad a WebMatrix mismo, algunas son plantillas adicionales y así sucesivamente.) Es posible que obtenga un mensaje de error acerca de la incompatibilidad de versiones. Puede ignorar este mensaje de error, haga clic en **Aceptar** y continuar con este tutorial.
+Se inicia el administrador de paquetes NuGet y se muestran los paquetes disponibles. (No todos los paquetes son aplicaciones auxiliares; algunos agregan funcionalidad a WebMatrix, algunas son plantillas adicionales, etc.). Puede obtener un mensaje de error sobre la incompatibilidad de versiones. Para pasar por alto este mensaje de error, haga clic en **Aceptar** y continúe con este tutorial.
 
-![Cuadro de diálogo de la Galería de NuGet en WebMatrix](intro-to-web-pages-programming/_static/image8.png)
+![Cuadro de diálogo Galería de NuGet en WebMatrix](intro-to-web-pages-programming/_static/image8.png)
 
 En el cuadro de búsqueda, escriba "aplicaciones auxiliares de asp.net". NuGet muestra los paquetes que coinciden con los términos de búsqueda.
 
-![Galería de NuGet en WebMatrix, que muestra los paquetes](intro-to-web-pages-programming/_static/image9.png)
+![Galería de NuGet en WebMatrix que muestra paquetes](intro-to-web-pages-programming/_static/image9.png)
 
-La biblioteca de aplicaciones auxiliares de ASP.NET Web contiene código para simplificar muchas tareas comunes, incluido el uso de imágenes Gravatar. Seleccione el **ASP.NET Web Helpers Library** del paquete y, a continuación, haga clic en **instalar** para iniciar el programa de instalación. Seleccione **Sí** cuando se le pregunte si desea instalar el paquete y acepte los términos para completar la instalación.
+La biblioteca web helpers de ASP.NET contiene código para simplificar muchas tareas comunes, incluido el uso de imágenes de Gravatar. Seleccione el paquete de la **biblioteca de aplicaciones auxiliares Web ASP.net** y, a continuación, haga clic en **instalar** para iniciar el instalador. Seleccione **sí** cuando se le pregunte si desea instalar el paquete y acepte los términos para completar la instalación.
 
-Ya está. NuGet se descarga e instala todo, incluidos los componentes adicionales que podrían ser necesarios (*dependencias*).
+Ya está. NuGet descarga e instala todo, incluidos los componentes adicionales que podrían ser necesarios (*dependencias*).
 
-Si por algún motivo tiene que desinstalar una aplicación auxiliar, el proceso es muy similar. Haga clic en el **NuGet** botón, haga clic en el **instalado** pestaña y seleccione el paquete que desea desinstalar.
+Si, por alguna razón, tiene que desinstalar una aplicación auxiliar, el proceso es muy similar. Haga clic en el botón **NuGet** , haga clic en la pestaña **instalado** y seleccione el paquete que desea desinstalar.
 
 ## <a name="using-a-helper-in-a-page"></a>Usar una aplicación auxiliar en una página
 
-Ahora usará la aplicación auxiliar que acaba de instalar. El proceso para agregar una aplicación auxiliar a una página es similar para la mayoría de las aplicaciones auxiliares.
+Ahora usará el ayudante que acaba de instalar. El proceso para agregar una aplicación auxiliar a una página es similar para la mayoría de las aplicaciones auxiliares.
 
-En WebMatrix, cree una página y asígnele el nombre *GravatarTest.cshml*. (Va a crear una página especial para probar la aplicación auxiliar, pero puede usar aplicaciones auxiliares en cualquier página del sitio).
+En WebMatrix, cree una página y asígnele el nombre *GravatarTest. cshml*. (Va a crear una página especial para probar el ayudante, pero puede usar las aplicaciones auxiliares en cualquier página del sitio).
 
-Dentro de la &lt;cuerpo&gt; elemento, agregue un &lt;div&gt; elemento. Dentro de la &lt;div&gt; elemento, escriba lo siguiente:
+Dentro del elemento &lt;cuerpo&gt;, agregue un elemento &lt;div&gt;. En el elemento &lt;div&gt;, escriba lo siguiente:
 
-@Gravatar.
+@GravatarOperador
 
-El carácter @ es el mismo carácter que se ha utilizado para marcar el código Razor. **Gravatar** es el objeto auxiliar que está trabajando.
+El carácter @ es el mismo carácter que ha utilizado para marcar el código Razor. **Gravatar** es el objeto auxiliar con el que está trabajando.
 
-Tan pronto como escriba el punto (.), WebMatrix muestra una lista de *métodos* (funciones) que la aplicación auxiliar de Gravatar hace que estén disponible:
+En cuanto escribe el punto (.), WebMatrix muestra una lista de *los métodos* (funciones) que la aplicación auxiliar Gravatar pone a disposición:
 
-![Lista desplegable de IntelliSense de aplicación auxiliar de Gravatar](intro-to-web-pages-programming/_static/image10.png)
+![Lista desplegable de IntelliSense de la aplicación auxiliar Gravatar](intro-to-web-pages-programming/_static/image10.png)
 
-Esta característica se conoce como *IntelliSense*. Le ayuda a código, ya que proporciona opciones de contexto adecuada. IntelliSense funciona con HTML, CSS, el código ASP.NET, JavaScript y otros lenguajes que se admiten en WebMatrix. Es otra característica que facilita el desarrollo de web pages en WebMatrix.
+Esta característica se conoce como *IntelliSense*. Le ayuda a codificar proporcionando opciones adecuadas para el contexto. IntelliSense funciona con código HTML, CSS, ASP.NET, JavaScript y otros lenguajes que se admiten en WebMatrix. Es otra característica que facilita el desarrollo de páginas web en WebMatrix.
 
-Presionar G en el teclado y vea que IntelliSense busca el método GetHtml. Presione Tab. IntelliSense inserta el método seleccionado (GetHtml) por usted. Escriba un paréntesis de apertura y tenga en cuenta que el paréntesis de cierre se agrega automáticamente. Escriba su dirección de correo electrónico comillas entre los paréntesis de dos. Si tiene una cuenta de Gravatar, se devolverá la imagen del perfil. Si no tiene una cuenta de Gravatar, se devuelve una imagen predeterminada. Cuando haya terminado, la línea tiene este aspecto:
+Presione G en el teclado y verá que IntelliSense encuentra el método GetHtml. Presione TAB. IntelliSense inserta el método seleccionado (GetHtml). Escriba un paréntesis de apertura y observe que el paréntesis de cierre se agrega automáticamente. Escriba la dirección de correo electrónico entre comillas entre los dos paréntesis. Si tiene una cuenta de Gravatar, se devolverá la imagen de perfil. Si no tiene una cuenta de Gravatar, se devuelve una imagen predeterminada. Cuando haya terminado, la línea tendrá el siguiente aspecto:
 
 [!code-css[Main](intro-to-web-pages-programming/samples/sample14.css)]
 
-Ahora puede ver la página en un explorador. Dependiendo de si tiene una cuenta de Gravatar, se muestra la imagen o la imagen predeterminada.
+Ahora vea la página en un explorador. Se muestra la imagen o la imagen predeterminada, en función de si tiene una cuenta de Gravatar.
 
 ![Gravatar](intro-to-web-pages-programming/_static/image11.png) ![imagen predeterminada](intro-to-web-pages-programming/_static/image12.png)
 
-Para hacerse una idea de lo que está haciendo la aplicación auxiliar para usted, vea el origen de la página en el explorador. Junto con el código HTML que tenía en la página, verá un elemento de imagen que incluye un identificador. Se trata de código que representa la aplicación auxiliar en la página en el lugar donde había @Gravatar.GetHtml. La aplicación auxiliar tardó la información proporcionada y generó el código que se comunica directamente con Gravatar con el fin de recibir la imagen correcta para la cuenta proporcionada.
+Para hacerse una idea de lo que está haciendo el ayudante, vea el origen de la página en el explorador. Junto con el código HTML que tenía en la página, verá un elemento de imagen que incluye un identificador. Este es el código que el ayudante representa en la página en el lugar donde se ha @Gravatar.GetHtml. El ayudante tomó la información proporcionada y generó el código que se comunica directamente con Gravatar para recuperar la imagen correcta de la cuenta proporcionada.
 
-El método GetHtml también le permite personalizar la imagen al proporcionar otros parámetros. El código siguiente muestra cómo solicitar una imagen con un ancho y alto de 40 píxeles y usa una imagen predeterminada especificada denominada **wavatar** si la cuenta especificada no existe.
+El método GetHtml también le permite personalizar la imagen proporcionando otros parámetros. En el código siguiente se muestra cómo solicitar una imagen con un ancho y un alto de 40 píxeles, y se usa una imagen predeterminada especificada denominada **Wavatar** si la cuenta especificada no existe.
 
 [!code-javascript[Main](intro-to-web-pages-programming/samples/sample15.js)]
 
-Este código genera algo parecido a lo siguiente (la imagen predeterminada de forma aleatoria puede variar).
+Este código genera algo parecido al resultado siguiente (la imagen predeterminada variará de forma aleatoria).
 
 ![](intro-to-web-pages-programming/_static/image13.png)
 
 ## <a name="coming-up-next"></a>Próxima
 
-Para mantener este breve tutorial, tuvimos que centrarse en solo algunos conceptos básicos. Naturalmente, hay un *mucho* más Razor y C#. Aprenderá más que vaya a través de estos tutoriales. Si está interesado en aprender más sobre los aspectos de programación de Razor y C# ahora mismo, puede leer una introducción más completa aquí: [Introducción a la programación Web de ASP.NET mediante la sintaxis Razor](https://go.microsoft.com/fwlink/?LinkID=202890).
+Para seguir este tutorial, teníamos que centrarnos solo en unos pocos aspectos básicos. Naturalmente, hay *mucho* más para Razor y C#. Aprenderá más a medida que avanza por estos tutoriales. Si está interesado en obtener más información sobre los aspectos de programación de Razor C# y ahora puede leer una introducción más exhaustiva aquí: [Introducción a la programación web de ASP.net mediante la sintaxis de Razor](https://go.microsoft.com/fwlink/?LinkID=202890).
 
-El siguiente tutorial presenta a trabajar con una base de datos. En ese tutorial, empezará a crear la aplicación de ejemplo que le permite enumerar sus películas favoritas.
+En el siguiente tutorial se explica cómo trabajar con una base de datos de. En ese tutorial, comenzará a crear la aplicación de ejemplo que le permite enumerar sus películas favoritas.
 
-## <a name="complete-listing-for-testrazor-page"></a>Lista completa de página TestRazor
+## <a name="complete-listing-for-testrazor-page"></a>Lista completa de la página de TestRazor
 
 [!code-cshtml[Main](intro-to-web-pages-programming/samples/sample16.cshtml)]
 
-## <a name="complete-listing-for-testrazorpart2-page"></a>Lista completa de página TestRazorPart2
+## <a name="complete-listing-for-testrazorpart2-page"></a>Lista completa de la página de TestRazorPart2
 
 [!code-cshtml[Main](intro-to-web-pages-programming/samples/sample17.cshtml)]
 
-## <a name="complete-listing-for-gravatartest-page"></a>Lista completa de página GravatarTest
+## <a name="complete-listing-for-gravatartest-page"></a>Lista completa de la página de GravatarTest
 
 [!code-cshtml[Main](intro-to-web-pages-programming/samples/sample18.cshtml)]
 
 ## <a name="additional-resources"></a>Recursos adicionales
 
-- [Introducción a la programación Web de ASP.NET mediante la sintaxis Razor](https://go.microsoft.com/fwlink/?LinkID=202890)
+- [Introducción a la programación web de ASP.NET mediante la sintaxis Razor](https://go.microsoft.com/fwlink/?LinkID=202890)
 - [Aplicación auxiliar de Twitter](../../ui-layouts-and-themes/twitter-helper.md)
 
 > [!div class="step-by-step"]

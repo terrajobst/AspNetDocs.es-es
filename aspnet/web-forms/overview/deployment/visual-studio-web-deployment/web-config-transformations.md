@@ -9,11 +9,11 @@ ms.assetid: 5a2a927b-14cb-40bc-867a-f0680f9febd7
 msc.legacyurl: /web-forms/overview/deployment/visual-studio-web-deployment/web-config-transformations
 msc.type: authoredcontent
 ms.openlocfilehash: a9d39547c94a63003442ba6fe1257693dde24b05
-ms.sourcegitcommit: 22fbd8863672c4ad6693b8388ad5c8e753fb41a2
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/28/2019
-ms.locfileid: "74621790"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78513715"
 ---
 # <a name="aspnet-web-deployment-using-visual-studio-webconfig-file-transformations"></a>Implementación web de ASP.NET con Visual Studio: transformaciones del archivo Web. config
 
@@ -23,7 +23,7 @@ por [Tom Dykstra](https://github.com/tdykstra)
 
 > En esta serie de tutoriales se muestra cómo implementar (publicar) una aplicación Web de ASP.NET en Azure App Service Web Apps o en un proveedor de hospedaje de terceros mediante Visual Studio 2012 o Visual Studio 2010. Para obtener información sobre la serie, vea [el primer tutorial de la serie](introduction.md).
 
-## <a name="overview"></a>Información general del
+## <a name="overview"></a>Información general
 
 En este tutorial se muestra cómo automatizar el proceso de cambiar el archivo *Web. config* cuando se implementa en entornos de destino diferentes. La mayoría de las aplicaciones tienen opciones de configuración en el archivo *Web. config* que deben ser diferentes cuando se implementa la aplicación. Automatizar el proceso de realizar estos cambios evita tener que hacerlo manualmente cada vez que implemente, lo que sería tedioso y propenso a errores.
 
@@ -47,7 +47,7 @@ Si la configuración del archivo *Web. config* que desea cambiar está en el `<c
 
 En **Explorador de soluciones**, expanda *Web. config* para ver los archivos de transformación *Web. Debug. config* y *Web. Release. config* que se crean de forma predeterminada para las dos configuraciones de compilación predeterminadas.
 
-![Web. config_transform_files](web-config-transformations/_static/image1.png)
+![Web.config_transform_files](web-config-transformations/_static/image1.png)
 
 Puede crear archivos de transformación para configuraciones de compilación personalizadas haciendo clic con el botón secundario en el archivo Web. config y eligiendo **Agregar transformaciones de configuración** en el menú contextual. En este tutorial no es necesario hacerlo y la opción de menú está deshabilitada, porque no ha creado ninguna configuración de compilación personalizada.
 
@@ -130,7 +130,7 @@ Esta transformación pertenece a los archivos de transformación de Perfil de pu
 > [!NOTE]
 > Dado que esta configuración se encuentra en el elemento `<appSettings>`, tiene otra alternativa para especificar la transformación al implementar en Web Apps en Azure App Service vea [especificar la configuración de Web. config en Azure](#watransforms) anteriormente en este tema.
 
-## <a name="setting-connection-strings"></a>Establecer cadenas de conexión
+## <a name="setting-connection-strings"></a>Definición de cadenas de conexión
 
 Aunque el archivo de transformación predeterminado contiene un ejemplo que muestra cómo actualizar una cadena de conexión, en la mayoría de los casos no es necesario configurar transformaciones de cadena de conexión, ya que puede especificar cadenas de conexión en el perfil de publicación. Lo hará en los tutoriales [implementar en IIS](deploying-to-iis.md) e [implementar en producción](deploying-to-production.md) .
 

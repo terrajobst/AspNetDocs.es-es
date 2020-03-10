@@ -10,11 +10,11 @@ ms.assetid: 220d3d75-16b2-4240-beae-a5b534f06419
 msc.legacyurl: /identity/overview/migrations/migrating-an-existing-website-from-sql-membership-to-aspnet-identity
 msc.type: authoredcontent
 ms.openlocfilehash: 633229cc4311d151121bf6a91b9fa8aeecca1197
-ms.sourcegitcommit: 7709c0a091b8d55b7b33bad8849f7b66b23c3d72
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/19/2020
-ms.locfileid: "77456158"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78471637"
 ---
 # <a name="migrating-an-existing-website-from-sql-membership-to-aspnet-identity"></a>Migrar un sitio web existente desde la pertenencia de SQL a ASP.NET Identity
 
@@ -83,15 +83,15 @@ Este archivo de script es específico de este ejemplo. Si el esquema de las tabl
 
 Para que las clases de ASP.NET Identity funcionen de forma prebox con los datos de los usuarios existentes, es necesario migrar el esquema de la base de datos al que necesita ASP.NET Identity. Podemos hacer esto agregando nuevas tablas y copiando la información existente en esas tablas. De forma predeterminada ASP.NET Identity usa EntityFramework para volver a asignar las clases del modelo de identidad a la base de datos para almacenar o recuperar información. Estas clases de modelo implementan las interfaces de identidad básicas que definen los objetos de usuario y de función. Las tablas y las columnas de la base de datos se basan en estas clases de modelo. Las clases del modelo EntityFramework en la identidad v 2.1.0 y sus propiedades se definen a continuación.
 
-| **IdentityUser** | **Tipo** | **IdentityRole** | **IdentityUserRole** | **IdentityUserLogin** | **IdentityUserClaim** |
+| **IdentityUser** | **ype** | **IdentityRole** | **IdentityUserRole** | **IdentityUserLogin** | **IdentityUserClaim** |
 | --- | --- | --- | --- | --- | --- |
-| Identificador | string | Identificador | RoleId | ProviderKey | Identificador |
-| Nombre de usuario | string | Nombre | UserId | UserId | ClaimType |
-| PasswordHash | string |  |  | LoginProvider | ClaimValue |
-| SecurityStamp | string |  |  |  | Identificador de\_de usuario |
-| Email | string |  |  |  |  |
+| Id. | cadena | Id. | RoleId | ProviderKey | Id. |
+| Nombre de usuario | cadena | Name | UserId | UserId | ClaimType |
+| PasswordHash | cadena |  |  | LoginProvider | ClaimValue |
+| SecurityStamp | cadena |  |  |  | Identificador de\_de usuario |
+| Correo electrónico | cadena |  |  |  |  |
 | EmailConfirmed | bool |  |  |  |  |
-| PhoneNumber | string |  |  |  |  |
+| PhoneNumber | cadena |  |  |  |  |
 | PhoneNumberConfirmed | bool |  |  |  |  |
 | LockoutEnabled | bool |  |  |  |  |
 | LockoutEndDate | DateTime |  |  |  |  |
@@ -101,11 +101,11 @@ Necesitamos tener tablas para cada uno de estos modelos con columnas que se corr
 
 | **Clase** | **Table** | **Clave principal** | **Clave externa** |
 | --- | --- | --- | --- |
-| IdentityUser | AspnetUsers | Identificador |  |
-| IdentityRole | AspnetRoles | Identificador |  |
+| IdentityUser | AspnetUsers | Id. |  |
+| IdentityRole | AspnetRoles | Id. |  |
 | IdentityUserRole | AspnetUserRole | UserId + RoleId | Identificador de\_de usuario:&gt;AspnetUsers RoleId-&gt;AspnetRoles |
 | IdentityUserLogin | AspnetUserLogins | ProviderKey + UserId + LoginProvider | UserId-&gt;AspnetUsers |
-| IdentityUserClaim | AspnetUserClaims | Identificador | Identificador de\_de usuario:&gt;AspnetUsers |
+| IdentityUserClaim | AspnetUserClaims | Id. | Identificador de\_de usuario:&gt;AspnetUsers |
 
 Con esta información, podemos crear instrucciones SQL para crear nuevas tablas. Podemos escribir cada instrucción individualmente o generar el script completo mediante los comandos de PowerShell de EntityFramework que podemos editar según sea necesario. Para ello, en VS, abra la **consola del administrador de paquetes** desde el menú **Ver** o **herramientas** .
 

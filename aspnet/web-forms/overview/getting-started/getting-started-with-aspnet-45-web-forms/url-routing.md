@@ -9,11 +9,11 @@ ms.assetid: 4f4bf092-c400-471f-a876-78fda0417890
 msc.legacyurl: /web-forms/overview/getting-started/getting-started-with-aspnet-45-web-forms/url-routing
 msc.type: authoredcontent
 ms.openlocfilehash: 66b727b69ca4f9a3d35b67f492f9a554146e09ef
-ms.sourcegitcommit: 22fbd8863672c4ad6693b8388ad5c8e753fb41a2
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/28/2019
-ms.locfileid: "74590709"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78474817"
 ---
 # <a name="url-routing"></a>Enrutamiento de direcciones URL
 
@@ -25,7 +25,7 @@ por [Erik Reitan](https://github.com/Erikre)
 
 En este tutorial, modificará la aplicación de ejemplo Wingtip Toys para admitir el enrutamiento de direcciones URL. El enrutamiento permite a la aplicación web usar direcciones URL que son fáciles de recordar y que son más compatibles con los motores de búsqueda. Este tutorial se basa en el tutorial anterior "pertenencia y administración" y forma parte de la serie de tutoriales de Wingtip Toys.
 
-## <a name="what-youll-learn"></a>Lo que aprenderá:
+## <a name="what-youll-learn"></a>Temas que se abordarán:
 
 - Cómo registrar rutas para una aplicación de formularios Web Forms ASP.NET.
 - Cómo agregar rutas a una página web.

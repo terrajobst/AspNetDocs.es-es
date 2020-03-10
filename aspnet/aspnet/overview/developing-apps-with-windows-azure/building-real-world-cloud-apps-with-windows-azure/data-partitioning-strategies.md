@@ -9,11 +9,11 @@ ms.assetid: 513837a7-cfea-4568-a4e9-1f5901245d24
 msc.legacyurl: /aspnet/overview/developing-apps-with-windows-azure/building-real-world-cloud-apps-with-windows-azure/data-partitioning-strategies
 msc.type: authoredcontent
 ms.openlocfilehash: efc3fa0255aa765e515412c5fa4098303a9d9234
-ms.sourcegitcommit: 7709c0a091b8d55b7b33bad8849f7b66b23c3d72
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/19/2020
-ms.locfileid: "77457029"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78500839"
 ---
 # <a name="data-partitioning-strategies-building-real-world-cloud-apps-with-azure"></a>Estrategias de particionamiento de datos (creación de aplicaciones en la nube reales con Azure)
 
@@ -100,12 +100,12 @@ Documentación:
 - [Prácticas recomendadas para el diseño de servicios a gran escala en Windows Azure Cloud Services](https://msdn.microsoft.com/library/windowsazure/jj717232.aspx). En las notas del producto, Mark SIMM y Michael Thomassy.
 - [Patrones y prácticas de Microsoft: patrones de diseño en la nube](https://msdn.microsoft.com/library/dn568099.aspx). Vea Guía de creación de particiones de datos, patrón de particionamiento.
 
-Videos:
+Vídeos:
 
 - [Failsafe: creación de Cloud Services escalables y resistentes](https://channel9.msdn.com/Series/FailSafe). Series de nueve partes de Ulrich Homann, Marc Mercuri y Mark SIMM. Presenta conceptos de alto nivel y principios arquitectónicos de una manera muy accesible e interesante, con historias tomadas de la experiencia del equipo de asesoramiento al cliente (CAT) de Microsoft con clientes reales. Consulte la explicación de la creación de particiones en el episodio 7.
 - [Building Big: lecciones aprendidas de clientes de Windows Azure, parte I](https://channel9.msdn.com/Events/Build/2012/3-029). Mark SIMM describe los esquemas de partición, las estrategias de particionamiento, cómo implementar el particionamiento y SQL Database federaciones, a partir de 19:49. Similar a la serie failsafe, pero profundiza en más detalles.
 
-Ejemplo de código:
+Código de ejemplo:
 
 - [Aspectos básicos del servicio en la nube en Windows Azure](https://code.msdn.microsoft.com/Cloud-Service-Fundamentals-4ca72649). Aplicación de ejemplo que incluye una base de datos particionada. Para obtener una descripción del esquema de particionamiento implementado, vea [dal: particionamiento de RDBMS](https://blogs.msdn.com/b/windowsazure/archive/2013/09/05/dal-sharding-of-rdbms.aspx) en el blog de Windows Azure.
 

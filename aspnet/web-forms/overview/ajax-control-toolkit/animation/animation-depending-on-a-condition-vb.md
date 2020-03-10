@@ -9,11 +9,11 @@ ms.assetid: 1b87d8d6-b3f7-4126-b51c-d41442fbf947
 msc.legacyurl: /web-forms/overview/ajax-control-toolkit/animation/animation-depending-on-a-condition-vb
 msc.type: authoredcontent
 ms.openlocfilehash: 583ebdbf109beb74b9a425020477183067bbb79a
-ms.sourcegitcommit: 22fbd8863672c4ad6693b8388ad5c8e753fb41a2
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/28/2019
-ms.locfileid: "74607008"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78497881"
 ---
 # <a name="animation-depending-on-a-condition-vb"></a>Animación según una condición (VB)
 
@@ -23,7 +23,7 @@ por [Christian Wenz](https://github.com/wenz)
 
 > El control de animación de ASP.NET AJAX control Toolkit no es solo un control, sino un marco de trabajo completo para agregar animaciones a un control. El hecho de que una animación se ejecute o no también puede depender de una condición en forma de código JavaScript.
 
-## <a name="overview"></a>Información general del
+## <a name="overview"></a>Información general
 
 El control de animación de ASP.NET AJAX control Toolkit no es solo un control, sino un marco de trabajo completo para agregar animaciones a un control. El hecho de que una animación se ejecute o no también puede depender de una condición en forma de código JavaScript.
 

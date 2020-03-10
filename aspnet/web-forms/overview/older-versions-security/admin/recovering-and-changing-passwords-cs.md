@@ -9,11 +9,11 @@ ms.assetid: 19c4d042-4e34-4b44-9f1d-6bf2253ba366
 msc.legacyurl: /web-forms/overview/older-versions-security/admin/recovering-and-changing-passwords-cs
 msc.type: authoredcontent
 ms.openlocfilehash: 8c07b8a3c36e4863c6d2d356b8483544ac4cafeb
-ms.sourcegitcommit: 22fbd8863672c4ad6693b8388ad5c8e753fb41a2
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/28/2019
-ms.locfileid: "74576714"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78457195"
 ---
 # <a name="recovering-and-changing-passwords-c"></a>Recuperar y cambiar las contraseñas (C#)
 

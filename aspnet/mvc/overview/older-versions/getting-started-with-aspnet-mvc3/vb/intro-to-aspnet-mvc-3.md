@@ -9,11 +9,11 @@ ms.assetid: a1b3d789-93b4-487f-b90d-80c9c9b4f8fa
 msc.legacyurl: /mvc/overview/older-versions/getting-started-with-aspnet-mvc3/vb/intro-to-aspnet-mvc-3
 msc.type: authoredcontent
 ms.openlocfilehash: 24f7de303ef7f5a457bd509ecc6bd0e3be7e3d9d
-ms.sourcegitcommit: 7709c0a091b8d55b7b33bad8849f7b66b23c3d72
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/19/2020
-ms.locfileid: "77456350"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78485497"
 ---
 # <a name="intro-to-aspnet-mvc-3-vb"></a>Introducción a ASP.NET MVC 3 (VB)
 
@@ -77,7 +77,7 @@ En el cuadro de diálogo **nuevo proyecto de ASP.NET MVC 3** , seleccione **apli
 
 ![1InternetAppRazor_SM](intro-to-aspnet-mvc-3/_static/image8.png)
 
-Haga clic en **OK**. Visual Web Developer usó una plantilla predeterminada para el proyecto ASP.NET MVC que acaba de crear, por lo que tiene una aplicación en funcionamiento en este momento sin hacer nada. Se trata de una "Hola mundo" simple. Project, y es un buen lugar para iniciar la aplicación.
+Haga clic en **Aceptar**. Visual Web Developer usó una plantilla predeterminada para el proyecto ASP.NET MVC que acaba de crear, por lo que tiene una aplicación en funcionamiento en este momento sin hacer nada. Se trata de una "Hola mundo" simple. Project, y es un buen lugar para iniciar la aplicación.
 
 [![](intro-to-aspnet-mvc-3/_static/image10.png)](intro-to-aspnet-mvc-3/_static/image9.png)
 

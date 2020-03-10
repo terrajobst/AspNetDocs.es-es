@@ -9,11 +9,11 @@ ms.assetid: 548e75f6-4d6c-4cb4-8da8-417915eb8393
 msc.legacyurl: /web-forms/overview/older-versions-getting-started/deploying-web-site-projects/common-configuration-differences-between-development-and-production-vb
 msc.type: authoredcontent
 ms.openlocfilehash: cc65af6eb4fca8b3b805e11e26da468a958a4221
-ms.sourcegitcommit: 22fbd8863672c4ad6693b8388ad5c8e753fb41a2
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/28/2019
-ms.locfileid: "74619955"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78513253"
 ---
 # <a name="common-configuration-differences-between-development-and-production-vb"></a>Diferencias de configuración comunes entre el desarrollo y la producción (VB)
 

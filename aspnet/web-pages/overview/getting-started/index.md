@@ -1,23 +1,23 @@
 ---
 uid: web-pages/overview/getting-started/index
-title: Introducción a las páginas Web ASP.NET | Microsoft Docs
+title: Introducción con ASP.NET Web Pages | Microsoft Docs
 author: rick-anderson
-description: Obtenga información sobre ASP.NET Web Pages ASP.NET Web Pages y la nueva sintaxis Razor proporcionan una manera rápida, cercana y ligera de combinar código de servidor con t HTML...
+description: Obtenga información acerca de ASP.NET Web Pages ASP.NET Web Pages y el nuevo sintaxis Razor proporcionar una manera rápida, accesible y ligera de combinar código de servidor con HTML t...
 ms.author: riande
 ms.date: 05/18/2012
 ms.assetid: 99253c4e-a125-4c21-85e7-a6dd74d93892
 msc.legacyurl: /web-pages/overview/getting-started
 msc.type: chapter
 ms.openlocfilehash: 50a249d0e64cff2a8c4f16f38f530b6d52f755de
-ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/06/2019
-ms.locfileid: "65133172"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78520651"
 ---
-# <a name="getting-started-with-aspnet-web-pages"></a>Introducción a las páginas Web ASP.NET
+# <a name="getting-started-with-aspnet-web-pages"></a>Introducción con ASP.NET Web Pages
 
-> ¿Qué páginas Web y WebMatrix son, además de cómo instalar todos los componentes, empezar a trabajar e implementar sitios.
+> Qué son las páginas web y WebMatrix, además de cómo instalar todo, comenzar e implementar sitios.
 
 - [Programar ASP.NET Web Pages en Visual Studio](program-asp-net-web-pages-in-visual-studio.md)
 - [Introducción a la sintaxis de Razor de programación web de ASP.NET](introducing-razor-syntax-c.md)

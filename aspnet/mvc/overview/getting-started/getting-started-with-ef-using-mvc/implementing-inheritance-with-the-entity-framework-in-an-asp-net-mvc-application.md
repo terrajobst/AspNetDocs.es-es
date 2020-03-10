@@ -10,11 +10,11 @@ ms.assetid: 08834147-77ec-454a-bb7a-d931d2a40dab
 msc.legacyurl: /mvc/overview/getting-started/getting-started-with-ef-using-mvc/implementing-inheritance-with-the-entity-framework-in-an-asp-net-mvc-application
 msc.type: authoredcontent
 ms.openlocfilehash: 73a01ed47b0935a1a9734c197377470defb1fe36
-ms.sourcegitcommit: 88fc80e3f65aebdf61ec9414810ddbc31c543f04
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/22/2020
-ms.locfileid: "76519393"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78471067"
 ---
 # <a name="tutorial-implement-inheritance-with-ef-in-an-aspnet-mvc-5-app"></a>Tutorial: implementación de la herencia con EF en una aplicación ASP.NET MVC 5
 
@@ -22,7 +22,7 @@ En el tutorial anterior se controlan las excepciones de simultaneidad. En este t
 
 En la programación orientada a objetos, puede usar la [herencia](http://en.wikipedia.org/wiki/Inheritance_(object-oriented_programming)) para facilitar la [reutilización de código](http://en.wikipedia.org/wiki/Code_reuse). En este tutorial, cambiará las clases `Instructor` y `Student` para que deriven de una clase base `Person` que contenga propiedades como `LastName`, que son comunes tanto para los instructores como para los alumnos. No tendrá que agregar ni cambiar ninguna página web, sino que cambiará parte del código y esos cambios se reflejarán automáticamente en la base de datos.
 
-En este tutorial ha:
+En este tutorial va a:
 
 > [!div class="checklist"]
 > * Aprenda a asignar la herencia a la base de datos
@@ -169,7 +169,7 @@ Para obtener más información sobre esta y otras estructuras de herencia, consu
 
 ## <a name="next-steps"></a>Pasos siguientes
 
-En este tutorial ha:
+En este tutorial va a:
 
 > [!div class="checklist"]
 > * Aprendido para asignar la herencia a la base de datos

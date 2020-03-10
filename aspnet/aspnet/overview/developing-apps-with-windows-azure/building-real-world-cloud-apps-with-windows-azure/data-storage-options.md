@@ -9,11 +9,11 @@ ms.assetid: e51fcecb-cb33-4f9e-8428-6d2b3d0fe1bf
 msc.legacyurl: /aspnet/overview/developing-apps-with-windows-azure/building-real-world-cloud-apps-with-windows-azure/data-storage-options
 msc.type: authoredcontent
 ms.openlocfilehash: 9357ed5aef39bed501cdac9ac26d46c884d4fae0
-ms.sourcegitcommit: 7709c0a091b8d55b7b33bad8849f7b66b23c3d72
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/19/2020
-ms.locfileid: "77457185"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78500833"
 ---
 # <a name="data-storage-options-building-real-world-cloud-apps-with-azure"></a>Opciones de almacenamiento de datos (creación de aplicaciones en la nube reales con Azure)
 
@@ -168,7 +168,7 @@ También es fácil crear bases de datos mediante el portal.
 
 Haga clic en **nuevo: Data Services** -- **SQL Database** -- **creación rápida**, escriba un nombre de base de datos, elija un servidor que ya tenga en la cuenta o cree uno nuevo y haga clic en **crear SQL Database**.
 
-![New SQL Database](data-storage-options/_static/image9.png)
+![Crear una base de datos de SQL Database](data-storage-options/_static/image9.png)
 
 Espere unos segundos y tenga una base de datos en Azure lista para su uso.
 
@@ -262,7 +262,7 @@ La informática en la nube hace que sea práctico mezclar y hacer coincidir los 
 
 ## <a name="resources"></a>Recursos
 
-Para obtener más información, vea los recursos siguientes.
+Para obtener más información, vea los siguientes recursos.
 
 Elección de una plataforma de base de datos:
 

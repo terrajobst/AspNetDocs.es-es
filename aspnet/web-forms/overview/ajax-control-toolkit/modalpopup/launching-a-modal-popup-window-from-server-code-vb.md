@@ -9,11 +9,11 @@ ms.assetid: 36ca81d7-906d-4db2-952b-add18a4ff421
 msc.legacyurl: /web-forms/overview/ajax-control-toolkit/modalpopup/launching-a-modal-popup-window-from-server-code-vb
 msc.type: authoredcontent
 ms.openlocfilehash: 1368a78d35ac6461bbc2e852e468f42eef2c0d2c
-ms.sourcegitcommit: 22fbd8863672c4ad6693b8388ad5c8e753fb41a2
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/28/2019
-ms.locfileid: "74606599"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78496963"
 ---
 # <a name="launching-a-modal-popup-window-from-server-code-vb"></a>Iniciar una ventana emergente modal desde el código del servidor (VB)
 
@@ -23,7 +23,7 @@ por [Christian Wenz](https://github.com/wenz)
 
 > El control ModalPopup en el kit de herramientas de control de AJAX ofrece una manera sencilla de crear un elemento emergente modal mediante medios del lado cliente. Sin embargo, algunos escenarios requieren que la apertura del elemento emergente modal se desencadene en el lado servidor.
 
-## <a name="overview"></a>Información general del
+## <a name="overview"></a>Información general
 
 El control ModalPopup en el kit de herramientas de control de AJAX ofrece una manera sencilla de crear un elemento emergente modal mediante medios del lado cliente. Sin embargo, algunos escenarios requieren que la apertura del elemento emergente modal se desencadene en el lado servidor.
 
