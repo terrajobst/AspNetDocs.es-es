@@ -9,11 +9,11 @@ ms.assetid: ac4b0d77-4816-4ded-afd0-88dab667aedd
 msc.legacyurl: /web-forms/overview/data-access/masterdetail/master-detail-filtering-with-two-dropdownlists-cs
 msc.type: authoredcontent
 ms.openlocfilehash: e24b7f91d34fbce1676f7f28ebb7d23903157f7f
-ms.sourcegitcommit: 22fbd8863672c4ad6693b8388ad5c8e753fb41a2
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/28/2019
-ms.locfileid: "74625759"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78424291"
 ---
 # <a name="masterdetail-filtering-with-two-dropdownlists-c"></a>Filtrado de maestro y detalles con dos DropDownLists (C#)
 

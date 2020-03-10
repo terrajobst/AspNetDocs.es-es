@@ -9,11 +9,11 @@ ms.assetid: d34f90a1-6de3-482a-a326-f87fdcbaaaff
 msc.legacyurl: /mvc/overview/older-versions-1/views/creating-page-layouts-with-view-master-pages-vb
 msc.type: authoredcontent
 ms.openlocfilehash: 97c0ecf1953cc54030656dd710a5150243877110
-ms.sourcegitcommit: 22fbd8863672c4ad6693b8388ad5c8e753fb41a2
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/28/2019
-ms.locfileid: "74593915"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78435205"
 ---
 # <a name="creating-page-layouts-with-view-master-pages-vb"></a>Crear diseños de página con páginas maestras de vista (VB)
 

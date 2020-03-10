@@ -1,23 +1,23 @@
 ---
 uid: web-forms/videos/data-access/linq-videos-from-the-vb-team/index
-title: Vídeos LINQ del equipo VB | Microsoft Docs
+title: Vídeos de LINQ del equipo de VB | Microsoft Docs
 author: rick-anderson
-description: Estos vídeos proporcionan a través de una hora y la otra mitad del contenido que se centra en las nuevas características de lenguaje LINQ de Visual Basic 9.0 incluye en Visual Studio 2008.
+description: Estos vídeos proporcionan una hora y una mitad de contenido centrada en las nuevas características del lenguaje LINQ de Visual Basic 9,0 incluidas en Visual Studio 2008.
 ms.author: riande
 ms.date: 02/24/2012
 ms.assetid: 257373bb-eab0-47bc-b5a2-37a9e91666d6
 msc.legacyurl: /web-forms/videos/data-access/linq-videos-from-the-vb-team
 msc.type: chapter
 ms.openlocfilehash: fae7bc473ecbc655400220aa158dbd5285ae1ea8
-ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/06/2019
-ms.locfileid: "65106826"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78421543"
 ---
 # <a name="linq-videos-from-the-vb-team"></a>Vídeos de LINQ del equipo de VB
 
-> Estos vídeos proporcionan a través de una hora y la otra mitad del contenido que se centra en las nuevas características de lenguaje LINQ de Visual Basic 9.0 incluye en Visual Studio 2008.
+> Estos vídeos proporcionan una hora y una mitad de contenido centrada en las nuevas características del lenguaje LINQ de Visual Basic 9,0 incluidas en Visual Studio 2008.
 
 - [Introducción a LINQ](how-do-i-get-started-with-linq.md)
 - [Realizar consultas de grupo y agregados](how-do-i-perform-group-and-aggregate-queries.md)

@@ -9,11 +9,11 @@ ms.assetid: 1e8e65f9-fe3e-4250-810b-c90227786bed
 msc.legacyurl: /web-forms/overview/data-access/advanced-data-access-scenarios/adding-additional-datatable-columns-vb
 msc.type: authoredcontent
 ms.openlocfilehash: 3a55f8bc4d3508387927ca81674073a001867de7
-ms.sourcegitcommit: 22fbd8863672c4ad6693b8388ad5c8e753fb41a2
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/28/2019
-ms.locfileid: "74608181"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78429103"
 ---
 # <a name="adding-additional-datatable-columns-vb"></a>Agregar columnas adicionales de DataTable (VB)
 

@@ -9,11 +9,11 @@ ms.assetid: e5d99c2b-d8ee-413c-80d5-c120cffb0a4c
 msc.legacyurl: /web-forms/overview/ajax-control-toolkit/animation/triggering-an-animation-in-another-control-cs
 msc.type: authoredcontent
 ms.openlocfilehash: e0a1f8986047da04db6fde8e54b6fd0ac6ee2603
-ms.sourcegitcommit: 22fbd8863672c4ad6693b8388ad5c8e753fb41a2
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/28/2019
-ms.locfileid: "74599641"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78430795"
 ---
 # <a name="triggering-an-animation-in-another-control-c"></a>Desencadenar una animación en otro control (C#)
 
@@ -23,7 +23,7 @@ por [Christian Wenz](https://github.com/wenz)
 
 > El control de animación de ASP.NET AJAX control Toolkit no es solo un control, sino un marco de trabajo completo para agregar animaciones a un control. Por lo general, el inicio de una animación lo desencadena la interacción del usuario con el mismo control. Sin embargo, también es posible interactuar con un control y después animar otro control.
 
-## <a name="overview"></a>Información general del
+## <a name="overview"></a>Información general
 
 El control de animación de ASP.NET AJAX control Toolkit no es solo un control, sino un marco de trabajo completo para agregar animaciones a un control. Por lo general, el inicio de una animación lo desencadena la interacción del usuario con el mismo control. Sin embargo, también es posible interactuar con un control y después animar otro control.
 

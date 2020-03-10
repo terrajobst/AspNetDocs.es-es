@@ -9,15 +9,15 @@ ms.assetid: 48f7feb3-872f-485d-b96f-e30011ff8c4a
 msc.legacyurl: /mvc/overview/older-versions/hands-on-labs/whats-new-in-aspnet-mvc-4
 msc.type: authoredcontent
 ms.openlocfilehash: 4235f4fe666cdeb7d0821127a2b349f2ff30cd6e
-ms.sourcegitcommit: 295cf898a4c87e264b0c35c7254b0fa4169f2278
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/13/2019
-ms.locfileid: "74057028"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78433675"
 ---
 # <a name="whats-new-in-aspnet-mvc-4"></a>Novedades de ASP.NET MVC 4
 
-Por [equipo de grupos de web](https://twitter.com/webcamps)
+por [equipo de grupos de web](https://twitter.com/webcamps)
 
 [Descargar el kit de aprendizaje de Web.](https://aka.ms/webcamps-training-kit)
 
@@ -203,12 +203,12 @@ ASP.NET MVC 4 facilita el desarrollo de sitios web para exploradores móviles y 
 
         La plantilla de proyecto de aplicación móvil incluye jQuery Mobile Library, que es una biblioteca de código abierto para la compatibilidad con exploradores móviles. jQuery Mobile aplica la mejora progresiva a los exploradores móviles que admiten CSS y JavaScript. La mejora progresiva permite que todos los exploradores muestren el contenido básico de una página web, mientras que solo permite que los exploradores más eficaces muestren el contenido enriquecido. Los archivos JavaScript y CSS, incluidos en el estilo de jQuery Mobile, ayudan a los exploradores móviles a ajustar el contenido en la pantalla sin hacer ningún cambio en el marcado de la página.
 
-        ![jQuery-Mobile-Library-included-in-the-template](whats-new-in-aspnet-mvc-4/_static/image12.png)
+        ![jQuery-mobile-library-included-in-the-template](whats-new-in-aspnet-mvc-4/_static/image12.png)
 
         *Biblioteca de jQuery Mobile incluida en la plantilla*
     - **Marcado basado en HTML5**
 
-        ![Mobile-Application-template-Using-HTML5-Markup](whats-new-in-aspnet-mvc-4/_static/image13.png)
+        ![Mobile-application-template-using-HTML5-markup](whats-new-in-aspnet-mvc-4/_static/image13.png)
 
         *Plantilla de aplicación móvil con marcado HTML5, (login. cshtml e index. cshtml)*
 4. Presione **F5** para ejecutar la solución.
@@ -318,7 +318,7 @@ En esta tarea, creará un simulacro de Photo Service para recuperar el contenido
 
     *Probar el servicio fotográfico ficticio*
 
-En una implementación real, podría usar [ASP.net web API](../../../../web-api/index.md) para implementar el servicio de la Galería fotográfica de. ASP.NET Web API es un marco que facilita la creación de servicios HTTP que llegan a una amplia gama de clientes, incluidos exploradores y dispositivos móviles. ASP.NET Web API es una plataforma ideal para compilar aplicaciones de RESTful en .NET Framework.
+En una implementación real, podría usar [ASP.net web API](../../../../web-api/index.md) para implementar el servicio de la Galería fotográfica de. ASP.NET Web API es un marco que facilita la creación de servicios HTTP disponibles para una amplia variedad de clientes, entre los que se incluyen exploradores y dispositivos móviles. ASP.NET Web API es una plataforma ideal para compilar aplicaciones de RESTful en .NET Framework.
 
 <a id="Task_2_-_Displaying_the_Photo_Gallery"></a>
 #### <a name="task-2---displaying-the-photo-gallery"></a>Tarea 2: Mostrar la Galería fotográfica
@@ -354,7 +354,7 @@ En esta tarea, actualizará la Página principal para mostrar la Galería fotogr
 9. Abra el explorador de archivos y copie toda la carpeta **fotos** que se encuentra en la carpeta **Source\Assets** de este laboratorio en la carpeta raíz del proyecto en explorador de soluciones.
 10. Ejecute la aplicación. Ahora debería ver la Página principal que muestra las fotos en la galería.
 
-    ![Galería fotográfica de](whats-new-in-aspnet-mvc-4/_static/image21.png "Galería fotográfica de")
+    ![Galería fotográfica de](whats-new-in-aspnet-mvc-4/_static/image21.png "Galería fotográfica")
 
     *Galería fotográfica de*
 11. En Visual Studio, presione **mayús** + **F5** para detener la depuración de la aplicación.
@@ -397,7 +397,7 @@ Una de las actualizaciones clave en ASP.NET MVC 4 es la compatibilidad con el de
 
     - **Views/Shared/\_layout. Mobile. cshtml**: es un diseño basado en móviles de jQuery optimizado para una pantalla más pequeña. Cuando el sitio web recibe una solicitud de un explorador móvil, reemplazará el diseño original (\_layout. cshtml) por este.
     - Un componente de modificador de vista: consta de la vista parcial views **/Shared/\_ViewSwitcher. cshtml** y el controlador **ViewSwitcherController.CS** . Este componente mostrará un vínculo en los exploradores móviles para permitir que los usuarios cambien a la versión de escritorio de la página.  
-        ![Proyecto de Galería fotográfica con soporte móvil](whats-new-in-aspnet-mvc-4/_static/image23.png "Phproyecto de galería de otos con compatibilidad para móviles ")
+        ![Proyecto de Galería fotográfica con soporte móvil](whats-new-in-aspnet-mvc-4/_static/image23.png "Proyecto de Galería fotográfica con soporte móvil")
 
         *Proyecto de Galería fotográfica con soporte móvil*
 4. Registre los paquetes móviles. Para ello, abra el archivo **global.asax.CS** y agregue la siguiente línea.
@@ -516,7 +516,7 @@ En esta tarea, explorará la implementación de ejemplo de un modificador de vis
 
     - El método **HttpContext. ClearOverriddenBrowser ()** quita cualquier agente de usuario invalidado para la solicitud actual.
     - El método **HttpContext. SetOverriddenBrowser ()** invalida el valor del agente de usuario real de la solicitud mediante el agente de usuario especificado.  
-        ![Controlador de ViewSwitcher](whats-new-in-aspnet-mvc-4/_static/image31.png "ViControlador de ewSwitcher ")  
+        ![Controlador de ViewSwitcher](whats-new-in-aspnet-mvc-4/_static/image31.png "Controlador de ViewSwitcher")  
 *Controlador de ViewSwitcher*
 
         El reemplazo del explorador es una característica principal de ASP.NET MVC 4, que también está disponible incluso si no se instala el paquete jQuery. Mobile. MVC. Sin embargo, esta característica solo afecta a la vista, el diseño y la vista parcial, y no afecta a ninguna de las características que dependen del objeto request. Browser.
@@ -538,7 +538,7 @@ En esta tarea, actualizará el diseño del escritorio para incluir el modificado
     ![Selector de vistas representado en la vista de escritorio](whats-new-in-aspnet-mvc-4/_static/image32.png "Selector de vistas representado en la vista de escritorio")
 
     *Selector de vistas representado en la vista de escritorio*
-7. Cambie a la vista móvil de nuevo y vaya a la página **acerca de** (http://localhost [puerto]/home/About). Tenga en cuenta que, incluso si no ha creado una vista about. Mobile. cshtml, se muestra la página about con el diseño móvil (\_layout. Mobile. cshtml).
+7. Cambie a la vista móvil de nuevo y vaya a la página **acerca de** (http://localhost[puerto]/home/About). Tenga en cuenta que, incluso si no ha creado una vista about. Mobile. cshtml, se muestra la página about con el diseño móvil (\_layout. Mobile. cshtml).
 
     ![Página acerca de](whats-new-in-aspnet-mvc-4/_static/image33.png "Página About")
 
@@ -589,7 +589,7 @@ Ahora tiene 3 diseños en la aplicación ASP.NET MVC 4:
 7. Presione **F5** para ejecutar la aplicación y examinar el sitio en el **emulador de Windows Phone**.
 8. Abra un **simulador de iPhone** (consulte el [Apéndice C](#AppendixC) para obtener instrucciones sobre cómo instalar y configurar un simulador de iPhone) y vaya también al sitio. Tenga en cuenta que cada teléfono usa la plantilla específica.
 
-    ![Usar-diferentes vistas-para-cada-móvil-dispositivo2](whats-new-in-aspnet-mvc-4/_static/image35.png)
+    ![Using-different-views-for-each-mobile-device2](whats-new-in-aspnet-mvc-4/_static/image35.png)
 
     *Usar vistas diferentes para cada dispositivo móvil*
 
@@ -598,7 +598,7 @@ Ahora tiene 3 diseños en la aplicación ASP.NET MVC 4:
 <a id="Exercise_4_Using_Asynchronous_Controllers"></a>
 ### <a name="exercise-4-using-asynchronous-controllers"></a>Ejercicio 4: uso de controladores asincrónicos
 
-Microsoft .NET Framework 4,5 incorpora nuevas características de lenguaje C# en y Visual Basic para proporcionar una nueva base para asincronía en la programación de .net. Esta nueva base hace que la programación asincrónica sea similar a la programación sincrónica, y de la misma forma que la programación sincrónica. Ahora puede escribir métodos de acción asincrónicos en ASP.NET MVC 4 mediante la clase **AsyncController** . Puede usar métodos de acción asincrónicos para solicitudes de ejecución prolongada que no son de CPU. Esto evita impedir que el servidor Web realice trabajo mientras se procesa la solicitud. La clase AsyncController se usa normalmente para llamadas a servicios Web de ejecución prolongada.
+Microsoft .NET Framework 4,5 incorpora nuevas características de lenguaje C# en y Visual Basic para proporcionar una nueva base para asincronía en la programación de .net. Esta nueva base hace que la programación asincrónica sea similar a la programación sincrónica, y de la misma forma que la programación sincrónica. Ahora puede escribir métodos de acción asincrónicos en ASP.NET MVC 4 mediante la clase **AsyncController** . Los métodos de acción asincrónicos se pueden utilizar para solicitudes de ejecución prolongada no relacionadas con la CPU. De este modo, el servidor web no se bloquea y se puede realizar trabajo en él mientras se procesa la solicitud. La clase AsyncController se usa normalmente para llamadas a servicios Web de ejecución prolongada.
 
 En este ejercicio se explican los conceptos básicos del funcionamiento asincrónico en ASP.NET MVC 4. Si desea profundizar más, puede consultar el artículo siguiente: [ [https://msdn.microsoft.com/library/ee728598%28v=vs.100%29.aspx](https://msdn.microsoft.com/library/ee728598%28v=vs.100%29.aspx)](https://msdn.microsoft.com/library/ee728598%28v=vs.100%29.aspx)
 
@@ -862,7 +862,7 @@ Para ejecutar el sitio en un dispositivo iPhone simulado, puede usar la extensi�
 1. Abra **Visual Studio 2012** y abra cualquier sitio web o cree un nuevo proyecto.
 2. Haga clic en la flecha abajo en el botón ejecutar y seleccione **examinar con**.
 
-    ![Examinar con](whats-new-in-aspnet-mvc-4/_static/image58.png "Examinar con")
+    ![Examinar con](whats-new-in-aspnet-mvc-4/_static/image58.png "Explorar con")
 
     *Examinar con*
 3. En el cuadro de diálogo &quot;examinar con&quot;, haga clic en **Agregar**.
@@ -933,7 +933,7 @@ Este apéndice le mostrará cómo crear un nuevo sitio web desde el Portal de ad
 7. En la página **Panel** , en la sección **vista rápida** , haga clic en el vínculo **Descargar Perfil de publicación** .
 
     > [!NOTE]
-    > El *Perfil de publicación* contiene toda la información necesaria para publicar una aplicación web en un sitio web de Windows Azure para cada método de publicación habilitado. El perfil de publicación contiene las direcciones URL, las credenciales de usuario y las cadenas de base de datos necesarias para conectarse a cada uno de los extremos para los que está habilitado un método de publicación y autenticarse en ellos. **Microsoft WebMatrix 2**, **Microsoft Visual Studio Express para Web** y **Microsoft Visual Studio 2012** admiten la lectura de perfiles de publicación para automatizar la configuración de estos programas para la publicación de aplicaciones web en sitios web de Windows Azure.
+    > El *Perfil de publicación* contiene toda la información necesaria para publicar una aplicación web en un sitio web de Windows Azure para cada método de publicación habilitado. El perfil de publicación contiene las direcciones URL, las credenciales de usuario y las cadenas de base de datos necesarias para conectarse a todos los extremos para los que está habilitado un método de publicación y autenticarse en ellos. **Microsoft WebMatrix 2**, **Microsoft Visual Studio Express para Web** y **Microsoft Visual Studio 2012** admiten la lectura de perfiles de publicación para automatizar la configuración de estos programas para la publicación de aplicaciones web en sitios web de Windows Azure.
 
     ![Descargar el perfil de publicación del sitio web](whats-new-in-aspnet-mvc-4/_static/image67.png "Descargar el perfil de publicación del sitio web")
 

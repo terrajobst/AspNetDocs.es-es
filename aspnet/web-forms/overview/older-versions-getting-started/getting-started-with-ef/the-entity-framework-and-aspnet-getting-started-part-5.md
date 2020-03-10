@@ -1,117 +1,117 @@
 ---
 uid: web-forms/overview/older-versions-getting-started/getting-started-with-ef/the-entity-framework-and-aspnet-getting-started-part-5
-title: Introducción a Entity Framework 4.0 Database First y 4 de ASP.NET Web Forms, parte 5 | Microsoft Docs
+title: Introducción con Entity Framework 4,0 Database First y ASP.NET 4 formularios Web Forms, parte 5 | Microsoft Docs
 author: tdykstra
-description: La aplicación web de Contoso University muestra cómo crear aplicaciones de formularios Web Forms de ASP.NET mediante Entity Framework. La aplicación de ejemplo es...
+description: En la aplicación Web de ejemplo contoso University se muestra cómo crear aplicaciones de formularios Web Forms de ASP.NET mediante el Entity Framework. La aplicación de ejemplo es...
 ms.author: riande
 ms.date: 12/03/2010
 ms.assetid: 24ad4379-3fb2-44dc-ba59-85fe0ffcb2ae
 msc.legacyurl: /web-forms/overview/older-versions-getting-started/getting-started-with-ef/the-entity-framework-and-aspnet-getting-started-part-5
 msc.type: authoredcontent
 ms.openlocfilehash: 75328e67abb4295b619cac5423a9eb970942fff7
-ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/06/2019
-ms.locfileid: "65133110"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78423871"
 ---
-# <a name="getting-started-with-entity-framework-40-database-first-and-aspnet-4-web-forms---part-5"></a>Introducción a Entity Framework 4.0 Database First y ASP.NET 4 Web Forms, parte 5
+# <a name="getting-started-with-entity-framework-40-database-first-and-aspnet-4-web-forms---part-5"></a>Introducción con Entity Framework 4,0 Database First y ASP.NET 4 formularios Web Forms, parte 5
 
 por [Tom Dykstra](https://github.com/tdykstra)
 
-> La aplicación web de Contoso University muestra cómo crear aplicaciones de formularios Web Forms de ASP.NET con el Entity Framework 4.0 y Visual Studio 2010. Para obtener información acerca de la serie de tutoriales, vea [el primer tutorial de la serie](the-entity-framework-and-aspnet-getting-started-part-1.md)
+> En la aplicación Web de ejemplo contoso University se muestra cómo crear aplicaciones de formularios Web Forms de ASP.NET mediante el Entity Framework 4,0 y Visual Studio 2010. Para obtener información sobre la serie de tutoriales, consulte [el primer tutorial de la serie](the-entity-framework-and-aspnet-getting-started-part-1.md) .
 
-## <a name="working-with-related-data-continued"></a>Trabajar con datos relacionados, a continuación
+## <a name="working-with-related-data-continued"></a>Trabajar con datos relacionados, continuación
 
-En el tutorial anterior se empezó a usar el `EntityDataSource` control para trabajar con datos relacionados. Muestra varios niveles de jerarquía y editar datos en las propiedades de navegación. En este tutorial aún funciona con los datos relacionados mediante la adición y eliminación de relaciones y agregando una nueva entidad que tiene una relación con una entidad existente.
+En el tutorial anterior comenzó a usar el control de `EntityDataSource` para trabajar con datos relacionados. En las propiedades de navegación se muestran varios niveles de jerarquía y datos editados. En este tutorial, continuará trabajando con datos relacionados agregando y eliminando relaciones y agregando una nueva entidad que tenga una relación con una entidad existente.
 
-Creará una página que agrega los cursos que están asignados a los departamentos de TI. Ya existen los departamentos y, cuando se crea un nuevo curso, al mismo tiempo a establecer una relación entre este y un departamento existente.
+Creará una página que agrega cursos asignados a los departamentos. Los departamentos ya existen y, cuando se crea un nuevo curso, al mismo tiempo establecerá una relación entre él y un departamento existente.
 
 [![Image02](the-entity-framework-and-aspnet-getting-started-part-5/_static/image2.png)](the-entity-framework-and-aspnet-getting-started-part-5/_static/image1.png)
 
-También creará una página que funciona con una relación varios a varios mediante la asignación de un instructor a un curso (agregar una relación entre dos entidades que seleccionó) o quitar un instructor de un curso (al quitar una relación entre dos entidades que Seleccione). En la base de datos, agregar una relación entre un instructor y un curso da como resultado una nueva fila que se agrega a la `CourseInstructor` tabla de asociación; quitar una relación implica la eliminación de una fila de la `CourseInstructor` tabla de asociación. Sin embargo, hacerlo en Entity Framework estableciendo las propiedades de navegación, sin hacer referencia a la `CourseInstructor` explícitamente la tabla.
+También creará una página que funciona con una relación de varios a varios asignando un instructor a un curso (agregando una relación entre dos entidades que seleccione) o quitando un instructor de un curso (quitando una relación entre dos entidades que usted Seleccione). En la base de datos, al agregar una relación entre un instructor y un curso, se agrega una nueva fila a la tabla de asociación `CourseInstructor`. la eliminación de una relación implica la eliminación de una fila de la tabla de asociación `CourseInstructor`. Sin embargo, esto se hace en el Entity Framework estableciendo las propiedades de navegación, sin hacer referencia a la tabla de `CourseInstructor` explícitamente.
 
 [![Image01](the-entity-framework-and-aspnet-getting-started-part-5/_static/image4.png)](the-entity-framework-and-aspnet-getting-started-part-5/_static/image3.png)
 
 ## <a name="adding-an-entity-with-a-relationship-to-an-existing-entity"></a>Agregar una entidad con una relación a una entidad existente
 
-Crear una nueva página web denominada *CoursesAdd.aspx* que usa el *Site.Master* página principal y agregue el siguiente marcado para la `Content` control denominado `Content2`:
+Cree una nueva página web denominada *CoursesAdd. aspx* que use la página maestra *site. Master* y agregue el marcado siguiente al control `Content` denominado `Content2`:
 
 [!code-aspx[Main](the-entity-framework-and-aspnet-getting-started-part-5/samples/sample1.aspx)]
 
-Este marcado crea un `EntityDataSource` control que selecciona cursos, que permite insertar, y que especifica un controlador para el `Inserting` eventos. Usará el controlador para actualizar el `Department` propiedad de navegación cuando un nuevo `Course` se crea la entidad.
+Este marcado crea un control `EntityDataSource` que selecciona los cursos, que habilita la inserción y que especifica un controlador para el evento `Inserting`. Usará el controlador para actualizar la propiedad de navegación `Department` cuando se crea una nueva entidad de `Course`.
 
-El marcado crea también un `DetailsView` control que se usará para agregar un nuevo `Course` entidades. El marcado usa campos enlazados para `Course` propiedades de la entidad. Tendrá que escribir el `CourseID` valor porque no es un campo de identificador generados por el sistema. En su lugar, es un número de curso debe especificarse manualmente cuando se crea el curso.
+El marcado también crea un control `DetailsView` que se utilizará para agregar nuevas entidades `Course`. El marcado usa campos enlazados para las propiedades de la entidad `Course`. Tiene que escribir el valor `CourseID` porque no es un campo de identificador generado por el sistema. En su lugar, es un número de curso que se debe especificar manualmente al crear el curso.
 
-Usar un campo de plantilla para el `Department` propiedad de navegación porque no se puede usar las propiedades de navegación con `BoundField` controles. El campo de plantilla proporciona una lista desplegable para seleccionar el departamento. La lista desplegable está enlazada a la `Departments` conjunto mediante el uso de entidades `Eval` en lugar de `Bind`, nuevo porque no se puede enlazar directamente las propiedades de navegación con el fin de actualizarlos. Especificar un controlador para el `DropDownList` del control `Init` eventos para que pueda almacenar una referencia al control para su uso por el código que actualiza el `DepartmentID` clave externa.
+Use un campo de plantilla para la propiedad de navegación `Department` porque las propiedades de navegación no se pueden usar con controles de `BoundField`. El campo de plantilla proporciona una lista desplegable para seleccionar el Departamento. La lista desplegable se enlaza al conjunto de entidades `Departments` mediante `Eval` en lugar de `Bind`, de nuevo porque no se pueden enlazar directamente las propiedades de navegación para actualizarlas. Se especifica un controlador para el evento de `Init` del control `DropDownList` para que pueda almacenar una referencia al control para que lo use el código que actualiza la clave externa `DepartmentID`.
 
-En *CoursesAdd.aspx.cs* justo después de la declaración de clase parcial, agregue un campo de clase para contener una referencia a la `DepartmentsDropDownList` control:
+En *CoursesAdd.aspx.CS* inmediatamente después de la declaración de clase parcial, agregue un campo de clase para que contenga una referencia al control `DepartmentsDropDownList`:
 
 [!code-csharp[Main](the-entity-framework-and-aspnet-getting-started-part-5/samples/sample2.cs)]
 
-Agregar un controlador para el `DepartmentsDropDownList` del control `Init` eventos para que pueda almacenar una referencia al control. Esto le permite obtener el valor que el usuario ha escrito y usarla para actualizar el `DepartmentID` valor de la `Course` entidad.
+Agregue un controlador para el evento `Init` del control `DepartmentsDropDownList` para que pueda almacenar una referencia al control. Esto le permite obtener el valor que el usuario ha escrito y usarlo para actualizar el valor `DepartmentID` de la entidad `Course`.
 
 [!code-csharp[Main](the-entity-framework-and-aspnet-getting-started-part-5/samples/sample3.cs)]
 
-Agregar un controlador para el `DetailsView` del control `Inserting` eventos:
+Agregue un controlador para el evento de `Inserting` del control `DetailsView`:
 
 [!code-csharp[Main](the-entity-framework-and-aspnet-getting-started-part-5/samples/sample4.cs)]
 
-Cuando el usuario hace clic en `Insert`, el `Inserting` evento se desencadena antes de inserta el nuevo registro. Obtiene el código del controlador de la `DepartmentID` desde el `DropDownList` controlar y lo usa para establecer el valor que se usará para la `DepartmentID` propiedad de la `Course` entidad.
+Cuando el usuario hace clic en `Insert`, se genera el evento de `Inserting` antes de que se inserte el nuevo registro. El código del controlador obtiene el `DepartmentID` del control `DropDownList` y lo usa para establecer el valor que se utilizará para la propiedad `DepartmentID` de la entidad `Course`.
 
-Entity Framework se encargará de agregar este curso para el `Courses` propiedad de navegación del asociado `Department` entidad. También agrega el departamento de TI la `Department` propiedad de navegación de la `Course` entidad.
+El Entity Framework se encargará de agregar este curso a la propiedad de navegación `Courses` de la entidad `Department` asociada. También agrega el Departamento a la propiedad de navegación `Department` de la entidad `Course`.
 
 Ejecute la página.
 
 [![Image02](the-entity-framework-and-aspnet-getting-started-part-5/_static/image6.png)](the-entity-framework-and-aspnet-getting-started-part-5/_static/image5.png)
 
-Escriba un identificador, un título y un número de créditos y seleccione un departamento y luego haga clic en **insertar**.
+Escriba un identificador, un título, un número de créditos y seleccione un departamento y, a continuación, haga clic en **Insertar**.
 
-Ejecute el *Courses.aspx* página y seleccione el mismo departamento para ver el nuevo curso.
+Ejecute la página *Courses. aspx* y seleccione el mismo Departamento para ver el nuevo curso.
 
 [![Image03](the-entity-framework-and-aspnet-getting-started-part-5/_static/image8.png)](the-entity-framework-and-aspnet-getting-started-part-5/_static/image7.png)
 
 ## <a name="working-with-many-to-many-relationships"></a>Trabajar con relaciones de varios a varios
 
-La relación entre el `Courses` conjunto de entidades y la `People` conjunto de entidades es una relación varios a varios. Un `Course` entidad tiene una propiedad de navegación denominada `People` que puede contener cero, uno o más relacionadas con `Person` entidades (que representan los instructores que se asigna a enseñar a ese curso). Y un `Person` entidad tiene una propiedad de navegación denominada `Courses` que puede contener cero, uno o más relacionadas con `Course` entidades (que representa los cursos de ese instructor está asignado a enseñar). Un instructor puede impartir varios cursos y un curso puede ser impartido por varios instructores. En esta sección del tutorial, deberá agregar y eliminar las relaciones entre `Person` y `Course` entidades mediante la actualización de las propiedades de navegación de las entidades relacionadas.
+La relación entre el conjunto de entidades `Courses` y el conjunto de entidades `People` es una relación de varios a varios. Una entidad `Course` tiene una propiedad de navegación llamada `People` que puede contener cero, una o más entidades `Person` relacionadas (que representan a los instructores asignados para enseñar ese curso). Y una entidad `Person` tiene una propiedad de navegación llamada `Courses` que puede contener cero, una o más entidades `Course` relacionadas (que representan los cursos que el instructor tiene asignados para enseñar). Un instructor puede enseñar varios cursos y un curso puede ser impartido por varios instructores. En esta sección del tutorial, agregará y quitará las relaciones entre `Person` y `Course` entidades mediante la actualización de las propiedades de navegación de las entidades relacionadas.
 
-Crear una nueva página web denominada *InstructorsCourses.aspx* que usa el *Site.Master* página principal y agregue el siguiente marcado para la `Content` control denominado `Content2`:
+Cree una nueva página web denominada *InstructorsCourses. aspx* que use la página maestra *site. Master* y agregue el marcado siguiente al control `Content` denominado `Content2`:
 
 [!code-aspx[Main](the-entity-framework-and-aspnet-getting-started-part-5/samples/sample5.aspx)]
 
-Este marcado crea un `EntityDataSource` control que recupera el nombre y `PersonID` de `Person` entidades para instructores. Un `DropDrownList` está enlazado el `EntityDataSource` control. El `DropDownList` control especifica un controlador para el `DataBound` eventos. Usará este controlador de listas desplegables de enlazar datos a los dos que se muestran los cursos.
+Este marcado crea un control de `EntityDataSource` que recupera el nombre y `PersonID` de `Person` entidades para los instructores. Un control `DropDrownList` se enlaza al control `EntityDataSource`. El control `DropDownList` especifica un controlador para el evento `DataBound`. Usará este controlador para enlazar los dos listas desplegables que muestran los cursos.
 
-El marcado crea también el siguiente grupo de controles que se usará para asignar un curso para el instructor seleccionado:
+El marcado también crea el siguiente grupo de controles que se utiliza para asignar un curso al instructor seleccionado:
 
-- Un `DropDownList` control para seleccionar un curso para asignar. Este control se rellenará con los cursos que no están asignados actualmente al instructor seleccionado.
-- Un `Button` control para iniciar la asignación.
-- Un `Label` control para mostrar un mensaje de error si se produce un error en la asignación.
+- Un control de `DropDownList` para seleccionar el curso que se va a asignar. Este control se rellenará con los cursos que actualmente no están asignados al instructor seleccionado.
+- Control `Button` para iniciar la asignación.
+- Un control `Label` para mostrar un mensaje de error si se produce un error en la asignación.
 
-Por último, el marcado crea también un grupo de controles que se usará para quitar un curso de instructor seleccionado.
+Por último, el marcado también crea un grupo de controles que se usarán para quitar un curso del instructor seleccionado.
 
-En *InstructorsCourses.aspx.cs*, agregue una mediante declaración:
+En *InstructorsCourses.aspx.CS*, agregue una instrucción using:
 
 [!code-csharp[Main](the-entity-framework-and-aspnet-getting-started-part-5/samples/sample6.cs)]
 
-Agregue un método para rellenar las dos listas desplegables que se muestran los cursos:
+Agregue un método para rellenar las dos listas desplegables que muestran los cursos:
 
 [!code-csharp[Main](the-entity-framework-and-aspnet-getting-started-part-5/samples/sample7.cs)]
 
-Este código obtiene todos los cursos de la `Courses` entidad establece y obtiene los cursos de la `Courses` propiedad de navegación de la `Person` entidad para el instructor seleccionado. A continuación, determina los cursos asignados a ese instructor y las listas desplegables se rellena en consecuencia.
+Este código obtiene todos los cursos del conjunto de entidades `Courses` y obtiene los cursos de la propiedad de navegación `Courses` de la entidad `Person` para el instructor seleccionado. A continuación, determina qué cursos están asignados a ese instructor y rellena las listas desplegables en consecuencia.
 
-Agregar un controlador para el `Assign` del botón `Click` eventos:
+Agregue un controlador para el evento de `Click` del botón `Assign`:
 
 [!code-csharp[Main](the-entity-framework-and-aspnet-getting-started-part-5/samples/sample8.cs)]
 
-Este código obtiene el `Person` entidad para el instructor seleccionado, obtiene el `Course` entidad para el curso seleccionado y agrega el curso seleccionado a la `Courses` propiedad de navegación del instructor `Person` entidad. A continuación, guarda los cambios en la base de datos y vuelve a rellenar las listas desplegables, por lo que se pueden ver los resultados inmediatamente.
+Este código obtiene la entidad `Person` del instructor seleccionado, obtiene la entidad `Course` para el curso seleccionado y agrega el curso seleccionado a la propiedad de navegación `Courses` de la entidad `Person` del instructor. Después guarda los cambios en la base de datos y vuelve a rellenar las listas desplegables para que los resultados se puedan ver inmediatamente.
 
-Agregar un controlador para el `Remove` del botón `Click` eventos:
+Agregue un controlador para el evento de `Click` del botón `Remove`:
 
 [!code-csharp[Main](the-entity-framework-and-aspnet-getting-started-part-5/samples/sample9.cs)]
 
-Este código obtiene el `Person` entidad para el instructor seleccionado, obtiene el `Course` entidad para el curso seleccionado y quita el curso seleccionado desde la `Person` la entidad `Courses` propiedad de navegación. A continuación, guarda los cambios en la base de datos y vuelve a rellenar las listas desplegables, por lo que se pueden ver los resultados inmediatamente.
+Este código obtiene la entidad `Person` del instructor seleccionado, obtiene la entidad `Course` para el curso seleccionado y quita el curso seleccionado de la propiedad de navegación `Courses` de la entidad `Person`. Después guarda los cambios en la base de datos y vuelve a rellenar las listas desplegables para que los resultados se puedan ver inmediatamente.
 
-Agregue código a la `Page_Load` método que se asegura de que los mensajes de error no están visibles cuando no se produce ningún error de informes, y agregar controladores para la `DataBound` y `SelectedIndexChanged` eventos de la lista desplegable de instructores para rellenar las listas de cursos:
+Agregue código al método `Page_Load` que asegúrese de que los mensajes de error no estén visibles cuando no haya ningún error para informar y agregue Controladores para los eventos `DataBound` y `SelectedIndexChanged` de la lista desplegable instructores para rellenar las listas desplegables de los cursos:
 
 [!code-csharp[Main](the-entity-framework-and-aspnet-getting-started-part-5/samples/sample10.cs)]
 
@@ -119,9 +119,9 @@ Ejecute la página.
 
 [![Image01](the-entity-framework-and-aspnet-getting-started-part-5/_static/image10.png)](the-entity-framework-and-aspnet-getting-started-part-5/_static/image9.png)
 
-Seleccione un instructor. El <strong>asignar un curso</strong> lista desplegable muestra los cursos que no enseña el instructor, y el <strong>quitar un curso</strong> lista desplegable muestra los cursos que ya está asignado el instructor. En el <strong>asignar un curso</strong> sección, seleccione un curso y, a continuación, haga clic en <strong>asignar</strong>. El curso se mueve a la <strong>quitar un curso</strong> lista desplegable. Seleccione un curso en el <strong>quitar un curso</strong> sección y haga clic en <strong>quitar</strong><em>.</em> El curso se mueve a la <strong>asignar un curso</strong> lista desplegable.
+Seleccione un instructor. La lista desplegable <strong>asignar un curso</strong> muestra los cursos que el instructor no enseña y la lista desplegable <strong>quitar un curso</strong> muestra los cursos a los que ya está asignado el instructor. En la sección <strong>asignar un curso</strong> , seleccione un curso y, a continuación, haga clic en <strong>asignar</strong>. El curso se desplaza a la lista desplegable <strong>quitar un curso</strong> . Seleccione un curso en la sección <strong>quitar un curso</strong> y haga clic en <strong>quitar</strong><em>.</em> El curso se mueve a la lista desplegable <strong>asignar un curso</strong> .
 
-Ahora ha visto algunas formas más para trabajar con datos relacionados. En el siguiente tutorial, obtendrá información sobre cómo usar la herencia en el modelo de datos para mejorar el mantenimiento de la aplicación.
+Ahora ha detectado algunas maneras más de trabajar con datos relacionados. En el siguiente tutorial, aprenderá a usar la herencia en el modelo de datos para mejorar el mantenimiento de la aplicación.
 
 > [!div class="step-by-step"]
 > [Anterior](the-entity-framework-and-aspnet-getting-started-part-4.md)

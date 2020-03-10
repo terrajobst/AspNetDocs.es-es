@@ -2,62 +2,62 @@
 uid: mvc/overview/older-versions-1/getting-started-with-mvc/getting-started-with-mvc-part5
 title: Acceso a los datos del modelo desde un controlador | Microsoft Docs
 author: shanselman
-description: Este es un tutorial para principiantes que presenta los conceptos básicos de ASP.NET MVC. Cree una aplicación web simple que lee y escribe desde una base de datos.
+description: Este es un tutorial para principiantes que presenta los conceptos básicos de ASP.NET MVC. Cree una aplicación web simple que lea y escriba en una base de datos.
 ms.author: riande
 ms.date: 08/14/2010
 ms.assetid: 004703cd-e0e9-4ba7-9974-1b0475c71222
 msc.legacyurl: /mvc/overview/older-versions-1/getting-started-with-mvc/getting-started-with-mvc-part5
 msc.type: authoredcontent
 ms.openlocfilehash: 207ed880977d794d81efdc1ea458d17a68d501d8
-ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/06/2019
-ms.locfileid: "65122887"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78437371"
 ---
 # <a name="accessing-your-models-data-from-a-controller"></a>Obtener acceso a los datos del modelo desde un controlador
 
 por [Scott Hanselman](https://github.com/shanselman)
 
-> Este es un tutorial para principiantes que presenta los conceptos básicos de ASP.NET MVC. Creará una aplicación web simple que lee y escribe desde una base de datos. Visite el [centro de aprendizaje de ASP.NET MVC](../../../index.md) para buscar otros ASP.NET MVC, tutoriales y ejemplos.
+> Este es un tutorial para principiantes que presenta los conceptos básicos de ASP.NET MVC. Creará una aplicación web simple que lee y escribe en una base de datos. Visite el [centro de aprendizaje de MVC de ASP.net](../../../index.md) para buscar otros tutoriales y ejemplos de ASP.NET MVC.
 
-En esta sección vamos a crear una nueva clase de nombre moviescontroller al y escribir algún código que recupera los datos de película y lo muestra al explorador mediante una plantilla de vista.
+En esta sección vamos a crear una nueva clase MoviesController y escribiremos código que recupere los datos de la película y los mostrará de nuevo en el explorador con una plantilla de vista.
 
-Haga clic con el botón derecho en la carpeta Controllers y realice un nombre moviescontroller al nuevo.
+Haga clic con el botón derecho en la carpeta Controllers y cree un nuevo MoviesController.
 
-[![Agregar controlador](getting-started-with-mvc-part5/_static/image2.png)](getting-started-with-mvc-part5/_static/image1.png)
+[![agregar controlador](getting-started-with-mvc-part5/_static/image2.png)](getting-started-with-mvc-part5/_static/image1.png)
 
-Esto creará un nuevo archivo "MoviesController.cs" bajo la carpeta \Controllers dentro de nuestro proyecto. Vamos a actualizar el MovieController para recuperar la lista de películas de nuestra base de datos recién agregado.
+Se creará un nuevo archivo "MoviesController.cs" debajo de nuestra carpeta \Controllers dentro de nuestro proyecto. Vamos a actualizar MovieController para recuperar la lista de películas de nuestra base de datos recién rellenada.
 
 [!code-csharp[Main](getting-started-with-mvc-part5/samples/sample1.cs)]
 
-Se está realizando una consulta LINQ para que solo recuperamos películas publicadas después el verano de 1984. Necesitaremos una plantilla de vista para representar esta lista de películas de vuelta, así que haga clic en el método y seleccione Agregar vista para crearlo.
+Vamos a realizar una consulta LINQ para que solo se recuperen las películas publicadas después del verano de 1984. Necesitaremos una plantilla de vista para volver a presentar esta lista de películas, así que haga clic con el botón derecho en el método y seleccione Agregar vista para crearla.
 
-En el cuadro de diálogo Agregar vista indicaremos que pasamos una lista&lt;Movies.Models.Movie&gt; a nuestra plantilla de vista. A diferencia de las horas anteriores se usa el cuadro de diálogo Agregar vista y decidió crear una plantilla "vacía", esta vez que indicaremos que queremos que Visual Studio para automáticamente "aplicar scaffolding a" una plantilla de vista para que podamos con algún contenido de forma predeterminada. Haremos esto seleccionando el elemento "List" en el menú"ver contenido de lista desplegable.
+En el cuadro de diálogo Agregar vista, se indicará que se está pasando una lista&lt;películas. Models. Movie&gt; a nuestra plantilla de vista. A diferencia de las horas anteriores usamos el cuadro de diálogo Agregar vista y eligió crear una plantilla "vacía", esta vez indicaremos que queremos que Visual Studio "scaffolding" automáticamente sea una plantilla de vista para nosotros con algún contenido predeterminado. Haremos esto seleccionando el elemento "list" en el menú desplegable de vista de contenido.
 
-Recuerde que cuando ha creado una nueva clase, deberá compilar la aplicación para que se muestre en el cuadro de diálogo Agregar vista.
+Recuerde que si ha creado una nueva clase, deberá compilar la aplicación para que se muestre en el cuadro de diálogo Agregar vista.
 
 ![Agregar vista](getting-started-with-mvc-part5/_static/image3.png)
 
-Haga clic en Agregar y el sistema generará automáticamente el código para obtener una vista para que podamos que muestra nuestra lista de películas. Esto es un buen momento para cambiar la &lt;h2&gt; encabezado a algo parecido a "My Movie List", como hicimos anteriormente con la vista de Hello World.
+Haga clic en agregar y el sistema generará automáticamente el código de una vista que muestra nuestra lista de películas. Es un buen momento para cambiar el encabezado &lt;H2&gt; a algo parecido a "mi lista de películas", como hicimos anteriormente con la vista Hola mundo.
 
-[![Películas - Microsoft Visual Web Developer 2010 Express](getting-started-with-mvc-part5/_static/image5.png)](getting-started-with-mvc-part5/_static/image4.png)
+[Películas de ![: Microsoft Visual Web Developer 2010 Express](getting-started-with-mvc-part5/_static/image5.png)](getting-started-with-mvc-part5/_static/image4.png)
 
-Ejecute la aplicación y visite /Movies en la barra de direcciones. Ahora hemos recupera datos de la base de datos mediante una consulta básica en el controlador y devuelve los datos a una vista que sabe acerca de las películas. Esa vista, a continuación, pone a través de la lista de películas y crea una tabla de datos para nosotros.
+Ejecute la aplicación y visite/Movies en la barra de direcciones. Ahora se han recuperado los datos de la base de datos mediante una consulta básica en el controlador y se han devuelto los datos a una vista que conoce las películas. A continuación, esta vista gira a través de la lista de películas y crea una tabla de datos para nosotros.
 
-[![Lista de películas - Windows Internet Explorer](getting-started-with-mvc-part5/_static/image7.png)](getting-started-with-mvc-part5/_static/image6.png)
+[![lista de películas: Windows Internet Explorer](getting-started-with-mvc-part5/_static/image7.png)](getting-started-with-mvc-part5/_static/image6.png)
 
-Se no implementar funcionalidad de edición, detalles y eliminación con esta aplicación, por lo que no necesitamos los vínculos predeterminados creados por la plantilla scaffold para nosotros. Abra el archivo /Movies/Index.aspx y quitarlas.
+No vamos a implementar la funcionalidad de edición, detalles y eliminación con esta aplicación, por lo que no necesitamos los vínculos predeterminados creados por nosotros. Abra el archivo/Movies/Index.aspx y quítelo.
 
-Este es el código fuente para el aspecto que debería nuestra plantilla de vista actualizada una vez que realizamos estos cambios:
+Este es el código fuente del aspecto que debería tener nuestra plantilla de vista actualizada una vez que realizamos estos cambios:
 
 [!code-aspx[Main](getting-started-with-mvc-part5/samples/sample2.aspx)]
 
-Crear vínculos que no necesitamos, por lo que deberá eliminarlos en este ejemplo. Mantendremos el vínculo Crear nuevo sin embargo, ya que es el siguiente. Este es el aspecto de nuestra aplicación con esa columna eliminada.
+Está creando vínculos que no necesitamos, por lo que los eliminaremos en este ejemplo. Sin embargo, conservaremos el vínculo crear nuevo, tal y como eso es próximo. Este es el aspecto de la aplicación con esa columna quitada.
 
-[![Lista de películas - Windows Internet Explorer](getting-started-with-mvc-part5/_static/image9.png)](getting-started-with-mvc-part5/_static/image8.png)
+[![lista de películas: Windows Internet Explorer](getting-started-with-mvc-part5/_static/image9.png)](getting-started-with-mvc-part5/_static/image8.png)
 
-Ahora tenemos una lista simple de nuestros datos de la película. Sin embargo, si hacemos clic en el vínculo "Crear nuevo", obtendremos un error que no se enlazó! Vamos a implementar un método de acción Create y que los usuarios puedan introducir nuevas películas en nuestra base de datos.
+Ahora tenemos una lista simple de los datos de la película. Sin embargo, si hacemos clic en el vínculo "crear nuevo", se producirá un error porque no está enlazado. Vamos a implementar un método de acción Create y permitir que un usuario escriba nuevas películas en nuestra base de datos.
 
 > [!div class="step-by-step"]
 > [Anterior](getting-started-with-mvc-part4.md)

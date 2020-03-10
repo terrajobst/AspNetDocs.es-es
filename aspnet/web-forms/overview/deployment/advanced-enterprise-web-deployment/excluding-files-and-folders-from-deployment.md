@@ -1,19 +1,19 @@
 ---
 uid: web-forms/overview/deployment/advanced-enterprise-web-deployment/excluding-files-and-folders-from-deployment
-title: Excluir archivos y carpetas de implementación | Microsoft Docs
+title: Excluir archivos y carpetas de la implementación | Microsoft Docs
 author: jrjlee
-description: Este tema describe cómo se pueden excluir archivos y carpetas de un paquete de implementación web al compilar y empaquetar un proyecto de aplicación web.
+description: En este tema se describe cómo puede excluir archivos y carpetas de un paquete de implementación web al compilar y empaquetar un proyecto de aplicación Web.
 ms.author: riande
 ms.date: 05/04/2012
 ms.assetid: f4cc2d40-6a78-429b-b06f-07d000d4caad
 msc.legacyurl: /web-forms/overview/deployment/advanced-enterprise-web-deployment/excluding-files-and-folders-from-deployment
 msc.type: authoredcontent
 ms.openlocfilehash: a262ce43d7199fb1015d54d0b7c213857c360946
-ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/06/2019
-ms.locfileid: "65133896"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78438421"
 ---
 # <a name="excluding-files-and-folders-from-deployment"></a>Excluir archivos y carpetas de la implementación
 
@@ -21,108 +21,108 @@ por [Jason Lee](https://github.com/jrjlee)
 
 [Descargar PDF](https://msdnshared.blob.core.windows.net/media/MSDNBlogsFS/prod.evol.blogs.msdn.com/CommunityServer.Blogs.Components.WeblogFiles/00/00/00/63/56/8130.DeployingWebAppsInEnterpriseScenarios.pdf)
 
-> Este tema describe cómo se pueden excluir archivos y carpetas de un paquete de implementación web al compilar y empaquetar un proyecto de aplicación web.
+> En este tema se describe cómo puede excluir archivos y carpetas de un paquete de implementación web al compilar y empaquetar un proyecto de aplicación Web.
 
-En este tema forma parte de una serie de tutoriales que se basa en los requisitos de implementación empresarial de una compañía ficticia denominada Fabrikam, Inc. Esta serie de tutoriales usa una solución de ejemplo&#x2014;el [solución Contact Manager](../web-deployment-in-the-enterprise/the-contact-manager-solution.md)&#x2014;para representar una aplicación web con un nivel realista de complejidad, incluida una aplicación ASP.NET MVC 3, una comunicación de Windows Servicio Foundation (WCF) y un proyecto de base de datos.
+Este tema forma parte de una serie de tutoriales basados en los requisitos de implementación empresarial de una empresa ficticia denominada Fabrikam, Inc. En esta serie de tutoriales se&#x2014;usa una solución de ejemplo de la&#x2014; [solución Contact Manager](../web-deployment-in-the-enterprise/the-contact-manager-solution.md)para representar una aplicación web con un nivel de complejidad realista, como una aplicación ASP.NET MVC 3, un servicio Windows Communication Foundation (WCF) y un proyecto de base de datos.
 
-El método de implementación en el corazón de estos tutoriales se basa en el enfoque de archivo de proyecto de división descrito en [descripción del archivo de proyecto](../web-deployment-in-the-enterprise/understanding-the-project-file.md), en que el proceso de compilación se controla mediante dos archivos de proyecto&#x2014;uno que contenga instrucciones que se aplican a todos los entornos de destino y que contiene la configuración de compilación e implementación específica del entorno de compilación. En tiempo de compilación, se combina el archivo de proyecto específicos del entorno en el archivo de proyecto independiente del entorno para formar un conjunto completo de las instrucciones de compilación.
+El método de implementación que se encuentra en el corazón de estos tutoriales se basa en el enfoque de archivo de proyecto dividido que se describe en [Descripción del archivo de proyecto](../web-deployment-in-the-enterprise/understanding-the-project-file.md), en el&#x2014;que el proceso de compilación se controla mediante dos archivos de proyecto que contiene instrucciones de compilación que se aplican a cada entorno de destino y uno que contiene la configuración de compilación e implementación específica del entorno. En tiempo de compilación, el archivo de proyecto específico del entorno se combina en el archivo de proyecto independiente del entorno para formar un conjunto completo de instrucciones de compilación.
 
 ## <a name="overview"></a>Información general
 
-Cuando compila un proyecto de aplicación web en Visual Studio 2010, la canalización de publicación de Web (WPP) le permite ampliar este proceso de compilación al empaquetar la aplicación web compilada en un paquete de web que se puede implementar. A continuación, puede usar la herramienta de implementación Web de Internet Information Services (IIS) (Web Deploy) para implementar este paquete web en un servidor web IIS remoto, o importar el paquete web manualmente mediante el Administrador de IIS. Este proceso de empaquetado se explica en [compilar y empaquetar proyectos de aplicación Web](../web-deployment-in-the-enterprise/building-and-packaging-web-application-projects.md).
+Al compilar un proyecto de aplicación web en Visual Studio 2010, la canalización de publicación web (WPP) le permite ampliar este proceso de compilación empaquetando la aplicación web compilada en un paquete web que se puede implementar. Después, puede usar la herramienta de implementación web (Web Deploy) de Internet Information Services (IIS) para implementar este paquete Web en un servidor Web de IIS remoto, o bien importar el paquete Web manualmente a través del administrador de IIS. Este proceso de empaquetado se explica en [compilar y empaquetar proyectos de aplicación web](../web-deployment-in-the-enterprise/building-and-packaging-web-application-projects.md).
 
-¿Cómo controlar lo que se incluyen en el sitio web del paquete? La configuración del proyecto en Visual Studio a través del archivo de proyecto subyacente, proporciona un control suficiente para muchos escenarios. Sin embargo, en algunos casos es posible que desee adaptar el contenido del paquete web en entornos de destino específico. Por ejemplo, es posible que desea incluir una carpeta para los archivos de registro al implementar la aplicación en un entorno de prueba, pero excluir la carpeta al implementar la aplicación en un entorno de ensayo o producción. En este tema le mostrará cómo hacerlo.
+¿Cómo puede controlar lo que se incluye en el paquete Web? La configuración del proyecto en Visual Studio, a través del archivo de proyecto subyacente, proporciona un control suficiente para muchos escenarios. Sin embargo, en algunos casos es posible que desee personalizar el contenido del paquete Web en entornos de destino específicos. Por ejemplo, puede que desee incluir una carpeta para los archivos de registro al implementar la aplicación en un entorno de prueba, pero excluir la carpeta al implementar la aplicación en un entorno de ensayo o de producción. En este tema se muestra cómo hacerlo.
 
-## <a name="what-gets-included-by-default"></a>¿Qué Obtiene incluye de forma predeterminada?
+## <a name="what-gets-included-by-default"></a>¿Qué se incluye de forma predeterminada?
 
-Al configurar las propiedades del proyecto de aplicación web en Visual Studio, el **elementos para implementar** lista el **Empaquetar/Publicar Web** página le permite especificar qué desea incluir en la implementación web paquete. De forma predeterminada, se establece en **sólo los archivos necesarios para ejecutar esta aplicación**.
+Al configurar las propiedades del proyecto de aplicación web en Visual Studio, la lista **elementos para implementar** en la página **Web de empaquetar/publicar** permite especificar lo que se desea incluir en el paquete de implementación web. De forma predeterminada, se establece en **solo los archivos necesarios para ejecutar esta aplicación**.
 
 ![](excluding-files-and-folders-from-deployment/_static/image1.png)
 
-Cuando se elige **sólo los archivos necesarios para ejecutar esta aplicación**, el WPP intentará determinar qué archivos se deben agregar al paquete de web. Esto incluye:
+Cuando elija **solo los archivos necesarios para ejecutar esta aplicación**, WPP intentará determinar qué archivos se deben agregar al paquete Web. Esto incluye:
 
-- Toda la compilación genera para el proyecto.
-- Los archivos marcan con una acción de compilación **contenido**.
+- Todas las salidas de compilación del proyecto.
+- Cualquier archivo marcado con una acción de compilación de **contenido**.
 
 > [!NOTE]
-> Se incluye la lógica que determina qué archivos se incluyen en este archivo:   
-> *%ProgramFiles%\MSBuild\Microsoft\VisualStudio\v10.0\Web\ Microsoft.Web.Publishing.OnlyFilesToRunTheApp.targets*
+> La lógica que determina los archivos que se van a incluir está contenida en este archivo:   
+> *%PROGRAMFILES%\MSBuild\Microsoft\VisualStudio\v10.0\Web\ Microsoft. Web. Publishing. OnlyFilesToRunTheApp. targets*
 
-## <a name="excluding-specific-files-and-folders"></a>Excluir determinados archivos y carpetas
+## <a name="excluding-specific-files-and-folders"></a>Exclusión de archivos y carpetas específicos
 
-En algunos casos, deseará un mayor control sobre el que se implementan los archivos y carpetas. Si sabe qué archivos van a excluir delante de tiempo y la exclusión se aplica a todos los entornos de destino, simplemente puede establecer el **acción de compilación** de cada archivo **ninguno**.
+En algunos casos, querrá tener un control más preciso sobre qué archivos y carpetas se implementan. Si sabe qué archivos desea excluir con anterioridad y la exclusión se aplica a todos los entornos de destino, puede simplemente establecer la **acción de compilación** de cada archivo en **ninguno**.
 
 **Para excluir archivos específicos de la implementación**
 
-1. En el **el Explorador de soluciones** , haga clic en el archivo y, a continuación, haga clic en **propiedades**.
-2. En el **propiedades** ventana, en el **acción de compilación** fila, seleccione **ninguno**.
+1. En la ventana **Explorador de soluciones** , haga clic con el botón secundario en el archivo y, a continuación, haga clic en **propiedades**.
+2. En la ventana **propiedades** , en la fila **acción de compilación** , seleccione **ninguno**.
 
-Sin embargo, este enfoque no siempre resulta conveniente. Por ejemplo, desea variar qué archivos y carpetas se incluyen según el entorno de destino y desde fuera de Visual Studio. Por ejemplo, en la solución Contact Manager de ejemplo, eche un vistazo al contenido del proyecto ContactManager.Mvc:
+Sin embargo, este enfoque no siempre es práctico. Por ejemplo, puede que desee variar qué archivos y carpetas se incluyen según el entorno de destino y desde fuera de Visual Studio. Por ejemplo, en la solución de ejemplo Contact Manager, eche un vistazo al contenido del proyecto ContactManager. Mvc:
 
 ![](excluding-files-and-folders-from-deployment/_static/image2.png)
 
-- La carpeta interna contiene algunas secuencias de comandos SQL que el programador usa para crear, quitar y rellenar las bases de datos locales para fines de desarrollo. No hay nada en esta carpeta debe implementarse en un entorno de ensayo o producción.
-- La carpeta Scripts contiene varios archivos de JavaScript. Muchos de estos archivos se incluyen únicamente para admitir la depuración o proporcionar IntelliSense en Visual Studio. Algunos de estos archivos no deben implementarse en entornos de ensayo o producción. Sin embargo, desea implementarlos en un entorno de prueba para desarrolladores para facilitar la solución de problemas.
+- La carpeta Internal contiene algunos scripts SQL que el programador usa para crear, quitar y rellenar las bases de datos locales con fines de desarrollo. No se debe implementar nada en esta carpeta en un entorno de ensayo o de producción.
+- La carpeta scripts contiene varios archivos JavaScript. Muchos de estos archivos se incluyen únicamente para admitir la depuración o proporcionar IntelliSense en Visual Studio. Algunos de estos archivos no se deben implementar en entornos de ensayo o de producción. Sin embargo, puede que desee implementarlos en un entorno de prueba de desarrollador para facilitar la solución de problemas.
 
-Aunque podría manipular los archivos de proyecto para excluir determinados archivos y carpetas, hay una manera más fácil. El WPP incluye un mecanismo para excluir archivos y carpetas mediante la creación de listas de elementos denominadas **ExcludeFromPackageFolders** y **ExcludeFromPackageFiles**. Puede extender este mecanismo agregando sus propios elementos a estas listas. Para ello, deberá completar estos pasos generales:
+Aunque podría manipular los archivos de proyecto para excluir archivos y carpetas específicos, hay una manera más fácil. WPP incluye un mecanismo para excluir archivos y carpetas mediante la creación de listas de elementos denominadas **ExcludeFromPackageFolders** y **ExcludeFromPackageFiles**. Puede extender este mecanismo agregando sus propios elementos a estas listas. Para ello, debe completar estos pasos de alto nivel:
 
-1. Cree un archivo de proyecto personalizado denominado *.wpp.targets [nombre de proyecto]* en la misma carpeta que el archivo de proyecto.
+1. Cree un archivo de proyecto personalizado denominado *[nombre de proyecto]. WPP. targets* en la misma carpeta que el archivo de proyecto.
 
     > [!NOTE]
-    > El *. wpp.targets* archivo debe ir en la misma carpeta que el archivo de proyecto de aplicación web&#x2014;por ejemplo, *ContactManager.Mvc.csproj*&#x2014;en lugar de en la misma carpeta que cualquier personalizado archivos de proyecto que se usan para controlar el proceso de compilación e implementación.
-2. En el *. wpp.targets* , agregue un **ItemGroup** elemento.
-3. En el **ItemGroup** elemento, agregar **ExcludeFromPackageFolders** y **ExcludeFromPackageFiles** para excluir determinados archivos y carpetas según sea necesario.
+    > El archivo *. WPP. targets* debe ir en la misma carpeta que el archivo&#x2014;de proyecto de aplicación Web, por ejemplo, *ContactManager. Mvc. csproj*&#x2014;en lugar de en la misma carpeta que los archivos de proyecto personalizados que se usan para controlar el proceso de compilación e implementación.
+2. En el archivo *. WPP. targets* , agregue un elemento **ItemGroup** .
+3. En el elemento **ItemGroup** , agregue los elementos **ExcludeFromPackageFolders** y **ExcludeFromPackageFiles** para excluir archivos y carpetas específicos, según sea necesario.
 
-Se trata de la estructura básica de este *. wpp.targets* archivo:
+Esta es la estructura básica de este archivo *. WPP. targets* :
 
 [!code-xml[Main](excluding-files-and-folders-from-deployment/samples/sample1.xml)]
 
-Tenga en cuenta que cada elemento incluye un elemento de metadatos de elemento denominado **FromTarget**. Este es un valor opcional que no afecten al proceso de compilación; sólo sirve para indicar por qué se omitieron los archivos o carpetas determinados si alguien revisa los registros de compilación.
+Tenga en cuenta que cada elemento incluye un elemento de metadatos de elemento denominado **FromTarget**. Este es un valor opcional que no afecta al proceso de compilación; simplemente sirve para indicar por qué se omitieron determinados archivos o carpetas si alguien revisa los registros de compilación.
 
-## <a name="excluding-files-and-folders-from-a-web-package"></a>Excluir archivos y carpetas de un paquete de Web
+## <a name="excluding-files-and-folders-from-a-web-package"></a>Exclusión de archivos y carpetas de un paquete Web
 
-El procedimiento siguiente muestra cómo agregar un *. wpp.targets* archivo a un proyecto de aplicación web y cómo usar el archivo para excluir determinados archivos y carpetas desde el paquete web al compilar el proyecto.
+En el procedimiento siguiente se muestra cómo agregar un archivo *. WPP. targets* a un proyecto de aplicación web y cómo usar el archivo para excluir archivos y carpetas específicos del paquete web al compilar el proyecto.
 
 **Para excluir archivos y carpetas de un paquete de implementación web**
 
 1. Abra la solución en Visual Studio 2010.
-2. En el **el Explorador de soluciones** ventana, haga clic en el nodo del proyecto de aplicación web (por ejemplo, **ContactManager.Mvc**), seleccione **agregar**y, a continuación, haga clic en **Nuevo elemento**.
-3. En el **Agregar nuevo elemento** cuadro de diálogo, seleccione el **archivo XML** plantilla.
-4. En el **nombre** , escriba *[nombre de proyecto]* **.wpp.targets** (por ejemplo, **ContactManager.Mvc.wpp.targets**) y, a continuación, haga clic en **agregar**.
+2. En la ventana de **Explorador de soluciones** , haga clic con el botón secundario en el nodo de proyecto de aplicación web (por ejemplo, **ContactManager. Mvc**), seleccione **Agregar**y, a continuación, haga clic en **nuevo elemento**.
+3. En el cuadro de diálogo **Agregar nuevo elemento** , seleccione la plantilla de **archivo XML** .
+4. En el cuadro **nombre** , escriba *[nombre del proyecto] * * *. WPP. targets** (por ejemplo, **ContactManager. Mvc. WPP. targets**) y, a continuación, haga clic en **Agregar**.
 
     ![](excluding-files-and-folders-from-deployment/_static/image3.png)
 
     > [!NOTE]
-    > Si agrega un nuevo elemento en el nodo raíz de un proyecto, se crea el archivo en la misma carpeta que el archivo de proyecto. Puede comprobarlo abriendo la carpeta en el Explorador de Windows.
-5. En el archivo, agregue un **proyecto** elemento y un **ItemGroup** elemento:
+    > Si agrega un nuevo elemento al nodo raíz de un proyecto, el archivo se crea en la misma carpeta que el archivo de proyecto. Para comprobarlo, abra la carpeta en el explorador de Windows.
+5. En el archivo, agregue un elemento **Project** y un elemento **ItemGroup** :
 
     [!code-xml[Main](excluding-files-and-folders-from-deployment/samples/sample2.xml)]
-6. Si desea excluir carpetas del paquete web, agregue un **ExcludeFromPackageFolders** elemento a la **ItemGroup** elemento:
+6. Si desea excluir carpetas del paquete Web, agregue un elemento **ExcludeFromPackageFolders** al elemento **ItemGroup** :
 
-   1. En el **Include** atributo, proporcione una lista separada por comas de las carpetas que desea excluir.
-   2. En el **FromTarget** elemento de metadatos, proporcione un valor significativo para indicar por qué las carpetas que se excluyen, como el nombre de la *. wpp.targets* archivo.
+   1. En el atributo **include** , proporcione una lista separada por punto y coma de las carpetas que desea excluir.
+   2. En el elemento de metadatos **FromTarget** , proporcione un valor significativo para indicar por qué se excluyen las carpetas, como el nombre del archivo *. WPP. targets* .
 
       [!code-xml[Main](excluding-files-and-folders-from-deployment/samples/sample3.xml)]
-7. Si desea excluir archivos del paquete web, agregue un **ExcludeFromPackageFiles** elemento a la **ItemGroup** elemento:
+7. Si desea excluir archivos del paquete Web, agregue un elemento **ExcludeFromPackageFiles** al elemento **ItemGroup** :
 
-   1. En el **Include** atributo, proporcione una lista separada por comas de los archivos que desea excluir.
-   2. En el **FromTarget** elemento de metadatos, proporcione un valor significativo para indicar por qué los archivos que se excluyen, como el nombre de la *. wpp.targets* archivo.
+   1. En el atributo **include** , proporcione una lista separada por puntos y comas de los archivos que desea excluir.
+   2. En el elemento de metadatos **FromTarget** , proporcione un valor significativo para indicar por qué se excluyen los archivos, como el nombre del archivo *. WPP. targets* .
 
       [!code-xml[Main](excluding-files-and-folders-from-deployment/samples/sample4.xml)]
-8. El *.wpp.targets [nombre de proyecto]* archivo ahora debería parecer a este:
+8. El archivo *[nombre de proyecto]. WPP. targets* ahora debe ser similar al siguiente:
 
     [!code-xml[Main](excluding-files-and-folders-from-deployment/samples/sample5.xml)]
-9. Guarde y cierre el *.wpp.targets [nombre de proyecto]* archivo.
+9. Guarde y cierre el archivo *[nombre del proyecto]. WPP. targets* .
 
-La próxima vez que creación y empaquetado el proyecto de aplicación web, el WPP detectará automáticamente el *. wpp.targets* archivo. Los archivos y carpetas que especificó no se incluirá en el paquete web.
+La próxima vez que compile y empaquete el proyecto de aplicación Web, WPP detectará automáticamente el archivo *. WPP. targets* . Los archivos y las carpetas especificados no se incluirán en el paquete Web.
 
 ## <a name="conclusion"></a>Conclusión
 
-En este tema se describe cómo excluir archivos y carpetas específicos cuando se compila un paquete web, mediante la creación de un personalizado *. wpp.targets* archivo en la misma carpeta que el archivo de proyecto de aplicación web.
+En este tema se describe cómo excluir archivos y carpetas específicos al compilar un paquete Web, mediante la creación de un archivo personalizado *. WPP. targets* en la misma carpeta que el archivo de proyecto de aplicación Web.
 
 ## <a name="further-reading"></a>Información adicional
 
-Para obtener más información sobre el uso de archivos de proyecto personalizados de Microsoft Build Engine (MSBuild) para controlar el proceso de implementación, consulte [descripción del archivo de proyecto](../web-deployment-in-the-enterprise/understanding-the-project-file.md) y [descripción del proceso de compilación](../web-deployment-in-the-enterprise/understanding-the-build-process.md). Para obtener más información sobre el empaquetado y el proceso de implementación, consulte [compilar y empaquetar proyectos de aplicación Web](../web-deployment-in-the-enterprise/building-and-packaging-web-application-projects.md), [configurar parámetros para la implementación del paquete Web](../web-deployment-in-the-enterprise/configuring-parameters-for-web-package-deployment.md), y [ Implementar paquetes Web](../web-deployment-in-the-enterprise/deploying-web-packages.md).
+Para obtener más información sobre el uso de archivos de proyecto de Microsoft Build Engine personalizado (MSBuild) para controlar el proceso de implementación, vea [Descripción del archivo de proyecto](../web-deployment-in-the-enterprise/understanding-the-project-file.md) y [Descripción del proceso de compilación](../web-deployment-in-the-enterprise/understanding-the-build-process.md). Para obtener más información sobre el proceso de empaquetado e implementación, vea [compilar y empaquetar proyectos de aplicación web](../web-deployment-in-the-enterprise/building-and-packaging-web-application-projects.md), [Configurar parámetros para la implementación de paquetes web](../web-deployment-in-the-enterprise/configuring-parameters-for-web-package-deployment.md)e [implementar paquetes web](../web-deployment-in-the-enterprise/deploying-web-packages.md).
 
 > [!div class="step-by-step"]
 > [Anterior](deploying-membership-databases-to-enterprise-environments.md)

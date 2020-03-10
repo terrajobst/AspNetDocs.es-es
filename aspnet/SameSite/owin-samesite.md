@@ -6,11 +6,11 @@ ms.author: riande
 ms.date: 12/6/2019
 uid: owin-samesite
 ms.openlocfilehash: a3353fd0f0332899aaba26b83aea0ff7c3a6d19b
-ms.sourcegitcommit: 7709c0a091b8d55b7b33bad8849f7b66b23c3d72
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/19/2020
-ms.locfileid: "77455742"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78439483"
 ---
 # <a name="samesite-cookies-and-the-open-web-interface-for-net-owin"></a>Cookies de SameSite y la interfaz web abierta para .NET (OWIN)
 
@@ -74,7 +74,7 @@ El borrador 2019 de la especificación de `SameSite`:
 * Especifica que las cookies se tratan como `SameSite=Lax` de forma predeterminada.
 * Especifica las cookies que validan explícitamente `SameSite=None` para habilitar la entrega entre sitios debe marcarse como `Secure`. `None` es una nueva entrada para rechazarla.
 * Está programado para que [Chrome](https://chromestatus.com/feature/5088147346030592) lo habilite de forma predeterminada en [febrero de 2020](https://blog.chromium.org/2019/10/developers-get-ready-for-new.html). Los exploradores empezaron a pasar a este estándar en 2019.
-* Es compatible con las revisiones emitidas tal y como se describe en los artículos de Knowledge base. Para más información, consulte <xref:samesite/kbs-samesite>.
+* Es compatible con las revisiones emitidas tal y como se describe en los artículos de Knowledge base. Para obtener más información, consulta <xref:samesite/kbs-samesite>.
 
 <a name="sob"></a>
 

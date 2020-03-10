@@ -9,11 +9,11 @@ ms.assetid: bd72bb7e-bdcb-490b-8bc1-9b669329632b
 msc.legacyurl: /ajax/cdn/jquery-ui
 msc.type: folder
 ms.openlocfilehash: 00e481ab8a24823fa4b52fb2d7ec38bc9f2cf739
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59409426"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78438181"
 ---
 # <a name="jquery-ui"></a>jQuery UI
 

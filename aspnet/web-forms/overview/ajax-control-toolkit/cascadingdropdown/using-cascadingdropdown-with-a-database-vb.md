@@ -9,11 +9,11 @@ ms.assetid: 97a3d33c-c856-43f3-8acb-f1ccbc48221a
 msc.legacyurl: /web-forms/overview/ajax-control-toolkit/cascadingdropdown/using-cascadingdropdown-with-a-database-vb
 msc.type: authoredcontent
 ms.openlocfilehash: 4482aa18c4446ec8f5f160c423008398ea2e1d0d
-ms.sourcegitcommit: 22fbd8863672c4ad6693b8388ad5c8e753fb41a2
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/28/2019
-ms.locfileid: "74599466"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78430657"
 ---
 # <a name="using-cascadingdropdown-with-a-database-vb"></a>Usar CascadingDropDown con una base de datos (VB)
 
@@ -23,7 +23,7 @@ por [Christian Wenz](https://github.com/wenz)
 
 > El control CascadingDropDown en el kit de herramientas de control de AJAX extiende un control DropDownList para que los cambios en un objeto DropDownList carguen los valores asociados en otro DropDownList. Para que esto funcione, se debe crear un servicio Web especial.
 
-## <a name="overview"></a>Información general del
+## <a name="overview"></a>Información general
 
 El control CascadingDropDown en el kit de herramientas de control de AJAX extiende un control DropDownList para que los cambios en un objeto DropDownList carguen los valores asociados en otro DropDownList. (Por ejemplo, una lista proporciona una lista de Estados de EE. UU. y la siguiente lista se rellena con las ciudades principales en ese estado). Para que esto funcione, se debe crear un servicio Web especial.
 

@@ -1,140 +1,140 @@
 ---
 uid: mvc/overview/older-versions/mvc-music-store/mvc-music-store-part-8
-title: 'Parte 8: Carro de la compra con las actualizaciones de Ajax | Microsoft Docs'
+title: 'Parte 8: carro de la compra con actualizaciones de Ajax | Microsoft Docs'
 author: jongalloway
-description: Esta serie de tutoriales detalla todos los pasos realizados para compilar la aplicación de ejemplo de Music Store de ASP.NET MVC. Parte 8 cubre el carro de la compra con las actualizaciones de Ajax.
+description: En esta serie de tutoriales se detallan todos los pasos realizados para compilar la aplicación de ejemplo ASP.NET MVC Music Store. La parte 8 abarca el carro de la compra con actualizaciones de Ajax.
 ms.author: riande
 ms.date: 04/21/2011
 ms.assetid: 26b2f55e-ed42-4277-89b0-c941eb754145
 msc.legacyurl: /mvc/overview/older-versions/mvc-music-store/mvc-music-store-part-8
 msc.type: authoredcontent
 ms.openlocfilehash: 89897ad41b217764cbd17317d4bf5d6a5c5d488f
-ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/06/2019
-ms.locfileid: "65112906"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78433519"
 ---
-# <a name="part-8-shopping-cart-with-ajax-updates"></a>Parte 8: Carro de la compra con las actualizaciones de Ajax
+# <a name="part-8-shopping-cart-with-ajax-updates"></a>Parte 8: carro de la compra con actualizaciones de Ajax
 
 por [Jon Galloway](https://github.com/jongalloway)
 
-> El Store de música de MVC es una aplicación de tutorial que presenta y explica paso a paso cómo usar ASP.NET MVC y Visual Studio para el desarrollo web.  
+> El almacén de música de MVC es una aplicación de tutorial que presenta y explica paso a paso cómo usar ASP.NET MVC y Visual Studio para el desarrollo web.  
 >   
-> El Store de música de MVC es una implementación de almacén de ejemplo ligera que vende álbumes de música en línea e implementa la administración básica del sitio, inicio de sesión de usuario y funcionalidad del carro de la compra.  
+> MVC Music Store es una implementación ligera de almacén de ejemplo que vende álbumes musicales en línea e implementa la funcionalidad básica de administración de sitios, Inicio de sesión de usuario y carro de la compra.  
 >   
-> Esta serie de tutoriales detalla todos los pasos realizados para compilar la aplicación de ejemplo de Music Store de ASP.NET MVC. Parte 8 cubre el carro de la compra con las actualizaciones de Ajax.
+> En esta serie de tutoriales se detallan todos los pasos realizados para compilar la aplicación de ejemplo ASP.NET MVC Music Store. La parte 8 abarca el carro de la compra con actualizaciones de Ajax.
 
-Permitiremos que los usuarios que coloquen álbumes en su carro de compra sin registrar, pero debe registrar como invitados desproteger completa. El proceso de la compra y la desprotección se dividirá en dos controladores: un controlador de ShoppingCart que permite anónimamente agregar elementos a un carro de compra y un controlador de desprotección que controla el proceso de pago. Se deberá comenzar con el carro de la compra en esta sección y luego crear el proceso de pago en la sección siguiente.
+Permitiremos a los usuarios colocar álbumes en el carro sin registrarse, pero tendrán que registrarse como invitados para completar la desprotección. El proceso de compra y retirada se divide en dos controladores: un controlador ShoppingCart que permite agregar elementos de forma anónima a un carro y un controlador de desprotección que controla el proceso de desprotección. Comenzaremos con el carro de la compra en esta sección y, a continuación, compilaremos el proceso de desprotección en la sección siguiente.
 
-## <a name="adding-the-cart-order-and-orderdetail-model-classes"></a>Agregar las clases de modelo del carro de compra, pedido y OrderDetail
+## <a name="adding-the-cart-order-and-orderdetail-model-classes"></a>Adición de las clases de modelo Cart, order y OrderDetail
 
-Nuestros procesos de carro de la compra y la desprotección hará que el uso de las clases nuevas. Haga clic en la carpeta Models y agregue una clase de carro (Cart.cs) con el código siguiente.
+Nuestro carro de la compra y los procesos de retirada harán uso de algunas clases nuevas. Haga clic con el botón secundario en la carpeta models y agregue una clase Cart (Cart.cs) con el código siguiente.
 
 [!code-csharp[Main](mvc-music-store-part-8/samples/sample1.cs)]
 
-Esta clase es bastante similar a otros usuarios que hemos usado hasta ahora, excepto el atributo [Key] para la propiedad de identificador de registro. Nuestros artículos del carro de compra tendrá un identificador de cadena denominado CartID para permitir compras anónimas, pero la tabla incluye una clave principal de entero denominada identificador de registro. Por convención, Code First de Entity Framework espera que la clave principal para una tabla denominada carro será CartId o Id., pero nos podemos reemplazar fácilmente mediante las anotaciones o código si queremos. Este es un ejemplo de cómo podemos usar las convenciones simples en Entity Framework Code First cuando sean adecuados para nosotros, pero, no estamos limitados por ellos cuando no lo hacen.
+Esta clase es bastante similar a la de los demás que hemos usado hasta ahora, excepto el atributo [Key] de la propiedad RecordId. Nuestros elementos del carro tendrán un identificador de cadena denominado CartID para permitir compras anónimas, pero la tabla incluye una clave principal de entero denominada RecordId. Por Convención, Entity Framework Code-First espera que la clave principal de una tabla denominada Cart sea CartId o ID, pero se puede reemplazar fácilmente por las anotaciones o el código si se desea. Este es un ejemplo de cómo podemos usar las convenciones simples en Entity Framework Code-First cuando nos acompañan, pero no están restringidos por ellos cuando no lo están.
 
-A continuación, agregue una clase Order (Order.cs) con el código siguiente.
+A continuación, agregue una clase de pedido (Order.cs) con el código siguiente.
 
 [!code-csharp[Main](mvc-music-store-part-8/samples/sample2.cs)]
 
-Esta clase realiza el seguimiento de información de resumen y de entrega para un pedido. **No se compilará aún**, porque no tiene una propiedad de navegación OrderDetails que depende de una clase que no hemos creado aún. Vamos a corregir que ahora mediante la adición de una clase denominada OrderDetail.cs, agregue el código siguiente.
+Esta clase realiza un seguimiento de la información de Resumen y entrega de un pedido. **No se compilará todavía**, porque tiene una propiedad de navegación OrderDetails que depende de una clase que aún no se ha creado. Vamos a corregir esto ahora agregando una clase denominada OrderDetail.cs, agregando el código siguiente.
 
 [!code-csharp[Main](mvc-music-store-part-8/samples/sample3.cs)]
 
-Nos aseguraremos de hacer una última actualización a nuestra clase MusicStoreEntities incluir DbSets que exponen las nuevas clases de modelo, también incluye una clase DbSet&lt;artista&gt;. La clase MusicStoreEntities actualizada aparece como a continuación.
+Haremos una última actualización a nuestra clase MusicStoreEntities para incluir DbSets que exponga las nuevas clases de modelo, incluido también un DbSet&lt;intérprete&gt;. La clase MusicStoreEntities actualizada aparece como se muestra a continuación.
 
 [!code-csharp[Main](mvc-music-store-part-8/samples/sample4.cs)]
 
-## <a name="managing-the-shopping-cart-business-logic"></a>Administrar la lógica de negocios del carro de la compra
+## <a name="managing-the-shopping-cart-business-logic"></a>Administrar la lógica de negocios de la cesta de la compra
 
-A continuación, vamos a crear la clase ShoppingCart en la carpeta Models. El modelo ShoppingCart controla el acceso a datos en la tabla de carro. Además, controlará la lógica de negocios a para agregar y quitar elementos del carro de compra.
+A continuación, vamos a crear la clase ShoppingCart en la carpeta models. El modelo ShoppingCart controla el acceso a los datos a la tabla Cart. Además, administrará la lógica de negocios para agregar y quitar elementos del carro de la compra.
 
-Puesto que no desea exigir que los usuarios registrarse para obtener una cuenta agregar elementos al carro de la compra, se asignarán a los usuarios un identificador único temporal (con un GUID o el identificador único global) al tener acceso a la cesta. Almacenaremos este identificador mediante la clase de sesión de ASP.NET.
+Dado que no es necesario que los usuarios se suscriban a una cuenta solo para agregar elementos a su carro de la compra, se asignará a los usuarios un identificador único temporal (mediante un GUID o un identificador único global) cuando accedan al carro de la compra. Almacenaremos este identificador mediante la clase de sesión ASP.NET.
 
-*Nota: La sesión de ASP.NET es un lugar conveniente para almacenar información específica del usuario que expirará después de que abandonen el sitio. Mientras uso indebido del estado de sesión puede tener implicaciones de rendimiento en los sitios más grandes, el uso de la luz funcionará bien para fines de demostración.*
+*Nota: la sesión ASP.NET es un lugar adecuado para almacenar información específica del usuario que expirará después de abandonar el sitio. Aunque el uso incorrecto del estado de la sesión puede tener implicaciones en el rendimiento de los sitios de mayor tamaño, nuestro ligero uso funcionará bien con fines de demostración.*
 
 La clase ShoppingCart expone los métodos siguientes:
 
-**AddToCart** toma un álbum como parámetro y lo agrega al carro de compra del usuario. Puesto que realiza el seguimiento de la tabla del carro de la cantidad para cada álbum, incluye lógica para crear una nueva fila si es necesario o sólo incremente la cantidad, si el usuario ya ha solicitado una copia del álbum.
+**AddToCart** toma un álbum como parámetro y lo agrega al carro del usuario. Dado que la tabla Cart realiza un seguimiento de la cantidad de cada álbum, incluye la lógica para crear una nueva fila si es necesario o simplemente incrementar la cantidad si el usuario ya ha pedido una copia del álbum.
 
-**RemoveFromCart** toma un identificador de álbum y lo quita del carro de compra del usuario. Si el usuario sólo tuviera una copia del álbum en su carro de compra, se quita la fila.
+**RemoveFromCart** toma un identificador de álbum y lo quita del carro del usuario. Si el usuario solo tenía una copia del álbum en el carro, se quita la fila.
 
-**EmptyCart** quita todos los elementos del carro de compra de un usuario.
+**EmptyCart** quita todos los elementos del carro de la compra de un usuario.
 
-**GetCartItems** recupera una lista de CartItems de visualización o procesamiento.
+**GetCartItems** recupera una lista de CartItems para su presentación o procesamiento.
 
-**GetCount** recupera un número total de álbumes de un usuario tiene en su carro de la compra.
+**GetCount** recupera el número total de álbumes que un usuario tiene en su carro de la compra.
 
-**GetTotal** calcula el costo total de todos los artículos del carro.
+**GetTotal** calcula el costo total de todos los elementos del carro.
 
-**CreateOrder** convierte el carro de la compra a un pedido durante la fase de retirada.
+**CreateOrder** convierte el carro de la compra en un pedido durante la fase de desprotección.
 
-**GetCart** es un método estático que permite a los nuestros controladores obtener un objeto de carro. Usa el **GetCartId** método para controlar el CartId de lectura de la sesión del usuario. El método GetCartId requiere el objeto HttpContextBase para que pueda leer CartId del usuario de la sesión del usuario.
+**GetCart** es un método estático que permite a nuestros controladores obtener un objeto Cart. Usa el método **GetCartId** para controlar la lectura de CartId desde la sesión del usuario. El método GetCartId requiere HttpContextBase para que pueda leer el CartId del usuario de la sesión del usuario.
 
-Aquí es el conjunto completo **clase ShoppingCart**:
+Esta es la **clase ShoppingCart**completa:
 
 [!code-csharp[Main](mvc-music-store-part-8/samples/sample5.cs)]
 
 ## <a name="viewmodels"></a>ViewModels
 
-Nuestro controlador de carro de la compra deberá comunicar cierta información a sus vistas compleja que no se asigna correctamente a nuestros objetos de modelo. No queremos modificar los modelos para que se ajuste a nuestras vistas; Clases de modelo deberían representar nuestro dominio, no la interfaz de usuario. Una solución sería pasar la información a nuestras vistas mediante la clase ViewBag, como hicimos con la información de la lista desplegable de Store Manager, pero pasando una gran cantidad de información a través de ViewBag obtiene difícil de administrar.
+Nuestro controlador de carro de la compra deberá comunicar información compleja a sus vistas, lo que no se asigna correctamente a los objetos del modelo. No queremos modificar nuestros modelos para que se adapten a nuestras vistas; Las clases de modelo deben representar nuestro dominio, no la interfaz de usuario. Una solución sería pasar la información a nuestras vistas mediante la clase ViewBag, como hicimos con la información de la lista desplegable del administrador de la tienda, pero pasar mucha información a través de ViewBag es difícil de administrar.
 
-Una solución para este problema consiste en usar el *ViewModel* patrón. Al utilizar este patrón se creación clases fuertemente tipadas que están optimizados para escenarios de nuestra vista específica y que exponen propiedades para el valores o contenido dinámico necesita nuestras plantillas de vista. Nuestras clases de controlador, a continuación, pueden rellenar y pasar estas clases optimizadas para la vista a nuestra plantilla de vista para usar. Esto permite la seguridad de tipos, la comprobación en tiempo de compilación y el editor IntelliSense dentro de las plantillas de vista.
+Una solución a esto es usar el patrón *ViewModel* . Al usar este patrón, creamos clases fuertemente tipadas que están optimizadas para nuestros escenarios de vista específicos y que exponen propiedades para los valores dinámicos y el contenido que necesitan nuestras plantillas de vista. A continuación, las clases de controlador pueden rellenar y pasar estas clases optimizadas para vistas a nuestra plantilla de vista que se va a usar. Esto permite la seguridad de tipos, la comprobación en tiempo de compilación y el IntelliSense del editor dentro de las plantillas de vista.
 
-Vamos a crear dos modelos de vista para su uso en el controlador de carro de la compra: el ShoppingCartViewModel contendrá el contenido del carro de la compra del usuario y la ShoppingCartRemoveViewModel se usará para mostrar información de confirmación cuando un usuario quita algo en su carro de compra.
+Crearemos dos modelos de vista para su uso en nuestro controlador de carro de la compra: el ShoppingCartViewModel contendrá el contenido del carro de la compra del usuario y ShoppingCartRemoveViewModel se usará para mostrar información de confirmación cuando un usuario quite algo desde el carro.
 
-Vamos a crear una nueva carpeta ViewModels en la raíz de nuestro proyecto para que todo organizado. Haga clic en el proyecto, selecciono Agregar / nueva carpeta.
+Vamos a crear una nueva carpeta ViewModels en la raíz de nuestro proyecto para mantener las cosas organizadas. Haga clic con el botón derecho en el proyecto, seleccione Agregar o nueva carpeta.
 
 ![](mvc-music-store-part-8/_static/image1.jpg)
 
-Nombre de la carpeta ViewModels.
+Asigne a la carpeta el nombre ViewModels.
 
 ![](mvc-music-store-part-8/_static/image1.png)
 
-A continuación, agregue la clase ShoppingCartViewModel en la carpeta ViewModels. Tiene dos propiedades: una lista de elementos del carro y un valor decimal para contener el precio total para todos los artículos del carro de compra.
+A continuación, agregue la clase ShoppingCartViewModel en la carpeta ViewModels. Tiene dos propiedades: una lista de elementos del carro y un valor decimal para contener el precio total de todos los artículos del carro.
 
 [!code-csharp[Main](mvc-music-store-part-8/samples/sample6.cs)]
 
-Ahora, agregue el ShoppingCartRemoveViewModel a la carpeta ViewModels, con las siguientes cuatro propiedades.
+Ahora, agregue ShoppingCartRemoveViewModel a la carpeta ViewModels, con las cuatro propiedades siguientes.
 
 [!code-csharp[Main](mvc-music-store-part-8/samples/sample7.cs)]
 
-## <a name="the-shopping-cart-controller"></a>El controlador de carro de la compra
+## <a name="the-shopping-cart-controller"></a>Controlador de carro de la compra
 
-El controlador de carro de la compra tiene tres objetivos principales: agregar elementos a un carro de compra, quitar elementos del carro de la y ver los elementos del carro de compra. Hace uso de las tres clases acaba de crear: ShoppingCartViewModel, ShoppingCartRemoveViewModel y ShoppingCart. Como se muestra en el StoreController y StoreManagerController, vamos a agregar un campo para contener una instancia de MusicStoreEntities.
+El controlador de carro de la compra tiene tres propósitos principales: agregar elementos a un carro, quitar elementos del carro y ver los elementos del carro. Usará las tres clases que acabamos de crear: ShoppingCartViewModel, ShoppingCartRemoveViewModel y ShoppingCart. Como en StoreController y StoreManagerController, agregaremos un campo que contenga una instancia de MusicStoreEntities.
 
-Agregar un controlador de carro de la compra de nuevo al proyecto mediante la plantilla de controlador en blanco.
+Agregue un nuevo controlador de carro de la compra al proyecto mediante la plantilla de controlador vacía.
 
 ![](mvc-music-store-part-8/_static/image2.png)
 
-Aquí es el controlador de ShoppingCart completa. Las acciones de índice y Agregar controlador resultará muy familiar. Las acciones de controlador Remove y CartSummary controlan dos casos especiales que explicaremos en la sección siguiente.
+Este es el controlador ShoppingCart completo. Las acciones index y Add Controller deben tener un aspecto muy familiar. Las acciones de controlador Remove y CartSummary controlan dos casos especiales, que trataremos en la sección siguiente.
 
 [!code-csharp[Main](mvc-music-store-part-8/samples/sample8.cs)]
 
 ## <a name="ajax-updates-with-jquery"></a>Actualizaciones de AJAX con jQuery
 
-A continuación, vamos a crear una página de índice de carro de la compra que está fuertemente tipada para el ShoppingCartViewModel y usa la plantilla de vista de lista con el mismo método que antes.
+A continuación, crearemos una página de índice de carro de la compra fuertemente tipada a ShoppingCartViewModel y utilizará la plantilla de vista de lista con el mismo método que antes.
 
 ![](mvc-music-store-part-8/_static/image3.png)
 
-Sin embargo, en lugar de usar un Html.ActionLink para quitar elementos del carro de la, vamos a usar jQuery para "conectar" el evento click para todos los vínculos en esta vista que tiene la clase RemoveLink HTML. En lugar de publicar el formulario, este controlador de eventos click simplemente realizará una devolución de llamada de AJAX en la acción de controlador RemoveFromCart. El RemoveFromCart devuelve un resultado JSON serializada, que la devolución de llamada de jQuery, a continuación, analiza y realiza cuatro actualizaciones rápidas a la página mediante jQuery:
+Sin embargo, en lugar de usar un elemento HTML. ActionLink para quitar elementos del carro, usaremos jQuery para "conectar" el evento de clic de todos los vínculos de esta vista que tengan la clase HTML RemoveLink. En lugar de publicar el formulario, este controlador de eventos de clic solo realizará una devolución de llamada AJAX a nuestra acción del controlador RemoveFromCart. RemoveFromCart devuelve un resultado serializado de JSON, que la devolución de llamada de jQuery analiza y realiza cuatro actualizaciones rápidas en la página con jQuery:
 
-- 1. Quita el álbum eliminado de la lista
-- 2. Actualiza el recuento de carro en el encabezado
-- 3. Muestra un mensaje de actualización para el usuario
-- 4. Actualiza el precio total del carro de compra
+- 1. Quita el álbum eliminado de la lista.
+- 2. Actualiza el número de carros en el encabezado.
+- 3. Muestra un mensaje de actualización al usuario
+- 4. Actualiza el precio total del carro
 
-Dado que el escenario remove se controlan mediante una devolución de llamada de Ajax en la vista de índice, no necesitamos una vista adicional para la acción RemoveFromCart. Este es el código completo de la vista /ShoppingCart/Index:
+Dado que el escenario de eliminación está siendo controlado por una devolución de llamada de Ajax en la vista de índice, no se necesita una vista adicional para la acción RemoveFromCart. Este es el código completo de la vista/ShoppingCart/Index:
 
 [!code-cshtml[Main](mvc-music-store-part-8/samples/sample9.cshtml)]
 
-Para probarlo, es necesario poder agregar elementos a nuestro carro de compra. Actualizaremos nuestra **Store detalles** vista e incluir un botón "Agregar al carro". Mientras estamos en ello, podemos incluir parte de la información adicional de álbum que hemos agregado desde que se actualizó por última vez esta vista: Género, intérprete, precio y carátulas de álbum. El código actualizado de vista de detalles de Store aparece como se muestra a continuación.
+Para probar esto, es necesario poder agregar elementos al carro de la compra. Actualizaremos la vista de detalles de la **tienda** para incluir un botón "agregar al carro". Aunque estamos en él, podemos incluir parte de la información adicional del álbum que hemos agregado desde la última vez que se actualizó esta vista: género, intérprete, precio y carátula del álbum. El código de vista de detalles del almacén actualizado aparece como se muestra a continuación.
 
 [!code-cshtml[Main](mvc-music-store-part-8/samples/sample10.cshtml)]
 
-Ahora podemos hacer clic en el almacén y probar agregando y quitando álbumes hacia y desde nuestro carro de compra. Ejecute la aplicación y busque el índice de Store.
+Ahora podemos hacer clic en la tienda y probar agregar y quitar álbumes en el carro de la compra. Ejecute la aplicación y vaya al índice de la tienda.
 
 ![](mvc-music-store-part-8/_static/image4.png)
 
@@ -142,19 +142,19 @@ A continuación, haga clic en un género para ver una lista de álbumes.
 
 ![](mvc-music-store-part-8/_static/image5.png)
 
-Al hacer clic en un título de álbum ahora muestra nuestra vista Detalles del álbum actualizado, incluido el botón "Agregar al carro".
+Al hacer clic en el título de un álbum, se muestra la vista de detalles del álbum actualizada, incluido el botón "agregar al carro".
 
 ![](mvc-music-store-part-8/_static/image6.png)
 
-Al hacer clic en el botón "Agregar al carro" muestra nuestra vista de índice de carro de la compra con la lista de resumen de carro de la compra.
+Al hacer clic en el botón "agregar al carro", se muestra nuestra vista de índice de carro de la compra con la lista de resumen del carro de la compra.
 
 ![](mvc-music-store-part-8/_static/image7.png)
 
-Después de cargar su carro de la compra, puede hacer clic en quitar el desde el vínculo del carro de compra para ver la actualización de Ajax al carro de la compra.
+Después de cargar el carro de la compra, puede hacer clic en el vínculo quitar del carro para ver la actualización de Ajax en el carro de la compra.
 
 ![](mvc-music-store-part-8/_static/image8.png)
 
-Hemos creado un trabajo carro que permite a los usuarios no registrados agregar elementos al carro de la compra. En la sección siguiente, se permiten para registrar y realizar el proceso de pago.
+Hemos creado un carro de la compra que funciona, lo que permite a los usuarios no registrados agregar elementos a su carro. En la sección siguiente, se les permitirá registrar y completar el proceso de desprotección.
 
 > [!div class="step-by-step"]
 > [Anterior](mvc-music-store-part-7.md)

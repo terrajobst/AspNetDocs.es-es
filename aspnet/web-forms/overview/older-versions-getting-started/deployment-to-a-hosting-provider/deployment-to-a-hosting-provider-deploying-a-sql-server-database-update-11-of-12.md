@@ -9,11 +9,11 @@ ms.assetid: 5e2bb092-cb22-4511-ad0a-22ae12dd99b3
 msc.legacyurl: /web-forms/overview/older-versions-getting-started/deployment-to-a-hosting-provider/deployment-to-a-hosting-provider-deploying-a-sql-server-database-update-11-of-12
 msc.type: authoredcontent
 ms.openlocfilehash: 0894c0ac24737e66b6960ef3d48aa17f78c6aa1d
-ms.sourcegitcommit: 22fbd8863672c4ad6693b8388ad5c8e753fb41a2
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/28/2019
-ms.locfileid: "74621079"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78423979"
 ---
 # <a name="deploying-an-aspnet-web-application-with-sql-server-compact-using-visual-studio-or-visual-web-developer-deploying-a-sql-server-database-update---11-of-12"></a>Implementar una aplicación Web de ASP.NET con SQL Server Compact con Visual Studio o Visual Web Developer: implementar una base de datos de SQL Server Update-11 de 12
 
@@ -25,7 +25,7 @@ por [Tom Dykstra](https://github.com/tdykstra)
 > 
 > Para ver un tutorial que muestra las características de implementación que se introdujeron después de la versión RC de Visual Studio 2012, muestra cómo implementar SQL Server ediciones distintas de SQL Server Compact y muestra cómo implementar en sitios web de Windows Azure, vea [implementación web de ASP.net con Visual Studio](../../deployment/visual-studio-web-deployment/introduction.md).
 
-## <a name="overview"></a>Información general del
+## <a name="overview"></a>Información general
 
 En este tutorial se muestra cómo implementar una actualización de base de datos en una base de datos de SQL Server completa. Dado que Migraciones de Code First realiza todo el trabajo de actualización de la base de datos, el proceso es casi idéntico al que hizo para SQL Server Compact en el tutorial [implementación de una actualización de base de datos](deployment-to-a-hosting-provider-deploying-a-database-update-9-of-12.md) .
 
@@ -151,7 +151,7 @@ Ha implementado correctamente una actualización de la aplicación que incluía 
 
 Esto completa esta serie de tutoriales sobre la implementación de una aplicación Web de ASP.NET en un proveedor de hospedaje de terceros. Para obtener más información acerca de cualquiera de los temas descritos en estos tutoriales, consulte el [mapa de contenido de implementación de ASP.net](https://msdn.microsoft.com/library/bb386521(v=vs.110).aspx) en el sitio web de MSDN.
 
-## <a name="acknowledgements"></a>Agradecimientos
+## <a name="acknowledgements"></a>Reconocimientos
 
 Me gustaría agradecer a las siguientes personas que realizaran importantes contribuciones al contenido de esta serie de tutoriales:
 

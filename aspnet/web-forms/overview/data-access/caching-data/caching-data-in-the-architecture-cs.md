@@ -9,11 +9,11 @@ ms.assetid: d29a7c41-0628-4a23-9dfc-bfea9c6c1054
 msc.legacyurl: /web-forms/overview/data-access/caching-data/caching-data-in-the-architecture-cs
 msc.type: authoredcontent
 ms.openlocfilehash: 192cadb8e2f862ac2a97a36b375e247b281ece93
-ms.sourcegitcommit: 22fbd8863672c4ad6693b8388ad5c8e753fb41a2
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/28/2019
-ms.locfileid: "74600810"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78443731"
 ---
 # <a name="caching-data-in-the-architecture-c"></a>Almacenar datos en caché en la arquitectura (C#)
 

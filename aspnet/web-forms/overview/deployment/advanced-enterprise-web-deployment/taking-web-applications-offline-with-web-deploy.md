@@ -9,11 +9,11 @@ ms.assetid: 3e9f6e7d-8967-4586-94d5-d3a122f12529
 msc.legacyurl: /web-forms/overview/deployment/advanced-enterprise-web-deployment/taking-web-applications-offline-with-web-deploy
 msc.type: authoredcontent
 ms.openlocfilehash: ba60664a0c3daa0650cd7e7cfc4ab9da08df3440
-ms.sourcegitcommit: e365196c75ce93cd8967412b1cfdc27121816110
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/07/2020
-ms.locfileid: "77075143"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78422215"
 ---
 # <a name="taking-web-applications-offline-with-web-deploy"></a>Desconectar aplicaciones web con Web Deploy
 
@@ -157,7 +157,7 @@ La próxima vez que compile y empaquete el proyecto de aplicación Web, WPP dete
 
 En este tema se describe cómo poner una aplicación web sin conexión mientras dure una implementación; para ello, se publica una *aplicación\_archivo. htm sin conexión* en el servidor de destino al inicio del proceso de implementación y se quita al final. También se describe cómo incluir una *aplicación\_archivo. htm sin conexión* en un paquete de implementación web.
 
-## <a name="further-reading"></a>Lecturas adicionales
+## <a name="further-reading"></a>Información adicional
 
 Para obtener más información sobre el proceso de empaquetado e implementación, vea [compilar y empaquetar proyectos de aplicación web](../web-deployment-in-the-enterprise/building-and-packaging-web-application-projects.md), [Configurar parámetros para la implementación de paquetes web](../web-deployment-in-the-enterprise/configuring-parameters-for-web-package-deployment.md)e [implementar paquetes web](../web-deployment-in-the-enterprise/deploying-web-packages.md).
 

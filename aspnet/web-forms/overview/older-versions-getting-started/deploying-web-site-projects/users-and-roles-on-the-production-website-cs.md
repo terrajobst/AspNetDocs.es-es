@@ -9,11 +9,11 @@ ms.assetid: dbc54313-5d05-4285-98b3-726edea6d0c9
 msc.legacyurl: /web-forms/overview/older-versions-getting-started/deploying-web-site-projects/users-and-roles-on-the-production-website-cs
 msc.type: authoredcontent
 ms.openlocfilehash: c47bd2c1661f129dd8856916de04b8ba459fbfec
-ms.sourcegitcommit: 22fbd8863672c4ad6693b8388ad5c8e753fb41a2
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/28/2019
-ms.locfileid: "74616562"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78441223"
 ---
 # <a name="users-and-roles-on-the-production-website-c"></a>Usuarios y roles en el sitio web deC#producción ()
 

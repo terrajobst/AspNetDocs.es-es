@@ -6,11 +6,11 @@ ms.author: riande
 ms.date: 2/15/2019
 uid: samesite/vbWF
 ms.openlocfilehash: 8979edecc5acf7dac81b9f53d31af00389f4727c
-ms.sourcegitcommit: 7709c0a091b8d55b7b33bad8849f7b66b23c3d72
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/19/2020
-ms.locfileid: "77458388"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78438439"
 ---
 # <a name="samesite-cookie-sample-for-aspnet-472-vb-webforms"></a>Ejemplo de cookie SameSite para WebForms de ASP.NET 4.7.2 VB
 .NET Framework 4,7 tiene compatibilidad integrada con el atributo [SameSite](https://www.owasp.org/index.php/SameSite) , pero se ajusta al estándar original.
@@ -70,7 +70,7 @@ El atributo sameSite predeterminado para el estado de sesión también se establ
 
 La actualización de noviembre de 2019 de .NET cambió la configuración predeterminada para la autenticación de formularios y la sesión en `lax` como la configuración más compatible. sin embargo, si inserta páginas en iframe, es posible que necesite revertir esta configuración a ninguna y, a continuación, agregar el código de [intercepción](#interception) que se muestra a continuación para ajustar el comportamiento de `none` en función del explorador.
 
-### <a name="running-the-sample"></a>Ejecución del ejemplo
+### <a name="running-the-sample"></a>Ejecutar el ejemplo
 
 Si ejecuta el proyecto de ejemplo, cargue el depurador del explorador en la página inicial y úselo para ver la colección de cookies para el sitio.
 Para ello, en Edge y Chrome, presione `F12`, después, seleccione la pestaña `Application` y haga clic en la dirección URL del sitio en la opción `Cookies` de la sección `Storage`.

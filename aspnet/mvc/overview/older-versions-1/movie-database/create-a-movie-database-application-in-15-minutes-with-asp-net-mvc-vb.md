@@ -9,11 +9,11 @@ ms.assetid: e4ba9786-734c-4eb3-91bb-089793325d0d
 msc.legacyurl: /mvc/overview/older-versions-1/movie-database/create-a-movie-database-application-in-15-minutes-with-asp-net-mvc-vb
 msc.type: authoredcontent
 ms.openlocfilehash: 0ce8161d29a8ab4005e2b20462b08c9e10ee815a
-ms.sourcegitcommit: 22fbd8863672c4ad6693b8388ad5c8e753fb41a2
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/28/2019
-ms.locfileid: "74595740"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78435775"
 ---
 # <a name="create-a-movie-database-application-in-15-minutes-with-aspnet-mvc-vb"></a>Crear una aplicación de base de datos de película en 15 minutos con ASP.NET MVC (VB)
 
@@ -49,7 +49,7 @@ Para crear la aplicación, es necesario completar cada uno de los siguientes pas
 4. Creación del controlador de MVC de ASP.NET
 5. Crear las vistas de MVC de ASP.NET
 
-## <a name="preliminaries"></a>Windows°PE
+## <a name="preliminaries"></a>Pasos preliminares
 
 Necesitará Visual Studio 2008 o Visual Web Developer 2008 Express para compilar una aplicación ASP.NET MVC. También debe descargar el marco de MVC de ASP.NET.
 
@@ -120,12 +120,12 @@ A continuación, es necesario crear una nueva tabla de base de datos. Desde la v
 
 <a id="0.2_table01"></a>
 
-| **Nombre de columna** | **Tipo de datos** | **Permitir valores NULL** |
+| **Nombre de la columna** | **Tipo de datos** | **Permitir valores NULL** |
 | --- | --- | --- |
-| Id. | Valor int. | Falso |
-| Title | Nvarchar (100) | Falso |
-| DataDirectory | Nvarchar (100) | Falso |
-| DateReleased | DateTime | Falso |
+| Id. | Valor int. | False |
+| Título | Nvarchar(100) | False |
+| Director | Nvarchar(100) | False |
+| DateReleased | DateTime | False |
 
 La primera columna, la columna ID, tiene dos propiedades especiales. En primer lugar, debe marcar la columna ID como la columna de clave principal. Después de seleccionar la columna ID, haga clic en el botón **set Primary Key (establecer clave principal** ) (es decir, el icono que se parece a una clave). En segundo lugar, debe marcar la columna ID como una columna de identidad. En el ventana Propiedades de columna, desplácese hacia abajo hasta la sección especificación de identidad y expándala. Cambie la propiedad **is Identity** por el valor **yes**. Cuando haya terminado, la tabla debe tener un aspecto similar al de la figura 4.
 
@@ -158,7 +158,7 @@ Siga estos pasos para iniciar el Asistente para Entity Data Model:
 Después de hacer clic en el botón Agregar, aparece el Asistente para Entity Data Model (vea la figura 6). Siga estos pasos para completar el asistente:
 
 1. En el paso **elegir contenido del modelo** , seleccione la opción **generar desde la base de datos** .
-2. En el paso **elegir la conexión de datos** , use la conexión de datos *MoviesDB. MDF* y el nombre *MoviesDBEntities* para la configuración de conexión. Haga clic en el botón **siguiente** .
+2. En el paso **elegir la conexión de datos** , use la conexión de datos *MoviesDB. MDF* y el nombre *MoviesDBEntities* para la configuración de conexión. Haga clic en el botón **Next** (Siguiente).
 3. En el paso **Elija los objetos de base de datos** , expanda el nodo tablas y seleccione la tabla películas. Escriba el espacio de nombres *MovieApp. Models* y haga clic en el botón **Finalizar** .
 
 [![el cuadro de diálogo nuevo proyecto](create-a-movie-database-application-in-15-minutes-with-asp-net-mvc-vb/_static/image6.jpg)](create-a-movie-database-application-in-15-minutes-with-asp-net-mvc-vb/_static/image11.png)

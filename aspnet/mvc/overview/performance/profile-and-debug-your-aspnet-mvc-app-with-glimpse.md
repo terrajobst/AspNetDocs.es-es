@@ -9,11 +9,11 @@ ms.assetid: c205805f-efdd-4fa7-9616-f26eab180611
 msc.legacyurl: /mvc/overview/performance/profile-and-debug-your-aspnet-mvc-app-with-glimpse
 msc.type: authoredcontent
 ms.openlocfilehash: d3689147a3bc3aa1f4180c377d2483a94bdd95a9
-ms.sourcegitcommit: 7709c0a091b8d55b7b33bad8849f7b66b23c3d72
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/19/2020
-ms.locfileid: "77457666"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78432901"
 ---
 # <a name="profile-and-debug-your-aspnet-mvc-app-with-glimpse"></a>Crear un perfil y depurar la aplicación de ASP.NET MVC con Glimpse
 

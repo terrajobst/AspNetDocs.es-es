@@ -9,11 +9,11 @@ ms.assetid: f7c00fbd-652c-433d-8ed3-0e5168a4d4df
 msc.legacyurl: /web-forms/overview/data-access/working-with-binary-files/uploading-files-vb
 msc.type: authoredcontent
 ms.openlocfilehash: 6e0d57ef2f1e8132f19777a7d14e94611c68adcd
-ms.sourcegitcommit: 22fbd8863672c4ad6693b8388ad5c8e753fb41a2
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/28/2019
-ms.locfileid: "74615254"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78441499"
 ---
 # <a name="uploading-files-vb"></a>Carga de archivos (VB)
 
@@ -170,7 +170,7 @@ Después de agregar los dos `DataColumn` s al `CategoriesDataTable` y el método
 
 ## <a name="updating-the-business-logic-layer-bll"></a>Actualizar la capa de lógica de negocios (BLL)
 
-Con la capa DAL actualizada, todo lo que queda es aumentar el nivel de lógica de negocios (BLL) para incluir un método para el nuevo método de `CategoriesTableAdapter`. Agregue el método siguiente a la clase `CategoriesBLL`:
+Con la capa DAL actualizada, todo lo que queda es aumentar el nivel de lógica de negocios (BLL) para incluir un método para el nuevo método de `CategoriesTableAdapter`. Agregue el siguiente método a la clase `CategoriesBLL`:
 
 [!code-vb[Main](uploading-files-vb/samples/sample4.vb)]
 

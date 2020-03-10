@@ -9,11 +9,11 @@ ms.assetid: 4a365e58-9b18-4bd2-bfd5-6981e7f2e179
 msc.legacyurl: /web-forms/videos/authentication
 msc.type: chapter
 ms.openlocfilehash: 9802eee31ecafeb17a09d6c154d811b3d0bb01de
-ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/06/2019
-ms.locfileid: "65133745"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78421723"
 ---
 # <a name="authentication"></a>Autenticación
 

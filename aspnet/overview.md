@@ -9,11 +9,11 @@ ms.date: 08/10/2019
 msc.legacyurl: ''
 msc.type: content
 ms.openlocfilehash: aa4f627bca99f0a7ffbbb53ea45ebdcf0850fd89
-ms.sourcegitcommit: 88fc80e3f65aebdf61ec9414810ddbc31c543f04
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/22/2020
-ms.locfileid: "76519367"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78431881"
 ---
 # <a name="aspnet-overview"></a>Información general de ASP.NET
 
@@ -33,7 +33,7 @@ Cada marco de trabajo tiene como destino un estilo de desarrollo diferente. El q
 
 A continuación se muestra información general de cada una de las plataformas y algunas ideas sobre cómo elegir entre ellas. Si prefiere un vídeo de introducción, consulte [creación de sitios web con ASP.net](https://channel9.msdn.com/Blogs/ASP-NET-Site-Videos/Making-Websites-with-ASPNET) y [¿Qué son las herramientas web?](https://channel9.msdn.com/Blogs/ASP-NET-Site-Videos/what-is-web-tools)
 
-|   | Si tiene experiencia en | Estilo de desarrollo | Conocimientos |
+|   | Si tiene experiencia en | Estilo de desarrollo | Especialidad |
 |-----------|----------------------|-----------------------------------------------------|----------------|
 | formularios Web Forms | Windows Forms, WPF, .NET | Desarrollo rápido con una rica biblioteca de controles que encapsulan el marcado HTML | RAD avanzado de nivel medio |
 | MVC       | Ruby on Rails, .NET  | Control total sobre el marcado HTML, el código y el marcado separados y las pruebas fáciles de escribir. La mejor opción para aplicaciones móviles y de una sola página (SPA). | Nivel intermedio, avanzado |
@@ -65,7 +65,7 @@ Además, los tres marcos no son totalmente independientes y elegir uno no impide
 
 ## <a name="web-apis"></a>API web
 
-ASP.NET Web API es un marco que facilita la creación de servicios HTTP disponibles para una amplia variedad de clientes, entre los que se incluyen exploradores y dispositivos móviles. ASP.NET Web API es la plataforma perfecta para crear aplicaciones RESTful en .NET Framework.
+ASP.NET Web API es un marco que facilita la creación de servicios HTTP disponibles para una amplia variedad de clientes, entre los que se incluyen exploradores y dispositivos móviles. ASP.NET Web API es una plataforma ideal para compilar aplicaciones de RESTful en .NET Framework.
 
 [Más información acerca de Web API](web-api/index.md)
 

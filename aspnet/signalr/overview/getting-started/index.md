@@ -1,23 +1,23 @@
 ---
 uid: signalr/overview/getting-started/index
-title: Introducción de SignalR | Microsoft Docs
+title: Introducción signalr | Microsoft Docs
 author: bradygaster
-description: Obtenga información acerca de ASP.NET SignalR ASP.NET SignalR es una nueva biblioteca para desarrolladores de ASP.NET que facilita la funcionalidad de desarrollo web en tiempo real. SignalR permite a bi...
+description: Más información sobre ASP.NET Signalr ASP.NET Signalr es una nueva biblioteca para desarrolladores de ASP.NET que facilita el desarrollo de funcionalidades Web en tiempo real. Signalr permite BI...
 ms.author: bradyg
 ms.date: 09/19/2014
 ms.assetid: 2acff246-c74c-4277-b539-35bc42988c6f
 msc.legacyurl: /signalr/overview/getting-started
 msc.type: chapter
 ms.openlocfilehash: 33dedc368388ba2163dee5faef498f6272aa790d
-ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/06/2019
-ms.locfileid: "65128160"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78431677"
 ---
-# <a name="signalr-getting-started"></a>Introducción de SignalR
+# <a name="signalr-getting-started"></a>Introducción signalr
 
-> ¿Qué SignalR es, las plataformas que se ejecuta, y cómo empezar a trabajar.
+> Señalización es, plataformas en las que se ejecuta y cómo empezar.
 
 - [Introducción a SignalR](introduction-to-signalr.md)
 - [Plataformas compatibles](supported-platforms.md)
@@ -25,4 +25,4 @@ ms.locfileid: "65128160"
 - [Tutorial: Introducción a SignalR 2 y MVC 5](tutorial-getting-started-with-signalr-and-mvc.md)
 - [Tutorial: Alta frecuencia en tiempo real con SignalR 2](tutorial-high-frequency-realtime-with-signalr.md)
 - [Tutorial: Difusión de servidores con SignalR 2](tutorial-server-broadcast-with-signalr.md)
-- [Laboratorio práctico: Aplicaciones Web en tiempo real con SignalR](real-time-web-applications-with-signalr.md)
+- [Laboratorio práctico: Aplicaciones web en tiempo real con SignalR](real-time-web-applications-with-signalr.md)

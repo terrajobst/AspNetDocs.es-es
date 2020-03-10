@@ -9,11 +9,11 @@ ms.assetid: 09279194-bcf9-4b59-a09d-c68e5926a758
 msc.legacyurl: /web-forms/overview/older-versions-getting-started/deploying-web-site-projects/deploying-your-site-using-an-ftp-client-vb
 msc.type: authoredcontent
 ms.openlocfilehash: 7875304c672625d8c0eaaf0fea8ef509bb801a3a
-ms.sourcegitcommit: 22fbd8863672c4ad6693b8388ad5c8e753fb41a2
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/28/2019
-ms.locfileid: "74611832"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78438877"
 ---
 # <a name="deploying-your-site-using-an-ftp-client-vb"></a>Implementar el sitio mediante un cliente FTP (VB)
 

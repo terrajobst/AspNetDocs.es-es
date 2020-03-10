@@ -9,11 +9,11 @@ ms.assetid: cd17dbe1-c5e1-4be8-ad3d-57233d52cef1
 msc.legacyurl: /web-forms/overview/data-access/advanced-data-access-scenarios/protecting-connection-strings-and-other-configuration-information-vb
 msc.type: authoredcontent
 ms.openlocfilehash: 070e1dccb80ef9af21ea621357c5b23e2ada6f9f
-ms.sourcegitcommit: 22fbd8863672c4ad6693b8388ad5c8e753fb41a2
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/28/2019
-ms.locfileid: "74607695"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78421003"
 ---
 # <a name="protecting-connection-strings-and-other-configuration-information-vb"></a>Proteger las cadenas de conexión y otros datos de configuración (VB)
 

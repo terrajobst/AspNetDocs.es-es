@@ -9,11 +9,11 @@ ms.assetid: b7f77869-aa1d-4025-924f-622c57112db6
 msc.legacyurl: /web-forms/overview/ajax-control-toolkit/slider/databinding-the-slider-control-cs
 msc.type: authoredcontent
 ms.openlocfilehash: ef547573f17f3265ad72717d3d3bbc622fd6894e
-ms.sourcegitcommit: 22fbd8863672c4ad6693b8388ad5c8e753fb41a2
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/28/2019
-ms.locfileid: "74598608"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78445915"
 ---
 # <a name="databinding-the-slider-control-c"></a>Enlace de datos del control deslizante (C#)
 
@@ -23,7 +23,7 @@ por [Christian Wenz](https://github.com/wenz)
 
 > El control deslizante en el kit de herramientas de control de AJAX proporciona un control deslizante gráfico que se puede controlar mediante el mouse. Es posible enlazar la posición actual del control deslizante a otro control ASP.NET.
 
-## <a name="overview"></a>Información general del
+## <a name="overview"></a>Información general
 
 El control deslizante en el kit de herramientas de control de AJAX proporciona un control deslizante gráfico que se puede controlar mediante el mouse. Es posible enlazar la posición actual del control deslizante a otro control ASP.NET.
 

@@ -9,11 +9,11 @@ ms.assetid: dff54fcb-68b1-4488-89a2-ca97532d6a4c
 msc.legacyurl: /mvc/overview/older-versions-1/views/creating-page-layouts-with-view-master-pages-cs
 msc.type: authoredcontent
 ms.openlocfilehash: 026e3efb4ebf84016aa0f6a5fda4af549fdadfcb
-ms.sourcegitcommit: 22fbd8863672c4ad6693b8388ad5c8e753fb41a2
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/28/2019
-ms.locfileid: "74594140"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78435199"
 ---
 # <a name="creating-page-layouts-with-view-master-pages-c"></a>Crear diseños de página con páginas maestras de vista (C#)
 

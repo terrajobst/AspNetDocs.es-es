@@ -1,31 +1,31 @@
 ---
 uid: web-pages/overview/getting-started/introducing-razor-syntax-vb
-title: Introducción a la programación Web de ASP.NET mediante la sintaxis Razor (Visual Basic) | Microsoft Docs
+title: Introducción a la programación web de ASP.NET mediante la sintaxis de Razor (Visual Basic) | Microsoft Docs
 author: Rick-Anderson
-description: Este apéndice ofrece una visión general de la programación con las páginas Web ASP.NET en Visual Basic, mediante la sintaxis de Razor.
+description: En este apéndice se ofrece información general sobre la programación con páginas Web ASP.NET en Visual Basic, mediante el sintaxis Razor.
 ms.author: riande
 ms.date: 02/07/2014
 ms.assetid: 5da59646-e973-41cd-88a9-c6b2c0594027
 msc.legacyurl: /web-pages/overview/getting-started/introducing-razor-syntax-vb
 msc.type: authoredcontent
 ms.openlocfilehash: 2be57655b8c9b76b94e1d9a7ae5fbee27545a0a9
-ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/06/2019
-ms.locfileid: "65113087"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78422665"
 ---
-# <a name="introduction-to-aspnet-web-programming-using-the-razor-syntax-visual-basic"></a>Introducción a la programación Web de ASP.NET mediante la sintaxis Razor (Visual Basic)
+# <a name="introduction-to-aspnet-web-programming-using-the-razor-syntax-visual-basic"></a>Introducción a la programación web de ASP.NET mediante la sintaxis Razor (Visual Basic)
 
 por [Tom FitzMacken](https://github.com/tfitzmac)
 
-> En este artículo ofrece una visión general de la programación con ASP.NET Web Pages con la sintaxis de Razor y Visual Basic. ASP.NET es la tecnología de Microsoft para la ejecución de páginas web dinámicas en servidores web.
+> En este artículo se proporciona información general sobre la programación con ASP.NET Web Pages mediante el sintaxis Razor y Visual Basic. ASP.NET es la tecnología de Microsoft para ejecutar páginas web dinámicas en servidores Web.
 > 
-> **Aprenderá lo**:
+> **Lo que aprenderá**:
 > 
-> - El 8 de principales sugerencias de introducción a ASP.NET Web Pages con sintaxis Razor de programación de programación.
-> - Conceptos básicos de programación que necesitará.
-> - ¿Qué código de servidor ASP.NET y la sintaxis Razor es todo acerca de.
+> - Las 8 mejores sugerencias de programación para empezar a programar ASP.NET Web Pages mediante sintaxis Razor.
+> - Conceptos de programación básicos que necesitará.
+> - Qué es el código del servidor de ASP.NET y el sintaxis Razor.
 >   
 > 
 > ## <a name="software-versions"></a>Versiones de software
@@ -36,171 +36,171 @@ por [Tom FitzMacken](https://github.com/tfitzmac)
 > 
 > Este tutorial también funciona con ASP.NET Web Pages 2.
 
-La mayoría de los ejemplos del uso de ASP.NET Web Pages con sintaxis Razor usa C#. Pero la sintaxis de Razor también es compatible con Visual Basic. Para programar una página web ASP.NET en Visual Basic, crea una página web con un *.vbhtml* extensión de nombre de archivo y, a continuación, agregue el código de Visual Basic. En este artículo se proporciona información general de cómo trabajar con el lenguaje Visual Basic y la sintaxis para crear las páginas Web ASP.NET.
+La mayoría de los ejemplos de uso de C#ASP.NET Web Pages con sintaxis Razor usar. Pero el sintaxis Razor también admite Visual Basic. Para programar una página web de ASP.NET en Visual Basic, cree una página web con una extensión de nombre de archivo *. vbhtml* y, a continuación, agregue Visual Basic código. En este artículo se proporciona información general sobre cómo trabajar con el lenguaje de Visual Basic y la sintaxis para crear páginas web de ASP.NET.
 
 > [!NOTE]
-> Las plantillas de sitio Web predeterminado de Microsoft WebMatrix (**pastelería**, **Galería fotográfica**, y **Starter Site**, etc.) están disponibles en versiones de C# y Visual Basic. Puede instalar las plantillas de Visual Basic, como paquetes de NuGet. Plantillas de sitios Web se instalan en la carpeta raíz del sitio en una carpeta denominada *Templates Microsoft*.
+> Las plantillas de sitio Web predeterminadas para Microsoft WebMatrix (**panadería**, **Galería fotográfica**y **sitio de inicio**, etc C# .) están disponibles en y Visual Basic versiones. Puede instalar las plantillas de Visual Basic como paquetes NuGet. Las plantillas de sitio web se instalan en la carpeta raíz de su sitio en una carpeta denominada *plantillas de Microsoft*.
 
-## <a name="the-top-8-programming-tips"></a>El 8 principales sugerencias de programación
+## <a name="the-top-8-programming-tips"></a>Las 8 mejores sugerencias de programación
 
-Esta sección enumeran algunas sugerencias que necesita realmente saber a medida que empiece a escribir código de servidor ASP.NET mediante la sintaxis Razor.
+En esta sección se enumeran algunas sugerencias que es absolutamente necesario saber a medida que empieza a escribir código de servidor de ASP.NET mediante el sintaxis Razor.
 
-### <a name="1-you-add-code-to-a-page-using-the--character"></a>1. Agregue código a una página con el carácter @
+### <a name="1-you-add-code-to-a-page-using-the--character"></a>1. Agregue código a una página mediante el carácter @.
 
-El `@` carácter inicia las expresiones en línea, bloques de instrucción única y bloques de múltiples instrucciones:
+El carácter `@` inicia las expresiones insertadas, los bloques de una sola instrucción y los bloques de varias instrucciones:
 
 [!code-vbhtml[Main](introducing-razor-syntax-vb/samples/sample1.vbhtml)]
 
-El resultado se muestra en un explorador:
+Resultado mostrado en un explorador:
 
-![Razor-Img1](introducing-razor-syntax-vb/_static/image1.jpg)
+![Razor: img1](introducing-razor-syntax-vb/_static/image1.jpg)
 
 > [!TIP] 
 > 
 > **Codificación HTML**
 > 
-> Al mostrar contenido en una página con el `@` de caracteres, como se muestra en los ejemplos anteriores, ASP.NET codifica en HTML el resultado. Esto reemplaza los caracteres reservados de HTML (como `<` y `>` y `&`) con los códigos que permiten los caracteres que se va a mostrar como caracteres en una página web no se interprete como etiquetas HTML o entidades. Sin codificación HTML, la salida desde el código de servidor podría no mostrarse correctamente y podría exponer una página a riesgos de seguridad.
+> Al mostrar el contenido en una página mediante el carácter `@`, como en los ejemplos anteriores, ASP.NET codifica el resultado en HTML. Esto reemplaza los caracteres HTML reservados (como `<` y `>` y `&`) con códigos que permiten mostrar los caracteres como caracteres en una página web en lugar de interpretarlos como etiquetas o entidades HTML. Sin la codificación HTML, la salida del código del servidor podría no mostrarse correctamente y podría exponer una página a los riesgos de seguridad.
 > 
-> Si su objetivo es generar marcado HTML que representa las etiquetas como marcado (por ejemplo `<p></p>` para un párrafo o `<em></em>` para resaltar el texto), consulte la sección [combinar texto, marcado y código en bloques de código](#BM_CombiningTextMarkupAndCode) más adelante en este artículo.
+> Si el objetivo es generar el formato HTML que representa las etiquetas como marcado (por ejemplo `<p></p>` para un párrafo o `<em></em>` para resaltar el texto), vea la sección [combinar texto, marcado y código en bloques de código](#BM_CombiningTextMarkupAndCode) más adelante en este artículo.
 > 
-> Puede leer más acerca de la codificación HTML en [trabajar con formularios HTML en sitios de ASP.NET Web Pages](https://go.microsoft.com/fwlink/?LinkId=202892).
+> Puede obtener más información sobre la codificación HTML en [trabajar con formularios HTML en ASP.NET Web pages sitios](https://go.microsoft.com/fwlink/?LinkId=202892).
 
-### <a name="2-you-enclose-code-blocks-with-codeend-code"></a>2. Incluir bloques de código con el código... Final de código
+### <a name="2-you-enclose-code-blocks-with-codeend-code"></a>2. delimite los bloques de código con código... Código final
 
-Un bloque de código incluye una o varias instrucciones de código y se incluye con las palabras clave `Code` y `End Code`. Coloque la apertura `Code` palabra clave inmediatamente después de la `@` carácter &#8212; no puede haber un espacio en blanco entre ellos.
+Un bloque de código incluye una o varias instrucciones de código y se encuentra entre las palabras clave `Code` y `End Code`. Coloque la palabra clave de `Code` de apertura inmediatamente después &#8212; del carácter de `@` no puede haber espacio en blanco entre ellas.
 
 [!code-vbhtml[Main](introducing-razor-syntax-vb/samples/sample2.vbhtml)]
 
-El resultado se muestra en un explorador:
+Resultado mostrado en un explorador:
 
-![Razor-Img2](introducing-razor-syntax-vb/_static/image2.jpg)
+![Razor: Img2](introducing-razor-syntax-vb/_static/image2.jpg)
 
-### <a name="3-inside-a-block-you-end-each-code-statement-with-a-line-break"></a>3. Dentro de un bloque, finaliza cada instrucción de código con un salto de línea
+### <a name="3-inside-a-block-you-end-each-code-statement-with-a-line-break"></a>3. dentro de un bloque, finaliza cada instrucción de código con un salto de línea.
 
-En un bloque de código de Visual Basic, cada instrucción finaliza con un salto de línea. (Más adelante en este artículo verá un método para rodear una instrucción de código larga en varias líneas si es necesario.)
+En un bloque de código Visual Basic, cada instrucción finaliza con un salto de línea. (Más adelante en el artículo verá una forma de ajustar una instrucción de código larga en varias líneas si es necesario).
 
 [!code-vbhtml[Main](introducing-razor-syntax-vb/samples/sample3.vbhtml)]
 
-### <a name="4-you-use-variables-to-store-values"></a>4. Usar variables para almacenar valores
+### <a name="4-you-use-variables-to-store-values"></a>4. Utilice variables para almacenar valores
 
-Puede almacenar valores en un *variable*, incluidas las cadenas, números y fechas, etcetera. Crear una nueva variable mediante el `Dim` palabra clave. Puede insertar directamente en una página con los valores de variable `@`.
+Puede almacenar valores en una *variable*, como cadenas, números y fechas, etc. Cree una nueva variable mediante la palabra clave `Dim`. Los valores de las variables se pueden insertar directamente en una página mediante `@`.
 
 [!code-vbhtml[Main](introducing-razor-syntax-vb/samples/sample4.vbhtml)]
 
-El resultado se muestra en un explorador:
+Resultado mostrado en un explorador:
 
-![Razor-Img3](introducing-razor-syntax-vb/_static/image3.jpg)
+![Razor: Img3](introducing-razor-syntax-vb/_static/image3.jpg)
 
-### <a name="5-you-enclose-literal-string-values-in-double-quotation-marks"></a>5. Incluya los valores de cadena literal entre comillas dobles
+### <a name="5-you-enclose-literal-string-values-in-double-quotation-marks"></a>5. incluir valores de cadena literales entre comillas dobles
 
-Un *cadena* es una secuencia de caracteres que se tratan como texto. Para especificar una cadena, debe encerrarlo entre comillas dobles:
+Una *cadena* es una secuencia de caracteres que se trata como texto. Para especificar una cadena, debe encerrarla entre comillas dobles:
 
 [!code-vbhtml[Main](introducing-razor-syntax-vb/samples/sample5.vbhtml)]
 
-Para insertar las comillas dobles dentro de un valor de cadena, inserte dos caracteres de comillas dobles. Si desea que el carácter de comillas dobles a aparecer una vez en el resultado de la página, escríbalo como `""` dentro el entrecomillado de cadena y si desea que aparezca dos veces, escríbala como `""""` dentro de la cadena entre comillas.
+Para insertar comillas dobles en un valor de cadena, inserte dos caracteres de comillas dobles. Si desea que el carácter de comillas dobles aparezca una vez en el resultado de la página, escríbalo como `""` dentro de la cadena entrecomillada y, si desea que aparezca dos veces, escríbalo como `""""` dentro de la cadena entrecomillada.
 
 [!code-vbhtml[Main](introducing-razor-syntax-vb/samples/sample6.vbhtml)]
 
-El resultado se muestra en un explorador:
+Resultado mostrado en un explorador:
 
-![Razor-Img4](introducing-razor-syntax-vb/_static/image4.jpg)
+![Razor: Img4](introducing-razor-syntax-vb/_static/image4.jpg)
 
-### <a name="6-visual-basic-code-is-not-case-sensitive"></a>6. Código de Visual Basic no distingue mayúsculas de minúsculas
+### <a name="6-visual-basic-code-is-not-case-sensitive"></a>6. Visual Basic código no distingue entre mayúsculas y minúsculas
 
-El lenguaje Visual Basic no distingue mayúsculas de minúsculas. Palabras clave de programación (como `Dim`, `If`, y `True`) y los nombres de variable (como `myString`, o `subTotal`) pueden escribirse en cualquier caso.
+El lenguaje Visual Basic no distingue mayúsculas de minúsculas. En cualquier caso, se pueden escribir palabras clave de programación (como `Dim`, `If`y `True`) y nombres de variables (como `myString`o `subTotal`).
 
-Las siguientes líneas de código asignación un valor a la variable `lastname` con una minúscula, asigne un nombre y, a continuación, generar el valor de variable a la página mediante un nombre en mayúsculas.
+Las siguientes líneas de código asignan un valor a la variable `lastname` con un nombre en minúsculas y, a continuación, envían el valor de la variable a la página con un nombre en mayúsculas.
 
 [!code-vbhtml[Main](introducing-razor-syntax-vb/samples/sample7.vbhtml)]
 
-El resultado se muestra en un explorador:
+Resultado mostrado en un explorador:
 
 ![vb-syntax-5](introducing-razor-syntax-vb/_static/image5.jpg)
 
-### <a name="7-much-of-your-coding-involves-working-with-objects"></a>7. Gran parte de la codificación implica trabajar con objetos
+### <a name="7-much-of-your-coding-involves-working-with-objects"></a>7. gran parte de la codificación implica trabajar con objetos
 
-Un objeto representa algo que se puede programar con &#8212; una página, un cuadro de texto, un archivo, una imagen, una solicitud web, un mensaje de correo electrónico, un registro de cliente (fila de la base de datos), etcetera. Objetos tienen propiedades que describen sus características &#8212; un objeto de cuadro de texto tiene un `Text` propiedad, un objeto de solicitud tiene un `Url` propiedad, un mensaje de correo electrónico tiene un `From` propiedad y un objeto customer tiene una `FirstName` propiedad. Los objetos también tienen métodos que son el &quot;verbos&quot; pueden realizar. Algunos ejemplos son un objeto de archivo `Save` método, un objeto de imagen `Rotate` método y un objeto de correo electrónico `Send` método.
+Un objeto representa un elemento que puede programar con &#8212; una página, un cuadro de texto, un archivo, una imagen, una solicitud Web, un mensaje de correo electrónico, un registro de cliente (fila de base de datos), etc. Los objetos tienen propiedades que describen sus &#8212; características. un objeto de cuadro de texto tiene una propiedad `Text`, un objeto de solicitud tiene una propiedad `Url`, un mensaje de correo electrónico tiene una propiedad `From` y un objeto Customer tiene una propiedad `FirstName`. Los objetos también tienen métodos que son los &quot;verbos&quot; pueden realizar. Entre los ejemplos se incluye el método de `Save` de un objeto de archivo, el método de `Rotate` de un objeto de imagen y el método `Send` de un objeto de correo electrónico.
 
-A menudo trabajará con la `Request` campos de objeto, lo que le ofrece información como los valores de formulario en la página (cuadros de texto, etc.), el tipo de explorador realizó la solicitud, la dirección URL de la página, la identidad del usuario, etcetera. En este ejemplo se muestra cómo obtener acceso a las propiedades de la `Request` objeto y cómo llamar a la `MapPath` método de la `Request` objeto, que proporciona la ruta de acceso absoluta de la página en el servidor:
+A menudo, trabajará con el objeto `Request`, que le proporciona información como los valores de los campos de formulario en la página (cuadros de texto, etc.), el tipo de explorador que realizó la solicitud, la dirección URL de la página, la identidad del usuario, etc. En este ejemplo se muestra cómo obtener acceso a las propiedades del objeto `Request` y cómo llamar al método `MapPath` del objeto `Request`, que proporciona la ruta de acceso absoluta de la página en el servidor:
 
 [!code-html[Main](introducing-razor-syntax-vb/samples/sample8.html)]
 
-El resultado se muestra en un explorador:
+Resultado mostrado en un explorador:
 
-![Razor-Img5](introducing-razor-syntax-vb/_static/image6.jpg)
+![Razor: Img5](introducing-razor-syntax-vb/_static/image6.jpg)
 
-### <a name="8-you-can-write-code-that-makes-decisions"></a>8. Puede escribir código que toma decisiones
+### <a name="8-you-can-write-code-that-makes-decisions"></a>8. puede escribir código que tome decisiones
 
-Una característica clave de páginas web dinámicas es que puede determinar qué hacer en función de condiciones. La manera más común de hacerlo es con la `If` instrucción (y opcionales `Else` instrucción).
+Una característica clave de las páginas web dinámicas es que puede determinar qué hacer en función de las condiciones. La forma más común de hacerlo es con la instrucción `If` (y la instrucción `Else` opcional).
 
 [!code-vbhtml[Main](introducing-razor-syntax-vb/samples/sample9.vbhtml)]
 
-La instrucción `If IsPost` es una manera abreviada de la escritura `If IsPost = True`. Junto con `If` instrucciones, hay una gran variedad de formas para probar condiciones, repita los bloques de código, y así sucesivamente, que se describen más adelante en este artículo.
+La instrucción `If IsPost` es una forma abreviada de escribir `If IsPost = True`. Junto con las instrucciones `If`, hay varias maneras de probar condiciones, repetir bloques de código, etc., que se describen más adelante en este artículo.
 
-El resultado que se muestra en un explorador (después de hacer clic **enviar**):
+El resultado mostrado en un explorador (después de hacer clic en **submit**):
 
-![Razor-Img6](introducing-razor-syntax-vb/_static/image7.jpg)
+![Razor: Img6](introducing-razor-syntax-vb/_static/image7.jpg)
 
 > [!TIP] 
 > 
-> **HTTP GET y POST métodos y la propiedad IsPost**
+> **Métodos GET y POST de HTTP y la propiedad IsPost**
 > 
-> El protocolo utilizado para las páginas web (HTTP) admite un número muy limitado de métodos (&quot;verbos&quot;) que se usan para realizar solicitudes al servidor. Dos las más comunes son GET, que se utiliza para leer una página, y POST, que se usa para enviar una página. En general, la primera vez que un usuario solicita una página, se solicita la página con GET. Si el usuario escribe en un formulario y, a continuación, hace clic en **enviar**, el explorador realiza una solicitud POST al servidor.
+> El protocolo usado para páginas web (HTTP) admite un número muy limitado de métodos (&quot;verbos&quot;) que se usan para hacer solicitudes al servidor. Los dos más comunes son GET, que se usa para leer una página y POST, que se usa para enviar una página. En general, la primera vez que un usuario solicita una página, se solicita la página mediante GET. Si el usuario rellena un formulario y, a continuación, hace clic en **Enviar**, el explorador realiza una solicitud post al servidor.
 > 
-> En la programación web, a menudo resulta útil saber si una página se solicitan como una operación GET o como una entrada de blog para que sepa cómo procesar la página. En ASP.NET Web Pages, puede usar el `IsPost` propiedad para ver si una solicitud es una operación GET o POST. Si la solicitud es una publicación, el `IsPost` propiedad devolverá true, y puede hacer cosas como la lectura de los valores de los cuadros de texto en un formulario. Muchos ejemplos verá mostrarle cómo procesar la página de manera diferente dependiendo del valor de `IsPost`.
+> En la programación web, a menudo resulta útil saber si se solicita una página como GET o como una entrada para que sepa cómo procesar la página. En ASP.NET Web Pages, puede usar la propiedad `IsPost` para ver si una solicitud es GET o POST. Si la solicitud es una publicación, la propiedad `IsPost` devolverá True y puede hacer cosas como leer los valores de los cuadros de texto de un formulario. Muchos ejemplos que verá muestran cómo procesar la página de forma diferente en función del valor de `IsPost`.
 
-## <a name="a-simple-code-example"></a>Un ejemplo de código Simple
+## <a name="a-simple-code-example"></a>Un ejemplo de código simple
 
-Este procedimiento muestra cómo crear una página que muestra las técnicas de programación básicas. En el ejemplo, cree una página que permite a los usuarios escribir dos números, a continuación, agrega y muestra el resultado.
+En este procedimiento se muestra cómo crear una página que muestra las técnicas básicas de programación. En el ejemplo, creará una página que permite a los usuarios escribir dos números y, después, los agregará y mostrará el resultado.
 
-1. En el editor, cree un nuevo archivo y asígnele el nombre *AddNumbers.vbhtml*.
-2. Copie el siguiente código y marcado en la página, reemplazando cualquier cosa ya está en la página.
+1. En el editor, cree un nuevo archivo y asígnele el nombre *AddNumbers. vbhtml*.
+2. Copie el código y el marcado siguientes en la página, reemplazando todo lo que ya está en la página.
 
     [!code-vbhtml[Main](introducing-razor-syntax-vb/samples/sample10.vbhtml)]
 
-    Estos son algunos aspectos que tener en cuenta:
+    A continuación se indican algunas cosas que debe tener en cuenta:
 
-    - El `@` carácter inicia el primer bloque de código en la página y precede a la `totalMessage` variable incrustada en la parte inferior.
-    - El bloque en la parte superior de la página se incluye en `Code...End Code`.
-    - Las variables `total`, `num1`, `num2`, y `totalMessage` almacenar varios números y una cadena.
-    - El valor literal de cadena asignado a la `totalMessage` es variable entre comillas dobles.
-    - Dado que el código de Visual Basic no distingue mayúsculas de minúsculas, cuando el `totalMessage` variable se usa la parte inferior de la página, su nombre sólo debe coincidir con la ortografía de la declaración de variable en la parte superior de la página. No importan las mayúsculas y minúsculas.
-    - La expresión `num1.AsInt()`  +  `num2.AsInt()` muestra cómo trabajar con objetos y métodos. El `AsInt` método en cada variable convierte la cadena especificada por el usuario a un número entero (entero) que se pueden agregar.
-    - El `<form>` etiqueta incluye un `method="post"` atributo. Especifica que, cuando el usuario hace clic en **agregar**, la página se enviará al servidor mediante el método HTTP POST. Cuando se envía la página, el código `If IsPost` se evalúa como true y operador condicional de código se ejecuta, muestra el resultado de sumar los números.
-3. Guarde la página y ejecútelo en un explorador. (Asegúrese de que la página está seleccionada en el **archivos** área de trabajo antes de ejecutarlo.) Escriba los dos números enteros y, a continuación, haga clic en el **agregar** botón.
+    - El carácter `@` inicia el primer bloque de código de la página y precede a la variable `totalMessage` incrustada cerca de la parte inferior.
+    - El bloque situado en la parte superior de la página se incluye en `Code...End Code`.
+    - Las variables `total`, `num1`, `num2`y `totalMessage` almacenan varios números y una cadena.
+    - El valor de cadena literal asignado a la variable `totalMessage` está entre comillas dobles.
+    - Dado que Visual Basic código no distingue entre mayúsculas y minúsculas, cuando la variable de `totalMessage` se usa cerca de la parte inferior de la página, su nombre solo debe coincidir con la ortografía de la declaración de variable en la parte superior de la página. No importa el uso de mayúsculas y minúsculas.
+    - La expresión `num1.AsInt()` + `num2.AsInt()` muestra cómo trabajar con objetos y métodos. El método `AsInt` de cada variable convierte la cadena especificada por un usuario en un número entero (un entero) que se puede Agregar.
+    - La etiqueta `<form>` incluye un atributo `method="post"`. Esto especifica que cuando el usuario haga clic en **Agregar**, la página se enviará al servidor mediante el método http post. Cuando se envía la página, el código `If IsPost` se evalúa como true y se ejecuta el código condicional, lo que muestra el resultado de sumar los números.
+3. Guarde la página y ejecútela en un explorador. (Asegúrese de que la página esté seleccionada en el área de trabajo **archivos** antes de ejecutarla). Escriba dos números enteros y, a continuación, haga clic en el botón **Agregar** .
 
-    ![Razor-Img7](introducing-razor-syntax-vb/_static/image8.jpg)
+    ![Razor: Img7](introducing-razor-syntax-vb/_static/image8.jpg)
 
-## <a name="visual-basic-language-and-syntax"></a>Sintaxis y el lenguaje Visual Basic
+## <a name="visual-basic-language-and-syntax"></a>Lenguaje Visual Basic y sintaxis
 
-Ya vimos un ejemplo básico de cómo crear una página web ASP.NET y cómo puede agregar código de servidor en formato HTML. Aquí aprenderá los conceptos básicos del uso de Visual Basic para escribir código de servidor ASP.NET mediante la sintaxis Razor &#8212; es decir, las reglas de lenguaje de programación.
+Antes vio un ejemplo básico de cómo crear una página web de ASP.NET y cómo agregar código de servidor al marcado HTML. Aquí aprenderá los conceptos básicos del uso de Visual Basic para escribir código del servidor de ASP.NET mediante &#8212; el sintaxis Razor es decir, las reglas del lenguaje de programación.
 
-Si tiene experiencia con la programación (especialmente si ha usado C, C++, C#, Visual Basic o JavaScript), gran parte de lo que lee aquí le resultarán familiar. Probablemente deberá familiarizarse con sólo de cómo se agrega código de WebMatrix para marcado en *.vbhtml* archivos.
+Si tiene experiencia con la programación (especialmente si ha usado C, C++, C#, Visual Basic o JavaScript), gran parte de lo que Lee aquí le resultará familiar. Probablemente necesitará familiarizarse solo con cómo se agrega el código WebMatrix al marcado en los archivos *. vbhtml* .
 
-### <a id="BM_CombiningTextMarkupAndCode"></a>  Combinación de texto, marcado y código en bloques de código
+### <a id="BM_CombiningTextMarkupAndCode"></a>Combinar texto, marcado y código en bloques de código
 
-En los bloques de código de servidor, a menudo conveniente generar texto y marcado en la página. Si un bloque de código de servidor contiene texto que no es código y que en su lugar se debe representar como está, debe ser capaz de distinguir ese texto desde el código ASP.NET. Existen varias formas de hacerlo.
+En los bloques de código de servidor, a menudo querrá Mostrar texto y marcado en la página. Si un bloque de código de servidor contiene texto que no es código y que, en su lugar, se debe representar como es, ASP.NET debe poder distinguir ese texto del código. Existen varias formas de hacerlo.
 
-- Incluir el texto en un elemento de bloque HTML como `<p></p>` o `<em></em>`:
+- Incluya el texto en un elemento de bloque HTML, como `<p></p>` o `<em></em>`:
 
     [!code-vbhtml[Main](introducing-razor-syntax-vb/samples/sample11.vbhtml)]
 
-    El elemento HTML puede incluir texto, los elementos adicionales de HTML y expresiones de código del servidor. Cuando ASP.NET ve la etiqueta HTML de apertura (por ejemplo, `<p>`), todo lo que representa el elemento y su contenido como es el explorador (y resuelve las expresiones de código del servidor).
+    El elemento HTML puede incluir texto, elementos HTML adicionales y expresiones de código de servidor. Cuando ASP.NET ve la etiqueta HTML de apertura (por ejemplo, `<p>`), representa todo el elemento y su contenido tal como está en el explorador (y resuelve las expresiones de código de servidor).
 
-- Use la `@:` operador o la `<text>` elemento. El `@:` da como resultado una sola línea de contenido que contiene texto sin formato o etiquetas HTML no coincidentes; el `<text>` elemento abarca varias líneas de salida. Estas opciones son útiles cuando no quiere representar un elemento HTML como parte de la salida.
+- Use el operador `@:` o el elemento `<text>`. El `@:` genera una sola línea de contenido que contiene texto sin formato o etiquetas HTML no coincidentes; el elemento `<text>` incluye varias líneas para la salida. Estas opciones son útiles cuando no desea representar un elemento HTML como parte de la salida.
 
     [!code-vbhtml[Main](introducing-razor-syntax-vb/samples/sample12.vbhtml)]
 
-    El ejemplo siguiente se repite el ejemplo anterior, pero usa un único par de `<text>` etiquetas para delimitar el texto para representar.
+    En el ejemplo siguiente se repite el ejemplo anterior, pero se usa un solo par de etiquetas `<text>` para incluir el texto que se va a representar.
 
     [!code-vbhtml[Main](introducing-razor-syntax-vb/samples/sample13.vbhtml)]
 
-    En el ejemplo siguiente, la `<text>` y `</text>` etiquetas incluir tres líneas, todos ellos tienen algunas no contenido texto y etiquetas HTML no coincidentes (`<br />`), junto con el código de servidor y las etiquetas HTML coincidentes. De nuevo, también se podría preceder cada línea individualmente con el `@:` operador; cualquiera de ellas funciona de forma.
+    En el ejemplo siguiente, las etiquetas `<text>` y `</text>` incluyen tres líneas, todas ellas tienen un texto no contenida y etiquetas HTML no coincidentes (`<br />`), junto con el código del servidor y las etiquetas HTML coincidentes. De nuevo, también podría preceder cada línea individualmente con el operador `@:`; ambos métodos funcionan.
 
     [!code-vbhtml[Main](introducing-razor-syntax-vb/samples/sample14.vbhtml)]
 
     > [!NOTE]
-    > Al generar texto, como se muestra en esta sección &#8212; con el elemento HTML, el `@:` (operador), o la `<text>` elemento &#8212; ASP.NET no codifica como HTML la salida. (Como se indicó anteriormente, ASP.NET codificar la salida de las expresiones de código de servidor y los bloques de código de servidor que van precedidos por `@`, excepto en los casos especiales que se indican en esta sección.)
+    > Cuando se genera texto como se muestra en esta &#8212; sección mediante un elemento HTML, el operador `@:` o el elemento &#8212; `<text>` ASP.net no codifica en HTML el resultado. (Como se indicó anteriormente, ASP.NET codifica la salida de las expresiones de código de servidor y los bloques de código de servidor precedidos por `@`, excepto en los casos especiales que se indican en esta sección).
 
 ### <a name="whitespace"></a>Whitespace
 
@@ -210,73 +210,73 @@ Los espacios adicionales en una instrucción (y fuera de un literal de cadena) n
 
 ### <a name="breaking-long-statements-into-multiple-lines"></a>Dividir instrucciones largas en varias líneas
 
-Puede dividir una instrucción de código larga en varias líneas mediante el uso del carácter de subrayado `_` (que en Visual Basic se denomina el *carácter de continuación*) después de cada línea de código. Para interrumpir una instrucción en la siguiente línea, al final de la línea, agregue un espacio y, a continuación, el carácter de continuación. Continuar con la instrucción en la línea siguiente. Puede ajustar las instrucciones en líneas tantos como necesite para mejorar la legibilidad. Las instrucciones siguientes son los mismos:
+Puede dividir una instrucción de código larga en varias líneas mediante el carácter de subrayado `_` (que en Visual Basic se denomina el *carácter de continuación*) después de cada línea de código. Para dividir una instrucción en la línea siguiente, al final de la línea agregue un espacio y, a continuación, el carácter de continuación. Continúe con la instrucción en la línea siguiente. Puede incluir instrucciones en tantas líneas como necesite para mejorar la legibilidad. Las siguientes instrucciones son iguales:
 
 [!code-vbhtml[Main](introducing-razor-syntax-vb/samples/sample16.vbhtml)]
 
-Sin embargo, no se puede ajustar una línea en el medio de un literal de cadena. No funciona en el ejemplo siguiente:
+Sin embargo, no se puede ajustar una línea en medio de un literal de cadena. El ejemplo siguiente no funciona:
 
 [!code-vbhtml[Main](introducing-razor-syntax-vb/samples/sample17.vbhtml)]
 
-Para combinar una cadena larga que se ajusta a varias líneas, como el código anterior, deberá usar el *operador de concatenación* (`&`), que verá más adelante en este artículo.
+Para combinar una cadena larga que se ajusta a varias líneas como el código anterior, deberá usar el *operador de concatenación* (`&`), que verá más adelante en este artículo.
 
-### <a name="code-comments"></a>Comentarios del código
+### <a name="code-comments"></a>Comentarios de código
 
-Comentarios le permite dejar notas para uso personal o a otros usuarios. Van precedidos de comentarios de la sintaxis de Razor `@*` y terminar por `*@`.
+Los comentarios le permiten dejar notas por su cuenta o por otras personas. Sintaxis Razor comentarios llevan el prefijo `@*` y terminan con `*@`.
 
 [!code-cshtml[Main](introducing-razor-syntax-vb/samples/sample18.cshtml)]
 
-Dentro de bloques de código puede usar los comentarios de la sintaxis de Razor, o puede usar normal carácter de comentario de Visual Basic, que es una comilla simple (`'`) como prefijo a cada línea.
+Dentro de los bloques de código puede utilizar los comentarios de sintaxis Razor, o bien usar el carácter de comentario de Visual Basic ordinario, que es una comilla simple (`'`) con prefijo en cada línea.
 
 [!code-vbhtml[Main](introducing-razor-syntax-vb/samples/sample19.vbhtml)]
 
-## <a name="variables"></a>Variables
+## <a name="variables"></a>variables
 
-Una variable es un objeto con nombre que usa para almacenar los datos. Puede asignar variables, pero el nombre debe comenzar con un carácter alfabético y no puede contener espacios en blanco o caracteres reservados. En Visual Basic, como se vio anteriormente, no importa el caso de las letras de un nombre de variable.
+Una variable es un objeto con nombre que se utiliza para almacenar los datos. Puede asignar cualquier valor a las variables, pero el nombre debe comenzar por un carácter alfabético y no puede contener espacios en blanco ni caracteres reservados. En Visual Basic, como vimos anteriormente, no importa el caso de las letras de un nombre de variable.
 
-### <a name="variables-and-data-types"></a>Las variables y tipos de datos
+### <a name="variables-and-data-types"></a>Variables y tipos de datos
 
-Una variable puede tener un tipo de datos específico, lo que indica qué tipo de datos se almacena en la variable. Puede tener variables de cadena que almacenan valores de cadena (como &quot;Hola mundo&quot;), las variables de entero que almacenan valores de número entero (por ejemplo, 3 o 79) y las variables de fecha que almacenan los valores de fecha en una variedad de formatos (por ejemplo, 12/4/2012 o de marzo de 2009 ). Y hay muchos otros tipos de datos que se puede usar.
+Una variable puede tener un tipo de datos específico, que indica qué tipo de datos se almacenan en la variable. Puede tener variables de cadena que almacenen valores de cadena (como &quot;Hello World&quot;), variables de entero que almacenan valores de número entero (como 3 o 79) y variables de fecha que almacenan valores de fecha en una variedad de formatos (como 4/12/2012 o marzo de 2009). Y hay muchos otros tipos de datos que puede usar.
 
-Sin embargo, no debe especificar un tipo para una variable. En la mayoría de los casos, ASP.NET puede deducir el tipo según cómo se utilizan los datos en la variable. (En ocasiones, debe especificar un tipo; verá ejemplos donde esto es cierto).
+Sin embargo, no es necesario especificar un tipo para una variable. En la mayoría de los casos, ASP.NET puede averiguar el tipo en función de cómo se usan los datos de la variable. (En ocasiones, debe especificar un tipo; verá ejemplos donde esto es cierto).
 
-Para declarar una variable sin especificar un tipo, use `Dim` más el nombre de variable (por ejemplo, `Dim myVar`). Para declarar una variable con un tipo, use `Dim` más el nombre de variable, seguido de `As` y, a continuación, el nombre de tipo (por ejemplo, `Dim myVar As String`).
+Para declarar una variable sin especificar un tipo, utilice `Dim` más el nombre de la variable (por ejemplo, `Dim myVar`). Para declarar una variable con un tipo, utilice `Dim` más el nombre de la variable, seguido de `As` y del nombre de tipo (por ejemplo, `Dim myVar As String`).
 
 [!code-vbhtml[Main](introducing-razor-syntax-vb/samples/sample20.vbhtml)]
 
-El ejemplo siguiente muestra algunas expresiones en línea que utilizan las variables en una página web.
+En el ejemplo siguiente se muestran algunas expresiones en línea que usan las variables en una página web.
 
 [!code-vbhtml[Main](introducing-razor-syntax-vb/samples/sample21.vbhtml)]
 
-El resultado se muestra en un explorador:
+Resultado mostrado en un explorador:
 
-![Razor-Img9](introducing-razor-syntax-vb/_static/image9.jpg)
+![Razor: Img9](introducing-razor-syntax-vb/_static/image9.jpg)
 
-### <a name="converting-and-testing-data-types"></a>Convertir y pruebas de tipos de datos
+### <a name="converting-and-testing-data-types"></a>Conversión y prueba de tipos de datos
 
-Aunque ASP.NET normalmente pueden determinar automáticamente un tipo de datos, a veces, no puede. Por lo tanto, es posible que deba ayudarnos ASP.NET mediante la realización de una conversión explícita. Incluso si no tiene que convertir los tipos, a veces resulta útil probar para ver qué tipo de datos podría estar trabajando con.
+Aunque ASP.NET normalmente puede determinar un tipo de datos de forma automática, a veces no es posible. Por lo tanto, es posible que necesite ayudar a ASP.NET a realizar una conversión explícita. Incluso si no tiene que convertir tipos, a veces resulta útil probar para ver el tipo de datos con el que puede trabajar.
 
-El caso más común es que se debe convertir una cadena a otro tipo, como en un entero o una fecha. El ejemplo siguiente muestra un caso típico que debe convertir una cadena en un número.
+El caso más común es que tenga que convertir una cadena en otro tipo, como un entero o una fecha. En el ejemplo siguiente se muestra un caso típico en el que debe convertir una cadena en un número.
 
 [!code-vbhtml[Main](introducing-razor-syntax-vb/samples/sample22.vbhtml)]
 
-Como norma, proporcionados por el usuario aparecerán como cadenas. Incluso si ha le pide al usuario que escriba un número e incluso si ha escrito un dígito, cuando se envía la entrada del usuario y leerlo en el código, los datos están en formato de cadena. Por lo tanto, debe convertir la cadena en un número. En el ejemplo, si se intenta realizar operaciones aritméticas en los valores sin necesidad de convertirlos, produce el siguiente error, porque ASP.NET no se puede agregar dos cadenas:
+Como regla, los datos proporcionados por el usuario se incluyen como cadenas. Incluso si ha solicitado al usuario que escriba un número e incluso si ha escrito un dígito, cuando se envía la entrada del usuario y lo lee en el código, los datos están en formato de cadena. Por lo tanto, debe convertir la cadena en un número. En el ejemplo, si intenta realizar operaciones aritméticas en los valores sin convertirlos, se producirá el siguiente error, porque ASP.NET no puede agregar dos cadenas:
 
 `Cannot implicitly convert type 'string' to 'int'.`
 
-Para convertir los valores enteros, se llama a la `AsInt` método. Si la conversión se realiza correctamente, a continuación, puede agregar los números.
+Para convertir los valores en enteros, llame al método `AsInt`. Si la conversión se realiza correctamente, puede Agregar los números.
 
-En la tabla siguiente se enumera algunos métodos de conversión y prueba comunes para las variables.
+En la tabla siguiente se enumeran algunos métodos de conversión y prueba comunes para las variables.
 
 :::row:::
     :::column:::
-        <strong>Method</strong>
+        <strong>Método</strong>
     :::column-end:::
     :::column:::
-        <strong>Description</strong>
+        <strong>Descripción</strong>
     :::column-end:::
     :::column:::
-        <strong>Example</strong>
+        <strong>Ejemplo</strong>
     :::column-end:::
 :::row-end:::
 
@@ -287,7 +287,7 @@ En la tabla siguiente se enumera algunos métodos de conversión y prueba comune
         `AsInt(), IsInt()`
     :::column-end:::
     :::column:::
-        Converts a string that represents a whole number (like &quot;593&quot;) to an integer.
+        Convierte una cadena que representa un número entero (como &quot;593&quot;) en un entero.
     :::column-end:::
     :::column:::
         [!code-vb[Main](introducing-razor-syntax-vb/samples/sample23.vb)]
@@ -301,7 +301,7 @@ En la tabla siguiente se enumera algunos métodos de conversión y prueba comune
         `AsBool(), IsBool()`
     :::column-end:::
     :::column:::
-        Converts a string like &quot;true&quot; or &quot;false&quot; to a Boolean type.
+        Convierte una cadena como &quot;true&quot; o &quot;falso&quot; a un tipo booleano.
     :::column-end:::
     :::column:::
         [!code-vb[Main](introducing-razor-syntax-vb/samples/sample24.vb)]
@@ -315,7 +315,7 @@ En la tabla siguiente se enumera algunos métodos de conversión y prueba comune
         `AsFloat(), IsFloat()`
     :::column-end:::
     :::column:::
-        Converts a string that has a decimal value like &quot;1.3&quot; or &quot;7.439&quot; to a floating-point number.
+        Convierte una cadena que tiene un valor decimal como &quot;1,3&quot; o &quot;7,439&quot; a un número de punto flotante.
     :::column-end:::
     :::column:::
         [!code-vb[Main](introducing-razor-syntax-vb/samples/sample25.vb)]
@@ -329,7 +329,7 @@ En la tabla siguiente se enumera algunos métodos de conversión y prueba comune
         `AsDecimal(), IsDecimal()`
     :::column-end:::
     :::column:::
-        Converts a string that has a decimal value like &quot;1.3&quot; or &quot;7.439&quot; to a decimal number. (In ASP.NET, a decimal number is more precise than a floating-point number.)
+        Convierte una cadena que tiene un valor decimal como &quot;1,3&quot; o &quot;7,439&quot; un número decimal. (En ASP.NET, un número decimal es más preciso que un número de punto flotante).
     :::column-end:::
     :::column:::
         [!code-vb[Main](introducing-razor-syntax-vb/samples/sample26.vb)]
@@ -343,7 +343,7 @@ En la tabla siguiente se enumera algunos métodos de conversión y prueba comune
         `AsDateTime(), IsDateTime()`
     :::column-end:::
     :::column:::
-        Converts a string that represents a date and time value to the ASP.NET `DateTime` type.
+        Convierte una cadena que representa un valor de fecha y hora en el tipo de `DateTime` ASP.NET.
     :::column-end:::
     :::column:::
         [!code-vb[Main](introducing-razor-syntax-vb/samples/sample27.vb)]
@@ -357,7 +357,7 @@ En la tabla siguiente se enumera algunos métodos de conversión y prueba comune
         `ToString()`
     :::column-end:::
     :::column:::
-        Converts any other data type to a string.
+        Convierte cualquier otro tipo de datos en una cadena.
     :::column-end:::
     :::column:::
         [!code-vb[Main](introducing-razor-syntax-vb/samples/sample28.vb)]
@@ -366,17 +366,17 @@ En la tabla siguiente se enumera algunos métodos de conversión y prueba comune
 
 ## <a name="operators"></a>Operadores
 
-Un operador es una palabra clave o el carácter que le indica a ASP.NET qué tipo de comando que se ejecuta en una expresión. Visual Basic admite muchos operadores, pero deberá reconocer algunas para comenzar a desarrollar páginas web de ASP.NET. En la tabla siguiente se resume los operadores más comunes.
+Un operador es una palabra clave o un carácter que indica a ASP.NET qué tipo de comando se debe realizar en una expresión. Visual Basic admite muchos operadores, pero solo necesita reconocer algunos para empezar a desarrollar páginas web de ASP.NET. En la tabla siguiente se resumen los operadores más comunes.
 
 :::row:::
     :::column:::
         <strong>Operator</strong>
     :::column-end:::
     :::column:::
-        <strong>Description</strong>
+        <strong>Descripción</strong>
     :::column-end:::
     :::column:::
-        <strong>Examples</strong>
+        <strong>Ejemplos</strong>
     :::column-end:::
 :::row-end:::
 
@@ -387,7 +387,7 @@ Un operador es una palabra clave o el carácter que le indica a ASP.NET qué tip
         `+ - * /`
     :::column-end:::
     :::column:::
-        Math operators used in numerical expressions.
+        Operadores matemáticos usados en expresiones numéricas.
     :::column-end:::
     :::column:::
         [!code-vb[Main](introducing-razor-syntax-vb/samples/sample29.vb)]
@@ -401,7 +401,7 @@ Un operador es una palabra clave o el carácter que le indica a ASP.NET qué tip
         `=`
     :::column-end:::
     :::column:::
-        Assignment and equality. Depending on context, either assigns the value on the right side of a statement to the object on the left side, or checks the values for equality.
+        Asignación e igualdad. Dependiendo del contexto, asigna el valor en el lado derecho de una instrucción al objeto en el lado izquierdo o comprueba si los valores son iguales.
     :::column-end:::
     :::column:::
         [!code-vb[Main](introducing-razor-syntax-vb/samples/sample30.vb)]
@@ -415,7 +415,7 @@ Un operador es una palabra clave o el carácter que le indica a ASP.NET qué tip
         `<>`
     :::column-end:::
     :::column:::
-        Inequality. Returns `True` if the values are not equal.
+        Desigualdad. Devuelve `True` si los valores no son iguales.
     :::column-end:::
     :::column:::
         [!code-vb[Main](introducing-razor-syntax-vb/samples/sample31.vb)]
@@ -429,7 +429,7 @@ Un operador es una palabra clave o el carácter que le indica a ASP.NET qué tip
         `< > <= >=`
     :::column-end:::
     :::column:::
-        Less than, greater than, less than or equal, and greater than or equal.
+        Menor que, mayor que, menor o igual que y mayor o igual que.
     :::column-end:::
     :::column:::
         [!code-vb[Main](introducing-razor-syntax-vb/samples/sample32.vb)]
@@ -443,7 +443,7 @@ Un operador es una palabra clave o el carácter que le indica a ASP.NET qué tip
         `&`
     :::column-end:::
     :::column:::
-        Concatenation, which is used to join strings.
+        Concatenación, que se usa para combinar cadenas.
     :::column-end:::
     :::column:::
         [!code-vbhtml[Main](introducing-razor-syntax-vb/samples/sample33.vbhtml)]
@@ -457,7 +457,7 @@ Un operador es una palabra clave o el carácter que le indica a ASP.NET qué tip
         `+= -=`
     :::column-end:::
     :::column:::
-        The increment and decrement operators, which add and subtract 1 (respectively) from a variable.
+        Los operadores de incremento y decremento, que suman y restan 1 (respectivamente) de una variable.
     :::column-end:::
     :::column:::
         [!code-vb[Main](introducing-razor-syntax-vb/samples/sample34.vb)]
@@ -471,7 +471,7 @@ Un operador es una palabra clave o el carácter que le indica a ASP.NET qué tip
         `.`
     :::column-end:::
     :::column:::
-        Dot. Used to distinguish objects and their properties and methods.
+        Semitono. Se usa para distinguir objetos y sus propiedades y métodos.
     :::column-end:::
     :::column:::
         [!code-vb[Main](introducing-razor-syntax-vb/samples/sample35.vb)]
@@ -485,7 +485,7 @@ Un operador es una palabra clave o el carácter que le indica a ASP.NET qué tip
         `()`
     :::column-end:::
     :::column:::
-        Parentheses. Used to group expressions, to pass parameters to methods, and to access members of arrays and collections.
+        Paréntesis. Se utiliza para agrupar expresiones, para pasar parámetros a métodos y para obtener acceso a miembros de matrices y colecciones.
     :::column-end:::
     :::column:::
         [!code-vbhtml[Main](introducing-razor-syntax-vb/samples/sample36.vbhtml)]
@@ -499,7 +499,7 @@ Un operador es una palabra clave o el carácter que le indica a ASP.NET qué tip
         `Not`
     :::column-end:::
     :::column:::
-        Not. Reverses a true value to false and vice versa. Typically used as a shorthand way to test for `False` (that is, for not `True`).
+        Tampoco. Invierte un valor true a false y viceversa. Normalmente se utiliza como una forma abreviada de probar `False` (es decir, para no `True`).
     :::column-end:::
     :::column:::
         [!code-vb[Main](introducing-razor-syntax-vb/samples/sample37.vb)]
@@ -513,172 +513,172 @@ Un operador es una palabra clave o el carácter que le indica a ASP.NET qué tip
         `AndAlso OrElse`
     :::column-end:::
     :::column:::
-        Logical AND and OR, which are used to link conditions together.
+        AND y OR lógicos, que se usan para vincular condiciones.
     :::column-end:::
     :::column:::
         [!code-vb[Main](introducing-razor-syntax-vb/samples/sample38.vb)]
     :::column-end:::
 :::row-end:::
 
-## <a name="working-with-file-and-folder-paths-in-code"></a>Trabajar con archivos y rutas de acceso de carpeta en el código
+## <a name="working-with-file-and-folder-paths-in-code"></a>Trabajar con rutas de acceso de archivos y carpetas en el código
 
-A menudo a trabajar con rutas de acceso de archivos y carpetas en el código. Este es un ejemplo de la estructura de la carpeta física de un sitio Web como podría aparecer en el equipo de desarrollo:
+A menudo, trabajará con rutas de acceso de archivos y carpetas en el código. A continuación se muestra un ejemplo de una estructura de carpetas físicas para un sitio Web tal y como podría aparecer en el equipo de desarrollo:
 
 `C:\WebSites\MyWebSite default.cshtml datafile.txt \images Logo.jpg \styles Styles.css`
 
-Estos son algunos detalles esenciales sobre las direcciones URL y rutas de acceso:
+Estos son algunos detalles esenciales sobre las direcciones URL y las rutas de acceso:
 
-- Una dirección URL comienza con cualquiera de un nombre de dominio (`http://www.example.com`) o un nombre de servidor (`http://localhost`, `http://mycomputer`).
-- Una dirección URL que se corresponde con una ruta de acceso física en un equipo host. Por ejemplo, `http://myserver` pueden corresponder a la carpeta *C:\websites\mywebsite* en el servidor.
-- Una ruta de acceso virtual es una abreviatura para representar las rutas de acceso en el código sin tener que especificar la ruta de acceso completa. Incluye la parte de una dirección URL que sigue al nombre de dominio o servidor. Al usar rutas de acceso virtuales, puede mover el código a un dominio diferente o un servidor sin tener que actualizar las rutas de acceso.
+- Una dirección URL comienza con un nombre de dominio (`http://www.example.com`) o un nombre de servidor (`http://localhost`, `http://mycomputer`).
+- Una dirección URL corresponde a una ruta de acceso física en un equipo host. Por ejemplo, `http://myserver` podría corresponder a la carpeta *C:\websites\mywebsite* del servidor.
+- Una ruta de acceso virtual es una forma abreviada de representar las rutas de acceso en el código sin tener que especificar la ruta de acceso completa. Incluye la parte de una dirección URL que sigue al nombre de dominio o de servidor. Al usar las rutas de acceso virtuales, puede trasladar el código a otro dominio o servidor sin tener que actualizar las rutas de acceso.
 
-Este es un ejemplo que le ayudarán a comprender las diferencias:
+Este es un ejemplo para ayudarle a comprender las diferencias:
 
 | Dirección URL completa | `http://mycompanyserver/humanresources/CompanyPolicy.htm` |
 | --- | --- |
-| Nombre del servidor | *mycompanyserver* |
+| Nombre de servidor | *mycompanyserver* |
 | Ruta de acceso virtual | */humanresources/CompanyPolicy.htm* |
 | Ruta de acceso física | *C:\mywebsites\humanresources\CompanyPolicy.htm* |
 
-Es la raíz virtual /, al igual que la raíz de la unidad C: es la unidad \. (Las rutas de acceso de la carpeta virtual siempre usar barras diagonales). La ruta de acceso virtual de una carpeta no debe tener el mismo nombre que la carpeta física; puede ser un alias. (En los servidores de producción, la ruta de acceso virtual rara vez coincide con una ruta de acceso física exacta.)
+La raíz virtual es/, al igual que la raíz de la unidad C: \. (Las rutas de acceso de carpeta virtual siempre usan barras diagonales). La ruta de acceso virtual de una carpeta no tiene que tener el mismo nombre que la carpeta física; puede ser un alias. (En servidores de producción, la ruta de acceso virtual rara vez coincide con una ruta de acceso física exacta).
 
-A veces, cuando se trabaja con archivos y carpetas en el código, debe hacer referencia a la ruta de acceso física y a veces, una ruta de acceso virtual, dependiendo de los objetos que se trabaja con. ASP.NET proporciona estas herramientas para trabajar con rutas de acceso de archivos y carpetas en el código: el `Server.MapPath` método y el `~` operador y `Href` método.
+Cuando se trabaja con archivos y carpetas en el código, a veces es necesario hacer referencia a la ruta de acceso física y, en ocasiones, a una ruta de acceso virtual, en función de los objetos con los que esté trabajando. ASP.NET proporciona estas herramientas para trabajar con rutas de acceso de archivos y carpetas en el código: el método `Server.MapPath` y el operador `~` y el método `Href`.
 
-### <a name="converting-virtual-to-physical-paths-the-servermappath-method"></a>Convertir rutas de acceso virtuales a físico: el método Server.MapPath
+### <a name="converting-virtual-to-physical-paths-the-servermappath-method"></a>Conversión de rutas de acceso virtuales a físicas: el método Server. MapPath
 
-El `Server.MapPath` método convierte una ruta de acceso virtual (como */default.cshtml*) a una ruta de acceso física absoluta (como *C:\WebSites\MyWebSiteFolder\default.cshtml*). Utilice este método cada vez que necesite una ruta de acceso física completa. Un ejemplo típico es cuando se va a leer o escribir un archivo de texto o imagen en el servidor web.
+El método `Server.MapPath` convierte una ruta de acceso virtual (como */default.cshtml*) en una ruta de acceso física absoluta (como *C:\WebSites\MyWebSiteFolder\default.cshtml*). Utilice este método siempre que necesite una ruta de acceso física completa. Un ejemplo típico es al leer o escribir un archivo de texto o de imagen en el servidor Web.
 
-Normalmente no conoce la ruta de acceso física absoluta de su sitio en el servidor de hospedaje de un sitio, por lo que este método puede convertir la ruta de acceso es saber, la ruta de acceso virtual, la ruta de acceso correspondiente en el servidor para usted. Pase la ruta de acceso virtual a un archivo o carpeta al método y devuelve la ruta de acceso física:
+Normalmente, no se conoce la ruta de acceso física absoluta del sitio en el servidor de un sitio de hospedaje, por lo que este método puede convertir la ruta de acceso que se conoce (la ruta de acceso virtual) en la ruta de acceso correspondiente en el servidor. Pasa la ruta de acceso virtual a un archivo o una carpeta al método y devuelve la ruta de acceso física:
 
 [!code-vbhtml[Main](introducing-razor-syntax-vb/samples/sample39.vbhtml)]
 
-### <a name="referencing-the-virtual-root-the--operator-and-href-method"></a>Hacer referencia a la raíz virtual: el ~ operador y Href (método)
+### <a name="referencing-the-virtual-root-the--operator-and-href-method"></a>Referencia a la raíz virtual: el operador ~ y el método href
 
-En un *.cshtml* o *.vbhtml* archivo, puede hacer referencia a la ruta de acceso virtual raíz mediante el `~` operador. Esto es muy útil porque puede mover las páginas en un sitio y los vínculos que contienen a otras páginas no se interrumpe. También es útil en caso de alguna vez mover su sitio Web a una ubicación diferente. A continuación se muestran algunos ejemplos:
+En un archivo *. cshtml* o *. vbhtml* , puede hacer referencia a la ruta de acceso de la raíz virtual mediante el operador `~`. Esto es muy útil porque puede mover páginas en un sitio y los vínculos que contienen a otras páginas no se romperán. También es útil en caso de que se mueva el sitio web a una ubicación diferente. A continuación se muestran algunos ejemplos:
 
 [!code-vbhtml[Main](introducing-razor-syntax-vb/samples/sample40.vbhtml)]
 
-Si el sitio Web está `http://myserver/myapp`, le mostramos cómo ASP.NET tratan estas rutas de acceso cuando se ejecuta la página:
+Si el sitio web está `http://myserver/myapp`, aquí se muestra cómo ASP.NET tratará estas rutas de acceso cuando se ejecute la página:
 
 - `myImagesFolder`: `http://myserver/myapp/images`
 - `myStyleSheet` : `http://myserver/myapp/styles/Stylesheet.css`
 
-(En realidad, no verá estas rutas de acceso que los valores de la variable, pero ASP.NET tratará las rutas de acceso como si eso es lo que fueran).
+(En realidad, no verá estas rutas de acceso como los valores de la variable, pero ASP.NET tratará las rutas de acceso como si eso fuera).
 
-Puede usar el `~` operador tanto en código del servidor (como anteriormente) en el marcado, similar al siguiente:
+Puede usar el operador `~` en el código del servidor (como arriba) y en el marcado, como se indica a continuación:
 
 [!code-html[Main](introducing-razor-syntax-vb/samples/sample41.html)]
 
-En el marcado, usa el `~` operador para crear rutas de acceso a recursos como archivos de imagen, otras páginas web y archivos CSS. Cuando se ejecuta la página, ASP.NET busca en la página (marcado y código) y resuelve todos los `~` referencias a la ruta de acceso adecuada.
+En el marcado, se usa el operador `~` para crear rutas de acceso a recursos como archivos de imagen, otras páginas web y archivos CSS. Cuando se ejecuta la página, ASP.NET busca en la página (código y marcado) y resuelve todas las referencias de `~` a la ruta de acceso adecuada.
 
-## <a name="conditional-logic-and-loops"></a>Bucles y la lógica condicional
+## <a name="conditional-logic-and-loops"></a>Lógica y bucles condicionales
 
-Código de servidor ASP.NET le permite realizar tareas basadas en condiciones y escribir código que se repite las instrucciones de código, es decir, un número específico de veces y que se ejecuta un bucle).
+El código de servidor ASP.NET permite realizar tareas basadas en condiciones y escribir código que repite instrucciones un número específico de veces, es decir, código que ejecuta un bucle).
 
-### <a name="testing-conditions"></a>Condiciones de pruebas
+### <a name="testing-conditions"></a>Condiciones de prueba
 
-Para probar una condición sencilla que use el `If...Then` instrucción, que devuelve `True` o `False` basándose en una prueba que especifique:
+Para probar una condición simple, use la instrucción `If...Then`, que devuelve `True` o `False` en función de una prueba que especifique:
 
 [!code-vbhtml[Main](introducing-razor-syntax-vb/samples/sample42.vbhtml)]
 
-El `If` palabra clave inicia un bloque. La prueba real (condición) sigue el `If` palabra clave y devuelve true o false. El `If` instrucción termina con `Then`. Las instrucciones que se ejecutarán si la prueba es verdadera se incluyan entre `If` y `End If`. Un `If` instrucción puede incluir un `Else` bloque que especifica las instrucciones que se ejecutarán si la condición es falsa:
+La palabra clave `If` inicia un bloque. La prueba real (condición) sigue a la palabra clave `If` y devuelve true o false. La instrucción `If` finaliza con `Then`. Las instrucciones que se ejecutarán si la prueba es true se incluyen `If` y `End If`. Una instrucción `If` puede incluir un bloque de `Else` que especifica las instrucciones que se ejecutarán si la condición es falsa:
 
 [!code-vbhtml[Main](introducing-razor-syntax-vb/samples/sample43.vbhtml)]
 
-Si un `If` instrucción inicia un bloque de código, no tiene que usar el valor normal `Code...End Code` instrucciones para incluir los bloques. Puede agregar `@` al bloque, y funcionará. Este enfoque funciona con `If` , así como otra palabras clave que se van seguidas de bloques de código, incluidos de programación de Visual Basic `For`, `For Each`, `Do While`, etcetera.
+Si una instrucción `If` inicia un bloque de código, no tiene que utilizar las instrucciones de `Code...End Code` normales para incluir los bloques. Simplemente puede Agregar `@` al bloque y funcionará. Este enfoque funciona con `If` así como con otras palabras clave de programación de Visual Basic que van seguidas de bloques de código, incluidos `For`, `For Each`, `Do While`, etc.
 
 [!code-vbhtml[Main](introducing-razor-syntax-vb/samples/sample44.vbhtml)]
 
-Puede agregar varias condiciones de uso de uno o varios `ElseIf` bloques:
+Puede agregar varias condiciones mediante uno o varios bloques de `ElseIf`:
 
 [!code-vbhtml[Main](introducing-razor-syntax-vb/samples/sample45.vbhtml)]
 
-En este ejemplo, si la primera condición en la `If` bloque no es true, el `ElseIf` se comprueba la condición. Si se cumple esa condición, las instrucciones en el `ElseIf` bloque se ejecutan. Si se cumple ninguna de las condiciones, las instrucciones en el `Else` bloque se ejecutan. Puede agregar cualquier número de `ElseIf` bloquea y, a continuación, cierre con un `Else` bloquear como el &quot;todo lo demás&quot; condición.
+En este ejemplo, si la primera condición del bloque `If` no es true, se comprueba la condición de `ElseIf`. Si se cumple esta condición, se ejecutan las instrucciones del bloque `ElseIf`. Si no se cumple ninguna de las condiciones, se ejecutan las instrucciones del bloque `Else`. Puede agregar cualquier número de bloques de `ElseIf` y, a continuación, cerrar con un bloque de `Else` como &quot;todo lo demás&quot; condición.
 
-Para probar un gran número de condiciones, use un `Select Case` bloque:
+Para probar un gran número de condiciones, use un bloque `Select Case`:
 
 [!code-vbhtml[Main](introducing-razor-syntax-vb/samples/sample46.vbhtml)]
 
-El valor para probar es entre paréntesis (en el ejemplo, la variable de día de la semana). Cada prueba individual usa un `Case` instrucción que se muestra un valor. Si el valor de un `Case` instrucción coincide con el valor de prueba, el código que `Case` bloque se ejecuta.
+El valor que se va a probar se encuentra entre paréntesis (en el ejemplo, la variable Weekday). Cada prueba individual utiliza una instrucción `Case` que muestra un valor. Si el valor de una instrucción `Case` coincide con el valor de prueba, se ejecuta el código de ese bloque de `Case`.
 
-El resultado de los dos últimos bloques condicionales mostrada en un explorador:
+El resultado de los dos últimos bloques condicionales mostrados en un explorador:
 
 ![Razor-Img10](introducing-razor-syntax-vb/_static/image10.jpg)
 
-### <a name="looping-code"></a>Código de bucles
+### <a name="looping-code"></a>Código de bucle
 
-A menudo necesitará ejecutar repetidamente las mismas instrucciones. La forma de hacerlo es mediante un bucle. Por ejemplo, se ejecuta con frecuencia las mismas instrucciones para cada elemento en una colección de datos. Si sabe exactamente cuántas veces desea crear un bucle, puede usar un `For` bucle. Este tipo de bucle es especialmente útil para contar o cuenta atrás:
+A menudo es necesario ejecutar las mismas instrucciones varias veces. Para ello, puede crear un bucle. Por ejemplo, a menudo se ejecutan las mismas instrucciones para cada elemento en una colección de datos. Si sabe exactamente cuántas veces desea crear un bucle, puede usar un bucle `For`. Este tipo de bucle es especialmente útil para la acumulación o el recuento:
 
 [!code-vbhtml[Main](introducing-razor-syntax-vb/samples/sample47.vbhtml)]
 
-El bucle comienza con la `For` palabra clave, seguida de tres elementos:
+El bucle comienza con la palabra clave `For`, seguido de tres elementos:
 
-- Inmediatamente después de la `For` la instrucción, se declara una variable de contador (no tiene que usar `Dim`) y, a continuación, indicar el intervalo, como en `i = 10 to 20`. Esto significa que la variable `i` se empezará a contar en 10 y continúa hasta que llega a 20 (ambos inclusive).
-- Entre los `For` y `Next` instrucciones es el contenido del bloque. Esto puede contener una o varias instrucciones de código que se ejecutan con cada bucle.
-- El `Next i` instrucción finaliza el bucle. Incrementa el contador y se inicia la siguiente iteración del bucle.
+- Inmediatamente después de la instrucción `For`, se declara una variable de contador (no es necesario usar `Dim`) y, a continuación, se indica el intervalo, como en `i = 10 to 20`. Esto significa que la variable `i` comenzará a contar en 10 y continuará hasta que alcance 20 (inclusive).
+- Entre las instrucciones `For` y `Next` se encuentra el contenido del bloque. Puede contener una o varias instrucciones de código que se ejecutan con cada bucle.
+- La instrucción `Next i` finaliza el bucle. Incrementa el contador e inicia la siguiente iteración del bucle.
 
-La línea de código entre la `For` y `Next` líneas contiene el código que se ejecuta para cada iteración del bucle. El marcado crea un nuevo párrafo (`<p>` elemento) cada vez y se agrega una línea a la salida, mostrar el valor de i (el contador). Al ejecutar esta página, el ejemplo crea 11 líneas que muestra la salida, con el texto de cada línea que indica el número de elemento.
+La línea de código entre las líneas `For` y `Next` contiene el código que se ejecuta para cada iteración del bucle. El marcado crea un nuevo párrafo (elemento`<p>`) cada vez y agrega una línea a la salida, mostrando el valor de i (el contador). Al ejecutar esta página, en el ejemplo se crean 11 líneas que muestran la salida, con el texto en cada línea que indica el número de elemento.
 
-![Razor-Img11](introducing-razor-syntax-vb/_static/image11.jpg)
+![Razor: Img11](introducing-razor-syntax-vb/_static/image11.jpg)
 
-Si está trabajando con una colección o matriz, a menudo se usa un `For Each` bucle. Una colección es un grupo de objetos similares y el `For Each` bucle permite llevar a cabo una tarea en cada elemento de la colección. Este tipo de bucle es conveniente para las colecciones, ya que a diferencia de un `For` bucle, no tendrá que incrementar el contador o establecer un límite. En su lugar, el `For Each` código del bucle for simplemente continúa a través de la colección hasta que haya terminado.
+Si está trabajando con una colección o una matriz, a menudo utiliza un bucle `For Each`. Una colección es un grupo de objetos similares y el bucle `For Each` le permite llevar a cabo una tarea en cada elemento de la colección. Este tipo de bucle es práctico para las colecciones, porque a diferencia de un bucle `For`, no tiene que incrementar el contador o establecer un límite. En su lugar, el código de bucle `For Each` simplemente continúa a través de la colección hasta que termina.
 
-En este ejemplo devuelve los elementos en el `Request.ServerVariables` colección (que contiene información sobre el servidor web). Usa un `For Each` bucle para mostrar el nombre de cada elemento mediante la creación de un nuevo `<li>` elemento en una lista con viñetas en HTML.
+En este ejemplo se devuelven los elementos de la colección `Request.ServerVariables` (que contiene información sobre el servidor Web). Usa un bucle `For Each` para mostrar el nombre de cada elemento mediante la creación de un nuevo elemento `<li>` en una lista con viñetas HTML.
 
 [!code-vbhtml[Main](introducing-razor-syntax-vb/samples/sample48.vbhtml)]
 
-El `For Each` palabra clave va seguida de una variable que representa un elemento único en la colección (en el ejemplo, `myItem`), seguido por el `In` palabra clave, seguida de la colección que desea para recorrer en iteración. En el cuerpo de la `For Each` bucle, puede obtener acceso al elemento actual utilizando la variable que declaró anteriormente.
+La palabra clave `For Each` va seguida de una variable que representa un único elemento de la colección (en el ejemplo, `myItem`), seguido de la palabra clave `In`, seguida de la colección a la que desea recorrer el bucle. En el cuerpo del bucle `For Each`, puede tener acceso al elemento actual mediante la variable que declaró anteriormente.
 
-![Razor-Img12](introducing-razor-syntax-vb/_static/image12.jpg)
+![Razor: Img12](introducing-razor-syntax-vb/_static/image12.jpg)
 
-Para crear un bucle de uso más general, utilice el `Do While` instrucción:
+Para crear un bucle de uso más general, use la instrucción `Do While`:
 
 [!code-vbhtml[Main](introducing-razor-syntax-vb/samples/sample49.vbhtml)]
 
-Este bucle comienza con la `Do While` palabra clave, seguida de una condición, seguido del bloque que se repita. Bucles normalmente incrementar (agregar a) o el decremento (restar) una variable o un objeto que se usa para el recuento. En el ejemplo, el `+=` operador de suma 1 al valor de una variable cada vez que se ejecuta el bucle. (Para disminuyen una variable en un bucle que cuenta hacia atrás, usaría el operador de decremento `-=`.)
+Este bucle comienza con la palabra clave `Do While`, seguida de una condición, seguida del bloque que se va a repetir. Los bucles suelen incrementar (agregar a) o disminuir (restar de) una variable o un objeto que se usa para el recuento. En el ejemplo, el operador `+=` agrega 1 al valor de una variable cada vez que se ejecuta el bucle. (Para reducir una variable en un bucle que se repite, se usaría el operador de decremento `-=`).
 
 ## <a name="objects-and-collections"></a>Objetos y colecciones
 
-Casi todo el contenido de un sitio Web ASP.NET es un objeto, incluida la propia página web. En esta sección se describe algunos objetos importantes que se va a trabajar con frecuencia en el código.
+Casi todo en un sitio web de ASP.NET es un objeto, incluida la propia página web. En esta sección se describen algunos objetos importantes con los que trabajará con frecuencia en el código.
 
 ### <a name="page-objects"></a>Objetos de página
 
-El objeto más básico de ASP.NET es la página. Puede tener acceso a las propiedades del objeto page directamente sin ningún objeto de calificación. El código siguiente obtiene la ruta de acceso de archivo de la página, utilizando el `Request` objeto de la página:
+El objeto más básico de ASP.NET es la página. Puede tener acceso directamente a las propiedades del objeto de página sin ningún objeto calificador. En el código siguiente se obtiene la ruta de acceso del archivo de la página mediante el `Request` objeto de la página:
 
 [!code-vbhtml[Main](introducing-razor-syntax-vb/samples/sample50.vbhtml)]
 
-Puede usar las propiedades de la `Page` objeto para obtener una gran cantidad de información, como:
+Puede utilizar las propiedades del objeto `Page` para obtener una gran cantidad de información, como:
 
-- `Request`. Como ya hemos visto, esto es una colección de información acerca de la solicitud actual, incluidos el tipo de explorador realizó la solicitud, la dirección URL de la página, la identidad del usuario, etcetera.
-- `Response`. Se trata de una colección de información sobre la respuesta (página) que se enviará al explorador cuando haya terminado de ejecutarse el código del servidor. Por ejemplo, puede utilizar esta propiedad para escribir información en la respuesta.
+- `Request`Operador Como ya ha visto, se trata de una colección de información sobre la solicitud actual, incluido el tipo de explorador que realizó la solicitud, la dirección URL de la página, la identidad del usuario, etc.
+- `Response`Operador Se trata de una colección de información sobre la respuesta (página) que se enviará al explorador cuando el código del servidor haya terminado de ejecutarse. Por ejemplo, puede usar esta propiedad para escribir información en la respuesta.
 
     [!code-vbhtml[Main](introducing-razor-syntax-vb/samples/sample51.vbhtml)]
 
 ### <a name="collection-objects-arrays-and-dictionaries"></a>Objetos de colección (matrices y diccionarios)
 
-Una colección es un grupo de objetos del mismo tipo, como una colección de `Customer` objetos desde una base de datos. ASP.NET contiene muchas colecciones integradas, como el `Request.Files` colección.
+Una colección es un grupo de objetos del mismo tipo, como una colección de objetos `Customer` de una base de datos. ASP.NET contiene muchas colecciones integradas, como la `Request.Files` colección.
 
-A menudo a trabajar con datos en colecciones. Dos tipos de colección comunes son el *matriz* y *diccionario*. Una matriz es útil cuando desea almacenar una colección de elementos similares, pero no desea crear una variable independiente para contener cada elemento:
+A menudo, trabajará con los datos de las colecciones. Dos tipos de colección comunes son la *matriz* y el *Diccionario*. Una matriz es útil cuando desea almacenar una colección de elementos similares pero no desea crear una variable independiente que contenga cada elemento:
 
 [!code-vbhtml[Main](introducing-razor-syntax-vb/samples/sample52.vbhtml)]
 
-Con las matrices, declarar un tipo de datos específico, como `String`, `Integer`, o `DateTime`. Para indicar que la variable puede contener una matriz, agregue un paréntesis al nombre de variable en la declaración (como `Dim myVar() As String`). Puede obtener acceso a los elementos en una matriz mediante su posición (index) o mediante el `For Each` instrucción. Los índices de matriz son de base cero &#8212; es decir, el primer elemento está en posición 0, el segundo elemento es en la posición 1 y así sucesivamente.
+Con las matrices, se declara un tipo de datos específico, como `String`, `Integer`o `DateTime`. Para indicar que la variable puede contener una matriz, agregue paréntesis al nombre de la variable en la declaración (como `Dim myVar() As String`). Puede tener acceso a los elementos de una matriz mediante su posición (índice) o mediante la instrucción `For Each`. Los índices de matriz son de base &#8212; cero, es decir, el primer elemento está en la posición 0, el segundo elemento está en la posición 1, y así sucesivamente.
 
 [!code-vbhtml[Main](introducing-razor-syntax-vb/samples/sample53.vbhtml)]
 
-Puede determinar el número de elementos en una matriz mediante la obtención de su `Length` propiedad. Para obtener la posición de un elemento específico de la matriz (es decir, para buscar en la matriz), use el `Array.IndexOf` método. También puede hacer cosas como inversa el contenido de una matriz (el `Array.Reverse` método) u ordenar el contenido (el `Array.Sort` método).
+Puede determinar el número de elementos de una matriz obteniendo su `Length` propiedad. Para obtener la posición de un elemento específico en la matriz (es decir, para buscar en la matriz), use el método `Array.IndexOf`. También puede hacer cosas como invertir el contenido de una matriz (el método `Array.Reverse`) u ordenar el contenido (el método `Array.Sort`).
 
-La salida del código de matriz de cadena mostrado en un explorador:
+La salida del código de la matriz de cadenas que se muestra en un explorador:
 
 ![Razor-Img13](introducing-razor-syntax-vb/_static/image13.jpg)
 
-Un diccionario es una colección de pares clave/valor, donde proporcionar la clave (o nombre) para establecer o recuperar el valor correspondiente:
+Un diccionario es una colección de pares clave-valor, donde se proporciona la clave (o nombre) para establecer o recuperar el valor correspondiente:
 
 [!code-vbhtml[Main](introducing-razor-syntax-vb/samples/sample54.vbhtml)]
 
-Para crear un diccionario, utilice el `New` palabra clave para indicar que está creando un nuevo `Dictionary` objeto. Un diccionario puede asignar a una variable mediante el `Dim` palabra clave. Indicar los tipos de datos de los elementos del diccionario utilizando paréntesis ( `( )` ). Al final de la declaración, debe agregar otro par de paréntesis, ya que esto es realmente un método que crea un nuevo diccionario.
+Para crear un diccionario, use la palabra clave `New` para indicar que está creando un nuevo objeto `Dictionary`. Puede asignar un diccionario a una variable mediante la palabra clave `Dim`. Se indican los tipos de datos de los elementos del diccionario mediante paréntesis (`( )`). Al final de la declaración, debe agregar otro par de paréntesis, porque en realidad es un método que crea un nuevo diccionario.
 
-Para agregar elementos al diccionario, puede llamar a la `Add` método de la variable del diccionario (`myScores` en este caso) y, a continuación, especifique una clave y un valor. Como alternativa, puede usar paréntesis para indicar la clave y realizar una asignación sencilla, como se muestra en el ejemplo siguiente:
+Para agregar elementos al diccionario, puede llamar al método `Add` de la variable Dictionary (`myScores` en este caso) y, a continuación, especificar una clave y un valor. Como alternativa, puede usar paréntesis para indicar la clave y realizar una asignación simple, como en el ejemplo siguiente:
 
 [!code-vbhtml[Main](introducing-razor-syntax-vb/samples/sample55.vbhtml)]
 
@@ -688,47 +688,47 @@ Para obtener un valor del diccionario, especifique la clave entre paréntesis:
 
 ## <a name="calling-methods-with-parameters"></a>Llamar a métodos con parámetros
 
-Como vimos anteriormente en este artículo, los objetos que programación con tienen métodos. Por ejemplo, un `Database` objeto podría tener un `Database.Connect` método. Muchos métodos también tienen uno o más parámetros. Un *parámetro* es un valor que se pasa a un método para habilitar el método completar su tarea. Por ejemplo, examine una declaración para el `Request.MapPath` método, que toma tres parámetros:
+Como vimos anteriormente en este artículo, los objetos con los que programa tienen métodos. Por ejemplo, un objeto de `Database` podría tener un método `Database.Connect`. Muchos métodos también tienen uno o más parámetros. Un *parámetro* es un valor que se pasa a un método para que el método pueda completar su tarea. Por ejemplo, examine una declaración para el método `Request.MapPath`, que toma tres parámetros:
 
 [!code-vb[Main](introducing-razor-syntax-vb/samples/sample57.vb)]
 
-Este método devuelve la ruta de acceso física en el servidor que corresponde a una ruta de acceso virtual especificada. Los tres parámetros del método son `virtualPath`, `baseVirtualDir`, y `allowCrossAppMapping`. (Tenga en cuenta que en la declaración, se enumeran los parámetros con los tipos de datos de los datos que aceptan). Cuando se llama a este método, debe proporcionar valores para los tres parámetros.
+Este método devuelve la ruta de acceso física en el servidor que corresponde a una ruta de acceso virtual especificada. Los tres parámetros del método son `virtualPath`, `baseVirtualDir`y `allowCrossAppMapping`. (Observe que en la declaración, los parámetros se enumeran con los tipos de datos de los datos que aceptarán). Cuando llame a este método, debe proporcionar valores para los tres parámetros.
 
-Cuando se está utilizando Visual Basic con la sintaxis de Razor, tiene dos opciones para pasar parámetros a un método: *parámetros posicionales* o *parámetros con nombre*. Para llamar a un método con parámetros posicionales, pasar los parámetros en un orden estricto que se especifica en la declaración del método. (Normalmente, sabría este orden, lea la documentación del método.) Debe seguir el orden y no se puede omitir cualquiera de los parámetros &#8212; si es necesario, pasa una cadena vacía (`""`) o null para un parámetro de posición que no tienen un valor para.
+Cuando se usa Visual Basic con el sintaxis Razor, tiene dos opciones para pasar parámetros a un método: *parámetros posicionales* o *parámetros con nombre*. Para llamar a un método mediante parámetros posicionales, se pasan los parámetros en un orden estricto que se especifica en la declaración del método. (Normalmente se conoce este orden leyendo la documentación del método). Debe seguir el orden y no puede omitir ninguno de los parámetros &#8212; si es necesario, pasa una cadena vacía (`""`) o null para un parámetro posicional para el que no tiene un valor.
 
-En el siguiente ejemplo se supone que tiene una carpeta denominada *scripts* en su sitio Web. El código llama a la `Request.MapPath` y pasa valores para los tres parámetros en el orden correcto. A continuación, muestra la ruta de acceso asignado resultante.
+En el ejemplo siguiente se da por supuesto que tiene una carpeta denominada *scripts* en el sitio Web. El código llama al método `Request.MapPath` y pasa los valores de los tres parámetros en el orden correcto. A continuación, se muestra la ruta de acceso asignada resultante.
 
 [!code-vbhtml[Main](introducing-razor-syntax-vb/samples/sample58.vbhtml)]
 
-Cuando hay demasiados parámetros para un método, puede mantener el código más limpio y sea más legible mediante el uso de parámetros con nombre. Para llamar a un método con parámetros con nombre, especifique el nombre del parámetro seguido `:=` y, a continuación, proporcione el valor. Una ventaja de parámetros con nombre es que puede agregarlos en cualquier orden que desee. (Una desventaja es que la llamada al método no es lo más compacto).
+Cuando hay muchos parámetros para un método, puede mantener el código más limpio y más legible mediante el uso de parámetros con nombre. Para llamar a un método con parámetros con nombre, especifique el nombre del parámetro seguido de `:=` y, a continuación, proporcione el valor. Una ventaja de los parámetros con nombre es que puede agregarlos en cualquier orden que desee. (Una desventaja es que la llamada al método no es tan compacta).
 
-El ejemplo siguiente llama al mismo método que el anterior, pero usa parámetros para proporcionar los valores con nombre:
+En el ejemplo siguiente se llama al mismo método que el anterior, pero se usan parámetros con nombre para proporcionar los valores:
 
 [!code-vbhtml[Main](introducing-razor-syntax-vb/samples/sample59.vbhtml)]
 
-Como puede ver, los parámetros se pasan en un orden diferente. Sin embargo, si ejecuta el ejemplo anterior y este ejemplo, devolverá el mismo valor.
+Como puede ver, los parámetros se pasan en un orden diferente. Sin embargo, si ejecuta el ejemplo anterior y este ejemplo, devolverán el mismo valor.
 
 ## <a name="handling-errors"></a>Control de errores
 
-### <a name="try-catch-statements"></a>Instrucciones Try-Catch
+### <a name="try-catch-statements"></a>Instrucciones try-catch
 
-A menudo tendrá las instrucciones en el código que podría producir un error por razones de fuera de su control. Por ejemplo:
+A menudo tendrá instrucciones en el código que podrían producir errores por motivos ajenos al control. Por ejemplo:
 
-- Si el código intenta abrir, crear, leer o escribir un archivo, puede producirse todo tipo de errores. No es posible que existe el archivo que desea, podría estar bloqueado, el código podría no tener los permisos y así sucesivamente.
-- De forma similar, si el código intenta actualizar registros en una base de datos, puede haber problemas con los permisos, es posible que se pierda la conexión a la base de datos, los datos que se va a guardar podrían ser no válido y así sucesivamente.
+- Si el código intenta abrir, crear, leer o escribir un archivo, puede producirse todo tipo de errores. Es posible que el archivo que desea no exista, que esté bloqueado, que el código no tenga permisos, etc.
+- Del mismo modo, si el código intenta actualizar registros en una base de datos, puede haber problemas con los permisos, que la conexión a la base de datos se haya quitado, que los datos que se van a guardar no sean válidos, etc.
 
-En términos de programación, estas situaciones se conocen como *excepciones*. Si el código encuentra una excepción, genera (produce) un mensaje de error: es decir, en el mejor, molesta a los usuarios.
+En términos de programación, estas situaciones se denominan *excepciones*. Si el código encuentra una excepción, genera (lanza) un mensaje de error que, en el mejor de los usuarios, es molesto.
 
-![Razor-Img14](introducing-razor-syntax-vb/_static/image14.jpg)
+![Razor: Img14](introducing-razor-syntax-vb/_static/image14.jpg)
 
-En situaciones donde el código puede encontrar excepciones y con el fin de evitar los mensajes de error de este tipo, puede usar `Try/Catch` instrucciones. En el `Try` (instrucción), ejecute el código que está protegiendo. En uno o varios `Catch` instrucciones, puede buscar de determinados errores (tipos específicos de excepciones) que pudieran haberse producido. Puede incluir tantos `Catch` las instrucciones que necesitan buscar errores que están anticipación.
+En situaciones en las que el código pueda encontrar excepciones y para evitar los mensajes de error de este tipo, puede usar `Try/Catch` instrucciones. En la instrucción `Try`, ejecute el código que está comprobando. En una o varias instrucciones de `Catch`, puede buscar errores específicos (tipos específicos de excepciones) que puedan haberse producido. Puede incluir tantas instrucciones `Catch` como necesite para buscar los errores que espera.
 
 > [!NOTE]
-> Se recomienda evitar el uso de la `Response.Redirect` método `Try/Catch` instrucciones, ya que puede provocar una excepción en la página.
+> Se recomienda evitar el uso del método `Response.Redirect` en `Try/Catch` instrucciones, ya que puede producir una excepción en la página.
 
-El ejemplo siguiente muestra una página que se crea un archivo de texto en la primera solicitud y, a continuación, muestra un botón que permite al usuario abrir el archivo. En el ejemplo se usa deliberadamente un nombre de archivo incorrecto por lo que provocará una excepción. El código incluye `Catch` instrucciones para dos posibles excepciones: `FileNotFoundException`, que se produce si el nombre de archivo es incorrecto, y `DirectoryNotFoundException`, lo que sucederá si ASP.NET aún no se encuentra la carpeta. (Se puede quitar el comentario una instrucción en el ejemplo con el fin de ver cómo se ejecuta cuando todo funciona correctamente.)
+En el ejemplo siguiente se muestra una página que crea un archivo de texto en la primera solicitud y, a continuación, muestra un botón que permite al usuario abrir el archivo. En el ejemplo se usa deliberadamente un nombre de archivo incorrecto para que se produzca una excepción. El código incluye `Catch` instrucciones para dos posibles excepciones: `FileNotFoundException`, que se produce si el nombre de archivo es incorrecto y `DirectoryNotFoundException`, que se produce si ASP.NET no puede incluso encontrar la carpeta. (Puede quitar el comentario de una instrucción en el ejemplo para ver cómo se ejecuta cuando todo funciona correctamente).
 
-Si el código no controla la excepción, verá una página de error similar a la captura de pantalla anterior. Sin embargo, la `Try/Catch` sección le ayuda a impedir que el usuario se vean estos tipos de errores.
+Si el código no controla la excepción, verá una página de error como la captura de pantalla anterior. Sin embargo, la sección `Try/Catch` ayuda a evitar que el usuario vea estos tipos de errores.
 
 [!code-vbhtml[Main](introducing-razor-syntax-vb/samples/sample60.vbhtml)]
 

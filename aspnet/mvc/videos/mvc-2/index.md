@@ -9,11 +9,11 @@ ms.assetid: 68968b8a-4f60-449e-8639-978fc40aed70
 msc.legacyurl: /mvc/videos/mvc-2
 msc.type: chapter
 ms.openlocfilehash: d2ddf52b01b8a1ae0e6c3b8db104d16775d144e6
-ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/06/2019
-ms.locfileid: "65120175"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78431905"
 ---
 # <a name="aspnet-mvc-2"></a>ASP.NET MVC 2
 
@@ -35,10 +35,10 @@ ms.locfileid: "65120175"
     - [Mostrar una tabla de los datos de la base de datos](how-do-i/displaying-a-table-of-database-data.md)
     - [Vídeo técnico de 80 minutos sobre ASP.NET MVC para desarrolladores y compilación de NerdDinner](how-do-i/what-is-aspnet-mvc-80-minute-technical-video-for-developers-building-nerddinner.md)
     - [Vídeo de introducción de 3 minutos de ASP.NET MVC para la toma de decisiones](how-do-i/why-aspnet-mvc-3-minute-overview-video-for-decision-makers.md)
-    - [ASP.NET MVC: 10 minutos vídeo técnico para desarrolladores](how-do-i/aspnet-mvc-how-10-minute-technical-video-for-developers.md)
+    - [ASP.NET MVC: Vídeo técnico de 10 minutos para desarrolladores](how-do-i/aspnet-mvc-how-10-minute-technical-video-for-developers.md)
     - [Devolver datos con formato JSON para una llamada de AJAX en una aplicación web de ASP.NET MVC](how-do-i/how-do-i-return-json-formatted-data-for-an-ajax-call-in-an-aspnet-mvc-web-application.md)
     - [Trabajar con datos en las vistas parciales de ASP.NET MVC](how-do-i/how-do-i-work-with-data-in-aspnet-mvc-partial-views.md)
-    - [Implementar modelos de vista para administrar los datos para las vistas de MVC de ASP.NET](how-do-i/how-do-i-implement-view-models-to-manage-data-for-aspnet-mvc-views.md)
+    - [Implementar modelos de vista para administrar datos para las vistas de MVC de ASP.NET](how-do-i/how-do-i-implement-view-models-to-manage-data-for-aspnet-mvc-views.md)
     - [Crear un asistente de HTML personalizada para una aplicación MVC](how-do-i/how-do-i-create-a-custom-html-helper-for-an-mvc-application.md)
     - [Trabajar con los enlazadores de modelos en una aplicación MVC](how-do-i/how-do-i-work-with-model-binders-in-an-mvc-application.md)
     - [Usar atributos HttpVerbs en una aplicación MVC](how-do-i/how-do-i-use-httpverbs-attributes-in-an-mvc-application.md)
@@ -58,6 +58,6 @@ ms.locfileid: "65120175"
     - [ASP.NET MVC For the Rest of Us: Parte 4](aspnet-mvc-for-the-rest-of-us/aspnet-mvc-for-the-rest-of-us-part-4.md)
 - [Tienda de música](music-store/index.md)
 
-    - [Store música de MVC, parte 1: Introducción, herramientas y estructura del proyecto](music-store/mvc-music-store-part-1-intro-tools-and-project-structure.md)
-    - [Store música de MVC, parte 2: Controladores](music-store/mvc-music-store-part-2-controllers.md)
-    - [Store música de MVC, parte 3: Las vistas y ViewModels](music-store/mvc-music-store-part-3-views-and-viewmodels.md)
+    - [Tienda de música de MVC, parte 1: Introducción, herramientas y estructura del proyecto](music-store/mvc-music-store-part-1-intro-tools-and-project-structure.md)
+    - [Tienda de música de MVC, parte 2: Controladores](music-store/mvc-music-store-part-2-controllers.md)
+    - [Tienda de música de MVC, parte 3: Vistas y ViewModels](music-store/mvc-music-store-part-3-views-and-viewmodels.md)

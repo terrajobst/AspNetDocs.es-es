@@ -9,11 +9,11 @@ ms.assetid: 2da25f6a-757e-4e7b-a812-1575288d8f7a
 msc.legacyurl: /web-forms/overview/data-access/advanced-data-access-scenarios/using-existing-stored-procedures-for-the-typed-dataset-s-tableadapters-vb
 msc.type: authoredcontent
 ms.openlocfilehash: e35c3d6a98516a07f6119e6cb9dbeb99bc28fe33
-ms.sourcegitcommit: 22fbd8863672c4ad6693b8388ad5c8e753fb41a2
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/28/2019
-ms.locfileid: "74613548"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78427129"
 ---
 # <a name="using-existing-stored-procedures-for-the-typed-datasets-tableadapters-vb"></a>Usar procedimientos almacenados existentes para los TableAdapters del conjunto de datos con tipo (VB)
 

@@ -9,11 +9,11 @@ ms.assetid: 91ee29ee-0689-40ee-914a-e7dd733b6622
 msc.legacyurl: /web-api/overview/older-versions/using-web-api-1-with-entity-framework-5/using-web-api-with-entity-framework-part-6
 msc.type: authoredcontent
 ms.openlocfilehash: e0bf88e3477acbde910cde956042449bc86ce79a
-ms.sourcegitcommit: 22fbd8863672c4ad6693b8388ad5c8e753fb41a2
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/28/2019
-ms.locfileid: "74600025"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78421291"
 ---
 # <a name="part-6-creating-product-and-order-controllers"></a>Parte 6: creación de controladores de productos y pedidos
 

@@ -9,11 +9,11 @@ ms.assetid: 0b8c56b5-fdf3-42dd-a866-98fbe0ab78a0
 msc.legacyurl: /mvc/overview/older-versions/getting-started-with-aspnet-mvc3/cs/adding-a-controller
 msc.type: authoredcontent
 ms.openlocfilehash: 959116ff773f4ef466cda6b172e8321590b50e5b
-ms.sourcegitcommit: 7709c0a091b8d55b7b33bad8849f7b66b23c3d72
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/19/2020
-ms.locfileid: "77457846"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78434965"
 ---
 # <a name="adding-a-controller-c"></a>Agregar un controlador (C#)
 

@@ -1,262 +1,262 @@
 ---
 uid: web-forms/overview/older-versions-getting-started/continuing-with-ef/maximizing-performance-with-the-entity-framework-in-an-asp-net-web-application
-title: Maximizar el rendimiento con Entity Framework 4.0 en una aplicación de ASP.NET 4 Web | Microsoft Docs
+title: Maximizar el rendimiento con el Entity Framework 4,0 en una aplicación Web de ASP.NET 4 | Microsoft Docs
 author: tdykstra
-description: Esta serie de tutoriales se basa en la aplicación web de Contoso University establecen que se crea mediante la introducción a la serie de tutoriales de Entity Framework 4.0. PUEDO...
+description: Esta serie de tutoriales se basa en la aplicación web contoso University que crea el Introducción con la serie de tutoriales Entity Framework 4,0. I...
 ms.author: riande
 ms.date: 01/26/2011
 ms.assetid: 4e43455e-dfa1-42db-83cb-c987703f04b5
 msc.legacyurl: /web-forms/overview/older-versions-getting-started/continuing-with-ef/maximizing-performance-with-the-entity-framework-in-an-asp-net-web-application
 msc.type: authoredcontent
 ms.openlocfilehash: 5630200a1ad1d30f6d89b38e15179f15b699fa9f
-ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/06/2019
-ms.locfileid: "65108582"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78439267"
 ---
-# <a name="maximizing-performance-with-the-entity-framework-40-in-an-aspnet-4-web-application"></a>Maximizar el rendimiento con Entity Framework 4.0 en una aplicación Web 4 de ASP.NET
+# <a name="maximizing-performance-with-the-entity-framework-40-in-an-aspnet-4-web-application"></a>Maximizar el rendimiento con el Entity Framework 4,0 en una aplicación Web de ASP.NET 4
 
 por [Tom Dykstra](https://github.com/tdykstra)
 
-> Esta serie de tutoriales se basa en la aplicación web de Contoso University creado por el [Introducción a Entity Framework 4.0](https://asp.net/entity-framework/tutorials#Getting%20Started) serie de tutoriales. Si no has completado los tutoriales anteriores, como un punto de partida para este tutorial puede [descargar la aplicación](https://code.msdn.microsoft.com/ASPNET-Web-Forms-97f8ee9a) que puede haberla creado. También puede [descargar la aplicación](https://code.msdn.microsoft.com/ASPNET-Web-Forms-6c7197aa) creado por la serie de tutoriales completa. Si tiene preguntas acerca de los tutoriales, puede publicarlos en el [foro de ASP.NET Entity Framework](https://forums.asp.net/1227.aspx).
+> Esta serie de tutoriales se basa en la aplicación web contoso University que crea el [Introducción con la](https://asp.net/entity-framework/tutorials#Getting%20Started) serie de tutoriales Entity Framework 4,0. Si no completó los tutoriales anteriores, como punto de partida para este tutorial, puede [descargar la aplicación](https://code.msdn.microsoft.com/ASPNET-Web-Forms-97f8ee9a) que habría creado. También puede [descargar la aplicación](https://code.msdn.microsoft.com/ASPNET-Web-Forms-6c7197aa) que se crea en la serie completa de tutoriales. Si tiene alguna pregunta sobre los tutoriales, puede publicarlos en el [Foro de Entity Framework de ASP.net](https://forums.asp.net/1227.aspx).
 
-En el tutorial anterior, vimos cómo controlar los conflictos de simultaneidad. Este tutorial muestra opciones para mejorar el rendimiento de una aplicación web ASP.NET que usa Entity Framework. Obtendrá información sobre varios métodos para maximizar el rendimiento o para diagnosticar problemas de rendimiento.
+En el tutorial anterior, vio cómo controlar los conflictos de simultaneidad. En este tutorial se muestran las opciones para mejorar el rendimiento de una aplicación Web ASP.NET que usa el Entity Framework. Conocerá varios métodos para maximizar el rendimiento o para diagnosticar problemas de rendimiento.
 
-Información que se presenta en las secciones siguientes es probable que sea útil en una amplia variedad de escenarios:
+La información que se presenta en las secciones siguientes es probable que sea útil en una amplia variedad de escenarios:
 
-- Cargar eficazmente datos relacionados.
+- Cargar datos relacionados de forma eficaz.
 - Administrar el estado de vista.
 
-Información presentada en las secciones siguientes puede ser útil si tiene consultas individuales que presente problemas de rendimiento:
+La información que se presenta en las secciones siguientes puede ser útil si tiene consultas individuales que presentan problemas de rendimiento:
 
-- Use el `NoTracking` merge (opción).
-- Compilación previa de las consultas LINQ.
-- Examine los comandos de consulta que se envían a la base de datos.
+- Use la opción de fusión mediante combinación de `NoTracking`.
+- Compile previamente las consultas LINQ.
+- Examine los comandos de consulta enviados a la base de datos.
 
-Información que se presenta en la sección siguiente es potencialmente útil para las aplicaciones que tienen modelos de datos extremadamente grandes:
+La información que se presenta en la sección siguiente es muy útil para las aplicaciones que tienen modelos de datos extremadamente grandes:
 
 - Generar previamente las vistas.
 
 > [!NOTE]
-> Rendimiento de la aplicación Web se ve afectado por diversos factores, incluidos aspectos como el tamaño de los datos de solicitud y respuesta, la velocidad de las consultas de base de datos, cuántas solicitudes que puede poner en cola el servidor y la rapidez con que puede dar servicio ellos e incluso la eficacia de cualquiera bibliotecas de script de cliente puede que esté usando. Si el rendimiento es fundamental en su aplicación, o si las pruebas o la experiencia muestra que el rendimiento de la aplicación no es satisfactorio, debe seguir un protocolo normal para ajustar el rendimiento. Medición para determinar dónde se producen cuellos de botella de rendimiento y, a continuación, solucione las áreas que tendrán el mayor impacto en el rendimiento general de la aplicación.
+> El rendimiento de las aplicaciones web se ve afectado por muchos factores, como el tamaño de los datos de solicitud y respuesta, la velocidad de las consultas de base de datos, el número de solicitudes que el servidor puede poner en cola y la rapidez con la que pueden atenderla, e incluso la eficacia de cualquier bibliotecas de scripts de cliente que puede usar. Si el rendimiento es crítico en la aplicación, o si las pruebas o la experiencia muestran que el rendimiento de la aplicación no es satisfactorio, debe seguir el protocolo normal para el ajuste del rendimiento. Mida para determinar dónde se producen los cuellos de botella de rendimiento y, a continuación, solucione las áreas que tendrán el mayor impacto en el rendimiento general de la aplicación.
 > 
-> En este tema se centra principalmente en formas en que potencialmente se puede mejorar el rendimiento específicamente de Entity Framework en ASP.NET. Las sugerencias aquí son útiles si determina que el acceso a datos es uno de los cuellos de botella de rendimiento en la aplicación. Excepto como se indicó, los métodos que se explican aquí no deben interpretarse como &quot;procedimientos recomendados&quot; en general, muchos de ellos son adecuados solo en situaciones excepcionales o a tipos muy específicos de dirección de los cuellos de botella de rendimiento.
+> Este tema se centra principalmente en las maneras en las que puede mejorar el rendimiento específicamente del Entity Framework en ASP.NET. Estas sugerencias son útiles si determina que el acceso a datos es uno de los cuellos de botella de rendimiento de la aplicación. A menos que se indique lo contrario, los métodos que se explican aquí no se deben tener en cuenta &quot;prácticas recomendadas&quot; en general; muchos de ellos solo son adecuados en situaciones excepcionales o para abordar tipos muy específicos de cuellos de botella de rendimiento.
 
-Para iniciar el tutorial, inicie Visual Studio y abra la aplicación web de Contoso University establecen que estaba trabajando con en el tutorial anterior.
+Para iniciar el tutorial, inicie Visual Studio y abra la aplicación web contoso University con la que estaba trabajando en el tutorial anterior.
 
-## <a name="efficiently-loading-related-data"></a>Carga de forma eficaz los datos relacionados
+## <a name="efficiently-loading-related-data"></a>Cargar datos relacionados de forma eficaz
 
-Hay varias maneras de que Entity Framework puede cargar datos relacionados en las propiedades de navegación de una entidad:
+Los Entity Framework pueden cargar datos relacionados en las propiedades de navegación de una entidad de varias maneras:
 
-- *Carga diferida*. Cuando la entidad se lee por primera vez, no se recuperan datos relacionados. Pero la primera vez que intente obtener acceso a una propiedad de navegación, se recuperan automáticamente los datos necesarios para esa propiedad de navegación. Esto da como resultado varias consultas que se envían a la base de datos: uno para la propia entidad y otro cada vez que los datos de la entidad relacionados que se debe recuperar. 
+- *Carga diferida*. Cuando la entidad se lee por primera vez, no se recuperan datos relacionados. Pero la primera vez que intente obtener acceso a una propiedad de navegación, se recuperan automáticamente los datos necesarios para esa propiedad de navegación. Esto da como resultado que se envíen varias consultas a la base de datos, una para la propia entidad y otra cada vez que se deben recuperar los datos relacionados de la entidad. 
 
     [![Image05](maximizing-performance-with-the-entity-framework-in-an-asp-net-web-application/_static/image2.png)](maximizing-performance-with-the-entity-framework-in-an-asp-net-web-application/_static/image1.png)
 
-*Carga diligente*. Cuando se lee la entidad, junto a ella se recuperan datos relacionados. Esto normalmente da como resultado una única consulta de combinación en la que se recuperan todos los datos que se necesitan. Carga diligente se especifica mediante el uso de la `Include` método, como ya hemos visto en estos tutoriales.
+*Carga diligente*. Cuando se lee la entidad, junto a ella se recuperan datos relacionados. Esto normalmente da como resultado una única consulta de combinación en la que se recuperan todos los datos que se necesitan. La carga diligente se especifica mediante el método `Include`, como ya se ha visto en estos tutoriales.
 
 [![Image07](maximizing-performance-with-the-entity-framework-in-an-asp-net-web-application/_static/image4.png)](maximizing-performance-with-the-entity-framework-in-an-asp-net-web-application/_static/image3.png)
 
-- *Carga explícita*. Esto es similar a la carga diferida, salvo que recupera explícitamente los datos relacionados en el código. no sucede automáticamente cuando tiene acceso a una propiedad de navegación. Cargar datos relacionados manualmente mediante el `Load` método de la propiedad de navegación de colecciones, o bien usar la `Load` método de la propiedad de referencia para las propiedades que contienen un solo objeto. (Por ejemplo, se llama a la `PersonReference.Load` método para cargar el `Person` propiedad de navegación de un `Department` entity.)
+- *Carga explícita*. Esto es similar a la carga diferida, salvo que recupera explícitamente los datos relacionados en el código; no se produce automáticamente cuando se obtiene acceso a una propiedad de navegación. Los datos relacionados se cargan manualmente mediante el método `Load` de la propiedad de navegación para las colecciones, o se usa el método `Load` de la propiedad Reference para las propiedades que contienen un solo objeto. (Por ejemplo, se llama al método `PersonReference.Load` para cargar la propiedad de navegación `Person` de una entidad `Department`).
 
     [![Image06](maximizing-performance-with-the-entity-framework-in-an-asp-net-web-application/_static/image6.png)](maximizing-performance-with-the-entity-framework-in-an-asp-net-web-application/_static/image5.png)
 
-Porque no recuperan inmediatamente los valores de propiedad, la carga diferida y la carga explícita son ambos conocen también como *la carga diferida*.
+Dado que no recuperan los valores de propiedad de inmediato, la carga diferida y la carga explícita también se conocen como *carga diferida*.
 
-La carga diferida es el comportamiento predeterminado para un contexto del objeto que se ha generado por el diseñador. Si abre el *SchoolModel.Designer.cs* archivo que define la clase de contexto de objeto, encontrará tres métodos de constructor y cada uno de ellos incluye la siguiente instrucción:
+La carga diferida es el comportamiento predeterminado de un contexto del objeto generado por el diseñador. Si abre el archivo *SchoolModel.Designer.CS* que define la clase de contexto del objeto, encontrará tres métodos de constructor, y cada uno de ellos incluirá la siguiente instrucción:
 
 [!code-csharp[Main](maximizing-performance-with-the-entity-framework-in-an-asp-net-web-application/samples/sample1.cs)]
 
-En general, si sabe que necesita datos relacionados para cada entidad de la carga diligente, recuperada ofrece el mejor rendimiento, porque una consulta única enviada a la base de datos es normalmente más eficaz que consultas independientes para cada entidad recuperada. Por otro lado, si necesita tener acceso a las propiedades de navegación de la entidad sólo con poca frecuencia o solo para un pequeño conjunto de entidades, la carga diferida o la carga explícita puede ser más eficaz, ya que la carga diligente recuperaría más datos de los que necesita.
+En general, si sabe que necesita datos relacionados para cada entidad recuperada, la carga diligente ofrece el mejor rendimiento, ya que una sola consulta que se envía a la base de datos suele ser más eficaz que las consultas independientes para cada entidad recuperada. Por otro lado, si necesita tener acceso a las propiedades de navegación de una entidad solo con poca frecuencia o solo para un pequeño conjunto de entidades, la carga diferida o la carga explícita pueden ser más eficaces, porque la carga diligente recuperaría más datos de los que necesita.
 
-En una aplicación web, la carga diferida puede ser relativamente poco valor de todos modos, dado que las acciones del usuario que afectan a la necesidad de datos relacionadas tienen lugar en el explorador, que no tiene conexión con el contexto del objeto que representa la página. Por otro lado, al enlazar un control, normalmente saber qué datos necesita y, por lo que normalmente es mejor para elegir la carga diligente o según la carga aplazada lo que es adecuado para cada escenario.
+En una aplicación Web, la carga diferida puede tener un valor relativamente bajo, ya que las acciones del usuario que afectan a la necesidad de datos relacionados tienen lugar en el explorador, que no tiene conexión con el contexto del objeto que representó la página. Por otro lado, al enlazar un control de datos, normalmente sabe qué datos necesita y, por lo general, es mejor elegir la carga diligente o la carga aplazada en función de lo que sea adecuado en cada escenario.
 
-Además, un control enlazado a datos podría usar un objeto de entidad después de desecha el contexto del objeto. En ese caso, una carga diferida una propiedad de navegación se produciría un error. Está claro que recibe el mensaje de error: &quot;`The ObjectContext instance has been disposed and can no longer be used for operations that require a connection.`&quot;
+Además, un control DataBound podría usar un objeto entidad después de desechar el contexto del objeto. En ese caso, se producirá un error al intentar cargar de una propiedad de navegación. El mensaje de error que recibe es claro: &quot;`The ObjectContext instance has been disposed and can no longer be used for operations that require a connection.`&quot;
 
-El `EntityDataSource` control deshabilita la carga diferida de manera predeterminada. Para el `ObjectDataSource` control que está usando para el tutorial actual (o si tener acceso al contexto de objeto desde el código de página), hay varias maneras de hacer que diferida carga deshabilitada de forma predeterminada. Se puede deshabilitar al crear instancias de un contexto del objeto. Por ejemplo, puede agregar la línea siguiente al método constructor de la `SchoolRepository` clase:
+El control `EntityDataSource` deshabilita la carga diferida de forma predeterminada. En el caso del control de `ObjectDataSource` que está usando para el tutorial actual (o si tiene acceso al contexto del objeto desde el código de la página), hay varias maneras de hacer que la carga diferida esté deshabilitada de forma predeterminada. Puede deshabilitarlo al crear una instancia de un contexto del objeto. Por ejemplo, puede Agregar la siguiente línea al método constructor de la clase `SchoolRepository`:
 
 [!code-csharp[Main](maximizing-performance-with-the-entity-framework-in-an-asp-net-web-application/samples/sample2.cs)]
 
-Para la aplicación Contoso University, hará que el contexto del objeto deshabilitar automáticamente para que esta propiedad no tiene que establecerse cada vez que se crea una instancia de un contexto de la carga diferida.
+Para la aplicación contoso University, hará que el contexto del objeto deshabilite automáticamente la carga diferida para que no sea necesario establecer esta propiedad cada vez que se cree una instancia de un contexto.
 
-Abra el *SchoolModel.edmx* modelo de datos, haga clic en la superficie de diseño y, a continuación, en el panel Propiedades, establezca la **carga diferida habilitada** propiedad `False`. Guarde y cierre el modelo de datos.
+Abra el modelo de datos *SchoolModel. edmx* , haga clic en la superficie de diseño y, a continuación, en el panel Propiedades, establezca la propiedad **carga diferida habilitada** en `False`. Guarde y cierre el modelo de datos.
 
 [![Image04](maximizing-performance-with-the-entity-framework-in-an-asp-net-web-application/_static/image8.png)](maximizing-performance-with-the-entity-framework-in-an-asp-net-web-application/_static/image7.png)
 
 ## <a name="managing-view-state"></a>Administrar el estado de vista
 
-Con el fin de proporcionar funcionalidad de actualización, una página web ASP.NET debe almacenar los valores de propiedad originales de una entidad cuando se procesa una página. Durante el procesamiento del control de devolución de datos puede volver a crear el estado original de la entidad y llamar a la entidad `Attach` método antes de aplicar los cambios y llamar a la `SaveChanges` método. De forma predeterminada, los controles de datos de formularios Web Forms ASP.NET usan el estado de vista para almacenar los valores originales. Sin embargo, el estado de vista puede afectar al rendimiento, porque está almacenada en los campos ocultos que pueden aumentar considerablemente el tamaño de la página que se envía a y desde el explorador.
+Para proporcionar la funcionalidad de actualización, una página web de ASP.NET debe almacenar los valores de propiedad originales de una entidad cuando se representa una página. Durante el procesamiento de los postback, el control puede volver a crear el estado original de la entidad y llamar al método `Attach` de la entidad antes de aplicar los cambios y llamar al método `SaveChanges`. De forma predeterminada, los controles de datos de formularios Web Forms de ASP.NET usan el estado de vista para almacenar los valores originales. Sin embargo, el estado de vista puede afectar al rendimiento, porque se almacena en campos ocultos que pueden aumentar considerablemente el tamaño de la página que se envía a y desde el explorador.
 
-Técnicas para administrar el estado de vista ni otras alternativas, como el estado de sesión, no son exclusivas de Entity Framework, por lo que este tutorial no entrar en este tema con todo detalle. Para obtener más información, consulte los vínculos al final del tutorial.
+Las técnicas para administrar el estado de vista, o alternativas como el estado de sesión, no son únicas en el Entity Framework, por lo que este tutorial no entra en este tema en detalle. Para obtener más información, consulte los vínculos al final del tutorial.
 
-Sin embargo, la versión 4 de ASP.NET proporciona una nueva forma de trabajar con el estado de vista que deben tener en cuenta todos los desarrolladores de aplicaciones de formularios Web Forms de ASP.NET: el `ViewStateMode` propiedad. Esta nueva propiedad se puede establecer en el nivel de página o control, y le permite deshabilitar el estado de vista predeterminada para una página y habilitarlo solo para los controles que lo necesiten.
+Sin embargo, la versión 4 de ASP.NET proporciona una nueva forma de trabajar con el estado de vista que todos los desarrolladores de ASP.NET de aplicaciones de formularios Web Forms deben tener en cuenta: la propiedad `ViewStateMode`. Esta nueva propiedad se puede establecer en el nivel de página o de control y le permite deshabilitar el estado de vista de forma predeterminada en una página y habilitarla solo para los controles que la necesiten.
 
-Para las aplicaciones donde el rendimiento es crítico, una buena práctica es siempre se deshabilita el estado de vista en el nivel de página y habilitarlo solo para los controles que lo requieran. No se puede reducir considerablemente el tamaño del estado de vista en las páginas de Contoso University por este método, pero para ver cómo funciona, deberá hacerlo el *Instructors.aspx* página. Que contiene muchos controles, incluido un `Label` control que tenga deshabilitado. Ninguno de los controles de esta página realmente debe tener habilitado el estado de vista. (El `DataKeyNames` propiedad de la `GridView` control especifica el estado que se debe mantener entre devoluciones de datos, pero estos valores se mantienen en estado de control, lo que no se ve afectado por la `ViewStateMode` propiedad.)
+En el caso de las aplicaciones en las que el rendimiento es crítico, se recomienda deshabilitar siempre el estado de vista en el nivel de página y habilitarlo solo para los controles que lo requieran. Este método no disminuirá sustancialmente el tamaño del estado de vista en las páginas de Contoso University, pero para ver cómo funciona, lo hará en la página *instructors. aspx* . Esa página contiene muchos controles, incluido un control `Label` que tiene deshabilitado el estado de vista. Ninguno de los controles de esta página realmente necesita tener habilitado el estado de vista. (La propiedad `DataKeyNames` del control `GridView` especifica el estado que se debe mantener entre los postbacks, pero estos valores se mantienen en el estado del control, lo que no se ve afectado por la propiedad `ViewStateMode`).
 
-El `Page` directiva y `Label` marcado del control actualmente es similar al siguiente:
+La Directiva de `Page` y el marcado de control de `Label` actualmente son similares al ejemplo siguiente:
 
 [!code-aspx[Main](maximizing-performance-with-the-entity-framework-in-an-asp-net-web-application/samples/sample3.aspx)]
 
-Realice los cambios siguientes:
+Se han realizado los siguientes cambios:
 
-- Agregar `ViewStateMode="Disabled"` a la `Page` directiva.
-- Quitar `ViewStateMode="Disabled"` desde el `Label` control.
+- Agregue `ViewStateMode="Disabled"` a la Directiva `Page`.
+- Quite `ViewStateMode="Disabled"` del control `Label`.
 
-El marcado ahora es similar al siguiente:
+El marcado ahora es similar al ejemplo siguiente:
 
 [!code-aspx[Main](maximizing-performance-with-the-entity-framework-in-an-asp-net-web-application/samples/sample4.aspx)]
 
-Ahora está deshabilitado para todos los controles. Si agrega un control que se debe usar el estado de vista más adelante, todo lo que necesita hacer es incluir el `ViewStateMode="Enabled"` atributo para ese control.
+El estado de vista ahora está deshabilitado para todos los controles. Si posteriormente agrega un control que necesita usar el estado de vista, lo único que debe hacer es incluir el `ViewStateMode="Enabled"` atributo para ese control.
 
-## <a name="using-the-notracking-merge-option"></a>Con la opción de combinación NoTracking
+## <a name="using-the-notracking-merge-option"></a>Usar la opción de combinación NoTracking
 
-Cuando un contexto del objeto recupera filas de la base de datos y crea objetos de entidad que representan a ellos, de forma predeterminada también realiza un seguimiento de esos objetos de entidad con su administrador de estado de objeto. Estos datos de seguimiento actúan como una memoria caché y se utilizan cuando se actualiza una entidad. Dado que una aplicación web normalmente tiene instancias de contexto de objetos de corta duración, las consultas a menudo devuelvan datos que no deben realizar un seguimiento, porque el contexto del objeto que hace que se eliminará antes de cualquiera de las entidades que lee se vuelven a utilizar o actualizan.
+Cuando un contexto de objeto recupera filas de base de datos y crea objetos de entidad que las representan, de forma predeterminada también realiza el seguimiento de los objetos de entidad mediante su administrador de estado de objetos. Estos datos de seguimiento actúan como una memoria caché y se usan al actualizar una entidad. Dado que una aplicación web tiene normalmente instancias de contexto de objeto de corta duración, las consultas a menudo devuelven datos de los que no es necesario realizar un seguimiento, ya que el contexto del objeto que los Lee se eliminará antes de que cualquiera de las entidades que lee se vuelva a usar o se actualice.
 
-En Entity Framework, puede especificar si el contexto del objeto realiza el seguimiento de los objetos entidad estableciendo un *merge (opción)*. Puede establecer la opción de combinación para consultas individuales o conjuntos de entidades. Si se establece para un conjunto de entidades, que significa que está configurando la opción de combinación predeterminada para todas las consultas que se crean para ese conjunto de entidades.
+En el Entity Framework, puede especificar si el contexto del objeto realiza un seguimiento de los objetos de entidad mediante la configuración de una *opción de combinación*. Puede establecer la opción de fusión mediante combinación para consultas individuales o para conjuntos de entidades. Si lo establece para un conjunto de entidades, significa que está estableciendo la opción de fusión mediante combinación predeterminada para todas las consultas que se crean para ese conjunto de entidades.
 
-Para la aplicación Contoso University, el seguimiento no es necesario para cualquiera de los conjuntos de entidades que tiene acceso desde el repositorio, por lo que puede establecer la opción de combinación `NoTracking` para esos conjuntos de entidades al crear instancias de contexto del objeto en la clase del repositorio. (Tenga en cuenta que en este tutorial, establecer la opción de combinación no tendrá un efecto notable en el rendimiento de la aplicación. El `NoTracking` opción es probable que sea una mejora del rendimiento observable solo en determinados escenarios de alto volumen de datos.)
+En el caso de la aplicación contoso University, no es necesario realizar el seguimiento de ninguno de los conjuntos de entidades a los que se tiene acceso desde el repositorio, por lo que puede establecer la opción de fusión mediante combinación en `NoTracking` para esos conjuntos de entidades cuando cree una instancia del contexto del objeto en la clase repository. (Tenga en cuenta que en este tutorial, el establecimiento de la opción de fusión mediante combinación no tendrá ningún efecto apreciable en el rendimiento de la aplicación. La opción `NoTracking` es probable que solo haga una mejora del rendimiento observable en ciertos escenarios de gran volumen de datos).
 
-En la carpeta de la capa DAL, abra el *SchoolRepository.cs* archivo y agregue un método de constructor que establece la opción de combinación para los conjuntos de entidades que se tiene acceso al repositorio:
+En la carpeta DAL, abra el archivo *SchoolRepository.CS* y agregue un método de constructor que establezca la opción de fusión mediante combinación para los conjuntos de entidades a los que el repositorio tiene acceso:
 
 [!code-csharp[Main](maximizing-performance-with-the-entity-framework-in-an-asp-net-web-application/samples/sample5.cs)]
 
-## <a name="pre-compiling-linq-queries"></a>Compilar previamente las consultas LINQ
+## <a name="pre-compiling-linq-queries"></a>Compilar previamente consultas LINQ
 
-La primera vez que Entity Framework se ejecuta una consulta de Entity SQL durante la vida de un determinado `ObjectContext` instancia, tarda algún tiempo para compilar la consulta. El resultado de la compilación se almacena en caché, lo que significa que las ejecuciones posteriores de la consulta son mucho más rápidas. Las consultas LINQ siguen un patrón similar, salvo que parte del trabajo necesario para compilar la consulta se realiza cada vez que se ejecuta la consulta. En otras palabras, para las consultas LINQ, de forma predeterminada todos los resultados de la compilación no se almacenan en caché.
+La primera vez que el Entity Framework ejecuta una consulta de Entity SQL dentro de la vida de una determinada instancia de `ObjectContext`, se tarda algún tiempo en compilar la consulta. El resultado de la compilación se almacena en caché, lo que significa que las ejecuciones posteriores de la consulta son mucho más rápidas. Las consultas LINQ siguen un patrón similar, salvo que parte del trabajo necesario para compilar la consulta se realiza cada vez que se ejecuta la consulta. En otras palabras, para las consultas LINQ, de forma predeterminada, no todos los resultados de la compilación se almacenan en caché.
 
-Si tiene una consulta LINQ que se espera que se ejecute varias veces en la vida de un contexto del objeto, puede escribir código que hace que todos los resultados de compilación en la memoria caché la primera vez que se ejecuta la consulta LINQ.
+Si tiene una consulta LINQ que espera ejecutar repetidamente en la vida de un contexto del objeto, puede escribir código que haga que todos los resultados de la compilación se almacenen en la memoria caché la primera vez que se ejecute la consulta LINQ.
 
-Como ilustración, deberá hacerlo para dos `Get` métodos en el `SchoolRepository` (clase), uno de los cuales no toma ningún parámetro (el `GetInstructorNames` método) y otro que requieren un parámetro (el `GetDepartmentsByAdministrator` método). Estos métodos como representan ahora realmente no es necesario al compilarse porque no son las consultas LINQ:
+Como ejemplo, lo hará para dos métodos `Get` en la clase `SchoolRepository`, uno de los cuales no toma ningún parámetro (el método `GetInstructorNames`) y otro que requiere un parámetro (el método `GetDepartmentsByAdministrator`). Ya no es necesario compilar estos métodos, ya que no es necesario compilarlos porque no son consultas LINQ:
 
 [!code-csharp[Main](maximizing-performance-with-the-entity-framework-in-an-asp-net-web-application/samples/sample6.cs)]
 
 [!code-csharp[Main](maximizing-performance-with-the-entity-framework-in-an-asp-net-web-application/samples/sample7.cs)]
 
-Sin embargo, por lo que puede probar las consultas compiladas, podrá continuar como si éstos se hubiese escritos como las siguientes consultas LINQ:
+Sin embargo, para que pueda probar las consultas compiladas, continuará como si se hubiesen escrito como las siguientes consultas LINQ:
 
 [!code-csharp[Main](maximizing-performance-with-the-entity-framework-in-an-asp-net-web-application/samples/sample8.cs)]
 
 [!code-csharp[Main](maximizing-performance-with-the-entity-framework-in-an-asp-net-web-application/samples/sample9.cs)]
 
-Puede cambiar el código de estos métodos a lo que se ha mostrado anteriormente y ejecute la aplicación para comprobar que funciona antes de continuar. Pero las siguientes instrucciones comenzar de inmediato en la creación de versiones compiladas previamente de ellos.
+Puede cambiar el código de estos métodos a lo que se muestra anteriormente y ejecutar la aplicación para comprobar que funciona antes de continuar. Sin embargo, las instrucciones siguientes pasan directamente a la creación de versiones compiladas previamente.
 
-Cree un archivo de clase en el *DAL* carpeta, asígnele el nombre *SchoolEntities.cs*y reemplace el código existente por el código siguiente:
+Cree un archivo de clase en la carpeta *Dal* , asígnele el nombre *SchoolEntities.CS*y reemplace el código existente por el código siguiente:
 
 [!code-csharp[Main](maximizing-performance-with-the-entity-framework-in-an-asp-net-web-application/samples/sample10.cs)]
 
-Este código crea una clase parcial que extiende la clase de contexto de objeto generado automáticamente. La clase parcial incluye dos consultas LINQ compiladas con la `Compile` método de la `CompiledQuery` clase. También crea los métodos que puede usar para llamar a las consultas. Guarde y cierre este archivo.
+Este código crea una clase parcial que extiende la clase de contexto del objeto generado automáticamente. La clase parcial incluye dos consultas LINQ compiladas mediante el método `Compile` de la clase `CompiledQuery`. También crea métodos que puede usar para llamar a las consultas. Guarde y cierre este archivo.
 
-A continuación, en *SchoolRepository.cs*, cambiar las existentes `GetInstructorNames` y `GetDepartmentsByAdministrator` métodos en el repositorio de clase para que llamen a las consultas compiladas:
+A continuación, en *SchoolRepository.CS*, cambie los métodos `GetInstructorNames` y `GetDepartmentsByAdministrator` existentes en la clase de repositorio para que llamen a las consultas compiladas:
 
 [!code-csharp[Main](maximizing-performance-with-the-entity-framework-in-an-asp-net-web-application/samples/sample11.cs)]
 
 [!code-csharp[Main](maximizing-performance-with-the-entity-framework-in-an-asp-net-web-application/samples/sample12.cs)]
 
-Ejecute el *Departments.aspx* página para comprobar que funciona igual que antes. El `GetInstructorNames` se llama al método con el fin de rellenar la lista desplegable de administrador y el `GetDepartmentsByAdministrator` se llama al método al hacer clic en **actualización** con el fin de comprobar que ningún instructor es un administrador de más de uno departamento.
+Ejecute la página *departments. aspx* para comprobar que funciona como antes. Se llama al método `GetInstructorNames` para rellenar la lista desplegable administrador y se llama al método `GetDepartmentsByAdministrator` al hacer clic en **Actualizar** para comprobar que ningún instructor sea un administrador de más de un departamento.
 
 [![Image03](maximizing-performance-with-the-entity-framework-in-an-asp-net-web-application/_static/image10.png)](maximizing-performance-with-the-entity-framework-in-an-asp-net-web-application/_static/image9.png)
 
-Dispone de las consultas precompiladas en la aplicación Contoso University solo para ver cómo hacerlo, no porque un modo contrastable podría mejorar el rendimiento. Compilar previamente las consultas LINQ agrega un nivel de complejidad en el código, por tanto, asegúrese de que hacerlo solo para las consultas que representan realmente los cuellos de botella en la aplicación.
+Ha compilado previamente las consultas en la aplicación contoso University solo para ver cómo hacerlo, no porque mejoraría el rendimiento. La precompilación de consultas LINQ agrega un nivel de complejidad al código, por lo que debe asegurarse de hacerlo solo para las consultas que realmente representan cuellos de botella de rendimiento en la aplicación.
 
-## <a name="examining-queries-sent-to-the-database"></a>Examen de las consultas enviadas a la base de datos
+## <a name="examining-queries-sent-to-the-database"></a>Examinar consultas enviadas a la base de datos
 
-Cuando se está investigando problemas de rendimiento, a veces resulta útil saber los comandos SQL exactos que Entity Framework está enviando a la base de datos. Si está trabajando con un `IQueryable` objeto, una manera de hacerlo es usar el `ToTraceString` método.
+Cuando está investigando problemas de rendimiento, a veces es útil conocer los comandos SQL exactos que el Entity Framework envía a la base de datos. Si está trabajando con un objeto `IQueryable`, una manera de hacerlo es usar el método `ToTraceString`.
 
-En *SchoolRepository.cs*, cambie el código en el `GetDepartmentsByName` método para que coincida con el ejemplo siguiente:
+En *SchoolRepository.CS*, cambie el código del método `GetDepartmentsByName` para que coincida con el ejemplo siguiente:
 
 [!code-csharp[Main](maximizing-performance-with-the-entity-framework-in-an-asp-net-web-application/samples/sample13.cs)]
 
-El `departments` variable se debe convertir en un `ObjectQuery` tipo sólo porque la `Where` método al final de la línea anterior crea un `IQueryable` objeto; sin la `Where` método, la conversión no sería necesaria.
+La variable `departments` se debe convertir en un tipo `ObjectQuery` solo porque el método `Where` al final de la línea anterior crea un objeto `IQueryable`. sin el método `Where`, la conversión no sería necesaria.
 
-Establecer un punto de interrupción en el `return` de línea y, a continuación, ejecute el *Departments.aspx* página en el depurador. Cuando se alcance el punto de interrupción, examinar el `commandText` variable en el **variables locales** ventana y use el visualizador de texto (el icono de lupa en la **valor** columna) para mostrar su valor en el **Visualizador de texto** ventana. Puede ver todo el comando SQL que se origina este código:
+Establezca un punto de interrupción en la línea de `return` y, a continuación, ejecute la página *departments. aspx* en el depurador. Cuando alcance el punto de interrupción, examine la variable `commandText` en la ventana **variables locales** y use el visualizador de texto (la lupa en la columna **valor** ) para mostrar su valor en la ventana del **visualizador de texto** . Puede ver el comando SQL completo que es el resultado de este código:
 
 [![Image08](maximizing-performance-with-the-entity-framework-in-an-asp-net-web-application/_static/image12.png)](maximizing-performance-with-the-entity-framework-in-an-asp-net-web-application/_static/image11.png)
 
-Como alternativa, la característica de IntelliTrace en Visual Studio Ultimate proporciona una manera de ver los comandos SQL generados por Entity Framework que no requiere cambiar el código o incluso establecer un punto de interrupción.
+Como alternativa, la característica IntelliTrace de Visual Studio Ultimate proporciona una manera de ver los comandos SQL generados por el Entity Framework que no requieren que se cambie el código ni siquiera se establezca un punto de interrupción.
 
 > [!NOTE]
-> Puede realizar los procedimientos siguientes solo si tiene Visual Studio Ultimate.
+> Solo puede realizar los siguientes procedimientos si tiene Visual Studio Ultimate.
 
-Restaurar el código original de la `GetDepartmentsByName` método y, a continuación, ejecute el *Departments.aspx* página en el depurador.
+Restaure el código original en el método `GetDepartmentsByName` y, a continuación, ejecute la página *departments. aspx* en el depurador.
 
-En Visual Studio, seleccione el **depurar** menú y, a continuación, **IntelliTrace**y, a continuación, **eventos de IntelliTrace**.
+En Visual Studio, seleccione el menú **depurar** , **IntelliTrace**y **eventos de IntelliTrace**.
 
 [![Image11](maximizing-performance-with-the-entity-framework-in-an-asp-net-web-application/_static/image14.png)](maximizing-performance-with-the-entity-framework-in-an-asp-net-web-application/_static/image13.png)
 
-En el **IntelliTrace** ventana, haga clic en **interrumpir todos**.
+En la ventana **IntelliTrace** , haga clic en **interrumpir todo**.
 
 [![Image12](maximizing-performance-with-the-entity-framework-in-an-asp-net-web-application/_static/image16.png)](maximizing-performance-with-the-entity-framework-in-an-asp-net-web-application/_static/image15.png)
 
-El **IntelliTrace** ventana muestra una lista de eventos recientes:
+La ventana **IntelliTrace** muestra una lista de eventos recientes:
 
 [![Image09](maximizing-performance-with-the-entity-framework-in-an-asp-net-web-application/_static/image18.png)](maximizing-performance-with-the-entity-framework-in-an-asp-net-web-application/_static/image17.png)
 
-Haga clic en el **ADO.NET** línea. Se expande para mostrar el texto del comando:
+Haga clic en la línea **ADO.net** . Se expande para mostrar el texto del comando:
 
 [![Image10](maximizing-performance-with-the-entity-framework-in-an-asp-net-web-application/_static/image20.png)](maximizing-performance-with-the-entity-framework-in-an-asp-net-web-application/_static/image19.png)
 
-Puede copiar la cadena de texto de comando completo en el Portapapeles desde el **variables locales** ventana.
+Puede copiar la cadena de texto de comando completa en el Portapapeles desde la ventana **variables locales** .
 
-Supongamos que estaba trabajando con una base de datos con varias tablas, relaciones y columnas que la simple `School` base de datos. Es posible que una consulta que recopila toda la información que necesita en un único `Select` instrucción que contenga múltiples `Join` cláusulas se vuelve demasiado complejo trabajar de forma eficaz. En ese caso puede cambiar de diligente a la carga explícita para simplificar la consulta.
+Supongamos que estaba trabajando con una base de datos con más tablas, relaciones y columnas que la base de datos de `School` simple. Es posible que una consulta que recopile toda la información que necesita en una sola instrucción `Select` que contenga varias cláusulas de `Join` sea demasiado compleja para que funcione de forma eficaz. En ese caso, puede cambiar de la carga diligente a la carga explícita para simplificar la consulta.
 
-Por ejemplo, pruebe a cambiar el código en el `GetDepartmentsByName` método *SchoolRepository.cs*. Actualmente método ya que dispone de una consulta de objeto que tiene `Include` métodos para la `Person` y `Courses` las propiedades de navegación. Reemplace el `return` instrucción con el código que realiza la carga explícita, tal como se muestra en el ejemplo siguiente:
+Por ejemplo, intente cambiar el código en el método `GetDepartmentsByName` de *SchoolRepository.CS*. Actualmente, en ese método tiene una consulta de objeto que tiene métodos `Include` para las propiedades de navegación `Person` y `Courses`. Reemplace la instrucción `return` por el código que realiza la carga explícita, como se muestra en el ejemplo siguiente:
 
 [!code-csharp[Main](maximizing-performance-with-the-entity-framework-in-an-asp-net-web-application/samples/sample14.cs)]
 
-Ejecute el *Departments.aspx* página en el depurador y compruebe el **IntelliTrace** ventana nuevo como se hizo antes. Ahora, cuando había una sola consulta antes, verá una secuencia larga de ellos.
+Ejecute la página *departments. aspx* en el depurador y vuelva a comprobar la ventana **IntelliTrace** como hizo antes. Ahora, cuando haya una sola consulta antes, verá una larga secuencia de ellos.
 
 [![Image13](maximizing-performance-with-the-entity-framework-in-an-asp-net-web-application/_static/image22.png)](maximizing-performance-with-the-entity-framework-in-an-asp-net-web-application/_static/image21.png)
 
-Haga clic en la primera **ADO.NET** visualizado de línea para ver qué ha pasado con la consulta compleja antes.
+Haga clic en la primera línea de **ADO.net** para ver lo que ha ocurrido en la consulta compleja que vio anteriormente.
 
 [![Image14](maximizing-performance-with-the-entity-framework-in-an-asp-net-web-application/_static/image24.png)](maximizing-performance-with-the-entity-framework-in-an-asp-net-web-application/_static/image23.png)
 
-La consulta de los departamentos de TI se ha convertido en un sencillo `Select` de consulta sin ningún `Join` cláusula, pero va seguido de distintas consultas que recuperan cursos relacionados y un administrador, mediante un conjunto de dos consultas para cada departamento devuelto por el original consulta.
+La consulta de los departamentos se ha convertido en una consulta de `Select` simple sin ninguna cláusula de `Join`, pero está seguida de consultas independientes que recuperan los cursos relacionados y un administrador, mediante un conjunto de dos consultas para cada departamento devuelto por la consulta original.
 
 > [!NOTE]
-> Si deja diferida habilitado, el patrón que se observa aquí, con la misma consulta que se repiten muchas veces, la carga podría deberse a la carga diferida. Un patrón que normalmente se desea evitar es carga diferida datos relacionados para cada fila de la tabla principal. A menos que haya comprobado que una consulta de combinación solo es demasiado compleja para ser eficaz, normalmente podrá mejorar el rendimiento en estos casos, cambie la consulta principal para usar la carga diligente.
+> Si deja habilitada la carga diferida, el patrón que se ve aquí, con la misma consulta repetida muchas veces, puede deberse a la carga diferida. Un patrón que normalmente desea evitar es la carga diferida de datos relativos a cada fila de la tabla principal. A menos que haya comprobado que una única consulta de combinación es demasiado compleja para ser eficaz, normalmente podría mejorar el rendimiento en tales casos cambiando la consulta principal para usar la carga diligente.
 
-## <a name="pre-generating-views"></a>Generar vistas previamente
+## <a name="pre-generating-views"></a>Generar vistas previas
 
-Cuando un `ObjectContext` en primer lugar se crea el objeto en un dominio de aplicación, Entity Framework genera un conjunto de clases que utiliza para tener acceso a la base de datos. Estas clases se denominan *vistas*, y si tiene un modelo de datos muy grandes, generar estas vistas puede retrasar la respuesta de la carpeta del sitio web a la primera solicitud para una página después de Inicializa un nuevo dominio de aplicación. Puede reducir este retraso de la primera solicitud mediante la creación de las vistas en tiempo de compilación en lugar de en tiempo de ejecución.
+Cuando un objeto de `ObjectContext` se crea por primera vez en un nuevo dominio de aplicación, el Entity Framework genera un conjunto de clases que usa para tener acceso a la base de datos. Estas clases se denominan *vistas*y, si tiene un modelo de datos muy grande, la generación de estas vistas puede retrasar la respuesta del sitio web a la primera solicitud de una página después de inicializar un nuevo dominio de aplicación. Puede reducir este retraso de primera solicitud creando las vistas en tiempo de compilación en lugar de en tiempo de ejecución.
 
 > [!NOTE]
-> Si la aplicación no tiene un modelo de datos extremadamente grandes, o si tiene un modelo de datos de gran tamaño, pero no le preocupa un problema de rendimiento que afecta a la primera solicitud de página después de que IIS se recicla, puede omitir esta sección. Vista de creación no ocurre cada vez que crea instancias de un `ObjectContext` de objeto, dado que las vistas se almacenan en caché en el dominio de aplicación. Por lo tanto, a menos que con frecuencia se recicla la aplicación en IIS, muy pocas solicitudes de página se beneficiarían de las vistas generadas previamente.
+> Si la aplicación no tiene un modelo de datos extremadamente grande, o si tiene un modelo de datos de gran tamaño, pero no le preocupa un problema de rendimiento que afecte únicamente a la primera solicitud de página después de que se recicle IIS, puede omitir esta sección. La creación de vistas no se produce cada vez que se crea una instancia de un objeto `ObjectContext`, porque las vistas se almacenan en la memoria caché del dominio de aplicación. Por lo tanto, a menos que se esté reciclando con frecuencia la aplicación en IIS, muy pocas solicitudes de página se beneficiarían de las vistas generadas previamente.
 
-Puede generar previamente vistas mediante el *EdmGen.exe* herramienta de línea de comandos o mediante un *Kit de herramientas de transformación de plantillas de texto* plantilla (T4). En este tutorial usará una plantilla T4.
+Puede generar previamente vistas mediante la herramienta de línea de comandos *EdmGen. exe* o mediante una plantilla de *texto de transformación de plantillas de texto* (T4). En este tutorial usará una plantilla T4.
 
-En el *DAL* carpeta, agregue un archivo mediante el **plantilla de texto** plantilla (se encuentra en la **General** nodo en el **plantillas instaladas** lista), y asígnele el nombre *SchoolModel.Views.tt*. Reemplace el código existente en el archivo con el código siguiente:
+En la carpeta *Dal* , agregue un archivo mediante la plantilla de **plantilla de texto** (se encuentra en el nodo **General** de la lista **plantillas instaladas** ) y asígnele el nombre *SchoolModel.views.TT*. Reemplace el código existente en el archivo por el código siguiente:
 
 [!code-csharp[Main](maximizing-performance-with-the-entity-framework-in-an-asp-net-web-application/samples/sample15.cs)]
 
-Este código genera vistas para una *.edmx* archivo que se encuentra en la misma carpeta que la plantilla y que tiene el mismo nombre que el archivo de plantilla. Por ejemplo, si su archivo de plantilla se denomina *SchoolModel.Views.tt*, buscará un archivo de modelo de datos denominado *SchoolModel.edmx*.
+Este código genera vistas para un archivo *. edmx* que se encuentra en la misma carpeta que la plantilla y que tiene el mismo nombre que el archivo de plantilla. Por ejemplo, si el archivo de plantilla se denomina *SchoolModel.views.TT*, buscará un archivo de modelo de datos denominado *SchoolModel. edmx*.
 
-Guarde el archivo y, después, haga clic en el archivo en **el Explorador de soluciones** y seleccione **ejecutar herramienta personalizada**.
+Guarde el archivo, haga clic con el botón derecho en el archivo en **Explorador de soluciones** y seleccione **Ejecutar herramienta personalizada**.
 
 [![Image02](maximizing-performance-with-the-entity-framework-in-an-asp-net-web-application/_static/image26.png)](maximizing-performance-with-the-entity-framework-in-an-asp-net-web-application/_static/image25.png)
 
-Visual Studio genera un archivo de código que crea las vistas, que se denomina *SchoolModel.Views.cs* basado en la plantilla. (Es posible que haya observado que el archivo de código se genera antes de seleccionar **ejecutar herramienta personalizada**, tan pronto como guarde el archivo de plantilla.)
+Visual Studio genera un archivo de código que crea las vistas, que se denomina *SchoolModel.views.CS* basándose en la plantilla. (Es posible que haya observado que el archivo de código se genera incluso antes de seleccionar **Ejecutar herramienta personalizada**, tan pronto como se guarda el archivo de plantilla).
 
 [![Image01](maximizing-performance-with-the-entity-framework-in-an-asp-net-web-application/_static/image28.png)](maximizing-performance-with-the-entity-framework-in-an-asp-net-web-application/_static/image27.png)
 
-Ahora puede ejecutar la aplicación y comprobar que funciona igual que antes.
+Ahora puede ejecutar la aplicación y comprobar que funciona como antes.
 
-Para obtener más información acerca de las vistas generadas previamente, consulte los siguientes recursos:
+Para obtener más información sobre las vistas generadas previamente, vea los siguientes recursos:
 
-- [Cómo: Generar previamente vistas para mejorar el rendimiento de consulta](https://msdn.microsoft.com/library/bb896240.aspx) en el sitio web MSDN. Explica cómo utilizar el `EdmGen.exe` herramienta de línea de comandos para generar previamente las vistas.
-- [Aislar Performance with Precompiled/Pre-generated Views en Entity Framework 4](https://blogs.msdn.com/b/appfabriccat/archive/2010/08/06/isolating-performance-with-precompiled-pre-generated-views-in-the-entity-framework-4.aspx) en el blog del equipo de asesoría de clientes de Windows Server AppFabric.
+- [Cómo: generar previamente vistas para mejorar el rendimiento](https://msdn.microsoft.com/library/bb896240.aspx) de las consultas en el sitio web de MSDN. Explica cómo usar la herramienta de línea de comandos `EdmGen.exe` para generar previamente las vistas.
+- [Aislar el rendimiento con vistas precompiladas o generadas previamente en el Entity Framework 4](https://blogs.msdn.com/b/appfabriccat/archive/2010/08/06/isolating-performance-with-precompiled-pre-generated-views-in-the-entity-framework-4.aspx) en el blog del equipo de asesoramiento al cliente de Windows Server AppFabric.
 
-Con esto finaliza la introducción para mejorar el rendimiento en una aplicación web ASP.NET que usa Entity Framework. Para obtener más información, vea los siguientes recursos:
+Esto completa la introducción a la mejora del rendimiento en una aplicación Web ASP.NET que utiliza el Entity Framework. Para obtener más información, vea los siguientes recursos:
 
-- [Consideraciones de rendimiento (Entity Framework)](https://msdn.microsoft.com/library/cc853327.aspx) en el sitio web MSDN.
-- [Relacionados con el rendimiento de publicaciones del blog del equipo de Entity Framework](https://blogs.msdn.com/b/adonet/archive/tags/performance/).
-- [EF opciones de combinación y consultas compiladas](https://blogs.msdn.com/b/dsimmons/archive/2010/01/12/ef-merge-options-and-compiled-queries.aspx). Entrada de blog que explica los comportamientos inesperados de las consultas compiladas y mezcla opciones tales como `NoTracking`. Si tiene previsto usar consultas compiladas o manipular la configuración de la opción de combinación en la aplicación, lea esto primero.
-- [Entidad relacionada con el marco de trabajo publicaciones en el blog de datos y modelado de Customer Advisory Team](https://blogs.msdn.com/b/dmcat/archive/tags/entity+framework/). Incluye publicaciones en las consultas compiladas y el uso de la Profiler de 2010 Visual Studio para detectar problemas de rendimiento.
-- [Conversación de foro de Entity Framework con consejos sobre cómo mejorar el rendimiento de las consultas de gran complejidad](https://social.msdn.microsoft.com/Forums/adodotnetentityframework/thread/ffe8b2ab-c5b5-4331-8988-33a872d0b5f6).
-- [Recomendaciones de administración de estado de ASP.NET](https://msdn.microsoft.com/library/z1hkazw7.aspx).
-- [Uso de Entity Framework y el origen ObjectDataSource: Paginación personalizada](http://geekswithblogs.net/Frez/articles/using-the-entity-framework-and-the-objectdatasource-custom-paging.aspx). Entrada de blog que se basa en la aplicación de ContosoUniversity creada en estos tutoriales para explicar cómo implementar la paginación en el *Departments.aspx* página.
+- [Consideraciones de rendimiento (Entity Framework)](https://msdn.microsoft.com/library/cc853327.aspx) en el sitio web de MSDN.
+- [Publicaciones relacionadas con el rendimiento en el blog del equipo de Entity Framework](https://blogs.msdn.com/b/adonet/archive/tags/performance/).
+- [Opciones de combinación de EF y consultas compiladas](https://blogs.msdn.com/b/dsimmons/archive/2010/01/12/ef-merge-options-and-compiled-queries.aspx). Entrada de blog en la que se explican los comportamientos inesperados de las consultas compiladas y las opciones de combinación como `NoTracking`. Si planea usar las consultas compiladas o manipular la configuración de las opciones de combinación en la aplicación, lea esto primero.
+- [En el blog del equipo de asesoría de clientes de datos y modelado. Entity Framework](https://blogs.msdn.com/b/dmcat/archive/tags/entity+framework/) Incluye publicaciones en las consultas compiladas y el uso del generador de perfiles de Visual Studio 2010 para detectar problemas de rendimiento.
+- [Entity Framework subproceso del foro con consejos sobre cómo mejorar el rendimiento de las consultas muy complejas](https://social.msdn.microsoft.com/Forums/adodotnetentityframework/thread/ffe8b2ab-c5b5-4331-8988-33a872d0b5f6).
+- [Recomendaciones de administración de estado de ASP.net](https://msdn.microsoft.com/library/z1hkazw7.aspx).
+- [Usar el Entity Framework y la paginación ObjectDataSource: Custom](http://geekswithblogs.net/Frez/articles/using-the-entity-framework-and-the-objectdatasource-custom-paging.aspx). Entrada de blog que se basa en la aplicación ContosoUniversity creada en estos tutoriales para explicar cómo implementar la paginación en la página *departments. aspx* .
 
-El siguiente tutorial revisa las importantes mejoras a Entity Framework que son nuevas en la versión 4.
+En el siguiente tutorial se revisan algunas de las mejoras importantes en las Entity Framework que son nuevas en la versión 4.
 
 > [!div class="step-by-step"]
 > [Anterior](handling-concurrency-with-the-entity-framework-in-an-asp-net-web-application.md)

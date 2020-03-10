@@ -9,11 +9,11 @@ ms.assetid: d3f062af-88cf-426d-af44-e41f32c41672
 msc.legacyurl: /web-forms/overview/data-access/custom-formatting/using-the-formview-s-templates-cs
 msc.type: authoredcontent
 ms.openlocfilehash: 013c6878aad1a2277b0a334c096ff16ed84a95f1
-ms.sourcegitcommit: 22fbd8863672c4ad6693b8388ad5c8e753fb41a2
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/28/2019
-ms.locfileid: "74625664"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78426619"
 ---
 # <a name="using-the-formviews-templates-c"></a>Usar las plantillas de FormView (C#)
 

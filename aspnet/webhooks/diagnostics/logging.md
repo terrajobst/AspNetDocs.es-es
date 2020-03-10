@@ -7,11 +7,11 @@ ms.author: riande
 ms.date: 01/17/2012
 ms.assetid: f71bc442-5f80-481b-a32c-a0ec18dee9d6
 ms.openlocfilehash: a05b32c4a8f9577bcf6170bd19a9e440b1aeb75b
-ms.sourcegitcommit: 7709c0a091b8d55b7b33bad8849f7b66b23c3d72
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/19/2020
-ms.locfileid: "77457588"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78440911"
 ---
 # <a name="aspnet-webhooks-logging"></a>Registro de webhooks de ASP.NET
 

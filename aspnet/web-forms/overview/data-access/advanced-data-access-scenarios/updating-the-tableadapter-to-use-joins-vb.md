@@ -9,11 +9,11 @@ ms.assetid: e624a3e0-061b-4efc-8b0e-5877f9ff6714
 msc.legacyurl: /web-forms/overview/data-access/advanced-data-access-scenarios/updating-the-tableadapter-to-use-joins-vb
 msc.type: authoredcontent
 ms.openlocfilehash: 5c94baa99b126cdd24d69afc3d02bfe8b069419b
-ms.sourcegitcommit: 22fbd8863672c4ad6693b8388ad5c8e753fb41a2
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/28/2019
-ms.locfileid: "74604274"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78427531"
 ---
 # <a name="updating-the-tableadapter-to-use-joins-vb"></a>Actualizar TableAdapter para usar JOIN (VB)
 

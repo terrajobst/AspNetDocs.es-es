@@ -9,11 +9,11 @@ ms.assetid: a86c0276-6481-46ee-8b4f-8c2009399ee9
 msc.legacyurl: /web-forms/overview/ajax-control-toolkit/animation/disabling-actions-during-animation-vb
 msc.type: authoredcontent
 ms.openlocfilehash: 4924d4f70099255b930d53f6a72e810be7a47485
-ms.sourcegitcommit: 22fbd8863672c4ad6693b8388ad5c8e753fb41a2
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/28/2019
-ms.locfileid: "74606834"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78430933"
 ---
 # <a name="disabling-actions-during-animation-vb"></a>Deshabilitar las acciones durante la animación (VB)
 
@@ -23,7 +23,7 @@ por [Christian Wenz](https://github.com/wenz)
 
 > El control de animación de ASP.NET AJAX control Toolkit no es solo un control, sino un marco de trabajo completo para agregar animaciones a un control. También admite acciones, como clics del mouse. Sin embargo, cuando un clic del mouse inicia una animación, es conveniente deshabilitar los clics del mouse durante la animación.
 
-## <a name="overview"></a>Información general del
+## <a name="overview"></a>Información general
 
 El control de animación de ASP.NET AJAX control Toolkit no es solo un control, sino un marco de trabajo completo para agregar animaciones a un control. También admite acciones, como clics del mouse. Sin embargo, cuando un clic del mouse inicia una animación, es conveniente deshabilitar los clics del mouse durante la animación.
 

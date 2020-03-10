@@ -9,11 +9,11 @@ ms.assetid: 9d9cb3b0-f4a7-434e-a508-9fc0ad0eb813
 msc.legacyurl: /web-api/overview/older-versions/using-web-api-1-with-entity-framework-5/using-web-api-with-entity-framework-part-5
 msc.type: authoredcontent
 ms.openlocfilehash: bbdeba756de7986cfeb92aa10a57f4f101382f99
-ms.sourcegitcommit: 22fbd8863672c4ad6693b8388ad5c8e753fb41a2
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/28/2019
-ms.locfileid: "74599993"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78447865"
 ---
 # <a name="part-5-creating-a-dynamic-ui-with-knockoutjs"></a>Parte 5: creación de una interfaz de usuario dinámica con Knockout. js
 

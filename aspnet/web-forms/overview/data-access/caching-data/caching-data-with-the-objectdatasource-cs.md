@@ -9,11 +9,11 @@ ms.assetid: bd87413c-8160-4520-a8a2-43b555c4183a
 msc.legacyurl: /web-forms/overview/data-access/caching-data/caching-data-with-the-objectdatasource-cs
 msc.type: authoredcontent
 ms.openlocfilehash: c9883314d6153b9816d9bad2a281ab3c0a816448
-ms.sourcegitcommit: 22fbd8863672c4ad6693b8388ad5c8e753fb41a2
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/28/2019
-ms.locfileid: "74612622"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78420661"
 ---
 # <a name="caching-data-with-the-objectdatasource-c"></a>Almacenar datos en caché con ObjectDataSource (C#)
 
@@ -149,9 +149,9 @@ Puede parecer que no se recuperan los datos de la base de datos cada vez que se 
 
 Con solo establecer algunas propiedades, ObjectDataSource puede configurarse para almacenar en caché automáticamente los datos recuperados en la memoria caché de datos ASP.NET. En la lista siguiente se resumen las propiedades relacionadas con la memoria caché de ObjectDataSource:
 
-- [EnableCaching](https://msdn.microsoft.com/library/system.web.ui.webcontrols.objectdatasource.enablecaching.aspx) debe establecerse en `true` para habilitar el almacenamiento en caché. De manera predeterminada, es `false`.
+- [EnableCaching](https://msdn.microsoft.com/library/system.web.ui.webcontrols.objectdatasource.enablecaching.aspx) debe establecerse en `true` para habilitar el almacenamiento en caché. El valor predeterminado es `false`.
 - [CacheDuration](https://msdn.microsoft.com/library/system.web.ui.webcontrols.objectdatasource.cacheduration.aspx) la cantidad de tiempo, en segundos, que los datos se almacenan en caché. El valor predeterminado es 0. ObjectDataSource solo almacenará en caché los datos si se `true` `EnableCaching` y `CacheDuration` se establece en un valor mayor que cero.
-- [CacheExpirationPolicy](https://msdn.microsoft.com/library/system.web.ui.webcontrols.objectdatasource.cacheexpirationpolicy.aspx) se puede establecer en `Absolute` o `Sliding`. Si `Absolute`, ObjectDataSource almacena en memoria caché los datos recuperados durante `CacheDuration` segundos; Si `Sliding`, los datos expiran solo después de que no se haya tenido acceso a ellos durante `CacheDuration` segundos. De manera predeterminada, es `Absolute`.
+- [CacheExpirationPolicy](https://msdn.microsoft.com/library/system.web.ui.webcontrols.objectdatasource.cacheexpirationpolicy.aspx) se puede establecer en `Absolute` o `Sliding`. Si `Absolute`, ObjectDataSource almacena en memoria caché los datos recuperados durante `CacheDuration` segundos; Si `Sliding`, los datos expiran solo después de que no se haya tenido acceso a ellos durante `CacheDuration` segundos. El valor predeterminado es `Absolute`.
 - [CacheKeyDependency](https://msdn.microsoft.com/library/system.web.ui.webcontrols.objectdatasource.cachekeydependency.aspx) utilice esta propiedad para asociar las entradas de caché de ObjectDataSource con una dependencia de caché existente. Las entradas de datos de ObjectDataSource s se pueden desalojar prematuramente de la memoria caché al expirar la `CacheKeyDependency`asociada. Normalmente, esta propiedad se usa para asociar una dependencia de caché de SQL con la memoria caché de ObjectDataSource, un tema que exploraremos en el futuro con el tutorial sobre las [dependencias de caché de SQL](using-sql-cache-dependencies-cs.md) .
 
 Permita que s configure el `ProductsDataSource` ObjectDataSource para almacenar en caché sus datos durante 30 segundos en una escala absoluta. Establezca la propiedad ObjectDataSource s `EnableCaching` en `true` y su propiedad `CacheDuration` en 30. Deje la propiedad `CacheExpirationPolicy` establecida en su valor predeterminado, `Absolute`.

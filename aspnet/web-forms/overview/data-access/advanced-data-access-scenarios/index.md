@@ -1,23 +1,23 @@
 ---
 uid: web-forms/overview/data-access/advanced-data-access-scenarios/index
-title: Escenarios de acceso de datos avanzados | Microsoft Docs
+title: Escenarios avanzados de acceso a datos | Microsoft Docs
 author: rick-anderson
-description: Estos tutoriales cubren cómo trabajar con procedimientos almacenados y las columnas calculadas, cómo usar combinaciones con tablas de base de datos y cómo cifrar información de conexión de datos...
+description: En estos tutoriales se explica cómo trabajar con procedimientos almacenados y columnas calculadas, cómo usar combinaciones con tablas de base de datos y cómo cifrar la información de conexión de datos...
 ms.author: riande
 ms.date: 10/05/2011
 ms.assetid: 00d198ed-fddc-4fd3-a86e-3f29c5f707cc
 msc.legacyurl: /web-forms/overview/data-access/advanced-data-access-scenarios
 msc.type: chapter
 ms.openlocfilehash: 25041560b9e8ff0a8c944572dad344e655100b0d
-ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/06/2019
-ms.locfileid: "65108548"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78428203"
 ---
 # <a name="advanced-data-access-scenarios"></a>Escenarios avanzados de acceso a datos
 
-> Estos tutoriales cubren cómo trabajar con procedimientos almacenados y las columnas calculadas, cómo usar combinaciones con tablas de base de datos y cómo cifrar la información de conexión de datos.
+> En estos tutoriales se explica cómo trabajar con procedimientos almacenados y columnas calculadas, cómo usar combinaciones con tablas de base de datos y cómo cifrar la información de conexión de datos.
 
 - [Crear procedimientos almacenados para los TableAdapters del conjunto de datos con tipo (C#)](creating-new-stored-procedures-for-the-typed-dataset-s-tableadapters-cs.md)
 - [Usar procedimientos almacenados existentes para los TableAdapters del conjunto de datos con tipo (C#)](using-existing-stored-procedures-for-the-typed-dataset-s-tableadapters-cs.md)

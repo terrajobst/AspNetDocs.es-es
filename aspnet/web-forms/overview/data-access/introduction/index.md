@@ -2,22 +2,22 @@
 uid: web-forms/overview/data-access/introduction/index
 title: Introducción | Microsoft Docs
 author: rick-anderson
-description: Este conjunto de tutoriales introductorio explica cómo crear una capa de acceso a datos (DAL), una capa de lógica empresarial (BLL) y una apariencia coherente a través de su sitio.
+description: En este conjunto introductorio de tutoriales se explica cómo crear una capa de acceso a datos (DAL), una capa de lógica de negocios (BLL) y una apariencia coherente en todo el sitio.
 ms.author: riande
 ms.date: 11/11/2011
 ms.assetid: 74f3a86b-81fa-4d64-820a-304613f72caa
 msc.legacyurl: /web-forms/overview/data-access/introduction
 msc.type: chapter
 ms.openlocfilehash: a62b473993804312021725642a102c1eeff20f74
-ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/06/2019
-ms.locfileid: "65132197"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78426367"
 ---
 # <a name="introduction"></a>Introducción
 
-> Este conjunto de tutoriales introductorio explica cómo crear una capa de acceso a datos (DAL), una capa de lógica empresarial (BLL) y una apariencia coherente a través de su sitio.
+> En este conjunto introductorio de tutoriales se explica cómo crear una capa de acceso a datos (DAL), una capa de lógica de negocios (BLL) y una apariencia coherente en todo el sitio.
 
 - [Crear una capa de acceso a datos (C#)](creating-a-data-access-layer-cs.md)
 - [Crear una capa de lógica empresarial (C#)](creating-a-business-logic-layer-cs.md)

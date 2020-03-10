@@ -1,23 +1,23 @@
 ---
 uid: web-forms/overview/older-versions-getting-started/deploying-web-site-projects/index
-title: Implementación de proyectos de sitio Web en Visual Studio 2008 y versiones anteriores | Microsoft Docs
+title: Implementar proyectos de sitio web en Visual Studio 2008 y versiones anteriores | Microsoft Docs
 author: rick-anderson
-description: Aplicaciones web ASP.NET están normalmente diseñadas, crean y probaron en un entorno de desarrollo local y deben implementarse en una o entorno de producción...
+description: Las aplicaciones Web de ASP.NET suelen diseñarse, crearse y probarse en un entorno de desarrollo local y deben implementarse en un entorno de producción o...
 ms.author: riande
 ms.date: 05/16/2012
 ms.assetid: 6f72bde8-f2f1-4e4a-94e5-494c3c153c14
 msc.legacyurl: /web-forms/overview/older-versions-getting-started/deploying-web-site-projects
 msc.type: chapter
 ms.openlocfilehash: 43c2397ef4ccc5eacb2ff4c5d04f62b9c8c481b7
-ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/06/2019
-ms.locfileid: "65134427"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78420493"
 ---
 # <a name="deploying-web-site-projects-in-visual-studio-2008-and-earlier"></a>Implementar proyectos de sitio web en Visual Studio 2008 y versiones anteriores
 
-> Las aplicaciones web ASP.NET son normalmente diseñadas, creadas y probadas en un entorno de desarrollo local y se deben implementar en un entorno de producción una vez que esté listo para la versión. Esta serie de tutoriales detalla el proceso de implementación.
+> Las aplicaciones Web de ASP.NET suelen diseñarse, crearse y probarse en un entorno de desarrollo local y deben implementarse en un entorno de producción una vez que esté listo para su lanzamiento. En esta serie de tutoriales se detalla el proceso de implementación.
 
 - [Opciones de hospedaje de ASP.NET (C#)](asp-net-hosting-options-cs.md)
 - [Determinar qué archivos se deben implementar (C#)](determining-what-files-need-to-be-deployed-cs.md)

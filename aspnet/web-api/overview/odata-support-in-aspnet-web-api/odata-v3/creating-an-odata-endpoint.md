@@ -9,11 +9,11 @@ ms.assetid: 262843d6-43a2-4f1c-82d9-0b90ae6df0cf
 msc.legacyurl: /web-api/overview/odata-support-in-aspnet-web-api/odata-v3/creating-an-odata-endpoint
 msc.type: authoredcontent
 ms.openlocfilehash: e68a454398f109dfd089be9c9a44d3fe662acc2f
-ms.sourcegitcommit: 22fbd8863672c4ad6693b8388ad5c8e753fb41a2
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/28/2019
-ms.locfileid: "74600433"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78448225"
 ---
 # <a name="creating-an-odata-v3-endpoint-with-web-api-2"></a>Creación de un punto de conexión de OData V3 con Web API 2
 
@@ -66,7 +66,7 @@ En el cuadro de diálogo **nuevo proyecto ASP.net** , seleccione la plantilla **
 
 Un *modelo* es un objeto que representa los datos de la aplicación. En este tutorial, se necesita un modelo que represente un producto. El modelo corresponde a nuestro tipo de entidad OData.
 
-En Explorador de soluciones, haga clic con el botón secundario en la carpeta modelos. En el menú contextual, seleccione **Agregar** y, a continuación, seleccione **clase**.
+En el Explorador de soluciones, haga clic con el botón derecho en la carpeta Models. En el menú contextual, seleccione **Agregar** y, después, haga clic en **Clase**.
 
 ![](creating-an-odata-endpoint/_static/image3.png)
 
@@ -90,7 +90,7 @@ Compile el proyecto ahora. En el paso siguiente, usaremos algunos scaffolding de
 
 Un *controlador* es una clase que controla las solicitudes HTTP. Debe definir un controlador independiente para cada conjunto de entidades en el servicio OData. En este tutorial, vamos a crear un único controlador.
 
-En Explorador de soluciones, haga clic con el botón secundario en la carpeta Controllers. Seleccione **Agregar** y, a continuación, seleccione **controlador**.
+En Explorador de soluciones, haga clic con el botón secundario en la carpeta Controllers. Seleccione **Agregar** y, luego, **Controlador**.
 
 ![](creating-an-odata-endpoint/_static/image5.png)
 
@@ -152,7 +152,7 @@ El primer parámetro es un nombre descriptivo para la ruta. Los clientes de su s
 
 En este paso, usará Entity Framework para inicializar la base de datos con algunos datos de prueba. Este paso es opcional, pero le permite probar el punto de conexión de OData de inmediato.
 
-En el menú **herramientas** , seleccione **Administrador de paquetes NuGet**y, a continuación, seleccione **consola del administrador de paquetes**. En la ventana de la consola del administrador de paquetes, escriba el siguiente comando:
+En el menú **herramientas** , seleccione **Administrador de paquetes NuGet**y, a continuación, seleccione **consola del administrador de paquetes**. En la ventana Package Manager Console, escriba el siguiente comando:
 
 [!code-console[Main](creating-an-odata-endpoint/samples/sample5.cmd)]
 
@@ -240,7 +240,7 @@ OData admite varios formatos de serialización:
 
 De forma predeterminada, Web API usa el formato "Light" de AtomPubJSON.
 
-Para obtener el formato AtomPub, establezca el encabezado Accept en "Application/Atom + XML". A continuación se muestra un cuerpo de respuesta de ejemplo:
+Para obtener el formato AtomPub, establezca el encabezado Accept en "Application/Atom + XML". A continuación se proporciona un cuerpo de respuesta de ejemplo:
 
 [!code-console[Main](creating-an-odata-endpoint/samples/sample13.cmd)]
 

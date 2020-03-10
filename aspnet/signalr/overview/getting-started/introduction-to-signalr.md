@@ -9,11 +9,11 @@ ms.assetid: 0fab5e35-8c1f-43d4-8635-b8aba8766a71
 msc.legacyurl: /signalr/overview/getting-started/introduction-to-signalr
 msc.type: authoredcontent
 ms.openlocfilehash: 8dbc31a5c8d59fa55dc5b513c1a51d24d18a685f
-ms.sourcegitcommit: 88fc80e3f65aebdf61ec9414810ddbc31c543f04
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/22/2020
-ms.locfileid: "76519406"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78431101"
 ---
 # <a name="introduction-to-signalr"></a>Introducción a SignalR
 
@@ -39,14 +39,14 @@ Signalr proporciona una API sencilla para crear llamadas a procedimiento remoto 
 
 ![Invocar métodos con Signalr](introduction-to-signalr/_static/image1.png)
 
-SignalR controla automáticamente la administración de conexiones y permite difundir mensajes a todos los clientes conectados de forma simultánea, como un salón de chat. También se pueden enviar mensajes a clientes concretos. La conexión entre el cliente y el servidor es persistente, a diferencia de una conexión HTTP clásica, que se vuelve a establecer para cada comunicación.
+Signalr controla la administración de conexiones automáticamente y le permite difundir mensajes a todos los clientes conectados simultáneamente, como un salón de chat. También puede enviar mensajes a clientes específicos. La conexión entre el cliente y el servidor es persistente, a diferencia de una conexión HTTP clásica, que se restablece para cada comunicación.
 
 Signalr admite la funcionalidad de "instalación de servidor", en la que el código de servidor puede llamar al código de cliente en el explorador mediante llamadas a procedimiento remoto (RPC), en lugar del modelo de solicitud-respuesta común en la web en la actualidad.
 
 Las aplicaciones de signalr pueden escalarse horizontalmente a miles de clientes mediante proveedores de escalado horizontal integrados y de terceros.
 
 Los proveedores integrados incluyen:
-* [Bus de servicio](https://www.nuget.org/packages/Microsoft.AspNet.SignalR.ServiceBus3)
+* [Service Bus](https://www.nuget.org/packages/Microsoft.AspNet.SignalR.ServiceBus3)
 * [SQL Server](https://www.nuget.org/packages/Microsoft.AspNet.SignalR.SqlServer)
 * [Redis](https://www.nuget.org/packages/Microsoft.AspNet.SignalR.Redis)
 

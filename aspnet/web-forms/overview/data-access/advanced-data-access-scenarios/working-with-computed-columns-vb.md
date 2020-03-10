@@ -9,11 +9,11 @@ ms.assetid: 5811b8ff-ed56-40fc-9397-6b69ae09a8f6
 msc.legacyurl: /web-forms/overview/data-access/advanced-data-access-scenarios/working-with-computed-columns-vb
 msc.type: authoredcontent
 ms.openlocfilehash: e425d7363c2cdea6efb0ba51f3fc2b6a5330bf2a
-ms.sourcegitcommit: 22fbd8863672c4ad6693b8388ad5c8e753fb41a2
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/28/2019
-ms.locfileid: "74603125"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78420859"
 ---
 # <a name="working-with-computed-columns-vb"></a>Trabajar con columnas calculadas (VB)
 
@@ -111,7 +111,7 @@ Al hacer clic en finalizar, el asistente creará los cuatro procedimientos almac
 
 ## <a name="step-4-including-the-computed-column-in-the-tableadapter-s-main-query"></a>Paso 4: incluir la columna calculada en la consulta principal de TableAdapter s
 
-Ahora es necesario actualizar el TableAdapter y el DataTable creados en el paso 3 para incluir la `FullContactName` columna calculada. Esto implica dos pasos:
+Ahora es necesario actualizar el TableAdapter y el DataTable creados en el paso 3 para incluir la `FullContactName` columna calculada. Esto conlleva dos pasos:
 
 1. Actualizar el `Suppliers_Select` procedimiento almacenado para devolver el `FullContactName` columna calculada y
 2. Actualizar DataTable para incluir una columna de `FullContactName` correspondiente.

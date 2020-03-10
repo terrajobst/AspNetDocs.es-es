@@ -9,11 +9,11 @@ ms.assetid: 675531a7-cb54-4dd6-89ac-2636e4c285a5
 msc.legacyurl: /web-forms/overview/data-access/advanced-data-access-scenarios/updating-the-tableadapter-to-use-joins-cs
 msc.type: authoredcontent
 ms.openlocfilehash: 24ff3645783dabfcdef5ac313a2d4833e4998efc
-ms.sourcegitcommit: 22fbd8863672c4ad6693b8388ad5c8e753fb41a2
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/28/2019
-ms.locfileid: "74608169"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78427777"
 ---
 # <a name="updating-the-tableadapter-to-use-joins-c"></a>Actualizar TableAdapter para usar JOIN (C#)
 

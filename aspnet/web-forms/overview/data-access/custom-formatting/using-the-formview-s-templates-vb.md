@@ -9,11 +9,11 @@ ms.assetid: 67b25f4c-2823-42b6-b07d-1d650b3fd711
 msc.legacyurl: /web-forms/overview/data-access/custom-formatting/using-the-formview-s-templates-vb
 msc.type: authoredcontent
 ms.openlocfilehash: cafe47cf5766bb14503852ec6e9f305d1e6d426f
-ms.sourcegitcommit: 22fbd8863672c4ad6693b8388ad5c8e753fb41a2
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/28/2019
-ms.locfileid: "74618374"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78426583"
 ---
 # <a name="using-the-formviews-templates-vb"></a>Usar las plantillas de FormView (VB)
 

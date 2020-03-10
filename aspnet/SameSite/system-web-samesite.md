@@ -5,12 +5,12 @@ description: Aprenda a usar las cookies de SameSite en ASP.NET
 ms.author: riande
 ms.date: 2/15/2019
 uid: samesite/system-web-samesite
-ms.openlocfilehash: edb368910b24be2d042afe3c19ffa1fb23245443
-ms.sourcegitcommit: 7709c0a091b8d55b7b33bad8849f7b66b23c3d72
+ms.openlocfilehash: 7987a5d6c9b3a82679d42a2d381d471d56f495c2
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/19/2020
-ms.locfileid: "77455715"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78439939"
 ---
 # <a name="work-with-samesite-cookies-in-aspnet"></a>Trabajar con cookies de SameSite en ASP.NET
 
@@ -133,7 +133,7 @@ Por lo tanto, la aplicación se interrumpe en Chrome o se interrumpe en muchos o
 
 La compatibilidad con SameSite se implementó por primera vez en .NET 4.7.2 con el [estándar de borrador 2016](https://tools.ietf.org/html/draft-west-first-party-cookies-07#section-4.1).
 
-Las actualizaciones del 19 de noviembre de 2019 de Windows actualizaron .NET 4.7.2 + del estándar 2016 al estándar 2019. Hay actualizaciones adicionales disponibles para otras versiones de Windows. Para más información, consulte <xref:samesite/kbs-samesite>.
+Las actualizaciones del 19 de noviembre de 2019 de Windows actualizaron .NET 4.7.2 + del estándar 2016 al estándar 2019. Hay actualizaciones adicionales disponibles para otras versiones de Windows. Para obtener más información, consulta <xref:samesite/kbs-samesite>.
 
  El borrador 2019 de la especificación SameSite:
 
@@ -177,7 +177,7 @@ Estas detecciones son los agentes de explorador más comunes que se han detectad
 * Es posible que la aplicación vea exploradores que no son de su sitio de prueba.
 * Debe estar preparado para agregar detecciones según sea necesario para su entorno.
 
-La forma de conectar la detección varía en función de la versión de .NET y el marco web que esté usando. Se puede llamar al siguiente código en el sitio de llamada de <xref:HTTP.HttpCookie>:
+La forma de conectar la detección varía en función de la versión de .NET y el marco web que esté usando. Se puede llamar al siguiente código en el sitio de la llamada a [HttpCookie](/dotnet/api/system.web.httpcookie) :
 
 [!code-csharp[](sample/SameSiteCheck.cs?name=snippet)]
 
@@ -248,6 +248,8 @@ Google no hace que las versiones anteriores de Chrome estén disponibles. Siga l
 * [Chromium 74 Win64](https://commondatastorage.googleapis.com/chromium-browser-snapshots/index.html?prefix=Win_x64/638880/)
 * Si no está usando una versión de 64 bits de Windows, puede usar el [visor de OmahaProxy](https://omahaproxy.appspot.com/) para buscar la rama de cromo que corresponde a Chrome 74 (v 74.0.3729.108) mediante las [instrucciones proporcionadas por cromo](https://www.chromium.org/getting-involved/download-chromium).
 
+A partir de la versión Canarias `80.0.3975.0`, se puede deshabilitar la mitigación temporal de LAX + POST con el fin de realizar pruebas mediante la nueva marca `--enable-features=SameSiteDefaultChecksMethodRigorously` para permitir la realización de pruebas de sitios y servicios en el estado final eventual de la característica en la que se ha quitado la mitigación. Para obtener más información, consulte las actualizaciones de los proyectos de cromo [SameSite](https://www.chromium.org/updates/same-site)
+
 #### <a name="test-with-chrome-80"></a>Prueba con Chrome 80 +
 
 [Descargue](https://www.google.com/chrome/) una versión de Chrome que admita su nuevo atributo. En el momento de escribir este documento, la versión actual es Chrome 80. Chrome 80 necesita que la marca `chrome://flags/#same-site-by-default-cookies` habilitada para usar el nuevo comportamiento. También debe habilitar (`chrome://flags/#cookies-without-same-site-must-be-secure`) para probar el próximo comportamiento de las cookies que no tienen ningún atributo sameSite habilitado. Chrome 80 está en el destino para que el modificador pueda tratar las cookies sin el atributo como `SameSite=Lax`, aunque con un período de gracia temporal para ciertas solicitudes. Para deshabilitar el período de gracia tiempo, se puede iniciar Chrome 80 con el siguiente argumento de línea de comandos:
@@ -302,6 +304,7 @@ Actualice el *archivo Web. config* para incluir los siguientes valores de config
 ## <a name="additional-resources"></a>Recursos adicionales
 
 * [Próximos cambios en la cookie de SameSite en ASP.NET y ASP.NET Core](https://devblogs.microsoft.com/aspnet/upcoming-samesite-cookie-changes-in-asp-net-and-asp-net-core/)
+* [Sugerencias para probar y depurar SameSite-de forma predeterminada y "SameSite = None; Proteger las cookies](https://www.chromium.org/updates/same-site/test-debug)
 * [Blog de cromo: desarrolladores: Prepárese para New SameSite = None; Configuración de cookies seguras](https://blog.chromium.org/2019/10/developers-get-ready-for-new.html)
 * [Explicación de las cookies de SameSite](https://web.dev/samesite-cookies-explained/)
 * [Actualizaciones de Chrome](https://www.chromium.org/updates/same-site)

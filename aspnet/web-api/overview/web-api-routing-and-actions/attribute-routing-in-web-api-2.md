@@ -1,6 +1,6 @@
 ---
 uid: web-api/overview/web-api-routing-and-actions/attribute-routing-in-web-api-2
-title: Atributo de enrutamiento en ASP.NET Web API 2 | Microsoft Docs
+title: Enrutamiento de atributos en ASP.NET Web API 2 | Microsoft Docs
 author: MikeWasson
 description: ''
 ms.author: riande
@@ -9,55 +9,55 @@ ms.assetid: 979d6c9f-0129-4e5b-ae56-4507b281b86d
 msc.legacyurl: /web-api/overview/web-api-routing-and-actions/attribute-routing-in-web-api-2
 msc.type: authoredcontent
 ms.openlocfilehash: 7da1805d8a7066e82743dc9bd7e024cc9813ee89
-ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/06/2019
-ms.locfileid: "65125462"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78447001"
 ---
-# <a name="attribute-routing-in-aspnet-web-api-2"></a>Enrutamiento mediante atributos en ASP.NET Web API 2
+# <a name="attribute-routing-in-aspnet-web-api-2"></a>Enrutamiento de atributos en ASP.NET Web API 2
 
 por [Mike Wasson](https://github.com/MikeWasson)
 
-*Enrutamiento* es cómo API Web coincide con un URI a una acción. Web API 2 es compatible con un nuevo tipo de enrutamiento, llamado *enrutamiento mediante atributos*. Como el nombre implica, el enrutamiento mediante atributos utiliza atributos para definir las rutas. Enrutamiento mediante atributos proporciona mayor control sobre los URI de la API web. Por ejemplo, puede crear fácilmente los identificadores URI que se describen las jerarquías de recursos.
+El *enrutamiento* es el modo en que la API Web coincide con un URI de una acción. Web API 2 admite un nuevo tipo de enrutamiento, denominado *enrutamiento de atributos*. Como implica el nombre, el enrutamiento de atributos utiliza atributos para definir rutas. El enrutamiento de atributos le proporciona más control sobre los URI de la API Web. Por ejemplo, puede crear fácilmente URI que describen jerarquías de recursos.
 
-El estilo anterior de enrutamiento, llamado basado en convenciones de enrutamiento, sigue siendo totalmente compatible. De hecho, puede combinar ambas técnicas en el mismo proyecto.
+El estilo anterior de enrutamiento, denominado enrutamiento basado en convenciones, sigue siendo totalmente compatible. De hecho, puede combinar ambas técnicas en el mismo proyecto.
 
-En este tema se muestra cómo habilitar el enrutamiento mediante atributos y se describe las diversas opciones para el enrutamiento mediante atributos. Para obtener un tutorial to-end que usa el enrutamiento mediante atributos, vea [crear una API de REST con enrutamiento mediante atributos en Web API 2](create-a-rest-api-with-attribute-routing.md).
+En este tema se muestra cómo habilitar el enrutamiento de atributos y se describen las distintas opciones para el enrutamiento de atributos. Para ver un tutorial de un extremo a otro que usa el enrutamiento de atributos, consulte [creación de una API de REST con enrutamiento de atributos en Web API 2](create-a-rest-api-with-attribute-routing.md).
 
 ## <a name="prerequisites"></a>Requisitos previos
 
-[Visual Studio 2017](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=button+cta&utm_content=download+vs2017) Community, Professional o Enterprise edition
+[Visual Studio 2017](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=button+cta&utm_content=download+vs2017) Community, Professional o Enterprise Edition
 
-Como alternativa, use el Administrador de paquetes de NuGet para instalar los paquetes necesarios. Desde el **herramientas** menú en Visual Studio, seleccione **Administrador de paquetes de NuGet**, a continuación, seleccione **Package Manager Console**. Escriba el siguiente comando en la ventana de consola de administrador de paquetes:
+También puede usar el administrador de paquetes NuGet para instalar los paquetes necesarios. En el menú **herramientas** de Visual Studio, seleccione **Administrador de paquetes NuGet**y, a continuación, seleccione **consola del administrador de paquetes**. Escriba el siguiente comando en la ventana de la consola del administrador de paquetes:
 
 `Install-Package Microsoft.AspNet.WebApi.WebHost`
 
 <a id="why"></a>
-## <a name="why-attribute-routing"></a>¿Por qué enrutamiento mediante atributos?
+## <a name="why-attribute-routing"></a>¿Por qué el enrutamiento de atributos?
 
-La primera versión de API Web usa *basado en convenciones* enrutamiento. En ese tipo de enrutamiento, puede definir uno o más plantillas de ruta, que básicamente son cadenas de parámetros. Cuando el marco de trabajo recibe una solicitud, coincide con el URI en la plantilla de ruta. (Para obtener más información sobre el enrutamiento basado en convenciones, vea [Routing in ASP.NET Web API](routing-in-aspnet-web-api.md).
+La primera versión de la API Web usó el enrutamiento *basado en convenciones* . En ese tipo de enrutamiento, se definen una o varias plantillas de ruta, que básicamente son cadenas con parámetros. Cuando el marco de trabajo recibe una solicitud, coincide con el URI en la plantilla de ruta. (Para obtener más información sobre el enrutamiento basado en convenciones, consulte [enrutamiento en ASP.net web API](routing-in-aspnet-web-api.md).
 
-Una ventaja del enrutamiento basado en convenciones es que las plantillas se definen en un solo lugar y las reglas de enrutamiento se aplican de forma coherente en todos los controladores. Por desgracia, enrutamiento basado en convenciones hace más difícil admitir determinados patrones URI que son comunes en las API de RESTful. Por ejemplo, los recursos a menudo contienen recursos secundarios: Los clientes tienen pedidos, las películas tienen los actores, tienen los autores de libros y así sucesivamente. Es natural para crear a los URI que reflejan estas relaciones:
+Una ventaja del enrutamiento basado en convenciones es que las plantillas se definen en un único lugar y las reglas de enrutamiento se aplican de forma coherente en todos los controladores. Desafortunadamente, el enrutamiento basado en convenciones dificulta la compatibilidad con determinados patrones de URI que son comunes en las API de RESTful. Por ejemplo, los recursos suelen contener recursos secundarios: los clientes tienen pedidos, las películas tienen actores, los libros tienen autores, etc. Es natural crear identificadores URI que reflejen estas relaciones:
 
 `/customers/1/orders`
 
-Este tipo de URI es difícil crear mediante enrutamiento basado en convenciones. Aunque es posible, los resultados no se escalan bien si tiene muchos controladores o tipos de recursos.
+Este tipo de URI es difícil de crear mediante el enrutamiento basado en convenciones. Aunque se puede hacer, los resultados no se escalan bien si tiene muchos controladores o tipos de recursos.
 
-Con el enrutamiento mediante atributos, es muy fácil de definir una ruta para este URI. Simplemente agregue un atributo a la acción de controlador:
+Con el enrutamiento de atributos, es trivial definir una ruta para este URI. Simplemente agregue un atributo a la acción del controlador:
 
 [!code-csharp[Main](attribute-routing-in-web-api-2/samples/sample1.cs)]
 
-Estos son algunos otros patrones de ese atributo enrutamiento hace fácil.
+Estos son otros patrones que facilita el enrutamiento de atributos.
 
-**Versiones de API**
+**Control de versiones de API**
 
-En este ejemplo, "/ api/v1/products" sería enrutado a un controlador diferente que "/ v2/api/products".
+En este ejemplo, "/API/v1/Products" se enrutaría a un controlador diferente que "/API/V2/Products".
 
 `/api/v1/products`
 `/api/v2/products`
 
-**Segmentos URI sobrecargados**
+**Segmentos de URI sobrecargados**
 
 En este ejemplo, "1" es un número de pedido, pero "pendiente" se asigna a una colección.
 
@@ -72,31 +72,31 @@ En este ejemplo, "1" es un número de pedido, pero "2013/06/16" especifica una f
 `/orders/2013/06/16`
 
 <a id="enable"></a>
-## <a name="enabling-attribute-routing"></a>Habilitar el enrutamiento mediante atributos
+## <a name="enabling-attribute-routing"></a>Habilitar el enrutamiento de atributos
 
-Para habilitar el enrutamiento mediante atributos, llame a **MapHttpAttributeRoutes** durante la configuración. Este método de extensión se define en el **System.Web.Http.HttpConfigurationExtensions** clase.
+Para habilitar el enrutamiento de atributos, llame a **MapHttpAttributeRoutes** durante la configuración. Este método de extensión se define en la clase **System. Web. http. HttpConfigurationExtensions** .
 
 [!code-csharp[Main](attribute-routing-in-web-api-2/samples/sample2.cs)]
 
-Enrutamiento mediante atributos se puede combinar con [basado en convenciones](routing-in-aspnet-web-api.md) enrutamiento. Para definir las rutas basado en convenciones, llame a la **MapHttpRoute** método.
+El enrutamiento de atributos se puede combinar con [el enrutamiento basado en convenciones](routing-in-aspnet-web-api.md) . Para definir las rutas basadas en convenciones, llame al método **MapHttpRoute** .
 
 [!code-csharp[Main](attribute-routing-in-web-api-2/samples/sample3.cs)]
 
-Para obtener más información sobre la configuración de Web API, consulte [configuración de ASP.NET Web API 2](../advanced/configuring-aspnet-web-api.md).
+Para obtener más información sobre la configuración de la API Web, consulte [configuración de ASP.net web API 2](../advanced/configuring-aspnet-web-api.md).
 
 <a id="config"></a>
-### <a name="note-migrating-from-web-api-1"></a>Nota: Migración de Web API 1
+### <a name="note-migrating-from-web-api-1"></a>Nota: migración desde web API 1
 
-Antes de Web API 2, las plantillas de proyecto Web API generan código similar al siguiente:
+Antes de la API Web 2, las plantillas de proyecto de la API Web generaban código similar al siguiente:
 
 [!code-csharp[Main](attribute-routing-in-web-api-2/samples/sample4.cs)]
 
-Si está habilitado el enrutamiento mediante atributos, este código producirá una excepción. Si actualiza un proyecto de API Web existente para usar el enrutamiento mediante atributos, asegúrese de actualizar este código de configuración a la siguiente:
+Si el enrutamiento de atributos está habilitado, este código producirá una excepción. Si actualiza un proyecto de API Web existente para usar el enrutamiento de atributos, asegúrese de actualizar este código de configuración a lo siguiente:
 
 [!code-csharp[Main](attribute-routing-in-web-api-2/samples/sample5.cs?highlight=4)]
 
 > [!NOTE]
-> Para obtener más información, consulte [configurar Web API con hospedaje de ASP.NET](../advanced/configuring-aspnet-web-api.md#webhost).
+> Para obtener más información, consulte Configuración de la [API Web con hospedaje de ASP.net](../advanced/configuring-aspnet-web-api.md#webhost).
 
 <a id="add-routes"></a>
 ## <a name="adding-route-attributes"></a>Agregar atributos de ruta
@@ -105,52 +105,52 @@ Este es un ejemplo de una ruta definida mediante un atributo:
 
 [!code-csharp[Main](attribute-routing-in-web-api-2/samples/sample6.cs)]
 
-La cadena &quot;clientes / {customerId} / pedidos&quot; es la plantilla URI para la ruta. API Web intenta hacer coincidir el URI de solicitud a la plantilla. En este ejemplo, "clientes" y "orders" son los segmentos literales y "{customerId}" es un parámetro de variable. Los URI siguientes coincidirían con esta plantilla:
+La cadena &quot;customers/{customerId}/Orders&quot; es la plantilla URI de la ruta. Web API intenta hacer coincidir el URI de solicitud con la plantilla. En este ejemplo, "Customers" y "Orders" son segmentos literales y "{customerId}" es un parámetro de variable. Los siguientes URI coincidirían con esta plantilla:
 
 - `http://localhost/customers/1/orders`
 - `http://localhost/customers/bob/orders`
 - `http://localhost/customers/1234-5678/orders`
 
-Puede restringir la búsqueda de coincidencias utilizando [restricciones](#constraints), que se describen más adelante en este tema.
+Puede restringir la coincidencia mediante [restricciones](#constraints), descritas más adelante en este tema.
 
-Tenga en cuenta que el &quot;{customerId}&quot; parámetro en la plantilla de ruta coincide con el nombre de la *customerId* parámetro del método. Cuando la API Web invoca la acción de controlador, intenta enlazar los parámetros de ruta. Por ejemplo, si el URI es `http://example.com/customers/1/orders`, API Web intenta enlazar el valor "1" para el *customerId* parámetro en la acción.
+Observe que el parámetro &quot;{customerId}&quot; de la plantilla de ruta coincide con el nombre del parámetro *customerId* en el método. Cuando la API Web invoca la acción del controlador, intenta enlazar los parámetros de ruta. Por ejemplo, si el URI es `http://example.com/customers/1/orders`, Web API intenta enlazar el valor "1" al parámetro *customerId* en la acción.
 
-Una plantilla URI puede tener varios parámetros:
+Una plantilla de URI puede tener varios parámetros:
 
 [!code-csharp[Main](attribute-routing-in-web-api-2/samples/sample7.cs)]
 
-Los métodos de controlador que no tienen un atributo de ruta usan enrutamiento basado en convenciones. De este modo, puede combinar ambos tipos de enrutamiento en el mismo proyecto.
+Los métodos de controlador que no tienen un atributo de ruta usan el enrutamiento basado en convenciones. De este modo, puede combinar ambos tipos de enrutamiento en el mismo proyecto.
 
-## <a name="http-methods"></a>Métodos HTTP
+## <a name="http-methods"></a>HTTP Methods
 
-API Web también selecciona las acciones según el método HTTP de la solicitud (GET, POST, etcetera). De forma predeterminada, la API Web busca una coincidencia entre mayúsculas y minúsculas, con el inicio del nombre del método de controlador. Por ejemplo, un método de controlador denominado `PutCustomers` coincide con una solicitud HTTP PUT.
+Web API también selecciona acciones basadas en el método HTTP de la solicitud (GET, POST, etc.). De forma predeterminada, Web API busca una coincidencia sin distinción entre mayúsculas y minúsculas con el inicio del nombre del método de controlador. Por ejemplo, un método de controlador denominado `PutCustomers` coincide con una solicitud PUT de HTTP.
 
-Puede invalidar esta convención decorando el método con cualquiera de los siguientes atributos:
+Puede invalidar esta Convención decorando el método con cualquiera de los siguientes atributos:
 
-- **[HttpDelete]**
+- **HttpDelete**
 - **[HttpGet]**
 - **[HttpHead]**
 - **[HttpOptions]**
 - **[HttpPatch]**
-- **[HttpPost]**
-- **[HttpPut]**
+- **HttpPost**
+- **HttpPut**
 
-El ejemplo siguiente asigna el método CreateBook a las solicitudes HTTP POST.
+En el ejemplo siguiente se asigna el método CreateBook a las solicitudes HTTP POST.
 
 [!code-csharp[Main](attribute-routing-in-web-api-2/samples/sample8.cs)]
 
-Para todos los demás métodos HTTP, incluidos los métodos no estándares, usan el **AcceptVerbs** atributo, que toma una lista de métodos HTTP.
+Para todos los demás métodos HTTP, incluidos los métodos no estándar, use el atributo **AcceptVerbs** , que toma una lista de métodos http.
 
 [!code-csharp[Main](attribute-routing-in-web-api-2/samples/sample9.cs)]
 
 <a id="prefixes"></a>
-## <a name="route-prefixes"></a>Prefijos de rutas
+## <a name="route-prefixes"></a>Prefijos de ruta
 
-A menudo, las rutas en un controlador todas comienzan por el mismo prefijo. Por ejemplo:
+A menudo, todas las rutas de un controlador se inician con el mismo prefijo. Por ejemplo:
 
 [!code-csharp[Main](attribute-routing-in-web-api-2/samples/sample10.cs)]
 
-Puede establecer un prefijo común para todo un controlador mediante la **[RoutePrefix]** atributo:
+Puede establecer un prefijo común para todo un controlador mediante el atributo **[RoutePrefix]** :
 
 [!code-csharp[Main](attribute-routing-in-web-api-2/samples/sample11.cs)]
 
@@ -165,109 +165,109 @@ El prefijo de ruta puede incluir parámetros:
 <a id="constraints"></a>
 ## <a name="route-constraints"></a>Restricciones de ruta
 
-Las restricciones de ruta le permiten restringir cómo coinciden los parámetros en la plantilla de ruta. La sintaxis general es &quot;{: restricción de parámetro}&quot;. Por ejemplo:
+Las restricciones de ruta permiten restringir el modo en que se buscan coincidencias con los parámetros de la plantilla de ruta. La sintaxis general es &quot;{parámetro: Constraint}&quot;. Por ejemplo:
 
 [!code-csharp[Main](attribute-routing-in-web-api-2/samples/sample14.cs)]
 
-En este caso, la primera ruta sólo se puede seleccionar si el &quot;id&quot; segmento del URI es un entero. En caso contrario, se elegirá la segunda ruta.
+Aquí, la primera ruta solo se seleccionará si el identificador de &quot;&quot; segmento del URI es un entero. De lo contrario, se elegirá la segunda ruta.
 
-En la tabla siguiente se enumera las restricciones que se admiten.
+En la tabla siguiente se enumeran las restricciones que se admiten.
 
-| Restricción | Descripción | Ejemplo |
+| Restricción | Description | Ejemplo |
 | --- | --- | --- |
-| alpha | Coincidencias de mayúscula o minúscula de caracteres del alfabeto latino (, a-z, A-z) | {x:alpha} |
+| alpha | Coincide con caracteres del alfabeto latino en mayúsculas o minúsculas (a-z, A-Z) | {x:alpha} |
 | bool | Coincide con un valor booleano. | {x:bool} |
-| datetime | Coincide con un **DateTime** valor. | {x:datetime} |
+| datetime | Coincide con un valor **DateTime** . | {x:datetime} |
 | decimal | Coincide con un valor decimal. | {x:decimal} |
 | double | Coincide con un valor de punto flotante de 64 bits. | {x:double} |
 | float | Coincide con un valor de punto flotante de 32 bits. | {x:float} |
-| guid | Coincide con un valor GUID. | {x:guid} |
+| guid | Coincide con un valor de GUID. | {x:guid} |
 | int | Coincide con un valor entero de 32 bits. | {x:int} |
-| longitud | Busca una cadena con la longitud especificada o en un intervalo especificado de longitudes. | {x:length(6)} {x:length(1,20)} |
+| longitud | Coincide con una cadena con la longitud especificada o dentro de un intervalo de longitud especificado. | {x:length (6)} {x:length (1, 20)} |
 | long | Coincide con un valor entero de 64 bits. | {x:long} |
 | max | Coincide con un entero con un valor máximo. | {x:max(10)} |
-| MaxLength | Busca una cadena con una longitud máxima. | {x:maxlength(10)} |
+| longitud | Coincide con una cadena con una longitud máxima. | {x:maxlength(10)} |
 | min | Coincide con un entero con un valor mínimo. | {x:min(10)} |
-| minLength | Busca una cadena con una longitud mínima. | {x:minlength(10)} |
-| range | Coincide con un número entero en un intervalo de valores. | {x:range(10,50)} |
-| regex | Coincide con una expresión regular. | {x:regex(^\d{3}-\d{3}-\d{4}$)} |
+| MinLength | Coincide con una cadena con una longitud mínima. | {x:MinLength (10)} |
+| range | Coincide con un entero dentro de un intervalo de valores. | {x:Range (10, 50)} |
+| regex | Coincide con una expresión regular. | {x:regex (^ \d{3}-\d{3}-\d{4}$)} |
 
-Tenga en cuenta que algunas de las restricciones, como &quot;min&quot;, toman argumentos entre paréntesis. Puede aplicar varias restricciones a un parámetro, separado por puntos.
+Observe que algunas de las restricciones, como &quot;min&quot;, toman argumentos entre paréntesis. Puede aplicar varias restricciones a un parámetro, separadas por dos puntos.
 
 [!code-csharp[Main](attribute-routing-in-web-api-2/samples/sample15.cs)]
 
 ### <a name="custom-route-constraints"></a>Restricciones de ruta personalizadas
 
-Puede crear las restricciones de ruta personalizada implementando la **IHttpRouteConstraint** interfaz. Por ejemplo, la siguiente restricción restringe un parámetro a un valor entero distinto de cero.
+Puede crear restricciones de ruta personalizadas implementando la interfaz **IHttpRouteConstraint** . Por ejemplo, la restricción siguiente restringe un parámetro a un valor entero distinto de cero.
 
 [!code-csharp[Main](attribute-routing-in-web-api-2/samples/sample16.cs)]
 
-El código siguiente muestra cómo registrar la restricción:
+En el código siguiente se muestra cómo registrar la restricción:
 
 [!code-csharp[Main](attribute-routing-in-web-api-2/samples/sample17.cs)]
 
-Ahora puede aplicar la restricción en sus rutas:
+Ahora puede aplicar la restricción en las rutas:
 
 [!code-csharp[Main](attribute-routing-in-web-api-2/samples/sample18.cs)]
 
-También puede reemplazar toda la **DefaultInlineConstraintResolver** clase implementando la **IInlineConstraintResolver** interfaz. Si lo hace, reemplazará todas las restricciones integradas, a menos que la implementación de **IInlineConstraintResolver** agrega específicamente.
+También puede reemplazar toda la clase **DefaultInlineConstraintResolver** implementando la interfaz **IInlineConstraintResolver** . Al hacerlo, se reemplazarán todas las restricciones integradas, a menos que la implementación de **IInlineConstraintResolver** las agregue específicamente.
 
 <a id="optional"></a>
-## <a name="optional-uri-parameters-and-default-values"></a>Los parámetros de URI opcional y los valores predeterminados
+## <a name="optional-uri-parameters-and-default-values"></a>Parámetros de URI opcionales y valores predeterminados
 
-Puede hacer que un parámetro de URI opcional mediante la adición de un signo de interrogación para el parámetro de ruta. Si un parámetro de ruta es opcional, debe definir un valor predeterminado para el parámetro de método.
+Puede crear un parámetro de URI opcional si agrega un signo de interrogación al parámetro Route. Si un parámetro de ruta es opcional, debe definir un valor predeterminado para el parámetro de método.
 
 [!code-csharp[Main](attribute-routing-in-web-api-2/samples/sample19.cs)]
 
 En este ejemplo, `/api/books/locale/1033` y `/api/books/locale` devuelven el mismo recurso.
 
-Como alternativa, puede especificar un valor predeterminado dentro de la plantilla de ruta, como sigue:
+También puede especificar un valor predeterminado dentro de la plantilla de ruta, como se indica a continuación:
 
 [!code-csharp[Main](attribute-routing-in-web-api-2/samples/sample20.cs)]
 
-Esto es prácticamente el mismo que el ejemplo anterior, pero hay una ligera diferencia de comportamiento cuando se aplica el valor predeterminado.
+Esto es prácticamente igual que el ejemplo anterior, pero hay una pequeña diferencia de comportamiento cuando se aplica el valor predeterminado.
 
-- En el primer ejemplo ("{lcid:int?}"), el valor predeterminado de 1033 se asigna directamente al parámetro de método, por lo que el parámetro tendrá este valor exacto.
-- En el segundo ejemplo ("{lcid:int = 1033}"), el valor predeterminado de "1033" recorre el proceso de enlace de modelos. El enlazador de modelos de forma predeterminada, se convertirá "1033" al valor numérico 1033. Sin embargo, es posible insertar un enlazador de modelos personalizado, que podría hacer algo diferente.
+- En el primer ejemplo ("{LCID: int?}"), el valor predeterminado de 1033 se asigna directamente al parámetro del método, por lo que el parámetro tendrá este valor exacto.
+- En el segundo ejemplo ("{LCID: int = 1033}"), el valor predeterminado de "1033" pasa por el proceso de enlace de modelos. El enlazador de modelos predeterminado convertirá "1033" en el valor numérico 1033. Sin embargo, podría conectar un enlazador de modelos personalizado, que podría hacer algo diferente.
 
-(En la mayoría de los casos, a menos que tenga los enlazadores de modelos personalizados en la canalización, los dos formularios será equivalente.)
+(En la mayoría de los casos, a menos que tenga enlazadores de modelos personalizados en la canalización, las dos formas serán equivalentes).
 
 <a id="route-names"></a>
 ## <a name="route-names"></a>Nombres de ruta
 
-En la API Web, cada ruta tiene un nombre. Los nombres de ruta son útiles para generar vínculos, por lo que puede incluir un vínculo en una respuesta HTTP.
+En Web API, cada ruta tiene un nombre. Los nombres de ruta son útiles para generar vínculos, por lo que puede incluir un vínculo en una respuesta HTTP.
 
-Para especificar el nombre de ruta, establezca la **nombre** propiedad del atributo. El ejemplo siguiente muestra cómo establecer el nombre de ruta y también cómo usar el nombre de ruta cuando se genera un vínculo.
+Para especificar el nombre de la ruta, establezca la propiedad **nombre** en el atributo. En el ejemplo siguiente se muestra cómo establecer el nombre de la ruta y cómo usar el nombre de la ruta al generar un vínculo.
 
 [!code-csharp[Main](attribute-routing-in-web-api-2/samples/sample21.cs)]
 
 <a id="order"></a>
-## <a name="route-order"></a>Orden de la ruta
+## <a name="route-order"></a>Orden de ruta
 
-Cuando el marco de trabajo intenta hacer coincidir un URI con una ruta, evalúa las rutas en un orden concreto. Para especificar el orden, establezca el **orden** propiedad del atributo de ruta. Los valores más bajos se evalúan primero. El valor de orden predeterminado es cero.
+Cuando el marco intenta hacer coincidir un URI con una ruta, evalúa las rutas en un orden determinado. Para especificar el orden, establezca la propiedad **Order** en el atributo Route. Primero se evalúan los valores inferiores. El valor de orden predeterminado es cero.
 
-Aquí es cómo se determina el orden total:
+A continuación se indica cómo se determina el orden total:
 
-1. Comparar el **orden** propiedad del atributo de ruta.
-2. Examine cada segmento URI de la plantilla de ruta. Para cada segmento, pedido como sigue:
+1. Compare la propiedad **Order** del atributo Route.
+2. Examine cada segmento del URI en la plantilla de ruta. Para cada segmento, orden de la manera siguiente:
 
     1. Segmentos literales.
     2. Parámetros de ruta con restricciones.
     3. Parámetros de ruta sin restricciones.
-    4. Segmentos de parámetro de carácter comodín con restricciones.
-    5. Segmentos de carácter comodín parámetro sin restricciones.
-3. En el caso de empate, las rutas se ordenan por una comparación de cadenas ordinales entre mayúsculas y minúsculas ([OrdinalIgnoreCase](https://msdn.microsoft.com/library/system.stringcomparer.ordinalignorecase.aspx)) de la plantilla de ruta.
+    4. Segmentos de parámetros comodín con restricciones.
+    5. Segmentos de parámetros comodín sin restricciones.
+3. En el caso de una empate, las rutas se ordenan por una comparación de cadenas ordinales sin distinción entre mayúsculas y minúsculas ([OrdinalIgnoreCase](https://msdn.microsoft.com/library/system.stringcomparer.ordinalignorecase.aspx)) de la plantilla de ruta.
 
-A continuación se muestra un ejemplo. Supongamos que define el controlador siguiente:
+A continuación se muestra un ejemplo. Supongamos que define el siguiente controlador:
 
 [!code-csharp[Main](attribute-routing-in-web-api-2/samples/sample22.cs)]
 
-Estas rutas se ordenan como sigue.
+Estas rutas se ordenan de la manera siguiente.
 
 1. pedidos y detalles
 2. orders/{id}
 3. orders/{customerName}
-4. orders/{\*date}
-5. pedidos / pendiente
+4. Orders/{\*Date}
+5. pedidos/pendientes
 
-Tenga en cuenta que "Detalles" es un segmento literal y aparece antes que "{id}", pero "pendiente" aparece por última vez porque el **orden** propiedad es 1. (En este ejemplo se supone que hay es ningún cliente denominado "Detalles" o "pendiente". En general, intente evitar rutas ambiguas. En este ejemplo, una plantilla de ruta mejor para `GetByCustomer` es "customers / {customerName}")
+Observe que "details" es un segmento literal y aparece antes que "{ID}", pero "Pending" aparece en último lugar porque la propiedad **Order** es 1. (En este ejemplo se da por supuesto que no hay clientes con el nombre "details" o "Pending". En general, intente evitar rutas ambiguas. En este ejemplo, una plantilla de ruta mejor para `GetByCustomer` es "Customers/{customerName}")

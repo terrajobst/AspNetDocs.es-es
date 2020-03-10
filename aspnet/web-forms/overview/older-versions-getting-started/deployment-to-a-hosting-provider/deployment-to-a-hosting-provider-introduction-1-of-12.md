@@ -9,11 +9,11 @@ ms.assetid: a2d7f33b-8c4a-4b48-9fb1-9139cf9b9878
 msc.legacyurl: /web-forms/overview/older-versions-getting-started/deployment-to-a-hosting-provider/deployment-to-a-hosting-provider-introduction-1-of-12
 msc.type: authoredcontent
 ms.openlocfilehash: ea88da1e6d510f706fc7ca370cfa32974c1243f8
-ms.sourcegitcommit: 22fbd8863672c4ad6693b8388ad5c8e753fb41a2
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/28/2019
-ms.locfileid: "74587745"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78421843"
 ---
 # <a name="deploying-an-aspnet-web-application-with-sql-server-compact-using-visual-studio-introduction---1-of-12"></a>Implementación de una aplicación Web de ASP.NET con SQL Server Compact con Visual Studio: Introducción 1 de 12
 
@@ -31,7 +31,7 @@ por [Tom Dykstra](https://github.com/tdykstra)
 > 
 > Si tiene preguntas que no están directamente relacionadas con el tutorial, puede publicarlas en el foro de [implementación de ASP.net](https://forums.asp.net/26.aspx/1?Configuration+and+Deployment).
 
-## <a name="overview"></a>Información general del
+## <a name="overview"></a>Información general
 
 Estos tutoriales le guían en la implementación de primero en IIS en el equipo de desarrollo local para realizar pruebas y, a continuación, en un proveedor de hospedaje de terceros. La aplicación que va a implementar utiliza una base de datos de aplicación y una base de datos de pertenencia a ASP.NET. Puede empezar a usar SQL Server Compact e implementar en SQL Server Compact, y en los tutoriales posteriores se muestra cómo implementar los cambios de la base de datos y cómo migrar a SQL Server.
 
@@ -39,7 +39,7 @@ El número de tutoriales – 11 en total más una página de solución de proble
 
 Los tutoriales están diseñados para ejecutarse en secuencia y cada parte se basa en la parte anterior. Sin embargo, puede omitir partes que no sean relevantes para su situación. (Si se omiten las partes, es posible que sea necesario ajustar los procedimientos en los tutoriales posteriores).
 
-## <a name="intended-audience"></a>Público al que está dirigido
+## <a name="intended-audience"></a>Destinatarios
 
 Los tutoriales están dirigidos a desarrolladores de ASP.NET que trabajan en pequeñas organizaciones u otros entornos en los que:
 

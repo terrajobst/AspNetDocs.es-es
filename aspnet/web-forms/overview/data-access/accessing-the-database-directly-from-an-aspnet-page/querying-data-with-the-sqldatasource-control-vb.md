@@ -9,11 +9,11 @@ ms.assetid: b12f752d-3502-40a4-b695-fc7b7d08cfd3
 msc.legacyurl: /web-forms/overview/data-access/accessing-the-database-directly-from-an-aspnet-page/querying-data-with-the-sqldatasource-control-vb
 msc.type: authoredcontent
 ms.openlocfilehash: 199ddb46e877c3a0937672d33241a240660684da
-ms.sourcegitcommit: 22fbd8863672c4ad6693b8388ad5c8e753fb41a2
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/28/2019
-ms.locfileid: "74606004"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78430063"
 ---
 # <a name="querying-data-with-the-sqldatasource-control-vb"></a>Consultar datos con el control SqlDataSource (VB)
 

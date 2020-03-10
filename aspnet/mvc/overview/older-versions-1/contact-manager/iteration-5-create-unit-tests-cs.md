@@ -1,223 +1,223 @@
 ---
 uid: mvc/overview/older-versions-1/contact-manager/iteration-5-create-unit-tests-cs
-title: 'Iteración #5: crear pruebas unitarias (C#) | Microsoft Docs'
+title: '#5 de iteración: crear pruebasC#unitarias () | Microsoft Docs'
 author: microsoft
-description: En la iteración quinta, realizamos nuestra aplicación más fácil de mantener y modificar mediante la adición de las pruebas unitarias. Nos simular nuestras clases de modelo de datos y generar pruebas unitarias para o...
+description: En la quinta iteración, se facilita el mantenimiento y la modificación de la aplicación mediante la adición de pruebas unitarias. Simulamos nuestras clases de modelo de datos y compilamos pruebas unitarias para o...
 ms.author: riande
 ms.date: 02/20/2009
 ms.assetid: 28ad8f80-b8a5-444e-b478-8b15a846060c
 msc.legacyurl: /mvc/overview/older-versions-1/contact-manager/iteration-5-create-unit-tests-cs
 msc.type: authoredcontent
 ms.openlocfilehash: 32e81cce34a0e0b1f6b01934334e1b66dce89651
-ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/06/2019
-ms.locfileid: "65123917"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78437845"
 ---
-# <a name="iteration-5--create-unit-tests-c"></a>Iteración #5: crear pruebas unitarias (C#)
+# <a name="iteration-5--create-unit-tests-c"></a>#5 de iteración: crear pruebasC#unitarias ()
 
 por [Microsoft](https://github.com/microsoft)
 
-[Descargue el código](iteration-5-create-unit-tests-cs/_static/contactmanager_5_cs1.zip)
+[Descargar código](iteration-5-create-unit-tests-cs/_static/contactmanager_5_cs1.zip)
 
-> En la iteración quinta, realizamos nuestra aplicación más fácil de mantener y modificar mediante la adición de las pruebas unitarias. Hemos simular nuestras clases de modelo de datos y generar pruebas unitarias para nuestros controladores y la lógica de validación.
+> En la quinta iteración, se facilita el mantenimiento y la modificación de la aplicación mediante la adición de pruebas unitarias. Hemos simulado nuestras clases de modelo de datos y compilamos pruebas unitarias para nuestros controladores y la lógica de validación.
 
-## <a name="building-a-contact-management-aspnet-mvc-application-c"></a>Creación de una aplicación de MVC de ASP.NET de la administración de contactos (C#)
+## <a name="building-a-contact-management-aspnet-mvc-application-c"></a>Creación de una aplicación ASP.NET MVC de administraciónC#de contactos ()
 
-En esta serie de tutoriales, creamos una aplicación de administración de contactos completa desde el principio para finalizar. La aplicación de Contact Manager permite almacenar información de contacto - nombres, números de teléfono y direcciones de correo electrónico: para obtener una lista de personas.
+En esta serie de tutoriales, creamos una aplicación de administración de contactos completa de principio a fin. La aplicación Contact Manager le permite almacenar información de contacto: nombres, números de teléfono y direcciones de correo electrónico, para obtener una lista de personas.
 
-Creamos la aplicación a través de varias iteraciones. Con cada iteración, mejorar gradualmente la aplicación. Es el objetivo de este enfoque de varias iteraciones para que pueda entender el motivo de cada cambio.
+Compilamos la aplicación en varias iteraciones. Con cada iteración, mejoramos gradualmente la aplicación. El objetivo de este enfoque de varias iteraciones es permitirle comprender la razón de cada cambio.
 
-- Iteración #1: crear la aplicación. En la primera iteración, se creará el Administrador de contactos de la manera más sencilla posible. Se agrega compatibilidad para las operaciones de base de datos básica: Crear, leer, actualizar y eliminar (CRUD).
+- #1 de iteración: cree la aplicación. En la primera iteración, se crea el administrador de contactos de la manera más sencilla posible. Agregamos compatibilidad con las operaciones básicas de base de datos: crear, leer, actualizar y eliminar (CRUD).
 
-- Iteración #2: hacer que la aplicación parezca interesante. En esta iteración, mejorar la apariencia de la aplicación mediante la modificación de la página principal de la vista de MVC de ASP.NET predeterminada y en cascada de hoja de estilos.
+- #2 de iteración: haga que la aplicación tenga un buen aspecto. En esta iteración, mejoramos la apariencia de la aplicación modificando la página maestra de vista de MVC predeterminada de ASP.NET y la hoja de estilos en cascada.
 
-- Iteración #3: agregar validación de formulario. En la tercera iteración, se agrega una validación de formulario básico. Evitamos personas desde el envío de un formulario sin completar los campos obligatorios. También hemos validar direcciones de correo electrónico y números de teléfono.
+- #3 de iteración: agregar validación de formulario. En la tercera iteración, agregamos la validación de formulario básica. Impedimos que los usuarios envíen un formulario sin completar los campos de formulario necesarios. También validamos las direcciones de correo electrónico y los números de teléfono.
 
-- Iteración #4: hacer que la aplicación tenga un acoplamiento. En este cuarta iteración, aprovechamos de varios patrones de diseño de software para que sea más fácil de mantener y modificar la aplicación de Contact Manager. Por ejemplo, se refactoriza nuestra aplicación para usar el patrón de repositorio y la inserción de dependencias.
+- #4 de iteración: hacer que la aplicación esté acoplada de forma flexible. En esta cuarta iteración, se aprovechan varios patrones de diseño de software para facilitar el mantenimiento y la modificación de la aplicación Contact Manager. Por ejemplo, se refactoriza nuestra aplicación para usar el patrón de repositorio y el patrón de inserción de dependencias.
 
-- Iteración #5: crear pruebas unitarias. En la iteración quinta, realizamos nuestra aplicación más fácil de mantener y modificar mediante la adición de las pruebas unitarias. Hemos simular nuestras clases de modelo de datos y generar pruebas unitarias para nuestros controladores y la lógica de validación.
+- #5 de iteración: crear pruebas unitarias. En la quinta iteración, se facilita el mantenimiento y la modificación de la aplicación mediante la adición de pruebas unitarias. Hemos simulado nuestras clases de modelo de datos y compilamos pruebas unitarias para nuestros controladores y la lógica de validación.
 
-- Iteración #6: usar el desarrollo controlado por pruebas. En esta iteración sexta, se agregan nuevas funciones a nuestra aplicación escribir pruebas unitarias en primer lugar y escribir código en las pruebas unitarias. En esta iteración, se agrega grupos de contactos.
+- #6 de iteración: Use el desarrollo controlado por pruebas. En esta sexta iteración, agregamos una nueva funcionalidad a nuestra aplicación escribiendo primero las pruebas unitarias y escribiendo código en las pruebas unitarias. En esta iteración, se agregan grupos de contactos.
 
-- Iteración #7: agregar funcionalidad Ajax. En la iteración séptima, mejorar la capacidad de respuesta y el rendimiento de nuestra aplicación agregando compatibilidad con Ajax.
+- #7 de iteración: agregar funcionalidad de Ajax. En la séptima iteración, se mejora la capacidad de respuesta y el rendimiento de la aplicación mediante la adición de compatibilidad con Ajax.
 
 ## <a name="this-iteration"></a>Esta iteración
 
-En la iteración anterior de la aplicación de Contact Manager, hemos refactorizado la aplicación para tener más de un acoplamiento flexible. Se separan la aplicación en un controlador distinto, servicio y capas de repositorio. Cada capa interactúa con la capa debajo de ella a través de interfaces.
+En la iteración anterior de la aplicación Contact Manager, hemos refactorizado la aplicación para que esté más acoplada. Dividimos la aplicación en distintas capas de controlador, servicio y repositorio. Cada capa interactúa con la capa que hay debajo a través de las interfaces.
 
-Hemos refactorizado la aplicación para hacer más fácil de mantener y modificar la aplicación. Por ejemplo, si es necesario usar una nueva tecnología de acceso de datos, podemos simplemente cambiamos la capa de repositorio sin tocar el controlador o el nivel de servicio. Haciendo que el Administrador de contactos de correspondencia imprecisa, se ve facilitado la aplicación sea más resistente a cambiar.
+Hemos refactorizado la aplicación para facilitar el mantenimiento y la modificación de la aplicación. Por ejemplo, si necesitamos usar una nueva tecnología de acceso a datos, podemos cambiar simplemente la capa del repositorio sin tocar el nivel de servicio o el controlador. Al hacer que Contact Manager esté débilmente acoplado, se hace que la aplicación sea más resistente a los cambios.
 
-Pero, ¿qué ocurre cuando sea necesario agregar una nueva característica a la aplicación de Contact Manager? O bien, ¿qué ocurre cuando se corrija un error? Una verdad triste pero bien probada de escribir código es cada vez que toque código que cree el riesgo de introducir nuevos errores.
+Pero, ¿qué ocurre cuando es necesario agregar una nueva característica a la aplicación Contact Manager? O bien, ¿qué ocurre cuando se corrige un error? Una verdad, pero bien comprobada, de escribir código es que, cada vez que toca código, crea el riesgo de introducir nuevos errores.
 
-Por ejemplo, un día bien, el administrador podría pedirle que agregar una nueva característica al administrador de contactos. Quiere agregar compatibilidad para grupos de contactos. Quiere permitir que los usuarios organizar sus contactos en grupos como amigos, negocios y así sucesivamente.
+Por ejemplo, una vez al día, es posible que el administrador le pida que agregue una nueva característica al administrador de contactos. Desea agregar compatibilidad para los grupos de contactos. Quiere permitir que los usuarios organicen sus contactos en grupos como amigos, negocios, etc.
 
-Para implementar esta nueva característica, deberá modificar los tres niveles de la aplicación de Contact Manager. Deberá agregar nueva funcionalidad a los controladores, la capa de servicio y el repositorio. Tan pronto como se empiece a modificar código, corre el riesgo de romper la funcionalidad que antes funcionaba.
+Para implementar esta nueva característica, deberá modificar las tres capas de la aplicación Contact Manager. Deberá agregar nuevas funcionalidades a los controladores, la capa de servicio y el repositorio. En cuanto empiece a modificar el código, correrá el riesgo de interrumpir las funciones que funcionaban antes.
 
-Refactorización de nuestra aplicación en capas separadas, como hicimos en la iteración anterior, era una buena opción. Fue una buena opción porque nos permite realizar cambios en capas completas sin tocar el resto de la aplicación. Sin embargo, si desea hacer más fácil de mantener y modificar el código dentro de una capa, deberá crear pruebas unitarias para el código.
+La refactorización de nuestra aplicación en capas independientes, como hicimos en la iteración anterior, era una buena cosa. Era una buena cosa porque nos permite realizar cambios en las capas completas sin tocar el resto de la aplicación. Sin embargo, si desea que el código de una capa sea más fácil de mantener y modificar, debe crear pruebas unitarias para el código.
 
-Usa una unidad prueba a una unidad de código individual. Estas unidades de código son menores que las capas de aplicación completo. Por lo general, utilice una prueba unitaria para comprobar si un método concreto en el código se comporta de la manera en que se espera. Por ejemplo, podría crear una prueba unitaria para el método CreateContact() expuesta la clase ContactManagerService.
+Use una prueba unitaria para probar una unidad de código individual. Estas unidades de código son más pequeñas que las capas de aplicación completas. Normalmente, se usa una prueba unitaria para comprobar si un método determinado del código se comporta de la manera esperada. Por ejemplo, debe crear una prueba unitaria para el método CreateContact () expuesto por la clase ContactManagerService.
 
-Las pruebas unitarias para un trabajo de la aplicación, como una red de seguridad. Cada vez que modifique el código en una aplicación, puede ejecutar un conjunto de pruebas unitarias para comprobar si la modificación interrumpe la funcionalidad existente. Pruebas unitarias que el código sea segura modificar. Pruebas unitarias que todo el código de la aplicación sea más resistente a cambiar.
+Las pruebas unitarias para una aplicación funcionan como una red de seguridad. Siempre que modifique el código en una aplicación, puede ejecutar un conjunto de pruebas unitarias para comprobar si la modificación interrumpe la funcionalidad existente. Las pruebas unitarias hacen que el código sea seguro para modificarse. Las pruebas unitarias hacen que todo el código de la aplicación sea más resistente a los cambios.
 
-En esta iteración, agregamos las pruebas unitarias a nuestra aplicación de Contact Manager. De este modo, en la siguiente iteración, podemos agregar grupos de contactos a nuestra aplicación sin preocuparse por romper la funcionalidad existente.
-
-> [!NOTE] 
-> 
-> Hay una variedad de marcos como NUnit, xUnit.net y MbUnit de pruebas unitarias. En este tutorial, usamos incluido con Visual Studio del marco de pruebas unitarias. Sin embargo, podría podríamos usar uno de estos marcos de trabajo alternativos.
-
-## <a name="what-gets-tested"></a>¿Qué Obtiene probado
-
-En el mundo perfecto, todo el código podría estar cubierto por las pruebas unitarias. En el mundo perfecto, tendría la red de seguridad perfecta. Sería capaz de modificar cualquier línea de código en la aplicación y sepa al instante, mediante la ejecución de las pruebas unitarias, si el cambio interrumpió la funcionalidad existente.
-
-Sin embargo, no queremos t en directo en un mundo perfecto. En la práctica, al escribir pruebas unitarias, concentrarse en escribir pruebas para la lógica de negocios (por ejemplo, la lógica de validación). En concreto, le *no* escribir pruebas unitarias para los datos de acceso lógica o su lógica de la vista.
-
-Para que sea útil, las pruebas unitarias deben ejecutar muy rápidamente. Puede acumular fácilmente cientos o incluso miles de pruebas unitarias para una aplicación. Si las pruebas unitarias tardan mucho tiempo en ejecutarse, a continuación, se evitará ejecutarlas. En otras palabras, cuánto tiempo se ejecutan pruebas unitarias son inútiles para fines de codificación de un día para otro.
-
-Por este motivo, normalmente no escribe pruebas unitarias para código que interactúa con una base de datos. Ejecutar cientos de pruebas unitarias en una base de datos serían demasiado lento. En su lugar, simulación de la base de datos y escribir código que interactúa con la base de datos ficticio (analizamos la simulación de una base de datos a continuación).
-
-Por un motivo similar, normalmente no escribe pruebas unitarias para las vistas. Para probar una vista, debe poner en marcha un servidor web. Dado que poner en marcha un servidor web es un proceso relativamente lento, no se recomienda crear pruebas unitarias para las vistas.
-
-Si la vista contiene una lógica complicada, a continuación, puede mover la lógica a los métodos auxiliares. Puede escribir pruebas unitarias para métodos auxiliares que se ejecutan sin poner en marcha un servidor web.
+En esta iteración, se agregan pruebas unitarias a nuestra aplicación de Contact Manager. De este modo, en la siguiente iteración, podemos agregar grupos de contactos a nuestra aplicación sin preocuparse por interrumpir la funcionalidad existente.
 
 > [!NOTE] 
 > 
-> Mientras prueba escribir la lógica de acceso a datos o lógica de la vista no es una buena idea al escribir pruebas unitarias, estas pruebas pueden ser muy valiosas al construcción funcional o la integración de las pruebas.
+> Hay una variedad de marcos de pruebas unitarias, entre los que se incluyen NUnit, xUnit.net y MbUnit. En este tutorial, usamos el marco de pruebas unitarias incluido con Visual Studio. Sin embargo, podría usar fácilmente uno de estos marcos de trabajo alternativos.
+
+## <a name="what-gets-tested"></a>Qué se prueba
+
+En el mundo perfecto, todo el código estará incluido en las pruebas unitarias. En el mundo perfecto, tendría la red de seguridad perfecta. Puede modificar cualquier línea de código de la aplicación y conocer al instante ejecutando las pruebas unitarias, independientemente de si el cambio ha infringido la funcionalidad existente.
+
+Sin embargo, no vivimos en un mundo perfecto. En la práctica, al escribir pruebas unitarias, se concentra en escribir pruebas para su lógica de negocios (por ejemplo, la lógica de validación). En concreto, *no* se escriben pruebas unitarias para la lógica de acceso a datos ni la lógica de la vista.
+
+Para que sea útil, las pruebas unitarias deben ejecutarse muy rápidamente. Puede acumular fácilmente cientos (o incluso miles) de pruebas unitarias para una aplicación. Si las pruebas unitarias tardan mucho tiempo en ejecutarse, evitará ejecutarlas. En otras palabras, las pruebas unitarias de larga ejecución no son útiles para la codificación diaria.
+
+Por esta razón, normalmente no se escriben pruebas unitarias para el código que interactúa con una base de datos. La ejecución de cientos de pruebas unitarias en una base de datos activa sería demasiado lenta. En su lugar, simulará la base de datos y escribirá código que interactúe con la base de datos ficticia (se describe el simulacro de una base de datos a continuación).
+
+Por una razón similar, normalmente no se escriben pruebas unitarias para las vistas. Para probar una vista, debe poner en marcha un servidor Web. Dado que la rotación de un servidor web es un proceso relativamente lento, no se recomienda crear pruebas unitarias para las vistas.
+
+Si la vista contiene lógica complicada, considere la posibilidad de mover la lógica a métodos auxiliares. Puede escribir pruebas unitarias para métodos auxiliares que se ejecuten sin necesidad de ejecutar un servidor Web.
 
 > [!NOTE] 
 > 
-> ASP.NET MVC es el motor de vistas de formularios Web. Mientras el motor de vistas de formularios Web depende de un servidor web, no pueden ser otros motores de vista.
+> Al escribir las pruebas para la lógica de acceso a datos o la lógica de vista, no es una buena idea al escribir pruebas unitarias, estas pruebas pueden ser muy valiosas al compilar pruebas funcionales o de integración.
 
-## <a name="using-a-mock-object-framework"></a>Uso de un marco de objeto ficticio
+> [!NOTE] 
+> 
+> ASP.NET MVC es el motor de vista de formularios Web Forms. Aunque el motor de vista de formularios Web Forms depende de un servidor Web, puede que otros motores de vista no estén.
 
-Al compilar las pruebas unitarias, casi siempre necesita aprovechar las ventajas de un marco de simulación de objeto. Un marco de simulación de objeto le permite crear simulacros y auxiliares de las clases en la aplicación.
+## <a name="using-a-mock-object-framework"></a>Usar un marco de objeto ficticio
 
-Por ejemplo, puede usar un marco de simulación de objeto para generar una versión ficticia de la clase de repositorio. De este modo, puede usar la clase de repositorio ficticio en lugar de la clase de repositorio reales en las pruebas unitarias. El repositorio ficticio permite evitar la ejecución de código de la base de datos al ejecutar una prueba unitaria.
+Al compilar pruebas unitarias, casi siempre es necesario sacar provecho de un marco de objeto ficticio. Un marco de objeto ficticio le permite crear simulacros y códigos auxiliares para las clases de la aplicación.
 
-Visual Studio no incluye un marco de simulación de objeto. Sin embargo, hay varios marcos de simulación de objeto comercial y de código abierto disponibles para .NET framework:
+Por ejemplo, puede usar un marco de objetos ficticios para generar una versión ficticia de la clase de repositorio. De este modo, puede usar la clase de repositorio ficticio en lugar de la clase de repositorio real en las pruebas unitarias. El uso del repositorio ficticio le permite evitar la ejecución de código de base de datos al ejecutar una prueba unitaria.
 
-1. Moq - este marco de trabajo está disponible bajo la licencia BSD de código abierto. Puede descargar Moq desde [ https://code.google.com/p/moq/ ](https://code.google.com/p/moq/).
-2. Rhino Mocks, este marco de trabajo está disponible bajo la licencia BSD de código abierto. Puede descargar Rhino Mocks desde [ http://ayende.com/projects/rhino-mocks.aspx ](http://ayende.com/projects/rhino-mocks.aspx).
-3. Typemock Isolator - se trata de un entorno comercial. Puede descargar una versión de prueba de [ http://www.typemock.com/ ](http://www.typemock.com/).
+Visual Studio no incluye un marco de objeto ficticio. Sin embargo, hay varios marcos de objetos ficticios comerciales y de código abierto disponibles para .NET Framework:
 
-En este tutorial, decidí usar Moq. Sin embargo, podría usar fácilmente Rhino Mocks o Typemock Isolator para crear el simulacro de objetos para la aplicación de Contact Manager.
+1. MOQ: este marco de trabajo está disponible en la licencia BSD de código abierto. Puede descargar MOQ desde [https://code.google.com/p/moq/](https://code.google.com/p/moq/).
+2. Rhino Mocks: este marco de trabajo está disponible en la licencia BSD de código abierto. Puede descargar Rhino Mocks de [http://ayende.com/projects/rhino-mocks.aspx](http://ayende.com/projects/rhino-mocks.aspx).
+3. Typemock Isolator: se trata de un marco comercial. Puede descargar una versión de prueba de [http://www.typemock.com/](http://www.typemock.com/).
 
-Para poder usar Moq, es preciso completar los pasos siguientes:
+En este tutorial, decidí usar MOQ. Sin embargo, puede usar fácilmente los simulacros de Rhino o Typemock Isolator para crear los objetos ficticios para la aplicación Contact Manager.
+
+Antes de poder usar MOQ, debe completar los pasos siguientes:
 
 1. .
-2. Antes de descomprimir la descarga, asegúrese de que haga clic en el archivo y haga clic en el botón rotulado **desbloquear** (consulte la figura 1).
+2. Antes de descomprimir la descarga, asegúrese de hacer clic con el botón secundario en el archivo y haga clic en el botón **desbloquear** (consulte la figura 1).
 3. Descomprima la descarga.
-4. Agregue una referencia al ensamblado Moq haciendo clic en la carpeta referencias del proyecto ContactManager.Tests y seleccionar **Agregar referencia**. En la pestaña Examinar, vaya a la carpeta donde descomprimió Moq y seleccione el ensamblado Moq.dll. Haga clic en el **Aceptar** botón.
-5. Después de completar estos pasos, la carpeta de referencias debe parecerse a la figura 2.
+4. Agregue una referencia al ensamblado MOQ haciendo clic con el botón secundario en la carpeta referencias del proyecto ContactManager. tests y seleccionando **Agregar referencia**. En la pestaña examinar, vaya a la carpeta donde descomprimió MOQ y seleccione el ensamblado MOQ. dll. Haga clic en el botón **Aceptar** .
+5. Después de completar estos pasos, la carpeta de referencias debe ser similar a la de la ilustración 2.
 
-[![Moq desbloqueo](iteration-5-create-unit-tests-cs/_static/image1.jpg)](iteration-5-create-unit-tests-cs/_static/image1.png)
+[![desbloquear MOQ](iteration-5-create-unit-tests-cs/_static/image1.jpg)](iteration-5-create-unit-tests-cs/_static/image1.png)
 
-**Figura 01**: Moq desbloqueo ([haga clic aquí para ver imagen en tamaño completo](iteration-5-create-unit-tests-cs/_static/image2.png))
+**Figura 01**: desbloqueo de MOQ ([haga clic para ver la imagen de tamaño completo](iteration-5-create-unit-tests-cs/_static/image2.png))
 
-[![Referencias después de agregar Moq](iteration-5-create-unit-tests-cs/_static/image2.jpg)](iteration-5-create-unit-tests-cs/_static/image3.png)
+[![referencias después de agregar MOQ](iteration-5-create-unit-tests-cs/_static/image2.jpg)](iteration-5-create-unit-tests-cs/_static/image3.png)
 
-**Figura 02**: Referencias después de agregar Moq ([haga clic aquí para ver imagen en tamaño completo](iteration-5-create-unit-tests-cs/_static/image4.png))
+**Figura 02**: referencias después de agregar MOQ ([haga clic para ver la imagen de tamaño completo](iteration-5-create-unit-tests-cs/_static/image4.png))
 
 ## <a name="creating-unit-tests-for-the-service-layer"></a>Crear pruebas unitarias para el nivel de servicio
 
-Permiten s empiece por crear un conjunto de pruebas unitarias para nuestro nivel de servicio de Contact Manager aplicación s. Vamos a usar estas pruebas para comprobar nuestra lógica de validación.
+Comencemos por crear un conjunto de pruebas unitarias para la capa de servicio de la aplicación de Contact Manager. Usaremos estas pruebas para comprobar la lógica de validación.
 
-Cree una nueva carpeta denominada Models en el proyecto ContactManager.Tests. A continuación, haga clic en la carpeta modelos y seleccione **Add, nueva prueba**. El **agregar nueva prueba** aparece el cuadro de diálogo se muestra en la figura 3. Seleccione el **de prueba unitaria** plantilla y el nombre de la nueva prueba ContactManagerServiceTest.cs. Haga clic en el **Aceptar** para agregar la nueva prueba a su proyecto de prueba.
+Cree una nueva carpeta denominada models en el proyecto ContactManager. tests. A continuación, haga clic con el botón derecho en la carpeta modelos y seleccione **Agregar, nueva prueba**. Aparece el cuadro de diálogo **Agregar nueva prueba** que se muestra en la figura 3. Seleccione la plantilla de **prueba unitaria** y asigne el nombre ContactManagerServiceTest.CS a la nueva prueba. Haga clic en el botón **Aceptar** para agregar la nueva prueba al proyecto de prueba.
 
 > [!NOTE] 
 > 
-> En general, conviene que la estructura de carpetas del proyecto de prueba para que coincida con la estructura de carpetas del proyecto de ASP.NET MVC. Por ejemplo, coloque las pruebas del controlador en una carpeta de controladores, las pruebas de modelo en una carpeta Models y así sucesivamente.
+> En general, desea que la estructura de carpetas del proyecto de prueba coincida con la estructura de carpetas del proyecto de ASP.NET MVC. Por ejemplo, las pruebas de controlador se colocan en una carpeta de controladores, las pruebas de modelo en una carpeta de modelos, etc.
 
 [![Models\ContactManagerServiceTest.cs](iteration-5-create-unit-tests-cs/_static/image3.jpg)](iteration-5-create-unit-tests-cs/_static/image5.png)
 
-**Figura 03**: Models\ContactManagerServiceTest.cs ([haga clic aquí para ver imagen en tamaño completo](iteration-5-create-unit-tests-cs/_static/image6.png))
+**Figura 03**: Models\ContactManagerServiceTest.CS ([haga clic para ver la imagen de tamaño completo](iteration-5-create-unit-tests-cs/_static/image6.png))
 
-Inicialmente, va a probar el método CreateContact() expone la clase ContactManagerService. Vamos a crear las cinco pruebas siguientes:
+Inicialmente, queremos probar el método CreateContact () expuesto por la clase ContactManagerService. Vamos a crear las cinco pruebas siguientes:
 
-- CreateContact() - pruebas que CreateContact() devuelve el valor true cuando un contacto válido se pasa al método.
-- CreateContactRequiredFirstName() - pruebas que se agrega un mensaje de error al estado del modelo cuando un contacto con un nombre que faltan se pasa al método CreateContact().
-- CreateContactRequiredLastName() - pruebas que se agrega un mensaje de error al estado del modelo cuando un contacto con un apellido que faltan se pasa al método CreateContact().
-- CreateContactInvalidPhone() - pruebas que se agrega un mensaje de error al estado del modelo cuando un contacto con un número de teléfono no válido se pasa al método CreateContact().
-- CreateContactInvalidEmail() - pruebas que se agrega un mensaje de error al estado del modelo cuando un contacto con una dirección de correo electrónico no válido se pasa al método CreateContact()...
+- CreateContact (): comprueba que CreateContact () devuelve el valor true cuando se pasa un contacto válido al método.
+- CreateContactRequiredFirstName (): comprueba que se agrega un mensaje de error al estado del modelo cuando un contacto con un nombre que falta se pasa al método CreateContact ().
+- CreateContactRequiredLastName (): comprueba que se agrega un mensaje de error al estado del modelo cuando se pasa un contacto con un apellido que falta al método CreateContact ().
+- CreateContactInvalidPhone (): comprueba que se agrega un mensaje de error al estado del modelo cuando se pasa un contacto con un número de teléfono no válido al método CreateContact ().
+- CreateContactInvalidEmail (): comprueba que se agrega un mensaje de error al estado del modelo cuando se pasa un contacto con una dirección de correo electrónico no válida al método CreateContact ().
 
 La primera prueba comprueba que un contacto válido no genera un error de validación. Las pruebas restantes comprueban cada una de las reglas de validación.
 
-El código para estas pruebas se encuentra en el listado 1.
+El código de estas pruebas está incluido en la lista 1.
 
-**Listing 1 - Models\ContactManagerServiceTest.cs**
+**Lista 1-Models\ContactManagerServiceTest.cs**
 
 [!code-csharp[Main](iteration-5-create-unit-tests-cs/samples/sample1.cs)]
 
-Dado que se usa la clase Contact en el listado 1, tenemos que agregar una referencia a Microsoft Entity Framework para nuestro proyecto de prueba. Agregue una referencia al ensamblado System.Data.Entity.
+Dado que usamos la clase Contact en la lista 1, es necesario agregar una referencia a Microsoft Entity Framework en nuestro proyecto de prueba. Agregue una referencia al ensamblado System. Data. Entity.
 
-Listado 1 contiene un método denominado Initialize() decorada con el atributo [TestInitialize]. Este método es llamado automáticamente antes de que se ejecuta cada una de las pruebas unitarias (se llama justo antes de cada una de las pruebas unitarias 5 veces). El método Initialize() crea un repositorio ficticio con la siguiente línea de código:
+La lista 1 contiene un método denominado Initialize () que se decora con el atributo [TestInitialize]. Se llama a este método automáticamente antes de que se ejecute cada una de las pruebas unitarias (se llama 5 veces a la derecha antes de cada una de las pruebas unitarias). El método Initialize () crea un repositorio ficticio con la siguiente línea de código:
 
 [!code-csharp[Main](iteration-5-create-unit-tests-cs/samples/sample2.cs)]
 
-Esta línea de código usa el marco de trabajo Moq para generar un repositorio simulado desde la interfaz IContactManagerRepository. Se usa el repositorio ficticio en lugar de la EntityContactManagerRepository real para evitar el acceso a la base de datos cuando se ejecuta cada prueba unitaria. El repositorio ficticio implementa los métodos de la interfaz IContactManagerRepository, pero los métodos don t hace realmente nada.
+Esta línea de código usa el marco MOQ para generar un repositorio ficticio a partir de la interfaz IContactManagerRepository. El repositorio ficticio se usa en lugar del EntityContactManagerRepository real para evitar el acceso a la base de datos cuando se ejecuta cada prueba unitaria. El repositorio ficticio implementa los métodos de la interfaz IContactManagerRepository, pero los métodos realmente no hacen nada.
 
 > [!NOTE] 
 > 
-> Cuando se usa el marco de trabajo Moq, hay una diferencia entre \_mockRepository y \_mockRepository.Object. El primero se refiere a la simulación&lt;IContactManagerRepository&gt; clase que contiene métodos para especificar cómo se comportará el repositorio ficticio. El segundo se refiere al repositorio ficticio real que implementa la interfaz IContactManagerRepository.
+> Al usar el marco de trabajo de MOQ, hay una diferencia entre \_mockRepository \_y el objeto mockRepository. El primero hace referencia a la clase ficticia&lt;IContactManagerRepository&gt; que contiene métodos para especificar cómo se comportará el repositorio ficticio. Esto último hace referencia al repositorio ficticio real que implementa la interfaz IContactManagerRepository.
 
-Al crear una instancia de la clase ContactManagerService, se usa el repositorio ficticio en el método Initialize(). Todas las pruebas unitarias individuales utilizan esta instancia de la clase ContactManagerService.
+El repositorio ficticio se usa en el método Initialize () al crear una instancia de la clase ContactManagerService. Todas las pruebas unitarias individuales usan esta instancia de la clase ContactManagerService.
 
-Listado 1 contiene cinco métodos que corresponden a cada una de las pruebas unitarias. Cada uno de estos métodos se decora con el atributo [TestMethod]. Al ejecutar las pruebas unitarias, se llama a cualquier método que tenga este atributo. En otras palabras, cualquier método esté decorado con el atributo [TestMethod] es una prueba unitaria.
+La lista 1 contiene cinco métodos que corresponden a cada una de las pruebas unitarias. Cada uno de estos métodos se decora con el atributo [TestMethod]. Al ejecutar las pruebas unitarias, se llama a cualquier método que tenga este atributo. En otras palabras, cualquier método que esté decorado con el atributo [TestMethod] es una prueba unitaria.
 
-La primera prueba unitaria, denominada CreateContact(), comprueba que una llamada a CreateContact() devuelve el valor true cuando una instancia válida de la clase Contact se pasa al método. La prueba crea una instancia de la clase Contact, llama al método CreateContact() y comprueba que CreateContact() devuelve el valor true.
+La primera prueba unitaria, denominada CreateContact (), comprueba que la llamada a CreateContact () devuelve el valor true cuando se pasa al método una instancia válida de la clase contact. La prueba crea una instancia de la clase Contact, llama al método CreateContact () y comprueba que CreateContact () devuelve el valor true.
 
-Las pruebas restantes comprueban que cuando se llama al método CreateContact() con un contacto no válido, a continuación, el método devuelve false y se agrega el mensaje de error de validación esperado al estado del modelo. Por ejemplo, la prueba CreateContactRequiredFirstName() crea una instancia de la clase Contact con una cadena vacía para su propiedad FirstName. A continuación, se llama al método de CreateContact() con el contacto no válido. Por último, la prueba comprueba que CreateContact() devuelve false y el estado del modelo contiene el mensaje de error de validación esperado "First name is required."
+Las pruebas restantes comprueban que cuando se llama al método CreateContact () con un contacto no válido, el método devuelve false y se agrega el mensaje de error de validación esperado al estado del modelo. Por ejemplo, la prueba CreateContactRequiredFirstName () crea una instancia de la clase contact con una cadena vacía para su propiedad FirstName. A continuación, se llama al método CreateContact () con el contacto no válido. Por último, la prueba comprueba que CreateContact () devuelve false y que el estado del modelo contiene el mensaje de error de validación esperado "el nombre es obligatorio".
 
-Puede ejecutar las pruebas unitarias en el listado 1 seleccionando la opción de menú **pruebas, ejecutar, todas las pruebas de la solución (CTRL + R, A)**. Los resultados de las pruebas se muestran en la ventana Resultados de pruebas (consulte la figura 4).
+Puede ejecutar las pruebas unitarias de la lista 1 seleccionando la opción de menú **probar, ejecutar, todas las pruebas de la solución (Ctrl + R, A)** . Los resultados de las pruebas se muestran en la ventana de Resultados de pruebas (vea la ilustración 4).
 
 [![Resultados de pruebas](iteration-5-create-unit-tests-cs/_static/image4.jpg)](iteration-5-create-unit-tests-cs/_static/image7.png)
 
-**Figura 04**: Los resultados de pruebas ([haga clic aquí para ver imagen en tamaño completo](iteration-5-create-unit-tests-cs/_static/image8.png))
+**Figura 04**: resultados de pruebas ([haga clic para ver la imagen de tamaño completo](iteration-5-create-unit-tests-cs/_static/image8.png))
 
-## <a name="creating-unit-tests-for-controllers"></a>Crear pruebas unitarias para los controladores
+## <a name="creating-unit-tests-for-controllers"></a>Crear pruebas unitarias para controladores
 
-ASP.NETMVC aplicación controlar el flujo de interacción del usuario. Cuando un controlador de pruebas que desea comprobar si el controlador devuelve el resultado y ver datos de la acción adecuada. También es posible que desee comprobar si un controlador interactúa con las clases de modelo de la manera prevista.
+La aplicación ASP. NETMVC controla el flujo de interacción del usuario. Al probar un controlador, desea probar si el controlador devuelve el resultado de la acción correcta y los datos de la vista. También podría querer probar si un controlador interactúa con las clases de modelo de la manera esperada.
 
-Por ejemplo, el listado 2 contiene dos pruebas unitarias para el método Create() del controlador de contacto. La primera prueba unitaria comprueba si un contacto válido se pasa al método Create(), a continuación, el método Create() redirige a la acción del índice. En otras palabras, cuando se pasa un contacto válido, el método Create() debe devolver un RedirectToRouteResult que representa la acción del índice.
+Por ejemplo, la lista 2 contiene dos pruebas unitarias para el método Create () del controlador de contactos. La primera prueba unitaria comprueba que, cuando se pasa un contacto válido al método Create (), el método Create () redirige a la acción de índice. En otras palabras, cuando se pasa un contacto válido, el método Create () debe devolver un RedirectToRouteResult que representa la acción de índice.
 
-No queremos t desea probar la capa de servicio ContactManager cuando estamos probando el nivel de controlador. Por lo tanto, nos simular la capa de servicio con el código siguiente en el método Initialize:
+No queremos probar el nivel de servicio de ContactManager cuando se prueba la capa del controlador. Por lo tanto, simulamos el nivel de servicio con el código siguiente en el método Initialize:
 
 [!code-csharp[Main](iteration-5-create-unit-tests-cs/samples/sample3.cs)]
 
-En la prueba unitaria CreateValidContact(), nos simular el comportamiento de la llamada a la capa de servicio CreateContact() método con la siguiente línea de código:
+En la prueba unitaria CreateValidContact (), simulamos el comportamiento de la llamada al método CreateContact () de nivel de servicio con la siguiente línea de código:
 
 [!code-csharp[Main](iteration-5-create-unit-tests-cs/samples/sample4.cs)]
 
-Esta línea de código hace que el servicio ContactManager ficticio devolver el valor true cuando se llama a su método CreateContact(). Por el nivel de servicio de simulación, podemos probar el comportamiento de nuestro controlador sin necesidad de ejecutar cualquier código en el nivel de servicio.
+Esta línea de código hace que el servicio ContactManager ficticio devuelva el valor true cuando se llama a su método CreateContact (). Al simular el nivel de servicio, podemos probar el comportamiento de nuestro controlador sin necesidad de ejecutar ningún código en el nivel de servicio.
 
-La segunda prueba unitaria comprueba que la acción Create() devuelve la vista de creación cuando un contacto no válido se pasa al método. Hacemos que el método CreateContact() para devolver el valor false con la siguiente línea de código de nivel de servicio:
+La segunda prueba unitaria comprueba que la acción Create () devuelve la vista de creación cuando se pasa un contacto no válido al método. Hacemos que el método CreateContact () del nivel de servicio devuelva el valor false con la siguiente línea de código:
 
 [!code-csharp[Main](iteration-5-create-unit-tests-cs/samples/sample5.cs)]
 
-Si el método Create() se comporta tal como esperábamos, a continuación, debe devolver la vista de creación cuando el nivel de servicio devuelve el valor false. De este modo, el controlador puede mostrar los mensajes de error de validación en la vista de creación y el usuario tiene la oportunidad de corregir ese propiedades del contacto no válido.
+Si el método Create () se comporta como se espera, debe devolver la vista Create cuando el nivel de servicio devuelva el valor false. De este modo, el controlador puede mostrar los mensajes de error de validación en la vista de creación y el usuario tiene la oportunidad de corregir las propiedades de contacto no válidas.
 
-Si va a crear pruebas unitarias para los controladores debe devolver los nombres de vista explícita de sus acciones de controlador. Por ejemplo, no devuelven una vista similar al siguiente:
+Si tiene previsto compilar pruebas unitarias para los controladores, debe devolver nombres de vista explícitos de las acciones del controlador. Por ejemplo, no devuelva una vista similar a la siguiente:
 
-devolver View();
+Vista devuelta ();
 
-En su lugar, devuelve la vista similar al siguiente:
+En su lugar, devuelva la vista de la siguiente manera:
 
-devolver View("Create");
+devolver vista ("crear");
 
-Si no es explícito al devolver una vista de la propiedad ViewResult.ViewName devuelve una cadena vacía.
+Si no es explícito al devolver una vista, la propiedad ViewResult. ViewName devuelve una cadena vacía.
 
-**Listing 2 - Controllers\ContactControllerTest.cs**
+**Lista 2-Controllers\ContactControllerTest.cs**
 
 [!code-csharp[Main](iteration-5-create-unit-tests-cs/samples/sample6.cs)]
 
 ## <a name="summary"></a>Resumen
 
-En esta iteración, hemos creado las pruebas unitarias para nuestra aplicación de Contact Manager. Podemos ejecutar estas pruebas unitarias en cualquier momento para comprobar que nuestra aplicación todavía se comporta de la manera en que se espera. Las pruebas unitarias actúan como una red de seguridad para nuestra aplicación lo que nos permite modificar de forma segura nuestra aplicación en el futuro.
+En esta iteración, creamos pruebas unitarias para nuestra aplicación de Contact Manager. Podemos ejecutar estas pruebas unitarias en cualquier momento para comprobar que la aplicación todavía se comporta de la manera esperada. Las pruebas unitarias actúan como una red de seguridad para nuestra aplicación, lo que nos permite modificar de forma segura nuestra aplicación en el futuro.
 
-Hemos creado dos conjuntos de pruebas unitarias. En primer lugar, hemos probado nuestra lógica de validación mediante la creación de pruebas unitarias para nuestro nivel de servicio. A continuación, hemos probado nuestra lógica de flujo de control mediante la creación de pruebas unitarias para nuestro nivel de controlador. Al probar nuestro nivel de servicio, nuestras pruebas nuestro nivel de servicio se habían aislada de la capa de repositorio mediante la simulación de la capa de repositorio. Al probar el nivel de controlador, hemos aislado nuestras pruebas para nuestro nivel de controlador mediante la capa de servicio de simulación.
+Hemos creado dos conjuntos de pruebas unitarias. En primer lugar, hemos probado la lógica de validación mediante la creación de pruebas unitarias para la capa de servicio. A continuación, probamos nuestra lógica de control de flujo mediante la creación de pruebas unitarias para la capa de controlador. Al probar el nivel de servicio, hemos aislado nuestras pruebas para nuestro nivel de servicio de nuestra capa de repositorio mediante la simulación de la capa del repositorio. Al probar la capa del controlador, hemos aislado nuestras pruebas para la capa del controlador mediante la simulación del nivel de servicio.
 
-En la siguiente iteración, se modificará la aplicación de Contact Manager para que admita los grupos de contactos. Vamos a agregar esta nueva funcionalidad a la aplicación mediante un proceso de diseño de software denominado desarrollo controlado por pruebas.
+En la siguiente iteración, se modifica la aplicación Contact Manager para que admita grupos de contactos. Agregaremos esta nueva funcionalidad a nuestra aplicación mediante un proceso de diseño de software denominado desarrollo controlado por pruebas.
 
 > [!div class="step-by-step"]
 > [Anterior](iteration-4-make-the-application-loosely-coupled-cs.md)

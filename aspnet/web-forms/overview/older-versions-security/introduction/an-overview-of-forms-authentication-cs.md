@@ -9,11 +9,11 @@ ms.assetid: de2d65b9-aadc-42ba-abe1-4e87e66521a0
 msc.legacyurl: /web-forms/overview/older-versions-security/introduction/an-overview-of-forms-authentication-cs
 msc.type: authoredcontent
 ms.openlocfilehash: 009c3f84e00d648ede4a15e530ceac2d23e01eec
-ms.sourcegitcommit: 22fbd8863672c4ad6693b8388ad5c8e753fb41a2
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/28/2019
-ms.locfileid: "74620752"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78439669"
 ---
 # <a name="an-overview-of-forms-authentication-c"></a>Información general de la autenticación deC#formularios ()
 
@@ -205,7 +205,7 @@ Como puede ver, hay tres cuentas de usuario válidas: Scott, Jisun y Sam, y las 
 
 Cuando un usuario escribe credenciales válidas, he mencionado que se le redirigirá a la "página correspondiente". ¿Cuál es la página adecuada? Recuerde que cuando un usuario visita una página que no está autorizado a ver, el FormsAuthenticationModule los redirige automáticamente a la página de inicio de sesión. Al hacerlo, incluye la dirección URL solicitada en QueryString a través del parámetro ReturnUrl. Es decir, si un usuario intentó visitar ProtectedPage. aspx y no estaba autorizado para hacerlo, el objeto FormsAuthenticationModule los redirigirá a:
 
-¿Login. aspx? ReturnUrl = ProtectedPage. aspx
+Login.aspx?ReturnUrl=ProtectedPage.aspx
 
 Tras iniciar sesión correctamente, el usuario debe redirigirse de nuevo a ProtectedPage. aspx. Como alternativa, los usuarios pueden visitar la página de inicio de sesión en su propio Volition. En ese caso, después de iniciar sesión en el usuario, deben enviarse a la página default. aspx de la carpeta raíz.
 

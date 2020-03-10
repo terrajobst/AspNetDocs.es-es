@@ -9,11 +9,11 @@ ms.assetid: 732a2316-e49f-4f72-becd-0cd72f14457e
 msc.legacyurl: /web-forms/overview/getting-started/getting-started-with-aspnet-45-web-forms/membership-and-administration
 msc.type: authoredcontent
 ms.openlocfilehash: ab00bc90bfc767d06e747be6dfb973245b5aae88
-ms.sourcegitcommit: 22fbd8863672c4ad6693b8388ad5c8e753fb41a2
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/28/2019
-ms.locfileid: "74615467"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78439933"
 ---
 # <a name="membership-and-administration"></a>Pertenencia y administración
 
@@ -25,11 +25,11 @@ por [Erik Reitan](https://github.com/Erikre)
 
 En este tutorial se muestra cómo actualizar la aplicación de ejemplo Wingtip Toys para agregar un rol personalizado y usar ASP.NET Identity. También muestra cómo implementar una página de administración desde la que el usuario con un rol personalizado puede Agregar y quitar productos del sitio Web.
 
-[ASP.net Identity](../../../../identity/overview/getting-started/introduction-to-aspnet-identity.md) es el sistema de pertenencia que se usa para compilar la aplicación Web ASP.net y está disponible en ASP.net 4,5. ASP.NET Identity se usa en la plantilla de proyecto Visual Studio 2013 Web Forms, así como las plantillas para la [aplicación de una sola página](../../../../single-page-application/index.md)de [ASP.NET MVC](../../../../mvc/index.md), [ASP.net web API](../../../../web-api/index.md)y ASP.net. También puede instalar específicamente el sistema ASP.NET Identity mediante NuGet cuando empiece con una aplicación Web vacía. Sin embargo, en esta serie de tutoriales, se usa el projecttemplate de **formularios Web Forms**, que incluye el sistema ASP.net Identity. ASP.NET Identity facilita la integración de datos de perfil específicos del usuario con los datos de la aplicación. Además, ASP.NET Identity le permite elegir el modelo de persistencia para perfiles de usuario en la aplicación. Puede almacenar los datos en una base de datos SQL Server u otro almacén de datos, incluidos los almacenes de datos *NoSQL* , como las tablas Azure Storage de Windows.
+[ASP.net Identity](../../../../identity/overview/getting-started/introduction-to-aspnet-identity.md) es el sistema de pertenencia que se usa para compilar la aplicación Web ASP.net y está disponible en ASP.net 4,5. ASP.NET Identity se usa en la plantilla de proyecto Visual Studio 2013 Web Forms, así como las plantillas para la [aplicación de una sola página](../../../../single-page-application/index.md)de [ASP.NET MVC](../../../../mvc/index.md), [ASP.net web API](../../../../web-api/index.md)y ASP.net. También puede instalar específicamente el sistema ASP.NET Identity mediante NuGet cuando empiece con una aplicación Web vacía. Sin embargo, en esta serie de tutoriales, se usa el projecttemplate de **formularios Web Forms**, que incluye el sistema ASP.net Identity. ASP.NET Identity facilita la integración de datos de perfil específicos del usuario con los datos de la aplicación. Además, ASP.NET Identity permite elegir el modelo de persistencia para perfiles de usuario en la aplicación. Puede almacenar los datos en una base de datos SQL Server u otro almacén de datos, incluidos los almacenes de datos *NoSQL* , como las tablas Azure Storage de Windows.
 
 Este tutorial se basa en el tutorial anterior titulado "Checkout and Payment with PayPal" en la serie de tutoriales de Wingtip Toys.
 
-## <a name="what-youll-learn"></a>Lo que aprenderá:
+## <a name="what-youll-learn"></a>Temas que se abordarán:
 
 - Cómo usar el código para agregar un rol personalizado y un usuario a la aplicación.
 - Cómo restringir el acceso a la página y la carpeta de administración.
@@ -124,11 +124,11 @@ Al agregar un archivo *Web. config* a la carpeta *admin* , puede restringir el a
 1. Haga clic con el botón secundario en la carpeta *admin* y seleccione **Agregar** -&gt; **nuevo elemento**.  
    Se abrirá el cuadro de diálogo **Agregar nuevo elemento**.
 2. En la lista de plantillas C# web visuales, seleccione <strong>archivo de configuración Web</strong>en la lista central, acepte el nombre predeterminado de <em>Web. config</em><strong>y, a continuación, seleccione</strong> <strong>Agregar</strong>.
-3. Reemplace el contenido XML existente en el archivo *Web. config* por lo siguiente:  
+3. Reemplace el contenido XML del archivo *Web.config* por el siguiente:  
 
     [!code-xml[Main](membership-and-administration/samples/sample4.xml)]
 
-Guarde el archivo *Web. config* . El archivo *Web. config* especifica que solo el usuario que pertenece al rol "canEdit" de la aplicación puede tener acceso a la página contenida en la carpeta *admin* .
+Guarde el archivo *Web.config* . El archivo *Web. config* especifica que solo el usuario que pertenece al rol "canEdit" de la aplicación puede tener acceso a la página contenida en la carpeta *admin* .
 
 ### <a name="including-custom-role-navigation"></a>Incluir la navegación de roles personalizados
 

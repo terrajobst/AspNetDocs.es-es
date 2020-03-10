@@ -9,11 +9,11 @@ ms.assetid: a92cd6ed-609a-4e40-ad23-004b54afd436
 msc.legacyurl: /web-forms/overview/data-access/custom-formatting/using-templatefields-in-the-gridview-control-vb
 msc.type: authoredcontent
 ms.openlocfilehash: 3c090dbf65d9acbcc0e343cda5e8da7fff2d35d3
-ms.sourcegitcommit: 22fbd8863672c4ad6693b8388ad5c8e753fb41a2
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/28/2019
-ms.locfileid: "74581211"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78426853"
 ---
 # <a name="using-templatefields-in-the-gridview-control-vb"></a>Usar TemplateFields en el control GridView (VB)
 

@@ -1,27 +1,27 @@
 ---
 uid: mvc/videos/mvc-1/aspnet-mvc-storefront/aspnet-mvc-storefront-part-23-getting-started-with-domain-driven-design
-title: 'Escaparate de ASP.NET MVC, parte 23: Introducción a Domain-Driven Design | Microsoft Docs'
+title: 'Escaparate de ASP.NET MVC, parte 23: Introducción con diseño controlado por dominio | Microsoft Docs'
 author: robconery
-description: No me gusta la complejidad que ha aparecido en mi aplicación. No está seguro de qué otra forma al colocarla - pero la arquitectura tiene que agitar el contenido es un poco así en este episodio...
+description: No me gusta la complejidad que se crept en mi aplicación. No se olvide de cómo hacerlo, pero la arquitectura debe agitarse un poco para que en este episodio...
 ms.author: riande
 ms.date: 05/28/2009
 ms.assetid: 690538bb-6f23-4b1a-94b7-188454bb734a
 msc.legacyurl: /mvc/videos/mvc-1/aspnet-mvc-storefront/aspnet-mvc-storefront-part-23-getting-started-with-domain-driven-design
 msc.type: video
 ms.openlocfilehash: be4edd63e7f4a19a1101ad5cabd9bf810df47e5e
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59417915"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78432253"
 ---
-# <a name="aspnet-mvc-storefront-part-23-getting-started-with-domain-driven-design"></a>Escaparate de ASP.NET MVC, parte 23: Introducción al diseño impulsado por dominios
+# <a name="aspnet-mvc-storefront-part-23-getting-started-with-domain-driven-design"></a>Escaparate de ASP.NET MVC, parte 23: Introducción con diseño controlado por Dominios
 
-por [Rob Conery](https://github.com/robconery)
+por [Rob cónica](https://github.com/robconery)
 
-No me gusta la complejidad que ha aparecido en mi aplicación. No está seguro de qué otra forma al colocarla - pero la arquitectura debe ser agita algo por lo que en este episodio abordar esta complejidad con determinación sobre el uso de diseño guiado por el dominio (DDD).
+No me gusta la complejidad que se crept en mi aplicación. ¿No está seguro de cómo hacerlo, pero la arquitectura debe agitarse un poco, por lo que en este episodio abordaremos esta complejidad en el uso del diseño controlado por dominios (DDD).
 
-[&#9654;Vea el vídeo (46 minutos)](https://channel9.msdn.com/Blogs/ASP-NET-Site-Videos/aspnet-mvc-storefront-part-23-getting-started-with-domain-driven-design)
+[&#9654;Ver vídeo (46 minutos)](https://channel9.msdn.com/Blogs/ASP-NET-Site-Videos/aspnet-mvc-storefront-part-23-getting-started-with-domain-driven-design)
 
 > [!div class="step-by-step"]
 > [Anterior](aspnet-mvc-storefront-part-22-restructuring-rerouting-and-paypal.md)

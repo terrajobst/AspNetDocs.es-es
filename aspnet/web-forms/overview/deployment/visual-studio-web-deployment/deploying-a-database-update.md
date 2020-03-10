@@ -9,11 +9,11 @@ ms.assetid: 9cad0833-486a-4474-a7f3-7715542ec4ce
 msc.legacyurl: /web-forms/overview/deployment/visual-studio-web-deployment/deploying-a-database-update
 msc.type: authoredcontent
 ms.openlocfilehash: 805eb84c24764cf921291f89054435601dbac48e
-ms.sourcegitcommit: 22fbd8863672c4ad6693b8388ad5c8e753fb41a2
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/28/2019
-ms.locfileid: "74636829"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78440791"
 ---
 # <a name="aspnet-web-deployment-using-visual-studio-deploying-a-database-update"></a>Implementación web de ASP.NET con Visual Studio: implementar una actualización de base de datos
 
@@ -23,7 +23,7 @@ por [Tom Dykstra](https://github.com/tdykstra)
 
 > En esta serie de tutoriales se muestra cómo implementar (publicar) una aplicación Web de ASP.NET en Azure App Service Web Apps o en un proveedor de hospedaje de terceros mediante Visual Studio 2012 o Visual Studio 2010. Para obtener información sobre la serie, vea [el primer tutorial de la serie](introduction.md).
 
-## <a name="overview"></a>Información general del
+## <a name="overview"></a>Información general
 
 En este tutorial, realizará un cambio en la base de datos y los cambios en el código relacionado, probará los cambios en Visual Studio y, a continuación, implementará la actualización en los entornos de prueba, ensayo y producción.
 
@@ -129,14 +129,14 @@ Para realizar la implementación mediante el proveedor dbDacFx, solo tiene que s
 
 1. Para abrir el Asistente para **publicación web** , haga clic con el botón secundario en el proyecto ContosoUniversity y haga clic en **publicar**.
 2. Seleccione el perfil de **prueba** .
-3. Haga clic en la pestaña **configuración** .
+3. Haga clic en la pestaña **Configuración** .
 4. En **DefaultConnection**, seleccione **Actualizar base de datos**.
 5. Deshabilite los scripts adicionales que configuró para ejecutarse para la implementación inicial:
 
     1. Haga clic en **configurar actualizaciones de base de datos**.
     2. En el cuadro de diálogo **configurar actualizaciones de base de datos** , desactive las casillas situadas junto a *Grant. SQL* y *ASPNET-Data-dev. SQL*.
     3. Haga clic en **Cerrar**.
-6. Haga clic en la pestaña **vista previa** .
+6. Haga clic en la pestaña **Vista previa** .
 7. En **bases** de datos y a la derecha de **DefaultConnection**, haga clic en el vínculo **vista previa de base de datos** .
 
     ![Vista previa de base de datos](deploying-a-database-update/_static/image7.png)

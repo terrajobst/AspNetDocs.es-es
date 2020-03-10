@@ -1,24 +1,24 @@
 ---
 uid: mvc/videos/mvc-1/conference-presentations/americas-next-top-model-view-controller-framework
-title: Siguiente Top Model View Controller Framework del América | Microsoft Docs
+title: Marco de trabajo de controlador de vista de modelo siguiente de America | Microsoft Docs
 author: Haacked
-description: Vea cómo crear una aplicación simple que se resalta algunas de las funcionalidades principales de ASP.NET MVC. Además, obtenga información sobre cómo mejorar la productividad con algunos de los...
+description: Vea cómo crear una aplicación simple que resalte algunas de las funcionalidades clave de ASP.NET MVC. Además, obtenga información sobre cómo mejorar la productividad con algunas de las...
 ms.author: riande
 ms.date: 05/12/2009
 ms.assetid: 2ce3281d-dc92-4a43-9645-7e12ef6e72a6
 msc.legacyurl: /mvc/videos/mvc-1/conference-presentations/americas-next-top-model-view-controller-framework
 msc.type: video
 ms.openlocfilehash: 917629c3ad457ade21dc832b248cb09102a5cf0c
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59395165"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78432145"
 ---
 # <a name="americas-next-top-model-view-controller-framework"></a>Tutorial "America's Next Top Model View Controller Framework"
 
 por [Phil Haack](https://github.com/Haacked)
 
-Vea cómo crear una aplicación simple que se resalta algunas de las funcionalidades principales de ASP.NET MVC. Además, obtenga información sobre cómo mejorar la productividad con algunas de las herramientas nuevas características de texturas.
+Vea cómo crear una aplicación simple que resalte algunas de las funcionalidades clave de ASP.NET MVC. Además, obtenga información sobre cómo mejorar la productividad con algunas de las nuevas características de herramientas interesantes.
 
-[&#9654;Vea el vídeo (70 minutos)](https://channel9.msdn.com/Blogs/ASP-NET-Site-Videos/americas-next-top-model-view-controller-framework)
+[&#9654;Ver vídeo (70 minutos)](https://channel9.msdn.com/Blogs/ASP-NET-Site-Videos/americas-next-top-model-view-controller-framework)

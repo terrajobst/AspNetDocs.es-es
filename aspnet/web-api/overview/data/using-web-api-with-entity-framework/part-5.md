@@ -9,11 +9,11 @@ ms.assetid: 0fd07176-b74b-48f0-9fac-0f02e3ffa213
 msc.legacyurl: /web-api/overview/data/using-web-api-with-entity-framework/part-5
 msc.type: authoredcontent
 ms.openlocfilehash: fc0463420207eba764014b8ec7123c5150e38247
-ms.sourcegitcommit: 84b1681d4e6253e30468c8df8a09fe03beea9309
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/02/2019
-ms.locfileid: "73445760"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78449029"
 ---
 # <a name="create-data-transfer-objects-dtos"></a>Crear objetos de transferencia de datos (DTO)
 
@@ -21,7 +21,7 @@ por [Mike Wasson](https://github.com/MikeWasson)
 
 [Descargar proyecto completado](https://github.com/MikeWasson/BookService)
 
-En este momento, nuestra API Web expone las entidades de base de datos al cliente. El cliente recibe los datos que se asignan directamente a las tablas de base de datos. Sin embargo, no siempre es una buena idea. A veces, desea cambiar la forma de los datos que envía al cliente. Por ejemplo, es posible que quiera:
+En este momento, nuestra API Web expone las entidades de base de datos al cliente. El cliente recibe los datos que se asignan directamente a las tablas de base de datos. Sin embargo, no siempre es una buena idea. A veces, desea cambiar la forma de los datos que envía al cliente. Por ejemplo, puedes:
 
 - Quitar referencias circulares (vea la sección anterior).
 - Oculte determinadas propiedades que los clientes no deben ver.

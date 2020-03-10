@@ -9,11 +9,11 @@ ms.assetid: 11ae4f64-01ba-4823-95f4-a2fe1f84f7d7
 msc.legacyurl: /web-forms/overview/data-access/masterdetail/master-detail-filtering-with-two-dropdownlists-vb
 msc.type: authoredcontent
 ms.openlocfilehash: 166d6a7664a326361dc2a3f115eddb988cd39d20
-ms.sourcegitcommit: 22fbd8863672c4ad6693b8388ad5c8e753fb41a2
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/28/2019
-ms.locfileid: "74577958"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78424297"
 ---
 # <a name="masterdetail-filtering-with-two-dropdownlists-vb"></a>Filtrado de maestro y detalles con dos DropDownLists (VB)
 

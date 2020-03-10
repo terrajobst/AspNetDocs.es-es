@@ -9,11 +9,11 @@ ms.assetid: ad8dd396-30f7-4abe-ac02-a0b84422e5be
 msc.legacyurl: /web-forms/overview/data-access/advanced-data-access-scenarios/protecting-connection-strings-and-other-configuration-information-cs
 msc.type: authoredcontent
 ms.openlocfilehash: 15970bee1e990d3a139673efe12486e08f79814c
-ms.sourcegitcommit: 22fbd8863672c4ad6693b8388ad5c8e753fb41a2
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/28/2019
-ms.locfileid: "74573476"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78421075"
 ---
 # <a name="protecting-connection-strings-and-other-configuration-information-c"></a>Proteger las cadenas de conexión y otros datos de configuración (C#)
 

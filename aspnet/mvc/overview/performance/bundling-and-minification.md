@@ -9,11 +9,11 @@ ms.assetid: 5894dc13-5d45-4dad-8096-136499120f1d
 msc.legacyurl: /mvc/overview/performance/bundling-and-minification
 msc.type: authoredcontent
 ms.openlocfilehash: 61bfe5dbac04b57e1461183b66ead2f01fe0734c
-ms.sourcegitcommit: 7709c0a091b8d55b7b33bad8849f7b66b23c3d72
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/19/2020
-ms.locfileid: "77457770"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78432955"
 ---
 # <a name="bundling-and-minification"></a>Unión y minificación
 
@@ -54,7 +54,7 @@ Además de quitar los comentarios y los espacios en blanco innecesarios, se ha c
 | **Original** | **Cambia** |
 | --- | --- |
 | imageTagAndImageID | n |
-| imageContext | t |
+| imageContext | m |
 | imageElement | i |
 
 ## <a name="impact-of-bundling-and-minification"></a>Impacto de la agrupación y Minificación
@@ -64,7 +64,7 @@ En la tabla siguiente se muestran varias diferencias importantes entre enumerar 
 |  | **Usar B/M** | **Sin B/M** | **Cambio** |
 | --- | --- | --- | --- |
 | **Solicitudes de archivo** | 9 | 34 | 256% |
-| **KB enviados** | 3,26 | 11.92 | 266% |
+| **KB enviados** | 3.26 | 11.92 | 266% |
 | **KB recibidos** | 388.51 | 530 | 36% |
 | **Tiempo de carga** | 510 MS | 780 MS | 53% |
 

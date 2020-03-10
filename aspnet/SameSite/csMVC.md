@@ -6,11 +6,11 @@ ms.author: riande
 ms.date: 2/15/2019
 uid: samesite/csMVC
 ms.openlocfilehash: dcbd0bee009669fb747d74e6ccef07fbae70a236
-ms.sourcegitcommit: 7709c0a091b8d55b7b33bad8849f7b66b23c3d72
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/19/2020
-ms.locfileid: "77458400"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78438205"
 ---
 # <a name="samesite-cookie-sample-for-aspnet-472-c-mvc"></a>Ejemplo de cookie de SameSite para C# ASP.net 4.7.2 MVC
 
@@ -92,7 +92,7 @@ Se debe establecer un administrador de cookies en *cada* componente que lo admit
 
 SystemWebCookieManager se utiliza para evitar [problemas conocidos](https://github.com/aspnet/AspNetKatana/wiki/System.Web-response-cookie-integration-issues) con la integración de cookies de respuesta.
 
-### <a name="running-the-sample"></a>Ejecución del ejemplo
+### <a name="running-the-sample"></a>Ejecutar el ejemplo
 
 Si ejecuta el proyecto de ejemplo, cargue el depurador del explorador en la página inicial y úselo para ver la colección de cookies para el sitio.
 Para ello, en Edge y Chrome, presione `F12`, después, seleccione la pestaña `Application` y haga clic en la dirección URL del sitio en la opción `Cookies` de la sección `Storage`.

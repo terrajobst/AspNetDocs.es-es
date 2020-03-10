@@ -9,11 +9,11 @@ ms.assetid: f84b4a16-e8bb-49e8-87a0-1832879a3501
 msc.legacyurl: /mvc/overview/older-versions-1/models-data/creating-model-classes-with-linq-to-sql-cs
 msc.type: authoredcontent
 ms.openlocfilehash: c27d1ffac3846fe4bc13b32c2ae91a63b2493126
-ms.sourcegitcommit: 22fbd8863672c4ad6693b8388ad5c8e753fb41a2
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/28/2019
-ms.locfileid: "74590195"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78437191"
 ---
 # <a name="creating-model-classes-with-linq-to-sql-c"></a>Crear clases de modelo con LINQ to SQL (C#)
 
@@ -61,11 +61,11 @@ Necesitamos agregar una tabla a nuestra base de datos que represente las pelícu
 
 Necesitamos agregar las siguientes columnas a la tabla de base de datos:
 
-| **Nombre de columna** | **Tipo de datos** | **Permitir valores NULL** |
+| **Nombre de la columna** | **Tipo de datos** | **Permitir valores NULL** |
 | --- | --- | --- |
-| Id. | Valor int. | Falso |
-| Title | Nvarchar (200) | Falso |
-| DataDirectory | Nvarchar (50) | Falso |
+| Id. | Valor int. | False |
+| Título | Nvarchar(200) | False |
+| Director | Nvarchar (50) | False |
 
 Debe hacer dos cosas especiales en la columna ID. En primer lugar, debe marcar la columna ID como columna de clave principal seleccionando la columna en el Diseñador de tablas y haciendo clic en el icono de una tecla. LINQ to SQL requiere que especifique las columnas de clave principal al realizar inserciones o actualizaciones en la base de datos.
 

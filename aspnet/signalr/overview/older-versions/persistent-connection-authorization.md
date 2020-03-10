@@ -1,19 +1,19 @@
 ---
 uid: signalr/overview/older-versions/persistent-connection-authorization
-title: Autenticación y autorización para las conexiones persistentes de SignalR (SignalR 1.x) | Microsoft Docs
+title: Autenticación y autorización para las conexiones persistentes de Signalr (Signalr 1. x) | Microsoft Docs
 author: bradygaster
-description: Este tema describe cómo aplicar la autorización en una conexión persistente. Para obtener información general sobre la integración de seguridad en una aplicación de SignalR,...
+description: En este tema se describe cómo aplicar la autorización en una conexión persistente. Para obtener información general sobre la integración de la seguridad en una aplicación Signalr,...
 ms.author: bradyg
 ms.date: 10/21/2013
 ms.assetid: c34bc627-41af-4c21-a817-e97a19a7f252
 msc.legacyurl: /signalr/overview/older-versions/persistent-connection-authorization
 msc.type: authoredcontent
 ms.openlocfilehash: 9ccc59e3ea502daf12ce82382ab30ca73ca0f9b5
-ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/06/2019
-ms.locfileid: "65117038"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78431191"
 ---
 # <a name="authentication-and-authorization-for-signalr-persistent-connections-signalr-1x"></a>Autenticación y autorización para las conexiones persistentes de SignalR (SignalR 1.x)
 
@@ -21,14 +21,14 @@ por [Patrick Fletcher](https://github.com/pfletcher), [Tom FitzMacken](https://g
 
 [!INCLUDE [Consider ASP.NET Core SignalR](~/includes/signalr/signalr-version-disambiguation.md)]
 
-> Este tema describe cómo aplicar la autorización en una conexión persistente. Para obtener información general sobre la integración de seguridad en una aplicación de SignalR, consulte [Introducción a la seguridad](index.md).
+> En este tema se describe cómo aplicar la autorización en una conexión persistente. Para obtener información general sobre la integración de la seguridad en una aplicación de Signalr, consulte [Introducción a la seguridad](index.md).
 
-## <a name="enforce-authorization"></a>Exigir la autorización
+## <a name="enforce-authorization"></a>Exigir autorización
 
-Para aplicar las reglas de autorización cuando se usa un [PersistentConnection](https://msdn.microsoft.com/library/microsoft.aspnet.signalr.persistentconnection(v=vs.111).aspx) debe invalidar el `AuthorizeRequest` método. No puede usar el `Authorize` atributo con las conexiones persistentes. El `AuthorizeRequest` método es llamado por el marco de SignalR antes de cada solicitud para comprobar que el usuario está autorizado para realizar la acción solicitada. El `AuthorizeRequest` no se llama al método desde el cliente; en su lugar, autenticar al usuario a través del mecanismo de autenticación estándar de la aplicación.
+Para aplicar reglas de autorización cuando se usa un [PersistentConnection](https://msdn.microsoft.com/library/microsoft.aspnet.signalr.persistentconnection(v=vs.111).aspx) , debe invalidar el método `AuthorizeRequest`. No se puede usar el atributo `Authorize` con conexiones persistentes. Signalr Framework llama al método `AuthorizeRequest` antes de cada solicitud para comprobar que el usuario está autorizado para realizar la acción solicitada. No se llama al método `AuthorizeRequest` desde el cliente; en su lugar, se autentica al usuario a través del mecanismo de autenticación estándar de la aplicación.
 
-El ejemplo siguiente muestra cómo limitar las solicitudes a los usuarios autenticados.
+En el ejemplo siguiente se muestra cómo limitar las solicitudes a los usuarios autenticados.
 
 [!code-csharp[Main](persistent-connection-authorization/samples/sample1.cs)]
 
-Puede agregar cualquier lógica de autorización personalizada en el método AuthorizeRequest; Por ejemplo, comprobando si un usuario pertenece a un rol determinado.
+Puede agregar cualquier lógica de autorización personalizada en el método AuthorizeRequest. por ejemplo, comprobar si un usuario pertenece a un rol determinado.

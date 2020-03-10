@@ -9,11 +9,11 @@ ms.assetid: 44aa1ac4-6ea2-48a2-972d-52710c48eae5
 msc.legacyurl: /mvc/overview/older-versions/working-with-the-dropdownlist-box-and-jquery/adding-a-new-category-to-the-dropdownlist-using-jquery-ui
 msc.type: authoredcontent
 ms.openlocfilehash: 3207079ee468232e5f75b081421241c232936baf
-ms.sourcegitcommit: 7709c0a091b8d55b7b33bad8849f7b66b23c3d72
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/19/2020
-ms.locfileid: "77455729"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78433159"
 ---
 # <a name="adding-a-new-category-to-the-dropdownlist-using-jquery-ui"></a>Agregar una nueva categoría al control DropDownList mediante jQuery UI
 
@@ -57,7 +57,7 @@ Ejecute la aplicación y haga clic en el botón **Agregar nuevo género** . En e
 
 ![](adding-a-new-category-to-the-dropdownlist-using-jquery-ui/_static/image4.png)
 
-Haga clic en el botón **Save** (Guardar). Una llamada AJAX crea la categoría opera y, a continuación, rellena la lista desplegable con opera y establece opera como el género seleccionado.
+Haga clic en el botón **Guardar**. Una llamada AJAX crea la categoría opera y, a continuación, rellena la lista desplegable con opera y establece opera como el género seleccionado.
 
 ![](adding-a-new-category-to-the-dropdownlist-using-jquery-ui/_static/image5.png)
 

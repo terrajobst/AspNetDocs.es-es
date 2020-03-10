@@ -9,11 +9,11 @@ ms.assetid: c655c324-2ffa-4c21-8265-a254d79a693d
 msc.legacyurl: /web-forms/overview/data-access/advanced-data-access-scenarios/debugging-stored-procedures-cs
 msc.type: authoredcontent
 ms.openlocfilehash: 12a8500b107345b9cc9ab457016fdef09ca1bb9d
-ms.sourcegitcommit: 22fbd8863672c4ad6693b8388ad5c8e753fb41a2
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/28/2019
-ms.locfileid: "74604788"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78428395"
 ---
 # <a name="debugging-stored-procedures-c"></a>Depurar procedimientos almacenados (C#)
 

@@ -9,11 +9,11 @@ ms.assetid: 42355b95-5f1f-413e-8d16-14cdfaaefcd8
 msc.legacyurl: /mvc/overview/older-versions/getting-started-with-aspnet-mvc3/cs/adding-a-model
 msc.type: authoredcontent
 ms.openlocfilehash: a5f494eaa05bcfcd9d49873db728d71c1fd332c8
-ms.sourcegitcommit: 7709c0a091b8d55b7b33bad8849f7b66b23c3d72
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/19/2020
-ms.locfileid: "77457795"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78434899"
 ---
 # <a name="adding-a-model-c"></a>Agregar un modelo (C#)
 

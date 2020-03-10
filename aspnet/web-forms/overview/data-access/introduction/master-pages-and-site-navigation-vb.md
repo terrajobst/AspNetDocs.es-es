@@ -9,11 +9,11 @@ ms.assetid: 022801d8-a327-4d0c-8780-6094c9cee00d
 msc.legacyurl: /web-forms/overview/data-access/introduction/master-pages-and-site-navigation-vb
 msc.type: authoredcontent
 ms.openlocfilehash: 4a2b5ba8c1781f1194f951a44661a8f7dd095f41
-ms.sourcegitcommit: 22fbd8863672c4ad6693b8388ad5c8e753fb41a2
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/28/2019
-ms.locfileid: "74578719"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78426031"
 ---
 # <a name="master-pages-and-site-navigation-vb"></a>Páginas maestras y navegación del sitio (VB)
 
@@ -219,11 +219,11 @@ Vamos a mostrar una lista sin ordenar con un repetidor de nuevo, pero esta vez m
 
 **Figura 13**: agregar un nuevo control de usuario Web a la carpeta `UserControls` ([haga clic para ver la imagen de tamaño completo](master-pages-and-site-navigation-vb/_static/image31.png))
 
-SectionLevelTutorialListing. ascx
+SectionLevelTutorialListing.ascx
 
 [!code-aspx[Main](master-pages-and-site-navigation-vb/samples/sample12.aspx)]
 
-SectionLevelTutorialListing. ascx. VB
+SectionLevelTutorialListing.ascx.vb
 
 [!code-vb[Main](master-pages-and-site-navigation-vb/samples/sample13.vb)]
 

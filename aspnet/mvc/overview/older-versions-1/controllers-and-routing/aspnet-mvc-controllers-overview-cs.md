@@ -1,118 +1,118 @@
 ---
 uid: mvc/overview/older-versions-1/controllers-and-routing/aspnet-mvc-controllers-overview-cs
-title: Información general del controlador de MVC de ASP.NET (C#) | Microsoft Docs
+title: Introducción al controlador MVC deC#ASP.net () | Microsoft Docs
 author: StephenWalther
-description: En este tutorial, Stephen Walther presenta los controladores ASP.NET MVC. Aprenda a crear nuevos controladores y devolver tipos diferentes de res de acción...
+description: En este tutorial, Stephen Walther presenta los controladores de ASP.NET MVC. Aprenderá a crear nuevos controladores y a devolver distintos tipos de acciones...
 ms.author: riande
 ms.date: 02/16/2008
 ms.assetid: b985c49a-3668-455c-a366-f85f6bc64b12
 msc.legacyurl: /mvc/overview/older-versions-1/controllers-and-routing/aspnet-mvc-controllers-overview-cs
 msc.type: authoredcontent
 ms.openlocfilehash: 1a287b37742400a17c2ed53cfd00bfb053b4f3d2
-ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/06/2019
-ms.locfileid: "65123606"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78437683"
 ---
 # <a name="aspnet-mvc-controller-overview-c"></a>Información general sobre el controlador de ASP.NET MVC (C#)
 
-by [Stephen Walther](https://github.com/StephenWalther)
+por [Stephen Walther](https://github.com/StephenWalther)
 
-> En este tutorial, Stephen Walther presenta los controladores ASP.NET MVC. Aprenda a crear nuevos controladores y devolver tipos diferentes de los resultados de acción.
+> En este tutorial, Stephen Walther presenta los controladores de ASP.NET MVC. Aprenderá a crear nuevos controladores y a devolver distintos tipos de resultados de acciones.
 
-Este tutorial exploran el tema de los controladores de ASP.NET MVC, las acciones de controlador y los resultados de acción. Después de completar este tutorial, comprenderá cómo se usan los controladores para controlar la manera en que un visitante interactúa con un sitio Web de ASP.NET MVC.
+En este tutorial se explora el tema de los controladores de ASP.NET MVC, las acciones de controlador y los resultados de acciones. Después de completar este tutorial, comprenderá cómo se usan los controladores para controlar la manera en que un visitante interactúa con un sitio web de ASP.NET MVC.
 
 ## <a name="understanding-controllers"></a>Descripción de los controladores
 
-Los controladores MVC están responsables de responder a las solicitudes realizadas en un sitio Web de ASP.NET MVC. Cada solicitud del explorador se asigna a un controlador determinado. Por ejemplo, imagine que escriba la dirección URL siguiente en la barra de direcciones del explorador:
+Los controladores de MVC son responsables de responder a las solicitudes realizadas en un sitio web de ASP.NET MVC. Cada solicitud del explorador se asigna a un controlador determinado. Por ejemplo, Imagine que escribe la siguiente dirección URL en la barra de direcciones del explorador:
 
 `http://localhost/Product/Index/3`
 
-En este caso, se invoca un controlador llamado ProductController. ProductController es responsable de generar la respuesta a la solicitud del explorador. Por ejemplo, el controlador puede devolver una vista concreta al explorador o el controlador podría redireccionar al usuario a otro controlador.
+En este caso, se invoca un controlador denominado ProductController. ProductController es responsable de generar la respuesta a la solicitud del explorador. Por ejemplo, el controlador podría devolver una vista determinada al explorador o el controlador podría redirigir al usuario a otro controlador.
 
-Listado 1 contiene un controlador simple llamado ProductController.
+La lista 1 contiene un controlador simple denominado ProductController.
 
-**Listado 1 - Controllers\ProductController.cs**
+**Listing1 - Controllers\ProductController.cs**
 
 [!code-csharp[Main](aspnet-mvc-controllers-overview-cs/samples/sample1.cs)]
 
-Como puede ver en el listado 1, un controlador es simplemente una clase (una clase de C# o Visual Basic. NET). Un controlador es una clase que derive de la clase System.Web.Mvc.Controller base. Dado que un controlador que se hereda de esta clase base, un controlador hereda varios métodos útiles de forma gratuita (se describen estos métodos en un momento).
+Como puede ver en la lista 1, un controlador es simplemente una clase (un Visual Basic .NET o C# una clase). Un controlador es una clase que se deriva de la clase base System. Web. Mvc. Controller. Dado que un controlador hereda de esta clase base, un controlador hereda varios métodos útiles de forma gratuita (se describen estos métodos en un momento).
 
 ## <a name="understanding-controller-actions"></a>Descripción de las acciones de controlador
 
-Un controlador expone las acciones de controlador. Una acción es un método en un controlador que se invoca cuando escriba una dirección URL determinada en la barra de direcciones del explorador. Por ejemplo, imagine que realiza una solicitud para la dirección URL siguiente:
+Un controlador expone las acciones del controlador. Una acción es un método en un controlador que se llama cuando se escribe una dirección URL determinada en la barra de direcciones del explorador. Por ejemplo, Imagine que realiza una solicitud para la siguiente dirección URL:
 
 `http://localhost/Product/Index/3`
 
-En este caso, se llama al método de Index() en la clase ProductController. El método Index() es un ejemplo de una acción de controlador.
+En este caso, se llama al método index () en la clase ProductController. El método index () es un ejemplo de una acción de controlador.
 
-Una acción de controlador debe ser un método público de una clase de controlador. Métodos de C#, de forma predeterminada, son métodos privados. Tenga en cuenta que cualquier método público que se agrega a una clase de controlador se expone como una acción de controlador automáticamente (debe tener cuidado esto como una acción de controlador se puede invocar cualquier usuario en el universo escribiendo la URL a la derecha en la barra de direcciones del explorador).
+Una acción de controlador debe ser un método público de una clase de controlador. C#de forma predeterminada, los métodos son métodos privados. Tenga en consideración que cualquier método público que agregue a una clase de controlador se expone automáticamente como una acción de controlador (debe tener cuidado con esto, ya que cualquier persona del universo puede invocar una acción de controlador simplemente escribiendo la dirección URL correcta en una barra de direcciones del explorador).
 
-Hay algunos requisitos adicionales que deben cumplirse mediante una acción de controlador. No se puede sobrecargar un método usado como una acción de controlador. Además, una acción de controlador no puede ser un método estático. Aparte de eso, puede usar cualquier método como una acción de controlador.
+Hay algunos requisitos adicionales que debe cumplir una acción de controlador. Un método utilizado como una acción de controlador no se puede sobrecargar. Además, una acción de controlador no puede ser un método estático. Aparte de eso, puede usar prácticamente cualquier método como una acción de controlador.
 
-## <a name="understanding-action-results"></a>Descripción de los resultados de acción
+## <a name="understanding-action-results"></a>Descripción de los resultados de la acción
 
-Devuelve una acción de controlador algo llamado un *resultado de acción*. Un resultado de acción es lo que devuelve una acción de controlador en respuesta a una solicitud del explorador.
+Una acción de controlador devuelve algo llamado *resultado de acción*. Un resultado de acción es lo que devuelve una acción del controlador en respuesta a una solicitud del explorador.
 
-El marco de ASP.NET MVC admite varios tipos de resultados de acción incluidos:
+El marco de MVC de ASP.NET admite varios tipos de resultados de acciones, entre los que se incluyen:
 
-1. ViewResult - representa HTML y marcado.
-2. EmptyResult - no representa ningún resultado.
-3. RedirectResult - representa una redirección a una nueva dirección URL.
-4. JsonResult - representa un resultado de la notación de objetos JavaScript que puede usarse en una aplicación de AJAX.
-5. JavaScriptResult - representa una secuencia de comandos de JavaScript.
-6. ContentResult - representa un resultado de texto.
-7. FileContentResult - representa un archivo descargable (con el contenido binario).
-8. FilePathResult - representa un archivo descargable (con una ruta de acceso).
-9. FileStreamResult - representa un archivo descargable (con una secuencia de archivo).
+1. ViewResult: representa HTML y marcado.
+2. EmptyResult: no representa ningún resultado.
+3. RedirectResult: representa una redirección a una nueva dirección URL.
+4. JsonResult: representa un resultado notación de objetos JavaScript que se puede usar en una aplicación AJAX.
+5. JavaScriptResult: representa un script de JavaScript.
+6. ContentResult: representa un resultado de texto.
+7. FileContentResult: representa un archivo descargable (con el contenido binario).
+8. FilePathResult: representa un archivo descargable (con una ruta de acceso).
+9. FileStreamResult: representa un archivo descargable (con un flujo de archivo).
 
-Todos estos resultados de acción se heredan de la clase ActionResult base.
+Todos estos resultados de acción heredan de la clase base ActionResult.
 
-En la mayoría de los casos, una acción de controlador devuelve ViewResult. Por ejemplo, la acción de controlador de índice en el listado 2 devuelve ViewResult.
+En la mayoría de los casos, una acción de controlador devuelve un ViewResult. Por ejemplo, la acción del controlador de índice de la lista 2 devuelve un ViewResult.
 
-**Listado 2 - Controllers\BookController.cs**
+**Lista 2-Controllers\BookController.cs**
 
 [!code-csharp[Main](aspnet-mvc-controllers-overview-cs/samples/sample2.cs)]
 
-Cuando una acción que devuelve un ViewResult HTML se devuelve al explorador. El método Index() en el listado 2 devuelve una vista llamada Index en el explorador.
+Cuando una acción devuelve un ViewResult, se devuelve HTML al explorador. El método index () de la lista 2 devuelve una vista denominada index al explorador.
 
-Tenga en cuenta que la acción de Index() en el listado 2 no devuelve un ViewResult(). En su lugar, se llama al método View() de la clase base del controlador. Normalmente, no se devuelven directamente un resultado de acción. En su lugar, llamar a uno de los métodos siguientes de la clase base del controlador:
+Tenga en cuenta que la acción index () de la lista 2 no devuelve ViewResult (). En su lugar, se llama al método View () de la clase base Controller. Normalmente, no se devuelve directamente un resultado de acción. En su lugar, se llama a uno de los métodos siguientes de la clase base del controlador:
 
-1. Ver: devuelve un resultado de acción ViewResult.
-2. Redirigir: devuelve un resultado de acción RedirectResult.
-3. RedirectToAction - devuelve un resultado de acción RedirectToRouteResult.
-4. RedirectToRoute - devuelve un resultado de acción RedirectToRouteResult.
-5. JSON - devuelve un resultado de acción JsonResult.
-6. JavaScriptResult - devuelve un JavaScriptResult.
-7. Content - devuelve un resultado de acción ContentResult.
-8. Archivo - devuelve un FileContentResult, FilePathResult o FileStreamResult dependiendo de los parámetros que se pasa al método.
+1. View: devuelve el resultado de una acción de ViewResult.
+2. Redirect: devuelve el resultado de una acción de RedirectResult.
+3. RedirectToAction: devuelve el resultado de una acción RedirectToRouteResult.
+4. RedirectToRoute: devuelve el resultado de una acción RedirectToRouteResult.
+5. JSON: devuelve el resultado de una acción de JsonResult.
+6. JavaScriptResult: devuelve un JavaScriptResult.
+7. Contenido: devuelve el resultado de una acción de ContentResult.
+8. Archivo: devuelve FileContentResult, FilePathResult o FileStreamResult, dependiendo de los parámetros pasados al método.
 
-Por lo tanto, si desea devolver una vista en el explorador, se llame al método View(). Si desea redirigir al usuario de acción de un controlador a otro, llama al método RedirectToAction(). Por ejemplo, la acción Details() en el listado 3 muestra una vista o redirige al usuario a la acción de Index() dependiendo de si el parámetro Id tiene un valor.
+Por lo tanto, si desea devolver una vista al explorador, llame al método View (). Si desea redirigir al usuario de una acción de controlador a otra, llame al método RedirectToAction (). Por ejemplo, la acción Details () de la lista 3 muestra una vista o redirige al usuario a la acción index (), dependiendo de si el parámetro ID tiene un valor.
 
-**Listado 3 - CustomerController.cs**
+**Lista 3: CustomerController.cs**
 
 [!code-csharp[Main](aspnet-mvc-controllers-overview-cs/samples/sample3.cs)]
 
-El resultado de acción ContentResult es especial. Puede usar el resultado de acción ContentResult para devolver un resultado de acción como texto sin formato. Por ejemplo, el método Index() en el listado 4 devuelve un mensaje como texto sin formato y no como HTML.
+El resultado de la acción ContentResult es especial. Puede usar el resultado de la acción ContentResult para devolver el resultado de una acción como texto sin formato. Por ejemplo, el método index () de la lista 4 devuelve un mensaje como texto sin formato y no como HTML.
 
-**Listing 4 - Controllers\StatusController.cs**
+**Lista 4: Controllers\StatusController.cs**
 
 [!code-csharp[Main](aspnet-mvc-controllers-overview-cs/samples/sample4.cs)]
 
-Cuando se invoca la acción StatusController.Index(), no se devuelve una vista. En su lugar, el texto sin formato "¡Hello World!" se devuelve al explorador.
+Cuando se invoca la acción StatusController. index (), no se devuelve una vista. En su lugar, el texto sin formato "Hola mundo!" se devuelve al explorador.
 
-Si una acción de controlador devuelve un resultado que es no es un resultado de acción - por ejemplo, una fecha o un entero -, a continuación, el resultado se encapsula en un ContentResult automáticamente. Por ejemplo, cuando se invoca la acción de Index() de la WorkController en el listado 5, la fecha se devuelve como un ContentResult automáticamente.
+Si una acción de controlador devuelve un resultado que no es un resultado de acción (por ejemplo, una fecha o un entero), el resultado se ajusta automáticamente en un ContentResult. Por ejemplo, cuando se invoca la acción index () de WorkController en la lista 5, la fecha se devuelve automáticamente como ContentResult.
 
-**Listado 5 - WorkController.cs**
+**Lista 5-WorkController.cs**
 
 [!code-csharp[Main](aspnet-mvc-controllers-overview-cs/samples/sample5.cs)]
 
-La acción de Index() en el listado 5 devuelve un objeto DateTime. El marco de MVC de ASP.NET convierte el objeto de fecha y hora en una cadena y ajusta el valor de fecha y hora en un ContentResult automáticamente. El explorador recibe la fecha y hora como texto sin formato.
+La acción index () de la lista 5 devuelve un objeto DateTime. El marco de MVC de ASP.NET convierte el objeto DateTime en una cadena y ajusta el valor DateTime en un ContentResult automáticamente. El explorador recibe la fecha y la hora como texto sin formato.
 
 ## <a name="summary"></a>Resumen
 
-El propósito de este tutorial era para presentarle a los conceptos de controladores de ASP.NET MVC, las acciones de controlador y los resultados de acción de controlador. En la primera sección, ha aprendido cómo agregar controladores nuevos a un proyecto ASP.NET MVC. A continuación, ha aprendido cómo públicos métodos de un controlador se exponen al universo como acciones de controlador. Finalmente, se analizan los diferentes tipos de resultados de acción que se pueden devolver desde una acción de controlador. En concreto, explicamos cómo devolver un ViewResult, RedirectToActionResult y ContentResult desde una acción de controlador.
+El propósito de este tutorial fue presentar los conceptos de los controladores de ASP.NET MVC, las acciones de controlador y los resultados de acciones de controlador. En la primera sección, ha aprendido a agregar nuevos controladores a un proyecto de ASP.NET MVC. A continuación, ha aprendido cómo los métodos públicos de un controlador se exponen al universo como acciones de controlador. Por último, analizamos los diferentes tipos de resultados de acción que se pueden devolver desde una acción de controlador. En concreto, hemos explicado cómo devolver ViewResult, RedirectToActionResult y ContentResult desde una acción de controlador.
 
 > [!div class="step-by-step"]
 > [Anterior](creating-an-action-vb.md)

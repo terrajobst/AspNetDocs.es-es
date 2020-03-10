@@ -1,27 +1,27 @@
 ---
 uid: web-forms/videos/data-access/linq-videos-from-the-vb-team/how-do-i-create-excel-spreadsheets-using-linq-to-xml
-title: '[¿Cómo lo hago?:] ¿Crear hojas de cálculo de Excel mediante LINQ to XML? | Microsoft Docs'
+title: '[Cómo:] ¿Crear hojas de cálculo de Excel con LINQ to XML? | Microsoft Docs'
 author: bethmassi
-description: Los desarrolladores de Visual Basic aprenderán consultar su base de datos de SQL Server para crear fácilmente las hojas de cálculo de Excel directamente en el editor de Visual Basic nosotros...
+description: Visual Basic desarrolladores aprenderán a consultar su base de datos de SQL Server para crear fácilmente hojas de cálculo de Excel directamente en el editor de Visual Basic...
 ms.author: riande
 ms.date: 11/15/2007
 ms.assetid: 147e51e3-3488-4e48-a06c-059c2cebd728
 msc.legacyurl: /web-forms/videos/data-access/linq-videos-from-the-vb-team/how-do-i-create-excel-spreadsheets-using-linq-to-xml
 msc.type: video
 ms.openlocfilehash: 1483030faf631099b8c044d1fbbdd000128f4fce
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59414197"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78420151"
 ---
-# <a name="how-do-i-create-excel-spreadsheets-using-linq-to-xml"></a>[¿Cómo lo hago?:] ¿Crear hojas de cálculo de Excel mediante LINQ to XML?
+# <a name="how-do-i-create-excel-spreadsheets-using-linq-to-xml"></a>[Cómo:] ¿Crear hojas de cálculo de Excel con LINQ to XML?
 
 por [Beth Massi](https://github.com/bethmassi)
 
-Los desarrolladores de Visual Basic aprenderán consultar su base de datos de SQL Server para crear fácilmente las hojas de cálculo de Excel directamente en el editor de Visual Basic mediante LINQ to XML.
+Visual Basic desarrolladores aprenderán a consultar su base de datos de SQL Server para crear fácilmente hojas de cálculo de Excel directamente en el editor de Visual Basic con LINQ to XML.
 
-[&#9654;Vea el vídeo (10 minutos)](https://channel9.msdn.com/Blogs/ASP-NET-Site-Videos/how-do-i-create-excel-spreadsheets-using-linq-to-xml)
+[&#9654;Ver vídeo (10 minutos)](https://channel9.msdn.com/Blogs/ASP-NET-Site-Videos/how-do-i-create-excel-spreadsheets-using-linq-to-xml)
 
 > [!div class="step-by-step"]
 > [Anterior](how-do-i-create-xml-documents-from-sql-data.md)
