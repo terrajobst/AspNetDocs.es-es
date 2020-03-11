@@ -9,11 +9,11 @@ ms.assetid: bd347d93-4251-4532-801c-a36f2dfa7f96
 msc.legacyurl: /web-forms/overview/data-access/caching-data/using-sql-cache-dependencies-vb
 msc.type: authoredcontent
 ms.openlocfilehash: 7d095538bd92d50675e5fce44f5ca68e8ee6c0e8
-ms.sourcegitcommit: 22fbd8863672c4ad6693b8388ad5c8e753fb41a2
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/28/2019
-ms.locfileid: "74603519"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78442909"
 ---
 # <a name="using-sql-cache-dependencies-vb"></a>Usar dependencias de caché de SQL (VB)
 
@@ -21,7 +21,7 @@ por [Scott Mitchell](https://twitter.com/ScottOnWriting)
 
 [Descargar código](https://download.microsoft.com/download/3/9/f/39f92b37-e92e-4ab3-909e-b4ef23d01aa3/ASPNET_Data_Tutorial_61_VB.zip) o [Descargar PDF](using-sql-cache-dependencies-vb/_static/datatutorial61vb1.pdf)
 
-> La estrategia de almacenamiento en caché más sencilla consiste en permitir que los datos almacenados en caché expiren después de un período de tiempo especificado. Pero este sencillo enfoque significa que los datos almacenados en caché no mantienen ninguna asociación con su origen de datos subyacente, lo que da lugar a datos obsoletos que se retienen demasiado largos o datos actuales que han expirado demasiado pronto. Un mejor enfoque consiste en usar la clase SqlCacheDependency para que los datos permanezcan en la memoria caché hasta que los datos subyacentes se hayan modificado en la base de datos SQL. En este tutorial se muestra cómo hacerlo.
+> La estrategia de almacenamiento en caché más sencilla consiste en permitir que los datos almacenados en caché expiren después de un período de tiempo especificado. Pero este sencillo enfoque significa que los datos almacenados en caché no mantienen ninguna asociación con su origen de datos subyacente, lo que da lugar a datos obsoletos que se retienen demasiado largos o datos actuales que han expirado demasiado pronto. Un mejor enfoque consiste en usar la clase SqlCacheDependency para que los datos permanezcan en la memoria caché hasta que los datos subyacentes se hayan modificado en la base de datos SQL. En este tutorial se muestra cómo realizar las siguientes acciones.
 
 ## <a name="introduction"></a>Introducción
 

@@ -9,11 +9,11 @@ ms.assetid: 3e20e64a-8808-4b49-88d6-014e2629d56f
 msc.legacyurl: /web-forms/overview/data-access/paging-and-sorting/efficiently-paging-through-large-amounts-of-data-vb
 msc.type: authoredcontent
 ms.openlocfilehash: 0c788c4109d0d2839de969c628399290376a1ccd
-ms.sourcegitcommit: 22fbd8863672c4ad6693b8388ad5c8e753fb41a2
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/28/2019
-ms.locfileid: "74612935"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78476965"
 ---
 # <a name="efficiently-paging-through-large-amounts-of-data-vb"></a>Pasar página por grandes cantidades de datos de forma eficaz (VB)
 
@@ -300,10 +300,10 @@ Un artículo de la mina, la [paginación personalizada en ASP.NET 2,0 con SQL Se
 
 |  | **Promedio de duración (s)** | **Lecturas** |
 | --- | --- | --- |
-| **SQL Profiler de paginación predeterminada** | 1,411 | 383 |
-| **SQL Profiler de paginación personalizada** | 0,002 | 29 |
-| **Seguimiento predeterminado de ASP.NET de paginación** | 2,379 | *N/A* |
-| **Seguimiento de ASP.NET de paginación personalizada** | 0,029 | *N/A* |
+| **SQL Profiler de paginación predeterminada** | 1.411 | 383 |
+| **SQL Profiler de paginación personalizada** | 0.002 | 29 |
+| **Seguimiento predeterminado de ASP.NET de paginación** | 2.379 | *N/D* |
+| **Seguimiento de ASP.NET de paginación personalizada** | 0.029 | *N/D* |
 
 Como puede ver, la recuperación de una página de datos determinada requiere 354 menos lecturas en promedio y completadas en una fracción del tiempo. En la página ASP.NET, se ha personalizado la página para que se representara cerca<sup>del 1/100 de</sup> tiempo que se llevó a cabo cuando se usa la paginación predeterminada. Vea [mi artículo](http://aspnet.4guysfromrolla.com/articles/031506-1.aspx) para obtener más información sobre estos resultados junto con el código y una base de datos que puede descargar para reproducir estas pruebas en su propio entorno.
 

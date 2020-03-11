@@ -9,11 +9,11 @@ ms.assetid: b4ac129d-1b8e-41ca-a38f-9b19d7c7bb0e
 msc.legacyurl: /web-forms/overview/older-versions-security/membership/creating-the-membership-schema-in-sql-server-cs
 msc.type: authoredcontent
 ms.openlocfilehash: 97623e7c13ab7799b9dadbb8e52be8e0cd99e252
-ms.sourcegitcommit: 22fbd8863672c4ad6693b8388ad5c8e753fb41a2
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/28/2019
-ms.locfileid: "74594912"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78464443"
 ---
 # <a name="creating-the-membership-schema-in-sql-server-c"></a>Crear el esquema de pertenencia en SQL Server (C#)
 
@@ -206,9 +206,9 @@ En la tabla 1 se muestra el aspecto de estas tres columnas para las distintas t�
 
 | **Técnica de almacenamiento&lt;\_O3A\_p/&gt;** | **Contraseña&lt;\_O3A\_p/&gt;** | **PasswordFormat&lt;\_O3A\_p/&gt;** | **PasswordSalt&lt;\_O3A\_p/&gt;** |
 | --- | --- | --- | --- |
-| Borrar | Misecreto! | 0 | tTnkPlesqissc2y2SMEygA = = |
-| Hash | 2oXm6sZHWbTHFgjgkGQsc2Ec9ZM = | 1 | wFgjUfhdUFOCKQiI61vtiQ = = |
-| Cifra | 62RZgDvhxykkqsMchZ0Yly7HS6onhpaoCYaRxV8g0F4CW56OXUU3e7Inza9j9BKp | 2 | LSRzhGS/AA/oqAXGLHJNBw = = |
+| Clear | MySecret! | 0 | tTnkPlesqissc2y2SMEygA== |
+| Hash | 2oXm6sZHWbTHFgjgkGQsc2Ec9ZM= | 1 | wFgjUfhdUFOCKQiI61vtiQ== |
+| Cifrados | 62RZgDvhxykkqsMchZ0Yly7HS6onhpaoCYaRxV8g0F4CW56OXUU3e7Inza9j9BKp | 2 | LSRzhGS/aa/oqAXGLHJNBw== |
 
 **Tabla 1**: valores de ejemplo para los campos relacionados con la contraseña al almacenar la contraseña persecret.
 
@@ -248,20 +248,20 @@ Además de los atributos `name` y `type`, el elemento `<add>` contiene atributos
 | --- | --- |
 | `ApplicationName` | Recuerde que el marco de pertenencia permite que un único almacén de usuario se divida en varias aplicaciones. Este valor indica el nombre de la partición de aplicación que utiliza el proveedor de pertenencia. Si no se especifica explícitamente este valor, se establece, en tiempo de ejecución, en el valor de la ruta de acceso de la raíz virtual de la aplicación. |
 | `commandTimeout` | Especifica el valor de tiempo de espera del comando SQL (en segundos). El valor predeterminado es 30. |
-| `connectionStringName` | Nombre de la cadena de conexión en el elemento `<connectionStrings>` que se va a usar para conectarse a la base de datos del almacén de usuarios. Este valor es obligatorio. |
+| `connectionStringName` | Nombre de la cadena de conexión en el elemento `<connectionStrings>` que se va a usar para conectarse a la base de datos del almacén de usuarios. Este valor es necesario. |
 | `description` | Proporciona una descripción descriptiva del proveedor registrado. |
 | `enablePasswordRetrieval` | Especifica si los usuarios pueden recuperar su contraseña olvidada. El valor predeterminado es `false`. |
 | `enablePasswordReset` | Indica si los usuarios pueden restablecer su contraseña. Tiene como valor predeterminado `true`. |
 | `maxInvalidPasswordAttempts` | Número máximo de intentos de inicio de sesión incorrectos que pueden producirse para un usuario determinado durante el `passwordAttemptWindow` especificado antes de que se bloquee el usuario. El valor predeterminado es 5. |
 | `minRequiredNonalphanumericCharacters` | Número mínimo de caracteres no alfanuméricos que deben aparecer en la contraseña de un usuario. Este valor debe estar comprendido entre 0 y 128; el valor predeterminado es 1. |
 | `minRequiredPasswordLength` | Número mínimo de caracteres necesarios en una contraseña. Este valor debe estar comprendido entre 0 y 128; el valor predeterminado es 7. |
-| `name` | Nombre del proveedor registrado. Este valor es obligatorio. |
+| `name` | Nombre del proveedor registrado. Este valor es necesario. |
 | `passwordAttemptWindow` | El número de minutos durante los que se realiza el seguimiento de los intentos de inicio de sesión incorrectos. Si un usuario proporciona credenciales de inicio de sesión no válidas `maxInvalidPasswordAttempts` veces dentro de esta ventana especificada, se bloquearán. El valor predeterminado es 10. |
-| `PasswordFormat` | El formato de almacenamiento de contraseña: `Clear`, `Hashed`o `Encrypted`. De manera predeterminada, es `Hashed`. |
+| `PasswordFormat` | El formato de almacenamiento de contraseña: `Clear`, `Hashed`o `Encrypted`. El valor predeterminado es `Hashed`. |
 | `passwordStrengthRegularExpression` | Si se proporciona, esta expresión regular se usa para evaluar la seguridad de la contraseña seleccionada del usuario al crear una nueva cuenta o al cambiar su contraseña. El valor predeterminado es una cadena vacía. |
 | `requiresQuestionAndAnswer` | Especifica si un usuario debe responder a su pregunta de seguridad al recuperar o restablecer su contraseña. El valor predeterminado es `true`. |
 | `requiresUniqueEmail` | Indica si todas las cuentas de usuario de una partición de aplicación determinada deben tener una dirección de correo electrónico única. El valor predeterminado es `true`. |
-| `type` | Especifica el tipo del proveedor. Este valor es obligatorio. |
+| `type` | Especifica el tipo del proveedor. Este valor es necesario. |
 
 **Tabla 2**: opciones de configuración de pertenencia y `SqlMembershipProvider`
 

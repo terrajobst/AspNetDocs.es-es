@@ -9,11 +9,11 @@ ms.assetid: 213eea41-1ab4-4371-8b24-1a1a66c515de
 msc.legacyurl: /web-forms/overview/data-access/advanced-data-access-scenarios/creating-stored-procedures-and-user-defined-functions-with-managed-code-cs
 msc.type: authoredcontent
 ms.openlocfilehash: c6aec9ca70fe3ab568b3d17fea6bfd56671edc03
-ms.sourcegitcommit: 22fbd8863672c4ad6693b8388ad5c8e753fb41a2
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/28/2019
-ms.locfileid: "74605404"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78428617"
 ---
 # <a name="creating-stored-procedures-and-user-defined-functions-with-managed-code-c"></a>Crear procedimientos almacenados y funciones definidas por el usuario con código administrado (C#)
 
@@ -44,7 +44,7 @@ Sin embargo, para este tutorial, se mueve la base de datos Northwind fuera de `A
 
 La descarga de este tutorial tiene los dos archivos de base de datos: `NORTHWND.MDF` y `NORTHWND_log.LDF`-colocados en una carpeta denominada `DataFiles`. Si va a seguir con su propia implementación de los tutoriales, cierre Visual Studio y mueva los archivos de `NORTHWND.MDF` y `NORTHWND_log.LDF` de la carpeta websites `App_Data` a una carpeta fuera del sitio Web. Una vez que los archivos de base de datos se han migrado a otra carpeta, es necesario registrar la base de datos Northwind con la instancia de base de datos SQL Server 2005 Express Edition. Esto se puede hacer desde SQL Server Management Studio. Si tiene instalada una edición no Express de SQL Server 2005 en el equipo, es probable que ya tenga Management Studio instalado. Si solo tiene SQL Server 2005 Express Edition en el equipo, dedique un momento a descargar e instalar [Microsoft SQL Server Management Studio Express](https://www.microsoft.com/downloads/details.aspx?displaylang=en&amp;FamilyID=C243A5AE-4BD1-4E3D-94B8-5A0F62BF7796).
 
-Inicie SQL Server Management Studio. Como se muestra en la figura 1, Management Studio comienza preguntando con qué servidor se va a conectar. Escriba localhost\SQLExpress para el nombre del servidor, elija autenticación de Windows en la lista desplegable autenticación y haga clic en conectar.
+Inicie SQL Server Management Studio. Como se muestra en la figura 1, Management Studio comienza preguntando con qué servidor se va a conectar. Escriba localhost\SQLExpress para el nombre del servidor, elija autenticación de Windows en la lista desplegable autenticación y haga clic en conectar.
 
 ![Conectarse a la instancia de base de datos adecuada](creating-stored-procedures-and-user-defined-functions-with-managed-code-cs/_static/image1.png)
 
@@ -88,7 +88,7 @@ Un proyecto SQL Server está asociado a una base de datos determinada. Por lo ta
 
 **Figura 5**: asociar el proyecto de SQL Server a la base de datos Northwind
 
-Para depurar los procedimientos almacenados administrados y las UDF que se crearán en este proyecto, es necesario habilitar la compatibilidad con la depuración de SQL/CLR para la conexión. Cada vez que se asocia un proyecto de SQL Server a una nueva base de datos (como hicimos en la figura 5), Visual Studio nos pregunta si queremos habilitar la depuración de SQL/CLR en la conexión (consulte la figura 6). Haz clic en Sí.
+Para depurar los procedimientos almacenados administrados y las UDF que se crearán en este proyecto, es necesario habilitar la compatibilidad con la depuración de SQL/CLR para la conexión. Cada vez que se asocia un proyecto de SQL Server a una nueva base de datos (como hicimos en la figura 5), Visual Studio nos pregunta si queremos habilitar la depuración de SQL/CLR en la conexión (consulte la figura 6). Haga clic en Sí.
 
 ![Habilitar la depuración de SQL/CLR](creating-stored-procedures-and-user-defined-functions-with-managed-code-cs/_static/image10.png)
 
@@ -136,7 +136,7 @@ Todos los objetos de base de datos administrados tienen acceso a un [objeto`SqlC
 
 ## <a name="step-4-deploying-the-managed-stored-procedure"></a>Paso 4: implementar el procedimiento almacenado administrado
 
-Con este código completo, estamos listos para implementarlo en la base de datos Northwind. La implementación de un proyecto de SQL Server compila el código en un ensamblado, registra el ensamblado con la base de datos y crea los objetos correspondientes en la base de datos, vinculándolos a los métodos adecuados en el ensamblado. El conjunto exacto de tareas que realiza la opción de implementación se escribe con más precisión en el paso 13. Haga clic con el botón derecho en el nombre del proyecto `ManagedDatabaseConstructs` en el Explorador de soluciones y elija la opción implementar. Sin embargo, se produce el siguiente error en la implementación: Sintaxis incorrecta cerca de ' EXTERNAL '. Es posible que tenga que establecer el nivel de compatibilidad de la base de datos actual en un valor superior para habilitar esta característica. Vea la ayuda del procedimiento almacenado `sp_dbcmptlevel`.
+Con este código completo, estamos listos para implementarlo en la base de datos Northwind. La implementación de un proyecto de SQL Server compila el código en un ensamblado, registra el ensamblado con la base de datos y crea los objetos correspondientes en la base de datos, vinculándolos a los métodos adecuados en el ensamblado. El conjunto exacto de tareas que realiza la opción de implementación se escribe con más precisión en el paso 13. Haga clic con el botón derecho en el nombre del proyecto `ManagedDatabaseConstructs` en el Explorador de soluciones y elija la opción implementar. Sin embargo, se produce el siguiente error en la implementación: Sintaxis incorrecta cerca de ' EXTERNAL '. Es probable que tenga que establecer el nivel de compatibilidad de la base de datos actual en un valor superior para habilitar esta característica. Vea la ayuda del procedimiento almacenado `sp_dbcmptlevel`.
 
 Este mensaje de error se produce al intentar registrar el ensamblado con la base de datos Northwind. Para registrar un ensamblado con una base de datos SQL Server 2005, el nivel de compatibilidad de la base de datos debe establecerse en 90. De forma predeterminada, las nuevas bases de datos de SQL Server 2005 tienen un nivel de compatibilidad de 90. Sin embargo, las bases de datos creadas con Microsoft SQL Server 2000 tienen un nivel de compatibilidad predeterminado de 80. Dado que la base de datos Northwind era inicialmente una Microsoft SQL Server base de datos 2000, su nivel de compatibilidad está establecido actualmente en 80 y, por tanto, debe aumentarse a 90 para poder registrar objetos de base de datos administrados.
 

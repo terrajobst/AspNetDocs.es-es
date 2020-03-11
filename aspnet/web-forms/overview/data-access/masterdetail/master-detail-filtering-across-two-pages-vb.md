@@ -9,11 +9,11 @@ ms.assetid: 361d6a44-3f1f-4daf-85df-d4c2b8bf065d
 msc.legacyurl: /web-forms/overview/data-access/masterdetail/master-detail-filtering-across-two-pages-vb
 msc.type: authoredcontent
 ms.openlocfilehash: 252c6d5e48aff0087e090e3ddc1f58c84a2c030e
-ms.sourcegitcommit: 22fbd8863672c4ad6693b8388ad5c8e753fb41a2
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/28/2019
-ms.locfileid: "74622881"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78424783"
 ---
 # <a name="masterdetail-filtering-across-two-pages-vb"></a>Filtrado de maestro y detalles en dos páginas (VB)
 
