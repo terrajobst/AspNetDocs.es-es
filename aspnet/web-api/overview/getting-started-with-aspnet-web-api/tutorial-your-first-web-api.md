@@ -8,12 +8,12 @@ ms.date: 11/28/2017
 ms.custom: seoapril2019
 msc.legacyurl: /web-api/overview/getting-started-with-aspnet-web-api/tutorial-your-first-web-api
 msc.type: authoredcontent
-ms.openlocfilehash: 3e35c2bc0e46dfdb4544b772775eddd533f27be3
-ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
+ms.openlocfilehash: 2717d93f47be9d4a6548731d8deeca312b25f39f
+ms.sourcegitcommit: 9e3ca74997a67c18589729d4b7303799905473eb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78448555"
+ms.lasthandoff: 03/11/2020
+ms.locfileid: "79084058"
 ---
 # <a name="get-started-with-aspnet-web-api-2-c"></a>Introducción a ASP.NET Web API 2 (C#)
 
@@ -46,7 +46,7 @@ En el panel **plantillas** , seleccione **plantillas instaladas** y expanda el n
 
 ![](tutorial-your-first-web-api/_static/image2.png)
 
-En el cuadro de diálogo **nuevo proyecto ASP.net** , seleccione la plantilla **vacía** . En &quot;agregar carpetas y referencias principales para&quot;, consulte **API Web**. Haga clic en **Aceptar**.
+En el cuadro de diálogo **nuevo proyecto ASP.net** , seleccione la plantilla **vacía** . En &quot;agregar carpetas y referencias principales para&quot;, consulte **API Web**. Haga clic en **OK**.
 
 ![](tutorial-your-first-web-api/_static/image3.png)
 
@@ -104,9 +104,9 @@ El controlador define dos métodos que devuelven productos:
 - El método `GetAllProducts` devuelve la lista completa de productos como un tipo de **&gt;de producto IEnumerable&lt;** .
 - El método `GetProduct` busca un único producto por su identificador.
 
-Ya está. Tiene una API Web en funcionamiento. Cada método en el controlador corresponde a uno o varios URI:
+Eso es todo. Tiene una API Web en funcionamiento. Cada método en el controlador corresponde a uno o varios URI:
 
-| Método de controlador | Identificador URI |
+| Método de controlador | URI |
 | --- | --- |
 | GetAllProducts | /api/products |
 | GetProduct | *identificador* de/API/Products/ |
@@ -165,7 +165,7 @@ Si escribe un identificador no válido, el servidor devuelve un error HTTP:
 
 ## <a name="using-f12-to-view-the-http-request-and-response"></a>Usar F12 para ver la solicitud y la respuesta HTTP
 
-Cuando se trabaja con un servicio HTTP, puede ser muy útil ver los mensajes de solicitud y solicitud HTTP. Puede hacerlo con las herramientas de desarrollo F12 de Internet Explorer 9. En Internet Explorer 9, presione **F12** para abrir las herramientas. Haga clic en la pestaña **red** y presione **Iniciar captura**. Ahora vuelva a la página web y presione **F5** para volver a cargar la Página Web. Internet Explorer capturará el tráfico HTTP entre el explorador y el servidor Web. La vista resumen muestra todo el tráfico de red de una página:
+Cuando se trabaja con un servicio HTTP, puede ser muy útil ver los mensajes de solicitud y respuesta HTTP. Puede hacerlo con las herramientas de desarrollo F12 de Internet Explorer 9. En Internet Explorer 9, presione **F12** para abrir las herramientas. Haga clic en la pestaña **red** y presione **Iniciar captura**. Ahora vuelva a la página web y presione **F5** para volver a cargar la Página Web. Internet Explorer capturará el tráfico HTTP entre el explorador y el servidor Web. La vista resumen muestra todo el tráfico de red de una página:
 
 ![](tutorial-your-first-web-api/_static/image14.png)
 
